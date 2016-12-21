@@ -1,0 +1,177 @@
+---
+title: "C2660 de erro do compilador | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2660"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2660"
+ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
+caps.latest.revision: 14
+caps.handback.revision: 14
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# C2660 de erro do compilador
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+função “”: a função não tem parâmetros de número  
+  
+ A função é chamada com um número incorreto de parâmetros.  
+  
+ C2660 pode ocorrer se você chamar acidentalmente uma função de API do windows em vez de uma função de membro MFC de mesmo nome.  Para resolver este problema:  
+  
+-   Ajuste a chamada de função para estar de acordo com o formato de chamada da função de membro.  
+  
+-   Use o operador de resolução de escopo \(`::`\) para informar o compilador para buscar o nome da função no espaço de nome global.  
+  
+## Exemplo  
+ O exemplo a seguir produz C2660.  
+  
+```  
+// C2660.cpp  
+void func( int, int ) {}  
+  
+int main() {  
+   func( 1 );   // C2660 func( int ) not declared  
+   func( 1, 0 );   // OK  
+}  
+```  
+  
+## Exemplo  
+ C2660 também poderá ocorrer se você tentar chamar diretamente o método dispose de um tipo gerenciado.  Para obter mais informações, consulte [Destruidores e finalizers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  O exemplo a seguir produz C2660.  
+  
+```  
+// C2660_a.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::Threading;  
+  
+void CheckStatus( Object^ stateInfo ) {}  
+  
+int main() {  
+   ManualResetEvent^ event = gcnew ManualResetEvent( false );     
+   TimerCallback^ timerDelegate = gcnew TimerCallback( &CheckStatus );  
+   Timer^ stateTimer = gcnew Timer( timerDelegate, event, 1000, 250 );  
+  
+   stateTimer->Dispose();   // C2660  
+   stateTimer->~Timer();   // OK  
+}  
+```  
+  
+## Exemplo  
+ C2660 ocorrerá se uma classe derivada ocultar uma função.  
+  
+```  
+// C2660b.cpp  
+// C2660 expected  
+#include <stdio.h>  
+  
+class f {  
+public:  
+   void bar() {  
+      printf_s("in f::bar\n");  
+    }  
+};  
+  
+class f2 : public f {  
+public:  
+   void bar(int i){printf("in f2::bar\n");}  
+   // Uncomment the following line to resolve.  
+   // using f::bar;   // - using declaration added  
+   // or  
+   // void bar(){__super::bar();}  
+};  
+  
+int main() {  
+   f2 fObject;  
+   fObject.bar();  
+}  
+```  
+  
+## Exemplo  
+ C2660 pode ocorrer se você invoca uma propriedade indexada incorretamente.  
+  
+```  
+// C2660c.cpp  
+// compile with: /clr  
+ref class X {  
+   double d;  
+public:  
+   X() : d(1.9) {}  
+   property double MyProp[] {  
+      double get(int i) {  
+         return d;  
+      }  
+   }   // end MyProp definition  
+};  
+  
+int main() {  
+   X ^ MyX = gcnew X();  
+   System::Console::WriteLine(MyX->MyProp(1));   // C2660  
+   System::Console::WriteLine(MyX->MyProp[1]);   // OK  
+}  
+```  
+  
+## Exemplo  
+ C2660 pode ocorrer se você invoca uma propriedade indexada incorretamente.  
+  
+```  
+// C2660d.cpp  
+// compile with: /clr  
+ref class A{  
+public:  
+   property int default[int,int] {  
+      int get(int a, int b) {  
+         return a + b;  
+      }  
+   }  
+};  
+  
+int main() {  
+   A^ a = gcnew A;  
+   int x = a[3][5];   // C2660  
+   int x2 = a[3,5];   // OK  
+}  
+```  
+  
+## Exemplo  
+ C2660 pode ocorrer se você definir um novo operador em uma classe do modelo, mas em que o novo operador cria um objeto cujo tipo é diferente do tipo inclusive.  
+  
+```  
+// C2660e.cpp  
+// compile with: /c  
+#include <malloc.h>  
+  
+template <class T> class CA {  
+private:  
+    static T** line;  
+   void* operator new (size_t, int i) {   
+      return 0;  
+   }  
+   void operator delete(void* pMem, int i) {  
+      free(pMem);  
+   }  
+  
+public:  
+   CA () { new (1) T(); }   // C2660  
+   // try the following line instead  
+   // CA () { new (1) CA<int>(); }  
+};  
+  
+typedef CA <int> int_CA;  
+  
+void AAA() {  
+   int_CA  list;  
+}  
+```
