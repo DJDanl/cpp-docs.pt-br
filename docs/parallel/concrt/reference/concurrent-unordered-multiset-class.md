@@ -1,0 +1,116 @@
+---
+title: "Classe concurrent_unordered_multiset | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "concurrent_unordered_set/concurrency::concurrent_unordered_multiset"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Classe concurrent_unordered_multiset"
+ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
+caps.latest.revision: 12
+caps.handback.revision: 5
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Classe concurrent_unordered_multiset
+[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+
+A classe `concurrent_unordered_multiset` é um contêiner protegido contra simultaneidade que controla uma sequência de comprimento variado de elementos do tipo \_Key\_type.  A sequência é representada em uma forma que permite acréscimo protegido contra simultaneidade, acesso de elemento, acesso de iterador e operações de passagem de iterador.  
+  
+## Sintaxe  
+  
+```  
+template <  
+   typename _Key_type,  
+   typename _Hasher = std::tr1::hash<_Key_type>,  
+   typename _Key_equality = std::equal_to<_Key_type>,  
+   typename _Allocator_type = std::allocator<_Key_type>  
+>  
+, typename _Key_equality = std::equal_to<_Key_type>, typename _Allocator_type = std::allocator<_Key_type> > class concurrent_unordered_multiset : public details::_Concurrent_hash< details::_Concurrent_unordered_set_traits<_Key_type, details::_Hash_compare<_Key_type, _Hasher, _Key_equality>, _Allocator_type, true> >;  
+```  
+  
+#### Parâmetros  
+ `_Key_type`  
+ O tipo principal.  
+  
+ `_Hasher`  
+ O tipo de objeto da função hash.  Esse argumento é opcional e o valor padrão é `std::tr1::hash<``_Key_type``>`.  
+  
+ `_Key_equality`  
+ O tipo de objeto da função de comparação de igualdade.  Esse argumento é opcional e o valor padrão é `std::equal_to<``_Key_type``>`.  
+  
+ `_Allocator_type`  
+ O tipo que representa o objeto armazenado do alocador que encapsula os detalhes sobre a alocação e a desalocação de memória para o vetor simultâneo.  Esse argumento é opcional e o valor padrão é `std::allocator<``_Key_type``>`.  
+  
+## Membros  
+  
+### Typedefs Públicas  
+  
+|Nome|Descrição|  
+|----------|---------------|  
+|`allocator_type`|O tipo de um distribuidor para gerenciar o armazenamento.|  
+|`const_iterator`|O tipo de um iterador de constante para a sequência controlada.|  
+|`const_local_iterator`|O tipo de um iterador de compartimento de constante para a sequência controlada.|  
+|`const_pointer`|O tipo de um ponteiro constante para um elemento.|  
+|`const_reference`|O tipo de uma referência constante para um elemento.|  
+|`difference_type`|O tipo de uma distância assinada entre dois elementos.|  
+|`hasher`|O tipo da função hash.|  
+|`iterator`|O tipo de um iterador para a sequência controlada.|  
+|`key_equal`|O tipo da função de comparação.|  
+|`key_type`|O tipo de uma chave classificação.|  
+|`local_iterator`|O tipo de um iterador de compartimento de memória para a sequência controlada.|  
+|`pointer`|O tipo de um ponteiro para um elemento.|  
+|`reference`|O tipo de uma referência para um elemento.|  
+|`size_type`|O tipo de uma distância não assinada entre dois elementos.|  
+|`value_type`|O tipo de um elemento.|  
+  
+### Construtores Públicos  
+  
+|Nome|Descrição|  
+|----------|---------------|  
+|[Construtor concurrent\_unordered\_multiset::concurrent\_unordered\_multiset](../Topic/concurrent_unordered_multiset::concurrent_unordered_multiset%20Constructor.md)|Sobrecarregado.  Constrói um multiconjunto simultâneo não ordenado.|  
+  
+### Métodos Públicos  
+  
+|Nome|Descrição|  
+|----------|---------------|  
+|[Método concurrent\_unordered\_multiset::hash\_function](../Topic/concurrent_unordered_multiset::hash_function%20Method.md)|Retorna o objeto armazenado da função hash.|  
+|[Método concurrent\_unordered\_multiset::insert](../Topic/concurrent_unordered_multiset::insert%20Method.md)|Sobrecarregado.  Adiciona elementos ao objeto `concurrent_unordered_multiset`.|  
+|[Método concurrent\_unordered\_multiset::key\_eq](../Topic/concurrent_unordered_multiset::key_eq%20Method.md)|O objeto armazenado da função de comparação de igualdade.|  
+|[Método concurrent\_unordered\_multiset::swap](../Topic/concurrent_unordered_multiset::swap%20Method.md)|Alterna o conteúdo de dois objetos de `concurrent_unordered_multiset` .  Este método não é seguro em simultaneidade.|  
+|[Método concurrent\_unordered\_multiset::unsafe\_erase](../Topic/concurrent_unordered_multiset::unsafe_erase%20Method.md)|Sobrecarregado.  Remove os elementos de `concurrent_unordered_multiset` em posições especificadas.  Este método não é seguro em simultaneidade.|  
+  
+### Operadores Públicos  
+  
+|Nome|Descrição|  
+|----------|---------------|  
+|[Operador concurrent\_unordered\_multiset::operator\=](../Topic/concurrent_unordered_multiset::operator=%20Operator.md)|Sobrecarregado.  Atribui o conteúdo de outro objeto `concurrent_unordered_multiset` nesse.  Este método não é seguro em simultaneidade.|  
+  
+## Comentários  
+ Para obter informações detalhadas sobre a classe `concurrent_unordered_multiset`, consulte [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md).  
+  
+## Hierarquia de Herança  
+ `_Traits`  
+  
+ `_Concurrent_hash`  
+  
+ `concurrent_unordered_multiset`  
+  
+## Requisitos  
+ **Cabeçalho:** concurrent\_unordered\_set.h  
+  
+ **Namespace:** simultaneidade  
+  
+## Consulte também  
+ [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
+ [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)

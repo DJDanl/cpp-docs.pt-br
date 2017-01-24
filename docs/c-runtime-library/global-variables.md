@@ -1,0 +1,64 @@
+---
+title: "Vari&#225;veis globais | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "c.variables"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "variáveis globais"
+  - "variáveis globais, biblioteca em tempo de execução da Microsoft"
+  - "variáveis, global"
+ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
+caps.latest.revision: 15
+caps.handback.revision: 15
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Vari&#225;veis globais
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+A biblioteca de tempo de execução C da Microsoft fornece as macros ou as variáveis globais a seguir.  Diversas delas foram preteridas e versões funcionais mais seguras foram adotadas. Recomendamos que você use as novas versões, em vez das variáveis globais.  
+  
+|Variável|Descrição|  
+|--------------|---------------|  
+|[\_\_argc, \_\_argv, \_\_wargv](../c-runtime-library/argc-argv-wargv.md)|Contém os argumentos da linha de comando.|  
+|[\_daylight, \_dstbias, \_timezone e \_tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Preterida.  Use `_get_daylight`, `_get_dstbias`, `_get_timezone` e `_get_tzname`.<br /><br /> Ajusta a hora local; usada em algumas funções de data e hora.|  
+|[errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)|Preterida.  Use `_get_errno`, `_set_errno`, `_get_doserrno`, `_set_doserrno`, `perror` e `strerror`.<br /><br /> Armazena códigos de erros e informações relacionadas.|  
+|[\_environ, \_wenviron](../c-runtime-library/environ-wenviron.md)|Preterida.  Use `getenv_s`, `_wgetenv_s`, `_dupenv_s`, `_wdupenv_s`, `_putenv_s` e `_wputenv_s`.<br /><br /> Ponteiros para matrizes de ponteiros para cadeias de caracteres do ambiente do processo; iniciada na inicialização.|  
+|[\_fmode](../c-runtime-library/fmode.md)|Preterida.  Use `_get_fmode` ou `_set_fmode`.<br /><br /> Define o modo padrão de conversão do arquivo.|  
+|[\_iob](../c-runtime-library/iob.md)|Matriz de estruturas de controle de E\/S para console, arquivos e dispositivos.|  
+|[\_pctype, \_pwctype, \_wctype, \_mbctype, \_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|Contém informações usadas por funções de classificação de caracteres.|  
+|[\_pgmptr, \_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|Preterida.  Use `_get_pgmptr` ou `_get_wpgmptr`.<br /><br /> Iniciada na inicialização do programa para o caminho completamente qualificado ou relativo do programa, o nome completo do programa ou o nome do programa sem a extensão do nome do arquivo, dependendo do modo como o programa foi invocado.|  
+  
+## Consulte também  
+ [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)   
+ [Constantes globais](../c-runtime-library/global-constants.md)   
+ [\_\_argc, \_\_argv, \_\_wargv](../c-runtime-library/argc-argv-wargv.md)   
+ [\_get\_daylight](../c-runtime-library/reference/get-daylight.md)   
+ [\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)   
+ [\_get\_timezone](../c-runtime-library/reference/get-timezone.md)   
+ [\_get\_tzname](../c-runtime-library/reference/get-tzname.md)   
+ [perror](../c-runtime-library/reference/perror-wperror.md)   
+ [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)   
+ [\_get\_doserrno](../Topic/_get_doserrno.md)   
+ [\_set\_doserrno](../c-runtime-library/reference/set-doserrno.md)   
+ [\_get\_errno](../Topic/_get_errno.md)   
+ [\_set\_errno](../Topic/_set_errno.md)   
+ [\_dupenv\_s, \_wdupenv\_s](../c-runtime-library/reference/dupenv-s-wdupenv-s.md)   
+ [getenv, \_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)   
+ [getenv\_s, \_wgetenv\_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [\_putenv, \_wputenv](../c-runtime-library/reference/putenv-wputenv.md)   
+ [\_putenv\_s, \_wputenv\_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)   
+ [\_get\_fmode](../c-runtime-library/reference/get-fmode.md)   
+ [\_set\_fmode](../c-runtime-library/reference/set-fmode.md)

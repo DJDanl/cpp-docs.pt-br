@@ -1,0 +1,111 @@
+---
+title: "E/S de fluxo | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "c.io"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "E/S [CRT], fluxo"
+  - "rotinas de E/S, E/S de fluxo"
+  - "E/S de fluxo"
+ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
+caps.latest.revision: 15
+caps.handback.revision: 15
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# E/S de fluxo
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Essas funções processam os dados em diferentes tamanhos e formatos de caracteres únicos para estruturas de dados grandes. Eles também fornecem armazenamento em buffer, que pode melhorar o desempenho. O tamanho padrão de um buffer de fluxo é 4K. Essas rotinas afetam apenas os buffers criados por rotinas de biblioteca de tempo de execução e não têm efeito nos buffers criada pelo sistema operacional.  
+  
+### Rotinas de e\/s de fluxo  
+  
+|Rotina|Use|Equivalente ao .NET framework|  
+|------------|---------|-----------------------------------|  
+|[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr\_s](../c-runtime-library/reference/clearerr-s.md)|Indicador de erro clara de fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Fluxo de fechamento|[System::IO::Stream::Close](https://msdn.microsoft.com/en-us/library/system.io.stream.close.aspx), [System::IO::BinaryReader::Close](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.close.aspx), [System::IO::BinaryWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.close.aspx), [System::IO::TextReader::Close](https://msdn.microsoft.com/en-us/library/system.io.textreader.close.aspx), [System::IO::TextWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.textwriter.close.aspx), [System::IO::StringReader::Close](https://msdn.microsoft.com/en-us/library/system.io.stringreader.close.aspx), [System::IO::StringWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.stringwriter.close.aspx), [System::IO::StreamReader::Close](https://msdn.microsoft.com/en-us/library/system.io.streamreader.close.aspx), [System::IO::StreamWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.close.aspx)|  
+|[fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Feche todos os fluxos exceto `stdin`, `stdout`, e `stderr`|[System::IO::Stream::Close](https://msdn.microsoft.com/en-us/library/system.io.stream.close.aspx), [System::IO::BinaryReader::Close](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.close.aspx), [System::IO::BinaryWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.close.aspx), [System::IO::TextReader::Close](https://msdn.microsoft.com/en-us/library/system.io.textreader.close.aspx), [System::IO::TextWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.textwriter.close.aspx), [System::IO::StringReader::Close](https://msdn.microsoft.com/en-us/library/system.io.stringreader.close.aspx), [System::IO::StringWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.stringwriter.close.aspx), [System::IO::StreamReader::Close](https://msdn.microsoft.com/en-us/library/system.io.streamreader.close.aspx), [System::IO::StreamWriter::Close](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.close.aspx)|  
+|[fdopen, wfdopen](../Topic/_fdopen,%20_wfdopen.md)|Associar o fluxo com o descritor de arquivo do arquivo aberto|<xref:System.IO.FileStream.%23ctor%2A>|  
+|[feof](../c-runtime-library/reference/feof.md)|Para o final do arquivo no fluxo de teste|[System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)|  
+|[ferror](../c-runtime-library/reference/ferror.md)|Erro no fluxo de teste|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[fflush](../Topic/fflush.md)|Liberar o fluxo no buffer ou dispositivo de armazenamento|[System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)|  
+|[fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md)|Ler caracteres de fluxo \(versões da função do `getc` e `getwc`\)|[System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)|  
+|[\_fgetchar, \_fgetwchar](../Topic/fgetc,%20fgetwc.md)|Ler caracteres de `stdin` \(versões da função do `getchar` e `getwchar`\)|[System::console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)|  
+|[fgetpos](../c-runtime-library/reference/fgetpos.md)|Obter o indicador de posição de fluxo|[System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)|  
+|[fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)|Cadeia de caracteres de leitura do fluxo|[System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx), [System::IO::TextReader::ReadBlock](https://msdn.microsoft.com/en-us/library/system.io.textreader.readblock.aspx)|  
+|[\_fileno](../Topic/_fileno.md)|Obter o descritor de arquivo associado de fluxo|[System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)|  
+|[\_flushall](../c-runtime-library/reference/flushall.md)|Liberar todos os fluxos para o buffer ou dispositivo de armazenamento|[System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx), [System::IO::StreamWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.flush.aspx), [System::IO::TextWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.textwriter.flush.aspx), [System::IO::BinaryWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.flush.aspx)|  
+|[fopen, wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen\_s, \_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Abrir fluxo|[System::IO::file::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)|  
+|[fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|Gravar dados formatados em fluxo|[System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)|  
+|[fputc, fputwc](../c-runtime-library/reference/fputc-fputwc.md)|Escreva um caractere em um fluxo \(versões da função do `putc` e `putwc`\)|[System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)|  
+|[\_fputchar, \_fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|Escreva para `stdout` \(versões da função do `putchar` e `putwchar`\)|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[fputs, fputws](../Topic/fputs,%20fputws.md)|Gravar a cadeia de caracteres no fluxo|[System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)|  
+|[fread](../c-runtime-library/reference/fread.md)|Ler dados não formatados de fluxo|[System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)|  
+|[freopen, wfreopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen\_s, \_wfreopen\_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Reatribuir `FILE` ponteiro de fluxo para o novo arquivo ou dispositivo|[System::IO::file::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)|  
+|[fscanf, fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|Ler dados formatados de fluxo|[System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx); Consulte também `Parse` métodos, tais como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).|  
+|[fseek, \_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|Mover arquivo posição dado local|[System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx), [System::IO::FileStream:: Seek](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)|  
+|[fsetpos](../Topic/fsetpos.md)|Indicador de posição do conjunto de fluxo|[System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)|  
+|[\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Abrir fluxo com o compartilhamento de arquivos|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[ftell, \_ftelli64](../c-runtime-library/reference/ftell-ftelli64.md)|Obter a posição atual do arquivo|[System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)|  
+|[fwrite](../Topic/fwrite.md)|Gravar itens de dados não formatados para transmitir|[System::IO::FileStream::Write](https://msdn.microsoft.com/en-us/library/system.io.filestream.write.aspx)|  
+|[getc, getwc](../c-runtime-library/reference/getc-getwc.md)|Ler caracteres de fluxo \(versões de macro do `fgetc` e `fgetwc`\)|[System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)|  
+|[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Ler caracteres de `stdin` \(versões de macro do `fgetchar` e `fgetwchar`\)|[System::console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)|  
+|[\_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Retorna o número de arquivos abertos simultaneamente permitido no fluxo de nível de e\/s.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[gets\_s, \_getws\_s](../c-runtime-library/reference/gets-s-getws-s.md)|Ler linha de `stdin`|[System::console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)|  
+|[\_getw](../c-runtime-library/reference/getw.md)|Leitura binário `int` de fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Gravar dados formatados em `stdout`|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Gravar caracteres em um fluxo \(versões de macro do `fputc` e `fputwc`\)|[System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)|  
+|[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Escreva para `stdout` \(versões de macro do `fputchar` e `fputwchar`\)|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[puts, \_putws](../Topic/puts,%20_putws.md)|Gravar linha de fluxo|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[\_putw](../c-runtime-library/reference/putw.md)|Gravar binário `int` fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[rewind](../c-runtime-library/reference/rewind.md)|Mover a posição do arquivo para o início do fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[\_rmtmp](../Topic/_rmtmp.md)|Remover arquivos temporários criados por `tmpfile`|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[scanf, \_scanf\_l, wscanf, \_wscanf\_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Ler dados formatados de `stdin`|[System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx); Consulte também `Parse` métodos, tais como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).|  
+|[setbuf](../c-runtime-library/reference/setbuf.md)|Buffer de fluxo de controle|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[\_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|Defina nível máximo para o número de arquivos abertos simultaneamente o fluxo de e\/s.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[setvbuf](../c-runtime-library/reference/setvbuf.md)|Tamanho do buffer e buffer de fluxo de controle|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[snprintf, snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|Gravar dados formatados do comprimento especificado para a cadeia de caracteres|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[snscanf, snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [\_snscanf\_s, \_snscanf\_s\_l, \_snwscanf\_s, \_snwscanf\_s\_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|Ler dados de um comprimento especificado do fluxo de entrada padrão em formato.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[sprintf, swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf\_s, \_sprintf\_s\_l, swprintf\_s, \_swprintf\_s\_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|Gravar dados formatados em cadeia de caracteres|[System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)|  
+|[sscanf, swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../Topic/sscanf_s,%20_sscanf_s_l,%20swscanf_s,%20_swscanf_s_l.md)|Ler dados formatados de cadeia de caracteres|Consulte `Parse` métodos, como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)|  
+|[tempnam, wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|Gerar o nome de arquivo temporário no diretório de dado|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[tmpfile](../c-runtime-library/reference/tmpfile.md), [tmpfile\_s](../Topic/tmpfile_s.md)|Criar arquivo temporário|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[tmpnam, wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md), [tmpnam\_s, \_wtmpnam\_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|Gerar o nome de arquivo temporário|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[ungetc, ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|Caractere de envio para o fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[vcprintf, vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md), [\_vcprintf\_s, \_vcprintf\_s\_l, \_vcwprintf\_s, \_vcwprintf\_s\_l](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|Grava dados formatados no console.|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[vfprintf, vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vfprintf\_s, \_vfprintf\_s\_l, vfwprintf\_s, \_vfwprintf\_s\_l](../Topic/vfprintf_s,%20_vfprintf_s_l,%20vfwprintf_s,%20_vfwprintf_s_l.md)|Gravar dados formatados em fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[vprintf, vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), [vprintf\_s, \_vprintf\_s\_l, vwprintf\_s, \_vwprintf\_s\_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|Gravar dados formatados em `stdout`|[System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)|  
+|[vsnprintf, vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Gravar dados formatados do comprimento especificado no buffer|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).|  
+|[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf\_s, \_vsprintf\_s\_l, vswprintf\_s, \_vswprintf\_s\_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Gravar dados formatados em buffer|[System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)|  
+  
+ Quando um programa inicia a execução, o código de inicialização é aberto automaticamente vários fluxos: entrada padrão \(apontada por `stdin`\), saída padrão \(apontada por `stdout`\) e o erro padrão \(apontada por `stderr`\). Esses fluxos são direcionados para o console \(tela e teclado\) por padrão. Use `freopen` para redirecionar `stdin`, `stdout`, ou `stderr` para um arquivo de disco ou um dispositivo.  
+  
+ Arquivos abertos usando as rotinas de fluxo são armazenados em buffer por padrão. O `stdout` e `stderr` funções são liberadas sempre que eles estão cheios ou, se você estiver escrevendo em um dispositivo de caractere, após cada chamada de biblioteca. Se um programa terminar de forma anormal, buffers de saída não podem ser liberados, resultando na perda de dados. Use `fflush` ou `_flushall` para garantir que o buffer associado a um arquivo especificado ou todos os buffers são liberados para o sistema operacional, que pode armazenar em cache dados antes da gravação no disco. O recurso de confirmação em disco garante que o conteúdo do buffer liberados não seja perdido em caso de falha do sistema.  
+  
+ Há duas maneiras para confirmar o conteúdo do buffer para o disco:  
+  
+-   Vincular com o arquivo COMMODE. OBJ para definir um sinalizador de confirmação global. A configuração padrão do sinalizador global é `n`, para "no\-commit."  
+  
+-   Defina o sinalizador do modo como `c` com `fopen` ou `_fdopen`.  
+  
+ Qualquer arquivo aberto especificamente com qualquer um de `c` ou o `n` sinalizador se comporta de acordo com o sinalizador, independentemente do estado do sinalizador de confirmação\/não\-confirmação global.  
+  
+ Se seu programa não fechar explicitamente um fluxo, o fluxo é fechado automaticamente quando o programa é encerrado. No entanto, você deve fechar um fluxo quando o programa for concluído com ele, como o número de fluxos que podem ser abertos ao mesmo tempo é limitado. Consulte [setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) para obter informações sobre esse limite.  
+  
+ Entrada pode seguir saída diretamente apenas com uma chamada intermediária para `fflush` ou a uma função de posicionamento de arquivos \(`fseek`, `fsetpos`, ou `rewind`\). Saída pode seguir entrada sem uma chamada intermediária para uma função de posicionamento de arquivo se a operação de entrada encontra o final do arquivo.  
+  
+## Consulte também  
+ [Entrada e saída](../Topic/Input%20and%20Output.md)   
+ [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)
