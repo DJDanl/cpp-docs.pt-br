@@ -1,61 +1,75 @@
 ---
-title: "gets, _getws | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getws"
-  - "gets"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcrt.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_getts"
-  - "gets"
-  - "_getws"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função getws"
-  - "Função getts"
-  - "Função _getws"
-  - "linhas, obtendo"
-  - "fluxos, obtendo linhas"
-  - "Função _getts"
-  - "Função gets"
-  - "entrada padrão, lendo de"
+title: gets, _getws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getws
+- gets
+apilocation:
+- msvcr80.dll
+- msvcr90.dll
+- msvcr120.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcrt.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- _getts
+- gets
+- _getws
+dev_langs:
+- C++
+helpviewer_keywords:
+- getws function
+- getts function
+- _getws function
+- lines, getting
+- streams, getting lines
+- _getts function
+- gets function
+- standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# gets, _getws
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 88a3ba45575669e577d1a3629d2dc28464a617d5
 
-Obtém uma linha do `stdin` fluxo. Versões mais seguras dessas funções estão disponíveis; consulte [gets\_s, \_getws\_s](../c-runtime-library/reference/gets-s-getws-s.md).  
+---
+# <a name="gets-getws"></a>gets, _getws
+Obtém uma linha do fluxo `stdin`. Estão disponíveis versões mais seguras dessas funções; consulte [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
 > [!IMPORTANT]
->  Essas funções são obsoletas. A partir do Visual Studio 2015, eles não estão disponíveis no CRT. As versões seguras dessas funções, gets\_s e getws\_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [gets\_s, \_getws\_s](../c-runtime-library/reference/gets-s-getws-s.md).  
+>  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT. As versões seguras dessas funções, gets_s e _getws_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no tempo de execução do Windows. Para obter mais informações, consulte [funções de CRT não têm suportadas com \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *gets(   
@@ -74,37 +88,37 @@ wchar_t *_getws(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `buffer`  
  Local de armazenamento para a cadeia de caracteres de entrada.  
   
-## Valor de retorno  
- Retorna o argumento se for bem\-sucedido. Um `NULL` ponteiro indica uma condição de erro ou o final do arquivo. Use [ferror](../c-runtime-library/reference/ferror.md) ou [feof](../c-runtime-library/reference/feof.md) para determinar qual deles ocorreu. Se `buffer` for `NULL`, essas funções chamar um manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornam `NULL` e defina errno como `EINVAL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna o argumento se for bem-sucedido. Um ponteiro `NULL` indica uma condição de erro ou de final do arquivo. Use [ferror](../c-runtime-library/reference/ferror.md) ou [feof](../c-runtime-library/reference/feof.md) para determinar qual das condições ocorreu. Se `buffer` for `NULL`, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão errno como `EINVAL`.  
   
-## Comentários  
- O `gets` função lê uma linha do fluxo de entrada padrão `stdin` e armazena em `buffer`. A linha consiste em todos os caracteres até e incluindo o primeiro caractere de nova linha \('\\n'\).`gets` em seguida, substitui o caractere de nova linha com um caractere nulo \('\\0'\) antes de retornar a linha. Por outro lado, o `fgets` função retém o caractere de nova linha.`_getws` é uma versão de caractere largo de `gets`; seu argumento e o valor de retorno são cadeias de caracteres largos.  
+## <a name="remarks"></a>Comentários  
+ A função `gets` lê uma linha do fluxo de entrada padrão `stdin` e a armazena em `buffer`. A linha consiste em todos os caracteres até e incluindo o primeiro caractere de nova linha ('\n'). `gets`, então, substitui o caractere de nova linha por um caractere nulo ('\0') antes de retornar a linha. Por sua vez, a função `fgets` retém o caractere de nova linha. `_getws` é uma versão de caractere largo de `gets`; seu argumento e o valor retornado são cadeias de caracteres largos.  
   
 > [!IMPORTANT]
->  Porque não há nenhuma maneira para limitar o número de caracteres lidos por obtém, entradas não confiáveis podem facilmente causar estouros de buffer. Use `fgets` em vez disso.  
+>  Como não há uma maneira de limitar o número de caracteres lidos por gets, entradas não confiáveis podem facilmente causar estouros de buffer. Use `fgets` em seu lugar.  
   
- No C\+\+, essas funções têm sobrecargas de modelo que invocam as contrapartes seguros, mais recentes dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).  
   
-### Mapeamentos de rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|TCHAR. Rotina H|Unicode e MBCS não definidos|MBCS definido|Unicode definido|  
-|---------------------|----------------------------------|-------------------|----------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_getts`|`gets`|`gets`|`_getws`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`gets`|\< stdio \>|  
-|`_getws`|\< stdio \> ou \< WCHAR \>|  
+|-------------|---------------------|  
+|`gets`|\<stdio.h>|  
+|`_getws`|\<stdio.h> ou \<wchar.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [compatibilidade](../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_gets.c  
@@ -122,18 +136,23 @@ int main( void )
 }  
 ```  
   
- Observe que a entrada mais do que 20 caracteres irá saturar o buffer de linha e certamente fazer com que o programa falhe.  
+ Observe que uma entrada com mais de 20 caracteres saturará o buffer de linha e provavelmente fará com que o programa falhe.  
   
 ```Output  
   
-Hello there!A linha inserida foi: bom dia!  
+Hello there!The line entered was: Hello there!  
 ```  
   
-## Equivalência do .NET Framework  
- [System::console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../c-runtime-library/stream-i-o.md)   
  [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)   
- [fputs, fputws](../Topic/fputs,%20fputws.md)   
- [puts, \_putws](../Topic/puts,%20_putws.md)
+ [fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)   
+ [puts, _putws](../c-runtime-library/reference/puts-putws.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

@@ -1,53 +1,67 @@
 ---
-title: "_heapset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapset"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcrt.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_heapset"
-  - "heapset"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "verificando heap"
-  - "Função heapset"
-  - "verificação de pilhas,"
-  - "depuração [CRT], problemas relacionados a heap"
-  - "Função _heapset"
+title: _heapset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapset
+apilocation:
+- msvcr90.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcrt.dll
+- msvcr120.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- _heapset
+- heapset
+dev_langs:
+- C++
+helpviewer_keywords:
+- checking heap
+- heapset function
+- heaps, checking
+- debugging [CRT], heap-related problems
+- _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _heapset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 38da17243a00f703313007a0721ccb44b5f3eb75
 
-Verifica pilhas consistência mínima e define as entradas livres para um valor especificado.  
+---
+# <a name="heapset"></a>_heapset
+Verifica heaps quanto à consistência mínima e configura as entradas livres com um valor especificado.  
   
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ele não está disponível no CRT.  
+>  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _heapset(   
@@ -55,15 +69,15 @@ int _heapset(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `fill`  
  Caractere de preenchimento.  
   
-## Valor de retorno  
- `_heapset` Retorna uma das seguintes constantes de manifesto de inteiro definidas no malloc.  
+## <a name="return-value"></a>Valor de retorno  
+ `_heapset` retorna uma das seguintes constantes de manifesto de inteiro definidas em Malloc.h.  
   
  `_HEAPBADBEGIN`  
- Informações de cabeçalho inicial inválidas ou não foi encontradas.  
+ As informações do cabeçalho inicial são inválidas ou não foram encontradas.  
   
  `_HEAPBADNODE`  
  Heap danificado ou nó inválido encontrado.  
@@ -72,24 +86,24 @@ int _heapset(
  Heap não inicializado.  
   
  `_HEAPOK`  
- Heap parece estar consistente.  
+ O heap parece ser consistente.  
   
- Além disso, se ocorrer um erro, `_heapset` define `errno` para `ENOSYS`.  
+ Além disso, se ocorrer um erro, `_heapset` definirá `errno` como `ENOSYS`.  
   
-## Comentários  
- O `_heapset` função mostra os locais de memória livre ou nós que foram substituídas acidentalmente.  
+## <a name="remarks"></a>Comentários  
+ A função `_heapset` mostra locais com memória livre ou nós que foram substituídos acidentalmente.  
   
- `_heapset` verifica a consistência mínima na pilha e define cada byte de entradas livres da heap de `fill` valor. Esse valor conhecido mostra quais locais de memória do heap contêm nós livres e que contêm dados que foram gravados acidentalmente memória liberada. Se o sistema operacional não suportar `_heapset`\(por exemplo, Windows 98\), a função retorna `_HEAPOK` e define `errno` para `ENOSYS`.  
+ `_heapset` verifica a consistência mínima no heap e define cada byte das entradas livres do heap para o valor `fill`. Esse valor conhecido mostra quais locais de memória do heap contêm nós livres e quais contêm dados que foram gravados acidentalmente na memória liberada. Se o sistema operacional não der suporte a `_heapset` (por exemplo, Windows 98), a função retornará `_HEAPOK` e definirá `errno` como `ENOSYS`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_heapset`|\< malloc \>|\< errno. h \>|  
+|-------------|---------------------|---------------------|  
+|`_heapset`|\<malloc.h>|\<errno.h>|  
   
- Para obter informações de compatibilidade, consulte [compatibilidade](../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_heapset.c  
@@ -128,15 +142,20 @@ int main( void )
 ```  
   
 ```Output  
-OK - heap é bem  
+OK - heap is fine  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Alocação de memória](../c-runtime-library/memory-allocation.md)   
- [\_heapadd](../c-runtime-library/heapadd.md)   
- [\_heapchk](../c-runtime-library/reference/heapchk.md)   
- [\_heapmin](../c-runtime-library/reference/heapmin.md)   
- [\_heapwalk](../Topic/_heapwalk.md)
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../c-runtime-library/memory-allocation.md)   
+ [_heapadd](../c-runtime-library/heapadd.md)   
+ [_heapchk](../c-runtime-library/reference/heapchk.md)   
+ [_heapmin](../c-runtime-library/reference/heapmin.md)   
+ [_heapwalk](../c-runtime-library/reference/heapwalk.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

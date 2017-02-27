@@ -1,79 +1,92 @@
 ---
-title: "_TRUNCATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TRUNCATE"
-  - "TRUNCATE"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante _TRUNCATE"
-  - "Constante TRUNCATE"
+title: _TRUNCATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TRUNCATE
+- TRUNCATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- TRUNCATE constant
+- _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _TRUNCATE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8aa045caaaaa198c4ddbf19d03decca8d1372155
 
-Especifica o comportamento de truncamento de cadeia de caracteres.  
+---
+# <a name="truncate"></a>_TRUNCATE
+Especifica o comportamento de truncamento da cadeia de caracteres.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #include <stdlib.h>  
 ```  
   
-## Comentários  
- `_TRUNCATE` habilita comportamento de truncamento quando passado como o parâmetro de `count` a essas funções:  
+## <a name="remarks"></a>Comentários  
+ `_TRUNCATE` habilita o comportamento de truncamento quando passado como o parâmetro `count` para essas funções:  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../Topic/strncpy_s,%20_strncpy_s_l,%20wcsncpy_s,%20_wcsncpy_s_l,%20_mbsncpy_s,%20_mbsncpy_s_l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- [mbsrtowcs\_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
+ [mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../Topic/wcstombs_s,%20_wcstombs_s_l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [wcsrtombs\_s](../c-runtime-library/reference/wcsrtombs-s.md)  
+ [wcsrtombs_s](../c-runtime-library/reference/wcsrtombs-s.md)  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
- Se o buffer de destino for muito pequeno para manter a cadeia de caracteres inteira, o comportamento normal dessas funções é a tratará como um caso de erro \(consulte [Validação do parâmetro](../c-runtime-library/parameter-validation.md)\).  No entanto, se o truncamento de cadeia de caracteres é habilitado passando `_TRUNCATE`, essas funções só copiarão o máximo possível da cadeia de caracteres como se ajustará, deixando o buffer de destino com terminação nula, e retornarão com êxito.  
+ Se o buffer de destino for muito pequeno para conter toda a cadeia de caracteres, o comportamento normal dessas funções será tratá-la como uma situação de erro (consulte [Validação de parâmetro](../c-runtime-library/parameter-validation.md)). No entanto, se o truncamento da cadeia de caracteres for habilitado ao passar `_TRUNCATE`, essas funções copiarão da cadeia de caracteres somente o que couber, deixando o buffer de destino com terminação nula e retornarão com êxito.  
   
- As alterações de truncamento os valores de retorno de funções afetadas.  As seguintes funções retornam 0 se nenhum truncamento ocorre, ou `STRUNCATE` se o truncamento:  
+ O truncamento da cadeia de caracteres altera os valores de retorno das funções afetadas. As seguintes funções retornarão 0 se não ocorrer o truncamento ou `STRUNCATE` se ocorrer o truncamento:  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../Topic/strncpy_s,%20_strncpy_s_l,%20wcsncpy_s,%20_wcsncpy_s_l,%20_mbsncpy_s,%20_mbsncpy_s_l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../Topic/wcstombs_s,%20_wcstombs_s_l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- As seguintes funções retornam o número de caracteres copiados se nenhum truncamento ocorre, ou \-1 se ocorrer o truncamento ocorre \(correspondendo o comportamento das funções originais do snprintf\):  
+ As seguintes funções retornarão o número de caracteres copiados se não ocorrer o truncamento ou -1 se o truncamento ocorrer (correspondendo ao comportamento das funções snprintf originais):  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_truncate.c  
@@ -91,7 +104,15 @@ int main()
 }  
 ```  
   
-  **truncamento ocorreu\!**  
-**'1234'**   
-## Consulte também  
+```Output  
+truncation occurred!  
+'1234'  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Constantes globais](../c-runtime-library/global-constants.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

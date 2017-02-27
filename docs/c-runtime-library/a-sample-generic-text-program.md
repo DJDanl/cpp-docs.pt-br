@@ -1,36 +1,50 @@
 ---
-title: "Um programa de texto gen&#233;rico de exemplo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Tipo _TCHAR"
-  - "mapeamentos, TCHAR. Tipos de dados H"
-  - "exemplo de texto genérico [CRT]"
-  - "Tipo TCHAR"
-  - "TCHAR. Tipos de dados H, mapeamento"
+title: "Uma Amostra de Programa de Texto Genérico | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Um programa de texto gen&#233;rico de exemplo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bbd3d53160c90af6a4bf34a7c3aad3aad968c739
 
-**Específico da Microsoft**  
+---
+# <a name="a-sample-generic-text-program"></a>Um programa de texto genérico de exemplo
+**Seção específica da Microsoft**  
   
- O seguinte GENTEXT.C programa, fornece uma ilustração mais detalhada dos mapeamentos de genérico\- texto definidos em TCHAR.H:  
+ O programa a seguir, GENTEXT. C, fornece uma ilustração mais detalhada do uso de mapeamentos de texto genéricos definidos em TCHAR.H:  
   
 ```  
 // GENTEXT.C  
@@ -71,7 +85,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Se `_MBCS` foi definido, mapas de GENTEXT.C a seguir programa de MBCS:  
+ Se `_MBCS` tiver sido definido, GENTEXT.C será mapeado para o programa MBCS a seguir:  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -109,7 +123,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Se `_UNICODE` foi definido, mapas de GENTEXT.C à versão Unicode do programa.  Para obter mais informações sobre como usar `wmain` em programas Unicode como uma substituição para `main`, consulte [Usando o wmain](../c-language/using-wmain.md)*em C \- referência de linguagem*.  
+ Se `_UNICODE` tiver sido definido, GENTEXT.C será mapeado para a seguinte versão Unicode do programa. Para obter mais informações sobre como usar o `wmain` em programas Unicode como uma substituição para `main`, consulte [Usando wmain](../c-language/using-wmain.md) na *Referência da linguagem C*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -147,7 +161,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Se nem nem `_MBCS``_UNICODE` foram definidas, mapas de GENTEXT.C ao código ASCII de byte único, como segue:  
+ Se nem `_MBCS` nem `_UNICODE` tiver sido definido, GENTEXT.C mapeará para o código ASCII de um byte da seguinte maneira:  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,11 +198,16 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md)   
  [Mapeamentos de tipo de dados](../c-runtime-library/data-type-mappings.md)   
- [Constante e mapeamentos de variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
+ [Mapeamentos de constante e variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Mapeamentos de rotina](../c-runtime-library/routine-mappings.md)   
  [Usando mapeamentos de texto genérico](../c-runtime-library/using-generic-text-mappings.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

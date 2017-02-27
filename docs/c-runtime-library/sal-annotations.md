@@ -1,75 +1,93 @@
 ---
-title: "Anota&#231;&#245;es de SAL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Anotação __bcount"
-  - "Anotação __checkreturn"
-  - "Anotação __deref"
-  - "Anotação __deref_opt"
-  - "Anotação __ecount"
-  - "Anotação __full"
-  - "Anotação __in"
-  - "Anotação __inout"
-  - "Anotação __nz"
-  - "Anotação __opt"
-  - "Anotação __out"
-  - "Anotação __part"
-  - "Anotação __ref"
-  - "Anotação __z"
-  - "Anotação _bcount"
-  - "_CA_SHOULD_CHECK_RETURN"
-  - "Anotação _deref"
-  - "Anotação _deref_opt"
-  - "Anotação _ecount"
-  - "Anotação _full"
-  - "Anotação _in"
-  - "Anotação _inout"
-  - "Anotação _nz"
-  - "Anotação _opt"
-  - "Anotação _out"
-  - "Anotação _part"
-  - "Anotação _ref"
-  - "Anotação _z"
-  - "Anotações [C++]"
-  - "Anotação bcount"
-  - "Anotação deref"
-  - "Anotação deref_opt"
-  - "Anotação ecount"
-  - "Anotação completa"
-  - "em anotação"
-  - "Anotação inout"
-  - "Anotação nz"
-  - "Anotação opt"
-  - "Anotação out"
-  - "Anotação part"
-  - "Anotação ref"
-  - "anotações de SAL"
-  - "anotações de SAL, _CA_SHOULD_CHECK_RETURN"
-  - "Anotação z"
+title: "Anotações SAL | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- __z annotation
+- ref annotation
+- _opt annotation
+- __checkreturn annotatioin
+- __deref_opt annotation
+- deref_opt annotation
+- __deref annotation
+- __in annotation
+- annotations [C++]
+- z annotation
+- _inout annotation
+- __ref annotation
+- full annotation
+- _in annotation
+- _ref annotation
+- __out annotation
+- _ecount annotation
+- SAL annotations
+- __opt annotation
+- inout annotation
+- in annotation
+- _CA_SHOULD_CHECK_RETURN
+- __bcount annotation
+- _full annotation
+- _bcount annotation
+- deref annotation
+- part annotation
+- _out annotation
+- __nz annotation
+- __part annotation
+- opt annotation
+- __full annotation
+- _nz annotation
+- _z annotation
+- out annotation
+- __ecount annotation
+- __inout annotation
+- SAL annotations, _CA_SHOULD_CHECK_RETURN
+- _deref_opt annotation
+- _deref annotation
+- nz annotation
+- _part annotation
+- ecount annotation
+- bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Anota&#231;&#245;es de SAL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bdb69f6744c45cacaf4c403967842302f2dc9865
 
-Se você examinar os arquivos de cabeçalho de biblioteca, você pode observar algumas anotações incomuns, por exemplo, `_In_z` e `_Out_z_cap_(_Size)`.  Estes são exemplos de linguagem de anotação a Microsoft código\-fonte \(SAL\), que fornece um conjunto de anotações para descrever como uma função usa seus parâmetros, por exemplo, as suposições faz sobre eles e as garantias faz em Concluir.  O arquivo de cabeçalho \< sal \> define as anotações.  
+---
+# <a name="sal-annotations"></a>Anotações de SAL
+Se você examinar os arquivos de cabeçalho de biblioteca, notará algumas anotações incomuns, como por exemplo, `_In_z` e `_Out_z_cap_(_Size)`. Estes são exemplos de SAL (linguagem de anotação de código-fonte) da Microsoft, que fornece um conjunto de anotações para descrever como uma função usa seus parâmetros, por exemplo, as suposições que ela faz sobre eles e as garantias obtidas ao concluir. O arquivo de cabeçalho \<sal.h> define as anotações.  
   
- Para obter mais informações sobre como usar as anotações SAL [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)], consulte [Usando anotações de SAL para reduzir defeitos de código do C\/C\+\+](../Topic/Using%20SAL%20Annotations%20to%20Reduce%20C-C++%20Code%20Defects.md).  
+ Para obter mais informações sobre como usar anotações de SAL no Visual Studio, consulte [Usando Anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

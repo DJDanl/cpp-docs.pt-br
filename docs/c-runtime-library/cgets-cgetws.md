@@ -1,59 +1,73 @@
 ---
-title: "_cgets, _cgetws | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cgetws"
-  - "_cgets"
-apilocation: 
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr110_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cgetws"
-  - "_cgetws"
-  - "_cgets"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _cgetws"
-  - "cadeias de caracteres [C++], obtendo do console"
-  - "console, obtendo cadeias de caracteres de"
-  - "Função _cgets"
-  - "Função cgetws"
-  - "Função cgets"
+title: _cgets, _cgetws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cgetws
+- _cgets
+apilocation:
+- msvcr100.dll
+- msvcr110.dll
+- msvcr80.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr110_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- cgetws
+- _cgetws
+- _cgets
+dev_langs:
+- C++
+helpviewer_keywords:
+- _cgetws function
+- strings [C++], getting from console
+- console, getting strings from
+- _cgets function
+- cgetws function
+- cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
 caps.latest.revision: 32
-caps.handback.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _cgets, _cgetws
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 702036cfaebb899ee4cee61877d37e2de2211617
 
-Obtém uma cadeia de caracteres no console. Versões mais seguras dessas funções estão disponíveis; consulte [\_cgets\_s, \_cgetws\_s](../Topic/_cgets_s,%20_cgetws_s.md).  
+---
+# <a name="cgets-cgetws"></a>_cgets, _cgetws
+Obtém uma cadeia de caracteres do console. Estão disponíveis versões mais seguras dessas funções; consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Essas funções são obsoletas. A partir do Visual Studio 2015, eles não estão disponíveis no CRT. As versões seguras dessas funções, cgets\_s e cgetws\_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [\_cgets\_s, \_cgetws\_s](../Topic/_cgets_s,%20_cgetws_s.md).  
+>  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT. As versões seguras dessas funções, _cgets_s e _cgetws_s, ainda estão disponíveis. Para obter informações sobre essas funções alternativas, consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos executados no tempo de execução do Windows. Para obter mais informações, consulte [funções de CRT não têm suportadas com \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *_cgets(   
@@ -72,36 +86,36 @@ wchar_t *_cgetws(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `buffer`  
  Local de armazenamento de dados.  
   
-## Valor de retorno  
- `_cgets` e `_cgetws` retornar um ponteiro para o início da cadeia de caracteres, `buffer[2]`. Se `buffer` for `NULL`, essas funções para invocar o manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, retorne `NULL` e defina `errno` para `EINVAL`.  
+## <a name="return-value"></a>Valor retornado  
+ `_cgets` e `_cgetws` retornam um ponteiro para o início da cadeia de caracteres, em `buffer[2]`. Se `buffer` for `NULL`, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão `NULL` e definirão `errno` como `EINVAL`.  
   
-## Comentários  
- Essas funções ler uma cadeia de caracteres do console e armazenar a cadeia de caracteres e seu comprimento no local apontado pela `buffer`. O `buffer` parâmetro deve ser um ponteiro para uma matriz de caracteres. O primeiro elemento da matriz, `buffer[0]`, deve conter o comprimento máximo \(em caracteres\) da cadeia de caracteres a ser lido. A matriz deve conter elementos suficientes para manter a cadeia de caracteres, um caractere nulo de terminação \('\\0'\) e 2 bytes adicionais. A função lê caracteres até um retorno de carro – linha feed combinação \(CR\-LF\) ou o número especificado de caracteres é lido. A cadeia de caracteres é armazenada começando em `buffer[2]`. Se a função lê uma CR\-LF, ele armazena o caractere nulo \('\\0'\). A função, em seguida, armazena o comprimento real da cadeia de caracteres no segundo elemento de matriz, `buffer[1]`.  
+## <a name="remarks"></a>Comentários  
+ Essas funções leem uma cadeia de caracteres do console e armazenam a cadeia de caracteres e seu comprimento no local apontado por `buffer`. O parâmetro `buffer` deve ser um ponteiro para uma matriz de caracteres. O primeiro elemento da matriz, `buffer[0]`, deve conter o tamanho máximo (em caracteres) da cadeia de caracteres a ser lida. A matriz deve conter elementos suficientes para conter a cadeia de caracteres, um caractere nulo de terminação ('\0') e 2 bytes adicionais. A função lê caracteres até uma combinação de CR-LF (retorno de carro – alimentação de linha) ou o número especificado de caracteres ser lido. A cadeia de caracteres é armazenada começando em `buffer[2]`. Se a função ler CR-LF, ela armazenará o caractere nulo ('\0'). A função então armazena o tamanho real da cadeia de caracteres no segundo elemento de matriz, `buffer[1]`.  
   
- Como todas as chaves de edição estão ativas quando `_cgets` ou`_cgetws` é chamada enquanto em um console de janela, pressione a tecla F3 repete a última entrada digitada.  
+ Uma vez que todas as chaves de edição estão ativas quando `_cgets` ou `_cgetws` é chamado enquanto em uma janela do console, pressionar a tecla F3 repete a última entrada digitada.  
   
- No C\+\+, essas funções têm sobrecargas de modelo que invocam as contrapartes seguros, mais recentes dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).  
   
-### Mapeamentos de rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR. h|Unicode e MBCS não definidos|MBCS definido|Unicode definido|  
-|---------------------|----------------------------------|-------------------|----------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_cgets`|\< conio.h \>|  
-|`_cgetws`|\< conio.h \> ou \< WCHAR \>|  
+|-------------|---------------------|  
+|`_cgets`|\<conio.h>|  
+|`_cgetws`|\<conio.h> ou \<wchar.h>|  
   
- Para obter informações de compatibilidade, consulte [compatibilidade](../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_cgets.c  
@@ -140,9 +154,16 @@ int main( void )
   
 ```Output  
   
-A line of input.Linha de texto, seguido por um retorno de carro de entrada: comprimento da linha = 16 Text = uma linha de entrada.  
+      A line of input.Input line of text, followed by carriage return:  
+Line Length = 16  
+Text = A line of input.  
 ```  
   
-## Consulte também  
- [Console e E\/S de porta](../c-runtime-library/console-and-port-i-o.md)   
- [\_getch, \_getwch](../Topic/_getch,%20_getwch.md)
+## <a name="see-also"></a>Consulte também  
+ [E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)   
+ [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

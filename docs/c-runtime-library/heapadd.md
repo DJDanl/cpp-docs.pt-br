@@ -1,52 +1,66 @@
 ---
-title: "_heapadd | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapadd"
-apilocation: 
-  - "msvcr100.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr80.dll"
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr90.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "heapadd"
-  - "_heapadd"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _heapadd"
-  - "memória, adicionando a heaps"
-  - "heaps, adicionando memória"
-  - "Função heapadd"
+title: _heapadd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapadd
+apilocation:
+- msvcr100.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr80.dll
+- msvcrt.dll
+- msvcr110.dll
+- msvcr90.dll
+apitype: DLLExport
+f1_keywords:
+- heapadd
+- _heapadd
+dev_langs:
+- C++
+helpviewer_keywords:
+- _heapadd function
+- memory, adding to heaps
+- heaps, adding memory
+- heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _heapadd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4d2f5694ad2f06bf78307783d8f24c34bb0849df
 
-Adiciona a memória no heap.  
+---
+# <a name="heapadd"></a>_heapadd
+Adiciona memória ao heap.  
   
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ele não está disponível no CRT.  
+>  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _heapadd(   
@@ -55,38 +69,43 @@ int _heapadd(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `memblock`  
  Ponteiro para a memória de heap.  
   
  `size`  
- Tamanho da memória para adicionar, em bytes.  
+ Tamanho da memória a ser adicionada, em bytes.  
   
-## Valor de retorno  
- Se for bem\-sucedido, `_heapadd` retornará 0; caso contrário, a função retorna – 1 e define `errno` para `ENOSYS`.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, `_heapadd` retornará 0; caso contrário, a função retornará – 1 e definirá `errno` como `ENOSYS`.  
   
- Para obter mais informações sobre esse e outros códigos de retorno, consulte [doserrno, errno, sys\_errlist e sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- Começando com o Visual C\+\+ versão 4.0, a estrutura subjacente do heap foi movida para as bibliotecas de tempo de execução C para dar suporte os novos recursos de depuração. Como resultado, `_heapadd` não é suportada em qualquer plataforma que se baseia na API do Win32.  
+## <a name="remarks"></a>Comentários  
+ Começando com o Visual C++ versão 4.0, a estrutura de heap subjacente foi movida para as bibliotecas de tempo de execução de C para dar suporte a novos recursos de depuração. Como resultado, `_heapadd` não tem mais suporte em nenhuma plataforma baseada na API do Win32.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_heapadd`|\< malloc \>|\< errno. h \>|  
+|-------------|---------------------|---------------------|  
+|`_heapadd`|\<malloc.h>|\<errno.h>|  
   
- Para obter informações de compatibilidade, consulte [compatibilidade](../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md) na Introdução.  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Alocação de memória](../c-runtime-library/memory-allocation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../c-runtime-library/memory-allocation.md)   
  [free](../c-runtime-library/reference/free.md)   
- [\_heapchk](../c-runtime-library/reference/heapchk.md)   
- [\_heapmin](../c-runtime-library/reference/heapmin.md)   
- [\_heapset](../c-runtime-library/heapset.md)   
- [\_heapwalk](../Topic/_heapwalk.md)   
+ [_heapchk](../c-runtime-library/reference/heapchk.md)   
+ [_heapmin](../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../c-runtime-library/heapset.md)   
+ [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
  [malloc](../c-runtime-library/reference/malloc.md)   
  [realloc](../c-runtime-library/reference/realloc.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

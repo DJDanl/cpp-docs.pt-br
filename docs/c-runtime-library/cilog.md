@@ -1,59 +1,79 @@
 ---
-title: "_CIlog | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CIlog"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcrt.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CIlog"
-  - "CIlog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Intrínseco _CIlog"
-  - "CIlog intrínseco"
+title: _CIlog | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CIlog
+apilocation:
+- msvcr90.dll
+- msvcr120.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcrt.dll
+apitype: DLLExport
+f1_keywords:
+- _CIlog
+- CIlog
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CIlog intrinsic
+- CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _CIlog
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4bdd81163dbfe776e4126fbe1a4d1f2364150022
 
-Calcula o logaritmo natural do valor superior da pilha.  
+---
+# <a name="cilog"></a>_CIlog
+Calcula o logaritmo natural do valor superior na pilha.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void __cdecl _CIlog();  
 ```  
   
-## Comentários  
- Essa versão da função de `log` tem uma convenção chamando especializada que o compilador entenda.  Acelera a execução porque impede que as cópias são geradas e ajuda a alocação do registro.  
+## <a name="remarks"></a>Comentários  
+ Esta versão da função `log` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.  
   
- O valor resultante é forçada na parte superior da pilha.  
+ O valor resultante é colocado na parte superior da pilha.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Plataforma:** x86  
   
-## Consulte também  
- [Referência da função alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log, logf, log10, log10f](../Topic/log,%20logf,%20log10,%20log10f.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

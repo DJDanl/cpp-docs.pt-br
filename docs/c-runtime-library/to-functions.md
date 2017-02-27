@@ -1,90 +1,103 @@
 ---
-title: "Fun&#231;&#245;es to | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "To"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "case, convertendo"
-  - "caracteres, convertendo"
-  - "minúsculas, convertendo cadeias de caracteres"
-  - "conversão de cadeia de caracteres, case"
-  - "conversão de cadeia de caracteres, para caracteres diferentes"
-  - "para funções"
-  - "maiúsculas, convertendo cadeias de caracteres"
+title: "Funções to | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr120.dll
+- msvcr90.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr80.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- To
+dev_langs:
+- C++
+helpviewer_keywords:
+- to functions
+- string conversion, to different characters
+- string conversion, case
+- lowercase, converting strings
+- uppercase, converting strings
+- case, converting
+- characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fun&#231;&#245;es to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0f4efaf826da7a2ff1ef5b9f21bc5e846751211b
 
-Cada uma das funções de **to** e seu macro associada, se houver, converte um único caractere para outro caractere.  
+---
+# <a name="to-functions"></a>Funções to
+Cada uma das funções **to** e sua macro associada, se houver, converte um único caractere em outro caractere.  
   
 |||  
 |-|-|  
-|[\_\_toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, \_toupper, towupper](../Topic/toupper,%20_toupper,%20towupper,%20_toupper_l,%20_towupper_l.md)|  
-|[tolower, \_tolower, towlower](../Topic/tolower,%20_tolower,%20towlower,%20_tolower_l,%20_towlower_l.md)||  
+|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|  
+|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||  
   
-## Comentários  
- As funções de **to** e as conversões macro são como se segue.  
+## <a name="remarks"></a>Comentários  
+ As funções **to** e as conversões de macro são as seguintes.  
   
 |Rotina|Macro|Descrição|  
-|------------|-----------|---------------|  
-|`__toascii`|`__toascii`|Converte `c` ao caractere ASCII|  
-|`tolower`|`tolower`|Converte `c` minúsculas se apropriado|  
-|`_tolower`|`_tolower`|Converte `c` minúsculas|  
-|`towlower`|Nenhum|Converte `c` a letra minúscula correspondente ampla de caracteres|  
-|`toupper`|`toupper`|Converte `c` se apropriado para letras maiúsculas|  
-|`_toupper`|`_toupper`|Converte `c` para letras maiúsculas|  
-|`towupper`|Nenhum|Converte c a letra maiúscula correspondente ampla de caracteres|  
+|-------------|-----------|-----------------|  
+|`__toascii`|`__toascii`|Converte `c` em caractere ASCII|  
+|`tolower`|`tolower`|Converte `c` em minúscula, se apropriado|  
+|`_tolower`|`_tolower`|Converte `c` em minúscula|  
+|`towlower`|Nenhum|Converte `c` em letra minúscula de caractere largo correspondente|  
+|`toupper`|`toupper`|Converte `c` em maiúscula, se apropriado|  
+|`_toupper`|`_toupper`|Converte `c` em maiúscula|  
+|`towupper`|Nenhum|Converte c em letra maiúscula de caractere largo correspondente|  
   
- Para usar as versões da função de rotinas de **to** que também são definidas como macros, remova as definições macro com políticas de `#undef` ou não inclua CTYPE.H.  Se você usar a opção do compilador do \/Za, o compilador usa a versão da função de `toupper` ou de `tolower`.  As declarações das funções de `toupper` e de `tolower` estão em. STDLIB.H.  
+ Para usar as versões de função das rotinas **to** que também são definidas como macros, remova as definições de macro com diretivas `#undef` ou não inclua CTYPE. H. Se você usar a opção do compilador /Za, o compilador usará a versão da função `toupper` ou `tolower`. As declarações das funções `toupper` e `tolower` estão em STDLIB. H.  
   
- A rotina de `__toascii` define todos menos os bits de ordem mais inferior de `c` 7 a 0, de forma que o valor convertido representa um caractere no conjunto de caracteres ASCII.  Se já `c` representa um caractere ASCII, `c` permanecerá inalterado.  
+ A rotina `__toascii` define todos, exceto os 7 bits de ordem inferior de `c` a 0, de forma que o valor convertido represente um caractere no conjunto de caracteres ASCII. Se `c` já representar um caractere ASCII, `c` permanecerá inalterado.  
   
- As rotinas de `tolower` e de `toupper` :  
+ As rotinas `tolower` e `toupper`:  
   
--   É dependente da categoria de `LC_CTYPE` de localidade atual \(`tolower` chama `isupper` e `toupper` chama `islower`\).  
+-   Dependem da categoria `LC_CTYPE` da localidade atual (`tolower` chama `isupper` e `toupper` chama `islower`).  
   
--   Converter `c` se `c` representa uma letra conversível dos casos apropriadas na localidade atual e os casos opostos existem para essa localidade.  Caso contrário, `c` permanecerá inalterado.  
+-   Convertem `c` se `c` representar uma letra conversível do caso apropriado na localidade atual e se o caso oposto existir para essa localidade. Caso contrário, `c` permanecerá inalterado.  
   
- As rotinas de `_tolower` e de `_toupper` :  
+ As rotinas `_tolower` e `_toupper`:  
   
--   As versões de localidade independentes, muito mais rápido de `tolower` e **toupper.**  
+-   São versões muito mais rápidas, independentes de localidade, de `tolower` e **toupper.**  
   
--   Pode ser usado quando **isascii\(**`c`**\)** e **isupper\(**`c`**\)** ou **islower\(**`c`**\)**, respectivamente, for diferente de zero.  
+-   Só podem ser usadas quando **isascii(**`c`**)** e **isupper(**`c`**)** ou **islower(**`c`**)**, respectivamente, forem diferentes de zero.  
   
--   Tem resultados indefinidos se `c` não é uma letra ASCII dos argumentos apropriados para converter.  
+-   Terão resultados indefinidos se `c` não for uma letra ASCII do caso apropriado para conversão.  
   
- As funções de `towlower` e de `towupper` retornam uma cópia convertida de `c` se e somente se ambas as condições forem diferentes de zero.  Caso contrário, `c` permanecerá inalterado.  
+ As funções `towlower` e `towupper` retornarão uma cópia convertida de `c` se ambas as seguintes condições forem diferentes de zero. Caso contrário, `c` permanecerá inalterado.  
   
--   `c` é um caractere largo dos casos adequados \(ou seja, para que `iswupper` ou **iswlower,** respectivamente, é diferente de zero\).  
+-   `c` é um caractere largo do caso apropriado (ou seja, para o qual `iswupper` ou **iswlower,** respectivamente, é diferente de zero).  
   
--   Há um caractere largo correspondente dos exemplos de destino \(ou seja, para que `iswlower` ou **iswupper,** respectivamente, é diferente de zero\).  
+-   Há um caractere largo correspondente do caso de destino (ou seja, para o qual `iswlower` ou **iswupper,** respectivamente, é diferente de zero).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_toupper.c  
@@ -117,9 +130,17 @@ int main( void )
 }  
 ```  
   
-  **Algumas de ESTAS letras são capitais.**  
-**algumas dessas LETRAS IS capitais.**   
-## Consulte também  
- [Conversão de dados](../c-runtime-library/data-conversion.md)   
+```Output  
+Some of THESE letters are Capitals.  
+sOME OF these LETTERS ARE cAPITALS.  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../c-runtime-library/data-conversion.md)   
  [Localidade](../c-runtime-library/locale.md)   
  [Rotinas is, isw](../c-runtime-library/is-isw-routines.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+
