@@ -1,46 +1,50 @@
 ---
-title: "_execute_onexit_table, _initialize_onexit_table, _register_onexit_function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_execute_onexit_table"
-  - "_initialize_onexit_table"
-  - "_register_onexit_function"
-apilocation: 
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_execute_onexit_table"
-  - "process/_execute_onexit_table"
-  - "_initialize_onexit_table"
-  - "process/_initialize_onexit_table"
-  - "_register_onexit_function"
-  - "process/_register_onexit_function"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "função _execute_onexit_table"
-  - "função _initialize_onexit_table"
-  - "função _register_onexit_function"
+title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _execute_onexit_table
+- _initialize_onexit_table
+- _register_onexit_function
+apilocation:
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _execute_onexit_table
+- process/_execute_onexit_table
+- _initialize_onexit_table
+- process/_initialize_onexit_table
+- _register_onexit_function
+- process/_register_onexit_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- _execute_onexit_table function
+- _initialize_onexit_table function
+- _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d57452bb893ce86a9bddf949a9887eaf38e1cdbd
 
-Gerencia as rotinas de ser chamado em tempo de saída.  
+---
+# <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
+Gerencia as rotinas que serão chamadas no tempo de saída.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _initialize_onexit_table(  
@@ -57,34 +61,39 @@ int _execute_onexit_table(
     );  
 ```  
   
-#### Parâmetros  
- \[entrada\/saída\] `table`  
+#### <a name="parameters"></a>Parâmetros  
+ [inout] `table`  
  Ponteiro para a tabela de função onexit.  
   
- \[in\] `function`  
+ [in] `function`  
  Ponteiro para uma função para adicionar à tabela de função onexit.  
   
-## Valor de retorno  
- Se for bem\-sucedido, retornará 0. Caso contrário, retornará um valor negativo.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará 0. Caso contrário, retornará um valor negativo.  
   
-## Comentários  
- Essas funções são detalhes de implementação de infra\-estrutura usada para dar suporte ao tempo de execução C e não devem ser chamados diretamente no seu código. O tempo de execução C usa um *tabela de função onexit* para representar a sequência das funções registradas por chamadas para `atexit`, `at_quick_exit`, e `_onexit`. A estrutura de dados de tabela de função onexit é um detalhe de implementação opaco do tempo de execução C; a ordem e o significado de seus membros de dados podem ser alteradas. Eles não devem ser examinados pelo código externo.  
+## <a name="remarks"></a>Comentários  
+ Essas funções são detalhes da implementação de infraestrutura usada para dar suporte ao tempo de execução C e não devem ser chamadas diretamente no seu código. O tempo de execução C usa uma *tabela de função onexit* para representar a sequência das funções registradas por chamadas para `atexit`, `at_quick_exit` e `_onexit`. A estrutura de dados de tabela de função onexit é um detalhe de implementação opaco do tempo de execução C; a ordem e o significado de seus membros de dados podem ser alterados. Eles não devem ser examinados pelo código externo.  
   
- O `_initialize_onexit_table` função inicializa a tabela de função onexit para seu valor inicial.  Essa função deve ser chamada antes que a tabela de função onexit é passada como `_register_onexit_function` ou `_execute_onexit_table`.  
+ A função `_initialize_onexit_table` inicializa a tabela de função onexit para seu valor inicial.  Essa função deve ser chamada antes que a tabela de função onexit seja passada para `_register_onexit_function` ou `_execute_onexit_table`.  
   
- O `_register_onexit_function` função acrescenta uma função ao final da tabela de função onexit.  
+ A função `_register_onexit_function` acrescenta uma função ao final da tabela de função onexit.  
   
- O `_execute_onexit_table` função executa todas as funções na tabela de função onexit, limpa a tabela e, em seguida, retorna. Após uma chamada para `_execute_onexit_table`, a tabela está em um estado inválido; ele deve ser reinicializado por uma chamada a `_initialize_onexit_table` antes de ser usado novamente.  
+ A função `_execute_onexit_table` executa todas as funções na tabela de função onexit, limpa a tabela e, em seguida, retorna. Após uma chamada para `_execute_onexit_table`, a tabela fica em um estado inválido. Ela deve ser reinicializada por uma chamada para `_initialize_onexit_table` antes de ser usada novamente.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C\+\+: \< process.h \>|  
+|-------------|---------------------|  
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|  
   
- O `_initialize_onexit_table`, `_register_onexit_function`, e `_execute_onexit_table` funções são específicas da Microsoft. Para informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
+ As funções `_initialize_onexit_table`, `_register_onexit_function` e `_execute_onexit_table` são específicas da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [atexit](../c-runtime-library/reference/atexit.md)   
- [sair, Exit, Exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [\_onexit, \_onexit\_m](../c-runtime-library/reference/onexit-onexit-m.md)
+ [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

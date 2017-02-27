@@ -1,40 +1,53 @@
 ---
-title: "Instru&#231;&#227;o return (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "( ) parênteses em instruções de retorno"
+title: "Instrução return para (C) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instru&#231;&#227;o return (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 214bca780d3ffe508d9e5e3bd9d78392df2f35b9
 
-A instrução `return` encerra a execução de uma função e devolve o controle para a função de chamada.  A execução é retomada na função de chamada no ponto imediatamente após a chamada.  Uma instrução `return` também pode retornar um valor à função de chamada.  Consulte [Tipo de retorno](../Topic/Return%20Type.md) para obter mais informações.  
+---
+# <a name="return-statement-c"></a>Instrução return (C)
+A instrução `return` encerra a execução de uma função e devolve o controle para a função de chamada. A execução é retomada na função de chamada no ponto imediatamente após a chamada. Uma instrução `return` também pode retornar um valor à função de chamada. Consulte [Tipo de Retorno](../c-language/return-type.md) para obter mais informações.  
   
-## Sintaxe  
- *jump\-statement*:  
- **return**  *expression*  opt **;**  
+## <a name="syntax"></a>Sintaxe  
+ *jump-statement*:  
+ **return**  *expression* opt**;**  
   
- O valor de *expression*, se presente, é retornado à função de chamada.  Se o valor de *expression* for omitido, o valor de retorno da função será indefinido.  A expressão, se presente, será avaliada e convertida no tipo retornado pela função.  Se a função foi declarada com o tipo de retorno `void`, uma instrução `return` que contém uma expressão gera um aviso e a expressão não é avaliada.  
+ O valor de *expression*, se existir, será retornado à função de chamada. Se o valor de *expression* for omitido, o valor retornado da função será indefinido. A expressão, se presente, será avaliada e convertida no tipo retornado pela função. Se a função foi declarada com o tipo de retorno `void`, uma instrução `return` que contém uma expressão gera um aviso e a expressão não é avaliada.  
   
- Se nenhuma instrução `return` aparecer em uma definição de função, o controle retornará automaticamente à função de chamada depois que a última instrução da função chamada for executada.  Nesse caso, o valor de retorno da função chamada será indefinido.  Se um valor de retorno não for necessário, declare a função para ter o tipo de retorno `void`; caso contrário, o tipo de retorno padrão será `int`.  
+ Se nenhuma instrução `return` aparecer em uma definição de função, o controle retornará automaticamente à função de chamada depois que a última instrução da função chamada for executada. Nesse caso, o valor de retorno da função chamada será indefinido. Se um valor de retorno não for necessário, declare a função para ter o tipo de retorno `void`; caso contrário, o tipo de retorno padrão será `int`.  
   
- Muitos programadores colocam o argumento *expression* da instrução `return` entre parênteses.  No entanto, C não requer parênteses.  
+ Muitos programadores colocam o argumento *expression* da instrução `return` entre parênteses. No entanto, C não requer parênteses.  
   
  Este exemplo demonstra a instrução `return`:  
   
@@ -70,10 +83,18 @@ void draw( int i, long long ll )
   
 ```  
   
- Neste exemplo, a função `main` chamada duas funções: `sq` e `draw`.  A função `sq` retorna o valor de `x * x` para `main`, onde o valor de retorno será atribuído a `y`.  Os parênteses ao redor da expressão de retorno em `sq` são avaliados como parte da expressão, e não são exigidos pela instrução de retorno.  Como a expressão de retorno é avaliada antes de ser convertida no tipo de retorno, `sq` força o tipo de expressão a ser o tipo de retorno com uma conversão para evitar um possível estouro de inteiros, o que pode levar a resultados inesperados.  A função `draw` é declarada como uma função `void`.  Imprime os valores de seus parâmetros e a instrução de retorno vazia encerra a função e não retorna um valor.  Uma tentativa de atribuir o valor de retorno de `draw` geraria uma mensagem de diagnóstico.  A função `main` retorna o valor de `x` ao sistema operacional.  
+ Neste exemplo, a função `main` chamada duas funções: `sq` e `draw`. A função `sq` retorna o valor de `x * x` para `main`, onde o valor de retorno será atribuído a `y`. Os parênteses ao redor da expressão de retorno em `sq` são avaliados como parte da expressão, e não são exigidos pela instrução de retorno. Como a expressão de retorno é avaliada antes de ser convertida no tipo de retorno, `sq` força o tipo de expressão a ser o tipo de retorno com uma conversão para evitar um possível estouro de inteiros, o que pode levar a resultados inesperados. A função `draw` é declarada como uma função `void`. Imprime os valores de seus parâmetros e a instrução de retorno vazia encerra a função e não retorna um valor. Uma tentativa de atribuir o valor de retorno de `draw` geraria uma mensagem de diagnóstico. A função `main` retorna o valor de `x` ao sistema operacional.  
   
  O resultado do exemplo é semelhante a este:  
   
-  **i \= 2147483647, ll \= 4611686014132420609**   
-## Consulte também  
+```Output  
+i = 2147483647, ll = 4611686014132420609  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Instruções](../c-language/statements-c.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

@@ -1,84 +1,98 @@
 ---
-title: "Declara&#231;&#245;es de estrutura | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "declarações de estrutura"
-  - "estruturas anônimas"
-  - "tipos [C], declarações"
-  - "membros de estrutura"
-  - "estruturas inseridas"
+title: "Declarações de estrutura | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- structure declarations
+- anonymous structures
+- types [C], declarations
+- structure members
+- embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Declara&#231;&#245;es de estrutura
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 69de9f2c7d45608e54a78a3dcfcadba67bf7157e
 
-Uma "declaração de estrutura" nomeia um tipo e especifica uma seqüência de valores de variáveis \(chamados de "membros" ou "campos" da estrutura\) que podem ter tipos diferentes. Um identificador opcional, chamado de "marca", fornece o nome do tipo de estrutura e pode ser usado em referências subsequentes para o tipo de estrutura. Uma variável desse tipo de estrutura contém a sequência inteira definida por esse tipo. Estruturas em C são semelhantes aos tipos conhecidos como "registros" em outros idiomas.  
+---
+# <a name="structure-declarations"></a>Declarações de estrutura
+Uma "declaração de estrutura" nomeia um tipo e especifica uma sequência de valores variáveis (chamados de "membros" ou "campos" da estrutura) que podem ter tipos diferentes. Um identificador opcional, chamado de "marca", fornece o nome do tipo de estrutura e pode ser usado em referências subsequentes ao tipo. Uma variável desse tipo de estrutura mantém a sequência inteira definida por esse tipo. As estruturas em C são semelhantes aos tipos conhecidos como "registros" em outras linguagens.  
   
-## Sintaxe  
- *especificador de estrutura ou união*:  
- *Identificador de estrutura ou união* aceitação**{** *struct\-declaration\-list* **}**  
+## <a name="syntax"></a>Sintaxe  
+ *struct-or-union-specifier*:  
+ *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
   
- *Identificador de estrutura ou união*  
+ *struct-or-union identifier*  
   
- *estrutura ou união*:  
+ *struct-or-union*:  
  **struct**  
   
  **union**  
   
- *struct\-declaration\-list*:  
- *declaração de estrutura*  
+ *struct-declaration-list*:  
+ *struct-declaration*  
   
- *declaração de struct struct\-declaration\-list*  
+ *struct-declaration-list struct-declaration*  
   
  O conteúdo da estrutura é definido para ser  
   
- *declaração struct*:  
- *especificador de qualificador de lista struct\-declarator\-list*  **;**  
+ *struct-declaration*:  
+ *specifier-qualifier-list struct-declarator-list*  **;**  
   
- *especificador\-qualifier\-list*:  
- *especificador de tipo especificador\-qualifier\-list* aceitação  
+ *specifier-qualifier-list*:  
+ *type-specifier specifier-qualifier-list* opt  
   
- *qualificador de tipo especificador\-qualifier\-list* aceitação  
+ *type-qualifier specifier-qualifier-list* opt  
   
- *lista de declaradores struct*:  
- *Declarador de estrutura*  
+ *struct-declarator-list*:  
+ *struct-declarator*  
   
- *lista de declaradores struct*  **,**  *Declarador de estrutura*  
+ *struct-declarator-list*  **,**  *struct-declarator*  
   
- *struct declarador*:  
+ *struct-declarator*:  
  `declarator`  
   
- A declaração de um tipo de estrutura não reservar espaço para uma estrutura. É apenas um modelo para declarações posteriores de variáveis de estrutura.  
+ A declaração de um tipo de estrutura não reserva espaço para uma estrutura. É apenas um modelo para declarações posteriores de variáveis da estrutura.  
   
- Um definido anteriormente *identificador* \(tag\) pode ser usado para se referir a um tipo de estrutura definido em outro lugar. Nesse caso, *struct\-declaration\-list* não pode ser repetido, desde a definição é visível. Declarações de ponteiros para estruturas e typedefs de tipos de estrutura podem usar a marca de estrutura antes que o tipo de estrutura seja definido. No entanto, a definição da estrutura deve ser encontrada antes de qualquer uso real do tamanho dos campos. Isso é uma definição incompleta do tipo e a marca de tipo. Para essa definição ser concluída, uma definição de tipo deve aparecer depois no mesmo escopo.  
+ Um *identifier* (marca) definido anteriormente pode ser usado para fazer referência a um tipo de estrutura definido em outro lugar. Nesse caso, *struct-declaration-list* não poderá ser repetida enquanto a definição estiver visível. Declarações de ponteiros para estruturas e typedefs de tipos de estrutura podem usar a marca de estrutura antes que o tipo de estrutura seja definido. No entanto, a definição da estrutura deve ser encontrada antes de qualquer uso real do tamanho dos campos. Essa é uma definição incompleta do tipo e da marca de tipo. Para que essa definição fique completa, uma definição de tipo deve aparecer depois no mesmo escopo.  
   
- O *struct\-declaration\-list* Especifica os tipos e nomes de membros da estrutura. Um *struct\-declaration\-list* argumento contiver uma variável ou mais declarações de campo de bits.  
+ A *struct-declaration-list* especifica os tipos e nomes dos membros da estrutura. Um argumento *struct-declaration-list* contém uma ou mais declarações de variável ou de campo de bits.  
   
- Cada variável declarada em *struct\-declaration\-list* é definido como um membro do tipo de estrutura. Declarações de variável em *struct\-declaration\-list* possuem a mesma forma que outras declarações de variáveis discutidas nesta seção, exceto que as declarações não podem conter inicializadores ou especificadores de classe de armazenamento. Os membros de estrutura podem ter qualquer tipo exceto o tipo de variável `void`, um tipo incompleto ou um tipo de função.  
+ Cada variável declarada em *struct-declaration-list* é definida como um membro do tipo de estrutura. As declarações de variáveis em *struct-declaration-list* têm o mesmo formato que outras declarações de variável abordadas nesta seção, com exceção de que as declarações não podem conter inicializadores nem especificadores de classe de armazenamento. Os membros da estrutura podem ter qualquer tipo de variável, exceto o tipo `void`, um tipo incompleto ou um tipo de função.  
   
- Um membro não pode ser declarado para ter o tipo da estrutura na qual ele aparece. No entanto, um membro pode ser declarado como um ponteiro para o tipo de estrutura em que aparece, desde que o tipo de estrutura tem uma marca. Isso permite que você crie listas vinculadas de estruturas.  
+ Um membro não pode ser declarado para ter o tipo da estrutura em que aparece. Porém, um membro pode ser declarado como um ponteiro para o tipo de estrutura em que aparece, desde que o tipo tenha uma marca. Isso permite criar listas vinculadas de estruturas.  
   
- As estruturas seguem o mesmo escopo que outros identificadores. Os identificadores de estruturas devem ser distintos de outra estrutura, união e marcas enumeração com a mesma visibilidade.  
+ As estruturas seguem o mesmo escopo que outros identificadores. Os identificadores de estruturas devem ser distintos de outras marcas de estrutura, união e enumeração com a mesma visibilidade.  
   
- Cada *declaração struct* em uma *struct\-declaration\-list* deve ser exclusivo dentro da lista. No entanto, os nomes de identificadores em uma *struct\-declaration\-list* não precisam ser distintos de nomes de variáveis comuns ou de identificadores em outras listas de declaração de estrutura.  
+ Cada *struct-declaration* em uma *struct-declaration-list* deve ser exclusivo na lista. No entanto, os nomes de identificadores em uma *struct-declaration-list* não precisam ser distintos de nomes de variáveis comuns ou de identificadores em outras listas de declarações de estrutura.  
   
- Estruturas aninhadas também podem ser acessadas como se fossem declaradas no nível de escopo de arquivo. Por exemplo, dada esta declaração:  
+ Também é possível acessar estruturas aninhadas como se fossem declaradas no nível do escopo do arquivo. Por exemplo, dada esta declaração:  
   
 ```  
 struct a  
@@ -91,15 +105,15 @@ struct a
 } var1;  
 ```  
   
- Essas duas declarações são válidas:  
+ estas duas declarações são válidas:  
   
 ```  
 struct a var3;  
 struct b var4;  
 ```  
   
-## Exemplos  
- Estes exemplos ilustram declarações de estrutura:  
+## <a name="examples"></a>Exemplos  
+ Estes exemplos ilustram declarações de estruturas:  
   
 ```  
 struct employee   /* Defines a structure variable named temp */  
@@ -110,13 +124,13 @@ struct employee   /* Defines a structure variable named temp */
 } temp;  
 ```  
   
- O `employee` estrutura tem três membros: `name`, `id`, e `class`. O `name` membro é uma matriz de 20 elementos, e `id` e `class` são membros simples `int` e **longo** digite, respectivamente. O identificador de `employee` é o identificador da estrutura.  
+ A estrutura `employee` tem três membros: `name`, `id` e `class`. O membro `name` é uma matriz de 20 elementos e `id` e `class` são membros simples com o tipo `int` e **long**, respectivamente. O identificador `employee` é o identificador da estrutura.  
   
 ```  
 struct employee student, faculty, staff;  
 ```  
   
- Este exemplo define três variáveis de estrutura: `student`, `faculty`, e `staff`. Cada estrutura tem a mesma lista de três membros. Os membros são declarados com o tipo de estrutura `employee`, definida no exemplo anterior.  
+ Esse exemplo define três variáveis de estrutura: `student`, `faculty` e `staff`. Cada estrutura tem a mesma lista de três membros. Os membros são declarados para ter o tipo de estrutura `employee`, definido no exemplo anterior.  
   
 ```  
 struct           /* Defines an anonymous struct and a */  
@@ -125,7 +139,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;  
 ```  
   
- O `complex` estrutura tem dois membros **float** tipo, `x` e `y`. O tipo de estrutura não tem nenhuma marca e, portanto, não nomeado ou anônimo.  
+ A estrutura `complex` tem dois membros do tipo **float**, `x` e `y`. O tipo de estrutura não tem marcas e, portanto, é não nomeado ou anônimo.  
   
 ```  
 struct sample   /* Defines a structure named x */  
@@ -136,9 +150,9 @@ struct sample   /* Defines a structure named x */
 } x;  
 ```  
   
- Os dois primeiros membros da estrutura são uma `char` variável e um ponteiro para um **float** valor. O terceiro membro, `next`, é declarado como um ponteiro para o tipo de estrutura que está sendo definido \(`sample`\).  
+ Os dois primeiros membros da estrutura são uma variável `char` e um ponteiro para um valor **float**. O terceiro membro, `next`, é declarado como um ponteiro para o tipo de estrutura que está sendo definido (`sample`).  
   
- Estruturas anônimas podem ser úteis quando a marca nomeada não é necessária. Esse é o caso quando uma declaração define todas as instâncias de estrutura. Por exemplo:  
+ As estruturas anônimas podem ser úteis quando a marca nomeada não é necessária. Esse é o caso quando uma declaração define todas as instâncias da estrutura. Por exemplo:  
   
 ```  
 struct  
@@ -148,7 +162,7 @@ struct
 } mystruct;  
 ```  
   
- Estruturas inseridas são frequentemente anônimas.  
+ As estruturas inseridas são frequentemente anônimas.  
   
 ```  
 struct somestruct  
@@ -161,15 +175,15 @@ struct somestruct
 } w;  
 ```  
   
- **Específico da Microsoft**  
+ **Seção específica da Microsoft**  
   
- O compilador permite uma matriz sem tamanho ou tamanho zero como o último membro de uma estrutura. Isso pode ser útil se o tamanho de uma matriz constante diferente quando usado em várias situações. A declaração de uma estrutura tem esta aparência:  
+ O compilador permite uma matriz não dimensionada ou de tamanho zero como o último membro de uma estrutura. Isso poderá ser útil se uma matriz constante tiver tamanhos diferentes quando usada em situações variadas. A declaração de uma estrutura assim é semelhante a esta:  
   
- `struct` *identificador***{** *conjunto de declarações* *Digite o nome da matriz***\[\];};**  
+ `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
   
- Matrizes sem dimensões podem aparecer somente como o último membro de uma estrutura. Estruturas que contêm declarações de matriz não dimensionada podem ser aninhadas dentro de outras estruturas, desde que nenhum membro adicional seja declarado em qualquer das estruturas de inclusão. Matrizes dessas estruturas não são permitidas. O `sizeof` operador, quando aplicada a uma variável desse tipo ou o próprio tipo, pressupõe 0 para o tamanho da matriz.  
+ As matrizes não dimensionadas só podem aparecer como o último membro de uma estrutura. As estruturas que contêm declarações de matrizes não dimensionadas podem ser aninhadas em outras estruturas, desde que nenhum membro adicional seja declarado em nenhuma das estruturas de inclusão. Matrizes dessas estruturas não são permitidas. O operador `sizeof`, quando aplicado a uma variável desse tipo ou ao próprio tipo, pressupõe 0 como o tamanho da matriz.  
   
- Declarações de estrutura também podem ser especificadas sem um declarador quando são membros de outra estrutura ou união. Os nomes dos campos são promovidos na estrutura de inclusão. Por exemplo, uma estrutura sem nome tem esta aparência:  
+ Declarações de estruturas também podem ser especificadas sem um declarador quando são membros de outra estrutura ou união. Os nomes de campos são promovidos na estrutura de inclusão. Por exemplo, uma estrutura sem nome tem aparência semelhante a esta:  
   
 ```  
 struct s  
@@ -187,9 +201,14 @@ struct s
 p_s->b = 100;  /* A reference to a field in the s structure */  
 ```  
   
- Consulte [membros de união e estrutura](../c-language/structure-and-union-members.md) para obter informações sobre referências de estrutura.  
+ Consulte [Membros de estruturas e uniões](../c-language/structure-and-union-members.md) para obter informações sobre referências de estrutura.  
   
- **FIM de específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Declaradores e declarações variáveis](../c-language/declarators-and-variable-declarations.md)
+## <a name="see-also"></a>Consulte também  
+ [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

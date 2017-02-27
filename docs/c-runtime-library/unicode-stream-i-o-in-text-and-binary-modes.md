@@ -1,42 +1,61 @@
 ---
-title: "Unicode fluxo I-O em modos de texto e bin&#225;rios | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "rotinas de E/S de fluxo"
-  - "E/s [CRT] fluxo unicode"
-  - "Unicode, rotinas de e/s de fluxo"
-  - "E/S de fluxo Unicode"
+title: "E/S de fluxo Unicode em modos de texto e binários | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- stream I/O routines
+- I/O [CRT], unicode stream
+- Unicode, stream I/O routines
+- Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# E/S de fluxo Unicode em modos de texto e bin&#225;rios
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 21d2a64b515d387698166f948dcd084431b79e58
 
-Quando a rotina de e\/s de fluxo Unicode \(como `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws`, ou `fputws`\) opera em um arquivo que está aberto no modo de texto \(o padrão\), dois tipos de caractere conversões ocorrem:  
+---
+# <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de fluxo Unicode em modos de texto e binários
+Quando a rotina E/S de fluxo Unicode (como `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws` ou `fputws`) opera em um arquivo que está aberto no modo de texto (o padrão), duas conversões de tipos de caractere ocorrem:  
   
--   Conversão de Unicode em MBCS ou MBCS para Unicode. Quando uma função de e\/S de fluxo Unicode opera em modo de texto, a fonte ou fluxo de destino deve para ser uma seqüência de caracteres multibyte. Portanto, as funções de entrada de fluxo Unicode convertem caracteres multibyte para caracteres largos \(como por uma chamada para o `mbtowc` função\). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte \(como por uma chamada para o `wctomb` função\).  
+-   Conversão de Unicode em MBCS ou MBCS para Unicode. Quando uma função de E/S de fluxo Unicode opera no modo de texto, presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
   
--   Retorno de carro – conversão de avanço de linha \(CR\-LF\). Essa conversão ocorre antes do MBCS – conversão Unicode \(para funções de entrada de fluxo Unicode\) e depois o Unicode – conversão de MBCS \(para funções de saída de fluxo Unicode\). Durante a entrada, cada retorno de carro – combinação de alimentação de linha é convertido em um caractere de avanço de linha única. Durante a saída, cada caractere de avanço de linha é convertido em um retorno de carro – combinação de avanço de linha.  
+-   Retorno de carro – Conversão de linha (CR-LF). Essa conversão ocorre antes do MBCS – conversão Unicode (para funções de entrada de fluxo Unicode) e depois da conversão de Unicode – MBCS (para funções de saída de fluxo Unicode). Durante a entrada, cada combinação de retorno de carro – linha é convertida em um caractere de avanço de linha único. Durante a saída, cada caractere de avanço de linha é convertido em uma combinação de retorno de carro – avanço de linha.  
   
- No entanto, quando uma função de e\/S de fluxo Unicode opera no modo binário, o arquivo é considerado como Unicode, e nenhuma conversão de conversão ou caracteres CR\-LF ocorre durante a entrada ou saída. Usar o setmode \( fileno \(stdin\), o\_binary\); instruções para usar corretamente o wcin em um arquivo de texto UNICODE.  
+ No entanto, quando uma função de E/S de fluxo Unicode opera no modo binário, o arquivo é considerado como Unicode e nenhuma conversão de CR-LF ou conversão de caractere ocorre durante a entrada ou saída. Use _setmode( _fileno( stdin ), _O_BINARY ); instruções para usar corretamente o wcin em um arquivo de texto UNICODE.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)   
- [Entrada e saída](../Topic/Input%20and%20Output.md)
+ [Entrada e saída](../c-runtime-library/input-and-output.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

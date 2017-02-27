@@ -1,43 +1,56 @@
 ---
-title: "Mapeamentos de rotina | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "mapeamentos de texto genérico"
-  - "Tipos de dados TCHAR.H, lista de mapeamentos de rotina"
+title: Mapeamentos de rotina | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Mapeamentos de rotina
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b0205a035009571ef73662f24299edc0aa16cc84
 
-Os mapeamentos de rotina de genérico\- texto são definidos em TCHAR.H.  `_tccpy` e o mapa de `_tclen` às funções em MBCS modelo; são mapeados para macros ou as funções embutidas em SBCS e em Unicode modelagem para manter a integridade.  Para obter informações sobre uma rotina genérico de texto, consulte o tópico da ajuda sobre `SBCS`de correspondência \-, `_MBCS`\-, ou a rotina relacionada da `_UNICODE`.  
+---
+# <a name="routine-mappings"></a>Mapeamentos de rotina
+Os mapeamentos de rotina de texto genérico são definidos em TCHAR. H. `_tccpy` e `_tclen` são mapeados para funções no modelo MBCS; eles são mapeados para macros ou funções embutidas nos modelos Unicode e SBCS para fins de integridade. Para obter informações sobre uma rotina de texto genérica, consulte o tópico da ajuda sobre as rotinas relacionadas a `SBCS`, `_MBCS` ou `_UNICODE`.  
   
- Mais informações específicas sobre as rotinas individuais listadas na coluna esquerda na tabela a seguir não está disponível nesta documentação.  No entanto, você pode facilmente procurar informações em `SBCS`de correspondência \-, `_MBCS`\-, ou a rotina relacionada da `_UNICODE`.  Use o comando de **Pesquisar** no menu de **Ajuda** pesquisar qualquer rotina de texto genérico\- listada em.  
+ Informações mais específicas sobre rotinas individuais listadas na coluna à esquerda na tabela a seguir não estão disponíveis nesta documentação. No entanto, você pode pesquisar facilmente as informações sobre uma rotina correspondente a `SBCS`, `_MBCS` ou `_UNICODE`. Use o comando **Search** comando no menu **Ajuda** para procurar qualquer rotina de texto genérica listada abaixo.  
   
- Para obter informações relacionadas, consulte [Mapeamentos de Genérico\- texto em TCHAR.H](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md).  
+ Para obter informações relacionadas, consulte [Mapeamentos de texto genéricos em TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Nome da rotina de Genérico\- texto|SBCS \(\_UNICODE & MBCS não definido\)|\_MBCS definido|\_UNICODE definido|  
-|----------------------------------------|--------------------------------------------|---------------------|------------------------|  
+|Nome da rotina de texto genérico|SBCS (_UNICODE e MBCS não definidos)|_MBCS definido|_UNICODE definido|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -65,7 +78,7 @@ Os mapeamentos de rotina de genérico\- texto são definidos em TCHAR.H.  `_tccp
 |`_istgraph`|`isgraph`|`_ismbcgraph`|`iswgraph`|  
 |`_istlead`|Sempre retorna falso|`_ismbblead`|Sempre retorna falso|  
 |`_istleadbyte`|Sempre retorna falso|`isleadbyte`|Sempre retorna falso|  
-|`_istlegal`|Sempre retorna true|`_ismbclegal`|Sempre retorna true|  
+|`_istlegal`|Sempre retorna verdadeiro|`_ismbclegal`|Sempre retorna verdadeiro|  
 |`_istlower`|`islower`|`_ismbclower`|`iswlower`|  
 |`_istprint`|`isprint`|`_ismbcprint`|`iswprint`|  
 |`_istpunct`|`ispunct`|`_ismbcpunct`|`iswpunct`|  
@@ -93,11 +106,11 @@ Os mapeamentos de rotina de genérico\- texto são definidos em TCHAR.H.  `_tccp
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
-|`_tccmp`|Mapeia para a função macro ou embutida|`_mbsncmp`|Mapeia para a função macro ou embutida|  
-|`_tccpy`|Mapeia para a função macro ou embutida|`_mbccpy`|Mapeia para a função macro ou embutida|  
+|`_tccmp`|É mapeado para um macro ou uma função embutida|`_mbsncmp`|É mapeado para um macro ou uma função embutida|  
+|`_tccpy`|É mapeado para um macro ou uma função embutida|`_mbccpy`|É mapeado para um macro ou uma função embutida|  
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|  
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
-|`_tclen`|Mapeia para a função macro ou embutida|`_mbclen`|Mapeia para a função macro ou embutida|  
+|`_tclen`|É mapeado para um macro ou uma função embutida|`_mbclen`|É mapeado para um macro ou uma função embutida|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|  
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|  
@@ -273,9 +286,14 @@ Os mapeamentos de rotina de genérico\- texto são definidos em TCHAR.H.  `_tccp
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md)   
  [Mapeamentos de tipo de dados](../c-runtime-library/data-type-mappings.md)   
- [Constante e mapeamentos de variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Um programa de texto genérico de exemplo](../c-runtime-library/a-sample-generic-text-program.md)   
+ [Mapeamentos de constante e variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
+ [Um programa de texto genérico de amostra](../c-runtime-library/a-sample-generic-text-program.md)   
  [Usando mapeamentos de texto genérico](../c-runtime-library/using-generic-text-mappings.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+
