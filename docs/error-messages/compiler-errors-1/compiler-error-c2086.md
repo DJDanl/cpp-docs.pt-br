@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2086 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2086"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2086"
+title: C2086 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2086
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2086
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2086
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bd755665cb777ec0e9ed781bf1e95605ac1d227c
+ms.lasthandoff: 02/25/2017
 
-“identificador”: redefinição  
+---
+# <a name="compiler-error-c2086"></a>C2086 de erro do compilador
+'identifier': redefinição  
   
- O identificador é definido mais de uma vez, ou uma instrução subsequente é diferente de uma anterior.  
+ O identificador está definido mais de uma vez, ou uma declaração subsequente é diferente da anterior.  
   
- C2086 também pode ser o resultado da compilação incremental para um assembly referenciado C\#.  Recompile o assembly do C\# para resolver este erro.  
+ C2086 também pode ser o resultado de construção incremental de um assembly referenciado do c#. Recompile o assembly c# para resolver esse erro.  
   
- O seguinte exemplo gera C2086:  
+ O exemplo a seguir gera C2086:  
   
 ```  
 // C2086.cpp  

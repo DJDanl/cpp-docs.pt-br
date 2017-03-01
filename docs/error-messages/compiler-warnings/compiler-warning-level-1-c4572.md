@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4572 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4572"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4572"
+title: "Compilador aviso (nível 1) C4572 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4572
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4572
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0814f78442366ae247a317d082368493930f0836
+ms.lasthandoff: 02/25/2017
 
-O atributo de ParamArray \[\] for substituído em \/clr, use “…” em vez de  
+---
+# <a name="compiler-warning-level-1-c4572"></a>Compilador C4572 de aviso (nível 1)
+Atributo [ParamArray] é preterido em /clr, use '...' em vez disso  
   
- Um estilo obsoleto para especificar uma lista de argumento de variável foi usado.  Durante a compilação de CLR, use a sintaxe de reticências em vez de <xref:System.ParamArrayAttribute>.  Para obter mais informações, consulte [Variable Argument Lists \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ Foi usado um estilo obsoleto para especificar uma lista de argumentos variável. Ao compilar para o CLR, use a sintaxe de reticências, em vez de <xref:System.ParamArrayAttribute>.</xref:System.ParamArrayAttribute> Para obter mais informações, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4572.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4572.  
   
 ```  
 // C4572.cpp  

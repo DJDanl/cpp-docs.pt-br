@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: "Compilador aviso (nível 2) C4250 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4250
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2338ee955fb9118b608f7d7429dd5ca28a5ee126
+ms.lasthandoff: 02/25/2017
 
-“class1”: herda “class2::member” por meio de domínio  
+---
+# <a name="compiler-warning-level-2-c4250"></a>Compilador C4250 de aviso (nível 2)
+'class1': herda class2::member por meio do domínio  
   
- Dois ou mais membros têm o mesmo nome.  Nesse `class2` é herdado como é uma classe base para as outras classes que contêm esse membro.  
+ Dois ou mais membros têm o mesmo nome. O `class2` é herdada porque é uma classe base para outras classes que continha esse membro.  
   
- Para suprimir C4250, use o pragma de [warning](../../preprocessor/warning.md) .  
+ Para suprimir C4250, use o [aviso](../../preprocessor/warning.md) pragma.  
   
- Porque uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada corresponde ao mestre um nome em uma classe base.  Por exemplo, na hierarquia a seguir da classe, há duas definições de funcional herdado no losango: a instância de vbc::func\(\) pela classe e, e o dominant::func\(\) pela classe dominante.  Uma chamada não qualificado de func\(\) por meio de um objeto da classe de losangos, chama sempre a instância de dominate::func\(\) .  Se a classe for fraca introduzir uma instância de func\(\), nenhuma definição dominaria, e a chamada será sinalizada como ambígua.  
+ Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, dada a hierarquia de classe a seguir, há duas definições de função herdada no losango: a instância de vbc::func() por meio da classe fraca e o dominante:: func() por meio da classe dominante. Uma chamada não qualificada de func() por meio de um objeto de classe de losango, sempre chama a instância de dominate:: func().  Se a classe fraca introduzir uma instância de func(), nem definição deve dominar e a chamada será sinalizada como ambígua.  
   
 ```  
 // C4250.cpp  
@@ -55,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir produz C4250.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4250.  
   
 ```  
 // C4250_b.cpp  
@@ -87,8 +102,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- Este exemplo mostra uma situação mais complexa.  O exemplo a seguir produz C4250.  
+## <a name="example"></a>Exemplo  
+ Este exemplo mostra uma situação mais complexa. O exemplo a seguir gera C4250.  
   
 ```  
 // C4250_c.cpp  

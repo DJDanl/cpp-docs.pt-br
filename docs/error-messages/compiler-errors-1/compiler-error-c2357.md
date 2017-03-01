@@ -1,41 +1,56 @@
 ---
-title: "Erro do Compilador C2357 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2357"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2357"
+title: C2357 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2357
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2357
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 19434a8cfcf9cb7158d93796c7be7a3ca9cbd666
+ms.lasthandoff: 02/25/2017
 
-“identificador”: deve ser uma função do tipo “tipo”  
+---
+# <a name="compiler-error-c2357"></a>C2357 de erro do compilador
+'identifier': deve ser uma função do tipo 'type'  
   
- O código a seguir declara uma versão da função de `atexit` que não corresponde à versão declarada internamente pelo compilador.  Declare `atexit` como segue:  
+ Seu código declara uma versão de `atexit` função que não coincide com a versão declarada internamente pelo compilador. Declarar `atexit` da seguinte maneira:  
   
 ```  
 int __cdecl atexit(void (__cdecl *)());  
 ```  
   
- Para obter mais informações, consulte [init\_seg](../../preprocessor/init-seg.md).  
+ Para obter mais informações, consulte [init_seg](../../preprocessor/init-seg.md).  
   
- O seguinte exemplo gera C2357:  
+ O exemplo a seguir gera C2357:  
   
 ```  
 // C2357.cpp  

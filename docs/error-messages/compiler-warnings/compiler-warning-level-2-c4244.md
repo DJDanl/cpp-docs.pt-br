@@ -1,40 +1,55 @@
 ---
-title: "Aviso do compilador (n&#237;vel 2) C4244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4244"
+title: "Compilador aviso (nível 2) C4244 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4244
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 2) C4244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4f77df52e0b3fd4fd96fb94bc982e08904abb06e
+ms.lasthandoff: 02/25/2017
 
-“argumento”: conversão do tipo “\- 1 " para o tipo “\- 2 ", possível perda de dados  
+---
+# <a name="compiler-warning-level-2-c4244"></a>Compilador C4244 de aviso (nível 2)
+'argumento de ': conversão de 'type1' em 'type2', possível perda de dados  
   
- Um tipo de ponto flutuante foi convertido em um tipo inteiro.  Uma possível perda de dados pode ter ocorrido.  
+ Um tipo de ponto flutuante foi convertido para um tipo inteiro.  Uma possível perda de dados pode ter ocorrido.  
   
- Se você obtiver C4244, você deve alterar seu programa para usar tipos compatíveis, ou adicionar qualquer lógica em seu código, para assegurar que o intervalo de valores possíveis sempre é compatível com os tipos que você está usando.  
+ Se você receber C4244, você deve alterar seu programa usar tipos compatíveis ou adicionar alguma lógica em seu código, para garantir que o intervalo de valores possíveis sempre será compatível com os tipos que você está usando.  
   
- C4244 também pode ser acionado no nível 3, e 4; consulte [Aviso do compilador \(níveis 3 e 4\) C4244](../Topic/Compiler%20Warning%20\(levels%203%20and%204\)%20C4244.md) para obter mais informações.  
+ C4244 também pode ser acionado no nível 3 e 4; consulte [C4244 de aviso do compilador (níveis 3 e 4)](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) para obter mais informações.  
   
-## Exemplo  
- O seguinte exemplo gera C4244:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4244:  
   
 ```  
 // C4244_level2.cpp  

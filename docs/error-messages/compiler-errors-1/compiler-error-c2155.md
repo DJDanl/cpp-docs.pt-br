@@ -1,30 +1,45 @@
 ---
-title: "Erro do Compilador C2155 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2155"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2155"
+title: C2155 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2155
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2155
 ms.assetid: 54d408af-fc48-4121-9011-5e75c7072e01
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2155
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5f835fea92fae8f99011ebe4b618723bce614f13
+ms.lasthandoff: 02/25/2017
 
-'?' : operando esquerdo inválido, arithmetic esperada ou tipo de ponteiro  
+---
+# <a name="compiler-error-c2155"></a>C2155 de erro do compilador
+'?' : operando esquerdo inválido, esperado tipo aritmético ou de ponteiro  
   
- Uma expressão à esquerda de `?` não pode ser comparada a zero.  Você deve usar uma ou uma expressão aritmética do ponteiro que possam ser comparadas a zero.
+ Uma expressão no lado esquerdo da `?` não pode ser comparado a zero. Você deve usar uma expressão aritmética ou ponteiro que pode ser comparada a zero.

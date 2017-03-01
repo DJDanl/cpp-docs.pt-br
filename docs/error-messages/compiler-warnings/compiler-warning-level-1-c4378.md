@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4378 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4378"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4378"
+title: "Compilador aviso (nível 1) C4378 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4378
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4378
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 70d7dcf7f569021f71708cc98b167eae0c7854c8
+ms.lasthandoff: 02/25/2017
 
-Deve obter ponteiros da função para executar inicializadores; considere System::ModuleHandle::ResolveMethodHandle  
+---
+# <a name="compiler-warning-level-1-c4378"></a>Compilador C4378 de aviso (nível 1)
+Deve obter ponteiros de função para executar inicializadores; considere o uso de System::ModuleHandle::ResolveMethodHandle  
   
- Em **\/clr**, os símbolos de inicializador contêm tokens da função, não ponteiros de funções.  Você precisa converter tokens para armazenar ponteiros que usam <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
+ Em **/clr**, símbolos de inicializador contêm tokens de função, não os ponteiros de funções.  Você precisa converter tokens para ponteiros usando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.</xref:System.ModuleHandle.ResolveMethodHandle%2A>  
   
-## Exemplo  
- O exemplo a seguir produz C4378.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4378.  
   
 ```  
 // C4378.cpp  
@@ -72,7 +87,7 @@ int main () {
 }  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como resolver C4378.  
   
 ```  

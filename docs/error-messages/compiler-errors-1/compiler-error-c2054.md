@@ -1,44 +1,59 @@
 ---
-title: "Erro do Compilador C2054 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2054"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2054"
+title: C2054 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2054
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2054
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: dbaf9a6589c939952b2965998d56366f1698c3d8
+ms.lasthandoff: 02/25/2017
 
-esperado “\(” para seguir o identificador” “  
+---
+# <a name="compiler-error-c2054"></a>C2054 de erro do compilador
+esperado ' (' a seguir 'Identificador'  
   
- O identificador da função é usada em um contexto que requer parênteses à direita.  
+ O identificador de função é usado em um contexto que requer parênteses à direita.  
   
- Esse erro pode ser causado omitindo um sinal de igual \(\=\) em uma inicialização complexa.  
+ Esse erro pode ser causado por um sinal de igual (=) em uma inicialização complexa a omissão.  
   
- O seguinte exemplo gera C2054:  
+ O exemplo a seguir gera C2054:  
   
 ```  
 // C2054.c  
 int array1[] { 1, 2, 3 };   // C2054, missing =  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C2054b.c  

@@ -1,33 +1,48 @@
 ---
-title: "Erro do Compilador C3200 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3200"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3200"
+title: Compilador erro C3200 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3200
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3200
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b2edf8f79acf23be02f81f3add02ad9d87b8d7e4
+ms.lasthandoff: 02/25/2017
 
-“modelo”: argumento inválido do modelo para o parâmetro “parâmetro” do modelo, esperava um modelo da classe  
+---
+# <a name="compiler-error-c3200"></a>C3200 de erro do compilador
+'template': argumento de modelo inválido para parâmetro de modelo 'parameter', esperado um modelo de classe  
   
- Um argumento inválido é passado a um modelo da classe.  O modelo da classe que o modelo como um parâmetro.  No exemplo, chame `Y<int, int> aY` gerará C3200.  O primeiro parâmetro precisa ser um modelo, como `Y<X, int> aY`.  
+ Você passou um argumento inválido para um modelo de classe. O modelo de classe espera o modelo como um parâmetro. No exemplo a seguir, chamar `Y<int, int> aY` gerará C3200. O primeiro parâmetro deve ser um modelo, como `Y<X, int> aY`.  
   
 ```  
 // C3200.cpp  

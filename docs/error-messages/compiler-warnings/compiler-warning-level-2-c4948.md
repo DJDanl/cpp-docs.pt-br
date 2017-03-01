@@ -1,57 +1,48 @@
 ---
-title: "Aviso do compilador (n&#237;vel 2) C4948 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4948"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4948"
+title: "Compilador aviso (nível 2) C4948 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4948
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4948
 ms.assetid: d006cb17-754a-4c70-ba7f-c3200e2cd8fa
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 2) C4948
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 6483f704967faa75d9298e0bb7e942e9a8202c00
+ms.lasthandoff: 02/25/2017
 
-o tipo de retorno de “acessador” não corresponde ao tipo do parâmetro mais recente do setters correspondente  
+---
+# <a name="compiler-warning-level-2-c4948"></a>Compilador C4948 de aviso (nível 2)
+tipo de retorno de 'acessador' não coincide com o último tipo de parâmetro do setter correspondente  
   
- O compilador detectou uma incompatibilidade entre tipo de dados que está sendo obtém e define para uma propriedade indexada.  
+O compilador encontrar uma incompatibilidade entre o tipo de dados está sendo obter e define uma propriedade indexada.  
   
- C4948 é somente **\/clr:oldSyntax**de utilização possível acessá\-lo.  
-  
- O seguinte exemplo gera C4948:  
-  
-```  
-// C4948.cpp  
-// compile with: /clr:oldSyntax /LD /W2  
-  
-__gc class MyClass  
-{  
-   int prop __nogc [2];  
-   public:  
-  
-      __property int get_P(int i)  
-      // try the following line instead  
-      // __property char get_P(int i)  
-      {  
-         return prop[i];  
-      }  
-  
-      __property void set_P(int i, char c)  
-      {  
-         prop[i] = c;  
-      }  
-};   // C4948  
-```
+C4948 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+

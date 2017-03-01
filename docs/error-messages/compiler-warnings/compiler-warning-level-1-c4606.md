@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4606 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4606"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4606"
+title: "Compilador aviso (nível 1) C4606 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4606
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4606
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0623611299416c5455be1b547a2e85f365cdfa12
+ms.lasthandoff: 02/25/2017
 
-aviso de \#pragma: “warning\_number” ignorado; Os avisos da análise de código não estão associados com os níveis de aviso  
+---
+# <a name="compiler-warning-level-1-c4606"></a>Compilador C4606 de aviso (nível 1)
+\#Aviso de Pragma: 'warning_number' ignorado; Avisos da análise de código não estão associados a níveis de aviso  
   
- Para avisos de análise de código, somente `error`, `once`, e `default` têm suporte com o pragma de [warning](../../preprocessor/warning.md) .  
+ Avisos de análise de código, apenas `error`, `once`, e `default` são compatíveis com o [aviso](../../preprocessor/warning.md) pragma.  
   
-## Exemplo  
- O exemplo a seguir produz C4606.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4606.  
   
 ```  
 // C4606.cpp  

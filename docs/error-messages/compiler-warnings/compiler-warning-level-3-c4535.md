@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4535"
+title: "Compilador aviso (nível 3) C4535 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4535
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fb7050b71823c2992e356080c29e6b81c8a22bcf
+ms.lasthandoff: 02/25/2017
 
-a chamada \_set\_se\_translator\(\) requer \/EHa  
+---
+# <a name="compiler-warning-level-3-c4535"></a>Compilador C4535 de aviso (nível 3)
+chamada a _set_se_translator() requer /EHa  
   
- O uso de [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) requer a opção e não **\/EHs**do compilador de [\/EHa](../../build/reference/eh-exception-handling-model.md) .  
+ O uso de [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requer o [/EHa](../../build/reference/eh-exception-handling-model.md) opção de compilador e não **/EHs**.  
   
-## Exemplo  
- O exemplo a seguir produz C4535.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4535.  
   
 ```  
 // C4535.cpp  

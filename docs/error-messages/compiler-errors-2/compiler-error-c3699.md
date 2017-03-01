@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3699 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3699"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3699"
+title: C3699 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3699
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3699
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 15d22c0c28628353deceef38e82397c920d2525d
+ms.lasthandoff: 02/25/2017
 
-operador “”: não pode usar essa ação indireta o tipo “tipo”  
+---
+# <a name="compiler-error-c3699"></a>C3699 de erro do compilador
+'operator': não é possível usar essa indireção no tipo 'type'  
   
- Foi feita uma tentativa de usar a ação indireta que não é permitida em `type`.  
+ Foi feita uma tentativa para usar caminho indireto que não é permitido em `type`.  
   
-## Exemplo  
- O exemplo a seguir produz C3699.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3699.  
   
 ```  
 // C3699.cpp  
@@ -43,8 +58,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- Uma propriedade trivial não pode ter o tipo de referência.  Consulte [property](../../windows/property-cpp-component-extensions.md) para maiores informações.  O exemplo a seguir produz C3699.  
+## <a name="example"></a>Exemplo  
+ Uma propriedade trivial não pode ter o tipo de referência. Consulte [propriedade](../../windows/property-cpp-component-extensions.md) para obter mais informações. O exemplo a seguir gera C3699.  
   
 ```  
 // C3699_b.cpp  
@@ -55,8 +70,8 @@ ref struct C {
 };  
 ```  
   
-## Exemplo  
- O equivalente “ponteiro de uma sintaxe para um ponteiro” é um identificador para uma referência de rastreamento.  O exemplo a seguir produz C3699.  
+## <a name="example"></a>Exemplo  
+ O equivalente de sintaxe "ponteiro para um ponteiro" é um identificador para uma referência de rastreamento. O exemplo a seguir gera C3699.  
   
 ```  
 // C3699_c.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2208 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2208"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2208"
+title: C2208 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2208
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2208
 ms.assetid: 9ae704bc-bf70-45f1-8e47-0470f21edd4e
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2208
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ff16ff8f0a44b3ce8b4b521828ced56c4f3d0769
+ms.lasthandoff: 02/25/2017
 
-“tipo”: nenhum membro definidas usando esse tipo  
+---
+# <a name="compiler-error-c2208"></a>C2208 de erro do compilador
+'type': nenhum membro definido usando esse tipo  
   
- Um identificador que resolve um nome de tipo está em uma declaração de agregação, mas o compilador não pode declarar um membro.  
+ É um identificador resolver para um nome de tipo em uma declaração de agregação, mas o compilador não pode declarar um membro.  
   
- O seguinte exemplo gera C2208:  
+ O exemplo a seguir gera C2208:  
   
 ```  
 // C2208.cpp  

@@ -1,37 +1,53 @@
 ---
-title: "Compilador C4788 de aviso (n&#237;vel 1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4788"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4788"
+title: "Compilador aviso (nível 1) C4788 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4788
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilador C4788 de aviso (n&#237;vel 1)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ae06ee08751afaff627d4baab59c6cab8f4ae883
+ms.lasthandoff: 02/25/2017
 
-“identificador”: o identificador foi truncado “para numerar caracteres”  
+---
+# <a name="compiler-warning-level-1-c4788"></a>Compilador C4788 de aviso (nível 1)
+'identifier': identificador foi truncado para caracteres 'number'  
   
- O compilador limita o comprimento máximo permitido um nome de função.  Quando o compilador gerenciar funclets para o código de EH\/SHE forma, o nome de funclet acrescentando ao nome da função com qualquer texto, por exemplo “\_\_catch”, “\_\_unwind”, ou outra cadeia de caracteres.  
+ O compilador limita o tamanho máximo permitido para um nome de função. Quando o compilador gera funclets para código EH/SEH, formar o nome funclet acrescentando o nome da função com algum texto, por exemplo "__catch," "\__unwind", ou outra cadeia de caracteres.  
   
- O nome de funclet resultante pode ser muito longo, e o compilador truncar\-o\-&z e gerencie\-lo\-á C4788.  
+ O nome funclet resultante pode ser muito longo, e o compilador irá truncar e gerar C4788.  
   
- Para resolver esse aviso, encurte o nome da função original.  Se a função é uma função ou método do modelo criando c, use um typedef para a parte do nome.  Por exemplo:  
+ Para resolver esse aviso, encurte o nome da função original. Se a função é uma função de modelo C++ ou método, use um typedef para a parte do nome. Por exemplo:  
   
 ```  
 C1<x, y, z<T>>::C2<a,b,c>::f  
@@ -44,4 +60,4 @@ typedef C1<x, y, z<T>>::C2<a,b,c> new_class ;
 new_class::f  
 ```  
   
- Esse aviso ocorre apenas no compilador de [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] .
+ Esse aviso ocorre apenas no [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] compilador.

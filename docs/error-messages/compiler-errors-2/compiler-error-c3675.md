@@ -1,38 +1,53 @@
 ---
-title: "Erro do Compilador C3675 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3675"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3675"
+title: C3675 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3675
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3675
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 38ccb1df6b30d82de1992d63ba127c050cdb5443
+ms.lasthandoff: 02/25/2017
 
-função “”: é permitido porque a propriedade é definida” “  
+---
+# <a name="compiler-error-c3675"></a>C3675 de erro do compilador
+'function': é reservado porque 'property' está definido  
   
- Quando declara uma propriedade simples, o compilador gerencia os métodos de acessador obter e de conjunto, e esses nomes devem estar presentes no escopo do programa.  Os nomes gerados completo são formados acrescentando o get\_ e o set\_ ao nome da propriedade.  Consequentemente, você não pode declarar funções com o mesmo nome que os acessadores completo gerados.  
+ Quando você declarar uma propriedade simples, o compilador gera get e métodos de acessador set e os nomes estão presentes no escopo do seu programa.  Os nomes gerados pelo compilador são formados acrescentando _ e configurou _ ao nome da propriedade.  Portanto, você não pode declarar funções com o mesmo nome que os acessadores gerado pelo compilador.  
   
- Consulte [property](../../windows/property-cpp-component-extensions.md) para maiores informações.  
+ Consulte [propriedade](../../windows/property-cpp-component-extensions.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir produz C3675.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3675.  
   
 ```  
 // C3675.cpp  

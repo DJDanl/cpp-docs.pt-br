@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3265 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3265"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3265"
+title: C3265 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3265
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3265
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 1e3de88791b46b242bb4cdb812e3c3349f44d137
+ms.lasthandoff: 02/25/2017
 
-não pode declarar um gerenciado “na construção” em uma construção não gerenciado não gerenciado”  
+---
+# <a name="compiler-error-c3265"></a>C3265 de erro do compilador
+não é possível declarar uma construção' gerenciada' gerenciada em uma 'não gerenciada construção' não gerenciada  
   
- Você não pode incluir um objeto gerenciado em um contexto não gerenciado.  
+Você não pode incluir um objeto gerenciado em um contexto não gerenciado.  
   
- O exemplo C3265 reproduz:  
+O exemplo a seguir reproduz C3265:  
   
 ```  
 // C3265_2.cpp  
@@ -48,47 +63,4 @@ class B
    // gcroot<A^> a;  
 };  
 ```  
-  
- O exemplo C3265 reproduz:  
-  
-```  
-// C3265.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class A { };  
-  
-__nogc class B  
-// try the following line instead  
-// __gc class B   
-{  
-   A *a;   // C3265  
-};  
-```  
-  
- C3265 também poderá ocorrer se você inserir um ponteiro gerenciado diretamente dentro de uma classe não gerenciado.  Para corrigir esse erro, use `gcroot`:  
-  
-```  
-// C3265b.cpp  
-// compile with: /clr:oldSyntax  
-#include <vcclr.h>  
-#using <mscorlib.dll>  
-  
-namespace TestNS {  
-   __gc public class Test{};  
-}  
-  
-template<class T>  
-struct Container {  
-  T* m_px;   // C3265  
-};  
-__gc public class ClassA {  
-public:  
-  ClassA (){}  
-   ~ClassA(){}  
-  
-private:  
-   Container<TestNS::Test*>  vctTest;  
-   // try the following line instead  
-   Container<gcroot<TestNS::Test* > > vctTest2;  
-};  
-```
+

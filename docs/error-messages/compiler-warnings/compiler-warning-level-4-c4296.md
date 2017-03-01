@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4296"
+title: "Compilador aviso (nível 4) C4296 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4296
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4296
 ms.assetid: 9d99aafe-f6bd-4ee0-b8d0-98ce5712274d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0e5c8810ef1bbe1a4a06eec6782e3773539e1beb
+ms.lasthandoff: 02/25/2017
 
-operador “”: a expressão é sempre false  
+---
+# <a name="compiler-warning-level-4-c4296"></a>Compilador C4296 de aviso (nível 4)
+'operator': expressão é sempre falsa  
   
- Uma variável não assinado foi usado em uma operação de comparação com o zero.  
+ Uma variável não assinada foi usada em uma operação de comparação com zero.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4296:  
+ O exemplo a seguir gera C4296:  
   
 ```  
 // C4296.cpp  

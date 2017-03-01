@@ -1,40 +1,55 @@
 ---
-title: "Erro do Compilador C2743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2743"
+title: C2743 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2743
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.lasthandoff: 02/25/2017
 
-“tipo”: não pode capturar um tipo nativo com destruidor de \_\_clrcall ou o construtor de cópia  
+---
+# <a name="compiler-error-c2743"></a>C2743 de erro do compilador
+'type': não é possível capturar um tipo nativo com o destruidor de clrcall ou Construtor de cópia  
   
- Um módulo compilado com **\/clr** \(não\) **\/clr:pure**tentou capturar uma exceção do tipo nativo e no construtor de destruidor ou de cópia do tipo usa \_`_clrcall` que chama a convenção.  
+ Um módulo compilado com **/clr** tentou capturar uma exceção de tipo nativo e onde o tipo destruidor ou Construtor de cópia usa `__clrcall` convenção de chamada.  
   
- Quando criada com **\/clr** \(não **\/clr:pure**\), a manipulação de exceção espera as funções de membro em um tipo nativo ser [\_\_cdecl](../Topic/__cdecl.md) e não [\_\_clrcall](../../cpp/clrcall.md).  Os tipos nativos com as funções de membro que usam `__clrcall` que chama a convenção não podem ser capturados em um módulo compilado com **\/clr**.  
+ Quando compilado com **/clr**, tratamento de exceção espera que as funções de membro em um tipo nativo para ser [cdecl](../../cpp/cdecl.md) e não [clrcall](../../cpp/clrcall.md). Tipos nativos com funções de membro usando `__clrcall` convenção de chamada não pode ser detectada em um módulo compilado com **/clr**.  
   
- Para obter mais informações, consulte [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Exemplo  
- O exemplo a seguir produz C2743.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2743.  
   
 ```  
 // C2743.cpp  

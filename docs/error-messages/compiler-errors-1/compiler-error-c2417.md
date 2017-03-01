@@ -1,30 +1,46 @@
 ---
-title: "C2417 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2417"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2417"
+title: C2417 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2417
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2417
 ms.assetid: 8f42d7a8-5289-4f56-8404-23e5243274d2
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2417 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8baf1f23d104649ad81d6c5263e47263c5819077
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2417"></a>C2417 de erro do compilador
 divisão por zero em 'context'  
   
  O parâmetro à direita do operador de divisão é zero neste contexto.

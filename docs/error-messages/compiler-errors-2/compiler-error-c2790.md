@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2790 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2790"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2790"
+title: C2790 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2790
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2790
 ms.assetid: 38d4fce1-ba00-413d-8bc1-e8aa43d7bc1f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2790
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 13d38b9a3c507ecced1aa34311cf9f83c6f4f383
+ms.lasthandoff: 02/25/2017
 
-“super”: essa palavra\-chave só pode ser usado no corpo da função de membro da classe  
+---
+# <a name="compiler-error-c2790"></a>C2790 de erro do compilador
+'super' : esta palavra-chave só pode ser usada dentro do corpo de função membro de classe  
   
- Essa mensagem de erro será exibida se o usuário tentar nunca usa a palavra\-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.  
+ Essa mensagem de erro será exibida se o usuário nunca tenta usa a palavra-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.  
   
- O seguinte exemplo gera C2790:  
+ O exemplo a seguir gera C2790:  
   
 ```  
 // C2790.cpp  

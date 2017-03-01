@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2495 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2495"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2495"
+title: C2495 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2495
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2495
 ms.assetid: bb7066fe-3549-4901-97e4-157f3c04dd57
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2495
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9b82e74c49a081e59353290001e18b1763a37eb8
+ms.lasthandoff: 02/25/2017
 
-“identificador”: o “nothrow” só pode ser aplicado às declarações ou às definições de função  
+---
+# <a name="compiler-error-c2495"></a>C2495 de erro do compilador
+'identifier': 'nothrow' só pode ser aplicado a declarações de função ou definições  
   
- O atributo [nothrow](../Topic/nothrow%20\(C++\).md) estendido pode ser aplicado às declarações ou às definições de função só.  
+ O [nothrow](../../cpp/nothrow-cpp.md) estendido atributo pode ser aplicado a declarações de função ou definições somente.  
   
- O seguinte exemplo gera C2495:  
+ O exemplo a seguir gera C2495:  
   
 ```  
 // C2495.cpp  

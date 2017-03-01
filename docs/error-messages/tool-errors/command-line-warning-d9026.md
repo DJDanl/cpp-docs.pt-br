@@ -1,33 +1,48 @@
 ---
-title: "Aviso D9026 (linha de comando) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9026"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9026"
+title: Linha de comando aviso D9026 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- D9026
+dev_langs:
+- C++
+helpviewer_keywords:
+- D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso D9026 (linha de comando)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6e6153a85437ddd61047f9eabd0071eca3900c28
+ms.lasthandoff: 02/25/2017
 
-as opções se aplicam à linha de comando inteira  
+---
+# <a name="command-line-warning-d9026"></a>Aviso D9026 (linha de comando)
+opções aplicam-se à linha de comando inteira  
   
- Uma opção tiver sido especificada em um comando depois que um nome de arquivo foi especificado.  A opção foi aplicada ao arquivo que precedeu a.  
+ Uma opção foi especificada em um comando após um nome de arquivo foi especificado. A opção foi aplicada ao arquivo anteriores.  
   
  Por exemplo, no comando  
   
@@ -35,6 +50,6 @@ as opções se aplicam à linha de comando inteira
 CL verdi.c /G5 puccini.c  
 ```  
   
- o arquivo VERDI.c será criado com a opção \/G5, não a opção \/G4.  
+ o arquivo VERDI.c será compilado usando a opção /G5, não o padrão /G4.  
   
- Esse comportamento é diferente de algumas versões anteriores, que foram aplicados somente as opções especificadas antes do nome de arquivo, resultando em VERDI.c que está sendo criado usando \/G4 e PUCCINI.c sendo compilados usando \/G5.
+ Esse comportamento é diferente do que algumas versões anteriores, aplicadas somente as opções especificadas antes do nome do arquivo, resultando em VERDI.c sendo compilado usando/G4 e PUCCINI.c sendo compilado usando /G5.

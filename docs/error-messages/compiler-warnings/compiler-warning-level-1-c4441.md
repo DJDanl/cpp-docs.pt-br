@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4441 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4441"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4441"
+title: "Compilador aviso (nível 1) C4441 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4441
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4441
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1d01274c86a4ed922d319034ccafcc3bae80991f
+ms.lasthandoff: 02/25/2017
 
-convenção de chamada de “cc1” ignorado; “cc2” usado  
+---
+# <a name="compiler-warning-level-1-c4441"></a>Compilador C4441 de aviso (nível 1)
+convenção de chamada de 'cc1' ignorado; 'cc2' usado  
   
- As funções de membro em tipos definidos pelo usuário gerenciados e em produtos genéricas globais da função devem usar [\_\_clrcall](../../cpp/clrcall.md) que chama a convenção.  `__clrcall`usado compilador.  
+ Funções de membro em tipos gerenciados definidos pelo usuário e genéricos de função global devem usar o [clrcall](../../cpp/clrcall.md) convenção de chamada.  O compilador usado `__clrcall`.  
   
-## Exemplo  
- O exemplo a seguir produz C4441.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4441.  
   
 ```  
 // C4441.cpp  

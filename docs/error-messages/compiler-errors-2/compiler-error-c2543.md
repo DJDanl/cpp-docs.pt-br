@@ -1,32 +1,47 @@
 ---
-title: "Erro do Compilador C2543 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2543"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2543"
+title: C2543 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2543
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2543
 ms.assetid: 6e4d2d03-ef34-4514-92fe-763543a71fa8
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2543
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1976fe185df5731d67eb72247a8fb67ca4ed8b1c
+ms.lasthandoff: 02/25/2017
 
-esperado “\]” para o operador “\[\]”  
+---
+# <a name="compiler-error-c2543"></a>C2543 de erro do compilador
+esperado ']' para o operador '[]'  
   
- O operador de subscrição está faltando um colchete esquerdo.  
+ O operador subscripting está faltando um colchete esquerdo.  
   
- Esse erro pode ser causado pela macro expansão.
+ Esse erro pode ser causado pela expansão de macro.

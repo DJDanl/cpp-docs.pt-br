@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3509"
+title: C3509 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3509
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3bfbeb373964212e23f6012e6a061bd456d0c6b4
+ms.lasthandoff: 02/25/2017
 
-“tipo”: tipo de retorno inválido de automação; quando um parâmetro estiver marcado”, “retval o tipo de retorno deve ser “nulo”, “HRESULT” ou “SCODE”  
+---
+# <a name="compiler-error-c3509"></a>C3509 de erro do compilador
+'type': tipo de retorno inválido de automação; Quando um parâmetro está marcado como 'retval', o tipo de retorno deve ser 'void', 'HRESULT' ou 'SCODE'  
   
- Um método em uma interface COM deve retornar nulo ou um HRESULT.  
+ Um método em uma interface COM deve retornar void ou um HRESULT.  
   
- O seguinte exemplo gera C3509:  
+ O exemplo a seguir gera C3509:  
   
 ```  
 // C3509.cpp  

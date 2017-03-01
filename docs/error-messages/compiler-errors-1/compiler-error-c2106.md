@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2106 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2106"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2106"
+title: C2106 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2106
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2106
 ms.assetid: d5c91a2e-04e4-4770-8478-788b98c52a53
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2106
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6e01a6028f8acdd9384858c2f80e089f07bf4edc
+ms.lasthandoff: 02/25/2017
 
-operador “”: o operando esquerdo deve ser l\-valor  
+---
+# <a name="compiler-error-c2106"></a>C2106 de erro do compilador
+'operator': operando esquerdo deve ser l-value  
   
- O operador deve ter um valor l\- como o operando esquerdo.  
+ O operador deve ter um l-value como operando esquerdo.  
   
- O seguinte exemplo gera C2106:  
+ O exemplo a seguir gera C2106:  
   
 ```  
 // C2106.cpp  

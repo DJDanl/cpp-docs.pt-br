@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2252 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2252"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2252"
+title: C2252 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2252
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2252
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fc550f7d412f01f8f6937a15fa7d4d44f0d22efd
+ms.lasthandoff: 02/25/2017
 
-não é possível criar explicitamente uma instância no modelo no escopo atual  
+---
+# <a name="compiler-error-c2252"></a>C2252 de erro do compilador
+não é possível instanciar explicitamente o modelo no escopo atual  
   
- O compilador detectou um problema com uma instanciação explícita de um modelo.  Por exemplo, você não pode criar explicitamente uma instância de um modelo em uma função.  
+ O compilador detectou um problema com uma instanciação explícita de um modelo.  Por exemplo, você não pode instanciar explicitamente um modelo em uma função.  
   
- O seguinte exemplo gera C2252:  
+ O exemplo a seguir gera C2252:  
   
 ```  
 // C2252.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2466 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2466"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2466"
+title: C2466 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2466
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2466
 ms.assetid: 75b251d1-7d0b-4a86-afca-26adedf74486
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2466
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 80a4949b8a8b25994c600d547da6e0ddf68ecde9
+ms.lasthandoff: 02/25/2017
 
-o não pode alocar uma matriz de tamanho constante 0  
+---
+# <a name="compiler-error-c2466"></a>C2466 de erro do compilador
+não é possível alocar uma matriz de dimensão constante 0  
   
- Uma matriz é atribuída ou declarada com tamanho zero.  A expressão constante para o tamanho da matriz deve ser um número inteiro maior que zero.  Uma declaração de matriz com um subscrito zero é válido somente para uma classe, uma estrutura, ou um sindicalista e apenas com extensões da Microsoft \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Uma matriz é alocada ou declarada com tamanho zero. A expressão de constante para o tamanho da matriz deve ser um inteiro maior que zero. Uma declaração de matriz com um zero subscrito é válida apenas para uma classe, estrutura ou membro de união e somente com extensões Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
   
- O seguinte exemplo gera C2466:  
+ O exemplo a seguir gera C2466:  
   
 ```  
 // C2466.cpp  

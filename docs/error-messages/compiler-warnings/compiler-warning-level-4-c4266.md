@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4266 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4266"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4266"
+title: "Compilador aviso (nível 4) C4266 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4266
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4266
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: de3ff46a0e0429153c989db38ec1d10ab7794d6f
+ms.lasthandoff: 02/25/2017
 
-função “”: não há substituição disponível para a função de membro virtual “tipo de base;” a função é ocultada  
+---
+# <a name="compiler-warning-level-4-c4266"></a>Compilador C4266 de aviso (nível 4)
+'function': nenhuma substituição disponível para função membro virtual da base 'type'; função é ocultada  
   
  Uma classe derivada não substituiu todas as sobrecargas de uma função virtual.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos de compilador desativados por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para maiores informações.  
+ Esse aviso é desativada por padrão.  Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4266:  
+ O exemplo a seguir gera C4266:  
   
 ```  
 // C4266.cpp  
@@ -48,7 +63,7 @@ class LocalBinding : private Engine {
 };   // C4266  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C4266b.cpp  

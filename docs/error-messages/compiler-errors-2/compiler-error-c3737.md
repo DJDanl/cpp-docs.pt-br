@@ -1,35 +1,51 @@
 ---
-title: "Erro do Compilador C3737 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3737"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3737"
+title: C3737 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3737
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3737
 ms.assetid: ca2aeb23-2491-4ccb-8838-884abf7065c8
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3737
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: fba4f70add3b92f2bbde8d5f1ad742a35f7d5bb6
+ms.lasthandoff: 02/25/2017
 
-“delegação”: um representante não pode ter uma convenção de chamada explícita  
+---
+# <a name="compiler-error-c3737"></a>C3737 de erro do compilador
+'representante': um delegado pode não ter uma convenção de chamada explícita  
   
- Você não pode especificar [convenção de chamada](../Topic/Calling%20Conventions.md) para [\_\_delegate](../Topic/__delegate.md).  
+ Não é possível especificar o [convenção de chamada](../../cpp/calling-conventions.md) para um `delegate`.  
   
- O seguinte exemplo gera C3737:  
+## <a name="example"></a>Exemplo  
+O exemplo a seguir gera C3737:  
   
 ```  
 // C3737a.cpp  
@@ -41,17 +57,4 @@ delegate void __stdcall MyFunc();   // C3737
 int main() {  
 }  
 ```  
-  
- O seguinte exemplo gera C3737:  
-  
-```  
-// C3737b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-__delegate void __stdcall MyFunc();   // C3737  
-// Try the following line instead.  
-// __delegate void MyFunc();  
-  
-int main() {  
-}  
-```
+

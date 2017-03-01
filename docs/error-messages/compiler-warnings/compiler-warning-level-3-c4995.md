@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4995 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4995"
+title: "Compilador aviso (nível 3) C4995 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4995
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4995
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 253645d6ea22f694e657c3391bdb723b75e086d6
+ms.lasthandoff: 02/25/2017
 
-função “”: o nome foi marcado como o \#pragma substituído  
+---
+# <a name="compiler-warning-level-3-c4995"></a>Compilador C4995 de aviso (nível 3)
+'function': nome foi marcado como #pragma preterido  
   
- O compilador encontrou uma função que foi marcada com pragma [preterido](../Topic/deprecated%20\(C-C++\).md).  A função não pode ser mais suporte em uma versão futura.  Você pode desativar esse aviso com o pragma de [aviso](../../preprocessor/warning.md) \(exemplo abaixo\).  
+ O compilador encontrou uma função que foi marcada com o pragma [preterido](../../preprocessor/deprecated-c-cpp.md). A função pode não ter mais suporte em uma versão futura. Você pode desativar esse aviso com a [aviso](../../preprocessor/warning.md) pragma (exemplo abaixo).  
   
-## Exemplo  
- O seguinte exemplo gera C4995:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4995:  
   
 ```  
 // C4995.cpp  

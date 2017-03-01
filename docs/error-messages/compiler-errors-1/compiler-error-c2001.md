@@ -1,42 +1,57 @@
 ---
-title: "Erro do Compilador C2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2001"
+title: C2001 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9237454014fea3967f7d6cfd9f8ac4b02f866eda
+ms.lasthandoff: 02/25/2017
 
-nova linha na constante  
+---
+# <a name="compiler-error-c2001"></a>C2001 de erro do compilador
+newline em constante  
   
- Uma constante de cadeia de caracteres não pode ser retomada em uma segunda linha a menos que você faça o seguinte:  
+ Uma constante de cadeia de caracteres não pode ser continuada em uma segunda linha, a menos que você faça o seguinte:  
   
--   Termine a primeira linha com uma barra invertida.  
+-   Finalizar a primeira linha com uma barra invertida.  
   
--   Feche a cadeia de caracteres na primeira linha com aspas duplas e abra a cadeia de caracteres na próxima linha com outra aspa dupla.  
+-   Feche a cadeia de caracteres na primeira linha com aspas duplas e abra a cadeia de caracteres na próxima linha com outro aspas duplas.  
   
- Encerrar a primeira linha com \\ n não é suficiente.  
+ Terminando a primeira linha com \n não é suficiente.  
   
-## Exemplo  
- O seguinte exemplo gera C2001:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2001:  
   
 ```  
 // C2001.cpp  
@@ -52,8 +67,8 @@ int main()
 }  
 ```  
   
-## Exemplo  
- Os espaços no início da linha seguinte depois que um caractere de linha acompanhamento é incluído na constante de cadeia de caracteres.  Nenhum dos exemplos citados acima inserir um caractere de nova linha na constante de cadeia de caracteres.  Você pode inserir um caractere de nova linha como mostrado a seguir:  
+## <a name="example"></a>Exemplo  
+ Espaços no início da próxima linha depois de um caractere de continuação de linha são incluídos na constante de cadeia de caracteres. Nenhum dos exemplos mostrados acima incorporar um caractere de nova linha em constante de cadeia de caracteres. Você pode inserir um caractere de nova linha, conforme mostrado aqui:  
   
 ```  
 // C2001b.cpp  

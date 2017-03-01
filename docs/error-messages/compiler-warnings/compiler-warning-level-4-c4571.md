@@ -1,50 +1,65 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4571"
+title: "Compilador aviso (nível 4) C4571 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4571
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e75d66d16c593e480dc5b29ba22a311e626147ca
+ms.lasthandoff: 02/25/2017
 
-Informativo: a semântica de captura \(...\) foi alterado desde Visual C\+\+ 7.1; as exceções estruturados \(SEH\) são capturadas não  
+---
+# <a name="compiler-warning-level-4-c4571"></a>Compilador C4571 de aviso (nível 4)
+Informativo: semântica catch(...) mudou desde o Visual C++ 7.1; exceções estruturadas (SEH) não são mais capturadas  
   
- C4571 é gerado para cada bloco de captura \(...\) a compile com **\/EHs**.  
+ C4571 é gerado para cada bloco catch ao compilar com **/EHs**.  
   
- Ao criar com **\/EHs**, um bloco de captura \(...\) não detectará uma exceção estruturado \(divisão por zero, ponteiro nulo, por exemplo\); um bloco de captura \(...\) detectará somente explicitamente\- lançadas exceções, C\+\+.  Para obter mais informações, consulte [Tratamento de Exceção](../../cpp/exception-handling-in-visual-cpp.md).  
+ Ao compilar com **/EHs**, um bloco catch não vai capturar uma exceção estruturada (divisão por zero, um ponteiro nulo, por exemplo); um catch bloco será apenas catch geradas explicitamente, exceções do C++.  Para obter mais informações, consulte [Exception Handling](../../cpp/exception-handling-in-visual-cpp.md).  
   
- Esse aviso é desativada por padrão.  Defina esse aviso sobre assegurar que quando você compila com **\/EHs** seus blocos de try\/catch \(...\) não pretendam capturar exceções estruturados.  Consulte [Avisos de compilador desativados por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para maiores informações.  
+ Esse aviso é desativada por padrão.  Ativar esse aviso em garantir que quando você compila com **/EHs** seus blocos catch (…) não tiver a intenção de capturar exceções estruturadas.  Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- Você pode resolver C4571 em uma das seguintes maneiras,  
+ Você pode resolver C4571 de uma das maneiras a seguir,  
   
--   Compile com **\/EHa** se você ainda quiser que seus blocos de try\/catch \(...\) para capturar exceções estruturados.  
+-   Compile com **/EHa** se você ainda deseja seus blocos catch para capturar exceções estruturadas.  
   
--   Não habilite C4571 se você não quiser que seus blocos de try\/catch \(...\) para capturar exceções estruturados, mas ainda quiser usar blocos de try\/catch \(...\).  Você ainda pode capturar exceções estruturados usando as palavras\-chave estruturados a manipulação de exceções \(**\_\_try**, **\_\_except**, e **\_\_finally**\).  Mas lembre\-se de que, quando os destruidores compilados de **\/EHs** serão chamados somente quando a exceção c criando será gerada, não a exceção.  
+-   Não habilite C4571 se você não quiser que seus blocos catch para capturar exceções estruturadas, mas você ainda queira usar blocos catch.  Você ainda pode capturar exceções estruturadas, usando a palavras-chave de tratamento de exceção estruturada (**Try**, **EXCEPT**, e **Finally**).  Mas lembre-se, quando compilado **/EHs** destruidores só serão chamados quando uma exceção de C++ é lançada, não quando ocorre uma exceção SEH.  
   
--   Substitua o bloco de captura \(...\) com os blocos de try\/catch para exceções específicas do C\+\+ e, opcionalmente, adicione manipulação de exceção estruturados em torno de manipulação de exceção C\+\+ \(**\_\_try**, **\_\_except**, e **\_\_finally**\).  Consulte [Tratamento de exceções estruturado](../../cpp/structured-exception-handling-c-cpp.md) para maiores informações.  
+-   Substitua o bloco catch com blocos catch para exceções específicas de C++ e, opcionalmente, adicionar tratamento em todo o tratamento de exceções C++ de exceção estruturada (**Try**, **EXCEPT**, e **Finally**).  Consulte [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) para obter mais informações.  
   
- Consulte [\/EH \(modelo de tratamento de exceções\)](../../build/reference/eh-exception-handling-model.md) para maiores informações.  
+ Consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir produz C4571.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4571.  
   
 ```  
 // C4571.cpp  

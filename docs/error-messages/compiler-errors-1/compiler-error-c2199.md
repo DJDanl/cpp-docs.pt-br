@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2199 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2199"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2199"
+title: C2199 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2199
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2199
 ms.assetid: 6a92a1b7-7906-49e6-a31f-e8bffbc7706a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2199
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8deec77a533455d07157774d8abb9885b721102c
+ms.lasthandoff: 02/25/2017
 
-erro de sintaxe: foi encontrado “identificador \(” no escopo global \(uma declaração pretendida?\)  
+---
+# <a name="compiler-error-c2199"></a>C2199 de erro do compilador
+Erro de sintaxe: encontrado ' identificador (' no escopo global (era uma declaração se destina?)  
   
- O contexto especificado gerou um erro de sintaxe.  Pode haver uma sintaxe incorreta da declaração.  
+ O contexto especificado causou um erro de sintaxe. Pode haver sintaxe de declaração incorreta.  
   
- O seguinte exemplo gera C2199:  
+ O exemplo a seguir gera C2199:  
   
 ```  
 // C2199.cpp  

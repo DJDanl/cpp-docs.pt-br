@@ -1,52 +1,69 @@
 ---
-title: "Erro do Compilador C3409 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3409"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3409"
+title: C3409 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3409
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3409
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: aacba3a2ece56fbe63b63bb5b1b9d0cc98e2505f
+ms.lasthandoff: 02/25/2017
 
-empty o bloco do atributo não é permitido  
+---
+# <a name="compiler-error-c3409"></a>C3409 de erro do compilador
+bloco de atributos vazio não é permitido  
   
- Os colchetes são interpretados pelo compilador como um bloco de [atributo](../../windows/cpp-attributes-reference.md) , mas nenhum atributo for localizado.  
+ Os colchetes foram interpretados pelo compilador como um [atributo](../../windows/cpp-attributes-reference.md) bloco, mas nenhum atributo foi encontrado.  
   
- O compilador pode gerar esse erro quando você usa colchetes como parte da definição de uma expressão de lambda.  Esse erro ocorre quando o compilador não pode determinar se os colchetes são parte da definição de uma expressão de lambda ou bloco do atributo.  Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).  
+ O compilador pode gerar esse erro quando você usa colchetes como parte da definição de uma expressão lambda. Esse erro ocorre quando o compilador não pode determinar se os colchetes são parte da definição de uma expressão lambda ou de um bloco de atributo. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
-### Para corrigir este erro  
+### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 1.  Se os colchetes são parte de um bloco de atributo:  
   
-    1.  Fornecer um ou mais atributos no bloco do atributo.  
+    1.  Fornece um ou mais atributos no bloco de atributo.  
   
-    2.  Remover o pacote do atributo.  
+    2.  Remova o bloco de atributo.  
   
-2.  Se os colchetes são parte de uma expressão de lambda:  
+2.  Se os colchetes são parte de uma expressão lambda:  
   
-    1.  Verifique se a expressão de lambda válidos segue regras de sintaxe.  
+    1.  Certifique-se de que a expressão lambda segue as regras de sintaxe válida.  
   
-         Para obter mais informações sobre a sintaxe da expressão de lambda, consulte [Sintaxe da expressão lambda](../../cpp/lambda-expression-syntax.md).  
+         Para obter mais informações sobre a sintaxe da expressão lambda, consulte [sintaxe da expressão Lambda](../../cpp/lambda-expression-syntax.md).  
   
-## Exemplo  
- O exemplo a seguir gerenciar C3409.  
+    2.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3409.  
   
 ```  
 // C3409.cpp  
@@ -63,8 +80,8 @@ __interface x {};
 class b : public x {};  
 ```  
   
-## Exemplo  
- O exemplo C3409 gerencie como uma expressão de lambda usa a especificação de `mutable` , mas não fornece uma lista de parâmetros.  O compilador não pode determinar se os colchetes são parte da definição de uma expressão de lambda ou bloco do atributo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3409 porque uma expressão lambda usa o `mutable` especificação, mas não fornece uma lista de parâmetros. O compilador não pode determinar se os colchetes são parte da definição de uma expressão lambda ou de um bloco de atributo.  
   
 ```  
 // C3409b.cpp  
@@ -75,7 +92,7 @@ int main()
 }  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [atributo](../../windows/cpp-attributes-reference.md)   
  [Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)   
  [Sintaxe da expressão lambda](../../cpp/lambda-expression-syntax.md)

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2477 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2477"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2477"
+title: C2477 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2477
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2477
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2a35402df2431d93986e901824dabf0bebae0cb8
+ms.lasthandoff: 02/25/2017
 
-“membro”: o membro estático de dados não pode ser iniciado pela classe derivada  
+---
+# <a name="compiler-error-c2477"></a>C2477 de erro do compilador
+'member': membro de dados estático não pode ser inicializado por meio da classe derivada  
   
- Um membro estático de dados de uma classe do modelo foi inicializado incorretamente.  Essa é uma alteração com versões do compilador do Visual C\+\+ antes do Visual Studio .NET 2003., para estar em conformidade com o padrão ISO C\+\+.  
+ Um membro de dados estáticos de uma classe de modelo foi inicializado incorretamente. Isso é uma alteração significativa com versões do compilador do Visual C++ antes do Visual Studio .NET 2003, para estar de acordo com o padrão ISO C++.  
   
- O seguinte exemplo gera C2477:  
+ O exemplo a seguir gera C2477:  
   
 ```  
 // C2477.cpp  

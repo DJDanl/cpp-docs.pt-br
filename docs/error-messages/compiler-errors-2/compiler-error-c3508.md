@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3508 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3508"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3508"
+title: C3508 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3508
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3508
 ms.assetid: 16d08f89-2f32-44eb-9421-68acecddf49b
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3508
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 31101d9482efcad6ee16f403c69988dd459598b4
+ms.lasthandoff: 02/25/2017
 
-“tipo”: não é um tipo válido de automação  
+---
+# <a name="compiler-error-c3508"></a>C3508 de erro do compilador
+'type': não é um tipo válido de automação  
   
  Um tipo inválido foi especificado.  
   
-## Exemplo  
- O seguinte exemplo gera C3508:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3508:  
   
 ```  
 // C3508.cpp  

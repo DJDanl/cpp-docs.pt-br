@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4561 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4561"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4561"
+title: "Compilador aviso (nível 1) C4561 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4561
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4561
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 411eda983973e842f0e664cfb3e19028ef287f60
+ms.lasthandoff: 02/25/2017
 
-“\_\_fastcall” incompatível com a opção de “\/clr”: ao converter “\_\_stdcall”  
+---
+# <a name="compiler-warning-level-1-c4561"></a>Compilador C4561 de aviso (nível 1)
+fastcall' incompatível com o ' / clr' opção: conversão em '\_stdcall '  
   
- A convenção da chamada de função de [\_\_fastcall](../../cpp/fastcall.md) não pode ser usada com a opção do compilador de [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) .  O compilador ignora as chamadas a `__fastcall`.  Para corrigir esse aviso, remover chamadas a **\_\_fastcall** ou criá\-las sem **\/clr**.  
+ O [fastcall](../../cpp/fastcall.md) convenção de chamada de função não pode ser usada com o [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador. O compilador ignora as chamadas para `__fastcall`. Para corrigir esse aviso, remova as chamadas para **fastcall** ou compilar sem **/clr**.  
   
- O seguinte exemplo gera C4561:  
+ O exemplo a seguir gera C4561:  
   
 ```  
 // C4561.cpp  

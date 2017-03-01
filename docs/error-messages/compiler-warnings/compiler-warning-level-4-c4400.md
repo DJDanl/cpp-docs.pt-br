@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4400 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4400"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4400"
+title: "Compilador aviso (nível 4) C4400 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4400
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4400
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 69a85c9d21670d97c9d7a956abf54496719f0875
+ms.lasthandoff: 02/25/2017
 
-“tipo”: o const\/qualificadores temporários neste tipo não tem suporte  
+---
+# <a name="compiler-warning-level-4-c4400"></a>Compilador C4400 de aviso (nível 4)
+'type': não há suporte para const/volátil qualificadores nesse tipo  
   
- Os qualificadores de [const](../../cpp/const-cpp.md)e de [volatile](../../cpp/volatile-cpp.md)não funcionarão com variáveis de tipos de Common Language Runtime.  
+ O [const](../../cpp/const-cpp.md)e [volátil](../../cpp/volatile-cpp.md)qualificadores não funcionará com variáveis de tipos common language runtime.  
   
-## Exemplo  
- O exemplo a seguir produz C4400.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4400.  
   
 ```  
 // C4400.cpp  

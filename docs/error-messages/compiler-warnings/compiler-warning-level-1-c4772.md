@@ -1,40 +1,55 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4772 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4772"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4772"
+title: "Compilador aviso (nível 1) C4772 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4772
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4772
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 41d26a5ecf3dd44256f1673dfaf47948103f41d3
+ms.lasthandoff: 02/25/2017
 
-o \#import que fez referência a um tipo de uma biblioteca ausente do tipo; “missing\_type” usado como espaço reservado  
+---
+# <a name="compiler-warning-level-1-c4772"></a>Compilador C4772 de aviso (nível 1)
+\#importação referenciou um tipo de uma biblioteca de tipos ausente; 'missing_type' usado como um espaço reservado  
   
- Uma biblioteca de tipos foi referenciada com a política de [\#import](../Topic/%23import%20Directive%20\(C++\).md) .  No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`.  Esse outro arquivo de .tlb não foi encontrado pelo compilador.  
+ Uma biblioteca de tipos foi referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb não foi encontrado pelo compilador.  
   
- Observe que o compilador não localizará bibliotecas de tipo em diretórios diferentes se você usar a opção do compilador de [\/I \(diretórios de inclusão adicionais\)](../../build/reference/i-additional-include-directories.md) especificar esses diretórios.  Se você quiser que o compilador para localizar bibliotecas de tipo em diretórios diferentes, adicionar esses diretórios para a variável de ambiente PATH.  
+ Observe que o compilador não localizará bibliotecas de tipo em diretórios diferentes se você usar o [/I (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md) opção de compilador para especificar esses diretórios. Se você deseja que o compilador encontrar bibliotecas de tipo em diretórios diferentes, adicione esses diretórios à variável de ambiente PATH.  
   
- Esse aviso é emitido, por padrão como um erro.  C4772 não pode ser suprimido com \/W0.  
+ Esse aviso é, por padrão, emitido como um erro. C4772 não pode ser suprimido com /W0.  
   
-## Exemplo  
- Esta é a primeira biblioteca de tipos necessária para reproduzir C4772.  
+## <a name="example"></a>Exemplo  
+ Essa é a primeira biblioteca de tipo necessária para reproduzir C4772.  
   
 ```  
 // c4772a.idl  
@@ -49,8 +64,8 @@ library C4772aLib
 };  
 ```  
   
-## Exemplo  
- Esta é a segunda biblioteca de tipos necessária para reproduzir C4772.  
+## <a name="example"></a>Exemplo  
+ Essa é a biblioteca de tipo segundo necessária para reproduzir C4772.  
   
 ```  
 // c4772b.idl  
@@ -68,8 +83,8 @@ library C4772bLib
 };  
 ```  
   
-## Exemplo  
- O seguinte exemplo gera C4772:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4772:  
   
 ```  
 // C4772.cpp  

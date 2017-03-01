@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4522 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4522"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4522"
+title: "Compilador aviso (nível 3) C4522 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4522
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4522
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c64c2f22412bc5b937d18a7233a378f9630fb848
+ms.lasthandoff: 02/25/2017
 
-“classes: vários operadores de atribuição especificados  
+---
+# <a name="compiler-warning-level-3-c4522"></a>Compilador C4522 de aviso (nível 3)
+'class': vários operadores de atribuição especificados  
   
- A classe tiver vários operadores de atribuição de um único tipo.  Esse aviso é informativo; os construtores são acessíveis em seu programa.  
+ A classe tem vários operadores de atribuição de um único tipo. Esse aviso é informativo; os construtores são podem ser chamados em seu programa.  
   
- Use o pragma de [warning](../../preprocessor/warning.md) para suprimir o aviso.  
+ Use o [aviso](../../preprocessor/warning.md) pragma para suprimir esse aviso.  
   
-## Exemplo  
- O exemplo a seguir produz C4522.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4522.  
   
 ```  
 // C4522.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2153 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2153"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2153"
+title: C2153 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2153
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2153
 ms.assetid: cfc50cb7-9a0f-4b5b-879a-d419c99f7be1
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2153
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e92f9c22722a7bb074679a041e9604c17b21d7be
+ms.lasthandoff: 02/25/2017
 
-constantes hexadecimal deve ter pelo menos um dígito hexadecimal o  
+---
+# <a name="compiler-error-c2153"></a>C2153 de erro do compilador
+constantes hex devem possuir pelo menos um dígito hex  
   
- As constantes hexadecimais 0x, 0X, e \\ x não são válidos.  Pelo menos um dígito hex o deve seguir x ou X.  
+ Constantes hexadecimais 0 x, 0x e \x não são válidos. Pelo menos um dígito hexadecimal deve seguir x ou X.  
   
- O seguinte exemplo gera C2153:  
+ O exemplo a seguir gera C2153:  
   
 ```  
 // C2153.cpp  

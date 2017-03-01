@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4293 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4293"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4293"
+title: "Compilador aviso (nível 1) C4293 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4293
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4293
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c5418bfabeacf42d195c6f539c28823bcfec3982
+ms.lasthandoff: 02/25/2017
 
-operador “”: comportamento indefinido negativo ou muito grande de contagem de turno,  
+---
+# <a name="compiler-warning-level-1-c4293"></a>Compilador C4293 de aviso (nível 1)
+'operator': Deslocar um número negativo ou muito grande, um comportamento indefinido  
   
- Se uma contagem de turno é negativa ou muito grande, o comportamento da imagem resultante é indefinido.  
+ Se uma contagem de shift for negativo ou muito grande, o comportamento da imagem resultante será indefinido.  
   
-## Exemplo  
- O seguinte exemplo gera C4293:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4293:  
   
 ```  
 // C4293.cpp  

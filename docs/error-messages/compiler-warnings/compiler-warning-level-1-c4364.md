@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4364"
+title: "Compilador aviso (nível 1) C4364 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4364
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7fc63c4d11c7d309cbfdb97769f6d26e986aa971
+ms.lasthandoff: 02/25/2017
 
-\#using para o assembly “arquivo” consultado anteriormente no local \(line\_number\) sem atributo de as\_friend; as\_friend não aplicado  
+---
+# <a name="compiler-warning-level-1-c4364"></a>Compilador C4364 de aviso (nível 1)
+\#usando para o assembly 'arquivo' visto anteriormente em location(line_number) sem as_friend atributo; as_friend não aplicado  
   
- Uma política de `#using` foi repetida para um dado arquivo de metadados, mas o qualificador de `as_friend` não foi usada na primeira ocorrência; o compilador ignorará segundo `as_friend`.  
+ A `#using` diretiva foi repetida para um arquivo de metadados específico, mas o `as_friend` qualificador não foi usado na primeira ocorrência; o compilador irá ignorar o segundo `as_friend`.  
   
- Para obter mais informações, consulte [Assemblies amigáveis \(C\+\+\)](../../dotnet/friend-assemblies-cpp.md).  
+ Para obter mais informações, consulte [Friend Assemblies (C++)](../../dotnet/friend-assemblies-cpp.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um componente.  
   
 ```  
@@ -40,8 +55,8 @@ manager: "ghogen"
 ref class A {};  
 ```  
   
-## Exemplo  
- O exemplo a seguir produz C4364.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4364.  
   
 ```  
 // C4364_b.cpp  

@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2009"
+title: C2009 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2009
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 70a03009a636b2bc1ca99c4eb886daafed2d7b9f
+ms.lasthandoff: 02/25/2017
 
-reutilização de “identificador formal macro”  
+---
+# <a name="compiler-error-c2009"></a>C2009 de erro do compilador
+reutilização de macro formal 'Identificador'  
   
- A lista de parâmetro formal definição de uma macro usa o identificador mais de uma vez.  Os identificadores da lista de parâmetros de macro devem ser exclusivos.  
+ Lista de parâmetros formais de uma definição de macro usa o identificador de mais de uma vez. Identificadores na lista de parâmetros da macro devem ser exclusivos.  
   
-## Exemplo  
- O seguinte exemplo gera C2009:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2009:  
   
 ```  
 // C2009.cpp  
@@ -44,8 +59,8 @@ int main()
 }  
 ```  
   
-## Exemplo  
- Solução possível:  
+## <a name="example"></a>Exemplo  
+ Resolução possível:  
   
 ```  
 // C2009b.cpp  

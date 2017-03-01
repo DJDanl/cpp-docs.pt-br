@@ -1,42 +1,57 @@
 ---
-title: "Erro do Compilador C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+title: C2217 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2bdb30cf9022f8c9bf489a056c21f12eb183c203
+ms.lasthandoff: 02/25/2017
 
-“attribute1” requer “attribute2”  
+---
+# <a name="compiler-error-c2217"></a>C2217 de erro do compilador
+'attribute1' requer 'attribute2'  
   
- O primeiro atributo da função requer o segundo atributo.  
+ O primeiro atributo de função requer o segundo atributo.  
   
-### Para corrigir verificando as seguintes causas possíveis  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
-1.  Interrompa a função \(\) de`__interrupt`declarada como `near`.  As funções de interrupção devem ser `far`.  
+1.  Interrupção (`__interrupt`) função declarada como `near`. Interrupção funções devem ser `far`.  
   
-2.  Interrompa a função declarada com `__stdcall`, ou o `__fastcall`.  As funções de interrupção devem usar C que chama convenções.  
+2.  Interromper a função declarada com `__stdcall`, ou `__fastcall`. Funções de interrupção deve usar C convenções de chamada.  
   
-## Exemplo  
- C2217 também pode ocorrer se você tentar associar um delegado a uma função de CLR que usa um número variável de argumentos.  Se a função também tem sobrecarga da matriz de parâmetro de e, use o em vez disso.  O exemplo a seguir produz C2217.  
+## <a name="example"></a>Exemplo  
+ C2217 também pode ocorrer se você tentar associar um delegado para uma função CLR que aceita um número variável de argumentos. Se a função também tem sobrecarga de matriz e parâmetro, use-a. O exemplo a seguir gera C2217.  
   
 ```  
 // C2217.cpp  

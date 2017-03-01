@@ -1,184 +1,193 @@
 ---
-title: "Erros do Compilador C2700 a C2799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: C2700 de erros do compilador por meio de C2799 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erros do Compilador C2700 a C2799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fd86815cb1f3ef215805bdb96449cb8b7a9b322a
+ms.lasthandoff: 02/25/2017
 
-Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C\+\+.  Você pode acessar as informações aqui ou na janela **Saída** no Visual Studio, é possível selecionar um número de erro e, em seguida, escolher a tecla F1.  
+---
+# <a name="compiler-errors-c2700-through-c2799"></a>C2700 de erros do compilador por meio de C2799
+Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e pressione a tecla F1.  
   
- [Erro do Compilador C2701](../Topic/Compiler%20Error%20C2701.md)  
+ [C2701 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2701.md)  
   
- [Erro do Compilador C2702](../../error-messages/compiler-errors-2/compiler-error-c2702.md)  
+ [C2702 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2702.md)  
   
  [C2703 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2703.md)  
   
- [Erro do Compilador C2705](../../error-messages/compiler-errors-2/compiler-error-c2705.md)  
+ [C2705 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2705.md)  
   
- [Erro do Compilador C2706](../../error-messages/compiler-errors-2/compiler-error-c2706.md)  
+ [C2706 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2706.md)  
   
- [Erro do Compilador C2707](../../error-messages/compiler-errors-2/compiler-error-c2707.md)  
+ [C2707 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2707.md)  
   
- [Erro do Compilador C2708](../../error-messages/compiler-errors-2/compiler-error-c2708.md)  
+ [C2708 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2708.md)  
   
- [Erro do Compilador C2710](../../error-messages/compiler-errors-2/compiler-error-c2710.md)  
+ [C2710 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2710.md)  
   
- [Erro do Compilador C2711](../../error-messages/compiler-errors-2/compiler-error-c2711.md)  
+ [C2711 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2711.md)  
   
- [Erro do Compilador C2712](../Topic/Compiler%20Error%20C2712.md)  
+ [C2712 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2712.md)  
   
- [Erro do Compilador C2713](../../error-messages/compiler-errors-2/compiler-error-c2713.md)  
+ [C2713 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2713.md)  
   
- [Erro do Compilador C2714](../Topic/Compiler%20Error%20C2714.md)  
+ [C2714 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2714.md)  
   
- [Erro do Compilador C2715](../../error-messages/compiler-errors-2/compiler-error-c2715.md)  
+ [C2715 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2715.md)  
   
- [C2716 de erro do compilador](../Topic/Compiler%20Error%20C2716.md)  
+ [C2718 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2718.md)  
   
- [Erro do Compilador C2717](../Topic/Compiler%20Error%20C2717.md)  
+ [C2719 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2719.md)  
   
- [Erro do Compilador C2718](../../error-messages/compiler-errors-2/compiler-error-c2718.md)  
+ [C2720 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2720.md)  
   
- [Erro do Compilador C2719](../Topic/Compiler%20Error%20C2719.md)  
+ [C2721 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2721.md)  
   
- [Erro do Compilador C2720](../../error-messages/compiler-errors-2/compiler-error-c2720.md)  
+ [C2722 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2722.md)  
   
- [Erro do Compilador C2721](../../error-messages/compiler-errors-2/compiler-error-c2721.md)  
+ [C2723 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2723.md)  
   
- [Erro do Compilador C2722](../Topic/Compiler%20Error%20C2722.md)  
+ [C2724 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2724.md)  
   
- [Erro do Compilador C2723](../../error-messages/compiler-errors-2/compiler-error-c2723.md)  
+ [C2725 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2725.md)  
   
- [Erro do Compilador C2724](../Topic/Compiler%20Error%20C2724.md)  
+ [C2726 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2726.md)  
   
- [Erro do Compilador C2725](../Topic/Compiler%20Error%20C2725.md)  
+ [C2728 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2728.md)  
   
- [Erro do Compilador C2726](../../error-messages/compiler-errors-2/compiler-error-c2726.md)  
-  
- [Erro do Compilador C2727](../Topic/Compiler%20Error%20C2727.md)  
-  
- [Erro do Compilador C2728](../../error-messages/compiler-errors-2/compiler-error-c2728.md)  
-  
- [Erro do Compilador C2731](../../error-messages/compiler-errors-2/compiler-error-c2731.md)  
+ [C2731 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2731.md)  
   
  [C2732 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2732.md)  
   
- [Erro do Compilador C2733](../../error-messages/compiler-errors-2/compiler-error-c2733.md)  
+ [C2733 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2733.md)  
   
- [Erro do Compilador C2734](../Topic/Compiler%20Error%20C2734.md)  
+ [C2734 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2734.md)  
   
- [Erro do Compilador C2735](../../error-messages/compiler-errors-2/compiler-error-c2735.md)  
+ [C2735 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2735.md)  
   
- [Erro do Compilador C2736](../../error-messages/compiler-errors-2/compiler-error-c2736.md)  
+ [C2736 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2736.md)  
   
  [C2738 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2738.md)  
   
- [Erro do Compilador C2739](../../error-messages/compiler-errors-2/compiler-error-c2739.md)  
+ [C2739 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2739.md)  
   
- [Erro do Compilador C2743](../../error-messages/compiler-errors-2/compiler-error-c2743.md)  
+ [C2743 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2743.md)  
   
- [Erro do Compilador C2745](../../error-messages/compiler-errors-2/compiler-error-c2745.md)  
+ [C2745 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2745.md)  
   
- [Erro do Compilador C2748](../../error-messages/compiler-errors-2/compiler-error-c2748.md)  
+ [C2748 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2748.md)  
   
- [Erro do Compilador C2749](../Topic/Compiler%20Error%20C2749.md)  
+ [C2749 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2749.md)  
   
- [Erro do Compilador C2750](../../error-messages/compiler-errors-2/compiler-error-c2750.md)  
+ [C2750 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2750.md)  
   
- [Erro do Compilador C2751](../../error-messages/compiler-errors-2/compiler-error-c2751.md)  
+ [C2751 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2751.md)  
   
- [Erro do Compilador C2752](../Topic/Compiler%20Error%20C2752.md)  
+ [C2752 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2752.md)  
   
- [Erro do Compilador C2753](../../error-messages/compiler-errors-2/compiler-error-c2753.md)  
+ [C2753 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2753.md)  
   
- [Erro do Compilador C2754](../../error-messages/compiler-errors-2/compiler-error-c2754.md)  
+ [C2754 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2754.md)  
   
- [Erro do Compilador C2755](../../error-messages/compiler-errors-2/compiler-error-c2755.md)  
+ [C2755 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2755.md)  
   
- [Erro do Compilador C2756](../../error-messages/compiler-errors-2/compiler-error-c2756.md)  
+ [C2756 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2756.md)  
   
- [Erro do Compilador C2757](../../error-messages/compiler-errors-2/compiler-error-c2757.md)  
+ [C2757 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2757.md)  
   
- [Erro do Compilador C2758](../../error-messages/compiler-errors-2/compiler-error-c2758.md)  
+ [C2758 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2758.md)  
   
- [Erro do Compilador C2760](../../error-messages/compiler-errors-2/compiler-error-c2760.md)  
+ [C2760 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2760.md)  
   
- [Erro do Compilador C2761](../../error-messages/compiler-errors-2/compiler-error-c2761.md)  
+ [C2761 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2761.md)  
   
- [Erro do Compilador C2762](../../error-messages/compiler-errors-2/compiler-error-c2762.md)  
+ [C2762 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2762.md)  
   
- [Erro do Compilador C2764](../../error-messages/compiler-errors-2/compiler-error-c2764.md)  
+ [C2764 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2764.md)  
   
- [Erro do Compilador C2765](../Topic/Compiler%20Error%20C2765.md)  
+ [C2765 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2765.md)  
   
- [Erro do Compilador C2766](../Topic/Compiler%20Error%20C2766.md)  
+ [C2766 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2766.md)  
   
- [Erro do Compilador C2767](../../error-messages/compiler-errors-2/compiler-error-c2767.md)  
+ [C2767 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2767.md)  
   
- [Erro do Compilador C2768](../../error-messages/compiler-errors-2/compiler-error-c2768.md)  
+ [C2768 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2768.md)  
   
- [Erro do Compilador C2770](../Topic/Compiler%20Error%20C2770.md)  
+ [C2770 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2770.md)  
   
- [Erro do Compilador C2773](../Topic/Compiler%20Error%20C2773.md)  
+ [C2773 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2773.md)  
   
- [Erro do Compilador C2774](../../error-messages/compiler-errors-2/compiler-error-c2774.md)  
+ [C2774 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2774.md)  
   
- [Erro do Compilador C2775](../../error-messages/compiler-errors-2/compiler-error-c2775.md)  
+ [C2775 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2775.md)  
   
- [Erro do Compilador C2776](../../error-messages/compiler-errors-2/compiler-error-c2776.md)  
+ [C2776 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2776.md)  
   
- [Erro do Compilador C2777](../../error-messages/compiler-errors-2/compiler-error-c2777.md)  
+ [C2777 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2777.md)  
   
- [Erro do Compilador C2778](../../error-messages/compiler-errors-2/compiler-error-c2778.md)  
+ [C2778 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2778.md)  
   
- [Erro do Compilador C2779](../Topic/Compiler%20Error%20C2779.md)  
+ [C2779 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2779.md)  
   
- [Erro do Compilador C2780](../../error-messages/compiler-errors-2/compiler-error-c2780.md)  
+ [C2780 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2780.md)  
   
- [Erro do Compilador C2781](../../error-messages/compiler-errors-2/compiler-error-c2781.md)  
+ [C2781 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2781.md)  
   
- [Erro do Compilador C2782](../../error-messages/compiler-errors-2/compiler-error-c2782.md)  
+ [C2782 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2782.md)  
   
- [Erro do Compilador C2783](../Topic/Compiler%20Error%20C2783.md)  
+ [C2783 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2783.md)  
   
- [Erro do Compilador C2784](../../error-messages/compiler-errors-2/compiler-error-c2784.md)  
+ [C2784 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2784.md)  
   
- [Erro do Compilador C2785](../../error-messages/compiler-errors-2/compiler-error-c2785.md)  
+ [C2785 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2785.md)  
   
- [Erro do Compilador C2786](../../error-messages/compiler-errors-2/compiler-error-c2786.md)  
+ [C2786 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2786.md)  
   
- [Erro do Compilador C2787](../Topic/Compiler%20Error%20C2787.md)  
+ [C2787 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2787.md)  
   
- [Erro do Compilador C2788](../Topic/Compiler%20Error%20C2788.md)  
+ [C2788 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2788.md)  
   
- [Erro do Compilador C2790](../../error-messages/compiler-errors-2/compiler-error-c2790.md)  
+ [C2790 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2790.md)  
   
- [Erro do Compilador C2791](../../error-messages/compiler-errors-2/compiler-error-c2791.md)  
+ [C2791 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2791.md)  
   
- [Erro do Compilador C2792](../../error-messages/compiler-errors-2/compiler-error-c2792.md)  
+ [C2792 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2792.md)  
   
- [Erro do Compilador C2793](../../error-messages/compiler-errors-2/compiler-error-c2793.md)  
+ [C2793 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2793.md)  
   
- [Erro do Compilador C2794](../../error-messages/compiler-errors-2/compiler-error-c2794.md)  
+ [C2794 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2794.md)  
   
- [Erro do Compilador C2795](../../error-messages/compiler-errors-2/compiler-error-c2795.md)  
+ [C2795 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2795.md)  
   
- [Erro do Compilador C2797](../../error-messages/compiler-errors-2/compiler-error-c2797.md)  
+ [Erro do compilador C2797](../../error-messages/compiler-errors-2/compiler-error-c2797.md)  
   
- [Erro do Compilador C2798](../../error-messages/compiler-errors-2/compiler-error-c2798.md)
+ [C2798 de erro do compilador](../../error-messages/compiler-errors-2/compiler-error-c2798.md)

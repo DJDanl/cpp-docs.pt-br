@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4357 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4357"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4357"
+title: "Compilador aviso (nível 3) C4357 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4357
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4357
 ms.assetid: 9259c633-3c02-4900-b94a-2d8d366d61cd
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4357
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1337d3861e6cb73bd4a7c44b77dbe2ef1e539d91
+ms.lasthandoff: 02/25/2017
 
-argumento da matriz de parâmetro na lista de argumentos formal para o delegado “del” ignorado ao gerar a função” “  
+---
+# <a name="compiler-warning-level-3-c4357"></a>Compilador C4357 de aviso (nível 3)
+argumento de matriz de parâmetro na lista de argumentos formais para delegar 'del' ignorado ao gerar 'function'  
   
- O atributo de `ParamArray` foi ignorado, e `function`não pode ser chamado com argumentos variáveis.  
+ O `ParamArray` atributo foi ignorado, e `function`não pode ser chamado com argumentos de variável.  
   
- O seguinte exemplo gera C4357:  
+ O exemplo a seguir gera C4357:  
   
 ```  
 // C4357.cpp  

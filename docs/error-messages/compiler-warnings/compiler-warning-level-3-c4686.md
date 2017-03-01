@@ -1,40 +1,55 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4686 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4686"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4686"
+title: "Compilador aviso (nível 3) C4686 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4686
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4686
 ms.assetid: 767c83c2-9e4b-4f9e-88c8-02128ba563f4
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4686
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9d6ef8c948e93a9916ff79f06f9aad5cd200c0e9
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-warning-level-3-c4686"></a>Compilador C4686 de aviso (nível 3)
 **'**   
- ***user\-defined type* ' : possible change in behavior, change in UDT return calling convention**  
+ ***tipo definido pelo usuário* ': possível alteração no comportamento, alteração no UDT retornar a convenção de chamada**  
   
- Uma classe a especialização de modelo que não foi definida antes que esteve usada em um tipo de retorno.  Qualquer coisa que cria uma instância da classe C4686; resolverá declarar uma instância ou acessar um membro \(\<\>Cint::anything\) também são opções.  
+ Uma especialização de modelo de classe não foi é definida para que foi usado em um tipo de retorno. Qualquer coisa que instancia a classe resolverá C4686; declarar uma instância ou acessar um membro (C\<int >:: nada) também são opções.  
   
- Esse aviso é o resultado do trabalho para fazer o compilador do Visual C\+\+ .NET 2003 estar em conformidade com o padrão ISO C\+\+.  
+ Esse aviso é o resultado do trabalho para tornar o compilador do Visual C++ .NET 2003 estão em conformidade com ISO C++ padrão.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- Tente o seguinte,  
+ Tente o seguinte em vez disso,  
   
 ```  
 // C4686.cpp  

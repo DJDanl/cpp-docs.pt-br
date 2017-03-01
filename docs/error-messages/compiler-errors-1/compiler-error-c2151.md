@@ -1,30 +1,45 @@
 ---
-title: "Erro do Compilador C2151 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2151"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2151"
+title: C2151 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2151
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2151
 ms.assetid: 7f8dd83a-1f41-46d8-8778-0d1f79ed36c9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2151
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b06bbc61bf592bf417557de104188a7e898099d5
+ms.lasthandoff: 02/25/2017
 
-mais de um atributo de idioma  
+---
+# <a name="compiler-error-c2151"></a>C2151 de erro do compilador
+mais de um atributo de linguagem  
   
- Uma função tiver mais de uma palavra\-chave \( `__cdecl`, `__stdcall`, ou `__fastcall`\) especificando uma convenção de chamada.
+ A função tem mais de uma palavra-chave ( `__cdecl`, `__stdcall`, ou `__fastcall`) especificando uma convenção de chamada.

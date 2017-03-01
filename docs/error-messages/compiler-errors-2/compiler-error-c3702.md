@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3702 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3702"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3702"
+title: C3702 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3702
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3702
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 39c5856f07ae2795e78ad4417d6c663a73bd9cf4
+ms.lasthandoff: 02/25/2017
 
-função “”: ATL é necessário para eventos COM  
+---
+# <a name="compiler-error-c3702"></a>C3702 de erro do compilador
+'function': ATL é necessária para eventos COM  
   
- Você tentou usar eventos de COM sem incluir os arquivos de cabeçalho necessários de ATL.  
+ Você tentou usar eventos COM sem incluir os arquivos de cabeçalho necessários ATL.  
   
- O seguinte exemplo gera C3702:  
+ O exemplo a seguir gera C3702:  
   
 ```  
 // C3702.cpp  

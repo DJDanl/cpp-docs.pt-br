@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3890 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3890"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3890"
+title: C3890 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3890
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3890
 ms.assetid: 2f22c2fd-c14e-45e1-b936-b739ffc0b135
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3890
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d136fbee23209029cc0c1585fb78209dd71f84f0
+ms.lasthandoff: 02/25/2017
 
-var “”: você não pode colocar o endereço de um membro de dados literal  
+---
+# <a name="compiler-error-c3890"></a>C3890 de erro do compilador
+'var': você não pode obter o endereço de um membro de dados literais  
   
- Um membro de dados literal existe no heap com coletados.  Um objeto no heap com coletado pode ser movido, assim que o endereço não é útil.  
+ Existe um membro de dados literais no heap coletado como lixo.  Um objeto no heap coletado como lixo pode ser movido para que colocar o endereço não é útil.  
   
- O seguinte exemplo gera C3890:  
+ O exemplo a seguir gera C3890:  
   
 ```  
 // C3890.cpp  

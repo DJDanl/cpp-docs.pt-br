@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+title: C3719 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9dff87eb093742239b6dff0771785f8a6111d256
+ms.lasthandoff: 02/25/2017
 
-contadores de “interface”: uma origem de evento interface baseada somente pode ser usada para eventos COM  
+---
+# <a name="compiler-error-c3719"></a>C3719 de erro do compilador
+'interface': uma fonte de evento com base de interface só pode ser usada para eventos COM  
   
- Você declarou uma interface em um contexto de não COM.  
+ Você declarou uma interface em um contexto de não-COM.  
   
- O seguinte exemplo gera C3719:  
+ O exemplo a seguir gera C3719:  
   
 ```  
 // C3719a.cpp  
@@ -56,7 +71,7 @@ int main() {
 }  
 ```  
   
- Para corrigir esse erro, aplique [objeto](../Topic/object%20\(C++\).md), [coclass](../../windows/coclass.md), [event\_source](../../windows/event-source.md), e atributos de [event\_receiver](../../windows/event-receiver.md) apropriadamente para fazer as classes em que você está usando as classes COM da interface.  Por exemplo:  
+ Para corrigir esse erro, aplicar o [objeto](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), e [event_receiver](../../windows/event-receiver.md) atributos apropriadamente para tornar as classes que você está usando as classes de interface COM. Por exemplo:  
   
 ```  
 // C3719b.cpp  

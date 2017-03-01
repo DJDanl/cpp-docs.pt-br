@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2775 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2775"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2775"
+title: C2775 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2775
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2775
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7c644318dcd5fe47f94af6e097c0958ed212c9f1
+ms.lasthandoff: 02/25/2017
 
-“identificador”: ” não “obtém o método é associado a esta propriedade  
+---
+# <a name="compiler-error-c2775"></a>C2775 de erro do compilador
+'identifier': nenhum método 'get' está associado esta propriedade  
   
- Um membro de dados declarado com o atributo estendido [propriedade](../../cpp/property-cpp.md) não tem uma função de `get` especificada, mas tentativas de uma expressão para recuperar seu valor.  
+ Um membro de dados declarado com a [propriedade](../../cpp/property-cpp.md) atributos estendidos não tem um `get` função especificada, mas uma expressão tenta recuperar seu valor.  
   
- O seguinte exemplo gera C2775:  
+ O exemplo a seguir gera C2775:  
   
 ```  
 // C2775.cpp  

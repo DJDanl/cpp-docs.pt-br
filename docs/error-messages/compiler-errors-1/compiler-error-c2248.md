@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2248"
+title: C2248 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2248
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3aab4e400abd09e426c3b9a4139c80041601e3ab
+ms.lasthandoff: 02/25/2017
 
-“membro”: não pode acessar o membro de “acesso” declarado em classes das classes  
+---
+# <a name="compiler-error-c2248"></a>C2248 de erro do compilador
+'member': não é membro de 'acessar' acesso declarado na classe 'class'  
   
- Os membros de uma classe derivada não podem acessar membros de `private` de uma classe base.  Você não pode acessar `private` ou membros de `protected` das instâncias da classe.  
+ Os membros de uma classe derivada não podem acessar `private` membros de uma classe base. Não é possível acessar `private` ou `protected` membros de instâncias de classe.  
   
- Consulte o artigo da Base de Dados de Conhecimento KB243351 para obter mais informações sobre como C2248.  
+ Consulte o artigo da Base de dados de Conhecimento KB243351 para obter mais informações sobre C2248.  
   
- O seguinte exemplo gera C2248:  
+ O exemplo a seguir gera C2248:  
   
 ```  
 // C2248.cpp  
@@ -59,7 +74,7 @@ int main() {
 }  
 ```  
   
- Outro problema de conformidade que expõe C2248 é o uso de amigos e de conhecimento do modelo.  Para obter mais informações, consulte [O vinculador de ferramentas do erro LNK2019](../Topic/Linker%20Tools%20Error%20LNK2019.md).  
+ Outro problema de conformidade que expõe C2248 é o uso de amigos de modelo e especialização. Para obter mais informações, consulte [erro das ferramentas de vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md).  
   
 ```  
 // C2248_b.cpp  
@@ -87,7 +102,7 @@ int main() {
 }  
 ```  
   
- Outro problema de conformidade que expõe C2248 é quando você tentar declarar um amigo de uma classe e quando a classe não é visível à declaração de amigo no escopo da classe.  Nesse caso, amizade de concessão a classe inclusive para resolver o erro.  
+ Outro problema de conformidade que expõe C2248 é quando você tentar declarar um amigo de uma classe e a classe não é visível para a declaração friend no escopo da classe. Nesse caso, conceda amizade à classe delimitadora para resolver o erro.  
   
 ```  
 // C2248_c.cpp  

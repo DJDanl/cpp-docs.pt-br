@@ -1,39 +1,54 @@
 ---
-title: "Erro do Compilador C2229 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2229"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2229"
+title: C2229 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2229
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2229
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7de148fcd83b780c767efaf6d28216628558b059
+ms.lasthandoff: 02/25/2017
 
-o tipo “identificador” tem uma matriz zero feita dimensionar ilegal  
+---
+# <a name="compiler-error-c2229"></a>C2229 de erro do compilador
+o tipo 'identifier' tem uma matriz de tamanho zero ilegal  
   
- Um membro de um campo da estrutura ou de bit contém uma matriz zero pequeno medida que não é o último membro.  
+ Um membro de um campo de estrutura ou bit contém uma matriz de tamanho zero não é o último membro.  
   
- Como é possível ter um valor nulo feitas dimensionar a matriz como o último membro da estrutura, você deve especificar seu tamanho quando você atribui o struct.  
+ Como você pode ter uma matriz de tamanho zero como o último membro da estrutura, você deve especificar seu tamanho ao alocar a estrutura.  
   
- Se o valor for null feitas dimensionar a matriz não é o último membro da estrutura, o compilador não pode calcular o deslocamento para os campos restantes.  
+ Se a matriz de tamanho zero não é o último membro da estrutura, o compilador não pode calcular o deslocamento para os campos restantes.  
   
- O seguinte exemplo gera C2229:  
+ O exemplo a seguir gera C2229:  
   
 ```  
 // C2229.cpp  

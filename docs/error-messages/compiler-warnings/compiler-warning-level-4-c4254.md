@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4254"
+title: "Compilador aviso (nível 4) C4254 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- c4254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e95ad57bc63c141790dcd8df13dda819a8e4e294
+ms.lasthandoff: 02/25/2017
 
-operador “”: conversão do tipo “\- 1 " para o tipo “\- 2 ", possível perda de dados  
+---
+# <a name="compiler-warning-level-4-c4254"></a>Compilador C4254 de aviso (nível 4)
+'operator': conversão de 'type1' em 'type2', possível perda de dados  
   
- Um campo maior bit for atribuído a um campo menor de bit.  Pode haver uma perda de dados.  
+ Um campo de bits maior foi atribuído a um campo de bits menor. Pode haver uma perda de dados.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4254:  
+ O exemplo a seguir gera C4254:  
   
 ```  
 // C4254.cpp  

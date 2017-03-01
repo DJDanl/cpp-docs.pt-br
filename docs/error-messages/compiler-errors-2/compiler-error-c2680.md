@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+title: C2680 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 92fbcb75de67b7d2f9f33c24ced48900d21550a4
+ms.lasthandoff: 02/25/2017
 
-“tipo”: tipo de destino inválido para o nome  
+---
+# <a name="compiler-error-c2680"></a>C2680 de erro do compilador
+'type': tipo de destino inválido para nome  
   
- Um operador de conversão tentou conversão em um tipo que não seja um ponteiro ou uma referência.  O operador de [dynamic\_cast](../../cpp/dynamic-cast-operator.md) pode ser usado apenas para ponteiros ou referências.  
+ Um operador de conversão tentou converter para um tipo que não é um ponteiro ou referência. O [dynamic_cast](../../cpp/dynamic-cast-operator.md) operador pode ser usado apenas para ponteiros ou referências.  
   
- O seguinte exemplo gera C2680:  
+ O exemplo a seguir gera C2680:  
   
 ```  
 // C2680.cpp  
@@ -44,7 +59,7 @@ void g(B b) {
 }  
 ```  
   
- C2680 também pode ocorrer quando o destino não for definido:  
+ C2680 também pode ocorrer quando o destino não está definido:  
   
 ```  
 // C2680b.cpp  

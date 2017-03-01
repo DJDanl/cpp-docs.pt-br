@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4717 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4717"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4717"
+title: "Compilador aviso (nível 1) C4717 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4717
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4717
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9e678379083d091d980cfe647f17e8aceb892c14
+ms.lasthandoff: 02/25/2017
 
-função “”: recursiva em todos os caminhos de controle, função fará o estouro de pilha de tempo de execução  
+---
+# <a name="compiler-warning-level-1-c4717"></a>Compilador C4717 de aviso (nível 1)
+'function': recursiva em todos os caminhos de controle, função fará com que o estouro de pilha do tempo de execução  
   
- Cada caminho com uma função contém uma chamada à função.  Como não há nenhuma forma de sair recursivamente a função sem primeira chamada própria, a função nunca será fechado.  
+ Cada caminho através de uma função contém uma chamada para a função. Como não há nenhuma maneira de sair de função sem primeiro chamar próprio recursivamente, a função nunca será encerrado.  
   
- O seguinte exemplo gera C4717:  
+ O exemplo a seguir gera C4717:  
   
 ```  
 // C4717.cpp  

@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4489 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4489"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4489"
+title: "Compilador aviso (nível 1) C4489 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4489
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4489
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6bf2d1c6e817c4777abece627711012af117bfbc
+ms.lasthandoff: 02/25/2017
 
-“especificador”: não permitido no método “método da interface;” são permitidos apenas aos especificadores de substituição em métodos da classe de referência e da classe do valor  
+---
+# <a name="compiler-warning-level-1-c4489"></a>Compilador C4489 de aviso (nível 1)
+'especificador de ': não é permitido no método de interface 'method'; Substituir especificadores são permitidos apenas em métodos de classe de valor e de classe ref  
   
- Uma palavra\-chave do especificador foi usado incorretamente em um método da interface.  
+ Uma palavra-chave do especificador incorreta foi usada em um método de interface.  
   
- Para obter mais informações, consulte [Especificadores de Substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [especificadores de substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4489.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4489.  
   
 ```  
 // C4489.cpp  

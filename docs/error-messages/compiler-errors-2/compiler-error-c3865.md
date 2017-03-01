@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3865 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3865"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3865"
+title: C3865 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3865
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3865
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 53d2146ae9d2882d82f7d2308b085ac0fed4cca3
+ms.lasthandoff: 02/25/2017
 
-“calling\_convention”: pode ser usado somente em funções de membro nativos  
+---
+# <a name="compiler-error-c3865"></a>C3865 de erro do compilador
+'calling_convention': somente pode ser usada em funções de membro nativo  
   
- Uma convenção de chamada foi usada em uma função que tenha uma função a um global ou em uma função de membro gerenciado.  A convenção de chamada só pode ser usada em uma função de membro nativo \(não gerenciado\).  
+ Uma convenção de chamada foi usada em uma função que era uma função de global ou em uma função de membro gerenciado. A convenção de chamada só pode ser usada em uma função de membro (não gerenciado) nativo.  
   
- Para obter mais informações, consulte [Convenções de chamada](../Topic/Calling%20Conventions.md).  
+ Para obter mais informações, consulte [convenções de chamada](../../cpp/calling-conventions.md).  
   
- O seguinte exemplo gera C3865:  
+ O exemplo a seguir gera C3865:  
   
 ```  
 // C3865.cpp  

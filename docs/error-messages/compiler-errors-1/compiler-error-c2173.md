@@ -1,30 +1,46 @@
 ---
-title: "C2173 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2173"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2173"
+title: C2173 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2173
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2173
 ms.assetid: 4df592b8-609b-41a5-b4fc-966eb5bb2d1a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2173 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 59167485fdbb46fd33634c2be45f142b5796a9f0
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2173"></a>C2173 de erro do compilador
 'function': o parâmetro real não é um ponteiro: parâmetro Número1, Número2 da lista de parâmetro  
   
- Parâmetro `number1` passado à lista de parâmetros `number2` não é um ponteiro. A função espera um ponteiro.
+ Parâmetro `number1` passada à lista de parâmetros `number2` não é um ponteiro. A função espera um ponteiro.

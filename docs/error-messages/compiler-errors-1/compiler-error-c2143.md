@@ -1,41 +1,57 @@
 ---
-title: "C2143 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2143"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2143"
+title: C2143 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2143
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2143 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.lasthandoff: 02/25/2017
 
-erro de sintaxe: “token1 ausentes” antes de “token2”  
+---
+# <a name="compiler-error-c2143"></a>C2143 de erro do compilador
+Erro de sintaxe: ausente 'token1' antes de 'token2'  
   
- O compilador esperou um token específico \(isto é, um elemento de linguagem diferente do espaço em branco\) e encontrou um outro token em vez disso.  
+ O compilador esperado um token específico (ou seja, um elemento de linguagem que não seja espaço em branco) e outro token encontrado.  
   
- Para obter informações sobre este erro quando ocorre quando você está usando um bloco de com tentativa, consulte [Artigo da Base de Dados de Conhecimento 241706](http://support.microsoft.com/kb/241706).  
+ Para obter informações sobre esse erro quando ele ocorre quando você estiver usando um bloco try de função, consulte [artigo da Base de dados de Conhecimento 241706](http://support.microsoft.com/kb/241706).  
   
- Verifique [Referência de linguagem C\+\+](../../cpp/cpp-language-reference.md) para determinar onde o código está sintaticamente incorretas.  Como o compilador pode relatar este erro depois de encontrar a linha que faz com que o problema, verifique várias linhas de código que precedem o erro.  
+ Verifique o [referência da linguagem C++](../../cpp/cpp-language-reference.md) para determinar onde o código está sintaticamente incorreto. Como o compilador pode relatar este erro depois de encontrar a linha que causa o problema, verifique várias linhas de código que precedem o erro.  
   
  C2143 pode ocorrer em situações diferentes.  
   
- Pode ocorrer quando um operador que pode qualificar um nome \(`::`, `->`, e `.`\) deve ser seguido pela palavra\-chave `template`, como neste exemplo:  
+ Isso pode ocorrer quando um operador que pode ser um nome qualificado (`::`, `->`, e `.`) deve ser seguido da palavra-chave `template`, como no exemplo:  
   
 ```cpp  
 class MyClass  
@@ -48,7 +64,7 @@ class MyClass
   
 ```  
   
- Por padrão, C\+\+ supõe que `Ty::PutFuncType` não é um modelo; consequentemente, seguinte `<` é interpretado como menor que o sinal.  Você deve informar ao compilador explicitamente que `PutFuncType` é um modelo de forma que possa corretamente analisar o colchetes angulares.  Para corrigir esse erro, use a palavra\-chave no nome de `template` dependente do tipo, conforme mostrado aqui:  
+ Por padrão, o C++ presume que `Ty::PutFuncType` não é um modelo; portanto, o seguinte `<` é interpretado como um menor-sinal.  Você deve informar o compilador explicitamente que `PutFuncType` é um modelo para que ele possa analisar corretamente o colchete angular. Para corrigir esse erro, use o `template` palavra-chave em nome do tipo dependentes, como mostrado aqui:  
   
 ```cpp  
 class MyClass  
@@ -61,7 +77,7 @@ class MyClass
   
 ```  
   
- C2143 pode ocorrer quando **\/clr** é usado e uma política de `using` tem um erro de sintaxe:  
+ C2143 pode ocorrer quando **/clr** é usado e uma `using` diretiva tem um erro de sintaxe:  
   
 ```cpp  
 // C2143a.cpp  
@@ -70,7 +86,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- Também pode ocorrer quando você está tentando criar um arquivo de origem usando a sintaxe de CLR sem usar **\/clr**:  
+ Ele também pode ocorrer quando você está tentando compilar um arquivo de código fonte usando a sintaxe do CLR sem também **/clr**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -84,7 +100,7 @@ int main() {
 }  
 ```  
   
- O primeiro caractere do não espaço em branco que segue uma instrução de `if` deve ser um parêntese esquerdo.  O compilador não pode traduzir algo:  
+ O primeiro caractere diferente de espaço que segue um `if` instrução deve ser um parêntese esquerdo. O compilador não pode converter qualquer outra coisa:  
   
 ```cpp  
 // C2143c.cpp  
@@ -99,9 +115,9 @@ int main() {
 }  
 ```  
   
- C2143 pode ocorrer quando uma chave, um parêntese, ou um ponto\-e\-vírgula de fechamento estão faltando na linha em que o erro for detectado ou em uma das linhas exatamente acima:  
+ C2143 pode ocorrer quando uma chave de fechamento, parênteses ou ponto e vírgula está ausente na linha onde o erro for detectado ou em uma das linhas apenas acima:  
   
-```caml  
+```cpp  
 // C2143d.cpp  
 // compile with: /c  
 class X {  
@@ -110,7 +126,7 @@ class X {
 } x;  
 ```  
   
- Ou quando há uma marca válida em uma declaração de classe:  
+ Ou, quando há uma marca inválida em uma declaração de classe:  
   
 ```cpp  
 // C2143e.cpp  
@@ -122,7 +138,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- Um rótulo ou quando não é anexado a uma instrução.  Se você deverá colocar um rótulo por si só, por exemplo, ao final de uma instrução composta, anexa\-o a uma instrução nula:  
+ Ou, quando um rótulo não é anexado a uma instrução. Se você deve colocar um rótulo por si só, por exemplo, no final de uma instrução composta, anexá-lo para uma instrução nula:  
   
 ```cpp  
 // C2143f.cpp  
@@ -136,7 +152,7 @@ void func1() {
 }  
 ```  
   
- O erro pode ocorrer quando uma chamada não qualificado é feita para um tipo na biblioteca padrão do C\+\+:  
+ O erro pode ocorrer quando é feita uma chamada não qualificada para um tipo na biblioteca padrão C++:  
   
 ```cpp  
 // C2143g.cpp  
@@ -146,7 +162,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK  
 ```  
   
- Há uma palavra\-chave ou ausente de `typename` :  
+ Ou a ausência de um `typename` palavra-chave:  
   
 ```cpp  
 // C2143h.cpp  
@@ -165,7 +181,7 @@ X<T>::Y X<T>::memFunc() {   // C2143
 }  
 ```  
   
- Ou se você tentar definir uma instanciação explícita:  
+ Ou, se você tentar definir uma instanciação explícita:  
   
 ```cpp  
 // C2143i.cpp  
@@ -178,9 +194,9 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- No programa c, as variáveis devem ser declaradas no início da função, e não podem ser declaradas depois que a função executa instruções de não declaração.  
+ Em um programa C, variáveis devem ser declaradas no início da função e não podem ser declaradas após a função executa instruções de declaração não.  
   
-```c  
+```C  
 // C2143j.c  
 int main()   
 {  
@@ -188,5 +204,5 @@ int main()
     i++;  
     int j = 0; // C2143  
 }  
-  
-```
+```  
+

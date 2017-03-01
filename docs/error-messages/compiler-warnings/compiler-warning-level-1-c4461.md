@@ -1,40 +1,56 @@
 ---
-title: "Compilador C4461 de aviso (n&#237;vel 1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4461"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4461"
+title: "Compilador aviso (nível 1) C4461 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4461
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4461
 ms.assetid: 104ffecc-3dd4-4cb1-89a8-81154fbe46d9
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilador C4461 de aviso (n&#237;vel 1)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 944171004dc2781bffb9b34d8b9a0fd6178398d8
+ms.lasthandoff: 02/25/2017
 
-“tipo”: esta classe não tem um finalizador “finalizador” mas nenhum destruidor “dtor”  
+---
+# <a name="compiler-warning-level-1-c4461"></a>Compilador C4461 de aviso (nível 1)
+'type': essa classe tiver um finalizador' finalizador', mas nenhum destruidor 'dtor'  
   
- A presença de um finalizador em um tipo implica recursos para excluir.  A menos que um finalizador é chamado explicitamente de destruidor do tipo, Common Language Runtime determina quando executar o finalizador, depois que seu objeto sai do escopo.  
+ A presença de um finalizador em um tipo implica recursos para excluir. A menos que um finalizador explicitamente é chamado de destruidor do tipo, o common language runtime determina quando executar o finalizador, depois que o objeto sai do escopo.  
   
- Se você definir um destruidor no tipo e chamar explicitamente o finalizador de destruidor, você pode executar de forma determinista seu finalizer.  
+ Se você definir um destruidor no tipo e chama o finalizador de destruidor explicitamente, você pode executar de forma determinista seu finalizador.  
   
- Para obter mais informações, consulte [Destruidores e finalizers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
-## Exemplo  
- O exemplo a seguir produz C4461.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4461.  
   
 ```  
 // C4461.cpp  

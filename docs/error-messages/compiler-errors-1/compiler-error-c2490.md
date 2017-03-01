@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2490"
+title: C2490 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2490
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 40ea387fad63200b02a8bf64568996fbc8c45e44
+ms.lasthandoff: 02/25/2017
 
-“palavra\-chave” não é permitida na função com o atributo “despido”  
+---
+# <a name="compiler-error-c2490"></a>C2490 de erro do compilador
+'palavra-chave' não permitido em função com o atributo 'naked'  
   
- Uma função definida como [despido](../Topic/naked%20\(C++\).md) não pode usar a manipulação de exceção estruturados.  
+ Uma função definida como [naked](../../cpp/naked-cpp.md) não é possível usar a manipulação de exceção estruturada.  
   
- O seguinte exemplo gera C2490:  
+ O exemplo a seguir gera C2490:  
   
 ```  
 // C2490.cpp  

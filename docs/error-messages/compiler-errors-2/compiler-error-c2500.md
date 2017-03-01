@@ -1,39 +1,54 @@
 ---
-title: "Erro do Compilador C2500 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2500"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2500"
+title: C2500 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2500
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2500
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5d705dfaf7c54e7bf50f89f088c2ca95096d0fea
+ms.lasthandoff: 02/25/2017
 
-“identifier1”: o “identifier2” já é uma classe base direta  
+---
+# <a name="compiler-error-c2500"></a>C2500 de erro do compilador
+'identifier1': 'identifier2' já é uma classe base direta  
   
- Uma classe ou estrutura aparecem mais de uma vez em uma lista de classes base.  
+ Uma classe ou estrutura aparece mais de uma vez em uma lista de classes base.  
   
- Uma base direta é uma mencionada na lista de base.  Uma base indireta é uma classe base a partir de uma das classes na lista de base.  
+ Uma base direta é um mencionado na lista base. Uma base indireta é uma classe base de uma das classes na lista base.  
   
- Uma classe não pode ser especificada como uma classe base direta mais de uma vez.  Uma classe pode ser usada como uma classe base indireta mais de uma vez.  
+ Uma classe não pode ser especificada mais de uma vez como uma classe base direta. Uma classe pode ser usada como uma classe base indireta mais de uma vez.  
   
- O seguinte exemplo gera C2500:  
+ O exemplo a seguir gera C2500:  
   
 ```  
 // C2500.cpp  

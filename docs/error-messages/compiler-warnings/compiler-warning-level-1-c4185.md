@@ -1,36 +1,54 @@
 ---
-title: "Compilador C4185 de aviso (n&#237;vel 1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4185"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4185"
+title: "Compilador aviso (nível 1) C4185 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4185
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4185
 ms.assetid: 37e7063a-35b1-4e05-ae31-e811dced02b9
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilador C4185 de aviso (n&#237;vel 1)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 37c3d99a912fbd6ab001ef40972057c9985c02ab
+ms.lasthandoff: 02/25/2017
 
-Ignorando atributo \#import desconhecido 'attribute'  
+---
+# <a name="compiler-warning-level-1-c4185"></a>Compilador C4185 de aviso (nível 1)
+Ignorando atributo #import desconhecido 'attribute'  
   
- O atributo não é um atributo válido de `#import`. Ele será ignorado.  
+ O atributo não é um atributo válido de `#import`. É ignorado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
-// C4185.cpp // compile with: /W1 /c #import "stdole2.tlb" no_such_attribute   // C4185  
+// C4185.cpp  
+// compile with: /W1 /c  
+#import "stdole2.tlb" no_such_attribute   // C4185  
 ```

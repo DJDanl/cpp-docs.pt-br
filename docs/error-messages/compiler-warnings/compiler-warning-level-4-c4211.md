@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4211 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4211"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4211"
+title: "Compilador aviso (nível 4) C4211 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4211
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4211
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bb015e2dfdff01c633894b2942dab5c6aaa8a2c9
+ms.lasthandoff: 02/25/2017
 
-extensão não padrão usada: extern redefinido em estático  
+---
+# <a name="compiler-warning-level-4-c4211"></a>Compilador C4211 de aviso (nível 4)
+extensão não padrão usada : extern redefinido para static  
   
- Com as extensões padrão da Microsoft \(\/Ze\), você pode redefinir um identificador de `extern` como **static**.  
+ Com as extensões da Microsoft padrão (/Ze), você pode redefinir um `extern` identificador como **estático**.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // C4211.c  
@@ -42,7 +57,7 @@ int main()
 }  
 ```  
   
- Tais redefine não são válidos na compatibilidade ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Tais redefinições são inválidas em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## Consulte também  
- [\(NOTINBUILD\)Static Storage\-Class Specifiers](http://msdn.microsoft.com/pt-br/3ba9289a-a412-4a17-b319-ceb2c087df48)
+## <a name="see-also"></a>Consulte também  
+ [(NOTINBUILD) Especificadores de classe de armazenamento estático](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48)

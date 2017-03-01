@@ -1,36 +1,51 @@
 ---
-title: "Compiler Error C2392 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2392"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2392"
+title: C2392 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2392
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compiler Error C2392
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 39865a81ea2646135d941e79ab6188bb4b982002
+ms.lasthandoff: 02/25/2017
 
-'method1': covariante retorna tipos não são suportados em gerenciado ou tipos WinRT, caso contrário 'method2' deve ser substituídos.  
+---
+# <a name="compiler-error-c2392"></a>C2392 de erro do compilador
+'method1': covariante retorna tipos não são suportados em gerenciados ou WinRTtypes, caso contrário 'method2' deve ser substituído.  
   
- Tipos de retorno covariante não são permitidos para funções de membro de tempo de execução do Windows ou durante a compilação com o [\/clr \(Common Language Runtime Compilation\)](../../build/reference/clr-common-language-runtime-compilation.md) opção.  
+ Tipos de retorno covariante não são permitidos para funções de membro de tempo de execução do Windows ou ao compilar com o [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opção.  
   
-## Exemplo  
- O exemplo a seguir gera C2392 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2392 e mostra como corrigi-lo.  
   
 ```  
 // C2392.cpp  

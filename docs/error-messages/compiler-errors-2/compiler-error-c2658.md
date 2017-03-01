@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2658 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2658"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2658"
+title: C2658 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2658
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2658
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: df5624feeed08a251ba6c541fbb8e069e0ade304
+ms.lasthandoff: 02/25/2017
 
-“membro”: redefinição na estrutura anônima\/união  
+---
+# <a name="compiler-error-c2658"></a>C2658 de erro do compilador
+'member': redefinição na estrutura/união anônima  
   
- Duas estruturas ou uniões anônimas continham instruções do membro com o mesmo identificador mas com tipos diferentes.  Em [\/Za](../../build/reference/za-ze-disable-language-extensions.md), você também obterá esse erro para membros com o mesmo tipo e identificador.  
+ Duas estruturas anônimas ou uniões contidos declarações de membro com o mesmo identificador, mas com tipos diferentes. Em [/Za](../../build/reference/za-ze-disable-language-extensions.md), você também receberá esse erro para membros com o mesmo identificador e tipo.  
   
- O seguinte exemplo gera C2658:  
+ O exemplo a seguir gera C2658:  
   
 ```  
 // C2658.cpp  

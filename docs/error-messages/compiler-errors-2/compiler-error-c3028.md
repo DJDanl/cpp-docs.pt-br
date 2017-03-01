@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3028"
+title: C3028 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a40904fcc0d6ce6135cfac3e96730064c6414d44
+ms.lasthandoff: 02/25/2017
 
-“membro”: um membro de dados somente de variável ou estáticos pode ser usado em uma cláusula compartilhando dados  
+---
+# <a name="compiler-error-c3028"></a>C3028 de erro do compilador
+'member': somente um membro de dados estáticos ou variável pode ser usado em uma cláusula de compartilhamento de dados  
   
- Um símbolo que não seja um membro de dados da variável ou estáticos foi passado à cláusula de redução.  
+ Um símbolo que não seja um membro de dados estáticos ou variável foi passado para a cláusula de redução.  
   
- O seguinte exemplo gera C3028:  
+ O exemplo a seguir gera C3028:  
   
 ```  
 // C3028.cpp  

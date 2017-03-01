@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2630 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2630"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2630"
+title: C2630 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2630
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2630
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3e889ca9348ffe58f6b0e38735ebd5b3a1231ab0
+ms.lasthandoff: 02/25/2017
 
-o símbolo “” encontrado no que deve ser uma lista separada por vírgulas  
+---
+# <a name="compiler-error-c2630"></a>C2630 de erro do compilador
+'symbol' encontrado no qual deve ser uma lista separada por vírgulas  
   
  O símbolo aparece em um contexto que requer uma vírgula.  
   
- O seguinte exemplo gera C2630:  
+ O exemplo a seguir gera C2630:  
   
 ```  
 // C2630.cpp  

@@ -1,40 +1,55 @@
 ---
-title: "Erro do Compilador C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+title: C3867 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b56a07d98e7d6644e8b3f7ec356012265c8200f5
+ms.lasthandoff: 02/25/2017
 
-'função': chamada de função ausente da lista de argumentos; Use ' & func' para criar um ponteiro para membro  
+---
+# <a name="compiler-error-c3867"></a>C3867 de erro do compilador
+'função': a chamada de função ausente da lista de argumentos; Use '< / func' para criar um ponteiro para membro  
   
- Você tentou obter o endereço de uma função de membro sem qualificação da função de membro com o nome da classe e o operador address\-of.  
+ Você tentou obter o endereço de uma função de membro sem qualificação da função de membro com o nome da classe e o operador address-of.  
   
- Esse erro também pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito no Visual C\+\+ 2005: compatibilidade de ponteiro para membro avançada.  Código compilado antes do Visual C\+\+ 2005 agora irá gerar C3867.  
+ Esse erro também pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito no Visual C++ 2005: conformidade aprimorada do ponteiro para membro. Código compilado antes do Visual C++ 2005 agora irá gerar C3867.  
   
-## Exemplo  
- C3867 pode ser emitido por compilador com uma resolução sugerida enganoso.  Sempre que possível, use a classe mais derivada.  
+## <a name="example"></a>Exemplo  
+ C3867 pode ser emitido do compilador com uma resolução sugerida enganoso. Sempre que possível, use a classe mais derivada.  
   
- O exemplo a seguir gera C3867 e mostra como corrigi\-lo.  
+ O exemplo a seguir gera C3867 e mostra como corrigi-lo.  
   
 ```  
 // C3867_1.cpp  
@@ -54,8 +69,8 @@ void Derived::Bar() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir gera C3867 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3867 e mostra como corrigi-lo.  
   
 ```  
 // C3867_2.cpp  
@@ -85,8 +100,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir gera C3867 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3867 e mostra como corrigi-lo.  
   
 ```  
 // C3867_3.cpp  
@@ -103,7 +118,7 @@ int main() {
 }  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3867.  
   
 ```  
@@ -126,7 +141,7 @@ public:
 };  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3867.  
   
 ```  

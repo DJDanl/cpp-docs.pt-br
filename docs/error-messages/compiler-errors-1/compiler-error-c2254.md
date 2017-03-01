@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2254"
+title: C2254 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fad970191f8ce6644f776c74ef56412a888b7760
+ms.lasthandoff: 02/25/2017
 
-função “”: especificador puro ou especificador abstrata de substituição não permitido na função de amigo  
+---
+# <a name="compiler-error-c2254"></a>C2254 de erro do compilador
+'function': especificador puro ou abstrato substituir especificador não é permitida na função de amigo  
   
- Uma função de `friend` é especificada como `virtual`puro.  
+ A `friend` função é especificada como puro `virtual`.  
   
- O seguinte exemplo gera C2254:  
+ O exemplo a seguir gera C2254:  
   
 ```  
 // C2254.cpp  

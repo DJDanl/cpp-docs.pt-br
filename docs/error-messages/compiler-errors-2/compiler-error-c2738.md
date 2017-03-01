@@ -1,30 +1,46 @@
 ---
-title: "C2738 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2738"
+title: C2738 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2738
 ms.assetid: 896b4640-1ee0-4cd8-9910-de3efa30006a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2738 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5561c0705b0dd0952ca9c473aece82d00407def5
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2738"></a>C2738 de erro do compilador
 'declaração de ': é ambíguo ou não é um membro de 'type'  
   
  Uma função foi declarada incorretamente.  

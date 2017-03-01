@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2593 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2593"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2593"
+title: C2593 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2593
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2593
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a9028227315c1887d226a8fd4833f57346ace62c
+ms.lasthandoff: 02/25/2017
 
-o identificador de operador” é ambíguo  
+---
+# <a name="compiler-error-c2593"></a>C2593 de erro do compilador
+'operador identifier' é ambíguo  
   
- Mais de um operador possível é definido para um operador sobrecarregado.  
+ Mais de um operador possíveis é definido para um operador sobrecarregado.  
   
  Esse erro pode ser corrigido se você usar uma conversão explícita em um ou mais parâmetros reais.  
   
- O seguinte exemplo gera C2593:  
+ O exemplo a seguir gera C2593:  
   
 ```  
 // C2593.cpp  
@@ -49,9 +64,9 @@ int main() {
 }  
 ```  
   
- Esse erro pode ser causado serializando uma variável de ponto flutuante usando um objeto de `CArchive` .  O compilador identifica o operador de `<<` como ambígua.  Os únicos tipos de primitivo C\+\+ que `CArchive` possível serializar são tipos de tamanho fixo `BYTE`, `WORD`, `DWORD`, e `LONG`.  Todos os tipos de inteiro devem ser convertidos em um desses tipos para a serialização.  Os tipos de ponto flutuante devem ser arquivados usando a função de membro de `CArchive::Write()` .  
+ Esse erro pode ser causado pela serialização uma variável ponto flutuante usando um `CArchive` objeto. O compilador identifica o `<<` operador como ambígua. O C++ apenas primitivos tipos que `CArchive` pode serializar os tipos de tamanho fixo `BYTE`, `WORD`, `DWORD`, e `LONG`. Todos os tipos de inteiro devem ser convertidos em um desses tipos para serialização. Tipos de ponto flutuante devem ser arquivados usando o `CArchive::Write()` função de membro.  
   
- O exemplo a seguir mostra como arquivamento uma variável de ponto flutuante \(`f`\) para arquivar `ar`:  
+ O exemplo a seguir mostra como arquivar uma variável de ponto flutuante (`f`) ao arquivo `ar`:  
   
 ```  
 ar.Write(&f, sizeof( float ));  

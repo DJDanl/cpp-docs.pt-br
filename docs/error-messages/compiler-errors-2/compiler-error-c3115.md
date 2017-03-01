@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3115 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3115"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3115"
+title: C3115 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3115
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3115
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: eb1f269b6a8adc94cb98d8ed8eaa133d750fb5bb
+ms.lasthandoff: 02/25/2017
 
-atributo “”: esse atributo não é permitida em “construção”  
+---
+# <a name="compiler-error-c3115"></a>C3115 de erro do compilador
+'attribute': este atributo não é permitido em 'em construção'  
   
- Um atributo tiver sido aplicado a uma construção para que se não desejava.  Consulte [Attributes by Usage](../../windows/attributes-by-usage.md) para maiores informações.  
+ Um atributo foi aplicado a uma construção para que ele não foi destinado.  Consulte [atributos por uso](../../windows/attributes-by-usage.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir produz C3115.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3115.  
   
 ```  
 // C3115.cpp  

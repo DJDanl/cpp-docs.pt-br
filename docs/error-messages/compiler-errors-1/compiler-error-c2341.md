@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2341 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2341"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2341"
+title: C2341 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2341
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2341
 ms.assetid: aa2a7da5-e1c8-4225-9939-5bdc50158f31
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2341
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fb4b219a3daaadaf3f6fe2a74cdd67ec9cab0337
+ms.lasthandoff: 02/25/2017
 
-nome de “seção”: o segmento deve ser definida usando o data\_seg, o code\_seg ou a seção de \#pragma antes de uso  
+---
+# <a name="compiler-error-c2341"></a>C2341 de erro do compilador
+'nome da seção': segmento deve ser definido usando #pragma data_seg, code_seg ou seção anterior para usar  
   
- Uma instrução de [aloque](../Topic/allocate.md) se refere a um segmento ainda não foi definido por [code\_seg](../../preprocessor/code-seg.md), por [data\_seg](../../preprocessor/data-seg.md), ou por pragmas de [seção](../../preprocessor/section.md) .  
+ Um [alocar](../../cpp/allocate.md) declaração se refere a um segmento que ainda não foram definido por [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), ou [seção](../../preprocessor/section.md) pragmas.  
   
- O seguinte exemplo gera C2341:  
+ O exemplo a seguir gera C2341:  
   
 ```  
 // C2341.cpp  
@@ -38,7 +53,7 @@ __declspec(allocate(".test"))   // C2341
 int j = 1;  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C2341b.cpp  

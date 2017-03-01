@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4488 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4488"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4488"
+title: "Compilador aviso (nível 1) C4488 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4488
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4488
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e73a872b26e1e2a1c83f960b66b9df83657f7c89
+ms.lasthandoff: 02/25/2017
 
-função “”: requer a palavra\-chave “palavra\-chave” implementando o método “interface\_method” da interface  
+---
+# <a name="compiler-warning-level-1-c4488"></a>Compilador C4488 de aviso (nível 1)
+'function': requer a palavra-chave 'palavra-chave' para implementar o método de interface 'interface_method'  
   
- Uma classe deve implementar todos os membros de uma interface que herda do diretamente.  Um membro implementado deve ter a acessibilidade pública, e deve ser marcado virtual.  
+ Uma classe deve implementar todos os membros de uma interface da qual ela herda diretamente. Um membro implementado deve ter acessibilidade pública e deve ser marcado como virtual.  
   
-## Exemplo  
- C4488 poderá ocorrer se um membro implementado não é public.  O exemplo a seguir produz C4488.  
+## <a name="example"></a>Exemplo  
+ C4488 pode ocorrer se um membro implementado não é público. O exemplo a seguir gera C4488.  
   
 ```  
 // C4488.cpp  
@@ -49,8 +64,8 @@ public:
 };  
 ```  
   
-## Exemplo  
- C4488 poderá ocorrer se um membro não é implementado virtual marcado.  O exemplo a seguir produz C4488.  
+## <a name="example"></a>Exemplo  
+ C4488 pode ocorrer se um membro implementado não está marcado como virtual. O exemplo a seguir gera C4488.  
   
 ```  
 // C4488_b.cpp  

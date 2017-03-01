@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4930 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4930"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4930"
+title: "Compilador aviso (nível 1) C4930 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4930
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4930
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7f8c83f59d68bf3f26dc16463e74a5b57f0424d9
+ms.lasthandoff: 02/25/2017
 
-“protótipo”: função chamada \(protótipo não era uma definição de variável pretendida?\)  
+---
+# <a name="compiler-warning-level-1-c4930"></a>Compilador C4930 de aviso (nível 1)
+'protótipo de ': função protótipo não chamada (era uma definição de variável se destina?)  
   
- O compilador detectou um protótipo não usada de função.  Se o protótipo foi planejado como uma declaração variável, remova os parênteses de abertura\/fechamento.  
+ O compilador detectou um protótipo de função não utilizados. Se o protótipo foi criado como uma declaração de variável, remova os parênteses de abertura/fechamento.  
   
- O seguinte exemplo gera C4930:  
+ O exemplo a seguir gera C4930:  
   
 ```  
 // C4930.cpp  
@@ -49,9 +64,9 @@ int main() {
 }  
 ```  
   
- C4930 também pode ocorrer quando o compilador não é possível distinguir entre uma declaração de protótipo de função e uma chamada de função.  
+ C4930 também pode ocorrer quando o compilador não consegue distinguir entre uma declaração de protótipo de função e uma chamada de função.  
   
- O seguinte exemplo gera C4930:  
+ O exemplo a seguir gera C4930:  
   
 ```  
 // C4930b.cpp  
@@ -122,4 +137,4 @@ int main()
 }  
 ```  
   
- No exemplo anterior, o resultado de um método que obtém os argumentos nulo é passado como um argumento para o construtor de uma variável local sem nome da classe.  A chamada pode ser resolvida nomeando a variável local ou prefixando a chamada de método com uma instância do objeto com o operador apropriado de ponteiro\-à\- membro.
+ No exemplo acima, o resultado de um método que usa zero argumentos é passado como um argumento para o construtor de uma variável local sem nome de classe. A chamada pode ser ambíguas por nomear a variável local ou prefixando a chamada de método com uma instância do objeto juntamente com o operador de ponteiro para membro apropriado.

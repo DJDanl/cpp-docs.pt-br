@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3395 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3395"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3395"
+title: C3395 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3395
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3395
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 319926d7a0ea76751e185ac132c247a5fa2b4af1
+ms.lasthandoff: 02/25/2017
 
-função “”: \_\_declspec \(dllexport\) não pode ser aplicado a uma função com a convenção de chamada de \_\_clrcall  
+---
+# <a name="compiler-error-c3395"></a>C3395 de erro do compilador
+'function': dllexport não pode ser aplicado a uma função com o \__clrcall convenção de chamada  
   
- `__declspec(dllexport)` e [\_\_clrcall](../../cpp/clrcall.md) não são compatíveis.  Para obter mais informações, consulte [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
+ `__declspec(dllexport)`e [clrcall](../../cpp/clrcall.md) não são compatíveis.  Para obter mais informações, consulte [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
   
- O seguinte exemplo gera C3395:  
+ O exemplo a seguir gera C3395:  
   
 ```  
 // C3395.cpp  

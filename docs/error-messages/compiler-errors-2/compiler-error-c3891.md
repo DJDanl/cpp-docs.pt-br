@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3891 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3891"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3891"
+title: C3891 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3891
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3891
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cca5b84f627fd0007ef01cd96f0176756398508d
+ms.lasthandoff: 02/25/2017
 
-var “”: um membro de dados literal não pode ser usado como um valor l\-  
+---
+# <a name="compiler-error-c3891"></a>C3891 de erro do compilador
+'var': um membro de dados literal não pode ser usado como um l-value  
   
- Uma variável de [literal](../../windows/literal-cpp-component-extensions.md) é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.  
+ A [literal](../../windows/literal-cpp-component-extensions.md) variável é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.  
   
- O seguinte exemplo gera C3891:  
+ O exemplo a seguir gera C3891:  
   
 ```  
 // C3891.cpp  

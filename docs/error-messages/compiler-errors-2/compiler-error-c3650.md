@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3650 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3650"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3650"
+title: C3650 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3650
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3650
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a8f775c24bbad5fba0cd9c47c3936f28da7608d7
+ms.lasthandoff: 02/25/2017
 
-“interface\_method”: não pode ser usada como uma substituição explícita, deve ser uma função de membro virtual de uma classe base  
+---
+# <a name="compiler-error-c3650"></a>C3650 de erro do compilador
+'interface_method': não pode ser usado como uma substituição explícita, deve ser uma função membro virtual de uma classe base  
   
- Foi feita uma tentativa de executar uma substituição explícita em um membro que não é virtual.  
+ Foi feita uma tentativa para executar uma substituição explícita em um membro que não era virtual.  
   
- Para obter mais informações, consulte [Substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3650:  
+ O exemplo a seguir gera C3650:  
   
 ```  
 // C3650.cpp  

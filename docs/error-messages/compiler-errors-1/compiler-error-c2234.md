@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2234 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2234"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2234"
+title: C2234 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2234
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2234
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f47717a6148e8b1801cb132a70ff050810d715b6
+ms.lasthandoff: 02/25/2017
 
-“name”: as matrizes das referências são ilegais  
+---
+# <a name="compiler-error-c2234"></a>C2234 de erro do compilador
+'name': matrizes de referências são inválidas  
   
- Como os ponteiros para as referências não são permitidos, as matrizes de referências não são possíveis.  
+ Como ponteiros para referências não são permitidos, matrizes de referências não são possíveis.  
   
- O seguinte exemplo gera C2234:  
+ O exemplo a seguir gera C2234:  
   
 ```  
 // C2234.cpp  

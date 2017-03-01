@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3903 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3903"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3903"
+title: C3903 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3903
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3903
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: dd4143c907bfa5daa56943bca9c507aa7ce7f40b
+ms.lasthandoff: 02/25/2017
 
-propriedade “”: não definiu ou para obter o método  
+---
+# <a name="compiler-error-c3903"></a>C3903 de erro do compilador
+'property': does não tiver configurado ou método get  
   
- Uma propriedade deve ter pelo menos `get` ou um método de `set` .  Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
+ Uma propriedade deve ter pelo menos um `get` ou um `set` método. Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3903:  
+ O exemplo a seguir gera C3903:  
   
 ```  
 // C3903.cpp  

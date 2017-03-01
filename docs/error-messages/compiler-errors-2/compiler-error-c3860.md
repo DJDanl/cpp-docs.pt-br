@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3860 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3860"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3860"
+title: C3860 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3860
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3860
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: dcb5dd8b097240a46feb5982168aed8e5bcd5595
+ms.lasthandoff: 02/25/2017
 
-o nome do cumprimento do tipo de classe da lista de argumentos de tipo deve listar parâmetros em ordem usada na lista de parâmetros de tipo  
+---
+# <a name="compiler-error-c3860"></a>C3860 de erro do compilador
+lista de argumentos de tipo após o nome do tipo de classe deve listar parâmetros na ordem usada na lista de parâmetros de tipo  
   
- Uma lista genérica ou modelo de argumento era errado formado.  
+ Uma lista de argumento genérico ou modelo ill foi formada.  
   
- O seguinte exemplo gera C3860:  
+ O exemplo a seguir gera C3860:  
   
 ```  
 // C3860.cpp  
@@ -43,7 +58,7 @@ template <class T2, class T1>
 void A<T1, T2>::f() {}   // C3860  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C3860b.cpp  
@@ -57,7 +72,7 @@ template <class T2, class T1>
 void A<T2, T1>::f() {}  
 ```  
   
- C3860 também pode ocorrer ao usar produtos genéricas:  
+ C3860 também pode ocorrer ao usar genéricos:  
   
 ```  
 // C3860c.cpp  
@@ -71,7 +86,7 @@ generic<class T, class U>
 void GC<T,T>::f() {}   // C3860  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C3860d.cpp  

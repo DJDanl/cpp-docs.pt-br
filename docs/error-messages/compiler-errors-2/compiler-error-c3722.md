@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3722 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3722"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3722"
+title: C3722 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3722
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3722
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e68a1e839d9327a494091a61ebfc3f242dfb4e77
+ms.lasthandoff: 02/25/2017
 
-um evento genérico não é permitido  
+---
+# <a name="compiler-error-c3722"></a>C3722 de erro do compilador
+um evento de generic não é permitido  
   
- O compilador só permite classes genéricos, estruturas, e funções.  Para obter mais informações, consulte [Generics](../../windows/generics-cpp-component-extensions.md).  
+ O compilador permite apenas funções, estruturas e classes genéricas.  Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3722:  
+ O exemplo a seguir gera C3722:  
   
 ```  
 // C3722.cpp  

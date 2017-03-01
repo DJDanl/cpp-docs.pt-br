@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2253 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2253"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2253"
+title: C2253 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2253
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2253
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 72a0d9239bcbee265311981c688b0caa7fbd1c56
+ms.lasthandoff: 02/25/2017
 
-função “”: o especificador puro ou o especificador abstrata de substituição permitidos apenas na função virtual  
+---
+# <a name="compiler-error-c2253"></a>C2253 de erro do compilador
+'function': especificador puro ou abstrato substituir especificador só é permitido em função virtual  
   
- Uma função nonvirtual é especificada como `virtual`puro.  
+ Uma função virtual é especificada como puro `virtual`.  
   
- O seguinte exemplo gera C2253:  
+ O exemplo a seguir gera C2253:  
   
 ```  
 // C2253.cpp  
@@ -41,7 +56,7 @@ public:
 };  
 ```  
   
- O seguinte exemplo gera C2253:  
+ O exemplo a seguir gera C2253:  
   
 ```  
 // C2253_2.cpp  

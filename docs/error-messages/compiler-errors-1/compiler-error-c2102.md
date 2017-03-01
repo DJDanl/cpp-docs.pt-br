@@ -1,30 +1,46 @@
 ---
-title: "C2102 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2102"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2102"
+title: C2102 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2102
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2102
 ms.assetid: d15b5fa3-fa46-4cd4-a3d2-3661646ecb7a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2102 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6de28bbebac0321388808542949f80d210de171e
+ms.lasthandoff: 02/25/2017
 
-' &' requer valor l  
+---
+# <a name="compiler-error-c2102"></a>C2102 de erro do compilador
+'< /' requer l-value  
   
- O operador address\-of \( `&` \) deve ter um l\-value como operando.
+ O operador address-of ( `&` ) deve ter um l-value como operando.

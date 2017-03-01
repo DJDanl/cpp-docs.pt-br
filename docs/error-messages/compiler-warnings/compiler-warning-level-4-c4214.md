@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4214 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4214"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4214"
+title: "Compilador aviso (nível 4) C4214 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4214
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4214
 ms.assetid: 9b8db279-1f12-4a6b-a923-2db22acd1947
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4214
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6de0a1fdd900dc9ce09caa829f3571242b5c06df
+ms.lasthandoff: 02/25/2017
 
-extensão não padrão usada: tipos de campo de bit diferentes int  
+---
+# <a name="compiler-warning-level-4-c4214"></a>Compilador C4214 de aviso (nível 4)
+extensão não padrão usada : tipos de campo de bits diferentes de int  
   
- Com as extensões padrão da Microsoft \(\/Ze\), os membros da estrutura de bitfield podem ser de qualquer tipo de inteiro.  
+ Com as extensões da Microsoft padrão (/Ze), junte membros de estrutura podem ser de qualquer tipo de inteiro.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // C4214.c  
@@ -44,4 +59,4 @@ int main()
 }  
 ```  
   
- Esses campos de bit são inválidos na compatibilidade ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).
+ Esses campos de bit são inválidos em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

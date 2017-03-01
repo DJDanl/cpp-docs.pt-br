@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3618 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3618"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3618"
+title: C3618 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3618
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3618
 ms.assetid: cacc105d-4389-4cb8-ae6c-41a3622e9a86
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3618
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 64f33ea1a03927ba3e8f5ee2bd093e90c715826c
+ms.lasthandoff: 02/25/2017
 
-função “”: um DllImport marcado método não pode ser definido  
+---
+# <a name="compiler-error-c3618"></a>C3618 de erro do compilador
+'function': um método marcado DllImport não pode ser definido  
   
- Um método marcado com <xref:System.Runtime.InteropServices.DllImportAttribute> é definido no specified.DLL.  
+ Um método marcado com <xref:System.Runtime.InteropServices.DllImportAttribute>é definido em especificado. DLL.</xref:System.Runtime.InteropServices.DllImportAttribute>  
   
-## Exemplo  
- O exemplo a seguir produz C3618.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3618.  
   
 ```  
 // C3618.cpp  

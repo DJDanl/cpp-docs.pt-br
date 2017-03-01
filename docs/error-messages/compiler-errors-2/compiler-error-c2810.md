@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2810 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2810"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2810"
+title: C2810 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2810
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2810
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5bff45dce0f11e7efcd1253098e4c9b6d82314d8
+ms.lasthandoff: 02/25/2017
 
-contadores de “interface”: uma interface só pode herdar de outra interface  
+---
+# <a name="compiler-error-c2810"></a>C2810 de erro do compilador
+'interface': uma interface só pode herdar de outra interface  
   
- [interface](../Topic/__interface.md) só pode herdar de outra interface e não pode herdar de uma classe ou de uma estrutura.  
+ Um [interface](../../cpp/interface.md) só pode herdar de outra interface e não pode herdar de uma classe ou estrutura.  
   
- O seguinte exemplo gera C2810:  
+ O exemplo a seguir gera C2810:  
   
 ```  
 // C2810.cpp  

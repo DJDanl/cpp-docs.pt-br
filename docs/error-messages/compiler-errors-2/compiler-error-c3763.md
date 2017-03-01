@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: C3763 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9fa5b7337c3c19d39f1847144551b76a1ea89dc6
+ms.lasthandoff: 02/25/2017
 
-“tipo”: “retval” e “out” só pode aparecer em um tipo de dados ponteiro  
+---
+# <a name="compiler-error-c3763"></a>C3763 de erro do compilador
+'type': 'retval' e 'out' só pode aparecer em um tipo de ponteiro de dados  
   
- Os atributos de [out](../Topic/out%20\(C++\).md) ou de [retval](../../windows/retval.md) podem ser exibidas apenas em parâmetros do ponteiro do tipo.  Remover o atributo ou use o parâmetro do ponteiro do tipo.  
+ O [out](../../windows/out-cpp.md) ou [retval](../../windows/retval.md) atributos só podem aparecer em parâmetros do tipo ponteiro. Remova o atributo ou tornar o parâmetro do tipo ponteiro.  
   
- O seguinte exemplo gera C3763:  
+ O exemplo a seguir gera C3763:  
   
 ```  
 // C3763.cpp  

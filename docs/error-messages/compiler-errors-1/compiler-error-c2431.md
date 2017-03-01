@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2431 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2431"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2431"
+title: C2431 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2431
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2431
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2431
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1124f70f0958edda73d25a074cefd804521b4fda
+ms.lasthandoff: 02/25/2017
 
-registro de índice ilegal em “identificador”  
+---
+# <a name="compiler-error-c2431"></a>C2431 de erro do compilador
+registro de índice inválido em 'Identificador'  
   
- ESP o registro é dimensionado ou usado como índice e o registro base.  A codificação de SIB para o processador x86 não permite também.  
+ Registro ESP é dimensionado ou usado como índice e o registro base. O SIB codificação para o x86 processador não permite qualquer um.  
   
- O seguinte exemplo gera C2431:  
+ O exemplo a seguir gera C2431:  
   
 ```  
 // C2431.cpp  

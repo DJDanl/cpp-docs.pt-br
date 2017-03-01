@@ -1,39 +1,54 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4407 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4407"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4407"
+title: "Compilador aviso (nível 1) C4407 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4407
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4407
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d500312686ddef76950c3038f52101ad946ee7df
+ms.lasthandoff: 02/25/2017
 
-conversão entre o ponteiro diferente às representações de membro, compilador pode gerar código incorreta  
+---
+# <a name="compiler-warning-level-1-c4407"></a>Compilador C4407 de aviso (nível 1)
+conversão entre diferentes representações de ponteiro para membro, compilador pode gerar código incorreto  
   
- Uma conversão incorreta foi detectada.  
+ Foi detectada uma conversão incorreta.  
   
- C4407 pode ser gerado devido ao trabalho de conformidade do compilador que foi feito no Visual C\+\+ 2005.  o Ponteiro\-à\- membro agora requer um nome qualificado e endereços do operador \(&\).  
+ C4407 podem ser geradas devido ao trabalho de conformidade do compilador que foi feito no Visual C++ 2005. Ponteiro para membro agora requer um nome qualificado e o operador address-of (&).  
   
- C4407 pode ocorrer se você converter entre um ponteiro\-à\- membro de herança múltipla a um único membro ponteiro\-à\- de herança.  Às vezes pode funcionar, mas às vezes pode não porque a única representação de ponteiro\-à\- membro de herança não contém informações suficientes.  A compilação com **\/vmm** pode ajudar \(para obter mais informações, consulte [\/vmm, \/vms, \/vmv \(representação de finalidade geral\)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)\).  Você também pode tentar reorganizar suas classes base; o compilador está detectando uma perda de informações na conversão porque uma classe base estiver em um deslocamento diferente de zero do derivada.  
+ C4407 pode ocorrer se você converter entre um vários herança ponteiro para membro para um única herança ponteiro para membro. Às vezes, isso pode funcionar, mas às vezes, ele não pode porque a representação de ponteiro para membro herança única não conter informações suficientes. Compilando com a **/vmm** podem ajudar a (para obter mais informações, consulte [/vmm, /vms, /vmv (representação de finalidade geral)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). Você também pode tentar reorganizar suas classes base; o compilador está detectando uma perda de informações na conversão porque uma classe base é um deslocamento diferente de zero a derivada.  
   
- O seguinte exemplo gera C4407:  
+ O exemplo a seguir gera C4407:  
   
 ```  
 // C4407.cpp  

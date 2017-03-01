@@ -1,32 +1,47 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4505 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4505"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4505"
+title: "Compilador aviso (nível 4) C4505 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4505
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4505
 ms.assetid: 068716a0-7dd2-40af-abf4-478f893b48c5
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4505
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f2d9fd3546c2e087b5f91f9a69539074fa61028a
+ms.lasthandoff: 02/25/2017
 
-função “”: a função local não referenciada foi removida  
+---
+# <a name="compiler-warning-level-4-c4505"></a>Compilador C4505 de aviso (nível 4)
+'function': função local sem referência foi removida  
   
- A função é determinada local e não referenciada no corpo do módulo; consequentemente, a função é código inoperante.  
+ A função fornecida é local e não referenciado no corpo do módulo; Portanto, a função é código inativo.  
   
- O compilador não gerou o código para essa função inoperante.
+ O compilador gera código para esta função inativo.

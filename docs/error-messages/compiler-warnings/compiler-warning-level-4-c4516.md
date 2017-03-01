@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4516 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4516"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4516"
+title: "Compilador aviso (nível 4) C4516 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4516
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4516
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2837f23e414d4f6ee58020375851c0874faf1e07
+ms.lasthandoff: 02/25/2017
 
-“class::symbol”: as declarações de acesso são substituídas; usados as declarações de membro fornecem uma alternativa melhor  
+---
+# <a name="compiler-warning-level-4-c4516"></a>Compilador C4516 de aviso (nível 4)
+'class::symbol': acesso declarações são preteridas; declarações usando membros fornecem uma alternativa melhor  
   
- O comitê ANSI declarados C\+\+ as declarações de acesso \(que modificam o acesso de um membro em uma classe derivada sem a palavra\-chave de [usando](../../cpp/using-declaration.md) \) para ser desatualizado.  As declarações de acesso não podem ser com suporte em versões futuras do C\+\+.  
+ O Comitê de C++ ANSI declarou declarações de acesso (alterando o acesso de um membro em uma classe derivada sem a [usando](../../cpp/using-declaration.md) palavra-chave) fiquem desatualizados. Declarações de acesso podem não ser compatível com versões futuras do C++.  
   
- O seguinte exemplo gera C4516:  
+ O exemplo a seguir gera C4516:  
   
 ```  
 // C4516.cpp  

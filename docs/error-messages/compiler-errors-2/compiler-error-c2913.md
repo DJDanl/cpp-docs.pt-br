@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2913 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2913"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2913"
+title: C2913 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2913
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2913
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7b675374b9f4b0790257a8f365b030d4cc823a84
+ms.lasthandoff: 02/25/2017
 
-especialização explícita; a declaração “” não é uma especialização de um modelo da classe  
+---
+# <a name="compiler-error-c2913"></a>C2913 de erro do compilador
+especialização explícita; 'declaração de ' não é uma especialização de um modelo de classe  
   
- Você não pode especializar uma classe de não modelo.  
+ Não é possível specialize uma classe diferente do modelo.  
   
- O seguinte exemplo gera C2913:  
+ O exemplo a seguir gera C2913:  
   
 ```  
 // C2913.cpp  

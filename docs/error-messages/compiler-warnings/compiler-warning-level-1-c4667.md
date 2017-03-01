@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4667 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4667"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4667"
+title: "Compilador aviso (nível 1) C4667 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4667
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4667
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: af73b9509191b9669b285cc7f81385ace0a113be
+ms.lasthandoff: 02/25/2017
 
-função “”: nenhum modelo de função definidas que as correspondências forçado a instanciação  
+---
+# <a name="compiler-warning-level-1-c4667"></a>Compilador C4667 de aviso (nível 1)
+'function': nenhum modelo de função definido que corresponda forçado instanciação  
   
- Você não pode criar uma instância de um modelo de função que não é declarado.  
+ Não é possível instanciar um modelo de função não foi declarado.  
   
- O exemplo a seguir fará C4667:  
+ O exemplo a seguir fará com que C4667:  
   
 ```  
 // C4667a.cpp  
@@ -38,7 +53,7 @@ template
 void max(const int &, const int &); // C4667 expected  
 ```  
   
- Para evitar esse aviso, primeiro declarar o modelo da função:  
+ Para evitar esse aviso, primeiro declare o modelo de função:  
   
 ```  
 // C4667b.cpp  

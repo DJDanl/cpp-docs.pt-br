@@ -1,36 +1,53 @@
 ---
-title: "Erro do Compilador C2434 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2434"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2434"
+title: C2434 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2434
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2434
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 65aac590a3282f2fd71c460d14927f5695fcdc5a
+ms.lasthandoff: 02/25/2017
 
-símbolo “”: um símbolo declarado com \_\_declspec \(processo\) não pode dinamicamente ser inicializado no modo de \/clr:pure  
+---
+# <a name="compiler-error-c2434"></a>C2434 de erro do compilador
+'symbol': um símbolo declarado com declspec não pode ser inicializado dinamicamente em /clr: modo puro  
   
- Não é possível inicializar dinamicamente uma variável do processo sob **\/clr:pure**.  Para obter mais informações, consulte [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) e [process](../../cpp/process.md).  
+ O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
   
-## Exemplo  
- O exemplo a seguir produz C2434.  
+ Não é possível inicializar dinamicamente uma variável por processo em **/clr: puro**. Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2434.  
   
 ```  
 // C2434.cpp  

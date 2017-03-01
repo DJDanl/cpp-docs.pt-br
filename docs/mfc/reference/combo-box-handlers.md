@@ -1,66 +1,83 @@
 ---
-title: "Manipuladores da caixa de combina&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_CBN_KILLFOCUS"
-  - "ON_CBN_ERRSPACE"
-  - "ON_CBN_EDITCHANGE"
-  - "ON_CBN_CLOSEUP"
-  - "ON_CBN_DBLCLK"
-  - "ON_CBN_EDITUPDATE"
-  - "ON_CBN_DROPDOWN"
-  - "ON_CBN_SELENDOK"
-  - "ON_CBN_SELCHANGE"
-  - "ON_CBN_SETFOCUS"
-  - "ON_CBN_SELENDCANCEL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de combinação, manipuladores"
-  - "ON_CBN_CLOSEUP"
-  - "ON_CBN_DBLCLK"
-  - "ON_CBN_DROPDOWN"
-  - "ON_CBN_EDITCHANGE"
-  - "ON_CBN_EDITUPDATE"
-  - "ON_CBN_ERRSPACE"
-  - "ON_CBN_KILLFOCUS"
-  - "ON_CBN_SELCHANGE"
-  - "ON_CBN_SELENDCANCEL"
-  - "ON_CBN_SELENDOK"
-  - "ON_CBN_SETFOCUS"
+title: "Manipuladores da caixa de combinação | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_CBN_KILLFOCUS
+- ON_CBN_ERRSPACE
+- ON_CBN_EDITCHANGE
+- ON_CBN_CLOSEUP
+- ON_CBN_DBLCLK
+- ON_CBN_EDITUPDATE
+- ON_CBN_DROPDOWN
+- ON_CBN_SELENDOK
+- ON_CBN_SELCHANGE
+- ON_CBN_SETFOCUS
+- ON_CBN_SELENDCANCEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_CBN_CLOSEUP
+- ON_CBN_SETFOCUS
+- ON_CBN_DBLCLK
+- ON_CBN_SELENDCANCEL
+- ON_CBN_DROPDOWN
+- ON_CBN_EDITUPDATE
+- ON_CBN_KILLFOCUS
+- combo boxes, handlers
+- ON_CBN_EDITCHANGE
+- ON_CBN_ERRSPACE
+- ON_CBN_SELENDOK
+- ON_CBN_SELCHANGE
 ms.assetid: 7f092412-01b7-4242-95ec-41ba506b9d71
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Manipuladores da caixa de combina&#231;&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3e20aea5d99fe6d706fee41a0e24a60a3b39b410
+ms.lasthandoff: 02/25/2017
 
-As entradas de mapa correspondem a seguir protótipos de função.  
+---
+# <a name="combo-box-handlers"></a>Manipuladores da caixa de combinação
+As seguintes entradas de mapa correspondem aos protótipos de função.  
   
-|Entrada do mapa|Protótipo de função|  
-|---------------------|-------------------------|  
-|ON\_CBN\_CLOSEUP \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\)|  
-|ON\_CBN\_DBLCLK \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_DROPDOWN \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_EDITCHANGE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_EDITUPDATE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_ERRSPACE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_KILLFOCUS \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_SELCHANGE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_SELENDCANCEL \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_SELENDOK \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_CBN\_SETFOCUS \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
+|Entrada de mapa|Protótipo da função|  
+|---------------|------------------------|  
+|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg|  
+|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+

@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2509"
+title: C2509 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2509
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2509
 ms.assetid: 339c1fcd-ec4a-456c-9f18-a9b24d9921af
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 81e1924c1fd9d51303521ac6dac4718755510320
+ms.lasthandoff: 02/25/2017
 
-“identificador”: função de membro não declarada em “classes  
+---
+# <a name="compiler-error-c2509"></a>C2509 de erro do compilador
+'identifier': função de membro não declarada em 'class'  
   
  A função não é declarada na classe especificada.  
   
-## Exemplo  
- O exemplo a seguir produz C2509.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2509.  
   
 ```  
 // C2509.cpp  

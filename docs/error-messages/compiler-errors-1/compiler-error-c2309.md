@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2309 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2309"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2309"
+title: C2309 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2309
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2309
 ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2309
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b7a1ab32bd7e112207e2eccd24058ab68c874801
+ms.lasthandoff: 02/25/2017
 
-o manipulador de captura esperou uma declaração posta entre parênteses de exceção  
+---
+# <a name="compiler-error-c2309"></a>C2309 de erro do compilador
+manipulador catch esperava uma declaração de exceção entre parênteses  
   
- Um manipulador de captura não tem nenhum tipo posto entre parênteses.  
+ Um manipulador catch possui nenhum tipo entre parênteses.  
   
- O seguinte exemplo gera C2309:  
+ O exemplo a seguir gera C2309:  
   
 ```  
 // C2309.cpp  

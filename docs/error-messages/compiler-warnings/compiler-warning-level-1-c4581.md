@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: "Compilador aviso (nível 1) C4581 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4581
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ca3e8fb8fdb3db7356dea9ce0be25136c8f23385
+ms.lasthandoff: 02/25/2017
 
-comportamento preterido: ““string1”” substituído com “string2” para processar o atributo  
+---
+# <a name="compiler-warning-level-1-c4581"></a>Compilador C4581 de aviso (nível 1)
+preterido comportamento: '"string1" ' substituído por string2 ao atributo de processo  
   
- Esse erro pode ser gerado no resultado do trabalho de conformidade do compilador que foi feito para Visual C\+\+ 2005: parâmetro que verifica os atributos do Visual C\+\+.  
+ Esse erro pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito no Visual C++ 2005: parâmetro procurando atributos do Visual C++.  
   
- Em versões anteriores, os valores de atributo são aceitos se foram incluídos entre aspas.  Se o valor for uma enumeração, não deverá ser colocado entre aspas.  
+ Nas versões anteriores, os valores de atributo foram aceitos se eles foram colocados entre aspas ou não. Se o valor é uma enumeração, não deve estar entre aspas.  
   
-## Exemplo  
- O exemplo a seguir produz C4581.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4581.  
   
 ```  
 // C4581.cpp  

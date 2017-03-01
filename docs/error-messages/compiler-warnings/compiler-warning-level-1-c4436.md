@@ -1,42 +1,57 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Compilador aviso (nível 1) C4436 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cb4e56a7455a4b3f76578d335c8cfca5a7ca36eb
+ms.lasthandoff: 02/25/2017
 
-o dynamic\_cast de base virtual “class1” a “class2” no ou no construtor destruidor pode falhar com o objeto parcialmente construído compile com \/vd2 ou define “class2” com vtordisp de \#pragma \(2\) aplicado  
+---
+# <a name="compiler-warning-level-1-c4436"></a>Compilador C4436 de aviso (nível 1)
+dynamic_cast da base virtual 'class1' para 'class2' no construtor ou destruidor pode falhar com compilação de objeto parcialmente construído com /vd2 ou definir 'class2' #pragma vtordisp(2) em vigor  
   
- O compilador encontrou uma operação de `dynamic_cast` com as seguintes características.  
+ O compilador encontrou um `dynamic_cast` operação com as seguintes características.  
   
--   A conversão for de um ponteiro da classe base para um ponteiro da classe derivada.  
+-   É a conversão de um ponteiro de classe base para um ponteiro de classe derivada.  
   
--   A classe herda derivada a inclusão da classe base.  
+-   Virtualmente, a classe derivada herda da classe base.  
   
--   A classe derivada não tiver um campo de `vtordisp` para a base virtual.  
+-   A classe derivada não tem um `vtordisp` campo base virtual.  
   
--   A conversão for localizada em um construtor ou em um destruidor da classe derivada, ou em uma determinada classe que herda mais da classe derivada.  
+-   A conversão foi encontrada em um construtor ou destruidor da classe derivada ou uma classe que mais herda da classe derivada.  
   
- O aviso indicar que `dynamic_cast` não pode ser executado corretamente, se o estiver operando em um objeto parcialmente construído.  Isso acontecer se o construtor\/destruidor derivadas está operando em um novo objeto de qualquer objeto derivado adicional.  Se a classe derivada chamada no aviso nunca é uma coluna adicional, o aviso pode ser ignorado.  
+ O aviso indica o `dynamic_cast` pode não executar corretamente, se ela estiver operando em um objeto parcialmente construído.  Isso acontece se o construtor/destruidor derivado estiver operando em um objeto de subsistema de algum objeto mais derivado.  Se a classe derivada chamada no aviso nunca é ainda mais derivado, o aviso pode ser ignorado.  
   
-## Exemplo  
- O exemplo C4436 gerencia e demonstra o problema de geração de código que ocorre do campo ausente de `vtordisp` .  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4436 e demonstra o problema de geração de código que surge da ausentes `vtordisp` campo.  
   
 ```cpp  
 // C4436.cpp  
@@ -78,7 +93,7 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Operador dynamic\_cast](../../cpp/dynamic-cast-operator.md)   
- [vtordisp](../Topic/vtordisp.md)   
- [Aviso do compilador \(nível 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+## <a name="see-also"></a>Consulte também  
+ [Operador dynamic_cast](../../cpp/dynamic-cast-operator.md)   
+ [vtordisp](../../preprocessor/vtordisp.md)   
+ [Compilador C4437 de aviso (nível 4)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

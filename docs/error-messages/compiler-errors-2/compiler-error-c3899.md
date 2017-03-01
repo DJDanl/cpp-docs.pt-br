@@ -1,38 +1,53 @@
 ---
-title: "Erro do Compilador C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: C3899 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 58d6cf8cbfe1bd8b649861f436a0c6dfb5e4accb
+ms.lasthandoff: 02/25/2017
 
-var “”: o uso de l\- valor do membro de dados não é permitido initonly diretamente dentro de uma região paralelo em classes das classes  
+---
+# <a name="compiler-error-c3899"></a>C3899 de erro do compilador
+'var': uso de l-value initonly do membro de dados não é permitido dentro de uma região paralela na classe 'class'  
   
- Um membro de dados de [initonly](../../dotnet/initonly-cpp-cli.md) não pode ser inicializado naquela parte de um construtor que está em uma região de [parallel](../../parallel/openmp/reference/parallel.md) .  Isso ocorre porque o compilador faz uma realocação interno do código, de modo que, é efetivamente já não faz parte do construtor.  
+ Um [initonly (C + + / CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado em que parte de um construtor que está em uma [paralela](../../parallel/openmp/reference/parallel.md) região.  Isso ocorre porque o compilador faz uma realocação interna desse código, de modo que, efetivamente não é parte do construtor.  
   
- Para resolver, inicializar initonly o membro de dados no construtor, mas fora da região paralela.  
+ Para resolver, inicialize o membro de dados initonly no construtor, mas fora da região paralela.  
   
-## Exemplo  
- O exemplo a seguir produz C3899.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3899.  
   
 ```  
 // C3899.cpp  

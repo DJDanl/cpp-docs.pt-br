@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4389 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4389"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4389"
+title: "Compilador aviso (nível 4) C4389 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- c4389
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4389
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4389
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f41ece6819bf2086bd326ed6f9acd5b003c7f620
+ms.lasthandoff: 02/25/2017
 
-operador “”: incompatibilidade assinados\/não assinados  
+---
+# <a name="compiler-warning-level-4-c4389"></a>Compilador C4389 de aviso (nível 4)
+'operator': incompatibilidade assinada/não  
   
- Variáveis assinados e não assinados de uma operação envolvida.  Isso pode resultar na perda de dados.  
+ Uma operação envolvida assinadas e variáveis. Isso pode resultar em perda de dados.  
   
- O seguinte exemplo gera C4389:  
+ O exemplo a seguir gera C4389:  
   
 ```  
 // C4389.cpp  
