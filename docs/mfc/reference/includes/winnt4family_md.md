@@ -15,7 +15,7 @@ translation.priority.ht:
 - zh-tw
 translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7921947aeb911e9ab35e8ae59dbaeb00bad69c54
+ms.openlocfilehash: 46f2ebc7d5f0add47b4d0b1503b5813286ccb8fb
 
 ---
-Tempo de Execução do Windows
+Windows NT 4.0

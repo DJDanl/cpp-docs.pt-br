@@ -15,7 +15,7 @@ translation.priority.ht:
 - zh-tw
 translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7921947aeb911e9ab35e8ae59dbaeb00bad69c54
+ms.openlocfilehash: 4573e6a42adc3099214434885d565d7ba1e0c24c
 
 ---
-Tempo de Execução do Windows
+Windows XP Home Edition, Windows XP Professional, Windows Server 2003

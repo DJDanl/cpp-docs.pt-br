@@ -1,59 +1,74 @@
 ---
-title: "shared (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Shared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "shared OpenMP clause"
+title: compartilhado (OpenMP) | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Shared
+dev_langs:
+- C++
+helpviewer_keywords:
+- shared OpenMP clause
 ms.assetid: 7887dc95-67a2-462f-a3a2-8e0632bf5d04
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# shared (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2ae11e15a3116b47966746fa550e14848b568161
+ms.lasthandoff: 02/25/2017
 
-Especifica que uma ou mais variáveis devem ser compartilhadas entre todos os threads.  
+---
+# <a name="shared-openmp"></a>shared (OpenMP)
+Especifica que uma ou mais variáveis devem ser compartilhados entre todos os threads.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 shared(var)  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  onde,  
   
  `var`  
- Variáveis de mais um para compartilhar.  Se mais de uma variável for especificada, separe os nomes de variáveis com uma vírgula.  
+ Variáveis mais um compartilhamento. Se mais de uma variável for especificada, separe os nomes de variáveis com uma vírgula.  
   
-## Comentários  
- Outra maneira de compartilhar variáveis entre threads é com o [copyprivate](../Topic/copyprivate.md) cláusula.  
+## <a name="remarks"></a>Comentários  
+ Outra maneira de compartilhar variáveis entre threads é com o [copyprivate](../../../parallel/openmp/reference/copyprivate.md) cláusula.  
   
- `shared`aplica as diretivas a seguir:  
+ `shared`aplica-se para as seguintes diretivas:  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
+-   [paralelo](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [seções](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Para obter mais informações, consulte [2.7.2.4 shared](../../../parallel/openmp/2-7-2-4-shared.md).  
+ Para obter mais informações, consulte [2.7.2.4 compartilhado](../../../parallel/openmp/2-7-2-4-shared.md).  
   
-## Exemplo  
- Consulte [private](../../../parallel/openmp/reference/private-openmp.md) para obter um exemplo do uso de `shared`.  
+## <a name="example"></a>Exemplo  
+ Consulte [particular](../../../parallel/openmp/reference/private-openmp.md) para obter um exemplo de como usar `shared`.  
   
-## Consulte também  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>Consulte também  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,143 +1,160 @@
 ---
-title: "Estilos est&#225;ticos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SS_SUNKEN"
-  - "SS_CENTER"
-  - "SS_ENHMETAFILE"
-  - "SS_RIGHT"
-  - "SS_BLACKRECT"
-  - "SS_LEFTNOWORDWRAP"
-  - "SS_GRAYFRAME"
-  - "SS_USERITEM"
-  - "SS_GRAYRECT"
-  - "SS_WHITEFRAME"
-  - "SS_ETCHEDFRAME"
-  - "SS_ETCHEDVERT"
-  - "SS_WHITERECT"
-  - "SS_PATHELLIPSIS"
-  - "SS_WORDELLIPSIS"
-  - "SS_NOPREFIX"
-  - "SS_BITMAP"
-  - "SS_SIMPLE"
-  - "SS_CENTERIMAGE"
-  - "SS_BLACKFRAME"
-  - "SS_OWNERDRAW"
-  - "SS_REALSIZEIMAGE"
-  - "SS_RIGHTJUST"
-  - "SS_ICON"
-  - "SS_NOTIFY"
-  - "SS_ETCHEDHORZ"
-  - "SS_LEFT"
-  - "SS_ENDELLIPSIS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Constante SS_BITMAP"
-  - "Constante SS_BLACKFRAME"
-  - "Constante SS_BLACKRECT"
-  - "Constante SS_CENTER"
-  - "Constante SS_CENTERIMAGE"
-  - "Constante SS_ENDELLIPSIS"
-  - "Constante SS_ENHMETAFILE"
-  - "Constante SS_ETCHEDFRAME"
-  - "Constante SS_ETCHEDHORZ"
-  - "Constante SS_ETCHEDVERT"
-  - "Constante SS_GRAYFRAME"
-  - "Constante SS_GRAYRECT"
-  - "Constante SS_ICON"
-  - "Constante SS_LEFT"
-  - "Constante SS_LEFTNOWORDWRAP"
-  - "Constante SS_NOPREFIX"
-  - "Constante SS_NOTIFY"
-  - "Constante SS_OWNERDRAW"
-  - "Constante SS_PATHELLIPSIS"
-  - "Constante SS_REALSIZEIMAGE"
-  - "Constante SS_RIGHT"
-  - "Constante SS_RIGHTJUST"
-  - "Constante SS_SIMPLE"
-  - "Constante SS_SUNKEN"
-  - "Constante SS_USERITEM"
-  - "Constante SS_WHITEFRAME"
-  - "Constante SS_WHITERECT"
-  - "Constante SS_WORDELLIPSIS"
-  - "estilos estáticos"
+title: "Estilos estáticos | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SS_SUNKEN
+- SS_CENTER
+- SS_ENHMETAFILE
+- SS_RIGHT
+- SS_BLACKRECT
+- SS_LEFTNOWORDWRAP
+- SS_GRAYFRAME
+- SS_USERITEM
+- SS_GRAYRECT
+- SS_WHITEFRAME
+- SS_ETCHEDFRAME
+- SS_ETCHEDVERT
+- SS_WHITERECT
+- SS_PATHELLIPSIS
+- SS_WORDELLIPSIS
+- SS_NOPREFIX
+- SS_BITMAP
+- SS_SIMPLE
+- SS_CENTERIMAGE
+- SS_BLACKFRAME
+- SS_OWNERDRAW
+- SS_REALSIZEIMAGE
+- SS_RIGHTJUST
+- SS_ICON
+- SS_NOTIFY
+- SS_ETCHEDHORZ
+- SS_LEFT
+- SS_ENDELLIPSIS
+dev_langs:
+- C++
+helpviewer_keywords:
+- SS_ICON constant
+- SS_WHITEFRAME constant
+- SS_BLACKFRAME constant
+- SS_ETCHEDHORZ constant
+- SS_OWNERDRAW constant
+- SS_BITMAP constant
+- SS_NOPREFIX constant
+- SS_NOTIFY constant
+- SS_CENTER constant
+- SS_REALSIZEIMAGE constant
+- SS_ETCHEDFRAME constant
+- SS_CENTERIMAGE constant
+- SS_SUNKEN constant
+- SS_ENDELLIPSIS constant
+- SS_WORDELLIPSIS constant
+- SS_WHITERECT constant
+- SS_ETCHEDVERT constant
+- SS_GRAYFRAME constant
+- SS_LEFTNOWORDWRAP constant
+- SS_LEFT constant
+- SS_SIMPLE constant
+- static styles
+- SS_ENHMETAFILE constant
+- SS_GRAYRECT constant
+- SS_USERITEM constant
+- SS_PATHELLIPSIS constant
+- SS_BLACKRECT constant
+- SS_RIGHT constant
+- SS_RIGHTJUST constant
 ms.assetid: a1114548-fc6d-491d-8c46-21d11b8574f5
 caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estilos est&#225;ticos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ad34c688fdfd3c2b4c81a0a03fbce53a905162ad
+ms.lasthandoff: 02/25/2017
 
--   **SS\_BITMAP** especifica um bitmap deve ser exibido no controle estático.  O texto fornecido é o nome de um bitmap \(não um nome de arquivo\) definido em outro lugar no arquivo de recurso.  O estilo ignora os parâmetros de nWidth e de nHeight; o controle disponibiliza dimensionar automaticamente para acomodar o bitmap.  
+---
+# <a name="static-styles"></a>Estilos estáticos
+-   **SS_BITMAP** Especifica um bitmap a ser exibido no controle estático. O texto especificado é o nome de um bitmap (não um nome de arquivo) definido em outro lugar no arquivo de recurso. O estilo ignora os parâmetros nWidth e nHeight; o controle dimensiona automaticamente para acomodar o bitmap.  
   
--   **SS\_BLACKFRAME** especifica uma caixa com um quadro desenhado com a mesma cor de peças da janela.  A opção é preta.  
+-   **SS_BLACKFRAME** Especifica uma caixa com um quadro com a mesma cor de quadros de janela. O padrão é preto.  
   
--   **SS\_BLACKRECT** especifica um retângulo preenchido com a cor usada para desenhar peças da janela.  A opção é preta.  
+-   **SS_BLACKRECT** Especifica um retângulo preenchido com a cor usada para desenhar quadros de janela. O padrão é preto.  
   
--   **SS\_CENTER** designa um retângulo simples e exibe o texto determinado centralizado no retângulo.  O texto é formatado antes de ser exibido.  As palavras que estenderiam após o término de uma linha são envolvidas automaticamente para o início da linha centralizada seguir.  
+-   **SS_CENTER** designa um retângulo simples e exibe o texto determinado centralizado no retângulo. O texto é formatado antes que ele seja exibido. Palavras que seriam estende além do final de uma linha são automaticamente encapsuladas para o início da próxima linha centralizado.  
   
--   **SS\_CENTERIMAGE** especifica que, se o bitmap ou o ícone é menor que a área do cliente do controle estático, o restante da área de cliente for preenchido com a cor de pixel no canto superior esquerdo de bitmap ou o ícone.  Se o controle estático contém uma única linha de texto, o texto será centralizado verticalmente na área do cliente do controle.  
+-   **SS_CENTERIMAGE** Especifica que, se o bitmap ou ícone for menor do que a área do cliente do controle estático, o restante da área do cliente é preenchido com a cor do pixel no canto superior esquerdo do bitmap ou ícone. Se o controle estático contém uma única linha de texto, o texto está centralizado verticalmente na área do cliente do controle.  
   
--   **SS\_ENDELLIPSIS** ou **SS\_PATHELLIPSIS** substituem a parte da cadeia de caracteres fornecida com as reticências se necessário, de forma que a medida de resultado no retângulo especificado.  
+-   **SS_ENDELLIPSIS** ou **SS_PATHELLIPSIS** substitui parte da cadeia de caracteres especificada com reticências, se necessário, para que o resultado se encaixa no retângulo especificado.  
   
-     Você pode especificar **SS\_END\_ELLIPSIS** para substituir caracteres no final da cadeia de caracteres, ou **SS\_PATHELLIPSIS** para substituir caracteres no meio da cadeia de caracteres.  Se a cadeia de caracteres contém caracteres de barra invertida \(\\\), preserva de **SS\_PATHELLIPSIS** tanto quanto de texto após a barra invertida a última possível.  
+     Você pode especificar **SS_END_ELLIPSIS** para substituir caracteres ao final da cadeia de caracteres, ou **SS_PATHELLIPSIS** para substituir caracteres no meio da cadeia. Se a cadeia de caracteres contém a barra invertida (\\) caracteres, **SS_PATHELLIPSIS** preserva máximo do texto após a última barra invertida possível.  
   
--   **SS\_ENHMETAFILE** especifica um metarquivo aprimorado deve ser exibido no controle estático.  O texto fornecido é o nome de um metarquivo.  Um controle estático de metarquivo aprimorado tem um tamanho fixo; o metarquivo é redimensionado para se ajustar à área de cliente de controle estático.  
+-   **SS_ENHMETAFILE** Especifica um metarquivo avançado deve ser exibido no controle estático. O texto especificado é o nome de um metarquivo. Um controle estático Metarquivo Avançado tem um tamanho fixo; o metarquivo é dimensionado para ajustar a área do cliente do controle estático.  
   
--   **SS\_ETCHEDFRAME** desenha o quadro estático de controle usando o estilo da borda de **EDGE\_ETCHED** .  
+-   **SS_ETCHEDFRAME** desenha o quadro do controle estático usando o **EDGE_ETCHED** estilo de borda.  
   
--   **SS\_ETCHEDHORZ** desenha a parte superior e as bordas inferiores de controle estático usando o estilo da borda de **EDGE\_ETCHED** .  
+-   **SS_ETCHEDHORZ** desenha as bordas superior e inferior do controle estático usando o **EDGE_ETCHED** estilo de borda.  
   
--   **SS\_ETCHEDVERT** desenha as bordas esquerda e direita do controle estático usando o estilo da borda de EDGE\_ETCHED.  
+-   **SS_ETCHEDVERT** desenha as bordas esquerdas e direita do controle estático usando o estilo de borda EDGE_ETCHED.  
   
--   **SS\_GRAYFRAME** especifica uma caixa com um quadro desenhado com a mesma cor do plano de fundo da tela \(área de trabalho\).  A opção estiver cinza.  
+-   **SS_GRAYFRAME** Especifica uma caixa com um quadro com a mesma cor do plano de fundo de tela (desktop). O padrão é cinza.  
   
--   **SS\_GRAYRECT** especifica um retângulo preenchido com a cor usada para preencher o plano de fundo da tela.  A opção estiver cinza.  
+-   **SS_GRAYRECT** Especifica um retângulo preenchido com a cor usada para preencher o plano de fundo de tela. O padrão é cinza.  
   
--   **SS\_ICON** designa um ícone exibido na caixa de diálogo.  O texto fornecido é o nome de um ícone \(não um nome de arquivo\) definido em outro lugar no arquivo de recurso.  Os parâmetros de `nWidth` e de `nHeight` são ignorados; o ícone disponibiliza dimensionar automaticamente.  
+-   **SS_ICON** designa um ícone exibido na caixa de diálogo. O texto especificado é o nome de um ícone (não um nome de arquivo) definido em outro lugar no arquivo de recurso. O `nWidth` e `nHeight` os parâmetros são ignorados; o ícone dimensiona automaticamente em si.  
   
--   **SS\_LEFT** designa um retângulo simples e exibe o texto fornecido resplendor\- esquerdo no retângulo.  O texto é formatado antes de ser exibido.  As palavras que estenderiam após o término de uma linha são envolvidas automaticamente para o início da linha resplendor\- esquerda seguir.  
+-   **SS_LEFT** designa um retângulo simples e exibe o texto determinado flush esquerdo do retângulo. O texto é formatado antes que ele seja exibido. Palavras que seriam estende além do final de uma linha são automaticamente encapsuladas para o início da próxima linha esquerda de liberação.  
   
--   **SS\_LEFTNOWORDWRAP** designa um retângulo simples e exibe o texto fornecido resplendor\- esquerdo no retângulo.  As guias são expandidas, mas as palavras não são envolvidas.  Texto que estende após o término de uma linha é anexado.  
+-   **SS_LEFTNOWORDWRAP** designa um retângulo simples e exibe o texto determinado flush esquerdo do retângulo. Guias são expandidas, mas palavras não são encapsuladas. Texto que ultrapassa o final de uma linha é cortado.  
   
--   **SS\_NOPREFIX** a menos que esse estilo for especificado, o interpretará todos os caracteres de E comercial \(&\) no texto do controle para ser caracteres de prefixo de acelerador.  Nesse caso, E comercial é removido e o próximo caractere da cadeia de caracteres é sublinhado.  Se um controle conter texto estático é onde esse recurso não é desejado, **SS\_NOPREFIX** pode ser adicionado.  Esse estilo de estática\- controle pode ser incluído em qualquer dos controles estáticos definidos.  Você pode combinar **SS\_NOPREFIX** com outros estilos usando o operador OR bit a bit.  Isso é o mais frequentemente usado quando os nomes de arquivo ou outras cadeias de caracteres que podem conter uma necessidade de E comercial de ser exibido em um controle estático em uma caixa de diálogo.  
+-   **SS_NOPREFIX** , a menos que esse estilo é especificado, Windows irá interpretar qualquer caractere e comercial (&) no texto do controle caracteres de prefixo de acelerador. Nesse caso, o e comercial é removido e o próximo caractere na cadeia de caracteres está sublinhado. Se for um controle estático conter o texto em que esse recurso não se for desejado, **SS_NOPREFIX** podem ser adicionados. Esse estilo de controle estático pode ser incluído com qualquer um dos controles estáticos definidos. Você pode combinar **SS_NOPREFIX** com outros estilos usando o operador OR bit a bit. Isso geralmente é usado quando nomes de arquivos ou outras cadeias de caracteres que podem conter um e comercial precisam ser exibido em um controle estático em uma caixa de diálogo.  
   
--   **SS\_NOTIFY** envia a janela pai **STN\_CLICKED**, notificações de **STN\_DBLCLK**, de **STN\_DISABLE**, e de **STN\_ENABLE** quando o usuário clica em ou clique duas vezes no controle.  
+-   **SS_NOTIFY** envia a janela pai **STN_CLICKED**, **STN_DBLCLK**, **STN_DISABLE**, e **STN_ENABLE** mensagens de notificação quando o usuário clica ou clica duas vezes no controle.  
   
--   **SS\_OWNERDRAW** especifica que o proprietário do controle estático é responsável para desenhar o controle.  A janela do proprietário recebe uma mensagem de `WM_DRAWITEM` sempre que as necessidades de controle de ser desenhado.  
+-   **SS_OWNERDRAW** Especifica que o proprietário do controle estático é responsável por desenhar o controle. A janela do proprietário recebe um `WM_DRAWITEM` mensagem sempre que o controle deve ser desenhado.  
   
--   **SS\_REALSIZEIMAGE** impede que um controle estático de ícones ou de bitmap \(isto é, os controles estáticos que têm o estilo de **SS\_ICON** ou de **SS\_BITMAP** \) é redimensionado como é carregada ou desenhado.  Se o ícone ou o bitmap é maior do que a área de destino, a imagem será anexado.  
+-   **SS_REALSIZEIMAGE** impede que um controle estático ícone ou bitmap (ou seja, os controles estáticos que têm o **SS_ICON** ou **SS_BITMAP** estilo) seja redimensionada conforme ele é carregado ou desenhado. Se o ícone ou o bitmap for maior que a área de destino, a imagem é recortada.  
   
--   **SS\_RIGHT** designa um retângulo simples e exibe o texto fornecido resplendor\- direito no retângulo.  O texto é formatado antes de ser exibido.  As palavras que estenderiam após o término de uma linha são envolvidas automaticamente para o início da linha resplendor\- direita seguir.  
+-   **SS_RIGHT** designa um retângulo simples e exibe o texto determinado flush-direita do retângulo. O texto é formatado antes que ele seja exibido. Palavras que seriam estende além do final de uma linha são automaticamente encapsuladas para o início da próxima linha flush direito.  
   
--   **SS\_RIGHTJUST** especifica que o canto inferior direito de um controle estático com o estilo de **SS\_BITMAP** ou de **SS\_ICON** permanece fixo quando o controle é redimensionado.  Somente os lados esquerdo e superiores são ajustados para acomodar um novo bitmap ou ícone.  
+-   **SS_RIGHTJUST** Especifica que o canto inferior direito de um controle estático com o **SS_BITMAP** ou **SS_ICON** estilo é permanecer fixo quando o controle é redimensionado. Somente os lados superior e esquerdos são ajustados para acomodar um novo bitmap ou ícone.  
   
--   **SS\_SIMPLE** designa um retângulo simples e exibe uma única linha de texto resplendor\- esquerda do retângulo.  A linha de texto não pode ser abreviada ou modificadas em nenhuma forma. \(A janela pai ou a caixa de diálogo controle não devem processar a mensagem de `WM_CTLCOLOR` .\)  
+-   **SS_SIMPLE** designa um retângulo simples e exibe uma única linha de texto flush esquerdo do retângulo. A linha de texto não pode ser reduzida ou alterada de alguma maneira. (Caixa de diálogo ou janela pai do controle não precisa processar o `WM_CTLCOLOR` mensagem.)  
   
--   **SS\_SUNKEN** desenha uma borda meia afundado ao redor de um controle estático.  
+-   **SS_SUNKEN** desenha uma borda submersa em torno de um controle estático.  
   
--   **SS\_USERITEM** especifica um item definido pelo usuário.  
+-   **SS_USERITEM** Especifica um item definido pelo usuário.  
   
--   **SS\_WHITEFRAME** especifica uma caixa com um quadro desenhado com a mesma cor do plano de fundo da janela.  A opção é branca.  
+-   **SS_WHITEFRAME** Especifica uma caixa com um quadro com a mesma cor do plano de fundo da janela. O padrão é branco.  
   
--   **SS\_WHITERECT** especifica um retângulo preenchido com a cor usada para preencher o plano de fundo da janela.  A opção é branca.  
+-   **SS_WHITERECT** Especifica um retângulo preenchido com a cor usada para preencher o plano de fundo da janela. O padrão é branco.  
   
--   **SS\_WORDELLIPSIS** trunca o texto que não couber e adiciona reticências.  
+-   **SS_WORDELLIPSIS** trunca o texto que não couber e adiciona elipses.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estilos usados pelo MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CStatic::Create](../Topic/CStatic::Create.md)   
+ [CStatic::Create](../../mfc/reference/cstatic-class.md#create)   
  [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477)   
- [Static Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760773)
+ [Estilos de controle estático](http://msdn.microsoft.com/library/windows/desktop/bb760773)
+
+
