@@ -1,105 +1,121 @@
 ---
-title: "Assistente de classe MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente de classe MFC"
-  - "assistentes (MFC)"
+title: Assistente de classe MFC | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Assistente de classe MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 42e46853541b9770a61fba4314fbbb37dea80d43
+ms.lasthandoff: 02/25/2017
 
-Permite adicionar mensagens e manipuladores de mensagem para classes em seu projeto.  Você também pode iniciar outros assistentes ou adicionar uma classe ao seu projeto.  
+---
+# <a name="mfc-class-wizard"></a>Assistente de classe MFC
+Permite adicionar mensagens e manipuladores de mensagens para classes no seu projeto. Você também pode iniciar outros assistentes ou adicionar uma classe ao seu projeto.  
   
- Para abrir **Assistente de Classe MFC**, no menu de **Projeto** , clique em **Assistente de classe**.  Para abrir o assistente com um atalho de teclado, digite. CTRL\+SHIFT\+X.  
+ Para abrir o **MFC Class Wizard**, no **projeto** menu, clique em **Class Wizard**. Para abrir o assistente com um atalho de teclado, digite CTRL + SHIFT + X.  
   
-## Lista UIElement  
+## <a name="uielement-list"></a>Lista UIElement  
  **Projeto**  
- O nome de um projeto na solução.  
+ O nome de um projeto em sua solução.  
   
  Você pode selecionar outros projetos na solução na caixa de listagem suspensa.  
   
  **Nome da classe**  
- O nome de uma classe no projeto.  
+ O nome de uma classe em seu projeto.  
   
- Quando você seleciona uma classe na lista de **Nome da classe** , os dados da classe populam os controles em **Assistente de Classe MFC**.  Quando você altera o valor de um controle, os dados da classe selecionada são afetados.  
+ Quando você seleciona uma classe no **nome da classe** lista, dados da classe preenche os controles a **MFC Class Wizard**. Quando você altera o valor de um controle, os dados na classe selecionada são afetados.  
   
- **Adicionar Classe**  
- Permite que você adicione uma classe de uma de várias fontes.  
+ **Adicionar classe**  
+ Permite adicionar uma classe de uma das várias fontes.  
   
- Dependendo da sua seleção, **MFC O assistente para adicionar classe**, **Adicione a classe do assistente de Typelib**, **Assistente de Adição de Classe do Controle ActiveX**, ou **Assistente do consumidor MFC ODBC** são iniciados.  
+ Dependendo da sua seleção, o **Assistente de classe do MFC adicionar**, **Adicionar classe de Typelib assistente**, **classe do ActiveX Assistente para adicionar controle**, ou **Assistente de consumidor ODBC MFC** é iniciado.  
   
- **Classe Base**  
- A classe base da classe que é exibida em **Nome da classe**.  
+ **Classe base**  
+ A classe base da classe que é exibida no **nome da classe**.  
   
  **Declaração de classe**  
- A classe na qual a classe de **Nome da classe** é declarada.  
+ A classe na qual o **nome da classe** classe é declarada.  
   
- A caixa de **Declaração de classe** será exibida somente se o nome nele for diferente do nome em **Implementação da classe**.  
+ O **declaração de classe** caixa é exibida somente se o nome do difere do nome em **implementação da classe**.  
   
  **Recurso**  
- A ID de O recurso em **Nome da classe**, se houver.  Caso contrário, a caixa de **Recurso** está vazia.  
+ A ID do recurso no **nome da classe**, se houver. Caso contrário, o **recursos** caixa estiver vazia.  
   
  **Implementação da classe**  
- O nome do arquivo que contém a implementação da classe em **Nome da classe**.  
+ O nome do arquivo que contém a implementação da classe de **nome da classe**.  
   
- Você pode selecionar um arquivo diferente da implementação clicando na seta.  A tabela a seguir lista as opções disponíveis.  
+ Você pode selecionar um arquivo de implementação diferentes clicando na seta. A tabela a seguir lista as opções disponíveis.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|**Abrir arquivo**|Sair do assistente da classe e abre o arquivo atual da implementação da classe.|  
-|**Pasta de que contém aberta**|Abre a pasta que contém o arquivo atual da implementação da classe.|  
-|**Caminho completo de cópia na área de transferência**|Copia o caminho do arquivo atual de implementação para a área de transferência.|  
+|------------|-----------------|  
+|**Abrir arquivo**|Sai do Assistente de classe e abre o arquivo de implementação de classe atual.|  
+|**Abra que contém a pasta**|Abre a pasta que contém o arquivo de implementação de classe atual.|  
+|**Copiar caminho completo para a área de transferência**|Copia o caminho do arquivo de implementação atual para a área de transferência.|  
   
  **Comandos**  
- Permite adicionar, excluir, editar, ou procurar um comando e pelo manipulador de mensagens.  
+ Permite adicionar, excluir, editar ou pesquisar um comando e o manipulador de mensagens.  
   
- Para adicionar um manipulador **Adicionar Manipulador**, clique em, ou clique duas vezes em um item na lista de **IDs de objeto** ou na lista de **Mensagens** .  O nome, a ID, e a mensagem resultantes são exibidos na lista de **Funções de membro** .  
+ Para adicionar um manipulador, clique em **Adicionar manipulador**, ou clique duas vezes em um item de **IDs de objeto** lista ou **mensagens** lista. O nome da função, ID e mensagem resultante são exibidos na **funções de membro** lista.  
   
- Para excluir um manipulador, selecione um item na lista de **Funções de membro** e clique em **Excluir Manipulador**.  
+ Para excluir um manipulador, selecione um item no **funções de membro** lista e, em seguida, clique em **excluir manipulador**.  
   
- Para alterar um manipulador, clique duas vezes no item correspondente na lista de **Funções de membro** .  Ou, selecione um item na caixa de listagem e clique em **Editar Código**.  
+ Para modificar um manipulador, clique duas vezes no item correspondente no **funções de membro** lista. Ou, selecione um item na caixa de listagem e, em seguida, clique em **editar código**.  
   
  **Mensagens**  
- Permite adicionar, excluir, editar, ou para pesquisar por uma mensagem e pelo manipulador de mensagens.  
+ Permite adicionar, excluir, editar ou pesquisar uma mensagem e seu manipulador de mensagens.  
   
- Para adicionar um manipulador **Adicionar Manipulador**, clique em, ou clique duas vezes em um item na lista de **Mensagens** .  
+ Para adicionar um manipulador, clique em **Adicionar manipulador**, ou clique duas vezes em um item de **mensagens** lista.  
   
- Para adicionar uma mensagem personalizada, clique **Adicionar Mensagem Personalizada** ou pressione a tecla ENTER, e depois especifique valores na caixa de diálogo de **Adicionar Mensagem Personalizada** .  Nessa caixa de diálogo, você também pode selecionar **Mensagem Registrada** para tratar uma mensagem da janela que é garantida para ser exclusivo em todo o sistema operacional.  
+ Para adicionar uma mensagem personalizada, clique em **Adicionar mensagem personalizada** ou pressione a tecla Enter e, em seguida, especifique valores de **Adicionar mensagem personalizada** caixa de diálogo. Na caixa de diálogo, você também pode selecionar **mensagem registrada** para lidar com uma mensagem da janela é garantida como sendo exclusivo em todo o sistema operacional.  
   
- **Funções Virtuais**  
- Permite adicionar, excluir, editar, ou para pesquisar por uma função virtual, ou por uma função virtual substituída.  
+ **Funções virtuais**  
+ Permite adicionar, excluir, editar ou pesquisar uma função virtual ou uma função virtual substituída.  
   
  **Variáveis de membro**  
- Permite adicionar, excluir, editar, ou para pesquisar por uma variável de membro.  
+ Permite adicionar, excluir, editar ou pesquisar uma variável de membro.  
   
  **Métodos**  
- Permite adicionar, excluir, ou procurar um método, e também vão\-nos a definição ou à declaração de um método.  
+ Permite adicionar, excluir, ou procure um método e também ir para a definição ou declaração de um método.  
   
- Para adicionar um método, clique em **Adicionar método**, e depois especifique valores na caixa de diálogo de **Adicionar método** .  
+ Para adicionar um método, clique em **Adicionar método**e especifique valores no **Adicionar método** caixa de diálogo.  
   
- Para excluir um método, selecione um item na lista de **Métodos** e clique em **Excluir método**.  
+ Para excluir um método, selecione um item no **métodos** lista e, em seguida, clique em **método Delete**.  
   
- Para exibir uma declaração, selecione um item na lista de **Métodos** e clique em **Vá para a declaração.**  
+ Para exibir uma declaração, selecione um item no **métodos** lista e, em seguida, clique em **ir para declaração.**  
   
- Para exibir uma definição, clique duas vezes em um item na lista de **Métodos** .  Ou, selecione um item na lista de **Métodos** e clique no botão de **Ir para definição** .  
+ Para exibir uma definição, clique duas vezes em um item de **métodos** lista. Ou, selecione um item no **métodos** lista e, em seguida, clique no **ir para definição** botão.  
   
-## Consulte também  
- [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)
+

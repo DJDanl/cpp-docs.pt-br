@@ -1,38 +1,53 @@
 ---
-title: "Aviso PRJ0029 (compila&#231;&#227;o de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0029"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0029"
+title: "PRJ0029 de aviso de compilação de projeto | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- PRJ0029
+dev_langs:
+- C++
+helpviewer_keywords:
+- PRJ0029
 ms.assetid: f02c09c6-09f3-4d44-8cd4-9a25336be1ea
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso PRJ0029 (compila&#231;&#227;o de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 228728c0dfcab5a4c72ef0969fcd4cdb6dfa05aa
+ms.lasthandoff: 02/25/2017
 
-A propriedade 'Outputs' para a etapa de compilação personalizada em nível de projeto não está definida.A etapa de compilação personalizada será ignorada.  
+---
+# <a name="project-build-warning-prj0029"></a>Aviso PRJ0029 no Build do Projeto
+A propriedade 'Outputs' para a etapa de compilação personalizada em nível de projeto não está definida. A etapa de compilação personalizada será ignorada.  
   
- Uma etapa personalizado de construção não foi executada porque nenhuma saída foi especificada.  
+ Uma etapa de compilação personalizada não foi executada porque nenhuma saída foi especificada.  
   
- Para resolver esse erro, siga um o seguinte:  
+ Para resolver esse erro, faça um o seguinte:  
   
--   Exclua a etapa personalizado de construção de compilação.  
+-   Exclua a etapa de compilação personalizada da compilação.  
   
 -   Adicione uma saída.  
   
--   Excluir o conteúdo do comando personalizado da etapa de compilação.
+-   Exclua o conteúdo do comando da etapa de compilação personalizada.

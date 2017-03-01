@@ -1,37 +1,52 @@
 ---
-title: "Erro BK1503 (BSCMAKE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1503"
+title: BSCMAKE erro BK1503 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- BK1503
+dev_langs:
+- C++
+helpviewer_keywords:
+- BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro BK1503 (BSCMAKE)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f99f0c8256816a1d9ee5a926e13488f6177a404b
+ms.lasthandoff: 02/25/2017
 
-não é possível gravar no arquivo “nome de arquivo” \[: motivo\]  
+---
+# <a name="bscmake-error-bk1503"></a>Erro BK1503 (BSCMAKE)
+não é possível gravar no arquivo 'arquivo' [: motivo]  
   
- BSCMAKE combina os arquivos de .sbr gerados durante a compilação em uma base de dados do navegador.  Se o base de dados do navegador resultante exceder 64 MB, ou se o número de arquivos de entrada \(.sbr\) excede 4092, esse erro será emitido.  
+ BSCMAKE combina os arquivos. SBR gerados durante a compilação em um banco de dados do navegador. Se o banco de dados resultante do navegador excede 64 MB, ou se o número de arquivos de entrada (SBR) exceder 4092, esse erro será emitido.  
   
- Se o problema é causado por mais de 4092 arquivos de .sbr, você deve reduzir o número de arquivos de entrada.  A partir do Visual Studio, isso pode ser realizado por [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) seu projeto inteiro, então verifica novamente em um arquivo com base em arquivo.  
+ Se o problema for causado por mais de 4092 arquivos. SBR, você deve reduzir o número de arquivos de entrada. De dentro do Visual Studio, isso pode ser feito por [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o projeto inteiro, em seguida, nova verificação arquivo por arquivo.  
   
- Se o problema é causado por um arquivo de .bsc maior que 64MB, reduzir o número de .sbr arquivos como a entrada diminuirá o tamanho do arquivo resultante de .bsc.  Além disso, a quantidade de procura as informações podem ser reduzida com o uso de \/Em \(exclua símbolos expandidos macro\), de \/El \(excluir variáveis locais\), e \/Es \(excluir arquivos do sistema\).  
+ Se o problema é causado por um arquivo. bsc maior que 64MB, reduzindo o número de arquivos. SBR como entrada diminuirá o tamanho do arquivo. bsc resultante. Além disso, a quantidade de informações de pesquisa pode ser reduzida com o uso de /Em (Excluir Macro expandida símbolos), /El (excluir variáveis locais) e /Es (excluir arquivos do sistema).  
   
-## Consulte também  
- [Opções de BSCMAKE](../Topic/BSCMAKE%20Options.md)
+## <a name="see-also"></a>Consulte também  
+ [Opções de BSCMAKE](../../build/reference/bscmake-options.md)

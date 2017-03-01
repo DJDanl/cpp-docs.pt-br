@@ -1,32 +1,47 @@
 ---
-title: "Aviso D9028 (linha de comando) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9028"
+title: Linha de comando aviso D9028 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- D9028
+dev_langs:
+- C++
+helpviewer_keywords:
+- D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso D9028 (linha de comando)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1e179f9709d4ea0dc3dee8c855819e8ad3e120f2
+ms.lasthandoff: 02/25/2017
 
-falha mínima de recriação, revertendo à compilação normal  
+---
+# <a name="command-line-warning-d9028"></a>Aviso D9028 (linha de comando)
+falha de compilação mínima, revertendo para compilação normal  
   
- O arquivo de projeto .idb estiver corrompido.  Exclua o arquivo e a recriação.  
+ O arquivo IDB do projeto está corrompido. Exclua o arquivo e recompilar.  
   
- Para obter mais informações sobre as recriações mínimas e do arquivo de .idb, consulte [opção de compilador do \/Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+ Para obter mais informações sobre recria mínimo e o arquivo IDB, consulte o [opção de compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).

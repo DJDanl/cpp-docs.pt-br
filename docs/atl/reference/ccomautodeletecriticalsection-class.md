@@ -1,58 +1,73 @@
 ---
-title: "Classe de CComAutoDeleteCriticalSection | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComAutoDeleteCriticalSection"
-  - "CComAutoDeleteCriticalSection"
-  - "ATL::CComAutoDeleteCriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CComAutoDeleteCriticalSection"
+title: Classe CComAutoDeleteCriticalSection | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComAutoDeleteCriticalSection
+- CComAutoDeleteCriticalSection
+- ATL::CComAutoDeleteCriticalSection
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
 caps.latest.revision: 17
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CComAutoDeleteCriticalSection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: eb53a0966d29759bbe7513f6042f72a280801707
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece métodos para obter e definir a propriedade de um objeto de seção crítica.  
+---
+# <a name="ccomautodeletecriticalsection-class"></a>Classe CComAutoDeleteCriticalSection
+Essa classe fornece métodos para a obtenção e liberar a propriedade de um objeto da seção crítica.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
-class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection  
+## <a name="remarks"></a>Comentários  
+ `CComAutoDeleteCriticalSection`deriva da classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). No entanto, `CComAutoDeleteCriticalSection` substitui o [termo](ccomsafedeletecriticalsection-class.md#term) método `private` acesso, o que força a limpeza de memória interna para ocorrer somente quando as instâncias dessa classe saem do escopo ou explicitamente são excluídas da memória.  
+
   
-```  
+ Essa classe não apresenta nenhuma métodos adicionais em sua classe base. Consulte [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) e [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obter mais informações sobre classes auxiliares de seção crítica.  
   
-## Comentários  
- `CComAutoDeleteCriticalSection` deriva da classe [CComSafeDeleteCriticalSection](../Topic/CComSafeDeleteCriticalSection%20Class.md).  Em o entanto, `CComAutoDeleteCriticalSection` substitui o método de [termo](../Topic/CComSafeDeleteCriticalSection::Term.md) acesso de `private` , que força a limpeza de memória interna para ocorrer apenas quando as instâncias da classe sai do escopo são excluídas ou explicitamente de memória.  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
   
- Esta classe não apresenta nenhum método adicional sobre sua classe base.  Consulte [CComSafeDeleteCriticalSection](../Topic/CComSafeDeleteCriticalSection%20Class.md) e [CComCriticalSection](../Topic/CComCriticalSection%20Class.md) para obter mais informações sobre classes auxiliares de seção crítica.  
-  
-## Hierarquia de herança  
- [CComCriticalSection](../Topic/CComCriticalSection%20Class.md)  
-  
- [CComSafeDeleteCriticalSection](../Topic/CComSafeDeleteCriticalSection%20Class.md)  
+ [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)  
   
  `CComAutoDeleteCriticalSection`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-## Consulte também  
- [Classe de CComSafeDeleteCriticalSection](../Topic/CComSafeDeleteCriticalSection%20Class.md)   
- [Classe de CComCriticalSection](../Topic/CComCriticalSection%20Class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
+ [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

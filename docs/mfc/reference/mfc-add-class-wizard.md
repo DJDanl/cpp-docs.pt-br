@@ -1,87 +1,102 @@
 ---
-title: "Assistente para adicionar classe MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.mfc.simple.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente para adicionar classe MFC"
-  - "assistentes [MFC]"
+title: Assistente de classe para adicionar MFC | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.mfc.simple.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Add Class Wizard
+- wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
 caps.latest.revision: 16
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Assistente para adicionar classe MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 08d258c2b8386a4dd0c1d24c6ac6aa10f6c04a63
+ms.lasthandoff: 02/25/2017
 
-Use este assistente de código para adicionar uma classe em um projeto existente de MFC, ou para adicionar uma classe em um projeto de ATL que da suporte ao MFC.  Você também pode adicionar classes de MFC para projetos do Win32 que têm o suporte de MFC.  Os recursos que você especificou quando criou o projeto determina as opções disponíveis nesta caixa de diálogo.  
+---
+# <a name="mfc-add-class-wizard"></a>Assistente para adicionar classe MFC
+Use esse assistente de código para adicionar uma classe a um projeto existente, ou para adicionar uma classe a um projeto ATL que dá suporte a MFC. Você também pode adicionar classes MFC para projetos do Win32 que têm suporte do MFC. Os recursos que você especificou quando criou seu projeto determinam as opções disponíveis nessa caixa de diálogo.  
   
-## Nomes  
- Nessa página, especifique o nome da classe, a classe base, e nomes de arquivos para a nova classe.  
+## <a name="names"></a>Nomes  
+ Nesta página, especifique o nome da classe, a classe base e nomes de arquivo para a nova classe.  
   
  **Nome da classe**  
- Especifica o nome da nova classe e padrão fornece a base para os nomes das IDs e os arquivos nessa página.  C\+\+ das classes o início normalmente com C “2.0”, o que por exemplo, “CMyClass” se torna “MyClass.h”, e assim por diante.  
+ Especifica o nome da nova classe e fornece a base padrão para os nomes dos arquivos nesta página e IDs. Classes C++ geralmente iniciar com "C", por exemplo, "CMyClass" torna-se "MyClass.h", e assim por diante.  
   
- **Classe Base**  
- Especifica o nome da classe base para a nova classe.  Por padrão, a classe base é [CWnd](../Topic/CWnd%20Class.md).  A classe base que você selecionar determina se outras caixas nessa página são ativas.  
+ **Classe base**  
+ Especifica o nome da classe base para a nova classe. Por padrão, a classe base é [CWnd](../../mfc/reference/cwnd-class.md). A classe base que você selecionar determina se outras caixas nesta página estão ativas.  
   
- O tipo de classe é definido como a classe base determina se a classe tiver um ID da caixa de diálogo ou uma ID de recurso  Os tipos gerais de classes são os seguintes:  
+ O tipo de classe que é definida como a classe base determina se a classe tem uma ID de caixa de diálogo ou uma ID de recurso. Os tipos gerais de classes são da seguinte maneira:  
   
--   Classes como [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../Topic/CWnd%20Class.md), ou [CDocument](../Topic/CDocument%20Class.md), que não requerem uma ID de ID ou do recurso da caixa de diálogo  Essas classes não usam uma ID da caixa de diálogo ou de recursos  Se você selecionar uma dessas classes para a sua classe base, a caixa de **ID de Diálogo** e a caixa de **ID de recurso do DHTML** são escurecidas.  
+-   Classes como [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), ou [CDocument](../../mfc/reference/cdocument-class.md), que não requerem uma caixa de diálogo ID ou ID de recurso. Essas classes não usa uma ID de caixa de diálogo ou recurso. Se você selecionar uma dessas classes para sua classe base, o **identificação da caixa de diálogo** caixa e o **ID de recurso DHTML** caixa estão esmaecidos.  
   
--   Classes como [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), ou [CPropertyPage](../../mfc/reference/cpropertypage-class.md), o que exige uma ID da caixa de diálogo  
+-   Classes como [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), ou [CPropertyPage](../../mfc/reference/cpropertypage-class.md), que requer uma ID da caixa de diálogo.  
   
--   A classe [CDHtmlDialog](../Topic/CDHtmlDialog%20Class.md), que requer um ID da caixa de diálogo, uma ID de recurso do DHTML, e um nome de arquivo HTML.  
+-   A classe [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), que requer uma ID de caixa de diálogo, uma ID de recurso DHTML e um nome de arquivo HTML.  
   
- Para classes que exigem uma ID da caixa de diálogo, você pode achar mais eficiente usar [Editor de recursos](../../mfc/resource-editors.md) para criar o recurso da caixa de diálogo, atribui o ID em [Janela Propriedades](../Topic/Properties%20Window.md), e cria uma classe associada à ID do recurso  Consulte [Criando uma nova caixa de diálogo](../../mfc/creating-a-new-dialog-box.md) para obter mais informações sobre como criar uma caixa de diálogo padrão do windows.  
+ Para classes que requerem uma ID da caixa de diálogo, talvez seja mais eficiente usar a [Resource editor](../../windows/resource-editors.md) para criar o recurso de caixa de diálogo, atribuir sua ID de [janela propriedades](/visualstudio/ide/reference/properties-window)e, em seguida, crie uma classe associada a essa ID de recurso. Consulte [criando uma nova caixa de diálogo](../../windows/creating-a-new-dialog-box.md) para obter mais informações sobre como criar uma caixa de diálogo padrão do Windows.  
   
 > [!NOTE]
->  Se você criar um recurso da caixa de diálogo primeiro e derivar sua nova classe de `CDHtmlDialog`, exclua o windows padrão **OK** e os botões de **Cancelar** que aparecem na caixa de diálogo padrão.  A caixa de diálogo padrão do windows hospeda o formulário do DHTML, que contém seus próprios **OK** e botões de **Cancelar** .  
+>  Se você criar um recurso de caixa de diálogo pela primeira vez e derivar sua nova classe de `CDHtmlDialog`, excluir padrão do Windows **Okey** e **Cancelar** botões que aparecem na caixa de diálogo padrão. A caixa de diálogo padrão do Windows hospeda o formulário DHTML, que contém seu próprio **Okey** e **Cancelar** botões.  
   
- Quando a caixa de diálogo pode conter controles do windows e controles do DHTML, não é recomendável.  
+ Enquanto a caixa de diálogo pode conter controles do Windows e controles DHTML, não é recomendável.  
   
- **ID de Diálogo**  
- Especifica a ID da caixa de diálogo, se você selecionou `CDialog`, `CFormView`, `CPropertyPage`, ou `CDHtmlDialog` como **Classe Base**.  
+ **ID da caixa de diálogo**  
+ Especifica a ID da caixa de diálogo, se você selecionou `CDialog`, `CFormView`, `CPropertyPage`, ou `CDHtmlDialog` como o **classe Base**.  
   
- **arquivo .h**  
- Define o nome do arquivo de cabeçalho para a nova classe do objeto.  Por padrão, esse nome é baseado no nome que você fornece em **Nome da classe**.  Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente.  Se você escolher um arquivo existente, o assistente não o salve no local selecionado até que você clique **Concluir** no assistente.  
+ **arquivo. h**  
+ Define o nome do arquivo de cabeçalho para a nova classe de objeto. Por padrão, esse nome se baseia o nome fornecido no **nome da classe**. Clique no botão de reticências para salvar o nome do arquivo para o local de sua escolha, ou para acrescentar a declaração de classe para um arquivo existente. Se você escolher um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir** no assistente.  
   
- O assistente não substitui um arquivo.  Se você selecionar o nome de um arquivo existente, quando você clicar em **Concluir**, o assistente solicitará que indica se a declaração de classe deve ser acrescentada ao conteúdo do arquivo.  Clique em **Sim** para anexar o arquivo; clique **Não** para retornar ao assistente e para especificar outro nome de arquivo.  
+ O assistente não substituirá um arquivo. Se você selecionar o nome de um arquivo existente, quando você clica em **concluir**, o assistente solicita que você indique se a declaração de classe deve ser anexada ao conteúdo do arquivo. Clique em **Sim** para anexar o arquivo; clique em **não** para retornar ao assistente e especifique outro nome de arquivo.  
   
- **arquivo .cpp**  
- Define o nome do arquivo de implementação para a nova classe do objeto.  Por padrão, esse nome é baseado no nome que você fornece em **Nome da classe**.  Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha.  O arquivo não será salvo no local selecionado até que você clique **Concluir** no assistente.  
+ **arquivo. cpp**  
+ Define o nome do arquivo de implementação para a nova classe de objeto. Por padrão, esse nome se baseia o nome fornecido no **nome da classe**. Clique no botão de reticências para salvar o nome de arquivo para o local de sua escolha. O arquivo não é salvo no local selecionado até que você clique **concluir** no assistente.  
   
- O assistente não substitui um arquivo.  Se você selecionar o nome de um arquivo existente, quando você clicar em **Concluir**, o assistente solicitará que indica se a implementação da classe deverá ser acrescentada ao conteúdo do arquivo.  Clique em **Sim** para anexar o arquivo; clique **Não** para retornar ao assistente e para especificar outro nome de arquivo.  
+ O assistente não substituirá um arquivo. Se você selecionar o nome de um arquivo existente, quando você clica em **concluir**, o assistente solicita que você indique se a implementação da classe deve ser anexada ao conteúdo do arquivo. Clique em **Sim** para anexar o arquivo; clique em **não** para retornar ao assistente e especifique outro nome de arquivo.  
   
  **Acessibilidade ativa**  
- Habilita o suporte para MFC a acessibilidade ativa chamando [EnableActiveAccessibility](../Topic/CWnd::EnableActiveAccessibility.md) no construtor.  Essa opção está disponível para as classes derivadas de [CWnd](../Topic/CWnd%20Class.md).  
+ Habilita o suporte do MFC para Active Accessibility chamando [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) no construtor. Essa opção está disponível para as classes derivadas de [CWnd](../../mfc/reference/cwnd-class.md).  
   
- **ID de recurso do DHTML**  
- Aplica\-se às classes derivadas de `CDHtmlDialog` somente.  Especifica a ID do recurso da caixa de diálogo do DHTML.  A ID do recurso aparece na seção de HTML do arquivo de .rc de projeto, junto com o nome de arquivo na caixa de diálogo HTML.  O recurso do DHTML, identificado por esse ID, é hospedado pela caixa de diálogo, identificada por **ID de Diálogo**.  
+ **ID do recurso DHTML**  
+ Aplica-se a classes derivadas de `CDHtmlDialog` somente. Especifica a ID do recurso da caixa de diálogo DHTML. A ID do recurso aparece na seção do arquivo. RC do projeto, juntamente com o nome de arquivo da caixa de diálogo HTML HTML. O recurso DHTML, identificado por essa ID é hospedado pela caixa de diálogo, identificado por **identificação da caixa de diálogo**.  
   
- **arquivo.htm**  
- Aplica\-se às classes derivadas de `CDHtmlDialog` somente.  Define o nome do arquivo HTML para a caixa de diálogo do DHTML.  Por padrão, esse nome de arquivo é baseado no nome da classe.  O nome de arquivo aparece na seção de HTML do arquivo de .rc de projeto, junto com a ID do recurso da caixa de diálogo do DHTML  
+ **. Arquivo HTM**  
+ Aplica-se a classes derivadas de `CDHtmlDialog` somente. Define o nome do arquivo HTML para a caixa de diálogo DHTML. Por padrão, esse nome de arquivo com base no nome da classe. O nome do arquivo é exibido na seção do arquivo. RC do projeto, juntamente com a ID de recurso DHTML diálogo caixa HTML  
   
  **Automação**  
- Define a classe no nível de suporte para [Automação](../../mfc/automation.md).  A automação no nível da classe está disponível para todas as classes que oferecem suporte à automação.  Também está disponível para os projetos criados com o suporte para a automação.  Isto é, um projeto de MFC que [o oferece suporte ATL](../../atl/reference/mfc-support-in-atl-projects.md), ou um projeto de MFC para que você selecionou a caixa de seleção de **Automação** na página de [Recursos avançados](../../mfc/reference/advanced-features-mfc-application-wizard.md) do assistente de aplicativo MFC.  
+ Define o nível de classe de suporte para [automação](../../mfc/automation.md). Automação no nível de classe está disponível para todas as classes que oferecem suporte a automação. Também está disponível para projetos criados com suporte para automação. Ou seja, o MFC um projeto que [oferece suporte a ATL](../../atl/reference/mfc-support-in-atl-projects.md), ou um projeto MFC para os quais você selecionou o **automação** caixa de seleção de [recursos avançados](../../mfc/reference/advanced-features-mfc-application-wizard.md) página do Assistente de aplicativo MFC.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|**Nenhum**|Indica que a classe não tem suporte de automação.|  
-|**Automação**|Indica que a classe oferece suporte à automação.  Se você selecionar essa opção, a classe recém\-criado está disponível como um objeto programável por aplicativos cliente de automação, como o Microsoft Visual Basic e o Microsoft Excel.  Essa opção não está disponível para as classes base listadas depois dessa tabela.|  
-|**Creatable por ID do tipo**|Indica que a classe e o projeto dão suporte a outros aplicativos que criam objetos dessa classe que usa a automação.  Com essa opção, os clientes de automação podem diretamente criar um objeto de automação.  O ID do tipo na caixa de texto é usado pelo aplicativo cliente especifique o objeto a ser criado; é pelo sistema e deve ser exclusivo.  Essa opção não está disponível para as classes base listadas depois dessa tabela.|  
+|------------|-----------------|  
+|**Nenhum**|Indica que a classe não possui nenhum suporte de automação.|  
+|**Automação**|Indica que a classe oferece suporte à automação. Se você selecionar essa opção, a classe recém-criado está disponível como um objeto programável por aplicativos de clientes de automação, como Microsoft Visual Basic e Microsoft Excel. Essa opção não está disponível para as classes base listadas depois desta tabela.|  
+|**Pode ser criado por ID do tipo**|Indica que a classe e o projeto compatível com outros aplicativos que criam objetos dessa classe usando a automação. Com essa opção, os clientes de automação diretamente podem criar um objeto de automação. A ID de tipo na caixa de texto é usada pelo aplicativo cliente para especificar o objeto a ser criado; ele é todo o sistema e deve ser exclusivo. Essa opção não está disponível para as classes base listadas depois desta tabela.|  
   
  Suporte de automação não está disponível para as seguintes classes base:  
   
@@ -107,14 +122,15 @@ Use este assistente de código para adicionar uma classe em um projeto existente
   
 -   `CSocket`  
   
- **Identificação do tipo**  
- Define a ID do tipo da classe.  A caixa de **Identificação do tipo** concatena o nome do projeto e o novo nome da classe da seguinte maneira: *MFCProj.MFCClass*.  Essa ID é variável somente se você selecionou a opção **Creatable por ID do tipo**de **Automação** .  
+ **ID do tipo**  
+ Define a ID do tipo da classe. O **ID do tipo** caixa concatena o nome do projeto e o novo nome da classe da seguinte maneira: *MFCProj.MFCClass*. Essa ID é alterável somente se você tiver selecionado o **automação** opção **Creatable por ID do tipo**.  
   
- **Gerenciar recursos de DocTemplate**  
- Indica que os documentos criados pelo aplicativo têm recursos de modelo de documento.  Para ativar essa caixa de seleção, o projeto deve oferecer suporte à arquitetura do documento\/exibição MFC, e a classe base dessa classe deve ser [CFormView](../../mfc/reference/cformview-class.md).  
+ **Gerar recursos DocTemplate**  
+ Indica que os documentos criados pelo aplicativo possuem recursos de modelo de documento. Para ativar essa caixa de seleção, o projeto deve oferecer suporte à arquitetura de documento/exibição MFC, e a classe base dessa classe deve ser [CFormView](../../mfc/reference/cformview-class.md).  
   
- Consulte [Modelos de documentos e o processo de criação do documento\/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md) para obter mais informações.  
+ Consulte [modelos de documento e o processo de criação de documento/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md) para obter mais informações.  
   
-## Consulte também  
- [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
- [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)
+

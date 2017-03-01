@@ -1,35 +1,50 @@
 ---
-title: "Erro fatal U1001 (NMAKE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1001"
+title: NMAKE Erro Fatal U1001 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- U1001
+dev_langs:
+- C++
+helpviewer_keywords:
+- U1001
 ms.assetid: 5d7da559-6cbd-44d6-848c-aaf54cae0d1a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal U1001 (NMAKE)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bd34ef5505df4039f0a26d9e623d654abee77706
+ms.lasthandoff: 02/25/2017
 
-erro de sintaxe: caractere ilegal “caractere” em macro  
+---
+# <a name="nmake-fatal-error-u1001"></a>Erro fatal U1001 (NMAKE)
+Erro de sintaxe: caractere inválido 'character' na macro  
   
- O caractere dado aparecerá em uma macro mas não é uma letra, um número, ou um caractere de sublinhado.  
+ O caractere determinado aparece em uma macro, mas não é uma letra, número ou sublinhado.  
   
- Esse erro pode ser causado por dois\-pontos ausente em uma macro expansão:  
+ Esse erro pode ser causado por uma vírgula ausente em uma expansão de macro:  
   
 ```  
 syntax error : illegal character '=' in macro  

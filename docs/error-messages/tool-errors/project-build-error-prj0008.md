@@ -1,34 +1,49 @@
 ---
-title: "Erro PRJ0008 (compila&#231;&#227;o de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0008"
+title: "PRJ0008 de erro de compilação de projeto | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- PRJ0008
+dev_langs:
+- C++
+helpviewer_keywords:
+- PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro PRJ0008 (compila&#231;&#227;o de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9057dc41d0678c2d24dfc9e058fb1ebf785de399
+ms.lasthandoff: 02/25/2017
 
-Não foi possível excluir o arquivo “arquivo”.  
+---
+# <a name="project-build-error-prj0008"></a>Erro de Build PRJ0008 no Projeto
+Não foi possível excluir o arquivo 'arquivo'.  
   
- **Verifique se o arquivo não está aberto em outro processo e se ele não está protegido contra gravação.**  
+ **Certifique-se de que o arquivo não está aberto por outro processo e não é protegido contra gravação.**  
   
- Durante uma recriação ou excluir, limpar todos do Visual C\+\+ intermediário e arquivos de saída conhecidos para a construção, bem como todos os arquivos que satisfaça as especificações de curinga na propriedade de **Extensões a Serem Excluídas ao Limpar** em [Página de propriedades geral dos parâmetros de configuração](../Topic/General%20Property%20Page%20\(Project\).md).  
+ Durante uma reconstrução ou limpar o Visual C++ exclui todos os arquivos de saída e intermediários conhecidos para a compilação, bem como todos os arquivos que atende às especificações de curinga no **extensões para excluir na limpeza** propriedade o [página de propriedade de configurações de configuração geral](../../ide/general-property-page-project.md).  
   
- Você verá esse erro se o Visual C\+\+ não pode excluir um arquivo.  Para resolver o erro, crie o arquivo e seu diretório ser gravados para o usuário que faz a compilação.
+ Você verá esse erro se o Visual C++ não é possível excluir um arquivo. Para resolver o erro, verifique o arquivo e o diretório gravável para o usuário que faz a compilação.

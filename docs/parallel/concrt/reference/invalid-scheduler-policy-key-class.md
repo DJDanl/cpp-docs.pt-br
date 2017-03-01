@@ -1,59 +1,86 @@
 ---
-title: "Classe invalid_scheduler_policy_key | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_scheduler_policy_key"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe invalid_scheduler_policy_key"
+title: Classe invalid_scheduler_policy_key | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_key
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
 caps.latest.revision: 19
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe invalid_scheduler_policy_key
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
+ms.lasthandoff: 02/25/2017
 
-Essa classe descreve uma exceção gerada quando uma chave inválida ou desconhecida é passado a um construtor do objeto de `SchedulerPolicy` , ou o método de `SetPolicyValue` de um objeto de `SchedulerPolicy` é passado a uma chave que deve ser modificada usando outros meios como o método de `SetConcurrencyLimits` .  
+---
+# <a name="invalidschedulerpolicykey-class"></a>Classe invalid_scheduler_policy_key
+Esta classe descreve uma exceção gerada quando um inválido ou desconhecido de chave é passado para um `SchedulerPolicy` construtor do objeto, ou o `SetPolicyValue` método de um `SchedulerPolicy` objeto é passado uma chave que deve ser alterada usando outros meios, como o `SetConcurrencyLimits` método.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+class invalid_scheduler_policy_key : public std::exception;
 ```  
-class invalid_scheduler_policy_key : public std::exception;  
-```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor invalid\_scheduler\_policy\_key::invalid\_scheduler\_policy\_key](../Topic/invalid_scheduler_policy_key::invalid_scheduler_policy_key%20Constructor.md)|Sobrecarregado.  Constrói um objeto `invalid_scheduler_policy_key`.|  
+|----------|-----------------|  
+|[Construtor invalid_scheduler_policy_key](#ctor)|Sobrecarregado. Constrói uma `invalid_scheduler_policy_key` objeto.|  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
   
  `invalid_scheduler_policy_key`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
   
  **Namespace:** simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe SchedulerPolicy](../../../parallel/concrt/reference/schedulerpolicy-class.md)   
- [Enumeração PolicyElementKey](../Topic/PolicyElementKey%20Enumeration.md)   
- [Método SchedulerPolicy::SetPolicyValue](../Topic/SchedulerPolicy::SetPolicyValue%20Method.md)   
- [Método SchedulerPolicy::SetConcurrencyLimits](../Topic/SchedulerPolicy::SetConcurrencyLimits%20Method.md)
+##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+
+ Constrói uma `invalid_scheduler_policy_key` objeto.  
+  
+```
+explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
+
+invalid_scheduler_policy_key() throw();
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Message`  
+ Uma mensagem descritiva do erro.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade](concurrency-namespace.md)   
+ [Classe SchedulerPolicy](schedulerpolicy-class.md)
+

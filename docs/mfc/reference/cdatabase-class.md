@@ -1,103 +1,558 @@
 ---
-title: "Classe de CDatabase | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CDatabase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CDatabase"
-  - "banco de dados classes [C++], ODBC"
-  - "conexões de banco de dados [C++], Classe de CDatabase"
-  - "MFC [C++], ODBC"
-  - "ODBC [C++], Classe de CDatabase"
-  - "Classe de banco de dados ODBC"
+title: Classe CDatabase | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDatabase
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [C++], ODBC
+- MFC [C++], ODBC
+- ODBC [C++], CDatabase class
+- ODBC database class
+- database connections [C++], CDatabase class
+- CDatabase class
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 caps.latest.revision: 24
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CDatabase
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a14025d712f09bef2b6b749d46cac1b1371fd4e3
+ms.lasthandoff: 02/25/2017
 
-Representa uma conexão a uma fonte de dados, com o qual você pode operar na fonte de dados.  
+---
+# <a name="cdatabase-class"></a>Classe CDatabase
+Representa uma conexão a uma fonte de dados por meio do qual você pode operar na fonte de dados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 class CDatabase : public CObject  
-  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CDatabase::CDatabase](../Topic/CDatabase::CDatabase.md)|Constrói um objeto de `CDatabase` .  Você deve inicializar o objeto chamando `OpenEx` ou **Abrir**.|  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CDatabase::BeginTrans](../Topic/CDatabase::BeginTrans.md)|Inicia uma transação “” — uma série de chamadas reversíveis a `AddNew`, a **Editar**, a **Excluir**, e funções de membro de **Atualizar** da classe `CRecordset` — na fonte de dados conectados.  A fonte de dados deve suportar transações para que **BeginTrans** tem qualquer efeito.|  
-|[CDatabase::BindParameters](../Topic/CDatabase::BindParameters.md)|Permite que você posicione os parâmetros de associadas antes de chamar `CDatabase::ExecuteSQL`.|  
-|[CDatabase::Cancel](../Topic/CDatabase::Cancel.md)|Cancela uma operação assíncrona ou processo de um segundo segmento.|  
-|[CDatabase::CanTransact](../Topic/CDatabase::CanTransact.md)|Retorna diferente de zero se a fonte de dados suportar transações.|  
-|[CDatabase::CanUpdate](../Topic/CDatabase::CanUpdate.md)|Retorna diferente de zero se o objeto de `CDatabase` é não atualizável \(somente leitura\).|  
-|[CDatabase::Close](../Topic/CDatabase::Close.md)|Fecha a conexão da fonte de dados.|  
-|[CDatabase::CommitTrans](../Topic/CDatabase::CommitTrans.md)|Termina uma transação iniciada por **BeginTrans**.  Os comandos na transação que modificam a fonte de dados é realizado.|  
-|[CDatabase::ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md)|Executa uma instrução SQL.  Nenhum registro de dados é retornado.|  
-|[CDatabase::GetBookmarkPersistence](../Topic/CDatabase::GetBookmarkPersistence.md)|Identifica as operações com que os indicadores persistem em objetos do conjunto de registros.|  
-|[: Getconnect](../Topic/CDatabase::GetConnect.md)|Retorna a cadeia de conexão ODBC usada para conectar o objeto de `CDatabase` a uma fonte de dados.|  
-|[CDatabase::GetCursorCommitBehavior](../Topic/CDatabase::GetCursorCommitBehavior.md)|Identifica o efeito de enviar uma transação em um objeto de abertura do conjunto de registros.|  
-|[CDatabase::GetCursorRollbackBehavior](../Topic/CDatabase::GetCursorRollbackBehavior.md)|Identifica o efeito de reverter uma transação em um objeto de abertura do conjunto de registros.|  
-|[CDatabase::GetDatabaseName](../Topic/CDatabase::GetDatabaseName.md)|Retorna o nome do banco de dados atualmente em uso.|  
-|[CDatabase::IsOpen](../Topic/CDatabase::IsOpen.md)|Retorna diferente de zero se o objeto de `CDatabase` é atualmente conectado a uma fonte de dados.|  
-|[CDatabase::OnSetOptions](../Topic/CDatabase::OnSetOptions.md)|Chamado pela estrutura para definir opções de conexão padrão.  A implementação padrão define o valor de tempo limite de consulta.  Você pode estabelecer essas opções antemão chamando `SetQueryTimeout`.|  
-|[CDatabase::Open](../Topic/CDatabase::Open.md)|Estabelece uma conexão a uma fonte de dados \(por meio de um driver ODBC\).|  
-|[CDatabase::OpenEx](../Topic/CDatabase::OpenEx.md)|Estabelece uma conexão a uma fonte de dados \(por meio de um driver ODBC\).|  
-|[CDatabase::Rollback](../Topic/CDatabase::Rollback.md)|Inverte de alterações feitas durante a transação atual.  A fonte de dados retorna ao seu estado anterior, conforme definido na chamada de **BeginTrans** , inalterado.|  
-|[CDatabase::SetLoginTimeout](../Topic/CDatabase::SetLoginTimeout.md)|Define o número de segundos após o qual de um tempo limite do da tentativa de conexão da fonte de dados.|  
-|[CDatabase::SetQueryTimeout](../Topic/CDatabase::SetQueryTimeout.md)|Define o número de segundos após o qual de tempo limite do das operações consulta de banco de dados.  Afeta todo o conjunto de registros subseqüentes **Abrir**, `AddNew`, **Editar**, e chamadas de **Excluir** .|  
+|----------|-----------------|  
+|[CDatabase::CDatabase](#cdatabase)|Constrói um objeto `CDatabase`. Você deve inicializar o objeto chamando `OpenEx` ou **abrir**.|  
   
-### Membros públicos de dados  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CDatabase::m\_hdbc](../Topic/CDatabase::m_hdbc.md)|Identificador de conexão Open Database Connectivity \(ODBC\) para uma fonte de dados.  Tipo **HDBC**.|  
+|----------|-----------------|  
+|[CDatabase::BeginTrans](#begintrans)|Inicia uma "transação" â €"uma série de chamadas reversíveis para o `AddNew`, **editar**, **excluir**, e **atualização** funções de membro da classe `CRecordset` â €" na fonte de dados conectada. A fonte de dados deve oferecer suporte a transações para **BeginTrans** tenha efeito.|  
+|[CDatabase::BindParameters](#bindparameters)|Permite que você vincule parâmetros antes de chamar `CDatabase::ExecuteSQL`.|  
+|[CDatabase::Cancel](#cancel)|Cancela uma operação assíncrona ou um processo de um thread de segundo.|  
+|[CDatabase::CanTransact](#cantransact)|Retorna zero se a fonte de dados oferece suporte a transações.|  
+|[CDatabase::CanUpdate](#canupdate)|Retorna zero se o `CDatabase` objeto é atualizável (não somente leitura).|  
+|[CDatabase::Close](#close)|Fecha a conexão de fonte de dados.|  
+|[CDatabase::CommitTrans](#committrans)|Conclui uma transação iniciada por **BeginTrans**. Comandos na transação que alteram a fonte de dados são realizados.|  
+|[CDatabase::](#executesql)|Executa uma instrução SQL. Não há registros de dados são retornados.|  
+|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifica as operações por meio dos quais persistem os indicadores em objetos de conjunto de registros.|  
+|[: Getconnect](#getconnect)|Retorna a cadeia de conexão ODBC usada para se conectar a `CDatabase` objeto para uma fonte de dados.|  
+|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifica o efeito de confirmar uma transação em um objeto de conjunto de registros aberto.|  
+|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifica o efeito da reversão de uma transação em um objeto de conjunto de registros aberto.|  
+|[CDatabase::GetDatabaseName](#getdatabasename)|Retorna o nome do banco de dados atualmente em uso.|  
+|[CDatabase::IsOpen](#isopen)|Retorna zero se o `CDatabase` objeto atualmente está conectado a uma fonte de dados.|  
+|[CDatabase::OnSetOptions](#onsetoptions)|Chamado pela estrutura para definir as opções de conexão padrão. A implementação padrão define o valor de tempo limite de consulta. Você pode estabelecer essas opções antecipadamente chamando `SetQueryTimeout`.|  
+|[CDatabase::Open](#open)|Estabelece uma conexão a uma fonte de dados (por meio de um driver ODBC).|  
+|[CDatabase::OpenEx](#openex)|Estabelece uma conexão a uma fonte de dados (por meio de um driver ODBC).|  
+|[CDatabase::Rollback](#rollback)|Reverte as alterações feitas durante a transação atual. A fonte de dados retorna ao estado anterior, conforme definido no **BeginTrans** chamada, inalterada.|  
+|[CDatabase::SetLoginTimeout](#setlogintimeout)|Define o número de segundos após o qual uma tentativa de conexão de fonte de dados atingirá o tempo limite.|  
+|[CDatabase::SetQueryTimeout](#setquerytimeout)|Define o número de segundos após o qual banco de dados de operações de consulta atingirá o tempo limite. Afeta o conjunto de registros subsequente **abrir**, `AddNew`, **editar**, e **excluir** chamadas.|  
   
-## Comentários  
- Uma fonte de dados é uma instância específica de dados hospedados por qualquer sistema de gerenciamento de banco de dados \(DBMS\).  Os exemplos incluem o dBASE Microsoft SQL Server, Microsoft Access, de Borland, e o xBASE.  Você pode ter um ou mais objetos de `CDatabase` ativos em vez de no seu aplicativo.  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CDatabase::m_hdbc](#m_hdbc)|Abra o identificador de conexão de conectividade de banco de dados (ODBC) para uma fonte de dados. Tipo de **HDBC**.|  
+  
+## <a name="remarks"></a>Comentários  
+ Uma fonte de dados é uma instância específica de dados hospedados por um sistema de gerenciamento de banco de dados (DBMS). Exemplos do Microsoft SQL Server, Microsoft Access, dBASE Borland e xBASE. Você pode ter um ou mais `CDatabase` objetos ativos de cada vez em seu aplicativo.  
   
 > [!NOTE]
->  Se você estiver trabalhando com acesso a dados objetos de classes \(DAO\) em vez das classes Open Database Connectivity \(ODBC\), use a classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) em vez de isso.  Para obter mais informações, consulte o artigo [visão geral: Programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
+>  Se você estiver trabalhando com as classes de objetos de acesso de dados (DAO) em vez das classes de conectividade de banco de dados aberto (ODBC), use a classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
   
- Para usar `CDatabase`, construir um objeto de `CDatabase` e chamar a função de membro de `OpenEx` .  Isso abre uma conexão.  Quando você constrói em objetos de `CRecordset` para operar na fonte de dados conectado, passe o construtor do recordset um ponteiro para seu objeto de `CDatabase` .  Quando você terminar usar a conexão, chame a função de membro de **Fechar** e destrua o objeto de `CDatabase` .  **Fechar** fecha todos os conjuntos de registros que não se você fechar anteriormente.  
+ Usar `CDatabase`, construir um `CDatabase` objeto e chamar seu `OpenEx` função de membro. Isso abre uma conexão. Quando você constrói, em seguida, `CRecordset` objetos à operação de fonte de dados conectada, passe ao construtor de conjunto de registros de um ponteiro para o `CDatabase` objeto. Quando você terminar de usar a conexão, chame o **fechar** membro de função e destruir o `CDatabase` objeto. **Fechar** fechar qualquer conjunto de registros que não tenha fechado anteriormente.  
   
- Para obter mais informações sobre `CDatabase`, consulte os artigos [A fonte de dados \(ODBC\)](../../data/odbc/data-source-odbc.md) e [visão geral: Programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
+ Para obter mais informações sobre `CDatabase`, consulte os artigos [fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md) e [visão geral: programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDatabase`  
   
-## Requisitos  
- **Cabeçalho:** afxdb.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxdb. h  
   
-## Consulte também  
- [Classe de CObject](../Topic/CObject%20Class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe de CRecordset](../Topic/CRecordset%20Class.md)
+##  <a name="a-namebegintransa--cdatabasebegintrans"></a><a name="begintrans"></a>CDatabase::BeginTrans  
+ Chame essa função de membro para iniciar uma transação com a fonte de dados conectada.  
+  
+```  
+BOOL BeginTrans();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a chamada foi bem-sucedida e as alterações são confirmadas manualmente; apenas Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Uma transação consiste em uma ou mais chamadas para o `AddNew`, **editar**, **excluir**, e **atualização** funções de membro de uma `CRecordset` objeto. Antes de iniciar uma transação, o `CDatabase` objeto deve já se conectou à fonte de dados chamando seu `OpenEx` ou **abrir** função de membro. Para terminar a transação, chame [CommitTrans](#committrans) para aceitar todas as alterações à fonte de dados (e executá-las) ou chamar [reversão](#rollback) para anular a transação inteira. Chamar **BeginTrans** depois de abrir qualquer conjunto de registros envolvidos na transação e como próximo do real operações de atualização possível.  
+  
+> [!CAUTION]
+>  Dependendo de seu driver de ODBC, abrir um conjunto de registros antes de chamar **BeginTrans** pode causar problemas ao chamar **reversão**. Você deve verificar o driver específico que você está usando. Por exemplo, ao usar o driver do Microsoft Access incluído no Microsoft ODBC Desktop Driver Pack 3.0, você deve considerar requisito do mecanismo de banco de dados Jet que você não deve iniciar uma transação em qualquer banco de dados que tem um cursor aberto. As classes de banco de dados MFC, um cursor aberto significa um aberto `CRecordset` objeto. Para obter mais informações, consulte [técnico 68 Observação](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).  
+  
+ **BeginTrans** também podem bloquear registros de dados no servidor, dependendo da simultaneidade solicitada e os recursos da fonte de dados. Para obter informações sobre proteção de dados, consulte o artigo [conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
+  
+ Transações definidas pelo usuário são explicadas no artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+ **BeginTrans** estabelece o estado no qual a sequência de transações pode ser revertida (invertido). Para estabelecer um novo estado para reversões, confirmar qualquer transação atual, em seguida, chame **BeginTrans** novamente.  
+  
+> [!CAUTION]
+>  Chamando **BeginTrans** novamente sem chamar **CommitTrans** ou **reversão** é um erro.  
+  
+ Chamar o [CanTransact](#cantransact) a função de membro para determinar se o driver dá suporte a transações para um determinado banco de dados. Você também deve chamar [GetCursorCommitBehavior](#getcursorcommitbehavior) e [GetCursorRollbackBehavior](#getcursorrollbackbehavior) para determinar o suporte para a preservação do cursor.  
+  
+ Para obter mais informações sobre transações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+### <a name="example"></a>Exemplo  
+  Consulte o artigo [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+  
+##  <a name="a-namebindparametersa--cdatabasebindparameters"></a><a name="bindparameters"></a>CDatabase::BindParameters  
+ Substituir `BindParameters` quando você precisa associar parâmetros antes de chamar [CDatabase::](#executesql).  
+  
+```  
+virtual void BindParameters(HSTMT hstmt);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `hstmt`  
+ O identificador de instrução ODBC para o qual você deseja associar parâmetros.  
+  
+### <a name="remarks"></a>Comentários  
+ Essa abordagem é útil quando o resultado não é necessário definir a partir de um procedimento armazenado.  
+  
+ Em sua substituição, chamar **SQLBindParameters** e relacionadas a funções ODBC para os parâmetros de ligação. MFC chama sua substituição antes de chamar `ExecuteSQL`. Você não precisa chamar **SQLPrepare**; `ExecuteSQL` chamadas **SQLExecDirect** e destrói o **hstmt**, que é usado apenas uma vez.  
+  
+##  <a name="a-namecancela--cdatabasecancel"></a><a name="cancel"></a>CDatabase::Cancel  
+ Chame essa função de membro para solicitar que a fonte de dados cancelar uma operação assíncrona em andamento ou um processo de um thread de segundo.  
+  
+```  
+void Cancel();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Observe que as classes MFC ODBC não usam o processamento assíncrono; para executar uma operação assíncrona, você deve chamar diretamente a função de API de ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Para obter mais informações, consulte [execução assíncrona](https://msdn.microsoft.com/library/ms713563.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namecantransacta--cdatabasecantransact"></a><a name="cantransact"></a>CDatabase::CanTransact  
+ Chame essa função de membro para determinar se o banco de dados permite que as transações.  
+  
+```  
+BOOL CanTransact() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se conjunto de registros usando este `CDatabase` objeto permitir transações; caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Para obter informações sobre transações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+##  <a name="a-namecanupdatea--cdatabasecanupdate"></a><a name="canupdate"></a>CDatabase::CanUpdate  
+ Chame essa função de membro para determinar se o `CDatabase` objeto permite atualizações.  
+  
+```  
+BOOL CanUpdate() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se o `CDatabase` objeto permite atualizações; caso contrário, 0, indicando que você passado **TRUE** na `bReadOnly` quando você abriu o `CDatabase` objeto ou da fonte de dados em si é somente leitura. A fonte de dados é somente leitura se uma chamada para a função ODBC API **SQLGetInfo** para **SQL_DATASOURCE_READ_ONLY** retorna "y".  
+  
+### <a name="remarks"></a>Comentários  
+ Nem todos os drivers dão suporte a atualizações.  
+  
+##  <a name="a-namecdatabasea--cdatabasecdatabase"></a><a name="cdatabase"></a>CDatabase::CDatabase  
+ Constrói um objeto `CDatabase`.  
+  
+```  
+CDatabase();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Depois de criar o objeto, você deve chamar seu `OpenEx` ou **abrir** função de membro para estabelecer uma conexão com uma fonte de dados especificado.  
+  
+ Talvez seja conveniente para incorporar o `CDatabase` objeto em sua classe de documento.  
+  
+### <a name="example"></a>Exemplo  
+ Este exemplo ilustra o uso `CDatabase` em um `CDocument`-classe derivada.  
+  
+ [!code-cpp[NVC_MFCDatabase n º&9;](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
+  
+ [!code-cpp[NVC_MFCDatabase n º&10;](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
+  
+##  <a name="a-nameclosea--cdatabaseclose"></a><a name="close"></a>CDatabase::Close  
+ Chame essa função de membro para desconectar de uma fonte de dados.  
+  
+```  
+virtual void Close();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Você deve fechar qualquer conjunto de registros associado a `CDatabase` antes de chamar essa função de membro de objeto. Porque **fechar** não destrói o `CDatabase` do objeto, você pode reutilizar o objeto abrindo uma nova conexão para a mesma fonte de dados ou outra fonte de dados.  
+  
+ Todas as pendentes `AddNew` ou **editar** instruções do conjunto de registros usando o banco de dados são canceladas e todas as transações pendentes serão revertidas. Qualquer conjunto de registros dependentes de `CDatabase` objeto são deixados em um estado indefinido.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDatabase&#12;](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
+  
+##  <a name="a-namecommittransa--cdatabasecommittrans"></a><a name="committrans"></a>CDatabase::CommitTrans  
+ Chame essa função de membro ao concluir transações.  
+  
+```  
+BOOL CommitTrans();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se as atualizações foram confirmadas com êxito; Caso contrário, 0. Se **CommitTrans** falhar, o estado da fonte de dados é indefinido. Você deve verificar os dados para determinar seu estado.  
+  
+### <a name="remarks"></a>Comentários  
+ Uma transação consiste em uma série de chamadas para o `AddNew`, **editar**, **excluir**, e **atualização** funções de membro de um `CRecordset` objeto começou com uma chamada para o [BeginTrans](#begintrans) função de membro. **CommitTrans** confirma a transação. Por padrão, as atualizações são confirmadas imediatamente. chamando **BeginTrans** faz com que o compromisso de atualizações deve ser atrasada até **CommitTrans** é chamado.  
+  
+ Até que você chame **CommitTrans** para finalizar uma transação, você pode chamar o [reversão](#rollback) função de membro para anular a transação e deixar a fonte de dados em seu estado original. Para iniciar uma nova transação, chame **BeginTrans** novamente.  
+  
+ Para obter mais informações sobre transações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+### <a name="example"></a>Exemplo  
+  Consulte o artigo [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+  
+##  <a name="a-nameexecutesqla--cdatabaseexecutesql"></a><a name="executesql"></a>CDatabase::  
+ Chame essa função de membro quando você precisa executar um comando SQL diretamente.  
+  
+```  
+void ExecuteSQL(LPCTSTR lpszSQL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `lpszSQL`  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que contém um comando SQL válido para executar. Você pode passar um [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
+  
+### <a name="remarks"></a>Comentários  
+ Crie o comando como uma cadeia de caracteres terminada em nulo. `ExecuteSQL`não retorna registros de dados. Se você deseja operar em registros, use um objeto recordset.  
+  
+ A maioria dos seus comandos de fonte de dados é emitida por meio de objetos de conjunto de registros, que oferece suporte a comandos para selecionar os dados, inserir novos registros, excluir registros e editar registros. No entanto, nem todas as funcionalidades ODBC diretamente é suportada pelas classes de banco de dados, portanto você às vezes precisa fazer uma chamada direta de SQL com `ExecuteSQL`.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDatabase&13;](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
+  
+##  <a name="a-namegetbookmarkpersistencea--cdatabasegetbookmarkpersistence"></a><a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+ Chame essa função de membro para determinar a persistência de indicadores em um objeto Recordset depois de determinadas operações.  
+  
+```  
+DWORD GetBookmarkPersistence() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma bitmask que identifica as operações através das quais persistem os indicadores em um objeto recordset. Para obter detalhes, consulte Observações.  
+  
+### <a name="remarks"></a>Comentários  
+ Por exemplo, se você chamar `CRecordset::GetBookmark` e chamar `CRecordset::Requery`, o indicador obtido a partir de `GetBookmark` pode não ser mais válido. Você deve chamar `GetBookmarkPersistence` antes de chamar `CRecordset::SetBookmark`.  
+  
+ A tabela a seguir lista os valores de bitmask que podem ser combinados para o valor retornado de `GetBookmarkPersistence`.  
+  
+|Valor de bitmask|Persistência de indicador|  
+|-------------------|--------------------------|  
+|`SQL_BP_CLOSE`|Os indicadores são válidos após uma **Requery** operação.|  
+|`SQL_BP_DELETE`|O indicador de uma linha é válido após um **excluir** operação na linha.|  
+|`SQL_BP_DROP`|Os indicadores são válidos após uma **fechar** operação.|  
+|`SQL_BP_SCROLL`|Os indicadores são válidos após qualquer **mover** operação. Isso simplesmente identifica se os indicadores são compatíveis com o conjunto de registros, como retornado por `CRecordset::CanBookmark`.|  
+|`SQL_BP_TRANSACTION`|Os indicadores são válidos depois que uma transação é confirmada ou revertida.|  
+|`SQL_BP_UPDATE`|O indicador de uma linha é válido após um **atualização** operação na linha.|  
+|`SQL_BP_OTHER_HSTMT`|Indicadores associados a um objeto recordset são válidos em um segundo conjunto de registros.|  
+  
+ Para obter mais informações sobre esse valor de retorno, consulte a função de API ODBC **SQLGetInfo** no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obter mais informações sobre os indicadores, consulte o artigo [conjunto de registros: indicadores e posições absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+  
+##  <a name="a-namegetconnecta--cdatabasegetconnect"></a><a name="getconnect"></a>: Getconnect  
+ Chame essa função de membro para recuperar a cadeia de conexão usada durante a chamada a `OpenEx` ou `Open` que conectado a `CDatabase` objeto para uma fonte de dados.  
+  
+```  
+const CString GetConnect() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A `const` [CString](../../atl-mfc-shared/reference/cstringt-class.md) contendo a cadeia de conexão se `OpenEx` ou `Open` tiver sido chamado; caso contrário, uma cadeia de caracteres vazia.  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [CDatabase::Open](#open) para obter uma descrição de como a cadeia de caracteres de conexão é criada.  
+  
+##  <a name="a-namegetcursorcommitbehaviora--cdatabasegetcursorcommitbehavior"></a><a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+ Chame essa função de membro para determinar como um [CommitTrans](#committrans) operação afeta cursores em objetos de conjunto de registros aberto.  
+  
+```  
+int GetCursorCommitBehavior() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor que indica o efeito de transações em objetos de conjunto de registros aberto. Para obter detalhes, consulte Observações.  
+  
+### <a name="remarks"></a>Comentários  
+ A tabela a seguir lista os possíveis valores de retornos para `GetCursorCommitBehavior` e o efeito correspondente no conjunto de registros aberto.  
+  
+|Valor retornado|Efeito sobre objetos CRecordset|  
+|------------------|----------------------------------|  
+|`SQL_CB_CLOSE`|Chamar `CRecordset::Requery` imediatamente após a confirmação de transação.|  
+|`SQL_CB_DELETE`|Chamar `CRecordset::Close` imediatamente após a confirmação de transação.|  
+|`SQL_CB_PRESERVE`|Prosseguir normalmente com `CRecordset` operações.|  
+  
+ Para obter mais informações sobre esse valor de retorno, consulte a função de API ODBC **SQLGetInfo** no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obter mais informações sobre transações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+##  <a name="a-namegetcursorrollbackbehaviora--cdatabasegetcursorrollbackbehavior"></a><a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+ Chame essa função de membro para determinar como um [reversão](#rollback) operação afeta cursores em objetos de conjunto de registros aberto.  
+  
+```  
+int GetCursorRollbackBehavior() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor que indica o efeito de transações em objetos de conjunto de registros aberto. Para obter detalhes, consulte Observações.  
+  
+### <a name="remarks"></a>Comentários  
+ A tabela a seguir lista os possíveis valores de retornos para `GetCursorRollbackBehavior` e o efeito correspondente no conjunto de registros aberto.  
+  
+|Valor retornado|Efeito sobre objetos CRecordset|  
+|------------------|----------------------------------|  
+|`SQL_CB_CLOSE`|Chamar `CRecordset::Requery` imediatamente após a reversão da transação.|  
+|`SQL_CB_DELETE`|Chamar `CRecordset::Close` imediatamente após a reversão da transação.|  
+|`SQL_CB_PRESERVE`|Prosseguir normalmente com `CRecordset` operações.|  
+  
+ Para obter mais informações sobre esse valor de retorno, consulte a função de API ODBC **SQLGetInfo** no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obter mais informações sobre transações, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+##  <a name="a-namegetdatabasenamea--cdatabasegetdatabasename"></a><a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+ Chame essa função de membro para recuperar o nome do banco de dados conectado no momento (desde que a fonte de dados define um objeto nomeado chamado "banco de dados").  
+  
+```  
+CString GetDatabaseName() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contém o nome de banco de dados se for bem-sucedida; caso contrário, vazio `CString`.  
+  
+### <a name="remarks"></a>Comentários  
+ Isso não é o mesmo que o nome da fonte de dados (DSN) especificado no `OpenEx` ou **abrir** chamar. O que `GetDatabaseName` retorna depende do ODBC. Em geral, um banco de dados é uma coleção de tabelas. Se essa entidade possui um nome, `GetDatabaseName` retorna.  
+  
+ Por exemplo, convém exibir esse nome em um título. Se ocorrer um erro ao recuperar o nome do ODBC, `GetDatabaseName` retorna vazia **Cstring**.  
+  
+##  <a name="a-nameisopena--cdatabaseisopen"></a><a name="isopen"></a>CDatabase::IsOpen  
+ Chame essa função de membro para determinar se o `CDatabase` objeto atualmente está conectado a uma fonte de dados.  
+  
+```  
+BOOL IsOpen() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se o `CDatabase` objeto está conectado no momento; caso contrário, 0.  
+  
+##  <a name="a-namemhdbca--cdatabasemhdbc"></a><a name="m_hdbc"></a>CDatabase::m_hdbc  
+ Contém um identificador público para uma conexão de fonte de dados ODBC â €"um"identificador de conexão".  
+  
+### <a name="remarks"></a>Comentários  
+ Normalmente, você terá que precisam acessar essa variável de membro diretamente. Em vez disso, o framework aloca o identificador ao chamar `OpenEx` ou **abrir**. O framework desaloca a alça quando você chama o **excluir** operador o `CDatabase` objeto. Observe que o **fechar** função de membro não desalocar o identificador.  
+  
+ Em algumas circunstâncias, no entanto, você talvez precise usar o identificador diretamente. Por exemplo, se você precisa chamar funções API ODBC diretamente em vez de por meio da classe `CDatabase`, talvez seja necessário um identificador de conexão a ser passado como um parâmetro. Consulte o exemplo de código a seguir.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDatabase&#15;](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
+  
+##  <a name="a-nameonsetoptionsa--cdatabaseonsetoptions"></a><a name="onsetoptions"></a>CDatabase::OnSetOptions  
+ O framework chama essa função de membro ao executar diretamente uma instrução SQL com o `ExecuteSQL` função de membro.  
+  
+```  
+virtual void OnSetOptions(HSTMT hstmt);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `hstmt`  
+ O identificador de instrução ODBC para o qual estão sendo definidas opções.  
+  
+### <a name="remarks"></a>Comentários  
+ `CRecordset::OnSetOptions`também chama essa função de membro.  
+  
+ `OnSetOptions`Define o valor de tempo limite de logon. Se tiverem sido chamadas anteriores para o `SetQueryTimeout` e a função de membro `OnSetOptions` reflete os valores atuais; caso contrário, ele define valores padrão.  
+  
+> [!NOTE]
+>  Antes da MFC 4.2, `OnSetOptions` também definir o modo de processamento para qualquer snychronous ou assíncrona. A partir do MFC 4.2, todas as operações são síncronas. Para executar uma operação assíncrona, você deve fazer uma chamada direta para a função ODBC API **SQLSetPos**.  
+  
+ Você não precisa substituir `OnSetOptions` para alterar o valor de tempo limite. Em vez disso, para personalizar o valor de tempo limite de consulta, chame `SetQueryTimeout` antes de criar um conjunto de registros; `OnSetOptions` usará o novo valor. O conjunto de valores se aplicam a operações subsequentes em todos os conjuntos de registros ou chamadas SQL diretas.  
+  
+ Substituir `OnSetOptions` se você deseja definir opções adicionais. Sua substituição deve chamar a classe base `OnSetOptions` antes ou depois de chamar a função ODBC API **SQLSetStmtOption**. Execute o método ilustrado na implementação do padrão da estrutura de `OnSetOptions`.  
+  
+##  <a name="a-nameopena--cdatabaseopen"></a><a name="open"></a>CDatabase::Open  
+ Chame essa função de membro para inicializar construído recentemente `CDatabase` objeto.  
+  
+```  
+virtual BOOL Open(
+    LPCTSTR lpszDSN,  
+    BOOL bExclusive = FALSE,  
+    BOOL bReadOnly = FALSE,  
+    LPCTSTR lpszConnect = _T("ODBC;"),  
+    BOOL bUseCursorLib = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `lpszDSN`  
+ Especifica o nome de uma fonte de dados â €"um nome registrado com ODBC por meio do programa Administrador de ODBC. Se for especificado um valor DSN em `lpszConnect` (na forma "DSN =\<fonte de dados >"), ele não deve ser especificado novamente na `lpszDSN`. Nesse caso, `lpszDSN` deve ser **nulo**. Caso contrário, você pode passar **nulo** se você deseja apresentar ao usuário uma caixa de diálogo de fonte de dados no qual o usuário pode selecionar uma fonte de dados. Para obter mais informações, consulte comentários.  
+  
+ `bExclusive`  
+ Não tem suporte nesta versão da biblioteca de classes. Atualmente, uma asserção falha se esse parâmetro for **TRUE**. A fonte de dados sempre é aberta como compartilhadas (não exclusivo).  
+  
+ `bReadOnly`  
+ **TRUE** se você pretende que a conexão seja somente leitura e para impedir atualizações para a fonte de dados. Todos os conjuntos de registros dependentes herdam esse atributo. O valor padrão é **FALSE**.  
+  
+ `lpszConnect`  
+ Especifica uma cadeia de conexão. A cadeia de caracteres de conexão concatena informações, incluindo possivelmente um nome de fonte de dados, uma ID de usuário válida na fonte de dados, uma cadeia de caracteres de autenticação de usuário (senha, se a fonte de dados requer um) e outras informações. A cadeia de caracteres de conexão toda deve ser prefixada pela cadeia de caracteres "ODBC;" (maiusculas ou minúsculas). "ODBC;" cadeia de caracteres é usada para indicar que a conexão a uma fonte de dados ODBC; Isso é para compatibilidade com versões posteriores quando versões futuras da biblioteca de classes podem oferecer suporte a fontes de dados ODBC não.  
+  
+ `bUseCursorLib`  
+ **TRUE** se você quiser que a DLL de biblioteca de Cursor ODBC a ser carregado. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores só terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. O valor padrão é **TRUE**. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a conexão for feita com êxito; Caso contrário, 0 se o usuário decidir cancelar quando for apresentada uma caixa de diálogo solicitando mais informações de conexão. Em outros casos, o framework lança uma exceção.  
+  
+### <a name="remarks"></a>Comentários  
+ O objeto de banco de dados deve ser inicializado antes de você pode usar para construir um objeto recordset.  
+  
+> [!NOTE]
+>  Chamando o [OpenEx](#openex) função de membro é a melhor maneira de se conectar a uma fonte de dados e inicializar o objeto de banco de dados.  
+  
+ Se os parâmetros em seu **abrir** chamada não contêm informações suficientes para fazer a conexão, o driver ODBC abre uma caixa de diálogo para obter as informações necessárias do usuário. Quando você chama **abrir**, sua cadeia de caracteres de conexão, `lpszConnect`, é armazenado em particular no `CDatabase` object e está disponível por chamar o [GetConnect](#getconnect) função de membro.  
+  
+ Se desejar, você pode abrir sua própria caixa de diálogo antes de chamar **abrir** para obter informações do usuário, como uma senha, em seguida, adicionar essas informações para a cadeia de caracteres de conexão que você passar para **abrir**. Ou talvez você queira salvar a cadeia de caracteres de conexão que você passar para que você possa reutilizá-lo na próxima vez que seu aplicativo chama **abrir** em uma `CDatabase` objeto.  
+  
+ Você também pode usar a cadeia de caracteres de conexão para vários níveis de autorização de logon (cada um para um outro `CDatabase` objeto) ou para transmitir outras informações específicas da fonte de dados. Para obter mais informações sobre cadeias de conexão, consulte o capítulo 5 no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ É possível que uma tentativa de conexão de tempo limite se, por exemplo, o host DBMS está indisponível. Se a tentativa de conexão falhar, **abrir** lança um `CDBException`.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDatabase&#14;](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
+  
+##  <a name="a-nameopenexa--cdatabaseopenex"></a><a name="openex"></a>CDatabase::OpenEx  
+ Chame essa função de membro para inicializar construído recentemente `CDatabase` objeto.  
+  
+```  
+virtual BOOL OpenEx(
+    LPCTSTR lpszConnectString,  
+    DWORD dwOptions = 0);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `lpszConnectString`  
+ Especifica uma cadeia de caracteres de conexão ODBC. Isso inclui o nome da fonte de dados, bem como outras informações opcionais, como uma ID de usuário e senha. Por exemplo, "DSN = SQLServer_Source; UID = SA; PWD = abc123 "é uma cadeia de caracteres de conexão possíveis. Observe que, se você passar **nulo** para `lpszConnectString`, uma caixa de diálogo de fonte de dados solicitará que o usuário selecione uma fonte de dados.  
+  
+ `dwOptions`  
+ Um bitmask que especifica uma combinação dos valores a seguir. O valor padrão é 0, o que significa que o banco de dados será aberto como compartilhado com acesso de gravação, a DLL de biblioteca de Cursor ODBC não será carregada, e a caixa de diálogo de conexão ODBC será exibido somente se não houver informações suficientes para fazer a conexão.  
+  
+- **CDatabase::openExclusive** não tem suporte nesta versão da biblioteca de classes. Uma fonte de dados sempre é aberta como compartilhadas (não exclusivo). Atualmente, uma declaração falhará se você especificar essa opção.  
+  
+- **CDatabase::openReadOnly** Abrir fonte de dados como somente leitura.  
+  
+- **CDatabase::useCursorLib** carregar a DLL da biblioteca de cursores ODBC. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores só terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
+  
+- **CDatabase::noOdbcDialog** não exibir a caixa de diálogo de conexão ODBC, independentemente se suficiente informações de conexão são fornecidas.  
+  
+- **CDatabase::forceOdbcDialog** sempre exibirá a caixa de diálogo de conexão ODBC.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a conexão for feita com êxito; Caso contrário, 0 se o usuário decidir cancelar quando for apresentada uma caixa de diálogo solicitando mais informações de conexão. Em outros casos, o framework lança uma exceção.  
+  
+### <a name="remarks"></a>Comentários  
+ O objeto de banco de dados deve ser inicializado antes de você pode usar para construir um objeto recordset.  
+  
+ Se o `lpszConnectString` parâmetro em seu `OpenEx` chamada não contém informações suficientes para que a conexão, o driver ODBC abre uma caixa de diálogo para obter as informações necessárias do usuário, desde que você não definiu **CDatabase::noOdbcDialog** ou **CDatabase::forceOdbcDialog** no `dwOptions` parâmetro. Quando você chama `OpenEx`, sua cadeia de caracteres de conexão, `lpszConnectString`, é armazenado em particular no `CDatabase` do objeto e está disponível por chamar o [GetConnect](#getconnect) função de membro.  
+  
+ Se desejar, você pode abrir sua própria caixa de diálogo antes de chamar `OpenEx` para obter informações do usuário, como uma senha e, em seguida, adicionar essas informações para a cadeia de caracteres de conexão que você passar para `OpenEx`. Ou talvez você queira salvar a cadeia de caracteres de conexão que você passar para que você possa reutilizá-lo na próxima vez que seu aplicativo chama `OpenEx` em uma `CDatabase` objeto.  
+  
+ Você também pode usar a cadeia de caracteres de conexão para vários níveis de autorização de logon (cada um para um outro `CDatabase` objeto) ou para transmitir outras informações específicas da fonte de dados. Para obter mais informações sobre cadeias de conexão, consulte o capítulo 6 no *referência do programador de ODBC*.  
+  
+ É possível que uma tentativa de conexão de tempo limite se, por exemplo, o host DBMS está indisponível. Se a tentativa de conexão falhar, `OpenEx` lança um `CDBException`.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDatabase n º&11;](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
+  
+##  <a name="a-namerollbacka--cdatabaserollback"></a><a name="rollback"></a>CDatabase::Rollback  
+ Chame essa função de membro para reverter as alterações feitas durante uma transação.  
+  
+```  
+BOOL Rollback();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a transação foi revertida com êxito; Caso contrário, 0. Se um **reversão** chamada falhar, a fonte de dados e a transação estados são indefinidos. Se **reversão** retorna 0, você deve verificar a fonte de dados para determinar seu estado.  
+  
+### <a name="remarks"></a>Comentários  
+ Todos os `CRecordset``AddNew`, **editar**, **excluir**, e **atualização** chamadas executadas desde a última [BeginTrans](#begintrans) serão revertidas para o estado que existia no momento da chamada.  
+  
+ Após uma chamada para **reversão**, a transação está acima e você deve chamar **BeginTrans** novamente por outra transação. O registro atual antes de você chamou **BeginTrans** torna-se o registro atual novamente após **reversão**.  
+  
+ Depois de uma reversão, o registro atual antes da reversão permanece atual. Para obter detalhes sobre o estado do conjunto de registros e a fonte de dados após uma reversão, consulte o artigo [transação (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+### <a name="example"></a>Exemplo  
+  Consulte o artigo [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+  
+##  <a name="a-namesetlogintimeouta--cdatabasesetlogintimeout"></a><a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+ Chamar esse membro função â €"antes de chamar `OpenEx` ou **abrir** â €" para substituir o número padrão de segundos permitido antes de uma tentativa conexão de origem expire.  
+  
+```  
+void SetLoginTimeout(DWORD dwSeconds);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `dwSeconds`  
+ O número de segundos permitido antes de uma tentativa de conexão expire.  
+  
+### <a name="remarks"></a>Comentários  
+ Uma tentativa de conexão pode expirar se, por exemplo, o DBMS não está disponível. Chamar **SetLoginTimeout** depois que você construir o inicializado `CDatabase` o objeto, mas antes de você chamar `OpenEx` ou **abrir**.  
+  
+ O valor padrão de tempo limite de logon é 15 segundos. Nem todas as fontes de dados oferecer suporte a capacidade de especificar um valor de tempo limite de logon. Se a fonte de dados não oferece suporte a tempo limite, você obterá saída de rastreamento, mas não uma exceção. Um valor 0 significa "infinito".  
+  
+##  <a name="a-namesetquerytimeouta--cdatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+ Chame essa função de membro para ignorar o número padrão de segundos permitido antes do tempo limite da fonte de dados conectada operações posteriores.  
+  
+```  
+void SetQueryTimeout(DWORD dwSeconds);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `dwSeconds`  
+ O número de segundos permitido antes de uma tentativa de consulta expire.  
+  
+### <a name="remarks"></a>Comentários  
+ Uma operação pode expirar devido a problemas de acesso à rede, tempo de processamento de consulta excessiva e assim por diante. Chamar `SetQueryTimeout` antes de abrir o conjunto de registros ou antes de chamar o conjunto de registros `AddNew`, **atualização** ou **excluir** funções de membro, se você quiser alterar o valor de tempo limite de consulta. A configuração afeta todas as demais **abrir**, `AddNew`, **atualização**, e **excluir** chamadas para qualquer conjunto de registros associado a esse `CDatabase` objeto. Alterar o valor de tempo limite de consulta para um conjunto de registros após a abertura não altera o valor do conjunto de registros. Por exemplo, subsequente **mover** operações não usa o novo valor.  
+  
+ O valor padrão de tempo limite de consulta é 15 segundos. Nem todas as fontes de dados oferecer suporte a capacidade de definir um valor de tempo limite de consulta. Se você definir um valor de tempo limite de consulta de 0, não haverá tempo limite; a comunicação com a fonte de dados pode parar de responder. Esse comportamento pode ser útil durante o desenvolvimento. Se a fonte de dados não oferece suporte a tempo limite, você obterá saída de rastreamento, mas não uma exceção.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CRecordset](../../mfc/reference/crecordset-class.md)
+

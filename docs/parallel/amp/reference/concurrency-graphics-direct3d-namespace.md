@@ -1,53 +1,69 @@
 ---
-title: "Namespace Concurrency::graphics::direct3d | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics::direct3d"
-  - "amp_short_vectors/Concurrency::graphics::direct3d"
-dev_langs: 
-  - "C++"
+title: Namespace Concurrency::Graphics::Direct3D | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d
+- amp_short_vectors/Concurrency::graphics::direct3d
+dev_langs:
+- C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Namespace Concurrency::graphics::direct3d
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
+ms.lasthandoff: 02/25/2017
 
-Fornece os métodos [get\_texture](../Topic/get_texture%20Function.md) e [make\_texture](../Topic/make_texture%20Function.md).  
+---
+# <a name="concurrencygraphicsdirect3d-namespace"></a>Namespace Concurrency::graphics::direct3d
+Fornece o [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) e [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) métodos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Funções  
+### <a name="functions"></a>Funções  
   
-|Nome|Descrição|  
-|----------|---------------|  
-|[Função get\_sampler](../Topic/get_sampler%20Function.md)|Obter a interface de estado de amostra Direct3D na exibição fornecida do acelerador que representa o objeto da amostra especificada.|  
-|[Função get\_texture](../Topic/get_texture%20Function.md)|Obtém a interface de textura do Direct3D subjacente ao objeto de [textura](../Topic/texture%20Class.md) especificado.|  
-|[Função make\_sampler](../Topic/make_sampler%20Function.md)|Crie uma amostra de um ponteiro de interface de estado de amostra do Direct3D.|  
-|[Função make\_texture](../Topic/make_texture%20Function.md)|Cria um objeto [texture](../Topic/texture%20Class.md) usando os parâmetros especificados.|  
-|[Função msad4](../Topic/msad4%20Function.md)|Compara um valor de referência de 4 bytes e um valor de origem de 8 bytes e acumula um vetor de 4 somas.|  
+|Nome<br /><br /> Descrição|  
+|--------------------------|  
+|[Função get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Obter a interface de estado de amostra do Direct3D no Acelerador de determinado exibir que representa o objeto de amostra especificado.|  
+|[Função get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Obtém a interface de textura Direct3D subjacente especificado [textura](texture-class.md) objeto.|  
+|[Função make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Crie uma amostra de um ponteiro de interface de estado de amostra do Direct3D.|  
+|[Função make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Cria um [textura](texture-class.md) objeto usando os parâmetros especificados.|  
+|[Função msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Compara um valor de referência de 4 bytes e um valor de origem de 8 bytes e um vetor de 4 somas é acumulado.|  
   
-## Requisitos  
- **Cabeçalho:** amp\_graphics.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_graphics.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Consulte também  
- [Namespace Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+## <a name="see-also"></a>Consulte também  
+ [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+

@@ -1,103 +1,120 @@
 ---
-title: "Estilos da caixa de mensagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MB_ICONQUESTION"
-  - "MB_ICONINFORMATION"
-  - "MB_DEFBUTTON2"
-  - "MB_YESNO"
-  - "MB_OKCANCEL"
-  - "MB_TASKMODAL"
-  - "MB_ICONEXCLAMATION"
-  - "MB_OK"
-  - "MB_DEFBUTTON3"
-  - "MB_YESNOCANCEL"
-  - "MB_APPLMODAL"
-  - "MB_RETRYCANCEL"
-  - "MB_DEFBUTTON1"
-  - "MB_ABORTRETRYIGNORE"
-  - "MB_SYSTEMMODAL"
-  - "MB_ICONSTOP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Constante MB_ABORTRETRYIGNORE"
-  - "Constante MB_APPLMODAL"
-  - "Constante MB_DEFBUTTON1"
-  - "Constante MB_DEFBUTTON2"
-  - "Constante MB_DEFBUTTON3"
-  - "Constante MB_ICONEXCLAMATION"
-  - "Constante MB_ICONINFORMATION"
-  - "Constante MB_ICONQUESTION"
-  - "Constante MB_ICONSTOP"
-  - "Constante MB_OK"
-  - "Constante MB_OKCANCEL"
-  - "Constante MB_RETRYCANCEL"
-  - "Constante MB_SYSTEMMODAL"
-  - "Constante MB_TASKMODAL"
-  - "Constante MB_YESNO"
-  - "Constante MB_YESNOCANCEL"
-  - "estilos da caixa de mensagem"
+title: Estilos de caixa de mensagem | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MB_ICONQUESTION
+- MB_ICONINFORMATION
+- MB_DEFBUTTON2
+- MB_YESNO
+- MB_OKCANCEL
+- MB_TASKMODAL
+- MB_ICONEXCLAMATION
+- MB_OK
+- MB_DEFBUTTON3
+- MB_YESNOCANCEL
+- MB_APPLMODAL
+- MB_RETRYCANCEL
+- MB_DEFBUTTON1
+- MB_ABORTRETRYIGNORE
+- MB_SYSTEMMODAL
+- MB_ICONSTOP
+dev_langs:
+- C++
+helpviewer_keywords:
+- MB_RETRYCANCEL constant
+- MB_TASKMODAL constant
+- message-box styles
+- MB_OKCANCEL constant
+- MB_OK constant
+- MB_DEFBUTTON1 constant
+- MB_ICONQUESTION constant
+- MB_ICONINFORMATION constant
+- MB_SYSTEMMODAL constant
+- MB_ICONSTOP constant
+- MB_YESNO constant
+- MB_YESNOCANCEL constant
+- MB_DEFBUTTON2 constant
+- MB_ABORTRETRYIGNORE constant
+- MB_ICONEXCLAMATION constant
+- MB_DEFBUTTON3 constant
+- MB_APPLMODAL constant
 ms.assetid: d87014c5-4ea4-4950-a27e-7bcdda67be7d
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estilos da caixa de mensagem
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7a6d3aa48a9e00eeb55bb62b7801edb64bd4285f
+ms.lasthandoff: 02/25/2017
 
-Os seguintes estilos da caixa de mensagem estão disponíveis.  
+---
+# <a name="message-box-styles"></a>Estilos da caixa de mensagem
+Os estilos de caixa de mensagem a seguir estão disponíveis.  
   
-## Tipos de Message\_Box  
+## <a name="messagebox-types"></a>Tipos de Message_Box  
   
--   **MB\_ABORTRETRYIGNORE** a caixa de mensagem contém três chaves: Nulo, tente, e ignorar.  
+-   **MB_ABORTRETRYIGNORE** a caixa de mensagem contém três pushbuttons: Abortar, repetir e ignorar.  
   
--   **MB\_OK** a caixa de mensagem contém uma tecla: OK.  
+-   **MB_OK** a caixa de mensagem contém um botão de ação: Okey.  
   
--   **MB\_OKCANCEL** a caixa de mensagem contém duas chaves: OK e cancelamento.  
+-   **MB_OKCANCEL** a caixa de mensagem contém dois pushbuttons: Okey e Cancelar.  
   
--   **MB\_RETRYCANCEL** a caixa de mensagem contém duas chaves: Repetição e cancelamento.  
+-   **MB_RETRYCANCEL** a caixa de mensagem contém dois pushbuttons: Repetir e Cancelar.  
   
--   **MB\_YESNO** a caixa de mensagem contém duas chaves: Sim ou não.  
+-   **MB_YESNO** a caixa de mensagem contém dois pushbuttons: Sim e não.  
   
--   **MB\_YESNOCANCEL** a caixa de mensagem contém três chaves: Sim, não, e cancelamento.  
+-   **MB_YESNOCANCEL** a caixa de mensagem contém três pushbuttons: Sim, não e Cancelar.  
   
-## O modo da caixa de mensagem  
+## <a name="message-box-modality"></a>Caixa de mensagem modalidade  
   
--   **MB\_APPLMODAL** o usuário deve responder a caixa de mensagem antes de continuar o trabalho na janela atual.  No entanto, o usuário poderá passar para as janelas de outros aplicativos e trabalhar nas janelas.  A opção é **MB\_APPLMODAL** se nem nem **MB\_SYSTEMMODALMB\_TASKMODAL** são especificados.  
+-   **MB_APPLMODAL** o usuário deve responder à caixa de mensagem antes de continuar o trabalho na janela atual. No entanto, o usuário pode mover para janelas de outros aplicativos e de trabalho nessas janelas. O padrão é **MB_APPLMODAL** se nem **MB_SYSTEMMODAL** nem **MB_TASKMODAL** for especificado.  
   
--   **MB\_SYSTEMMODAL** todos os aplicativos é suspenso até que o usuário responder a caixa de mensagem.  As caixas de mensagem modal sistema são usadas para notificar o usuário dos erros graves, potencialmente prejudiciais que exigem atenção imediata e devem ser usados com moderação.  
+-   **MB_SYSTEMMODAL** todos os aplicativos são suspensos até que o usuário responda à caixa de mensagem. Caixas de mensagem modal do sistema são usadas para notificar o usuário sobre sério, potencialmente prejudiciais erros que exigem atenção imediata e devem ser usados com moderação.  
   
--   **MB\_TASKMODAL** semelhante a **MB\_APPLMODAL**, mas não útil em um aplicativo da classe do Microsoft.  Esse sinalizador é reservado para um aplicativo de chamada ou uma biblioteca que não tem um identificador de janela disponível.  
+-   **MB_TASKMODAL** semelhante ao **MB_APPLMODAL**, mas não é útil em um aplicativo de classe do Microsoft Foundation. Esse sinalizador é reservado para um aplicativo de chamada ou a biblioteca que não tem um identificador de janela disponível.  
   
-## Ícones da caixa de mensagem  
+## <a name="message-box-icons"></a>Ícones de caixa de mensagem  
   
--   **MB\_ICONEXCLAMATION**que um ícone de ponto de exclamação aparece na caixa de mensagem.  
+-   **MB_ICONEXCLAMATION** um ícone de ponto de exclamação aparece na caixa de mensagem.  
   
--   **MB\_ICONINFORMATION**que consista de ícone “i” em um círculo é exibida na caixa de mensagem.  
+-   **MB_ICONINFORMATION** um ícone consiste em um "I" em um círculo aparece na caixa de mensagem.  
   
--   O ícone de ponto de interrogação de A**MB\_ICONQUESTION**aparece na caixa de mensagem.  
+-   **MB_ICONQUESTION** um ícone de ponto de interrogação é exibido na caixa de mensagem.  
   
--   O ícone de sinal irrelevante de A**MB\_ICONSTOP**aparece na caixa de mensagem.  
+-   **MB_ICONSTOP** um ícone de sinal de interrupção aparece na caixa de mensagem.  
   
-## Botões padrão da caixa de mensagem  
+## <a name="message-box-default-buttons"></a>Caixa de mensagem padrão botões  
   
--   **MB\_DEFBUTTON1** o primeiro botão é o padrão.  Observe que o primeiro botão é sempre o padrão a menos que **MB\_DEFBUTTON2** ou **MB\_DEFBUTTON3** é especificado.  
+-   **MB_DEFBUTTON1** o primeiro botão é o padrão. Observe que o primeiro botão é sempre o padrão, a menos que **MB_DEFBUTTON2** ou **MB_DEFBUTTON3** for especificado.  
   
--   **MB\_DEFBUTTON2** o segundo botão é o padrão.  
+-   **MB_DEFBUTTON2** o segundo botão é o padrão.  
   
--   **MB\_DEFBUTTON3** o terceiro botão é o padrão.  
+-   **MB_DEFBUTTON3** o terceiro botão é o padrão.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estilos usados pelo MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [AfxMessageBox](../Topic/AfxMessageBox.md)
+ [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)
+
+

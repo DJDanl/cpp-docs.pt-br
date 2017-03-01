@@ -1,37 +1,51 @@
 ---
-title: "Estrutura LOGPEN | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LOGPEN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura LOGPEN"
+title: Estrutura LOGPEN | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LOGPEN
+dev_langs:
+- C++
+helpviewer_keywords:
+- LOGPEN structure
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura LOGPEN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f3868d2ac6a7b18cfe43f7da8865aed0a3ecf88d
+ms.lasthandoff: 02/25/2017
 
-O `LOGPEN` estrutura define o estilo, a largura e a cor de uma caneta, um objeto usado para desenhar linhas e bordas. O [CPen::CreatePenIndirect](../Topic/CPen%20Class.md#cpen__createpenindirect) função usa o `LOGPEN` estrutura.  
+---
+# <a name="logpen-structure"></a>Estrutura LOGPEN
+O `LOGPEN` estrutura define o estilo, a largura e a cor de uma caneta, um objeto usado para desenhar linhas e bordas. O [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) função usa o `LOGPEN` estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
- 
-    typedef struct tagLOGPEN {  /* lgpn */  
+typedef struct tagLOGPEN {  /* lgpn */  
     UINT lopnStyle;  
     POINT lopnWidth;  
     COLORREF lopnColor;  
@@ -54,11 +68,11 @@ O `LOGPEN` estrutura define o estilo, a largura e a cor de uma caneta, um objeto
   
 - **PS_NULL** cria uma caneta nula.  
   
-- **PS_INSIDEFRAME** cria uma caneta que desenha uma linha dentro do quadro de formas fechadas produzidos por funções de saída da GDI que especificam um retângulo (por exemplo, o **Elipse**, **retângulo**, `RoundRect`, `Pie`, e `Chord` funções de membro). Quando esse estilo é usado com GDI saída funções que não especificam um retângulo (por exemplo, o `LineTo` função de membro), a área de desenho da caneta não é limitada por um quadro.  
+- **PS_INSIDEFRAME** cria uma caneta que desenha uma linha dentro do quadro de formas fechadas produzidos por funções de saída da GDI que especificam um retângulo (por exemplo, o **elipse**, **retângulo**, `RoundRect`, `Pie`, e `Chord` funções de membro). Quando esse estilo é usado com GDI saída funções que não especificam um retângulo (por exemplo, o `LineTo` função de membro), a área de desenho da caneta não é limitada por um quadro.  
   
      Se tiver uma caneta de **PS_INSIDEFRAME** estilo e uma cor que não corresponde a uma cor na tabela de cores lógicas, a caneta é desenhada com uma cor pontilhada. O **PS_SOLID** estilo da caneta não pode ser usado para criar uma caneta com uma cor pontilhada. O **PS_INSIDEFRAME** estilo é idêntico ao **PS_SOLID** se a largura da caneta é menor ou igual a 1.  
   
-     Quando o **PS_INSIDEFRAME** estilo é usado com objetos GDI gerados por funções que **Elipse**, **retângulo**, e `RoundRect`, a linha não pode ser completamente dentro do quadro especificado.  
+     Quando o **PS_INSIDEFRAME** estilo é usado com objetos GDI gerados por funções diferentes de **elipse**, **retângulo**, e `RoundRect`, a linha não pode ser completamente dentro do quadro especificado.  
   
  *lopnWidth*  
  Especifica a largura da caneta, em unidades lógicas. Se o **lopnWidth** membro é 0, a caneta é 1 pixel de largura em dispositivos de varredura independentemente do modo de mapeamento atual.  
@@ -67,12 +81,13 @@ O `LOGPEN` estrutura define o estilo, a largura e a cor de uma caneta, um objeto
  Especifica a cor da caneta.  
   
 ## <a name="remarks"></a>Comentários  
- O **y** o valor de [PONTO](../../mfc/reference/point-structure1.md) estrutura o **lopnWidth** membro não é usado.  
+ O **y** o valor de [ponto](../../mfc/reference/point-structure1.md) estrutura o **lopnWidth** membro não é usado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** wingdi  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPen::CreatePenIndirect](../Topic/CPen%20Class.md#cpen__createpenindirect)
+ [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
+
 

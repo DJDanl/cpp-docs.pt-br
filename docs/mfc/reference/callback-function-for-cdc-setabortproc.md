@@ -1,58 +1,73 @@
 ---
-title: "Fun&#231;&#227;o de retorno de chamada para CDC::SetAbortProc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Callback Function for CDC::SetAbortProc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funções de retorno de chamada, para CDC::SetAbortProc"
+title: "Função de retorno de chamada para CDC:: SetAbortProc | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Callback Function for CDC::SetAbortProc
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, for CDC::SetAbortProc
 ms.assetid: daa36d5d-15de-40fc-8d37-a865d06c4710
 caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#227;o de retorno de chamada para CDC::SetAbortProc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1ba16ea60d8b18abd1962ded2da7e11ff2ef09a1
+ms.lasthandoff: 02/25/2017
 
-O nome *AbortFunc* é um espaço reservado para o nome da função de aplicativo fornecido.  
+---
+# <a name="callback-function-for-cdcsetabortproc"></a>Função de retorno de chamada para CDC::SetAbortProc
+O nome *AbortFunc* é um espaço reservado para o nome da função fornecida pelo aplicativo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      BOOL CALLBACK EXPORT AbortFunc(   
-   HDC hPr,   
-   int code    
-);  
+BOOL CALLBACK EXPORT AbortFunc(
+    HDC hPr,  
+    int code);
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *hPr*  
  Identifica o contexto do dispositivo.  
   
  `code`  
- Especifica se um erro ocorreu.  Será 0 se nenhum erro ocorreu.  É **SP\_OUTOFDISK** se o gerenciador de cópia está fora de espaço em disco e mais espaço em disco se tornará disponível se o aplicativo espera.  Se `code` é **SP\_OUTOFDISK**, o aplicativo não precisa cancelar o trabalho de cópia.  Se não fizer, deve produzir ao gerenciador de cópia chamando a função do windows de **PeekMessage** ou de **GetMessage** .  
+ Especifica se um erro ocorreu. Ele é 0 se nenhum erro tiver ocorrido. É **SP_OUTOFDISK** se o Gerenciador de impressão está sem espaço em disco e mais espaço em disco estará disponível se o aplicativo espera. Se `code` é **SP_OUTOFDISK**, o aplicativo não precisa interromper o trabalho de impressão. Se não estiver, ele deve produzir para o Gerenciador de impressão chamando o **PeekMessage** ou **GetMessage** função do Windows.  
   
-## Valor de retorno  
- O valor de retorno da função de manipulador aborto\- for diferente de zero se o trabalho de cópia é continuar, e 0 se for cancelado.  
+## <a name="return-value"></a>Valor de retorno  
+ O valor de retorno da função de manipulador de anulação é diferente de zero se o trabalho de impressão é continuar e 0 se for cancelado.  
   
-## Comentários  
- O nome real deve ser exportado como descrito na seção comentários de [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md).  
+## <a name="remarks"></a>Comentários  
+ O nome real deve ser exportado conforme descrito na seção comentários de [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
   
-## Requisitos  
- **Cabeçalho:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxwin. h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md)
+ [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)
+
+

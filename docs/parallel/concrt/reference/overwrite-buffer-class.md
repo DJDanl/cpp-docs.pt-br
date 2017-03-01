@@ -1,98 +1,337 @@
 ---
-title: "Classe overwrite_buffer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::overwrite_buffer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe overwrite_buffer"
+title: Classe overwrite_buffer | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::overwrite_buffer
+dev_langs:
+- C++
+helpviewer_keywords:
+- overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
 caps.latest.revision: 22
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe overwrite_buffer
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 02a4968ef88d8a6181a4d5412f894dce100ba7b3
+ms.lasthandoff: 02/25/2017
 
-Um bloco da mensagem de `overwrite_buffer` é uma para mais idiomas de destino, várias origem, `propagator_block` ordenado capaz de armazenar uma única mensagem por vez.  As novas mensagens substituem tinham anteriormente.  
+---
+# <a name="overwritebuffer-class"></a>Classe overwrite_buffer
+Um `overwrite_buffer` bloco de mensagens é um destino de vários com várias fontes, ordenada `propagator_block` capaz de armazenar uma única mensagem por vez. Novas mensagens substituem aqueles mantido anteriormente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<class T>
+class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>, multi_link_registry<ISource<T>>>;
 ```  
-template<  
-   class _Type  
->  
-class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<_Type>>, multi_link_registry<ISource<_Type>>>;  
-```  
   
-#### Parâmetros  
- `_Type`  
- O tipo de carga útil de mensagens armazenadas e propagadas pelo buffer.  
+#### <a name="parameters"></a>Parâmetros  
+ `T`  
+ O tipo de carga de mensagens armazenadas e propagada pelo buffer.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor overwrite\_buffer::overwrite\_buffer](../Topic/overwrite_buffer::overwrite_buffer%20Constructor.md)|Sobrecarregado.  Constrói um bloco da mensagem de `overwrite_buffer` .|  
-|[Destruidor overwrite\_buffer::~overwrite\_buffer](../Topic/overwrite_buffer::~overwrite_buffer%20Destructor.md)|Destrói o bloco da mensagem de `overwrite_buffer` .|  
+|----------|-----------------|  
+|[Construtor overwrite_buffer](#ctor)|Sobrecarregado. Constrói um `overwrite_buffer` bloco de mensagens.|  
+|[~ overwrite_buffer destruidor](#dtor)|Destrói o `overwrite_buffer` bloco de mensagens.|  
   
-### Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Método overwrite\_buffer::has\_value](../Topic/overwrite_buffer::has_value%20Method.md)|Verifica se este bloco da mensagem de `overwrite_buffer` tem um valor ainda.|  
-|[Método overwrite\_buffer::value](../Topic/overwrite_buffer::value%20Method.md)|Obtém uma referência à carga atual da mensagem que está sendo armazenada no bloco da mensagem de `overwrite_buffer` .|  
-  
-### Métodos Protegidos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método overwrite\_buffer::accept\_message](../Topic/overwrite_buffer::accept_message%20Method.md)|Aceita uma mensagem que é oferecida por esse bloco da mensagem de `overwrite_buffer` , retornando uma cópia da mensagem ao chamador.|  
-|[Método overwrite\_buffer::consume\_message](../Topic/overwrite_buffer::consume_message%20Method.md)|Consome uma mensagem anteriormente oferecida pelo bloco da mensagem de `overwrite_buffer` e reservada pelo destino, retornando uma cópia da mensagem ao chamador.|  
-|[Método overwrite\_buffer::link\_target\_notification](../Topic/overwrite_buffer::link_target_notification%20Method.md)|Um retorno de chamada que notifica que um novo destino esteve vinculado a esse bloco da mensagem de `overwrite_buffer` .|  
-|[Método overwrite\_buffer::propagate\_message](../Topic/overwrite_buffer::propagate_message%20Method.md)|Passa de forma assíncrona uma mensagem de um bloco de `ISource` a esse bloco da mensagem de `overwrite_buffer` .  É invocado pelo método de `propagate` , quando chamado por um bloco de origem.|  
-|[Método overwrite\_buffer::propagate\_to\_any\_targets](../Topic/overwrite_buffer::propagate_to_any_targets%20Method.md)|Coloca `message``_PMessage` do bloco da mensagem de `overwrite_buffer` e oferece\-o em todos os destinos vinculados.|  
-|[Método overwrite\_buffer::release\_message](../Topic/overwrite_buffer::release_message%20Method.md)|Libera uma reserva anterior da mensagem. \(Substitui [source\_block::release\_message](../Topic/source_block::release_message%20Method.md).\)|  
-|[Método overwrite\_buffer::reserve\_message](../Topic/overwrite_buffer::reserve_message%20Method.md)|Reserva uma mensagem oferecida anteriormente por esse bloco da mensagem de `overwrite_buffer` . \(Substitui [source\_block::reserve\_message](../Topic/source_block::reserve_message%20Method.md).\)|  
-|[Método overwrite\_buffer::resume\_propagation](../Topic/overwrite_buffer::resume_propagation%20Method.md)|Propagação de resumos depois que uma reserva foi liberada. \(Substitui [source\_block::resume\_propagation](../Topic/source_block::resume_propagation%20Method.md).\)|  
-|[Método overwrite\_buffer::send\_message](../Topic/overwrite_buffer::send_message%20Method.md)|Passa de forma síncrona uma mensagem de um bloco de `ISource` a esse bloco da mensagem de `overwrite_buffer` .  É invocado pelo método de `send` , quando chamado por um bloco de origem.|  
-|[Método overwrite\_buffer::supports\_anonymous\_source](../Topic/overwrite_buffer::supports_anonymous_source%20Method.md)|Substitui o método de `supports_anonymous_source` para indicar que esse bloco pode aceitar as mensagens são oferecidas a ele por uma origem que não seja vinculada. \(Substitui [ITarget::supports\_anonymous\_source](../Topic/ITarget::supports_anonymous_source%20Method.md).\)|  
+|----------|-----------------|  
+|[Método has_value](#has_value)|Verifica se este `overwrite_buffer` bloco de mensagens ainda um valor.|  
+|[Método de valor](#value)|Obtém uma referência para a carga atual da mensagem que está sendo armazenada na `overwrite_buffer` bloco de mensagens.|  
   
-## Comentários  
- Um bloco da mensagem de `overwrite_buffer` propaga out cópias da mensagem do armazenada para cada um de seus destinos.  
+### <a name="protected-methods"></a>Métodos Protegidos  
   
- Para obter mais informações, consulte [Blocos de mensagens assíncronos](../../../parallel/concrt/asynchronous-message-blocks.md).  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método accept_message](#accept_message)|Aceita uma mensagem que foi oferecida por esse `overwrite_buffer` bloco de mensagens, retornando uma cópia da mensagem para o chamador.|  
+|[Método consume_message](#consume_message)|Consome uma mensagem anteriormente oferecida pelo `overwrite_buffer` bloco de mensagens e reservado pelo destino, retornando uma cópia da mensagem para o chamador.|  
+|[Método link_target_notification](#link_target_notification)|Um retorno de chamada que notifica que um novo destino foi vinculado a este `overwrite_buffer` bloco de mensagens.|  
+|[Método propagate_message](#propagate_message)|Assincronamente transmite uma mensagem de uma `ISource` bloco a esta `overwrite_buffer` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
+|[Método propagate_to_any_targets](#propagate_to_any_targets)|Locais de `message``_PMessage` neste `overwrite_buffer` bloco de mensagens e oferece a todos os destinos vinculados.|  
+|[Método release_message](#release_message)|Libera uma reserva de mensagem anterior. (Substitui [source_block:: release_message](source-block-class.md#release_message).)|  
+|[Método reserve_message](#reserve_message)|Reserva uma mensagem anteriormente oferecida por esse `overwrite_buffer` bloco de mensagens. (Substitui [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[Método resume_propagation](#resume_propagation)|Retoma a propagação após uma reserva foi lançada. (Substitui [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[Método send_message](#send_message)|Sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `overwrite_buffer` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
+|[Método supports_anonymous_source](#supports_anonymous_source)|Substitui o `supports_anonymous_source` método para indicar que este bloco pode aceitar mensagens oferecidas a ele por uma fonte que não está vinculada. (Substitui [Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
-## Hierarquia de Herança  
- [ISource](../../../parallel/concrt/reference/isource-class.md)  
+## <a name="remarks"></a>Comentários  
+ Um `overwrite_buffer` bloco de mensagens propaga cópias de sua mensagem armazenada para cada um dos seus destinos.  
   
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+ Para obter mais informações, consulte [blocos de mensagens assíncronas](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
- [source\_block](../Topic/source_block%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [ISource](isource-class.md)  
   
- [propagator\_block](../../../parallel/concrt/reference/propagator-block-class.md)  
+ [ITarget](itarget-class.md)  
+  
+ [source_block](source-block-class.md)  
+  
+ [propagator_block](propagator-block-class.md)  
   
  `overwrite_buffer`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
   
  **Namespace:** simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe unbounded\_buffer](../Topic/unbounded_buffer%20Class.md)   
- [Classe single\_assignment](../../../parallel/concrt/reference/single-assignment-class.md)
+##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+
+ Aceita uma mensagem que foi oferecida por esse `overwrite_buffer` bloco de mensagens, retornando uma cópia da mensagem para o chamador.  
+  
+```
+virtual message<T>* accept_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_MsgId`  
+ O `runtime_object_identity` da oferecida `message` objeto.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o `message` que o chamador agora tem a propriedade do objeto.  
+  
+### <a name="remarks"></a>Comentários  
+ O `overwrite_buffer` bloco retorna cópias da mensagem para seus destinos de mensagens, em vez de transferir a propriedade da mensagem mantida atualmente.  
+  
+##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+
+ Consome uma mensagem anteriormente oferecida pelo `overwrite_buffer` bloco de mensagens e reservado pelo destino, retornando uma cópia da mensagem para o chamador.  
+  
+```
+virtual message<T>* consume_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_MsgId`  
+ O `runtime_object_identity` do `message` do objeto que está sendo consumida.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o `message` que o chamador agora tem a propriedade do objeto.  
+  
+### <a name="remarks"></a>Comentários  
+ Semelhante ao `accept`, mas sempre é precedido por uma chamada para `reserve`.  
+  
+##  <a name="a-namehasvaluea-hasvalue"></a><a name="has_value"></a>has_value 
+
+ Verifica se este `overwrite_buffer` bloco de mensagens ainda um valor.  
+  
+```
+bool has_value() const;
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `true`Se o bloco recebeu um valor de `false` caso contrário.  
+  
+##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+
+ Um retorno de chamada que notifica que um novo destino foi vinculado a este `overwrite_buffer` bloco de mensagens.  
+  
+```
+virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_PTarget`  
+ Um ponteiro para o destino vinculado recentemente.  
+  
+##  <a name="a-namedtora-overwritebuffer"></a><a name="dtor"></a>~ overwrite_buffer 
+
+ Destrói o `overwrite_buffer` bloco de mensagens.  
+  
+```
+~overwrite_buffer();
+```  
+  
+##  <a name="a-namectora-overwritebuffer"></a><a name="ctor"></a>overwrite_buffer 
+
+ Constrói um `overwrite_buffer` bloco de mensagens.  
+  
+```
+overwrite_buffer();
+
+overwrite_buffer(
+    filter_method const& _Filter);
+
+overwrite_buffer(
+    Scheduler& _PScheduler);
+
+overwrite_buffer(
+    Scheduler& _PScheduler,
+    filter_method const& _Filter);
+
+overwrite_buffer(
+    ScheduleGroup& _PScheduleGroup);
+
+overwrite_buffer(
+    ScheduleGroup& _PScheduleGroup,
+    filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Filter`  
+ Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.  
+  
+ `_PScheduler`  
+ O `Scheduler` objeto dentro do qual a propagação de tarefa para o `overwrite_buffer` bloco de mensagens está agendado.  
+  
+ `_PScheduleGroup`  
+ O `ScheduleGroup` objeto dentro do qual a propagação de tarefa para o `overwrite_buffer` bloco de mensagens está agendado. O `Scheduler` objeto usado é indicado pelo grupo de agendamento.  
+  
+### <a name="remarks"></a>Comentários  
+ O tempo de execução usa o agendador padrão se você não especificar o `_PScheduler` ou `_PScheduleGroup` parâmetros.  
+  
+ O tipo `filter_method` é um functor com assinatura `bool (T const &)` que é invocado por este `overwrite_buffer` bloco de mensagens para determinar se ele deve aceitar uma mensagem oferecida.  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ Assincronamente transmite uma mensagem de uma `ISource` bloco a esta `overwrite_buffer` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_PMessage`  
+ Um ponteiro para o `message` objeto.  
+  
+ `_PSource`  
+ Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+  
+##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+
+ Locais de `message``_PMessage` neste `overwrite_buffer` bloco de mensagens e oferece a todos os destinos vinculados.  
+  
+```
+virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_PMessage`  
+ Um ponteiro para um `message` objeto desse `overwrite_buffer` assumir a propriedade do.  
+  
+### <a name="remarks"></a>Comentários  
+ Este método substitui a mensagem atual no `overwrite_buffer` com a mensagem recentemente aceita `_PMessage`.  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ Sincronicamente transmite uma mensagem de uma `ISource` bloco a esta `overwrite_buffer` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_PMessage`  
+ Um ponteiro para o `message` objeto.  
+  
+ `_PSource`  
+ Um ponteiro para o bloco de código-fonte oferecendo a mensagem.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
+  
+##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+
+ Substitui o `supports_anonymous_source` método para indicar que este bloco pode aceitar mensagens oferecidas a ele por uma fonte que não está vinculada.  
+  
+```
+virtual bool supports_anonymous_source();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `true`como o bloco não adie oferecido mensagens.  
+  
+##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+
+ Libera uma reserva de mensagem anterior.  
+  
+```
+virtual void release_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_MsgId`  
+ O `runtime_object_identity` do `message` objeto sendo lançada.  
+  
+##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+
+ Reserva uma mensagem anteriormente oferecida por esse `overwrite_buffer` bloco de mensagens.  
+  
+```
+virtual bool reserve_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_MsgId`  
+ O `runtime_object_identity` do `message` do objeto que está sendo reservado.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `true`Se a mensagem foi reservada com êxito, `false` caso contrário.  
+  
+### <a name="remarks"></a>Comentários  
+ Depois de `reserve` é chamado, se ele retorna `true`, `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.  
+  
+##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+
+ Retoma a propagação após uma reserva foi lançada.  
+  
+```
+virtual void resume_propagation();
+```  
+  
+##  <a name="a-namevaluea-value"></a><a name="value"></a>valor 
+
+ Obtém uma referência para a carga atual da mensagem que está sendo armazenada na `overwrite_buffer` bloco de mensagens.  
+  
+```
+T value();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A carga da mensagem atualmente armazenada.  
+  
+### <a name="remarks"></a>Comentários  
+ O valor armazenado na `overwrite_buffer` pode alterar imediatamente após esse método retorna. Esse método aguardará até que uma mensagem chega se nenhuma mensagem estiver atualmente armazenada na `overwrite_buffer`.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade](concurrency-namespace.md)   
+ [Classe unbounded_buffer](unbounded-buffer-class.md)   
+ [Classe single_assignment](single-assignment-class.md)
+

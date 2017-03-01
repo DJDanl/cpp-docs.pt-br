@@ -1,55 +1,72 @@
 ---
-title: "Configura&#231;&#245;es do aplicativo, Assistente de DLL MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.dll.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente de DLL MFC, configurações de aplicativo"
+title: "Configurações do aplicativo, Assistente de DLL MFC | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.dll.appset
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Configura&#231;&#245;es do aplicativo, Assistente de DLL MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: df1e3de3e1548fe4c4c340a30127d9916998ba64
+ms.lasthandoff: 02/25/2017
 
-Use esta página do assistente da DLL MFC para criar e adicionar recursos básicos para um novo projeto da DLL MFC.  
+---
+# <a name="application-settings-mfc-dll-wizard"></a>Configurações do aplicativo, Assistente de DLL MFC
+Use esta página do Assistente de DLL MFC para criar e adicionar recursos básicos para um novo projeto de DLL do MFC.  
   
-## Tipo DLL  
- Selecione o tipo de DLL que deseja criar.  
+## <a name="dll-type"></a>Tipo DLL  
+ Selecione o tipo da DLL que você deseja criar.  
   
- **Regular DLL using shared MFC DLL**  
- Selecione esta opção para vincular a biblioteca MFC ao programa como uma DLL compartilhado.  Usando esta opção, você não pode compartilhar objetos MFC entre o DLL e o aplicativo de chamada.  O programa faz chamadas na biblioteca MFC em tempo de execução.  Essa opção reduz os requisitos de disco e de memória do programa se é composto de vários arquivos de execução que usam a biblioteca MFC.  O Win32 e programas MFC podem chamar funções no DLL.  Você deverá redistribuir a DLL MFC com esse tipo de projeto.  
+ **DLL normal usando compartilhado DLL do MFC**  
+ Selecione esta opção para vincular a biblioteca MFC para o programa como uma DLL compartilhada. Usando essa opção, é possível compartilhar objetos MFC entre sua DLL e o aplicativo de chamada. O programa faz chamadas para a biblioteca MFC em tempo de execução. Essa opção reduz os requisitos de disco e memória do seu programa se ele é composto de vários arquivos de execução que usam a biblioteca MFC. Programas Win32 e no MFC podem chamar funções em sua DLL. Você deve redistribuir o DLL do MFC com esse tipo de projeto.  
   
- **Regular DLL with MFC statically linked**  
- Selecione esta opção para vincular estaticamente seu programa à biblioteca MFC em tempo de compilação.  O Win32 e programas MFC podem chamar funções no DLL.  Quando esta opção aumentar o tamanho do programa, não precisará redistribuir a DLL MFC com esse tipo de projeto.  Você não pode compartilhar objetos MFC entre o DLL e o aplicativo de chamada.  
+ **DLL regular com MFC vinculados estaticamente**  
+ Selecione esta opção para vincular seu programa estaticamente a biblioteca MFC em tempo de compilação. Programas Win32 e no MFC podem chamar funções em sua DLL. Embora essa opção aumenta o tamanho do seu programa, você não precisa redistribuir a DLL do MFC com esse tipo de projeto. Você não pode compartilhar objetos MFC entre sua DLL e o aplicativo de chamada.  
   
- **MFC extension DLL**  
- Selecione esta opção para que seu programa para fazer em tempo de execução chama a biblioteca MFC, e se você quiser compartilhar objetos MFC entre o DLL e o aplicativo de chamada.  Essa opção reduz os requisitos de disco e de memória do programa, se é composto de vários arquivos executáveis que usam a biblioteca MFC.  Somente os programas de MFC podem chamar funções no DLL.  Você deverá redistribuir a DLL MFC com esse tipo de projeto.  
+ **DLL de extensão do MFC**  
+ Selecione esta opção se você deseja que o programa para fazer chamadas para a biblioteca MFC em tempo de execução e se você quiser compartilhar objetos MFC entre sua DLL e o aplicativo de chamada. Essa opção reduz os requisitos de disco e memória do programa, se ele é composto de vários arquivos executáveis que usam a biblioteca MFC. Somente os programas MFC podem chamar funções em sua DLL. Você deve redistribuir o DLL do MFC com esse tipo de projeto.  
   
-## Recursos adicionais  
- Selecione se o DLL MFC deve oferecer suporte à automação e se deve dar suporte aos soquetes do windows.  
+## <a name="additional-features"></a>Recursos adicionais  
+ Selecione se a DLL do MFC deve dar suporte a automação e se ele deve oferecer suporte a Windows sockets.  
   
  **Automação**  
- Selecione **Automação** para permitir que o programa manipular os objetos implementados em outro programa.  Selecione **Automação** também expõe o programa a outros clientes de automação.  Consulte [Automação](../../mfc/automation.md) para obter mais informações.  
+ Selecione **automação** para permitir que seu programa manipular objetos implementados em outro programa. Selecionando **automação** também expõe seu programa para outros clientes de automação. Consulte [automação](../../mfc/automation.md) para obter mais informações.  
   
- **Windows sockets**  
- Selecione esta opção para indicar que o programa oferece suporte aos soquetes do windows.  Soquetes do windows que permitem escrever programas que se comunicam pelas redes TCP\/IP.  
+ **Soquetes do Windows**  
+ Selecione esta opção para indicar que o programa oferece suporte ao Windows sockets. Soquetes do Windows permitem que você escrever programas que se comunicam através de redes TCP/IP.  
   
- Quando o DLL MFC com suporte de soquetes do windows é criado, [CWinApp::InitInstance](../Topic/CWinApp::InitInstance.md) inicializa o suporte para soquetes e o arquivo de cabeçalho StdAfx.h MFC inclui AfxSock.h.  
+ Quando a DLL do MFC com o Windows sockets suporte é criado, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) inicializa o suporte para soquetes e o arquivo de cabeçalho Stdafx. H do MFC inclui AfxSock.h.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assistente de DLL MFC](../../mfc/reference/mfc-dll-wizard.md)   
- [Criando um projeto DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
+ [Criando um projeto de DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
+
+

@@ -1,59 +1,75 @@
 ---
-title: "Estrutura ABCFLOAT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ABCFLOAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura ABCFLOAT"
+title: Estrutura ABCFLOAT | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ABCFLOAT
+dev_langs:
+- C++
+helpviewer_keywords:
+- ABCFLOAT structure
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
 caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura ABCFLOAT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: dbeece873e4c6b8b314d13db75226f6d8db0b2ed
+ms.lasthandoff: 02/25/2017
 
-A estrutura de `ABCFLOAT` contém as larguras da, B, c e 2.0 de um caractere da fonte.  
+---
+# <a name="abcfloat-structure"></a>Estrutura ABCFLOAT
+O `ABCFLOAT` estrutura contém as larguras de A, B e C de um caractere de fonte.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      typedef struct _ABCFLOAT { /* abcf */  
-   FLOAT abcfA;  
-   FLOAT abcfB;  
-   FLOAT abcfC;  
+typedef struct _ABCFLOAT { /* abcf */  
+    FLOAT abcfA;  
+    FLOAT abcfB;  
+    FLOAT abcfC;  
 } ABCFLOAT;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *abcfA*  
- Especifica o espaçamento do caractere.  Espaçamento de é a distância a ser adicionado à posição atual antes de chamar o glifo do caractere.  
+ Especifica o espaçamento de um do caractere. O espaçamento de um é a distância para adicionar à posição atual antes do glifo de caracteres de desenho.  
   
  *abcfB*  
- Especifica o espaçamento de B de caractere.  O espaçamento de B é a largura da parte desenhada de glifo de caractere.  
+ Especifica o espaçamento B do caractere. O espaçamento de B é a largura da parte desenhado de glifo de caracteres.  
   
  *abcfC*  
- Especifica espaço C de caractere.  Espaço C é a distância a ser adicionado à posição atual fornecer espaço em branco à direita do glifo de caractere.  
+ Especifica o espaçamento C do caractere. O espaçamento de C é a distância para adicionar à posição atual para fornecer espaço em branco à direita do glifo caracteres.  
   
-## Comentários  
- As larguras da, B, c e 2.0 são medidas ao longo da linha de base da fonte.  O incremento de caractere \(largura total\) de um caractere é a soma dos espaços da, B, c e 2.0.  O ou Ao espaço de C podem ser negativo indicar underhangs ou saliências.  
+## <a name="remarks"></a>Comentários  
+ As larguras de A, B e C são medidas ao longo da linha de base da fonte. O incremento de caractere (largura total) de um caractere é a soma dos espaços de A, B e C. A ou o espaço de C pode ser negativo para indicar underhangs ou overhangs.  
   
-## Requisitos  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** wingdi  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../Topic/CDC::GetCharABCWidths.md)
+ [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
+
+

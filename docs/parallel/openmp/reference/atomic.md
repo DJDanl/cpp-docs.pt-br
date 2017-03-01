@@ -1,49 +1,64 @@
 ---
-title: "atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atomic OpenMP directive"
+title: "atômicos | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic
+dev_langs:
+- C++
+helpviewer_keywords:
+- atomic OpenMP directive
 ms.assetid: 275e0338-cf2f-4525-97b5-696250000df7
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# atomic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bda7605e611aeac0e3c03def934acf2303a95d3b
+ms.lasthandoff: 02/25/2017
 
-Especifica que um local de memória que será atualizado atomicamente.  
+---
+# <a name="atomic"></a>atomic
+Especifica que um local de memória que será atualizado automaticamente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma omp atomic  
    expression  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `expression`  
- A instrução que contém o lvalue cuja localização de memória que você deseja proteger contra várias gravações.  Para obter mais informações sobre formulários de expressão legal, consulte a especificação do OpenMP.  
+ A instrução que contém o l-value cujo local de memória que você deseja proteger contra várias gravações. Para obter mais informações sobre formulários de expressão legal, consulte a especificação de OpenMP.  
   
-## Comentários  
- O `atomic` diretiva oferece suporte a cláusulas sem OpenMP.  
+## <a name="remarks"></a>Comentários  
+ A `atomic` diretiva oferece suporte a nenhum cláusulas OpenMP.  
   
- Para obter mais informações, consulte [2.6.4 atomic Construct](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Para obter mais informações, consulte [2.6.4 atômica construir](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_atomic.cpp  
@@ -64,6 +79,9 @@ int main() {
 }  
 ```  
   
-  **Número de segmentos: 10**   
-## Consulte também  
+```Output  
+Number of threads: 10  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

@@ -1,37 +1,51 @@
 ---
-title: "Estrutura NCCALCSIZE_PARAMS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NCCALCSIZE_PARAMS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura NCCALCSIZE_PARAMS"
+title: Estrutura NCCALCSIZE_PARAMS | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NCCALCSIZE_PARAMS
+dev_langs:
+- C++
+helpviewer_keywords:
+- NCCALCSIZE_PARAMS structure
 ms.assetid: 3424cd9f-806a-4089-82fb-414187589edf
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura NCCALCSIZE_PARAMS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 88c25fd5e5862d5f0954ae853442c66eaf7320c8
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="nccalcsizeparams-structure"></a>Estrutura NCCALCSIZE_PARAMS
 O `NCCALCSIZE_PARAMS` estrutura contém informações que um aplicativo pode usar durante o processamento de `WM_NCCALCSIZE` mensagem para calcular o tamanho, posição e conteúdo válido da área do cliente de uma janela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
- 
-    typedef struct tagNCCALCSIZE_PARAMS {  
+typedef struct tagNCCALCSIZE_PARAMS {  
     RECT rgrc[3];  
     PWINDOWPOS lppos;  
 } NCCALCSIZE_PARAMS;  
@@ -49,5 +63,6 @@ O `NCCALCSIZE_PARAMS` estrutura contém informações que um aplicativo pode usa
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnNcCalcSize](../Topic/CWnd%20Class.md#OnNcCalcSize)
+ [CWnd::OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)
+
 

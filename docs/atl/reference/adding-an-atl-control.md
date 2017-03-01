@@ -1,40 +1,55 @@
 ---
-title: "Adicionando um controle de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Projetos de ATL, adicionando controles"
-  - "controles [ATL], adicionando a projetos"
+title: Adicionando um controle ATL | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding controls
+- controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
 caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Adicionando um controle de ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 28353386bf172bb4fdca595c7e8b2b724e5dc9d6
+ms.lasthandoff: 02/25/2017
 
-Use o assistente para adicionar um objeto de interface do usuário a um projeto que suporta interface para todos os possíveis contêiner.  Para suportar essas interfaces, o projeto deve ter sido criado como um aplicativo de ATL ou como um aplicativo MFC que contém o suporte de ATL.  Você pode usar [Assistente de projeto de ATL](../Topic/ATL%20Project%20Wizard.md) para criar um aplicativo de ATL, ou [adicionar um objeto de ATL ao seu aplicativo MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementar o suporte de ATL para um aplicativo MFC.  
+---
+# <a name="adding-an-atl-control"></a>Adicionando um controle ATL
+Use este assistente para adicionar um objeto de interface de usuário a um projeto que oferece suporte a interfaces para todos os contêineres potenciais. Para oferecer suporte a essas interfaces, o projeto deve ter sido criado como um aplicativo ATL ou como um aplicativo do MFC que contém suporte ATL. Você pode usar o [ATL Project Wizard](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, ou [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte do ATL para um aplicativo MFC.  
   
-### Para adicionar um controle de ATL ao seu projeto  
+### <a name="to-add-an-atl-control-to-your-project"></a>Para adicionar um controle ATL ao seu projeto  
   
-1.  Em **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](http://msdn.microsoft.com/pt-br/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique com o botão direito do mouse no nome do projeto ao qual você deseja adicionar o objeto simples de ATL.  
+1.  No **Solution Explorer** ou [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique no nome do projeto para o qual você deseja adicionar o ATL simple object.  
   
-2.  Clique **Adicionar** do menu de atalho, clique em **Adicionar Classe**.  
+2.  Clique em **adicionar** o menu de atalho e clique **Adicionar classe**.  
   
-3.  Em a caixa de diálogo de [Adicionar Classe](../../ide/add-class-dialog-box.md) , no painel de modelos, clique em **Controle do ATL**, e clique em **Adicionar** para exibir [Assistente de controle de ATL](../../atl/reference/atl-control-wizard.md).  
+3.  No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel de modelos, clique em **controle ATL**e, em seguida, clique em **adicionar** para exibir o [Assistente de controle ATL](../../atl/reference/atl-control-wizard.md).  
   
- Usando **Assistente de controle de ATL**, você pode criar um dos três tipos de controles:  
+ Usando o **Assistente de controle ATL**, você pode criar um dos três tipos de controles:  
   
 -   Um controle padrão  
   
@@ -42,9 +57,11 @@ Use o assistente para adicionar um objeto de interface do usuário a um projeto 
   
 -   Um controle DHTML  
   
- Além de isso, você pode reduzir o tamanho do controle e remover as interfaces que não são usadas pela maioria de contêiner **controle mínimo  \*\*\*** selecionando na página de **Opções** do assistente.  
+ Além disso, você pode reduzir o tamanho do controle e remover interfaces que não são usadas pela maioria dos contêineres selecionando **controle mínimo** sobre o **opções** página do assistente.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade para o controle composto](../../atl/adding-functionality-to-the-composite-control.md)   
- [Fundamentos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire Sample](http://msdn.microsoft.com/pt-br/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [Conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Exemplo de ATLFire](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+
+

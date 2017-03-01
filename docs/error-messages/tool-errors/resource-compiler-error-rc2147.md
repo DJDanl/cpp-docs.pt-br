@@ -1,36 +1,51 @@
 ---
-title: "Erro RC2147 (compilador de recurso) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2147"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2147"
+title: RC2147 de erro do compilador de recurso | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- RC2147
+dev_langs:
+- C++
+helpviewer_keywords:
+- RC2147
 ms.assetid: 09974f06-1731-4e70-b373-f9218e0ee8d9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro RC2147 (compilador de recurso)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f7f223883ff2009f1ff766702c443cd42a95300d
+ms.lasthandoff: 02/25/2017
 
-ID de SUBLANGUAGE não é um número  
+---
+# <a name="resource-compiler-error-rc2147"></a>Erro RC2147 (compilador de recurso)
+Não é um número de identificação de SUBIDIOMA  
   
- O valor da ID de SUBLANGUAGE deve ser um número.  
+ O valor da ID de SUBIDIOMA deve ser um número.  
   
- A instrução de **IDIOMA** deve usar a seguinte sintaxe:  
+ O **idioma** instrução deve usar a sintaxe a seguir:  
   
- *primary\_language\_ID de* **IDIOMA**,*secondary\_language\_ID*  
+ **IDIOMA** *primary_language_ID*,*secondary_language_ID*  
   
- As IDs de SUBLANGUAGE válidos são definidos como as constantes de **SUBLANG\_** em WINNT.h arquivo.
+ IDs de SUBIDIOMA válidas são definidos como **SUBLANG_** constantes no arquivo Winnt.

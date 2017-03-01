@@ -1,76 +1,106 @@
 ---
-title: "Classe de CMFCSpinButtonCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CMFCSpinButtonCtrl"
+title: Classe CMFCSpinButtonCtrl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCSpinButtonCtrl class
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 caps.latest.revision: 25
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CMFCSpinButtonCtrl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: c1832062461f2ed53df07a72428089179ed493ab
+ms.lasthandoff: 02/25/2017
 
-A classe de `CMFCSpinButtonCtrl` suporta um gerente visual que desenhar um controle de botão de rotação.  
+---
+# <a name="cmfcspinbuttonctrl-class"></a>Classe CMFCSpinButtonCtrl
+O `CMFCSpinButtonCtrl` classe oferece suporte a um Gerenciador visual que desenha um controle de botão de rotação.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Construtor padrão.|  
 |`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruidor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CMFCSpinButtonCtrl::OnDraw](../Topic/CMFCSpinButtonCtrl::OnDraw.md)|Repintura o controle atual do botão de rotação.|  
+|----------|-----------------|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Redesenha o controle de botão de rotação atual.|  
   
-## Comentários  
- Para usar um gerente visual para desenhar um botão de rotação controle em seu aplicativo, substituem todas as instâncias da classe de `CSpinButtonCtrl` com a classe de `CMFCSpinButtonCtrl` .  
+## <a name="remarks"></a>Comentários  
+ Para usar um Gerenciador visual para desenhar um controle de botão de rotação em seu aplicativo, substitua todas as instâncias do `CSpinButtonCtrl` de classe com o `CMFCSpinButtonCtrl` classe.  
   
-## Exemplo  
- O exemplo a seguir demonstra como criar um objeto da classe de `CMFCSpinButtonCtrl` e usar o método de `Create` .  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como criar um objeto de `CMFCSpinButtonCtrl` classe e usar seu `Create` método.  
   
- [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/CPP/cmfcspinbuttonctrl-class_1.cpp)]  
+ [!code-cpp[25 NVC_MFC_RibbonApp](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)  
   
  [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxspinbuttonctrl.h  
   
-## Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../Topic/MFC%20Classes.md)   
- [Classe de CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+##  <a name="a-nameondrawa--cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+ Redesenha o controle de botão de rotação atual.  
+  
+```  
+virtual void OnDraw(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+### <a name="remarks"></a>Comentários  
+ O framework chama o `CMFCSpinButtonCtrl::OnPaint` método para manipular o [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) mensagem e que método por sua vez chama isso `CMFCSpinButtonCtrl::OnDraw` método. Substitui esse método para personalizar o modo como o framework desenha o controle de botão de rotação.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+

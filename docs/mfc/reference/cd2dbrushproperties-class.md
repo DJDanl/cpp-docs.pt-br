@@ -1,60 +1,103 @@
 ---
-title: "Classe de CD2DBrushProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CD2DBrushProperties"
-  - "afxrendertarget/CD2DBrushProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CD2DBrushProperties"
+title: Classe CD2DBrushProperties | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CD2DBrushProperties
+- afxrendertarget/CD2DBrushProperties
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DBrushProperties class
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
 caps.latest.revision: 18
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CD2DBrushProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9f1a166950acda1f8341b58b82288d6f5cf9aeef
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="cd2dbrushproperties-class"></a>Classe CD2DBrushProperties
 Um wrapper para `D2D1_BRUSH_PROPERTIES`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CD2DBrushProperties::CD2DBrushProperties](../Topic/CD2DBrushProperties::CD2DBrushProperties.md)|Sobrecarregado.  Cria uma estrutura de `CD2D_BRUSH_PROPERTIES`|  
-  
-### Métodos protegidos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CD2DBrushProperties::CommonInit](../Topic/CD2DBrushProperties::CommonInit.md)|Inicializa o objeto|  
+|----------|-----------------|  
+|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Sobrecarregado. Cria um `CD2D_BRUSH_PROPERTIES` estrutura|  
   
-## Hierarquia de herança  
+### <a name="protected-methods"></a>Métodos Protegidos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBrushProperties::CommonInit](#commoninit)|Inicializa o objeto|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `D2D1_BRUSH_PROPERTIES`  
   
- [CD2DBrushProperties](../../mfc/reference/cd2dbrushproperties-class.md)  
+ `CD2DBrushProperties`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxrendertarget.h  
   
-## Consulte também  
- [Classes](../Topic/MFC%20Classes.md)
+##  <a name="a-namecd2dbrushpropertiesa--cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties  
+ Cria uma estrutura de CD2D_BRUSH_PROPERTIES  
+  
+```  
+CD2DBrushProperties();  
+CD2DBrushProperties(FLOAT _opacity);
+
+ 
+CD2DBrushProperties(
+    D2D1_MATRIX_3X2_F _transform,  
+    FLOAT _opacity = 1.);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_opacity`  
+ A base opacidade do pincel. O valor padrão é 1.0.  
+  
+ `_transform`  
+ A transformação a ser aplicada ao Pincel  
+  
+##  <a name="a-namecommoninita--cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrushProperties::CommonInit  
+ Inicializa o objeto  
+  
+```  
+void CommonInit();
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classes](../../mfc/reference/mfc-classes.md)
+

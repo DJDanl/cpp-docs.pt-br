@@ -1,48 +1,63 @@
 ---
-title: "omp_get_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_dynamic OpenMP function"
+title: omp_get_dynamic | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_get_dynamic
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_get_dynamic OpenMP function
 ms.assetid: efa843c5-7266-4a75-8db3-22992663d9db
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_get_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bd026e3370d7f71626d63f285deba132c7a27987
+ms.lasthandoff: 02/25/2017
 
-Retorna um valor que indica se o número de threads disponíveis na região paralela subseqüente pode ser ajustado pelo tempo de execução.  
+---
+# <a name="ompgetdynamic"></a>omp_get_dynamic
+Retorna um valor que indica se o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int omp_get_dynamic();  
 ```  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Se for diferente de zero, o ajuste dinâmico de threads está habilitado.  
   
-## Comentários  
- Ajuste dinâmico de segmentos é especificado com [omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) e [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
+## <a name="remarks"></a>Comentários  
+ Ajuste dinâmico de segmentos é especificado com [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) e [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
   
- Para obter mais informações, consulte [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
+ Para obter mais informações, consulte [3.1.7 função omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   
-## Exemplo  
- Consulte [omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) para obter um exemplo do uso de `omp_get_dynamic`.  
+## <a name="example"></a>Exemplo  
+ Consulte [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) para obter um exemplo de como usar `omp_get_dynamic`.  
   
-## Consulte também  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções](../../../parallel/openmp/reference/openmp-functions.md)

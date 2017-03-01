@@ -1,36 +1,51 @@
 ---
-title: "Erro fatal U1099 (NMAKE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1099"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1099"
+title: NMAKE Erro Fatal U1099 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- U1099
+dev_langs:
+- C++
+helpviewer_keywords:
+- U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal U1099 (NMAKE)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 374d2ad4f13dac829e7b602fe8456c2e3521f69f
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="nmake-fatal-error-u1099"></a>Erro fatal U1099 (NMAKE)
 estouro de pilha  
   
- O makefile que está sendo processado era muito complexo da alocação de pilhas atual em NMAKE.  NMAKE tem uma alocação de 0x3000 \(12K\).  
+ O makefile processado era muito complexo para a alocação de pilha atual em NMAKE. NMAKE tem uma alocação de 0x3000 (12K).  
   
- Para aumentar a alocação de pilha de NMAKE, execute o utilitário de [editbin \/stack](../../build/reference/stack.md) com um padrão maior de pilhas:  
+ Para aumentar a alocação da pilha do NMAKE, execute o [editbin /stack](../../build/reference/stack.md) utilitário com uma opção de pilha maior:  
   
- **editbin \/STACK:reserve NMAKE.EXE**  
+ **editbin /STACK:reserve NMAKE. EXE**  
   
- onde *a reserva* é um número maior que a alocação de pilhas atual em NMAKE.
+ onde *reservar* é um número maior que a alocação de pilha atual em NMAKE.

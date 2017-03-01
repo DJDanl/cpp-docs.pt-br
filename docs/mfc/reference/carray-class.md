@@ -1,116 +1,548 @@
 ---
-title: "Classe de CArray | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrizes [C++], classes"
-  - "Classe de CArray"
-  - "classes de coleção, baseado modelo-"
-  - "modelos, classes de coleção"
+title: Classe CArray | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CArray class
+- arrays [C++], classes
+- templates, collection classes
+- collection classes, template-based
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 caps.latest.revision: 33
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CArray
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: bac8e08540ffead565d1097c6ef1efcae5e606c2
+ms.lasthandoff: 02/25/2017
 
-Suporta matrizes que são como matrizes de C, mas pode crescer e reduz dinamicamente como necessário.  
+---
+# <a name="carray-class"></a>Classe CArray
+Oferece suporte a matrizes que são como matrizes de C, mas podem reduzir e dinamicamente cresça conforme necessário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template < class TYPE, class ARG_TYPE = const TYPE& >   
-class CArray :   
-   public CObject  
+template <class TYPE, class ARG_TYPE = const TYPE&>  
+class CArray : public CObject  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `TYPE`  
- O parâmetro do modelo que especifica o tipo de objetos armazenados na matriz.  `TYPE` é um parametro que é retornado por `CArray`.  
+ Parâmetro de modelo que especifica o tipo de objetos armazenados na matriz. `TYPE`é um parâmetro que é retornado pelo `CArray`.  
   
- `ARG` *\_* `TYPE`  
- O parâmetro do modelo que especifica o tipo de argumento que é usada para acessar objetos armazenados na matriz.  Geralmente uma referência a `TYPE`.  `ARG_TYPE` é um parametro que é passado para `CArray`.  
+ `ARG` *_* `TYPE`  
+ Parâmetro de modelo que especifica o tipo de argumento que é usado para acessar objetos armazenados na matriz. Geralmente uma referência a `TYPE`. `ARG_TYPE`é um parâmetro que é passado para `CArray`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CArray::CArray](../Topic/CArray::CArray.md)|Constrói uma matriz vazia.|  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CArray::Add](../Topic/CArray::Add.md)|Adiciona um elemento ao final da matriz; aumenta a matriz se necessário.|  
-|[CArray::Append](../Topic/CArray::Append.md)|Acrescenta uma matriz a outra matriz; aumenta a matriz se necessário|  
-|[CArray::Copy](../Topic/CArray::Copy.md)|Copia uma matriz a outra matriz; aumenta a matriz se necessário.|  
-|[CArray::ElementAt](../Topic/CArray::ElementAt.md)|Retorna uma referência temporária ao ponteiro de elemento dentro da matriz.|  
-|[CArray::FreeExtra](../Topic/CArray::FreeExtra.md)|Qualquer libera a memória não usado acima do limite superior atual.|  
-|[CArray::GetAt](../Topic/CArray::GetAt.md)|Retorna o valor em um índice especificado.|  
-|[CArray::GetCount](../Topic/CArray::GetCount.md)|Obtém o número de elementos em esta matriz.|  
-|[CArray::GetData](../Topic/CArray::GetData.md)|Permite acesso aos elementos na matriz.  Pode ser **NULO**.|  
-|[CArray::GetSize](../Topic/CArray::GetSize.md)|Obtém o número de elementos em esta matriz.|  
-|[CArray::GetUpperBound](../Topic/CArray::GetUpperBound.md)|Retorna o índice válido maior.|  
-|[CArray::InsertAt](../Topic/CArray::InsertAt.md)|Insere elemento \(ou todos os elementos em outros matriz\) em um índice especificado.|  
-|[CArray::IsEmpty](../Topic/CArray::IsEmpty.md)|Determina se a matriz está vazia.|  
-|[CArray::RemoveAll](../Topic/CArray::RemoveAll.md)|Remove todos os elementos da matriz.|  
-|[CArray::RemoveAt](../Topic/CArray::RemoveAt.md)|Remove um elemento em um índice específico.|  
-|[CArray::SetAt](../Topic/CArray::SetAt.md)|Defina o valor para um índice dado; matriz não permitida crescer.|  
-|[CArray::SetAtGrow](../Topic/CArray::SetAtGrow.md)|Defina o valor para um índice dado; aumenta a matriz se necessário.|  
-|[CArray::SetSize](../Topic/CArray::SetSize.md)|Define o número de elementos a serem contidos em esta matriz.|  
+|----------|-----------------|  
+|[CArray::CArray](#carray)|Constrói uma matriz vazia.|  
   
-### Operadores públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CArray::operator](../Topic/CArray::operator.md)|Obtém ou define o elemento no índice especificado.|  
+|----------|-----------------|  
+|[CArray::Add](#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|  
+|[CArray::Append](#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário|  
+|[CArray::Copy](#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|  
+|[CArray::ElementAt](#elementat)|Retorna uma referência temporária ao ponteiro do elemento dentro da matriz.|  
+|[CArray::FreeExtra](#freeextra)|Libera toda memória não usada acima do limite superior atual.|  
+|[CArray::GetAt](#getat)|Retorna o valor a um determinado índice.|  
+|[CArray::GetCount](#getcount)|Obtém o número de elementos nesta matriz.|  
+|[CArray::GetData](#getdata)|Permite acesso aos elementos na matriz. Pode ser **nulo**.|  
+|[CArray::GetSize](#getsize)|Obtém o número de elementos nesta matriz.|  
+|[CArray::GetUpperBound](#getupperbound)|Retorna o maior índice válido.|  
+|[CArray::InsertAt](#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|  
+|[CArray::IsEmpty](#isempty)|Determina se a matriz está vazia.|  
+|[CArray::RemoveAll](#removeall)|Remove todos os elementos dessa matriz.|  
+|[CArray::RemoveAt](#removeat)|Remove um elemento a um índice específico.|  
+|[CArray::SetAt](#setat)|Define o valor de um determinado índice; não é permitido à matriz aumentar.|  
+|[CArray::SetAtGrow](#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|  
+|[CArray::SetSize](#setsize)|Define o número de elementos a ser contido nesta matriz.|  
   
-## Comentários  
- Matriz de índices sempre início na posição 0.  Você pode decidir se corrigir o limite superior ou ativar a matriz para expandir quando você adiciona elementos após o limite atual.  A memória é atribuída continuamente ao limite superior, mesmo se alguns elementos são nulos.  
+### <a name="public-operators"></a>Operadores Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[operator&#91;&#93;](#operator_at)|Define ou obtém o elemento no índice especificado.|  
+  
+## <a name="remarks"></a>Comentários  
+ Índices de matriz iniciam sempre na posição 0. Você pode optar por corrigir o limite superior ou habilitar a matriz expandir quando você adiciona elementos anteriores atual associado. Memória é alocada continuamente ao limite superior, mesmo que alguns elementos são nulos.  
   
 > [!NOTE]
->  A maioria dos métodos de redimensionamento um objeto de `CArray` ou para adicionar elementos uso [memcpy\_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) aos elementos de animação.  Este é um problema pois `memcpy_s` não é compatível com qualquer objeto que exigem o construtor ser chamados.  Se os itens em `CArray` não são compatíveis com `memcpy_s`, você deve criar uma nova `CArray` de tamanho apropriado.  Você deve usar [CArray::Copy](../Topic/CArray::Copy.md) e [CArray::SetAt](../Topic/CArray::SetAt.md) para preencher a nova matriz porque esses métodos usam um operador de atribuição em vez de `memcpy_s`.  
+>  A maioria dos métodos que redimensionar uma `CArray` de objeto ou adicionar elementos a ele usam [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) para mover elementos. Esse é um problema porque `memcpy_s` não é compatível com todos os objetos que exigem o construtor a ser chamado. Se os itens do `CArray` não são compatíveis com `memcpy_s`, você deve criar um novo `CArray` de tamanho apropriado. Você deve usar [CArray::Copy](#copy) e [CArray::SetAt](#setat) para preencher a matriz de novo, pois esses métodos usam um operador de atribuição em vez de `memcpy_s`.  
   
- Como com matriz de energia AC, última hora de acesso para um elemento indexado `CArray` são constantes e são independentes do tamanho da matriz.  
+ Assim como acontece com uma matriz de C, o tempo de acesso para um `CArray` elemento indexado é constante e é independente do tamanho da matriz.  
   
 > [!TIP]
->  Antes de usar uma matriz, use [SetSize](../Topic/CArray::SetSize.md) para estabelecer o tamanho e atribuir a memória para ele.  Se você não usar `SetSize`, adicione os elementos a sua matriz freqüentemente faz com que ele manipule a ser realocada e copiado.  A realocação freqüentes e copiar e são não podem fragmentar a memória.  
+>  Antes de usar uma matriz, use [SetSize](#setsize) para estabelecer seu tamanho e alocar memória para ele. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
   
- Se você precisar de um despejo dos elementos individuais em uma matriz, você deve definir o tamanho do objeto de [CDumpContext](../../mfc/reference/cdumpcontext-class.md) a 1 ou maior.  
+ Se você precisar de um despejo de elementos individuais em uma matriz, você deve definir a profundidade do [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto como 1 ou maior.  
   
- Determinadas funções de membro de essa classe chamam funções auxiliares globais que devem ser personalizadas para a maioria dos usos da classe de `CArray` .  Consulte o tópico [Auxiliares de classe de coleção](../../mfc/reference/collection-class-helpers.md) na seção de macros e de Globais MFC.  
+ Determinadas funções de membro dessa chamada de classe auxiliar global funções que devem ser personalizadas para a maioria dos usos do `CArray` classe. Consulte o tópico [auxiliares da classe de coleção](../../mfc/reference/collection-class-helpers.md) na seção Macros e globais MFC.  
   
- A derivação da classe da matriz é como a derivação da lista.  
+ Derivação de classe de matriz é semelhante à derivação de lista.  
   
  Para obter mais informações sobre como usar `CArray`, consulte o artigo [coleções](../../mfc/collections.md).  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CArray`  
   
-## Requisitos  
- `Header:` afxtempl.h  
+## <a name="requirements"></a>Requisitos  
+ `Header:`afxtempl.h  
   
-## Consulte também  
- [O exemplo COLETA MFC](../../top/visual-cpp-samples.md)   
- [Classe de CObject](../Topic/CObject%20Class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe de CObArray](../../mfc/reference/cobarray-class.md)   
+##  <a name="a-nameadda--carrayadd"></a><a name="add"></a>CArray::Add  
+ Adiciona um novo elemento ao final de uma matriz, aumentando a matriz em 1.  
+  
+```  
+INT_PTR Add(ARG_TYPE newElement);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `ARG_TYPE`  
+ Parâmetro de modelo especificando o tipo dos argumentos fazendo referência a elementos nesta matriz.  
+  
+ `newElement`  
+ O elemento a ser adicionado a essa matriz.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O índice do elemento adicionado.  
+  
+### <a name="remarks"></a>Comentários  
+ Se [SetSize](#setsize) tem sido usado com uma `nGrowBy` valor maior que 1, memória extra pode ser alocada. No entanto, o limite superior aumentam em 1 somente.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#22;](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
+  
+##  <a name="a-nameappenda--carrayappend"></a><a name="append"></a>CArray::Append  
+ Chame essa função de membro para adicionar o conteúdo de uma matriz ao final do outro.  
+  
+```  
+INT_PTR Append(const CArray& src);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ *src*  
+ Fonte dos elementos a ser anexado a uma matriz.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O índice do primeiro elemento anexado.  
+  
+### <a name="remarks"></a>Comentários  
+ As matrizes devem ser do mesmo tipo.  
+  
+ Se necessário, **Append** pode alocar memória adicional para acomodar os elementos anexados à matriz.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#23;](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
+  
+##  <a name="a-namecarraya--carraycarray"></a><a name="carray"></a>CArray::CArray  
+ Constrói uma matriz vazia.  
+  
+```  
+CArray();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ A matriz aumenta um elemento por vez.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#24;](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
+  
+##  <a name="a-namecopya--carraycopy"></a><a name="copy"></a>CArray::Copy  
+ Use esta função de membro para copiar os elementos de uma matriz para outro.  
+  
+```  
+void Copy(const CArray& src);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ *src*  
+ Fonte dos elementos a serem copiados para uma matriz.  
+  
+### <a name="remarks"></a>Comentários  
+ Chame essa função de membro para substituir os elementos de uma matriz com os elementos de outra matriz.  
+  
+ **Cópia** não liberar memória; no entanto, se necessário, **cópia** pode alocar memória adicional para acomodar os elementos copiados para a matriz.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[25 NVC_MFCCollections](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
+  
+##  <a name="a-nameelementata--carrayelementat"></a><a name="elementat"></a>CArray::ElementAt  
+ Retorna uma referência ao elemento especificado dentro da matriz temporária.  
+  
+```  
+TYPE& ElementAt(INT_PTR nIndex);  
+const TYPE& ElementAt(INT_PTR nIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nIndex`  
+ Um índice de inteiro é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma referência a um elemento de matriz.  
+  
+### <a name="remarks"></a>Comentários  
+ Ele é usado para implementar o operador de atribuição da esquerda para matrizes.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [GetSize](#getsize).  
+  
+##  <a name="a-namefreeextraa--carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra  
+ Libera qualquer memória extra alocado enquanto a matriz foi personalizada.  
+  
+```  
+void FreeExtra();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Essa função não tem efeito sobre o tamanho ou o limite superior da matriz.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [GetData](#getdata).  
+  
+##  <a name="a-namegetata--carraygetat"></a><a name="getat"></a>CArray::GetAt  
+ Retorna o elemento de matriz no índice especificado.  
+  
+```  
+TYPE& GetAt(INT_PTR nIndex);  
+const TYPE& GetAt(INT_PTR nIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ *TIPO*  
+ Parâmetro de modelo especifica o tipo dos elementos da matriz.  
+  
+ `nIndex`  
+ Um índice de inteiro é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O elemento de matriz no momento nesse índice.  
+  
+### <a name="remarks"></a>Comentários  
+ Passando um valor negativo ou um valor maior que o valor retornado por `GetUpperBound` resultará em uma declaração com falha.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#26;](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
+  
+##  <a name="a-namegetcounta--carraygetcount"></a><a name="getcount"></a>CArray::GetCount  
+ Retorna o número de elementos da matriz.  
+  
+```  
+INT_PTR GetCount() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O número de itens na matriz.  
+  
+### <a name="remarks"></a>Comentários  
+ Chame esse método para recuperar o número de elementos na matriz. Como índices são baseados em zero, o tamanho é maior que o maior índice 1. Chamar esse método gerará o mesmo resultado que o [CArray::GetSize](#getsize) método.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#27;](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
+  
+##  <a name="a-namegetdataa--carraygetdata"></a><a name="getdata"></a>CArray::GetData  
+ Use esta função de membro para obter acesso direto aos elementos em uma matriz.  
+  
+```  
+const TYPE* GetData() const; 
+TYPE* GetData();
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ *TIPO*  
+ Parâmetro de modelo especifica o tipo dos elementos da matriz.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para um elemento de matriz.  
+  
+### <a name="remarks"></a>Comentários  
+ Se nenhum elemento estiver disponível, `GetData` retorna um valor nulo.  
+  
+ Enquanto o acesso direto aos elementos de uma matriz pode ajudá-lo a trabalhar mais rapidamente, tenha cuidado ao chamar `GetData`; erros feitas diretamente afetam os elementos da sua matriz.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#28;](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
+  
+##  <a name="a-namegetsizea--carraygetsize"></a><a name="getsize"></a>CArray::GetSize  
+ Retorna o tamanho da matriz.  
+  
+```  
+INT_PTR GetSize() const;  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Como índices são baseados em zero, o tamanho é maior que o maior índice 1. Chamar esse método gerará o mesmo resultado que o [CArray::GetCount](#getcount) método.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[29 NVC_MFCCollections](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
+  
+##  <a name="a-namegetupperbounda--carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound  
+ Retorna o limite superior atual dessa matriz.  
+  
+```  
+INT_PTR GetUpperBound() const;  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Como os índices de matriz são baseadas em zero, essa função retorna um valor de 1 menor que `GetSize`.  
+  
+ A condição de **(GetUpperBound)** = -1 indica que a matriz não contém elementos.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [CArray::GetAt](#getat).  
+  
+##  <a name="a-nameinsertata--carrayinsertat"></a><a name="insertat"></a>CArray::InsertAt  
+ A primeira versão do `InsertAt` insere um elemento (ou várias cópias de um elemento) em um índice especificado em uma matriz.  
+  
+```  
+void InsertAt(
+    INT_PTR nIndex,
+    ARG_TYPE newElement,  
+    INT_PTR nCount = 1);
+ 
+void InsertAt(
+    INT_PTR nStartIndex,  
+    CArray* pNewArray);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nIndex`  
+ Um índice de inteiro pode ser maior que o valor retornado por `GetUpperBound`.  
+  
+ `ARG_TYPE`  
+ Parâmetro de modelo especificando o tipo dos elementos nesta matriz.  
+  
+ `newElement`  
+ O elemento a ser colocado nesta matriz.  
+  
+ `nCount`  
+ O número de vezes que esse elemento deve ser inserido (o padrão é 1).  
+  
+ `nStartIndex`  
+ Um índice de inteiro pode ser maior que o valor retornado por [GetUpperBound](#getupperbound).  
+  
+ `pNewArray`  
+ Outra matriz que contém os elementos a serem adicionados a essa matriz.  
+  
+### <a name="remarks"></a>Comentários  
+ No processo, ele desloca para cima (incrementando o índice) o elemento existente nesse índice, e desloca todos os elementos acima dela.  
+  
+ A segunda versão insere todos os elementos de outra `CArray` coleta, começando no `nStartIndex` posição.  
+  
+ O `SetAt` função, por outro lado, substitui um elemento da matriz especificada e não todos os elementos de deslocamento.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[30 NVC_MFCCollections](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
+  
+##  <a name="a-nameisemptya--carrayisempty"></a><a name="isempty"></a>CArray::IsEmpty  
+ Determina se a matriz está vazia.  
+  
+```  
+BOOL IsEmpty() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a matriz não contém elementos; Caso contrário, 0.  
+  
+##  <a name="a-nameoperatorata--carrayoperator-"></a><a name="operator_at"></a>CArray::operator\[\]  
+ Esses operadores subscript são conveniente substituir o [SetAt](#setat) e [GetAt](#getat) funções.  
+  
+```  
+TYPE& operator[](int_ptr nindex);  
+const TYPE& operator[](int_ptr nindex) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ *TIPO*  
+ Parâmetro de modelo especificando o tipo dos elementos nesta matriz.  
+  
+ `nIndex`  
+ Índice do elemento a ser acessado.  
+  
+### <a name="remarks"></a>Comentários  
+ O operador first, chamada para matrizes que não são **const**, pode ser usado em à direita (r-Value) ou à esquerda (l-value) de uma instrução de atribuição. A segunda chamada para **const** matrizes, pode ser usado apenas no lado direito.  
+  
+ A versão de depuração da biblioteca declara se o subscrito (tanto no lado esquerdo ou direito de uma instrução de atribuição) está fora dos limites.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#34;](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
+  
+##  <a name="a-namerelocateelementsa--carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements  
+ Realoca dados para um novo buffer quando a matriz deve aumentar ou reduzir.  
+  
+```  
+template<class TYPE, class ARG_TYPE>  
+AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
+    TYPE* pNewData,  
+    const TYPE* pData,  
+    INT_PTR nCount);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pNewData`  
+ Um novo buffer para a matriz de elementos.  
+  
+ `pData`  
+ A matriz antiga de elementos.  
+  
+ `nCount`  
+ Número de elementos na matriz antigo.  
+  
+### <a name="remarks"></a>Comentários  
+ `pNewData`sempre é grande o suficiente para manter todos os `pData` elementos.  
+  
+ O [CArray](../../mfc/reference/carray-class.md) implementação usa esse método para copiar os dados antigos para um novo buffer quando a matriz deve aumentar ou reduzir (quando [SetSize](#setsize) ou [FreeExtra](#freeextra) são chamados). A implementação padrão apenas copia os dados.  
+  
+ Para matrizes em que um elemento contém um ponteiro para um dos seus próprios membros ou outra estrutura contém um ponteiro para um dos elementos da matriz, os ponteiros não são atualizados na cópia simples. Nesse caso, você pode corrigir ponteiros implementando uma especialização de `RelocateElements` com os tipos relevantes. Você também é responsável por cópia de dados.  
+  
+##  <a name="a-nameremovealla--carrayremoveall"></a><a name="removeall"></a>CArray::RemoveAll  
+ Remove todos os elementos dessa matriz.  
+  
+```  
+void RemoveAll();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Se a matriz estiver vazia, a função ainda funciona.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCCollections&#31;](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
+  
+##  <a name="a-nameremoveata--carrayremoveat"></a><a name="removeat"></a>CArray::RemoveAt  
+ Remove um ou mais elementos, começando em um índice especificado em uma matriz.  
+  
+```  
+void RemoveAt(
+    INT_PTR nIndex,  
+    INT_PTR nCount = 1);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nIndex`  
+ Um índice de inteiro é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
+  
+ `nCount`  
+ O número de elementos a serem removidos.  
+  
+### <a name="remarks"></a>Comentários  
+ O processo, ele alterna para baixo de todos os elementos acima do elemento removido (s). Ele diminui a superior associado da matriz, mas não libera memória.  
+  
+ Se você tentar remover mais elementos que estão contidos na matriz acima do ponto de remoção, a versão de depuração da biblioteca de declarações.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[32 NVC_MFCCollections](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
+  
+##  <a name="a-namesetata--carraysetat"></a><a name="setat"></a>CArray::SetAt  
+ Define o elemento de matriz no índice especificado.  
+  
+```  
+void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nIndex`  
+ Um índice de inteiro é maior que ou igual a 0 e menor ou igual ao valor retornado por [GetUpperBound](#getupperbound).  
+  
+ `ARG_TYPE`  
+ Especifica o tipo de argumentos usados para fazer referência a elementos da matriz de parâmetro de modelo.  
+  
+ `newElement`  
+ O novo valor de elemento a ser armazenado na posição especificada.  
+  
+### <a name="remarks"></a>Comentários  
+ `SetAt`não fará com que a matriz a crescer. Use [SetAtGrow](#setatgrow) se você quiser que a matriz para crescer automaticamente.  
+  
+ Certifique-se de que o valor de índice representa uma posição válida na matriz. Se estiver fora dos limites, a versão de depuração da biblioteca de declarações.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [GetAt](#getat).  
+  
+##  <a name="a-namesetatgrowa--carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow  
+ Define o elemento de matriz no índice especificado.  
+  
+```  
+void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nIndex`  
+ Um índice de inteiro que é maior que ou igual a 0.  
+  
+ `ARG_TYPE`  
+ Especificar o tipo dos elementos na matriz de parâmetro de modelo.  
+  
+ `newElement`  
+ O elemento a ser adicionado a essa matriz. A **nulo** valor permitido.  
+  
+### <a name="remarks"></a>Comentários  
+ A matriz aumenta automaticamente quando necessário (ou seja, o limite superior é ajustado para acomodar o novo elemento).  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[33 NVC_MFCCollections](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
+  
+##  <a name="a-namesetsizea--carraysetsize"></a><a name="setsize"></a>CArray::SetSize  
+ Estabelece o tamanho de uma matriz vazia ou existente; aloca memória se necessário.  
+  
+```  
+void SetSize(
+    INT_PTR nNewSize,  
+    INT_PTR nGrowBy = -1);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nNewSize`  
+ O tamanho da matriz novo (número de elementos). Deve ser maior ou igual a 0.  
+  
+ `nGrowBy`  
+ O número mínimo de slots de elemento para alocar se um aumento de tamanho é necessário.  
+  
+### <a name="remarks"></a>Comentários  
+ Se o novo tamanho for menor que o tamanho anterior, a matriz será truncada e toda a memória não usada é liberada.  
+  
+ Use esta função para definir o tamanho da sua matriz antes de começar a usar a matriz. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
+  
+ O `nGrowBy` parâmetro afeta a alocação de memória interna enquanto a matriz está crescendo. Seu uso não afeta o tamanho da matriz conforme relatado pelo [GetSize](#getsize) e [GetUpperBound](#getupperbound). Se o valor padrão é usado, o MFC aloca memória de forma calculada para evitar a fragmentação de memória e otimizar a eficiência na maioria dos casos.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [GetData](#getdata).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Exemplo MFC COLETAR](../../visual-cpp-samples.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CObArray](../../mfc/reference/cobarray-class.md)   
  [Auxiliares da classe de coleção](../../mfc/reference/collection-class-helpers.md)
+

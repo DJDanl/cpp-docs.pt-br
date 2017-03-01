@@ -1,60 +1,114 @@
 ---
-title: "Classe de CComFakeCriticalSection | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComFakeCriticalSection"
-  - "CComFakeCriticalSection"
-  - "ATL::CComFakeCriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CComFakeCriticalSection"
+title: Classe CComFakeCriticalSection | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComFakeCriticalSection
+- CComFakeCriticalSection
+- ATL::CComFakeCriticalSection
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
 caps.latest.revision: 19
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CComFakeCriticalSection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece os mesmos métodos que [CComCriticalSection](../Topic/CComCriticalSection%20Class.md) mas não fornece uma seção crítica.  
+---
+# <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
+Essa classe fornece os mesmos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , mas não oferece uma seção crítica.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+class CComFakeCriticalSection
 ```  
   
-class CComFakeCriticalSection  
+## <a name="members"></a>Membros  
   
-```  
-  
-## Membros  
-  
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CComFakeCriticalSection::Init](../Topic/CComFakeCriticalSection::Init.md)|Não fará nada pois não há nenhuma seção crítica.|  
-|[CComFakeCriticalSection::Lock](../Topic/CComFakeCriticalSection::Lock.md)|Não fará nada pois não há nenhuma seção crítica.|  
-|[CComFakeCriticalSection::Term](../Topic/CComFakeCriticalSection::Term.md)|Não fará nada pois não há nenhuma seção crítica.|  
-|[CComFakeCriticalSection::Unlock](../Topic/CComFakeCriticalSection::Unlock.md)|Não fará nada pois não há nenhuma seção crítica.|  
+|----------|-----------------|  
+|[CComFakeCriticalSection::Init](#init)|Não fará nada, pois há uma seção crítica.|  
+|[CComFakeCriticalSection::Lock](#lock)|Não fará nada, pois há uma seção crítica.|  
+|[CComFakeCriticalSection::Term](#term)|Não fará nada, pois há uma seção crítica.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|Não fará nada, pois há uma seção crítica.|  
   
-## Comentários  
- `CComFakeCriticalSection` espelha os métodos localizados em [CComCriticalSection](../Topic/CComCriticalSection%20Class.md).  Em o entanto, `CComFakeCriticalSection` não fornece uma seção crítica; portanto, seus métodos não fazem nada.  
+## <a name="remarks"></a>Comentários  
+ `CComFakeCriticalSection`espelha os métodos encontrados em [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). No entanto, `CComFakeCriticalSection` não fornece uma seção crítica; portanto, seus métodos não fazem nada.  
   
- Normalmente, você usa `CComFakeCriticalSection` com um nome de `typedef` , `AutoCriticalSection` ou `CriticalSection`.  A o usar [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) , ou [CComMultiThreadModelNoCS](../Topic/CComMultiThreadModelNoCS%20Class.md)referência ambos esses nomes `CComFakeCriticalSection`de `typedef` .  Ao usar [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), referenciam [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) e `CComCriticalSection`, respectivamente.  
+ Normalmente, você usa `CComFakeCriticalSection` por meio de um `typedef` nomear, como `AutoCriticalSection` ou `CriticalSection`. Ao usar [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ambos `typedef` nomes de referência `CComFakeCriticalSection`. Ao usar [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), eles fazem referência [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) e `CComCriticalSection`, respectivamente.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-## Consulte também  
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-nameinita--ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init  
+ Não fará nada, pois há uma seção crítica.  
+  
+```
+HRESULT Init() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna S_OK.  
+  
+##  <a name="a-namelocka--ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock  
+ Não fará nada, pois há uma seção crítica.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna S_OK.  
+  
+##  <a name="a-nameterma--ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Term  
+ Não fará nada, pois há uma seção crítica.  
+  
+```
+HRESULT Term() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna S_OK.  
+  
+##  <a name="a-nameunlocka--ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock  
+ Não fará nada, pois há uma seção crítica.  
+  
+```
+HRESULT Unlock() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna S_OK.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

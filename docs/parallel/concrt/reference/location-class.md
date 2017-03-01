@@ -1,69 +1,188 @@
 ---
-title: "Classe location | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::location"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de local"
+title: Classe Location | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::location
+dev_langs:
+- C++
+helpviewer_keywords:
+- location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
 caps.latest.revision: 10
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe location
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
+ms.lasthandoff: 02/25/2017
 
-Uma abstração de uma localização física em hardware.  
+---
+# <a name="location-class"></a>Classe location
+Uma abstração de um local físico no hardware.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+class location;
 ```  
-class location;  
-```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor location::location](../Topic/location::location%20Constructor.md)|Sobrecarregado.  Constrói um objeto `location`.|  
-|[Destruidor location::~location](../Topic/location::~location%20Destructor.md)|Destrói um objeto de `location` .|  
+|----------|-----------------|  
+|[local de construtor](#ctor)|Sobrecarregado. Constrói um objeto `location`.|  
+|[~ local destruidor](#dtor)|Destrói um objeto `location`.|  
   
-### Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Método location::current](../Topic/location::current%20Method.md)|Retorna um objeto de `location` que representa o local em que o mais específico o thread de chamada está em execução.|  
-|[Método location::from\_numa\_node](../Topic/location::from_numa_node%20Method.md)|Retorna um objeto de `location` que representa um nó EM UMA especificado.|  
-  
-### Operadores Públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Operador location::operator\!\=](../Topic/location::operator!=%20Operator.md)|Determina se dois objetos de `location` representam o local diferente.|  
-|[Operador location::operator\=](../Topic/location::operator=%20Operator.md)|Atribui o conteúdo de um objeto diferente de `location` para este.|  
-|[Operador location::operator\=\=](../Topic/location::operator==%20Operator.md)|Determina se dois objetos de `location` representam o mesmo local.|  
+|----------|-----------------|  
+|[Método atual](#current)|Retorna um `location` objeto que representa o local mais específico que o thread de chamada está em execução.|  
+|[Método from_numa_node](#from_numa_node)|Retorna um `location` objeto que representa um nó NUMA.|  
   
-## Hierarquia de Herança  
+### <a name="public-operators"></a>Operadores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[operador! = operador](#operator_neq)|Determina se dois `location` objetos representam um local diferente.|  
+|[operador Operator =](#operator_eq)|Atribui o conteúdo de um outro `location` objeto a este.|  
+|[operador Operator = =](#operator_eq_eq)|Determina se dois `location` objetos representam o mesmo local.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `location`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** concrt.h  
   
  **Namespace:** simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ local 
+
+ Destrói um objeto `location`.  
+  
+```
+~location();
+```  
+  
+##  <a name="a-namecurrenta-current"></a><a name="current"></a>atual 
+
+ Retorna um `location` objeto que representa o local mais específico que o thread de chamada está em execução.  
+  
+```
+static location __cdecl current();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um local que representa o local mais específico o thread de chamada está em execução.  
+  
+##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+
+ Retorna um `location` objeto que representa um nó NUMA.  
+  
+```
+static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_NumaNodeNumber`  
+ O número de nó para construir um local.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um local que representa o nó NUMA especificado pelo `_NumaNodeNumber` parâmetro.  
+  
+##  <a name="a-namectora-location"></a><a name="ctor"></a>local 
+
+ Constrói um objeto `location`.  
+  
+```
+location();
+
+location(
+    const location& _Src);
+
+location(
+    T _LocationType,
+    unsigned int _Id,
+    unsigned int _BindingId = 0,
+    _Inout_opt_ void* _PBinding = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Src`  
+ `_LocationType`  
+ `_Id`  
+ `_BindingId`  
+ `_PBinding`  
+  
+### <a name="remarks"></a>Comentários  
+ Um local padrão construído representa o sistema como um todo.  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operador! = 
+
+ Determina se dois `location` objetos representam um local diferente.  
+  
+```
+bool operator!= (const location& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Rhs`  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `true`Se os dois locais forem diferentes, `false` caso contrário.  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+
+ Atribui o conteúdo de um outro `location` objeto a este.  
+  
+```
+location& operator= (const location& _Rhs);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Rhs`  
+ A fonte `location` objeto.  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operador = = 
+
+ Determina se dois `location` objetos representam o mesmo local.  
+  
+```
+bool operator== (const location& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Rhs`  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `true`Se os dois locais são idênticos, e `false` caso contrário.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade](concurrency-namespace.md)
+

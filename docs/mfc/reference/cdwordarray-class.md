@@ -1,0 +1,114 @@
+---
+title: Classe CDWordArray | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDWordArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- doublewords
+- CDWordArray class
+- doublewords, array of
+- CObArray class, CDWordArray
+ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
+caps.latest.revision: 23
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd66241cff0f497d49fe9ff1850e740e15a9246c
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="cdwordarray-class"></a>Classe CDWordArray
+Oferece suporte a matrizes de palavra duplas de 32 bits.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+class CDWordArray : public CObject  
+```  
+  
+## <a name="members"></a>Membros  
+ As funções de membro do `CDWordArray` são semelhantes às funções de membro da classe [CObArray](../../mfc/reference/cobarray-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObArray` para obter a função específica de membro. Ao ver um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substitua um `DWORD`.  
+  
+ `CObject* CObArray::GetAt( int <nIndex> ) const;`  
+  
+ por exemplo, traduz para  
+  
+ `DWORD CDWordArray::GetAt( int <nIndex> ) const;`  
+  
+### <a name="public-constructors"></a>Construtores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Constrói uma matriz vazia.|  
+  
+### <a name="public-methods"></a>Métodos Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Inclui um elemento ao final da matriz; aumenta a matriz quando necessário.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Acrescenta outra matriz à matriz; aumenta a matriz quando necessário.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copia outra matriz à matriz; aumenta a matriz quando necessário.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retorna uma referência temporária ao byte dentro da matriz.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera toda memória não usada acima do limite superior atual.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retorna o valor a um determinado índice.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtém o número de elementos nesta matriz.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Permite acesso aos elementos na matriz. Pode ser **nulo**.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtém o número de elementos nesta matriz.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retorna o maior índice válido.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insere um elemento (ou todos os elementos em outra matriz) em um índice especificado.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Determina se a matriz está vazia.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Remove todos os elementos dessa matriz.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Remove um elemento a um índice específico.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Define o valor de um determinado índice; não é permitido à matriz aumentar.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Define o valor de um determinado índice; aumenta a matriz quando necessário.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Define o número de elementos a ser contido nesta matriz.|  
+  
+### <a name="public-operators"></a>Operadores Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Define ou obtém o elemento no índice especificado.|  
+  
+## <a name="remarks"></a>Comentários  
+ A `CDWordArray` incorpora a macro `IMPLEMENT_SERIAL` para suportar serialização e despejo de seus elementos. Se uma matriz de palavra duplas é armazenada em um arquivo, com a inserção sobrecarregada ( ** << **) operador ou com o `Serialize` função de membro, cada elemento é, por sua vez, serializado.  
+  
+> [!NOTE]
+>  Antes de usar uma matriz, utilize `SetSize` para estabelecer seu tamanho e alocar memória para ela. Se `SetSize` não for utilizado, incluir elementos à matriz fará com que ela seja frequentemente realocada e copiada. Realocações e cópias frequentes são ineficientes e podem fragmentar a memória.  
+  
+ Se você precisar depurar saída dos elementos individuais da matriz, você deve definir a profundidade do `CDumpContext` objeto para 1 ou maior.  
+  
+ Para obter mais informações sobre como usar o `CDWordArray`, consulte o artigo [coleções](../../mfc/collections.md).  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxcoll. h  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CObArray](../../mfc/reference/cobarray-class.md)
+

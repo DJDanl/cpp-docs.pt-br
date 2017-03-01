@@ -1,78 +1,103 @@
 ---
-title: "Classe de CAutoPtrList | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoPtrList"
-  - "CAutoPtrList"
-  - "ATL.CAutoPtrList"
-  - "ATL::CAutoPtrList<E>"
-  - "ATL.CAutoPtrList<E>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CAutoPtrList"
+title: Classe CAutoPtrList | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoPtrList
+- CAutoPtrList
+- ATL.CAutoPtrList
+- ATL::CAutoPtrList<E>
+- ATL.CAutoPtrList<E>
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CAutoPtrList
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: b39c3c08cf2970036bf8690c46a4f3518a7a55e1
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece os métodos úteis quando construir uma lista de ponteiros inteligentes.  
+---
+# <a name="cautoptrlist-class"></a>Classe CAutoPtrList
+Essa classe fornece métodos úteis ao construir uma lista de ponteiros inteligentes.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados em tempo de execução do windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<typename E>  
+class CAutoPtrList : 
+   public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```  
   
-      template<  
-typename E  
->  
-class CAutoPtrList : public CAtlList<  
-ATL::CAutoPtr< E>,  
-CAutoPtrElementTraits< E>  
->  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `E`  
- O tipo ponteiro.  
+ O tipo de ponteiro.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CAutoPtrList::CAutoPtrList](../Topic/CAutoPtrList::CAutoPtrList.md)|o construtor.|  
+|----------|-----------------|  
+|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|O construtor.|  
   
-## Comentários  
- Essa classe fornece um construtor e derivado de [CAtlList](../Topic/CAtlList%20Class.md) métodos e de [CAutoPtrElementTraits](../Topic/CAutoPtrElementTraits%20Class.md) para ajudar à criação de um objeto de lista que armazena ponteiros inteligentes.  A classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornece uma função semelhante para um objeto de matriz.  
+## <a name="remarks"></a>Comentários  
+ Essa classe fornece um construtor e deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para ajudar na criação de um objeto de lista armazenar ponteiros inteligentes. A classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornece uma função semelhante para um objeto de matriz.  
   
- Para obter mais informações, consulte [Classes de coleção de ATL](../../atl/atl-collection-classes.md).  
+ Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
-## Hierarquia de herança  
- [CAtlList](../Topic/CAtlList%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CAutoPtrList`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-## Consulte também  
- [Classe de CAtlList](../Topic/CAtlList%20Class.md)   
- [Classe de CAutoPtrElementTraits](../Topic/CAutoPtrElementTraits%20Class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-namecautoptrlista--cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtrList::CAutoPtrList  
+ O construtor.  
+  
+```
+CAutoPtrList(UINT nBlockSize = 10) throw();
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nBlockSize`  
+ O tamanho do bloco, com um padrão de 10.  
+  
+### <a name="remarks"></a>Comentários  
+ O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos maiores de bloco reduzem chamadas para rotinas de alocação de memória, mas usam mais recursos.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CAtlList](../../atl/reference/catllist-class.md)   
+ [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

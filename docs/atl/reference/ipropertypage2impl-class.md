@@ -1,79 +1,105 @@
 ---
-title: "Classe de IPropertyPage2Impl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPropertyPage2Impl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Implementação de IPropertyPage2 ATL"
-  - "Classe de IPropertyPage2Impl"
-  - "páginas de propriedades"
+title: Classe IPropertyPage2Impl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPropertyPage2Impl
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages
+- IPropertyPage2 ATL implementation
+- IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de IPropertyPage2Impl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 43680d12febbd94137009f66242198129d4b3630
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="ipropertypage2impl-class"></a>Classe IPropertyPage2Impl
 Essa classe implementa **IUnknown** e herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados em [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<class T>  
+class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
-      template< class   
-      T  
-      >  
-class IPropertyPage2Impl : public IPropertyPageImpl< T>  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- Sua classe, derivada de `IPropertyPage2Impl`.  
+ Sua classe derivada de `IPropertyPage2Impl`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[IPropertyPage2Impl::EditProperty](../Topic/IPropertyPage2Impl::EditProperty.md)|Especifica que o controle da propriedade receberá o foco quando a página de propriedades é ativada.  a implementação de ATL retorna **E\_NOTIMPL**.|  
+|----------|-----------------|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Especifica qual controle de propriedade receberá o foco quando a página de propriedades é ativada. Retorna a implementação de ATL **E_NOTIMPL**.|  
   
-## Comentários  
- a interface de [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) estende [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) adicionando o método de `EditProperty` .  Esse método permite que um cliente seleciona uma propriedade específica em um objeto da página de propriedades.  
+## <a name="remarks"></a>Comentários  
+ O [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interface estende [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) adicionando o `EditProperty` método. Esse método permite que um cliente selecionar uma propriedade específica em um objeto de página de propriedade.  
   
- A classe `IPropertyPage2Impl` simplesmente retorna **E\_NOTIMPL** para **IPropertyPage2::EditProperty**.  Em o entanto, ele herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa **IUnknown** enviar informações para o dispositivo de despejo em compilações de depuração.  
+ Classe `IPropertyPage2Impl` simplesmente retorna **E_NOTIMPL** para **IPropertyPage2::EditProperty**. No entanto, ele herda a implementação padrão de [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) e implementa **IUnknown** enviando informações para o despejo de compilações de dispositivo no modo de depuração.  
   
- Quando você cria uma página de propriedades, a classe é derivada de `IPropertyPageImpl`normalmente.  Para fornecer suporte adicional de **IPropertyPage2**, modifique a definição da classe e substitua o método de `EditProperty` .  
+ Quando você cria uma página de propriedades, sua classe geralmente é derivada de `IPropertyPageImpl`. Para oferecer suporte a extra **IPropertyPage2**, modifique a definição de classe e substituir o `EditProperty` método.  
   
- **Artigos relacionados** [tutorial de ATL](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md), [criando um projeto de ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IPropertyPage`  
   
  [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)  
   
  `IPropertyPage2Impl`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlctl.h  
   
-## Consulte também  
- [Classe de IPerPropertyBrowsingImpl](../Topic/IPerPropertyBrowsingImpl%20Class.md)   
- [Classe de ISpecifyPropertyPagesImpl](../Topic/ISpecifyPropertyPagesImpl%20Class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-nameeditpropertya--ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+ Especifica qual controle de propriedade receberá o foco quando a página de propriedades é ativada.  
+  
+```
+HRESULT EditProperty(DISPID dispID);
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [Classe ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

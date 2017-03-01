@@ -1,33 +1,48 @@
 ---
-title: "omp_init_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_lock OpenMP function"
+title: omp_init_lock | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_init_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
 caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_init_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0edcd073cc9f63bed9c374e7a883ed7e5f014c61
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="ompinitlock"></a>omp_init_lock
 Inicializa um bloqueio simple.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void omp_init_lock(  
@@ -35,14 +50,14 @@ void omp_init_lock(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `lock`  
- Uma variável do tipo [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md).  
+ Uma variável do tipo [omp_lock_t ()](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## Comentários  
- Para obter mais informações, consulte [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+## <a name="remarks"></a>Comentários  
+ Para obter mais informações, consulte [3.2.1 funções omp_init_lock e omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_init_lock.cpp  
@@ -72,45 +87,48 @@ int main() {
 }  
 ```  
   
-  **O segmento 0 \- Iniciando bloqueado região**  
-**Thread 0 \- terminando bloqueado região**  
-**O segmento 0 \- Iniciando bloqueado região**  
-**Thread 0 \- terminando bloqueado região**  
-**O segmento 0 \- Iniciando bloqueado região**  
-**Thread 0 \- terminando bloqueado região**  
-**O segmento 0 \- Iniciando bloqueado região**  
-**Thread 0 \- terminando bloqueado região**  
-**O segmento 0 \- Iniciando bloqueado região**  
-**Thread 0 \- terminando bloqueado região**  
-**O thread 1 \- Iniciando bloqueado região**  
-**Thread 1 \- terminando bloqueado região**  
-**O thread 1 \- Iniciando bloqueado região**  
-**Thread 1 \- terminando bloqueado região**  
-**O thread 1 \- Iniciando bloqueado região**  
-**Thread 1 \- terminando bloqueado região**  
-**O thread 1 \- Iniciando bloqueado região**  
-**Thread 1 \- terminando bloqueado região**  
-**O thread 1 \- Iniciando bloqueado região**  
-**Thread 1 \- terminando bloqueado região**  
-**O thread 2 \- Iniciando bloqueado região**  
-**Região do thread 2 \- terminando bloqueado**  
-**O thread 2 \- Iniciando bloqueado região**  
-**Região do thread 2 \- terminando bloqueado**  
-**O thread 2 \- Iniciando bloqueado região**  
-**Região do thread 2 \- terminando bloqueado**  
-**O thread 2 \- Iniciando bloqueado região**  
-**Região do thread 2 \- terminando bloqueado**  
-**O thread 2 \- Iniciando bloqueado região**  
-**Região do thread 2 \- terminando bloqueado**  
-**3 \- Iniciando do thread bloqueado região**  
-**Região de thread 3 \- terminando bloqueado**  
-**3 \- Iniciando do thread bloqueado região**  
-**Região de thread 3 \- terminando bloqueado**  
-**3 \- Iniciando do thread bloqueado região**  
-**Região de thread 3 \- terminando bloqueado**  
-**3 \- Iniciando do thread bloqueado região**  
-**Região de thread 3 \- terminando bloqueado**  
-**3 \- Iniciando do thread bloqueado região**  
-**Região de thread 3 \- terminando bloqueado**   
-## Consulte também  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Funções](../../../parallel/openmp/reference/openmp-functions.md)

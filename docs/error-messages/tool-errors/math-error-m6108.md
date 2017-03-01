@@ -1,35 +1,50 @@
 ---
-title: "Erro M6108 (Math) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "M6108"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "M6108"
+title: Erro M6108 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- M6108
+dev_langs:
+- C++
+helpviewer_keywords:
+- M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro M6108 (Math)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4c1378cbef93581262b56cb91cb321d7714fb635
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="math-error-m6108"></a>Erro M6108 (Math)
 raiz quadrada  
   
- O operando em uma operação de quadrado\- raiz não negativo.  
+ O operando em uma operação de raiz quadrada estava negativo.  
   
- O programa será encerrado com o código de saída 136.  
+ Programa é encerrado com código de saída 136.  
   
 > [!NOTE]
->  A função de `sqrt` na biblioteca de tempo de execução C e a função intrínseca **SQRT** de FORTRAN não gerenciem esse erro.  As verificações de função C `sqrt` o argumento antes de executar a operação e retorna um erro avalia se o operando for negativo.  A função de **SQRT** FORTRAN gerencia o erro [M6201](../../error-messages/tool-errors/math-error-m6201.md) DOMAIN em vez desse erro.
+>  O `sqrt` função na biblioteca de tempo de execução C e a função intrínseca FORTRAN **SQRT** gera esse erro. O C `sqrt` função verifica o argumento antes de executar a operação e retorna um valor de erro se o operando for negativo. O padrão FORTRAN **SQRT** função gera o erro de domínio [M6201](../../error-messages/tool-errors/math-error-m6201.md) em vez desse erro.

@@ -1,75 +1,141 @@
 ---
-title: "Classe message_processor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::message_processor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe message_processor"
+title: Classe message_processor | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::message_processor
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
 caps.latest.revision: 16
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe message_processor
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
+ms.lasthandoff: 02/25/2017
 
-A classe de `message_processor` é a classe base abstrata para processamento de objetos de `message` .  Não há nenhuma garantia na ordem das mensagens.  
+---
+# <a name="messageprocessor-class"></a>Classe message_processor
+O `message_processor` classe é a classe base abstrata para processamento de `message` objetos. Não há nenhuma garantia sobre a ordem das mensagens.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<class T>
+class message_processor;
 ```  
-template<  
-   class _Type  
->  
-class message_processor;  
-```  
   
-#### Parâmetros  
- `_Type`  
- O tipo de dados de carga nas mensagens tratadas por esse objeto de `message_processor` .  
+#### <a name="parameters"></a>Parâmetros  
+ `T`  
+ O tipo de dados de carga nas mensagens tratadas por este `message_processor` objeto.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|`type`|Um alias de tipo para `_Type`.|  
+|----------|-----------------|  
+|`type`|Um alias de tipo para `T`.|  
   
-### Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Método message\_processor::async\_send](../Topic/message_processor::async_send%20Method.md)|Quando substituído em uma classe derivada, mensagens locais no bloco de forma assíncrona.|  
-|[Método message\_processor::sync\_send](../Topic/message_processor::sync_send%20Method.md)|Quando substituído em uma classe derivada, mensagens locais no bloco de forma síncrona.|  
-|[Método message\_processor::wait](../Topic/message_processor::wait%20Method.md)|Quando substituído em uma classe derivada, espera para que todas as operações assíncronas serem concluídas.|  
-  
-### Métodos Protegidos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método message\_processor::process\_incoming\_message](../Topic/message_processor::process_incoming_message%20Method.md)|Quando substituído em uma classe derivada, executa o processamento para frente de mensagens em bloco.  Chamado uma vez a cada vez que uma nova mensagem é adicionada e a fila é localizada para estar vazia.|  
+|----------|-----------------|  
+|[Método async_send](#async_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.|  
+|[Método sync_send](#sync_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.|  
+|[Método Wait](#wait)|Quando substituído em uma classe derivada, espera por todas as operações assíncronas concluir.|  
   
-## Hierarquia de Herança  
+### <a name="protected-methods"></a>Métodos Protegidos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem é adicionada e a fila é encontrada estar vazio.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `message_processor`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** agents.h  
   
  **Namespace:** simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe ordered\_message\_processor](../Topic/ordered_message_processor%20Class.md)
+##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+
+ Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.  
+  
+```
+virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Msg`  
+ Um `message` objeto para enviar de forma assíncrona.  
+  
+### <a name="remarks"></a>Comentários  
+ Implementações de processador devem substituir esse método.  
+  
+##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+
+ Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem é adicionada e a fila é encontrada estar vazio.  
+  
+```
+virtual void process_incoming_message() = 0;
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Implementações de bloco de mensagens devem substituir esse método.  
+  
+##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+
+ Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.  
+  
+```
+virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_Msg`  
+ Um `message` objeto a ser enviado de forma síncrona.  
+  
+### <a name="remarks"></a>Comentários  
+ Implementações de processador devem substituir esse método.  
+  
+##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+
+ Quando substituído em uma classe derivada, espera por todas as operações assíncronas concluir.  
+  
+```
+virtual void wait() = 0;
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Implementações de processador devem substituir esse método.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade](concurrency-namespace.md)   
+ [Classe ordered_message_processor](ordered-message-processor-class.md)
+
