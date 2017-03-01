@@ -1,36 +1,53 @@
 ---
-title: "Erro do Compilador C3808 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3808"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3808"
+title: C3808 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3808
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3808
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.lasthandoff: 02/25/2017
 
-“tipo”: uma classe com o atributo de ComImport não pode definir o membro “membro”, só as funções do sumário ou de dllimport são permitidas  
+---
+# <a name="compiler-error-c3808"></a>C3808 de erro do compilador
+'type': uma classe com o atributo ComImport não pode definir o membro 'member', apenas abstrato ou dllimport funções são permitidas  
   
- Um tipo que deriva de <xref:System.Runtime.InteropServices.ComImportAttribute> não pode definir `member`.  
+ Um tipo derivado de <xref:System.Runtime.InteropServices.ComImportAttribute>não é possível definir `member`.</xref:System.Runtime.InteropServices.ComImportAttribute>  
   
-## Exemplo  
- O exemplo a seguir produz C3808.  
+ O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3808.  
   
 ```  
 // C3808.cpp  

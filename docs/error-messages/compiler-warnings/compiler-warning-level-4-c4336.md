@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4336 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4336"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4336"
+title: "Compilador aviso (nível 4) C4336 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4336
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4336
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 877dc8835e71ba7995d1bd9b3cc51844398fc605
+ms.lasthandoff: 02/25/2017
 
-a importação fez remissão recíproca a biblioteca “type\_lib1” do tipo antes de importar “type\_lib2”  
+---
+# <a name="compiler-warning-level-4-c4336"></a>Compilador C4336 de aviso (nível 4)
+Importar biblioteca 'type_lib1' de tipo de referência cruzado antes de importar 'type_lib2'  
   
- Uma biblioteca de tipos foi referenciada com a política de [\#import](../Topic/%23import%20Directive%20\(C++\).md) .  No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`.  Esse outro arquivo de .tlb foi encontrado pelo compilador.  
+ Uma biblioteca de tipos foi referenciada com o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva. No entanto, a biblioteca de tipos continha uma referência a outra biblioteca de tipos que não foi referenciada com `#import`. Esse outro arquivo. tlb foi encontrado pelo compilador.  
   
- Considerando\-se duas bibliotecas de tipo em disco criado dos dois arquivos \(compilados com midl.exe\):  
+ Bibliotecas de tipo dois determinado em disco criado a partir de dois arquivos a seguir (compilados com midl.exe):  
   
 ```  
 // c4336a.idl  
@@ -44,7 +59,7 @@ library c4336aLib
 };  
 ```  
   
- A segunda biblioteca de tipos:  
+ Biblioteca de tipos do segundo:  
   
 ```  
 // c4336b.idl  
@@ -60,7 +75,7 @@ library C4336bLib
 };  
 ```  
   
- O seguinte exemplo gera C4336:  
+ O exemplo a seguir gera C4336:  
   
 ```  
 // C4336.cpp  

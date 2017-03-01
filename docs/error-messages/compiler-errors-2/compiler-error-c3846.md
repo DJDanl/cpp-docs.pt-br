@@ -1,35 +1,51 @@
 ---
-title: "Erro do Compilador C3846 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3846"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3846"
+title: C3846 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3846
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3846
 ms.assetid: c470f8a5-106b-4efb-b8dc-e1319e04130f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3846
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 04807182611beed23bf388d1f42a4fba0a3acea7
+ms.lasthandoff: 02/25/2017
 
-símbolo “”: não pode importar o símbolo de assembly2 “”: como o símbolo “” já tiver sido importados de outro assembly “assembly1”  
+---
+# <a name="compiler-error-c3846"></a>C3846 de erro do compilador
+'symbol': não é possível importar o símbolo de 'assembly2': como 'symbol' já foi importada de outro assembly 'assembly1'  
   
- Um símbolo não pôde ser importado de um assembly referenciado como foi previamente importado de um assembly referenciado.  
+ Não foi possível importar um símbolo de um assembly referenciado porque ele foi importado anteriormente de um assembly referenciado.  
   
- O seguinte exemplo gera C3846:  
+## <a name="example"></a>Exemplo
+O exemplo a seguir gera C3846:  
   
 ```  
 // C3846a.cpp  
@@ -39,7 +55,7 @@ public ref struct G
 };  
 ```  
   
- E depois criar isso:  
+ E, em seguida, compilar isso:  
   
 ```  
 // C3846b.cpp  
@@ -51,31 +67,4 @@ int main()
 {  
 }  
 ```  
-  
- O seguinte exemplo gera C3846:  
-  
-```  
-// C3846c.cpp  
-// compile with: /LD /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-public __gc struct G  
-{  
-};  
-```  
-  
- E depois criar isso:  
-  
-```  
-// C3846d.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-#using "c3846c.dll"  
-#using "c3846c.obj"   // C3846  
-  
-int main()  
-{  
-}  
-```
+

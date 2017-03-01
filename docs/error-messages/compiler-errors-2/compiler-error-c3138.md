@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+title: C3138 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 588f807fae454c1c497c7247f9f429e7476ac311
+ms.lasthandoff: 02/25/2017
 
-contadores de “interface”: uma interface de “atributo” deve herdar IDispatch, ou uma interface que herde IDispatch  
+---
+# <a name="compiler-error-c3138"></a>C3138 de erro do compilador
+'interface': uma interface de 'attribute' deve herdar de IDispatch ou de uma interface que herda de IDispatch  
   
- Uma interface com os atributos de [double](../Topic/dual.md) ou de [dispinterface](../../windows/dispinterface.md) não tem `IDispatch` como uma interface base direta ou indireta.  
+ Uma interface com o [dual](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) atributos não tem `IDispatch` como uma interface base direta ou indireta.  
   
- O exemplo a seguir gerenciar C3138:  
+ O exemplo a seguir gera C3138:  
   
 ```  
 // C3138.cpp  

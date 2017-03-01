@@ -1,43 +1,58 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4290 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4290"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4290"
+title: "Compilador aviso (nível 3) C4290 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4290
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4290
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 930e95da2f726e7aeda8e80055a857c1410265da
+ms.lasthandoff: 02/25/2017
 
-A especificação de exceção C\+\+ ignorada exceto para indicar uma função não é \_\_declspec \(o nothrow\)  
+---
+# <a name="compiler-warning-level-3-c4290"></a>Compilador C4290 de aviso (nível 3)
+especificação de exceção de C++ ignorada exceto para indicar que a função não é __declspec(nothrow)  
   
- Uma função é declarado usando a especificação de exceção, que Visual C\+\+ aceita mas não implementa.  O código com especificações de exceção que são ignorados durante a compilação pode precisar ser recompilado e vinculado para ser reutilizado em versões futuras que oferecem suporte às especificações de exceção.  
+ Uma função é declarada usando a especificação de exceção, que o Visual C++ aceita, mas não implementa. Código de exceção especificações que são ignoradas durante a compilação podem precisar ser recompilado e vinculado para ser reutilizado em futuras versões com suporte a especificações de exceção.  
   
- Para obter mais informações, consulte [Especificações de exceção \(lançar\)](../../cpp/exception-specifications-throw-cpp.md).  
+ Para obter mais informações, consulte [especificações de exceção (acionar)](../../cpp/exception-specifications-throw-cpp.md) .  
   
- Você pode evitar esse aviso usando o pragma de [aviso](../../preprocessor/warning.md) :  
+ Você pode evitar esse aviso usando o [aviso](../../preprocessor/warning.md) pragma:  
   
 ```  
 #pragma warning( disable : 4290 )  
 ```  
   
- O exemplo de código gerenciado C4290:  
+ O exemplo de código a seguir gera C4290:  
   
 ```  
 // C4290.cpp  

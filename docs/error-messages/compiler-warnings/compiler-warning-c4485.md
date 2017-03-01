@@ -1,40 +1,55 @@
 ---
-title: "Aviso do compilador C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+title: C4485 de aviso do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7a3578b78f3ae8d33a602fe4d52b76c10930e42b
+ms.lasthandoff: 02/25/2017
 
-“override\_function”: as correspondências baseiam o método “base\_class\_function” da classe de referência, mas não são “novos marcado” ou “substituição”; “novo” e “\(virtual "\) será assumido  
+---
+# <a name="compiler-warning-c4485"></a>C4485 de aviso do compilador
+'override_function': corresponde ao método da classe base ref 'base_class_function', mas não está marcado como 'new' ou 'Substituir'; 'new' (e 'virtual') serão assumidos  
   
- Um acessador substituir, com ou sem a palavra\-chave de `virtual` , uma função do acessador tipado da classe base, mas o especificador de `override` ou de `new` não fazia parte da assinatura substituindo da função.  Adicionar o especificador de `new` ou de `override` para resolver esse aviso.  
+ Substitui um acessador, com ou sem o `virtual` palavra-chave, uma função de acessador de classe base, mas o `override` ou `new` especificador não fazia parte da assinatura de função de substituição. Adicionar o `new` ou `override` especificador para resolver esse aviso.  
   
- Consulte [override](../../windows/override-cpp-component-extensions.md) e [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obter mais informações.  
+ Consulte [substituir](../../windows/override-cpp-component-extensions.md) e [novo (novo slot em vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obter mais informações.  
   
- C4485 é emitido sempre como um erro.  Use o pragma de [warning](../../preprocessor/warning.md) para suprimir C4485.  
+ C4485 sempre é emitida como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4485.  
   
-## Exemplo  
- O exemplo C4485 gerencia  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4485  
   
 ```  
 // C4485.cpp  

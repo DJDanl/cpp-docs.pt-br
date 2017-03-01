@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4267 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4267"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4267"
+title: "Compilador aviso (nível 3) C4267 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4267
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4267
 ms.assetid: 2fa2f13f-fa4f-47bb-ad8f-6cb19cfc91e6
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4267
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5999e0af1c435bf75378d2299069557f7810d7b6
+ms.lasthandoff: 02/25/2017
 
-'var': conversão de size\_t para 'type', possível perda de dados  
+---
+# <a name="compiler-warning-level-3-c4267"></a>Compilador C4267 de aviso (nível 3)
+'var': conversão de 'size_t' para 'type', possível perda de dados  
   
  O compilador detectou uma conversão de `size_t` para um tipo menor.  
   
- Para corrigir esse aviso, use `size_t` em vez de `type`.  Como alternativa, use um tipo integral que é pelo menos tão grande quanto `size_t`.  
+ Para corrigir esse aviso, use `size_t` em vez de `type`. Como alternativa, use um tipo integral que é pelo menos tão grande quanto `size_t`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4267.  
   
 ```  

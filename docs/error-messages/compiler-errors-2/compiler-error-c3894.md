@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3894"
+title: C3894 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 66feae2a1908b650d6927cb94f82dda0db0189f8
+ms.lasthandoff: 02/25/2017
 
-var “”: o uso de l\- valor do membro de dados initonly estático é permitido apenas ao construtor de classe das classes das classes  
+---
+# <a name="compiler-error-c3894"></a>C3894 de erro do compilador
+'var': uso de l-value de membro de dados estáticos initonly só é permitido no construtor da classe da classe 'class'  
   
- Os membros de dados estáticos de [initonly](../../dotnet/initonly-cpp-cli.md) só podem ser usados como l\- valores em seu ponto de declaração, ou em um construtor estático.  
+ Estático [initonly](../../dotnet/initonly-cpp-cli.md) membros de dados só podem ser usados como l-values em seu ponto de declaração, ou em um construtor estático.  
   
- Os membros de dados de instância \(não estático\) initonly só podem ser usados como l\- valores em seu ponto de declaração, ou construtores de instância \(não estático\).  
+ Membros da instância (não estático) initonly dados só podem ser usados como l-values em seu ponto de declaração ou nos construtores do instância (não estático).  
   
- O seguinte exemplo gera C3894:  
+ O exemplo a seguir gera C3894:  
   
 ```  
 // C3894.cpp  

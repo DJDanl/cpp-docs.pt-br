@@ -1,37 +1,53 @@
 ---
-title: "Compilador C4100 de aviso (n&#237;vel 4) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4100"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4100"
+title: "Compilador aviso (nível 4) C4100 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4100
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilador C4100 de aviso (n&#237;vel 4)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 62e8239f7472fcf3e7fb4b2ca6bc65995f20b3fb
+ms.lasthandoff: 02/25/2017
 
-“identificador”: parâmetro formal não referenciado  
+---
+# <a name="compiler-warning-level-4-c4100"></a>Compilador C4100 de aviso (nível 4)
+'identifier': parâmetro formal sem referência  
   
- O parâmetro formal não é referenciado no corpo da função.  O parâmetro sem referência é ignorado.  
+ O parâmetro formal não é referenciado no corpo da função. O parâmetro sem referência será ignorado.  
   
- C4100 também pode ser enviado quando o código chama um destrutor em um parâmetro de outro modo sem referência de tipo primitivo.  Essa é uma limitação do compilador do Visual C\+\+.  
+ C4100 também pode ser emitido quando o código chama um destruidor no parâmetro de tipo primitivo não referenciados uma outra forma.  Essa é uma limitação do compilador do Visual C++.  
   
- O seguinte exemplo gera C4100:  
+ O exemplo a seguir gera C4100:  
   
 ```  
 // C4100.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+title: C3855 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d70b14c0b4dea79a65e02821e08d860195da8ff5
+ms.lasthandoff: 02/25/2017
 
-“classes: o parâmetro de tipo “param” é incompatível com a declaração  
+---
+# <a name="compiler-error-c3855"></a>C3855 de erro do compilador
+'class': o parâmetro de tipo 'param' é incompatível com a declaração  
   
- O compilador encontrou o modelo de nontype ou parâmetros genéricas com nomes diferentes.  Isso pode ocorrer quando um parâmetro especificado do modelo na definição de uma especialização de modelo é incompatível com sua declaração.  
+ O compilador encontrados modelo sem tipo ou parâmetros genéricos com nomes diferentes. Isso pode ocorrer quando um parâmetro de modelo especificado na definição de uma especialização de modelo é incompatível com sua declaração.  
   
- O seguinte exemplo gera C3855:  
+ O exemplo a seguir gera C3855:  
   
 ```  
 // C3855.cpp  
@@ -42,7 +57,7 @@ template <char N>
 void C<N>::f() {}   // C3855  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C3855b.cpp  
@@ -56,7 +71,7 @@ template <int N>
 void C<N>::f() {}  
 ```  
   
- C3855 também pode ocorrer ao usar produtos genéricas:  
+ C3855 também pode ocorrer ao usar genéricos:  
   
 ```  
 // C3855c.cpp  
@@ -73,7 +88,7 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C3855d.cpp  

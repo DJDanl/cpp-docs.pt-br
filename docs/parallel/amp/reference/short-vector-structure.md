@@ -1,36 +1,52 @@
 ---
-title: "Estrutura short_vector | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::short_vector"
-dev_langs: 
-  - "C++"
+title: Estrutura short_vector | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::short_vector
+dev_langs:
+- C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
 caps.latest.revision: 7
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura short_vector
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: f8df5600c8af80b4d279fc1fde0cc4c2ab9337eb
+ms.lasthandoff: 02/25/2017
 
-short\_vector fornece as definições metaprogramação que são úteis para programar vetores curtos genericamente.  
+---
+# <a name="shortvector-structure"></a>Estrutura short_vector
+short_vector fornece metaprogramação definições que são úteis para a programação de vetores curtos genericamente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<  
-   typename _Scalar_type,  
-   int _Size  
+template<
+    typename _Scalar_type,  
+    int _Size  
 >  
 struct short_vector;  
 template<>  
@@ -83,31 +99,38 @@ template<>
 struct short_vector<double, 4>;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_Scalar_type`  
  `_Size`  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs Públicas  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
 |`type`||  
   
-### Construtores Públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor short\_vector::short\_vector](../Topic/short_vector::short_vector%20Constructor.md)||  
+|----------|-----------------|  
+|[short_vector:: short_vector construtor](#ctor)||  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `short_vector`  
   
-## Requisitos  
- **Cabeçalho:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Consulte também  
- [Namespace Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora--shortvectorshortvector-constructor"></a><a name="ctor"></a>short_vector:: short_vector construtor  
+  
+```  
+short_vector();
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+

@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4546 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4546"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4546"
+title: "Compilador aviso (nível 1) C4546 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4546
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4546
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9cd6f5811bdc99f157286a1582084b551e754d91
+ms.lasthandoff: 02/25/2017
 
-chamada de função antes da lista de argumento ausente de vírgula  
+---
+# <a name="compiler-warning-level-1-c4546"></a>Compilador C4546 de aviso (nível 1)
+faltando lista de argumentos na chamada de função antes da vírgula  
   
- O compilador detectou uma expressão doente\- formada de vírgula.  
+ O compilador detectou uma expressão com vírgulas malformados.  
   
- Esse aviso é desativada por padrão.  Para obter mais informações, consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Esse aviso é desativada por padrão. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Exemplo  
- O seguinte exemplo gera C4546:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4546:  
   
 ```  
 // C4546.cpp  

@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4365 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4365"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4365"
+title: "Compilador aviso (nível 4) C4365 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4365
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4365
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 15b1e12d9d0bf4b60f32eef5a095fe45b800080c
+ms.lasthandoff: 02/25/2017
 
-ação “”: conversão de “type\_1” incompatibilidade assinada\/não assinado de type\_2”, “  
+---
+# <a name="compiler-warning-level-4-c4365"></a>Compilador C4365 de aviso (nível 4)
+'action': conversão de 'type_1' em 'type_2', incompatibilidade assinada/não  
   
- Por exemplo, você tentou converter um valor sem assinatura para um valor assinado.  
+ Por exemplo, você tentou converter um valor sem sinal para um valor assinado.  
   
- C4365 é desativada por padrão.  Para obter mais informações, consulte [Avisos de compilador desativados por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ C4365 está desativado por padrão.  Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4365.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4365.  
   
 ```  
 // C4365.cpp  

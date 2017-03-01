@@ -1,33 +1,48 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4584 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4584"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4584"
+title: "Compilador aviso (nível 1) C4584 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4584
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4584
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 31508185d34bd34b7c51ee0dfa4720d8b2969470
+ms.lasthandoff: 02/25/2017
 
-“class1”: o class2 das classes base” já é uma classe base de class3” “  
+---
+# <a name="compiler-warning-level-1-c4584"></a>Compilador C4584 de aviso (nível 1)
+'class1': classe base 'class2' já é uma classe base de 'class3'  
   
- A classe que você definiu herda de duas classes, uma de que herda do outro.  Por exemplo:  
+ A classe definida por você herda de duas classes, uma que herda do outro. Por exemplo:  
   
 ```  
 // C4584.cpp  
@@ -42,4 +57,4 @@ class C : public A, public B { // C4584
 };  
 ```  
   
- Nesse caso, um aviso será emitido na classe C porque ambos herda da classe A e B da classe, que também herda de A classe.  Esse aviso serve como um lembrete que você deve qualificar o uso dos membros dessas classes base ou um erro de compilador será gerado devido à ambiguidade em relação ao membro da classe você se refere.
+ Nesse caso, um aviso seria emitido na classe C porque ela é herdada da classe e a classe B, que também herda da classe A. Esse aviso serve como um lembrete de que você deve qualificar totalmente o uso de membros a partir dessas classes base ou um erro do compilador será gerado devido à ambiguidade sobre qual membro da classe que você consulte.

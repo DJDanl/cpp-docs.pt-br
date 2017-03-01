@@ -1,40 +1,55 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4398 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4398"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4398"
+title: "Compilador aviso (nível 3) C4398 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4398
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4398
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 18270bb89bcc5d1855750c572a5b6fb9e51c2ba3
+ms.lasthandoff: 02/25/2017
 
-“variable”: o objeto global do processo pode não funcionar corretamente com vários appdomains; considere usar \_\_declspec \(o criar appdomain\)  
+---
+# <a name="compiler-warning-level-3-c4398"></a>Compilador C4398 de aviso (nível 3)
+'variável': objeto global por processo talvez não funcionem corretamente com vários appdomains; Considere o uso de declspec  
   
- Uma função virtual com [\_\_clrcall](../../cpp/clrcall.md) que chama a convenção em um tipo nativo causa a criação do domínio de aplicativo vtable.  Essa variável não pode corrigir corretamente quando usado em vários domínios de aplicativo.  
+ Uma função virtual com [clrcall](../../cpp/clrcall.md) convenção de chamada em um tipo nativo faz com que a criação de um por vtable de domínio de aplicativo. Essa variável não pode corrigir corretamente quando usados em vários domínios de aplicativo.  
   
- Você pode resolver esse aviso compilando com **\/clr:pure**, que faz variáveis globais por appdomain por padrão, ou explicitamente marcando `__declspec(appdomain)`variável.  
+ Você pode resolver este aviso marcando explicitamente a variável `__declspec(appdomain)`. Em versões do Visual Studio antes de 2017 do Visual Studio, você pode resolver este aviso compilando com **/clr: puro**, que torna as variáveis globais por appdomain por padrão.  
   
- Para obter mais informações, consulte [appdomain](../Topic/appdomain.md) e [Domínios de aplicativo e Visual C\+\+](../../dotnet/application-domains-and-visual-cpp.md).  
+ Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [domínios de aplicativo e do Visual C++](../../dotnet/application-domains-and-visual-cpp.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4398.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4398.  
   
 ```  
 // C4398.cpp  

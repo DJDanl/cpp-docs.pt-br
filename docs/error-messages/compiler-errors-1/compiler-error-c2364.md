@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2364"
+title: C2364 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2364
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2364
 ms.assetid: 4f550571-94b5-42ca-84cb-663fecbead44
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 39ee268cde7095cb581917c4d3da2ce2b482f64d
+ms.lasthandoff: 02/25/2017
 
-“tipo”: tipo ilegal para o atributo personalizado  
+---
+# <a name="compiler-error-c2364"></a>C2364 de erro do compilador
+'type': tipo inválido para atributo personalizado  
   
- Os argumentos nomeados para atributos personalizados são limitados para constantes de tempo de compilação.  Por exemplo, tipos de integral \(int, char, etc.\), System::Type^, e System::Object^.  
+ Argumentos nomeados atributos personalizados são limitados a constantes de tempo de compilação. Por exemplo, os tipos integrais (int, char, etc.), System:: Type ^ e System:: Object ^.  
   
-## Exemplo  
- O exemplo a seguir produz C2364.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2364.  
   
 ```  
 // c2364.cpp  

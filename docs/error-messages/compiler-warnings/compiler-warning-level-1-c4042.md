@@ -1,43 +1,58 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4042 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4042"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4042"
+title: "Compilador aviso (nível 1) C4042 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4042
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4042
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 53c7d3cd497ebb07e0bea7f326655d6c287c9a64
+ms.lasthandoff: 02/25/2017
 
-“identificador”: tem a classe de armazenamento incorreto  
+---
+# <a name="compiler-warning-level-1-c4042"></a>Compilador C4042 de aviso (nível 1)
+'identifier': tem a classe de armazenamento inválido  
   
- A classe de armazenamento especificada não pode ser usada com esse identificador neste contexto.  O compilador usa a classe de armazenamento padrão em vez:  
+ A classe de armazenamento especificada não pode ser usada com este identificador neste contexto. Em vez disso, o compilador usa a classe de armazenamento padrão:  
   
--   `extern`, se o *identificador* é uma função.  
+-   `extern`, se *identificador* é uma função.  
   
--   **auto**, se *o identificador* é um parâmetro formal ou variável local.  
+-   **auto**, se *identificador* é um parâmetro formal ou variável local.  
   
--   Nenhuma classe de armazenamento, se *o identificador* é uma variável global.  
+-   Nenhum armazenamento de classe, se *identificador* é uma variável global.  
   
- Esse aviso pode ser causado especificando uma classe de armazenamento diferente **register** em uma declaração de parâmetro.  
+ Esse aviso pode ser causado por especificar uma classe de armazenamento diferente de **registrar** em uma declaração de parâmetro.  
   
- O exemplo C4042 gerencia  
+ O exemplo a seguir gera C4042  
   
 ```  
 // C4042.cpp  

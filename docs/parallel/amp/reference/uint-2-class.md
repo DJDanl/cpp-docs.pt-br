@@ -1,136 +1,222 @@
 ---
-title: "Classe uint_2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::uint_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::y"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::uint_2::r"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator--"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::uint_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::uint_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::x"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::uint_2"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::uint_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::uint_2::g"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::operator++"
-  - "amp_short_vectors/Concurrency::graphics::uint_2::rg"
-dev_langs: 
-  - "C++"
+title: Classe uint_2 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::uint_2::set_xy
+- amp_short_vectors/Concurrency::graphics::uint_2::y
+- amp_short_vectors/Concurrency::graphics::uint_2::gr
+- amp_short_vectors/Concurrency::graphics::uint_2::operator-
+- amp_short_vectors/Concurrency::graphics::uint_2::get_x
+- amp_short_vectors/Concurrency::graphics::uint_2::operator-=
+- amp_short_vectors/Concurrency::graphics::uint_2::r
+- amp_short_vectors/Concurrency::graphics::uint_2::yx
+- amp_short_vectors/Concurrency::graphics::uint_2::operator--
+- amp_short_vectors/Concurrency::graphics::uint_2::set_yx
+- amp_short_vectors/Concurrency::graphics::uint_2::operator=
+- amp_short_vectors/Concurrency::graphics::uint_2::set_x
+- amp_short_vectors/Concurrency::graphics::uint_2::operator+=
+- amp_short_vectors/Concurrency::graphics::uint_2::get_y
+- amp_short_vectors/Concurrency::graphics::uint_2::xy
+- amp_short_vectors/Concurrency::graphics::uint_2::x
+- amp_short_vectors/Concurrency::graphics::uint_2::get_xy
+- amp_short_vectors/Concurrency::graphics::uint_2::set_y
+- amp_short_vectors/Concurrency::graphics::uint_2
+- amp_short_vectors/Concurrency::graphics::uint_2::operator*=
+- amp_short_vectors/Concurrency::graphics::uint_2::get_yx
+- amp_short_vectors/Concurrency::graphics::uint_2::operator/=
+- amp_short_vectors/Concurrency::graphics::uint_2::g
+- amp_short_vectors/Concurrency::graphics::uint_2::operator++
+- amp_short_vectors/Concurrency::graphics::uint_2::rg
+dev_langs:
+- C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
 caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe uint_2
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1116be21d4f65b67ab967b7acedf4859df54a6e7
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="uint2-class"></a>Classe uint_2
 Representa um vetor curto de dois inteiros sem sinal.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class uint_2;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs públicos  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
 |`value_type`||  
   
-### Construtores públicos  
+### <a name="public-constructors"></a>Construtores Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor uint\_2::uint\_2](../Topic/uint_2::uint_2%20Constructor.md)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|----------|-----------------|  
+|[Construtor uint_2](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
   
-### Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|Método uint\_2::get\_x||  
-|Método uint\_2::get\_xy||  
-|Método uint\_2::get\_y||  
-|Método uint\_2::get\_yx||  
-|uint\_2::ref\_g\_Method||  
-|uint\_2::ref\_r\_Method||  
-|uint\_2::ref\_x\_Method||  
-|uint\_2::ref\_y\_Method||  
-|Método uint\_2::set\_x||  
-|Método uint\_2::set\_xy||  
-|Método uint\_2::set\_y||  
-|Método uint\_2::set\_yx||  
-  
-### Operadores públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|uint\_2::Operator \- operador||  
-|uint\_2::Operator % \= operador||  
-|uint\_2::Operator & operador \=||  
-|uint\_2::Operator \* operador \=||  
-|Operador de uint\_2::Operator \/ \=||  
-|uint\_2::Operator ^ Operator \=||  
-|uint\_2::Operator &#124; operador \=||  
-|uint\_2::Operator ~ operador||  
-|uint\_2::Operator operador \+ \+||  
-|Operador \+ \= uint\_2::Operator||  
-|uint\_2::Operator \<\< \= operador||  
-|uint\_2::Operator \= operador||  
-|uint\_2::Operator\-\= operador||  
-|uint\_2::Operator \>\> \= operador||  
+|----------|-----------------|  
+|Método uint_2::get_x||  
+|Método uint_2::get_xy||  
+|Método uint_2::get_y||  
+|Método uint_2::get_yx||  
+|uint_2::ref_g_Method||  
+|uint_2::ref_r_Method||  
+|uint_2::ref_x_Method||  
+|uint_2::ref_y_Method||  
+|Método uint_2::set_x||  
+|Método uint_2::set_xy||  
+|Método uint_2::set_y||  
+|Método uint_2::set_yx||  
   
-### Constantes públicas  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Constante uint\_2::size](../Topic/uint_2::size%20Constant.md)||  
+|----------|-----------------|  
+|uint_2::Operator - operador||  
+|uint_2::Operator % = operador||  
+|uint_2::Operator < / operador =||  
+|uint_2::Operator * operador =||  
+|Operador de uint_2::Operator / =||  
+|uint_2::Operator ^ Operator =||  
+|uint_2::Operator | operador =||  
+|uint_2::Operator ~ operador||  
+|uint_2::Operator operador + +||  
+|Operador + = uint_2::Operator||  
+|uint_2::Operator\<= operador||  
+|uint_2::Operator = operador||  
+|uint_2::Operator-= operador||  
+|uint_2::Operator >> = operador||  
   
-### Membros de dados públicos  
+### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|Membro de dados uint\_2::g||  
-|Membro de dados uint\_2::GR||  
-|Membro de dados uint\_2::r||  
-|Membro de dados uint\_2::RG||  
-|Membro de dados uint\_2::x||  
-|Membro de dados uint\_2::xy||  
-|Membro de dados uint\_2::y||  
-|Membro de dados uint\_2::YX||  
+|----------|-----------------|  
+|[tamanho constante](#uint_2__size)||  
   
-## Hierarquia de herança  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|Membro de dados uint_2::g||  
+|Membro de dados uint_2::GR||  
+|Membro de dados uint_2::r||  
+|Membro de dados uint_2::RG||  
+|Membro de dados uint_2::x||  
+|Membro de dados uint_2::xy||  
+|Membro de dados uint_2::y||  
+|Membro de dados uint_2::YX||  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `uint_2`  
   
-## Requisitos  
- **Cabeçalho:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_short_vectors.h  
   
  **Namespace:** Concurrency:: Graphics  
   
-## Consulte também  
- [Namespace Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-uint2"></a><a name="ctor"></a>uint_2 
+
+ Padrão construtor inicializa todos os elementos com 0.  
+  
+```  
+uint_2() restrict(amp,
+    cpu);
+
+ 
+uint_2(
+    unsigned int _V0,  
+    unsigned int _V1) restrict(amp,
+    cpu);
+
+ 
+uint_2(
+    unsigned int _V) restrict(amp,
+    cpu);
+
+ 
+uint_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline uint_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline uint_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline uint_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline uint_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline uint_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_V0`  
+ O valor para inicializar o elemento 0.  
+  
+ `_V1`  
+ O valor para inicializar o elemento 1.  
+  
+ `_V`  
+ O valor de inicialização.  
+  
+ `_Other`  
+ O objeto usado para inicializar.  
+  
+##  <a name="a-nameuint2sizea-size"></a><a name="uint_2__size"></a>tamanho 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+

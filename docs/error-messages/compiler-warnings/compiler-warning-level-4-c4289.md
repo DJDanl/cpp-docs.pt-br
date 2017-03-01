@@ -1,39 +1,54 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4289 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4289"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4289"
+title: "Compilador aviso (nível 4) C4289 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4289
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4289
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9e23937ad5b9116df63c7c2db4b993eb8ef563cd
+ms.lasthandoff: 02/25/2017
 
-extensão não padrão usada: var “”: a variável de controle loop for declarado em para\- loop é usado fora do escopo do loop para\-  
+---
+# <a name="compiler-warning-level-4-c4289"></a>Compilador C4289 de aviso (nível 4)
+extensão não padrão usada: 'var': variável de controle de loop declarada no loop for é usada fora do escopo do loop for  
   
- Ao criar com [\/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **\/Zc:forScope\-**, uma variável declarada em um loop de [para](../../cpp/for-statement-cpp.md) foi usado depois que **for**\- dê um loop no escopo.  
+ Ao compilar com [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc:forScope-**, uma variável declarada em um [para](../../cpp/for-statement-cpp.md) loop foi usado após o **para**-escopo de loop.  
   
- Consulte [\/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar o comportamento padrão em loop de **for** com **\/Ze**.  
+ Consulte [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar o comportamento padrão em **para** loops com **/Ze**.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4289:  
+ O exemplo a seguir gera C4289:  
   
 ```  
 // C4289.cpp  

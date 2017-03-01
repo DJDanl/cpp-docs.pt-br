@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3854 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3854"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3854"
+title: C3854 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3854
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3854
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ca51acadc48e322a458dc22c374d0ff8dbe5d176
+ms.lasthandoff: 02/25/2017
 
-a expressão à esquerda de “\=” avalia a uma função.Não pode ser atribuído a uma função \(uma função não é um valor l\-\)  
+---
+# <a name="compiler-error-c3854"></a>C3854 de erro do compilador
+avalia a expressão à esquerda de '=' para uma função. Não é possível atribuir a uma função (uma função não é um l-value)  
   
- Uma referência não pode ser reiniciada.  Desreferenciar uma referência a uma função produz uma função, que é um rvalue, que não é possível atribuir.  Consequentemente, você não pode atribuir a uma referência a uma função.  
+ Uma referência não pode ser reinicializada. Uma referência a uma função de referência resulta em uma função, que é um rvalue, para que você não pode atribuir. Portanto, é possível atribuir através de uma referência a uma função.  
   
- O seguinte exemplo gera C3854:  
+ O exemplo a seguir gera C3854:  
   
 ```  
 // C3854.cpp  

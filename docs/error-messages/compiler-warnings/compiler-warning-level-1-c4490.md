@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4490"
+title: "Compilador aviso (nível 1) C4490 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4490
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e33c66f85fe97fc64e3c04056b05f81e4143b91c
+ms.lasthandoff: 02/25/2017
 
-“substituição”: uso incorreto do especificador de substituição; a função “” não corresponde a um método da classe de referência de base  
+---
+# <a name="compiler-warning-level-1-c4490"></a>Compilador C4490 de aviso (nível 1)
+'override': uso incorreto de especificador de substituição; 'function' não corresponde a um método de classe ref base  
   
- Um especificador de substituição foi usado incorretamente.  Por exemplo, você não substitui a função da interface, você implementá\-la.  
+ Um especificador de substituição foi usado incorretamente. Por exemplo, você não substituir a função de uma interface, você implementá-lo.  
   
- Para obter mais informações, consulte [Especificadores de Substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [especificadores de substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4490.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4490.  
   
 ```  
 // C4490.cpp  
