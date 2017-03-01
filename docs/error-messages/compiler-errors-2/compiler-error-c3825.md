@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3825"
+title: C3825 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 403ad0379db8384fd9cf84ea06d4f58f4878d269
+ms.lasthandoff: 02/25/2017
 
-'class': gerenciada ou WinRT classe pode apenas suporte gerenciado ou eventos do WinRT  
+---
+# <a name="compiler-error-c3825"></a>C3825 de erro do compilador
+'class': gerenciada ou WinRTclass pode apenas suporte gerenciado ou WinRTevents  
   
- Somente os eventos .NET têm suporte em classes gerenciadas.  Apenas os eventos de tempo de execução do Windows têm suporte nas classes de tempo de execução do Windows.  Para corrigir esse erro em código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` de `native` para `managed`.  Como alternativa, remova o atributo.  
+ Somente os eventos .NET têm suporte em classes gerenciadas. Somente os eventos de tempo de execução do Windows têm suporte nas classes de tempo de execução do Windows. Para corrigir esse erro em código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` de `native` para `managed`. Como alternativa, remova o atributo.  
   
-## Exemplo  
- O exemplo a seguir gera C3825 e mostra como corrigi\-lo:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3825 e mostra como corrigi-lo:  
   
 ```  
 // C3825a.cpp  

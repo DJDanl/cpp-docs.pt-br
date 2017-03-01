@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3893"
+title: C3893 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c1d7c8bcb673384ecc718795bc154128db42d12c
+ms.lasthandoff: 02/25/2017
 
-var “”: o uso de l\- valor do membro de dados é permitido initonly somente em um construtor da instância do das classes” type\_name  
+---
+# <a name="compiler-error-c3893"></a>C3893 de erro do compilador
+'var': uso de l-value initonly do membro de dados só é permitido em um construtor de instância da classe 'type_name'  
   
- Os membros de dados estáticos de [initonly](../../dotnet/initonly-cpp-cli.md) só podem ter seu endereço recolhidos um construtor estático.  
+ Estático [initonly](../../dotnet/initonly-cpp-cli.md) membros de dados só podem ter seus endereços obtidos em um construtor estático.  
   
- Os membros de dados de instância \(não estático\) initonly só podem ter seus construtores recolhidos endereço de instância \(não estático\).  
+ Membros de dados (não estático) initonly instância só podem ter seus endereços obtidos em construtores de instância (não estático).  
   
- O seguinte exemplo gera C3893:  
+ O exemplo a seguir gera C3893:  
   
 ```  
 // C3893.cpp  

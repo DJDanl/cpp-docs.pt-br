@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2352 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2352"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2352"
+title: C2352 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2352
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2352
 ms.assetid: 0efad8cb-659f-4b3e-8f6f-9f8ec44d345c
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2352
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 15447f7da47fcfb63ddfa357cc303de0f8d7c0d9
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2352"></a>C2352 de erro do compilador
 'class::function': chamada ilegal da função de membro não estático  
   
- Um `static` chamado de função de membro de uma função de membro não estático.  Ou uma função de membro não estático foi chamada de fora da classe como uma função estática.  
+ Um `static` uma função de membro não estático chamado de função de membro. Ou, a função de membro não estático foi chamada fora da classe como uma função estática.  
   
- O exemplo a seguir gera C2352 e mostra como corrigi\-lo:  
+ O exemplo a seguir gera C2352 e mostra como corrigi-lo:  
   
 ```  
 // C2352.cpp  
@@ -45,7 +60,7 @@ public:
 };  
 ```  
   
- O exemplo a seguir gera C2352 e mostra como corrigi\-lo:  
+ O exemplo a seguir gera C2352 e mostra como corrigi-lo:  
   
 ```  
 // C2352b.cpp  

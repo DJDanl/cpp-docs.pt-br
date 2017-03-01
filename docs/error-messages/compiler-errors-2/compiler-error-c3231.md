@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3231 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3231"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3231"
+title: C3231 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3231
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3231
 ms.assetid: fe5dc352-e634-45fa-9534-3da176294c98
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3231
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 666234b53842a009a6b33bcd81f0b19deb2e5629
+ms.lasthandoff: 02/25/2017
 
-“arg”: o argumento de tipo de modelo não pode usar um parâmetro de tipo genérico  
+---
+# <a name="compiler-error-c3231"></a>C3231 de erro do compilador
+'arg': argumento de tipo de modelo não é possível usar um parâmetro de tipo genérico  
   
- Os modelos são criados uma instância em tempo de compilação, mas os produtos genéricas serão instanciados em tempo de execução.  Consequentemente, não é possível gerar o código genérico que pode chamar o modelo porque o modelo não pode ser criada uma instância em tempo de execução quando o tipo genérico é conhecido por fim.  
+ Modelos são instanciados em tempo de compilação, mas genéricos são instanciados em tempo de execução. Portanto, não é possível gerar código genérico que pode chamar o modelo porque o modelo não pode ser instanciado em tempo de execução quando o tipo genérico é conhecido por último.  
   
- O seguinte exemplo gera C3231:  
+ O exemplo a seguir gera C3231:  
   
 ```  
 // C3231.cpp  

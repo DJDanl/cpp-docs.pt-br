@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3901 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3901"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3901"
+title: C3901 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3901
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3901
 ms.assetid: 19af4141-39ad-4c16-a68f-3ae76f648186
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3901
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 33351ce7e066b9bfca843bc24a4c02fe7ba11ee2
+ms.lasthandoff: 02/25/2017
 
-“accessor\_function”: deve ter o tipo de retorno “tipo”  
+---
+# <a name="compiler-error-c3901"></a>C3901 de erro do compilador
+'accessor_function': deve ter o tipo de retorno 'type'  
   
- Pelo menos se obtém o tipo de retorno do método deve corresponder ao tipo de propriedade.  Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
+ Tipo de retorno do método get pelo menos um deve corresponder ao tipo de propriedade. Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3901:  
+ O exemplo a seguir gera C3901:  
   
 ```  
 // C3901.cpp  

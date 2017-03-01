@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3868 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3868"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3868"
+title: C3868 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3868
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3868
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9d251e34eec5c1505f8d2f19326fa369006440ea
+ms.lasthandoff: 02/25/2017
 
-“tipo”: as restrições no parâmetro genérico parâmetro” diferentes de aqueles na declaração  
+---
+# <a name="compiler-error-c3868"></a>C3868 de erro do compilador
+'type': restrições no parâmetro genérico 'parameter' diferem na declaração  
   
- Várias instruções devem ter as mesmas restrições genéricas.  Para obter mais informações, consulte [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Várias declarações devem ter as mesmas restrições genéricas.  Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
   
-## Exemplo  
- O exemplo a seguir produz C3868.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3868.  
   
 ```  
 // C3868.cpp  

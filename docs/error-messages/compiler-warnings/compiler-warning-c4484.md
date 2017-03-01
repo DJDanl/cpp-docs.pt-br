@@ -1,46 +1,61 @@
 ---
-title: "Aviso do compilador C4484 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4484"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4484"
+title: C4484 de aviso do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4484
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador C4484
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ec127038509275247a1030d7ac1bef4f448ec705
+ms.lasthandoff: 02/25/2017
 
-“override\_function”: as correspondências baseiam o método “base\_class\_function” da classe de referência, mas não são “virtuais”, “novos marcados como” ou “substituição”; “novo” \(e não “virtual "\) será assumido  
+---
+# <a name="compiler-warning-c4484"></a>C4484 de aviso do compilador
+'override_function': corresponde ao método da classe base ref 'base_class_function', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') será assumido  
   
- Ao criar com **\/clr**, o compilador não substituirá implicitamente uma função da classe base, que significa a função obterá um novo local em vtable.  Para resolver, especifique explicitamente se uma função é uma substituição.  
+ Ao compilar com **/clr**, o compilador não substituirá implicitamente uma função de classe base, o que significa que a função terá um novo slot em vtable. Para resolver, explicitamente especifique se uma função é uma substituição.  
   
  Para obter mais informações, consulte:  
   
--   [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [override](../../windows/override-cpp-component-extensions.md)  
   
--   [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [novo (novo slot em vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
- C4484 é emitido sempre como um erro.  Use o pragma de [warning](../../preprocessor/warning.md) para suprimir C4484.  
+ C4484 sempre é emitida como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4484.  
   
-## Exemplo  
- O exemplo a seguir produz C4484.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4484.  
   
 ```  
 // C4484.cpp  

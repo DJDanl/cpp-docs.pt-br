@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3626 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3626"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3626"
+title: C3626 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3626
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3626
 ms.assetid: 43926e2b-1ba9-4a43-9343-c58449cbb336
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3626
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8e8f2d843511586f335d6d534c5f2daa9e4de0d7
+ms.lasthandoff: 02/25/2017
 
-“palavra\-chave”: a palavra\-chave “\_\_event” pode ser usado somente em interfaces, funções de membro e os membros de dados de COM que são ponteiros para os representantes  
+---
+# <a name="compiler-error-c3626"></a>C3626 de erro do compilador
+'palavra-chave': palavra-chave Event' só pode ser usado em interfaces COM, funções de membro e membros de dados que são ponteiros para delegados  
   
- Uma palavra\-chave foi usado incorretamente.  
+ Uma palavra-chave foi usada incorretamente.  
   
- O seguinte exemplo gera C3626:  
+ O exemplo a seguir gera C3626:  
   
 ```  
 // C3626.cpp  

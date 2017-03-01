@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2764"
+title: C2764 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f8230d62dfe02f5bdddb16b0214fb9da033da4c0
+ms.lasthandoff: 02/25/2017
 
-“param”: parâmetros de modelo não usados ou deducible na especialização parcial “especialização”  
+---
+# <a name="compiler-error-c2764"></a>C2764 de erro do compilador
+'param': parâmetro de modelo não usado ou deducible na especialização parcial 'especialização'  
   
- Um parâmetro de modelo não é usado em uma especialização parcial.  Isso torna a especialização parcial inutilizável porque o parâmetro do modelo não for possível deduzir.  
+ Um parâmetro de modelo não é usado em uma especialização parcial. Isso torna a especialização parcial inutilizável porque o parâmetro de modelo não pode ser deduzido.  
   
-## Exemplo  
- O seguinte exemplo gera C2764:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2764:  
   
 ```  
 // C2764.cpp  

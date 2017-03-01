@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3740 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3740"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3740"
+title: C3740 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3740
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3740
 ms.assetid: edb17a90-2307-4df6-943d-580460d26d2b
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3740
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e4e541d996d9daa7458fb61df10e69a5d9101364
+ms.lasthandoff: 02/25/2017
 
-os modelos não podem origem ou para receber eventos  
+---
+# <a name="compiler-error-c3740"></a>C3740 de erro do compilador
+modelos não fonte ou receber eventos  
   
- Uma classe ou uma estrutura templated não podem conter [eventos](../../cpp/event-handling.md).  
+ Uma classe de modelo ou struct não pode conter [eventos](../../cpp/event-handling.md).  
   
- O seguinte exemplo gera C3740:  
+ O exemplo a seguir gera C3740:  
   
 ```  
 // C3740.cpp  

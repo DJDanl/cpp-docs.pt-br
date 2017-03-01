@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3765 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3765"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3765"
+title: C3765 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3765
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3765
 ms.assetid: feadee7a-fcfb-402c-af2f-0e656f814a13
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3765
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 231f26293efb42e420a52ef0ed8051607b0f7fc0
+ms.lasthandoff: 02/25/2017
 
-“evento”: não é possível definir um evento em uma classe\/struct “tipo” marcada como um event\_receiver  
+---
+# <a name="compiler-error-c3765"></a>C3765 de erro do compilador
+'event': não é possível definir um evento em um classe/struct 'type' marcado como um event_receiver  
   
- Se uma classe é marcada com o atributo de [event\_receiver](../../windows/event-receiver.md) , a classe não pode conter uma declaração de [\_\_event](../../cpp/event.md) .  
+ Se uma classe está marcada com o [event_receiver](../../windows/event-receiver.md) atributo, a classe não pode conter um [Event](../../cpp/event.md) declaração.  
   
- O seguinte exemplo gera C3765:  
+ O exemplo a seguir gera C3765:  
   
 ```  
 // C3765.cpp  

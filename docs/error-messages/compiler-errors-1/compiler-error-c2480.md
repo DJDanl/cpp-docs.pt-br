@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2480 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2480"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2480"
+title: C2480 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2480
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2480
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 90223773164cc0c8e0f29db709effc74f8ac0ce8
+ms.lasthandoff: 02/25/2017
 
-“identificador”: o thread “” é válido apenas para itens de dados de extensão estático  
+---
+# <a name="compiler-error-c2480"></a>C2480 de erro do compilador
+'identifier': 'thread' só é válida para itens de dados de extensão estática  
   
- Você não pode usar o atributo de `thread` com uma variável automático, membro de dados não estático, parâmetro de função, ou em declarações ou definições de função.  
+ Não é possível usar o `thread` com uma variável automática, o membro de dados não estático, o parâmetro de função ou em declarações de função ou definições de atributo.  
   
- Use o atributo de `thread` para variáveis globais, membros de dados estáticos, e variáveis estáticas locais.  
+ Use o `thread` atributo para variáveis globais, os membros de dados estáticos e variáveis estáticas locais apenas.  
   
- O seguinte exemplo gera C2480:  
+ O exemplo a seguir gera C2480:  
   
 ```  
 // C2480.cpp  

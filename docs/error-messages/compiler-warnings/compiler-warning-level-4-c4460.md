@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4460 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4460"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4460"
+title: "Compilador aviso (nível 4) C4460 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4460
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4460
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e08453025ca9d12dc79dd0d592d8dd17a32de102
+ms.lasthandoff: 02/25/2017
 
-WinRT ou CLR 'operador', parâmetro tiver passado por referência.WinRT ou CLR 'operador' tem uma semântica diferente do operador C\+\+ 'operator', você pretendia passar por valor?  
+---
+# <a name="compiler-warning-level-4-c4460"></a>Compilador C4460 de aviso (nível 4)
+WinRT ou CLR operador 'operator', parâmetro tiver passado por referência. WinRT ou CLR 'operador' tem uma semântica diferente do operador C++ 'operator', você pretendia passar por valor?  
   
- Um valor pode ser transmitido por referência a um operador definido pelo usuário em tempo de execução do Windows ou CLR.  Se o valor for alterado dentro da função, observe que o valor retornado após a chamada de função será atribuída o valor de retorno da função.  No C\+\+ padrão, o valor alterado será refletido depois da chamada de função.  
+ Um valor pode ser transmitido por referência a um operador definido pelo usuário em tempo de execução do Windows ou CLR. Se o valor for alterado dentro da função, observe que o valor retornado após a chamada de função será atribuída o valor de retorno da função. No C++ padrão, o valor alterado será refletido após a chamada de função.  
   
-## Exemplo  
- O exemplo a seguir gera C4460 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4460 e mostra como corrigi-lo.  
   
 ```  
 // C4460.cpp  

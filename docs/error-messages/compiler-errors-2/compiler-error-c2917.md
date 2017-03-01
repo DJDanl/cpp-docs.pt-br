@@ -1,37 +1,61 @@
 ---
-title: "C2917 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2917"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2917"
+title: C2917 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2917
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2917
 ms.assetid: ec9da9ee-0f37-47b3-87dd-19ef5a14dc4c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2917 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e1702502d012f11c66d10fe41b57f2be0a0031de
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2917"></a>C2917 de erro do compilador
 'name': parâmetro de modelo inválido  
   
  Uma lista de parâmetros de modelo contém um identificador que não era um parâmetro de modelo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2917.  
   
 ```  
-// C2917.cpp // compile with: /c template<class T> class Vector { void sort(); }; template<class T*> void Vector<T>::sort() {}   // C2917 // try the following line instead // template<class T> void Vector<T>::sort() {}  
+// C2917.cpp  
+// compile with: /c  
+template<class T> class Vector {  
+   void sort();  
+};  
+  
+template<class T*> void Vector<T>::sort() {}   // C2917  
+// try the following line instead  
+// template<class T> void Vector<T>::sort() {}  
 ```

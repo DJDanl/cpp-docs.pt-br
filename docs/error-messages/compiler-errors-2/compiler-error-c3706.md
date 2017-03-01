@@ -1,39 +1,54 @@
 ---
-title: "Erro do Compilador C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: C3706 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 080298796a97d6b983b7ff731f6c25ec11722b1b
+ms.lasthandoff: 02/25/2017
 
-função “”: deve ser uma interface COM de eventos acionados COM  
+---
+# <a name="compiler-error-c3706"></a>C3706 de erro do compilador
+'function': deve ser uma interface COM para acionar eventos COM  
   
- A interface de eventos que você usa para disparar eventos COM deve ser uma interface COM.  Nessa situação, a interface deve ser definida usando um atributo do Visual C\+\+, ou ser importada com [\#import](../Topic/%23import%20Directive%20\(C++\).md) de uma biblioteca de tipos com o atributo de embedded\_idl de \#import.  
+ A interface de eventos que você usa para acionar eventos COM deve ser uma interface COM. Nessa situação, a interface devem ser definida usando um atributo de Visual C++ ou importados usando [#import](../../preprocessor/hash-import-directive-cpp.md) de uma biblioteca de tipos com atributo de embedded_idl do #import.  
   
- Observe que as linhas de `#include` dos arquivos de cabeçalho de ATL mostrados no exemplo a seguir são necessárias usando eventos COM.  Para corrigir esse erro, siga a `IEvents` \(a interface de eventos\) uma interface COM aplicando um dos seguintes atributos à definição da: [objeto](../Topic/object%20\(C++\).md), [double](../Topic/dual.md), ou [dispinterface](../../windows/dispinterface.md).  
+ Observe que o `#include` linhas dos arquivos de cabeçalho ATL mostrados no exemplo a seguir são necessárias para o uso de eventos COM. Para corrigir esse erro, verifique `IEvents` (a interface de eventos) uma interface COM aplicando um dos seguintes atributos à definição de interface: [objeto](../../windows/object-cpp.md), [dual](../../windows/dual.md), ou [dispinterface](../../windows/dispinterface.md).  
   
- Se uma interface é de um arquivo de cabeçalho gerado por MIDL, o compilador não o reconhecerá como uma interface COM.  
+ Se uma interface for de um arquivo de cabeçalho gerado pelo MIDL, o compilador não a reconhecerá como uma interface COM.  
   
- O seguinte exemplo gera C3706:  
+ O exemplo a seguir gera C3706:  
   
 ```  
 // C3706.cpp  

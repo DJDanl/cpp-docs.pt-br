@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3194 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3194"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3194"
+title: C3194 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3194
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3194
 ms.assetid: 49d3ffc6-eff6-4b46-865b-18811692a8bb
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3194
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f400e95d022e8319d8f694ae66d5822e6c7c033a
+ms.lasthandoff: 02/25/2017
 
-“membro”: um tipo de valor não pode ter um operador de atribuição  
+---
+# <a name="compiler-error-c3194"></a>C3194 de erro do compilador
+'member': um tipo de valor não pode ter um operador de atribuição  
   
- As funções de membro especiais que exigem a invocação automática pelo compilador, como um construtor de cópia ou um operador de atribuição de cópia não têm suporte dentro de uma classe do valor.  
+ Não há suporte para funções de membro especial que requerem a invocação automática pelo compilador, como um construtor de cópia ou operador de atribuição de cópia dentro de uma classe de valor.  
   
-## Exemplo  
- O exemplo a seguir produz C3194.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3194.  
   
 ```  
 // C3194.cpp  

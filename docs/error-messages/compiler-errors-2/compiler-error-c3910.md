@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3910 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3910"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3910"
+title: C3910 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3910
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3910
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: db69e7a5bec7ddbc06e51726052900812a08cff9
+ms.lasthandoff: 02/25/2017
 
-“evento”: deve definir o membro método “”  
+---
+# <a name="compiler-error-c3910"></a>C3910 de erro do compilador
+'event': deve definir o método' membro'  
   
- Um evento foi definido, mas não continha o método especificado, exigido do acessador.  
+ Um evento foi definido, mas não continha o método acessador especificado, é necessário.  
   
  Para obter mais informações, consulte [evento](../../windows/event-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3910:  
+ O exemplo a seguir gera C3910:  
   
 ```  
 // C3910.cpp  

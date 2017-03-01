@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2605 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2605"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2605"
+title: C2605 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2605
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2605
 ms.assetid: a0e6f132-5acf-4e19-b277-ddf196d182bf
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2605
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c650ba8235ba013cf1eed1bb4fbe412a223a6a89
+ms.lasthandoff: 02/25/2017
 
-'name': este método é reservado no gerenciada ou WinRT classe  
+---
+# <a name="compiler-error-c2605"></a>C2605 de erro do compilador
+'name': esse método está reservado no gerenciada ou WinRT classe  
   
- Determinados nomes são reservados pelo compilador para funções internas.  Para obter mais informações, consulte [Destruidores e finalizers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Determinados nomes são reservados pelo compilador para funções internas.  Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2605.  
   
 ```  

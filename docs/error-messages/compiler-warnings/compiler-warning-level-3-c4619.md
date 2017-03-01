@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4619 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4619"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4619"
+title: "Compilador aviso (nível 3) C4619 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4619
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4619
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9ce8da2a6d4787a024c2ead4426a0374f5bdbbff
+ms.lasthandoff: 02/25/2017
 
-aviso de \#pragma: não há nenhum número de aviso “número”  
+---
+# <a name="compiler-warning-level-3-c4619"></a>Compilador C4619 de aviso (nível 3)
+\#Aviso de Pragma: há um número de aviso 'number'  
   
- Foi feita uma tentativa de desabilitar um aviso que não existe.  
+ Foi feita uma tentativa para desativar um aviso de que não existe.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4619:  
+ O exemplo a seguir gera C4619:  
   
 ```  
 // C4619.cpp  

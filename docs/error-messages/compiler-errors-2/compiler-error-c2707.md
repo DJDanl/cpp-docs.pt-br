@@ -1,44 +1,59 @@
 ---
-title: "Erro do Compilador C2707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2707"
+title: C2707 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 54c6f9cf3d53bd041c2cd041024047f83bfa8e91
+ms.lasthandoff: 02/25/2017
 
-“identificador”: contexto incorreto para a função intrínseca  
+---
+# <a name="compiler-error-c2707"></a>C2707 de erro do compilador
+'identifier': contexto incorreto para a função intrínseca  
   
- Os intrinsics estruturados manipulação de exceções gerais são inválidos em determinados contextos:  
+ Intrínsecos do tratamento de exceções estruturados são inválidos em determinados contextos:  
   
--   `_exception_code()` fora de um filtro de exceção ou bloco de `__except`  
+-   `_exception_code()`fora de um filtro de exceção ou `__except` bloco  
   
--   `_exception_info()` fora de um filtro de exceção  
+-   `_exception_info()`fora de um filtro de exceção  
   
--   `_abnormal_termination()` fora de um bloco de `__finally`  
+-   `_abnormal_termination()`fora de um `__finally` bloco  
   
- Para resolver o erro, verifique se os intrinsics manipulação de exceções gerais são colocados no contexto apropriado.  
+ Para resolver o erro, certifique-se de que a manipulação de exceção intrínsecos são colocados no contexto apropriado.  
   
-## Exemplo  
- O exemplo a seguir produz C2707.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2707.  
   
 ```  
 // C2707.cpp  

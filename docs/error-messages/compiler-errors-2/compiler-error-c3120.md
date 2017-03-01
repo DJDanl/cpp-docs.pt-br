@@ -1,33 +1,48 @@
 ---
-title: "Erro do Compilador C3120 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3120"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3120"
+title: C3120 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3120
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3120
 ms.assetid: 9b6b210f-9948-4517-a4cc-b4aaadebde68
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3120
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d194c85b34cbf682b6814a4043ea191b0604419b
+ms.lasthandoff: 02/25/2017
 
-“method\_name”: os métodos da interface não podem usar uma lista de argumento de variável  
+---
+# <a name="compiler-error-c3120"></a>C3120 de erro do compilador
+'nome_do_método': métodos de interface não podem levar a uma lista de argumentos de variável  
   
- Um método da interface não pode usar uma lista de argumento de variável.  Por exemplo, a seguinte definição da gerenciar C3120:  
+ Um método de interface não pode receber uma lista de argumentos variável. Por exemplo, a seguinte definição de interface gera C3120:  
   
 ```  
 // C3120.cpp  

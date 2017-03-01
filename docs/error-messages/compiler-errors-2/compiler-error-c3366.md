@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3366 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3366"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3366"
+title: C3366 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3366
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3366
 ms.assetid: efc55bcf-c16d-43c1-a36f-87a6165fa2a8
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3366
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 930114bfb06019f13b4f44cc51b72922237a62f6
+ms.lasthandoff: 02/25/2017
 
-'variable': membros de dados estáticos gerenciado ou tipos WinRT devem ser definidos dentro da definição de classe  
+---
+# <a name="compiler-error-c3366"></a>C3366 de erro do compilador
+'variável': membros de dados estáticos gerenciados ou WinRTtypes devem ser definidos dentro da definição de classe  
   
- Você tentou fazer referência a um membro estático de uma classe WinRT ou .NET ou interface fora da definição da classe ou interface.  
+ Você tentou fazer referência a um membro estático da classe WinRT ou .NET ou interface fora da definição da classe ou interface.  
   
- O compilador precisa saber a definição completa da classe \(para emitir os metadados após uma passagem\) e exige que os membros de dados estáticos sejam inicializados dentro da classe.  
+ O compilador precisa saber a definição completa da classe (para emitir os metadados após uma passagem) e requer que os membros de dados estáticos sejam inicializados dentro da classe.  
   
- Por exemplo, o exemplo a seguir gera C3366 e mostra como corrigi\-lo:  
+ Por exemplo, o exemplo a seguir gera C3366 e mostra como corrigi-lo:  
   
 ```  
 // C3366.cpp  
@@ -43,15 +58,4 @@ ref class X {
   
 int X::i = 5;      // C3366  
 ```  
-  
- O exemplo a seguir gera C3366 e mostra como corrigi\-lo:  
-  
-```  
-// C3366_b.cpp  
-// compile with: /clr:oldSyntax /c  
-__gc struct X {  
-   static int i;   // initialize i here to avoid C3366  
-};  
-  
-int X::i = 5;      // C3366  
-```
+

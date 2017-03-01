@@ -1,38 +1,53 @@
 ---
-title: "Erro do Compilador C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: C3915 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c853cba55fb72190f4e1432dd095d42bf2ba47e7
+ms.lasthandoff: 02/25/2017
 
-o tipo “” não tem nenhuma propriedade indexada padrão \(indexador da classe\)  
+---
+# <a name="compiler-error-c3915"></a>C3915 de erro do compilador
+'type' não tem nenhuma propriedade padrão indexado (indexador de classe)  
   
- Um tipo não tem uma opção, a propriedade indexada.  
+ Um tipo não tem um padrão, uma propriedade indexada.  
   
  Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
   
-## Exemplo  
- O exemplo a seguir produz C3915.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3915.  
   
 ```  
 // C3915.cpp  
@@ -55,10 +70,10 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C3915 também pode ocorrer se você tentar consumir um indicador padrão no mesmo compiland onde esteve definido com <xref:System.Reflection.DefaultMemberAttribute>.  
+## <a name="example"></a>Exemplo  
+ C3915 também pode ocorrer se você tentar consumir um indexador padrão no mesmo compiland onde ele foi definido com <xref:System.Reflection.DefaultMemberAttribute>.</xref:System.Reflection.DefaultMemberAttribute>  
   
- O exemplo a seguir produz C3915.  
+ O exemplo a seguir gera C3915.  
   
 ```  
 // C3915_b.cpp  

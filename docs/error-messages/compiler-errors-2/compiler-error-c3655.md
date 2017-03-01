@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3655 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3655"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3655"
+title: C3655 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3655
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3655
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6d45686377be80b363227b5b6d708f1c81153f01
+ms.lasthandoff: 02/25/2017
 
-função “”: função preterida já explicitamente  
+---
+# <a name="compiler-error-c3655"></a>C3655 de erro do compilador
+'function': função já explicitamente substituído  
   
- Uma função só pode ser substituída explicitamente uma vez.  Para obter mais informações, consulte [Substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Uma função pode somente ser explicitamente substituída uma vez. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3655:  
+ O exemplo a seguir gera C3655:  
   
 ```  
 // C3655.cpp  

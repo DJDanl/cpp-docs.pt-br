@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3718 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3718"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3718"
+title: C3718 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3718
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3718
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 845f135cc27bcf58f1ead94cc68d07eba3c6fc28
+ms.lasthandoff: 02/25/2017
 
-só pode chamar o “evento” no contexto de uma função de membro da classe receber  
+---
+# <a name="compiler-error-c3718"></a>C3718 de erro do compilador
+somente é possível chamar 'event' no contexto de uma função de membro da classe receptora  
   
- `event` pode ser chamado somente da classe pull.  
+ O `event`só pode ser chamado da classe do receptor.  
   
-## Exemplo  
- O seguinte exemplo gera C3718:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3718:  
   
 ```  
 // C3718.cpp  

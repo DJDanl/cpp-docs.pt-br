@@ -1,33 +1,48 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4101 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4101"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4101"
+title: "Compilador aviso (nível 3) C4101 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4101
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4101
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 068bec1a99af6ff934cd8afdd9fe6ca8ec31a0a8
+ms.lasthandoff: 02/25/2017
 
-“identificador”: variável local não referenciada  
+---
+# <a name="compiler-warning-level-3-c4101"></a>Compilador C4101 de aviso (nível 3)
+'identifier': variável local sem referência  
   
- A variável local nunca é usado.  Esse aviso ocorrerá na situação óbvia:  
+ A variável local nunca é usada. Esse aviso ocorrerá na situação óbvio:  
   
 ```  
 // C4101a.cpp  
@@ -37,7 +52,7 @@ int i;   // C4101
 }  
 ```  
   
- No entanto, esse aviso também ocorrerá ao chamar uma função de membro de **static** por uma instância da classe:  
+ No entanto, esse aviso também ocorrerá ao chamar um **estático** função de membro por meio de uma instância da classe:  
   
 ```  
 // C4101b.cpp  
@@ -56,10 +71,10 @@ int main() {
 }  
 ```  
   
- Nessa situação, o usa informações do compilador sobre `si` para acessar a função de **static** , mas a instância da classe não é necessária para chamar a função de **static** ; consequentemente o aviso.  Para resolver esse aviso, você pode:  
+ Nessa situação, o compilador usa informações sobre `si` para acessar o **estático** função, mas a instância da classe não é necessário chamar o **estático** função; portanto, o aviso. Para resolver esse aviso, você pode:  
   
--   Adicionar um construtor, em que o compilador usaria a instância de `si` na chamada de `func`.  
+-   Adicione um construtor, em que o compilador poderia usar a instância do `si` na chamada para `func`.  
   
--   Remover a palavra\-chave de **static** de definição de `func`.  
+-   Remover o **estático** palavra-chave da definição do `func`.  
   
--   Chame a função de **static** explicitamente: `int y = S::func();`.
+-   Chamar o **estático** função explicitamente: `int y = S::func();`.

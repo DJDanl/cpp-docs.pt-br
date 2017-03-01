@@ -1,33 +1,48 @@
 ---
-title: "Erro do Compilador C2797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2797"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2797"
+title: Erro do compilador C2797 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2797
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2797
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9db6a5e203ff4cdbf41e99174944ce1af79c0d60
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2797"></a>Erro do Compilador C2797
 A inicialização de lista dentro da lista do inicializador de membro ou do inicializador de membro de dados não estáticos não está implementada.  
   
- O compilador C\+\+ no Visual Studio não implementa a inicialização de lista dentro de uma lista de inicializador de membro ou de um inicializador de membro de dados não estáticos.  Antes da Atualização 3 do Visual Studio 2013, ele era silenciosamente convertido em uma chamada de função, que pode levar a geração de código incorreto.  A Atualização 3 do Visual Studio 2013 relata isso como um erro.  
+ O compilador C++ no Visual Studio não implementa a inicialização de lista dentro de uma lista de inicializador de membro ou de um inicializador de membro de dados não estáticos. Antes da Atualização 3 do Visual Studio 2013, ele era silenciosamente convertido em uma chamada de função, que pode levar a geração de código incorreto. A Atualização 3 do Visual Studio 2013 relata isso como um erro.  
   
  Esse exemplo gera C2797:  
   
@@ -57,7 +72,7 @@ struct S2 {
   
 ```  
   
- Para corrigir esse problema, você pode usar a construção explícita de listas internas.  Por exemplo:  
+ Para corrigir esse problema, você pode usar a construção explícita de listas internas. Por exemplo:  
   
 ```  
 #include <vector>  
@@ -83,4 +98,4 @@ struct S {
   
 ```  
   
- \(O compilador do Visual Studio 2013 faz isso implicitamente antes da Atualização 3 do Visual Studio 2013.\)
+ (O compilador do Visual Studio 2013 faz isso implicitamente antes da Atualização 3 do Visual Studio 2013.)

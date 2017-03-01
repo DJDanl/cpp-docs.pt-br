@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: C3849 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 924892795ebdfb751ab9e30fd973cfaacf24709e
+ms.lasthandoff: 02/25/2017
 
-com o estilo chama uma expressão do tipo “tipo” perderia o const e\/ou os qualificadores temporários para todos números sobrecargas disponíveis do operador  
+---
+# <a name="compiler-error-c3849"></a>C3849 de erro do compilador
+chamada de estilo de função em uma expressão do tipo 'type' perderia qualificadores voláteis e/ou constantes para número de todas as sobrecargas do operador disponível  
   
- Uma variável com um tipo especificado const\- temporário só pode chamar funções de membro definidas com o mesmo maiores ou qualificações const\- voláteis.  
+ Uma variável com um tipo const volátil especificado só pode chamar membros a funções definidas com qualificações de const volátil igual ou superior.  
   
- Para corrigir esse erro, forneça uma função de membro apropriado.  Você não pode executar uma conversão em um const ou em um objeto qualificado volátil quando a conversão causa perda de qualificação.  Você pode obter qualificadores mas não pode perder qualificadores na conversão.  
+ Para corrigir esse erro, forneça uma função de membro apropriado. Você não pode executar uma conversão em uma constante ou objeto qualificado volátil quando a conversão causa perda de qualificação. Você pode obter qualificadores, mas você não pode perder qualificadores em uma conversão.  
   
- Os exemplos a seguir gerenciam C3849:  
+ Os exemplos a seguir geram C3849:  
   
 ```  
 // C3849.cpp  

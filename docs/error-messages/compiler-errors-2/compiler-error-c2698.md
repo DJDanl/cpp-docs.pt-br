@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2698 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2698"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2698"
+title: C2698 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2698
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2698
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7d023ab3a76ca5de71c2165b4b4b37d67545d654
+ms.lasthandoff: 02/25/2017
 
-usados a declaração da declaração “1 " não pode coexistir usados com a declaração existente para a declaração “2 "  
+---
+# <a name="compiler-error-c2698"></a>C2698 de erro do compilador
+a declaração using para ' declaração 1' não pode coexistir com a existente usando declaração para ' declaração 2'  
   
- Quando você tem [usando a declaração](../../cpp/using-declaration.md) para um membro de dados, nenhuma declaração de utilização no mesmo escopo que usa o mesmo nome não é permitida, porque somente as funções podem ser sobrecarregadas.  
+ Depois de ter um [usando a declaração](../../cpp/using-declaration.md) para um membro de dados, uso de qualquer declaração no mesmo escopo que usa o mesmo nome não é permitida como funções só podem ser sobrecarregadas.  
   
- O seguinte exemplo gera C2698:  
+ O exemplo a seguir gera C2698:  
   
 ```  
 // C2698.cpp  

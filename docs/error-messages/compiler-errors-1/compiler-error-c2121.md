@@ -1,30 +1,45 @@
 ---
-title: "Erro do Compilador C2121 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2121"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2121"
+title: C2121 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2121
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2121
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2d345a7dc931f2f83208d82941174fdd0a7318c6
+ms.lasthandoff: 02/25/2017
 
-“\#”: caractere inválido: possivelmente o resultado de uma macro expansão  
+---
+# <a name="compiler-error-c2121"></a>C2121 de erro do compilador
+'#' : caractere inválido : possivelmente o resultado de uma expansão de macro  
   
- Um caractere \# inválido pode ter sido inserido por uma macro incorreto que usa o operador token\- colando \(\#\#\) em vez do operador stringizing \(\#\).
+ Um caractere # inválida pode ter foi inserido por uma macro incorreta que usa o operador de colagem de token (#) em vez do operador stringizing (#).

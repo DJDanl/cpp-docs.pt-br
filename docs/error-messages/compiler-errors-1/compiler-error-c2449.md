@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2449 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2449"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2449"
+title: C2449 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2449
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2449
 ms.assetid: 544bf0b6-daa0-40e8-9f21-8e583d472a2d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2449
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f9a1466abe1b358b212e87abe495eb7f8a2e9b07
+ms.lasthandoff: 02/25/2017
 
-encontrado “{” no escopo do arquivo \(cabeçalho de falta de função?\)  
+---
+# <a name="compiler-error-c2449"></a>C2449 de erro do compilador
+encontrado '{' no escopo de arquivo (faltando cabeçalho de função?)  
   
- Uma chave aberta ocorre no escopo do arquivo.  
+ Uma chave de abertura ocorre no escopo do arquivo.  
   
- Esse erro pode ser causado por um ponto\-e\-vírgula entre um cabeçalho da função e a chave de abertura da definição de função.  
+ Esse erro pode ser causado por um ponto e vírgula entre um cabeçalho de função e a chave de abertura da definição da função.  
   
- O seguinte exemplo gera C2499:  
+ O exemplo a seguir gera C2499:  
   
 ```  
 // C2449.c  

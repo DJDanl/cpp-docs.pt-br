@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2572 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2572"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2572"
+title: C2572 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2572
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2572
 ms.assetid: f1a42d69-727d-4ce5-88c8-d5f55dea66ac
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2572
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c0383b931964515798e82f1405f4d596d0c27b04
+ms.lasthandoff: 02/25/2017
 
-“class::member”: redefinição de parâmetro padrão: param de parâmetro  
+---
+# <a name="compiler-error-c2572"></a>C2572 de erro do compilador
+'class::member': redefinição de parâmetro padrão: parâmetro param  
   
- Os parâmetros padrão não podem ser redefinidos.  Se você precisar outro valor para o parâmetro, o parâmetro padrão deve ficar indefinida.  
+ Parâmetros padrão não podem ser redefinidos. Se você precisar de outro valor para o parâmetro, o parâmetro padrão deve ser deixado indefinido.  
   
- O seguinte exemplo gera C2572:  
+ O exemplo a seguir gera C2572:  
   
 ```  
 // C2572.cpp  

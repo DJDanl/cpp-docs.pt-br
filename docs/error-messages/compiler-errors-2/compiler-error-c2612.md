@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2612 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2612"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2612"
+title: C2612 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2612
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2612
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9a9b997d781839017f1c05041b823da8a39bcdf3
+ms.lasthandoff: 02/25/2017
 
-char de “direita” ilegal na lista de inicializador de base\/membro  
+---
+# <a name="compiler-error-c2612"></a>C2612 de erro do compilador
+à direita 'char' inválida na lista de inicializador de membro/base  
   
- Um caractere aparece depois que a base ou o último membro em uma lista de inicializador.  
+ Um caractere é exibida após a última base ou membro em uma lista de inicializadores.  
   
- O seguinte exemplo gera C2612:  
+ O exemplo a seguir gera C2612:  
   
 ```  
 // C2612.cpp  

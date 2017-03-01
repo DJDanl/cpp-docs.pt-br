@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador C4986 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4986"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4986"
+title: C4986 de aviso do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4986
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4986
 ms.assetid: a3a7b008-29dd-4203-85f3-7740ab6790bb
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador C4986
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f4870580cb48eba09aa10850e2584e0b2bac0246
+ms.lasthandoff: 02/25/2017
 
-função “”: a especificação de exceção não corresponde à instrução anterior  
+---
+# <a name="compiler-warning-c4986"></a>C4986 de aviso do compilador
+'function': especificação de exceção não corresponde à declaração anterior  
   
- Esse aviso pode ser gerado quando há uma especificação de exceção em uma declaração e não em outro.  
+ Esse aviso pode ser gerado quando há uma especificação de exceção em uma declaração e não o outro.  
   
- Por padrão, C4986 será.  Para obter mais informações, consulte [Avisos de compilador desativados por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Por padrão, C4986 está desativado. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Exemplo  
- O exemplo a seguir produz C4986.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4986.  
   
 ```cpp  
 class X { };  
@@ -41,11 +56,10 @@ void f1() throw (X*);
 void f1()  
 {  
     // ...  
-}  
-  
+}    
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir elimina esse aviso.  
   
 ```cpp  
@@ -55,6 +69,5 @@ void f1() throw (X*);
 void f1() throw (X*)  
 {  
     // ...  
-}  
-  
+}    
 ```

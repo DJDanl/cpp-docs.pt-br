@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3703"
+title: C3703 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ea2ca458b49b2fbd7bb9f45b080f12282c2fbcb9
+ms.lasthandoff: 02/25/2017
 
-“manipulador de eventos”: um método do manipulador de eventos deve ter a mesma classe de armazenamento que a origem “evento”  
+---
+# <a name="compiler-error-c3703"></a>C3703 de erro do compilador
+'manipulador de eventos ': um método de manipulador de eventos deve ter a mesma classe de armazenamento como a origem 'event'  
   
- [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferente do manipulador de eventos que é enganchada.  Por exemplo, esse erro ocorre quando o manipulador de eventos é uma função de membro estático e o evento não é estático.  Para corrigir esse erro, de eventos e o manipulador de eventos a mesma classe de armazenamento.  
+ Um [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferentes que o manipulador de eventos para o qual ele está conectado. Por exemplo, esse erro ocorre se o manipulador de eventos é uma função de membro estático e o evento não é estático. Para corrigir esse erro, forneça o evento e o manipulador de eventos da mesma classe de armazenamento.  
   
- O seguinte exemplo gera C3703:  
+ O exemplo a seguir gera C3703:  
   
 ```  
 // C3703.cpp  

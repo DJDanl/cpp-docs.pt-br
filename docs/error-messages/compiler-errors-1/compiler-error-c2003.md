@@ -1,30 +1,45 @@
 ---
-title: "Erro do Compilador C2003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2003"
+title: C2003 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2003
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2003
 ms.assetid: 3161bc08-593d-4448-9fd3-4e3810be9e82
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ba9debb66298c28aad38a68875f44775c7340cdb
+ms.lasthandoff: 02/25/2017
 
-“ID definida esperada”  
+---
+# <a name="compiler-error-c2003"></a>C2003 de erro do compilador
+esperado 'defined id'  
   
- Um identificador deve seguir a palavra\-chave de pré\-processador.
+ Um identificador deve seguir a palavra-chave pré-processador.

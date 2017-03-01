@@ -1,38 +1,49 @@
 ---
-title: "C3248 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3248"
+title: C3248 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3248
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3248
 ms.assetid: d00b9d7d-b6be-4a5b-bb52-48174ea71fc4
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C3248 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 017e0f42e4e29b07600b5502362b4a60bdf906d9
+ms.lasthandoff: 02/25/2017
 
-'function1': função declarada como do \-sealed' não pode ser substituída por 'function2'  
+---
+# <a name="compiler-error-c3248"></a>C3248 de erro do compilador
+'function1': função declarada como do -sealed' não pode ser substituída por 'function2'  
   
- Uma classe derivada tentou substituir um [\_\_sealed](../../misc/sealed.md) método virtual.  
+Uma classe derivada tentou substituir um **sealed** método virtual.  
   
- C3248 é só pode ser acessado usando **\/clr:oldSyntax**.  
-  
- O exemplo a seguir gera C3248:  
-  
-```  
-// C3248b.cpp // compile with: /clr:oldSyntax using namespace System; __gc struct B { __sealed virtual void func(); }; __gc struct D : B { void func();   // C3248 };  
-```
+C3248 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+

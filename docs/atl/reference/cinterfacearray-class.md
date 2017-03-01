@@ -1,78 +1,99 @@
 ---
-title: "Classe de CInterfaceArray | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CInterfaceArray"
-  - "CInterfaceArray"
-  - "ATL::CInterfaceArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CInterfaceArray"
+title: Classe CInterfaceArray | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CInterfaceArray
+- CInterfaceArray
+- ATL::CInterfaceArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
 caps.latest.revision: 18
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CInterfaceArray
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: a2a99eb3cff4f2381d4c58e4d1a7aaa167e83896
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece os métodos úteis quando construir uma matriz de ponteiros da interface COM.  
+---
+# <a name="cinterfacearray-class"></a>Classe CInterfaceArray
+Essa classe fornece métodos úteis ao construir uma matriz de ponteiros de interface COM.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class I, const IID* piid=& __uuidof(I)>  
+class CInterfaceArray : 
+   public CAtlArray<ATL::CComQIPtr<I, piid>,
+                    CComQIPtrElementTraits<I, piid>>
 ```  
   
-      template<  
-   class I,  
-   const IID* piid = & __uuidof( I )  
->  
-class CInterfaceArray : public CAtlArray<  
-   ATL::CComQIPtr< I, piid >,  
-   CComQIPtrElementTraits< I, piid >  
->  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `I`  
- Uma interface COM que especifica o tipo de ponteiro para ser armazenado.  
+ Uma interface COM especificando o tipo de ponteiro a ser armazenado.  
   
  `piid`  
- Um ponteiro para o IID de `I`.  
+ Um ponteiro para o IID da `I`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CInterfaceArray::CInterfaceArray](../Topic/CInterfaceArray::CInterfaceArray.md)|O construtor para a matriz da interface.|  
+|----------|-----------------|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|O construtor para a matriz de interface.|  
   
-## Comentários  
- Essa classe fornece um construtor e métodos derivados para criar uma matriz de ponteiros da interface COM.  Use [CInterfaceList](../Topic/CInterfaceList%20Class.md) quando uma lista é necessária.  
+## <a name="remarks"></a>Comentários  
+ Essa classe fornece um construtor e métodos derivados para criar uma matriz de ponteiros de interface COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando uma lista é necessária.  
   
- Para obter mais informações, consulte [Classes de coleção de ATL](../../atl/atl-collection-classes.md).  
+ Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
-## Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CAtlArray`  
   
  `CInterfaceArray`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-## Consulte também  
- [Classe de CAtlArray](../../atl/reference/catlarray-class.md)   
- [Classe de CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Classe de CComQIPtrElementTraits](../Topic/CComQIPtrElementTraits%20Class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-namecinterfacearraya--cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
+ O construtor.  
+  
+```
+CInterfaceArray() throw();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Inicializa a matriz de ponteiro inteligente.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
+ [Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
+ [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

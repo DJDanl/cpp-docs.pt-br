@@ -1,43 +1,58 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4510 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4510"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4510"
+title: "Compilador aviso (nível 4) C4510 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4510
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4510
 ms.assetid: fd28d1d4-ad27-4dad-94c0-9dba46c93180
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4510
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 527b3ddfcd291d2e18a38af180db595fc6630abd
+ms.lasthandoff: 02/25/2017
 
-“classes: o construtor padrão não pôde ser gerado  
+---
+# <a name="compiler-warning-level-4-c4510"></a>Compilador C4510 de aviso (nível 4)
+'class': não foi possível gerar o construtor padrão  
   
- O compilador não pode gerar um construtor padrão para a classe especificada e nenhum construtor definido pelo usuário foi criado.  Você não poderá criar objetos desse tipo.  
+ O compilador não pode gerar um construtor padrão para a classe especificada e nenhum construtor definido pelo usuário foi criada. Você não poderá criar objetos desse tipo.  
   
- Há várias situações que impedem o compilador gerencia um construtor padrão, incluindo:  
+ Há várias situações que impedem que o compilador gera um construtor padrão, incluindo:  
   
--   Um membro de dados de const.  
+-   Um membro de dados const.  
   
 -   Um membro de dados que é uma referência.  
   
- Você precisa criar um construtor padrão definida pelo usuário para a classe que inicializa esses membros.  
+ Você precisa criar um construtor padrão definido pelo usuário para a classe que inicializa esses membros.  
   
- O seguinte exemplo gera C4510:  
+ O exemplo a seguir gera C4510:  
   
 ```  
 // C4510.cpp  

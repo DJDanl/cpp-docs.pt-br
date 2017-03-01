@@ -1,64 +1,48 @@
 ---
-title: "Erro do Compilador C3166 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3166"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3166"
+title: C3166 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3166
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3166
 ms.assetid: ec3e330d-c15d-4158-8268-09101486c566
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3166
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 13ff799b21825c24ae98cfd416e7e2021b6bd2bb
+ms.lasthandoff: 02/25/2017
 
-“ponteiro”: não pode declarar um ponteiro para um ponteiro dentro de \_\_gc como um membro de “tipo”  
+---
+# <a name="compiler-error-c3166"></a>C3166 de erro do compilador
+'ponteiro': não é possível declarar um ponteiro para um ponteiro de GC interiores como um membro de 'type'  
   
- O compilador encontrou uma declaração do ponteiro inválido \(um ponteiro de [\_\_nogc](../../misc/nogc.md) a um ponteiro de [\_\_gc](../Topic/__gc.md) .\).  Essa sintaxe pode ser suporte em uma versão futura.  
+O compilador encontrado uma declaração de ponteiro inválido (um `__nogc` ponteiro para um `__gc` ponteiro.). 
   
- C3166 é somente **\/clr:oldSyntax**de utilização possível acessá\-lo.  
-  
- O seguinte exemplo gera C3166:  
-  
-```  
-// C3166.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-__gc struct G {  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-public __gc class H {  
-public:  
-   Int32 __gc* __nogc* p;   // C3166  
-};  
-  
-public __value struct I {  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-public __value class J {  
-public:  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-int main() {  
-   G* pG = new G;  
-   H* pH = new H;  
-}  
-```
+C3166 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+

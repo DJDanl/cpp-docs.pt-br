@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3161 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3161"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3161"
+title: C3161 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3161
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3161
 ms.assetid: 1fe2be85-a343-487b-8476-bf9e257eb29d
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3161
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0e12d426f689281f34a7680164a1197e4c7d94e3
+ms.lasthandoff: 02/25/2017
 
-contadores de “interface”: aninhando a classe, o struct, a união a interface ou em uma interface são ilegais; aninhando da interface em uma classe, o struct ou a união são ilegal  
+---
+# <a name="compiler-error-c3161"></a>C3161 de erro do compilador
+'interface': aninhamento de classe, estrutura, união ou interface em uma interface é ilegal; interface aninhamento em uma classe, estrutura ou união é ilegal  
   
- [\_\_interface](../Topic/__interface.md) só pode aparecer no escopo global ou em um namespace.  Uma classe, uma estrutura, ou uma união não podem aparecer em uma interface.  
+ Um [interface](../../cpp/interface.md) só pode aparecer no escopo global ou dentro de um namespace. Uma classe, estrutura ou união não pode aparecer em uma interface.  
   
-## Exemplo  
- O exemplo a seguir produz C3161.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3161.  
   
 ```  
 // C3161.cpp  

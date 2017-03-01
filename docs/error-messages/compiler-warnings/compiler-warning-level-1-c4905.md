@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4905 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4905"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4905"
+title: "Compilador aviso (nível 1) C4905 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4905
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4905
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c77b1e79c93a6f481ae5420b4ca1aed8685d7bcf
+ms.lasthandoff: 02/25/2017
 
-todo literal de cadeia de caracteres convertida em “LPSTR”  
+---
+# <a name="compiler-warning-level-1-c4905"></a>Compilador C4905 de aviso (nível 1)
+literal amplo de cadeia de caracteres convertido em 'LPSTR'  
   
- O compilador detectou uma conversão não seguro.  A conversão for bem\-sucedida, mas você deve usar uma rotina de conversão.  
+ O compilador detectou uma conversão não é segura. A conversão foi bem-sucedida, mas você deve usar uma rotina de conversão.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
-## Exemplo  
- O exemplo a seguir produz C4905.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4905.  
   
 ```  
 // C4905.cpp  

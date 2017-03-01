@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3853 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3853"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3853"
+title: C3853 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3853
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3853
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: eac85ff264e4738c9c0499e8f2d50895fb3344ce
+ms.lasthandoff: 02/25/2017
 
-“\=”: inicializar novamente uma referência ou uma atribuição com uma referência\-à\- função é ilegal  
+---
+# <a name="compiler-error-c3853"></a>C3853 de erro do compilador
+'=': reinicializar uma referência ou atribuir através de uma referência a função é inválido  
   
- Não pode alocar uma referência a uma função como as funções não são lvalues.  
+ Não é possível atribuir a uma referência através de uma função como funções não são l-Values.  
   
- Os exemplos a seguir gerenciam C3853:  
+ Os exemplos a seguir geram C3853:  
   
 ```  
 // C3853.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3892 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3892"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3892"
+title: C3892 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3892
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3892
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d7fd6695a20078ec6f98f14930408028546ebf08
+ms.lasthandoff: 02/25/2017
 
-var “”: você não pode alocar uma variável que é const  
+---
+# <a name="compiler-error-c3892"></a>C3892 de erro do compilador
+'var': não é possível atribuir a uma variável que é const  
   
- Uma variável de const não pode ser alterado depois que for declarado e inicializado.  
+ Uma variável const não pode ser alterada depois que ela é declarada e inicializada.  
   
- O seguinte exemplo gera C3892:  
+ O exemplo a seguir gera C3892:  
   
 ```  
 // C3892.cpp  

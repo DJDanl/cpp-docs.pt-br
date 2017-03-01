@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: C2552 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1b73a43c3781a96f65a67e9622db5efee2c7e99c
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2552"></a>C2552 de erro do compilador
 "identificador": não agregados não podem ser inicializados com a lista de inicializadores  
   
  O identificador agregado foi inicializado incorretamente.  
   
- [Agregações](../../c-language/initializing-aggregate-types.md) são definidas como:  
+ [Agregações](../../c-language/initializing-aggregate-types.md) são definidos como:  
   
 -   Matrizes  
   
@@ -43,9 +58,9 @@ manager: "ghogen"
   
     -   Funções virtuais  
   
- Além disso, o Visual C\+\+ não permite tipos de dados em uma agregação que contenha construtores.  
+ Além disso, o Visual C++ não permite tipos de dados em uma agregação que contenha construtores.  
   
- A seguir encontram\-se os motivos que podem fazer com que o C2552 seja acionado quando houver uma tentativa de fazer uma inicialização de agregação em um tipo:  
+ A seguir encontram-se os motivos que podem fazer com que o C2552 seja acionado quando houver uma tentativa de fazer uma inicialização de agregação em um tipo:  
   
 -   O tipo tem um ou vários construtores definidos pelo usuário.  
   
@@ -57,7 +72,7 @@ manager: "ghogen"
   
 -   O tipo é uma classe ref ou interface CLR.  
   
--   O tipo tem uma matriz de dimensão não fixa \(matriz zero\) cujos elementos têm destruidores.  
+-   O tipo tem uma matriz de dimensão não fixa (matriz zero) cujos elementos têm destruidores.  
   
  O seguinte exemplo gera C2552:  
   

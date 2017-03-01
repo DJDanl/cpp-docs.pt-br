@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2819 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2819"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2819"
+title: C2819 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2819
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2819
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d658b06552af2e5a293bad88aee948d4555f1357
+ms.lasthandoff: 02/25/2017
 
-o tipo “tipo” não tem um membro sobrecarregado operador “\-\>”  
+---
+# <a name="compiler-error-c2819"></a>C2819 de erro do compilador
+o tipo 'type' não tem um membro sobrecarregadas 'operator->'  
   
- Você precisa definir `operator->()` para usar essa operação do ponteiro.  
+ Você precisa definir `operator->()` para usar essa operação de ponteiro.  
   
- O seguinte exemplo gera C2819:  
+ O exemplo a seguir gera C2819:  
   
 ```  
 // C2819.cpp  
@@ -59,7 +74,7 @@ void F(D j) {
 }  
 ```  
   
- C2819 também pode ocorrer ao usar [Semântica da pilha do C\+\+ para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md).  O seguinte exemplo gera C2819:  
+ C2819 também pode ocorrer ao usar [semântica da pilha do C++ para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md). O exemplo a seguir gera C2819:  
   
 ```  
 // C2819_b.cpp  

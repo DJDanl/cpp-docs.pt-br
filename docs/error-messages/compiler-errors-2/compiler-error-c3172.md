@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3172 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3172"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3172"
+title: C3172 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3172
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3172
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f045f6aab578fe2a7657d661cb73536a33941a0d
+ms.lasthandoff: 02/25/2017
 
-“module\_name”: não pode especificar atributos diferentes de idl\_module em um projeto  
+---
+# <a name="compiler-error-c3172"></a>C3172 de erro do compilador
+'module_name': não é possível especificar atributos idl_module diferentes em um projeto  
   
- os atributos de[idl\_module](../../windows/idl-module.md) com o mesmo nome `dllname` mas diferente ou parâmetrosde `version`encontradas em dois dos arquivos em uma compilação.  Somente um atributo exclusivo de `idl_module` pode ser especificado pela compilação.  
+ [idl_module](../../windows/idl-module.md) atributos com o mesmo nome mas diferentes `dllname` ou `version`parâmetros foram encontrados em dois dos arquivos em uma compilação. Somente um único `idl_module` atributo pode ser especificado por compilação.  
   
- Os atributos de `idl_module` idênticos podem ser especificados em mais de um arquivo de código\-fonte.  
+ Idêntico `idl_module` atributos podem ser especificados em mais de um arquivo de código fonte.  
   
- Por exemplo, se os seguintes atributos de `idl_module` foram localizados:  
+ Por exemplo, se o seguinte `idl_module` atributos foram encontrados:  
   
 ```  
 // C3172.cpp  
@@ -40,7 +55,7 @@ manager: "ghogen"
 int main() {}  
 ```  
   
- Em seguida, e  
+ E, em seguida,  
   
 ```  
 // C3172b.cpp  
@@ -49,4 +64,4 @@ int main() {}
 [ idl_module(name="x", dllname="file.dll", version="1.0") ];  
 ```  
   
- o compilador geraria C3172 \(observe os valores diferentes da versão\).
+ o compilador poderia gerar C3172 (Observe os valores de versão diferente).

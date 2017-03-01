@@ -1,39 +1,54 @@
 ---
-title: "Erro do Compilador C3510 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3510"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3510"
+title: C3510 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3510
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3510
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f458caabcedf16d2bf794cd6b5a74c303f2b8a7b
+ms.lasthandoff: 02/25/2017
 
-o não pode localizar a biblioteca dependente “type\_lib” do tipo  
+---
+# <a name="compiler-error-c3510"></a>C3510 de erro do compilador
+não é possível localizar a biblioteca de tipos dependente 'type_lib'  
   
- [no\_registry](../Topic/no_registry.md) e [auto\_search](../../preprocessor/auto-search.md) foram transmitidos a `#import` mas o compilador não pôde localizar uma biblioteca referenciada do tipo.  
+ [no_registry](../../preprocessor/no-registry.md) e [auto_search](../../preprocessor/auto-search.md) foram passados para `#import` , mas o compilador não foi capaz de encontrar uma biblioteca de tipos referenciada.  
   
- Para resolver este erro, certifique\-se de que todas as bibliotecas de tipo e bibliotecas do tipo referenciadas estão disponíveis para o compilador.  
+ Para resolver esse erro, certifique-se de que todas as bibliotecas de tipos e bibliotecas de tipo referenciado estão disponíveis para o compilador.  
   
- O seguinte exemplo gera C3510:  
+ O exemplo a seguir gera C3510:  
   
- Suponha que as duas bibliotecas de tipo foram criadas, e que C3510a.tlb esteve excluído ou não no caminho.  
+ Vamos supor que as seguintes bibliotecas de dois tipo foram criadas e que C3510a.tlb foi excluído ou não no caminho.  
   
 ```  
 // C3510a.idl  
@@ -48,7 +63,7 @@ library C3510aLib
 };  
 ```  
   
- E o código\-fonte para a segunda biblioteca de tipos:  
+ E, em seguida, o código-fonte para a biblioteca de tipos segundo:  
   
 ```  
 // C3510b.idl  
@@ -64,7 +79,7 @@ library C3510bLib
 };  
 ```  
   
- E o código de cliente:  
+ E, em seguida, o código do cliente:  
   
 ```  
 // C3510.cpp  

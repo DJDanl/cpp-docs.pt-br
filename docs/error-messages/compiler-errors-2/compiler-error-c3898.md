@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3898 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3898"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3898"
+title: C3898 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3898
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3898
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 26d75123300470956c32cc03f911e36b74542f6f
+ms.lasthandoff: 02/25/2017
 
-var “”: os membros de tipo de dados só podem ser membros de tipos gerenciados  
+---
+# <a name="compiler-error-c3898"></a>C3898 de erro do compilador
+'var': membros de dados de tipo só podem ser membros de tipos gerenciados  
   
- Um membro de dados de [initonly](../../dotnet/initonly-cpp-cli.md) foi declarado em uma classe nativo.  Um membro de dados de `initonly` só pode ser declarado em uma classe de CLR.  
+ Um [initonly](../../dotnet/initonly-cpp-cli.md) membro de dados foi declarado em uma classe nativa.  Um `initonly` membro de dados só pode ser declarado em uma classe CLR.  
   
- O seguinte exemplo gera C3898:  
+ O exemplo a seguir gera C3898:  
   
 ```  
 // C3898.cpp  
@@ -40,7 +55,7 @@ struct Y1 {
 };  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C3898b.cpp  

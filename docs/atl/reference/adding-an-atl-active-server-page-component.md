@@ -1,53 +1,70 @@
 ---
-title: "Adicionando um componente da p&#225;gina de ATL Active Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Componentes ASP"
-  - "Componentes ASP, adicionando"
-  - "Componentes de ATL ASP"
-  - "ATL, Componentes ASP"
+title: "Adicionar um componente de página de servidor ativo ATL | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ASP components, adding
+- ASP components
+- ATL, ASP components
+- ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Adicionando um componente da p&#225;gina de ATL Active Server
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d254e088d52ba788dc06e7818e907ba944cde05c
+ms.lasthandoff: 02/25/2017
 
-Para adicionar um objeto \(ATL\) ativa de biblioteca de modelo ao seu projeto, seu projeto deve ter sido criado como um aplicativo de ATL COM ou como um aplicativo MFC que contém o suporte de ATL.  Você pode usar [Assistente de projeto de ATL](../Topic/ATL%20Project%20Wizard.md) para criar um aplicativo de ATL, você pode selecionar **Adicionar Suporte ATL ao MFC** da caixa de diálogo de [Adicione a caixa de diálogo de classe](../../ide/add-class-dialog-box.md) , ou você pode implementar [adicionar um objeto de ATL ao seu aplicativo MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) o suporte de ATL para um aplicativo MFC.  
+---
+# <a name="adding-an-atl-active-server-page-component"></a>Adicionar um componente de página de servidor ativo do ATL
+Para adicionar um objeto de biblioteca ATL (Active Template) ao seu projeto, o projeto deve ter sido criado como um aplicativo COM ATL ou como um aplicativo do MFC que contém suporte ATL. Você pode usar o [ATL Project Wizard](../../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL, você pode selecionar **adicionar suporte a ATL ao MFC** do [Adicionar caixa de diálogo classe](../../ide/add-class-dialog-box.md) caixa de diálogo, ou você pode [adicionar um objeto ATL ao seu aplicativo do MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte do ATL para um aplicativo MFC.  
   
- Componentes de páginas do Active Server são parte da arquitetura de Serviços de Informações da Internet, que fornece os seguintes recursos avançados de desenvolvimento Web:  
+ Componentes do Active Server Pages fazem parte da arquitetura de serviços de informações da Internet, que fornece os seguintes recursos avançados de desenvolvimento da Web:  
   
--   Você pode incorporar componentes do ASP em suas páginas HTML para criar conteúdo dinâmico, ao.  
+-   Você pode incorporar componentes ASP em suas páginas HTML para criar conteúdo dinâmico, independente do navegador.  
   
--   Você pode usar páginas ASP para fornecer a conectividade baseado em padrões de banco de dados.  
+-   Você pode usar as páginas ASP para fornecer conectividade de banco de dados baseado em padrões.  
   
--   Você pode usar os recursos de tratamento de erros do ASP para seus aplicativos baseados na web.  
+-   Você pode usar os recursos de tratamento de erros do ASP para seus aplicativos baseados na Web.  
   
-### Para adicionar páginas de ATL Active Server componentes para o seu projeto  
+### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para adicionar um componente Active Server Pages ATL ao seu projeto  
   
-1.  Em **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](http://msdn.microsoft.com/pt-br/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique com o botão direito do mouse no nome do projeto ao qual você deseja adicionar páginas de ATL Active Server componentes.  
+1.  No **Solution Explorer** ou [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique no nome do projeto para o qual você deseja adicionar o componente ATL Active Server Pages.  
   
-2.  Em o menu de atalho, clique **Adicionar**, clique em **Adicionar Classe**.  
+2.  No menu de atalho, clique em **adicionar**e, em seguida, clique em **Adicionar classe**.  
   
-3.  Em a caixa de diálogo de [Adicionar Classe](../../ide/add-class-dialog-box.md) , no painel de modelos, clique em **"Componente ASP \(Active Server Page\) do ATL"**, e clique em **Abrir** para exibir [Assistente do componente da página de ATL Active Server](../../atl/reference/atl-active-server-page-component-wizard.md).  
+3.  No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel de modelos, clique em **ATL Active Server página componente**e, em seguida, clique em **abrir** para exibir o [ATL Assistente de componentes de página Active Server](../../atl/reference/atl-active-server-page-component-wizard.md).  
   
-## Consulte também  
- [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
- [Adicionar uma nova interface em um projeto ATL](../Topic/Adding%20a%20New%20Interface%20in%20an%20ATL%20Project.md)   
- [Adicionando pontos de conexão a um objeto](../../atl/adding-connection-points-to-an-object.md)   
+## <a name="see-also"></a>Consulte também  
+ [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
+ [Adicionando uma nova Interface em um projeto do ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
+ [Adicionando pontos de Conexão a um objeto](../../atl/adding-connection-points-to-an-object.md)   
  [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)   
- [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
- [Adicionando uma classe do C\+\+ genérica](../../ide/adding-a-generic-cpp-class.md)
+ [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adicionando uma classe C++ genérica](../../ide/adding-a-generic-cpp-class.md)
+
+

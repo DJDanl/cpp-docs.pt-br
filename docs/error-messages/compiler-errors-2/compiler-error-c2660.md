@@ -1,42 +1,58 @@
 ---
-title: "C2660 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+title: C2660 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2660 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c812a1bbaa080f3699767746513b2c3893c8d76c
+ms.lasthandoff: 02/25/2017
 
-função “”: a função não tem parâmetros de número  
+---
+# <a name="compiler-error-c2660"></a>C2660 de erro do compilador
+'function': função não aceita parâmetros de número  
   
  A função é chamada com um número incorreto de parâmetros.  
   
- C2660 pode ocorrer se você chamar acidentalmente uma função de API do windows em vez de uma função de membro MFC de mesmo nome.  Para resolver este problema:  
+ C2660 pode ocorrer se você acidentalmente chamar uma função da API do Windows em vez de uma função de membro MFC do mesmo nome. Para resolver esse problema:  
   
--   Ajuste a chamada de função para estar de acordo com o formato de chamada da função de membro.  
+-   Ajuste a chamada de função de acordo com o formato da chamada de função de membro.  
   
--   Use o operador de resolução de escopo \(`::`\) para informar o compilador para buscar o nome da função no espaço de nome global.  
+-   Use o operador de resolução de escopo (`::`) para indicar ao compilador para procurar o nome da função no espaço de nome global.  
   
-## Exemplo  
- O exemplo a seguir produz C2660.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2660.  
   
 ```  
 // C2660.cpp  
@@ -48,8 +64,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2660 também poderá ocorrer se você tentar chamar diretamente o método dispose de um tipo gerenciado.  Para obter mais informações, consulte [Destruidores e finalizers](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  O exemplo a seguir produz C2660.  
+## <a name="example"></a>Exemplo  
+ C2660 também pode ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.  
   
 ```  
 // C2660_a.cpp  
@@ -69,8 +85,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2660 ocorrerá se uma classe derivada ocultar uma função.  
+## <a name="example"></a>Exemplo  
+ C2660 ocorrerá se uma classe derivada oculta uma função.  
   
 ```  
 // C2660b.cpp  
@@ -99,8 +115,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2660 pode ocorrer se você invoca uma propriedade indexada incorretamente.  
+## <a name="example"></a>Exemplo  
+ C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.  
   
 ```  
 // C2660c.cpp  
@@ -123,8 +139,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2660 pode ocorrer se você invoca uma propriedade indexada incorretamente.  
+## <a name="example"></a>Exemplo  
+ C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.  
   
 ```  
 // C2660d.cpp  
@@ -145,8 +161,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2660 pode ocorrer se você definir um novo operador em uma classe do modelo, mas em que o novo operador cria um objeto cujo tipo é diferente do tipo inclusive.  
+## <a name="example"></a>Exemplo  
+ C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo delimitador.  
   
 ```  
 // C2660e.cpp  

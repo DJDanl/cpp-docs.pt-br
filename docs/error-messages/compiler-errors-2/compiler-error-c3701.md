@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3701 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3701"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3701"
+title: C3701 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3701
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3701
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d435981316ca7126f30c246539efc678218abdd0
+ms.lasthandoff: 02/25/2017
 
-função “”: o não tem nenhum evento event\_source  
+---
+# <a name="compiler-error-c3701"></a>C3701 de erro do compilador
+'function': event_source não tem nenhum evento  
   
- Você tentou usar [event\_source](../../windows/event-source.md) em uma classe que não tem nenhum método de evento.  Para corrigir esse erro, adicione um ou mais eventos à classe.  
+ Você tentou usar [event_source](../../windows/event-source.md) em uma classe que não tem métodos nenhum evento. Para corrigir esse erro, adicione um ou mais eventos à classe.  
   
- O seguinte exemplo gera C3701:  
+ O exemplo a seguir gera C3701:  
   
 ```  
 // C3701.cpp  

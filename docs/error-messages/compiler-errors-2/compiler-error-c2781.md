@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2781 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2781"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2781"
+title: C2781 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2781
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2781
 ms.assetid: f29b9963-f55b-427c-8db6-50f37713df5a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2781
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2cbac543a782698e5d14bc866b8451a46b6f2a21
+ms.lasthandoff: 02/25/2017
 
-“declaração”: espera pelo menos o argumento do valor fornecido \- valor2  
+---
+# <a name="compiler-error-c2781"></a>C2781 de erro do compilador
+'declaração de ': espera pelo menos value1 argumento - value2 fornecido  
   
- Um modelo da função com uma lista de parâmetros variável tiver poucos argumentos.  
+ Um modelo de função com uma lista de parâmetros variáveis tem poucos argumentos.  
   
- O seguinte exemplo gera C2781:  
+ O exemplo a seguir gera C2781:  
   
 ```  
 // C2781.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2711"
+title: C2711 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f301eec6fa40311187d43b194f8da77f52fb4ead
+ms.lasthandoff: 02/25/2017
 
-função “”: essa função não pode ser criada como gerenciado, considere usar o \#pragma não gerenciado  
+---
+# <a name="compiler-error-c2711"></a>C2711 de erro do compilador
+'function': essa função não pode ser criadas como gerenciadas, considere usar #pragma não gerenciado  
   
- Algumas instruções impedirão que o compilador gerencia MSIL para a função inclusive.  
+ Algumas instruções impedirá que o compilador gerando MSIL para a função.  
   
- O seguinte exemplo gera C2711:  
+ O exemplo a seguir gera C2711:  
   
 ```  
 // C2711.cpp  

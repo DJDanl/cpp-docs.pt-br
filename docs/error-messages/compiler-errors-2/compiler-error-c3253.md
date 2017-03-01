@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3253 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3253"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3253"
+title: C3253 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3253
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3253
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7a44f72c6b2380b2281f369990953f1bc82f7701
+ms.lasthandoff: 02/25/2017
 
-função “”: erro com substituição explícita  
+---
+# <a name="compiler-error-c3253"></a>C3253 de erro do compilador
+'function': erro com substituição explícita  
   
- Uma substituição explícita for especificada incorretamente.  Por exemplo, você não pode especificar uma implementação de uma substituição que você também especifica como pura.  Para obter mais informações, consulte [Substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Uma substituição explícita foi especificada incorretamente. Por exemplo, você não pode especificar uma implementação de uma substituição que você também especificar como puro. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3253:  
+ O exemplo a seguir gera C3253:  
   
 ```  
 // C3253.cpp  

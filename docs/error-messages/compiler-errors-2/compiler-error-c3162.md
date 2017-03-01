@@ -1,44 +1,59 @@
 ---
-title: "Erro do Compilador C3162 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3162"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3162"
+title: C3162 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3162
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3162
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7f902889c3390dc65eb58750db9114e15e4bd10d
+ms.lasthandoff: 02/25/2017
 
-“tipo”: um tipo de referência que tem um destruidor não pode ser usado como tipo de membro de dados membro estático “”  
+---
+# <a name="compiler-error-c3162"></a>C3162 de erro do compilador
+'type': um tipo de referência que tem um destruidor não pode ser usado como o tipo de membro de dados estáticos 'member'  
   
- Common Language Runtime não pode saber quando executar um destruidor definido pelo usuário quando a classe também contém a função de membro estático.  
+ O common language runtime não é possível saber quando executar um destruidor definido pelo usuário quando a classe também contém a função de membro estático.  
   
- Um destruidor será executado nunca a menos que o objeto é excluído explicitamente.  
+ Um destruidor nunca será executado, a menos que o objeto é excluído explicitamente.  
   
- Para obter mais informações, consulte,  
+ Para obter mais informações, consulte  
   
--   [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
--   [Problemas de migração de 64 bits do Visual C\+\+comuns](../../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Problemas de migração de 64 bits do Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)  
   
-## Exemplo  
- O exemplo a seguir produz C3162.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3162.  
   
 ```  
 // C3162.cpp  

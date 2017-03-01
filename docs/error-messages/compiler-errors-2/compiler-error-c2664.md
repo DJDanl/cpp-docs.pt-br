@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2664 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2664"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2664"
+title: C2664 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2664
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2664
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e011a23723809dd580ef309d8d7d0f653f1c81f6
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2664"></a>C2664 de erro do compilador
 'function': não é possível converter o argumento n de 'type1' em 'type2'  
   
- Esse problema de conversão de parâmetro poderá acontecer se uma instância de classe for criada e houver uma tentativa de conversão implícita em um construtor marcado com a palavra\-chave `explicit`.  Para obter mais informações sobre conversões explícitas, consulte [Conversões](../../cpp/user-defined-type-conversions-cpp.md).  
+ Esse problema de conversão de parâmetro poderá acontecer se uma instância de classe for criada e houver uma tentativa de conversão implícita em um construtor marcado com a palavra-chave `explicit`. Para obter mais informações sobre conversões explícitas, consulte [conversões de tipo definidas pelo usuário](../../cpp/user-defined-type-conversions-cpp.md).  
   
  Se um objeto temporário é passado para uma função que usa uma referência a um objeto como parâmetro, essa referência deve ser uma referência `const`.  
   
- Se a função é passada para um parâmetro que não é do tipo que a função espera, um objeto temporário é criado usando o construtor apropriado.  Em seguida, esse objeto temporário é passado para a função.  Nesse caso, o objeto temporário é usado para inicializar a referência.  Em versões anteriores da linguagem, todas as referências podiam ser inicializadas por objetos temporários.  
+ Se a função é passada para um parâmetro que não é do tipo que a função espera, um objeto temporário é criado usando o construtor apropriado. Em seguida, esse objeto temporário é passado para a função. Nesse caso, o objeto temporário é usado para inicializar a referência. Em versões anteriores da linguagem, todas as referências podiam ser inicializadas por objetos temporários.  
   
  Para corrigir o C2664,  
   
@@ -41,10 +56,10 @@ manager: "ghogen"
   
  O C2664 também pode ser gerado quando uma classe oculta um membro de uma de suas classes base.  
   
- Para obter mais informações, consulte [Como converter System::String em wchar\_t\* ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).  
+ Para obter mais informações, consulte [como: converter System:: String em wchar_t * ou char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).  
   
-## Exemplo  
- O exemplo a seguir gera C2664 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2664 e mostra como corrigi-lo.  
   
 ```  
 // C2664.cpp  
@@ -66,8 +81,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- Este exemplo também gera C2664 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ Este exemplo também gera C2664 e mostra como corrigi-lo.  
   
 ```  
 // C2664b.cpp  
@@ -84,8 +99,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra o C2664 usando um literal de cadeia de caracteres para chamar `Test`, e mostra como corrigi\-lo.  Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado.  O resultado é um objeto temporário que não pode ser usado para inicializar a referência.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra o C2664 usando um literal de cadeia de caracteres para chamar `Test`e mostra como corrigi-lo. Como o parâmetro é uma referência `szString`, um objeto deve ser criado pelo construtor apropriado. O resultado é um objeto temporário que não pode ser usado para inicializar a referência.  
   
 ```  
 // C2664c.cpp  
@@ -124,8 +139,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O compilador força os requisitos padrão C\+\+ para aplicar `const`.  Este exemplo gera C2664:  
+## <a name="example"></a>Exemplo  
+ O compilador força os requisitos padrão C++ para aplicar `const`. Este exemplo gera C2664:  
   
 ```  
 // C2664d.cpp  
@@ -148,8 +163,8 @@ int main()
 }  
 ```  
   
-## Exemplo  
- Aqui está uma situação mais complexa em que C2664 é gerado, incluindo instruções sobre como corrigir o problema:  
+## <a name="example"></a>Exemplo  
+ Aqui está uma situação mais complexa, em que C2664 é gerado, incluindo instruções sobre como corrigir o problema:  
   
 ```  
 // C2664e.cpp  
@@ -192,8 +207,8 @@ int main( ) {
 }  
 ```  
   
-## Exemplo  
- Uma variável enum não é convertida em seu tipo subjacente para que uma chamada de função seja atendida.  Para obter mais informações, consulte [enum class](../../windows/enum-class-cpp-component-extensions.md).  O exemplo a seguir gera C2664 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ Uma variável enum não é convertida em seu tipo subjacente para que uma chamada de função seja atendida. Para obter mais informações, consulte [classe enum](../../windows/enum-class-cpp-component-extensions.md). O exemplo a seguir gera C2664 e mostra como corrigi-lo.  
   
 ```  
 // C2664f.cpp  
@@ -213,8 +228,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- Um bug no compilador midl causa a emissão de um tipo wchar\_t como unsigned short na biblioteca de tipos.  Para resolver esse erro, converta o tipo em seu código\-fonte C\+\+ ou defina o tipo como uma cadeia de caracteres no arquivo idl.  
+## <a name="example"></a>Exemplo  
+ Um bug no compilador midl causa a emissão de um tipo wchar_t como unsigned short na biblioteca de tipos. Para resolver esse erro, converta o tipo em seu código-fonte C++ ou defina o tipo como uma cadeia de caracteres no arquivo idl.  
   
 ```  
 // C2664g.idl  
@@ -235,10 +250,10 @@ library myproj1 {
 }  
 ```  
   
- O C2664 também é lançado usando `wchar_t` ao mover o código do Visual C\+\+ 6.0 para versões posteriores.  No Visual C\+\+ 6.0 e versões anteriores, `wchar_t` era `typedef` para `unsigned short` e, portanto, podia ser convertido implicitamente nesse tipo.  Depois do Visual C\+\+ 6.0, `wchar_t` é seu próprio tipo interno, conforme especificado no padrão C\+\+, e não pode mais ser convertido implicitamente em `unsigned short`.  Consulte [\/Zc:wchar\_t \(wchar\_t é do tipo nativo\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ O C2664 também é lançado usando `wchar_t` ao mover o código do Visual C++ 6.0 para versões posteriores. No Visual C++ 6.0 e versões anteriores, `wchar_t` era `typedef` para `unsigned short` e, portanto, podia ser convertido implicitamente nesse tipo. Depois do Visual C++ 6.0, `wchar_t` é seu próprio tipo interno, conforme especificado no padrão C++, e não pode mais ser convertido implicitamente em `unsigned short`. Consulte [/ZC: (wchar_t é do tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## Exemplo  
- O exemplo a seguir gera C2664 e mostra como corrigi\-lo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2664 e mostra como corrigi-lo.  
   
 ```  
 // C2664h.cpp  
@@ -258,7 +273,7 @@ int main() {
 }  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O C2664 também é causado quando o compilador não pode deduzir argumentos do modelo.  
   
 ```  

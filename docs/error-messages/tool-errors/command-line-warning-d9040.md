@@ -1,34 +1,50 @@
 ---
-title: "Aviso D9040 (linha de comando) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9040"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9040"
+title: Linha de comando aviso d9040 () | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- D9040
+dev_langs:
+- C++
+helpviewer_keywords:
+- D9040
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso D9040 (linha de comando)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8393d475039e83f004a22cd15161905f1150afce
+ms.lasthandoff: 02/25/2017
 
-ignorando a opção “\/analyze”; Os avisos da análise de código não estão disponíveis nesta edição do compilador  
+---
+# <a name="command-line-warning-d9040"></a>Aviso D9040 (linha de comando)
+ignorando opção '/analyze'; avisos de Análise de Código não estão disponíveis nesta edição do compilador  
   
- A opção de linha de comando de **\/analyze** não está disponível em todas as edições do Visual Studio.  Para solucionar este aviso, alternar para uma edição com suporte do Visual Studio, ou remover a opção de linha de comando.  
+ O **/ANALYZE** opção de linha de comando não está disponível em todas as edições do Visual Studio. Para corrigir esse aviso, alterne para uma edição com suporte do Visual Studio, ou remova a opção de linha de comando.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Erros de linha de comando D8000 até D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)
+ [Opções do Compilador](../../build/reference/compiler-options.md)

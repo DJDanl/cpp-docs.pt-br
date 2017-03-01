@@ -1,35 +1,51 @@
 ---
-title: "Erro do Compilador C3749 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3749"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3749"
+title: C3749 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3749
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3749
 ms.assetid: 3d26b468-4757-41b8-b5a2-78022a5295fb
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3749
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 20072ae0bdb55a6ee9cbac9d1ce0269991b839af
+ms.lasthandoff: 02/25/2017
 
-atributo “”: um atributo personalizado não pode ser usado em uma função  
+---
+# <a name="compiler-error-c3749"></a>C3749 de erro do compilador
+'attribute': um atributo personalizado não pode ser usado dentro de uma função  
   
- Um atributo personalizado não pode ser usado em uma função. \(Para obter mais informações sobre atributos personalizados, consulte o tópico [atributo](../../windows/attribute.md).\)  
+ Um atributo personalizado não pode ser usado dentro de uma função. Para obter mais informações sobre atributos personalizados, consulte o tópico [atributo](../../windows/attribute.md).  
   
- O seguinte exemplo gera C3749:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3749:  
   
 ```  
 // C3749a.cpp  
@@ -43,18 +59,4 @@ public ref struct ABC : public Attribute {
   
 void f1() { [ABC]; };  // C3749  
 ```  
-  
- O seguinte exemplo gera C3749:  
-  
-```  
-// C3749b.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[attribute(All)]  
-public __gc struct ABC {  
-   ABC() {}  
-};  
-  
-void f1() { [ABC]; };  // C3749  
-```
+

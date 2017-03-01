@@ -1,42 +1,57 @@
 ---
-title: "Erro do Compilador C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: C3532 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3b82a94a0ff06288792c01ab50f30d19ace4018c
+ms.lasthandoff: 02/25/2017
 
-“tipo”: uso incorreto de “automóvel”  
+---
+# <a name="compiler-error-c3532"></a>C3532 de erro do compilador
+'type': uso incorreto de 'auto'  
   
- O tipo indicado não pode ser declarado com a palavra\-chave de `auto` .  Por exemplo, você não pode usar a palavra\-chave de `auto` para declarar uma matriz ou um tipo de retorno do método.  
+ O tipo indicado não pode ser declarado com o `auto` palavra-chave. Por exemplo, você não pode usar o `auto` palavra-chave para declarar uma matriz ou um método de tipo de retorno.  
   
-### Para corrigir este erro  
+### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se a expressão de inicialização gerencie um tipo válido.  
+1.  Certifique-se de que a expressão de inicialização produz um tipo válido.  
   
-2.  Certifique\-se de que você não declara uma matriz ou um tipo de retorno do método.  
+2.  Certifique-se de que você não declarar uma matriz ou um tipo de retorno do método.  
   
-## Exemplo  
- O exemplo a seguir gerencie C3532 como a palavra\-chave de `auto` não pode declarar um tipo de retorno do método.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir produz C3532 porque o `auto` palavra-chave não pode declarar um tipo de retorno do método.  
   
 ```  
 // C3532a.cpp  
@@ -44,8 +59,8 @@ manager: "ghogen"
 auto f(){}   // C3532  
 ```  
   
-## Exemplo  
- O exemplo a seguir gerencie C3532 como a palavra\-chave de `auto` não pode declarar uma matriz.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir produz C3532 porque o `auto` palavra-chave não pode declarar uma matriz.  
   
 ```  
 // C3532b.cpp  
@@ -62,5 +77,5 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Palavra\-chave auto](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [palavra-chave auto](../../cpp/auto-keyword.md)

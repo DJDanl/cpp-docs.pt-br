@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: C3670 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9e4722136aa6792965eeb7db36d8d1f8b64f9496
+ms.lasthandoff: 02/25/2017
 
-“substituição”: não é possível substituir o método inacessível “” método da classe base  
+---
+# <a name="compiler-error-c3670"></a>C3670 de erro do compilador
+'override': não é possível substituir o método de classe base inacessível 'method'  
   
- Uma substituição só pode ocorrer em uma função cujo nível de acesso torna disponível em um tipo derivado.  Para obter mais informações, consulte [Substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Uma substituição só podem ocorrer em uma função cujo nível de acesso disponibiliza em um tipo derivado. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- O seguinte exemplo gera C3670:  
+ O exemplo a seguir gera C3670:  
   
 ```  
 // C3670.cpp  

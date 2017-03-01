@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2440 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2440"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2440"
+title: C2440 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2440
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2440
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5f0472f7d318de24c38898388906a264cf56db7b
+ms.lasthandoff: 02/25/2017
 
-'conversion': não é possível converter de 'type1' para 'type2'  
+---
+# <a name="compiler-error-c2440"></a>C2440 de erro do compilador
+'conversion': não é possível converter de 'type1' em 'type2'  
   
- O compilador não pode converter de "`type1`" em "`type2`".  
+O compilador não pode converter de `type1` para `type2`.  
   
-## Exemplo  
- O C2440 pode ser causado se você tentar inicializar uma `char*` não constante \(ou `wchar_t*`\) usando um literal de cadeia de caracteres no código C\+\+, quando a opção de compatibilidade de compilador [\/Zc:strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) é definida.  No C, o tipo de um literal de cadeia de caracteres é matriz de `char`, mas no C\+\+, é matriz de `const` `char`.  Este exemplo gera C2440:  
+## <a name="example"></a>Exemplo  
+C2440 pode ser causado se você tentar inicializar não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de um literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -47,8 +62,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ser causado se você tentar converter um ponteiro para o membro para void\*.  O exemplo a seguir produz C2440:  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ser causado se você tentar converter um ponteiro para membro void *. O exemplo a seguir gera C2440:  
   
 ```cpp  
 // C2440.cpp  
@@ -69,8 +84,8 @@ public:
 };  
 ```  
   
-## Exemplo  
- O C2440 também poderá ser causado se você tentar converter de um tipo que seja somente declarado encaminhado mas não definido.  Este exemplo gera C2440:  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ser causado se você tentar converter de um tipo que é declarado apenas para frente, mas não definido. Este exemplo gera C2440:  
   
 ```cpp  
 // c2440a.cpp   
@@ -84,14 +99,14 @@ Base * func(Derived * d) {
   
 ```  
   
-## Exemplo  
- Os erros C2440 nas linhas 15 e 16 do exemplo a seguir são qualificados com a mensagem `Incompatible calling conventions for UDT return value`. \(Um UDT é um tipo definido pelo usuário, como uma classe, um estrutura, ou uma união.\) Esses tipos de erros de incompatibilidade são causados quando a convenção de chamada de um UDT especificado no tipo de retorno de uma declaração de encaminhamento conflita com a convenção real de chamada do UDT e quando um ponteiro de função está envolvido.  
+## <a name="example"></a>Exemplo  
+ Os erros de C2440 nas linhas 15 e 16 do próximo exemplo estão qualificados com o `Incompatible calling conventions for UDT return value` mensagem. A *UDT* é um tipo definido pelo usuário, como uma classe, estrutura ou união. Esses tipos de erros de incompatibilidade são causados quando a convenção de chamada de um UDT especificado no tipo de retorno de um conflito de declaração de encaminhamento com a convenção de chamada real do UDT e um ponteiro de função está envolvido.  
   
- No exemplo, primeiro há declarações de avanço para uma estrutura e para uma função que retorna a estrutura; o compilador pressupõe que a estrutura usa a convenção de chamada do C\+\+.  A próxima é a definição de estrutura, que, por padrão, usa a convenção de chamada do C.  Como o compilador não conhece a convenção de chamada de estrutura até que ele termine de ler a estrutura inteira, a convenção de chamada da estrutura no tipo de retorno de `get_c2` será considerada como sendo C\+\+.  
+ No exemplo, pela primeira vez há declarações de encaminhamento para uma estrutura em uma função que retorna a estrutura; o compilador pressupõe que a estrutura usa a convenção de chamada de C++. Em seguida é a definição de estrutura, que, por padrão, usa o C convenção de chamada. Porque o compilador não sabe a convenção de chamada da estrutura até terminar de ler a estrutura inteira, a convenção de chamada para a estrutura no tipo de retorno de `get_c2` também é considerado como C++.  
   
- A estrutura é seguida por outra declaração de função que retorna a estrutura mas, nesse ponto, o compilador sabe que a convenção de chamada de estrutura é C\+\+.  De maneira semelhante, o ponteiro de função, que retorna a estrutura, é definido após a definição da estrutura de modo que o compilador saiba que a estrutura usa a convenção de chamada do C\+\+.  
+ A estrutura é seguida por outra declaração de função que retorna a estrutura, mas neste ponto, o compilador sabe que a convenção de chamada do struct é C++. Da mesma forma, o ponteiro de função, que retorna a estrutura, é definido após a definição de estrutura para que o compilador sabe que a estrutura usa a convenção de chamada de C++.  
   
- Para resolver C2440 que ocorre devido as convenções de chamada incompatíveis, declare as funções que retornam UDT após a definição UDT.  
+ Para resolver C2440 ocorre devido às convenções de chamada incompatíveis, declare funções que retornam uma UDT após a definição de UDT.  
   
 ```cpp  
 // C2440b.cpp  
@@ -133,8 +148,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ocorrer se você atribuir zero a um ponteiro interior:  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ocorrer se você atribuir zero para um ponteiro interno:  
   
 ```cpp  
 // C2440c.cpp  
@@ -147,8 +162,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário.  Para obter mais informações sobre conversões definidas por usuário, consulte [Conversões definidas pelo usuário](../../dotnet/user-defined-conversions-cpp-cli.md)\).  Este exemplo gera C2440:  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário. Por exemplo, quando um operador de conversão foi definido como `explicit`, o compilador não pode usá-lo em uma conversão implícita. Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C + + / CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Este exemplo gera C2440:  
   
 ```cpp  
 // C2440d.cpp  
@@ -170,8 +185,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ocorrer se você tentar criar uma instância de uma matriz do Visual C\+\+ cujo tipo seja <xref:System.Array>.  Para obter mais informações, consulte [Arrays](../../windows/arrays-cpp-component-extensions.md).  O exemplo a seguir produz C2440:  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ocorrer se você tentar criar uma instância de uma matriz do Visual C++ cujo tipo é <xref:System.Array>.</xref:System.Array>  Para obter mais informações, consulte [matrizes](../../windows/arrays-cpp-component-extensions.md).  O exemplo a seguir gera C2440:  
   
 ```cpp  
 // C2440e.cpp  
@@ -184,8 +199,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ocorrer devido as alterações no recurso de atributos.  O exemplo a seguir produz C2440.  
+## <a name="example"></a>Exemplo  
+ C2440 também pode ocorrer devido a alterações no recurso de atributos.  O exemplo a seguir gera C2440.  
   
 ```cpp  
 // c2440f.cpp  
@@ -195,10 +210,10 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];  
 ```  
   
-## Exemplo  
- O compilador do Visual C\+\+ não permite mais que o [Operador const\_cast](../Topic/const_cast%20Operator.md) exija um downcast quando o código\-fonte que usa a programação **\/clr** é criado.  
+## <a name="example"></a>Exemplo  
+ O compilador do Visual C++ não permite que o [operador const_cast](../../cpp/const-cast-operator.md) converter para baixo ao código-fonte que usa **/clr** programação é compilada.  
   
- Para resolver esse C2440, use o operador de conversão correto.  Para obter mais informações, consulte [Operadores de conversão](../../cpp/casting-operators.md).  
+ Para resolver essa C2440, use o operador cast correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).  
   
  Este exemplo gera C2440:  
   
@@ -215,18 +230,30 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O C2440 também pode ser gerado com **\/clr:oldSyntax**:  
+## <a name="example"></a>Exemplo  
+C2440 pode ocorrer devido a alterações de conformidade do compilador no Visual Studio 2015 atualização 3. Anteriormente, o compilador incorretamente consideradas determinadas expressões distintas do mesmo tipo ao identificar uma correspondência de modelo para um `static_cast` operação. Agora, o compilador distingue os tipos corretamente e código que dependiam anterior `static_cast` comportamento for interrompido. Para corrigir esse problema, altere o argumento de modelo para corresponder ao tipo de parâmetro de modelo ou usar um `reinterpret_cast` ou lançamento de estilo C.
+  
+Este exemplo gera C2440:  
   
 ```cpp  
-// c2440h.cpp  
-// compile with: /clr:oldSyntax  
-__gc class Base {};  
-__gc class Derived : public Base {};  
-int main() {  
-   Derived *d = new Derived;  
-   Base *b = d;  
-   d = const_cast<Derived*>(b);   // C2440  
-   d = dynamic_cast<Derived*>(b);   // OK  
-}  
+// c2440h.cpp
+
+template<int *a>
+struct S1 {};
+
+int g;
+struct S2 : S1<&g> {
+};
+
+int main()
+{
+    S2 s;
+    static_cast<S1<&*&g>>(s); // C2440 in VS 2015 Update 3 
+    // This compiles correctly:
+    // static_cast<S1<&g>>(s);
+}
+
+This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
+
 ```
+

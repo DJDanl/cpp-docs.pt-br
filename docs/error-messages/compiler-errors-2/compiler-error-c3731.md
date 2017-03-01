@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3731 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3731"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3731"
+title: C3731 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3731
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3731
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fe5ada71df8fcf06d17e4ea9fe6a8d1ccb40b22b
+ms.lasthandoff: 02/25/2017
 
-evento compatível como “function1” e “manipulador function2”; a origem do evento e o manipulador de eventos devem ter o mesmo tipo  
+---
+# <a name="compiler-error-c3731"></a>C3731 de erro do compilador
+evento incompatível 'function1' e o manipulador 'function2'; origem do evento e o manipulador de eventos devem ser do mesmo tipo  
   
- O destinatário da origem do evento e do evento deve ter o mesmo tipo \(por exemplo `native` em tipos de `com` \).  Para corrigir esse erro, siga os tipos de fonte de evento e o manipulador de eventos correspondente.  
+ A origem do evento e o receptor de evento devem ter o mesmo tipo (por exemplo `native` versus `com` tipos). Para corrigir esse erro, verifique os tipos de origem do evento e a correspondência de manipulador de eventos.  
   
- O seguinte exemplo gera C3731:  
+ O exemplo a seguir gera C3731:  
   
 ```  
 // C3731.cpp  

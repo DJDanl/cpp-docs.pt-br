@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2970 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2970"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2970"
+title: C2970 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2970
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2970
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e8118fa6f025be20f3d892ef0c0b1bbcca4b5b55
+ms.lasthandoff: 02/25/2017
 
-“classes: parâmetro “param” do modelo: “arg”: uma expressão que envolve objetos com vinculação interno não pode ser usada como um argumento que não seja do tipo  
+---
+# <a name="compiler-error-c2970"></a>C2970 de erro do compilador
+'class': o parâmetro de modelo 'param': 'arg': uma expressão que envolva objetos com vinculação interna não pode ser usada como um argumento de tipo não  
   
- Você não pode usar o nome ou o endereço de uma variável estática como um argumento do modelo.  A classe do modelo espera um valor de const que possa ser avaliada em tempo de compilação.  
+ Você não pode usar o nome ou endereço de uma variável estática como um argumento de modelo. A classe de modelo espera um valor constante que pode ser avaliado em tempo de compilação.  
   
- O seguinte exemplo gera C2970:  
+ O exemplo a seguir gera C2970:  
   
 ```  
 // C2970.cpp  

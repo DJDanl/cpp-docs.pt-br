@@ -1,33 +1,49 @@
 ---
-title: "C3723 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3723"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3723"
+title: C3723 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3723
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C3723 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2c010f3c96162e64208dc1fc3231cf1734af5fff
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c3723"></a>C3723 de erro do compilador
 'function': não foi possível resolver o evento  
   
- `function` não foi possível resolver o evento que chamar.  
+ `function`não foi possível resolver o evento que chamar.  
   
  O exemplo a seguir gera C3723:  
   
@@ -52,7 +68,7 @@ int main() {
 }  
 ```  
   
- `__hook` e `__unhook` não são compatíveis com \/clr programação.  Use os operadores \+ \= e\-\=.  
+ `__hook`e `__unhook` não são compatíveis com /clr programação.  Use os operadores + = e-=.  
   
  O exemplo a seguir gera C3723:  
   

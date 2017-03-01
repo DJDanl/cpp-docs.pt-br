@@ -1,194 +1,1369 @@
 ---
-title: "Classe de CMFCPropertyGridCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCPropertyGridCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CMFCPropertyGridCtrl"
-  - "Método de CMFCPropertyGridCtrl::accHitTest"
-  - "Método de CMFCPropertyGridCtrl::accLocation"
-  - "Método de CMFCPropertyGridCtrl::get_accChild"
-  - "Método de CMFCPropertyGridCtrl::get_accDefaultAction"
-  - "Método de CMFCPropertyGridCtrl::get_accDescription"
-  - "Método de CMFCPropertyGridCtrl::get_accName"
-  - "Método de CMFCPropertyGridCtrl::get_accRole"
-  - "Método de CMFCPropertyGridCtrl::get_accState"
-  - "Método de CMFCPropertyGridCtrl::get_accValue"
-  - "Método de CMFCPropertyGridCtrl::PreTranslateMessage"
+title: Classe CMFCPropertyGridCtrl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCPropertyGridCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCPropertyGridCtrl::get_accValue method
+- CMFCPropertyGridCtrl::accHitTest method
+- CMFCPropertyGridCtrl::get_accState method
+- CMFCPropertyGridCtrl::accLocation method
+- CMFCPropertyGridCtrl::get_accChild method
+- CMFCPropertyGridCtrl::get_accName method
+- CMFCPropertyGridCtrl::PreTranslateMessage method
+- CMFCPropertyGridCtrl::get_accRole method
+- CMFCPropertyGridCtrl::get_accDefaultAction method
+- CMFCPropertyGridCtrl class
+- CMFCPropertyGridCtrl::get_accDescription method
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 caps.latest.revision: 35
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CMFCPropertyGridCtrl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 93611d1b52d6372a81b91f08c5a5c7b215b584e3
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Suporta um controle de grade editável de propriedade que pode exibir propriedades em ordem alfabética ou hierárquica.  
+ Oferece suporte a um controle de grade de propriedade editável que pode exibir as propriedades em ordem alfabética ou hierárquica.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CMFCPropertyGridCtrl : public CWnd  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](../Topic/CMFCPropertyGridCtrl::CMFCPropertyGridCtrl.md)|Constrói um objeto de `CMFCPropertyGridCtrl` .|  
+|----------|-----------------|  
+|[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Constrói um objeto `CMFCPropertyGridCtrl`.|  
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruidor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|`CMFCPropertyGridCtrl::accHitTest`|Chamado pela estrutura para recuperar o elemento filho ou o objeto filho em um determinado ponto na tela.  Overrides \( [CWnd::accHitTest](../Topic/CWnd::accHitTest.md).\)|  
-|`CMFCPropertyGridCtrl::accLocation`|Chamado pela estrutura para recuperar o local atual da tela do objeto especificado.  Overrides \( [CWnd::accLocation](../Topic/CWnd::accLocation.md).\)|  
-|[CMFCPropertyGridCtrl::accSelect](../Topic/CMFCPropertyGridCtrl::accSelect.md)|Chamado pela estrutura para alterar a seleção ou mover o foco do teclado do objeto especificado.  Overrides \( [CWnd::accSelect](../Topic/CWnd::accSelect.md).\)|  
-|[CMFCPropertyGridCtrl::AddProperty](../Topic/CMFCPropertyGridCtrl::AddProperty.md)|Adiciona uma nova propriedade para um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](../Topic/CMFCPropertyGridCtrl::AlwaysShowUserToolTip.md)||  
-|[CMFCPropertyGridCtrl::CloseColorPopup](../Topic/CMFCPropertyGridCtrl::CloseColorPopup.md)|Fechar a caixa de diálogo de seleção de cor.|  
-|[CMFCPropertyGridCtrl::Create](../Topic/CMFCPropertyGridCtrl::Create.md)|Cria um controle de grade de propriedade e anexá\-la ao objeto do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::DeleteProperty](../Topic/CMFCPropertyGridCtrl::DeleteProperty.md)|Exclui a propriedade especificada do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::DrawControlBarColors](../Topic/CMFCPropertyGridCtrl::DrawControlBarColors.md)||  
-|[CMFCPropertyGridCtrl::EnableDescriptionArea](../Topic/CMFCPropertyGridCtrl::EnableDescriptionArea.md)|Habilita ou desabilita a área de descrição que é exibida abaixo da lista de propriedades.|  
-|[CMFCPropertyGridCtrl::EnableHeaderCtrl](../Topic/CMFCPropertyGridCtrl::EnableHeaderCtrl.md)|Habilita ou desabilita o controle de cabeçalho na parte superior do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::EnsureVisible](../Topic/CMFCPropertyGridCtrl::EnsureVisible.md)|Colocar um controle de grade de propriedade e expande itens da propriedade até que a propriedade especificada seja visível.|  
-|[CMFCPropertyGridCtrl::ExpandAll](../Topic/CMFCPropertyGridCtrl::ExpandAll.md)|Expande ou recolhe todos os nós do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::FindItemByData](../Topic/CMFCPropertyGridCtrl::FindItemByData.md)|Recupera a propriedade que está associada com um valor definido pelo usuário de `DWORD` .|  
-|`CMFCPropertyGridCtrl::get_accChild`|Chamado pela estrutura para recuperar o endereço de uma interface de `IDispatch` para o filho especificado.  Overrides \( [CWnd::get\_accChild](../Topic/CWnd::get_accChild.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accChildCount](../Topic/CMFCPropertyGridCtrl::get_accChildCount.md)|Chamado pela estrutura para recuperar o número de filhos que pertencem a esse objeto.  Overrides \( [CWnd::get\_accChildCount](../Topic/CWnd::get_accChildCount.md).\)|  
-|`CMFCPropertyGridCtrl::get_accDefaultAction`|Chamado pela estrutura para recuperar uma cadeia de caracteres que descreve a ação default do objeto.  Overrides \( [CWnd::get\_accDefaultAction](../Topic/CWnd::get_accDefaultAction.md).\)|  
-|`CMFCPropertyGridCtrl::get_accDescription`|Chamado pela estrutura para recuperar uma cadeia de caracteres que descreve a aparência visual do objeto especificado.  Overrides \( [CWnd::get\_accDescription](../Topic/CWnd::get_accDescription.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accFocus](../Topic/CMFCPropertyGridCtrl::get_accFocus.md)|Chamado pela estrutura para recuperar o objeto que tem o foco do teclado.  Overrides \( [CWnd::get\_accFocus](../Topic/CWnd::get_accFocus.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accHelp](../Topic/CMFCPropertyGridCtrl::get_accHelp.md)|Chamado pela estrutura para recuperar a cadeia de caracteres de propriedade de `Help` de um objeto.  Overrides \( [CWnd::get\_accHelp](../Topic/CWnd::get_accHelp.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accHelpTopic](../Topic/CMFCPropertyGridCtrl::get_accHelpTopic.md)|Chamado pela estrutura para recuperar o caminho completo do arquivo de `WinHelp`associado ao objeto especificado e o identificador do tópico apropriado dentro de esse arquivo.  Overrides \( [CWnd::get\_accHelpTopic](../Topic/CWnd::get_accHelpTopic.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accKeyboardShortcut](../Topic/CMFCPropertyGridCtrl::get_accKeyboardShortcut.md)|Chamado pela estrutura para recuperar a chave ou a tecla de acesso de atalho do objeto especificado.  Overrides \( [CWnd::get\_accKeyboardShortcut](../Topic/CWnd::get_accKeyboardShortcut.md).\)|  
-|`CMFCPropertyGridCtrl::get_accName`|Chamado pela estrutura para recuperar o nome do objeto especificado.  Overrides \( [CWnd::get\_accName](../Topic/CWnd::get_accName.md).\)|  
-|`CMFCPropertyGridCtrl::get_accRole`|Chamado pela estrutura para recuperar informações que descrevem a função do objeto especificado.  Overrides \( [CWnd::get\_accRole](../Topic/CWnd::get_accRole.md).\)|  
-|[CMFCPropertyGridCtrl::get\_accSelection](../Topic/CMFCPropertyGridCtrl::get_accSelection.md)|Chamado pela estrutura para recuperar os filhos de este objeto selecionados.  Overrides \( [CWnd::get\_accSelection](../Topic/CWnd::get_accSelection.md).\)|  
-|`CMFCPropertyGridCtrl::get_accState`|Chamado pela estrutura para recuperar o estado atual do objeto especificado.  Overrides \( [CWnd::get\_accState](../Topic/CWnd::get_accState.md).\)|  
-|`CMFCPropertyGridCtrl::get_accValue`|Chamado pela estrutura para recuperar o valor do objeto especificado.  Overrides \( [CWnd::get\_accValue](../Topic/CWnd::get_accValue.md).\)|  
-|[CMFCPropertyGridCtrl::GetBkColor](../Topic/CMFCPropertyGridCtrl::GetBkColor.md)|Recupera a cor do plano de fundo do controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::GetBoldFont](../Topic/CMFCPropertyGridCtrl::GetBoldFont.md)|Recupera a fonte do windows que o texto no controle de grade atual da propriedade para o estilo em negrito.|  
-|[CMFCPropertyGridCtrl::GetCurSel](../Topic/CMFCPropertyGridCtrl::GetCurSel.md)|Recupera a propriedade selecionada.|  
-|[CMFCPropertyGridCtrl::GetCustomColors](../Topic/CMFCPropertyGridCtrl::GetCustomColors.md)|Recupera as cores personalizados que são definidas no momento para elementos de controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetDescriptionHeight](../Topic/CMFCPropertyGridCtrl::GetDescriptionHeight.md)|Recupera a altura da área de descrição localizada na parte inferior do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetDescriptionRows](../Topic/CMFCPropertyGridCtrl::GetDescriptionRows.md)|Retorna o número de linhas na área de descrição de um controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::GetHeaderCtrl](../Topic/CMFCPropertyGridCtrl::GetHeaderCtrl.md)|Retorna o objeto interno de [CMFCHeaderCtrl](../Topic/CMFCHeaderCtrl%20Class.md) que a estrutura usa para exibir o controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::GetHeaderHeight](../Topic/CMFCPropertyGridCtrl::GetHeaderHeight.md)|Recupera a altura do cabeçalho do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetLeftColumnWidth](../Topic/CMFCPropertyGridCtrl::GetLeftColumnWidth.md)|Obtém a largura da coluna esquerda do controle de grade atual da propriedade, que contém o nome de cada propriedade.|  
-|[CMFCPropertyGridCtrl::GetListRect](../Topic/CMFCPropertyGridCtrl::GetListRect.md)|Recupera o retângulo delimitador do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetProperty](../Topic/CMFCPropertyGridCtrl::GetProperty.md)|Recupera um ponteiro para o objeto da propriedade correspondente ao índice especificado de um item do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetPropertyColumnWidth](../Topic/CMFCPropertyGridCtrl::GetPropertyColumnWidth.md)|Obtém a largura atual da coluna que contém valores de propriedade.|  
-|[CMFCPropertyGridCtrl::GetPropertyCount](../Topic/CMFCPropertyGridCtrl::GetPropertyCount.md)|Retorna o número de propriedades em um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetRowHeight](../Topic/CMFCPropertyGridCtrl::GetRowHeight.md)|Recupera a altura de uma linha no controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::GetScrollBarCtrl](../Topic/CMFCPropertyGridCtrl::GetScrollBarCtrl.md)|Recupera um ponteiro para o controle de barra de rolagem no controle de grade de propriedade.  Overrides \( [CWnd::GetScrollBarCtrl](../Topic/CWnd::GetScrollBarCtrl.md).\)|  
-|[CMFCPropertyGridCtrl::GetTextColor](../Topic/CMFCPropertyGridCtrl::GetTextColor.md)|Recupera a cor do texto de itens da propriedade no controle de grade atual da propriedade.|  
-|`CMFCPropertyGridCtrl::GetThisClass`|Usado pela estrutura para obter um ponteiro para o objeto de [CRuntimeClass](../Topic/CRuntimeClass%20Structure.md) que está associado com esse tipo da classe.|  
-|[CMFCPropertyGridCtrl::HitTest](../Topic/CMFCPropertyGridCtrl::HitTest.md)|Recupera um ponteiro para o objeto de propriedade que corresponde a um item do controle de grade de propriedade se um ponto está especificado no item.  Esse método também indica a área no controle de grade de propriedade que contém o ponto.|  
-|[CMFCPropertyGridCtrl::InitHeader](../Topic/CMFCPropertyGridCtrl::InitHeader.md)|Inicializa o objeto interno de [CMFCHeaderCtrl](../Topic/CMFCHeaderCtrl%20Class.md) que a estrutura usa para exibir o controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::IsAlphabeticMode](../Topic/CMFCPropertyGridCtrl::IsAlphabeticMode.md)|Indica se um controle de grade de propriedade está no modo alfabética.|  
-|[CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip](../Topic/CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip.md)||  
-|[CMFCPropertyGridCtrl::IsDescriptionArea](../Topic/CMFCPropertyGridCtrl::IsDescriptionArea.md)|Indica se a área de descrição de um controle de grade de propriedade é exibida.|  
-|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](../Topic/CMFCPropertyGridCtrl::IsGroupNameFullWidth.md)|Indica se cada nome de grupo de propriedades é exibido pela largura do controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::IsHeaderCtrl](../Topic/CMFCPropertyGridCtrl::IsHeaderCtrl.md)|Indica se o controle de cabeçalho é exibido.|  
-|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](../Topic/CMFCPropertyGridCtrl::IsMarkModifiedProperties.md)|Indica como o controle de grade de propriedade exibe propriedades alteradas.|  
-|[CMFCPropertyGridCtrl::IsShowDragContext](../Topic/CMFCPropertyGridCtrl::IsShowDragContext.md)|Indica se a estrutura redesenho nome das colunas e o valor do controle de grade atual da propriedade quando um usuário redimensionar colunas.|  
-|[CMFCPropertyGridCtrl::IsVSDotNetLook](../Topic/CMFCPropertyGridCtrl::IsVSDotNetLook.md)|Indica se a aparência do controle de grade de propriedade está no estilo que é usado por CONTRA .NET.|  
-|[CMFCPropertyGridCtrl::MarkModifiedProperties](../Topic/CMFCPropertyGridCtrl::MarkModifiedProperties.md)|Especifica como exibir propriedades alteradas.|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) transladar mensagens de janela antes que são distribuídos funções do windows de [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e de [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) .  Overrides \( [CWnd::PreTranslateMessage](../Topic/CWnd::PreTranslateMessage.md).\)|  
-|[CMFCPropertyGridCtrl::RemoveAll](../Topic/CMFCPropertyGridCtrl::RemoveAll.md)|Remove todos os objetos da propriedade de um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::ResetOriginalValues](../Topic/CMFCPropertyGridCtrl::ResetOriginalValues.md)|Restaura o valor original de todas as propriedades.|  
-|[CMFCPropertyGridCtrl::SetAlphabeticMode](../Topic/CMFCPropertyGridCtrl::SetAlphabeticMode.md)|Define ou alfabético modo de redefinições.|  
-|[CMFCPropertyGridCtrl::SetBoolLabels](../Topic/CMFCPropertyGridCtrl::SetBoolLabels.md)|Especifica o texto de rótulos booleanos.|  
-|[CMFCPropertyGridCtrl::SetCurSel](../Topic/CMFCPropertyGridCtrl::SetCurSel.md)|Seleciona uma propriedade em um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::SetCustomColors](../Topic/CMFCPropertyGridCtrl::SetCustomColors.md)|Especifica cores personalizado para os vários elementos de controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::SetDescriptionRows](../Topic/CMFCPropertyGridCtrl::SetDescriptionRows.md)|Especifica o número de linhas para exibir na seção de descrição de um controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](../Topic/CMFCPropertyGridCtrl::SetGroupNameFullWidth.md)|Especifica se mostrar a largura total de nome de categoria para um grupo de propriedades do controle de grade atual da propriedade.|  
-|[CMFCPropertyGridCtrl::SetListDelimiter](../Topic/CMFCPropertyGridCtrl::SetListDelimiter.md)|Define um caractere usado como um delimitador em uma lista de valores de propriedade.|  
-|[CMFCPropertyGridCtrl::SetShowDragContext](../Topic/CMFCPropertyGridCtrl::SetShowDragContext.md)|Especifica se a estrutura redesenho nome das colunas e o valor do controle de grade atual da propriedade quando um usuário redimensionar colunas.|  
-|[CMFCPropertyGridCtrl::SetVSDotNetLook](../Topic/CMFCPropertyGridCtrl::SetVSDotNetLook.md)|Define a aparência do controle de grade de propriedade para o estilo que é usado em CONTRA .NET.|  
-|[CMFCPropertyGridCtrl::UpdateColor](../Topic/CMFCPropertyGridCtrl::UpdateColor.md)|Defina o valor de cor da propriedade de cor selecionada.|  
+|----------|-----------------|  
+|`CMFCPropertyGridCtrl::accHitTest`|Chamado pela estrutura para recuperar o elemento filho ou o objeto filho em um determinado ponto na tela. (Substitui [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
+|`CMFCPropertyGridCtrl::accLocation`|Chamado pela estrutura para recuperar o local da tela atual do objeto especificado. (Substitui [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
+|[CMFCPropertyGridCtrl::accSelect](#accselect)|Chamado pela estrutura para modificar a seleção ou mover o foco do teclado do objeto especificado. (Substitui [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
+|[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Adiciona uma nova propriedade para um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](#alwaysshowusertooltip)||  
+|[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Fecha a caixa de diálogo de seleção de cor.|  
+|[CMFCPropertyGridCtrl::Create](#create)|Cria um controle de grade de propriedade e anexa-o para o objeto de controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::DeleteProperty](#deleteproperty)|Exclui a propriedade especificada do controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::DrawControlBarColors](#drawcontrolbarcolors)||  
+|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Habilita ou desabilita a área de descrição é exibida abaixo da lista de propriedades.|  
+|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Habilita ou desabilita o controle de cabeçalho na parte superior do controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Rola um controle de grade de propriedade e expande a propriedade items até que a propriedade especificada está visível.|  
+|[CMFCPropertyGridCtrl::ExpandAll](#expandall)|Expande ou recolhe todos os nós de controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Recupera a propriedade que está associada a um usuário definido `DWORD` valor.|  
+|`CMFCPropertyGridCtrl::get_accChild`|Chamado pela estrutura para recuperar o endereço de uma `IDispatch` interface para o filho especificado. (Substitui [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|  
+|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Chamado pela estrutura para recuperar o número de filhos que pertence a este objeto. (Substitui [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|  
+|`CMFCPropertyGridCtrl::get_accDefaultAction`|Chamado pela estrutura para recuperar uma cadeia de caracteres que descreve a ação padrão do objeto. (Substitui [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|  
+|`CMFCPropertyGridCtrl::get_accDescription`|Chamado pela estrutura para recuperar uma cadeia de caracteres que descreve a aparência visual do objeto especificado. (Substitui [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|  
+|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Chamado pela estrutura para recuperar o objeto que tem o foco do teclado. (Substitui [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|  
+|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Chamado pela estrutura para recuperar um objeto `Help` cadeia de caracteres de propriedade. (Substitui [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
+|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Chamado pela estrutura para recuperar o caminho completo do `WinHelp`arquivo associado ao objeto especificado e o identificador do tópico apropriado dentro desse arquivo. (Substitui [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
+|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Chamado pela estrutura para recuperar a tecla de atalho do objeto especificado ou a chave de acesso. (Substitui [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|  
+|`CMFCPropertyGridCtrl::get_accName`|Chamado pela estrutura para recuperar o nome do objeto especificado. (Substitui [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|  
+|`CMFCPropertyGridCtrl::get_accRole`|Chamado pela estrutura para recuperar informações que descreve a função do objeto especificado. (Substitui [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|  
+|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Chamado pela estrutura para recuperar o filho selecionado deste objeto. (Substitui [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|  
+|`CMFCPropertyGridCtrl::get_accState`|Chamado pela estrutura para recuperar o estado atual do objeto especificado. (Substitui [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|  
+|`CMFCPropertyGridCtrl::get_accValue`|Chamado pela estrutura para recuperar o valor do objeto especificado. (Substitui [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|  
+|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Recupera a cor de plano de fundo do controle de grade de propriedade atual.|  
+|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Recupera a fonte do Windows que controlar no estilo em negrito do texto na grade da propriedade atual.|  
+|[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Recupera a propriedade selecionada no momento.|  
+|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Recupera as cores personalizadas atualmente definidas para elementos de controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Recupera a altura da área de descrição localizada na parte inferior do controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Recupera o número de linhas na área de descrição do controle de grade de propriedade atual.|  
+|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Recupera o interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que a estrutura usa para exibir o controle de grade de propriedade atual do objeto.|  
+|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Recupera a altura do cabeçalho do controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Recupera a largura da coluna à esquerda do controle de grade de propriedade atual, que contém o nome de cada propriedade.|  
+|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Recupera o retângulo delimitador do controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetProperty](#getproperty)|Recupera um ponteiro para o objeto de propriedade que corresponde ao índice de um item de controle de grade de propriedade especificado.|  
+|[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Recupera a largura atual da coluna que contém os valores de propriedade.|  
+|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Recupera o número de propriedades em um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Recupera a altura de uma linha no controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Recupera um ponteiro para o controle de barra de rolagem no controle de grade de propriedade. (Substitui [CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|  
+|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Recupera a cor do texto dos itens de propriedade no controle de grade de propriedade atual.|  
+|`CMFCPropertyGridCtrl::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
+|[CMFCPropertyGridCtrl::HitTest](#hittest)|Recupera um ponteiro para o objeto de propriedade que corresponde a um item de controle de grade de propriedade, se houver um ponto especificado no item. Esse método também indica a área no controle de grade de propriedade que contém o ponto.|  
+|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Inicializa o interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que a estrutura usa para exibir o controle de grade de propriedade atual do objeto.|  
+|[CMFCPropertyGridCtrl::IsAlphabeticMode](#isalphabeticmode)|Indica se um controle de grade de propriedade está no modo alfabético.|  
+|[CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip](#isalwaysshowusertooltip)||  
+|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Indica se a área de descrição do controle de grade de propriedade é exibida.|  
+|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Indica se cada nome de propriedade do grupo é exibido na largura do controle de grade de propriedade atual.|  
+|[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Indica se o controle de cabeçalho é exibido.|  
+|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Indica como o controle de grade de propriedade exibe propriedades modificadas.|  
+|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Indica se o framework redesenha as colunas nome e valor do controle de grade de propriedade atual quando um usuário redimensiona as colunas.|  
+|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Indica se a aparência do controle de grade de propriedade é no estilo usado pelo .NET VS.|  
+|[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Especifica como exibir propriedades modificadas.|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens de janela antes de serem distribuídos para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Remove todos os objetos de propriedade de um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Restaura o valor original de todas as propriedades.|  
+|[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Define ou redefine o modo em ordem alfabética.|  
+|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Especifica o texto dos rótulos Boolean.|  
+|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Seleciona uma propriedade em um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Especifica as cores personalizadas para vários elementos de controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Especifica o número de linhas a serem exibidas na seção de descrição do controle de grade de propriedade atual.|  
+|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Especifica se deve exibir a largura total do nome da categoria para um grupo de propriedades no controle de grade de propriedade atual.|  
+|[CMFCPropertyGridCtrl::SetListDelimiter](#setlistdelimiter)|Define um caractere que será usado como um delimitador em uma lista de valores de propriedade.|  
+|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Especifica se a estrutura redesenha as colunas nome e valor do controle de grade de propriedade atual quando um usuário redimensiona as colunas.|  
+|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Define a aparência do controle de grade de propriedade para o estilo que é usado no VS .NET.|  
+|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Define o valor de cor da propriedade cor atualmente selecionada.|  
   
-### Métodos protegidos  
+### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CMFCPropertyGridCtrl::AdjustLayout](../Topic/CMFCPropertyGridCtrl::AdjustLayout.md)|Redesenho do controle grade de propriedade e suas propriedades.|  
-|[CMFCPropertyGridCtrl::CompareProps](../Topic/CMFCPropertyGridCtrl::CompareProps.md)|Chamado pelo controle de grade de propriedades para classificar propriedades.|  
-|[CMFCPropertyGridCtrl::EditItem](../Topic/CMFCPropertyGridCtrl::EditItem.md)|Chamado pela estrutura quando o usuário para alterar uma propriedade.|  
-|[CMFCPropertyGridCtrl::EndEditItem](../Topic/CMFCPropertyGridCtrl::EndEditItem.md)|Chamado pela estrutura quando o usuário parar de alterar uma propriedade.|  
-|[CMFCPropertyGridCtrl::Init](../Topic/CMFCPropertyGridCtrl::Init.md)|Chamado pela estrutura para inicializar um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::OnChangeSelection](../Topic/CMFCPropertyGridCtrl::OnChangeSelection.md)|Chamado pela estrutura quando a seleção atual é alterada.|  
-|[CMFCPropertyGridCtrl::OnClickButton](../Topic/CMFCPropertyGridCtrl::OnClickButton.md)|Chamado pela estrutura de propriedade quando um botão é clicado.|  
-|[CMFCPropertyGridCtrl::OnDrawBorder](../Topic/CMFCPropertyGridCtrl::OnDrawBorder.md)|Chamado pela estrutura para desenhar uma borda ao redor de um controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::OnDrawDescription](../Topic/CMFCPropertyGridCtrl::OnDrawDescription.md)|Chamado pela estrutura para desenhar a área de descrição e para exibir a descrição.|  
-|[CMFCPropertyGridCtrl::OnDrawList](../Topic/CMFCPropertyGridCtrl::OnDrawList.md)|Chamado pela estrutura para exibir a lista de propriedades do controle de grade de propriedade.|  
-|[CMFCPropertyGridCtrl::OnDrawProperty](../Topic/CMFCPropertyGridCtrl::OnDrawProperty.md)|Chamado pela estrutura para exibir uma propriedade.|  
-|[CMFCPropertyGridCtrl::OnPropertyChanged](../Topic/CMFCPropertyGridCtrl::OnPropertyChanged.md)|Chamado pela estrutura quando o valor de uma propriedade é alterado.|  
-|[CMFCPropertyGridCtrl::OnSelectCombo](../Topic/CMFCPropertyGridCtrl::OnSelectCombo.md)|Chamado pela estrutura quando uma propriedade que contém um controle caixa de combinação está marcada.|  
-|[CMFCPropertyGridCtrl::ValidateItemData](../Topic/CMFCPropertyGridCtrl::ValidateItemData.md)|Chamado pela estrutura para validar dados da propriedade.|  
+|----------|-----------------|  
+|[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Redesenha o controle de grade de propriedade e suas propriedades.|  
+|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Chamado pelo controle de grade de propriedade para propriedades de classificação.|  
+|[CMFCPropertyGridCtrl::EditItem](#edititem)|Chamado pela estrutura quando o usuário começa a modificar uma propriedade.|  
+|[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Chamado pela estrutura quando o usuário para modificar uma propriedade.|  
+|[CMFCPropertyGridCtrl::Init](#init)|Chamado pela estrutura para inicializar um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::OnChangeSelection](#onchangeselection)|Chamado pela estrutura quando a seleção atual é alterada.|  
+|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Chamado pela estrutura quando uma propriedade de botão é clicada.|  
+|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Chamado pela estrutura para desenhar uma borda ao redor de um controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::OnDrawDescription](#ondrawdescription)|Chamado pela estrutura para desenhar a área de descrição e exibir o texto de descrição.|  
+|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Chamado pela estrutura para exibir a lista de propriedades no controle de grade de propriedade.|  
+|[CMFCPropertyGridCtrl::OnDrawProperty](#ondrawproperty)|Chamado pela estrutura para exibir uma propriedade.|  
+|[CMFCPropertyGridCtrl::OnPropertyChanged](#onpropertychanged)|Chamado pela estrutura quando o valor de uma propriedade é alterado.|  
+|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Chamado pela estrutura quando uma propriedade que contém um controle de caixa de combinação é selecionada.|  
+|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Chamado pela estrutura para validar os dados de propriedade.|  
   
-## Comentários  
- Exibe de classe de `CMFCPropertyGridCtrl` um controle de grade de propriedade que contém as propriedades editáveis derivadas de classes de [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) .  Cada propriedade pode representar um tipo e pode conter sub\-itens.  O controle de grade de propriedade suporta uma área redimensionável na parte inferior que pode exibir a descrição de uma propriedade selecionada.  
+## <a name="remarks"></a>Comentários  
+ O `CMFCPropertyGridCtrl` classe exibe um controle de grade de propriedade que contém propriedades editáveis derivadas de [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) classe. Cada propriedade pode representar um tipo e podem conter subitens. O controle de grade de propriedade oferece suporte a uma área redimensionável na parte inferior que pode exibir a descrição de uma propriedade selecionada.  
   
- Para usar um controle de grade de propriedade, construir um objeto de `CMFCPropertyGridCtrl` e então chame o método de [CMFCPropertyGridCtrl::Create](../Topic/CMFCPropertyGridCtrl::Create.md) .  Use o método de [CMFCPropertyGridCtrl::AddProperty](../Topic/CMFCPropertyGridCtrl::AddProperty.md) para adicionar propriedades à lista.  
+ Para usar um controle de grade de propriedade, construir um `CMFCPropertyGridCtrl` do objeto e, em seguida, chame o [CMFCPropertyGridCtrl::Create](#create) método. Use o [CMFCPropertyGridCtrl::AddProperty](#addproperty) para adicionar propriedades à lista.  
   
-## Propriedades de seleção  
- Em vez de representar um valor, um item propriedade pode iniciar uma caixa de diálogo que permite que o usuário selecione uma cor, um arquivo, ou uma fonte.  
+## <a name="selection-properties"></a>Propriedades de seleção  
+ Em vez de representar um valor, um item de propriedade pode iniciar uma caixa de diálogo que permite ao usuário selecionar uma cor, o arquivo ou a fonte.  
   
- A tabela a seguir lista quatro tipos de propriedades de seleção:  
+ A tabela a seguir lista os quatro tipos de propriedade de seleção:  
   
 |Classe|Descrição|  
-|------------|---------------|  
-|[Classe de CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Uma propriedade comumente usados que é usada para especificar o valor de cadeias de caracteres, Booleans datas, e assim por diante.|  
-|[Classe de CMFCPropertyGridColorProperty](../Topic/CMFCPropertyGridColorProperty%20Class.md)|Uma propriedade que é usada para selecionar um valor de cor.|  
-|[Classe de CMFCPropertyGridFileProperty](../Topic/CMFCPropertyGridFileProperty%20Class.md)|Uma propriedade que é usada para selecionar um arquivo.|  
-|[Classe de CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Uma propriedade que é usada para selecionar uma fonte.|  
+|-----------|-----------------|  
+|[Classe CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Uma propriedade de finalidade geral que é usada para especificar o valor de datas de cadeias de caracteres, booleanos, e assim por diante.|  
+|[Classe CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Uma propriedade que é usada para selecionar um valor de cor.|  
+|[Classe CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Uma propriedade que é usada para selecionar um arquivo.|  
+|[Classe CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Uma propriedade que é usada para selecionar uma fonte.|  
   
-## Ilustrações  
- As ilustrações a seguir descrevem um controle de grade de propriedade que exibe as propriedades de duas maneiras.  A primeira ilustração exibe as propriedades hierarquicamente e a segunda exibe propriedades em ordem alfabética.  
+## <a name="illustrations"></a>Ilustrações  
+ As ilustrações a seguir indicam um controle de grade de propriedade que exibe as propriedades de duas maneiras. A primeira ilustração exibe propriedades hierarquicamente e o segundo exibe as propriedades em ordem alfabética.  
   
- ![PropertySheet de lista](../../mfc/reference/media/proplist.png "PropList")  
+ ![Folha de propriedades de lista de propriedade](../../mfc/reference/media/proplist.png "proplist")  
   
-## Exemplo  
- O exemplo a seguir demonstra como configurar um objeto do controle de grade de propriedade usando vários métodos na classe de `CMFCPropertyGridCtrl` .  O exemplo demonstra como habilitar o controle de cabeçalho, permite a área de descrição, e define a aparência do controle de grade de propriedade.  O exemplo também mostra como definir o modo alfabético para o controle por meio de classes que o controle todas as propriedades que contém pelo nome de propriedade, e como definir as cores personalizado para vários elementos de controle de grade de propriedade.  Este exemplo é parte de [novo exemplo de controles](../../top/visual-cpp-samples.md).  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como configurar um objeto de controle de grade de propriedade usando vários métodos na `CMFCPropertyGridCtrl` classe. O exemplo demonstra como habilitar o controle de cabeçalho, a área de descrição e definir a aparência do controle de grade de propriedade. O exemplo também mostra como definir o modo alfabético para o controle no qual o controle classifica todas as propriedades que ele contém o nome da propriedade e como definir as cores personalizadas para vários elementos do controle de grade de propriedade. Este exemplo é parte do [exemplo novos controles](../../visual-cpp-samples.md).  
   
- [!CODE [NVC_MFC_NewControls#14](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_NewControls#14)]  
-[!CODE [NVC_MFC_NewControls#16](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_NewControls#16)]  
-[!CODE [NVC_MFC_NewControls#20](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_NewControls#20)]  
-[!CODE [NVC_MFC_NewControls#21](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_NewControls#21)]  
-[!CODE [NVC_MFC_NewControls#24](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_NewControls#24)]  
+ [!code-cpp[NVC_MFC_NewControls&#14;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls n º&16;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]  
+[!code-cpp[20 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_3.cpp)]  
+[!code-cpp[NVC_MFC_NewControls&#21;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_4.cpp)]  
+[!code-cpp[NVC_MFC_NewControls&#24;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_5.cpp)]  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxpropertygridctrl.h  
   
-## Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../Topic/MFC%20Classes.md)
+##  <a name="a-nameaccselecta--cmfcpropertygridctrlaccselect"></a><a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT accSelect(
+    long flagsSelect,  
+    VARIANT varChild);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `flagsSelect`  
+ [in] `varChild`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameaddpropertya--cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+ Adiciona uma nova propriedade para um controle de grade de propriedade.  
+  
+```  
+int AddProperty(
+    CMFCPropertyGridProperty* pProp,  
+    BOOL bRedraw=TRUE,  
+    BOOL bAdjustLayout=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Ponteiro para uma propriedade.  
+  
+ [in] `bRedraw`  
+ `TRUE`para redesenhar a propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+ [in] `bAdjustLayout`  
+ `TRUE`para recalcular como desenhar o texto e o valor da propriedade e, em seguida, desenhe a propriedade; `FALSE` usar cálculos existentes para desenhar a propriedade. O valor padrão é `TRUE`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se esse método for bem-sucedido, o índice baseado em zero da posição no controle de grade de propriedade onde a propriedade foi adicionada; Caso contrário, retornará -1.  
+  
+### <a name="remarks"></a>Comentários  
+ Este método adiciona um ponteiro para a propriedade especificada ao final da lista de propriedades no controle de grade de propriedade. Não destruir as propriedades ou permitir que eles saem do escopo antes do controle de grade é destruído. Quando terminar com o controle de grade de propriedade, chamada [CMFCPropertyGridCtrl::RemoveAll](#removeall) para excluir todas as propriedades adicionadas. O método AddProperty falhará se a propriedade especificada já foi adicionada à lista.  
+  
+##  <a name="a-nameadjustlayouta--cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+ Redesenha o controle de grade de propriedade e suas propriedades.  
+  
+```  
+virtual void AdjustLayout();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Esse método recalcula como desenhar o controle de grade de propriedade de inteiro e suas propriedades, incluindo imagens, fontes e controles.  
+  
+##  <a name="a-namealwaysshowusertooltipa--cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void AlwaysShowUserToolTip(BOOL bShow = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bShow`  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameclosecolorpopupa--cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+ Fecha a caixa de diálogo de seleção de cor.  
+  
+```  
+virtual void CloseColorPopup();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Para obter mais informações sobre a caixa de diálogo de seleção de cor, consulte [CMFCPropertyGridColorProperty classe](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).  
+  
+##  <a name="a-namecmfcpropertygridctrla--cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+ Constrói um objeto `CMFCPropertyGridCtrl`.  
+  
+```  
+CMFCPropertyGridCtrl();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namecomparepropsa--cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+ Chamado pelo controle de grade de propriedade para propriedades de classificação.  
+  
+```  
+virtual int CompareProps(
+    const CMFCPropertyGridProperty* pProp1,  
+    const CMFCPropertyGridProperty* pProp2) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pProp1`  
+ Um ponteiro para uma propriedade.  
+  
+ `pProp2`  
+ Um ponteiro para uma propriedade.  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+|Valor de retorno|Descrição|  
+|------------------|-----------------|  
+|< 0|O nome do `pProp1` parâmetro for menor que o nome do `pProp2` parâmetro.|  
+|0|O nome do `pProp1` parâmetro for igual ao nome do `pProp2` parâmetro.|  
+|> 0|O nome do `pProp1` objeto é maior que o nome do `pProp2` parâmetro.|  
+  
+### <a name="remarks"></a>Comentários  
+ Por padrão, esse método usa o [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método para comparar o `CMFCPropertyGridProperty::m_strName` membros dos parâmetros especificados.  
+  
+##  <a name="a-namecreatea--cmfcpropertygridctrlcreate"></a><a name="create"></a>CMFCPropertyGridCtrl::Create  
+ Cria um controle de grade de propriedade e anexa-o para o objeto de controle de grade de propriedade.  
+  
+```  
+virtual BOOL Create(
+    DWORD dwStyle,  
+    const RECT& rect,  
+    CWnd* pParentWnd,  
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `dwStyle`  
+ Uma combinação bit a bit (OR) de [estilos de janela](../../mfc/reference/window-styles.md).  
+  
+ [in] `rect`  
+ Um retângulo que especifica o tamanho e a posição da janela, no cliente de coordenadas do `pParentWnd`.  
+  
+ [in] `pParentWnd`  
+ Ponteiro para a janela pai. Não deve ser `NULL`.  
+  
+ [in] `nID`  
+ A ID da janela filho.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se a janela foi criada com êxito; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Para criar um controle de grade de propriedade, a primeira chamada [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) para construir um objeto de grade de propriedade. Em seguida, chame `CMFCPropertyGridCtrl::Create`.  
+  
+### <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como usar o `Create` método `CMFCPropertyGridCtrl` classe. Este exemplo é parte do [exemplo novos controles](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_NewControls&#15;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
+  
+##  <a name="a-namedeletepropertya--cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+ Exclui a propriedade especificada do controle de grade de propriedade.  
+  
+```  
+BOOL DeleteProperty(
+    CMFCPropertyGridProperty*& pProp,  
+    BOOL bRedraw=TRUE,  
+    BOOL bAdjustLayout=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Ponteiro para uma propriedade.  
+  
+ [in] `bRedraw`  
+ `TRUE`para redesenhar o controle de grade de propriedade; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+ [in] `bAdjustLayout`  
+ `TRUE`para recalcular a desenhar o texto, imagens e itens no controle de grade de propriedade e, em seguida, desenhe o controle; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método para excluir uma propriedade e todos os subelementos, do controle de grade de propriedade.  
+  
+##  <a name="a-namedrawcontrolbarcolorsa--cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL DrawControlBarColors() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameedititema--cmfcpropertygridctrledititem"></a><a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+ Chamado pela estrutura quando o usuário começa a modificar uma propriedade.  
+  
+```  
+virtual BOOL EditItem(
+    CMFCPropertyGridProperty* pProp,  
+    LPPOINT lptClick=NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Ponteiro para uma propriedade.  
+  
+ [in] `lptClick`  
+ O ponto de controle de grade de propriedade que o usuário clicou para iniciar a operação de edição. É o ponto em coordenadas do cliente do controle. O valor padrão é `NULL`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se o método for bem-sucedido; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameenabledescriptionareaa--cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+ Habilita ou desabilita a área de descrição é exibida abaixo da lista de propriedades no controle de grade de propriedade.  
+  
+```  
+void EnableDescriptionArea(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bEnable`  
+ `TRUE`Para habilitar a área de descrição; `FALSE` para desabilitar a área de descrição. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ A área de descrição é exibida na parte inferior do controle de grade de propriedade. Por padrão, a área de descrição é desabilitado e não é visível.  
+  
+##  <a name="a-nameenableheaderctrla--cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+ Habilita ou desabilita o controle de cabeçalho na parte superior do controle de grade de propriedade.  
+  
+```  
+void EnableHeaderCtrl(
+    BOOL bEnable=TRUE,  
+    LPCTSTR lpszLeftColumn=_T("Property"),  
+    LPCTSTR lpszRightColumn=_T("Value"));
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bEnable`  
+ `TRUE`Para habilitar o controle de cabeçalho; `FALSE` para desabilitar o controle de cabeçalho. O valor padrão é `TRUE`.  
+  
+ [in] `lpszLeftColumn`  
+ O título da coluna à esquerda do controle de cabeçalho. O valor padrão é **propriedade**.  
+  
+ [in] `lpszRightColumn`  
+ O título da coluna à direita do controle de cabeçalho. O valor padrão é **valor**.  
+  
+##  <a name="a-nameendedititema--cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+ Chamado pela estrutura quando o usuário conclui a modificação de uma propriedade.  
+  
+```  
+virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bUpdateData`  
+ `TRUE`para especificar que os dados de propriedade modificada devem ser validados quando a operação de edição é concluída; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se a operação de edição termina com êxito; `FALSE` se os dados de propriedade modificada não são válidos ou se deve continuar a operação de edição.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameensurevisiblea--cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+ Rola um controle de grade de propriedade e expande a propriedade items até que a propriedade especificada está visível.  
+  
+```  
+void EnsureVisible(
+    CMFCPropertyGridProperty* pProp,  
+    BOOL bExpandParents=FALSE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Ponteiro para uma propriedade.  
+  
+ [in] `bExpandParents`  
+ `TRUE`Expanda os itens pai para tornar a propriedade especificada visível; Caso contrário, `FALSE`. O padrão é `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameexpandalla--cmfcpropertygridctrlexpandall"></a><a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+ Expande ou recolhe todos os nós de controle de grade de propriedade.  
+  
+```  
+void ExpandAll(BOOL bExpand=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bExpand`  
+ `TRUE`para expandir todos os nós; `FALSE` para recolher todos os nós. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namefinditembydataa--cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+ Recupera a propriedade que está associada a um usuário definido `DWORD` valor.  
+  
+```  
+CMFCPropertyGridProperty* FindItemByData(
+    DWORD_PTR dwData,  
+    BOOL bSearchSubItems=TRUE) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `dwData`  
+ Um valor `DWORD`.  
+  
+ [in] `bSearchSubItems`  
+ `TRUE`para pesquisar a propriedade subitens; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o objeto de propriedade associada, se esse método for bem-sucedida; Caso contrário, `NULL`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) construtor ou [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) método para associar um `DWORD` com uma propriedade.  
+  
+##  <a name="a-namegetaccchildcounta--cmfcpropertygridctrlgetaccchildcount"></a><a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accChildCount(long* pcountChildren);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pcountChildren`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetaccfocusa--cmfcpropertygridctrlgetaccfocus"></a><a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accFocus(VARIANT* pvarChild);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pvarChild`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetacchelpa--cmfcpropertygridctrlgetacchelp"></a><a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accHelp(
+    VARIANT varChild,  
+    BSTR* pszHelp);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `varChild`  
+ [in] `pszHelp`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetacchelptopica--cmfcpropertygridctrlgetacchelptopic"></a><a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accHelpTopic(
+    BSTR* pszHelpFile,  
+    VARIANT varChild,  
+    long* pidTopic);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pszHelpFile`  
+ [in] `varChild`  
+ [in] `pidTopic`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetacckeyboardshortcuta--cmfcpropertygridctrlgetacckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accKeyboardShortcut(
+    VARIANT varChild,  
+    BSTR* pszKeyboardShortcut);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `varChild`  
+ [in] `pszKeyboardShortcut`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetaccselectiona--cmfcpropertygridctrlgetaccselection"></a><a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual HRESULT get_accSelection(VARIANT* pvarChildren);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pvarChildren`  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetbkcolora--cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+ Recupera a cor de plano de fundo do controle de grade de propriedade atual.  
+  
+```  
+COLORREF GetBkColor() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor de cor RGB.  
+  
+### <a name="remarks"></a>Comentários  
+ Esse método recupera a cor que a estrutura usa para desenhar o plano de fundo do controle de grade de propriedade atual. O [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) método recupera a cor de primeiro plano.  
+  
+##  <a name="a-namegetboldfonta--cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+ Recupera a fonte do Windows que é usada para desenhar o texto no controle de grade de propriedade atual no estilo em negrito.  
+  
+```  
+CFont& GetBoldFont();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma referência a um [CFont](../../mfc/reference/cfont-class.md) objeto que descreve as características de uma fonte em negrito.  
+  
+##  <a name="a-namegetcursela--cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+ Recupera a propriedade selecionada no momento.  
+  
+```  
+CMFCPropertyGridProperty* GetCurSel() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o objeto de propriedade que corresponde ao item selecionado no controle de grade de propriedade.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetcustomcolorsa--cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+ Recupera as cores personalizadas atualmente definidas para elementos de controle de grade de propriedade.  
+  
+```  
+void GetCustomColors(
+    COLORREF& clrBackground,  
+    COLORREF& clrText,  
+    COLORREF& clrGroupBackground,  
+    COLORREF& clrGroupText,  
+    COLORREF& clrDescriptionBackground,  
+    COLORREF& clrDescriptionText,  
+    COLORREF& clrLine);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [out] `clrBackground`  
+ A cor de plano de fundo de valores de propriedade.  
+  
+ [out] `clrText`  
+ A cor do texto do valor de propriedade e nomes de propriedade.  
+  
+ [out] `clrGroupBackground`  
+ A cor de plano de fundo de um grupo de propriedades.  
+  
+ [out] `clrGroupText`  
+ A cor do texto no grupo de propriedades.  
+  
+ [out] `clrDescriptionBackground`  
+ A cor de plano de fundo da área de descrição.  
+  
+ [out] `clrDescriptionText`  
+ A cor do texto na área de descrição.  
+  
+ [out] `clrLine`  
+ A cor das linhas desenhadas entre as propriedades.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) método para definir cores personalizadas.  
+  
+##  <a name="a-namegetdescriptionheighta--cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+ Recupera a altura da área de descrição, que está localizada na parte inferior do controle de grade de propriedade.  
+  
+```  
+int GetDescriptionHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A altura da área de descrição, em pixels.  
+  
+### <a name="remarks"></a>Comentários  
+ A altura da área de descrição é calculada automaticamente e é definida como 1/4 a altura do controle de grade de propriedade.  
+  
+ Use o [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para exibir ou ocultar a área de descrição. Use o [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) método para determinar se a área de descrição é exibida ou ocultada.  
+  
+##  <a name="a-namegetdescriptionrowsa--cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+ Recupera o número de linhas na área de descrição do controle de grade de propriedade atual.  
+  
+```  
+int GetDescriptionRows() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O número de linhas na área de descrição do controle de grade de propriedade atual.  
+  
+### <a name="remarks"></a>Comentários  
+ O [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) construtor inicializa a área de descrição para 3 linhas.  
+  
+##  <a name="a-namegetheaderctrla--cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+ Recupera o interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que a estrutura usa para exibir o controle de grade de propriedade atual do objeto.  
+  
+```  
+virtual CMFCHeaderCtrl& GetHeaderCtrl();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma referência a um objeto `CMFCHeaderCtrl`.  
+  
+##  <a name="a-namegetheaderheighta--cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+ Recupera a altura do cabeçalho de um controle de grade de propriedade.  
+  
+```  
+int GetHeaderHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A altura do cabeçalho, em pixels.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetleftcolumnwidtha--cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+ Recupera a largura da coluna à esquerda do controle de grade de propriedade atual, que contém o nome de cada propriedade.  
+  
+```  
+int GetLeftColumnWidth() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A largura da coluna de nome.  
+  
+### <a name="remarks"></a>Comentários  
+ A coluna à direita de um controle de grade de propriedade contém o valor de cada propriedade.  
+  
+##  <a name="a-namegetlistrecta--cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+ Recupera o retângulo delimitador do controle de grade de propriedade.  
+  
+```  
+CRect GetListRect() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O retângulo delimitador do controle de grade de propriedade. Esse retângulo não inclui o cabeçalho e a área de descrição.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetpropertya--cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+ Recupera um ponteiro para o objeto de propriedade que corresponde ao índice de um item em um controle de grade de propriedade especificado.  
+  
+```  
+CMFCPropertyGridProperty* GetProperty(int nIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `nIndex`  
+ O índice com base em zero de um item de controle de grade de propriedade.  
+  
+ Esse método declara se o `nIndex` parâmetro é menor que zero ou maior que ou igual ao número de propriedades.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o objeto de propriedade que corresponde ao índice especificado se esse método for bem-sucedida; Caso contrário, `NULL`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetpropertycolumnwidtha--cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+ Recupera a largura atual da coluna que contém os valores de propriedade.  
+  
+```  
+int GetPropertyColumnWidth() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A largura atual da coluna que contém os valores de propriedade.  
+  
+### <a name="remarks"></a>Comentários  
+ A coluna à direita no controle de grade de propriedade contém os valores de propriedade. Um cliente pode usar a caixa de divisão do controle de grade de propriedade para alterar a largura da coluna de valores.  
+  
+##  <a name="a-namegetpropertycounta--cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+ Recupera o número de propriedades em um controle de grade de propriedade.  
+  
+```  
+int GetPropertyCount() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O número de propriedades.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetrowheighta--cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+ Recupera a altura de uma linha no controle de grade de propriedade.  
+  
+```  
+int GetRowHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A altura de uma linha.  
+  
+### <a name="remarks"></a>Comentários  
+ A altura de uma linha é igual para a altura da fonte atual além de 4 pixels.  
+  
+##  <a name="a-namegetscrollbarctrla--cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+ Recupera um ponteiro para o controle de barra de rolagem no controle de grade de propriedade.  
+  
+```  
+virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `nBar`  
+ A orientação da barra de rolagem, que deve ser `SB_VERT`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para um objeto de barra de rolagem, ou `NULL` se não há nenhuma barra de rolagem ou a orientação da barra de rolagem é `SB_HORZ`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método para obter acesso direto para o controle de barra de rolagem vertical.  
+  
+##  <a name="a-namegettextcolora--cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+ Recupera a cor que é usada para desenhar o texto dos itens de propriedade no controle de grade de propriedade atual.  
+  
+```  
+COLORREF GetTextColor() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor de cor RGB.  
+  
+### <a name="remarks"></a>Comentários  
+ Esse método recupera a cor que a estrutura usa para desenhar o primeiro plano do controle de grade de propriedade atual. O [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) método recupera a cor de plano de fundo.  
+  
+##  <a name="a-namehittesta--cmfcpropertygridctrlhittest"></a><a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+ Recupera um ponteiro para o objeto de propriedade que corresponde a um item de controle de grade de propriedade, se houver um ponto especificado no item. Esse método também indica a área no controle de grade de propriedade que contém o ponto.  
+  
+```  
+CMFCPropertyGridProperty* HitTest(
+    CPoint pt,  
+    CMFCPropertyGridProperty::ClickArea* pnArea=NULL,  
+    BOOL bPropsOnly=FALSE) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pt`  
+ Um ponto nas coordenadas do cliente.  
+  
+ [in, out] `pnArea`  
+ Um ponteiro para um `ClickArea` variável. Quando este método retorna, a variável indica o *área de propriedade* que contém o ponto especificado. Para obter mais informações sobre uma área de propriedade, consulte comentários.  
+  
+ [in] `bPropsOnly`  
+ `TRUE`Para testar somente a área de propriedade; `FALSE` para testar o *área Descrição* se o ponto especificado não está na área de propriedade. O valor padrão é `FALSE`. Para obter mais informações sobre a área de descrição, consulte comentários.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se o `bPropsOnly` parâmetro é `TRUE` e o ponto especificado estiver em uma área de propriedade, o valor de retorno é um ponteiro para o objeto de propriedade correspondente. Além disso, o `pnArea` parâmetro for definido para a área específica que contém o ponto especificado. Caso contrário, o valor de retorno será `NULL` e `pnArea` parâmetro não é modificado.  
+  
+ Se o `bPropsOnly` parâmetro é `FALSE`, o valor de retorno é sempre `NULL`. No entanto, se o ponto especificado está na área de descrição, o `pnArea` parâmetro for definido como `CMFCPropertyGridProperty::ClickDescription`.  
+  
+### <a name="remarks"></a>Comentários  
+ O termo *área de propriedade* refere-se a qualquer uma do nome, valor, ou expandir as áreas de caixa de um item de controle de grade de propriedade. O *área Descrição* é a zona na parte inferior de um controle de grade de propriedade. Quando você clica em um item de controle de grade de propriedade, a área de descrição exibe uma descrição da propriedade correspondente.  
+  
+ Esse método define o valor da variável de `pnArea` parâmetro aponta. A tabela a seguir lista as áreas correspondentes e os valores possíveis.  
+  
+|Valor|Área|  
+|-----------|----------|  
+|`ClickArea::ClickExpandBox`|Controle de caixa de expansão de propriedade.|  
+|`ClickArea::ClickName`|Nome da propriedade.|  
+|`ClickArea::ClickValue`|Valor de propriedade.|  
+|`CMFCPropertyGridProperty::ClickDescription`|Área de descrição de controle de grade de propriedade.|  
+  
+##  <a name="a-nameinita--cmfcpropertygridctrlinit"></a><a name="init"></a>CMFCPropertyGridCtrl::Init  
+ Chamado pela estrutura para inicializar um controle de grade de propriedade.  
+  
+```  
+virtual void Init();
+```  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameinitheadera--cmfcpropertygridctrlinitheader"></a><a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+ Inicializa o interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que a estrutura usa para exibir o controle de grade de propriedade atual do objeto.  
+  
+```  
+virtual void InitHeader();
+```  
+  
+##  <a name="a-nameisalphabeticmodea--cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+ Indica se um controle de grade de propriedade está no modo alfabético.  
+  
+```  
+BOOL IsAlphabeticMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se o controle de grade de propriedade estiver no modo alfabético. Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Quando o controle de grade de propriedade está no modo alfabético, todas as propriedades são classificadas em ordem alfabética por nome. Caso contrário, as propriedades são agrupadas em seus nós pai.  
+  
+ Use o [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) método para habilitar ou desabilitar o modo alfabético.  
+  
+##  <a name="a-nameisalwaysshowusertooltipa--cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsAlwaysShowUserToolTip() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameisdescriptionareaa--cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+ Indica se a área de descrição do controle de grade de propriedade é exibida.  
+  
+```  
+BOOL IsDescriptionArea() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se a área de descrição é exibida; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para ocultar ou exibir a área de descrição.  
+  
+##  <a name="a-nameisgroupnamefullwidtha--cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+ Indica se cada nome de propriedade do grupo é exibido na largura do controle de grade de propriedade atual.  
+  
+```  
+BOOL IsGroupNameFullWidth() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se os nomes de grupo são exibidos na largura do controle de grade de propriedade; `FALSE` se os nomes de grupo são truncados pela coluna direita (valor) do controle.  
+  
+### <a name="remarks"></a>Comentários  
+ A *grupo* é uma coleção de propriedades relacionadas em um controle de grade de propriedade. Se o controle é exibido hierarquicamente, o *nome do grupo* é exibido como um título de categoria na linha acima do grupo.  
+  
+##  <a name="a-nameisheaderctrla--cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+ Indica se o controle de cabeçalho é exibido.  
+  
+```  
+BOOL IsHeaderCtrl() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se o controle de cabeçalho é exibido; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) método para ocultar ou exibir o controle de cabeçalho.  
+  
+##  <a name="a-nameismarkmodifiedpropertiesa--cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+ Indica como o controle de grade de propriedade exibe propriedades modificadas.  
+  
+```  
+BOOL IsMarkModifiedProperties() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se o estilo em negrito é usado para exibir modificou propriedades; `FALSE` se o estilo normal é usado para exibir propriedades modificadas.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameisshowdragcontexta--cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+ Indica se o framework redesenha as colunas nome e valor do controle de grade de propriedade atual quando um usuário redimensiona as colunas.  
+  
+```  
+BOOL IsShowDragContext() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se a estrutura redesenha as colunas nome e valor durante uma operação de redimensionamento; `FALSE` se o framework redesenha as colunas após a operação de arrastar.  
+  
+### <a name="remarks"></a>Comentários  
+ O usuário pode redimensionar as colunas nome e valor de um controle de grade de propriedade arrastando a barra de divisão entre as colunas. Se o contexto de arrastar for exibido, as colunas nome e valor são redimensionadas enquanto o usuário arrasta a barra de divisão. Caso contrário, a barra de divisão se movimenta, mas as colunas não são redesenhadas até que a operação de arrastar seja concluída.  
+  
+##  <a name="a-nameisvsdotnetlooka--cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+ Indica se a aparência do controle de grade de propriedade é no estilo do Visual Studio .NET.  
+  
+```  
+BOOL IsVSDotNetLook() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se o controle de grade de propriedade é no estilo do Visual Studio .NET; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) método para definir o controle de grade de propriedade para o estilo do Visual Studio .NET.  
+  
+##  <a name="a-namemarkmodifiedpropertiesa--cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+ Especifica como exibir propriedades modificadas.  
+  
+```  
+void MarkModifiedProperties(
+    BOOL bMark=TRUE,  
+    BOOL bRedraw=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bMark`  
+ `TRUE`Para exibir propriedades de estilo em negrito; modificadas `FALSE` para exibir propriedades modificadas no estilo normal. O valor padrão é `TRUE`.  
+  
+ [in] `bRedraw`  
+ `TRUE`para redesenhar o controle de grade de propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameonchangeselectiona--cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+ Chamado pela estrutura quando a seleção atual é alterada.  
+  
+```  
+virtual void OnChangeSelection(
+    CMFCPropertyGridProperty* pNewSel,   
+    CMFCPropertyGridProperty* pOldSel);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+  
+|Parâmetro|Descrição|  
+|---------------|-----------------|  
+|[in] `pNewSel`|Ponteiro para a propriedade selecionada recentemente.|  
+|[in] `pOldSel`|Ponteiro para a propriedade selecionada anteriormente.|  
+  
+### <a name="remarks"></a>Comentários  
+ A implementação padrão desse método não fará nada.  
+  
+##  <a name="a-nameonclickbuttona--cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+ Chamado pela estrutura quando uma propriedade de botão é clicada.  
+  
+```  
+virtual void OnClickButton(CPoint point);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `point`  
+ Um ponto nas coordenadas do cliente.  
+  
+### <a name="remarks"></a>Comentários  
+ Por padrão, esse método atualiza o valor da propriedade atual.  
+  
+##  <a name="a-nameondrawbordera--cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+ Chamado pela estrutura para desenhar uma borda ao redor de um controle de grade de propriedade.  
+  
+```  
+virtual void OnDrawBorder(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameondrawdescriptiona--cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+ Chamado pela estrutura para desenhar a área de descrição e exibir o texto de descrição.  
+  
+```  
+virtual void OnDrawDescription(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+ [in] `rect`  
+ Um retângulo que especifica onde desenhar a área de descrição.  
+  
+### <a name="remarks"></a>Comentários  
+ Use o [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para exibir a área de descrição.  
+  
+##  <a name="a-nameondrawlista--cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+ Chamado pela estrutura para exibir a lista de propriedades no controle de grade de propriedade.  
+  
+```  
+virtual void OnDrawList(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameondrawpropertya--cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+ Chamado pela estrutura para exibir uma propriedade.  
+  
+```  
+virtual int OnDrawProperty(
+    CDC* pDC,  
+    CMFCPropertyGridProperty* pProp) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+ [in] `pProp`  
+ Um ponteiro para um objeto de propriedade.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ `TRUE`Se esse método for bem-sucedida; Caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameonpropertychangeda--cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+ Chamado pela estrutura quando o valor de uma propriedade é alterado.  
+  
+```  
+virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Um ponteiro para um objeto de propriedade cujo valor foi alterado.  
+  
+### <a name="remarks"></a>Comentários  
+ Por padrão, esse método envia o [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) mensagens para o proprietário do controle de grade de propriedade.  
+  
+##  <a name="a-nameonselectcomboa--cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+ Chamado pela estrutura quando uma propriedade que contém um controle de caixa de combinação é selecionada.  
+  
+```  
+void OnSelectCombo();
+```  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameremovealla--cmfcpropertygridctrlremoveall"></a><a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+ Remove todos os objetos de propriedade de um controle de grade de propriedade.  
+  
+```  
+void RemoveAll();
+```  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameresetoriginalvaluesa--cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+ Restaura os valores originais de todas as propriedades.  
+  
+```  
+void ResetOriginalValues(BOOL bRedraw=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bRedraw`  
+ `TRUE`para redesenhar a lista de propriedades; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namesetalphabeticmodea--cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+ Define ou redefine o modo alfabético.  
+  
+```  
+void SetAlphabeticMode(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bSet`  
+ `TRUE`Para definir o modo alfabético. `FALSE` modo alfabético de redefinição. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Quando o controle de grade de propriedade está no modo alfabético, o controle classifica todas as propriedades que ele contém o nome da propriedade.  
+  
+##  <a name="a-namesetboollabelsa--cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+ Especifica o texto dos rótulos Boolean.  
+  
+```  
+void SetBoolLabels(
+    LPCTSTR lpszTrue,  
+    LPCTSTR lpszFalse);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `lpszTrue`  
+ A cadeia de caracteres de texto a ser exibida para o valor booliano True.  
+  
+ [in] `lpszFalse`  
+ A cadeia de caracteres de texto a ser exibida para o valor booleano False.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namesetcursela--cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+ Seleciona uma propriedade em um controle de grade de propriedade.  
+  
+```  
+void SetCurSel(
+    CMFCPropertyGridProperty* pProp,  
+    BOOL bRedraw=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pProp`  
+ Um ponteiro para um objeto de propriedade.  
+  
+ [in] `bRedraw`  
+ `TRUE`para redesenhar o controle de grade de propriedade imediatamente. Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método para cancelar a seleção do item atual no controle de grade de propriedade e, em seguida, selecione o item que corresponde à propriedade especificada.  
+  
+##  <a name="a-namesetcustomcolorsa--cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+ Especifica as cores personalizadas para vários elementos do controle de grade de propriedade.  
+  
+```  
+void SetCustomColors(
+    COLORREF clrBackground,  
+    COLORREF clrText,  
+    COLORREF clrGroupBackground,  
+    COLORREF clrGroupText,  
+    COLORREF clrDescriptionBackground,  
+    COLORREF clrDescriptionText,  
+    COLORREF clrLine);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `clrBackground`  
+ A cor de plano de fundo de valores de propriedade.  
+  
+ [in] `clrText`  
+ A cor do texto do valor de propriedade e nomes de propriedade.  
+  
+ [in] `clrGroupBackground`  
+ A cor de plano de fundo de um grupo de propriedades.  
+  
+ [in] `clrGroupText`  
+ A nova cor do texto do grupo de propriedades.  
+  
+ [in] `clrDescriptionBackground`  
+ A cor de plano de fundo da área de descrição.  
+  
+ [in] `clrDescriptionText`  
+ A cor do texto na área de descrição.  
+  
+ [in] `clrLine`  
+ A cor das linhas desenhadas entre as propriedades.  
+  
+### <a name="remarks"></a>Comentários  
+ Para qualquer parâmetro, especifique o `((COLORREF)-1)` valor para usar a cor padrão para esse elemento do controle de grade de propriedade de cor.  
+  
+ Para personalizar a aparência de uma propriedade específica, derive uma classe do [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) classe e substituir o [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), e [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) métodos.  
+  
+##  <a name="a-namesetdescriptionrowsa--cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+ Especifica o número de linhas a serem exibidas na seção de descrição do controle de grade de propriedade atual.  
+  
+```  
+void SetDescriptionRows(int nDescRows);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `nDescRows`  
+ O número de linhas a serem exibidas na descrição da propriedade.  
+  
+##  <a name="a-namesetgroupnamefullwidtha--cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+ Especifica se deve exibir a largura total do nome da categoria para um grupo de propriedades no controle de grade de propriedade atual.  
+  
+```  
+void SetGroupNameFullWidth(
+    BOOL bGroupNameFullWidth = TRUE,  
+    BOOL bRedraw = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bGroupNameFullWidth`  
+ `TRUE`Para exibir a largura completa do nome da categoria, independentemente da largura da coluna de nome de propriedade. `FALSE`para limitar a largura do nome da categoria para a largura da coluna de nome de propriedade. O valor padrão é `TRUE`.  
+  
+ [in] `bRedraw`  
+ `TRUE`Para atualizar o controle de grade de propriedade imediatamente; `FALSE` atualizar o controle quando a próxima redesenhar o evento ocorre. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ O controle de grade de propriedade consiste em um redimensionáveis *nome da propriedade* coluna e um *valor da propriedade* coluna. O final da coluna de nome também é o início da coluna de valor. Para redimensionar as colunas, arraste a borda entre as colunas.  
+  
+ Os termos de *nome do grupo* e *nome da categoria* são usados alternadamente neste método. O nome da categoria é exibido em uma linha que coordena a um conjunto de valores e propriedades relacionadas. Esse método Especifica se a largura da coluna de nome de propriedade também especifica a largura do nome da categoria exibida.  
+  
+##  <a name="a-namesetlistdelimitera--cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+ Define um caractere que é usado como um delimitador em uma lista de valores de propriedade.  
+  
+```  
+void SetListDelimiter(TCHAR c);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `c`  
+ Um caractere para servir como um delimitador.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método para definir um caractere delimitador em uma lista de valores de propriedade são usados no [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) construtor. Esse construtor, definir o `bIsValueList` parâmetro para `TRUE`.  
+  
+ Por padrão, o [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) construtor define o caractere delimitador de vírgula (',').  
+  
+##  <a name="a-namesetshowdragcontexta--cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+ Especifica se a estrutura redesenha as colunas nome e valor do controle de grade de propriedade atual quando um usuário redimensiona as colunas.  
+  
+```  
+void SetShowDragContext(BOOL bShowDragContext = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bShowDragContext`  
+ `TRUE`redimensionar as colunas nome e valor durante uma operação de redimensionamento; `FALSE` redesenhar as colunas após a operação de arrastar. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ O usuário pode redimensionar as colunas nome e valor de um controle de grade de propriedade arrastando a barra de divisão entre as colunas. Se o contexto de arrastar for exibido, as colunas nome e valor são redimensionadas enquanto o usuário arrasta a barra de divisão. Caso contrário, a barra de divisão se movimenta, mas as colunas não são redesenhadas até que a operação de arrastar seja concluída.  
+  
+##  <a name="a-namesetvsdotnetlooka--cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+ Define a aparência do controle de grade de propriedade para o estilo que é usado no Visual Studio .NET.  
+  
+```  
+void SetVSDotNetLook(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `bSet`  
+ `TRUE`Para definir o controle de grade de propriedade para o estilo que é usado no Visual Studio .NET; Caso contrário, `FALSE`. O valor padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameupdatecolora--cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+ Define o valor de cor da propriedade cor atualmente selecionada.  
+  
+```  
+virtual void UpdateColor(COLORREF color);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `color`  
+ Um valor de cor RGB.  
+  
+### <a name="remarks"></a>Comentários  
+ Esse método declara no modo de depuração, se a propriedade selecionada no momento do controle de grade de propriedade não é uma propriedade de cor.  
+  
+##  <a name="a-namevalidateitemdataa--cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+ Chamado pela estrutura para validar os dados de propriedade.  
+  
+```  
+virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+  
+|Parâmetro|Descrição|  
+|---------------|-----------------|  
+|[in] `pProp`|Ponteiro para uma propriedade. Este parâmetro não é usado.|  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Sempre `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+ O [CMFCPropertyGridCtrl::EndEditItem](#endedititem) método chama esse método para validar os dados. Por padrão, esse método não usa seu `pProp` parâmetro e seu valor de retorno é sempre `TRUE`.  
+  
+ Se você substituir esse método, retornar `TRUE` se os dados de propriedade especificado são válidos. Caso contrário, retornará `FALSE`, caso em que a estrutura não atualiza a propriedade.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
+

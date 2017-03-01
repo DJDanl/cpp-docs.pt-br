@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C3170 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3170"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3170"
+title: Compilador erro C3170 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3170
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3170
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 201016cc38b34bfba69dcf615a29bdb33a91eeae
+ms.lasthandoff: 02/25/2017
 
-não pode ter diferentes identificadores do módulo em um projeto  
+---
+# <a name="compiler-error-c3170"></a>C3170 de erro do compilador
+não é possível ter identificadores de módulo diferentes em um projeto  
   
- os atributos de[módulo](../../windows/module-cpp.md) com nomes diferentes encontradas em dois dos arquivos em uma compilação.  Somente um atributo exclusivo de `module` pode ser especificado pela compilação.  
+ [módulo](../../windows/module-cpp.md) atributos com nomes diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um único `module` atributo pode ser especificado por compilação.  
   
- Os atributos de `module` idênticos podem ser especificados em mais de um arquivo de código\-fonte.  
+ Idêntico `module` atributos podem ser especificados em mais de um arquivo de código fonte.  
   
- Por exemplo, se os seguintes atributos do módulo foi encontrado:  
+ Por exemplo, se os atributos de módulo a seguir foram encontrados:  
   
 ```  
 // C3170.cpp  
@@ -39,7 +54,7 @@ não pode ter diferentes identificadores do módulo em um projeto
 int main() {}  
 ```  
   
- Em seguida, e  
+ E, em seguida,  
   
 ```  
 // C3170b.cpp  
@@ -48,4 +63,4 @@ int main() {}
 [ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
 ```  
   
- o compilador geraria C3170 \(observe os nomes diferentes\).
+ o compilador poderia gerar C3170 (Observe os nomes diferentes).

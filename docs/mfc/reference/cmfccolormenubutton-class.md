@@ -1,87 +1,102 @@
 ---
-title: "Classe de CMFCColorMenuButton | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCColorMenuButton"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CMFCColorMenuButton"
+title: Classe CMFCColorMenuButton | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCColorMenuButton
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCColorMenuButton class
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 caps.latest.revision: 29
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CMFCColorMenuButton
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a9b1e7a3dbfe4d98b3d51850723eb22ec1f9da06
+ms.lasthandoff: 02/25/2017
 
-A classe de `CMFCColorMenuButton` suporta um comando de menu ou um botão da barra de ferramentas que ligue uma caixa de diálogo seletor de cor.  
+---
+# <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
+O `CMFCColorMenuButton` classe oferece suporte a um comando de menu ou um botão que inicia uma caixa de diálogo do seletor de cores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CMFCColorMenuButton : public CMFCToolBarMenuButton  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CMFCColorMenuButton::CMFCColorMenuButton](../Topic/CMFCColorMenuButton::CMFCColorMenuButton.md)|Constrói um objeto de `CMFCColorMenuButton` .|  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CMFCColorMenuButton::EnableAutomaticButton](../Topic/CMFCColorMenuButton::EnableAutomaticButton.md)|Ativar e desativar um botão “automático” que está localizado acima dos botões normais de cor.  \(O botão automático do sistema padrão é rotulado **Automático**.\)|  
-|[CMFCColorMenuButton::EnableDocumentColors](../Topic/CMFCColorMenuButton::EnableDocumentColors.md)|Permite que a exibição de cores a específicas em vez de cores do sistema.|  
-|[CMFCColorMenuButton::EnableOtherButton](../Topic/CMFCColorMenuButton::EnableOtherButton.md)|Ativar e desativar um “outro” botão que está localizado abaixo dos botões normais de cor.  \(O sistema padrão “outro” botão é rotulado **Cores mais…**.\)|  
-|[CMFCColorMenuButton::EnableTearOff](../Topic/CMFCColorMenuButton::EnableTearOff.md)|Permite que a capacidade de rasgar fora um painel de cor.|  
-|[CMFCColorMenuButton::GetAutomaticColor](../Topic/CMFCColorMenuButton::GetAutomaticColor.md)|Recupera a cor automático atual.|  
-|[CMFCColorMenuButton::GetColor](../Topic/CMFCColorMenuButton::GetColor.md)|Recupera a cor atual do botão.|  
-|[CMFCColorMenuButton::GetColorByCmdID](../Topic/CMFCColorMenuButton::GetColorByCmdID.md)|Recupera a cor que corresponde a um certo ID de comando|  
-|[CMFCColorMenuButton::OnChangeParentWnd](../Topic/CMFCColorMenuButton::OnChangeParentWnd.md)|Chamado pela estrutura quando a janela pai alterar.|  
-|[CMFCColorMenuButton::OpenColorDialog](../Topic/CMFCColorMenuButton::OpenColorDialog.md)|Abrir uma caixa de diálogo de seleção de cor.|  
-|[CMFCColorMenuButton::SetColor](../Topic/CMFCColorMenuButton::SetColor.md)|Define a cor do botão atual da cor.|  
-|[CMFCColorMenuButton::SetColorByCmdID](../Topic/CMFCColorMenuButton::SetColorByCmdID.md)|Define a cor do botão especificado no menu de cor.|  
-|[CMFCColorMenuButton::SetColorName](../Topic/CMFCColorMenuButton::SetColorName.md)|Define um novo nome para a cor especificada.|  
-|[CMFCColorMenuButton::SetColumnsNumber](../Topic/CMFCColorMenuButton::SetColumnsNumber.md)|Define o número de colunas que são exibidas por um objeto de `CMFCColorBar` .|  
+|----------|-----------------|  
+|[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Constrói um objeto `CMFCColorMenuButton`.|  
   
-### Métodos protegidos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CMFCColorMenuButton::CopyFrom](../Topic/CMFCColorMenuButton::CopyFrom.md)|Copia outro botão da barra de ferramentas para o botão atual.|  
-|[CMFCColorMenuButton::CreatePopupMenu](../Topic/CMFCColorMenuButton::CreatePopupMenu.md)|Cria uma caixa de diálogo seletor de cor.|  
-|[CMFCColorMenuButton::IsEmptyMenuAllowed](../Topic/CMFCColorMenuButton::IsEmptyMenuAllowed.md)|Indica se os menus vazias são suportados.|  
-|[CMFCColorMenuButton::OnDraw](../Topic/CMFCColorMenuButton::OnDraw.md)|Chamado pela estrutura para exibir uma imagem em um botão.|  
-|[CMFCColorMenuButton::OnDrawOnCustomizeList](../Topic/CMFCColorMenuButton::OnDrawOnCustomizeList.md)|Chamado pela estrutura antes que um objeto de `CMFCColorMenuButton` é exibido na lista de uma caixa de diálogo de personalização da barra de ferramentas.|  
+|----------|-----------------|  
+|[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Habilita e desabilita um botão "automático" que está posicionado acima dos botões de cor normal. (O botão automática padrão do sistema é rotulado como **automáticas**.)|  
+|[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Permite a exibição de cores de documento específico, em vez de cores do sistema.|  
+|[CMFCColorMenuButton::EnableOtherButton](#enableotherbutton)|Habilita e desabilita um botão "outro" que será posicionado abaixo dos botões de cor normal. (O padrão do sistema é rotulado como "outro" botão **mais cores... **.)|  
+|[CMFCColorMenuButton::EnableTearOff](#enabletearoff)|Habilita a capacidade de separar um painel de cor.|  
+|[CMFCColorMenuButton::GetAutomaticColor](#getautomaticcolor)|Recupera a cor automática atual.|  
+|[CMFCColorMenuButton::GetColor](#getcolor)|Recupera a cor do botão.|  
+|[CMFCColorMenuButton::GetColorByCmdID](#getcolorbycmdid)|Recupera a cor que corresponde a uma ID de comando especificado.|  
+|[CMFCColorMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Chamado pela estrutura quando altera a janela pai.|  
+|[CMFCColorMenuButton::OpenColorDialog](#opencolordialog)|Abre uma caixa de diálogo de seleção de cor.|  
+|[CMFCColorMenuButton::SetColor](#setcolor)|Define a cor do botão de cor atual.|  
+|[CMFCColorMenuButton::SetColorByCmdID](#setcolorbycmdid)|Define a cor do botão de menu cor especificada.|  
+|[CMFCColorMenuButton::SetColorName](#setcolorname)|Define um novo nome para a cor especificada.|  
+|[CMFCColorMenuButton::SetColumnsNumber](#setcolumnsnumber)|Define o número de colunas que são exibidas por um `CMFCColorBar` objeto.|  
   
-## Comentários  
- Para substituir o comando de menu ou no botão da barra de ferramentas original com um objeto de `CMFCColorMenuButton` , cria o objeto de `CMFCColorMenuButton` , define estilos apropriadas de [Classe de CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) em seguida, chame o método de `ReplaceButton` da classe de [Classe de CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) .  Se você personaliza uma barra de ferramentas, chame o método de [CMFCToolBarsCustomizeDialog::ReplaceButton](../Topic/CMFCToolBarsCustomizeDialog::ReplaceButton.md) .  
+### <a name="protected-methods"></a>Métodos Protegidos  
   
- A caixa de diálogo seletor de cores é criada durante o processamento do manipulador de eventos de [CMFCColorMenuButton::CreatePopupMenu](../Topic/CMFCColorMenuButton::CreatePopupMenu.md) .  O manipulador de eventos notifica o elemento pai com uma mensagem de `WM_COMMAND` .  O objeto de `CMFCColorMenuButton` envia a identificação do controle que é atribuído ao comando de menu ou para o botão da barra de ferramentas original.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CMFCColorMenuButton::CopyFrom](#copyfrom)|Copia outro botão da barra de ferramentas para o botão atual.|  
+|[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Cria uma caixa de diálogo do seletor de cores.|  
+|[CMFCColorMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Indica se os menus vazias têm suporte.|  
+|[CMFCColorMenuButton::OnDraw](#ondraw)|Chamado pela estrutura para exibir uma imagem em um botão.|  
+|[CMFCColorMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Chamado pela estrutura antes de uma `CMFCColorMenuButton` objeto é exibido na lista de uma caixa de diálogo de personalização da barra de ferramentas.|  
   
-## Exemplo  
- O exemplo a seguir demonstra como criar e configurar um botão de menu de cores usando vários métodos na classe de `CMFCColorMenuButton` .  Em o exemplo, um objeto de `CPalette` é projetado principalmente e então usado para construir um objeto da classe de `CMFCColorMenuButton` .  O objeto de `CMFCColorMenuButton` é configurado em seu ativação automática e outros botões, e definindo sua cor e o número de colunas.  Esse código é parte de [Exemplo de preenchimento da palavra](../../top/visual-cpp-samples.md).  
+## <a name="remarks"></a>Comentários  
+ Para substituir o menu da barra de ferramentas ou comando botão original com um `CMFCColorMenuButton` de objeto, criar o `CMFCColorMenuButton` objeto, qualquer apropriado [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) estilos e, em seguida, chame o `ReplaceButton` método o [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md) classe. Se você personalizar uma barra de ferramentas, chame o [CMFCToolBarsCustomizeDialog::ReplaceButton](../../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) método.  
   
- [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/CPP/cmfccolormenubutton-class_1.h)]  
-[!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/CPP/cmfccolormenubutton-class_2.cpp)]  
+ A caixa de diálogo do seletor de cores é criada durante o processamento de [CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu) manipulador de eventos. O manipulador de eventos notifica o quadro principal com um `WM_COMMAND` mensagem. O `CMFCColorMenuButton` objeto envia a ID do controle que é atribuída para o botão de barra de ferramentas ou comando de menu original.  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra como criar e configurar um botão de menu de cor usando vários métodos na `CMFCColorMenuButton` classe. No exemplo, um `CPalette` objeto é criado primeiro e, em seguida, usado para construir um objeto de `CMFCColorMenuButton` classe. O `CMFCColorMenuButton` objeto é configurado, em seguida, permitindo seu automático e outros botões e definindo a cor e o número de colunas. Esse código é parte do [exemplo Word Pad](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_WordPad n º&5;](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]  
+[!code-cpp[NVC_MFC_WordPad n º&6;](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
@@ -89,13 +104,382 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
   
  [CMFCColorMenuButton](../../mfc/reference/cmfccolormenubutton-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcolormenubutton.h  
   
-## Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../Topic/MFC%20Classes.md)   
- [Classe de CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)   
- [Classe de CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
- [Classe de CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)   
- [Classe de CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)
+##  <a name="a-namecmfccolormenubuttona--cmfccolormenubuttoncmfccolormenubutton"></a><a name="cmfccolormenubutton"></a>CMFCColorMenuButton::CMFCColorMenuButton  
+ Constrói um objeto `CMFCColorMenuButton`.  
+  
+```  
+CMFCColorMenuButton();
+
+ 
+CMFCColorMenuButton(
+    UINT uiCmdID,  
+    LPCTSTR lpszText,  
+    CPalette* pPalette=NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `uiCmdID`  
+ Uma ID de comando do botão.  
+  
+ [in] `lpszText`  
+ O texto do botão.  
+  
+ [in] `pPalette`  
+ Um ponteiro para uma paleta de cores do botão.  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+### <a name="remarks"></a>Comentários  
+ O primeiro construtor é o construtor padrão. A cor do objeto atual e cor automática são inicializados para preto (RGB (0, 0, 0)).  
+  
+ O segundo construtor inicializa o botão para a cor que corresponde à ID de comando especificado.  
+  
+##  <a name="a-namecopyfroma--cmfccolormenubuttoncopyfrom"></a><a name="copyfrom"></a>CMFCColorMenuButton::CopyFrom  
+ Copia uma [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)-objeto derivado para outro.  
+  
+```  
+virtual void CopyFrom(const CMFCToolBarButton& src);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `src`  
+ Botão de origem para copiar.  
+  
+### <a name="remarks"></a>Comentários  
+ Substitui esse método para copiar os objetos que derivam de `CMFCColorMenuButton` objeto.  
+  
+##  <a name="a-namecreatepopupmenua--cmfccolormenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>CMFCColorMenuButton::CreatePopupMenu  
+ Cria uma caixa de diálogo do seletor de cores.  
+  
+```  
+virtual CMFCPopupMenu* CreatePopupMenu();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um objeto que representa uma caixa de diálogo do seletor de cores.  
+  
+### <a name="remarks"></a>Comentários  
+ Este método é chamado pela estrutura quando o usuário pressionar um botão de menu de cor.  
+  
+##  <a name="a-nameenableautomaticbuttona--cmfccolormenubuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorMenuButton::EnableAutomaticButton  
+ Habilita e desabilita um botão "automático" que está posicionado acima dos botões de cor normal. (O botão automática padrão do sistema é rotulado como **automáticas**.)  
+  
+```  
+void EnableAutomaticButton(
+    LPCTSTR lpszLabel,  
+    COLORREF colorAutomatic,  
+    BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `lpszLabel`  
+ Especifica o texto do botão que é exibido quando o botão se torna automática.  
+  
+ [in] `colorAutomatic`  
+ Especifica uma nova cor automática.  
+  
+ [in] `bEnable`  
+ Especifica se o botão é automático ou não.  
+  
+### <a name="remarks"></a>Comentários  
+ O botão automática se aplica a cor padrão atual.  
+  
+##  <a name="a-nameenabledocumentcolorsa--cmfccolormenubuttonenabledocumentcolors"></a><a name="enabledocumentcolors"></a>CMFCColorMenuButton::EnableDocumentColors  
+ Permite a exibição de cores de documento específico, em vez de cores do sistema.  
+  
+```  
+void EnableDocumentColors(
+    LPCTSTR lpszLabel,  
+    BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `lpszLabel`  
+ Especifica o texto do botão.  
+  
+ [in] `bEnable`  
+ `TRUE`Para exibir as cores específicas do documento ou `FALSE` para exibir cores do sistema.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método para exibir as cores do documento atual ou a paleta de cores do sistema quando o usuário clica em um botão de menu de cor.  
+  
+##  <a name="a-nameenableotherbuttona--cmfccolormenubuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorMenuButton::EnableOtherButton  
+ Habilita e desabilita um botão "outro" que será posicionado abaixo dos botões de cor normal. (O padrão do sistema é rotulado como "outro" botão **mais cores... **.)  
+  
+```  
+void EnableOtherButton(
+    LPCTSTR lpszLabel,  
+    BOOL bAltColorDlg=TRUE,  
+    BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `lpszLabel`  
+ Especifica o texto do botão.  
+  
+ [in] `bAltColorDlg`  
+ Especifique `TRUE` para exibir o `CMFCColorDialog` caixa de diálogo, ou `FALSE` para exibir a caixa de diálogo de cor padrão do sistema.  
+  
+ [in] `bEnable`  
+ Especifique `TRUE` para exibir o botão "outro"; caso contrário, `FALSE`. O padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameenabletearoffa--cmfccolormenubuttonenabletearoff"></a><a name="enabletearoff"></a>CMFCColorMenuButton::EnableTearOff  
+ Habilita a capacidade de separar um painel de cor.  
+  
+```  
+void EnableTearOff(
+    UINT uiID,  
+    int nVertDockColumns=-1,  
+    int nHorzDockRows=-1);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `uiID`  
+ Especifica a ID do painel destacável.  
+  
+ [in] `nVertDockColumns`  
+ Especifica o número de colunas no painel encaixado na vertical cor enquanto estiver em estado destacável.  
+  
+ [in] `nHorzDockRows`  
+ Especifica o número de linhas para o painel Cor ancorada horizontalmente no estado destacável.  
+  
+### <a name="remarks"></a>Comentários  
+ Chame esse método para habilitar o recurso "destacável" para o painel de cor que surge quando o `CMFCColorMenuButton` é pressionado.  
+  
+##  <a name="a-namegetautomaticcolora--cmfccolormenubuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFCColorMenuButton::GetAutomaticColor  
+ Recupera a cor automática atual.  
+  
+```  
+COLORREF GetAutomaticColor() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um valor de cor RGB que representa a cor automática atual.  
+  
+### <a name="remarks"></a>Comentários  
+ Chame esse método para obter a cor automática é definida por [CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton).  
+  
+##  <a name="a-namegetcolora--cmfccolormenubuttongetcolor"></a><a name="getcolor"></a>CMFCColorMenuButton::GetColor  
+ Recupera a cor do botão.  
+  
+```  
+COLORREF GetColor() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A cor do botão.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namegetcolorbycmdida--cmfccolormenubuttongetcolorbycmdid"></a><a name="getcolorbycmdid"></a>CMFCColorMenuButton::GetColorByCmdID  
+ Recupera a cor que corresponde a uma ID de comando especificado.  
+  
+```  
+static COLORREF GetColorByCmdID(UINT uiCmdID);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `uiCmdID`  
+ Uma ID de comando.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A cor que corresponde à ID de comando especificado.  
+  
+### <a name="remarks"></a>Comentários  
+ Use esse método quando você tem vários botões de cor em um aplicativo. Quando o usuário clica em um botão de cor, o botão envia sua ID de comando em um `WM_COMMAND` mensagem ao seu pai. O `GetColorByCmdID` método usa a ID de comando para recuperar a cor correspondente.  
+  
+##  <a name="a-nameisemptymenualloweda--cmfccolormenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>CMFCColorMenuButton::IsEmptyMenuAllowed  
+ Indica se os menus vazias têm suporte.  
+  
+```  
+virtual BOOL IsEmptyMenuAllowed() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se são permitidas menus vazias; Caso contrário, zero.  
+  
+### <a name="remarks"></a>Comentários  
+ Menus vazias são suportados por padrão. Substitui esse método para alterar esse comportamento na classe derivada.  
+  
+##  <a name="a-nameonchangeparentwnda--cmfccolormenubuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCColorMenuButton::OnChangeParentWnd  
+ Chamado pela estrutura quando altera a janela pai.  
+  
+```  
+virtual void OnChangeParentWnd(CWnd* pWndParent);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pWndParent`  
+ Um ponteiro para a nova janela pai.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameondrawa--cmfccolormenubuttonondraw"></a><a name="ondraw"></a>CMFCColorMenuButton::OnDraw  
+ Chamado pela estrutura para exibir uma imagem em um botão.  
+  
+```  
+virtual void OnDraw(
+    CDC* pDC,  
+    const CRect& rect,  
+    CMFCToolBarImages* pImages,  
+    BOOL bHorz=TRUE,  
+    BOOL bCustomizeMode=FALSE,  
+    BOOL bHighlight=FALSE,  
+    BOOL bDrawBorder=TRUE,  
+    BOOL bGrayDisabledButtons=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+ [in] `rect`  
+ Um retângulo que circunda a área a ser redesenhado.  
+  
+ [in] `pImages`  
+ Aponta para uma lista de imagens da barra de ferramentas.  
+  
+ [in] `bHorz`  
+ `TRUE`para especificar que a barra de ferramentas está em um estado ancorado horizontal; Caso contrário, `FALSE`. O padrão é `TRUE`.  
+  
+ [in] `bCustomizeMode`  
+ `TRUE`para especificar que o aplicativo está no modo de personalização. Caso contrário, `FALSE`. O padrão é `FALSE`.  
+  
+ [in] `bHighlight`  
+ `TRUE`para especificar que o botão é realçado; Caso contrário, `FALSE`. O padrão é `FALSE`.  
+  
+ [in] `bDrawBorder`  
+ `TRUE`para especificar que a borda do botão é exibida; Caso contrário, `FALSE`. O padrão é `TRUE`.  
+  
+ [in] `bGrayDisabledButtons`  
+ `TRUE`para especificar que desabilitado botões estão cinza (esmaecido). Caso contrário, `FALSE`. O padrão é `TRUE`.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-nameondrawoncustomizelista--cmfccolormenubuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCColorMenuButton::OnDrawOnCustomizeList  
+ Chamado pela estrutura antes de uma `CMFCColorMenuButton` objeto é exibido na lista de uma caixa de diálogo de personalização da barra de ferramentas.  
+  
+```  
+virtual int OnDrawOnCustomizeList(
+    CDC* pDC,  
+    const CRect& rect,  
+    BOOL bSelected);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pDC`  
+ Um ponteiro para um contexto de dispositivo.  
+  
+ [in] `rect`  
+ Um retângulo que circunda o botão a ser desenhada.  
+  
+ [in] `bSelected`  
+ `TRUE`Especifica que o botão está no estado selecionado. Caso contrário, `FALSE`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A largura do botão.  
+  
+### <a name="remarks"></a>Comentários  
+ Este método é chamado pela estrutura quando um `CMFCColorMenuButton` objeto é exibido na caixa de listagem durante o processo de personalização da barra de ferramentas.  
+  
+##  <a name="a-nameopencolordialoga--cmfccolormenubuttonopencolordialog"></a><a name="opencolordialog"></a>CMFCColorMenuButton::OpenColorDialog  
+ Abre uma caixa de diálogo de seleção de cor.  
+  
+```  
+virtual BOOL OpenColorDialog(
+    const COLORREF colorDefault,  
+    COLORREF& colorRes);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `colorDefault`  
+ A cor padrão que está selecionada na caixa de diálogo de cor.  
+  
+ [out] `colorRes`  
+ Retorna a cor selecionada pelo usuário na caixa de diálogo de cor.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se o usuário selecionar uma nova cor. Caso contrário, zero.  
+  
+### <a name="remarks"></a>Comentários  
+ Quando o botão de menu é clicado, chame este método para abrir uma caixa de diálogo de cor. Se o valor de retorno é diferente de zero, a cor selecionada pelo usuário é armazenada no `colorRes` parâmetro. Use o [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) método para alternar entre a caixa de diálogo cores padrão e o [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo.  
+  
+##  <a name="a-namesetcolora--cmfccolormenubuttonsetcolor"></a><a name="setcolor"></a>CMFCColorMenuButton::SetColor  
+ Define a cor do botão de cor atual.  
+  
+```  
+virtual void SetColor(
+    COLORREF clr,  
+    BOOL bNotify=TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `clr`  
+ Um valor de cor RGB.  
+  
+ [in] `bNotify`  
+ `TRUE`Para aplicar o `clr` cores de parâmetro para qualquer botão de menu associados ou barra de ferramentas; caso contrário, `FALSE`.  
+  
+### <a name="remarks"></a>Comentários  
+ Chame esse método para alterar a cor do botão de cor atual. Se o `bNotify` parâmetro for diferente de zero, a cor do botão correspondente em qualquer menu pop-up associado ou a barra de ferramentas é alterada para a cor especificada pelo `clr` parâmetro.  
+  
+##  <a name="a-namesetcolorbycmdida--cmfccolormenubuttonsetcolorbycmdid"></a><a name="setcolorbycmdid"></a>CMFCColorMenuButton::SetColorByCmdID  
+ Define a cor do botão de menu cor especificada.  
+  
+```  
+static void SetColorByCmdID(
+    UINT uiCmdID,  
+    COLORREF color);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `uiCmdID`  
+ A ID de recurso de um botão de menu de cor.  
+  
+ [in] `color`  
+ Um valor de cor RGB.  
+  
+##  <a name="a-namesetcolornamea--cmfccolormenubuttonsetcolorname"></a><a name="setcolorname"></a>CMFCColorMenuButton::SetColorName  
+ Define um novo nome para a cor especificada.  
+  
+```  
+static void SetColorName(
+    COLORREF color,  
+    const CString& strName);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `color`  
+ O valor RGB da cor cujo nome é alterado.  
+  
+ [in] `strName`  
+ O novo nome da cor.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namesetcolumnsnumbera--cmfccolormenubuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCColorMenuButton::SetColumnsNumber  
+ Define o número de colunas a serem exibidas em um controle de seleção de cor ( [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) objeto).  
+  
+```  
+void SetColumnsNumber(int nColumns);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `nColumns`  
+ O número de colunas a serem exibidas.  
+  
+### <a name="remarks"></a>Comentários  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)   
+ [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
+ [Classe CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)   
+ [Classe CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)
+

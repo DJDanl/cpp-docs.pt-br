@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2548 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2548"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2548"
+title: C2548 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2548
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2548
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 55fe541483e4447d18b6bc2d2ff6619e40d52816
+ms.lasthandoff: 02/25/2017
 
-“class::member”: parâmetro padrão ausente para o parâmetro de parâmetro  
+---
+# <a name="compiler-error-c2548"></a>C2548 de erro do compilador
+'class::member': parâmetro padrão para o parâmetro ausente  
   
- A lista de parâmetro padrão está faltando um parâmetro.  Se você fornecer um parâmetro padrão em qualquer lugar em uma lista de parâmetros, você deve definir parâmetros padrão para todos os parâmetros subsequentes.  
+ A lista de parâmetros padrão não tem um parâmetro. Se você fornecer um parâmetro padrão em qualquer lugar em uma lista de parâmetros, você deve definir parâmetros padrão para todos os parâmetros subsequentes.  
   
-## Exemplo  
- O seguinte exemplo gera C2548:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2548:  
   
 ```  
 // C2548.cpp  

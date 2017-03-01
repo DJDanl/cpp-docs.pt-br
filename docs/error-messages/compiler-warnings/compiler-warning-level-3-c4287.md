@@ -1,38 +1,53 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4287 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4287"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4287"
+title: "Compilador aviso (nível 3) C4287 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4287
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4287
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3a13d2f625158043fa70b0f80690297ffc05a888
+ms.lasthandoff: 02/25/2017
 
-operador “”: incompatibilidade constante não assinados\/negativa  
+---
+# <a name="compiler-warning-level-3-c4287"></a>Compilador C4287 de aviso (nível 3)
+'operator': incompatibilidade de constante negativa/não assinada  
   
- Uma variável não assinado foi usado em uma operação com um número negativo.  
+ Uma variável não assinada foi usada em uma operação com um número negativo.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
-## Exemplo  
- O seguinte exemplo gera C4287:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4287:  
   
 ```  
 // C4287.cpp  

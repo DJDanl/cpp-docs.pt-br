@@ -1,40 +1,55 @@
 ---
-title: "Erro do Compilador C3163 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3163"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3163"
+title: C3163 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3163
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3163
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 310e67b1e1dbeb58554c9630faed4d60ba5690e1
+ms.lasthandoff: 02/25/2017
 
-“construção”: atribui inconsistente com declaração anterior  
+---
+# <a name="compiler-error-c3163"></a>C3163 de erro do compilador
+'Criar': atributos inconsistentes com a declaração anterior  
   
- Os atributos que são aplicados a um conflito de definição com os atributos que são aplicados a uma instrução.  
+ Os atributos que são aplicados a uma definição em conflito com os atributos que são aplicados a uma declaração.  
   
- Uma forma de resolver C3163 é eliminar atributos na declaração futuras.  Todos os atributos em uma declaração frente devem ser\-lhes menor que os atributos na definição ou, no máximo, em iguais.  
+ Uma maneira de resolver C3163 é eliminar atributos na declaração de encaminhamento. Os atributos em uma declaração de encaminhamento devem ser menor do que os atributos na definição ou, no máximo, igual a eles.  
   
- Uma possível causa do erro C3163 envolve o idioma da anotação do código\-fonte da Microsoft \(SAL\).  Macros de SAL não expande a menos que você criar seu projeto usando o sinalizador de **\/analyze** .  Um programa que compilasse limpa sem \/analyze pode gerar C3163 se você tentar recompilar o com a opção do \/analyze.  Para obter mais informações sobre SAL, consulte [Anotações de SAL](../../c-runtime-library/sal-annotations.md).  
+ Uma possível causa do erro C3163 envolve a linguagem de anotação do código Microsoft fonte (SAL). As macros SAL não expandir, a menos que você compila seu projeto usando o **/ANALYZE** sinalizador. Um programa que foi compilado corretamente sem /ANALYZE poderá gerar C3163 se você tentar recompilá-lo com a opção /Analyze. Para obter mais informações sobre o SAL, consulte [anotações de SAL](../../c-runtime-library/sal-annotations.md).  
   
-## Exemplo  
- O exemplo a seguir produz C3163.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3163.  
   
 ```  
 // C3163.cpp  
@@ -47,5 +62,5 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Anotações de SAL](../../c-runtime-library/sal-annotations.md)

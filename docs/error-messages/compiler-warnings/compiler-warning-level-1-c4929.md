@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+title: "Compilador aviso (nível 1) C4929 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4929
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c9a662904f764c1eba48f24d7fc7b97254fe0e51
+ms.lasthandoff: 02/25/2017
 
-“arquivo”: typelibrary contém uma união; ignorando o qualificador de “embedded\_idl”  
+---
+# <a name="compiler-warning-level-1-c4929"></a>Compilador C4929 de aviso (nível 1)
+'arquivo': typelibrary contém uma união; Ignorando o qualificador 'embedded_idl'  
   
- O atributo de embedded\_idl de [\#import](../Topic/%23import%20Directive%20\(C++\).md) não pôde ser aplicado à biblioteca de tipos como uma união estiver presente na biblioteca de tipos.  Para resolver esse aviso, não use o embedded\_idl.  
+ O atributo embedded_idl do [#import](../../preprocessor/hash-import-directive-cpp.md) não pôde ser aplicada à biblioteca de tipos como uma união está presente na biblioteca de tipos. Para resolver esse aviso, não use embedded_idl.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir define um componente.  
   
 ```  
@@ -62,8 +77,8 @@ struct C : I {
 };  
 ```  
   
-## Exemplo  
- O exemplo a seguir produz C4929.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C4929.  
   
 ```  
 // C4929b.cpp  

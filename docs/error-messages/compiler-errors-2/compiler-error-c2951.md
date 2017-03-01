@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2951 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2951"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2951"
+title: C2951 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2951
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2951
 ms.assetid: c6f95aa2-c894-425b-a51c-d40d70c8daa1
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2951
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 117c1b40c1533edb0abc5012e2b5fd5cd43d9c80
+ms.lasthandoff: 02/25/2017
 
-as declarações de tipo são permitidas apenas no GAC, no namespace, ou no escopo da classe  
+---
+# <a name="compiler-error-c2951"></a>C2951 de erro do compilador
+declarações de tipo são permitidas somente no namespace global, ou escopo de classe  
   
- Você não pode declarar uma parte externa ou do modelo genérico da classe global ou um escopo do namespace.  Se você executa seu genérico ou declarações de modelo incluir arquivos, certifique\-se de que o arquivo incluir está no escopo global.  
+ Você não pode declarar um genérico ou escopo de namespace ou classe de modelo global externo. Se você tornar suas declarações genérico ou um modelo em um arquivo de inclusão, verifique se o arquivo de inclusão está no escopo global.  
   
- O seguinte exemplo gera C2951:  
+ O exemplo a seguir gera C2951:  
   
 ```  
 // C2951.cpp  
@@ -42,7 +57,7 @@ int main() {
 }  
 ```  
   
- C2951 também pode ocorrer ao usar produtos genéricas:  
+ C2951 também pode ocorrer ao usar genéricos:  
   
 ```  
 // C2951b.cpp  

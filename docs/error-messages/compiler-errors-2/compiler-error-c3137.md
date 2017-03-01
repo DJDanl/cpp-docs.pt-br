@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3137 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3137"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3137"
+title: C3137 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3137
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3137
 ms.assetid: 70bb1313-2e87-43ed-a0d8-33fa6ff475e4
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3137
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5fcf26ea1a5cb2565a1ad343536a86f0fb26ba08
+ms.lasthandoff: 02/25/2017
 
-propriedade “”: uma propriedade não pode ser inicializada  
+---
+# <a name="compiler-error-c3137"></a>C3137 de erro do compilador
+'property': uma propriedade não pode ser inicializada  
   
- Uma propriedade não pode ser inicializada, por exemplo, na lista de inicialização de um construtor.  
+ Uma propriedade não pode ser inicializada, por exemplo, na lista de inicialização do construtor.  
   
- O exemplo a seguir gerenciar C3137:  
+ O exemplo a seguir gera C3137:  
   
 ```  
 // C3137.cpp  
@@ -50,23 +65,4 @@ public:
    }  
 };  
 ```  
-  
- O exemplo a seguir gerenciar C3137:  
-  
-```  
-// C3137_2.cpp  
-// compile with: /clr:oldSyntax /c  
-__gc class CMyClass {  
-public:  
-   __property int get_Size() {  
-      return 0;  
-   }  
-   __property void set_Size(int i) {}  
-  
-   CMyClass() : Size(1) {   // C3137  
-      // to resolve this C3137, remove the initializer from the  
-      // ctor declaration and perform the assignment as follows  
-      // Size = 1;  
-   }  
-};  
-```
+

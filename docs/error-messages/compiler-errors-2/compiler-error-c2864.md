@@ -1,33 +1,48 @@
 ---
-title: "Erro do Compilador C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+title: C2864 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 260474c18b4e51afe66d84cd6ca61d2b55fc8710
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2864"></a>C2864 de erro do compilador
 'variable': um membro de dados static com um inicializador em classe deve ter o tipo integral const não volátil  
   
- Para inicializar um membro de dados `static` que seja definido como `volatile`, `const` não volátil ou um tipo não integral, use uma instrução de definição de membro.  Eles não podem ser inicializados em uma declaração.  
+ Para inicializar um membro de dados `static` que seja definido como `volatile`, `const` não volátil ou um tipo não integral, use uma instrução de definição de membro. Eles não podem ser inicializados em uma declaração.  
   
  Este exemplo gera C2864:  
   

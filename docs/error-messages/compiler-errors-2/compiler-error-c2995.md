@@ -1,36 +1,58 @@
 ---
-title: "C2995 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2995"
+title: C2995 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2995
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2995
 ms.assetid: a57cdfe0-b40b-4a67-a95c-1a49ace4842b
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2995 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b0953a828d34f3c87a74d8324eb7cee188faad59
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2995"></a>C2995 de erro do compilador
 'function': modelo de função já foi definido  
   
- Certifique\-se de que há apenas uma definição para cada função de membro de uma classe de modelo.  
+ Certifique-se de que há apenas uma definição para cada função de membro de uma classe de modelo.  
   
  O exemplo a seguir gera C2995:  
   
 ```  
-// C2995.cpp // compile with: /c template <class T> void Test(T x){} template <class T> void Test(T x){}   // C2995 template <class T> void Test2(T x){}   // OK  
+// C2995.cpp  
+// compile with: /c  
+template <class T>  
+void Test(T x){}  
+  
+template <class T> void Test(T x){}   // C2995  
+template <class T> void Test2(T x){}   // OK  
 ```

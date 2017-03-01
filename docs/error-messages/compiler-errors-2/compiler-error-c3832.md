@@ -1,30 +1,45 @@
 ---
-title: "Erro do Compilador C3832 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3832"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3832"
+title: C3832 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3832
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3832
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ec38573109ac61312cd9fd2008fad5a001a57b4f
+ms.lasthandoff: 02/25/2017
 
-“biblioteca tipo”: digite aspectos da biblioteca como se foi criada para ponteiros de 32 bits; alterar \(em inglês\) “ptrsize” o qualificador  
+---
+# <a name="compiler-error-c3832"></a>C3832 de erro do compilador
+'biblioteca de tipos ': biblioteca de tipos é como se ele foi criado para ponteiros de 32 bits; Altere o qualificador 'ptrsize'  
   
- As informações explícita fornecida com o atributo de `ptrsize` de política de [\#import](../Topic/%23import%20Directive%20\(C++\).md) não concordou com o qual o compilador encontradas na biblioteca de tipos.
+ Informações explícitas fornecido com o `ptrsize` atributo o [#import](../../preprocessor/hash-import-directive-cpp.md) diretiva não conseguiram concordar com o que o compilador encontrado na biblioteca de tipos.

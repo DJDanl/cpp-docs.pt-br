@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3764"
+title: C3764 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ed66a6348c08d8b33b12ecd3ec4209213d12bcd3
+ms.lasthandoff: 02/25/2017
 
-“override\_function”: não é possível substituir o método “base\_class\_function” da classe base  
+---
+# <a name="compiler-error-c3764"></a>C3764 de erro do compilador
+'override_function': não é possível substituir o método da classe base 'base_class_function'  
   
- O compilador detectou uma substituição doente\- bem formada.  Por exemplo, a função da classe base não foi `virtual`.  Para obter mais informações, consulte [override](../../windows/override-cpp-component-extensions.md).  
+ O compilador detectou uma substituição malformados. Por exemplo, a função de classe base não era `virtual`. Para obter mais informações, consulte [substituir](../../windows/override-cpp-component-extensions.md).  
   
-## Exemplo  
- O exemplo a seguir produz C3764.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3764.  
   
 ```  
 // C3764.cpp  
@@ -46,8 +61,8 @@ public ref struct B : A {
 };  
 ```  
   
-## Exemplo  
- C3764 também pode ocorrer quando um método da classe base é ambos e nomeadas explicitamente substituído.  O exemplo a seguir produz C3764.  
+## <a name="example"></a>Exemplo  
+ C3764 também pode ocorrer quando um método da classe base é explicitamente e chamado substituído. O exemplo a seguir gera C3764.  
   
 ```  
 // C3764_b.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2774 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2774"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2774"
+title: C2774 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2774
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2774
 ms.assetid: 10f428c6-7f49-489a-92ba-6ef978b7caaf
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2774
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3aa1766ea467b80f942281eb36030fe3af358139
+ms.lasthandoff: 02/25/2017
 
-“identificador”: não método “colocado” é associado a esta propriedade  
+---
+# <a name="compiler-error-c2774"></a>C2774 de erro do compilador
+'identifier': nenhum método 'put' está associado esta propriedade  
   
- Um membro de dados declarado com [propriedade](../../cpp/property-cpp.md) não tem nenhuma função de `put` , mas tentativas de uma expressão para definir seu valor.  
+ Um membro de dados declarado com [propriedade](../../cpp/property-cpp.md) não tem nenhum `put` função, mas a expressão tenta definir seu valor.  
   
- O seguinte exemplo gera C2774:  
+ O exemplo a seguir gera C2774:  
   
 ```  
 // C2774.cpp  

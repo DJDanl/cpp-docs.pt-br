@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 2) C4056 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4056"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4056"
+title: "Compilador aviso (nível 2) C4056 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4056
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4056
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 2) C4056
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c1e5423eb775b451aae57421ddcdd5658f9940eb
+ms.lasthandoff: 02/25/2017
 
-estouro aritmético na constante de ponto flutuante  
+---
+# <a name="compiler-warning-level-2-c4056"></a>Compilador C4056 de aviso (nível 2)
+Estouro em aritmético constante de ponto flutuante  
   
- A constante de aritmética de ponto flutuante gerencie um resultado que excede o valor máximo permitido.  
+ Aritmética de ponto flutuante de constante gera um resultado que excede o valor máximo permitido.  
   
- Esse aviso pode ser causado por otimizações de compilador executadas durante a aritmética constante.  Você pode ignorar com segurança esse aviso se parte quando você desativar a otimização[\/Od](../../build/reference/od-disable-debug.md)\(\).  
+ Esse aviso pode ser causado pelas otimizações do compilador executadas durante a aritmética constante. Você pode ignorar com segurança esse aviso se ele desaparece quando você desativa a otimização ([/Od](../../build/reference/od-disable-debug.md)).  
   
- O seguinte exemplo gera C4056:  
+ O exemplo a seguir gera C4056:  
   
 ```  
 // C4056.cpp  

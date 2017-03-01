@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C3254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3254"
+title: C3254 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3254
 ms.assetid: 93427b10-fa72-4e43-80d1-1a6e122f9f40
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4eae5cb3e7aa6bc91c7caee1b5ef3fbcd0b24139
+ms.lasthandoff: 02/25/2017
 
-“substituição” explícita: a classe contém a substituição explícita “substituição” mas não se deriva de uma interface que contém a declaração de função  
+---
+# <a name="compiler-error-c3254"></a>C3254 de erro do compilador
+'substituição explícita': classe contém 'substituição de substituição explícita', mas não é derivada de uma interface que contém a declaração de função  
   
- Quando você [explicitamente substituição](../../cpp/explicit-overrides-cpp.md) um método, a classe que contém a substituição deve derivar, direta ou indiretamente, do tipo que contém a função que você estiver substituindo.  
+ Quando você [substituir explicitamente](../../cpp/explicit-overrides-cpp.md) um método, a classe que contém a substituição deve derivam, direta ou indiretamente, do tipo que contém a função que você está substituindo.  
   
- O seguinte exemplo gera C3254:  
+ O exemplo a seguir gera C3254:  
   
 ```  
 // C3254.cpp  

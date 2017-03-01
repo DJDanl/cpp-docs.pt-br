@@ -1,40 +1,55 @@
 ---
-title: "Erro do Compilador C3538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3538"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3538"
+title: C3538 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3538
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3538
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2dabcac3d1b5551ffdb580b33bf529dca23159d1
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c3538"></a>C3538 de erro do compilador
 em uma lista de declaradores, 'auto' deve sempre deduzir para o mesmo tipo  
   
- Todas as variáveis declaradas em uma lista de declaração não resolvidos para o mesmo tipo.  
+ Todas as variáveis declaradas em uma lista de declaração não resolver o mesmo tipo.  
   
-### Para corrigir este erro  
+### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Certifique\-se de que todos os `auto` declarações na lista deduzam o mesmo tipo.  
+1.  Certifique-se de que todos os `auto` declarações na lista deduzam o mesmo tipo.  
   
-## Exemplo  
- As instruções a seguir produzem C3538.  Cada instrução declara diversas variáveis, mas cada uso do `auto` palavra\-chave não deduzir o mesmo tipo.  
+## <a name="example"></a>Exemplo  
+ As instruções a seguir produzem C3538. Cada instrução declara diversas variáveis, mas cada uso do `auto` palavra-chave não deduzir o mesmo tipo.  
   
 ```  
 // C3538.cpp  
@@ -54,5 +69,5 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Palavra\-chave auto](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Consulte também  
+ [palavra-chave auto](../../cpp/auto-keyword.md)

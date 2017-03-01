@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2073"
+title: C2073 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2073
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2803824e64b5590376e3e41e2732f91aa0fffff3
+ms.lasthandoff: 02/25/2017
 
-“identificador”: os elementos da matriz parcialmente inicializada devem ter um construtor padrão  
+---
+# <a name="compiler-error-c2073"></a>C2073 de erro do compilador
+'identifier': elementos de matriz parcialmente inicializado devem ter um construtor padrão  
   
- Pouquíssimos inicializadores foram especificados para uma matriz de tipos definidos pelo usuário ou de constantes.  Se um inicializador explícito e o construtor correspondente não são especificados para um membro de matriz, um construtor padrão deve ser fornecido.  
+ Inicializadores de poucos foram especificados para uma matriz de tipos definidos pelo usuário ou constantes. Se um inicializador explícito e seu construtor correspondente não forem especificadas para um membro da matriz, um construtor padrão deve ser fornecido.  
   
- O seguinte exemplo gera C2073:  
+ O exemplo a seguir gera C2073:  
   
 ```  
 // C2073.cpp  

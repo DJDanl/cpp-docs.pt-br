@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2575 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2575"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2575"
+title: C2575 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2575
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2575
 ms.assetid: 9eb45706-37ef-4481-b373-6d193ba13634
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2575
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3b584402928f7e2104cdb4ac9a62bf24a645e1ba
+ms.lasthandoff: 02/25/2017
 
-“identificador”: apenas funções de membro e as bases podem ser virtuais  
+---
+# <a name="compiler-error-c2575"></a>C2575 de erro do compilador
+'identifier': somente funções de membro e bases de dados podem ser virtual  
   
- Uma função ou uma classe global são declaradas `virtual`.  Isso não é permitido.  
+ Uma classe ou função global é declarada `virtual`. Isso não é permitido.  
   
- O seguinte exemplo gera C2575:  
+ O exemplo a seguir gera C2575:  
   
 ```  
 // C2575.cpp  

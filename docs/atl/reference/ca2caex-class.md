@@ -1,102 +1,160 @@
 ---
-title: "CA2CAEX Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CA2CAEX"
-  - "ATL.CA2CAEX<t_nBufferLength>"
-  - "ATLCONV/CA2CAEX"
-  - "ATL::CA2CAEX<t_nBufferLength>"
-  - "ATL::CA2CAEX"
-  - "CA2CAEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CA2CAEX"
+title: Classe CA2CAEX | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CA2CAEX
+- ATL.CA2CAEX<t_nBufferLength>
+- ATLCONV/CA2CAEX
+- ATL::CA2CAEX<t_nBufferLength>
+- ATL::CA2CAEX
+- CA2CAEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CA2CAEX Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
+ms.lasthandoff: 02/25/2017
 
-Essa classe é usada por macros `CA2CTEX` e `CT2CAEX`de conversão de cadeia de caracteres, e o typedef **CA2CA**.  
+---
+# <a name="ca2caex-class"></a>Classe CA2CAEX
+Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados em tempo de execução do windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<int t_nBufferLength = 128>  
+class CA2CAEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CA2CAEX  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `t_nBufferLength`  
- O tamanho do buffer usado no processo de conversão.  o comprimento padrão é 128 bytes.  
+ O tamanho do buffer usado no processo de conversão. O comprimento padrão é 128 bytes.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CA2CAEX::CA2CAEX](../Topic/CA2CAEX::CA2CAEX.md)|o construtor.|  
-|[CA2CAEX::~CA2CAEX](../Topic/CA2CAEX::~CA2CAEX.md)|O destrutor.|  
-  
-### Operadores públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CA2CAEX::operator LPCSTR](../Topic/CA2CAEX::operator%20LPCSTR.md)|Operador de conversão.|  
+|----------|-----------------|  
+|[CA2CAEX::CA2CAEX](#ca2caex)|O construtor.|  
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|O destruidor.|  
   
-### Membros públicos de dados  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CA2CAEX::m\_psz](../Topic/CA2CAEX::m_psz.md)|O membro de dados que armazena a cadeia de caracteres de origem.|  
+|----------|-----------------|  
+|[CA2CAEX::Operator LPCSTR](#operator_lpcstr)|Operador de conversão.|  
   
-## Comentários  
- A menos que a funcionalidade adicional é necessária, use `CA2CTEX`, `CT2CAEX`, ou **CA2CA** em seu próprio código.  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
   
- Essa classe é seguro para usar em loop e não transbordará a pilha.  Por padrão, as classes de conversão de ATL e macros usarão a página de código ANSI atual da thread para a conversão.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CA2CAEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|  
   
- Os seguintes macros são baseados em essa classe:  
+## <a name="remarks"></a>Comentários  
+ A menos que a funcionalidade adicional for necessária, use `CA2CTEX`, `CT2CAEX`, ou **CA2CA** em seu próprio código.  
   
--   `CA2CTEX`  
+ Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam a página de código ANSI dos threads atuais para a conversão.  
   
--   `CT2CAEX`  
+ As macros a seguir baseiam-se em sua classe:  
   
- O exemplo a seguir typedef é baseado em essa classe:  
+- `CA2CTEX`  
   
--   **CA2CA**  
+- `CT2CAEX`  
   
- Para uma discussão de esses macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres de ATL e de MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ Typedef a seguir baseia-se em sua classe:  
   
-## Exemplo  
- [Macros de conversão de cadeia de caracteres de ATL e de MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) consulte para um exemplo de como usar esses macros de conversão de cadeia de caracteres.  
+- **CA2CA**  
   
-## Requisitos  
- **Cabeçalho:** atlconv.h  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## Consulte também  
- [CA2AEX Class](../../atl/reference/ca2aex-class.md)   
+## <a name="example"></a>Exemplo  
+ Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** Atlconv. h  
+  
+##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+ O construtor.  
+  
+```
+CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
+CA2CAEX(LPCSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `psz`  
+ A cadeia de caracteres de texto a ser convertido.  
+  
+ `nCodePage`  
+ Não usado nessa classe.  
+  
+### <a name="remarks"></a>Comentários  
+ Cria o buffer necessário para a tradução.  
+  
+##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+ O destruidor.  
+  
+```
+~CA2CAEX() throw();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Libera o buffer alocado.  
+  
+##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+ O membro de dados que armazena a cadeia de caracteres de origem.  
+  
+```
+LPCSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::Operator LPCSTR  
+ Operador de conversão.  
+  
+```  
+operator LPCSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna a cadeia de caracteres de texto como tipo `LPCSTR`.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
  [Classe CA2WEX](../../atl/reference/ca2wex-class.md)   
- [CW2AEX Class](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX Class](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX Class](../../atl/reference/cw2wex-class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+ [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
+ [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
+ [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

@@ -1,35 +1,50 @@
 ---
-title: "Compiler Error C3386 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3386"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3386"
+title: C3386 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3386
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3386
 ms.assetid: 93fa8c33-0f10-402b-8eec-b0a217a1f8dc
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compiler Error C3386
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d61312489e5113afb18c26a0d6cbf5336c13dd27
+ms.lasthandoff: 02/25/2017
 
-'type': \_\_declspec\(dllexport\)\/\_\_declspec\(dllimport\) não pode ser aplicado a um gerenciado ou WinRT tipo  
+---
+# <a name="compiler-error-c3386"></a>C3386 de erro do compilador
+'type': dllexport /\__declspec(dllimport) não pode ser aplicado a gerenciada ou WinRTtype  
   
- O `dllimport` e [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` modificadores não são válidos em gerenciada ou tempo de execução do Windows tipo.  
+ O `dllimport` e [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` modificadores não são válidos em um gerenciado ou tempo de execução do Windows tipo.  
   
- O exemplo a seguir gera C3386 e mostra como corrigi\-lo:  
+ O exemplo a seguir gera C3386 e mostra como corrigi-lo:  
   
 ```  
 // C3386.cpp  

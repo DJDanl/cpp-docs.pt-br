@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C2298 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2298"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2298"
+title: C2298 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2298
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2298
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2298
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 158571e6a565788a58df6546c64ee0c685839f4d
+ms.lasthandoff: 02/25/2017
 
-“operação”: operação ilegal no ponteiro para a expressão de função de membro  
+---
+# <a name="compiler-error-c2298"></a>C2298 de erro do compilador
+'operation': operação ilegal no ponteiro, a expressão de função de membro  
   
  Um ponteiro para a expressão de função de membro deve chamar a função de membro.  
   
-## Exemplo  
- O exemplo a seguir produz C2298.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2298.  
   
 ```  
 // C2298.cpp  
@@ -64,8 +79,8 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir produz C2298.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2298.  
   
 ```  
 // C2298_b.cpp  
@@ -75,9 +90,9 @@ void F() {}
 class Measure {  
 public:  
    void SetTrackingFunction(void (Measure::*fnc)()) {  
-      TrackingFunction = this->*fnc;   // C2298  
-      TrackingFunction = fnc;   // OK  
-      GlobalTracker = F;   // OK  
+      TrackingFunction = this->*fnc;   // C2298  
+      TrackingFunction = fnc;   // OK  
+      GlobalTracker = F;   // OK  
    }  
 private:  
    void (Measure::*TrackingFunction)(void);  

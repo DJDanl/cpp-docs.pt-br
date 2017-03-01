@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4096 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4096"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4096"
+title: "Compilador aviso (nível 1) C4096 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4096
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4096
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 38ba5ca53ea2939a6532df47cfd85741c87d24cc
+ms.lasthandoff: 02/25/2017
 
-“a”: a interface não é uma interface COM; não será emitido a IDL  
+---
+# <a name="compiler-warning-level-1-c4096"></a>Compilador C4096 de aviso (nível 1)
+'a': não é uma interface COM; não será emitido para IDL  
   
- Uma definição de interface que você possa ter planejado como uma interface COM não foi definida como uma interface COM e em virtude disso não será emitida para o arquivo de IDL.  
+ Uma definição de interface desejada como uma interface COM não foi definida como uma interface COM e, portanto, não será emitida para o arquivo IDL.  
   
- Consulte [Atributos de interface](../../windows/interface-attributes.md) para os atributos de uma lista que indicam que uma interface é uma interface COM.  
+ Consulte [atributos de Interface](../../windows/interface-attributes.md) para atributos uma lista que indicam uma interface é uma interface COM.  
   
- O seguinte exemplo gera C4096:  
+ O exemplo a seguir gera C4096:  
   
 ```  
 // C4096.cpp  

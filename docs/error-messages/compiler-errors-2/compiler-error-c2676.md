@@ -1,36 +1,52 @@
 ---
-title: "C2676 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+title: C2676 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2676 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b58a14d094aa75a93c13d87d02f1026accb1b283
+ms.lasthandoff: 02/25/2017
 
-operador binário “”: o tipo “” não define esse operador ou uma conversão de em um tipo aceitável para o operador predefinido  
+---
+# <a name="compiler-error-c2676"></a>C2676 de erro do compilador
+binário 'operator': 'type' não define esse operador ou uma conversão para um tipo aceitável para o operador predefinido  
   
- Para usar o operador, você deve sobrecarregá\-la do tipo especificado ou definir uma conversão de em um tipo para o qual o operador está definido.  
+ Para usar o operador, você deve sobrecarregá-lo para o tipo especificado ou definir uma conversão para um tipo para o qual o operador está definido.  
   
-## Exemplo  
- O exemplo a seguir produz C2676.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2676.  
   
 ```  
 // C2676.cpp  
@@ -60,12 +76,12 @@ int main() {
 }  
 ```  
   
-## Exemplo  
- C2676 também poderá ocorrer se você tentar fazer aritmética do ponteiro no ponteiro de `this` de um tipo de referência.  
+## <a name="example"></a>Exemplo  
+ C2676 também pode ocorrer se você tentar fazer aritmética de ponteiro a `this` ponteiro do tipo de referência.  
   
- O ponteiro de `this` é do identificador do tipo em um tipo de referência.  Para obter mais informações, consulte [Semântica desse ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ O `this` ponteiro for do tipo identificador em um tipo de referência. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- O exemplo a seguir produz C2676.  
+ O exemplo a seguir gera C2676.  
   
 ```  
 // C2676_a.cpp  

@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+title: C3918 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: dc951a4f2a0ec56fc0aae91c63a2520f39900db2
+ms.lasthandoff: 02/25/2017
 
-o exige o uso “membro” ser um membro de dados  
+---
+# <a name="compiler-error-c3918"></a>C3918 de erro do compilador
+requer o uso de membro ser um membro de dados  
   
- C3918 pode ocorrer por várias razões relacionado aos eventos.  
+ C3918 pode ocorrer por várias razões relacionadas aos eventos.  
   
-## Exemplo  
- C3918 pode ocorrer porque um membro da classe é necessário no contexto atual.  O exemplo a seguir produz C3918.  
+## <a name="example"></a>Exemplo  
+ C3918 pode ocorrer porque um membro de classe é necessária no contexto atual. O exemplo a seguir gera C3918.  
   
 ```  
 // C3918.cpp  
@@ -50,10 +65,10 @@ public:
 };  
 ```  
   
-## Exemplo  
- C3918 é causado também se você tenta verificar um evento trivial para null \(o nome do evento não fornecerá o acesso direto a delegação de repositório de backup para o evento\).  
+## <a name="example"></a>Exemplo  
+ C3918 também ocorre se você tentar verificar um evento trivial para null (o nome do evento deixará de fornecer acesso direto ao delegado de armazenamento de backup para o evento).  
   
- O exemplo a seguir produz C3918.  
+ O exemplo a seguir gera C3918.  
   
 ```  
 // C3918_2.cpp  
@@ -74,8 +89,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## Exemplo  
- C3918 também poderá ocorrer se você assina incorretamente a um evento.  O exemplo a seguir produz C3918.  
+## <a name="example"></a>Exemplo  
+ C3918 também pode ocorrer se você se inscrever incorretamente a um evento. O exemplo a seguir gera C3918.  
   
 ```  
 // C3918_3.cpp  

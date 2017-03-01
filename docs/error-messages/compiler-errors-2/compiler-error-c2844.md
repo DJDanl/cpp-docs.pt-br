@@ -1,37 +1,52 @@
 ---
-title: "Erro do Compilador C2844 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2844"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2844"
+title: C2844 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2844
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2844
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: c6bfb80408e058d22977ff068c9a0c21d5353a90
+ms.lasthandoff: 02/25/2017
 
-“membro”: não pode ser um membro da interface de “interface”  
+---
+# <a name="compiler-error-c2844"></a>C2844 de erro do compilador
+'member': não pode ser um membro de interface 'interface'  
   
- [interface class](../../windows/interface-class-cpp-component-extensions.md) não pode conter um membro de dados a menos que também seja uma propriedade.  
+ Um [classe de interface](../../windows/interface-class-cpp-component-extensions.md) não pode conter um membro de dados, a menos que também é uma propriedade.  
   
- Algo diferente de uma propriedade ou uma função de membro não é permitido em uma interface.  Além disso, não são permitidos, os construtores destruidores, e operadores.  
+ Algo diferente de uma propriedade ou função de membro não é permitido em uma interface. Além disso, operadores, construtores e destruidores não são permitidas.  
   
- O seguinte exemplo gera C2844:  
+ O exemplo a seguir gera C2844:  
   
 ```  
 // C2844a.cpp  
@@ -42,16 +57,4 @@ public interface class IFace {
    // property int Size;  
 };  
 ```  
-  
- O seguinte exemplo gera C2844:  
-  
-```  
-// C2844b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-__gc __interface IFace {  
-   int i;   // C2844  
-   // try the following line instead  
-   // __property int Size { get; set; };  
-};  
-```
+

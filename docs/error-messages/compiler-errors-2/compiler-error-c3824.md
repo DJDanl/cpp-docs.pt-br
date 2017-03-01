@@ -1,35 +1,51 @@
 ---
-title: "Erro do Compilador C3824 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3824"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3824"
+title: C3824 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3824
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3824
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 546edbeccfee84e91018d0801f0c1ebc7a53a537
+ms.lasthandoff: 02/25/2017
 
-“membro”: esse tipo não pode aparecer nesse contexto \(parâmetro da função, tipo de retorno, ou um membro estático\)  
+---
+# <a name="compiler-error-c3824"></a>C3824 de erro do compilador
+'member': esse tipo não pode aparecer neste contexto (parâmetro de função, tipo de retorno ou um membro estático)  
   
- Fixar ponteiros não pode ser parâmetros de função, tipos de retorno, ou `static`declarado.  
+ Ponteiros de fixação não pode ser parâmetros de função, tipos de retorno ou declarado `static`.  
   
- O seguinte exemplo gera C3824:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3824:  
   
 ```  
 // C3824a.cpp  
@@ -39,22 +55,4 @@ void func() {
    pin_ptr<int> b; // OK  
 }  
 ```  
-  
- **Extensões gerenciadas para C\+\+**  
-  
- Os ponteiros locais declarados com a palavra\-chave de `__pin` não podem ser declaradas `static` e não podem ser ponteiros interiores.  
-  
- O seguinte exemplo gera C3824:  
-  
-```  
-// C3824b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-  
-__gc struct A {};  
-  
-void func() {  
-   static A __pin* a;   // C3824  
-   A __pin* b;   // OK  
-}  
-```
+

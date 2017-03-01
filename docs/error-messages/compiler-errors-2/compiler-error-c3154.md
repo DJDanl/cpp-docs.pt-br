@@ -1,38 +1,53 @@
 ---
-title: "Erro do Compilador C3154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3154"
+title: C3154 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3154
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 93ccb3241e208fe91a2150f69e15fb262e0d9c78
+ms.lasthandoff: 02/25/2017
 
-Esperado “,” antes de reticências.a não vírgula de fornecedores as reticências não suportadas nas funções de matriz de parâmetros.  
+---
+# <a name="compiler-error-c3154"></a>C3154 de erro do compilador
+Esperado ',' antes de reticências. Não-CSV reticências não tem suportada em funções de matriz de parâmetro.  
   
- Uma função de argumento de variável não foi declarada corretamente.  
+ Uma função de argumento variável não foi declarada corretamente.  
   
- Para obter mais informações, consulte [Variable Argument Lists \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ Para obter mais informações, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## Exemplo  
- O exemplo a seguir produz C3154.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3154.  
   
 ```  
 // C3154.cpp  

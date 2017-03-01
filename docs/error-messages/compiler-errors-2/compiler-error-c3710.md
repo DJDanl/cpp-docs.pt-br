@@ -1,36 +1,51 @@
 ---
-title: "Erro do Compilador C3710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3710"
+title: C3710 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C3710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 29f5e2d696cbf14b1d5ce9b516a5f6de6b980813
+ms.lasthandoff: 02/25/2017
 
-função “”: sintaxe inadequada para especificar o manipulador de eventos em \_\_hook\/\_\_unhook  
+---
+# <a name="compiler-error-c3710"></a>C3710 de erro do compilador
+'function': sintaxe incorreta para especificar o manipulador de eventos em hook /\__unhook  
   
- Quando você especifica um manipulador de eventos com [\_\_hook](../../cpp/hook.md) ou [\_\_unhook](../../cpp/unhook.md), o manipulador deve ser um método válido.  
+ Quando você especifica um manipulador de eventos com [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md), o manipulador deve ser um método válido.  
   
-## Exemplo  
- O exemplo C3710 gerencia  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C3710  
   
 ```  
 // C3710.cpp  

@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2541 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2541"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2541"
+title: C2541 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2541
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2541
 ms.assetid: ed95180f-00df-4e62-a8e9-1b6dab8281bf
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2541
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2520675cd740578fc88590dc35765a1e738cc5bc
+ms.lasthandoff: 02/25/2017
 
-“excluir”: exclusão: não pode excluir objetos que não são ponteiros  
+---
+# <a name="compiler-error-c2541"></a>C2541 de erro do compilador
+'delete': excluir: não é possível excluir objetos que não são ponteiros  
   
- O operador de [excluir](../../cpp/delete-operator-cpp.md) foi usado em um objeto que não seja um ponteiro.  
+ O [excluir](../../cpp/delete-operator-cpp.md) operador foi usado em um objeto que não seja um ponteiro.  
   
- O seguinte exemplo gera C2541:  
+ O exemplo a seguir gera C2541:  
   
 ```  
 // C2541.cpp  

@@ -1,47 +1,62 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4005"
+title: "Compilador aviso (nível 1) C4005 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4005
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cdbc7270dcf00f63519fc64541c7d1e950735b22
+ms.lasthandoff: 02/25/2017
 
-“identificador”: redefinição macro  
+---
+# <a name="compiler-warning-level-1-c4005"></a>Compilador C4005 de aviso (nível 1)
+'identifier': redefinição de macro  
   
- O identificador macro é definido duas vezes.  O compilador usa a segunda definição macro.  
+ O identificador de macro é definido duas vezes. O compilador usa a segunda definição de macro.  
   
-### Para corrigir verificando as seguintes causas possíveis  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
-1.  Definindo uma macro na linha de comando e em código com uma política de `#define` .  
+1.  Definindo uma macro na linha de comando e no código com um `#define` diretiva.  
   
-2.  Macros importados do incluem arquivos.  
+2.  Macros importadas de arquivos de inclusão.  
   
-### Para corrigir usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
   
-1.  Remover uma das definições.  
+1.  Remova uma das definições.  
   
-2.  Use uma política de [\#undef](../../preprocessor/hash-undef-directive-c-cpp.md) antes da segunda definição.  
+2.  Use um [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) diretiva antes da definição de segundo.  
   
- O seguinte exemplo gera C4005:  
+ O exemplo a seguir gera C4005:  
   
 ```  
 // C4005.cpp  
