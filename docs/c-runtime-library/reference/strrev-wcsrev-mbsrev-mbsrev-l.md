@@ -1,77 +1,91 @@
 ---
-title: "_strrev, _wcsrev, _mbsrev, _mbsrev_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsrev"
-  - "_mbsrev"
-  - "_strrev"
-  - "_mbsrev_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strrev"
-  - "_ftcsrev"
-  - "_tcsrev"
-  - "mbsrev"
-  - "mbsrev_l"
-  - "_wcsrev_fstrrev"
-  - "_mbsrev"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _ftcsrev"
-  - "Função _mbsrev"
-  - "Função _mbsrev_l"
-  - "Função _strrev"
-  - "Função _tcsrev"
-  - "Função _wcsrev"
-  - "caracteres [C++], invertendo a ordem"
-  - "caracteres [C++], alternando"
-  - "Função ftcsrev"
-  - "Função mbsrev"
-  - "Função mbsrev_l"
-  - "invertendo caracteres em cadeias de caracteres"
-  - "cadeias de caracteres [C++], invertendo"
-  - "Função strrev"
-  - "Função tcsrev"
-  - "Função wcsrev"
+title: _strrev, _wcsrev, _mbsrev, _mbsrev_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsrev
+- _mbsrev
+- _strrev
+- _mbsrev_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strrev
+- _ftcsrev
+- _tcsrev
+- mbsrev
+- mbsrev_l
+- _wcsrev_fstrrev
+- _mbsrev
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbsrev_l function
+- characters [C++], switching
+- _mbsrev function
+- strrev function
+- _ftcsrev function
+- strings [C++], reversing
+- wcsrev function
+- _strrev function
+- mbsrev_l function
+- reversing characters in strings
+- ftcsrev function
+- characters [C++], reversing order
+- _wcsrev function
+- mbsrev function
+- tcsrev function
+- _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
 caps.latest.revision: 25
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strrev, _wcsrev, _mbsrev, _mbsrev_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 864c1bab23bdedf856f850411b1ba24813757833
+ms.lasthandoff: 02/25/2017
 
-Inverte os caracteres de uma cadeia de caracteres.  
+---
+# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
+Reverte os caracteres de uma cadeia de caracteres.  
   
 > [!IMPORTANT]
->  `_mbsrev` e `_mbsrev_l` não podem ser usados em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsrev` e `_mbsrev_l` não podem ser usados em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *_strrev(  
@@ -89,44 +103,44 @@ unsigned char *_mbsrev_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `str`  
- Cadeia de caracteres terminada com Null a ser invertida.  
+ Cadeia de caracteres terminada em nulo para reverter.  
   
  `locale`  
- Localidade a ser usada.  
+ Localidade a usar.  
   
-## Valor de retorno  
- Retorna um ponteiro para a cadeia de caracteres alterada.  Nenhum valor de retorno é reservado para indicar um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna um ponteiro para a cadeia de caracteres alterada. Nenhum valor retornado é reservado para indicar um erro.  
   
-## Comentários  
- A função `_strrev` inverte a ordem dos caracteres em `string`.  O caractere de terminação nula permanece no lugar.  `_wcsrev` e `_mbsrev` são versões de caracteres largos e de multibyte de `_strrev`.  Os argumentos e o valor de retorno de `_wcsrev` são cadeias de caracteres largos; `_mbsrev` são cadeias de caracteres de vários bytes.  Para `_mbsrev`, a ordem dos bytes em cada caractere de multibyte em `string` não é alterada.  Essas três funções se comportam de forma idêntica.  
+## <a name="remarks"></a>Comentários  
+ A função `_strrev` inverte a ordem dos caracteres em `string`. O caractere nulo de terminação permanece em vigor. `_wcsrev` e `_mbsrev` são versões de caracteres largos e de caracteres multibyte de `_strrev`. Os argumentos e o valor retornado de `_wcsrev` são cadeias de caracteres largos; aqueles de `_mbsrev` são cadeias de caracteres multibyte. Para `_mbsrev`, a ordem de bytes em cada caractere multibyte em `string` não é alterada. Caso contrário, essas três funções se comportam de forma idêntica.  
   
- `_mbsrev` valida seus parâmetros.  Se `string1` ou `string2` for um ponteiro nulo, o parâmetro de manipulador inválido será chamado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar,`_mbsrev` retornará `NULL` e definirá `errno` como `EINVAL`.  `_strrev` e `_wcsrev` não validam seus parâmetros.  
+ `_mbsrev` valida seus parâmetros. Se `string1` ou `string2` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_mbsrev` retornará `NULL` e definirá `errno` como `EINVAL`. `_strrev` e `_wcsrev` não validam seus parâmetros.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções são idênticas, exceto aquelas que não têm o sufixo `_l` usam a localidade atual e aquelas que têm o sufixo`_l`, ao contrário, usam o parâmetro de localidade que foi informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o sufixo `_l` usam a localidade atual e as versões com um sufixo `_l` usam o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
 > [!IMPORTANT]
->  Essas funções podem ser vulneráveis às ameaças de saturação de buffer.  As saturações de buffer podem ser usadas para ataques ao sistema, pois podem causar uma elevação de privilégios injustificável.  Para obter mais informações, consulte [Evitando saturações de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsrev`|`_strrev`|`_mbsrev`|`_wcsrev`|  
-|**n\/d**|**n\/d**|`_mbsrev_l`|**n\/d**|  
+|**n/d**|**n/d**|`_mbsrev_l`|**n/d**|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_strrev`|\<string.h\>|  
-|`_wcsrev`|\<string.h\> ou \<wchar.h\>|  
-|`_mbsrev`, `_mbsrev_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strrev`|\<string.h>|  
+|`_wcsrev`|\<string.h> ou \<wchar.h>|  
+|`_mbsrev`, `_mbsrev_l`|\<mbstring.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_strrev.c  
@@ -152,13 +166,16 @@ int main( void )
 }  
 ```  
   
-  **A cadeia de caracteres "Able was I ere I saw Elba" é um palíndromo**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The string "Able was I ere I saw Elba" is a palindrome  
+```  
   
-## Consulte também  
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

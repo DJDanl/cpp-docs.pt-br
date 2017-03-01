@@ -1,58 +1,72 @@
 ---
-title: "_strtime_s, _wstrtime_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wstrtime_s"
-  - "_strtime_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wstrtime_s"
-  - "strtime_s"
-  - "wstrtime_s"
-  - "_strtime_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _strtime_s"
-  - "Função _wstrtime_s"
-  - "copiando a hora em buffers"
-  - "Função strtime_s"
-  - "hora, copiando"
-  - "Função wstrtime_s"
+title: _strtime_s, _wstrtime_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wstrtime_s
+- _strtime_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wstrtime_s
+- strtime_s
+- wstrtime_s
+- _strtime_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wstrtime_s function
+- copying time to buffers
+- strtime_s function
+- _wstrtime_s function
+- time, copying
+- _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
 caps.latest.revision: 25
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strtime_s, _wstrtime_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4a6025f8f50cf0955b773583cfbe9cfc9bf74f06
+ms.lasthandoff: 02/25/2017
 
-Copie a hora atuais para um buffer.  Essas são versões de [\_strtime, \_wstrtime](../Topic/_strtime,%20_wstrtime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+Copia a hora atual para um buffer. Estas são versões de [_strtime, _wstrtime](../../c-runtime-library/reference/strtime-wstrtime.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t _strtime_s(  
@@ -73,55 +87,55 @@ errno_t _wstrtime_s(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[saída\] `buffer`  
- Um buffer, pelo menos 10 bytes, onde a hora serão gravados.  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `buffer`  
+ Um buffer de, pelo menos, 10 bytes de comprimento, no qual a hora será gravada.  
   
- \[entrada\] `numberOfElements`  
+ [in] `numberOfElements`  
  O tamanho do buffer.  
   
-## Valor de retorno  
- Nulo se com êxito.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido.  
   
- Se uma condição de erro ocorrer, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  O valor de retorno é um código de erro se houver uma falha.  Os códigos de erro são definidos em ERRNO.H; consulte a tabela a seguir para erros exatos gerados por essa função.  Para obter mais informações sobre códigos de erro, consulte [constantes de errno](../../c-runtime-library/errno-constants.md).  
+ Se ocorrer uma condição de erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se houver uma falha, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO. H; consulte a tabela a seguir para os erros exatos gerados por esta função. Para obter mais informações sobre códigos de erro, consulte [Constantes errno](../../c-runtime-library/errno-constants.md).  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|`buffer`|`numberOfElements`|Return|Conteúdo de `buffer`|  
+|`buffer`|`numberOfElements`|Valor de|Conteúdo de `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
-|`NULL`|\(nenhum\)|`EINVAL`|Não modificados|  
-|Não `NULL` \(que aponta para o buffer válido\)|0|`EINVAL`|Não modificados|  
-|Não `NULL` \(que aponta para o buffer válido\)|0 \< tamanhos \< 9|`EINVAL`|Cadeia de caracteres vazia|  
-|Não `NULL` \(que aponta para o buffer válido\)|Tamanho \> 9|0|Hora atuais formatadas conforme especificado em comentários|  
+|`NULL`|(qualquer)|`EINVAL`|Não modificado|  
+|Não `NULL` (apontando para o buffer válido)|0|`EINVAL`|Não modificado|  
+|Não `NULL` (apontando para o buffer válido)|0 < tamanho < 9|`EINVAL`|Cadeia de caracteres vazia|  
+|Não `NULL` (apontando para o buffer válido)|Tamanho > 9|0|Hora atual formatada conforme especificado nos comentários|  
   
-## Problemas de segurança  
- Passar um valor não nulo inválido para o buffer resultará em uma violação de acesso se o parâmetro de `numberOfElements` é maior que 9.  
+## <a name="security-issues"></a>Problemas de segurança  
+ Passar um valor não nulo inválido de buffer resultará em uma violação de acesso se o `numberOfElements` parâmetro é maior do que 9.  
   
- Passe um valor para `numberOfElements` que seja maior que o tamanho real do buffer resultará em excesso de buffer.  
+ Passar um valor `numberOfElements` que seja maior que o tamanho real do buffer resultará em estouro de buffer.  
   
-## Comentários  
- Essas funções fornecem versões mais seguro de `_strtime` e de `_wstrtime`.  A função de `_strtime_s` copia a hora local atual no buffer apontado por `timestr`*.* A hora é formatada como `hh:mm:ss` onde `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora, e `ss` são dois dígitos que representam segundos.  Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos depois de 6 PM. O buffer deve ser pelo menos 9 bytes; o tamanho real é especificado pelo segundo parâmetro.  
+## <a name="remarks"></a>Comentários  
+ Estas funções fornecem versões mais seguras de `_strtime` e `_wstrtime`. A função `_strtime_s` copia a hora local atual para o buffer apontado por `timestr`*.* A hora é formatada como `hh:mm:ss` em que `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora e `ss` são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos após 6 horas da noite. O buffer deve ter, pelo menos, 9 bytes; o tamanho real é especificado pelo segundo parâmetro.  
   
- `_wstrtime` é uma versão de ampla caractere de `_strtime`; o argumento e o valor de retorno de `_wstrtime` são cadeias de caracteres de ampla caractere.  Essas funções se comportam exatamente o contrário.  
+ `_wstrtime` é uma versão de caractere largo de `_strtime`; o argumento e o valor retornado de `_wstrtime` são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapeamento de rotina de Genérico\- texto:  
+### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico:  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrtime_s`|`_strtime_s`|`_strtime_s`|`_wstrtime_s`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_strtime_s`|\<time.h\>|  
-|`_wstrtime_s`|\<time.h ou\> wchar.h \<\>|  
+|-------------|---------------------|  
+|`_strtime_s`|\<time.h>|  
+|`_wstrtime_s`|\<time.h> ou \<wchar.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // strtime_s.c  
@@ -159,9 +173,12 @@ int main()
 }  
 ```  
   
-  **Hora do sistema operacional:            14:37: 49**  
-**Data do sistema operacional:            04\/25\/03**   
-## Equivalência do .NET Framework  
+```Output  
+OS time:            14:37:49  
+OS date:            04/25/03  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
   
@@ -173,12 +190,12 @@ int main()
   
 -   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [ctime\_s, \_ctime32\_s, \_ctime64\_s, \_wctime\_s, \_wctime32\_s, \_wctime64\_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [mktime, \_mktime32, \_mktime64](../Topic/mktime,%20_mktime32,%20_mktime64.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)   
- [\_tzset](../Topic/_tzset.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)

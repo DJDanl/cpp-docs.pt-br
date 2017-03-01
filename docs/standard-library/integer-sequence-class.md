@@ -1,38 +1,53 @@
 ---
-title: "Classe integer_sequence | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "type_traits/std::index_sequence"
-  - "type_traits/std::make_index_sequence"
-  - "type_traits/std::integer_sequence"
-  - "type_traits/std::make_integer_sequence"
-  - "type_traits/std::index_sequence_for"
-  - "integer_sequence"
-  - "std.integer_sequence"
-  - "std::integer_sequence"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "integer_sequence"
+title: Classe integer_sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::index_sequence
+- type_traits/std::make_index_sequence
+- type_traits/std::integer_sequence
+- type_traits/std::make_integer_sequence
+- type_traits/std::index_sequence_for
+- integer_sequence
+- std.integer_sequence
+- std::integer_sequence
+dev_langs:
+- C++
+helpviewer_keywords:
+- integer_sequence
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe integer_sequence
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 384e96cb5d2564d5459ade590c9224797f3468d5
+ms.lasthandoff: 02/25/2017
 
-Representa uma sequência de número inteiro. Pode ser usado para deduzir e expanda pacotes de parâmetros em tipos de variadic como std::tuple \< t... > que são passados como argumentos para uma função.  
+---
+# <a name="integersequence-class"></a>Classe integer_sequence
+Representa uma sequência de inteiros. Pode ser usada para deduzir e expandir pacotes de parâmetros em tipos variadic, como std::tuple\<T...>, que são passados como argumentos para uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,27 +58,27 @@ struct integer_sequence
   
 #### <a name="parameters"></a>Parâmetros  
  T  
- O tipo de valores; deve ser um tipo integral: bool, char, char16_t, char32_t, wchar_t, ou assinado ou tipos de inteiro sem sinal.  
+ O tipo dos valores; deve ser um tipo integral: bool, char, char16_t, char32_t, wchar_t, ou tipos inteiros com sinal ou sem sinal.  
   
- Valos  
- Um pacote de parâmetro de tipo não representa uma sequência de valores do tipo integral T.  
+ Vals  
+ Um pacote de parâmetro que não são de tipo e que representa uma sequência de valores do tipo integral T.  
   
 ## <a name="members"></a>Membros  
   
 |||  
 |-|-|  
 |`static size_t size() noexcept`|O número de elementos na sequência.|  
-|TypeDef T value_type|O tipo de cada elemento na sequência. Deve ser um tipo integral.|  
+|typedef T value_type|O tipo de cada elemento na sequência. Deve ser um tipo integral.|  
   
 ## <a name="remarks"></a>Comentários  
- Um pacote de parâmetro que é passado diretamente para uma função pode ser descompactado sem qualquer auxiliares biblioteca especial. Quando um pacote de parâmetros é parte de um tipo que é passado para uma função, e você precisa de índices para acessar os elementos, descompactá-lo a maneira mais fácil é usar `integer_sequence` e seus aliases de tipo relacionado `make_integer_sequence`, `index_sequence`, `make_index_sequence`, e `index_sequence_for`.  
+ Um pacote de parâmetros passado diretamente a uma função pode ser desempacotado sem nenhum auxiliar de biblioteca especial. Quando um pacote de parâmetros faz parte de um tipo passado para uma função, e você precisa de índices para acessar os elementos, a maneira mais fácil de desempacotá-o é usar `integer_sequence` e os aliases de tipo relacionados `make_integer_sequence`, `index_sequence`, `make_index_sequence` e `index_sequence_for`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir baseia-se na proposta de original [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html). Ele mostra como usar um `integer_sequence` para criar um `std::tuple` de um `std::array<T,N>`, e como usar um `integer_sequence` para obter os membros de tupla.  
+ O exemplo a seguir é baseado na proposta [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html) original. Ele mostra como usar um `integer_sequence` para criar um `std::tuple` de um `std::array<T,N>`, bem como usar um `integer_sequence` para chegar aos membros da tupla.  
   
- No `a2t` função, um `index_sequence` é um alias de `integer_sequence` com base no `size_t` tipo integral. `make_index_sequence` é um alias que cria uma base zero em tempo de compilação `index_sequence` com o mesmo número de elementos da matriz que é passado pelo chamador. `a2t` passa o `index_sequence` por valor para `a2t_` , onde a expressão `a[I]...` desempacota `I`, e, em seguida, os elementos estão sendo alimentados para `make_tuple` que consome individuais como argumentos. Por exemplo, se a sequência contém três elementos, em seguida, `make_tuple` é chamado de make_tuple ([0], [1], a[2]). Os próprios elementos de matriz do curso podem ser qualquer tipo.  
+ Na função `a2t`, um `index_sequence` é um alias de `integer_sequence` com base no tipo integral `size_t`. `make_index_sequence` é um alias que, em tempo de compilação, cria `index_sequence` baseado em zero com o mesmo número de elementos da matriz que é passado pelo chamador. `a2t` passa o `index_sequence`, por valor, para `a2t_`, em que a expressão `a[I]...` desempacota `I` e, então, os elementos são alimentados para `make_tuple`, que os consome como argumentos individuais. Por exemplo, se a sequência contiver três elementos, `make_tuple` será chamado como make_tuple(a[0], a[1], a[2]). Os próprios elementos da matriz podem, claro, ser de qualquer tipo.  
   
- A função aplicar aceita uma [std::tuple](../standard-library/tuple-class.md), e produz um integer_sequence usando o `tuple_size` classe auxiliar. Observe que [std::decay_t](../standard-library/decay-class.md)_is necessário porque [tuple_size](../standard-library/tuple-size-class-tuple.md) não funciona com tipos de referência. O `apply_` função descompacta os membros da tupla e encaminha separados como argumentos para uma chamada de função. Neste exemplo, a função é uma simples expressão lambda que imprime os valores.  
+ A função apply aceita uma [std::tuple](../standard-library/tuple-class.md) e produz um integer_sequence usando a classe auxiliar `tuple_size`. Observe que [std::decay_t](../standard-library/decay-class.md)_ é necessário porque [tuple_size](../standard-library/tuple-size-class-tuple.md) não funciona com tipos de referência. A função `apply_` desempacota os membros da tupla e os encaminha como argumentos separados para uma chamada de função. Neste exemplo, a função é uma expressão lambda simples que imprime os valores.  
   
 ```  
   
@@ -123,13 +138,14 @@ int main()
   
 ```  
   
-  Para fazer um `index_sequence` para um pacote de parâmetro, use `index_sequence_for`\< t... > que é um alias para `make_index_sequence`\< sizeof... (T) >  
+  Para fazer um `index_sequence` para um pacote de parâmetro, use `index_sequence_for`\<T...>, que é um alias para `make_index_sequence`\<sizeof...(T)>  
   
 ## <a name="requirements"></a>Requisitos  
- Cabeçalho: \< type_traits >  
+ Cabeçalho: <type_traits>  
   
  Namepace: std  
   
 ## <a name="see-also"></a>Consulte também  
- [Reticências e modelos Variadic](../cpp/ellipses-and-variadic-templates.md)
+ [Reticências e modelos variadic](../cpp/ellipses-and-variadic-templates.md)
+
 

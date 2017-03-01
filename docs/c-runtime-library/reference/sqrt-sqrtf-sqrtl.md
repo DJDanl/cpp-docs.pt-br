@@ -1,88 +1,116 @@
 ---
-title: "sqrt, sqrtf, sqrtl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "sqrtl"
-  - "sqrtf"
-  - "sqrt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "sqrt"
-  - "sqrtf"
-  - "_sqrtl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _sqrtl"
-  - "calculando raízes quadradas"
-  - "Função sqrt"
-  - "Função sqrtf"
-  - "Função sqrtl"
-  - "raízes quadradas, calculando"
+title: sqrt, sqrtf, sqrtl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- sqrtl
+- sqrtf
+- sqrt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- sqrt
+- sqrtf
+- _sqrtl
+dev_langs:
+- C++
+helpviewer_keywords:
+- sqrtf function
+- sqrt function
+- sqrtl function
+- _sqrtl function
+- calculating square roots
+- square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
 caps.latest.revision: 18
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# sqrt, sqrtf, sqrtl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 93639a3c69e135301179079035a8fd52cf3a2318
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 Calcula a raiz quadrada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-double sqrt(    double x  ); float sqrt(    float x  );  // C++ only long double sqrt(    long double x );  // C++ only float sqrtf(    float x  ); long double sqrtl(    long double x  );  
+double sqrt(  
+   double x   
+);  
+float sqrt(  
+   float x   
+);  // C++ only  
+long double sqrt(  
+   long double x  
+);  // C++ only  
+float sqrtf(  
+   float x   
+);  
+long double sqrtl(  
+   long double x   
+);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
  Um valor de ponto flutuante não negativo  
   
-## Comentários  
- Como C\+\+ permite a sobrecarga, você pode chamar sobrecargas de `sqrt` que usam o tipo `float` ou `long double`.  Em programas C, `sqrt` sempre usa e retorna `double`.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite a sobrecarga, você pode chamar sobrecargas de `sqrt` que usam o tipo `float` ou `long double`. Em programas C, `sqrt` sempre usa e retorna `double`.  
   
-## Valor de retorno  
- A função `sqrt` retorna a raiz quadrada de `x`.  Por padrão, se `x` for um valor negativo, `sqrt` retorna um NaN \(não é um número\) indefinido.  
+## <a name="return-value"></a>Valor de retorno  
+ A função `sqrt` retorna a raiz quadrada de `x`. Por padrão, se `x` for um valor negativo, `sqrt` retorna um NaN (não é um número) indefinido.  
   
 |Entrada|Exceção SEH|Exceção `_matherr`|  
-|-------------|-----------------|------------------------|  
-|± QNAN,IND|nenhum|\_DOMAIN|  
-|\- ∞|nenhum|\_DOMAIN|  
-|x\<0|nenhum|\_DOMAIN|  
+|-----------|-------------------|--------------------------|  
+|± QNAN,IND|nenhum|_DOMAIN|  
+|- ∞|nenhum|_DOMAIN|  
+|x<0|nenhum|_DOMAIN|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`sqrt`, `sqrtf`, `sqrtl`|\<math.h\>|\<cmath\>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`sqrt`, `sqrtf`, `sqrtl`|\<math.h>|\<cmath>|  
   
  Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_sqrt.c  
@@ -103,13 +131,16 @@ int main( void )
 }  
 ```  
   
-  **A raiz quadrada de 45,35 é 6,73**   
-## Equivalência do .NET Framework  
+```Output  
+The square root of 45.35 is 6.73  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Math::Sqrt](https://msdn.microsoft.com/en-us/library/system.math.sqrt.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
- [log, logf, log10, log10f](../Topic/log,%20logf,%20log10,%20log10f.md)   
- [pow, powf, powl](../Topic/pow,%20powf,%20powl.md)   
- [\_CIsqrt](../../c-runtime-library/cisqrt.md)
+ [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
+ [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   
+ [_CIsqrt](../../c-runtime-library/cisqrt.md)

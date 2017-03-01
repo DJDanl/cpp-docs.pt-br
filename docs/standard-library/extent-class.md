@@ -1,59 +1,71 @@
 ---
-title: "Classe extent | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.extent"
-  - "extent"
-  - "std::tr1::extent"
-  - "std.extent"
-  - "std::extent"
-  - "type_traits/std::extent"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe extent [TR1]"
-  - "extent"
+title: Classe extent | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- extent
+- std::extent
+- type_traits/std::extent
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent class
+- extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
 caps.latest.revision: 20
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe extent
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 23cf8230cd5b8adb7975ec21a249d9efc4d66c71
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="extent-class"></a>Classe extent
 Obtém uma dimensão de matriz.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty, unsigned I = 0>  
-    struct extent;  
+template <class Ty, unsigned I = 0>  
+struct extent;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
  `I`  
- A matriz associado à consulta.  
+ A matriz associada à consulta.  
   
-## Comentários  
- Se `Ty` é um tipo de matriz que tenha pelo menos `I` dimensões, a consulta de tipo contém o número de elementos na dimensão especificada pelo `I`.  Se `Ty` não é um tipo de matriz ou sua classificação é menor que `I`, ou se `I` for zero e `Ty` é do tipo "array desconhecido associado do `U`", a consulta de tipo mantém o valor 0.  
+## <a name="remarks"></a>Comentários  
+ Se `Ty` é um tipo de matriz que tem pelo menos `I` dimensões, a consulta de tipo contém o número de elementos na dimensão especificada por `I`. Se `Ty` não é um tipo de matriz ou sua classificação é menor que `I` ou se `I` é zero e `Ty` é do tipo "matriz desconhecida associada à `U`", a consulta de tipo mantém o valor 0.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__extent.cpp   
+```cpp  
+// std__type_traits__extent.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -70,14 +82,18 @@ int main()
   
 ```  
   
-  **extensão 0 \= \= 5**  
-**1 ponto \= \= 10**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+extent 0 == 5  
+extent 1 == 10  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe remove\_all\_extents](../standard-library/remove-all-extents-class.md)   
- [Classe remove\_extent](../standard-library/remove-extent-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe remove_all_extents](../standard-library/remove-all-extents-class.md)   
+ [Classe remove_extent](../standard-library/remove-extent-class.md)
+

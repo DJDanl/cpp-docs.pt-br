@@ -1,78 +1,92 @@
 ---
-title: "strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsncat_s_l"
-  - "wcsncat_s"
-  - "_mbsncat_s_l"
-  - "_mbsncat_s"
-  - "strncat_s"
-  - "_strncat_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strncat_s_l"
-  - "_mbsncat_s_l"
-  - "_tcsncat_s"
-  - "wcsncat_s"
-  - "wcsncat_s_l"
-  - "strncat_s"
-  - "_mbsncat_s"
-  - "_tcsncat_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbsncat_s"
-  - "Função _mbsncat_s_l"
-  - "Função _tcsncat_s"
-  - "Função _tcsncat_s_l"
-  - "acrescentando cadeias de caracteres"
-  - "concatenando cadeias de caracteres"
-  - "Função mbsncat_s"
-  - "Função mbsncat_s_l"
-  - "concatenação de cadeia de caracteres [C++]"
-  - "cadeias de caracteres [C++], anexando"
-  - "Função strncat_s"
-  - "Função strncat_s_l"
-  - "Função wcsncat_s"
-  - "Função wcsncat_s_l"
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsncat_s_l
+- wcsncat_s
+- _mbsncat_s_l
+- _mbsncat_s
+- strncat_s
+- _strncat_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strncat_s_l
+- _mbsncat_s_l
+- _tcsncat_s
+- wcsncat_s
+- wcsncat_s_l
+- strncat_s
+- _mbsncat_s
+- _tcsncat_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- _mbsncat_s function
+- mbsncat_s_l function
+- _tcsncat_s function
+- _mbsncat_s_l function
+- strncat_s function
+- strings [C++], appending
+- strncat_s_l function
+- string concatenation [C++]
+- _tcsncat_s_l function
+- wcsncat_s function
+- appending strings
+- wcsncat_s_l function
+- mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
 caps.latest.revision: 42
-caps.handback.revision: 40
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 81de28f343535df964284cd204921352951c2bd6
+ms.lasthandoff: 02/25/2017
 
-Acrescenta caracteres a uma cadeia de caracteres.  Essas versões de [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) têm aprimoramentos de segurança, como descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
+Acrescenta caracteres a uma cadeia de caracteres. Essas versões de [strncat, _strncat_l, wcsncat, _wcsncat_l, mbsncat, mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsncat_s` e `_mbsncat_s_l` não podem ser usados em aplicativos executados no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncat_s` e `_mbsncat_s_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t strncat_s(  
@@ -155,37 +169,37 @@ errno_t _mbsncat_s_l(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[saída\] `strDest`  
- Cadeia de caracteres de destino terminada com Null.  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `strDest`  
+ Cadeia de caracteres de destino terminada em nulo.  
   
- \[in\]`numberOfElements`  
+ [in]`numberOfElements`  
  Tamanho do buffer de destino.  
   
- \[in\]`strSource`  
- Cadeia de caracteres de origem terminada com Null.  
+ [in]`strSource`  
+ Cadeia de caracteres de origem com terminação nula.  
   
- \[in\]`count`  
- Número de caracteres a ser anexado, ou [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ [in]`count`  
+ O número de caracteres a serem acrescentados ou [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- \[entrada\] `locale`  
- Localidade a ser usada.  
+ [in] `locale`  
+ Localidade a usar.  
   
-## Valor de retorno  
- Retornará 0 se tiver êxito, um código de erro da falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Retornará 0 se for bem-sucedido; um código de erro em caso de falha.  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|`strDestination`|`numberOfElements`|`strSource`|Valor de retorno|Conteúdo de `strDestination`|  
-|----------------------|------------------------|-----------------|----------------------|----------------------------------|  
-|`NULL` ou não terminado|any|any|`EINVAL`|não modificado|  
-|any|any|`NULL`|`EINVAL`|não modificado|  
-|any|0, ou muito pequeno|any|`ERANGE`|não modificado|  
+|`strDestination`|`numberOfElements`|`strSource`|Valor retornado|Conteúdo de `strDestination`|  
+|----------------------|------------------------|-----------------|------------------|----------------------------------|  
+|`NULL` ou não finalizado|qualquer|qualquer|`EINVAL`|não modificado|  
+|qualquer|qualquer|`NULL`|`EINVAL`|não modificado|  
+|qualquer|0 ou muito pequeno|qualquer|`ERANGE`|não modificado|  
   
-## Comentários  
- Tentativa dessas funções para acrescentar os primeiros caracteres de `D` de `strSource` ao final de `strDest`, onde `D` é o menor de `count` e o comprimento de `strSource`.  Se anexar esses caracteres de `D` caiba dentro de `strDest` \(cujo tamanho é fornecido como `numberOfElements`\) e deixar ainda de espaço para um terminador nulo, esses caracteres são anexados, a partir do original que encerra o zero de `strDest`, e um novo zero de término está anexado; caso contrário, `strDest`\[0\] é definido como o caractere nulo e o manipulador inválido do parâmetro é chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
+## <a name="remarks"></a>Comentários  
+ Essas funções tentam anexar os primeiros `D` caracteres de `strSource` ao final do `strDest`, em que `D` é inferior a `count` e o comprimento de `strSource`. Se acrescentar os `D` caracteres caiba dentro `strDest` (cujo tamanho é determinado como `numberOfElements`) e ainda deixar espaço para um terminador nulo, em seguida, esses caracteres são acrescentados, começando em original terminação nula de `strDest` e uma novo terminação nula é anexado; caso contrário, `strDest`[0] é definido para o caractere nulo e o parâmetro inválido manipulador é chamado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).  
   
- Há uma exceção no parágrafo anterior.  Se `count` é [\_TRUNCATE](../../c-runtime-library/truncate.md) em tão bem quanto de `strSource` caberá será anexada a `strDest` enquanto ainda deixar de espaço anexar um zero sendo encerrado.  
+ Há uma exceção para o parágrafo acima. Se `count` é [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, a maioria de `strSource` que se ajustará será acrescentada a `strDest` enquanto ainda deixa espaço para acrescentar uma terminação nula.  
   
  Por exemplo,  
   
@@ -195,9 +209,9 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", 3);`  
   
- significa que nós estamos solicitando `strncat_s` para acrescentar por muito tempo três caracteres a dois caracteres em caracteres de um buffer cinco; isso não permite nenhum espaço para o terminador, portanto os zeros nulos de `strncat_s` para substituir a cadeia de caracteres e chama o manipulador inválido do parâmetro.  
+ significa que, pedimos para `strncat_s` anexar três caracteres em dois caracteres em um buffer de cinco caracteres longos; não deixando nenhum espaço para o terminador nulo, portanto, `strncat_s` zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.  
   
- Se o comportamento de truncamento é necessário, use `_TRUNCATE` ou ajuste o parâmetro de `size` adequadamente:  
+ Se for necessário o comportamento de truncamento, use `_TRUNCATE` ou ajuste o parâmetro `size` adequadamente:  
   
  `strncat_s(dst, _countof(dst), "34567", _TRUNCATE);`  
   
@@ -205,38 +219,38 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);`  
   
- Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo.  Se a cópia for feita entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
+ Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
   
- Se `strSource` ou `strDest` são `NULL`, ou são `numberOfElements` for zero, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) .  Se a execução for permitida continuar, a função retornará `EINVAL` sem alterar seus parâmetros.  
+ Se `strSource` ou `strDest` é `NULL` ou é `numberOfElements` for zero, um manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará `EINVAL` sem modificar seus parâmetros.  
   
- `wcsncat_s` e `_mbsncat_s` são versões de caracteres largos e de multibyte de `strncat_s`.  Os argumentos da cadeia de caracteres e o valor de retorno de `wcsncat_s` são cadeias de caracteres largos; aqueles do `_mbsncat_s` são cadeias de caracteres multibyte.  Essas três funções se comportam de forma idêntica.  
+ `wcsncat_s` e `_mbsncat_s` são versões de caracteres largos e de caracteres multibyte de `strncat_s`. Os argumentos de cadeia de caracteres e o valor retornado de `wcsncat_s` são cadeias de caracteres largos; desses de `_mbsncat_s` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções sem o sufixo `_l` usam a localidade atual para esse comportamento dependente da localidade; as versões com o sufixo `_l` são idênticas, exceto que elas usam o parâmetro de localidade informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD.  Para desabilitar esse comportamento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncat_s`|`strncat_s`|`_mbsnbcat_s`|`wcsncat_s`|  
 |`_tcsncat_s_l`|`_strncat_s_l`|`_mbsnbcat_s_l`|`_wcsncat_s_l`|  
   
- `_strncat_s_l` e `_wcsncat_s_l` não têm dependências de localidade; são fornecidos somente para `_tcsncat_s_l`.  
+ `_strncat_s_l` e `_wcsncat_s_l` não ter nenhuma dependência de localidade; eles são fornecidos somente para `_tcsncat_s_l`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`strncat_s`|\<string.h\>|  
-|`wcsncat_s`|\<string.h\> ou \<wchar.h\>|  
-|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncat_s`|\<string.h>|  
+|`wcsncat_s`|\<string.h> ou \<wchar.h>|  
+|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_strncat_s.cpp  
@@ -336,46 +350,57 @@ int main( void )
 }  
 ```  
   
-  **Anexando 4 caracteres de “não” para o mapeamento de 10 bytes armazenar em buffer do destino**  
- **conteúdo antigos de destino: “hello world”**  
- **novos conteúdo de destino: “hello world” ther**  
-**Anexando 5 caracteres de “não” ao buffer de 10 bytes destino**  
- **conteúdo antigos de destino: “hello world”**  
- **novos conteúdo de destino: “hello world " não”**  
-**Anexando 6 caracteres de “não” ao buffer de 10 bytes destino**  
- **conteúdo antigos de destino: “hello world”**  
- **novos conteúdo de destino: “hello world " não”**  
-**O buffer de destino muito pequeno:**  
-**Anexando 4 caracteres de “não” para o mapeamento de 10 bytes armazenar em buffer do destino**  
- **conteúdo antigos de destino: “hello world”**  
-**Manipulador inválido do parâmetro invocado: \(L " 0” && buffer é muito pequeno\)**  
- **novos conteúdo de destino: ''**  
-**Exemplos de truncamento:**  
-**Acrescentar “não” destino ao buffer de 10 bytes com semântica de truncamento**  
- **conteúdo antigos de destino: “hello world”**  
- **novos conteúdo de destino: “hello world”**  
- **o truncamento**  
-**Acrescentar “\!” destino ao buffer de 10 bytes com semântica de truncamento**  
- **conteúdo antigos de destino: “hello world”**  
- **novos conteúdo de destino: “hello world\!”**  
- **o truncamento não ocorreu**  
-**Proteger o exemplo de sobrecarga do modelo:**  
-**Manipulador inválido do parâmetro invocado: \(L " 0” && buffer é muito pequeno\)**  
- **novos conteúdo de destino: ''**   
-## Equivalência do .NET Framework  
+```Output  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi ther'  
+  
+Appending 5 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Appending 6 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Destination buffer too small:  
+  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hello '  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+Appending 'there' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello the'  
+    truncation did occur  
+  
+Appending '!' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello !'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
-## Consulte também  
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset, \_strset\_l, \_wcsset, \_wcsset\_l, \_mbsset, \_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

@@ -1,73 +1,91 @@
 ---
-title: "&lt;ostream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<ostream>"
-  - "<ostream>"
-  - "ostream/std::<ostream>"
-  - "std::<ostream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho ostream"
+title: '&lt;ostream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<ostream>
+- <ostream>
+- ostream/std::<ostream>
+- std::<ostream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 caps.latest.revision: 20
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;ostream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7ab75505669403c32cbe9954afe688ce0f14a67d
+ms.lasthandoff: 02/25/2017
 
-Define a classe de modelo[basic\_ostream](../Topic/basic_ostream%20Class.md)que faz a mediação inserções para o iostreams.  O cabeçalho também define vários manipuladores relacionados.  \(Esse cabeçalho é geralmente incluído para você, por outro os cabeçalhos iostreams.  Você raramente precisa incluí\-lo diretamente.\)  
+---
+# <a name="ltostreamgt"></a>&lt;ostream&gt;
+Define a classe de modelo [basic_ostream](../standard-library/basic-ostream-class.md), que atua como mediador de inserções para iostreams. O cabeçalho também define vários manipuladores relacionados. (Esse cabeçalho geralmente é incluído para você por outro cabeçalho iostreams. Raramente é necessário incluí-lo diretamente.)  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <ostream>  
   
 ```  
   
-### DefsTipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ostream](../Topic/ostream.md)|Cria um tipo de`basic_ostream`que é especializada em`char`e`char_traits`especializadas em`char`.|  
-|[wostream](../Topic/wostream.md)|Cria um tipo de`basic_ostream`que é especializada em`wchar_t`e`char_traits`especializadas em`wchar_t`.|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Cria um tipo de `basic_ostream` que é especializado em `char` e `char_traits` é especializado em `char`.|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Cria um tipo de `basic_ostream` que é especializado em `wchar_t` e `char_traits` é especializado em `wchar_t`.|  
   
-### Manipuladores  
-  
-|||  
-|-|-|  
-|[endl](../Topic/endl.md)|Termina uma linha e libera o buffer.|  
-|[extremidades](../Topic/ends%20\(Standard%20C++%20Library\).md)|Finaliza uma cadeia de caracteres.|  
-|[flush](../Topic/flush%20\(Standard%20C++%20Library\).md)|Libera o buffer.|  
-||Troca os valores da esquerda`basic_ostream`objeto parâmetro para aqueles direita`basic_ostream`objeto parâmetro.|  
-  
-### Operadores  
+### <a name="manipulators"></a>Manipuladores  
   
 |||  
 |-|-|  
-|[Operador \<\<](../Topic/operator%3C%3C%20\(%3Costream%3E\).md)|Grava o fluxo de vários tipos.|  
+|[endl](../standard-library/ostream-functions.md#endl)|Termina uma linha e libera o buffer.|  
+|[ends](../standard-library/ostream-functions.md#ends)|Termina uma cadeia de caracteres.|  
+|[flush](../standard-library/ostream-functions.md#flush)|Libera o buffer.|  
+|[swap](../standard-library/ostream-functions.md#swap)|Troca os valores do parâmetro de objeto `basic_ostream` à esquerda por aqueles do parâmetro de objeto `basic_ostream` à direita.|  
   
-### Classes  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[basic\_ostream](../Topic/basic_ostream%20Class.md)|A classe de modelo descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo.|  
+|[operator<<](../standard-library/ostream-operators.md#operator_lt__lt_)|Grava vários tipos no fluxo.|  
   
-## Consulte também  
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programação iostream](../Topic/iostream%20Programming.md)   
- [Convenções iostreams](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|A classe de modelo descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Programação de iostream](../standard-library/iostream-programming.md)   
+ [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+
+
+
+

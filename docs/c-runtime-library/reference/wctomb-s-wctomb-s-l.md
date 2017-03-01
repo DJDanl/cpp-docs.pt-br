@@ -1,57 +1,71 @@
 ---
-title: "wctomb_s, _wctomb_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wctomb_s_l"
-  - "wctomb_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctomb_s"
-  - "_wctomb_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _wctomb_s_l"
-  - "caracteres, convertendo"
-  - "conversão de cadeia de caracteres, cadeias de caracteres multibyte"
-  - "conversão de cadeia de caracteres, caracteres largos"
-  - "Função wctomb_s"
-  - "Função wctomb_s_l"
-  - "caracteres largos, convertendo"
+title: wctomb_s, _wctomb_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wctomb_s_l
+- wctomb_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wctomb_s
+- _wctomb_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- wctomb_s function
+- wctomb_s_l function
+- string conversion, wide characters
+- wide characters, converting
+- _wctomb_s_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
 caps.latest.revision: 18
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# wctomb_s, _wctomb_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
+ms.lasthandoff: 02/25/2017
 
-Converte um caractere largo em caracteres multibyte correspondente.  Uma versão de [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+Converte um caractere largo no caractere multibyte correspondente. Uma versão de [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t wctomb_s(  
@@ -69,53 +83,53 @@ errno_t _wctomb_s_l(
 );  
 ```  
   
-#### Parâmetros  
- \[saída\] `pRetValue`  
- O número de bytes, ou um código que indica o resultado.  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `pRetValue`  
+ O número de bytes ou um código que indica o resultado.  
   
- \[saída\] `mbchar`  
- O endereço de um caracteres multibyte.  
+ [out] `mbchar`  
+ O endereço de um caractere multibyte.  
   
- \[entrada\] `sizeInBytes`  
- Tamanho do buffer `mbchar`.  
+ [in] `sizeInBytes`  
+ O tamanho do buffer `mbchar`.  
   
- \[entrada\] `wchar`  
+ [in] `wchar`  
  Um caractere largo.  
   
- \[entrada\] `locale`  
+ [in] `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Zero se tiver êxito, um código de erro ou falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido ou um código de erro em caso de falha.  
   
- Condições de erro  
+ Condições de Erro  
   
-|`mbchar`|`sizeInBytes`|Valor de retorno|`pRetValue`|  
-|--------------|-------------------|----------------------|-----------------|  
-|`NULL`|\>0|`EINVAL`|não modificado|  
-|any|\>`INT_MAX`|`EINVAL`|não modificado|  
-|any|muito pequeno|`EINVAL`|não modificado|  
+|`mbchar`|`sizeInBytes`|Valor retornado|`pRetValue`|  
+|--------------|-------------------|------------------|-----------------|  
+|`NULL`|>0|`EINVAL`|não modificado|  
+|qualquer|>`INT_MAX`|`EINVAL`|não modificado|  
+|qualquer|muito pequeno|`EINVAL`|não modificado|  
   
- Se qualquer uma das condições de erro acima ocorrerem, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar,`wctomb` retornará `EINVAL` e definirá `errno` como `EINVAL`.  
+ Se qualquer uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `wctomb` retornará `EINVAL` e definirá `errno` como `EINVAL`.  
   
-## Comentários  
- A função de `wctomb_s` converte seu argumento de `wchar` correspondente em caracteres multibyte e armazena o resultado em `mbchar`.  Você pode chamar a função de qualquer ponto em qualquer programa.  
+## <a name="remarks"></a>Comentários  
+ A função `wctomb_s` converte seu argumento `wchar` no caractere multibyte correspondente e armazena o resultado em `mbchar`. Você pode chamar a função de qualquer ponto, em qualquer programa.  
   
- Se `wctomb_s` converte o caractere largo a um caracteres multibyte, coloca o número de bytes \(que nunca é maior que `MB_CUR_MAX`\) em caractere largo em inteiro apontado por `pRetValue`.  Se `wchar` é o caractere nulo ampla de caracteres \(L \\ 0 '\), `wctomb_s` preenche `pRetValue` com 1.  Se o ponteiro `mbchar` de destino for NULL, `wctomb_s` coloca 0 em `pRetValue`.  Se a conversão não é possível na localidade atual, `wctomb_s` coloca – 1 em `pRetValue`.  
+ Se `wctomb_s` converter o caractere largo em um caractere multibyte, ele colocará o número de bytes (que nunca será maior que `MB_CUR_MAX`) no caractere largo para o inteiro apontado por `pRetValue`. Se `wchar` for o caractere nulo de caractere largo (L'\0'), `wctomb_s` preencherá `pRetValue` com 1. Se o ponteiro de destino `mbchar` for NULL, `wctomb_s` colocará 0 em `pRetValue`. Se a conversão não for possível na localidade atual, `wctomb_s` colocará –1 em `pRetValue`.  
   
- `wctomb_s` usa a localidade atual para as informações de localidade dependente; `_wctomb_s_l` é idêntico exceto que usa a localidade passada por vez.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ `wctomb_s` usa a localidade atual de qualquer informação dependente da localidade; `_wctomb_s_l` é idêntico, exceto pelo fato de que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`wctomb_s`|\<stdlib.h\>|  
-|`_wctomb_s_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`wctomb_s`|\<stdlib.h>|  
+|`_wctomb_s_l`|\<stdlib.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
- Esse programa ilustra o comportamento da função de `wctomb` .  
+## <a name="example"></a>Exemplo  
+ Este programa ilustra o comportamento da função `wctomb`.  
   
 ```  
 // crt_wctomb_s.cpp  
@@ -135,17 +149,20 @@ int main( void )
 }  
 ```  
   
-  **Converter um caractere largo:**  
- **Caracteres convertidos: 1**  
- **Caractere de Multibyte: a**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Convert a wide character:  
+   Characters converted: 1  
+   Multibyte character: a  
+```  
   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
  [Localidade](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../Topic/mbtowc,%20_mbtowc_l.md)   
- [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

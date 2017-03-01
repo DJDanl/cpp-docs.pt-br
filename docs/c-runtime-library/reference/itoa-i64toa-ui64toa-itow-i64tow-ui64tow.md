@@ -1,82 +1,96 @@
 ---
-title: "_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_itow"
-  - "_i64tow"
-  - "_itoa"
-  - "_i64toa"
-  - "_ui64toa"
-  - "_ui64tow"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_i64tow"
-  - "ui64toa"
-  - "ui64tow"
-  - "itot"
-  - "_itot"
-  - "_i64toa"
-  - "_itoa"
-  - "_itow"
-  - "_ui64tow"
-  - "i64toa"
-  - "i64tow"
-  - "itow"
-  - "_ui64toa"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _i64toa"
-  - "Função _i64tow"
-  - "Função _itoa"
-  - "Função _itot"
-  - "Função _itow"
-  - "Função _ui64toa"
-  - "Função _ui64tow"
-  - "convertendo inteiros"
-  - "convertendo números, em cadeias de caracteres"
-  - "Função i64toa"
-  - "Função i64tow"
-  - "números inteiros, convertendo"
-  - "Função itoa"
-  - "Função itot"
-  - "Função itow"
-  - "Função ui64toa"
-  - "Função ui64tow"
+title: _itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _itow
+- _i64tow
+- _itoa
+- _i64toa
+- _ui64toa
+- _ui64tow
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _i64tow
+- ui64toa
+- ui64tow
+- itot
+- _itot
+- _i64toa
+- _itoa
+- _itow
+- _ui64tow
+- i64toa
+- i64tow
+- itow
+- _ui64toa
+dev_langs:
+- C++
+helpviewer_keywords:
+- _itot function
+- ui64toa function
+- _ui64toa function
+- converting integers
+- itot function
+- _i64tow function
+- _i64toa function
+- _itow function
+- ui64tow function
+- integers, converting
+- itoa function
+- _ui64tow function
+- i64tow function
+- itow function
+- i64toa function
+- converting numbers, to strings
+- _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 caps.latest.revision: 25
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9493cefa8bb57f088eb13294c0cdc045a0d6417b
+ms.lasthandoff: 02/25/2017
 
-Converte um inteiro para uma cadeia de caracteres.  Versões mais seguras dessas funções estão disponíveis; consulte [\_itoa\_s, \_i64toa\_s, \_ui64toa\_s, \_itow\_s, \_i64tow\_s, \_ui64tow\_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md).  
+---
+# <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
+Converte um inteiro em uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *_itoa(  
@@ -147,49 +161,49 @@ wchar_t * _ui64tow(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `value`  
  Número a ser convertido.  
   
  `str`  
- Resultado da cadeia de caracteres.  
+ Resultado de cadeia de caracteres.  
   
  `radix`  
- Base de `value`; qual deve estar no intervalo 2\-36.  
+ Base de `value`, que deve estar no intervalo de 2 a 36.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna um ponteiro para `str`.  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna um ponteiro para `str`. Nenhum erro é retornado.  
   
-## Comentários  
- `_itoa`, `_i64toa`, e as funções de `_ui64toa` convertem os dígitos do argumento específico de `value` a uma cadeia de caracteres com terminação nula e os armazena o resultado \(até 33 caracteres para `_itoa` e 65 para `_i64toa` e `_ui64toa`\) em `str`.  Se `radix` é igual a 10 e `value` for negativo, o primeiro caractere da cadeia de caracteres é armazenada o sinal de menos \( `–` \).  `_itow`, `_i64tow`, e `_ui64tow` são versões de ampla caractere de `_itoa`, de `_i64toa`, e de `_ui64toa`, respectivamente.  
+## <a name="remarks"></a>Comentários  
+ As funções `_itoa`, `_i64toa` e `_ui64toa` convertem os dígitos do argumento `value` determinado em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 caracteres para `_itoa` e 65 para `_i64toa` e `_ui64toa`) em `str`. Se `radix` for igual a 10 e `value` for negativo, o primeiro caractere da cadeia de caracteres armazenada será o sinal de subtração (`–`). `_itow`, `_i64tow` e `_ui64tow` são versões de caractere largo de `_itoa`, `_i64toa` e `_ui64toa`, respectivamente.  
   
 > [!IMPORTANT]
->  Para impedir excesso de buffer, verifique se o buffer de `str` seja grande o suficiente para manter os dígitos convertidos mais com o caractere à direita e um caractere de sinal.  
+>  Para evitar estouros de buffer, verifique se o buffer `str` é grande o suficiente para manter os dígitos convertidos, além do caractere nulo à direita e de um caractere de sinal.  
   
- No C\+\+, essas funções têm as sobrecargas de modelo que invocam as correspondentes seguras mais recentes dessas funções.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_itot`|`_itoa`|`_itoa`|`_itow`|  
 |`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|  
 |`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_itoa`|\<stdlib.h\>|  
-|`_i64toa`|\<stdlib.h\>|  
-|`_ui64toa`|\<stdlib.h\>|  
-|`_itow`|\<stdlib.h\>|  
-|`_i64tow`|\<stdlib.h\>|  
-|`_ui64tow`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_itoa`|\<stdlib.h>|  
+|`_i64toa`|\<stdlib.h>|  
+|`_ui64toa`|\<stdlib.h>|  
+|`_itow`|\<stdlib.h>|  
+|`_i64tow`|\<stdlib.h>|  
+|`_ui64tow`|\<stdlib.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_itoa.c  
@@ -227,39 +241,44 @@ int main( void )
 }  
 ```  
   
-  **base 10: \-1 \(2 caracteres\)**  
-**base 9: 12068657453 \(11 caracteres\)**  
-**base 8: 37777777777 \(11 caracteres\)**  
-**base 7: 211301422353 \(12 caracteres\)**  
-**base 6: 1550104015503 \(13 caracteres\)**  
-**base 5: 32244002423140 \(14 caracteres\)**  
-**base 4: 3333333333333333 \(16 caracteres\)**  
-**base 3: 102002022201221111210 \(21 caracteres\)**  
-**base 2: 11111111111111111111111111111111 \(32 caracteres\)**  
-**base 10: \-1 \(2 caracteres\)**  
-**base 9: 145808576354216723756 \(21 caracteres\)**  
-**base 8: 1777777777777777777777 \(22 caracteres\)**  
-**base 7: 45012021522523134134601 \(23 caracteres\)**  
-**base 6: 3520522010102100444244423 \(25 caracteres\)**  
-**base 5: 2214220303114400424121122430 \(28 caracteres\)**  
-**base 4: 33333333333333333333333333333333 \(32 caracteres\)**  
-**base 3: 11112220022122120101211020120210210211220 \(41 caracteres\)**  
-**base 2: 1111111111111111111111111111111111111111111111111111111111111111 \(64 caracteres\)**  
-**base 10: 18446744073709551615 \(20 caracteres\)**  
-**base 9: 145808576354216723756 \(21 caracteres\)**  
-**base 8: 1777777777777777777777 \(22 caracteres\)**  
-**base 7: 45012021522523134134601 \(23 caracteres\)**  
-**base 6: 3520522010102100444244423 \(25 caracteres\)**  
-**base 5: 2214220303114400424121122430 \(28 caracteres\)**  
-**base 4: 33333333333333333333333333333333 \(32 caracteres\)**  
-**base 3: 11112220022122120101211020120210210211220 \(41 caracteres\)**  
-**base 2: 1111111111111111111111111111111111111111111111111111111111111111 \(64 caracteres\)**   
-## Equivalência do .NET Framework  
+```Output  
+base 10: -1 (2 chars)  
+base 9: 12068657453 (11 chars)  
+base 8: 37777777777 (11 chars)  
+base 7: 211301422353 (12 chars)  
+base 6: 1550104015503 (13 chars)  
+base 5: 32244002423140 (14 chars)  
+base 4: 3333333333333333 (16 chars)  
+base 3: 102002022201221111210 (21 chars)  
+base 2: 11111111111111111111111111111111 (32 chars)  
+  
+base 10: -1 (2 chars)  
+base 9: 145808576354216723756 (21 chars)  
+base 8: 1777777777777777777777 (22 chars)  
+base 7: 45012021522523134134601 (23 chars)  
+base 6: 3520522010102100444244423 (25 chars)  
+base 5: 2214220303114400424121122430 (28 chars)  
+base 4: 33333333333333333333333333333333 (32 chars)  
+base 3: 11112220022122120101211020120210210211220 (41 chars)  
+base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
+  
+base 10: 18446744073709551615 (20 chars)  
+base 9: 145808576354216723756 (21 chars)  
+base 8: 1777777777777777777777 (22 chars)  
+base 7: 45012021522523134134601 (23 chars)  
+base 6: 3520522010102100444244423 (25 chars)  
+base 5: 2214220303114400424121122430 (28 chars)  
+base 4: 33333333333333333333333333333333 (32 chars)  
+base 3: 11112220022122120101211020120210210211220 (41 chars)  
+base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
- [\_ltoa, \_ltow](../Topic/_ltoa,%20_ltow.md)   
- [\_ltoa\_s, \_ltow\_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)   
- [\_ultoa, \_ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
- [\_ultoa\_s, \_ultow\_s](../Topic/_ultoa_s,%20_ultow_s.md)
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
+ [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
+ [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
+ [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)

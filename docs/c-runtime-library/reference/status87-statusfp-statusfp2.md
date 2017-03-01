@@ -1,66 +1,81 @@
 ---
-title: "_status87, _statusfp, _statusfp2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_statusfp2"
-  - "_statusfp"
-  - "_status87"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_statusfp2"
-  - "_statusfp"
-  - "statusfp2"
-  - "_status87"
-  - "status87"
-  - "statusfp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "funções de ponto flutuante, obtendo palavra de status"
-  - "números de ponto flutuante, palavra de status"
-  - "Função status87"
-  - "palavra de status, obtendo ponto flutuante"
-  - "Função statusfp"
-  - "Função _statusfp"
-  - "Função _statusfp2"
-  - "Função statusfp2"
-  - "Função _status87"
-  - "funções de ponto flutuante"
-  - "palavra de status"
+title: _status87, _statusfp, _statusfp2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _statusfp2
+- _statusfp
+- _status87
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _statusfp2
+- _statusfp
+- statusfp2
+- _status87
+- status87
+- statusfp
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point functions, getting status word
+- floating-point numbers, status word
+- status87 function
+- status word, getting floating point
+- statusfp function
+- _statusfp function
+- _statusfp2 function
+- statusfp2 function
+- _status87 function
+- floating-point functions
+- status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
 caps.latest.revision: 20
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _status87, _statusfp, _statusfp2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
+ms.lasthandoff: 02/25/2017
 
-Obtém a palavra status de ponto flutuante.  
+---
+# <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
+Obtém a palavra de status de ponto flutuante.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 unsigned int _status87( void );  
@@ -68,34 +83,34 @@ unsigned int _statusfp( void );
 void _statusfp2(unsigned int *px86, unsigned int *pSSE2)  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `px86`  
- Esse endereço é preenchido com a palavra status para a unidade de ponto flutuante x87.  
+ Esse endereço é preenchido com a palavra de status para a unidade de ponto flutuante x87.  
   
  `pSSE2`  
- Esse endereço é preenchido com a palavra status para a unidade de ponto flutuante SSE2.  
+ Esse endereço é preenchido com a palavra de status para a unidade de ponto flutuante SSE2.  
   
-## Valor de retorno  
- Para `_status87` e `_statusfp`, os bits no valor retornado indicam o status do ponto flutuante.  Consulte o arquivo de inclusão FLOAT.H para obter uma definição dos bits que são retornados por `_statusfp`.  Muitas funções da biblioteca de matemática alteram a palavras de status de ponto flutuante, com resultados imprevisíveis.  A otimização pode reorganizar, combinar, e eliminar operações de ponto flutuante ao redor de chamadas a `_status87`, a `_statusfp`, e as funções relacionadas.  Use a opção do compilador de [\/Od \(desabilitar\)](../../build/reference/od-disable-debug.md) ou a política de pragma de [fenv\_access](../../preprocessor/fenv-access.md) evitar as otimizações que reorganizam operações de ponto flutuante.  Os valores de retorno de `_clearfp` e de `_statusfp`, e também os parâmetros de retorno de `_statusfp2`, são mais confiáveis se menos operações de ponto flutuante são executadas entre estados conhecidos de palavras de status de ponto flutuante.  
+## <a name="return-value"></a>Valor de retorno  
+ Para `_status87` e `_statusfp`, os bits no valor retornado indicam o status de ponto flutuante. Consulte o arquivo FLOAT.H incluído para obter uma definição dos bits retornados por `_statusfp`. Muitas funções de biblioteca de matemática modificam a palavra de status de ponto flutuante, com resultados imprevisíveis. A otimização pode reordenar, combinar e eliminar as operações de ponto flutuante em torno das chamadas para `_status87`, `_statusfp` e funções relacionadas. Use a opção do compilador [/Od (Desabilitar (Depurar))](../../build/reference/od-disable-debug.md) ou a diretiva pragma [fenv_access](../../preprocessor/fenv-access.md) para impedir otimizações que reordenem as operações de ponto flutuante. Valores retornados de `_clearfp` e `_statusfp` e também os parâmetros de retorno de `_statusfp2` serão mais confiáveis se houver menos operações de ponto flutuantes entre estados conhecidos da palavra de status de ponto flutuante.  
   
-## Comentários  
- A função `_statusfp` obtém a palavra de status do ponto flutuante.  A palavra status é uma combinação do status do processador de ponto flutuante e outras condições detectadas pelo manipulador de exceção do ponto flutuante, por exemplo, estouro e estouro negativo de pilha do ponto flutuante.  As exceções sem máscara são verificadas antes que o conteúdo da palavra status seja retornado.  Isso significa que o chamador é informado de exceções pendentes.  Nas plataformas x86, `_statusfp` retorna uma combinação do status do ponto flutuante do x87 e SSE2.  Em plataformas x64, o status retornado é baseado no estado MXCSR do SSE.  Em plataformas ARM, a função `_statusfp` retorna o status do registro FPSCR.  
+## <a name="remarks"></a>Comentários  
+ A função `_statusfp` obtém a palavra de status de ponto flutuante. A palavra de status é uma combinação do status do processador de ponto flutuante e outras condições detectadas pelo manipulador de exceção de ponto flutuante – por exemplo, estouro positivo e negativo de pilha de ponto flutuante. Exceções sem máscara são verificadas antes de o conteúdo da palavra de status ser retornado. Isso significa que o chamador é informado sobre exceções pendentes. Em plataformas x86, `_statusfp` retorna uma combinação dos status de ponto flutuante SSE2 e x87. Em plataformas x64, o status retornado é baseado no status MXCSR do SSE. Em plataformas ARM, `_statusfp` retorna o status do registro FPSCR.  
   
- `_statusfp` é uma versão portátil independente de plataforma de `_status87`.  É idêntico a `_status87` em plataformas Intel \(x86\) e também é suportado pelas plataformas x64 e ARM.  Para garantir que o código de ponto flutuante seja portátil para todas as arquiteturas, use `_statusfp`.  Se você está definido somente as plataformas x86 como destino, você pode usar `_status87` ou `_statusfp`.  
+ `_statusfp` é uma versão portátil e independente de plataforma de `_status87`. É idêntico a `_status87` em plataformas Intel (x86) e também tem suporte nas plataformas x64 e ARM. Para garantir que seu código de ponto flutuante seja portátil para todas as arquiteturas, use `_statusfp`. Se você tiver apenas plataformas x86 como destino, poderá usar `_status87` ou `_statusfp`.  
   
- Recomendamos `_statusfp2` para os chip \(como Pentium IV\) que têm um processador x87 e SSE2 de ponto flutuante.  Para `_statusfp2`, os endereços são preenchidos usando a palavra de status de ponto flutuante para o processador de ponto flutuante x87 ou SSE2.  Para um chip que suporta os processadores x87 e SSE2 de ponto flutuante, EM\_AMBIGUOUS é definido para 1 se `_statusfp` ou `_controlfp` forem usados e a ação era ambígua porque podia se referir à palavra de status de ponto flutuante do x87 ou SSE2.  A função `_statusfp2` tem suporte somente nas plataformas x86.  
+ Recomendamos `_statusfp2` para chips (como Pentium IV) que têm um ambos um processador de ponto flutuante x87 e um SSE2. Para `_statusfp2`, os endereços são preenchidos pelo uso da palavra de status de ponto flutuante tanto para o processador de ponto flutuante x87 quanto para o SSE2. Para um chip que dá suporte a processadores de ponto flutuante x87 e SSE2, EM_AMBIGUOUS é definido como 1 se `_statusfp` ou `_controlfp` é usado e a ação foi ambígua porque ela poderia se referir à palavra de status do ponto flutuante SSE2 ou x87. Só há suporte para a função `_statusfp2` em plataformas x86.  
   
- Estas funções não são úteis para [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) ou a compilação de `/clr:pure` como Common Language Runtime \(CLR\) oferece suporte apenas a precisão de ponto flutuante padrão.  
+ Essas funções não são úteis para [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime (CLR) suporta apenas a precisão de ponto flutuante padrão.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_status87`, `_statusfp`, `_statusfp2`|\<float.h\>|  
+|-------------|---------------------|  
+|`_status87`, `_statusfp`, `_statusfp2`|\<float.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_statusfp.c  
@@ -135,13 +150,16 @@ int main(void)
 }  
 ```  
   
-  **0x00000000 \= Status \- espaço livre**  
-**Status \= 0x00000003 \- incorreto, estouro negativo**  
-**Status \= 0x00080003 \- incorreto, estouro negativo, denormal**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Status = 0x00000000 - clear  
+Status = 0x00000003 - inexact, underflow  
+Status = 0x00080003 - inexact, underflow, denormal  
+```  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [\_clear87, \_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
- [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md)
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)

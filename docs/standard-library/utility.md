@@ -1,81 +1,99 @@
 ---
-title: "&lt;utility&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<utility>"
-  - "utility/std::<utility>"
-  - "std.<utility>"
-  - "std::<utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho utility"
+title: '&lt;utility&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <utility>
+- utility/std::<utility>
+- std.<utility>
+- std::<utility>
+dev_langs:
+- C++
+helpviewer_keywords:
+- utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
 caps.latest.revision: 18
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;utility&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 67792e92a4a8336c025249a5d1322d00360a62c5
+ms.lasthandoff: 02/25/2017
 
-Define os tipos, funções e operadores que ajudam a construir e gerenciar os pares de objetos, que são úteis sempre que dois objetos precisam ser tratados como se fossem um modelo Biblioteca STL \(Standard\).  
+---
+# <a name="ltutilitygt"></a>&lt;utility&gt;
+Define os tipos, funções e operadores da Biblioteca Padrão C++ que ajudam a construir e gerenciar pares de objetos úteis sempre que dois objetos precisam ser tratados como se fossem um.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <utility>  
   
 ```  
   
-## Comentários  
- Pares são amplamente usadas na biblioteca C\+\+ padrão.  Eles são necessários, como os argumentos e valores de retorno para diversas funções e tipos de elemento para contêineres como[classe map](../Topic/map%20Class.md)e[classe multimap](../standard-library/multimap-class.md).  O cabeçalho \< utility \> é automaticamente incluído por \< map \> para auxiliar no gerenciamento de seus elementos de tipo de par chave\/valor.  
+## <a name="remarks"></a>Comentários  
+ Os pares são amplamente usados na Biblioteca Padrão C++. Eles são necessários como os argumentos e valores retornados para diversas funções e como tipos de elemento para contêineres como a [classe map](../standard-library/map-class.md) e a [classe multimap](../standard-library/multimap-class.md). O cabeçalho \<utility> é incluído automaticamente por \<map> para auxiliar no gerenciamento de elementos do tipo par chave/valor.  
   
-### Classes  
-  
-|||  
-|-|-|  
-|[tuple\_element](../standard-library/tuple-element-class-utility.md)|Uma classe que encapsula o tipo de um`pair`elemento.|  
-|[tuple\_size](../standard-library/tuple-size-class-utility.md)|Uma classe que encapsula`pair`contagem de elementos.|  
-  
-### Funções  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[avançar](../Topic/forward.md)|Preserva o tipo de referência \(o`lvalue`ou`rvalue`\) do argumento de sendo disfarçada pelo encaminhamento perfeito.|  
-|[obter](../Topic/get%20Function%20%3Cutility%3E.md)|Uma função que obtém um elemento de uma`pair`objeto.|  
-|[make\_pair](../Topic/make_pair.md)|Uma função auxiliar do modelo usada para construir objetos do tipo`pair`onde os tipos de componente se baseiam nos tipos de dados passados como parâmetros.|  
-|[mover](../Topic/move.md)|Retorna o que for passado no argumento como um`rvalue`referência.|  
-|[swap](../Topic/swap%20\(%3Cutility%3E\).md)|Troca os elementos de dois`pair`objetos.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Uma classe que encapsula o tipo de um elemento `pair`.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Uma classe que encapsula a contagem do elemento `pair`.|  
   
-### Operadores  
+### <a name="functions"></a>Funções  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/operator!=%20\(%3Cutility%3E\).md)|Testa se o objeto par no lado esquerdo do operador não é igual ao objeto par no lado direito.|  
-|[operator\=\=](../Topic/operator==%20\(%3Cutility%3E\).md)|Testa se o objeto par no lado esquerdo do operador é igual ao objeto par no lado direito.|  
-|[operador \<](../Topic/operator%3C%20\(%3Cutility%3E\).md)|Testa se o par de objetos no lado esquerdo do operador é menor que o objeto par no lado direito.|  
-|[Operador \<\=](../Topic/operator%3C=%20\(%3Cutility%3E\).md)|Testa se o par de objetos no lado esquerdo do operador é menor ou igual ao objeto par no lado direito.|  
-|[Operador \>](../Topic/operator%3E%20\(%3Cutility%3E\).md)|Testa se o objeto par no lado esquerdo do operador é maior que o objeto par no lado direito.|  
-|[Operador \>\=](../Topic/operator%3E=%20\(%3Cutility%3E\).md)|Testa se o objeto par no lado esquerdo do operador é maior que ou igual ao objeto par no lado direito.|  
+|[forward](../standard-library/utility-functions.md#forward)|Evita que o tipo de referência (`lvalue` ou `rvalue`) do argumento seja obscurecido por encaminhamento perfeito.|  
+|[get](../standard-library/utility-functions.md#get)|Uma função que obtém um elemento de um objeto `pair`.|  
+|[make_pair](../standard-library/utility-functions.md#make_pair)|Uma função modelo auxiliar usada para construir objetos do tipo `pair`, em que os tipos de componente são baseados nos tipos de dados transmitidos como parâmetros.|  
+|[move](../standard-library/utility-functions.md#move)|Retorna o que foi passado no argumento como uma referência `rvalue`.|  
+|[swap](../standard-library/utility-functions.md#swap)|Troca os elementos de dois objetos `pair`.|  
   
-### Nome Forte  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[identidade](../Topic/identity%20Structure.md)||  
-|[par](../standard-library/pair-structure.md)|Um tipo que fornece a capacidade de tratar os dois objetos como um único objeto.|  
+|[operator!=](../standard-library/utility-operators.md#operator_neq)|Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.|  
+|[operator==](../standard-library/utility-operators.md#operator_eq_eq)|Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.|  
+|[operator<](../standard-library/utility-operators.md#operator_lt_)|Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.|  
+|[operator\<=](../standard-library/utility-operators.md#operator_lt__eq)|Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.|  
+|[operator>](../standard-library/utility-operators.md#operator_gt_)|Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.|  
+|[operator>=](../standard-library/utility-operators.md#operator_gt__eq)|Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.|  
   
-## Consulte também  
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="structs"></a>Structs  
+  
+|||  
+|-|-|  
+|[identity](../standard-library/identity-structure.md)||  
+|[pair](../standard-library/pair-structure.md)|Um tipo que fornece a capacidade de tratar dois objetos como um único objeto.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

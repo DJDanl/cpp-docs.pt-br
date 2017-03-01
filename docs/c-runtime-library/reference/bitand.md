@@ -1,47 +1,62 @@
 ---
-title: "bitand | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "std::bitand"
-  - "std.bitand"
-  - "bitand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função bitand"
+title: bitand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- std::bitand
+- std.bitand
+- bitand
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# bitand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 22e35097ff6c0bc37a78587322bf530e62cbc1f9
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="bitand"></a>bitand
 Uma alternativa para o operador &.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -49,10 +64,10 @@ Uma alternativa para o operador &.
   
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  A macro produz o operador  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // iso646_bitand.cpp  
@@ -73,7 +88,10 @@ int main( )
 }  
 ```  
   
-  **0**  
-**0**   
-## Requisitos  
- **Cabeçalho:** \<iso646.h\>
+```Output  
+0  
+0  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<iso646.h>

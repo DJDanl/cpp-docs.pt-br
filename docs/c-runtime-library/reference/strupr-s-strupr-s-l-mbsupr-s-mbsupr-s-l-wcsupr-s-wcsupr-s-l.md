@@ -1,91 +1,105 @@
 ---
-title: "_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strupr_s"
-  - "_strupr_s_l"
-  - "_mbsupr_s"
-  - "_wcsupr_s_l"
-  - "_mbsupr_s_l"
-  - "_wcsupr_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strupr_s"
-  - "mbsupr_s"
-  - "wcsupr_s"
-  - "_mbsupr_s_l"
-  - "mbsupr_s_l"
-  - "wcsupr_s_l"
-  - "_wcsupr_s"
-  - "_tcsupr_s_l"
-  - "_mbsupr_s"
-  - "_tcsupr_s"
-  - "strupr_s_l"
-  - "_wcsupr_s_l"
-  - "_strupr_s"
-  - "_strupr_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbsupr_s"
-  - "Função _mbsupr_s_l"
-  - "Função _strupr_s"
-  - "Função _strupr_s_l"
-  - "Função _tcsupr_s"
-  - "Função _tcsupr_s_l"
-  - "Função _wcsupr_s"
-  - "Função _wcsupr_s_l"
-  - "convertendo maiúsculas em minúsculas ou vice-versa, Funções CRT"
-  - "Função mbsupr_s"
-  - "Função mbsupr_s_l"
-  - "conversão de cadeia de caracteres [C++], case"
-  - "cadeias de caracteres [C++], case"
-  - "cadeias de caracteres [C++], convertendo maiúsculas em minúsculas ou vice-versa"
-  - "Função strupr_s"
-  - "Função strupr_s_l"
-  - "Função tcsupr_s"
-  - "Função tcsupr_s_l"
-  - "maiúsculas, convertendo cadeias de caracteres em"
-  - "Função wcsupr_s"
-  - "Função wcsupr_s_l"
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strupr_s
+- _strupr_s_l
+- _mbsupr_s
+- _wcsupr_s_l
+- _mbsupr_s_l
+- _wcsupr_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strupr_s
+- mbsupr_s
+- wcsupr_s
+- _mbsupr_s_l
+- mbsupr_s_l
+- wcsupr_s_l
+- _wcsupr_s
+- _tcsupr_s_l
+- _mbsupr_s
+- _tcsupr_s
+- strupr_s_l
+- _wcsupr_s_l
+- _strupr_s
+- _strupr_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsupr_s_l function
+- strupr_s_l function
+- _wcsupr_s_l function
+- _tcsupr_s_l function
+- mbsupr_s function
+- _wcsupr_s function
+- uppercase, converting strings to
+- tcsupr_s function
+- string conversion [C++], case
+- strupr_s function
+- wcsupr_s_l function
+- _mbsupr_s function
+- _mbsupr_s_l function
+- _strupr_s_l function
+- tcsupr_s_l function
+- strings [C++], case
+- converting case, CRT functions
+- _tcsupr_s function
+- strings [C++], converting case
+- _strupr_s function
+- wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bb233c851e318ecddc2f9fb4aa602421d01c95b7
+ms.lasthandoff: 02/25/2017
 
-Converte uma cadeia de caracteres em letras maiúsculas, usando a localidade atual ou uma localidade especificada em que é passada.  Essas versões de [\_strupr, \_strupr\_l, \_mbsupr, \_mbsupr\_l, \_wcsupr\_l, \_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) têm aprimoramentos de segurança, como descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
+Converte uma cadeia de caracteres em maiúsculas, usando a localidade atual ou uma localidade especificada passada. Essas versões de [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsupr_s` e `_mbsupr_s_l` não podem ser usados em aplicativos executados no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsupr_s` e `_mbsupr_s_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t _strupr_s(  
@@ -144,9 +158,9 @@ errno_t _mbsupr_s_l(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `str`  
- Cadeia de caracteres a ser colocada em maiúscula.  
+ Cadeia de caracteres a ser colocada em maiúsculas.  
   
  `numberOfElements`  
  O tamanho do buffer.  
@@ -154,44 +168,44 @@ errno_t _mbsupr_s_l(
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Zero se tiver êxito; um código de erro diferente de zero em uma falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se tiver êxito; um código de erro diferente de zero em caso de falha.  
   
- Essas funções validam seus parâmetros.  Se `str` for um ponteiro `NULL`, o manipulador de parâmetro inválido será chamado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, as funções retornarão `EINVAL` e definirão `errno` como `EINVAL`.  Se `numberOfElements` for menor que o tamanho da cadeia de caracteres, as funções retornarão `ERANGE` e definirão `errno` como `ERANGE`.  
+ Essas funções validam seus parâmetros. Se `str` for um ponteiro `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão `EINVAL` e definirão `errno` como `EINVAL`. Se `numberOfElements` for menor que o tamanho da cadeia de caracteres, as funções também retornarão `ERANGE` e definirão `errno` como `ERANGE`.  
   
-## Comentários  
- A função de `_strupr_s` converte, no lugar, cada letra minúscula em `str` letras maiúsculas.  `_wcsupr_s` é a versão de caracteres largos de `_strupr_s`.  `_mbsupr_s` é a versão de caracteres multibyte de `_strupr_s`.  
+## <a name="remarks"></a>Comentários  
+ A função `_strupr_s` converte, in-loco, cada letra minúscula em `str` em maiúsculas. `_wcsupr_s` é a versão de caracteres largos do `_strupr_s`. `_mbsupr_s` é a versão de caractere multibyte de `_strupr_s`.  
   
- A conversão é determinada pela configuração da localidade da categoria `LC_CTYPE`.  Outros caracteres não são afetados.  Para obter mais informações sobre `LC_CTYPE`, consulte [setlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções sem o sufixo `_l` usam a localidade atual para esse comportamento dependente da localidade; as versões com o sufixo `_l` são idênticas, exceto que elas usam o parâmetro de localidade informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ A conversão é determinada pela configuração de categoria `LC_CTYPE` da localidade. Outros caracteres não são afetados. Para obter mais informações sobre `LC_CTYPE`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As versões dessas funções sem o sufixo `_l` usam a localidade atual; as versões com o sufixo `_l` são idênticas, exceto por usarem a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD.  Para desabilitar esse comportamento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsupr_s`|`_strupr_s`|`_mbsupr_s`|`_wcsupr_s`|  
 |`_tcsupr_s_l`|`_strupr_s_l`|`_mbsupr_s_l`|`_wcsupr_s_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_strupr_s`, `_strupr_s_l`|\<string.h\>|  
-|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strupr_s`, `_strupr_s_l`|\<string.h>|  
+|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h> ou \<wchar.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
- Consulte o exemplo de [\_strlwr\_s, \_strlwr\_s\_l, \_mbslwr\_s, \_mbslwr\_s\_l, \_wcslwr\_s, \_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) .  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo de [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::String::ToUpper](https://msdn.microsoft.com/en-us/library/system.string.toupper.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strlwr\_s, \_strlwr\_s\_l, \_mbslwr\_s, \_mbslwr\_s\_l, \_wcslwr\_s, \_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+ [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)

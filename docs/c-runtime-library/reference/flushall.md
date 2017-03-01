@@ -1,78 +1,93 @@
 ---
-title: "_flushall | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_flushall"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_flushall"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função flushall"
-  - "liberando fluxos"
-  - "fluxos de liberação"
-  - "Função _flushall"
+title: _flushall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _flushall
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _flushall
+dev_langs:
+- C++
+helpviewer_keywords:
+- flushall function
+- flushing streams
+- streams, flushing
+- _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
 caps.latest.revision: 16
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _flushall
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7d1802d3d1c61099a7e260617ad8e7858c25501d
+ms.lasthandoff: 02/25/2017
 
-Libera todos os fluxos; limpa todos os buffers.  
+---
+# <a name="flushall"></a>_flushall
+Libera todos os fluxos, limpa todos os buffers.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _flushall( void );  
 ```  
   
-## Valor de retorno  
- `_flushall` retorna o número de fluxos abertos \(entrada e saída\).  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ `_flushall` retorna o número de fluxos abertos (entrada e saída). Nenhum erro é retornado.  
   
-## Comentários  
- Por padrão, a função de `_flushall` grava os arquivos apropriados o conteúdo de todos os buffers associados com os fluxos de saída abertos.  Todos os buffers associados com os fluxos de entrada abertos serão desmarcados de seus conteúdos atuais. \(Esses buffers são mantidos normalmente pelo sistema operacional, que determina o tempo ótimos de gravar automaticamente os dados em disco: quando um buffer for concluída, quando um fluxo está fechado, ou quando um programa será encerrado normalmente sem fechar os fluxos.\)  
+## <a name="remarks"></a>Comentários  
+ Por padrão, a função `_flushall` grava nos arquivos adequados o conteúdo de todos os buffers associados a fluxos de saída abertos. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)  
   
- Se uma leitura segue uma chamada a `_flushall`, os novos dados são lidos os arquivos de entrada nos buffers.  Todos os fluxos permanecem abertos depois da chamada a `_flushall`.  
+ Se uma leitura seguir uma chamada para `_flushall`, novos dados serão lidos dos arquivos de entrada nos buffers. Todos os fluxos permanecerão abertos após a chamada para `_flushall`.  
   
- O recurso de disco confirmação\-à\- da biblioteca de tempo de execução permite garantir que os dados críticos seja gravado diretamente no disco em vez de buffers do sistema operacional.  Sem reescrever um programa existente, você pode habilitar esse recurso vincular os arquivos de programa do objeto com Commode.obj.  No arquivo executável resultante, as chamadas para `_flushall` grava o conteúdo de todos os buffers em disco.  Somente `_flushall` e `fflush` são afetados por Commode.obj.  
+ O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para `_flushall` gravam o conteúdo de todos os buffers no disco. Somente `_flushall` e `fflush` são afetados por Commode.obj.  
   
- Para obter informações sobre como controlar o recurso de confirmação\-à\- disco, consulte [Fluxo de E\/S](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md), e [\_fdopen](../Topic/_fdopen,%20_wfdopen.md).  
+ Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) e [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_flushall`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_flushall`|\<stdio.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_flushall.c  
@@ -90,8 +105,11 @@ int main( void )
 }  
 ```  
   
-  **Houvesse 3 fluxos liberados**   
-## Equivalência do .NET Framework  
+```Output  
+There were 3 streams flushed  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
   
@@ -101,9 +119,9 @@ int main( void )
   
 -   [System::IO::BinaryWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.flush.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [\_commit](../../c-runtime-library/reference/commit.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../Topic/fflush.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [_commit](../../c-runtime-library/reference/commit.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

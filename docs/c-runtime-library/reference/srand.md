@@ -1,57 +1,71 @@
 ---
-title: "srand | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "srand"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "srand"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "números, pseudoaleatórios"
-  - "números, aleatório"
-  - "números pseudoaleatórios"
-  - "números aleatórios, gerando"
-  - "ponto inicial aleatório"
-  - "ponto inicial aleatório, configuração"
-  - "Função srand"
-  - "pontos iniciais"
-  - "pontos iniciais, definindo aleatório"
+title: srand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- srand
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- srand
+dev_langs:
+- C++
+helpviewer_keywords:
+- random starting point
+- random starting point, setting
+- random numbers, generating
+- srand function
+- numbers, pseudorandom
+- numbers, random
+- pseudorandom numbers
+- starting points, setting random
+- starting points
 ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# srand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4b66807016325bd363627fc1104bedb7b980cc83
+ms.lasthandoff: 02/25/2017
 
-Define o valor inicial de semente para o gerador de número pseudoaleatório.  
+---
+# <a name="srand"></a>srand
+Define o valor de semente inicial para o gerador de números pseudoaleatórios.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void srand(  
@@ -59,27 +73,27 @@ void srand(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `seed`  
- Semente para a geração de número pseudoaleatório  
+ Semente para geração de números pseudoaleatórios  
   
-## Comentários  
- A função de `srand` define o ponto de partida para gerar uma série de inteiros pseudoaleatório no thread atual.  Para reinicializar o gerador para criar a mesma sequência de resultados, chame a função de `srand` e use o mesmo argumento de `seed` novamente.  Qualquer outro valor para `seed` define o gerador a um ponto de partida diferente na sequência pseudoaleatório.  `rand` recupera os números pseudoaleatório que são gerados.  Chamada `rand` antes de qualquer chamada para gerar `srand` a mesma sequência de chamar `srand` com `seed` passada como 1.  
+## <a name="remarks"></a>Comentários  
+ A função `srand` define o ponto de partida para gerar uma série de inteiros pseudoaleatórios no thread atual. Para reinicializar o gerador para criar a mesma sequência de resultados, chame a função `srand` e use o mesmo argumento `seed` novamente. Qualquer outro valor de `seed` define o gerador para um ponto de partida diferente na sequência de números pseudoaleatórios. `rand` recupera os números pseudoaleatórios que são gerados. Chamar `rand` antes de qualquer chamada para `srand` gera a mesma sequência que chamar `srand` com `seed` passado como 1.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`srand`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`srand`|\<stdlib.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
- Consulte o exemplo de [margem](../Topic/rand.md).  
+## <a name="example"></a>Exemplo  
+ Veja o exemplo de [rand](../../c-runtime-library/reference/rand.md).  
   
-## Equivalência do .NET Framework  
- [Classe de System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ [Classe System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [rand](../Topic/rand.md)
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [rand](../../c-runtime-library/reference/rand.md)

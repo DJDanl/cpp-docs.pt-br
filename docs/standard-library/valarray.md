@@ -1,109 +1,127 @@
 ---
-title: "&lt;valarray&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<valarray>"
-  - "valarray/std::<valarray>"
-  - "std::<valarray>"
-  - "<valarray>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho valarray"
+title: '&lt;valarray&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<valarray>
+- valarray/std::<valarray>
+- std::<valarray>
+- <valarray>
+dev_langs:
+- C++
+helpviewer_keywords:
+- valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
 caps.latest.revision: 19
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;valarray&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 30e284b7b37bdab16a6fdb7e05b73c1c20bf1458
+ms.lasthandoff: 02/25/2017
 
-Define o valarray de classe de modelo e várias classes de modelo e de suporte funções.  
+---
+# <a name="ltvalarraygt"></a>&lt;valarray&gt;
+Define o valarray da classe de modelo e várias classes de modelo e funções com suporte.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <valarray>  
   
 ```  
   
-## Comentários  
- Essas funções e classes de modelo são permitidas latitude incomuns por razões de desempenho aprimorado.  Especificamente, qualquer tipo de retorno de função**valarray \<**T1**\>**pode retornar um objeto de outro tipo T2.  Nesse caso, qualquer função que aceita um ou mais argumentos de tipo**valarray \<**T2**\>**deve ter sobrecargas que aceitam arbitrárias combinações desses argumentos, cada substituída por um argumento do tipo T2.  
+## <a name="remarks"></a>Comentários  
+ Essas classes de modelo e funções são latitudes incomuns permitidas por razões de desempenho aprimorado. De forma específica, qualquer função que retorne o tipo **valarray\<**T1**>** pode retornar um objeto de outro tipo T2. Nesse caso, qualquer função que aceite um ou mais argumentos do tipo **valarray\<**T2**>** deve ter sobrecargas que aceitam combinações arbitrárias desses argumentos, cada uma substituída por um argumento do tipo T2.  
   
-### Funções  
-  
-|||  
-|-|-|  
-|[abs](../Topic/abs%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais ao valor absoluto dos elementos de valarray de entrada.|  
-|[acos](../Topic/acos%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o arco cosseno dos elementos de valarray de entrada.|  
-|[asin](../Topic/asin%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o arco seno dos elementos de valarray de entrada.|  
-|[atan](../Topic/atan%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais ao valor principal de tangente dos elementos de valarray de entrada.|  
-|[atan2](../Topic/atan2%20\(%3Cvalarray%3E\).md)|Retorna um valarray cujos elementos são iguais para o arco tangente do cartesiano componentes especificados por uma combinação de constantes e elementos de valarrays.|  
-|[cos](../Topic/cos%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o cosseno dos elementos de valarray de entrada.|  
-|[cosh](../Topic/cosh%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o cosseno hiperbólico dos elementos de valarray de entrada.|  
-|[exp](../Topic/exp%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais a natural do exponencial dos elementos de valarray de entrada.|  
-|[log](../Topic/log%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o logaritmo natural dos elementos de valarray de entrada.|  
-|[log10](../Topic/log10%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais a base 10 ou logaritmo comum dos elementos de valarray de entrada.|  
-|[pow](../Topic/pow%20\(%3Cvalarray%3E\).md)|Opera nos elementos de entrada valarrays e constantes, retornando um valarray cujos elementos são iguais a uma base especificada pelos elementos de uma entrada valarray ou uma constante elevada a um expoente especificado pelos elementos de uma entrada valarray ou uma constante.|  
-|[sin](../Topic/sin%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o seno dos elementos de valarray de entrada.|  
-|[sinh](../Topic/sinh%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais para o seno hiperbólico dos elementos de valarray de entrada.|  
-|[sqrt](../Topic/sqrt%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais a raiz quadrada de elementos de valarray de entrada.|  
-|[swap](../Topic/swap%20\(%3Cvalarray%3E\).md)||  
-|[tan](../Topic/tan%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais a tangente dos elementos de valarray de entrada.|  
-|[tanh](../Topic/tanh%20\(%3Cvalarray%3E\).md)|Opera nos elementos de uma entrada valarray, retornando um valarray cujos elementos são iguais a tangente hiperbólica dos elementos de valarray de entrada.|  
-  
-### Operadores  
+### <a name="functions"></a>Funções  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/operator!=%20\(%3Cvalarray%3E\).md)|Testa se os elementos correspondentes das duas valarrays tamanhos igual são diferente ou se todos os elementos de um valarray são desiguais um valor especificado do tipo de elemento do valarray.|  
-|[operator%](../Topic/operator%25.md)|Obtém o resto da divisão os elementos correspondentes das duas valarrays tamanhos igual ou da divisão de um valarray por um valor especificado do tipo de elemento da valarray ou da divisão de um valor especificado por um valarray.|  
-|[operator&](../Topic/operator&.md)|Obtém o bit a bit**AND**entre elementos correspondentes das duas valarrays tamanhos igual ou entre um valarray e um valor do tipo de elemento especificado.|  
-|[operador & &](../Topic/operator&&.md)|Obtém a lógica**AND**entre elementos correspondentes das duas valarrays tamanhos igual ou entre um valarray e um valor especificado do tipo de elemento do valarray.|  
-|[Operador \>](../Topic/operator%3E%20\(%3Cvalarray%3E\).md)|Testa se os elementos de um valarray são maiores que os elementos de um valarray de tamanho igual ou se todos os elementos de um valarray são maiores ou menores que um valor especificado do tipo de elemento do valarray.|  
-|[Operador \>\=](../Topic/operator%3E=%20\(%3Cvalarray%3E\).md)|Testa se os elementos de um valarray são maiores ou iguais aos elementos de um valarray de tamanho igual ou se todos os elementos de um valarray são maiores do que ou igual a ou menor ou igual ao valor especificado.|  
-|[Operador \>\>](../Topic/operator%3E%3E%20\(%3Cvalarray%3E\).md)|Os bits para cada elemento de um valarray um número especificado de posições ou por um valor em especificado por um segundo valarray de turnos de direito.|  
-|[operador \<](../Topic/operator%3C%20\(%3Cvalarray%3E\).md)|Testa se os elementos de um valarray são menores do que os elementos de um valarray de tamanho igual ou se todos os elementos de um valarray são maiores ou menores que um valor especificado.|  
-|[Operador \<\=](../Topic/operator%3C=%20\(%3Cvalarray%3E\).md)|Testa se os elementos de um valarray são menores ou iguais aos elementos de um valarray de tamanho igual ou se todos os elementos de um valarray são maiores do que ou igual a ou menor ou igual ao valor especificado.|  
-|[Operador \<\<](../Topic/operator%3C%3C%20\(%3Cvalarray%3E\).md)|Esquerda desloca os bits para cada elemento de um valarray um número especificado de posições ou por um valor em especificado por um segundo valarray.|  
-|[operator\*](../Topic/operator*%20\(%3Cvalarray%3E\).md)|Obtém o produto em entre elementos correspondentes de dois valarrays de tamanhos igual ou entre um valarray um valor especificado do tipo de elemento do valarray.|  
-|[operator\+](../Topic/operator+%20\(%3Cvalarray%3E\).md)|Obtém a soma em entre elementos correspondentes de dois valarrays de tamanhos igual ou entre um valarray um valor especificado do tipo de elemento do valarray.|  
-|[operator\-](../Topic/operator-%20\(%3Cvalarray%3E\)2.md)|Obtém a diferença em entre elementos correspondentes de dois valarrays de tamanhos igual ou entre um valarray um valor especificado do tipo de elemento do valarray.|  
-|[operador \/](../Topic/operator-%20\(%3Cvalarray%3E\)1.md)|Obtém o quociente em entre elementos correspondentes de dois valarrays de tamanhos igual ou entre um valarray um valor especificado do tipo de elemento do valarray.|  
-|[operator\=\=](../Topic/operator==%20\(%3Cvalarray%3E\).md)|Testes sejam os elementos correspondentes das duas valarrays igual tamanhos igual ou se estão todos os elementos de um valarray igual a um valor especificado do tipo de elemento do valarray.|  
-|[operator^](../Topic/operator%5E.md)|Obtém o bit a bit exclusivo`OR`entre elementos correspondentes das duas valarrays tamanhos igual ou entre um valarray e um valor do tipo de elemento especificado.|  
-|[operator&#124;](../Topic/operator%7C.md)|Obtém o bit a bit`OR`entre elementos correspondentes das duas valarrays tamanhos igual ou entre um valarray e um valor do tipo de elemento especificado.|  
-|[Operator &#124; &#124;](../Topic/operator%7C%7C.md)|Obtém a lógica`OR`entre elementos correspondentes das duas valarrays tamanhos igual ou entre um valarray e um valor especificado do tipo de elemento do valarray.|  
+|[abs](../standard-library/valarray-functions.md#abs)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao valor absoluto dos elementos da valarray de entrada.|  
+|[acos](../standard-library/valarray-functions.md#acos)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao arco cosseno dos elementos da valarray de entrada.|  
+|[asin](../standard-library/valarray-functions.md#asin)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao arco seno dos elementos da valarray de entrada.|  
+|[atan](../standard-library/valarray-functions.md#atan)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao valor de entidade de segurança do arco tangente dos elementos da valarray de entrada.|  
+|[atan2](../standard-library/valarray-functions.md#atan2)|Retorna uma valarray cujos elementos são iguais ao arco tangente dos componentes cartesianos especificados por uma combinação de constantes e de elementos de valarrays.|  
+|[cos](../standard-library/valarray-functions.md#cos)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao cosseno dos elementos da valarray de entrada.|  
+|[cosh](../standard-library/valarray-functions.md#cosh)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao cosseno hiperbólico dos elementos da valarray de entrada.|  
+|[exp](../standard-library/valarray-functions.md#exp)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao exponencial natural dos elementos da valarray de entrada.|  
+|[log](../standard-library/valarray-functions.md#log)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao logaritmo natural dos elementos da valarray de entrada.|  
+|[log10](../standard-library/valarray-functions.md#log10)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao logaritmo de base 10 ou comum dos elementos da valarray de entrada.|  
+|[pow](../standard-library/valarray-functions.md#pow)|Opera nos elementos de constantes e de valarrays de entrada retornando uma valarray cujos elementos são iguais a uma base especificada pelos elementos de uma valarray de entrada ou uma constante elevada a um expoente especificado pelos elementos de uma constante ou de uma valarray de entrada.|  
+|[sin](../standard-library/valarray-functions.md#sin)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao seno dos elementos da valarray de entrada.|  
+|[sinh](../standard-library/valarray-functions.md#sinh)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais ao seno hiperbólico dos elementos da valarray de entrada.|  
+|[sqrt](../standard-library/valarray-functions.md#sqrt)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais à raiz quadrada dos elementos da valarray de entrada.|  
+|[swap](../standard-library/valarray-functions.md#swap)||  
+|[tan](../standard-library/valarray-functions.md#tan)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais à tangente dos elementos da valarray de entrada.|  
+|[tanh](../standard-library/valarray-functions.md#tanh)|Opera nos elementos de uma valarray de entrada retornando uma valarray cujos elementos são iguais à tangente hiperbólica dos elementos da valarray de entrada.|  
   
-### Classes  
-  
-|||  
-|-|-|  
-|[Classe gslice](../Topic/gslice%20Class.md)|Uma classe de utilitário para valarray é usado para definir fatias multidimensionais de um valarray.|  
-|[Classe gslice\_array](../standard-library/gslice-array-class.md)|Uma classe de modelo interno, auxiliar que oferece suporte a objetos de fatia geral, fornecendo operações entre matrizes de subconjunto definidas pela fatia geral de um valarray.|  
-|[Classe indirect\_array](../standard-library/indirect-array-class.md)|Uma classe de modelo interno, auxiliar que oferece suporte a objetos que são subconjuntos de valarrays fornecendo operações entre matrizes de subconjunto definidos especificando um subconjunto dos índices de valarray um pai.|  
-|[Classe mask\_array](../Topic/mask_array%20Class.md)|Uma classe de modelo interno, auxiliar que oferece suporte a objetos que são subconjuntos de valarrays pai, especificado com uma expressão booleana, fornecendo operações entre as matrizes de subconjunto.|  
-|[Classe slice](../Topic/slice%20Class.md)|Uma classe de utilitário para valarray é usado para definir unidimensionais, semelhante ao vetor, subconjuntos de um valarray.|  
-|[Classe slice\_array](../standard-library/slice-array-class.md)|Uma classe de modelo interno, auxiliar que oferece suporte a objetos de fatia, fornecendo operações entre matrizes de subconjunto definidas pela fatia de um valarray.|  
-|[Classe valarray](../standard-library/valarray-class.md)|A classe de modelo descreve um objeto que controla uma sequência de elementos do tipo**tipo**que são armazenados como uma matriz e projetado para executar operações matemáticas em alta velocidade, otimizadas para desempenho computacional.|  
-  
-### Especializações  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[valarray \< bool \> classe](../Topic/valarray%3Cbool%3E%20Class.md)|Uma versão especializada do modelo classe valarray \<**tipo**\> para elementos do tipo`bool`.|  
+|[operator!=](../standard-library/valarray-operators.md#operator_neq)|Testa se os elementos correspondentes de duas valarrays de tamanhos iguais são diferentes ou se todos os elementos de uma valarray são diferentes de um valor especificado do tipo de elemento da valarray.|  
+|[operator%](../standard-library/valarray-operators.md#operator_mod)|Obtém o resto da divisão dos elementos correspondentes de duas valarrays de tamanhos iguais, da divisão de uma valarray por um valor especificado do tipo de elemento da valarray ou da divisão de um valor especificado por uma valarray.|  
+|[operator&](../standard-library/valarray-operators.md#operator_amp_)|Obtém o **AND** bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|  
+|[operator&&](../standard-library/valarray-operators.md#operator_amp__amp_)|Obtém o **AND** lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|  
+|[operator>](../standard-library/valarray-operators.md#operator_gt_)|Testa se os elementos de uma valarray são maiores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado do tipo de elemento da valarray.|  
+|[operator>=](../standard-library/valarray-operators.md#operator_gt__eq)|Testa se os elementos de uma valarray são maiores ou iguais aos elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores, menores ou iguais a um valor especificado.|  
+|[operator>>](../standard-library/valarray-operators.md#operator_gt__gt_)|Desloca para a direita os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|  
+|[operator<](../standard-library/valarray-operators.md#operator_lt_)|Testa se os elementos de uma valarray são menores que os elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores ou menores que um valor especificado.|  
+|[operator<=](../standard-library/valarray-operators.md#operator_lt__eq)|Testa se os elementos de uma valarray são menores ou iguais aos elementos de uma valarray de tamanho igual ou se todos os elementos de uma valarray são maiores, menores ou iguais a um valor especificado.|  
+|[operator<<](../standard-library/valarray-operators.md#operator_lt__lt_)|Desloca para a esquerda os bits de cada elemento de uma valarray por um número especificado de posições ou por um valor elemento a elemento especificado por uma segunda valarray.|  
+|[operator*](../standard-library/valarray-operators.md#operator_star)|Obtém o produto elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|  
+|[operator+](../standard-library/valarray-operators.md#operator_add)|Obtém a soma elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|  
+|[operator-](../standard-library/valarray-operators.md#operator-)|Obtém a subtração elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|  
+|[operator/](../standard-library/valarray-operators.md#operator_)|Obtém o quociente elemento a elemento entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray de um valor especificado do tipo de elemento da valarray.|  
+|[operator==](../standard-library/valarray-operators.md#operator_eq_eq)|Testa se os elementos correspondentes de duas valarrays de tamanhos iguais são iguais ou se todos os elementos de uma valarray são iguais a um valor especificado do tipo de elemento da valarray.|  
+|[operator^](../standard-library/valarray-operators.md#operator_xor)|Obtém o bit a bit exclusivo `OR` entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|  
+|[operator&#124;](../standard-library/valarray-operators.md#operator_or)|Obtém o `OR` bit a bit entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento.|  
+|[operator&#124;&#124;](../standard-library/valarray-operators.md#operator_lor)|Obtém o `OR` lógico entre os elementos correspondentes de duas valarrays de tamanhos iguais ou entre uma valarray e um valor especificado do tipo de elemento da valarray.|  
   
-## Consulte também  
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[Classe gslice](../standard-library/gslice-class.md)|Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.|  
+|[Classe gslice_array](../standard-library/gslice-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos de fatia geral fornecendo operações entre matrizes de subconjunto definidas pela fatia geral de um valarray.|  
+|[Classe indirect_array](../standard-library/indirect-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos que são subconjuntos de valarrays fornecendo operações entre matrizes de subconjunto definidas pela especificação de um subconjunto de índices de uma valarray pai.|  
+|[Classe mask_array](../standard-library/mask-array-class.md)|Uma classe de modelo interno e auxiliar, que dá suporte para objetos que são subconjuntos dos valarrays pai, especificados com uma expressão booliana, ao fornecer operações entre as matrizes de subconjunto.|  
+|[Classe slice](../standard-library/slice-class.md)|Uma classe de utilitário para valarray usada para definir subconjuntos unidimensionais, parecidos com um vetor de uma valarray.|  
+|[Classe slice_array](../standard-library/slice-array-class.md)|Uma classe de modelo auxiliar interna, que dá suporte a objetos de fatia fornecendo operações entre matrizes de subconjunto definidas pela fatia de um valarray.|  
+|[Classe valarray](../standard-library/valarray-class.md)|A classe de modelo descreve um objeto que controla uma sequência de elementos do tipo **Type** armazenados como uma matriz, projetada para executar operações matemáticas em alta velocidade e otimizada para o desempenho computacional.|  
+  
+### <a name="specializations"></a>Especializações  
+  
+|||  
+|-|-|  
+|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Uma versão especializada da classe de modelo valarray\<**Type**> para elementos do tipo `bool`.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

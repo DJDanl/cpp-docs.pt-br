@@ -1,58 +1,72 @@
 ---
-title: "_splitpath_s, _wsplitpath_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wsplitpath_s"
-  - "_splitpath_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wsplitpath_s"
-  - "splitpath_s"
-  - "_splitpath_s"
-  - "wsplitpath_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _splitpath_s"
-  - "Função _wsplitpath_s"
-  - "nomes de caminho"
-  - "nomes de caminho"
-  - "Função splitpath_s"
-  - "Função wsplitpath_s"
+title: _splitpath_s, _wsplitpath_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wsplitpath_s
+- _splitpath_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wsplitpath_s
+- splitpath_s
+- _splitpath_s
+- wsplitpath_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- splitpath_s function
+- pathnames
+- _splitpath_s function
+- _wsplitpath_s function
+- path names
+- wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
 caps.latest.revision: 29
-caps.handback.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _splitpath_s, _wsplitpath_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
+ms.lasthandoff: 02/25/2017
 
-Interrompe um nome de caminho em componentes.  Essas são versões de [\_splitpath, \_wsplitpath](../Topic/_splitpath,%20_wsplitpath.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+Divide um nome de caminho em componentes. Estas são versões de [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t _splitpath_s(  
@@ -95,100 +109,100 @@ errno_t _wsplitpath_s(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[entrada\] `path`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `path`  
  Caminho completo.  
   
- \[saída\] `drive`  
- Letra de unidade, seguido por dois\-pontos \(`:`\).  Você pode passar `NULL` para este parâmetro se você não precisar mais da letra da unidade.  
+ [out] `drive`  
+ Letra da unidade, seguida por dois pontos (`:`). Você pode passar `NULL` para esse parâmetro se a letra da unidade não é necessária.  
   
- \[entrada\] `driveNumberOfElements`  
- O tamanho do buffer de `drive` em um byte ou em caracteres amplos.  Se `drive` é `NULL`, este valor deve ser 0.  
+ [in] `driveNumberOfElements`  
+ O tamanho do buffer `drive` em caracteres de byte único ou largos. Se `drive` é `NULL`, esse valor deve ser 0.  
   
- \[saída\] `dir`  
- Caminho de diretório, inclusive a barra à direita.  As barras \( `/` \), as barras invertidas \( `\` \), ou ambos podem ser usadas.  Você pode passar `NULL` para este parâmetro se você não precisa do caminho de diretório.  
+ [out] `dir`  
+ Caminho do diretório, incluindo barra à direita. Barras duplas (`/`), barras invertidas (`\`) ou ambas podem ser usadas. Você pode passar `NULL` para esse parâmetro se o caminho do diretório não é necessário.  
   
- \[entrada\] `dirNumberOfElements`  
- O tamanho do buffer de `dir` em um byte ou em caracteres amplos.  Se `dir` é `NULL`, este valor deve ser 0.  
+ [in] `dirNumberOfElements`  
+ O tamanho do buffer `dir` em caracteres de byte único ou largos. Se `dir` é `NULL`, esse valor deve ser 0.  
   
- \[saída\] `fname`  
- Nome de arquivo base \(sem a extensão\).  Você pode passar `NULL` para este parâmetro se você não precisa do nome de arquivo.  
+ [out] `fname`  
+ Nome de arquivo base (sem extensão). Você pode passar `NULL` para esse parâmetro se o nome de arquivo não é necessário.  
   
- \[entrada\] `nameNumberOfElements`  
- O tamanho do buffer de `fname` em um byte ou em caracteres amplos.  Se `fname` é `NULL`, este valor deve ser 0.  
+ [in] `nameNumberOfElements`  
+ O tamanho do buffer `fname` em caracteres de byte único ou largos. Se `fname` é `NULL`, esse valor deve ser 0.  
   
- \[saída\] `ext`  
- Extensão de nome de arquivo, incluindo período principal \(**.**\). Você pode passar `NULL` para este parâmetro se você não precisar mais da extensão de nome de arquivo.  
+ [out] `ext`  
+ Extensão de nome de arquivo, incluindo ponto à esquerda (**.**). Você pode passar `NULL` para esse parâmetro se a extensão do nome do arquivo não é necessária.  
   
- \[entrada\] `extNumberOfElements`  
- O tamanho do buffer de `ext` em um byte ou em caracteres amplos.  Se `ext` é `NULL`, este valor deve ser 0.  
+ [in] `extNumberOfElements`  
+ O tamanho do buffer `ext` em caracteres de byte único ou largos. Se `ext` é `NULL`, esse valor deve ser 0.  
   
-## Valor de retorno  
- Zero se tiver êxito; um código de erro em falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido; um código de erro em caso de falha.  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|Condição|Valor de Retorno|  
-|--------------|----------------------|  
+|Condição|Valor de retorno|  
+|---------------|------------------|  
 |`path` é `NULL`|`EINVAL`|  
-|`drive` é `NULL`, `driveNumberOfElements` for diferente de zero|`EINVAL`|  
-|`drive` é`NULL`não, `driveNumberOfElements` é zero|`EINVAL`|  
-|`dir` é `NULL`, `dirNumberOfElements` for diferente de zero|`EINVAL`|  
-|`dir` é`NULL`não, `dirNumberOfElements` é zero|`EINVAL`|  
-|`fname` é `NULL`, `nameNumberOfElements` for diferente de zero|`EINVAL`|  
-|`fname` é`NULL`não, `nameNumberOfElements` é zero|`EINVAL`|  
-|`ext` é `NULL`, `extNumberOfElements` for diferente de zero|`EINVAL`|  
-|`ext` é`NULL`não, `extNumberOfElements` é zero|`EINVAL`|  
+|`drive` é `NULL`, `driveNumberOfElements` é diferente de zero|`EINVAL`|  
+|`drive` é diferente de `NULL`, `driveNumberOfElements` é zero|`EINVAL`|  
+|`dir` é `NULL`, `dirNumberOfElements` é diferente de zero|`EINVAL`|  
+|`dir` é diferente de `NULL`, `dirNumberOfElements` é zero|`EINVAL`|  
+|`fname` é `NULL`, `nameNumberOfElements` é diferente de zero|`EINVAL`|  
+|`fname` é diferente de `NULL`, `nameNumberOfElements` é zero|`EINVAL`|  
+|`ext` é `NULL`, `extNumberOfElements` é diferente de zero|`EINVAL`|  
+|`ext` é diferente de `NULL`, `extNumberOfElements` é zero|`EINVAL`|  
   
- Se qualquer uma das condições anteriores ocorrerem, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) .  Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.  
+ Se qualquer uma das condições acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `EINVAL`.  
   
- Se algum dos buffers são muito curtos manter o resultado, essas funções desmarque todos os buffers em cadeias de caracteres vazias, definem `errno` a `ERANGE`, e o retorno `ERANGE`.  
+ Se qualquer um dos buffers é curto demais para conter o resultado, essas funções limpam todos os buffers para cadeias de caracteres vazias, definem `errno` como `ERANGE` e retornam `ERANGE`.  
   
-## Comentários  
- A função de `_splitpath_s` interrompe um caminho nos quatro componentes.  `_splitpath_s` controla automaticamente argumentos de cadeia de caracteres de multibyte\- caracteres conforme apropriado, confirmando sequências de multibyte\- caractere de acordo com a página de código de multibyte atualmente em uso.  `_wsplitpath_s` é uma versão de ampla caractere de `_splitpath_s`; os argumentos a `_``wsplitpath_s`são cadeias de caracteres de ampla caractere.  Essas funções se comportam de outra forma idêntica  
+## <a name="remarks"></a>Comentários  
+ A função `_splitpath_s` divide um caminho em seus quatro componentes. `_splitpath_s` manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte que está sendo usada no momento. `_wsplitpath_s` é uma versão de caractere largo de `_splitpath_s`; os argumentos para `_``wsplitpath_s` são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tsplitpath_s`|`_splitpath_s`|`_splitpath_s`|`_wsplitpath_s`|  
   
- Cada componente do caminho completo é armazenado em um buffer separado; as constantes manifestas `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME`, e `_MAX_EXT` \(\) definido em STDLIB.H especificar o tamanho máximo permitido para cada componente do arquivo.  Arquivo dos componentes maiores que o dano manifesto correspondente do heap da causa das constantes.  
+ Cada componente do caminho completo é armazenado em um buffer separado; as constantes de manifesto `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` e `_MAX_EXT` (definidas em STDLIB.H) especificam o tamanho máximo permitido para cada componente de arquivo. Componentes de arquivo maiores do que as constantes de manifesto correspondentes causam corrupção de heap.  
   
- A tabela a seguir lista os valores de constantes manifestas.  
+ A tabela a seguir lista os valores das constantes do manifesto.  
   
 |Nome|Valor|  
 |----------|-----------|  
-|\_MAX\_DRIVE|3|  
-|\_MAX\_DIR|256|  
-|\_MAX\_FNAME|256|  
-|\_MAX\_EXT|256|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
- Se o caminho completo não tiver um componente \(por exemplo, um nome de arquivo\), `_splitpath_s` atribui uma cadeia de caracteres vazia ao buffer correspondente.  
+ Se o caminho completo não contém um componente (por exemplo, um nome de arquivo), `_splitpath_s` atribui uma cadeia de caracteres vazia ao buffer correspondente.  
   
- No C\+\+, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD.  Para desabilitar esse comportamento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_splitpath_s`|\<stdlib.h\>|  
-|`_wsplitpath_s`|\<stdlib.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_splitpath_s`|\<stdlib.h>|  
+|`_wsplitpath_s`|\<stdlib.h> ou \<wchar.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
- Consulte o exemplo de [\_makepath\_s, \_wmakepath\_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
+## <a name="example"></a>Exemplo  
+ Veja o exemplo de [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Manipulação de arquivos](../../c-runtime-library/file-handling.md)   
- [\_splitpath, \_wsplitpath](../Topic/_splitpath,%20_wsplitpath.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)

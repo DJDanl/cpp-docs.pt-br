@@ -1,54 +1,68 @@
 ---
-title: "_fread_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fread_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fread_nolock"
-  - "fread_nolock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _fread_nolock"
-  - "dados [C++], lendo de fluxo de entrada"
-  - "Função fread_nolock"
-  - "lendo dados [C++], de fluxos de entrada"
-  - "fluxos [C++], lendo dados de"
+title: _fread_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fread_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fread_nolock
+- fread_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- data [C++], reading from input stream
+- fread_nolock function
+- _fread_nolock function
+- streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _fread_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1aab497606be10ec017f148e8060f6d8922e1078
+ms.lasthandoff: 02/25/2017
 
-Ler dados de um fluxo, sem bloquear outros threads.  
+---
+# <a name="freadnolock"></a>_fread_nolock
+Lê dados de um fluxo sem bloquear outros threads.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_t _fread_nolock(   
@@ -59,9 +73,9 @@ size_t _fread_nolock(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `buffer`  
- Local para armazenamento de dados.  
+ Local de armazenamento de dados.  
   
  `size`  
  Tamanho do item em bytes.  
@@ -72,24 +86,24 @@ size_t _fread_nolock(
  `stream`  
  Ponteiro para a estrutura `FILE`.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Consulte [fread](../../c-runtime-library/reference/fread.md).  
   
-## Comentários  
- Esta função é uma versão sem\-bloqueio de `fread`.  É idêntica a `fread` exceto que não é protegida de interferências dos outros threads.  Pode ser mais rápida porque não imponha a sobrecarga do bloqueio out outros threads.  Use essa função só em contextos seguro para threads como aplicativos de thread único ou onde os identificadores do escopo da chamada já thread o isolamento.  
+## <a name="remarks"></a>Comentários  
+ Esta função é uma versão sem bloqueio de `fread`. É idêntica a `fread`, exceto pelo fato de não ser protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_fread_nolock`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`_fread_nolock`|\<stdio.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../Topic/fwrite.md)   
- [\_read](../Topic/_read.md)
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [fwrite](../../c-runtime-library/reference/fwrite.md)   
+ [_read](../../c-runtime-library/reference/read.md)
