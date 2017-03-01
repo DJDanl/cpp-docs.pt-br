@@ -1,51 +1,65 @@
 ---
-title: "wcsrtombs_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "conversão de cadeia de caracteres, caracteres largos"
-  - "Função wcsrtombs_s"
-  - "caracteres largos, cadeias de caracteres"
+title: wcsrtombs_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- string conversion, wide characters
+- wcsrtombs_s function
+- wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
 caps.latest.revision: 27
-caps.handback.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# wcsrtombs_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 52f3395cc878c1f051867d81ee12d0c9b3de619d
+ms.lasthandoff: 02/25/2017
 
-Converter uma cadeia de caracteres amplas em sua representação de cadeia de caracteres de vários bytes.  Uma versão de [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="wcsrtombss"></a>wcsrtombs_s
+Converte uma cadeia de caracteres largos em sua representação de cadeia de caracteres multibyte. Uma versão de [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t wcsrtombs_s(  
@@ -66,66 +80,66 @@ errno_t wcsrtombs_s(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[saída\] `pReturnValue`  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `pReturnValue`  
  O número de caracteres convertidos.  
   
- \[saída\] `mbstr`  
- O endereço de um buffer resultante para converter a cadeia de caracteres de vários bytes.  
+ [out] `mbstr`  
+ O endereço de um buffer da cadeia de caracteres multibyte convertida resultante.  
   
- \[saída\] `sizeInBytes`  
- O tamanho em bytes do buffer de `mbstr` .  
+ [out] `sizeInBytes`  
+ O tamanho em bytes do buffer `mbstr`.  
   
- \[entrada\] `wcstr`  
- Aponta para a cadeia de caracteres amplas a ser convertida.  
+ [in] `wcstr`  
+ Aponta para a cadeia de caracteres largos a ser convertida.  
   
- \[entrada\] `count`  
- O número máximo de bytes a serem armazenadas no buffer de `mbstr` , ou [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ [in] `count`  
+ O número máximo de bytes a ser armazenado no buffer `mbstr` ou em [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- \[entrada\] `mbstate`  
- Um ponteiro para um objeto do estado da conversão de `mbstate_t` .  
+ [in] `mbstate`  
+ Um ponteiro para um objeto do estado da conversão `mbstate_t`.  
   
-## Valor de retorno  
- Zero se tiver êxito, um código de erro ou falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido ou um código de erro em caso de falha.  
   
-|Condição de erro|Valor de retorno e `errno`|  
-|----------------------|--------------------------------|  
-|`mbstr` é `NULL` e `sizeInBytes` \> 0|`EINVAL`|  
+|Condição de erro|Valor retornado e `errno`|  
+|---------------------|------------------------------|  
+|`mbstr` é `NULL` e `sizeInBytes` > 0|`EINVAL`|  
 |`wcstr` é `NULL`|`EINVAL`|  
-|O buffer de destino for muito pequeno conter a cadeia de caracteres convertida \(a menos que `count` é `_TRUNCATE`; consulte os comentários abaixo\)|`ERANGE`|  
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que `count` seja `_TRUNCATE`; consulte Comentários abaixo)|`ERANGE`|  
   
- Se alguma dessas condições ocorrer, a exceção inválido do parâmetro é chamada conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) .  Se a execução for permitida continuar, a função retornará um código de erro e define `errno` conforme indicado na tabela.  
+ Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um código de erro e definirá `errno` conforme indicado na tabela.  
   
-## Comentários  
- A função de `wcsrtombs_s` converte uma cadeia de caracteres de caracteres amplos apontados por `wcstr` em caracteres multibyte armazenados em buffer apontado por `mbstr`, usando o estado de conversão contido em `mbstate`.  A conversão para cada caractere continuará até que uma destas condições seja atender:  
+## <a name="remarks"></a>Comentários  
+ A função `wcsrtombs_s` converte uma cadeia de caracteres largos apontada por `wcstr` em caracteres multibyte armazenados no buffer apontado por `mbstr` usando o estado da conversão contido em `mbstate`. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:  
   
 -   Um caractere largo nulo é encontrado  
   
--   Um caractere largo que não pode ser convertido for encontrado  
+-   Um caractere largo que não pode ser convertido é encontrado  
   
--   O número de bytes armazenados em buffer de `mbstr` igual `count`.  
+-   O número de bytes armazenados no buffer `mbstr` é igual a `count`.  
   
- A cadeia de caracteres de destino tiver terminação sempre \(até mesmo no caso de um erro\).  
+ A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de erro).  
   
- Se `count` é o valor especial [\_TRUNCATE](../../c-runtime-library/truncate.md), então `wcsrtombs_s` converte o máximo possível da cadeia de caracteres como caiba no buffer de destino, enquanto ainda deixar de espaço para um terminador nulo.  
+ Se `count` for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `wcsrtombs_s` converterá o máximo da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um terminador nulo.  
   
- Se `wcsrtombs_s` converte a cadeia de caracteres de origem, coloca o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em `*``pReturnValue` \( `pReturnValue` fornecido não for `NULL`\).  Isso ocorre mesmo se o argumento de `mbstr` é `NULL` e fornece uma maneira de determinar o tamanho de buffer necessário.  Observe que se `mbstr` é `NULL`, `count` será ignorado.  
+ Se `wcsrtombs_s` converter com êxito a cadeia de caracteres de origem, ele colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em `*``pReturnValue` (desde que `pReturnValue` não seja `NULL`). Isso ocorrerá mesmo se o argumento `mbstr` for `NULL` e fornecerá uma maneira de determinar o tamanho do buffer necessário. Observe que se `mbstr` for `NULL`, `count` será ignorado.  
   
- Se `wcsrtombs_s` encontrar um caractere largo que não pode converter em um caracteres multibyte, o coloca \-1 em `*``pReturnValue`, define o buffer de destino em uma cadeia de caracteres vazia, define `errno` a `EILSEQ`, e retorna `EILSEQ`.  
+ Se `wcsrtombs_s` encontrar um caractere largo que não seja possível converter em um caractere multibyte, ele colocará –1 em `*``pReturnValue`, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá `errno` como `EILSEQ` e retornará `EILSEQ`.  
   
- Se as sequências apontadas por `wcstr` e a sobreposição de `mbstr` , o comportamento de `wcsrtombs_s` são indefinidas.  `wcsrtombs_s` é afetado por categoria de LC\_TYPE de localidade atual.  
+ Se as sequências apontadas por `wcstr` e por `mbstr` se sobrepuserem, o comportamento de `wcsrtombs_s` será indefinido. `wcsrtombs_s` é afetado pela categoria LC_TYPE da localidade atual.  
   
 > [!IMPORTANT]
->  Certifique\-se de que `wcstr` e `mbstr` não se sobrepõem, e que `count` reflete corretamente o número de caracteres amplos para converter.  
+>  Verifique se `wcstr` e `mbstr` não se sobrepõem e se `count` reflete corretamente o número de caracteres largos a ser convertido.  
   
- A função de `wcsrtombs_s` difere de [wcstombs\_s, \_wcstombs\_s\_l](../Topic/wcstombs_s,%20_wcstombs_s_l.md) por seu restartability.  O estado da conversão é armazenado em `mbstate` para chamadas subsequentes à mesma ou a outras funções restartable.  Os resultados são definidos ao misturar o uso de funções restartable e nonrestartable.  Por exemplo, um aplicativo use `wcsrlen` em vez de `wcslen`, se uma chamada subsequente a `wcsrtombs_s` foi usado em vez de `wcstombs_s.`  
+ A função `wcsrtombs_s` difere de [wcstombs_s, wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) por sua capacidade de reinicialização. O estado da conversão é armazenado em `mbstate` para chamadas posteriores às mesmas funções ou a outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria `wcsrlen` em vez de `wcslen` se uma chamada subsequente a `wcsrtombs_s` fosse usada em vez de `wcstombs_s.`  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-## Exceções  
- A função de `wcsrtombs_s` é seguro multi\-threaded desde que nenhuma função no thread atual chama `setlocale` quando essa função executar e `mbstate` for nulo.  
+## <a name="exceptions"></a>Exceções  
+ A função `wcsrtombs_s` será multithread-safe contanto que nenhuma função no thread atual chame `setlocale` enquanto essa função estiver em execução e o `mbstate` for nulo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_wcsrtombs_s.cpp  
@@ -168,22 +182,25 @@ void main()
 }  
 ```  
   
-  **A cadeia de caracteres foi convertida com êxito.**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The string was successfully converted.  
+```  
   
-## Requisitos  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`wcsrtombs_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs_s`|\<wchar.h>|  
   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)
