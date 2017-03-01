@@ -1,54 +1,68 @@
 ---
-title: "_configthreadlocale | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_configthreadlocale"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-locale-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_configthreadlocale"
-  - "configthreadlocale"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _configthreadlocale"
-  - "Função configthreadlocale"
-  - "localidades, por thread"
-  - "de acordo com a localidade do thread"
-  - "localidade do thread"
+title: _configthreadlocale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _configthreadlocale
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _configthreadlocale
+- configthreadlocale
+dev_langs:
+- C++
+helpviewer_keywords:
+- configthreadlocale function
+- locales, per-thread
+- _configthreadlocale function
+- per-thread locale
+- thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
 caps.latest.revision: 24
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _configthreadlocale
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
+ms.lasthandoff: 02/25/2017
 
-Configura as opções de localidade por thread.  
+---
+# <a name="configthreadlocale"></a>_configthreadlocale
+Configura operações de localidade por thread.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _configthreadlocale(  
@@ -56,49 +70,49 @@ int _configthreadlocale(
 );  
 ```  
   
-#### Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  `type`  
- A opção a ser definida.  Uma das opções listadas na tabela a seguir.  
+ A opção a ser definida. Uma das opções listadas na tabela a seguir.  
   
-## Valor de retorno  
- O status anterior da localidade por thread \(`_DISABLE_PER_THREAD_LOCALE` ou `_ENABLE_PER_THREAD_LOCALE`\), ou \-1 em caso de falha.  
+## <a name="return-value"></a>Valor de retorno  
+ O status de localidade por thread anterior (`_DISABLE_PER_THREAD_LOCALE` ou `_ENABLE_PER_THREAD_LOCALE`) ou -1 em caso de falha.  
   
-## Comentários  
- A função `_configurethreadlocale` é usada para controlar o uso de locais específicos do thread.  Use uma dessas opções para especificar ou determinar o status de localidade por thread:  
+## <a name="remarks"></a>Comentários  
+ A função `_configurethreadlocale` é usada para controlar o uso de localidades específicas do thread. Use uma dessas opções para especificar ou determinar o status de localidade por thread:  
   
  `_ENABLE_PER_THREAD_LOCALE`  
- Faça o segmento atual usar uma localidade específica de segmento.  As chamadas subsequentes para `setlocale` nesse thread afetam somente o próprio local do thread.  
+ Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes ao `setlocale` neste thread afetam somente a própria localidade do thread.  
   
  `_DISABLE_PER_THREAD_LOCALE`  
- Faça o segmento atual usar a localidade global.  As chamadas subsequentes para `setlocale` nesse thread afetam outros threads que usam o local global.  
+ Faça o thread atual usar a localidade global. As chamadas subsequentes para `setlocale` neste thread afetam outros threads usando a localidade global.  
   
  `0`  
  Recupera a configuração atual para este thread específico.  
   
- Essas funções afetam o comportamento de `setlocale`, `_tsetlocale`, `_wsetlocale`, `_beginthread` e `_beginthreadex`.  Se outro método for usado para criar segmentos, as configurações de localidade não terão efeito nos segmentos.  
+ Essas funções afetam o comportamento de `setlocale`, `_tsetlocale`, e `_wsetlocale`. Quando a localidade por thread é desabilitada, subsequente de qualquer chamada para `setlocale` ou `_wsetlocale` altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, `setlocale` ou `_wsetlocale` afeta somente a localidade do thread atual.  
   
- Quando a localidade por thread é desativada, todas as chamadas subsequentes para `setlocale` ou para `_wsetlocale` alteram a localidade de todos os threads.  Quando a localidade por thread é ativada, `setlocale` ou `_wsetlocale` afeta somente a localidade do thread atual.  
+ Se você usar `_configurethreadlocale` para habilitar uma localidade por thread, recomendamos que você chame `setlocale` ou `_wsetlocale` para definir a localidade preferencial nesse thread imediatamente.  
   
- Se você usar `_configurethreadlocale` para ativar uma localidade por segmento, recomendamos que você chame `setlocale` ou `_wsetlocale` para definir o local preferido nesse segmento imediatamente depois.  
+ Se `type` não for um dos valores listados nessa tabela, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função definirá `errno` como `EINVAL` e retornará -1.  
   
- Se `type` não for um dos valores listados na tabela, essa função chama o manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará \-1.  
-  
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_configthreadlocale`|\<locale.h\>|  
+|-------------|---------------------|  
+|`_configthreadlocale`|\<locale.h>|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // crt_configthreadlocale.cpp  
 //   
 // This program demonstrates the use of _configthreadlocale when  
-// using is two independent threads.  
+// using two independent threads.  
 //  
+// Compile by using: cl /EHsc /W4 crt_configthreadlocale.cpp 
   
 #include <locale.h>  
+#include <mbctype.h>  
 #include <process.h>  
 #include <windows.h>  
 #include <stdio.h>  
@@ -131,12 +145,14 @@ int get_time(unsigned char* str)
   
 // This thread sets its locale to German  
 // and prints the time.  
-unsigned __stdcall SecondThreadFunc( void* pArguments )  
+unsigned __stdcall SecondThreadFunc( void* /*pArguments*/ )  
 {  
     unsigned char str[BUFF_SIZE];  
   
+    _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);  
+
     // Set the thread code page  
-    _setmbcp(_MB_CP_ANSI)  
+    _setmbcp(_MB_CP_ANSI);  
   
     // Set the thread locale  
     printf("The thread locale is now set to %s.\n",  
@@ -160,8 +176,8 @@ int main()
     unsigned        threadID;  
     unsigned char   str[BUFF_SIZE];  
   
-    // Configure per-thread locale to cause all subsequently created   
-    // threads to have their own locale.  
+    // Enable per-thread locale causes all subsequent locale   
+    // setting changes in this thread to only affect this thread.  
     _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);  
   
     // Retrieve the time string from the helper function  
@@ -183,18 +199,20 @@ int main()
   
     // Destroy the thread object.  
     CloseHandle( hThread );  
-}  
+} 
 ```  
   
-  **A localidade do thread agora está definida para Inglês\_Estados Unidos.1252.**  
-**O tempo na localidade Inglês é: 'Wednesday, May 12, 2004'**  
-**A localidade do thread agora está definida para Alemão\_Alemanha.1252.**  
-**O tempo na localidade Alemão é 'Mittwock, 12.  Maio de 2004 '**    
-## Equivalência do .NET Framework  
- Não aplicável. No entanto, consulte [Usando a propriedade CurrentCulture](http://msdn.microsoft.com/pt-br/3156042d-6082-4205-90b4-c917ae6a3ba6).  
+```Output  
+The thread locale is now set to English_United States.1252.  
+The time in English locale is: 'Wednesday, May 12, 2004'  
   
-## Consulte também  
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
- [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md)   
+The thread locale is now set to German_Germany.1252.  
+The time in German locale is: 'Mittwoch, 12. Mai 2004'  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [Localidade](../../c-runtime-library/locale.md)   
- [Multithread e localidades](../../parallel/multithreading-and-locales.md)
+ [Multithread e localidades](../../parallel/multithreading-and-locales.md)  
+

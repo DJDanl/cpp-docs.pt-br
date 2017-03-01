@@ -1,51 +1,66 @@
 ---
-title: "_aligned_realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_realloc"
-  - "aligned_realloc"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função aligned_realloc"
-  - "Função _aligned_realloc"
+title: _aligned_realloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_realloc
+- aligned_realloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_realloc function
+- _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _aligned_realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b385fd07e76aad108765c83c1404e28ac0c9138e
+ms.lasthandoff: 02/25/2017
 
-Altera o tamanho de um bloco de memória que é atribuído com [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
+---
+# <a name="alignedrealloc"></a>_aligned_realloc
+Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void * _aligned_realloc(  
@@ -55,34 +70,34 @@ void * _aligned_realloc(
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `memblock`  
- O ponteiro atual do bloco de memória.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `memblock`  
+ O ponteiro do bloco de memória atual.  
   
- \[entrada\] `size`  
- O tamanho da alocação de memória solicitada.  
+ [in] `size`  
+ Tamanho da alocação de memória solicitada.  
   
- \[entrada\] `alignment`  
- O valor de alinhamento, que deve ser uma potência de inteiro de 2.  
+ [in] `alignment`  
+ O valor de alinhamento, que deve ser um inteiro elevado à segunda potência.  
   
-## Valor de retorno  
- `_aligned_realloc` retorna um ponteiro nulo \(movido e possivelmente\) no bloco de memória realocado.  O valor de retorno é `NULL` se o tamanho for nulo e o argumento de buffer não é `NULL`, ou se não houver memória suficiente disponível para expandir o bloco ao tamanho especificado.  No primeiro caso, o bloco original é liberado.  No segundo, o bloco original permanece inalterado.  O valor de retorno para um espaço de armazenamento que é garantia de ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto.  Para obter um ponteiro para um tipo diferente nulo, use uma conversão de tipos no valor de retorno.  
+## <a name="return-value"></a>Valor de retorno  
+ `_aligned_realloc` retorna um ponteiro nulo para o bloco de memória realocado (e possivelmente migrado). O valor retornado é `NULL` se o tamanho for zero e o argumento do buffer não for `NULL`, ou se não houver memória suficiente para expandir o bloco para o tamanho determinado. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.  
   
- É um erro para realocar a memória e alterar o alinhamento de um bloco.  
+ Realocar a memória e alterar o alinhamento de um bloco é um erro.  
   
-## Comentários  
- `_aligned_realloc` é baseado em `malloc`.  Para obter mais informações sobre como usar `_aligned_offset_malloc`, consulte [malloc](../../c-runtime-library/reference/malloc.md).  
+## <a name="remarks"></a>Comentários  
+ `_aligned_realloc` baseia-se em `malloc`. Para obter mais informações sobre como usar `_aligned_offset_malloc`, consulte [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Esta função define `errno` a `ENOMEM` se a alocação de memória falhou ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`.  Para obter mais informações sobre `errno`, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Além disso, `_aligned_realloc` valida seus parâmetros.  Se `alignment` não é uma potência de 2, esta função invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essa função retornará `NULL` e definirá `errno` como `EINVAL`.  
+ Essa função define `errno` como `ENOMEM` se a alocação da memória tiver falhado ou se o tamanho solicitado for maior que `_HEAP_MAXREQ`. Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, `_aligned_realloc` valida seus parâmetros. Se `alignment` não for um número elevado à segunda potência, essa função invocará o manipulador de parâmetro inválido, conforme a descrição em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará `NULL` e definirá `errno` como `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_aligned_realloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_realloc`|\<malloc.h>|  
   
-## Exemplo  
- Para obter mais informações, consulte [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
+## <a name="example"></a>Exemplo  
+ Para obter mais informações, consulte [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Alinhamento de dados](../../c-runtime-library/data-alignment.md)

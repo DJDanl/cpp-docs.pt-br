@@ -1,69 +1,132 @@
 ---
-title: "Classe cache_suballoc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cache_suballoc"
-  - "allocators/stdext::cache_suballoc"
-  - "stdext::cache_suballoc"
-  - "cache_suballoc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe cache_suballoc"
+title: cache_suballoc Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext.cache_suballoc
+- allocators/stdext::cache_suballoc
+- stdext::cache_suballoc
+- cache_suballoc
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache_suballoc class
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
 caps.latest.revision: 17
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe cache_suballoc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 537930868e47fd1e947a99ff808d870532c38c58
+ms.lasthandoff: 02/25/2017
 
-Define um [Bloquear alocador](../standard-library/allocators-header.md) que aloca e desaloca os blocos de memória de um único tamanho.  
+---
+# <a name="cachesuballoc-class"></a>Classe cache_suballoc
+Define um [alocador de blocos](../standard-library/allocators-header.md) que aloca e desaloca os blocos de memória de um único tamanho.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <std::size_t Sz, size_t Nelts = 20>  
+class cache_suballoc
 ```  
-template <std::size_t Sz, size_t Nelts = 20> class cache_suballoc  
-```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
 |Parâmetro|Descrição|  
-|---------------|---------------|  
-|`Sz`|O número de elementos na matriz a ser alocado.|  
+|---------------|-----------------|  
+|`Sz`|O número de elementos na matriz a serem alocados.|  
   
-## Comentários  
- A classe de modelo cache\_suballoc armazena blocos de memória liberada em uma lista livre com comprimento ilimitado, usando `freelist<sizeof(Type), max_unbounded>`, e suballocates blocos de memória de uma parte maior alocada com `operator new` quando a lista livre está vazia.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo cache_suballoc armazena blocos de memória desalocados em uma lista livre com comprimento ilimitado, usando `freelist<sizeof(Type), max_unbounded>` e subaloca blocos de memória de uma parte maior alocada com `operator new` quando a lista livre está vazia.  
   
- Cada fragmento contém `Sz * Nelts` bytes de memória utilizável e os dados que `operator new` e `operator delete` exigem. Partes alocados nunca são liberados.  
+ Cada parte contém `Sz * Nelts` bytes de memória utilizável e os dados que `operator new` e `operator delete` requerem. Partes alocadas nunca são liberadas.  
   
-### Construtores  
-  
-|||  
-|-|-|  
-|[cache\_suballoc](../Topic/cache_suballoc::cache_suballoc.md)|Constrói um objeto do tipo `cache_suballoc`.|  
-  
-### Funções membro  
+### <a name="constructors"></a>Construtores  
   
 |||  
 |-|-|  
-|[allocate](../Topic/cache_suballoc::allocate.md)|Aloca um bloco de memória.|  
-|[desalocar](../Topic/cache_suballoc::deallocate.md)|Libera um número especificado de objetos desde o início do armazenamento em uma posição especificada.|  
+|[cache_suballoc](#cache_suballoc__cache_suballoc)|Constrói um objeto do tipo `cache_suballoc`.|  
   
-## Requisitos  
- **Cabeçalho:** \< alocadores \>  
+### <a name="member-functions"></a>Funções membro  
+  
+|||  
+|-|-|  
+|[allocate](#cache_suballoc__allocate)|Aloca um bloco de memória.|  
+|[deallocate](#cache_suballoc__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-## Consulte também  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="a-namecachesuballocallocatea--cachesuballocallocate"></a><a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+ Aloca um bloco de memória.  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+  
+|Parâmetro|Descrição|  
+|---------------|-----------------|  
+|`count`|O número de elementos na matriz a serem alocados.|  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para o objeto alocado.  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namecachesuballoccachesuballoca--cachesuballoccachesuballoc"></a><a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+ Constrói um objeto do tipo `cache_suballoc`.  
+  
+```
+cache_suballoc();
+```  
+  
+### <a name="remarks"></a>Comentários  
+  
+##  <a name="a-namecachesuballocdeallocatea--cachesuballocdeallocate"></a><a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+ Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+  
+|Parâmetro|Descrição|  
+|---------------|-----------------|  
+|`ptr`|Um ponteiro para o primeiro objeto a ser desalocado do armazenamento.|  
+|`count`|O número de objetos a serem desalocados do armazenamento.|  
+  
+### <a name="remarks"></a>Comentários  
+  
+## <a name="see-also"></a>Consulte também  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

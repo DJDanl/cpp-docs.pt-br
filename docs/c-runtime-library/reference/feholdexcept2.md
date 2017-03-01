@@ -1,51 +1,65 @@
 ---
-title: "feholdexcept | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feholdexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feholdexcept"
-  - "fenv/feholdexcept"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "função feholdexcept"
+title: feholdexcept2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- feholdexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feholdexcept
+- fenv/feholdexcept
+dev_langs:
+- C++
+helpviewer_keywords:
+- feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# feholdexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="feholdexcept"></a>feholdexcept
 Salva o ambiente atual de ponto flutuante no objeto especificado, limpa os sinalizadores de status do ponto flutuante e, se possível, coloca o ambiente de ponto flutuante no modo contínuo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int feholdexcept(  
@@ -54,30 +68,30 @@ int feholdexcept(
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `penv`  
- Ponteiro para uma `fenv_t` objeto contenha uma cópia do ambiente de ponto flutuante.  
+ Ponteiro para um objeto `fenv_t` para conter uma cópia do ambiente de ponto flutuante.  
   
-## Valor de retorno  
- Retorna zero se e somente se a função é capaz de ativar o tratamento de exceções de ponto flutuante contínuas com êxito.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna zero se, e somente se, a função for capaz de ativar o tratamento de exceções de ponto flutuante contínuas com êxito.  
   
-## Comentários  
- O `feholdexcept` função é usada para armazenar o estado do atual ambiente de ponto flutuante no `fenv_t` objeto apontado por `penv`, e para definir o ambiente para não interromper a execução em exceções de ponto flutuante. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente é restaurado usando [fesetenv](../Topic/fesetenv2.md) ou [feupdateenv](../Topic/feupdateenv.md).  
+## <a name="remarks"></a>Comentários  
+ A função `feholdexcept` é usada para armazenar o estado do ambiente de ponto flutuante atual no objeto `fenv_t` apontado por `penv` e para definir o ambiente para não interromper a execução em exceções de ponto flutuante. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente seja restaurado usando [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) ou [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
   
- Você pode usar essa função no início de uma sub\-rotina que precisa para ocultar uma ou mais exceções de ponto flutuantes do chamador. Para relatar uma exceção, basta limpar as exceções indesejadas usando [feclearexcept,](../../c-runtime-library/reference/feclearexcept1.md) e encerre o modo contínuo com uma chamada para `feupdateenv`.  
+ Você pode usar essa função no início de uma sub-rotina que precisa ocultar uma ou mais exceções de ponto flutuante do chamador. Para relatar uma exceção, basta limpar as exceções indesejadas usando [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md) e encerrar o modo contínuo com uma chamada para `feupdateenv`.  
   
- Para usar essa função, você deve desativar otimizações de ponto flutuantes que poderiam impedir o acesso usando a `#pragma fenv_access(on)` diretiva antes da chamada. Para obter mais informações, consulte [fenv\_access](../../preprocessor/fenv-access.md).  
+ Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`feholdexcept`|\< fenv \>|\< cfenv \>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`feholdexcept`|\<fenv.h>|\<cfenv>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Consulte também  
- [Referência da função alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](../Topic/fesetenv2.md)   
- [feupdateenv](../Topic/feupdateenv.md)
+ [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

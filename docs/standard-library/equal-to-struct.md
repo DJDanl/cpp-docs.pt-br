@@ -1,79 +1,90 @@
 ---
-title: "Struct equal_to | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::equal_to"
-  - "equal_to"
-  - "xfunctional/std::equal_to"
-  - "std.equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função equal_to"
-  - "Struct equal_to"
+title: Struct equal_to | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::equal_to
+- equal_to
+- xfunctional/std::equal_to
+- std.equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- equal_to function
+- equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
 caps.latest.revision: 17
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct equal_to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 16ad908ab9f4fb4f8b55efbec255dfd55e515a05
+ms.lasthandoff: 02/25/2017
 
-Um predicado binário que executa a operação de igualdade \(`operator==`\) em seus argumentos.  
+---
+# <a name="equalto-struct"></a>Struct equal_to
+Um predicado binário que executa a operação de igualdade ( `operator==`) em seus argumentos.  
   
-## Sintaxe  
-  
-```  
-template<class Type = void>  
-   struct equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator==  
-template<>  
-   struct equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            == std::forward<Type2>(Right));  
-   };  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
+template <class Type = void>  
+struct equal_to : public binary_function<Type, Type, bool>   
+ {  
+    bool operator()(const Type& Left, const Type& Right) const; 
+ };  
+ 
+// specialized transparent functor for operator== 
+template <>  
+struct equal_to<void>  
+ {  
+    template <class T, class U>  
+    auto operator()(T&& Left, U&& Right) const 
+      ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
+ };  
+```  
   
-#### Parâmetros  
- `Type`, `Type1`, `Type2`  
- Qualquer tipo que ofereça suporte `operator==` que usa operandos dos tipos especificados ou inferidos.  
+#### <a name="parameters"></a>Parâmetros  
+ `Type`, ` T`, ` U`  
+ Qualquer tipo que dê suporte a um `operator==` que usa operandos dos tipos especificados ou inferidos.  
   
  `Left`  
- O operando esquerdo de uma operação de igualdade.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type1`.  
+ O operando esquerdo da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido ` T`.  
   
  `Right`  
- O operando direito de uma operação de igualdade.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type2`.  
+ O operando direito da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido ` U`.  
   
-## Valor de retorno  
- O resultado de `Left``==``Right`.  O modelo especializado aperfeiçoa a transmissão de resultado, que contém o tipo que é retornado por `operator==`.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado de `Left``==``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator==`.  
   
-## Comentários  
- Os objetos do tipo `Type` devem ser igualdade\- comparáveis.  Isso exige que `operator==` definida no conjunto de objetos satisfaz as propriedades matemáticas de uma relação de equivalência.  Todos os tipos numéricos internos e do ponteiro satisfazem esse requisito.  
+## <a name="remarks"></a>Comentários  
+ Os objetos do tipo `Type` devem ser comparáveis por igualdade. Isso requer que o `operator==` definido no conjunto de objetos atenda às propriedades matemáticas de uma relação de equivalência. Todos os tipos numéricos internos e de ponteiro atendem a esse requisito.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // functional_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -124,7 +135,11 @@ int main( )
 }  
 ```  
   
-  **O vetor v1 \= \(0 1 4 5 8 9\)**  
-**O vetor v2 \= \(\-0 1 \-4 5 \-8 9\)**  
-**O resultado da comparação elemento de linha equal\_to**  
-**entre v1 & v2 é: \(1 1 0 1 0 1\)**
+```Output  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise equal_to comparison  
+between v1 & v2 is: ( 1 1 0 1 0 1 )  
+```
+
+

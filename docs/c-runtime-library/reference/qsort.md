@@ -1,52 +1,68 @@
 ---
-title: "qsort | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função qsort"
-  - "algoritmo de classificação rápida"
-  - "classificando matrizes"
-  - "matrizes [CRT], classificação"
+title: qsort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort
+dev_langs:
+- C++
+helpviewer_keywords:
+- qsort function
+- quick-sort algorithm
+- sorting arrays
+- arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# qsort
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 01a2c3c9f2878d9dbc9f6c2d135de661e546d064
+ms.lasthandoff: 02/25/2017
 
-Executa um tipo rápido.  Uma versão mais segura dessa função está disponível; consulte [qsort\_s](../../c-runtime-library/reference/qsort-s.md).  
+---
+# <a name="qsort"></a>qsort
+Executa uma classificação rápida. Uma versão mais segura dessa função está disponível, consulte [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void qsort(  
@@ -57,49 +73,49 @@ void qsort(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `base`  
  Início da matriz de destino.  
   
  `num`  
- Tamanho da matriz em elementos.  
+ Tamanho da matriz nos elementos.  
   
  `width`  
  Tamanho do elemento em bytes.  
   
  `compare`  
- Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos da matriz e retorna um valor que especifica a relação.  
+ Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento.  
   
-## Comentários  
- A função de `qsort` implementa de um algoritmo de classificação para classificar uma matriz de elementos de `num` , cada um de bytes de `width` .  O argumento `base` é um ponteiro para a base da matriz a ser classificada.  substitui`qsort` esta matriz usando os elementos classificados.  
+## <a name="remarks"></a>Comentários  
+ A função `qsort` implementa um algoritmo de classificação rápida para classificar uma matriz de elementos `num`, cada uma de bytes `width`. O argumento `base` é um ponteiro para a base da matriz a ser classificada. `qsort` substitui essa matriz usando os elementos classificados.  
   
- `qsort` chama a rotina de `compare` uma ou mais vezes durante o tipo, e passa ponteiros a dois elementos da matriz em cada chamada.  
+ `qsort` chama a rotina `compare` uma ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.  
   
 ```  
-compare( (void *) & elem1, (void *) & elem2 );  
+compare( (void *) & elem1, (void *) & elem2 );  
 ```  
   
- A rotina compara os elementos e retorna um dos valores a seguir.  
+ A rotina deve comparar os elementos e retornar um dos valores a seguir.  
   
-|Comparar o valor de retorno da função|Descrição|  
-|-------------------------------------------|---------------|  
-|\< 0|`elem1` menor que `elem2`|  
-|0|equivalente a `elem2`de`elem1`|  
-|\> 0|`elem1` maior que `elem2`|  
+|Comparar o valor retornado da função|Descrição|  
+|-----------------------------------|-----------------|  
+|< 0|`elem1` é menor que `elem2`|  
+|0|`elem1` é equivalente a `elem2`|  
+|> 0|`elem1` é maior que `elem2`|  
   
- A matriz é classificada em ordem crescente, como definido pela função de comparação.  Para classificar em ordem decrescente uma matriz, inverta sentido de “maior que” e “menor que” na função de comparação.  
+ A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.  
   
- Essa função valida seus parâmetros.  Se `compare` ou `num` são `NULL`, ou se `base` é `NULL` e \*`num` for diferente de zero, ou se `width` é menor que zero, o manipulador inválido do parâmetro é chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, a função retorna e `errno` é definido como `EINVAL`.  
+ Essa função valida seus parâmetros. Se `compare` ou `num` for `NULL` ou se `base` for `NULL` e *`num` for diferente de zero ou ainda se `width` for menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e `errno` será definida como `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`qsort`|\<stdlib.h e\> search.h \<\>|  
+|-------------|---------------------|  
+|`qsort`|\<stdlib.h> e \<search.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_qsort.c  
@@ -139,11 +155,14 @@ int compare( const void *arg1, const void *arg2 )
 }  
 ```  
   
-  **o menino merece cada o bom**   
-## Equivalência do .NET Framework  
+```Output  
+boy deserves every favor good  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)

@@ -1,73 +1,87 @@
 ---
-title: "_getdrive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdrive"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_getdrive"
-  - "getdrive"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _getdrive"
-  - "unidade de disco atual"
-  - "unidades de disco"
-  - "Função getdrive"
+title: _getdrive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdrive
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _getdrive
+- getdrive
+dev_langs:
+- C++
+helpviewer_keywords:
+- current disk drive
+- getdrive function
+- disk drives
+- _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _getdrive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 15464a0f5d15dd7bce2754044c63a29334979d88
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="getdrive"></a>_getdrive
 Obtém a unidade de disco atual.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos que executam no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _getdrive( void );  
 ```  
   
-## Valor de retorno  
- Retorna a unidade \(padrão\) atual \(1\=A, 2\=B e assim por diante\).  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna a unidade atual (padrão) (1 = A, B = 2 e assim por diante). Nenhum erro é retornado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_getdrive`|\<direct.h\>|  
+|-------------|---------------------|  
+|`_getdrive`|\<direct.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_getdrive.c  
@@ -108,17 +122,20 @@ int main( void )
 }  
 ```  
   
-  **Unidades disponíveis:**  
-**A: \(O diretório atual é A:\\\)**  
-**C: \(O diretório atual é C:\\\)**  
-**E: \(o diretório atual é E:\\testdir\\bin\)**  
-**F: \(O diretório atual é F:\\\)**  
-**G: \(O diretório atual é G:\\\)**   
-## Equivalência do .NET Framework  
+```Output  
+Available drives are:  
+A: (Current directory is A:\)  
+C: (Current directory is C:\)  
+E: (Current directory is E:\testdir\bin)  
+F: (Current directory is F:\)  
+G: (Current directory is G:\)  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   
- [\_chdrive](../../c-runtime-library/reference/chdrive.md)   
- [\_getcwd, \_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdcwd, \_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)
+ [_chdrive](../../c-runtime-library/reference/chdrive.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)

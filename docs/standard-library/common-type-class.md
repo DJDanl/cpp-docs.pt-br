@@ -1,70 +1,81 @@
 ---
-title: "Classe common_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.common_type"
-  - "common_type"
-  - "std::tr1::common_type"
-  - "std.common_type"
-  - "std::common_type"
-  - "type_traits/std::common_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe common_type [TR1]"
-  - "common_type"
+title: Classe common_type | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- common_type
+- std::common_type
+- type_traits/std::common_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- common_type class
+- common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
 caps.latest.revision: 22
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe common_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="commontype-class"></a>Classe common_type
 Determina o tipo comum de um ou mais tipos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```
 template <class... T>  
-   struct common_type;  
-  
+struct common_type;
+
 template <class T>  
-   struct common_type<T> {  
-      typedef typename decay<T>::type type;  
-};  
-  
+struct common_type<T> {
+    typedef typename decay<T>::type type;
+};
+
 template <class T, class U>  
-   struct common_type<T, U> {  
-      typedef typename decay<decltype(true ?  declval<T>() :  
-         declval<U>())>::type type;  
-};  
-  
+struct common_type<T, U> {
+    typedef typename decay<decltype(true declval<T>() :
+    declval<U>())>::type type;
+};
+
 template <class T, class U, class... V>  
-   struct common_type<T, U, V...> {  
-      typedef typename common_type<typename common_type<T, U>::type, V...>::type type;  
-};  
+struct common_type<T, U, V...> {
+    typedef typename common_type<typename common_type<T, U>::type, V...>::type type;
+};
 ```  
   
-#### Parâmetros  
- Lista de tipos que são [Concluir tipos](../Topic/Incomplete%20Types.md) ou nulo.  
+#### <a name="parameters"></a>Parâmetros  
+ Lista de tipos que são [tipos completos](../c-language/incomplete-types.md) ou nulos.  
   
-## Comentários  
- O `type` membro é o tipo comum para que todos os tipos no parâmetro de lista pode ser convertida.  
+## <a name="remarks"></a>Comentários  
+ O membro `type` é o tipo comum no qual todos os tipos na lista de parâmetros podem ser convertidos.  
   
-## Exemplo  
- O programa a seguir demonstra alguns cenários de uso correto e testes para obter os resultados.  
+## <a name="example"></a>Exemplo  
+ O programa a seguir demonstra alguns cenários de uso corretos e testes para resultados.  
   
 ```cpp  
 // Compile using cl.exe /EHsc  
@@ -105,33 +116,36 @@ int main()
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
+```
+Test for typedefs of common_type int
+NumericType: true
+FloatType: false
+ModifiedIntType: true
+ClassType: false
+---------------------------
+Test for typedefs of common_type double
+NumericType: false
+FloatType: true
+ModifiedIntType: false
+ClassType: false
+---------------------------
+Test for typedefs of common_type Base
+NumericType: false
+FloatType: false
+ModifiedIntType: false
+ClassType: true
 ```  
-Test for typedefs of common_type int  
-NumericType: true  
-FloatType: false  
-ModifiedIntType: true  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type double  
-NumericType: false  
-FloatType: true  
-ModifiedIntType: false  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type Base  
-NumericType: false  
-FloatType: false  
-ModifiedIntType: false  
-ClassType: true  
   
-```  
-  
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

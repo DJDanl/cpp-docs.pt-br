@@ -1,76 +1,79 @@
 ---
-title: "Classe hash_compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "hash_set/stdext::hash_compare"
-  - "std.hash_compare"
-  - "hash_compare"
-  - "std::hash_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe hash_compare"
+title: Classe hash_compare | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- hash_set/stdext::hash_compare
+- std.hash_compare
+- hash_compare
+- std::hash_compare
+dev_langs:
+- C++
+helpviewer_keywords:
+- hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
 caps.latest.revision: 21
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe hash_compare
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: e493529a2511d92b9c99f820bd05b8f911ef9280
+ms.lasthandoff: 02/25/2017
 
-A classe de modelo descreve um objeto que pode ser usado por qualquer um dos contêineres associativos hash — hash\_map, hash\_multimap, hash\_set, ou hash\_multiset — como um padrão**características**o objeto de parâmetro para solicitar e os elementos que contêm o hash.  
+---
+# <a name="hashcompare-class"></a>Classe hash_compare
+A classe de modelo descreve um objeto que pode ser usado por qualquer um dos contêineres associativos de hash — hash_map, hash_multimap, hash_set ou hash_multiset — como um objeto de parâmetro **Traits** padrão para ordenar e fazer o hash dos elementos que eles contêm.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Key, class Traits = less<Key> >  
-   class hash_compare  
-   {  
-   Traits comp;  
-public:  
-   const size_t bucket_size = 4;  
-   const size_t min_buckets = 8;  
-   hash_compare( );  
-   hash_compare( Traits pred );  
-   size_t operator( )( const Key& _Key ) const;  
-   bool operator( )(   
-      const Key& _Key1,  
-      const Key& _Key2  
-   ) const;  
-   };  
-```  
+class hash_compare { Traits comp; public: const size_t bucket_size = 4; const size_t min_buckets = 8; hash_compare(); hash_compare(Traits pred); size_t operator()(const Key& key) const; bool operator()( const Key& key1, const Key& key2) const; };  
   
-## Comentários  
- Cada contêiner associativo hash armazena um objeto de características de hash do tipo**características**\(um parâmetro de modelo\).  Você pode derivar uma classe de uma especialização de hash\_compare substituir seletivamente certas funções e objetos, ou você pode fornecer sua própria versão desta classe se você atender a determinados requisitos mínimos.  Especificamente, para hash\_comp um objeto do tipo**hash\_compare \< chave, características \>**o seguinte comportamento é necessária para os contêineres acima:  
+## <a name="remarks"></a>Comentários  
+ Cada contêiner associativo de hash armazena um objeto de características de hash do tipo **Traits** (um parâmetro de modelo). Você pode derivar uma classe de uma especialização de hash_compare para substituir seletivamente determinadas funções e objetos ou pode fornecer sua própria versão dessa classe se atender a certos requisitos mínimos. Especificamente, para um objeto hash_comp do tipo **hash_compare\<Key, Traits>**, o seguinte comportamento é necessário para os contêineres acima:  
   
--   Todos os valores de`_Key`do tipo**chave**a chamada**hash\_comp**\(`_Key`\) serve como uma função de hash, que produz uma distribuição de valores do tipo**size\_t**.  Retorna a função fornecida pelo hash\_compare`_Key`.  
+-   Para todos os valores `key` do tipo **Key**, a chamada **hash_comp**(`key`) serve como uma função de hash, que produz uma distribuição de valores do tipo **size_t**. A função fornecida por hash_compare retorna `key`.  
   
--   Para qualquer valor`_Key1`do tipo**chave**que precede`_Key2`na seqüência e tem o mesmo hash \(valor retornado pela função de hash\),**hash\_comp**\(`_Key2``_Key1`\) é false.  A função deve impor um total de pedidos em valores do tipo**chave**.  Retorna a função fornecida pelo hash\_compare*comp*\(`_Key2``_Key1`\)`,`onde*comp*é um objeto armazenado do tipo**características**que você pode especificar quando você constrói o objeto hash\_comp.  Para o padrão**características**tipo de parâmetro**menos \< chave \>**chaves de classificação nunca diminuem em valor.  
+-   Para qualquer valor `key1` do tipo **Key** que precede `key2` na sequência e tem o mesmo valor de hash (valor retornado pela função de hash), **hash_comp**(`key2`, `key1`) é falso. A função deve impor um ordenamento total de valores do tipo **Key**. A função fornecida por hash_compare retorna *comp*( `key2`, `key1`) `,`, em que *comp* é um objeto armazenado do tipo **Traits** que você pode especificar quando constrói o objeto hash_comp. Para o tipo de parâmetro **Traits** padrão **less\<Key>**, o valor das chaves de classificação nunca diminui.  
   
--   A constante de inteiro**bucket\_size**Especifica o número médio de elementos por "bucket" \(entrada de tabela de hash\) que o contêiner deve tentar não deve exceder.  Deve ser maior que zero.  O valor fornecido por hash\_compare é 4.  
+-   A constante inteira **bucket_size** especifica o número médio de elementos por "bucket" (entrada de tabela de hash) que o contêiner deve tentar não ultrapassar. Ela deve ser maior que zero. O valor fornecido por hash_compare é 4.  
   
--   A constante de inteiro**min\_buckets**Especifica o número mínimo de buckets para manter a tabela de hash.  Ele deve ser uma potência de dois e maior que zero.  O valor fornecido por hash\_compare é 8.  
+-   A constante inteira **min_buckets** especifica o número mínimo de buckets a serem mantidos na tabela de hash. Ela deve ser uma potência de dois e maior que zero. O valor fornecido por hash_compare é 8.  
   
- No Visual C\+\+ .NET 2003, membros de[\< hash\_map \>](../standard-library/hash-map.md)e[\< hash\_set \>](../standard-library/hash-set.md)arquivos de cabeçalho não estão mais no namespace padrão, mas em vez disso, foram movidos para o namespace stdext.  Consulte [O namespace stdext](../Topic/stdext%20Namespace.md) para obter mais informações.  
+ No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
   
-## Exemplo  
- Consulte exemplos de[hash\_map:: hash\_map](../Topic/hash_map::hash_map.md)[hash\_multimap:: hash\_multimap](../Topic/hash_multimap::hash_multimap.md)[hash\_set:: hash\_set](../Topic/hash_set::hash_set.md)e[hash\_multiset:: hash\_multiset](../Topic/hash_multiset::hash_multiset.md)para obter exemplos de como declarar e usar hash\_compare.  
+## <a name="example"></a>Exemplo  
+ Veja exemplos de [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map__hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap__hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set__hash_set) e [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset__hash_multiset), para ver exemplos de como declarar e usar hash_compare.  
   
-## Requisitos  
- **Cabeçalho:**\< hash\_map \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<hash_map>  
   
  **Namespace:** stdext  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

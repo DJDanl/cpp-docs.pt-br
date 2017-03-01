@@ -1,43 +1,58 @@
 ---
-title: "Classe de Cont&#234;iner::value_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Typedef value_type"
+title: "Contêiner Class::value_type | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
 caps.latest.revision: 8
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe de Cont&#234;iner::value_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 91bc5c4a06a8afc7ab02fc548c9c781e157be1bb
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="container-classvaluetype"></a>Classe de Contêiner::value_type
 > [!NOTE]
->  Este tópico está na documentação do Visual C\+\+ como um exemplo nonfunctional contêineres usados na biblioteca padrão C\+\+.  Para obter mais informações, consulte [Contêineres STL](../standard-library/stl-containers.md).  
+>  Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).  
   
- Atua um sinônimo para o parâmetro **Ty**do modelo.  
+ Age como um sinônimo do parâmetro de modelo **Ty**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
+ 
 typedef T4 value_type;  
-  
 ```  
   
-## Comentários  
- É descrito aqui como um sinônimo para o tipo não for especificado **T4** \(normalmente **Alloc::value\_type**\).  
+## <a name="remarks"></a>Comentários  
+ Descrito aqui como um sinônimo para o tipo não especificado **T4** (normalmente, **Alloc::value_type**).  
   
-## Consulte também  
- [Exemplo de Classe de Contêiner](../Topic/Sample%20Container%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe de contêiner de amostra](../standard-library/sample-container-class.md)
+

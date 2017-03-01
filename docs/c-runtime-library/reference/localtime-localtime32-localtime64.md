@@ -1,60 +1,74 @@
 ---
-title: "localtime, _localtime32, _localtime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_localtime64"
-  - "_localtime32"
-  - "localtime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "localtime64"
-  - "_localtime64"
-  - "localtime32"
-  - "localtime"
-  - "_localtime32"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função localtime32"
-  - "Função _localtime32"
-  - "Função _localtime64"
-  - "Função localtime64"
-  - "Função localtime"
-  - "tempo, convertendo valores"
+title: localtime, _localtime32, _localtime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _localtime64
+- _localtime32
+- localtime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- localtime64
+- _localtime64
+- localtime32
+- localtime
+- _localtime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- localtime32 function
+- _localtime32 function
+- _localtime64 function
+- localtime64 function
+- localtime function
+- time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# localtime, _localtime32, _localtime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0a348a54f517a6910ff8f4e8accc4b86df699c9e
+ms.lasthandoff: 02/25/2017
 
-Converter um valor de tempo e corrigir o fuso horário local. Versões mais seguras dessas funções estão disponíveis; consulte [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
+---
+# <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
+Converter um valor temporal e corrigir o fuso horário local. Versões mais seguras dessas funções estão disponíveis; consulte [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 struct tm *localtime(  
@@ -68,75 +82,75 @@ struct tm *_localtime64(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `timer`  
- Ponteiro para hora armazenado.  
+ Ponteiro para a hora armazenada.  
   
-## Valor de retorno  
- Retornar um ponteiro para o resultado da estrutura, ou `NULL` se a data passada para a função é:  
+## <a name="return-value"></a>Valor de retorno  
+ Retornar um ponteiro para o resultado da estrutura ou `NULL` se a data passada para a função for:  
   
--   Antes da meia\-noite de 1º de janeiro de 1970.  
+-   Antes da meia-noite de 1º de janeiro de 1970.  
   
--   Após 03:14:07 de 19 de janeiro de 2038, UTC \(usando `_time32` e `time32_t`\).  
+-   Após 03:14:07 de 19 de janeiro de 2038, UTC (usando `_time32` e `time32_t`).  
   
--   Após a 23:59:59 em 31 de dezembro de 3000, UTC \(usando `_time64` e `__time64_t`\).  
+-   Após 23:59:59 de 31 de dezembro de 3000, UTC (usando `_time64` e `__time64_t`).  
   
- `_localtime64`, que usa o `__time64_t` estrutura, permite que as datas sejam expressas backup a 23:59:59, 31 de dezembro de 3000 a universal coordenado \(UTC\), enquanto `_localtime32` representa datas até 23:59:59 18 de janeiro de 2038, UTC.  
+ `_localtime64`, que usa a estrutura `__time64_t`, permite que as datas sejam expressas até 23:59:59 de 31 de dezembro de 3000, no UTC, enquanto `_localtime32` representa datas até 23:59:59 de 18 de janeiro de 2038, no UTC.  
   
- `localtime` é uma função embutida que é avaliada como `_localtime64`, e `time_t` é equivalente a `__time64_t`. Se você precisar forçar o compilador a interpretar `time_t`como o antigo 32 bits `time_t`, você pode definir `_USE_32BIT_TIME_T`. Fazer isso fará com que `localtime` para avaliar a `_localtime32`. Isso não é recomendado porque seu aplicativo pode falhar após 18 de janeiro de 2038, e não é permitido em plataformas de 64 bits.  
+ `localtime` é uma função embutida avaliada como `_localtime64` e `time_t` é equivalente a `__time64_t`. Se você precisar forçar o compilador a interpretar `time_t` como o `time_t` antigo de 32 bits, poderá definir `_USE_32BIT_TIME_T`. Essa ação fará com que `localtime` seja avaliado como `_localtime32`. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e isso não é permitido em plataformas de 64 bits.  
   
- Os campos do tipo estrutura [tm](../../c-runtime-library/standard-types.md) armazenar valores a seguir, cada um deles é um `int`:  
+ Os campos do tipo de estrutura [tm](../../c-runtime-library/standard-types.md) armazenam valores a seguir, cada um dos quais é um `int`:  
   
  `tm_sec`  
- Segundos após o minuto \(0\-59\).  
+ Segundos após o minuto (0 – 59).  
   
  `tm_min`  
- Minutos após a hora \(0\-59\).  
+ Minutos após a hora (0 – 59).  
   
  `tm_hour`  
- Horas após a meia\-noite \(0\-23\).  
+ Horas após a meia-noite (0 – 23).  
   
  `tm_mday`  
- Dia do mês \(1\-31\).  
+ Dia do mês (1 – 31).  
   
  `tm_mon`  
- Mês \(0 – 11; Janeiro \= 0\).  
+ Mês (0 – 11; janeiro = 0).  
   
  `tm_year`  
- Ano \(ano atual menos 1900\).  
+ Ano (ano atual menos 1900).  
   
  `tm_wday`  
- Dia da semana \(0 – 6; Domingo \= 0\).  
+ Dia da semana (0 – 6; domingo = 0).  
   
  `tm_yday`  
- Dia do ano \(0 a 365; 1 de janeiro \= 0\).  
+ Dia do ano (0 – 365; 1º de janeiro = 0).  
   
  `tm_isdst`  
- Valor positivo se o horário de verão está em vigor; 0 se o horário de verão não estiver em vigor. valor negativo se o status do horário de verão é desconhecido. Se o `TZ` variável de ambiente é definida, a biblioteca de tempo de execução C assumirá as regras apropriadas para os Estados Unidos para implementar o cálculo de – horário de verão \(DST\).  
+ O valor será positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status do horário de verão for desconhecido. Se a variável de ambiente `TZ` estiver definida, a biblioteca em tempo de execução C presume que as regras dos Estados Unidos serão usadas para implementar o cálculo do DST (horário de verão).  
   
-## Comentários  
- O `localtime` função converte uma hora armazenada como um [time\_t](../../c-runtime-library/standard-types.md) valor e armazena o resultado em uma estrutura do tipo `tm`. O `long` valor `timer` representa os segundos passados desde a meia\-noite \(00: 00:00\), 1 de janeiro de 1970, UTC. Esse valor geralmente é obtido o `time` função.  
+## <a name="remarks"></a>Comentários  
+ A função `localtime` converte uma hora armazenada como um valor [time_t](../../c-runtime-library/standard-types.md) e armazena o resultado em uma estrutura do tipo `tm`. O valor `long` `timer` representa os segundos passados desde a meia-noite (00:00:00) de 1º de janeiro de 1970, no UTC. Geralmente, esse valor é obtido da função `time`.  
   
- Ambas as versões de 32 bits e 64 bits do `gmtime`, `mktime`, `mkgmtime`, e `localtime` todos usam um único `tm` estrutura por thread para a conversão. Cada chamada para uma dessas rotinas destrói o resultado da chamada anterior.  
+ As versões de 32 e de 64 bits de `gmtime`, `mktime`, `mkgmtime` e `localtime` usam uma estrutura simples `tm` por thread para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.  
   
- `localtime` corrige o fuso horário local se o usuário primeiro define a variável de ambiente global `TZ`. Quando `TZ` estiver definido, três variáveis de ambiente \(`_timezone`, `_daylight`, e `_tzname`\) são definidas automaticamente também. Se o `TZ` variável não for definida, `localtime` tenta usar as informações de fuso horário especificadas no aplicativo de data\/hora no painel de controle. Se essas informações não podem ser obtidas, PST8PDT, o que significa o fuso horário do Pacífico, é usado por padrão. Consulte [tzset](../Topic/_tzset.md) para obter uma descrição dessas variáveis.`TZ` é uma extensão da Microsoft e não faz parte da definição padrão ANSI de `localtime`.  
+ `localtime` corrige o fuso horário local se o usuário definir a variável de ambiente global `TZ` primeiro. Ao definir `TZ`, três outras variáveis de ambiente (`_timezone`, `_daylight` e `_tzname`) também serão definidas automaticamente. Se a variável `TZ` não estiver definida, `localtime` tentará usar as informações de fuso horário especificadas no aplicativo Data/Hora no Painel de Controle. Se tais informações não puderem ser obtidas, o PST8PDT (Fuso Horário do Pacífico) será usado por padrão. Consulte [tzset](../../c-runtime-library/reference/tzset.md) para obter uma descrição dessas variáveis. `TZ` é uma extensão da Microsoft e não faz parte da definição padrão ANSI de `localtime`.  
   
 > [!NOTE]
 >  O ambiente de destino deve tentar determinar se o horário de verão está em vigor.  
   
- Essas funções validam seus parâmetros. Se `timer` for um ponteiro nulo, ou se o valor do timer for negativo, essas funções chamar um manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam `NULL` e defina `errno` para `EINVAL`.  
+ Essas funções validam seus parâmetros. Se `timer` for um ponteiro nulo ou se o valor do temporizador for negativo, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão `NULL` e definirão `errno` como `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`localtime`|\< h \>|  
-|`_localtime32`|\< h \>|  
-|`_localtime64`|\< h \>|  
+|-------------|---------------------|  
+|`localtime`|\<time.h>|  
+|`_localtime32`|\<time.h>|  
+|`_localtime64`|\<time.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_localtime.cpp  
@@ -177,18 +191,18 @@ int main( void )
 ```  
   
 ```Output  
-12 de fevereiro ter 10:05:58 AM  
+Tue Feb 12 10:05:58 AM  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)   
- [\_tzset](../Topic/_tzset.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)

@@ -1,64 +1,78 @@
 ---
-title: "_popen, _wpopen | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_popen"
-  - "_wpopen"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tpopen"
-  - "popen"
-  - "wpopen"
-  - "_popen"
-  - "_wpopen"
-  - "_tpopen"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _popen"
-  - "Função _tpopen"
-  - "Função _wpopen"
-  - "pipes, criando"
-  - "Função popen"
-  - "Função tpopen"
-  - "Função wpopen"
+title: _popen, _wpopen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _popen
+- _wpopen
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tpopen
+- popen
+- wpopen
+- _popen
+- _wpopen
+- _tpopen
+dev_langs:
+- C++
+helpviewer_keywords:
+- tpopen function
+- pipes, creating
+- _popen function
+- _tpopen function
+- popen function
+- wpopen function
+- _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _popen, _wpopen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f5cb8430c6539e7c16f38ae8cbac6016f7c85215
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="popen-wpopen"></a>_popen, _wpopen
 Cria um pipe e executa um comando.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos que executam no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -72,26 +86,26 @@ const wchar_t *mode
 );  
 ```  
   
-#### Parâmetros  
- *comando*  
- Comando a ser executado.  
+#### <a name="parameters"></a>Parâmetros  
+ *command*  
+ O comando a ser executado.  
   
- *mode*  
- Modo de fluxo retornado.  
+ *modo*  
+ Modo do fluxo retornado.  
   
-## Valor de retorno  
- Retorna um fluxo associado a uma extremidade do pipe criado.  A outra extremidade do pipe será associada à saída padrão de entrada ou padrão de comando gerado.  As funções **nulo** de retorno em um erro.  Se o erro for um parâmetro inválido, como se *o comando* ou no *modo* for um ponteiro nulo, ou *o modo* não é um modo válido, `errno` está definido como `EINVAL`.  Consulte a seção comentários para modos válidos.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna um fluxo associado a uma extremidade do pipe criado. A outra extremidade do pipe está associada à entrada ou saída padrão do comando gerado. As funções retornam **Nulo** em caso de erro. Se o erro é um parâmetro inválido, como se *command* ou *mode* fossem um ponteiro nulo ou *modo* não é um modo válido, `errno` é definido como `EINVAL`. Consulte a seção Comentários para ver os modos válidos.  
   
- Para obter informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- A função de `_popen` cria um pipe e executar de forma assíncrona uma cópia desovada do processador de comando com *o comando*especificado de cadeia de caracteres.  *O modo* de cadeia de caracteres especifica o tipo de acesso solicitado, como a seguir.  
+## <a name="remarks"></a>Comentários  
+ A função `_popen` cria um pipe e executa assincronamente uma cópia gerada do processador de comando com a cadeia de caracteres *command* especificada. A cadeia de caracteres *mode* especifica o tipo de acesso solicitado da seguinte maneira.  
   
  **"r"**  
  O processo de chamada pode ler a saída padrão do comando gerado usando o fluxo retornado.  
   
  **"w"**  
- O processo de chamada pode gravar na entrada de comando padrão gerado que usa o fluxo retornado.  
+ O processo de chamada pode gravar na entrada padrão do comando gerado usando o fluxo retornado.  
   
  **"b"**  
  Abrir no modo binário.  
@@ -100,29 +114,29 @@ const wchar_t *mode
  Abrir no modo de texto.  
   
 > [!NOTE]
->  Se usado em um programa do windows, a função de `_popen` retorna um ponteiro de arquivo inválido que faz com que o programa pare de responder indefinidamente.  `_popen` funciona corretamente em um aplicativo de console.  Para criar um aplicativo do Windows que redireciona a entrada e as saídas, consulte [Criando um processo filho com a entrada e a saída redirecionada](http://msdn.microsoft.com/library/windows/desktop/ms682499) em [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+>  Se usada em um programa do Windows, a função `_popen` retorna um ponteiro de arquivo inválido que faz com que o programa pare de responder indefinidamente. `_popen` funciona corretamente em um aplicativo de console. Para criar um aplicativo do Windows que redireciona a entrada e a saída, consulte [Criando um processo filho com entrada e saída redirecionadas](http://msdn.microsoft.com/library/windows/desktop/ms682499) no [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `_wpopen` é uma versão de ampla caractere de `_popen`; o argumento *de caminho* a `_wpopen` é uma cadeia de caracteres de ampla caractere.  Caso contrário, `_wpopen` e `_popen`, ao contrário, se comportam de forma idêntica.  
+ `_wpopen` é uma versão de caractere largo de `_popen`; o argumento *path* para `_wpopen` é uma cadeia de caracteres larga. Caso contrário, `_wpopen` e `_popen` se comportam de forma idêntica.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tpopen`|`_popen`|`_popen`|`_wpopen`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_popen`|\<stdio.h\>|  
-|`_wpopen`|\<stdio.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_popen`|\<stdio.h>|  
+|`_wpopen`|\<stdio.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_popen.c  
@@ -166,8 +180,8 @@ int main( void )
 }  
 ```  
   
-## Saída de Exemplo  
- Essa saída assumem que há apenas um arquivo no diretório atual com a extensão de nome de arquivo de C.A.  
+## <a name="sample-output"></a>Saída de Exemplo  
+ Essa saída supõe que haja apenas um arquivo no diretório atual com uma extensão de nome de arquivo .c.  
   
 ```  
  Volume in drive C is CDRIVE  
@@ -182,10 +196,10 @@ int main( void )
 Process returned 0  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Processo e controle de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [\_pclose](../Topic/_pclose.md)   
- [\_pipe](../../c-runtime-library/reference/pipe.md)
+## <a name="see-also"></a>Consulte também  
+ [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [_pclose](../../c-runtime-library/reference/pclose.md)   
+ [_pipe](../../c-runtime-library/reference/pipe.md)

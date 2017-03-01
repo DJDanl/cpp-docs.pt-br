@@ -1,79 +1,93 @@
 ---
-title: "Struct greater | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "greater"
-  - "xfunctional/std::greater"
-  - "std.greater"
-  - "std::greater"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Struct greater"
-  - "Função greater"
+title: Struct greater | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- greater
+- xfunctional/std::greater
+- std.greater
+- std::greater
+dev_langs:
+- C++
+helpviewer_keywords:
+- greater struct
+- greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
 caps.latest.revision: 22
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct greater
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: bcb6c83709d8e0effc202ecfb13659e7f725b1d1
+ms.lasthandoff: 02/25/2017
 
-Um predicado que executa binário grande da operação \(\)`operator>`em seus argumentos.  
+---
+# <a name="greater-struct"></a>Struct greater
+Um predicado binário que executa a operação "maior que" ( `operator>`) em seus argumentos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class Type = void>
+struct greater : public binary_function <Type, Type, bool>  
+{
+    bool operator()(
+    const Type& Left,
+    const Type& Right) const;
+
+ };
+
+// specialized transparent functor for operator>
+template <>
+struct greater<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const
+    ->  decltype(std::forward<T>(Left)> std::forward<U>(Right));
+ };
 ```  
-template<class Type = void>  
-   struct greater : public binary_function <Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
   
-// specialized transparent functor for operator>  
-template<>  
-   struct greater<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         > std::forward<Type2>(Right));  
-   };  
-  
-```  
-  
-#### Parâmetros  
- `Type`, `Type1`, `Type2`  
- Qualquer tipo que ofereça suporte `operator>` que usa operandos dos tipos especificados ou inferidos.  
+#### <a name="parameters"></a>Parâmetros  
+ `Type`, `T`, `U`  
+ Qualquer tipo que dê suporte a um `operator>` que usa operandos dos tipos especificados ou inferidos.  
   
  `Left`  
- O operando esquerdo de tamanho\-grande da operação.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type1`.  
+ O operando esquerdo da operação "maior que". O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.  
   
  `Right`  
- O operando direito de grande da operação.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type2`.  
+ O operando direito da operação "maior que". O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
   
-## Valor de retorno  
- O resultado de `Left``>``Right`.  O modelo especializado aperfeiçoa a transmissão de resultado, que contém o tipo que é retornado por `operator>`.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado de `Left``>``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator>`.  
   
-## Comentários  
- O predicado`Type`\> fornece a ordenação binária `greater`\<fraco restrito de um conjunto de valores do elemento do tipo `Type` em classes de equivalência, se e somente se este tipo satisfaz os requisitos matemáticos padrão para o seja ordenado.  As especializações para qualquer tipo de ponteiro gerenciem a ordenação global de elementos, que todos os elementos de valores distintos são colocados em relação às outras.  
+## <a name="remarks"></a>Comentários  
+ O predicado binário `greater`< `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo `Type` em classes de equivalência, se e somente se esse tipo atender aos requisitos matemáticos padrão para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // functional_greater.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -117,18 +131,22 @@ int main( )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
-```  
-Original vector v1 = ( 41 18467 6334 26500 19169 15724 11478 29358 )  
-Sorted vector v1 = ( 41 6334 11478 15724 18467 19169 26500 29358 )  
-Resorted vector v1 = ( 29358 26500 19169 18467 15724 11478 6334 41 )  
+```
+Original vector v1 = (41 18467 6334 26500 19169 15724 11478 29358)
+Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
+Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```  
   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

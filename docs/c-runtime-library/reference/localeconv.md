@@ -1,184 +1,198 @@
 ---
-title: "localeconv | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "localeconv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "localeconv"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Tipo lconv"
-  - "Função localeconv"
-  - "localidades, obtendo informações sobre"
+title: localeconv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- localeconv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- localeconv
+dev_langs:
+- C++
+helpviewer_keywords:
+- lconv type
+- localeconv function
+- locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# localeconv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4e4e6ea80db7930b227f3d2bea5ccf1c35f9e750
+ms.lasthandoff: 02/25/2017
 
-Obtém informações detalhadas sobre as configurações de localidade.  
+---
+# <a name="localeconv"></a>localeconv
+Obtém informações detalhadas sobre configurações de localidade.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 struct lconv *localeconv( void );  
 ```  
   
-## Valor de retorno  
- `localeconv` retorna um ponteiro para um objeto preenchido do tipo [lconv da estrutura](../../c-runtime-library/standard-types.md).  Os valores contidos no objeto podem ser substituídos por chamadas subsequentes a `localeconv` e não modifica diretamente o objeto.  As chamadas a [setlocale](../Topic/setlocale,%20_wsetlocale.md) com valores de `category` de `LC_ALL`, de `LC_MONETARY`, ou de `LC_NUMERIC` substituir o conteúdo da estrutura.  
+## <a name="return-value"></a>Valor de retorno  
+ `localeconv` retorna um ponteiro para um objeto preenchido do tipo [struct lconv](../../c-runtime-library/standard-types.md). Os valores contidos no objeto podem ser substituídos por chamadas subsequentes a `localeconv` e não modificam diretamente o objeto. Chamadas para [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) com valores `category` de `LC_ALL`, `LC_MONETARY` ou `LC_NUMERIC` substituem os conteúdos da estrutura.  
   
-## Comentários  
- A função de `localeconv` obtém informações detalhadas sobre a formatação numérica da localidade atual.  Essas informações são armazenadas em uma estrutura de tipo **lconv**.  A estrutura de **lconv** , definida em LOCALE.H, contém os seguintes membros:  
+## <a name="remarks"></a>Comentários  
+ A função `localeconv` obtém informações detalhadas sobre a formatação numérica da localidade atual. Essas informações são armazenadas em uma estrutura do tipo **lconv**. A estrutura **lconv**, definida em LOCALE.H, contém os seguintes membros:  
   
  `char *decimal_point, wchar_t *_W_decimal_point`  
- Caractere de ponto decimal para quantidades nonmonetary.  
+ Caractere de vírgula decimal para quantidades não monetárias.  
   
  `char *thousands_sep, wchar_t *_W_thousands_sep`  
- Caractere que separa grupos de dígitos à esquerda do ponto decimal para quantidades nonmonetary.  
+ Caractere que separa grupos de dígitos à esquerda da vírgula decimal para quantidades não monetárias.  
   
  `char *grouping`  
- Tamanho de cada grupo de dígitos em volumes nonmonetary.  
+ Tamanho de cada grupo de dígitos em quantidades não monetárias.  
   
  `char *int_curr_symbol, wchar_t *_W_int_curr_symbol`  
- Símbolo de moeda internacional da localidade atual.  Os três primeiros caracteres especificam o símbolo de moeda internacional alfabético conforme definido *no ISO 4217 para a representação códigos de moeda e os fundos* padrão.  O quarto caractere \(imediatamente antes do caractere nulo\) separar o símbolo de moeda internacional da quantidade de moeda.  
+ Símbolo de moeda internacional para a localidade atual. Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*. O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.  
   
  `char *currency_symbol, wchar_t *_W_currency_symbol`  
  Símbolo de moeda local para a localidade atual.  
   
  `char *mon_decimal_point, wchar_t *_W_mon_decimal_point`  
- Caractere de ponto decimal para quantidades monetárias.  
+ Caractere de vírgula decimal para quantidades monetárias.  
   
  `char *mon_thousands_sep, wchar_t *_W_mon_thousands_sep`  
- Separador para grupos de dígitos à esquerda da casa decimal em volumes monetárias.  
+ Separador para grupos de dígitos à esquerda da casa decimal em quantidades monetárias.  
   
  `char *mon_grouping`  
- Tamanho de cada grupo de dígitos em volumes monetárias.  
+ Tamanho de cada grupo de dígitos em quantidades monetárias.  
   
  `char *positive_sign, wchar_t *_W_positive_sign`  
- Cadeia de caracteres que indica o sinal para quantidades monetárias não negativo.  
+ Cadeia de caracteres indicando o sinal para quantidades monetárias não negativas.  
   
  `char *negative_sign, wchar_t *_W_negative_sign`  
- Cadeia de caracteres que indica o sinal para quantidades monetárias negativas.  
+ Cadeia de caracteres indicando o sinal para quantidades monetárias negativas.  
   
  `char int_frac_digits`  
- Número de dígitos à direita da casa decimal em volumes monetárias internacional formatados.  
+ Número de dígitos à direita da vírgula decimal em quantidades monetárias internacionalmente formatadas.  
   
  `char frac_digits`  
- Número de dígitos à direita da casa decimal em volumes monetárias formatados.  
+ Número de dígitos à direita da vírgula decimal em quantidades monetárias formatadas.  
   
  `char p_cs_precedes`  
- Defina como 1 se o símbolo de moeda precede o valor da quantidade de moeda formatada não negativo.  Defina como 0 se o símbolo segue o valor.  
+ Definido como 1 se o símbolo de moeda preceder o valor para a quantidade monetária formatada não negativa. Definido como 0 se o símbolo seguir o valor.  
   
  `char p_sep_by_space`  
- Defina como 1 se o símbolo de moeda é separado por espaço de valor para a quantidade de moeda formatada não negativo.  Defina como 0 se não houver nenhuma divisão de espaço.  
+ Definido como 1 se o símbolo de moeda for separado por espaço do valor para a quantidade monetária formatada não negativa. Definido como 0 se não houver nenhuma separação por espaço.  
   
  `char n_cs_precedes`  
- Defina como 1 se o símbolo de moeda precede o valor da quantidade de moeda formatada negativa.  Defina como 0 se o símbolo êxito o valor.  
+ Definido como 1 se o símbolo de moeda preceder o valor para a quantidade monetária formatada negativa. Definido como 0 se o símbolo suceder o valor.  
   
  `char n_sep_by_space`  
- Defina como 1 se o símbolo de moeda é separado por espaço de valor para a quantidade de moeda formatada negativa.  Defina como 0 se não houver nenhuma divisão de espaço.  
+ Definido como 1 se o símbolo de moeda for separado por espaço do valor para a quantidade monetária formatada negativa. Definido como 0 se não houver nenhuma separação por espaço.  
   
  `char p_sign_posn`  
- A posição do positivo se conecta quantidades monetárias formatados não negativo.  
+ Posição do sinal positivo em quantidades monetárias formatadas não negativas.  
   
  `char n_sign_posn`  
- A posição do positivo se conecta quantidades monetárias formatados negativas.  
+ Posição do sinal positivo em quantidades monetárias formatadas negativas.  
   
- Os membros da estrutura que têm `char` `*` e versões de `wchar_t *` são ponteiros em cadeias de caracteres.  Qualquer um que `""` iguais \(ou `L""` para `wchar_t *`\) é de comprimento zero ou não suporte na localidade atual.  Observe que `decimal_point` e `_W_decimal_point` sempre têm suporte e de comprimento diferente de zero.  
+ Membros da estrutura que têm versões `char` `*` e `wchar_t *` são ponteiros para cadeias de caracteres. Qualquer um desses que seja igual a `""` (ou `L""` para `wchar_t *`) terá comprimento igual a zero ou não terá suporte na localidade atual. Observe que `decimal_point` e `_W_decimal_point` sempre terão suporte e comprimento diferente de zero.  
   
- Os membros de `char` da estrutura são números não negativo pequenos, não caracteres.  Qualquer um que iguais **CHAR\_MAX** não é suportado na localidade atual.  
+ Os membros `char` da estrutura são números pequenos não negativos e não caracteres. Qualquer um desses que seja igual a **CHAR_MAX** não terá suporte na localidade atual.  
   
- Os elementos de **grouping** e de **mon\_grouping** são interpretados de acordo com as regras a seguir.  
+ Os elementos de **agrupamento** e **mon_grouping** são interpretados de acordo com as regras a seguir.  
   
- **CHAR\_MAX**  
- Não executa nenhum agrupamento adicional.  
+ **CHAR_MAX**  
+ Não execute qualquer agrupamento adicional.  
   
  0  
- Use o elemento anterior para cada um de dígitos restantes.  
+ Use o elemento anterior para cada um dos dígitos restantes.  
   
  *n*  
- Número de dígitos que compõem o grupo atual.  O próximo elemento está verificado para determinar o tamanho do próximo grupo de dígitos antes de cluster atual.  
+ Número de dígitos que compõem o agrupamento atual. O próximo elemento é examinado para determinar o tamanho do próximo grupo de dígitos antes do grupo atual.  
   
- Os valores para **int\_curr\_symbol** são interpretados de acordo com as seguintes regras:  
+ Os valores para **int_curr_symbol** são interpretados de acordo com as regras a seguir:  
   
--   Os três primeiros caracteres especificam o símbolo de moeda internacional alfabético conforme definido *no ISO 4217 para a representação códigos de moeda e os fundos* padrão.  
+-   Os três primeiros caracteres especificam o símbolo de moeda alfabético internacional, conforme definido na norma *ISO 4217, Códigos para a Representação de Moedas e Fundos*.  
   
--   O quarto caractere \(imediatamente antes do caractere nulo\) separar o símbolo de moeda internacional da quantidade de moeda.  
+-   O quarto caractere (caractere nulo imediatamente anterior) separa o símbolo de moeda internacional da quantidade monetária.  
   
- Os valores para **p\_cs\_precedes** e **n\_cs\_precedes** são interpretados de acordo com as regras a seguir \(a regra de **n\_cs\_precedes** está entre parênteses\):  
-  
- 0  
- O símbolo de moeda segue o valor para não negativo \(negativo\) formatou o valor monetário.  
-  
- 1  
- O símbolo de moeda precede o valor de não negativo \(negativo\) formatou o valor monetário.  
-  
- Os valores para **p\_sep\_by\_space** e **n\_sep\_by\_space** são interpretados de acordo com as regras a seguir \(a regra de **n\_sep\_by\_space** está entre parênteses\):  
+ Os valores para **p_cs_precedes** e **n_cs_precedes** são interpretados de acordo com as regras a seguir (a regra para **n_cs_precedes** está entre parênteses):  
   
  0  
- O símbolo de moeda é separado do valor por espaço para o valor monetário formatado \(negativo\) não negativo.  
+ O símbolo de moeda sucede o valor para a quantidade monetária formatada não negativa (negativa).  
   
  1  
- Não há separação de espaço entre o símbolo de moeda e o valor para o valor monetário formatado \(negativo\) não negativo.  
+ O símbolo de moeda precede o valor para a quantidade monetária formatada não negativa (negativa).  
   
- Os valores para **p\_sign\_posn** e **n\_sign\_posn** são interpretados de acordo com as seguintes regras:  
+ Os valores para **p_sep_by_space** e **n_sep_by_space** são interpretados de acordo com as regras a seguir (a regra para **n_sep_by_space** está entre parênteses):  
   
  0  
- Quantidade de trechos de parênteses e símbolo de moeda.  
+ O símbolo de moeda é separado por espaço do valor para o valor monetário formatado não negativo (negativo).  
   
  1  
- A cadeia de caracteres de sinal precede o símbolo de quantidade e de moeda.  
+ Não há separação por espaço entre o símbolo de moeda e o valor para o valor monetário formatado não negativo (negativo).  
+  
+ Os valores para **p_sign_posn** e **n_sign_posn** são interpretados de acordo com as regras a seguir:  
+  
+ 0  
+ Parênteses circundam os símbolos de quantidade e moeda.  
+  
+ 1  
+ Cadeia de caracteres de sinal precedem os símbolos de quantidade e moeda.  
   
  2  
- A cadeia de caracteres de sinal segue o símbolo de quantidade e de moeda.  
+ Cadeia de caracteres de sinal sucedem os símbolos de quantidade e moeda.  
   
  3  
- A cadeia de caracteres de sinal precede imediatamente o símbolo de moeda.  
+ Cadeia de caracteres de sinal precede o símbolo de moeda.  
   
  4  
- A cadeia de caracteres de sinal logo após o símbolo de moeda.  
+ Cadeia de caracteres de sinal sucede o símbolo de moeda.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`localeconv`|\<locale.h\>|  
+|-------------|---------------------|  
+|`localeconv`|\<locale.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Localidade](../../c-runtime-library/locale.md)   
  [setlocale](../../preprocessor/setlocale.md)   
  [Funções strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, \_strftime\_l, \_wcsftime\_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

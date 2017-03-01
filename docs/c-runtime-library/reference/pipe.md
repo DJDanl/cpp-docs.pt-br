@@ -1,133 +1,139 @@
 ---
-title: "_pipe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_pipe"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "pipe"
-  - "_pipe"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Pipes, criando"
-  - "Função _pipe"
-  - "pipes"
-  - "Função pipe"
+title: _pipe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _pipe
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- pipe
+- _pipe
+dev_langs:
+- C++
+helpviewer_keywords:
+- pipes, creating
+- _pipe function
+- pipes
+- pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _pipe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="pipe"></a>_pipe
 Cria um pipe para leitura e gravação.  
   
 > [!IMPORTANT]
->  Essa API não pode ser usado em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [funções de CRT não têm suportadas com \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Essa API não pode ser usada em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-int  
-_pipe(  
-int  
-*  
-pfds  
-,  
-unsigned  
-int  
-psize  
-,  
-int  
-textmode  
+      int _pipe(  
+int *pfds,  
+unsigned int psize,  
+int textmode   
 );  
-  
 ```  
   
-#### Parâmetros  
- `pfds`\[2\]  
- Matriz para manter a leitura e gravação descritores de arquivo.  
+#### <a name="parameters"></a>Parâmetros  
+ `pfds`[2]  
+ Matriz para manter os descritores de arquivos de leitura e gravação.  
   
  `psize`  
- Quantidade de memória para reservar.  
+ Quantidade de memória a ser reservada.  
   
  `textmode`  
  Modo de arquivo.  
   
-## Valor de retorno  
- Retorna 0 se for bem\-sucedido. Retorna – 1 para indicar um erro. No erro, `errno` é definido como um destes valores:  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna 0 se for bem-sucedido. Retorna -1 para indicar um erro. Em caso de erro, `errno` é definido como um destes valores:  
   
--   `EMFILE`, que indica que não há mais descritores de arquivo estão disponíveis.  
+-   `EMFILE`, que indica que nenhum outro descritor de arquivo está disponível.  
   
--   `ENFILE`, que indica um estouro de tabela de arquivos de sistema.  
+-   `ENFILE`, que indica um estouro de sistema-arquivo-tabela.  
   
--   `EINVAL`, que indica que qualquer matriz `pfds` é um ponteiro nulo ou valor inválido para `textmode` foi passado.  
+-   `EINVAL`, que indica que a matriz `pfds` é um ponteiro nulo ou que um valor inválido para `textmode` foi passado.  
   
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- O `_pipe` função cria um *pipe*, que é um canal de e\/s artificial que usa um programa para passar informações para outros programas. Um pipe é semelhante a um arquivo porque ele possui um ponteiro de arquivo, um descritor de arquivo ou ambos, e pode ser lido ou gravado usando a biblioteca padrão de entrada e saída funções. No entanto, um pipe não representa um arquivo específico ou dispositivo. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do programa e é controlada totalmente pelo sistema operacional.  
+## <a name="remarks"></a>Comentários  
+ A função `_pipe` cria um *pipe*, que é um canal de E/S artificial que um programa usa para passar informações para outros programas. Um pipe lembra um arquivo, pois ele tem um ponteiro de arquivo, um descritor de arquivo ou ambos e pode ser lido ou gravado usando as funções de entrada e saída da Biblioteca Padrão. No entanto, um pipe não representa um arquivo ou dispositivo específico. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do próprio programa e é controlada totalmente pelo sistema operacional.  
   
- `_pipe` é semelhante a `_open` mas abre o pipe para ler e gravar e retorna dois de descritores em vez de um arquivo. O programa pode usar ambos os lados da conexão ou fechar aquela que não precisa. Por exemplo, o processador de comando do Windows cria um pipe quando ele executa um comando como `PROGRAM1 | PROGRAM2`.  
+ `_pipe` é semelhante a `_open`, mas abre o pipe para leitura e gravação e retorna dois descritores de arquivo em vez de um. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando do Windows cria um pipe quando ele executa um comando como `PROGRAM1 | PROGRAM2`.  
   
- O padrão de saída descritor de `PROGRAM1` é anexado ao descritor de gravação do pipe. O descritor de entrada padrão do `PROGRAM2` é anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.  
+ O descritor de saída padrão de `PROGRAM1` está anexado ao descritor de gravação do pipe. O descritor de entrada padrão de `PROGRAM2` está anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.  
   
- O `_pipe` função retorna dois descritores de arquivo para o pipe no `pfds` argumento. O elemento `pfds`\[0\] contém o descritor de leitura e o elemento `pfds`\[1\] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira como outros descritores de arquivo. \(As funções de saída e entrada de baixo nível `_read` e `_write` pode ler e gravar em um pipe.\) Para detectar a condição final de pipe, procure um `_read` solicitação que retorna 0 como o número de bytes lidos.  
+ A função `_pipe` retorna dois descritores de arquivo para o pipe no argumento `pfds`. O elemento `pfds`[0] contém o descritor de leitura e o elemento `pfds`[1] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira que outros descritores de arquivo. (As funções de saída e entrada de baixo nível `_read` e `_write` podem ler e gravar em um pipe.) Para detectar a condição fim de pipe, procure uma solicitação `_read` que retorna 0 como o número de bytes lidos.  
   
- O `psize` argumento especifica a quantidade de memória, em bytes, para reservar para o pipe. O `textmode` argumento especifica o modo de tradução para o pipe. A constante de manifesto `_O_TEXT` Especifica uma conversão de texto e a constante `_O_BINARY` Especifica a conversão binária. \(Consulte [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) para obter uma descrição dos modos de texto e binários.\) Se o `textmode` argumento for 0, `_pipe` usa o modo de conversão padrão que é especificado pela variável do modo padrão [fmode](../../c-runtime-library/fmode.md).  
+ O argumento `psize` especifica a quantidade de memória, em bytes, a ser reservada para o pipe. O argumento `textmode` especifica o modo de translação para o pipe. A constante de manifesto `_O_TEXT` especifica uma tradução de texto e a constante `_O_BINARY` especifica a tradução de binário. (Consulte [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md) para obter uma descrição dos modos binário e de texto.) Se o argumento `textmode` for 0, `_pipe` usa o modo de translação padrão que é especificado pela variável do modo padrão [_fmode](../../c-runtime-library/fmode.md).  
   
- Programas multithread, nenhum bloqueio é executada. Os descritores de arquivo que são retornados são abertos recentemente e não deve ser referenciados por qualquer segmento até após o `_pipe` chamada é concluída.  
+ Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo que são retornados foram abertos recentemente e não devem ser referenciados por qualquer thread até após a chamada `_pipe` ser concluída.  
   
- Para usar o `_pipe` de função para a comunicação entre um processo pai e um processo filho, cada processo deve ter apenas um descritor abrir no pipe. Os descritores de devem ser opposites: se o pai tem um descritor de leitura abra, o filho deve ter um descritor de gravação abrir. A maneira mais fácil de fazer isso é `OR` \(`|`\) o `_O_NOINHERIT` sinalizador com `textmode`. Em seguida, use `_dup` ou `_dup2` para criar uma cópia herdável do descritor de conexão que você deseja passar para o filho. Feche o descritor original e, em seguida, gerar o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 posteriormente neste artigo.  
+ Para usar a função `_pipe` para a comunicação entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é `OR` (`|`) no sinalizador `_O_NOINHERIT` com `textmode`. Em seguida, use `_dup` ou `_dup2` para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.  
   
- No sistema operacional Windows, um pipe é destruído quando todos os seus descritores de foram fechados. \(Se tem sido fechados todos os descritores de leitura no pipe, em seguida, gravar no pipe causa um erro.\) Todas as operações leitura e gravação no pipe espera até que haja dados suficientes ou espaço em buffer suficiente para concluir a solicitação de e\/s.  
+ No sistema operacional Windows, um pipe é destruído quando todos os seus descritores foram fechados. (Se todos os descritores de leitura no pipe foram fechados, então, gravar no pipe causa um erro.) Todas as operações de leitura e gravação no pipe esperam até que haja dados ou espaço em buffer suficiente para concluir a solicitação de E/S.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_pipe`|\< IO \>|\< fcntl \> 1 \< errno \> 2|  
+|-------------|---------------------|---------------------|  
+|`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
- 1 para `_O_BINARY` e `_O_TEXT` definições.  
+ 1 Para as definições `_O_BINARY` e `_O_TEXT`.  
   
- 2 `errno` definições.  
+ 2 definições `errno`.  
   
- Para obter informações de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Libraries  
- Todas as versões do [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo 1  
+## <a name="example-1"></a>Exemplo 1  
   
 ```  
   
-        // crt_pipe.c  
+      // crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -210,7 +216,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## Saída de exemplo  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 Son, what is the square root of 1000?  
@@ -231,8 +237,8 @@ Son, what is the square root of 8000?
 Dad, the square root of 8000 is 89.44.  
 ```  
   
-## Exemplo 2  
- Este é um aplicativo de filtro básico. Ele gera crt\_pipe\_beeper o aplicativo após ele ter criado um pipe que direciona stdout do aplicativo gerado para o filtro. O filtro remove caracteres ASCII de 7 \(alarme sonoro\).  
+## <a name="example-2"></a>Exemplo 2  
+ Este é um aplicativo de filtro básico. Ele gera crt_pipe_beeper do aplicativo após criar um pipe que direciona o stdout do aplicativo gerado para o filtro. O filtro remove caracteres ASCII 7 (bipe).  
   
 ```  
 // crt_pipe_beeper.c  
@@ -346,7 +352,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 This is speaker beep number 1...  
@@ -361,9 +367,9 @@ This is speaker beep number 9...
 This is speaker beep number 10...  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Processo e controle de ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+## <a name="see-also"></a>Consulte também  
+ [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

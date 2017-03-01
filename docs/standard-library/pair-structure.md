@@ -1,94 +1,98 @@
 ---
-title: "Estrutura pair | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "utility/std::pair"
-  - "pair"
-  - "std::pair"
-  - "std.pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe pair"
+title: Estrutura pair | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- utility/std::pair
+- pair
+- std::pair
+- std.pair
+dev_langs:
+- C++
+helpviewer_keywords:
+- pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
 caps.latest.revision: 20
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Estrutura pair
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f9f6574029dd40d0c8c2a2ff2a5f73f4744f5ffe
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="pair-structure"></a>Estrutura pair
 Uma estrutura que fornece a capacidade de tratar os dois objetos como um único objeto.  
   
-## Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe  
 ```  
-template<class T1, class T2>  
-   struct pair   
-   {  
-   typedef T1 first_type;  
-   typedef T2 second_type;  
-   T1 first;  
-   T2 second;  
-  
-   constexpr pair( );  
-   constexpr pair(  
-      const T1& Val1,   
-      const T2& Val2  
-   );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         const pair<Other1, Other2>& Right  
-      );  
-  
-template<class Other1, class Other2>  
-      constexpr pair(  
-        const pair <Other1 Val1, Other2 Val2>&& Right  
-      );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         Other1&& Val1, Other2&& Val2  
-      );  
-   };  
+struct pair
+{
+    typedef T1 first_type;
+    typedef T2 second_type;
+    T1 first;
+    T2 second;
+    constexpr pair();
+    constexpr pair(
+        const T1& Val1,
+        const T2& Val2);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair<Other1, Other2>& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair <Other1 Val1, Other2 Val2>&& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(Other1&& Val1, Other2&& Val2);
+};
 ```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Val1`  
- Valor Inicializando o primeiro elemento da`pair`.  
+ O valor que inicializa o primeiro elemento de `pair`.  
   
  `Val2`  
- Valor Inicializando o segundo elemento de`pair`.  
+ O valor que inicializa o segundo elemento de `pair`.  
   
  `Right`  
- Um par cujos valores serão usados para inicializar os elementos de outro par.  
+ Um par cujos valores devem ser usados para inicializar os elementos de outro par.  
   
-## Valor de retorno  
- O primeiro construtor \(padrão\) inicializa o primeiro elemento do par ao padrão de tipo**T1**e o segundo elemento padrão do tipo**T2**.  
+## <a name="return-value"></a>Valor de retorno  
+ O primeiro construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo **T1** e o segundo elemento para o padrão do tipo **T2**.  
   
- O segundo construtor inicializa o primeiro elemento do par de`Val1`e o segundo para*Val2.*  
+ O segundo construtor inicializa o primeiro elemento do par para `Val1` e o segundo para *Val2.*  
   
- O terceiro construtor \(modelo\) inicializa o primeiro elemento do par de`Right`.**primeiro**e o segundo para`Right`.**segunda**.  
+ O terceiro construtor (modelo) inicializa o primeiro elemento do par para `Right`. **primeiro** e segundo para `Right`. **second**.  
   
- O quarto construtor inicializa o primeiro elemento do par de`Val1`e o segundo para*Val2*usando[Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ O quarto construtor inicializa o primeiro elemento do par para `Val1` e o segundo para *Val2* usando o [Declarador de Referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## Comentários  
- A estrutura de modelo armazena um par de objetos do tipo**T1**e**T2**respectivamente.  O tipo**first\_type**é o mesmo que o parâmetro de modelo**T1**e o tipo**second\_type**é o mesmo que o parâmetro de modelo**T2**.  **T1**e**T2**cada precisa fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor.  Todos os membros do tipo`pair`são públicos, como o tipo é declarado como um`struct`em vez de como um**classe**.  Os dois usos mais comuns para um par são tipos como retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo[classe map](../Topic/map%20Class.md)e[classe multimap](../standard-library/multimap-class.md)que tem uma chave e um tipo de valor associado a cada elemento.  O segundo atende aos requisitos de um contêiner de par associativo e tem um tipo de valor do formulário`pair`\<**const**`key_type``mapped_type`\>.  
+## <a name="remarks"></a>Comentários  
+ A estrutura de modelo armazena um par de objetos do tipo **T1** e **T2**, respectivamente. O tipo **first_type** é o mesmo que o parâmetro de modelo **T1** e o tipo **second_type** é o mesmo que o parâmetro de modelo **T2**. **T1** e **T2** precisam fornecer apenas um construtor padrão, um construtor de argumento único e um destruidor. Todos os membros do tipo `pair` são públicos, pois o tipo é declarado como um `struct` em vez de como uma **classe**. Os dois usos mais comuns para um par são como tipos de retorno para funções que retornam dois valores e como elementos para as classes de contêiner associativo [Classe map](../standard-library/map-class.md) e [Classe multimap](../standard-library/multimap-class.md) que têm uma chave e um tipo de valor associado a cada elemento. O segundo atende aos requisitos de um contêiner de par associativo e tem um tipo de valor do formulário `pair`< **const**`key_type`, `mapped_type`>.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // utility_pair.cpp  
 // compile with: /EHsc  
 #include <utility>  
@@ -163,16 +167,26 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;  
    }  
 }  
+\* Output:   
+The pair p1 is: ( 10, 0.011 ).  
+The pair p2 is: ( 10, 0.222 ).  
+The pair p3 is: ( 10, 0.011 ).  
+The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).  
+The element (4,40) was inserted successfully in m1.  
+The element with a key value of  
+ ( (pr2.first) -> first ) = 1 is already in m1,  
+ so the insertion failed.  
+*\  
 ```  
   
-  **O p1 par é: \(10, 0.011\).  O p2 par é: \(10, 0.222\).  O par p3 é: \(10, 0.011\).  Os pares de elemento de m1 o mapa são: \(1, 10\) \(2, 20\) \(3, 30\).  O elemento \(4,40\) foi inserido com êxito no m1.  O elemento com um valor de chave**  
- **\(\(pr2.first\) \-\> primeiro\) \= 1 já está sendo m1,**  
- **a inserção de falha.**    
-## Requisitos  
- **Cabeçalho:** \<utility\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<utility>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Operador lógico de par](../misc/pair-logical-operator.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

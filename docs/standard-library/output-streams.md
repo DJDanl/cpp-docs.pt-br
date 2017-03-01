@@ -1,64 +1,79 @@
 ---
-title: "Fluxos de Sa&#237;da | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fluxos de saída"
+title: "Fluxos de saída | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
 caps.latest.revision: 12
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fluxos de Sa&#237;da
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 34a37749690fc0e42ba855640d0936fd8a25842f
+ms.lasthandoff: 02/25/2017
 
-Um objeto de fluxo de saída é um destino para bytes.  As três classes as mais importantes do fluxo de saída são `ostream`, `ofstream`, e `ostringstream`.  
+---
+# <a name="output-streams"></a>Fluxos de Saída
+Um objeto de fluxo de saída é um destino de bytes. As três classes de fluxo de saída mais importantes são `ostream`, `ofstream` e `ostringstream`.  
   
- A classe de `ostream` , pela classe derivada, `basic_ostream`oferece suporte aos objetos predefinidos de fluxo:  
+ A classe `ostream`, por meio da classe derivada `basic_ostream`, dá suporte os objetos de fluxo predefinidos:  
   
--   saída padrão de`cout`  
+-   saída padrão `cout`  
   
--   erro padrão de`cerr`com proteção limitada  
+-   Erro padrão `cerr` com buffer limitado  
   
--   `clog` semelhante a `cerr` mas com proteção completa  
+-   `clog` semelhante ao `cerr`, mas com buffer completo  
   
- Os objetos são construídos com pouca frequência de `ostream`; os objetos predefinidos geralmente são usados.  Em alguns casos, você pode reatribuir objetos predefinidos após a inicialização do programa.  A classe de `ostream` , que pode ser configurada para a operação em buffer ou não armazenado, é mais adequada para a saída sequenciais em modo gráfico.  Toda a funcionalidade da classe base, `ios`, é incluída em `ostream`.  Se você criar um objeto da classe `ostream`, você deve especificar um objeto de `streambuf` para o construtor.  
+ Objetos raramente são construídos de `ostream`; objetos predefinidos geralmente são usados. Em alguns casos, você pode reatribuir objetos predefinidos após a inicialização do programa. A classe `ostream`, que pode ser configurada para a operação com buffer ou sem buffer, é mais adequada para saída de modo de texto sequencial. Toda a funcionalidade da classe base, `ios`, está incluída em `ostream`. Se você construir um objeto da classe `ostream`, deverá especificar um objeto `streambuf` para o construtor.  
   
- A classe de `ofstream` oferece suporte a saídas do arquivo em disco.  Se você precisar de um disco de saída somente leitura, construir um objeto da classe `ofstream`.  Você pode especificar se os objetos de `ofstream` aceitam binário ou os dados do modo gráfico para construir o objeto de `ofstream` ou ao chamar a função de membro de `open` do objeto.  Muitas opções e funções de membro de formatação aplicam a `ofstream` objetos, e todas as funcionalidades das classes base `ios` e `ostream` será incluída.  
+ A classe `ofstream` dá suporte à saída de arquivo de disco. Se você precisar de um disco somente saída, construa um objeto da classe `ofstream`. Você pode especificar se objetos `ofstream` aceitam dados no modo de texto ou binários ao construir o objeto `ofstream` ou ao chamar a função membro `open` do objeto. Muitas opções de formatação e funções membro se aplicam aos objetos `ofstream` e toda a funcionalidade das classes base `ios` e `ostream` estão incluídas.  
   
- Se você especificar um nome de arquivo no construtor, esse arquivo é aberto automaticamente quando o objeto é construído.  Se não, você pode usar a função de membro de `open` invocado depois do construtor padrão.  
+ Se você especificar um nome de arquivo no construtor, esse arquivo é aberto automaticamente quando o objeto é construído. Caso contrário, você pode usar a função membro `open` depois de invocar o construtor padrão.  
   
- Como a função `sprintf_s`de tempo de execução, a classe de `ostringstream` oferece suporte a saídas em cadeias de caracteres de memória.  Para criar uma cadeia de caracteres na memória usando a formatação do fluxo de E\/S, construir um objeto da classe `ostringstream`.  
+ Assim como a função de tempo de execução `sprintf_s`, a classe `ostringstream` dá suporte a saídas para cadeias de caracteres na memória. Para criar uma cadeia de caracteres na memória usando a formatação de fluxo de E/S, construa um objeto da classe `ostringstream`.  
   
-## Nesta seção  
- [Construindo objetos de fluxo de saída](../Topic/Constructing%20Output%20Stream%20Objects.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Construindo objetos de fluxo de saída](../standard-library/constructing-output-stream-objects.md)  
   
  [Usando operadores de inserção e controlando o formato](../standard-library/using-insertion-operators-and-controlling-format.md)  
   
- [Funções de Membro de Fluxo de Arquivo de Saída](../standard-library/output-file-stream-member-functions.md)  
+ [Funções de membro de fluxo de arquivo de saída](../standard-library/output-file-stream-member-functions.md)  
   
- [Efeitos do buffer](../standard-library/effects-of-buffering.md)  
+ [Efeitos do armazenamento em buffer](../standard-library/effects-of-buffering.md)  
   
- [Arquivos de Saída Binários](../standard-library/binary-output-files.md)  
+ [Arquivos de saída binários](../standard-library/binary-output-files.md)  
   
- [Sobrecarregando o operador \<\< para as suas próprias classes](../Topic/Overloading%20the%20%3C%3C%20Operator%20for%20Your%20Own%20Classes.md)  
+ [Sobrecarregando o operador << para as suas próprias classes](../standard-library/overloading-the-output-operator-for-your-own-classes.md)  
   
- [Elaborando os seus próprios manipuladores sem argumentos](../standard-library/writing-your-own-manipulators-without-arguments.md)  
+ [Elaborando os próprios manipuladores sem argumentos](../standard-library/writing-your-own-manipulators-without-arguments.md)  
   
-## Consulte também  
- [\<ostream\> Membros](http://msdn.microsoft.com/pt-br/a5afd034-0e3c-41ee-bbd7-468d9188da1d)   
- [ofstream](../Topic/ofstream.md)   
- [ostringstream](../Topic/ostringstream.md)   
- [os membros do basic\_ostream](http://msdn.microsoft.com/pt-br/82e5cc91-7c0c-4950-a8ce-ac779cfbbd93)   
- [Programação iostream](../Topic/iostream%20Programming.md)
+## <a name="see-also"></a>Consulte também 
+ [ofstream](../standard-library/basic-ofstream-class.md)   
+ [ostringstream](../standard-library/basic-ostringstream-class.md)   
+ [Programação de iostream](../standard-library/iostream-programming.md)
+
+

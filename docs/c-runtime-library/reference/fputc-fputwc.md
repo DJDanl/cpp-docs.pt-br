@@ -1,56 +1,70 @@
 ---
-title: "fputc, fputwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fputc"
-  - "fputwc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fputc"
-  - "fputwc"
-  - "_fputtc"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _fputtc"
-  - "Função fputc"
-  - "Função fputtc"
-  - "Função fputwc"
-  - "fluxos, gravando caracteres em"
+title: fputc, fputwc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fputc
+- fputwc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputc
+- fputwc
+- _fputtc
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing characters to
+- fputtc function
+- _fputtc function
+- fputwc function
+- fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 caps.latest.revision: 20
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# fputc, fputwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: cc4d393a6a6b679db98a7bc45aa689ca7f5be738
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="fputc-fputwc"></a>fputc, fputwc
 Grava um caractere em um fluxo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int fputc(  
@@ -63,48 +77,48 @@ wint_t fputwc(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Caractere a ser gravado.  
+ O caractere a ser gravado.  
   
  `stream`  
- Ponteiro a estrutura de `FILE` .  
+ Ponteiro para a estrutura `FILE`.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna o caractere escrito.  Para `fputc`, um valor de retorno de `EOF` indica um erro.  No caso de `fputwc`, um valor de retorno de `WEOF` indica um erro.  Se `stream` for `NULL`, essas funções chamarão o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, elas retornarão `EOF` e definirão `errno` como `EINVAL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna o caractere gravado. Para `fputc`, um valor retornado de `EOF` indica que há um erro. Para `fputwc`, um valor retornado de `WEOF` indica que há um erro. Se `stream` for `NULL`, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão `EOF` e definirão `errno` como `EINVAL`.  
   
- Para obter mais informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
-## Comentários  
- Cada uma dessas funções grava o caractere único `c` a um arquivo na posição indicada pelo indicador de posição associado do arquivo \(se definido\) e avança o indexador conforme apropriado.  No caso de `fputc` e de `fputwc`, o arquivo é associado com `stream`*.* Se o arquivo não puder suportar solicitações de posicionamento ou tiver sido aberto em modo de anexação, o caractere é acrescentado ao final de fluxo.  
+## <a name="remarks"></a>Comentários  
+ Cada uma dessas funções grava o caractere único `c` em um arquivo na posição indicada pelo indicador de posição do arquivo associado (se definido) e avança o indicador conforme apropriado. No caso de `fputc` e `fputwc`, o arquivo está associado a `stream`*.* Se o arquivo não puder dar suporte a solicitações de posicionamento ou tiver sido aberto no modo de acréscimo, o caractere será acrescentado ao final do fluxo.  
   
- As duas funções se comportam de maneira idêntica, se o fluxo estiver aberto no modo de ANSI.  `fputc` não tem suporte para saída em um fluxo UNICODE.  
+ As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `fputc` não dá suporte à saída em um fluxo UNICODE.  
   
- As versões com o sufixo `_nolock` são idênticas, exceto pelo fato de que não são protegidas contra interferência de outros threads.  Para obter mais informações, consulte[\_fputc\_nolock, \_fputwc\_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
+ As versões com o sufixo `_nolock` são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Para obter mais informações, consulte [_fputc_nolock, _fputwc_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
   
- As observações específicas da rotina são as seguintes:  
+ Veja comentários específicos sobre a rotina a seguir.  
   
 |Rotina|Comentários|  
-|------------|-----------------|  
-|`fputc`|Equivalente a `putc`, mas somente implementado como uma função, em vez de como uma função e uma macro.|  
-|`fputwc`|Versão de caracteres largos de `fputc`.  Grava `c` como um caractere de multibyte ou um caractere largo, de acordo com o modo em que `stream` é aberto \- modo de texto ou modo binário.|  
+|-------------|-------------|  
+|`fputc`|Equivalente a `putc`, mas implementado somente como uma função, em vez de uma função e uma macro.|  
+|`fputwc`|Versão de caractere largo de `fputc`. Grava `c` como um caractere multibyte ou um caractere largo, dependendo de `stream` ser aberto no modo de texto ou binário.|  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fputtc`|`fputc`|`fputc`|`fputwc`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`fputc`|\<stdio.h\>|  
-|`fputwc`|\<stdio.h\> ou \<wchar.h\>|  
+|--------------|---------------------|  
+|`fputc`|\<stdio.h>|  
+|`fputwc`|\<stdio.h> ou \<wchar.h>|  
   
- O console não tem suporte em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Os manipuladores de fluxo padrão associados ao console — `stdin`, `stdout` e `stderr` — devem ser redirecionados antes que as funções de tempo de execução do C possam utilizá\-los em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_fputc.c  
@@ -125,14 +139,17 @@ int main( void )
 }  
 ```  
   
-  **Esse é um teste de fputc\!\!**   
-## Equivalência do .NET Framework  
+```Output  
+This is a test of fputc!!  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
   
 -   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

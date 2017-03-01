@@ -1,63 +1,78 @@
 ---
-title: "lround, lroundf, lroundl, llround, llroundf, llroundl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "llround"
-  - "llroundf"
-  - "llroundl"
-  - "lroundf"
-  - "lround"
-  - "lroundl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lround"
-  - "lroundl"
-  - "llroundl"
-  - "llround"
-  - "lroundf"
-  - "llroundf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função llround"
-  - "Função llroundf"
-  - "Função llroundl"
-  - "Função lround"
-  - "Função lroundf"
-  - "Função lroundl"
+title: lround, lroundf, lroundl, llround, llroundf, llroundl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- llround
+- llroundf
+- llroundl
+- lroundf
+- lround
+- lroundl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lround
+- lroundl
+- llroundl
+- llround
+- lroundf
+- llroundf
+dev_langs:
+- C++
+helpviewer_keywords:
+- lround function
+- llroundl function
+- llround function
+- lroundf function
+- llroundf function
+- lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
 caps.latest.revision: 6
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# lround, lroundf, lroundl, llround, llroundf, llroundl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 62e3b71920b2e0c95de5f5f4b6c0a4681aa3b0be
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 Arredonda um valor de ponto flutuante para o inteiro mais próximo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 long lround(   
@@ -92,29 +107,29 @@ long long llroundl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
- O valor exponencial de ponto flutuante para arredondar.  
+ O valor do ponto flutuante a ser arredondado.  
   
-## Valor de retorno  
- As funções de `lround` e `llround` retornam o `long` mais próximo ou o inteiro de `long long` para `x`.  Os valores incompletos são arredondados para cima, independentemente da configuração do modo por arredondamento de ponto flutuante.  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ As funções `lround` e `llround` retornam o inteiro `long` ou `long long` mais próximo de `x`. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
-|-------------|-----------------|---------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`, `IND`|nenhum|`_DOMAIN`|  
   
-## Comentários  
- Como o C\+\+ permite a sobrecarga, você pode chamar as sobrecargas de `lround` or `llround` que levam e retornam valores `float` e `long double`.  Em um programa em C, `lround` e `llround` sempre obterão e retornarão um `double`.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `lround` ou `llround` que tomam e retornam valores de `float` e `long double`. Em um programa C, `lround` e `llround` sempre tomam e retornam um `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`lround`, `lroundf`, `lroundl`, `llround`, `llroundf`, `llroundl`|\<math.h\>|  
+|-------------|---------------------|  
+|`lround`, `lroundf`, `lroundl`, `llround`, `llroundf`, `llroundl`|\<math.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_lround.c  
@@ -141,21 +156,24 @@ int main( void )
 }  
 ```  
   
-  **lround\(2,499999\) é 2**  
-**lround\(\-2,499999\) é \-2**  
-**lroundf\(2,800000\) é 3**  
-**lroundf\(\-2,800000\) é \-3**  
-**lroundl\(2,500000\) é 4**  
-**lroundl\(\-2,500000\) é \-4**   
-## Equivalência do .NET Framework  
+```Output  
+lround(2.499999) is 2  
+lround(-2.499999) is -2  
+lroundf(2.800000) is 3  
+lroundf(-2.800000) is -3  
+lroundl(2.500000) is 4  
+lroundl(-2.500000) is -4  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Math::Round](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../Topic/fmod,%20fmodf.md)   
- [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/pt-br/312fd869-a9c0-4107-bb23-ab8299d04385)   
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
+ [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/en-us/312fd869-a9c0-4107-bb23-ab8299d04385)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   
- [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/pt-br/15111e73-331d-41d1-81b7-3e10df894848)   
+ [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/en-us/15111e73-331d-41d1-81b7-3e10df894848)   
  [rint, rintf, rintl](../../c-runtime-library/reference/rint-rintf-rintl.md)

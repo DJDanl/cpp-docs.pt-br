@@ -1,57 +1,72 @@
 ---
-title: "_makepath_s, _wmakepath_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wmakepath_s"
-  - "_makepath_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wmakepath_s"
-  - "makepath_s"
-  - "_makepath_s"
-  - "wmakepath_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _makepath_s"
-  - "Função wmakepath_s"
-  - "caminhos"
-  - "Função _wmakepath_s"
-  - "Função makepath_s"
+title: _makepath_s, _wmakepath_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wmakepath_s
+- _makepath_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wmakepath_s
+- makepath_s
+- _makepath_s
+- wmakepath_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _makepath_s function
+- wmakepath_s function
+- paths
+- _wmakepath_s function
+- makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
 caps.latest.revision: 29
-caps.handback.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _makepath_s, _wmakepath_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 60ec32f25fb39189c73b80dd9e83107dd90df3dc
+ms.lasthandoff: 02/25/2017
 
-Cria um nome de caminho dos componentes.  Essas são versões de [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
+Cria um nome de caminho com base nos componentes. Estas são versões de [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t _makepath_s(  
@@ -88,67 +103,67 @@ errno_t _wmakepath_s(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[saída\] `path`  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `path`  
  Buffer de caminho completo.  
   
- \[entrada\] `sizeInWords`  
- Tamanho do buffer no word.  
+ [in] `sizeInWords`  
+ O tamanho do buffer em palavras.  
   
- \[entrada\] `sizeInBytes`  
- Tamanho do buffer em bytes.  
+ [in] `sizeInBytes`  
+ O tamanho do buffer em bytes.  
   
- \[entrada\] `drive`  
- Contém uma letra \(A, B, e assim por diante\) correspondentes à unidade desejada e a dois\-pontos à direita opcional.  `_makepath_s` insere os dois\-pontos automaticamente no caminho composto se está ausente.  Se `drive` é `NULL` ou aponta para uma cadeia de caracteres vazia, nenhuma letra de unidade aparece na cadeia de caracteres composta de `path` .  
+ [in] `drive`  
+ Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. `_makepath_s` insere automaticamente os dois pontos no caminho de composição se ele estiver ausente. Se `drive` for `NULL` ou apontar para uma cadeia de caracteres vazia, nenhuma letra da unidade aparecerá na cadeia de caracteres de composição `path`.  
   
- \[entrada\] `dir`  
- Contém o caminho dos diretórios, não incluindo o designador de unidade ou o nome do arquivo real.  A barra à direita é opcional, e uma barra \(\/\) ou uma barra invertida \(\\\) ou ambos podem ser usados em um único argumento de `dir` .  Se nenhuma barra à direita \(\/ou\/\/\\\) for especificada, será inserida automaticamente.  Se `dir` é `NULL` ou aponta para uma cadeia de caracteres vazia, nenhum caminho de diretório é inserido na cadeia de caracteres composta de `path` .  
+ [in] `dir`  
+ Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/), uma barra invertida (\\) ou ambas podem ser usadas em um único argumento `dir`. Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se `dir` for `NULL` ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório será inserido na cadeia de caracteres de composição `path`.  
   
- \[entrada\] `fname`  
- Contém o nome de arquivo base sem nenhuma extensões de nome de arquivo.  Se `fname` é `NULL` ou aponta para uma cadeia de caracteres vazia, nenhum nome de arquivo é inserido na cadeia de caracteres composta de `path` .  
+ [in] `fname`  
+ Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se `fname` for `NULL` ou apontar para uma cadeia de caracteres vazia, nenhum nome de arquivo será inserido na cadeia de caracteres de composição `path`.  
   
- \[entrada\] `ext`  
- Contém a extensão de nome de arquivo real, com ou sem um período principal \(.\).  `_makepath_s` insere o período automaticamente se não aparecer em `ext`.  Se `ext` é `NULL` ou aponta para uma cadeia de caracteres vazia, nenhuma extensão é inserida na cadeia de caracteres composta de `path` .  
+ [in] `ext`  
+ Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). `_makepath_s` insere o período automaticamente se ele não aparecer em `ext`. Se `ext` for `NULL` ou apontar para uma cadeia de caracteres vazia, nenhuma extensão será inserida na cadeia de caracteres de composição `path`.  
   
-## Valor de retorno  
- Zero se tiver êxito; um código de erro em falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido; um código de erro em caso de falha.  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|`path`|`sizeInWords` \/ `sizeInBytes`|Return|Conteúdo de `path`|  
+|`path`|`sizeInWords` / `sizeInBytes`|Valor de|Conteúdo de `path`|  
 |------------|------------------------------------|------------|------------------------|  
-|`NULL`|any|`EINVAL`|não modificado|  
-|any|\<\= 0|`EINVAL`|não modificado|  
+|`NULL`|qualquer|`EINVAL`|não modificado|  
+|qualquer|<= 0|`EINVAL`|não modificado|  
   
- Se qualquer uma das condições de erro acima ocorrerem, essas funções invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, `errno` estádefinido como`EINVAL` e retorna`EINVAL`**.** `NULL` de funções são permitidos os parâmetros `drive`, `fname`, e `ext`.  Para obter informações sobre o comportamento quando esses parâmetros são ponteiros nulos ou cadeias de caracteres vazias, consulte a seção comentários.  
+ Se qualquer uma das condições de erro acima ocorrer, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e as funções retornarão `EINVAL`**.** `NULL` tem permissão para os parâmetros `drive`, `fname` e `ext`. Para obter informações sobre o comportamento quando esses parâmetros são ponteiros nulos ou cadeias de caracteres vazias, consulte a seção de Comentários.  
   
-## Comentários  
- A função de `_makepath_s` cria uma cadeia de caracteres composta de caminho dos componentes individuais, para armazenar o resultado em `path`.  `path` pode incluir uma letra de unidade, um caminho de diretório, um nome de arquivo, e uma extensão de nome de arquivo.  `_wmakepath_s` é uma versão de caractere largo de `_makepath_s`; os argumentos para `_wmakepath_s` são cadeias de caractere amplo.  Caso contrário, `_wmakepath_s` e `_makepath_s`, ao contrário, se comportam de forma idêntica.  
+## <a name="remarks"></a>Comentários  
+ A função `_makepath_s` cria uma cadeia de caracteres de caminho de composição com base em componentes individuais e armazena o resultado em `path`. O `path` pode incluir uma letra da unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. `_wmakepath_s` é uma versão de caractere largo de `_makepath_s`; os argumentos para `_wmakepath_s` são cadeias de caracteres largas. Caso contrário, `_wmakepath_s` e `_makepath_s` se comportam de forma idêntica.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmakepath_s`|`_makepath_s`|`_makepath_s`|`_wmakepath_s`|  
   
- O argumento de `path` deve apontar para um buffer vazio grande o suficiente para manter o caminho completo.  `path` composto não deve ser maior que a constante de `_MAX_PATH` , definida em Stdlib.h.  
+ O argumento `path` deve apontar para um buffer vazio grande o suficiente para conter o caminho completo. A composição `path` não deve ser maior do que a constante `_MAX_PATH`, definida em Stdlib.h.  
   
- Se o caminho for `NULL`, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Além disso, `errno` é definido como `EINVAL`.  os valores de`NULL` são permitidos todos os outros parâmetros.  
+ Se o caminho for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, `errno` é definido como `EINVAL`. Valores `NULL` são permitidos para todos os outros parâmetros.  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
- As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD.  Para desabilitar esse comportamento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_makepath_s`|\<stdlib.h\>|  
-|`_wmakepath_s`|\<stdlib.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_makepath_s`|\<stdlib.h>|  
+|`_wmakepath_s`|\<stdlib.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_makepath_s.c  
@@ -188,7 +203,7 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 Path created with _makepath_s: c:\sample\crt\crt_makepath_s.c  
@@ -200,11 +215,11 @@ Path extracted with _splitpath_s:
   Ext: .c  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
   
-## Consulte também  
- [Manipulação de arquivos](../../c-runtime-library/file-handling.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)

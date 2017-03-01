@@ -1,56 +1,70 @@
 ---
-title: "_dup, _dup2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dup"
-  - "_dup2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_dup2"
-  - "_dup"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _dup"
-  - "Função _dup2"
-  - "Função dup"
-  - "Função dup2"
-  - "identificadores de arquivo [C++], duplicando"
-  - "identificadores de arquivo [C++], reatribuindo"
+title: _dup, _dup2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dup
+- _dup2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _dup2
+- _dup
+dev_langs:
+- C++
+helpviewer_keywords:
+- _dup2 function
+- dup function
+- file handles [C++], duplicating
+- file handles [C++], reassigning
+- dup2 function
+- _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _dup, _dup2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bbdaaf91266699c3b3a223692cb46953a69f09c4
+ms.lasthandoff: 02/25/2017
 
-Cria um segundo arquivo descritor para um arquivo aberto \(`_dup`\), ou reatribui um arquivo descritor \(`_dup2`\).  
+---
+# <a name="dup-dup2"></a>_dup, _dup2
+Cria um segundo descritor de arquivo para um arquivo aberto (`_dup`) ou reatribui um descritor de arquivo (`_dup2`).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _dup(   
@@ -62,37 +76,37 @@ int _dup2(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `fd`, `fd1`  
- Descritores de arquivo que se referem ao arquivo aberto.  
+ Descritores de arquivo que fazem referência ao arquivo aberto.  
   
  `fd2`  
  Qualquer descritor de arquivo.  
   
-## Valor de retorno  
- `_dup` retorna um novo descritor de arquivo.  `_dup2` retorna 0 para indicar o sucesso.  Se um erro ocorrer, cada função retornará \-1 e definirá `errno` como `EBADF` se o arquivo descritor for inválido ou como `EMFILE` se mais nenhum arquivo descritor estiver disponível.  No caso de um arquivo descritor inválido, a função também chama o manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Valor de retorno  
+ `_dup` retorna um novo descritor de arquivo. `_dup2` retorna 0 para indicar êxito. Se ocorrer um erro, cada função retorna –1 e define `errno` como `EBADF` se o descritor de arquivo for inválido ou como `EMFILE` se não houver mais descritores de arquivo disponíveis. No caso de um descritor de arquivo inválido, a função também invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
   
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- As funções `_dup` e `_dup2` associam um segundo descritor de arquivo a um arquivo atualmente aberto.  Essas funções podem ser usadas para associar um descritor de arquivo predefinido, como aquele para `stdout`, a um arquivo diferente.  As operações no arquivo podem ser executadas usando qualquer descritor de arquivo.  O tipo de acesso permitido para o arquivo não é afetado pela criação de um novo descritor.  `_dup` retorna o próximo descritor de arquivo disponível para o arquivo especificado.  `_dup2` força `fd2` para fazer referência ao mesmo arquivo do `fd1`.  Se `fd2` estiver associado a um arquivo aberto no momento da chamada, esse arquivo é fechado.  
+## <a name="remarks"></a>Comentários  
+ As funções `_dup` e `_dup2` associam um segundo descritor de arquivo com um arquivo aberto. Essas funções podem ser usadas para associar um descritor de arquivo predefinido, como `stdout`, com um arquivo diferente. As operações no arquivo podem ser realizadas usando um descritor de arquivo. O tipo de acesso permitido para o arquivo não é afetado pela criação de um novo descritor. `_dup` retorna o próximo descritor de arquivo disponível para o arquivo. `_dup2` força `fd2` para se referir ao mesmo arquivo como `fd1`. Se `fd2` está associado com um arquivo aberto no momento da chamada, esse arquivo é fechado.  
   
- `_dup` e `_dup2` aceitam descritores de arquivo como parâmetros.  Para passar um fluxo `(FILE *)` a qualquer uma dessas funções, use [\_fileno](../Topic/_fileno.md).  A rotina `fileno` retorna o descritor de arquivo atualmente associado ao fluxo especificado.  O exemplo a seguir mostra como associar `stderr` \(definido como `FILE` `*` em Stdio.h\) a um descritor de arquivo:  
+ `_dup` e `_dup2` aceitam descritores de arquivo como parâmetros. Para passar um fluxo `(FILE *)` para uma dessas funções, use [_fileno](../../c-runtime-library/reference/fileno.md). A rotina `fileno` retorna o descritor de arquivo associado no momento a determinado fluxo. O exemplo a seguir mostra como associar `stderr` (definido como `FILE` `*` no Stdio.h) com um descritor de arquivo:  
   
 ```  
 int cstderr = _dup( _fileno( stderr ));  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_dup`|\<io.h\>|  
-|`_dup2`|\<io.h\>|  
+|-------------|---------------------|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- O console não tem suporte em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Os manipuladores de fluxo padrão associados ao console — `stdin`, `stdout` e `stderr` — devem ser redirecionados antes que as funções de tempo de execução do C possam utilizá\-los em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_dup.c  
@@ -146,12 +160,16 @@ int main( void )
 }  
 ```  
   
-  **Isso vai para stdout primeiro**  
-**Isso vai para stdout**  
-**O arquivo de 'dados' contém:**  
-**Isso vai para 'dados' do arquivo**   
-## Consulte também  
- [E\/S de nível inferior](../../c-runtime-library/low-level-i-o.md)   
- [\_close](../Topic/_close.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+```Output  
+This goes to stdout first  
+This goes to stdout  
+  
+The file 'data' contains:  
+This goes to file 'data'  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

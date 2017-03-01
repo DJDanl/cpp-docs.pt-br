@@ -1,79 +1,90 @@
 ---
-title: "Struct not_equal_to | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.not_equal_to"
-  - "std::not_equal_to"
-  - "not_equal_to"
-  - "xfunctional/std::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função not_equal_to"
-  - "Struct not_equal_to"
+title: Struct not_equal_to | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.not_equal_to
+- std::not_equal_to
+- not_equal_to
+- xfunctional/std::not_equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- not_equal_to function
+- not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
 caps.latest.revision: 19
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct not_equal_to
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 741c899479f89845a2be8e68e133a48b7d99e7c3
+ms.lasthandoff: 02/25/2017
 
-Um predicado binário que executa a operação de desigualdade \(`operator!=`\) em seus argumentos.  
+---
+# <a name="notequalto-struct"></a>Struct not_equal_to
+Um predicado binário que executa a operação de desigualdade ( `operator!=`) em seus argumentos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Type = void>  
-   struct not_equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator!=  
-template<>  
-   struct not_equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         != std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct not_equal_to : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator!=
+template <>
+struct not_equal_to<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) != std::forward<U>(Right));
+};
 ```  
   
-#### Parâmetros  
- `Type`, `Type1`, `Type2`  
- Qualquer tipo que ofereça suporte `operator!=` que usa operandos dos tipos especificados ou inferidos.  
+#### <a name="parameters"></a>Parâmetros  
+ `Type`, `T`, `U`  
+ Qualquer tipo que dê suporte a um `operator!=` que usa operandos dos tipos especificados ou inferidos.  
   
  `Left`  
- O operando esquerdo de uma operação de desigualdade.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type1`.  
+ O operando esquerdo da operação de desigualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.  
   
  `Right`  
- O operando direito da operação de desigualdade.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type2`.  
+ O operando direito da operação de desigualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
   
-## Valor de retorno  
- O resultado de `Left``!=``Right`.  O modelo especializado aperfeiçoa a transmissão de resultado, que contém o tipo que é retornado por `operator!=`.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado de `Left``!=``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator!=`.  
   
-## Comentários  
- Os objetos do tipo `Type` devem ser igualdade\- comparáveis.  Isso exige que `operator!=` definida no conjunto de objetos satisfaz as propriedades matemáticas de uma relação de equivalência.  Todos os tipos numéricos internos e do ponteiro satisfazem esse requisito.  
+## <a name="remarks"></a>Comentários  
+ Os objetos do tipo `Type` devem ser comparáveis por igualdade. Isso requer que o `operator!=` definido no conjunto de objetos atenda às propriedades matemáticas de uma relação de equivalência. Todos os tipos numéricos internos e de ponteiro atendem a esse requisito.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // functional_not_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -122,16 +133,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise not_equal_to comparsion  
+between v1 & v2 is: ( 0 0 1 0 1 0 )  
+*/  
 ```  
   
-  **O vetor v1 \= \(0 1 4 5 8 9\)**  
-**O vetor v2 \= \(\-0 1 \-4 5 \-8 9\)**  
-**O resultado de comparsion elemento no not\_equal\_to**  
-**entre v1 & v2 é: \(0 0 1 0 1 0\)**   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

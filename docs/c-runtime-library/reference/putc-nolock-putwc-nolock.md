@@ -1,102 +1,124 @@
 ---
-title: "_putc_nolock, _putwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putc_nolock"
-  - "_putwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_puttc_nolock"
-  - "puttc_nolock"
-  - "putwc_nolock"
-  - "_putwc_nolock"
-  - "_putc_nolock"
-  - "putc_nolock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função puttc_nolock"
-  - "Função putc_nolock"
-  - "Função _putc_nolock"
-  - "fluxos, gravando caracteres em"
-  - "caracteres, gravar"
-  - "Função putwc_nolock"
-  - "Função _puttc_nolock"
-  - "Função _putwc_nolock"
+title: _putc_nolock, _putwc_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putc_nolock
+- _putwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _puttc_nolock
+- puttc_nolock
+- putwc_nolock
+- _putwc_nolock
+- _putc_nolock
+- putc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- puttc_nolock function
+- putc_nolock function
+- _putc_nolock function
+- streams, writing characters to
+- characters, writing
+- putwc_nolock function
+- _puttc_nolock function
+- _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _putc_nolock, _putwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b81bcd1508646f302ad399c53d00ff06f1366a0c
+ms.lasthandoff: 02/25/2017
 
-Grava um caractere em um fluxo sem bloqueio do thread.  
+---
+# <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
+Grava um caractere em um fluxo sem bloquear o thread.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-int _putc_nolock(   intc,   FILE*stream);wint_t _putwc_nolock(   wchar_tc,   FILE*stream);  
+      int _putc_nolock(  
+   int c,  
+   FILE *stream   
+);  
+wint_t _putwc_nolock(  
+   wchar_t c,  
+   FILE *stream   
+);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Caracteres a serem gravados.  
+ O caractere a ser gravado.  
   
  `stream`  
- Ponteiro para o **arquivo** estrutura.  
+ Ponteiro para a estrutura **FILE**.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Consulte **putc, putwc**.  
   
-## Comentários  
- `_putc_nolock` e `_putwc_nolock` são idênticas às versões sem o **NOLOCK** sufixo exceto que eles não são protegidos contra interferência por outros threads. Eles podem ser mais rápidos porque eles não incorrem na sobrecarga de bloqueio de outros threads. Use essas funções somente em contextos de thread\-safe, como aplicativos de thread único ou onde o escopo de chamada já manipula o isolamento de thread.  
+## <a name="remarks"></a>Comentários  
+ `_putc_nolock` e `_putwc_nolock` são idênticas às versões sem o sufixo **_nolock**, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
   
- `_putwc_nolock` é a versão de caractere largo do `_putc_nolock`; as duas funções tenham comportamento idêntico quando o fluxo é aberto no modo ANSI.`_putc_nolock` atualmente não suporta a saída em um fluxo UNICODE.  
+ `_putwc_nolock` é a versão de caractere largo de `_putc_nolock`; as duas funções se comportam de forma idêntica quando o fluxo é aberto no modo ANSI. Atualmente, `_putc_nolock` não dá suporte para a saída em um fluxo UNICODE.  
   
-### Mapeamentos de rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR. h|Unicode e MBCS não definidos|MBCS definido|Unicode definido|  
-|---------------------|----------------------------------|-------------------|----------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**putwc\_nolock**|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_putc_nolock`|\< stdio \>|  
-|`_putwc_nolock`|\< stdio \> ou \< WCHAR \>|  
+|-------------|---------------------|  
+|`_putc_nolock`|\<stdio.h>|  
+|`_putwc_nolock`|\<stdio.h> ou \<wchar.h>|  
   
- Não há suporte para o console no [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. Os identificadores de fluxo padrão que estão associados com o console —`stdin`, `stdout`, e `stderr`— devem ser redirecionados para funções de tempo de execução C podem usá\-los em [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. Para obter informações de compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Libraries  
- Todas as versões do [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_putc_nolock.c  
@@ -121,19 +143,19 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 This is the line of output  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
   
--   [System::console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
+-   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

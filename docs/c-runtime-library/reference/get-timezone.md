@@ -1,52 +1,67 @@
 ---
-title: "_get_timezone | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_timezone"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_timezone"
-  - "get_timezone"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "fusos horários"
-  - "Função get_timezone"
-  - "Função _get_timezone"
+title: _get_timezone | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_timezone
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_timezone
+- get_timezone
+dev_langs:
+- C++
+helpviewer_keywords:
+- time zones
+- get_timezone function
+- _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _get_timezone
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1810a9c79d21b6a0b19f5f4e4f2d4c59d286e5b7
+ms.lasthandoff: 02/25/2017
 
-Recupera a diferença em segundos entre o tempo universal coordenados \(UTC\) e hora local.  
+---
+# <a name="gettimezone"></a>_get_timezone
+Recupera a diferença em segundos entre o UTC (Tempo Universal Coordenado) e a hora local.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -55,32 +70,32 @@ Recupera a diferença em segundos entre o tempo universal coordenados \(UTC\) e 
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `seconds`  
- A diferença em segundos entre UTC e hora local.  
+ A diferença, em segundos, entre o UTC e a hora local.  
   
-## Valor de retorno  
- Nulo se com êxito ou um valor de `errno` se ocorrer um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero é bem-sucedido ou um valor `errno`, se ocorrer um erro.  
   
-## Comentários  
- A função de `_get_timezone` recupera a diferença em segundos entre UTC e hora locais como um inteiro.  O valor padrão é 28.800 segundos, para hora padrão do pacífico \(oito horas atrás de UTC\).  
+## <a name="remarks"></a>Comentários  
+ A função `_get_timezone` recupera a diferença, em segundos, entre o UTC e a hora local como um número inteiro. O valor padrão é de 28.800 segundos para a Hora Padrão do Pacífico (oito horas antes do UTC).  
   
- Se `seconds` é `NULL`, o parâmetro de manipulador inválido é invocado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `EINVAL`.  
+ Se `seconds` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_get_timezone`|\<time.h\>|  
+|-------------|---------------------|  
+|`_get_timezone`|\<time.h>|  
   
  Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)   
- [\_get\_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_tzname](../../c-runtime-library/reference/get-tzname.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_tzname](../../c-runtime-library/reference/get-tzname.md)

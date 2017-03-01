@@ -1,53 +1,68 @@
 ---
-title: "_fpieee_flt | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpieee_flt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fpieee_flt"
-  - "_fpieee_flt"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _fpieee_flt"
-  - "tratamento de exceções, ponto flutuante"
-  - "tratamento de exceções de ponto flutuante"
-  - "Função fpieee_flt"
+title: _fpieee_flt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpieee_flt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fpieee_flt
+- _fpieee_flt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fpieee_flt function
+- exception handling, floating-point
+- floating-point exception handling
+- fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _fpieee_flt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
+ms.lasthandoff: 02/25/2017
 
-Invoca um manipulador de armadilha definido pelo usuário para exceções de ponto flutuante IEEE.  
+---
+# <a name="fpieeeflt"></a>_fpieee_flt
+Invoca um manipulador de interceptação definido pelo usuário para exceções de ponto flutuante do IEEE.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _fpieee_flt(   
@@ -57,42 +72,42 @@ int _fpieee_flt(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `excCode`  
  Código da exceção.  
   
  `excInfo`  
- Ponteiro para a estrutura de informações da exceção do Windows NT.  
+ Ponteiro para a estrutura de informações de exceção do Windows NT.  
   
  `handler`  
- Ponteiro para a rotina de armadilha\- manipulador do IEEE do usuário.  
+ Ponteiro para a rotina do manipulador de interceptação do IEEE do usuário.  
   
-## Valor de retorno  
- O valor de retorno de `_fpieee_flt` é o valor retornado por `handler`.  Como tal, a rotina de filtro IEEE pode ser usada na cláusula FROM de um mecanismo estruturado de \(SEH\) manipulação de exceções gerais.  
+## <a name="return-value"></a>Valor de retorno  
+ O valor retornado de `_fpieee_flt` é o valor retornado por `handler`. Sendo assim, a rotina de filtro do IEEE pode ser usada na cláusula except de um mecanismo de SEH (manipulação de exceção estruturada).  
   
-## Comentários  
- A função de `_fpieee_flt` invoca um manipulador de armadilha definido pelo usuário para exceções de ponto flutuante IEEE e fornecê\-lo com todas as informações relevantes.  Esta rotina serve como um filtro de exceção no mecanismo, que invoca seu próprio manipulador de exceção IEEE quando necessário.  
+## <a name="remarks"></a>Comentários  
+ A função `_fpieee_flt` invoca um manipulador de interceptação definido pelo usuário para exceções de ponto flutuante do IEEE e fornece a ele todas as informações relevantes. Essa rotina serve como um filtro de exceção no mecanismo de SEH, que invoca seu próprio manipulador de exceção do IEEE quando necessário.  
   
- A estrutura de `_FPIEEE_RECORD` , definida em Fpieee.h, contém informações que pertencem a uma exceção de ponto flutuante IEEE.  Essa estrutura é passada para o manipulador de armadilha definida pelo usuário por `_fpieee_flt`.  
+ A estrutura `_FPIEEE_RECORD`, definida em Fpieee.h, contém informações referentes a uma exceção de ponto flutuante do IEEE. Essa estrutura é passada para o manipulador de interceptação definido pelo usuário por `_fpieee_flt`.  
   
-|campo de \_FPIEEE\_RECORD|Descrição|  
-|-------------------------------|---------------|  
-|`unsigned int RoundingMode`, `unsigned int Precision`|Esses campos contiverem informações sobre o ambiente de ponto flutuante na exceção.|  
-|`unsigned int Operation`|Indica o tipo de operação que causou a armadilha.  Se o tipo for uma comparação \(`_FpCodeCompare`\), você pode fornecer um dos valores especiais de `_FPIEEE_COMPARE_RESULT` \(conforme definido em Fpieee.h\) no campo de `Result.Value` .  O tipo de conversão \(`_FpCodeConvert`\) indica que a armadilha durante uma operação de ponto flutuante de conversão.  Você pode assistir `Operand1` e `Result` tipos para determinar o tipo de conversão que está sendo tentada.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Essas estruturas indica os tipos e os valores de resultado dos operandos e propõe:<br /><br /> `OperandValid` Sinalizador que indica se o valor de resposta é válido.<br /><br /> `Format` Tipo de dados do valor correspondente.  O tipo de formato pode ser retornado se o valor correspondente não é válido.<br /><br /> `Value` Valor de dados do resultado ou do operando.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|o \_FPIEEE\_EXCEPTION\_FLAGS contém um campo de bit pelo tipo de exceção de ponto flutuante.<br /><br /> Há uma correspondência entre esses campos e os argumentos usados para mascarar as exceções fornecidas a [\_controlfp](../Topic/_control87,%20_controlfp,%20__control87_2.md).<br /><br /> O significado de cada bit exato depende do contexto:<br /><br /> `Cause` Cada bit do conjunto específico que indica a exceção foi gerada.<br /><br /> `Enable` Cada bit do conjunto indica que a exceção específica estiver desmascarada atualmente.<br /><br /> `Status` Cada bit do conjunto indica que a exceção específica está pendente no momento.  Isso inclui as exceções que não foram gerados como foram mascaradas por `_controlfp`.|  
+|Campo _FPIEEE_RECORD|Descrição|  
+|----------------------------|-----------------|  
+|`unsigned int RoundingMode`, `unsigned int Precision`|Esses campos contêm informações sobre o ambiente de ponto flutuante no momento em que a exceção ocorreu.|  
+|`unsigned int Operation`|Indica o tipo de operação que causou a interceptação. Se o tipo for uma comparação (`_FpCodeCompare`), você poderá fornecer um dos valores especiais de `_FPIEEE_COMPARE_RESULT` (conforme definido em Fpieee.h) no campo `Result.Value`. O tipo de conversão (`_FpCodeConvert`) indica que a interceptação ocorreu durante uma operação de conversão de ponto flutuante. Examine os tipos `Operand1` e `Result` para determinar o tipo de conversão que está sendo tentada.|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Essas estruturas indicam os tipos e valores do resultado e dos operandos propostos:<br /><br /> `OperandValid` Sinalizador que indica se o valor de resposta é válido.<br /><br /> `Format` Tipo de dados do valor correspondente. O tipo de formato pode ser retornado, mesmo que o valor correspondente não seja válido.<br /><br /> `Value` Valor de dados do resultado ou do operando.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS contém um campo de bits por tipo de exceção de ponto flutuante.<br /><br /> Há uma correspondência entre esses campos e os argumentos usados para mascarar as exceções fornecidas a [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> O significado exato de cada bit depende do contexto:<br /><br /> `Cause` Cada bit definido indica a exceção específica que foi gerada.<br /><br /> `Enable` Cada bit definido indica que a exceção específica está sendo desmascarada.<br /><br /> `Status` Cada bit definido indica que a exceção específica está pendente. Isso inclui exceções que não foram geradas porque estavam mascaradas por `_controlfp`.|  
   
- Durante as exceções que são desabilitadas são gerados quando você habilita as.  Isso pode resultar em um comportamento indefinido ao usar `_fpieee_flt` como um filtro de exceção.  Sempre chamada [\_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) antes de habilitar as exceções de ponto flutuante.  
+ Exceções pendentes desabilitadas são geradas quando você as habilita. Isso pode resultar em um comportamento indefinido ao usar `_fpieee_flt` como um filtro de exceção. Sempre chame [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) antes de habilitar exceções de ponto flutuante.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_fpieee_flt`|\<fpieee.h\>|  
+|--------------|---------------------|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_fpieee.c  
@@ -159,10 +174,10 @@ int main( void )
 }  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [\_control87, \_controlfp, \_\_control87\_2](../Topic/_control87,%20_controlfp,%20__control87_2.md)   
- [\_controlfp\_s](../../c-runtime-library/reference/controlfp-s.md)
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

@@ -1,65 +1,95 @@
 ---
-title: "_ITERATOR_DEBUG_LEVEL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ITERATOR_DEBUG_LEVEL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ITERATOR_DEBUG_LEVEL"
+title: _ITERATOR_DEBUG_LEVEL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ITERATOR_DEBUG_LEVEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 caps.latest.revision: 6
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _ITERATOR_DEBUG_LEVEL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: d5f89f871f60827d894aa414e12b52f0c5f7ef38
+ms.lasthandoff: 02/25/2017
 
-A macro de `_ITERATOR_DEBUG_LEVEL` \(IDL\) substitui e combina a funcionalidade de macros de [\_SECURE\_SCL](../standard-library/secure-scl.md) \(LCC\) e de [\_HAS\_ITERATOR\_DEBUGGING](../Topic/_HAS_ITERATOR_DEBUGGING.md) \(ESCONDIDO\).  
+---
+# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+A macro `_ITERATOR_DEBUG_LEVEL` controla se [iteradores verificados](../standard-library/checked-iterators.md) e o [suporte depuração de iteradores](../standard-library/debug-iterator-support.md) estão habilitados. Essa macro substitui e combina a funcionalidade das macros antigas `_SECURE_SCL` e `_HAS_ITERATOR_DEBUGGING`.  
   
-## Valores macro  
- As tabelas a seguir resumem os valores para macros de `_SECURE_SCL` e de `_HAS_ITERATOR_DEBUGGING` e, finalmente como esses valores são substituídos pela macro de `_ITERATOR_DEBUG_LEVEL` .  
+## <a name="macro-values"></a>Valores da macro  
+A tabela a seguir resume os possíveis valores da macro `_ITERATOR_DEBUG_LEVEL`.  
   
- A seção a seguir descreve os possíveis valores de LCC e macros de ESCONDIDOS.  
+|Modo de compilação|Valor da macro|Descrição|  
+|----------------------|----------------|-----------------|  
+|**Depuração**|||  
+||0|Desabilita os iteradores verificados e desabilita a depuração do iterador.|  
+||1|Habilita os iteradores verificados e desabilita a depuração do iterador.|  
+||2 (padrão)|Habilita a depuração do iterador, iteradores verificados não são relevantes.|  
+|**Versão**|||  
+||0 (padrão)|Desabilita iteradores verificados.|  
+||1|Habilita iteradores verificados, a depuração do iterador não é revelante.|  
   
- SCL\=0  
- Desabilita verificaram iteradores.  
+No modo de versão, o compilador gera um erro se você especificar `_ITERATOR_DEBUG_LEVEL` como 2.  
   
- SCL\=1  
- Habilita verificou iteradores.  
+## <a name="remarks"></a>Comentários  
+A macro `_ITERATOR_DEBUG_LEVEL` controla se os [iteradores verificados](../standard-library/checked-iterators.md) estão habilitados e, no modo de Depuração, se o [suporte para depuração de iteradores](../standard-library/debug-iterator-support.md) está habilitado. Se `_ITERATOR_DEBUG_LEVEL` estiver definido como 1 ou 2, os iteradores verificados garantem que os limites de seu contêiner não serão substituídos. Se `_ITERATOR_DEBUG_LEVEL` for 0, os iteradores não serão verificados. Quando `_ITERATOR_DEBUG_LEVEL` é definido como 1, o uso de qualquer iterador não seguro gera um erro de tempo de execução e o programa é finalizado. Quando `_ITERATOR_DEBUG_LEVEL` é definido como 2, o iterador não seguro causa uma asserção e uma caixa de diálogo de erro de tempo de execução que permite interromper o depurador. 
+
+Como a macro `_ITERATOR_DEBUG_LEVEL` dá suporte a funcionalidades semelhantes das macros `_SECURE_SCL` e `_HAS_ITERATOR_DEBUGGING`, talvez você não saiba qual macro e valor de macro usar em uma determinada situação. Para evitar confusão, recomendamos que você use apenas a macro `_ITERATOR_DEBUG_LEVEL`. Esta tabela descreve o valor da macro `_ITERATOR_DEBUG_LEVEL` equivalente a ser usado para diversos valores de `_SECURE_SCL` e `_HAS_ITERATOR_DEBUGGING` no código existente.  
   
- HID\=0  
- Depuração de iterador de desabilita em construções de depuração.  
+|**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
+|---|---|---|
+|0 (padrão da versão)|0 (desabilitado)|0 (desabilitado)|
+|1|1 (habilitado)|0 (desabilitado)|
+|2 (padrão da depuração)|(não relevante)|1 (habilitado no modo de depuração)|
   
- HID\=1  
- Habilita a depuração de iterador em construções de depuração.  HID não pode ser habilitado em construções de versão.  
+Para obter informações sobre como desabilitar avisos sobre iteradores verificados, consulte [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
- A tabela a seguir descreve como os valores macro de IDL substituem a LCC e os valores macro ESCONDIDOS.  
+### <a name="example"></a>Exemplo  
   
-|Modo de compilação|Novo macro|Macros antigos|Descrição|  
-|------------------------|----------------|--------------------|---------------|  
-|**Depurar**||||  
-||IDL\=0|SCL\=0, HID\=0|Desabilita verificaram iteradores e desabilita a depuração de iterador.|  
-||IDL\=1|SCL\=1, HID\=0|Verificou iteradores habilita e desabilita a depuração de iterador.|  
-||IDL\=2 \(padrão\)|SCL\= \(não se aplica\), HID\=1|Por padrão, habilita a depuração de iterador; os iteradores verificados não são pertinentes.|  
-|**Versão**||||  
-||IDL\=0 \(padrão\)|SCL\=0|Por padrão, desabilita verificaram iteradores.|  
-||IDL\=1|SCL\=1|Habilita verificado; iteradores a depuração de iterador não é relevante.|  
+Para especificar um valor para a macro `_ITERATOR_DEBUG_LEVEL`, use uma opção do compilador [/D](../build/reference/d-preprocessor-definitions.md) para defini-lo na linha de comando ou use `#define` antes que os cabeçalhos da Biblioteca Padrão do C++ sejam incluídos nos arquivos de origem. Por exemplo, na linha de comando, para compilar *sample.cpp* no modo de depuração e usar o suporte para depuração de iteradores, você pode especificar a definição de macro `_ITERATOR_DEBUG_LEVEL`:  
   
-## Comentários  
- No modo de versão, um erro é emitido se você especificar. IDL\=2.  
+`cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`  
   
- Como macros de `_SECURE_SCL` e de `_HAS_ITERATOR_DEBUGGING` dão suporte à funcionalidade semelhante, os usuários são frequentemente incertos que macro e macro valor a ser usado em uma situação específico.  Para resolver esse problema, recomendamos que você use apenas a macro de `_ITERATOR_DEBUG_LEVEL` .  
+Em um arquivo de origem, especifique a macro antes de qualquer cabeçalho de biblioteca padrão que defina iteradores.  
   
-## Consulte também  
- [Bibliotecas seguras: Biblioteca Padrão C\+\+](../standard-library/safe-libraries-cpp-standard-library.md)
+```cpp  
+// sample.cpp  
+  
+#define _ITERATOR_DEBUG_LEVEL 1  
+  
+#include <vector>  
+  
+// ...
+```  
+  
+## <a name="see-also"></a>Consulte também  
+[Iteradores verificados](../standard-library/checked-iterators.md)   
+[Suporte ao iterador de depuração](../standard-library/debug-iterator-support.md)   
+[Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md)
+

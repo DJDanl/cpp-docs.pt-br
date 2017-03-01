@@ -1,119 +1,129 @@
 ---
-title: "Classe linear_congruential_engine | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.linear_congruential_engine"
-  - "random/std::tr1::linear_congruential_engine"
-  - "linear_congruential_engine"
-  - "std::tr1::linear_congruential_engine"
-  - "tr1.linear_congruential_engine"
-  - "tr1::linear_congruential_engine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe linear_congruential_engine"
+title: Classe linear_congruential_engine | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- linear_congruential_engine
+- std::linear_congruential_engine
+- random/std::linear_congruential_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 caps.latest.revision: 21
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe linear_congruential_engine
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 0c2d3fb09db9b8f1bf1daca935fac34afd2c6ecb
+ms.lasthandoff: 02/25/2017
 
-Gera uma sequência aleatória pelo algoritmo Congruente linear.  
+---
+# <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
+Gera uma sequência aleatória pelo algoritmo congruente linear.  
   
-## Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe  
 ```  
-template<class UIntType, UIntType A, UIntType C, UIntType M>  
 class linear_congruential_engine{  
-public:  
-    // types  
-    typedef UIntType result_type;  
-  
-    // engine characteristics  
-    static constexpr result_type multiplier = a;  
-    static constexpr result_type increment = c;  
-    static constexpr result_type modulus = m;  
-    static constexpr result_type min() { return c == 0u ? 1u: 0u; }  
-    static constexpr result_type max() { return m - 1u; }  
-    static constexpr result_type default_seed = 1u;  
-  
-    // constructors and seeding functions  
-    explicit linear_congruential_engine(result_type s = default_seed);  
-    template<class Sseq> explicit linear_congruential_engine(Sseq& q);  
-    void seed(result_type s = default_seed);  
-    template<class Sseq> void seed(Sseq& q);  
-  
-    // generating functions  
-    result_type operator()();  
-    void discard(unsigned long long z);  
-};  
+   public:  // types  
+   typedef UIntType result_type;  
+   // engine characteristics  
+   static constexpr result_type multiplier = a;  
+   static constexpr result_type increment = c;  
+   static constexpr result_type modulus = m;  
+   static constexpr result_type min() { return c == 0u  1u: 0u; }  
+   static constexpr result_type max() { return m - 1u; }  
+   static constexpr result_type default_seed = 1u;  
+   // constructors and seeding functions  
+   explicit linear_congruential_engine(result_type s = default_seed);
+   template <class Sseq>  
+   explicit linear_congruential_engine(Sseq& q);
+   void seed(result_type s = default_seed);
+   template <class Sseq>  
+   void seed(Sseq& q);
+   // generating functions  
+   result_type operator()();
+   void discard(unsigned long long z);
+   };  
 ```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `UIntType`  
- O tipo de resultado inteiro sem sinal. Para os tipos possíveis, consulte [\<random\>](../standard-library/random.md).  
+ O tipo de resultado inteiro sem sinal. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
  `A`  
- **Multiplicador**.**Pré\-condição**: seção Consulte comentários.  
+ **Multiplicador**. **Pré-condição**: consulte a seção Comentários.  
   
  `C`  
- **Incremento**.**Pré\-condição**: seção Consulte comentários.  
+ **Incremento**. **Pré-condição**: consulte a seção Comentários.  
   
  `M`  
- **Módulo**.**Pré\-condição**: consulte comentários.  
+ **Módulo**. **Pré-condição**: consulte os comentários.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
 ||||  
 |-|-|-|  
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|  
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|  
   
- `default_seed` é um membro constante, definido como `1u`, usado como o valor de parâmetro padrão para `linear_congruential_engine::seed` e construtor de valor único.  
+ `default_seed` é um membro constante, definido como `1u`, usado como valor padrão do parâmetro `linear_congruential_engine::seed` e construtor de valor único.  
   
- Para obter mais informações sobre membros do mecanismo, consulte [\<random\>](../standard-library/random.md).  
+ Para obter mais informações sobre membros do mecanismo, consulte [\<random>](../standard-library/random.md).  
   
-## Comentários  
- O `linear_congruential_engine` classe de modelo é o mecanismo gerador mais simples, mas não a qualidade mais alta ou mais rápida. Uma melhoria em relação esse mecanismo é o [substract\_with\_carry\_engine](../Topic/subtract_with_carry_engine%20Class.md). Nenhum desses mecanismos é tão rápido nem como resultados de alta qualidade como o [mersenne\_twister\_engine](../standard-library/mersenne-twister-engine-class.md).  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo `linear_congruential_engine` é o mecanismo gerador mais simples, mas não o mais rápido nem de maior qualidade. Uma melhoria em relação a esse mecanismo é o [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Nenhum desses mecanismos é tão rápido nem tem resultados de qualidade tão altos quanto o [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- Esse mecanismo produz valores de um tipo especificado pelo usuário não assinado integral usando a relação de recorrência \(*período*\) `x(i) = (A * x(i-1) + C) mod M`.  
+ Esse mecanismo produz valores de um tipo integral não assinado especificado pelo usuário usando a relação de recorrência (*ponto final*) `x(i) = (A * x(i-1) + C) mod M`.  
   
- Se `M` for zero, o valor usado para essa operação de módulo é `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor de semente, se nenhuma chamada foi feita para `operator()`.  
+ Se `M` for igual a zero, o valor usado para essa operação de módulo é `numeric_limits<result_type>::max() + 1`. O estado do mecanismo é o último valor retornado ou o valor semente, se nenhuma chamada tiver sido feita a `operator()`.  
   
- Se `M` for diferente de zero, os valores dos argumentos de modelo `A` e `C` deve ser menor que `M`.  
+ Se `M` for diferente de zero, os valores dos argumentos de modelo `A` e `C` devem ser inferiores a `M`.  
   
- Embora seja possível construir um gerador do mecanismo diretamente, você também pode usar um desses typedefs predefinidos.  
+ Embora seja possível construir um gerador diretamente desse mecanismo, também é possível usar um dos typedefs predefinidos.  
   
- `minstd_rand0`: 1988 mecanismo padrão mínimo \(Lewis, Goodman e Miller, 1969\).  
+ `minstd_rand0`: mecanismo padrão mínimo de 1988 (Lewis, Goodman e Miller, 1969).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`: Mecanismo padrão mínimo atualizado `minstd_rand0` \(Park, Miller e Stockmeyer, 1993\).  
+ `minstd_rand`: mecanismo padrão mínimo atualizado `minstd_rand0` (Park, Miller e Stockmeyer, 1993).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- Para obter informações detalhadas sobre o algoritmo de mecanismo Congruente linear, consulte o artigo da Wikipedia [gerador Congruente Linear](http://go.microsoft.com/fwlink/?LinkId=402446).  
+ Para obter informações detalhadas sobre o algoritmo de mecanismo congruente linear, consulte o artigo da Wikipédia [Geradores congruentes lineares](http://go.microsoft.com/fwlink/LinkId=402446).  
   
-## Requisitos  
- **Cabeçalho:** \< random \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<random>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>Consulte também  
+ [\<random>](../standard-library/random.md)
+
+
+

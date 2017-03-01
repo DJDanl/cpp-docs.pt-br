@@ -1,55 +1,70 @@
 ---
-title: "mbrtoc16, mbrtoc32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbrtoc16"
-  - "mbrtoc32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbrtoc16"
-  - "mbrtoc32"
-  - "uchar/mbrtoc16"
-  - "uchar/mbrtoc32"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "função mbrtoc16"
-  - "função mbrtoc32"
+title: mbrtoc16, mbrtoc323 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbrtoc16
+- mbrtoc32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbrtoc16
+- mbrtoc32
+- uchar/mbrtoc16
+- uchar/mbrtoc32
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrtoc16 function
+- mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# mbrtoc16, mbrtoc32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4707c4bd142f1ffb0dddccf1622615fded746ad8
+ms.lasthandoff: 02/25/2017
 
-Representa o primeiro caractere multibyte em uma cadeia de caracteres estreita o caractere UTF\-16 ou UTF\-32 equivalente.  
+---
+# <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
+Converte o primeiro caractere multibyte em uma sequência de caracteres estreita no caractere UTF-16 ou UTF-32 equivalente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_t mbrtoc16(   
@@ -68,50 +83,50 @@ size_t mbrtoc32(
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `destination`  
- Ponteiro para o `char16_t` ou `char32_t` equivalente do caractere multibyte para converter. Se for null, a função não armazena um valor.  
+ O ponteiro para o `char16_t` ou `char32_t` equivalente do caractere multibyte a ser convertido. Se for null, a função não armazenará um valor.  
   
  `source`  
- Ponteiro para a cadeia de caracteres para converter caracteres multibyte.  
+ O ponteiro para a cadeia de caracteres multibyte a ser convertida.  
   
  `max_bytes`  
- O número máximo de bytes em `source` para examinar um caractere converter. Isso deve ser um valor entre 1 e o número de bytes, incluindo qualquer terminador nulo, restantes no `source`.  
+ O número máximo de bytes em `source` a serem examinados para um caractere a ser convertido. Isso deve ser um valor entre um e o número de bytes, incluindo qualquer terminador nulo, restantes no `source`.  
   
  `state`  
- Ponteiro para uma `mbstate_t` objeto de estado de conversão usado para interpretar a cadeia de caracteres multibyte para um ou mais caracteres de saída.  
+ O ponteiro para um objeto de estado de conversão `mbstate_t` usado para interpretar a cadeia de caracteres multibyte para um ou mais caracteres de saída.  
   
-## Valor de retorno  
- Em caso de sucesso, retorna o valor da primeira dessas condições que se aplica, dado atual `state` valor:  
+## <a name="return-value"></a>Valor de retorno  
+ Em caso de sucesso, retorna o valor da primeira dessas condições que se aplica, dado o valor `state` atual:  
   
 |Valor|Condição|  
-|-----------|--------------|  
-|0|O próximo `max_bytes` ou menos caracteres convertidos de `source` correspondem ao caractere grande null, que é o valor armazenado se `destination` não for nulo.<br /><br /> `state` contém o estado inicial do turno.|  
-|Entre 1 e `max_bytes`, inclusive|O valor retornado é o número de bytes de `source` Concluir um caractere multibyte válido. O caractere largo convertido é armazenado se `destination` não for nulo.|  
-|\-3|O próximo caractere largo resultantes de uma chamada anterior para a função foi armazenado no `destination` se `destination` não for nulo. Nenhum byte de `source` são consumidas por essa chamada para a função.<br /><br /> Quando  `source` aponta para um caractere multibyte que requer mais de um caractere largo para representar \(por exemplo, um par substituto\), então o `state` valor é atualizado para que a próxima chamada de função gravará o caractere adicional.|  
-|\-2|O próximo `max_bytes` bytes representam incompleto, mas os caracteres multibyte, potencialmente válido. Nenhum valor é armazenado em `destination`. Esse resultado pode ocorrer se `max_bytes` é zero.|  
-|\-1|Erro de codificação. O próximo `max_bytes` ou menos bytes não contribuem para um caractere multibyte completo e válido. Nenhum valor é armazenado em `destination`.<br /><br /> `EILSEQ` são armazenados em `errno` e o estado de conversão `state` for especificado.|  
+|-----------|---------------|  
+|0|Os próximos `max_bytes` ou menos caracteres convertidos de `source` correspondem ao caractere largo nulo, que é o valor armazenado se `destination` não for nulo.<br /><br /> `state` contém o estado de deslocamento inicial.|  
+|Entre 1 e `max_bytes`, inclusive|O valor retornado é o número de bytes de `source` que completa um caractere multibyte válido. O caractere largo convertido será armazenado se `destination` não for nulo.|  
+|-3|O próximo caractere largo resultante de uma chamada anterior para a função foi armazenado no `destination` se `destination` não era nulo. Nenhum byte de `source` é consumido por essa chamada para a função.<br /><br /> Quando `source` aponta para um caractere multibyte que requer mais de um caractere largo para representar (por exemplo, um par substituto), então o valor `state` é atualizado para que a próxima chamada de função grave o caractere adicional.|  
+|-2|Os próximos `max_bytes` bytes representam um caractere multibyte incompleto, mas potencialmente válido. Não é armazenado nenhum valor em `destination`. Esse resultado poderá ocorrer se `max_bytes` for zero.|  
+|-1|Ocorreu um erro de codificação. Os próximos `max_bytes` ou menos bytes não contribuem para um caractere multibyte completo e válido. Não é armazenado nenhum valor em `destination`.<br /><br /> `EILSEQ` é armazenado em `errno` e o estado de conversão `state` não é especificado.|  
   
-## Comentários  
- O `mbrtoc16` função lê até `max_bytes` bytes do `source` para localizar o primeiro caractere multibyte completo, válido e armazena o equivalente UTF\-16 caracteres em `destination`. Os bytes de origem são interpretados de acordo com a localidade multibyte do thread atual. Se os caracteres multibyte exigir mais de um caractere de saída UTF\-16 como um par substituto, então o `state` valor é definido para armazenar o próximo caractere UTF\-16 no `destination` na próxima chamada para `mbrtoc16`. O `mbrtoc32` é idêntica, mas a saída é armazenada como um caractere UTF\-32.  
+## <a name="remarks"></a>Comentários  
+ A função `mbrtoc16` lê até `max_bytes` bytes de `source` para encontrar o primeiro caractere multibyte válido completo e, em seguida, armazena o caractere UTF-16 equivalente no `destination`. Os bytes de origem são interpretados de acordo com a localidade de multibyte do thread atual. Se os caracteres multibyte exigirem mais de um caractere de saída UTF-16, como um par substituto, então o valor `state` será definido para armazenar o próximo caractere UTF-16 no `destination` na próxima chamada para `mbrtoc16`. A função `mbrtoc32` é idêntica, mas a saída é armazenada como um caractere UTF-32.  
   
- Se `source` for null, essas funções de retorno o equivalente de uma chamada feita usando argumentos de `NULL` para `destination`, `""` para `source`,  e `1` para `max_bytes`. Os valores passados de `destination` e `max_bytes` são ignorados.  
+ Se `source` for null, essas funções retornam o equivalente de uma chamada feita usando argumentos de `NULL` para `destination`, `""` para `source` e `1` para `max_bytes`. Os valores passados de `destination` e `max_bytes` são ignorados.  
   
- Se `source` for não nulo, a função começa no início da cadeia de caracteres e inspeciona até `max_bytes` bytes para determinar o número de bytes necessários para concluir o próximo caractere multibyte, incluindo as seqüências de turno. Se os bytes examinados contiverem um caractere multibyte válido e completo, a função converte o caractere em caractere largo de 16 bits ou 32 bits equivalente ou caracteres. Se `destination` não é nulo, a função armazenará o resultado da primeira \(e possivelmente somente\) de caractere no destino. Se os caracteres de saída adicionais forem necessários, um valor é definido `state`, de modo que as chamadas subseqüentes à função os caracteres adicionais de saída e retornam o valor de \-3. Se nenhum caractere de saída mais forem necessário, em seguida, `state` está definido para o estado inicial do turno.  
+ Se `source` não for nulo, a função começará no início da cadeia de caracteres e inspecionará até `max_bytes` bytes para determinar o número de bytes necessários para completar o próximo caractere multibyte, incluindo quaisquer sequências de deslocamento. Se os bytes examinados contiverem um caractere multibyte válido e completo, a função converterá o caractere no caractere ou caracteres largos de 16 bits ou 32 bits equivalentes. Se `destination` não for nulo, a função armazenará o primeiro (e possivelmente único) caractere resultante no destino. Se os caracteres de saída adicionais forem necessários, um valor será definido em `state`, de modo que as chamadas subsequentes para a função gerarão os caracteres adicionais e retornarão o valor -3. Se não for necessário mais nenhum caractere de saída adicional, `state` será definido para o estado de deslocamento inicial.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`mbrtoc16`, `mbrtoc32`|\< uchar.h \>|\< cuchar \>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [c16rtomb, c32rtomb](../Topic/c16rtomb,%20c32rtomb1.md)   
+ [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
  [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
  [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md)   
- [mbsrtowcs\_s](../../c-runtime-library/reference/mbsrtowcs-s.md)
+ [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)

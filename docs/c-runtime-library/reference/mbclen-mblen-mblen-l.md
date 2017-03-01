@@ -1,67 +1,81 @@
 ---
-title: "_mbclen, mblen, _mblen_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbclen"
-  - "mblen"
-  - "_mblen_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mblen"
-  - "ftclen"
-  - "_mbclen"
-  - "tclen"
-  - "_ftclen"
-  - "_tclen"
-  - "mbclen"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbclen"
-  - "Função _mblen_l"
-  - "Função _tclen"
-  - "Função mbclen"
-  - "Função mblen"
-  - "Função mblen_l"
-  - "Função tclen"
+title: _mbclen, mblen, _mblen_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbclen
+- mblen
+- _mblen_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mblen
+- ftclen
+- _mbclen
+- tclen
+- _ftclen
+- _tclen
+- mbclen
+dev_langs:
+- C++
+helpviewer_keywords:
+- tclen function
+- _mblen_l function
+- _tclen function
+- mblen_l function
+- _mbclen function
+- mbclen function
+- mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _mbclen, mblen, _mblen_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
+ms.lasthandoff: 02/25/2017
 
-Obtém o tamanho e determina a validade de um caractere de multibyte.  
+---
+# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+Obtém o comprimento e determina a validade de um caractere multibyte.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos que executam no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 size_t _mbclen(  
@@ -78,46 +92,46 @@ int _mblen_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Caractere de multibyte.  
+ Caractere multibyte.  
   
  `mbstr`  
  Endereço de uma sequência de bytes de caracteres multibyte.  
   
  `count`  
- Número de bytes a serem verificados.  
+ O número de bytes a serem verificados.  
   
  `locale`  
- Localidade a ser usada.  
+ Localidade a usar.  
   
-## Valor de retorno  
- `_mbclen` retorna 1 ou 2, de acordo com o caractere multibyte `c` ter 1 ou 2 bytes.  Não há retorno de erro para `_mbclen`.  Se `mbstr` não for `NULL`, `mblen` retorna o tamanho, em bytes, do caractere de multibyte.  Se `mbstr` for `NULL` ou apontar para o caractere nulo do caractere largo, `mblen` retornará 0.  Se o objeto para o qual `mbstr` aponta não forma um caractere de multibyte válido dentro dos primeiros caracteres de `count`, `mblen` retornará – 1.  
+## <a name="return-value"></a>Valor de retorno  
+ `_mbclen` retorna 1 ou 2, de acordo com se o caractere multibyte `c` tem 1 ou 2 bytes. Nenhum erro é retornado para `_mbclen`. Se `mbstr` não for `NULL`, `mblen` retornará o tamanho, em bytes, do caractere multibyte. Se `mbstr` for `NULL` ou apontar para o caractere nulo de caractere largo, `mblen` retornará 0. Se o objeto para o qual `mbstr` aponta não formar um caractere multibyte válido dentro dos primeiros `count` caracteres, `mblen` retornará -1.  
   
-## Comentários  
- A função `_mbclen` retorna o tamanho, em bytes, do caractere multibyte `c`.  Se `c` não apontar para o byte inicial de um caractere de multibyte conforme determinado por uma chamada implícita a `_ismbblead`, o resultado de `_mbclen` é imprevisível.  
+## <a name="remarks"></a>Comentários  
+ A função `_mbclen` retorna o tamanho, em bytes, do caractere multibyte `c`. Se `c` não apontar para o byte inicial de um caractere multibyte conforme determinado por uma chamada implícita para `_ismbblead`, o resultado de `_mbclen` será imprevisível.  
   
- `mblen` retorna o tamanho em bytes de `mbstr` se for um caractere válido de multibyte e determina a validade do caractere de multibyte associado com a página de código.  `mblen` examina `count` ou menos bytes contidos em `mbstr`, mas não mais do que os bytes de `MB_CUR_MAX`.  
+ `mblen` retornará o comprimento em bytes do `mbstr` se ele for um caractere multibyte válido e determinará a validade de caracteres multibyte associada à página de código. `mblen` examina `count` ou menos bytes contidos em `mbstr`, mas não mais de `MB_CUR_MAX` bytes.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções sem o sufixo `_l` usam a localidade atual para esse comportamento dependente da localidade; as versões com o sufixo `_l` são idênticas, exceto que elas usam o parâmetro de localidade informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
-|`_tclen`|Mapeia para a função macro ou embutida|`_mbclen`|Mapeia para a função macro ou embutida|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_tclen`|É mapeado para um macro ou uma função embutida|`_mbclen`|É mapeado para um macro ou uma função embutida|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_mbclen`|\<mbstring.h\>|  
-|`mblen`|\<stdlib.h\>|  
-|`_mblen_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_mbclen`|\<mbstring.h>|  
+|`mblen`|\<stdlib.h>|  
+|`_mblen_l`|\<stdlib.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_mblen.c  
@@ -147,7 +161,7 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 Convert wide character to multibyte character:  
@@ -158,12 +172,12 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Classificação de caractere](../../c-runtime-library/character-classification.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classificação de caracteres](../../c-runtime-library/character-classification.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbccpy, \_mbccpy\_l](../Topic/_mbccpy,%20_mbccpy_l.md)   
- [strlen, wcslen, \_mbslen, \_mbslen\_l, \_mbstrlen, \_mbstrlen\_l](../Topic/strlen,%20wcslen,%20_mbslen,%20_mbslen_l,%20_mbstrlen,%20_mbstrlen_l.md)
+ [_mbccpy, _mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
+ [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

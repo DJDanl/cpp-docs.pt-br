@@ -1,126 +1,140 @@
 ---
-title: "clock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "calculando tempo de processador usado"
-  - "Função clock"
-  - "tempo de processador usado"
-  - "tempo de processador usado, calculando"
-  - "hora, calculando processador"
+title: clock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clock
+dev_langs:
+- C++
+helpviewer_keywords:
+- processor time used, calculating
+- time, calculating processor
+- clock function
+- processor time used
+- calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
 caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# clock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3a226377499df1747a022325b762b3cdfdd35ea6
+ms.lasthandoff: 02/25/2017
 
-Calcula o tempo do relógio usado pelo processo de chamada.  
+---
+# <a name="clock"></a>clock
+Calcula a hora do relógio usada pelo processo de chamada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 clock_t clock( void );  
 ```  
   
-## Valor de retorno  
- A hora do relógio decorrido desde o início do processo \(tempo decorrido em tempos de segundos `CLOCKS_PER_SEC`\).  Se a quantidade de tempo decorrido estiver disponível, a função retorna – 1, convertido como um `clock_t`.  
+## <a name="return-value"></a>Valor retornado  
+O tempo decorrido desde a inicialização do CRT no início do processo, medido em `CLOCKS_PER_SEC` unidades por segundo. Se o tempo decorrido não estiver disponível ou tiver excedido o tempo máximo positivo que pode ser gravado como um tipo `clock_t`, a função retornará o valor `(clock_t)(-1)`.   
   
-## Comentários  
- O `clock` função informa quanto tempo do relógio usado pelo processo de chamada.  Observe que isso não é estritamente em conformidade com ISO C99, que especifica o tempo de CPU net como o valor de retorno.  Para obter o tempo de CPU, use o Win32 [GetProcessTimes](http://msdn.microsoft.com/library/windows/desktop/ms683223) função.  
+## <a name="remarks"></a>Comentários  
+A função `clock` informa quantas horas do relógio se passaram desde a inicialização do CRT durante o início do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223). Para determinar o tempo decorrido em segundos, divida o valor retornado pela função `clock` pela macro `CLOCKS_PER_SEC`.  
   
- Um temporizador é aproximadamente igual a 1 \/`CLOCKS_PER_SEC` segundos.  Tendo tempo suficiente, o valor retornado por `clock` pode exceder o valor máximo positivo de `clock_t` e se torna negativa, ou exceder o máximo absoluto e passam.  Não confie nesse valor para o tempo total decorrido em processos executados por mais de 214,748 segundos ou aproximadamente 59 horas.  
-  
-## Requisitos  
+Com tempo suficiente, o valor retornado por `clock` poderá exceder o valor máximo positivo de `clock_t`. Quando o processo tiver sido executado por mais tempo, o valor retornado por `clock` sempre será `(clock_t)(-1)`, conforme especificado pelo padrão ISO C99 (7.23.2.1) e ISO C11 (7.27.2.1). A Microsoft implementa `clock_t` como uma `long`, um inteiro assinado de 32 bits e a macro `CLOCKS_PER_SEC` é definida como 1.000. Isso gera um valor retornado de função `clock` máximo de 2147483,647 segundos ou cerca de 24,8 dias. Não dependa do valor retornado por `clock` em processos que tenham sido executados por mais tempo que esse período. Você pode usar a função `time` de 64 bits ou a função [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) do Windows para registrar tempos de processo decorridos de muitos anos.  
+
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`clock`|\<time.h\>|  
+|-------------|---------------------|  
+|`clock`|\<time.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_clock.c  
-// This example prompts for how long  
-// the program is to run and then continuously  
-// displays the elapsed time for that period.  
-//  
+// This sample uses clock() to 'sleep' for three 
+// seconds, then determines how long it takes  
+// to execute an empty loop 600000000 times.  
   
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <time.h>  
   
-void sleep( clock_t wait );  
-  
-int main( void )  
-{  
-   long    i = 6000000L;  
-   clock_t start, finish;  
-   double  duration;  
-  
-   // Delay for a specified time.  
-   printf( "Delay for three seconds\n" );  
-   sleep( (clock_t)3 * CLOCKS_PER_SEC );  
-   printf( "Done!\n" );  
-  
-   // Measure the duration of an event.  
-   printf( "Time to do %ld empty loops is ", i );  
-   start = clock();  
-   while( i-- )   
-      ;  
-   finish = clock();  
-   duration = (double)(finish - start) / CLOCKS_PER_SEC;  
-   printf( "%2.1f seconds\n", duration );  
-}  
-  
 // Pauses for a specified number of milliseconds.  
-void sleep( clock_t wait )  
+void do_sleep( clock_t wait )  
 {  
    clock_t goal;  
    goal = wait + clock();  
    while( goal > clock() )  
       ;  
 }  
+  
+const long num_loops = 600000000L;
+
+int main( void )  
+{  
+   long    i = num_loops;  
+   clock_t start, finish;  
+   double  duration;  
+  
+   // Delay for a specified time.  
+   printf( "Delay for three seconds\n" );  
+   do_sleep( (clock_t)3 * CLOCKS_PER_SEC );  
+   printf( "Done!\n" );  
+  
+   // Measure the duration of an event.  
+   start = clock();  
+   while( i-- )   
+      ;  
+   finish = clock();  
+   duration = (double)(finish - start) / CLOCKS_PER_SEC;  
+   printf( "Time to do %ld empty loops is ", num_loops );  
+   printf( "%2.3f seconds\n", duration );  
+}  
 ```  
   
-  **Atraso de três segundos**  
-**Concluído\!  Tempo para fazer 6000000 loops vazios é 0,1 segundos**    
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Delay for three seconds  
+Done!  
+Time to do 600000000 empty loops is 1.354 seconds  
+```  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [difftime, \_difftime32, \_difftime64](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [difftime, _difftime32, _difftime64](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

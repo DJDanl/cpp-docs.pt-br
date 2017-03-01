@@ -1,62 +1,76 @@
 ---
-title: "_get_purecall_handler, set_purecall_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_purecall_handler"
-  - "_set_purecall_handler_m"
-  - "_get_purecall_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_purecall_handler"
-  - "_set_purecall_handler_m"
-  - "set_purecall_handler_m"
-  - "set_purecall_handler"
-  - "stdlib/_set_purecall_handler"
-  - "stdlib/_get_purecall_handler"
-  - "_get_purecall_handler"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _set_purecall_handler"
-  - "Função set_purecall_handler"
-  - "purecall_handler"
-  - "Função set_purecall_handler_m"
-  - "_purecall_handler"
-  - "Função _set_purecall_handler_m"
-  - "função _get_purecall_handler"
+title: _get_purecall_handler, _set_purecall_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_purecall_handler
+- _set_purecall_handler_m
+- _get_purecall_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _set_purecall_handler
+- _set_purecall_handler_m
+- set_purecall_handler_m
+- set_purecall_handler
+- stdlib/_set_purecall_handler
+- stdlib/_get_purecall_handler
+- _get_purecall_handler
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_purecall_handler function
+- set_purecall_handler function
+- purecall_handler
+- set_purecall_handler_m function
+- _purecall_handler
+- _set_purecall_handler_m function
+- _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _get_purecall_handler, set_purecall_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0d555fb059e371e2ec7d27dd1fa9ea94a799f5f1
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 Obtém ou define o manipulador de erro para uma chamada de função virtual pura.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 typedef void (__cdecl* _purecall_handler)(void);  
@@ -68,31 +82,31 @@ _purecall_handler __cdecl _set_purecall_handler(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `function`  
- A função a ser chamada quando uma função virtual pura é chamada. Um `_purecall_handler` função deve ter um tipo de retorno void.  
+ A função a ser chamada quando uma função virtual pura é chamada. Uma função `_purecall_handler` deve ter um tipo de retorno nulo.  
   
-## Valor de retorno  
- Anterior `_purecall_handler`. Retorna `nullptr` não se houvesse nenhum manipulador anterior.  
+## <a name="return-value"></a>Valor de retorno  
+ O `_purecall_handler` anterior. Retorna `nullptr` se não houver manipulador anterior.  
   
-## Comentários  
- O `_get_purecall_handler` e `_set_purecall_handler` funções são específicas da Microsoft e se aplicam somente ao código C\+\+.  
+## <a name="remarks"></a>Comentários  
+ As funções `_get_purecall_handler` e `_set_purecall_handler` são específicas da Microsoft e se aplicam somente a código C++.  
   
- Uma chamada para uma função virtual pura é um erro porque ele tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função virtual pura, para capturá\-las para depuração ou para fins de relatório. Para usar seu próprio manipulador de erro, crie uma função que tem o `_purecall_handler` assinatura, use `_set_purecall_handler` para torná\-lo o manipulador atual.  
+ Uma chamada para uma função virtual pura é um erro porque não tem nenhuma implementação. Por padrão, o compilador gera código para invocar uma função de manipulador de erro quando uma função virtual pura é chamada, o que encerra o programa. Você pode instalar sua própria função de manipulador de erro para chamadas de função pura virtual, para capturá-las para fins de depuração ou relatório. Para usar seu próprio manipulador de erro, crie uma função que tenha a assinatura `_purecall_handler` e use `_set_purecall_handler` para torná-lo o manipulador atual.  
   
- Porque há apenas um `_purecall_handler` para cada processo, quando você chama `_set_purecall_handler` \-lo imediatamente afeta todos os threads. O último chamador em qualquer thread define o manipulador.  
+ Como há apenas um `_purecall_handler` para cada processo, quando você chama `_set_purecall_handler`, ele afeta imediatamente todos os threads. O último chamador em qualquer thread define o manipulador.  
   
- Para restaurar o comportamento padrão, chamar `_set_purecall_handler` usando um `nullptr` argumento.  
+ Para restaurar o comportamento padrão, chame `_set_purecall_handler` usando um argumento `nullptr`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_get_purecall_handler`, `_set_purecall_handler`|\< cstdlib \> ou \< stdlib. h \>|  
+|-------------|---------------------|  
+|`_get_purecall_handler`, `_set_purecall_handler`|\<cstdlib> ou \<stdlib.h>|  
   
- Para informações sobre compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // _set_purecall_handler.cpp  
@@ -138,9 +152,9 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ```Output  
-Em _purecall_handler.  
+In _purecall_handler.  
 ```  
   
-## Consulte também  
- [Tratamento de erros](../../c-runtime-library/error-handling-crt.md)   
- [\_purecall](../Topic/_purecall.md)
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de erro](../../c-runtime-library/error-handling-crt.md)   
+ [_purecall](../../c-runtime-library/reference/purecall.md)

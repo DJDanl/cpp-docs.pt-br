@@ -1,51 +1,67 @@
 ---
-title: "Fluxos de entrada | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [C++], lendo de fluxo de entrada"
-  - "objetos de fluxo de entrada"
-  - "fluxos de entrada"
-  - "lendo dados [C++], de fluxos de entrada"
+title: Fluxos de entrada | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- data [C++], reading from input stream
+- input streams
+- input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
 caps.latest.revision: 11
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fluxos de entrada
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
+ms.lasthandoff: 02/25/2017
 
-Um objeto do fluxo de entrada é uma origem de bytes.  As três classes as mais importantes do fluxo de entrada são [istream](http://msdn.microsoft.com/pt-br/6801779e-260e-416d-b4ec-fef5ff1b2371), [ifstream](../Topic/ifstream.md), e [istringstream](../Topic/istringstream.md).  
+---
+# <a name="input-streams"></a>Fluxos de entrada
+Um objeto de fluxo de entrada é uma fonte de bytes. As três classes de fluxo de entrada mais importantes são [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md) e [istringstream](../standard-library/basic-istringstream-class.md).  
   
- A classe de `istream` é usada melhor para a entrada sequencial de modo gráfico.  Você pode configurar objetos da classe `istream` para a operação em buffer ou não armazenado.  Toda a funcionalidade da classe base, `ios`, é incluída em `istream`.  Você construirá raramente objetos da classe `istream`.  Em vez disso, você usará geralmente o objeto predefinido de `cin` , que é realmente um objeto da classe [ostream](../standard-library/ostream.md).  Em alguns casos, você pode atribuir `cin` a outros objetos de fluxo após a inicialização do programa.  
+ A classe `istream` é mais adequada para entrada de modo de texto sequencial. É possível configurar objetos da classe `istream` para operações armazenadas em buffer ou não. Toda a funcionalidade da classe base, `ios`, está incluída em `istream`. Raramente você construirá objetos da classe `istream`. Em vez disso, normalmente você usará o objeto `cin` predefinido, que na realidade é um objeto da classe [ostream](../standard-library/basic-ostream-class.md). Em alguns casos, é possível atribuir `cin` a outros objetos de fluxo após a inicialização do programa.  
   
- A classe de `ifstream` oferece suporte à entrada do arquivo em disco.  Se você precisar de um arquivo de disco de entrada somente leitura, construir um objeto da classe `ifstream`.  Você pode especificar binário ou os dados do modo gráfico.  Se você especificar um nome de arquivo no construtor, o arquivo é aberto automaticamente quando o objeto é construído.  Se não, você pode usar a função de `open` invocado depois do construtor padrão.  Muitas opções e funções de membro de formatação aplicam a `ifstream` objetos.  Toda a funcionalidade das classes base `ios` e `istream` é incluída em `ifstream`.  
+ A classe `ifstream` dá suporte à entrada de arquivo de disco. Se você precisar de um arquivo de disco somente de entrada, construa um objeto da classe `ifstream`. É possível especificar dados binários ou em modo de texto. Se você especificar um nome de arquivo no construtor, o arquivo será aberto automaticamente quando o objeto for construído. Caso contrário, você pode usar a função `open` depois de invocar o construtor padrão. Muitas opções de formatação e funções membro se aplicam a objetos `ifstream`. Toda a funcionalidade das classes base `ios` e `istream` está incluída em `ifstream`.  
   
- Como a função de biblioteca `sscanf_s`, a classe de `istringstream` oferece suporte à entrada de cadeias de caracteres de memória.  Para extrair dados de uma matriz de caractere que tem um terminador nulo, aloque e inicializar a cadeia de caracteres, então construir um objeto da classe `istringstream`.  
+ Assim como a função de biblioteca `sscanf_s`, a classe `istringstream` dá suporte a entrada de cadeias de caracteres na memória. Para extrair dados de uma matriz de caracteres com um terminador nulo, aloque e inicialize a cadeia de caracteres e construa um objeto da classe `istringstream`.  
   
-## Nesta seção  
- [Construindo objetos de fluxo de entrada](../Topic/Constructing%20Input%20Stream%20Objects.md)  
+## <a name="in-this-section"></a>Nesta seção  
+ [Construindo objetos de fluxo de entrada](../standard-library/constructing-input-stream-objects.md)  
   
- [Usando operadores de extração](../Topic/Using%20Extraction%20Operators.md)  
+ [Usando operadores de extração](../standard-library/using-extraction-operators.md)  
   
  [Testando erros de extração](../standard-library/testing-for-extraction-errors.md)  
   
- [Manipuladores de Fluxo de Entrada](../standard-library/input-stream-manipulators.md)  
+ [Manipuladores de fluxo de entrada](../standard-library/input-stream-manipulators.md)  
   
- [Funções de Membro de Fluxo de Entrada](../standard-library/input-stream-member-functions.md)  
+ [Funções membro de fluxo de entrada](../standard-library/input-stream-member-functions.md)  
   
- [Sobrecarregando o operador \>\> para as suas próprias classes](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
+ [Sobrecarregando o operador >> para suas próprias classes](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
-## Consulte também  
- [Programação iostream](../Topic/iostream%20Programming.md)
+## <a name="see-also"></a>Consulte também  
+ [Programação de iostream](../standard-library/iostream-programming.md)
+

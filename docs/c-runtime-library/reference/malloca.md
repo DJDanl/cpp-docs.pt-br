@@ -1,51 +1,65 @@
 ---
-title: "_malloca | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_malloca"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "malloca"
-  - "_malloca"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _malloca"
-  - "Função malloca"
-  - "alocação de memória, stack"
+title: _malloca | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _malloca
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- malloca
+- _malloca
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, stack
+- malloca function
+- _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _malloca
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70a37640ec7f6024539ad1e2134152190e698133
+ms.lasthandoff: 02/25/2017
 
-Aloca memória na pilha.  Essa é uma versão de [\_alloca](../../c-runtime-library/reference/alloca.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="malloca"></a>_malloca
+Aloca memória na pilha. Esta é uma versão de [_alloca](../../c-runtime-library/reference/alloca.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void *_malloca(   
@@ -53,40 +67,40 @@ void *_malloca(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `size`  
- Bytes a ser atribuídos de pilha.  
+ Bytes a serem alocados da pilha.  
   
-## Valor de retorno  
- A rotina de `_malloca` retorna um ponteiro de `void` ao espaço alocado, que tem a garantia de ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto.  Se `size` é 0, `_malloca` atribui um item de comprimento zero e retorna um ponteiro válido para o item.  
+## <a name="return-value"></a>Valor de retorno  
+ A rotina `_malloca` retorna um ponteiro `void` para o espaço alocado, que deve ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto. Se `size` for 0, o `_malloca` alocará um item de comprimento zero e retornará um ponteiro válido para esse item.  
   
- Uma exceção de estouro de pilha é gerada se o espaço não pode ser atribuído.  A exceção de estouro de pilhas não é exception c; criando é uma exceção estruturados.  Em vez de usar a manipulação de exceção C\+\+, você deve usar [Manipulação de exceção estruturado](../../cpp/structured-exception-handling-c-cpp.md) \(ELA\).  
+ Uma exceção de excedente de pilha será gerada se não for possível alocar o espaço. A exceção de excedente de pilha não é uma exceção de C++; ela é uma exceção estruturada. Em vez de usar o tratamento de exceções de C++, você deve usar a [SEH](../../cpp/structured-exception-handling-c-cpp.md) (Manipulação de Exceção Estruturada).  
   
-## Comentários  
- `_malloca` atribui bytes de `size` da pilha de programa ou heap se a solicitação excede determinado tamanho em bytes dados por `_ALLOCA_S_THRESHOLD`.  A diferença entre `_malloca` e `_alloca` é que `_alloca` atribui sempre na pilha, independentemente do tamanho.  Ao contrário de `_alloca`, que não requer nem permite uma chamada a `free` liberar a memória alocada assim, `_malloca` requer o uso de [\_freea](../../c-runtime-library/reference/freea.md) liberar a memória.  No modo de depuração, `_malloca` sempre atribui a memória heap.  
+## <a name="remarks"></a>Comentários  
+ O `_malloca` alocará `size` bytes da pilha ou do heap do programa se a solicitação exceder um determinado tamanho em bytes fornecidos pelo `_ALLOCA_S_THRESHOLD`. A diferença entre `_malloca` e `_alloca` é que o `_alloca` sempre aloca na pilha, independentemente do tamanho. Ao contrário de `_alloca`, que não exige ou permite que uma chamada para `free` libere a memória alocada, `_malloca` exige o uso de [_freea](../../c-runtime-library/reference/freea.md) para liberar memória. No modo de depuração, o `_malloca` sempre aloca memória do heap.  
   
- Há restrições explicitamente a `_malloca` chamar em um identificador \(EH\) da exceção.  As rotinas de EH executadas em processadores de x86\-class operam em seu próprio quadro de memória: Executam as tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função inclusive.  As implementações mais comuns incluem expressões estruturadas o Windows NT a cláusula FROM de manipulação de exceção \(SEH\) e de captura C\+\+.  Consequentemente, chamar explicitamente `_malloca` em qualquer um dos seguintes cenários resulta na falha do programa durante o retorno para a rotina chamando de EH:  
+ Há restrições para chamar `_malloca` explicitamente em um EH (manipulador de exceção). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar `_malloca` explicitamente em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:  
   
--   Windows NT ELA expressão de filtro de exceção: `__except` \(`_malloca ()` \)  
+-   Expressão de filtro de exceção SEH do Windows NT: `__except` (`_malloca ()` )  
   
--   Windows NT ELA manipulador final de exceção: `__finally``_malloca ()` {}  
+-   Manipulador de exceção final do Windows NT SEH: `__finally` {`_malloca ()` }  
   
--   Expressão da cláusula de captura de EH C\+\+  
+-   Expressão da cláusula catch do EH de C++  
   
- No entanto, `_malloca` pode ser chamado diretamente de uma rotina de EH ou de um retorno de chamada fornecido pelo aplicativo que é invocado por um dos cenários de EH listados anteriormente.  
+ No entanto, `_malloca` pode ser chamado diretamente de dentro de uma rotina do EH ou de um retorno de chamada fornecido pelo aplicativo, que é invocado por um dos cenários do EH listados anteriormente.  
   
 > [!IMPORTANT]
->  No Windows XP, se `_malloca` é chamado dentro de um bloco try\/catch, você deve chamar [\_resetstkoflw](../Topic/_resetstkoflw.md) no bloco de captura.  
+>  No Windows XP, se `_malloca` for chamado dentro de um bloco try/catch, você deverá chamar [resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) no bloco catch.  
   
- Além das restrições anteriores, ao usar a opção de [\/clr \(Compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) , `_malloca` não pode ser usado em blocos de `__except` .  Para obter mais informações, consulte [Limitações do \/clr](../../build/reference/clr-restrictions.md).  
+ Além das restrições acima, ao usar a opção [/clr (Compilação Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), o `_malloca` não poderá ser usado nos blocos `__except`. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_malloca`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_malloca`|\<malloc.h>|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_malloca_simple.c  
@@ -106,7 +120,7 @@ int main()
 }  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_malloca_exception.c  
@@ -166,24 +180,24 @@ int main()
 }  
 ```  
   
-## Entrada  
+## <a name="input"></a>Entrada  
   
 ```  
 1000  
 ```  
   
-## Saída de Exemplo  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 Enter the number of bytes to allocate using _malloca: 1000  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Alocação de memória](../../c-runtime-library/memory-allocation.md)   
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_resetstkoflw](../Topic/_resetstkoflw.md)
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

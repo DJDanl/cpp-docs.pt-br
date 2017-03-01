@@ -1,59 +1,73 @@
 ---
-title: "fdim, fdimf, fdiml | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-  - "math/fdim"
-  - "math/fdimf"
-  - "math/fdiml"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "Função fdim"
-  - "Função fdimf"
-  - "função fdiml"
+title: fdim, fdimf, fdiml | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fdim
+- fdimf
+- fdiml
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fdim
+- fdimf
+- fdiml
+- math/fdim
+- math/fdimf
+- math/fdiml
+dev_langs:
+- C++
+helpviewer_keywords:
+- fdim function
+- fdimf function
+- fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# fdim, fdimf, fdiml
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: debfeaf19648f73ecca9643b1b740f014e4f3251
+ms.lasthandoff: 02/25/2017
 
-Determina a diferença entre os valores do primeiro e segundo positiva.  
+---
+# <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
+Determina a diferença positiva entre os primeiros e segundos valores.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double fdim(  
@@ -83,45 +97,45 @@ long double fdiml(
   
 ```  
   
-#### Parâmetros  
- \[in\] `x`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `x`  
  O primeiro valor.  
   
- \[in\] `y`  
+ [in] `y`  
  O segundo valor.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Retorna a diferença positiva entre `x` e `y`:  
   
-|Valor de retorno|Cenário|  
-|----------------------|-------------|  
-|x\-y|Se x \> y|  
-|0|Se x \< \= s|  
+|Valor retornado|Cenário|  
+|------------------|--------------|  
+|x-y|se x > y|  
+|0|se x <= y|  
   
  Caso contrário, pode retornar um dos seguintes erros:  
   
-|Problema|Retornar|  
-|--------------|--------------|  
-|Erro de estouro do intervalo|\+ HUGE\_VAL \+ HUGE\_VALF, ou \+ HUGE\_VALL|  
-|Erro de intervalo de estouro negativo|valor correto \(após o arredondamento\)|  
+|Problema|Valor de|  
+|-----------|------------|  
+|Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|  
+|Erro de intervalo de estouro negativo|valor correto (após o arredondamento)|  
 |`x` ou `y` é NaN|NaN|  
   
- Os erros são relatados como especificado em [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Os erros são relatados conforme especificado em [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Comentários  
- Como C\+\+ permite sobrecargas, é possível chamar sobrecargas de `fdim` que tomam e retornam tipos float e double longo. Em um programa C, `fdim` sempre toma e retorna um double.  
+## <a name="remarks"></a>Comentários  
+ Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `fdim` que utilizam e retornam tipos duplos flutuantes e longos. Em um programa C, `fdim` sempre usa e retorna um duplo.  
   
- Exceto para o tratamento de NaN, essa função é equivalente a [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)\(`x`\-`y,` 0\).  
+ Exceto para o tratamento de NaN, essa função é equivalente a [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)(`x`-`y,` 0).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`fdim`, `fdimf`,  `fdiml`|\< Math \>|\<cmath\>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`fdim`,                `fdimf`,  `fdiml`|\<math.h>|\<cmath>|  
   
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Consulte também  
- [Referência da função alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [Abs, laboratórios, llabs, abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)

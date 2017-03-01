@@ -1,50 +1,64 @@
 ---
-title: "fgetpos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetpos"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetpos"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função fgetpos"
-  - "fluxos, indicador de posição de arquivo"
+title: fgetpos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetpos
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetpos function
+- streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# fgetpos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0305a6446f9878ae01ee634d93979eec2dbab811
+ms.lasthandoff: 02/25/2017
 
-Obtém o indicador de arquivo posição de um fluxo.  
+---
+# <a name="fgetpos"></a>fgetpos
+Obtém o indicador de posição do arquivo do fluxo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int fgetpos(   
@@ -53,28 +67,28 @@ int fgetpos(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
- Fluxo de destino.  
+ O fluxo de destino.  
   
  `pos`  
- Armazenamento de Posição\- medidor.  
+ Armazenamento do indicador de posição.  
   
-## Valor de retorno  
- Se tiver êxito, retorna 0 de `fgetpos` .  Em caso de falha, retorna um valor diferente de zero e define `errno` a uma das seguintes constantes manifestas \(definidas em STDIO.H\): `EBADF`, o que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não for acessível, ou `EINVAL`, que significa que o valor de `stream` ou o valor de `pos` for inválido, como se o for um ponteiro nulo.  Se `stream` ou `pos` é um ponteiro de `NULL` , a função invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Valor de retorno  
+ Se tiver êxito, `fgetpos` retornará 0. Em caso de falha, ele retorna um valor diferente de zero e define `errno` como uma das seguintes constantes de manifesto (definidas em STDIO.H): `EBADF`, que significa que o fluxo especificado não é um ponteiro de arquivo válido ou não está acessível ou `EINVAL`, que significa que o valor `stream` ou o valor de `pos` é inválido, por exemplo, se é um deles for um ponteiro nulo. Se `stream` ou `pos` for um ponteiro `NULL`, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md).  
   
-## Comentários  
- A função de `fgetpos` obtém o valor atual do indicador de arquivo posição do argumento de `stream` e armazenado no objeto apontado por `pos`.  A função de `fsetpos` posteriormente pode usar as informações armazenadas em `pos` para redefinir o ponteiro de argumento de `stream` a sua posição em `fgetpos` foi chamado.  O valor de `pos` é armazenado em um formato interno e planejado para uso apenas por `fgetpos` e por `fsetpos`.  
+## <a name="remarks"></a>Comentários  
+ A função `fgetpos` obtém o valor atual do indicador de posição do arquivo do argumento `stream` e o armazena no objeto apontado por `pos`. A função `fsetpos` pode, posteriormente, usar informações armazenadas em `pos` para redefinir o ponteiro do argumento `stream` para sua posição no momento em que `fgetpos` foi chamado. O valor `pos` é armazenado em um formato interno e é destinado para uso somente por `fgetpos` e `fsetpos`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`fgetpos`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fgetpos`|\<stdio.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_fgetpos.c  
@@ -116,22 +130,22 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_fgetpos.txt  
+## <a name="input-crtfgetpostxt"></a>Entrada: crt_fgetpos.txt  
   
 ```  
 fgetpos gets a stream's file-position indicator.  
 ```  
   
-### Saída crt\_fgetpos.txt  
+### <a name="output-crtfgetpostxt"></a>Saída crt_fgetpos.txt  
   
 ```  
 after fgetpos: gets a stream  
 after fsetpos: gets a stream  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fsetpos](../Topic/fsetpos.md)
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [fsetpos](../../c-runtime-library/reference/fsetpos.md)

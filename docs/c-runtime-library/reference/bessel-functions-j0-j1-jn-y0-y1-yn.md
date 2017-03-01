@@ -1,66 +1,80 @@
 ---
-title: "Fun&#231;&#245;es Bessel: j0, J1, Jn, y0, y1, Yn | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_j0"
-  - "_j1"
-  - "_jn"
-  - "_y0"
-  - "_y1"
-  - "_yn"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "c.bessel"
-  - "_j0"
-  - "_j1"
-  - "_jn"
-  - "_y0"
-  - "_y1"
-  - "_yn"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Funções Bessel"
-  - "Função _j0"
-  - "Função _j1"
-  - "Função _jn"
-  - "Função _y0"
-  - "Função _y1"
-  - "Função _yn"
+title: "Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _j0
+- _j1
+- _jn
+- _y0
+- _y1
+- _yn
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- c.bessel
+- _j0
+- _j1
+- _jn
+- _y0
+- _y1
+- _yn
+dev_langs:
+- C++
+helpviewer_keywords:
+- Bessel functions
+- _j0 function
+- _j1 function
+- _jn function
+- _y0 function
+- _y1 function
+- _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fun&#231;&#245;es Bessel: j0, J1, Jn, y0, y1, Yn
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 857b1d9032b65a1b10139988bb84c3be721cccbe
+ms.lasthandoff: 02/25/2017
 
-Computa a função de Bessel do tipo primeiro ou segundo, de pedidos n, 1 ou 0. The Bessel funções são comumente usadas em matemática ondas eletromagnéticas teoria.  
+---
+# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
+Computa a função Bessel do primeiro ou do segundo tipo, de ordens 0, 1 ou n. As funções Bessel geralmente são usadas nos cálculos da teoria de ondas eletromagnéticas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double _j0(   
@@ -85,40 +99,40 @@ double _yn(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
  Valor de ponto flutuante.  
   
  `n`  
- Ordem de inteiro da função de Bessel.  
+ Ordem de inteiro da função Bessel.  
   
-## Valor de retorno  
- Todas essas rotinas retorna uma função de Bessel de `x`. Se `x` é negativo no `_y0`, `_y1`, ou `_yn` funções, os conjuntos de rotina `errno` para `EDOM`, imprime um `_DOMAIN` mensagem de erro para `stderr`, e retorna `_HUGE_VAL`. Você pode modificar o tratamento de erro ao usar `_matherr`.  
+## <a name="return-value"></a>Valor de retorno  
+ Todas essas rotinas retornam uma função Bessel de `x`. Se `x` for negativo nas funções `_y0`, `_y1` ou `_yn`, a rotina definirá `errno` como `EDOM`, imprime uma mensagem de erro `_DOMAIN` em `stderr` e retorna `_HUGE_VAL`. Você pode modificar o tratamento de erro usando `_matherr`.  
   
-## Comentários  
- O `_j0`, `_j1`, e `_jn` rotinas retornam Bessel funções do primeiro tipo: pedidos 0, 1 e n, respectivamente.  
+## <a name="remarks"></a>Comentários  
+ As rotinas `_j0`, `_j1` e `_jn` retornam as funções Bessel do primeiro tipo: ordens 0, 1 e n, respectivamente.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
-|-------------|-----------------|---------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|`INVALID`|`_DOMAIN`|  
   
- O `_y0`, `_y1`, e `_yn` rotinas retornam Bessel funções do segundo tipo: pedidos 0, 1 e n, respectivamente.  
+ As rotinas `_y0`, `_y1` e `_yn` retornam as funções Bessel do segundo tipo: ordens 0, 1 e n, respectivamente.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
-|-------------|-----------------|---------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|`INVALID`|`_DOMAIN`|  
 |± 0|`ZERODIVIDE`|`_SING`|  
-|&#124; x &#124; \< 0,0|`INVALID`|`_DOMAIN`|  
+|&#124;x&#124;<0.0|`INVALID`|`_DOMAIN`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_j0`, `_j1`, `_jn`, `_y0`, `_y1`, `_yn`|\< Cmath \> \(C\+\+\), \< Math \> \(C, C\+\+\)|  
+|-------------|---------------------|  
+|`_j0`, `_j1`, `_jn`, `_y0`, `_y1`, `_yn`|\<cmath> (C++), \<math.h> (C, C++)|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_bessel1.c  
@@ -144,9 +158,21 @@ int main( void )
 ```  
   
 ```Output  
-Funções Bessel para x = 2.387000: j0 tipo ordem função resultado primeiro 0 (x) J1 de primeiro 1 0.009288 (0.522941 primeiro 2 Jn (x 2) x) 0.428870 3 primeiras Jn (3, x) 4 primeiro 0.195734 Jn (4 x) 0.063131 segundo y0 0 (x) y1 de 1 segundo 0.511681 (x) Yn 0.094374 2 segundo (2, x)-0.432608 segundo 3 Yn (3, x)-0.819314 segundo 4 Yn (4 -1.626833 x)  
+Bessel functions for x = 2.387000:  
+ Kind   Order  Function     Result  
+  
+ First  0      _j0( x )     0.009288  
+ First  1      _j1( x )     0.522941  
+ First  2      _jn( 2, x )  0.428870  
+ First  3      _jn( 3, x )  0.195734  
+ First  4      _jn( 4, x )  0.063131  
+ Second 0      _y0( x )     0.511681  
+ Second 1      _y1( x )     0.094374  
+ Second 2      _yn( 2, x )  -0.432608  
+ Second 3      _yn( 3, x )  -0.819314  
+ Second 4      _yn( 4, x )  -1.626833  
 ```  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)

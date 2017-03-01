@@ -1,52 +1,65 @@
 ---
-title: "Struct random_access_iterator_tag | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xutility/std::random_access_iterator_tag"
-  - "random_access_iterator_tag"
-  - "std.random_access_iterator_tag"
-  - "std::random_access_iterator_tag"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe random_access_iterator_tag"
-  - "Struct random_access_iterator_tag"
+title: Struct random_access_iterator_tag | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xutility/std::random_access_iterator_tag
+- random_access_iterator_tag
+- std.random_access_iterator_tag
+- std::random_access_iterator_tag
+dev_langs:
+- C++
+helpviewer_keywords:
+- random_access_iterator_tag class
+- random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
 caps.latest.revision: 23
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct random_access_iterator_tag
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 394b40a61a8404d65555680ce110f8f3b3a9fae0
+ms.lasthandoff: 02/25/2017
 
-Uma classe que fornece um tipo de retorno para uma função de **iterator\_category**, que representa um iterador de acesso aleatório.  
+---
+# <a name="randomaccessiteratortag-struct"></a>Struct random_access_iterator_tag
+Uma classe que fornece um tipo de retorno para a função **iterator_category**, que representa um iterador de acesso aleatório.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 ```  
   
-   struct random_access_iterator_tag  
-: public bidirectional_iterator_tag {};  
-```  
+## <a name="remarks"></a>Comentários  
+ As classes de marca de categoria são usadas como marcas de compilação para seleção de algoritmos. A função de modelo precisa encontrar a categoria mais específica do argumento iterador para que ela possa usar o algoritmo mais eficiente em tempo de compilação. Para cada iterador do tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** deve ser definido para ser a marca de categoria mais específica que descreve o comportamento do iterador.  
   
-## Comentários  
- As classes da marca de categoria são usadas como criar marcas para a seleção do algoritmo.  A função do modelo precisa localizar a categoria a mais específica do argumento de iterador de forma que possa usar o algoritmo mais eficiente em tempo de compilação.  Para cada iterador do tipo `Iterator`, `iterator_traits`\<`Iterator`\>**::iterator\_category** deve ser definido para ser a marca para mais específica da categoria que descreve o comportamento de iterador.  
+ O tipo é o mesmo que **iterator**\< **Iter**> **::iterator_category** quando **Iter** descreve um objeto que pode servir como um iterador de acesso aleatório.  
   
- O tipo é o mesmo que **iterator**\<**Iter**\>**::iterator\_category** quando **Iter** descreve um objeto que pode servir como um iterador de acesso aleatório.  
+## <a name="example"></a>Exemplo  
   
-## Exemplo  
-  
-```  
+```cpp  
 // iterator_rait.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -93,28 +106,32 @@ int main( )
 }  
 ```  
   
-## Saída de Exemplo  
- A saída a seguir é para x86.  
+## <a name="sample-output"></a>Saída de Exemplo  
+ A saída a seguir destina-se ao x86.  
   
+```
+The type of iterator for vector<int> is identified by the tag:
+    struct std::random_access_iterator_tag
+The type of iterator for vector<char> is identified by the tag:
+    struct std::random_access_iterator_tag
+The iterators are the same.
+
+The type of iterator for list<char> is identified by the tag:
+    struct std::bidirectional_iterator_tag
+The iterators are not the same.
+0012FF3B
 ```  
-The type of iterator for vector<int> is identified by the tag:  
- struct std::random_access_iterator_tag  
-The type of iterator for vector<char> is identified by the tag:  
- struct std::random_access_iterator_tag  
-The iterators are the same.  
   
-The type of iterator for list<char> is identified by the tag:  
- struct std::bidirectional_iterator_tag  
-The iterators are not the same.  
-0012FF3B  
-```  
-  
-## Requisitos  
- **Cabeçalho:** \<iterator\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<iterator>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Struct bidirectional\_iterator\_tag](../Topic/bidirectional_iterator_tag%20Struct.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Struct bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

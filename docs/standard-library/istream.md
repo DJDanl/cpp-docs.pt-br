@@ -1,73 +1,91 @@
 ---
-title: "&lt; istream &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "istream/std::<istream>"
-  - "std.<istream>"
-  - "<istream>"
-  - "std::<istream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho istream"
+title: '&lt;istream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- istream/std::<istream>
+- std.<istream>
+- <istream>
+- std::<istream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
 caps.latest.revision: 20
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt; istream &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 590dcefb4804e50197e945bea6c39e2bd4e1e15a
+ms.lasthandoff: 02/25/2017
 
-Define o modelo classe basic\_istream, que atua como mediador extrações para o iostreams, e o modelo classe basic\_iostream, que atua como mediador extrações e inserções. O cabeçalho também define um manipulador relacionado. Esse arquivo de cabeçalho é normalmente incluído para você por outro cabeçalho iostreams; Você raramente precisará incluí\-lo diretamente.  
+---
+# <a name="ltistreamgt"></a>&lt;istream&gt;
+Define a classe de modelo basic_istream, que atua como mediador de extrações para os iostreams e a classe de modelo basic_iostream, que atua como mediador de extrações e inserções. O cabeçalho também define um manipulador relacionado. Esse arquivo de cabeçalho geralmente é incluído para você por outro cabeçalho iostreams, dificilmente você precisará incluí-lo diretamente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <istream>  
   
 ```  
   
-### Typedefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[iostream](../Topic/iostream.md)|Um tipo `basic_iostream` especializadas em `char`.|  
-|[istream](../Topic/istream.md)|Um tipo `basic_istream` especializadas em `char`.|  
-|[wiostream](../Topic/wiostream.md)|Um tipo `basic_iostream` especializadas em **wchar**.|  
-|[wistream](../Topic/wistream.md)|Um tipo `basic_istream` especializadas em **wchar**.|  
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Um tipo `basic_iostream` especializado em `char`.|  
+|[istream](../standard-library/istream-typedefs.md#istream)|Um tipo `basic_istream` especializado em `char`.|  
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Um tipo `basic_iostream` especializado em **wchar**.|  
+|[wistream](../standard-library/istream-typedefs.md#wistream)|Um tipo `basic_istream` especializado em **wchar**.|  
   
-### Manipuladores  
-  
-|||  
-|-|-|  
-|[ws](../Topic/ws.md)|Ignora o espaço em branco no fluxo.|  
-|[swap](../Topic/%3Cistream%3E%20swap.md)|Troca dois objetos de fluxo.|  
-  
-### Operadores  
+### <a name="manipulators"></a>Manipuladores  
   
 |||  
 |-|-|  
-|[Operador \>\>](../Topic/operator%3E%3E%20\(%3Cistream%3E\).md)|Extrai cadeias de caracteres e caracteres do fluxo.|  
+|[ws](../standard-library/istream-functions.md#ws)|Ignora o espaço em branco no fluxo.|  
+|[swap](../standard-library/istream-functions.md#istream_swap)|Troca dois objetos de fluxo.|  
   
-### Classes  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[basic\_iostream](../standard-library/basic-iostream-class.md)|Uma classe de fluxo que pode fazer ambos de entrada e saída.|  
-|[basic\_istream](../Topic/basic_istream%20Class.md)|A classe de modelo descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo com elementos do tipo **Elem**, também conhecido como [char\_type](../Topic/basic_ios::char_type.md), cujas características de caractere são determinadas pela classe **Tr**, também conhecido como [traits\_type](../Topic/basic_ios::traits_type.md).|  
+|[operator>>](../standard-library/istream-operators.md#operator_gt__gt_)|Extrai caracteres e cadeias de caracteres do fluxo.|  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programação iostream](../Topic/iostream%20Programming.md)   
- [Convenções iostreams](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Uma classe de fluxo que pode fazer tanto entrada quanto saída.|  
+|[basic_istream](../standard-library/basic-istream-class.md)|Essa classe de modelo descreve um objeto que controla a extração de elementos e objetos codificados de um buffer de fluxo com elementos do tipo **Elem**, também conhecido como [char_type](../standard-library/basic-ios-class.md#basic_ios__char_type), cujas características de caractere são determinadas pela classe **Tr**, também conhecida como [traits_type](../standard-library/basic-ios-class.md#basic_ios__traits_type).|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Programação de iostream](../standard-library/iostream-programming.md)   
+ [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+
+
+
+

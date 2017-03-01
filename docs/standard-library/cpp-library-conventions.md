@@ -1,63 +1,80 @@
 ---
-title: "Conven&#231;&#245;es da Biblioteca C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++]"
-  - "convenções de codificação, Biblioteca Padrão C++"
-  - "convenções [C++], Biblioteca Padrão C++"
-  - "nomes de função [C++]"
-  - "funções [C++], convenções de nomenclatura da biblioteca"
-  - "convenções de nomenclatura [C++], biblioteca C++"
-  - "convenções de nomenclatura [C++], Biblioteca Padrão C++"
-  - "Biblioteca Padrão C++, convenções"
+title: "Convenções da biblioteca C++ | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, conventions
+- classes [C++]
+- functions [C++], library naming conventions
+- naming conventions [C++], C++ Standard Library
+- conventions [C++], C++ Standard Library
+- function names [C++]
+- coding conventions, C++ Standard Library
+- naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Conven&#231;&#245;es da Biblioteca C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 55d3959b12b1b1a25a6c4b5c65fce59db57cf838
+ms.lasthandoff: 02/25/2017
 
-A biblioteca C\+\+ muito obedece as mesmas convenções que a biblioteca padrão C, mais quaisquer mais descritos aqui.  
+---
+# <a name="c-library-conventions"></a>Convenções da Biblioteca C++
+A biblioteca C++ obedece às mesmas convenções da Biblioteca C Padrão, além de mais algumas descritas aqui.  
   
- Uma implementação tiver determinada latitude como declara tipos e funções da biblioteca C\+\+:  
+ Uma implementação tem determinada latitude em como ela declara tipos e funções na biblioteca C++:  
   
--   Os nomes de funções na biblioteca padrão C podem ter extern \# " C\+\+” ou vinculação extern de C “2.0”.  Inclui o cabeçalho de C do padrão apropriado em vez do que declara uma entidade da biblioteca de tabela embutida.  
+-   Os nomes de funções na biblioteca C Padrão podem ter uma vinculação extern #"C++" ou extern "C". Inclua o cabeçalho do C Padrão apropriado em vez de declarar uma entidade de biblioteca embutida.  
   
--   Um nome de função de membro em uma classe de biblioteca pode ter assinaturas adicionais da função nas listadas neste documento.  Você pode ter certeza de que uma chamada de função descrita aqui se comporta como esperado, mas não pode levar do endereço de uma função de membro de biblioteca. \(O tipo não pode ser o que você espera.\)  
+-   O nome de uma função de membro em uma classe de biblioteca pode ter assinaturas de função adicionais além daquelas listadas neste documento. Você pode ter certeza de que uma chamada da função descrita aqui se comporta como esperado, mas não é possível usar de forma confiável o endereço de uma função de membro da biblioteca. (O tipo pode não ser o esperado.)  
   
--   Uma classe de biblioteca pode ter classes base \(nonvirtual\) não documentadas.  Uma classe do como uma classe derivada de outras, de fato, pode ser derivada de aquela classe por outras classes não documentadas.  
+-   Uma classe de biblioteca pode ter classes base (não virtuais) não documentadas. Uma classe documentada como derivada de outra classe pode, na verdade, ser derivada dessa classe por meio de outras classes não documentadas.  
   
--   Um tipo definido como um sinônimo para qualquer tipo de inteiro pode ser igual a um de vários tipos diferentes de inteiro.  
+-   Um tipo definido como sinônimo de algum tipo inteiro pode ser igual a um dos vários tipos inteiros diferentes.  
   
--   Um tipo de máscara de bits o pode ser implementado como um tipo de número inteiro ou uma enumeração.  Em ambos os casos, você pode executar operação bit a bit \(como `AND` e `OR`\) em valores do mesmo tipo de máscara de bits.  Os elementos `A` e `B` de um tipo de máscara de bits são valores diferentes de zero de modo que `A` &`B` é zero.  
+-   Um tipo de bitmask pode ser implementado como um tipo inteiro ou uma enumeração. Em ambos os casos, é possível executar operações bit a bit (como `AND` e `OR`) nos valores do mesmo tipo de bitmask. Os elementos `A` e `B` de um tipo de bitmask são valores diferentes de zero, como `A` & `B` é zero.  
   
--   Uma função de biblioteca que não tem nenhuma especificação de exceção é possível lançar uma exceção arbitrária, a menos que a definição restringir claramente essa possibilidade.  
+-   Uma função de biblioteca que não tem uma especificação de exceção pode gerar uma exceção arbitrária, a menos que sua definição claramente restrinja essa possibilidade.  
   
  Por outro lado, há algumas restrições:  
   
--   A biblioteca padrão C do não usa nenhuma macro mascarando.  Somente assinaturas da função específica são reservadas, não os nomes das funções são exibidos.  
+-   A Biblioteca C Padrão não usa macros de mascaramento. Somente assinaturas de função específicas são reservadas, não os nomes das funções em si.  
   
--   Um nome de função de biblioteca fora de uma classe não terá adicional, não documentado, assinaturas da função.  Você pode usar o seu endereço.  
+-   O nome de uma função de biblioteca fora de uma classe não terá assinaturas de função adicionais não documentadas. É possível usar seu endereço de forma confiável.  
   
--   As classes base e tão virtuais descritos funções de membro são realmente virtuais, quando aquelas descritas quanto nonvirtual são realmente nonvirtual.  
+-   Classes base e funções de membro descritas como virtuais certamente são virtuais, enquanto aquelas descritas como não virtuais certamente não são virtuais.  
   
--   Dois tipos definidos pela biblioteca de C\+\+ sempre são diferentes a menos que esse documento sugerir outros explicitamente.  
+-   Dois tipos definidos pela biblioteca C++ sempre são diferentes, a menos que este documento explicitamente sugira o contrário.  
   
--   As funções fornecidas pela biblioteca, incluindo as versões padrão de funções substituíveis, podem lançar no *máximo* essas exceções listadas em qualquer especificação de exceção.  Nenhum destruidor fornecido pela biblioteca lança exceções.  As funções da biblioteca padrão C consegue propagar uma exceção, como quando `qsort` chama uma função de comparação que gerou uma exceção, mas não lançam exceções de outra forma.  
+-   As funções fornecidas pela biblioteca, incluindo as versões padrão das funções substituíveis, podem gerar *no máximo* as exceções listadas em qualquer especificação de exceção. Nenhum destruidor fornecido pela biblioteca gera exceções. As funções na Biblioteca C Padrão podem propagar uma exceção, como ocorre quando `qsort` chama uma função de comparação que gera uma exceção, mas, de outro modo, elas não geram exceções.  
   
-## Consulte também  
- [Visão geral da STL](../standard-library/cpp-standard-library-overview.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

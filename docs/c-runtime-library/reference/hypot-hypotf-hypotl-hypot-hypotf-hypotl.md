@@ -1,65 +1,79 @@
 ---
-title: "hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_hypotf"
-  - "hypot"
-  - "hypotf"
-  - "_hypot"
-  - "_hypotl"
-  - "hypotl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "hypotf"
-  - "hypotl"
-  - "_hypotl"
-  - "hypot"
-  - "_hypot"
-  - "_hypotf"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _hypot"
-  - "calculando hipotenusas"
-  - "Função hypot"
-  - "cálculo de hipotenusas"
-  - "Função hypotf"
-  - "Função hypotl"
-  - "triângulos, calculando hipotenusa"
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _hypotf
+- hypot
+- hypotf
+- _hypot
+- _hypotl
+- hypotl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- hypotf
+- hypotl
+- _hypotl
+- hypot
+- _hypot
+- _hypotf
+dev_langs:
+- C++
+helpviewer_keywords:
+- hypotenuse calculation
+- hypot function
+- hypotf function
+- triangles, calculating hypotenuse
+- hypotl function
+- calculating hypotenuses
+- _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c372095f4ae5903f27e5f6add9a79de728a5e202
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 Calcula a hipotenusa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double hypot(   
@@ -88,29 +102,29 @@ long double _hypotl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`, `y`  
  Valores de ponto flutuante.  
   
-## Valor de retorno  
- Se for bem\-sucedido, `hypot` retorna o comprimento da hipotenusa; em estouro, `hypot` retorna INF \(infinito\) e a variável de `errno` é definida como `ERANGE`.  Você pode usar `_matherr` para alterar o tratamento de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, `hypot` retorna o comprimento da hipotenusa, no estouro, `hypot` retorna INF (infinito) e a variável `errno` é definida como `ERANGE`. Você pode usar `_matherr` para modificar o tratamento de erros.  
   
- Para obter mais informações sobre códigos de retorno, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- As funções `hypot` calculam o comprimento da hipotenusa de um triângulo retângulo, dado o comprimento dos dois lados `x` e `y` \(em outras palavras, a raiz quadrada de `x`<sup>2</sup> \+ `y`<sup>2</sup>\).  
+## <a name="remarks"></a>Comentários  
+ As funções `hypot` calculam o comprimento da hipotenusa de um triângulo retângulo, dado o comprimento dos dois lados `x` e `y` (em outras palavras, a raiz quadrada de `x`<sup>2</sup> + `y`<sup>2</sup>).  
   
- As versões das funções que têm sublinhados iniciais são fornecidas para compatibilidade com os padrões anteriores.  Seu comportamento é idêntico às versões que não têm sublinhados iniciais.  Recomendamos usar as versões sem sublinhados principais para o novo código.  
+ As versões das funções que têm sublinhados iniciais são fornecidas para compatibilidade com os padrões anteriores. Seu comportamento é idêntico ao das versões que não têm sublinhados iniciais. É recomendável usar as versões sem sublinhados iniciais para o novo código.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h\>|  
+|-------------|---------------------|  
+|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h>|  
   
- Para obter mais informações de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_hypot.c  
@@ -128,11 +142,14 @@ int main( void )
 }  
 ```  
   
-  **Se um triângulo retângulo tiver lados 3,0 e 4,0, sua hipotenusa será 5,0**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0  
+```  
   
-## Consulte também  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
  [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [\_cabs](../Topic/_cabs.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)

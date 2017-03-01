@@ -1,60 +1,75 @@
 ---
-title: "realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_brealloc"
-  - "_nrealloc"
-  - "realloc"
-  - "_frealloc"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _brealloc"
-  - "Função realloc"
-  - "Função nrealloc"
-  - "Função frealloc"
-  - "Função _nrealloc"
-  - "blocos de memória, realocando"
-  - "memória, realocando"
-  - "Função _frealloc"
-  - "realocar blocos de memória"
+title: realloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _brealloc
+- _nrealloc
+- realloc
+- _frealloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _brealloc function
+- realloc function
+- nrealloc function
+- frealloc function
+- _nrealloc function
+- memory blocks, reallocating
+- memory, reallocating
+- _frealloc function
+- reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 caps.latest.revision: 20
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="realloc"></a>realloc
 Realocar blocos de memória.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void *realloc(  
@@ -63,50 +78,50 @@ void *realloc(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `memblock`  
- Ponteiro para o bloco de memória anteriormente atribuído.  
+ Ponteiro para o bloco de memória alocado anteriormente.  
   
  `size`  
  Novo tamanho em bytes.  
   
-## Valor de retorno  
- `realloc` retorna um ponteiro de `void` \(movido e possivelmente\) no bloco de memória realocado.  
+## <a name="return-value"></a>Valor de retorno  
+ `realloc` retorna um ponteiro `void` para o bloco de memória realocado (e possivelmente movido).  
   
- Se não houver memória suficiente disponível para expandir o bloco ao tamanho especificado, o bloco original permanecerá inalterado, e `NULL` é retornado.  
+ Se não houver memória suficiente para expandir o bloco para o tamanho determinado, o bloco original será deixada inalterado e `NULL` é retornado.  
   
- Se `size` for zero, o bloco apontado por `memblock` será liberado; o valor de retorno é `NULL`, aponte para e `memblock` é deixado em um bloco liberado.  
+ Se `size` for zero, então o bloco apontado por `memblock` é liberado; o valor retornado é `NULL` e `memblock` é deixado apontando para um bloco liberado.  
   
- O valor de retorno para um espaço de armazenamento que é garantia de ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto.  Para obter um ponteiro para um tipo diferente de `void`, use uma conversão de tipos no valor de retorno.  
+ O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja `void`, use uma conversão de tipo no valor retornado.  
   
-## Comentários  
- A função de `realloc` o tamanho de um bloco de memória alocada.  O argumento de `memblock` ao início do bloco de memória.  Se `memblock` é `NULL`, `realloc` se comporta da mesma maneira que `malloc` e atribui\-se um novo bloco de bytes de `size` .  Se `memblock` não é `NULL`, deve ser um ponteiro retornado por uma chamada a `calloc`anterior, a `malloc`, ou a `realloc`.  
+## <a name="remarks"></a>Comentários  
+ A função `realloc` altera o tamanho de um bloco de memória alocado. O argumento `memblock` aponta para o início do bloco de memória. Se `memblock` for `NULL`, `realloc` se comporta da mesma maneira que `malloc` e aloca um novo bloco de `size` bytes. Se `memblock` não for `NULL`, ele deverá ser um ponteiro retornado por uma chamada anterior para `calloc`, `malloc` ou `realloc`.  
   
- O argumento de `size` do novo tamanho do bloco, em bytes.  O conteúdo do bloco não serão alteradas até o mais curto tamanhos dos novos e antigos, embora o novo pacote pode estar em um local diferente.  Como o novo bloco pode estar em um novo local na memória, o ponteiro retornado por `realloc` não é garantido como o ponteiro passado pelo argumento de `memblock` .  `realloc` não zera a memória alocada recentemente no caso de crescimento do buffer.  
+ O argumento `size` fornece o novo tamanho do bloco, em bytes. O conteúdo do bloco fica inalterado até o menor dos tamanhos novos e antigos, embora o novo bloco possa estar em um local diferente. Como o novo bloco pode estar em um novo local de memória, não há garantia que o ponteiro retornado por `realloc` seja aquele passado por meio do argumento `memblock`. `realloc` não zera memória recém-alocada no caso de crescimento de buffer.  
   
- `realloc` define `errno` a `ENOMEM` se a alocação de memória falhar ou se a quantidade de memória solicitada exceder `_HEAP_MAXREQ`.  Para obter mais informações sobre esse e outros códigos de erro, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ `realloc` definirá `errno` para `ENOMEM` se a alocação de memória falhar ou se a quantidade de memória solicitada exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- chamadas`malloc`de`realloc`para usar a função C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) para definir o novo modo do manipulador.  O novo modo de manipulador indica se, em caso de falha, `malloc` deve chamar a nova rotina do manipulador conforme definido por [\_set\_new\_handler](../Topic/_set_new_handler.md).  Por padrão, `malloc` não chama a nova rotina do manipulador em caso de falha para alocar memória.  Você pode substituir esse comportamento padrão para que, quando `realloc` não aloca memória, `malloc` chama a nova rotina de manipulador da mesma forma que o operador de `new` faz quando falha pela mesma razão.  Para substituir o padrão, chame  
+ `realloc` chama `malloc` para usar a função [set_new_mode](../../c-runtime-library/reference/set-new-mode.md) C++ para definir o novo modo de manipulador. O novo modo do manipulador indica se, em caso de falha, `malloc` deverá chamar a nova rotina do manipulador conforme definido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Por padrão, `malloc` não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando `realloc` falhar ao alocar memória, `malloc` chame a nova rotina do manipulador da mesma forma que o operador `new` fará quando ele falhar pelo mesmo motivo. Para substituir o padrão, chame  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- no início de programa, ou link com o NEWMODE.OBJ \(consulte [Opções de link](../Topic/Link%20Options.md)\).  
+ no início do seu programa ou vincule com NEWMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)).  
   
- Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução C, `realloc` resolve a [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md).  Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [O heap de depuração do CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas em tempo de execução C, `realloc` será resolvido como [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).  
   
- `realloc` é `__declspec(noalias)` marcado e `__declspec(restrict)`, o que significa que a função não é garantida para modificar as variáveis globais, e que o ponteiro retornado não possui alias.  Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrinja](../../cpp/restrict.md).  
+ `realloc` é marcado como `__declspec(noalias)` e `__declspec(restrict)`, o que representa a garantia de que a função não modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`realloc`|\<stdlib.h\> e \<malloc.h\>|  
+|-------------|---------------------|  
+|`realloc`|\<stdlib.h> e \<malloc.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_realloc.c  
@@ -148,13 +163,16 @@ int main( void )
 }  
 ```  
   
-  **O tamanho do bloco depois de um malloc de 1000 longs: 4000**  
-**O tamanho do bloco depois de um realloc de 1000 longs mais: 8000**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Size of block after malloc of 1000 longs: 4000  
+Size of block after realloc of 1000 more longs: 8000  
+```  
   
-## Consulte também  
- [Alocação de memória](../../c-runtime-library/memory-allocation.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)

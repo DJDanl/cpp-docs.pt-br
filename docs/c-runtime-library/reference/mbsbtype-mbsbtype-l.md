@@ -1,59 +1,73 @@
 ---
-title: "_mbsbtype, _mbsbtype_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsbtype_l"
-  - "_mbsbtype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsbtype"
-  - "mbsbtype_l"
-  - "_mbsbtype_l"
-  - "_mbsbtype"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbsbtype"
-  - "Função _mbsbtype_l"
-  - "Função mbsbtype"
-  - "Função mbsbtype_l"
+title: _mbsbtype, _mbsbtype_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsbtype_l
+- _mbsbtype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsbtype
+- mbsbtype_l
+- _mbsbtype_l
+- _mbsbtype
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbsbtype function
+- mbsbtype function
+- _mbsbtype_l function
+- mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _mbsbtype, _mbsbtype_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9c76458b2ae964d352ff735ec0ff67b1ddab7e2f
+ms.lasthandoff: 02/25/2017
 
-Retorna o tipo de bytes em uma cadeia de caracteres.  
+---
+# <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
+Retorna o tipo de byte em uma cadeia de caracteres.  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos que executam no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _mbsbtype(  
@@ -67,46 +81,46 @@ int _mbsbtype_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `mbstr`  
  Endereço de uma sequência de caracteres multibyte.  
   
  `count`  
- Cabeçalho de deslocamento de byte da cadeia de caracteres.  
+ Deslocamento do byte do início da cadeia de caracteres.  
   
  `locale`  
- Localidade a ser usada.  
+ Localidade a usar.  
   
-## Valor de retorno  
- `_mbsbtype` e `_mbsbtype_l`retornam um valor inteiro que indica o resultado de teste no byte especificado.  As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.  
+## <a name="return-value"></a>Valor de retorno  
+ `_mbsbtype` e `_mbsbtype_l` retornam um valor inteiro indicando o resultado do teste no byte especificado. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.  
   
-|Valor de retorno|Tipo de byte|  
-|----------------------|------------------|  
-|`_MBC_SINGLE` \(0\)|Caractere de byte único.  Por exemplo, na página de código 932, `_mbsbtype` retorna 0 se o byte especificado estiver dentro do intervalo de 0x20 a 0x7E ou de 0xA1 a 0xDF.|  
-|`_MBC_LEAD` \(1\)|Primeiro byte do caractere de multibyte.  Por exemplo, na página de código 932, `_mbsbtype` retorna 1 se o byte especificado estiver dentro do intervalo de 0x81 a 0x9F ou de 0xE0 a 0xFC.|  
-|`_MBC_TRAIL` \(2\)|Byte à direita de caractere multibyte.  Por exemplo, na página de código 932, `_mbsbtype` retorna 2 se o byte especificado estiver dentro do intervalo de 0x40 a 0x7E ou de 0x80 a 0xFC.|  
-|`_MBC_ILLEGAL` \(–1\)|`NULL` cadeia de caracteres, caractere inválido ou `NULL` byte encontrado antes do byte no deslocamento `count` em `mbstr`.|  
+|Valor retornado|Tipo de byte|  
+|------------------|---------------|  
+|`_MBC_SINGLE` (0)|Caractere de um byte. Por exemplo, na página de código 932, `_mbsbtype` retornará 0 se o byte especificado estiver dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF.|  
+|`_MBC_LEAD` (1)|Byte inicial do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retornará 1 se o byte especificado estiver dentro do intervalo 0x81 – 0x9F ou 0xE0 – 0xFC.|  
+|`_MBC_TRAIL` (2)|Byte à direita do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retornará 2 se o byte especificado estiver dentro do intervalo 0x40 – 0x7E ou 0x80 – 0xFC.|  
+|`_MBC_ILLEGAL` (–1)|Cadeia de caracteres `NULL`, caractere inválido ou byte `NULL` encontrado antes do byte no deslocamento `count` em `mbstr`.|  
   
-## Comentários  
- A função `_mbsbtype` determina o tipo de um byte em uma cadeia de caracteres multibyte.  A função examina somente o byte no deslocamento `count` em `mbstr`, ignorando os caracteres inválidos antes do bytes especificado.  
+## <a name="remarks"></a>Comentários  
+ A função `_mbsbtype` determina o tipo de um byte em uma cadeia de caracteres multibyte. A função examina somente os bytes no deslocamento `count` no `mbstr`, ignorando os caracteres inválidos antes do byte especificado.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale](../Topic/setlocale,%20_wsetlocale.md).  A versão dessa função sem o sufixo `_l` usa a localidade atual para esse comportamento dependente da localidade; a versão com o sufixo `_l` é idêntica, exceto pelo fato de que ela usa o parâmetro de localidade informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo `_l` usa a localidade atual desse comportamento dependente da localidade. A versão com o sufixo `_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- Se a cadeia de caracteres de entrada for `NULL`, o manipulador de parâmetro inválido será chamado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, `errno` será definido como `EINVAL` e a função retornará `_MBC_ILLEGAL`.  
+ Se a cadeia de caracteres de entrada for `NULL`, o manipulador de parâmetro inválido será invocado, como descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e a função retornará `_MBC_ILLEGAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_mbsbtype`|\<mbstring.h\>|\<mbctype.h\>\*|  
-|`_mbsbtype_l`|\<mbstring.h\>|\<mbctype.h\>\*|  
+|-------------|---------------------|---------------------|  
+|`_mbsbtype`|\<mbstring.h>|\<mbctype.h>*|  
+|`_mbsbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
   
- \* No caso de constantes de manifesto usadas como valores de retorno.  
+ \* Para constantes de manifesto usadas como valores retornados.  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  Não aplicável, mas consulte [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)

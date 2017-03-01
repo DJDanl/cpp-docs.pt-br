@@ -1,85 +1,99 @@
 ---
-title: "getchar, getwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getchar"
-  - "getwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getwchar"
-  - "GetChar"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _gettchar"
-  - "caracteres, lendo"
-  - "Função gettchar"
-  - "Função getwchar"
-  - "entrada padrão, lendo de"
+title: getchar, getwchar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getchar
+- getwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getwchar
+- GetChar
+dev_langs:
+- C++
+helpviewer_keywords:
+- gettchar function
+- characters, reading
+- getwchar function
+- _gettchar function
+- standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
 caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# getchar, getwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2b1f07444f30bbd14db6a2124f44bbadef781456
+ms.lasthandoff: 02/25/2017
 
-Lê um caractere a partir da entrada padrão.  
+---
+# <a name="getchar-getwchar"></a>getchar, getwchar
+Lê um caractere da entrada padrão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int getchar();  
 wint_t getwchar();  
 ```  
   
-## Valor de retorno  
- Retorna a leitura de caracteres.  Para indicar um erro de leitura ou uma condição de participante de Arquivo, `getchar``returns EOF`, e retorna `WEOF`de `getwchar` .  Para `getchar`, use `ferror` ou `feof` para verificar para um erro ou a fim de arquivo.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, `getchar``returns EOF` e `getwchar` retorna `WEOF`. Para `getchar`, use `ferror` ou `feof` para verificar se há um erro ou se o final do arquivo foi atingido.  
   
-## Comentários  
- Cada rotina ler um único caractere de `stdin` e incrementa o ponteiro de arquivo associado para apontar para o próximo caractere.  `getchar` é o mesmo que [\_fgetchar](../Topic/fgetc,%20fgetwc.md), mas implementado como uma função e como uma macro.  
+## <a name="remarks"></a>Comentários  
+ Cada rotina lê um único caractere de `stdin` e incrementa o ponteiro de arquivo associado para apontar para o caractere seguinte. `getchar` é o mesmo que [_fgetchar](../../c-runtime-library/reference/fgetc-fgetwc.md), mas é implementado como uma função e como uma macro.  
   
- Essas funções bloqueiam o thread de chamada e, portanto, são thread\-safe.  Para uma versão sem bloqueio, consulte [\_getchar\_nolock, \_getwchar\_nolock](../Topic/_getchar_nolock,%20_getwchar_nolock.md).  
+ Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para ver uma versão sem bloqueio, consulte [_getchar_nolock, _getwchar_nolock](../../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_gettchar`|`getchar`|`getchar`|`getwchar`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`getchar`|\<stdio.h\>|  
-|`getwchar`|\<stdio.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`getchar`|\<stdio.h>|  
+|`getwchar`|\<stdio.h> ou \<wchar.h>|  
   
- O console não tem suporte em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Os manipuladores de fluxo padrão associados ao console — `stdin`, `stdout` e `stderr` — devem ser redirecionados antes que as funções de tempo de execução do C possam utilizá\-los em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_getchar.c  
@@ -104,17 +118,21 @@ int main()
 }  
 ```  
   
-  **`Essa Entrada`de texto era: Esse texto**   
-## Equivalência do .NET Framework  
+```Output  
+  
+This textInput was: This text  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
   
 -   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [fgetc, fgetwc](../Topic/fgetc,%20fgetwc.md)   
- [\_getch, \_getwch](../Topic/_getch,%20_getwch.md)   
+ [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

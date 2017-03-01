@@ -1,61 +1,81 @@
 ---
-title: "Classe numpunct_byname | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.numpunct_byname"
-  - "numpunct_byname"
-  - "xlocnum/std::numpunct_byname"
-  - "std::numpunct_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe numpunct_byname"
+title: Classe numpunct_byname | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.numpunct_byname
+- numpunct_byname
+- xlocnum/std::numpunct_byname
+- std::numpunct_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
 caps.latest.revision: 24
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe numpunct_byname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: eea856d76ee0fcf12c1cdb4bf1bf0dd0f3125d5f
+ms.lasthandoff: 02/25/2017
 
-A classe derivada do modelo descreve um objeto que pode servir como uma faceta de `numpunct` de uma localidade determinada habilitando a formatação e a pontuação de expressões numéricas e boolianos.  
+---
+# <a name="numpunctbyname-class"></a>Classe numpunct_byname
+A classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta `numpunct` de uma determinada localidade, permitindo a formatação e pontuação de expressões numéricas e boolianas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class CharType>
+class numpunct_byname : public numpunct<Elem> {
+public:
+    explicit numpunct_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
+
+    explicit numpunct_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual ~numpunct_byname();
+
+ };
 ```  
-template<Class CharType>  
-    class numpunct_byname : public numpunct<Elem> {  
-public:  
-    explicit numpunct_byname(  
-        const char* _Locname,  
-        size_t _Refs = 0  
-    );  
-    explicit numpunct_byname(  
-        const string& _Locname,  
-        size_t _Refs = 0  
-    );  
-protected:  
-    virtual ~numpunct_byname( );  
-   };  
-```  
   
-## Comentários  
- O comportamento é determinado pela localidade `_Locname`de [nomeado](../Topic/locale::name.md) .  O construtor inicializa o objeto base com [numpunct](../Topic/numpunct::numpunct.md)\<CharType\>\(`_Refs`\).  
+## <a name="remarks"></a>Comentários  
+ Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#locale__name) `_Locname`. O construtor inicializa seu objeto base com [numpunct](../standard-library/numpunct-class.md#numpunct__numpunct)\<CharType>( `_Refs`).  
   
-## Requisitos  
- localidade \<de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<locale>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

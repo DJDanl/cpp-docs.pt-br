@@ -1,59 +1,77 @@
 ---
-title: "&lt;limits&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<limits>"
-  - "std::<limits>"
-  - "limits/std::<limits>"
-  - "<limits>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cabeçalho limits"
+title: '&lt;limites&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<limits>
+- std::<limits>
+- limits/std::<limits>
+- <limits>
+dev_langs:
+- C++
+helpviewer_keywords:
+- limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
 caps.latest.revision: 18
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;limits&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b59c3409c473af61613168e85f3980233420ba8d
+ms.lasthandoff: 02/25/2017
 
-Define a classe de modelo `numeric_limits` e duas enumerações relacionadas a representações de ponto flutuante e arredondamento.  
+---
+# <a name="ltlimitsgt"></a>&lt;limites&gt;
+Define a classe de modelo `numeric_limits` e duas enumerações relacionadas a representações de pontos flutuantes e arredondamento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <limits>  
   
 ```  
   
-## Comentários  
- Especializações explícitas a `numeric_limits` classe descrevem muitas propriedades de tipos fundamentais, incluindo o caractere, inteiro e tipos de ponto flutuante e `bool` que são definidos em vez de fixo pelas regras da linguagem C\+\+ de implementação.  As propriedades descritas nos limites de \< \> incluem precisão, mínimo e máximo em tamanho representações, arredondamento e sinalizar erros de tipo.  
+## <a name="remarks"></a>Comentários  
+ Especializações explícitas da classe `numeric_limits` descrevem muitas propriedades dos tipos fundamentais, incluindo os tipos de ponto flutuante, caractere e inteiro, bem como `bool`, que são definidos pela implementação e não fixados pelas regras da linguagem C++. Propriedades descritas em \<limits> incluem precisão, representações de tamanho mínimo e máximo, arredondamento e erros de tipo de sinalização.  
   
-### Enumeração  
-  
-|||  
-|-|-|  
-|[float\_denorm\_style](../Topic/float_denorm_style.md)|A enumeração descreve os vários métodos que pode escolher uma implementação que representa um valor de ponto flutuante desnormalizado — um pequeno demais para representar como um valor normalizado:|  
-|[float\_round\_style](../Topic/float_round_style.md)|A enumeração descreve os vários métodos que pode escolher uma implementação para o arredondamento de um valor de ponto flutuante para um valor inteiro.|  
-  
-### Classes  
+### <a name="enumerations"></a>Enumerações  
   
 |||  
 |-|-|  
-|[Classe numeric\_limits](../standard-library/numeric-limits-class.md)|A classe de modelo descreve propriedades aritméticas tipos numéricos internos.|  
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style_enumeration)|A enumeração descreve os vários métodos que uma implementação pode escolher para representar um valor de ponto flutuante desnormalizado — um pequeno demais para ser representado como um valor normalizado:|  
+|[float_round_style](../standard-library/limits-enums.md#float_round_style_enumeration)|A enumeração descreve os vários métodos que uma implementação pode escolher para fazer o arredondamento de um valor de ponto flutuante para um valor inteiro.|  
   
-## Consulte também  
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[Classe numeric_limits](../standard-library/numeric-limits-class.md)|A classe de modelo descreve propriedades aritméticas de tipos numéricos internos.|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

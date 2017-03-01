@@ -1,59 +1,73 @@
 ---
-title: "exp2, exp2f, exp2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "exp2"
-  - "exp2f"
-  - "exp2l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "exp2"
-  - "math/exp2"
-  - "exp2f"
-  - "math/exp2f"
-  - "exp2l"
-  - "math/exp2l"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "Função exp2"
-  - "Função exp2f"
-  - "função exp2l"
+title: exp2, exp2f, exp2l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- exp2
+- exp2f
+- exp2l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- exp2
+- math/exp2
+- exp2f
+- math/exp2f
+- exp2l
+- math/exp2l
+dev_langs:
+- C++
+helpviewer_keywords:
+- exp2 function
+- exp2f function
+- exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# exp2, exp2f, exp2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c6652eb49a1e8a246ae47e2d95ff1a58d7fd60a0
+ms.lasthandoff: 02/25/2017
 
-Computa 2 elevado ao valor especificado \(ou seja, 2ˣ\).  
+---
+# <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
+Calcula 2 elevado ao valor especificado (ou seja, 2ˣ).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double exp2(  
@@ -78,36 +92,36 @@ long double exp2l(
   
 ```  
   
-#### Parâmetros  
- \[in\] `x`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `x`  
  O valor do expoente.  
   
-## Valor de retorno  
- Se for bem\-sucedido, retorna o expoente de base 2 de `x` \(2ˣ\). Caso contrário, pode retornar um dos seguintes valores:  
+## <a name="return-value"></a>Valor de retorno  
+ Se for bem-sucedido, retornará o expoente de base&2; de `x` (2ˣ). Caso contrário, pode retornar um dos seguintes valores:  
   
-|Problema|Retornar|  
-|--------------|--------------|  
-|`x` \= ±0|1|  
-|`x` \= \- INFINITY|\+0|  
-|`x` \= \+ INFINITY|\+ INFINITY|  
-|`x` \= NaN|NaN|  
-|Erro de estouro do intervalo|\+ HUGE\_VAL \+ HUGE\_VALF, ou \+ HUGE\_VALL|  
+|Problema|Valor de|  
+|-----------|------------|  
+|`x` = ±0|1|  
+|`x` = -INFINITY|+0|  
+|`x` = +INFINITY|+INFINITY|  
+|`x` = NaN|NaN|  
+|Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|  
 |Erro de intervalo de estouro negativo|resultado correto, após o arredondamento|  
   
- Os erros são relatados como especificado em [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Os erros são relatados conforme especificado em [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Comentários  
- Como C\+\+ permite sobrecargas, é possível chamar sobrecargas de `exp2` que tomam e retornam tipos float e double longo. Em um programa C, `exp2` sempre toma e retorna um double.  
+## <a name="remarks"></a>Comentários  
+ Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `exp2` que utilizam e retornam tipos duplos flutuantes e longos. Em um programa C, `exp2` sempre usa e retorna um duplo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rotina|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`exp`, `expf`, `expl`|\< Math \>|\<cmath\>|  
+|Rotina|Cabeçalho C|Cabeçalho C++|  
+|-------------|--------------|------------------|  
+|`exp`,                `expf`, `expl`|\<math.h>|\<cmath>|  
   
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Consulte também  
- [Referência da função alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)

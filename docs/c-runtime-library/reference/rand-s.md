@@ -1,85 +1,99 @@
 ---
-title: "rand_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rand_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rand_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "números aleatórios criptograficamente seguros"
-  - "gerando números pseudoaleatórios"
-  - "números, gerando pseudoaleatórios"
-  - "números, pseudoaleatórios"
-  - "números pseudoaleatórios"
-  - "Função rand_s"
-  - "números aleatórios, criptograficamente seguros"
-  - "números aleatórios, gerando"
+title: rand_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rand_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rand_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- generating pseudorandom numbers
+- random numbers, cryptographically secure
+- random numbers, generating
+- rand_s function
+- numbers, pseudorandom
+- cryptographically secure random numbers
+- pseudorandom numbers
+- numbers, generating pseudorandom
 ms.assetid: d6a0be60-997d-4904-8411-8aea6839cc94
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# rand_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 44aae25d87d501416d470fb3c33faba00f3fb9e7
+ms.lasthandoff: 02/25/2017
 
-Gerencie um número pseudoaleatório.  Uma versão de [rand](../Topic/rand.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="rands"></a>rand_s
+Gera um número pseudoaleatório. Uma versão de [rand](../../c-runtime-library/reference/rand.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t rand_s(   unsigned int* randomValue);  
 ```  
   
-## Valor de retorno  
- Zero se bem\-sucedido, caso contrário, um código de erro.  Se o ponteiro `randomValue` de entrada for um ponteiro nulo, a função invoca um manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, a função retornará `EINVAL` e definirá `errno` como `EINVAL`.  Se a função falhar por qualquer outro motivo, \*`randomValue` será definido como 0.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido; caso contrário, um código de erro. Se o ponteiro de entrada `randomValue` for um ponteiro nulo, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará `EINVAL` e definirá `errno` como `EINVAL`. Se a função falhar por qualquer motivo, *`randomValue` será definido como 0.  
   
-## Comentários  
- A função de `rand_s` pseudoaleatório grava um inteiro no intervalo de 0 a `UINT_MAX` ao ponteiro de entrada.  A função de `rand_s` usa o sistema operacional para gerar números aleatórios criptograficamente seguros.  Não usa a semente gerada pela função de [srand](../../c-runtime-library/reference/srand.md) , nem afeta a sequência de números aleatórios usada por `rand`.  
+## <a name="remarks"></a>Comentários  
+ A função `rand_s` grava um inteiro pseudoaleatório no intervalo de 0 a `UINT_MAX` para o ponteiro de entrada. A função `rand_s` usa o sistema operacional para gerar números aleatórios protegidos por criptografia. Ele não usa a semente gerada pela função [srand](../../c-runtime-library/reference/srand.md), nem afeta a sequência de números aleatória usada pelo `rand`.  
   
- A função de `rand_s` requer que `_CRT_RAND_S` constante seja definido antes da instrução de inclusão para que a função seja declarada, como no exemplo a seguir:  
+ A função `rand_s` exige que a constante `_CRT_RAND_S` seja definida antes da instrução de inclusão para a função a ser declarada, como no exemplo a seguir:  
   
 ```  
 #define _CRT_RAND_S  
 #include <stdlib.h>  
 ```  
   
- `rand_s` depende de [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API, disponível somente no Windows XP e posterior.  
+ `rand_s` depende da API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), que só está disponível no Windows XP e versões posteriores.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`rand_s`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`rand_s`|\<stdlib.h>|  
   
  Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_rand_s.c  
@@ -129,7 +143,7 @@ int main( void )
 }  
 ```  
   
-## Saída de Exemplo  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 10  
@@ -155,9 +169,9 @@ int main( void )
 65.0712  
 ```  
   
-## Equivalência do .NET Framework  
- [Classe de System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ [Classe System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [srand](../../c-runtime-library/reference/srand.md)

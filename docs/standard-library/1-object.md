@@ -1,49 +1,64 @@
 ---
-title: "Objeto _1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1._1"
-  - "_1"
-  - "std::tr1::_1"
-  - "functional/std::tr1::_1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Objeto _1 [TR1]"
+title: Objeto _1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _1
+- std::_1
+- functional/std::_1
+dev_langs:
+- C++
+helpviewer_keywords:
+- _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
 caps.latest.revision: 24
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Objeto _1
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="1-object"></a>Objeto _1
 Espaços reservados para argumentos substituíveis.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 namespace placeholders {  
-  extern unspecified _1, _2, ... _M  
-  } // namespace placeholders (within std)  
+    extern unspecified _1,
+    _2, ... _M  
+ } // namespace placeholders (within std)  
 ```  
   
-## Comentários  
- Os objetos `_1, _2, ... _M` são espaços reservados que designam o primeiro, o segundo,…, milionésimo argumento, respectivamente em uma chamada de função para um objeto retornado por [Função bind](../Topic/bind%20Function.md).  Você usa `_N` para especificar onde o Nth argumento deve ser inserido quando a expressão bind é avaliada.  
+## <a name="remarks"></a>Comentários  
+ Os objetos `_1, _2, ... _M` são espaços reservados para designar o primeiro, o segundo, até o milésimo argumento, respectivamente, em uma chamada de função para um objeto retornado pela [Função bind](../standard-library/functional-functions.md#bind_function). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.  
   
- Nessa implementação o valor de `M` é 20.  
+ Nesta implementação, o valor de `M` é 20.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -81,20 +96,26 @@ int main()
   
 ```  
   
-  **1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**  
-**1\*2 \=\= 2**  
-**2\*2 \=\= 4**  
-**3\*2 \=\= 6**  
-**1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+```Output  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+  
+1*2 == 2  
+2*2 == 4  
+3*2 == 6  
+  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Função bind](../Topic/bind%20Function.md)   
- [Classe is\_placeholder](../Topic/is_placeholder%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Função bind](../standard-library/functional-functions.md#bind_function)   
+ [Classe is_placeholder](../standard-library/is-placeholder-class.md)
+

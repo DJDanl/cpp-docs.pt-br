@@ -1,59 +1,73 @@
 ---
-title: "acos, acosf, acosl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "acosf"
-  - "acos"
-  - "acosl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "acos"
-  - "acosl"
-  - "acosf"
-  - "math/acosf"
-  - "math/acosl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função acos"
-  - "Função acosf"
-  - "Função acosl"
-  - "Função arccosine"
-  - "Funções trigonométricas"
+title: acos, acosf, acosl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- acosf
+- acos
+- acosl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- acos
+- acosl
+- acosf
+- math/acosf
+- math/acosl
+dev_langs:
+- C++
+helpviewer_keywords:
+- acos function
+- acosl function
+- acosf function
+- trigonometric functions
+- arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# acos, acosf, acosl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70b71755436db29f60b1f8a4da8f2da216dcaf31
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 Calcula o arco cosseno.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double acos(   
@@ -73,32 +87,32 @@ long double acosl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
- Valor entre 1 e 1, para que que calcula o arco cosseno \(o cosseno invertida\).  
+ Valor entre –1 e 1, usado para calcular o arco cosseno (o cosseno inverso).  
   
-## Valor de retorno  
- A função de `acos` retorna o arco cosseno de `x` no intervalo 0 em radianos de π.  
+## <a name="return-value"></a>Valor de retorno  
+ A função `acos` retorna o arco cosseno de `x` no intervalo de 0 a π radianos.  
   
- Por padrão, se `x` for menor que –1 ou maior que 1, `acos` retorna um valor indefinido.  
+ Por padrão, se `x` for menor que -1 ou maior que 1, `acos` retornará um indefinido.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
-|-------------|-----------------|---------------------|  
+|-----------|-------------------|-----------------------|  
 |± ∞|`INVALID`|`_DOMAIN`|  
 |± QNAN,IND|nenhum|`_DOMAIN`|  
-|&#124;x&#124;\>1|`INVALID`|`_DOMAIN`|  
+|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
-## Comentários  
- Como C\+\+ reserva evitada, você pode chamar as sobrecargas de `acos` que têm e retornam `float` e tipos de `long double` .  Em um programa em C, `acos` sempre obterá e retornará um `double`.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `acos` que usam e retornam tipos `float` e `long double`. Em um programa C, `acos` sempre toma e retorna um `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|  
-|------------|--------------------------|--------------------------|  
-|`acos`, `acosf`, `acosl`|\<math.h\>|\<errno.h\>|  
+|-------------|---------------------|----------------------|  
+|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
   
-## Exemplo  
- Esse programa solicita um valor no intervalo de \-1 a 1.  Valores de entrada sem mensagens de erro de `_DOMAIN` deste produto do intervalo.  Se um valor válido é inserido, o programa imprime o arco seno e o arco cosseno desse valor.  
+## <a name="example"></a>Exemplo  
+ Este programa solicita um valor no intervalo de –1 a 1. Valores de entrada fora desse intervalo produzem mensagens de erro de `_DOMAIN`. Se um valor válido for inserido, o programa imprimirá o arco seno e o arco cosseno desse valor.  
   
 ```  
 // crt_asincos.c  
@@ -141,16 +155,19 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **Arco seno de 0,000000 \= 0,000000**  
-**Arco cosseno de 0,000000 \= 1,570796**   
-## Equivalência do .NET Framework  
+```Output  
+Arcsine of 0.000000 = 0.000000  
+Arccosine of 0.000000 = 1.570796  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Math::Acos](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)

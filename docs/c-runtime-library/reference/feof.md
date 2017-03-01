@@ -1,50 +1,64 @@
 ---
-title: "feof | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feof"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "final do arquivo, testando para"
-  - "Função feof"
+title: feof | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- feof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feof
+dev_langs:
+- C++
+helpviewer_keywords:
+- end of file, testing for
+- feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# feof
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: aef536d11e6d7902bdaf43ccc3a5257be4522661
+ms.lasthandoff: 02/25/2017
 
-Testa participante de Arquivo em um fluxo.  
+---
+# <a name="feof"></a>feof
+Testa o fim do arquivo em um fluxo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int feof(   
@@ -52,29 +66,29 @@ int feof(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
- Ponteiro a estrutura de `FILE` .  
+ Ponteiro para a estrutura `FILE`.  
   
-## Valor de retorno  
- A função de `feof` retorna um valor diferente de zero se uma operação de leitura tentou ler após o final do arquivo; retorna 0 de outra forma.  Se o ponteiro de fluxo é `NULL`, a função invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, `errno` está definido como `EINVAL` e retorna 0 de `feof` .  
+## <a name="return-value"></a>Valor de retorno  
+ A função `feof` retorna um valor diferente de zero se uma operação de leitura tentou ler após o final do arquivo. Caso contrário, retorna 0. Se o ponteiro de fluxo for `NULL`, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e `feof` retornará 0.  
   
- Para obter mais informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
-## Comentários  
- A rotina de `feof` \(implementada como uma função e como uma macro\) determina se o término de `stream` esteve passado.  Quando o final do arquivo é transmitida, as operações de leitura retornam um indicador de participante de Arquivo até que o fluxo seja fechado ou até `rewind`, `fsetpos`, `fseek`, ou `clearerr` sejam chamados nele.  
+## <a name="remarks"></a>Comentários  
+ A rotina `feof` (implementada como uma função e como uma macro) determina se o final do `stream` foi passado. Quando o fim do arquivo for passado, as operações de leitura retornarão um indicador de fim de arquivo até que o fluxo seja fechado ou até `rewind`, `fsetpos`, `fseek` ou `clearerr` ser chamado.  
   
- Por exemplo, se um arquivo tiver 10 bytes e você leia 10 bytes do arquivo, `feof` retornará 0 porque, embora o ponteiro de arquivo está no final do arquivo, você não tentou ler além de extremidade.  Somente depois que você tentar ler um byte 11o retorno de `feof` um valor diferente de zero.  
+ Por exemplo, se um arquivo contiver 10 bytes e ler 10 bytes do arquivo, `feof` retornará 0 porque, mesmo se o ponteiro do arquivo estiver no fim do arquivo, você não tentou ler além do fim. Somente após a tentativa de ler um 11º byte o `feof` retornará um valor diferente de zero.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`feof`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`feof`|\<stdio.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_feof.c  
@@ -114,26 +128,26 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_feof.txt  
+## <a name="input-crtfeoftxt"></a>Entrada: crt_feof.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Saída  
+### <a name="output"></a>Saída  
   
 ```  
 Number of bytes read = 19  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Tratamento de erros](../../c-runtime-library/error-handling-crt.md)   
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de erro](../../c-runtime-library/error-handling-crt.md)   
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

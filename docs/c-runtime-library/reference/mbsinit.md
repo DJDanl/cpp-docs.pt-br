@@ -1,48 +1,62 @@
 ---
-title: "mbsinit | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbsinit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsinit"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função mbsinit"
+title: mbsinit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbsinit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- mbsinit
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# mbsinit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5ee8d0460a0d8b3bfa34de9c4ce7487cfd071d12
+ms.lasthandoff: 02/25/2017
 
-Controla o estado de uma conversão de caracteres multibyte.  
+---
+# <a name="mbsinit"></a>mbsinit
+Controla o estado de uma conversão de caracteres de vários bytes.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,19 +65,19 @@ Controla o estado de uma conversão de caracteres multibyte.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `ps`  
- Um ponteiro para uma variável de [mbstate\_t](../../c-runtime-library/standard-types.md) .  
+ Um ponteiro para uma variável [mbstate_t](../../c-runtime-library/standard-types.md).  
   
-## Valor de retorno  
- Diferente de zero se `ps` for NULL ou se não no meio de uma conversão.  
+## <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se `ps` for NULL ou se não estiver no meio de uma conversão.  
   
-## Comentários  
- Quando usar um ANSI que adotam um ponteiro de **mbstate\_t** , passando o endereço do `mbstate_t` retornará informações sobre se o byte pela última vez no buffer esteve convertido.  
+## <a name="remarks"></a>Comentários  
+ Ao usar uma das funções ANSI que usa um ponteiro **mbstate_t**, passar o endereço do seu `mbstate_t` retornará informações sobre se o último byte no buffer foi convertido.  
   
- A página de código apropriada precisa ser instalada para dar suporte aos caracteres multibyte.  
+ A página de código apropriada deve ser instalada para dar suporte aos caracteres multibyte.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_mbsinit.cpp  
@@ -157,7 +171,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## Saída de Exemplo  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 Locale set to: "Japanese_Japan.932"  
@@ -169,5 +183,5 @@ MB String: AaBbCcxXyYzZ
 WC String: AaBbCcxXyYzZ  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)

@@ -1,50 +1,65 @@
 ---
-title: "_CrtIsMemoryBlock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtIsMemoryBlock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtlsMemoryBlock"
-  - "_CrtIsMemoryBlock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _CrtIsMemoryBlock"
-  - "Função CrtIsMemoryBlock"
+title: _CrtIsMemoryBlock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtIsMemoryBlock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtlsMemoryBlock
+- _CrtIsMemoryBlock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtIsMemoryBlock function
+- CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _CrtIsMemoryBlock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e884526e45e4bb8fbf1070fca8fd740d692dc285
+ms.lasthandoff: 02/25/2017
 
-Verifica se um bloco de memória especificado está no heap e local que tem um identificador em blocos de heap válido de depuração \(versão de depuração somente\).  
+---
+# <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
+Verifica se um bloco de memória especificado está no heap local e se ele tem um identificador de tipo de bloco de heap de depuração válido (somente versão de depuração).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _CrtIsMemoryBlock(   
@@ -56,55 +71,55 @@ int _CrtIsMemoryBlock(
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `userData`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `userData`  
  Ponteiro para o início do bloco de memória a ser verificado.  
   
- \[entrada\] `size`  
- Tamanho do bloco especificado \(em bytes\).  
+ [in] `size`  
+ Tamanho do bloco especificado (em bytes).  
   
- \[saída\] `requestNumber`  
- Ponteiro para o número de alocação do bloco ou de `NULL`.  
+ [out] `requestNumber`  
+ Ponteiro para o número de alocação do bloco ou `NULL`.  
   
- \[saída\] `filename`  
+ [out] `filename`  
  Ponteiro para o nome do arquivo de origem que solicitou o bloco ou `NULL`.  
   
- \[saída\] `linenumber`  
- Ponteiro para a linha número no arquivo de origem ou em `NULL`.  
+ [out] `linenumber`  
+ Ponteiro para o número de linha no arquivo de origem ou `NULL`.  
   
-## Valor de retorno  
- `_CrtIsMemoryBlock` retorna `TRUE` se o bloco de memória especificado está localizado no heap local e tem um identificador em blocos de heap válido de depuração; caso contrário, a função retornará `FALSE`.  
+## <a name="return-value"></a>Valor de retorno  
+ `_CrtIsMemoryBlock` retornará `TRUE` se o bloco de memória especificado estiver localizado no heap local e tiver um identificador de tipo de bloco de heap de depuração válido; caso contrário, a função retornará `FALSE`.  
   
-## Comentários  
- A função de `_CrtIsMemoryBlock` verifica se um bloco de memória especificada está localizado no heap local do aplicativo e que tem um identificador válido em blocos.  Essa função pode ser usada também para obter o número da ordem de alocação do objeto e o nome do arquivo de origem\/número de linha na alocação do bloco de memória solicitada foi originalmente.  Passando valores não nulos para `requestNumber`, `filename`, ou faz com que `_CrtIsMemoryBlock` parâmetros de `linenumber` definir esses parâmetros para os valores no cabeçalho de depuração do bloco de memória, se encontrar o bloco no heap local.  Quando [\_DEBUG](../Topic/_DEBUG.md) não for definido, as chamadas para `_CrtIsMemoryBlock` serão removidos durante pré\-processamento.  
+## <a name="remarks"></a>Comentários  
+ A função `_CrtIsMemoryBlock` verifica se um bloco de memória especificado está localizado no heap local do aplicativo e se ele tem um identificador de tipo de bloco válido. Essa função também pode ser usada para obter o número de ordem de alocação do objeto e o nome do arquivo de origem/número de linha em que a alocação de bloco de memória foi originalmente solicitada. Passar valores não NULL para os parâmetros `requestNumber`, `filename` ou `linenumber` faz com que `_CrtIsMemoryBlock` defina esses parâmetros com os valores no cabeçalho de depuração do bloco de memória, caso ele encontre o bloco no heap local. Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, as chamadas a `_CrtIsMemoryBlock` são removidas durante o pré-processamento.  
   
- Se `_CrtIsMemoryBlock` falhar, retornará `FALSE` e parâmetros de saída são inicializados com os valores padrão: `requestNumber` e `lineNumber` são definidos como 0 e `filename` é definido como `NULL`.  
+ Se `_CrtIsMemoryBlock` falhar, ele retornará `FALSE` e os parâmetros de saída serão inicializados com os valores padrão: `requestNumber` e `lineNumber` são definidos como 0 e `filename` é definido como `NULL`.  
   
- Como essa função retorna `TRUE` ou `FALSE`, pode ser transmitido para um de macros de [\_ASSERT](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md) para criar um mecanismo simples de tratamento de erros de depuração.  O exemplo a seguir faz com que uma falha de asserção se o endereço especificado não está localizado no heap local:  
+ Como essa função retorna `TRUE` ou `FALSE`, ela pode ser passada para uma das macros [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) para criar um mecanismo simples de tratamento de erro de depuração. O seguinte exemplo causa uma falha de asserção se o endereço especificado não está localizado no heap local:  
   
 ```  
 _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,   
 &filename, &linenumber ) );  
 ```  
   
- Para obter mais informações sobre como `_CrtIsMemoryBlock` pode ser usado com outras funções e macros de depuração, consulte [Macros para relatórios](../Topic/Macros%20for%20Reporting.md).  Para obter informações sobre como os blocos de memória são atribuídos, inicializados, e gerenciados na versão de depuração da heap de base, consulte [Detalhes da pilha de depuração CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Para obter mais informações sobre como `_CrtIsMemoryBlock` pode ser usado com outras macros e funções de depuração, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_CrtIsMemoryBlock`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Versões de depuração das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md) somente.  
+## <a name="libraries"></a>Libraries  
+ Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
- Consulte o exemplo do tópico de [\_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md) .  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo do tópico [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)

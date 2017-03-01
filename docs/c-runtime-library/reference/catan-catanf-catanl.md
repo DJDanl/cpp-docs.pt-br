@@ -1,59 +1,73 @@
 ---
-title: "catan, catanf, catanl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-  - "complex/catan"
-  - "complex/catanf"
-  - "complex/catanl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "função catan"
-  - "função catanf"
-  - "função catanl"
+title: catan, catanf, catanl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- catan
+- catanf
+- catanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- catan
+- catanf
+- catanl
+- complex/catan
+- complex/catanf
+- complex/catanl
+dev_langs:
+- C++
+helpviewer_keywords:
+- catan function
+- catanf function
+- catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# catan, catanf, catanl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: cb516702a6fdb59eb2fbef2179fce76db8a32081
+ms.lasthandoff: 02/25/2017
 
-Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo \[− 1; \+ 1\] no eixo imaginário.  
+---
+# <a name="catan-catanf-catanl"></a>catan, catanf, catanl
+Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [−1; +1] ao longo do eixo imaginário.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _Dcomplex catan(   
@@ -73,31 +87,31 @@ _Lcomplex catanl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `z`  
- Um número complexo que representa um ângulo em radianos.  
+ Um número complexo que representa um ângulo, em radianos.  
   
-## Valor de retorno  
- O arco tangente de `z`, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo \[−π\/2; \+ π\/2\] ao longo do eixo real.  
+## <a name="return-value"></a>Valor retornado  
+ O arco tangente de `z`, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [−π/2; +π/2] ao longo do eixo real.  
   
-## Comentários  
- Como C\+\+ permite sobrecargas, é possível chamar sobrecargas de `catan` que tomam e retornam `_Fcomplex` e `_Lcomplex` valores. Em um programa C, `catan` sempre toma e retorna um `_Dcomplex` valor.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `catan` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `catan` sempre usa e retorna um valor `_Dcomplex`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rotina|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`catan`, `catanf`, `catanl`|\< Complex. h \>|\< ccomplex \>|  
+|Rotina|Cabeçalho C|Cabeçalho C++|  
+|-------------|--------------|------------------|  
+|`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
   
- Para obter informações de compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Consulte também  
- [Referência da função alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [csinh, csinhf, csinhl](../Topic/csinh,%20csinhf,%20csinhl.md)   
- [casinh, casinhf, casinhl](../Topic/casinh,%20casinhf,%20casinhl.md)   
- [ccosh, ccoshf, ccoshl](../Topic/ccosh,%20ccoshf,%20ccoshl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
  [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
