@@ -1,53 +1,68 @@
 ---
-title: "mbstowcs_s, _mbstowcs_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbstowcs_s_l"
-  - "mbstowcs_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbstowcs_s_l"
-  - "mbstowcs_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbstowcs_s_l"
-  - "Função mbstowcs_s"
-  - "Função mbstowcs_s_l"
+title: mbstowcs_s, _mbstowcs_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbstowcs_s_l
+- mbstowcs_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbstowcs_s_l
+- mbstowcs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbstowcs_s_l function
+- mbstowcs_s function
+- mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
 caps.latest.revision: 31
-caps.handback.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# mbstowcs_s, _mbstowcs_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3a5c84be1336d762289705102c1f2213f04642ea
+ms.lasthandoff: 02/25/2017
 
-Converte uma sequência de caracteres multibyte a uma sequência de caracteres amplos correspondente.  Versões de [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
+Converte uma sequência de caracteres multibyte em uma sequência de caracteres largos correspondente. As versões de [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) com melhorias de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t mbstowcs_s(  
@@ -82,81 +97,81 @@ errno_t _mbstowcs_s_l(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
- \[saída\] `pReturnValue`  
+#### <a name="parameters"></a>Parâmetros  
+ [out] `pReturnValue`  
  O número de caracteres convertidos.  
   
- \[saída\] `wcstr`  
- O endereço do buffer resultante para converter a cadeia de caracteres amplas.  
+ [out] `wcstr`  
+ Endereço do buffer para a cadeia de caracteres largos convertida resultante.  
   
- \[entrada\] `sizeInWords`  
- O tamanho do buffer de `wcstr` no word.  
+ [in] `sizeInWords`  
+ O tamanho do buffer `wcstr` em palavras.  
   
- \[in\]`mbstr`  
- O endereço de uma sequência de zero terminou caracteres multibyte.  
+ [in]`mbstr`  
+ O endereço de uma sequência de caracteres multibyte terminadas por nulo.  
   
- \[entrada\] `count`  
- O número máximo de caracteres amplos a armazenar em buffer de `wcstr` , não incluindo o terminador nulo, ou [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ [in] `count`  
+ O número máximo de caracteres largos a serem armazenados no buffer `wcstr`, não incluindo o caractere nulo de terminação ou [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- \[entrada\] `locale`  
+ [in] `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Zero se tiver êxito, um código de erro ou falha.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido ou um código de erro em caso de falha.  
   
-|Condição de erro|Valor de retorno e `errno`|  
-|----------------------|--------------------------------|  
-|`wcstr` é `NULL` e `sizeInWords` \> 0|`EINVAL`|  
+|Condição de erro|Valor retornado e `errno`|  
+|---------------------|------------------------------|  
+|`wcstr` é `NULL` e `sizeInWords` > 0|`EINVAL`|  
 |`mbstr` é `NULL`|`EINVAL`|  
-|O buffer de destino for muito pequeno conter a cadeia de caracteres convertida \(a menos que `count` é `_TRUNCATE`; consulte os comentários abaixo\)|`ERANGE`|  
-|`wcstr` não é `NULL` e \=\= 0 de `sizeInWords`|`EINVAL`|  
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que `count` seja `_TRUNCATE`; consulte Comentários abaixo)|`ERANGE`|  
+|`wcstr` não é `NULL` e `sizeInWords` == 0|`EINVAL`|  
   
- Se alguma dessas condições ocorrer, a exceção inválido do parâmetro é chamada conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) .  Se a execução for permitida continuar, a função retornará um código de erro e define `errno` conforme indicado na tabela.  
+ Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um código de erro e definirá `errno` conforme indicado na tabela.  
   
-## Comentários  
- A função de `mbstowcs_s` converte uma cadeia de caracteres de caracteres multibyte apontados por `mbstr` em caracteres amplos armazenados em buffer apontado por `wcstr`.  A conversão para cada caractere continuará até que uma destas condições seja atender:  
+## <a name="remarks"></a>Comentários  
+ A função `mbstowcs_s` converte uma cadeia de caracteres multibyte apontada por `mbstr` em caracteres largos armazenados no buffer apontado por `wcstr`. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:  
   
--   Um caractere nulo é encontrado multibyte  
+-   Um caractere nulo multibyte é encontrado  
   
--   Um caractere inválido multibyte for encontrado  
+-   Um caractere multibyte inválido é encontrado  
   
--   O número de caracteres amplos armazenados no buffer de `wcstr` igual `count`.  
+-   O número de caracteres largos armazenados no buffer `wcstr` é igual a `count`.  
   
- A cadeia de caracteres de destino tiver terminação sempre \(até mesmo no caso de um erro\).  
+ A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de erro).  
   
- Se `count` é o valor especial [\_TRUNCATE](../../c-runtime-library/truncate.md), então `mbstowcs_s` converte o máximo possível da cadeia de caracteres como caiba no buffer de destino, enquanto ainda deixar de espaço para um terminador nulo.  
+ Se `count` for o valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `mbstowcs_s` converterá o máximo da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um terminador nulo.  
   
- Se `mbstowcs_s` converte a cadeia de caracteres de origem, coloca o tamanho em caracteres amplos de cadeia de caracteres convertida, incluindo o terminador nulo, em `*``pReturnValue` \( `pReturnValue` fornecido não for `NULL`\).  Isso ocorre mesmo se o argumento de `wcstr` é `NULL` e fornece uma maneira de determinar o tamanho de buffer necessário.  Observe que se `wcstr` é `NULL`, `count` é ignorado, e `sizeInWords` deve ser 0.  
+ Se `mbstowcs_s` converter com êxito a cadeia de caracteres de origem, ele colocará o tamanho em caracteres largos da cadeia de caracteres convertida, incluindo o terminador nulo, em `*``pReturnValue` (desde que `pReturnValue` não seja `NULL`). Isso ocorrerá mesmo se o argumento `wcstr` for `NULL` e fornecerá uma maneira de determinar o tamanho do buffer necessário. Observe que se `wcstr` for `NULL`, `count` será ignorado e `sizeInWords` deve ser 0.  
   
- Se `mbstowcs_s` encontrar um caractere inválido multibyte, o coloca 0 em `*``pReturnValue`, define o buffer de destino em uma cadeia de caracteres vazia, define `errno` a `EILSEQ`, e retorna `EILSEQ`.  
+ Se `mbstowcs_s` encontrar um caractere multibyte inválido, ele colocará 0 em `*``pReturnValue`, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá `errno` como `EILSEQ`e retornará `EILSEQ`.  
   
- Se as sequências apontadas por `mbstr` e a sobreposição de `wcstr` , o comportamento de `mbstowcs_s` são indefinidas.  
+ Se as sequências apontadas por `mbstr` e por `wcstr` se sobrepuserem, o comportamento de `mbstowcs_s` será indefinido.  
   
 > [!IMPORTANT]
->  Certifique\-se de que `wcstr` e `mbstr` não se sobrepõem, e que `count` reflete corretamente o número de caracteres multibyte para converter.  
+>  Verifique se `wcstr` e `mbstr` não se sobrepõem e se `count` reflete corretamente o número de caracteres multibyte a ser convertido.  
   
- `mbstowcs_s` usa a localidade atual para qualquer comportamento dependente de localidade; `_mbstowcs_s_l` é idêntico exceto que usa a localidade passada por vez.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ `mbstowcs_s` usa a localidade atual de qualquer comportamento dependente da localidade; `_mbstowcs_s_l` é idêntico, exceto pelo fato de que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- No C\+\+, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente \(eliminando a necessidade de especificar um argumento de tamanho\) e podem substituir automaticamente as funções menos seguras mais antigas por correspondentes mais seguras e mais recentes.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`mbstowcs_s`|\<stdlib.h\>|  
-|`_mbstowcs_s_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbstowcs_s`|\<stdlib.h>|  
+|`_mbstowcs_s_l`|\<stdlib.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc, \_mbtowc\_l](../Topic/mbtowc,%20_mbtowc_l.md)   
- [wcstombs, \_wcstombs\_l](../Topic/wcstombs,%20_wcstombs_l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
