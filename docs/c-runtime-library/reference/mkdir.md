@@ -1,8 +1,7 @@
 ---
 title: "mkdir | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,17 +26,28 @@ f1_keywords:
   - "mkdir"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função mkdir"
+  - "mkdir function"
 ms.assetid: 0a212890-181e-45d0-988d-e0f301fcdeb8
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# mkdir
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Essa função POSIX foi preterida.  Use ISO C\+\+ [\_mkdir](../Topic/_mkdir,%20_wmkdir.md) compatível em vez disso.
+# <a name="mkdir"></a>mkdir
+Essa função POSIX foi preterida. Use o [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md) compatível com C++ ISO em vez disso.

@@ -1,52 +1,54 @@
 ---
-title: "Classe type_index | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "typeindex/std::type_index"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe type_index"
+title: Classe type_index | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- typeindex/std::type_index
+dev_langs:
+- C++
+helpviewer_keywords:
+- type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
 caps.latest.revision: 14
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe type_index
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e00ba54975dfac0439509e63606e9992d86c9522
+ms.lasthandoff: 02/25/2017
 
-A classe de `type_index` envolve um ponteiro para [Classe type\_info](../cpp/type-info-class.md) para ajudar na indexação por esses objetos.  
+---
+# <a name="typeindex-class"></a>Classe type_index
+A classe `type_index` encapsula um ponteiro para a [Classe type_info](../cpp/type-info-class.md) para auxiliar na indexação por esses objetos.  
   
-```  
-class type_index {  
-public:  
-    type_index(const type_info& tinfo);  
-    const char *name() const;  
-    size_t hash_code() const;  
-    bool operator==(const type_info& right) const;  
-    bool operator!=(const type_info& right) const;  
-    bool operator<(const type_info& right) const;  
-    bool operator<=(const type_info& right) const;  
-    bool operator>(const type_info& right) const;  
-    bool operator>=(const type_info& right) const;  
-};  
-```  
+classe type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- O construtor inicializa `ptr` a `&tinfo`.  
+ O construtor inicializa `ptr` para `&tinfo`.  
   
  `name` retorna `ptr->name()`.  
   
- retorna `ptr->hash_code().`de`hash_code`  
+ `hash_code` retorna `ptr->hash_code().`  
   
  `operator==` retorna `*ptr == right.ptr`.  
   
@@ -54,12 +56,16 @@ public:
   
  `operator<` retorna `*ptr->before(*right.ptr)`.  
   
- retorna `!(right < *this).`de`operator<=`  
+ `operator<=` retorna `!(right < *this).`  
   
- retorna `right < *this`de`operator>`.  
+ `operator>` retorna `right < *this`.  
   
  `operator>=` retorna `!(*this < right)`.  
   
-## Consulte também  
- [Informações de tipo de tempo de execução](../Topic/Run-Time%20Type%20Information.md)   
- [\<typeindex\>](../standard-library/typeindex.md)
+## <a name="see-also"></a>Consulte também  
+ [Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)   
+ [\<typeindex>](../standard-library/typeindex.md)
+
+
+
+

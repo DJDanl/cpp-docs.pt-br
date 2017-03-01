@@ -1,56 +1,68 @@
 ---
-title: "Classe is_fundamental | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_fundamental"
-  - "std.tr1.is_fundamental"
-  - "std::tr1::is_fundamental"
-  - "std.is_fundamental"
-  - "std::is_fundamental"
-  - "type_traits/std::is_fundamental"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe is_fundamental [TR1]"
-  - "is_fundamental"
+title: Classe is_fundamental | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_fundamental
+- std::is_fundamental
+- type_traits/std::is_fundamental
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_fundamental class
+- is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
 caps.latest.revision: 19
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe is_fundamental
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ba389ba4db5b559314b9db19cbb08d9f86ba4e7d
+ms.lasthandoff: 02/25/2017
 
-Testa se o tipo é nulo ou aritmética.  
+---
+# <a name="isfundamental-class"></a>Classe is_fundamental
+Testa se o tipo é nulo ou aritmético.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_fundamental;  
+template <class Ty>  
+struct is_fundamental;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é um tipo fundamental, ou seja, `void`, um tipo integral, um flutuante, tipo de ponto ou uma `cv-qualified` formulário de um deles, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo fundamental, ou seja, `void`, um tipo integral, um tipo de ponto flutuante ou uma forma `cv-qualified` de algum deles; caso contrário, será falsa.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_fundamental.cpp   
+```cpp  
+// std__type_traits__is_fundamental.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_fundamental \< trivial \> \= \= false**  
-**is\_fundamental \< int \> \= \= true**  
-**is\_fundamental \< const float \> \= \= true**  
-**is\_fundamental \< void \> \= \= true**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_fundamental<trivial> == false  
+is_fundamental<int> == true  
+is_fundamental<const float> == true  
+is_fundamental<void> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_compound](../standard-library/is-compound-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_compound](../standard-library/is-compound-class.md)
+

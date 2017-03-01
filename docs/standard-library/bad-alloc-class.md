@@ -1,8 +1,7 @@
 ---
 title: "Classe bad_alloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,17 +16,28 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe bad_alloc"
+  - "bad_alloc class"
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe bad_alloc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="badalloc-class"></a>Classe bad_alloc
 A classe descreve uma exceção gerada para indicar que uma solicitação de alocação não teve êxito.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,16 +51,16 @@ virtual ~bad_alloc();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado por **que** é uma cadeia de caracteres C definido pela implementação. Nenhuma das funções de membro lançar exceções.  
+ O valor retornado por **o quê** é uma cadeia de caracteres C definida pela implementação. Nenhuma das funções de membro lança exceções.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \< novo>  
+ **Cabeçalho:** \<new>  
   
  **Namespace:** std  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // bad_alloc.cpp  
 // compile with: /EHsc  
 #include<new>  
@@ -69,16 +79,16 @@ int main() {
 }  
 ```  
   
-## <a name="sample-output"></a>Saída de exemplo  
+## <a name="sample-output"></a>Saída de Exemplo  
   
 ```  
 bad allocation  
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \< novo>  
+ **Cabeçalho:** \<new>  
   
 ## <a name="see-also"></a>Consulte também
- [Classe Exception](../standard-library/exception-class1.md)  
- [Segurança de threads na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Classe exception](../standard-library/exception-class.md)  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

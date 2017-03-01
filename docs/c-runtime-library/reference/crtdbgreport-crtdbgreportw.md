@@ -1,53 +1,68 @@
 ---
-title: "_CrtDbgReport, _CrtDbgReportW | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtDbgReport"
-  - "_CrtDbgReportW"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtDbgReport"
-  - "CrtDbgReportW"
-  - "_CrtDbgReportW"
-  - "_CrtDbgReport"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "geração de relatórios de depuração"
-  - "Função _CrtDbgReport"
-  - "Função CrtDbgReport"
-  - "Função CrtDbgReportW"
-  - "Função _CrtDbgReportW"
+title: _CrtDbgReport, _CrtDbgReportW | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtDbgReport
+- _CrtDbgReportW
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtDbgReport
+- CrtDbgReportW
+- _CrtDbgReportW
+- _CrtDbgReport
+dev_langs:
+- C++
+helpviewer_keywords:
+- debug reporting
+- _CrtDbgReport function
+- CrtDbgReport function
+- CrtDbgReportW function
+- _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _CrtDbgReport, _CrtDbgReportW
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 Gera um relatório com uma mensagem de depuração e envia o relatório para três destinos possíveis (somente versões de depuração).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -91,30 +106,30 @@ int _CrtDbgReportW(
  Argumentos de substituição opcionais usados por `format`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Para todos os destinos do relatório, `_CrtDbgReport` e `_CrtDbgReportW` retornam -1 em caso de erro e 0 caso nenhum erro seja encontrado. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica o **novamente** botão, essas funções retornam 1. Se o usuário clica o **anular** botão na janela de mensagem de depuração, essas funções é o imediatamente a anulação e não retornam um valor.  
+ Para todos os destinos do relatório, `_CrtDbgReport` e `_CrtDbgReportW` retornam -1 em caso de erro e 0 caso nenhum erro seja encontrado. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica no botão **Tentar novamente**, essas funções retornam 1. Se o usuário clicar no botão **Anular** na janela Mensagem de Depuração, essas funções serão anuladas imediatamente e não retornarão um valor.  
   
- O [rpt, rptf](../Topic/_RPT,%20_RPTF,%20_RPTW,%20_RPTFW%20Macros.md) Depurar macros chamada `_CrtDbgReport` para gerar seu depuração relatórios. As versões de caracteres largos dessas macros, bem como [Assert &#91; E &#93;](../Topic/_ASSERT,%20_ASSERTE,%20_ASSERT_EXPR%20Macros.md), `_RPTW``n` e `_RPTFW``n`, use `_CrtDbgReportW` para gerar seu depuração relatórios. Quando `_CrtDbgReport` ou `_CrtDbgReportW` retorna o valor 1, essas macros iniciam o depurador se a depuração JIT (just-in-time) estiver habilitada.  
+ As macros de depuração [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) chamam `_CrtDbgReport` para gerar seus relatórios de depuração. As versões de caractere largo dessas macros, bem como [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` e `_RPTFW``n`, usam `_CrtDbgReportW` para gerar seus relatórios de depuração. Quando `_CrtDbgReport` ou `_CrtDbgReportW` retorna o valor 1, essas macros iniciam o depurador se a depuração JIT (just-in-time) estiver habilitada.  
   
 ## <a name="remarks"></a>Comentários  
- `_CrtDbgReport` e `_CrtDbgReportW` podem enviar o relatório de depuração para três destinos diferentes: um arquivo de relatório de depuração, um monitor de depuração (o depurador [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) ou uma janela de mensagem de depuração. Duas funções de configuração [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [crtsetreportfile](../Topic/_CrtSetReportFile.md), são usados para especificar o destino ou destinos para cada tipo de relatório. Essas funções permitem o controle independente do destino de cada tipo de relatório. Por exemplo, é possível especificar que um `reportType` de `_CRT_WARN` seja enviado somente ao monitor de depuração, enquanto um `reportType` de `_CRT_ASSERT` é enviado a uma janela de mensagem de depuração e a um arquivo de relatório definido pelo usuário.  
+ `_CrtDbgReport` e `_CrtDbgReportW` podem enviar o relatório de depuração para três destinos diferentes: um arquivo de relatório de depuração, um monitor de depuração (o depurador [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) ou uma janela de mensagem de depuração. Duas funções de configuração, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), são usadas para especificar os destinos de cada tipo de relatório. Essas funções permitem o controle independente do destino de cada tipo de relatório. Por exemplo, é possível especificar que um `reportType` de `_CRT_WARN` seja enviado somente ao monitor de depuração, enquanto um `reportType` de `_CRT_ASSERT` é enviado a uma janela de mensagem de depuração e a um arquivo de relatório definido pelo usuário.  
   
  `_CrtDbgReportW` é a versão de caracteres largos do `_CrtDbgReport`. Todos os parâmetros de saída e cadeia de caracteres estão em cadeias de caracteres largos. Caso contrário, não há diferença da versão de caractere de byte único.  
   
  `_CrtDbgReport` e `_CrtDbgReportW` criam a mensagem do usuário para o relatório de depuração ao substituir os argumentos `argument`[`n`] na cadeia de caracteres `format` usando as mesmas regras definidas pelas funções `printf` ou `wprintf`. Essas funções geram o relatório de depuração e determinam o destino (ou destinos) com base nos modos do relatório atual e no arquivo definido para `reportType`. Quando o relatório é enviado para uma janela de mensagem de depuração, `filename`, `lineNumber` e `moduleName` são incluídos nas informações exibidas na janela.  
   
- O tabela a seguir lista as opções disponíveis para o modo (ou modos), o arquivo do relatório e o comportamento resultante de `_CrtDbgReport` e `_CrtDbgReportW`. Essas opções são definidas como sinalizadores de bits em \<crtdbg.h>.  
+ O tabela a seguir lista as opções disponíveis para o modo (ou modos), o arquivo do relatório e o comportamento resultante de `_CrtDbgReport` e `_CrtDbgReportW`. Essas opções são definidas como sinalizadores de bit em \<crtdbg.h>.  
   
 |Modo do relatório|Arquivo do relatório|Comportamento `_CrtDbgReport`, `_CrtDbgReportW`|  
 |-----------------|-----------------|------------------------------------------------|  
-|`_CRTDBG_MODE_DEBUG`|Não aplicável|Grava mensagens usando o Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API.|  
-|`_CRTDBG_MODE_WNDW`|Não aplicável|Chama o Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API para criar a caixa de mensagem para exibir a mensagem junto com **anular**, **novamente**, e **Ignorar** botões. Se um usuário clicar **anular**, `_CrtDbgReport` ou `_CrtDbgReport` abortado imediatamente. Se um usuário clicar **novamente**, ele retorna 1. Se um usuário clicar **Ignorar**, a execução continua e `_CrtDbgReport` e `_CrtDbgReportW` retornam 0. Observe que clicar em **Ignorar** quando uma condição de erro existe sempre resulta em "comportamento inesperado".|  
-|`_CRTDBG_MODE_FILE`|`__HFILE`|Grava a mensagem fornecida pelo usuário `HANDLE`, usando o Windows [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) API e não verifica a validade do identificador de arquivo; o aplicativo é responsável por abrir o arquivo de relatório e passar um identificador de arquivo válido.|  
+|`_CRTDBG_MODE_DEBUG`|Não aplicável|Grava mensagens usando a API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) do Windows.|  
+|`_CRTDBG_MODE_WNDW`|Não aplicável|Chama a API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clicar em **Anular**, `_CrtDbgReport` ou `_CrtDbgReport` será anulado imediatamente. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clicar em **Ignorar**, a execução continuará e `_CrtDbgReport` e `_CrtDbgReportW` retornarão 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|  
+|`_CRTDBG_MODE_FILE`|`__HFILE`|Grava mensagens no `HANDLE` fornecido pelo usuário, usando a API [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) do Windows e não verifica a validade do identificador de arquivo: o aplicativo é responsável por abrir o arquivo de relatório e passar um identificador de arquivo válido.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDERR`|Grava a mensagem no `stderr`.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|Grava a mensagem no `stdout`.|  
   
- O relatório pode ser enviado para um, dois ou três destinos ou nenhum destino. Para obter mais informações sobre como especificar o modo de relatório ou modos e arquivo de relatório, consulte o [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [crtsetreportfile](../Topic/_CrtSetReportFile.md) funções. Para obter mais informações sobre como usar as macros de depuração e funções de relatórios, consulte [Macros para relatórios](../Topic/Macros%20for%20Reporting.md).  
+ O relatório pode ser enviado para um, dois ou três destinos ou nenhum destino. Para obter mais informações sobre como especificar os modos de relatório e o arquivo de relatório, consulte as funções [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md). Para obter mais informações sobre como usar as macros de depuração e as funções de relatório, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting).  
   
- Se seu aplicativo precisar de mais flexibilidade do que o fornecido por `_CrtDbgReport` e `_CrtDbgReportW`, você pode escrever seu próprio relatório de função e vinculá-lo para a biblioteca de tempo de execução C mecanismo de relatórios usando o [crtsetreporthook](../../c-runtime-library/reference/crtsetreporthook.md) função.  
+ Caso seu aplicativo precise de mais flexibilidade do que `_CrtDbgReport` e `_CrtDbgReportW` fornecem, é possível escrever sua própria função de relatório e vinculá-la ao mecanismo de relatório da biblioteca em tempo de execução C usando a função [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -123,10 +138,10 @@ int _CrtDbgReportW(
 |`_CrtDbgReport`|\<crtdbg.h>|  
 |`_CrtDbgReportW`|\<crtdbg.h>|  
   
- `_CrtDbgReport` e `_CrtDbgReportW` são extensões da Microsoft. Para obter mais informações, consulte [compatibilidade](../../c-runtime-library/compatibility.md).  
+ `_CrtDbgReport` e `_CrtDbgReportW` são extensões da Microsoft. Para obter mais informações, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Libraries  
- Versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md) somente.  
+ Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -141,13 +156,13 @@ int main(int argc, char *argv[]) {
 }  
 ```  
   
- Consulte [crt_dbg2](http://msdn.microsoft.com/pt-br/21e1346a-6a17-4f57-b275-c76813089167) para obter um exemplo de como alterar a função de relatório.  
+ Consulte [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) para obter um exemplo de como alterar a função de relatório.  
   
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
   
--   [System::Diagnostics::Debug::WriteLine](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
+-   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
   
 -   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
   
@@ -155,7 +170,7 @@ int main(int argc, char *argv[]) {
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   
- [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)   
- [Crtsetreportfile](../Topic/_CrtSetReportFile.md)   
- [printf, printf_l, and wprintf, wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [DEBUG](../Topic/_DEBUG.md)
+ [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)   
+ [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [_DEBUG](../../c-runtime-library/debug.md)

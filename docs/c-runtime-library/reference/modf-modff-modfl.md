@@ -1,8 +1,7 @@
 ---
 title: "modf, modff, modfl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,24 +35,34 @@ f1_keywords:
   - "math/modfl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função modf"
-  - "Função modff"
-  - "função modfl"
+  - "modf function"
+  - "modff function"
+  - "modfl function"
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# modf, modff, modfl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Divide um valor de ponto flutuante em frações e partes do inteiro.  
+# <a name="modf-modff-modfl"></a>modf, modff, modfl
+Divide um valor de ponto flutuante em partes inteiras e fracionárias.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double modf(  
@@ -78,35 +87,35 @@ long double modfl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *x*  
  Valor de ponto flutuante.  
   
  `intptr`  
- Ponteiro para a parte inteira armazenado.  
+ Ponteiro para a parte inteira armazenada.  
   
-## Valor de retorno  
- Esta função retorna a parte fracionária assinada de *x*. Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Esta função retorna a parte fracionária com sinal de *x*. Nenhum erro é retornado.  
   
-## Comentários  
- O `modf` funções dividir o valor de ponto flutuante `x` em frações e partes do inteiro, cada um deles tem o mesmo sinal `x`. A parte fracionária assinada de `x` é retornado. A parte inteira é armazenada como um valor de ponto flutuante no `intptr.`  
+## <a name="remarks"></a>Comentários  
+ As funções `modf` dividem o valor de ponto flutuante `x` em partes inteiras e fracionárias, cada uma delas tem o mesmo sinal que `x`. A parte fracionária com sinal de `x` é retornada. A parte inteira é armazenada como um valor de ponto flutuante no `intptr.`  
   
- `modf` tem uma implementação que usa o Streaming SIMD Extensions 2 \(SSE2\). Consulte [\_set\_SSE2\_enable](../Topic/_set_SSE2_enable.md) para obter informações e restrições sobre como usar a implementação SSE2.  
+ `modf` tem uma implementação que usa SSE2 (Extensões SIMD de Streaming 2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- C\+\+ permite sobrecargas, para que você possa chamar sobrecargas de `modf` que tomam e retornam `float` ou `long double` parâmetros. Em um programa C, `modf` sempre usa dois valores double e retorna um valor double.  
+ O C++ permite sobrecargas, de modo que é possível chamar sobrecargas de `modf` que usam e retornam os parâmetros `float` ou `long double`. Em um programa C, `modf` sempre usa dois valores duplos e retorna um valor duplo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`modf`, `modff`, `modfl`|C: \< Math \><br /><br /> C\+\+:, \< cmath \> ou \< Math \>|  
+|-------------|---------------------|  
+|`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++: , \<cmath> ou \<math.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Libraries  
- Todas as versões do [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_modf.c  
@@ -126,13 +135,13 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 For -14.876543, the fraction is -0.876543 and the integer is -14  
 ```  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

@@ -1,8 +1,7 @@
 ---
 title: "calloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,23 +27,34 @@ f1_keywords:
   - "calloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "alocação de memória e matrizes"
-  - "Função calloc"
+  - "memory allocation, arrays"
+  - "calloc function"
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# calloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Atribui uma matriz na memória com os elementos inicializados como 0.  
+# <a name="calloc"></a>calloc
+Aloca uma matriz na memória com elementos inicializados como 0.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void *calloc(   
@@ -53,42 +63,42 @@ void *calloc(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `num`  
  Número de elementos.  
   
  `size`  
- Comprimento em bytes de cada elemento.  
+ O comprimento, em bytes, de cada elemento.  
   
-## Valor de retorno  
- `calloc` retorna um ponteiro para o espaço alocado.  O espaço de armazenamento apontado pelo valor de retorno tem a garantia de ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto.  Para obter um ponteiro para um tipo diferente de `void`, use uma conversão de tipos no valor de retorno.  
+## <a name="return-value"></a>Valor retornado  
+ `calloc` retorna um ponteiro para o espaço alocado. O espaço de armazenamento ao qual o valor retornado apontou com certeza estará alinhado de modo adequado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja `void`, use uma conversão de tipo no valor retornado.  
   
-## Comentários  
- A função de `calloc` atribui o espaço de armazenamento para uma matriz de elementos de `num` , cada um de `size` de bytes de comprimento.  Cada elemento é inicializado como 0.  
+## <a name="remarks"></a>Comentários  
+ A função `calloc` aloca espaço de armazenamento para uma matriz de `num` elementos, cada um com um tamanho de `size` bytes. Cada elemento é inicializado como 0.  
   
- `calloc` define `errno` a `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória solicitada exceder `_HEAP_MAXREQ`.  Para obter mais informações sobre esse e outros códigos de erro, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ `calloc` definirá `errno` como `ENOMEM` se uma alocação de memória falhar ou se a quantidade de memória solicitada exceder `_HEAP_MAXREQ`. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- chamadas `malloc` de`calloc` para usar a função C\+\+ [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) para definir o novo modo do manipulador.  O novo modo de manipulador indica se, em caso de falha, `malloc` deve chamar a nova rotina do manipulador conforme definido por [\_set\_new\_handler](../Topic/_set_new_handler.md).  Por padrão, `malloc` não chama a nova rotina do manipulador em caso de falha para alocar memória.  Você pode substituir esse comportamento padrão para que, quando `calloc` não aloca memória, `malloc` chama a nova rotina de manipulador da mesma forma que o operador de `new` faz quando falha pela mesma razão.  Para substituir o padrão, chame  
+ `calloc` chama `malloc` para usar a função C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) para definir o novo modo do manipulador. O novo modo do manipulador indica se, em caso de falha, `malloc` deverá chamar a nova rotina do manipulador conforme definido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Por padrão, `malloc` não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando `calloc` falhar ao alocar memória, `malloc` chame a nova rotina do manipulador da mesma forma que o operador `new` fará quando ele falhar pelo mesmo motivo. Para substituir o padrão, chame  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- no início do seu programa, ou no link com NEWMODE.OBJ \(consulte [Opções de link](../Topic/Link%20Options.md)\).  
+ com antecedência em seu programa ou vincule com NEWMODE. OBJ (consulte [Opções de link](../../c-runtime-library/link-options.md)).  
   
- Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução C, `calloc` resolve a [\_calloc\_dbg](../../c-runtime-library/reference/calloc-dbg.md).  Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [O heap de depuração do CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas em tempo de execução de C, `calloc` será resolvido como [_calloc_dbg](../../c-runtime-library/reference/calloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).  
   
- `calloc` é `__declspec(noalias)` marcado e `__declspec(restrict)`, o que significa que a função não é garantida para modificar as variáveis globais, e que o ponteiro retornado não possui alias.  Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrinja](../../cpp/restrict.md).  
+ `calloc` é marcado como `__declspec(noalias)` e `__declspec(restrict)`, o que representa a garantia de que a função não modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`calloc`|\<stdlib.h\> e \<malloc.h\>|  
+|-------------|---------------------|  
+|`calloc`|\<stdlib.h> e \<malloc.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_calloc.c  
@@ -111,12 +121,15 @@ int main( void )
 }  
 ```  
   
-  **Alocado 40 inteiros longos**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocated 40 long integers  
+```  
   
-## Consulte também  
- [Alocação de memória](../../c-runtime-library/memory-allocation.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

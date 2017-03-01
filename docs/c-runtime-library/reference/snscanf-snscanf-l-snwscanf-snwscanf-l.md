@@ -1,8 +1,7 @@
 ---
 title: "_snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,36 +40,46 @@ f1_keywords:
   - "snwscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _snscanf"
-  - "Função _snscanf_l"
-  - "Função _sntscanf"
-  - "Função _sntscanf_l"
-  - "Função _snwscanf"
-  - "Função _snwscanf_l"
-  - "lendo dados, cadeias de caracteres"
-  - "Função snscanf"
-  - "Função snscanf_l"
-  - "Função sntscanf"
-  - "Função sntscanf_l"
-  - "Função snwscanf"
-  - "Função snwscanf_l"
-  - "cadeias de caracteres [C++], lendo"
-  - "cadeias de caracteres [C++], lendo dados de"
+  - "snscanf_l function"
+  - "snwscanf function"
+  - "_sntscanf_l function"
+  - "sntscanf function"
+  - "_snwscanf_l function"
+  - "_sntscanf function"
+  - "_snscanf_l function"
+  - "sntscanf_l function"
+  - "strings [C++], reading data from"
+  - "snscanf function"
+  - "snwscanf_l function"
+  - "_snwscanf function"
+  - "reading data, strings"
+  - "strings [C++], reading"
+  - "_snscanf function"
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-As leituras mostram dados de um comprimento especificado de uma cadeia de caracteres.  Versões mais seguras dessas funções estão disponíveis; consulte [\_snscanf\_s, \_snscanf\_s\_l, \_snwscanf\_s, \_snwscanf\_s\_l](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).  
+# <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
+Lê dados formatados de um comprimento especificado de uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int __cdecl _snscanf(  
@@ -101,51 +110,51 @@ int __cdecl _snwscanf_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `input`  
- Cadeia de caracteres de entrada para verificar.  
+ A cadeia de caracteres de entrada para examinar.  
   
  `length`  
- Número de caracteres a ser analisada em `input`.  
+ O número de caracteres a examinar em `input`.  
   
  `format`  
- Um ou mais formato especificadores.  
+ Um ou mais especificadores de formato.  
   
  `... (optional)`  
- As variáveis que serão usados para armazenar os valores extraíram de cadeia de caracteres de entrada pelos especificadores de formato em `format`.  
+ Variáveis que serão usadas para armazenar os valores extraídos da cadeia de caracteres de entrada por especificadores de formato em `format`.  
   
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Essas duas funções retornam o número de campos com êxito convertidos e atribuídos; o valor de retorno não inclui os campos que foram lidos mas não atribuído.  Um valor de retorno 0 indica que nenhum campo foi atribuído.  O valor de retorno é `EOF` para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.  Para obter mais informações, consulte [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
+## <a name="return-value"></a>Valor de retorno  
+ Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será `EOF` para um erro ou se o fim da cadeia de caracteres for alcançado antes da primeira conversão. Para obter mais informações, consulte [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
   
- Se `input` ou `format` é um ponteiro de `NULL` , ou se `length` é menor ou igual a zero, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essas funções retornarão `EOF` e definirão `errno` para `EINVAL`.  
+ Se `input` ou `format` for um ponteiro `NULL` ou se `length` for menor que ou igual a zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EOF` e definirão `errno` para `EINVAL`.  
   
- Para obter informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- Essa função é como `sscanf` exceto que fornece a capacidade de especificar um número fixo de caracteres para examinar de cadeia de caracteres de entrada.  Para obter mais informações, consulte [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
+## <a name="remarks"></a>Comentários  
+ Esta função é como `sscanf`, exceto pelo fato de que ela fornece a capacidade de especificar um número fixo de caracteres da cadeia de entrada para examinar. Para obter mais informações, consulte [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
   
- As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam o parâmetro de localidade passado em vez da localidade de thread atual.  
+ As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntscanf`|`_snscanf`|`_snscanf`|`_snwscanf`|  
 |`_sntscanf_l`|`_snscanf_l`|`_snscanf_l`|`_snwscanf_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_snscanf`, `_snscanf_l`|\<stdio.h\>|  
-|`_snwscanf`, `_snwscanf_l`|\<stdio.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_snscanf`, `_snscanf_l`|\<stdio.h>|  
+|`_snwscanf`, `_snwscanf_l`|\<stdio.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_snscanf.c  
@@ -173,10 +182,13 @@ int main( )
 }  
 ```  
   
-  **o \_snscanf convertia 2 campos: 15 e 12,000000**  
-**o \_snwscanf convertia 2 campos: 15 e 12,000000**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+_snscanf converted 2 fields: 15 and 12.000000  
+_snwscanf converted 2 fields: 15 and 12.000000  
+```  
   
-## Consulte também  
- [Especificação de largura scanf Width](../../c-runtime-library/scanf-width-specification.md)
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md)

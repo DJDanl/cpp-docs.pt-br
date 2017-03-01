@@ -1,8 +1,7 @@
 ---
 title: "free | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,23 +27,34 @@ f1_keywords:
   - "free"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "blocos de memória, desalocando"
-  - "Função free"
+  - "memory blocks, deallocating"
+  - "free function"
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# free
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="free"></a>free
 Desaloca ou libera um bloco de memória.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void free(   
@@ -52,43 +62,43 @@ void free(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `memblock`  
- Bloco de memória alocado anteriormente seja liberado.  
+ Bloqueio de memória anteriormente alocado a ser liberado.  
   
-## Comentários  
- A função de `free` desaloca um bloco de memória \(`memblock`\) que é atribuído anteriormente por uma chamada a `calloc`, a `malloc`, ou a `realloc`.  O número de bytes liberados equivale ao número de bytes necessários quando o pacote foi atribuído \(ou realocado, no caso de `realloc`\).  Se `memblock` é `NULL`, o ponteiro será ignorado e `free` retorna imediatamente.  Tente liberar um ponteiro inválido \(um ponteiro para um bloco de memória que não é atribuído por `calloc`, a `malloc`, ou a `realloc`\) pode afetar solicitações subsequentes de alocação e causar erros.  
+## <a name="remarks"></a>Comentários  
+ A função `free` desaloca um bloco de memória (`memblock`) que foi alocado anteriormente por uma chamada a `calloc`, `malloc` ou `realloc`. O número de bytes liberados é equivalente ao número de bytes solicitados quando o bloco foi alocado (ou realocado, no caso de `realloc`). Se `memblock` for `NULL`, o ponteiro será ignorado e `free` será retornado imediatamente. Tentar liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por `calloc`, `malloc` ou `realloc`) pode afetar solicitações posteriores de alocação e causar erros.  
   
- Se ocorrer um erro em liberar a memória, `errno` é definido com informações do sistema operacional na natureza da falha.  Para obter mais informações, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Se ocorrer um erro ao liberar a memória, o `errno` é definido com informações do sistema operacional sobre a natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Depois que um bloco de memória foi liberado, [\_heapmin](../../c-runtime-library/reference/heapmin.md) minimiza a quantidade de memória livre no heap coalescendo as regiões não usado e liberação dos de volta ao sistema operacional.  A memória liberada que não é liberada para o sistema operacional for restaurada para o pool livre e está disponível para alocação novamente.  
+ Após um bloco de memória ter sido liberado, [_heapmin](../../c-runtime-library/reference/heapmin.md) minimiza a quantidade de memória livre no heap juntando as regiões não utilizadas e liberando-as para o sistema operacional. A memória liberada que não for liberada para o sistema operacional será restaurada para o pool livre e ficará disponível para alocação novamente.  
   
- Quando o aplicativo é vinculado a uma versão de depuração das bibliotecas de tempo de execução C, `free` resolve a [\_free\_dbg](../../c-runtime-library/reference/free-dbg.md).  Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [O heap de depuração do CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas de tempo de execução C, `free` será resolvido como [_free_dbg](../../c-runtime-library/reference/free-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).  
   
- `free` é marcado `__declspec(noalias)`, o que significa que a função não é garantida para modificar as variáveis globais.  Para obter mais informações, consulte [noalias](../../cpp/noalias.md).  
+ `free` é marcado como `__declspec(noalias)`, o significa que há uma garantia de que a função não modifica variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).  
   
- Para liberar a memória alocada com [\_malloca](../../c-runtime-library/reference/malloca.md), use [\_freea](../../c-runtime-library/reference/freea.md).  
+ Para liberar a memória alocada com [_malloca](../../c-runtime-library/reference/malloca.md), use [_freea](../../c-runtime-library/reference/freea.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`free`|\<stdlib.h\> e \<malloc.h\>|  
+|--------------|---------------------|  
+|`free`|\<stdlib.h> e \<malloc.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
- Consulte o exemplo de [malloc](../../c-runtime-library/reference/malloc.md).  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo para [malloc](../../c-runtime-library/reference/malloc.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Alocação de memória](../../c-runtime-library/memory-allocation.md)   
- [\_alloca](../../c-runtime-library/reference/alloca.md)   
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   
+ [_alloca](../../c-runtime-library/reference/alloca.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_free\_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [\_freea](../../c-runtime-library/reference/freea.md)
+ [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_freea](../../c-runtime-library/reference/freea.md)

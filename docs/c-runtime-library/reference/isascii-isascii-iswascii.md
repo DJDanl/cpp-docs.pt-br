@@ -1,8 +1,7 @@
 ---
-title: "isascii isascii, iswascii | Microsoft Docs"
+title: "isascii, __isascii, iswascii | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,27 +35,37 @@ f1_keywords:
   - "corecrt_wctype/iswascii"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função __isascii"
-  - "Função _isascii"
-  - "Função isascii"
-  - "Função _istascii"
-  - "Função istascii"
-  - "Função iswascii"
+  - "__isascii function"
+  - "_isascii function"
+  - "isascii function"
+  - "_istascii function"
+  - "istascii function"
+  - "iswascii function"
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# isascii isascii, iswascii
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determina se um determinado caractere é um caractere ASCII.  
+# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
+Determina se um dado caractere é um caractere ASCII.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int __isascii(   
@@ -68,34 +77,34 @@ int iswascii(
 #define isascii __isascii  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Inteiro para testar.  
+ Inteiro a ser testado.  
   
-## Valor de retorno  
- Cada um desses rotinas retorna zero se `c` é uma representação específica de um caractere ASCII.`__isascii` Retorna um valor diferente de zero se `c` é um caractere ASCII \(no intervalo 0x00 – 0x7F\).`iswascii` Retorna um valor diferente de zero se `c` é uma representação de caractere largo de um caractere ASCII. Todas essas rotinas retornará 0 se `c` não satisfaz a condição de teste.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere ASCII. `__isascii` retornará um valor diferente de zero se `c` for um caractere ASCII (no intervalo 0x00 – 0x7F). `iswascii` retornará um valor diferente de zero se `c` for uma representação de caractere largo de um caractere ASCII. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
-## Comentários  
- Ambos `__isascii` e `iswascii` são implementados como macros, a menos que a macro do pré\-processador \_CTYPE\_DISABLE\_MACROS está definido.  
+## <a name="remarks"></a>Comentários  
+ `__isascii` e `iswascii` são implementados como macros, a menos que a macro do pré-processador _CTYPE_DISABLE_MACROS esteja definida.  
   
- Para compatibilidade com versões anteriores, `isascii` é implementado como uma só se macro [\_\_STDC\_\_](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; caso contrário, é indefinido.  
+ Para compatibilidade com versões anteriores, `isascii` é implementado como uma macro somente quando [__STDC\_\_](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; caso contrário, será indefinido.  
   
-### Mapeamentos de rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR. h|Unicode e MBCS não definidos|MBCS definido|Unicode definido|  
-|---------------------|----------------------------------|-------------------|----------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_istascii`|`__isascii`|`__isascii`|`iswascii`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`isascii`, `__isascii`|C: \< CType \><br /><br /> C\+\+: \< cctype \> ou \< CType \>|  
-|`iswascii`|C: \< wctype \>, \< CType \> ou \< WCHAR \><br /><br /> C\+\+: \< cwctype \>, \< cctype \>, \< wctype \>, \< CType \> ou \< WCHAR \>|  
+|-------------|---------------------|  
+|`isascii`, `__isascii`|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|  
+|`iswascii`|C: \<wctype.h>, \<ctype.h> ou \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> ou \<wchar.h>|  
   
- O `isascii`, `__isascii` e `iswascii` funções são específicas da Microsoft. Para obter informações adicionais sobre compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ As funções `isascii`, `__isascii` e `iswascii` são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Consulte também  
- [Classificação de caractere](../../c-runtime-library/character-classification.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classificação de caracteres](../../c-runtime-library/character-classification.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)

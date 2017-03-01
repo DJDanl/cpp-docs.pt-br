@@ -1,8 +1,7 @@
 ---
 title: "rewind | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,25 +27,35 @@ f1_keywords:
   - "rewind"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "ponteiros de arquivo [C++]"
-  - "ponteiros de arquivo [C++], reposicionando"
-  - "reposicionando ponteiros de arquivo"
-  - "Função rewind"
+  - "rewind function"
+  - "repositioning file pointers"
+  - "file pointers [C++], repositioning"
+  - "file pointers [C++]"
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# rewind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Reposicionar o ponteiro de arquivo para o início de um arquivo.  
+# <a name="rewind"></a>rewind
+Reposiciona o ponteiro de arquivo para o início de um arquivo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -55,35 +64,35 @@ Reposicionar o ponteiro de arquivo para o início de um arquivo.
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
  Ponteiro para a estrutura **FILE**.  
   
-## Comentários  
- A função de **rewind** reposicionar o ponteiro de arquivo associado com `stream` ao início do arquivo.  Uma chamada para **rewind** é semelhante a  
+## <a name="remarks"></a>Comentários  
+ A função **rewind** reposiciona o ponteiro de arquivo associado ao `stream` para o início do arquivo. Uma chamada para **rewind** é semelhante a  
   
- **\(void\) fseek\(** `stream`**, 0L,** `SEEK_SET` **\);**  
+ **(void) fseek(** `stream`**, 0L,** `SEEK_SET` **);**  
   
- No entanto, ao contrário de `fseek`, **rewind** limpa os indicadores de erro para o fluxo como também o indicador de participante de Arquivo.  Além disso, ao contrário de `fseek`, **rewind** não retorna um valor para indicar se o ponteiro esteve movido com êxito.  
+ No entanto, diferentemente de `fseek`, **rewind** limpa os indicadores de erro para o fluxo, bem como o indicador de fim de arquivo. Além disso, ao contrário de `fseek`, **rewind** não retorna um valor para indicar se o ponteiro foi movido com êxito.  
   
- Para limpar o buffer de teclado, use **rewind** com o fluxo `stdin`, associado ao teclado por padrão.  
+ Para limpar o buffer de teclado, use **rewind** com o fluxo `stdin`, que está associado ao teclado por padrão.  
   
- Se o fluxo é um ponteiro de `NULL` , o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, retorna e `errno` dessa função são definidos como `EINVAL`.  
+ Se o fluxo for um ponteiro `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará e `errno` será definido como `EINVAL`.  
   
- Para obter informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|**rewind**|\<stdio.h\>|  
+|-------------|---------------------|  
+|**rewind**|\<stdio.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_rewind.c  
@@ -116,15 +125,15 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 The values written are: 1 and -37  
 The values read are: 1 and -37  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)

@@ -1,59 +1,71 @@
 ---
-title: "Classe is_same | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_same"
-  - "std.tr1.is_same"
-  - "is_same"
-  - "std.is_same"
-  - "std::is_same"
-  - "type_traits/std::is_same"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe is_same [TR1]"
-  - "is_same"
+title: Classe is_same | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_same
+- std::is_same
+- type_traits/std::is_same
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_same class
+- is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
 caps.latest.revision: 19
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe is_same
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
+ms.lasthandoff: 02/25/2017
 
-Testa se dois tipos são os mesmos.  
+---
+# <a name="issame-class"></a>Classe is_same
+Testa se dois tipos são iguais.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty1, class Ty2>  
-    struct is_same;  
+template <class Ty1, class Ty2>  
+struct is_same;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty1`  
- O primeiro tipo de consulta.  
+ O primeiro tipo a ser consultado.  
   
  `Ty2`  
- O segundo tipo de consulta.  
+ O segundo tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se os tipos de `Ty1` e `Ty2` são do mesmo tipo, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se os tipos `Ty1` e `Ty2` forem o mesmo tipo; caso contrário, será falsa.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_same.cpp   
+```cpp  
+// std__type_traits__is_same.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -86,17 +98,21 @@ int main()
   
 ```  
   
-  **is\_same \< base, base de dados de \> \= \= true**  
-**is\_same \< base, derivado \> \= \= false**  
-**is\_same \< derivada, base \> \= \= false**  
-**is\_same \< int, int \> \= \= true**  
-**is\_same \< int, int const \> \= \= false**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_same<base, base> == true  
+is_same<base, derived> == false  
+is_same<derived, base> == false  
+is_same<int, int> == true  
+is_same<int, const int> == false  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_convertible](../standard-library/is-convertible-class.md)   
- [Classe is\_base\_of](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_convertible](../standard-library/is-convertible-class.md)   
+ [Classe is_base_of](../standard-library/is-base-of-class.md)
+

@@ -1,8 +1,7 @@
 ---
 title: "Classe is_empty | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,47 +9,55 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
-  - "std::tr1::is_empty"
-  - "std.tr1.is_empty"
   - "is_empty"
-  - "std.is_empty"
   - "std::is_empty"
   - "type_traits/std::is_empty"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe is_empty [TR1]"
+  - "is_empty class"
   - "is_empty"
 ms.assetid: 44a6fc92-7e55-4fbe-9a24-2a0ce2dccba0
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_empty
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="isempty-class"></a>Classe is_empty
 Testa se o tipo é uma classe vazia.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_empty;  
+template <class Ty>  
+struct is_empty;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
- O tipo de consulta.  
+ O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é uma classe vazia, de outra forma, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe vazia; caso contrário, será falsa.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_empty.cpp   
+```cpp  
+// std__type_traits__is_empty.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -79,13 +86,16 @@ int main()
 ```  
   
 ```Output  
-is_empty < trivial > = = false is_empty < vazio > = = true is_empty < int > = = false  
+is_empty<trivial> == false  
+is_empty<empty> == true  
+is_empty<int> == false  
 ```  
   
-## Requisitos  
- **Cabeçalho:** \< type\_traits \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)
+

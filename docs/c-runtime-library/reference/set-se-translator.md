@@ -1,51 +1,65 @@
 ---
-title: "_set_se_translator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_se_translator"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_se_translator"
-  - "set_se_translator"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _set_se_translator"
-  - "tratamento de exceção, alterando"
-  - "Função set_se_translator"
+title: _set_se_translator | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_se_translator
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _set_se_translator
+- set_se_translator
+dev_langs:
+- C++
+helpviewer_keywords:
+- set_se_translator function
+- exception handling, changing
+- _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 caps.latest.revision: 21
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _set_se_translator
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: d8d43b39c9f71807d68f20cb4873abf96d3f91e8
+ms.lasthandoff: 02/25/2017
 
-As exceções do Win32 de identificadores \(exceções estruturado de 2.0 C\) como C\+\+ digitaram exceções.  
+---
+# <a name="setsetranslator"></a>_set_se_translator
+Trata exceções do Win32 (exceções C estruturadas) como exceções C++.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _se_translator_function _set_se_translator(  
@@ -53,45 +67,43 @@ _se_translator_function _set_se_translator(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `seTransFunction`  
- Ponteiro para a função é estruturada c de tradutor de exceção que você criou.  
+ Ponteiro para uma função conversora de exceção estruturada de C que você escreve.  
   
-## Valor de retorno  
- Retorna um ponteiro para a função anterior de tradutor registrada por `_set_se_translator`, de forma que a função anterior pode ser restaurados posteriormente.  Se nenhuma função anterior foi definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; esse valor pode ser NULL.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna um ponteiro para a função conversora anterior registrada por `_set_se_translator`, de modo que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor retornado poderá ser usado para restaurar o comportamento padrão; esse valor pode ser NULL.  
   
-## Comentários  
- A função de `_set_se_translator` fornece uma maneira de tratar exceções do Win32 \(exceções estruturado de 2.0 C\) como exceções digitadas C\+\+.  Para permitir que cada um uma exceção C seja tratada pelo manipulador c criando `catch` , primeiro defina a classe de invólucro de exceção de c que pode ser usado, ou derivada, para atribuir um tipo específico da classe com exceção de c.  Para usar essa classe, instale uma função personalizada de tradutor da exceção de 2.0 C que é chamado pela exceção interna c do mecanismo de manipulação de exceções gerais será emitido cada vez.  Dentro da função de tradutor, você pode gerar qualquer exceção com tipo que possa ser capturada por um manipulador de correspondência C\+\+ `catch` .  
+## <a name="remarks"></a>Comentários  
+ A função `_set_se_translator` fornece um meio para manipular exceções do Win32 (exceções C estruturadas) como exceções tipadas C++. Para permitir que cada exceção de C seja manipulada por um manipulador `catch` C++, primeiro defina uma classe wrapper de exceção de C que possa ser usada – ou da qual seja possível obter uma classe derivada – para atribuir um tipo de classe específico a uma exceção de C. Para usar essa classe, instale uma função personalizada de conversão da exceção de C, chamada pelo mecanismo interno de manipulação de exceção sempre que uma exceção de C é gerada. Dentro de sua função translator, você pode gerar qualquer exceção tipada que pode ser capturada por um manipulador `catch` C++ correspondente.  
   
- Você deve usar [\/EHa](../../build/reference/eh-exception-handling-model.md) ao usar `_set_se_translator`.  
+ Você deve usar [/EHa](../../build/reference/eh-exception-handling-model.md) ao usar `_set_se_translator`.  
   
- Para especificar uma função personalizada de tradução, chame `_set_se_translator` com o nome da função de conversão como seu argumento.  A função de tradutor que você gravação é chamado uma vez para cada invocação de função na pilha que tem blocos de `try` .  Não há nenhuma função padrão de tradutor.  
+ Para especificar uma função de conversão personalizada, chame `_set_se_translator` com o nome da função de conversão como seu único argumento. A função de conversão que você grava é chamada uma vez para cada invocação de função na pilha que tem blocos `try`. Não há nenhuma função conversora padrão.  
   
- A função de tradutor deve fazer não mais do que gerou a exceção digitada c. criando  Se faz nada além do kit \(como gravar um arquivo de log, por exemplo\) seu programa não podem se comportar como esperado, como o número de vezes que a função de tradutor é chamada é dependente de plataforma.  
+ Sua função conversora não deve fazer nada além de gerar uma exceção tipada C++. Se ela fizer qualquer coisa além de gerar (como gravar em um arquivo de log, por exemplo), seu programa poderá não se comportar conforme o esperado, pois o número de vezes que a função conversora é invocada depende da plataforma.  
   
- Em um ambiente multithread, as funções de tradutor são mantidas separadamente para cada thread.  Necessidades de cada thread de instalar novos sua própria função de tradutor.  Assim, cada thread é responsável de sua própria manipulação de tradução para o.  `_set_se_translator` é específico a um thread; outro DLL pode instalar uma função diferente da conversão.  
+ Em um ambiente multithreaded, funções de conversão são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função conversora. Portanto, cada thread é responsável pela sua própria manipulação de encerramento. `_set_se_translator` é específico para um thread; outra DLL pode instalar uma função de conversão diferente.  
   
- A função de `seTransFunction` que você gravação deve ser uma função compilada nativo \(não criada com \/clr\).  Deve ser um número inteiro sem sinal e um ponteiro para uma estrutura do Win32 `_EXCEPTION_POINTERS` como argumentos.  Os argumentos são os valores de retorno de chamadas à API do Win32 `GetExceptionCode` e funções de `GetExceptionInformation` , respectivamente.  
+ A função `seTransFunction` que você escreve deve ser uma função compilada de modo nativo (não compilada com /clr). Ela precisa levar como argumentos um inteiro sem sinal e um ponteiro para uma estrutura `_EXCEPTION_POINTERS` Win32. Os argumentos são os valores retornados das chamadas às funções `GetExceptionCode` e `GetExceptionInformation` de API do Win32, respectivamente.  
   
 ```  
 typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );  
 ```  
   
- Para `_set_se_translator`, as implicações dinamicamente ao vincular a CRT; outro DLL do processo pode chamar `_set_se_translator` e substituir o manipulador com seus próprios.  
+ Para `_set_se_translator`, há implicações ao vincular dinamicamente ao CRT; outra DLL no processo pode chamar `_set_se_translator` e substituir o manipulador usado por você pelo manipulador da própria DLL.  
   
- Ao usar `_set_se_translator` de código gerenciado \(código compilado com \/clr\) ou nativo misto e código gerenciado, lembre\-se de que o tradutor afeta as exceções geradas em código nativo.  Nenhuma exceções gerenciado gerada no código gerenciado \(como aumentar `System::Exception`\) não são roteadas através da função de tradutor.  As exceções geradas em código gerenciado usando a função `RaiseException` do Win32 ou causadas por uma exceção do sistema como uma exceção divisão por zero são roteadas através de tradutor.  
+ Ao usar `_set_se_translator` do código gerenciado (código compilado com /clr) ou do código misto gerenciado e nativo, esteja ciente de que a conversora afeta somente as exceções geradas em código nativo. Exceções gerenciadas geradas em código gerenciado (por exemplo, ao gerar `System::Exception`) não são roteadas por meio da função conversora. Exceções geradas em código gerenciado usando a função `RaiseException` Win32 ou causadas por uma exceção do sistema como uma exceção de divisão por zero são roteadas por meio da conversora.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_set_se_translator`|\<eh.h\>|  
-  
- A funcionalidade fornecida por `_set_se_translator` não está disponível no código compilado com a opção do compilador de [\/clr: puro](../../build/reference/clr-common-language-runtime-compilation.md) .  
+|-------------|---------------------|  
+|`_set_se_translator`|\<eh.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_settrans.cpp  
@@ -144,11 +156,14 @@ void trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 }  
 ```  
   
-  **No trans\_func.**  
-**Em finalmente**  
-**Capturar uma exceção \_\_try com SE\_Exception.**   
-## Exemplo  
- Embora a funcionalidade fornecida por `_set_se_translator` não está disponível no código gerenciado, é possível usar esse mapeamento em código nativo, mesmo se esse código nativo está em uma compilação na opção de `/clr` , contanto que o código nativo é indicado usando `#pragma unmanaged`.  Se uma exceção estruturado está sendo gerada em código gerenciado que deve ser mapeado, o código que gerencia e os identificadores a exceção devem ser marcados com `pragma`.  O código a seguir mostra um uso possível.  Para obter mais informações, consulte [Diretivas Pragma e a palavra\-chave \_\_Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+```Output  
+In trans_func.  
+In finally  
+Caught a __try exception with SE_Exception.  
+```  
+  
+## <a name="example"></a>Exemplo  
+ Embora a funcionalidade fornecida pelo `_set_se_translator` não esteja disponível em código gerenciado, é possível usar esse mapeamento em código nativo, mesmo que o código nativo esteja em uma compilação no comutador `/clr`, desde que o código nativo seja indicado usando `#pragma unmanaged`. Se uma exceção estruturada está sendo lançada em código gerenciado que deve ser mapeado, o código que gera e manipula a exceção deve ser marcado com o `pragma`. O código a seguir mostra um uso possível. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
 ```  
 // crt_set_se_translator_clr.cpp  
@@ -199,14 +214,17 @@ int main(int argc, char** argv) {
 }  
 ```  
   
-  **Traduzindo a exceção estruturado com exceção de c. criando**  
-**CMyException capturado.**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Translating the structured exception to a C++ exception.  
+Caught CMyException.  
+```  
   
-## Consulte também  
- [Rotinas do tratamento de exceções](../../c-runtime-library/exception-handling-routines.md)   
- [set\_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set\_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Rotinas de tratamento de exceções](../../c-runtime-library/exception-handling-routines.md)   
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [terminate](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../Topic/unexpected%20\(CRT\).md)
+ [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

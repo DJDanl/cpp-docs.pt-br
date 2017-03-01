@@ -1,8 +1,7 @@
 ---
 title: "strrev, wcsrev | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,18 +28,29 @@ f1_keywords:
   - "wcsrev"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função strrev"
-  - "Função wcsrev"
+  - "strrev function"
+  - "wcsrev function"
 ms.assetid: 89e05854-a9ce-4fb7-993d-a9831cd7edf2
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# strrev, wcsrev
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Essas funções de POSIX são preteridas.  Use a conformidade ISO C\+\+ [\_strrev, \_wcsrev, \_mbsrev, \_mbsrev\_l](../../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md) em vez disso.
+# <a name="strrev-wcsrev"></a>strrev, wcsrev
+Essas funções POSIX foram preteridas. Ao invés disso use ISO C++ compatível com [_strrev, _wcsrev, _mbsrev, _mbsrev_l](../../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md).

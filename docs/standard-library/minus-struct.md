@@ -1,76 +1,87 @@
 ---
-title: "Struct minus | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "minus"
-  - "std.minus"
-  - "std::minus"
-  - "xfunctional/std::minus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Struct minus"
-  - "Classe minus"
+title: Struct minus | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- minus
+- std.minus
+- std::minus
+- xfunctional/std::minus
+dev_langs:
+- C++
+helpviewer_keywords:
+- minus struct
+- minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
 caps.latest.revision: 20
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct minus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: e2ed81d3d990e9c9f2a9a21d04fabcbbfbb94f9a
+ms.lasthandoff: 02/25/2017
 
-Um objeto predefinido de função que executa a operação de subtração \( `operator-`binário\) em seus argumentos.  
+---
+# <a name="minus-struct"></a>Struct minus
+Um objeto de função predefinido que executa a operação de subtração (binário `operator-`) em seus argumentos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Type = void>  
-   struct minus : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator-  
-template<>  
-   struct minus<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            - std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct minus : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator-
+template <>
+struct minus<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) - std::forward<U>(Right));
+ };
 ```  
   
-#### Parâmetros  
- `Type`, `Type1`, `Type2`  
- Um tipo que ofereça suporte a um binário `operator-` que usa operandos dos tipos especificados ou inferidos.  
+#### <a name="parameters"></a>Parâmetros  
+ `Type`, `T`, `U`  
+ Um tipo que dá suporte a um `operator-` binário que usa operandos dos tipos especificados ou inferidos.  
   
  `Left`  
- O operando esquerdo da operação.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type1`.  
+ O operando esquerdo da operação. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.  
   
  `Right`  
- O operando direito da operação.  O modelo unspecialized usa um argumento de referência de lvalue do tipo `Type`.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type2`.  
+ O operando direito da operação. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
   
-## Valor de retorno  
- O resultado de `Left``-``Right`.  O modelo especializado aperfeiçoa a transmissão de resultado, que contém o tipo retornado por `operator-`.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado de `Left``-``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator-`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // functional_minus.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -116,16 +127,22 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 1 5 9 13 17 21 )  
+The vector v2 = ( -1 2 5 8 11 14 )  
+The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )  
+*\  
 ```  
   
-  **O vetor v1 \= \(1 5 9 13 17 21\)**  
-**O vetor v2 \= \(\-1 2 5 8 11 14\)**  
-**As diferenças em elemento sábias entre v1 e v2 são: \(2 3 4 5 6 7\)**   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

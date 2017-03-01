@@ -1,8 +1,7 @@
 ---
 title: "setbuf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,23 +27,33 @@ f1_keywords:
   - "setbuf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função setbuf"
-  - "buffer de fluxo"
+  - "setbuf function"
+  - "stream buffering"
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proteção de fluxo de controle.  Esta função é substituída; use [setvbuf](../../c-runtime-library/reference/setvbuf.md) em vez disso.  
+# <a name="setbuf"></a>setbuf
+Controla o buffer de fluxo. Essa função foi preterida; use [setvbuf](../../c-runtime-library/reference/setvbuf.md) em seu lugar.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void setbuf(  
@@ -53,27 +62,27 @@ void setbuf(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
- Ponteiro a estrutura de `FILE` .  
+ Ponteiro para a estrutura `FILE`.  
   
  `buffer`  
- Buffer usuário atribuído.  
+ Buffer alocado pelo usuário.  
   
-## Comentários  
- A função de `setbuf` controla a proteção para `stream`.  O argumento de `stream` deve recorrer a um arquivo aberto que não seja lido ou não é gravado.  Se o argumento de `buffer` é `NULL`, o fluxo não está armazenado no buffer.  Caso contrário, o buffer deve apontar para uma matriz de caractere de comprimento `BUFSIZ`, onde `BUFSIZ` é o tamanho do buffer conforme definido em. STDIO.H.  O buffer especificado pelo usuário, em vez de buffer atribuído por padrão para o fluxo fornecido, é usado para armazenar em buffer de E\/S.  O fluxo de `stderr` não é armazenado em buffer por padrão, mas você pode usar `setbuf` buffers para atribuir a `stderr`.  
+## <a name="remarks"></a>Comentários  
+ A função `setbuf` controla o buffer para `stream`. O argumento `stream` deve se referir a um arquivo aberto que não foi lido ou gravado. Se o argumento `buffer` é `NULL`, o fluxo é sem buffer. Caso contrário, o buffer deve apontar para uma matriz de caracteres de tamanho `BUFSIZ`, em que `BUFSIZ` é o tamanho do buffer conforme definido em STDIO.H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O fluxo `stderr` é sem buffer por padrão, mas você pode usar `setbuf` atribuir buffers para `stderr`.  
   
- `setbuf` foi substituído por [setvbuf](../../c-runtime-library/reference/setvbuf.md), que é a rotina preferida para o novo código.  `setbuf` é mantido para compatibilidade com o código existente.  
+ `setbuf` foi substituído por [setvbuf](../../c-runtime-library/reference/setvbuf.md), que é a rotina preferencial para o novo código. `setbuf` é mantido para compatibilidade com o código existente.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`setbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setbuf`|\<stdio.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_setbuf.c  
@@ -107,14 +116,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 definido como o buffer definido pelo usuário no: 0012FCDC**  
-**proteção stream2 desabilitada**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../Topic/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [fflush](../../c-runtime-library/reference/fflush.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

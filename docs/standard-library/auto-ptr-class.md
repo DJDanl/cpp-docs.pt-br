@@ -1,8 +1,7 @@
 ---
 title: "Classe auto_ptr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,97 +16,518 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe auto_ptr"
+  - "auto_ptr class"
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 caps.latest.revision: 26
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe auto_ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Encapsula um ponteiro inteligente ao redor de um recurso que garante que o recurso é destruído automaticamente ao controle deixa um bloco.  
+# <a name="autoptr-class"></a>Classe auto_ptr
+Encapsula um ponteiro inteligente ao redor de um recurso que garante que o recurso seja destruído automaticamente quando o controle sair de um bloco.  
   
- Mais capacitado`unique_ptr`classe substitui`auto_ptr`.  Para obter mais informações, consulte[Classe unique\_ptr](../standard-library/unique-ptr-class.md).  
+ A classe `unique_ptr` mais capacitada substitui `auto_ptr`. Para obter mais informações, consulte [Classe unique_ptr](../standard-library/unique-ptr-class.md).  
   
- Para obter mais informações sobre`throw()`e manipulação de exceção, consulte[Especificações de exceção \(lançar\)](../cpp/exception-specifications-throw-cpp.md).  
+ Para obter mais informações sobre `throw()` e o tratamento de exceções, consulte [Especificações de exceção (gerar)](../cpp/exception-specifications-throw-cpp.md).  
   
-## Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe  
+ ```   
+class auto_ptr {
+public:
+    typedef Type element_type;
+    explicit auto_ptr(Type* ptr = 0) throw();
+    auto_ptr(auto_ptr<Type>& right) throw()
+        ;
+    template <class Other>
+    operator auto_ptr<Other>() throw();
+    template <class Other>
+    auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
+    template <class Other>
+    auto_ptr(auto_ptr<Other>& right);
+    auto_ptr<Type>& operator=(auto_ptr<Type>& right);
+    ~auto_ptr();
+    Type& operator*() const throw();
+    Type * operator->()const throw();
+    Type *get() const throw();
+    Type *release()throw();
+    void reset(Type* ptr = 0);
+};
 ```  
-template<class Type>  
-    class auto_ptr {  
-public:  
-    typedef Type element_type;  
-    explicit auto_ptr(Type *_Ptr = 0) throw();  
-    auto_ptr(auto_ptr<Type>& _Right) throw();  
-    template<class Other>  
-        operator auto_ptr<Other>() throw();  
-    template<class Other>  
-        auto_ptr<Type>& operator=(auto_ptr<Other>& _Right) throw();  
-    template<class Other>  
-        auto_ptr(auto_ptr<Other>& _Right);  
-    auto_ptr<Type>& operator=(auto_ptr<Type>& _Right);  
-    ~auto_ptr();  
-    Type& operator*() const throw();  
-    Type *operator->()const throw();  
-    Type *get() const throw();  
-    Type *release()throw();  
-    void reset(Type *_Ptr = 0);  
-};  
-```  
+#### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ O `auto_ptr` do qual um recurso existente.  
   
-#### Parâmetros  
- `_Right`  
- O`auto_ptr`da qual obter um recurso existente.  
-  
- `_Ptr`  
+ ` ptr`  
  O ponteiro especificado para substituir o ponteiro armazenado.  
   
-## Comentários  
- A classe de modelo descreve um ponteiro inteligente, chamado um`auto_ptr,`para um objeto alocado.  O ponteiro deve ser nulo ou designar um objeto alocado pelo`new`.  O`auto_ptr`transfere a propriedade se o valor armazenado é atribuído a outro objeto.  \(Ele substitui o valor armazenado após uma transferência com um ponteiro nulo.\) O destruidor de`auto_ptr<Type>`exclui o objeto alocado.  O`auto_ptr<Type>`garante que um objeto alocado é excluído automaticamente quando o controle sai de um bloco, mesmo por meio de uma exceção lançada.  Você não deve criar dois`auto_ptr<Type>`objetos que possuem o mesmo objeto.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo descreve um ponteiro inteligente, chamado de `auto_ptr,` para um objeto alocado. O ponteiro deve ser nulo ou designar um objeto alocado pelo `new`. O `auto_ptr` transfere a propriedade se o valor armazenado for atribuído a outro objeto. (Ele substitui o valor armazenado após uma transferência com um ponteiro nulo.) O destruidor para `auto_ptr<Type>` exclui o objeto alocado. O `auto_ptr<Type>` garante que um objeto alocado seja excluído automaticamente quando o controle sai de um bloco, mesmo que seja por meio de uma exceção gerada. Você não deve criar dois objetos `auto_ptr<Type>` que detenham o mesmo objeto.  
   
- Você pode passar um`auto_ptr<Type>`objeto por valor como um argumento para uma chamada de função.  Um`auto_ptr`não pode ser um elemento de qualquer contêiner de biblioteca padrão.  Confiável não é possível gerenciar uma sequência de`auto_ptr<Type>`objetos com um contêiner Standard Template Library.  
+ Você pode passar um objeto `auto_ptr<Type>` por valor como um argumento para uma chamada de função. Um `auto_ptr` não pode ser um elemento de nenhum contêiner de Biblioteca Padrão. Você não pode gerenciar confiavelmente uma sequência de objetos `auto_ptr<Type>` com um contêiner de Biblioteca Padrão C++.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores  
-  
-|||  
-|-|-|  
-|[auto\_ptr](../Topic/auto_ptr::auto_ptr.md)|O construtor para objetos do tipo `auto_ptr`.|  
-  
-### DefsTipo  
+### <a name="constructors"></a>Construtores  
   
 |||  
 |-|-|  
-|[element\_type](../Topic/auto_ptr::element_type.md)|O tipo é um sinônimo para o parâmetro de modelo`Type`.|  
+|[auto_ptr](#auto_ptr__auto_ptr)|O construtor para objetos do tipo `auto_ptr`.|  
   
-### Funções membro  
-  
-|||  
-|-|-|  
-|[obter](../Topic/auto_ptr::get.md)|A função de membro retorna o ponteiro armazenado`myptr`.|  
-|[versão](../Topic/auto_ptr::release.md)|O membro substitui o ponteiro armazenado`myptr`com um ponteiro nulo e retorna o ponteiro armazenado anteriormente.|  
-|[redefinir](../Topic/auto_ptr::reset.md)|A função de membro avalia a expressão`delete myptr`mas somente se o valor do ponteiro armazenado`myptr`muda como resultado da chamada de função.  Ele substitui o ponteiro armazenado com`ptr`.|  
-  
-### Operadores  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\=](../Topic/auto_ptr::operator=.md)|Um operador de atribuição que transfere a propriedade de uma`auto_ptr`objeto para outro.|  
-|[operator\*](../Topic/auto_ptr::operator*.md)|O operador de desreferenciamento para objetos do tipo`auto_ptr`.|  
-|[operator\-\>](../Topic/auto_ptr::operator-%3E.md)|O operador para permitir o acesso de membro.|  
-|[operador auto\_ptr \< outros \>](../Topic/auto_ptr::operator%20auto_ptr%3COther%3E.md)|Converte uma espécie de`auto_ptr`em outro tipo de`auto_ptr`.|  
-|[operador auto\_ptr\_ref \< outros \>](../Topic/auto_ptr::operator%20auto_ptr_ref%3COther%3E.md)|Converte a partir de um`auto_ptr`para um`auto_ptr_ref`.|  
+|[element_type](#auto_ptr__element_type)|O tipo é um sinônimo do parâmetro de modelo `Type`.|  
   
-## Requisitos  
- **Cabeçalho:** \< memória \>  
+### <a name="member-functions"></a>Funções membro  
+  
+|||  
+|-|-|  
+|[get](#auto_ptr__get)|A função membro retorna o ponteiro armazenado `myptr`.|  
+|[release](#auto_ptr__release)|O membro substitui o ponteiro armazenado `myptr` por um ponteiro nulo e retorna o ponteiro armazenado anteriormente.|  
+|[reset](#auto_ptr__reset)|A função membro avalia a expressão `deleteÂ myptr`, mas somente se o valor do ponteiro armazenado `myptr` mudar como resultado da chamada de função. Ele substitui o ponteiro armazenado por `ptr`.|  
+  
+### <a name="operators"></a>Operadores  
+  
+|||  
+|-|-|  
+|[operator=](#auto_ptr__operator_eq)|Um operador de atribuição que transfere a propriedade de um objeto `auto_ptr` para outro.|  
+|[operator*](#auto_ptr__operator_star)|O operador de desreferenciamento para objetos do tipo `auto_ptr`.|  
+|[operator->](#auto_ptr__operator-_gt_)|O operador para permitir o acesso de membro.|  
+|[operator auto_ptr\<Other>](#auto_ptr__operator_auto_ptr_lt_other_gt_)|Converte de um tipo de `auto_ptr` para outro tipo de `auto_ptr`.|  
+|[operator auto_ptr_ref\<Other>](#auto_ptr__operator_auto_ptr_ref_lt_other_gt_)|Converte de um `auto_ptr` para um `auto_ptr_ref`.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<memory>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Classe unique\_ptr](../standard-library/unique-ptr-class.md)
+##  <a name="a-nameautoptrautoptra--autoptrautoptr"></a><a name="auto_ptr__auto_ptr"></a>  auto_ptr::auto_ptr  
+ O construtor para objetos do tipo `auto_ptr`.  
+  
+```   
+explicit auto_ptr(Type* ptr  = 0) throw();
+
+auto_ptr(auto_ptr<Type>& right) throw();
+
+auto_ptr(auto _ptr_ref<Type> right) throw();
+
+template <class Other>  
+auto _ptr(auto _ptr<Other>& right) throw();
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` ptr`  
+ O ponteiro para o objeto que `auto_ptr` encapsula.  
+  
+ ` right`  
+ O `auto_ptr` objeto a ser copiada pelo construtor.  
+  
+### <a name="remarks"></a>Comentários  
+ Os primeiro construtor armazena ` ptr` na **myptr**, o ponteiro armazenado para o objeto alocado. O segundo construtor transfere a propriedade do ponteiro armazenado em ` right`, armazenando ` right`. [release](#auto_ptr__release) em **myptr**.  
+  
+ O terceiro construtor se comporta da mesma maneira que o segundo, exceto que ele armazena **right**. `ref`. **release** em **myptr**, em que `ref` é a referência armazenada em ` right`.  
+  
+ O construtor de modelo se comporta da mesma maneira que o segundo construtor, desde que um ponteiro para **Other** possa ser convertido implicitamente em um ponteiro para **Type**.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_auto_ptr.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+  
+using namespace std;  
+  
+class Int   
+{  
+public:  
+   Int(int i)   
+   {  
+      cout << "Constructing " << ( void* )this  << endl;   
+      x = i;  
+      bIsConstructed = true;  
+   };  
+   ~Int( )   
+   {  
+      cout << "Destructing " << ( void* )this << endl;   
+      bIsConstructed = false;  
+   };  
+   Int &operator++( )   
+   {  
+      x++;  
+      return *this;  
+   };  
+   int x;  
+private:  
+   bool bIsConstructed;  
+};  
+  
+void function ( auto_ptr<Int> &pi )  
+{  
+   ++( *pi );  
+   auto_ptr<Int> pi2( pi );  
+   ++( *pi2 );  
+   pi = pi2;  
+}  
+  
+int main( )   
+{  
+   auto_ptr<Int> pi ( new Int( 5 ) );  
+   cout << pi->x << endl;  
+   function( pi );  
+   cout << pi->x << endl;  
+}  
+```  
+  
+```Output  
+Constructing 00311AF8  
+5  
+7  
+Destructing 00311AF8  
+```  
+  
+##  <a name="a-nameautoptrelementtypea--autoptrelementtype"></a><a name="auto_ptr__element_type"></a>  auto_ptr::element_type  
+ O tipo é um sinônimo do parâmetro de modelo **Type**.  
+  
+```  
+ 
+typedef Type element  _type;  
+```  
+  
+##  <a name="a-nameautoptrgeta--autoptrget"></a><a name="auto_ptr__get"></a>  auto_ptr::get  
+ A função membro retorna o ponteiro armazenado **myptr**.  
+  
+```   
+Type *get() const throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O ponteiro armazenado **myptr**.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_get.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+using namespace std;  
+  
+class Int   
+{  
+public:  
+   Int(int i)   
+   {  
+      x = i;  
+      cout << "Constructing " << ( void* )this  << " Value: " << x << endl;   
+   };  
+   ~Int( )   
+   {  
+      cout << "Destructing " << ( void* )this << " Value: " << x << endl;   
+   };  
+  
+   int x;  
+  
+};  
+  
+int main( )   
+{  
+   auto_ptr<Int> pi ( new Int( 5 ) );  
+   pi.reset( new Int( 6 ) );  
+   Int* pi2 = pi.get ( );  
+   Int* pi3 = pi.release ( );  
+   if (pi2 == pi3)  
+      cout << "pi2 == pi3" << endl;  
+   delete pi3;  
+}  
+```  
+  
+```Output  
+Constructing 00311AF8 Value: 5  
+Constructing 00311B88 Value: 6  
+Destructing 00311AF8 Value: 5  
+pi2 == pi3  
+Destructing 00311B88 Value: 6  
+```  
+  
+##  <a name="a-nameautoptroperatoreqa--autoptroperator"></a><a name="auto_ptr__operator_eq"></a>  auto_ptr::operator=  
+ Um operador de atribuição que transfere a propriedade de um objeto `auto_ptr` para outro.  
+  
+```  
+template <class Other>  
+auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
+auto_ptr<Type>& operator=(auto_ptr<Type>& right) throw();
+auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um objeto do tipo `auto_ptr`.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma referência a um objeto do tipo `auto_ptr`\< **Type**>.  
+  
+### <a name="remarks"></a>Comentários  
+ A atribuição avalia a expressão **delete myptr**, mas apenas se o ponteiro armazenado **myptr** mudar como resultado da atribuição. Ele então transfere a propriedade do ponteiro armazenado em _*Right* armazenando \_ *Right*. [release](#auto_ptr__release) em **myptr**. A função retorna **\*this**.  
+  
+### <a name="example"></a>Exemplo  
+  Para obter um exemplo do uso do operador membro, consulte [auto_ptr::auto_ptr](#auto_ptr__auto_ptr).  
+  
+##  <a name="a-nameautoptroperatorstara--autoptroperator"></a><a name="auto_ptr__operator_star"></a>  auto_ptr::operator*  
+ O operador de desreferenciamento para objetos do tipo `auto_ptr`.  
+  
+```   
+Type& operator*() const throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma referência a um objeto do tipo **Type** que o ponteiro detém.  
+  
+### <a name="remarks"></a>Comentários  
+ O operador de indireção retorna `*`[get](#auto_ptr__get). Portanto, o ponteiro armazenado não deve ser nulo.  
+  
+### <a name="example"></a>Exemplo  
+  Para obter um exemplo de como usar a função membro, consulte [auto_ptr::auto_ptr](#auto_ptr__auto_ptr).  
+  
+##  <a name="a-nameautoptroperator-gta--autoptroperator-gt"></a><a name="auto_ptr__operator-_gt_"></a>  auto_ptr::operator-&gt;  
+ O operador para permitir o acesso de membro.  
+  
+```   
+Type * operator->() const throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um membro do objeto que **auto_ptr** detém.  
+  
+### <a name="remarks"></a>Comentários  
+ O operador de seleção retorna [get](#auto_ptr__get)`( )`, de modo que a expressão *ap*-> **membro** comporta-se da mesma forma que ( *ap*. **get**( ) )-> **member**, em que *ap* é um objeto da classe `auto_ptr`\< **Type**>. Portanto, o ponteiro armazenado não deve ser nulo e o **Tipo** deve ser uma classe, estrutura ou tipo de união com um membro **membro**.  
+  
+### <a name="example"></a>Exemplo  
+  Para obter um exemplo de como usar a função membro, consulte [auto_ptr::auto_ptr](#auto_ptr__auto_ptr).  
+  
+##  <a name="a-nameautoptroperatorautoptrltothergta--autoptroperator-autoptrltothergt"></a><a name="auto_ptr__operator_auto_ptr_lt_other_gt_"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;  
+ Converte de um tipo de `auto_ptr` para outro tipo de `auto_ptr`.  
+  
+```   
+template <class Other>  
+operator auto _ptr<Other>() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O tipo operador de conversão retorna `auto_ptr` \< **Other**>( **\*this**).  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_op_auto_ptr.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+  
+using namespace std;  
+int main()  
+{  
+   auto_ptr<int> pi ( new int( 5 ) );  
+   auto_ptr<const int> pc = ( auto_ptr<const int> )pi;  
+}  
+```  
+  
+##  <a name="a-nameautoptroperatorautoptrrefltothergta--autoptroperator-autoptrrefltothergt"></a><a name="auto_ptr__operator_auto_ptr_ref_lt_other_gt_"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;  
+ Conversões de um `auto_ptr` para um **auto_ptr_ref**.  
+  
+```   
+template <class Other>  
+operator auto _ptr  _ref<Other>() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O tipo operador de conversão retorna **auto_ptr_ref**\< **Other**>( **\*this**).  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_op_auto_ptr_ref.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+  
+using namespace std;  
+  
+class C {
+public:
+    C(int _i) : m_i(_i) {
+    }
+    ~C() {
+        cout << "~C:  " << m_i << "\n";
+    }
+    C &operator =(const int &x) {
+        m_i = x;
+        return *this;
+    }
+    int m_i;
+};
+void f(auto_ptr<C> arg) {
+};
+int main()
+{
+    const auto_ptr<C> ciap(new C(1));
+    auto_ptr<C> iap(new C(2));
+
+    // Error: this implies transfer of ownership of iap's pointer  
+    // f(ciap);   
+    f(iap); // compiles, but gives up ownership of pointer  
+
+            // here, iap owns a destroyed pointer so the following is bad:  
+            // *iap = 5; // BOOM  
+
+    cout << "main exiting\n";
+}
+```  
+  
+```Output  
+~C:  2  
+main exiting  
+~C:  1  
+```  
+  
+##  <a name="a-nameautoptrreleasea--autoptrrelease"></a><a name="auto_ptr__release"></a>  auto_ptr::release  
+ O membro substitui o ponteiro armazenado **myptr** por um ponteiro nulo e retorna o ponteiro armazenado anteriormente.  
+  
+```   
+Type *release() throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O ponteiro armazenado anteriormente.  
+  
+### <a name="remarks"></a>Comentários  
+ O membro substitui o ponteiro armazenado **myptr** por um ponteiro nulo e retorna o ponteiro armazenado anteriormente.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_release.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+using namespace std;  
+  
+class Int
+{
+public:
+    Int(int i)
+    {
+        x = i;
+        cout << "Constructing " << (void*)this << " Value: " << x << endl;
+    };
+    ~Int() {
+        cout << "Destructing " << (void*)this << " Value: " << x << endl;
+    };
+
+    int x;
+
+};
+
+int main()
+{
+    auto_ptr<Int> pi(new Int(5));
+    pi.reset(new Int(6));
+    Int* pi2 = pi.get();
+    Int* pi3 = pi.release();
+    if (pi2 == pi3)
+        cout << "pi2 == pi3" << endl;
+    delete pi3;
+}
+```  
+  
+```Output  
+Constructing 00311AF8 Value: 5  
+Constructing 00311B88 Value: 6  
+Destructing 00311AF8 Value: 5  
+pi2 == pi3  
+Destructing 00311B88 Value: 6  
+```  
+  
+##  <a name="a-nameautoptrreseta--autoptrreset"></a><a name="auto_ptr__reset"></a>  auto_ptr::reset  
+ A função membro avalia a expressão **delete**Â **myptr**, mas somente se o valor do ponteiro armazenado **myptr** mudar como resultado de uma chamada de função. Ele então substitui o ponteiro armazenado por **ptr**.  
+  
+```   
+void reset(Type* ptr = 0);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` ptr`  
+ O ponteiro especificado para substituir o ponteiro armazenado **myptr**.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// auto_ptr_reset.cpp  
+// compile with: /EHsc  
+#include <memory>  
+#include <iostream>  
+#include <vector>  
+  
+using namespace std;
+
+class Int
+{
+public:
+    Int(int i)
+    {
+        x = i;
+        cout << "Constructing " << (void*)this << " Value: " << x << endl;
+    };
+    ~Int()
+    {
+        cout << "Destructing " << (void*)this << " Value: " << x << endl;
+    };
+
+    int x;
+};
+
+int main()
+{
+    auto_ptr<Int> pi(new Int(5));
+    pi.reset(new Int(6));
+    Int* pi2 = pi.get();
+    Int* pi3 = pi.release();
+    if (pi2 == pi3)
+        cout << "pi2 == pi3" << endl;
+    delete pi3;
+}
+```  
+  
+```Output  
+Constructing 00311AF8 Value: 5  
+Constructing 00311B88 Value: 6  
+Destructing 00311AF8 Value: 5  
+pi2 == pi3  
+Destructing 00311B88 Value: 6  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Classe unique_ptr](../standard-library/unique-ptr-class.md)
+

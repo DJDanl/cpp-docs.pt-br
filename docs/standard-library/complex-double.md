@@ -1,8 +1,7 @@
 ---
-title: "Complex &lt; double &gt; | Microsoft Docs"
+title: "complex&lt;double&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,61 +15,68 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "função Complex < double >"
+  - "complex<double> function"
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
 caps.latest.revision: 23
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Complex &lt; double &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="complexltdoublegt"></a>complex&lt;double&gt;
+Descreve um objeto que armazena um par ordenado de objetos do tipo **double***,* o primeiro representando a parte real de um número complexo e o segundo representando a parte imaginária.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```
+template <>
+class complex<double> {
+public:
+    constexpr complex(
+    double RealVal = 0,
+    double ImagVal = 0);
 
-Descreve um objeto que armazena um par ordenado de objetos do tipo **duplo***,* o primeiro que representa a parte de um número complexo e o segundo real que representa a parte imaginária.  
-  
-## Sintaxe  
-  
-```  
-template<>  
-   class complex<double> {  
-public:  
-   constexpr complex(  
-      double _RealVal = 0,   
-      double _ImagVal = 0  
-   );  
-  
-   constexpr complex(  
-      const complex<double>& _ComplexNum  
-   );  
-   constexpr explicit complex(  
-      const complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+constexpr complex(const complex<double>& complexNum);
+
+constexpr explicit complex(const complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### Parâmetros  
- `_RealVal`  
- O valor do tipo **duplo** para a parte real do número complexo sendo construído.  
+#### <a name="parameters"></a>Parâmetros  
+ `RealVal`  
+ O valor do tipo **double** da parte real do número complexo que está sendo construído.  
   
- `_ImagVal`  
- O valor do tipo **duplo** para a parte imaginária do número complexo sendo construído.  
+ `ImagVal`  
+ O valor do tipo **double** da parte imaginária do número complexo que está sendo construído.  
   
- `_ComplexNum`  
- O número complexo do tipo **float** ou do tipo `long double` cujos partes reais e imaginários são usados para inicializar um número complexo do tipo **duplo** sendo construído.  
+ ` complexNum`  
+ O número complexo do tipo **float** ou do tipo `long double` cujas partes reais e imaginárias são usadas para inicializar um número complexo do tipo **double** que está sendo construído.  
   
-## Valor de retorno  
- Um número complexo do tipo **duplo**.  
+## <a name="return-value"></a>Valor de retorno  
+ Um número complexo do tipo **double**.  
   
-## Comentários  
- A especialização explícita da classe modelo complexa para uma classe complexa do tipo **duplo** difere apenas em construtores define a classe de modelo. A conversão de **float** para **duplo** pode ser implícito, mas a conversão de `long double` para **duplo** é necessária para ser **explícita**. O uso de **explícita** regras de início com a conversão de tipo usando sintaxe de atribuição.  
+## <a name="remarks"></a>Comentários  
+ A especialização explícita da classe de modelo complexa para uma classe complexa do tipo **double** difere apenas da classe de modelo nos construtores que ela define. A conversão de **float** em **double** pode ser implícita, mas a conversão de `long double` em **double** precisa ser **explícita**. O uso de **explícito** exclui a iniciação com conversão de tipo usando a sintaxe de atribuição.  
   
- Para obter mais informações sobre a classe de modelo `complex`, consulte [Classe complex](../standard-library/complex-class.md). Para obter uma lista de membros da classe modelo `complex`, consulte.  
+ Para obter mais informações sobre a classe do modelo `complex`, consulte [Classe complexa](../standard-library/complex-class.md). Para obter uma lista de membros da classe do modelo `complex`, consulte.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // complex_comp_dbl.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -110,14 +116,27 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type double gives c1 = (4,5)  
+Implicit conversion from type float to type double,  
+ gives c2double = (4,5)  
+Explicit conversion from type float to type double,  
+ gives c3longdouble = (4,5)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.  
+*\  
 ```  
   
- **Especificar partes reais e imaginários iniciais, como tipo double dá c1 \= \(4,5\) conversão implícita de tipo float para o tipo double, c2double dá \= \(4,5\) conversão explícita do tipo float para o tipo double, c3longdouble dá \= \(4,5\) o resto de c3 é recuperado de c3 usando: abs \(c3\) \= 6.40312 argumento de c3 é recuperado do uso de c3: arg \(c3\) \= radianos 0.896055, que é 51.3402 graus.**   
-## Requisitos  
- **Cabeçalho**: \< complexo \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho**: \<complexo>  
   
  **Namespace:** std  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classe complex](../standard-library/complex-class.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

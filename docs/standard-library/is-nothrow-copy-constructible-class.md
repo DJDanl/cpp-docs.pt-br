@@ -1,8 +1,7 @@
 ---
 title: "Classe is_nothrow_copy_constructible | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,34 +19,50 @@ helpviewer_keywords:
   - "is_nothrow_copy_constructible"
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
 caps.latest.revision: 22
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_nothrow_copy_constructible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testa se o tipo tem um [nothrow](../Topic/nothrow%20\(C++\).md) construtor de cópia.  
+# <a name="isnothrowcopyconstructible-class"></a>Classe is_nothrow_copy_constructible
+Testa se o tipo tem um construtor de cópia **nothrow**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Ty>  
-    struct is_nothrow_copy_constructible;  
+```
+template <class Ty>
+struct is_nothrow_copy_constructible;
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` tem um nothrow construtor de cópia, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um construtor de cópia nothrow; caso contrário, será falsa.  
   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+
+

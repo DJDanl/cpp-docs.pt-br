@@ -1,8 +1,7 @@
 ---
 title: "Classe underflow_error | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,18 +16,29 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe underflow_error"
+  - "underflow_error class"
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe underflow_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe serve como a classe base para todas as exceções geradas para relatar um estouro aritmético.  
+# <a name="underflowerror-class"></a>Classe underflow_error
+A classe serve como a classe base para todas as exceções geradas para relatar um estouro negativo aritmético.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,11 +53,11 @@ public:
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado por [que](../standard-library/exception-class1.md) é uma cópia do **mensagem**`.`[dados](../standard-library/basic-string-class.md#basic_string__data).  
+ O valor retornado por [what](../standard-library/exception-class.md) é uma cópia de **message**`.`[data](../standard-library/basic-string-class.md#basic_string__data).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // underflow_error.cpp  
 // compile with: /EHsc /GR  
 #include <iostream>  
@@ -72,12 +82,12 @@ Type: class std::underflow_error
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \< stdexcept>  
+ **Cabeçalho:** \<stdexcept>  
   
  **Namespace:** std  
   
 ## <a name="see-also"></a>Consulte também  
- [\< stdexcept> membros](http://msdn.microsoft.com/pt-br/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)   
- [Classe runtime_error](../Topic/runtime_error%20Class.md)   
- [Segurança de threads na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [\<stdexcept> Membros](http://msdn.microsoft.com/en-us/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)   
+ [Classe runtime_error](../standard-library/runtime-error-class.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

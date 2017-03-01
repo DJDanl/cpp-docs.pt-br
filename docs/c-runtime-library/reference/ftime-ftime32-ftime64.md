@@ -1,8 +1,7 @@
 ---
 title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,29 +34,40 @@ f1_keywords:
   - "ftime32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função ftime64"
-  - "Função _ftime64"
-  - "hora atual"
-  - "Função _ftime"
-  - "Função ftime"
-  - "Função _ftime32"
-  - "Função ftime32"
-  - "tempo, obtendo atual"
+  - "ftime64 function"
+  - "_ftime64 function"
+  - "current time"
+  - "_ftime function"
+  - "ftime function"
+  - "_ftime32 function"
+  - "ftime32 function"
+  - "time, getting current"
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# _ftime, _ftime32, _ftime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Obter a hora atual.  Versões mais seguras dessas funções estão disponíveis; consulte [\_ftime\_s, \_ftime32\_s, \_ftime64\_s](../Topic/_ftime_s,%20_ftime32_s,%20_ftime64_s.md).  
+# <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
+Obtenha a hora atual. Versões mais seguras dessas funções estão disponíveis; consulte [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void _ftime(   
@@ -71,42 +81,42 @@ void _ftime64(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `timeptr`  
- Ponteiro para `_timeb`,a`__timeb32` ou a estrutura de `__timeb64` .  
+ Ponteiro para a estrutura `_timeb`, `__timeb32` ou `__timeb64`.  
   
-## Comentários  
- A função de `_ftime` obtém a hora local atual e armazena\-as na estrutura apontada por `timeptr`*.* `_timeb`, `__timeb32`,eas estruturas de`__timeb64` são definidos no sistema \\ Timeb.h.  Contém quatro campos, listados na tabela a seguir.  
+## <a name="remarks"></a>Comentários  
+ A função `_ftime` obtém a hora local atual e a armazena na estrutura apontada por `timeptr`*.* As estruturas `_timeb`, `__timeb32` e `__timeb64` são definidas em SYS\Timeb.h. Elas contêm quatro campos, que são listados na tabela a seguir.  
   
  `dstflag`  
- Diferente de zero se o tempo do horário de verão estão atualmente em vigor para o fuso horário local. \(Consulte [\_tzset](../Topic/_tzset.md) para obter uma explicação de como a hora do horário de verão são determinados.\)  
+ Diferente de zero se o horário de verão estiver em vigor no fuso horário local. (Consulte [_tzset](../../c-runtime-library/reference/tzset.md) para obter uma explicação de como o horário de verão é determinado.)  
   
  `millitm`  
- Fração de um segundo em milissegundos.  
+ Fração de segundo em milissegundos.  
   
  `time`  
- O tempo em segundos desde meia\-noite \(00:00: 00\), o 1º de janeiro de 1970, coordinator hora universal \(UTC\).  
+ Tempo, em segundos, desde a meia-noite (00:00:00) de 1º de janeiro de 1970 no horário UTC (Tempo Universal Coordenado).  
   
  `timezone`  
- Diferença em minutos, movendo para o oeste, entre UTC e hora local.  O valor de `timezone` é definido do valor da variável global `_timezone` \(consulte `_tzset`\).  
+ Diferença em minutos, movendo-se rumo ao oeste, entre o UTC e o horário local. O valor de `timezone` é definido com base no valor da variável global `_timezone` (consulte `_tzset`).  
   
- `_ftime64`, que usa a estrutura de `__timeb64` , permite que as datas de arquivo criar são expressas anterior a 23:59: o 31 de dezembro, 59, 3000, UTC; considerando que `_ftime32` representa apenas datas a 03:14: 7 de janeiro de 19, 2038, UTC.  A meia\-noite, o 1º de janeiro de 1970, é o limite inferior do intervalo de datas para todas essas funções.  
+ `_ftime64`, que usa a estrutura `__timeb64`, permite que as datas de criação de arquivos sejam expressas até 23:59:59 de 31 de dezembro de 3000, no UTC, enquanto `_ftime32` representa apenas datas até 23:59:59 de 18 de janeiro de 2038, no UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.  
   
- `_ftime` é equivalente a `_ftime64` e `_timeb` contém um horário de 64 bits.  Isso é verdadeiro `_USE_32BIT_TIME_T` a menos que seja definido nesse caso, o comportamento anterior é aplicado; `_ftime` usa um horário de 32 bits e `_timeb` contém um horário de 32 bits.  
+ `_ftime` é equivalente a `_ftime64` e `_timeb` contém uma hora de 64 bits. Isso é verdadeiro a menos que `_USE_32BIT_TIME_T` seja definido; nesse caso, o comportamento antigo está em vigor. `_ftime` usa uma hora de 32 bits e `_timeb` contém uma hora de 32 bits.  
   
- `_ftime` valida seus parâmetros.  Se passado um ponteiro nulo como `timeptr`, a função invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, a função `errno` define a `EINVAL`.  
+ `_ftime` valida seus parâmetros. Se um ponteiro nulo for passado como `timeptr`, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_ftime`|\<o sistema\/types.h e\> sistema \<\/timeb.h\>|  
-|`_ftime32`|\<o sistema\/types.h e\> sistema \<\/timeb.h\>|  
-|`_ftime64`|\<o sistema\/types.h e\> sistema \<\/timeb.h\>|  
+|--------------|---------------------|  
+|`_ftime`|\<sys/types.h> e \<sys/timeb.h>|  
+|`_ftime32`|\<sys/types.h> e \<sys/timeb.h>|  
+|`_ftime64`|\<sys/types.h> e \<sys/timeb.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_ftime.c  
@@ -153,18 +163,21 @@ int main( void )
 }  
 ```  
   
-  **Segundos desde meia\-noite, o 1º de janeiro de 1970 \(UTC\): 1051553334**  
-**Milissegundos: 230**  
-**Minutos entre UTC e hora locais: 480**  
-**Sinalizador do horário de verão \(1 horário de verão de mídia é aplicado\): 1**  
-**A hora é segunda\-feira 28 de abril de 11: 08:54.230 2003**   
-## Equivalência do .NET Framework  
+```Output  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

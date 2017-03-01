@@ -1,80 +1,113 @@
 ---
-title: "cbrt, cbrtf, cbrtl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cbrt"
-  - "cbrtf"
-  - "cbrtl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cbrtl"
-  - "cbrt"
-  - "cbrtf"
-dev_langs: 
-  - "C++"
+title: cbrt, cbrtf, cbrtl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cbrt
+- cbrtf
+- cbrtl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cbrtl
+- cbrt
+- cbrtf
+dev_langs:
+- C++
+helpviewer_keywords:
+- cbrtl function
+- cbrtf function
+- cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# cbrt, cbrtf, cbrtl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d52b7425985ee23499c53004e925da86492b0a8c
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 Calcula a raiz cúbica.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-double cbrt(    double x  ); float cbrt(    float x  );  // C++ only long double cbrt(    long double x );  // C++ only float cbrtf(    float x  ); long double cbrtl(    long double x );  
+double cbrt(  
+   double x   
+);  
+float cbrt(  
+   float x   
+);  // C++ only  
+long double cbrt(  
+   long double x  
+);  // C++ only  
+float cbrtf(  
+   float x   
+);  
+long double cbrtl(  
+   long double x  
+);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
  Valor de ponto flutuante  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  As funções `cbrt` retornam a raiz cúbica de `x`.  
   
-|Entrada|Exceção SEH|`_matherr` Exceção|  
-|-------------|-----------------|------------------------|  
+|Entrada|Exceção SEH|Exceção `_matherr`|  
+|-----------|-------------------|--------------------------|  
 |± ∞, QNAN, IND|nenhum|nenhum|  
   
-## Comentários  
- Como C\+\+ permite a sobrecarga, você pode chamar sobrecargas de `cbrt` que usam o tipo `float` ou `long double`.  Em programas C, `cbrt` sempre usa e retorna `double`.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite a sobrecarga, você pode chamar sobrecargas de `cbrt` que usam o tipo `float` ou `long double`. Em programas C, `cbrt` sempre usa e retorna `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`cbrt`, `cbrtf`, `cbrtl`|\<math.h\>|\<cmath\>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`cbrt`, `cbrtf`, `cbrtl`|\<math.h>|\<cmath>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```c  
+```C  
 // crt_cbrt.c  
 // Compile using: cl /W4 crt_cbrt.c  
 // This program calculates a cube root.  
@@ -92,12 +125,15 @@ int main( void )
 }  
 ```  
   
-  **A raiz cúbica de \-64,64 é \-4,013289**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The cube root of -64.64 is -4.013289  
+```  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
- [log, logf, log10, log10f](../Topic/log,%20logf,%20log10,%20log10f.md)   
- [pow, powf, powl](../Topic/pow,%20powf,%20powl.md)
+ [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
+ [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)

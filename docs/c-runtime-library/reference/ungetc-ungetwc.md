@@ -1,8 +1,7 @@
 ---
 title: "ungetc, ungetwc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,26 +30,36 @@ f1_keywords:
   - "ungetc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _ungettc"
-  - "caracteres, retornando para o fluxo"
-  - "Função ungetc"
-  - "Função ungettc"
-  - "Função ungetwc"
+  - "ungetwc function"
+  - "ungettc function"
+  - "characters, pushing back onto stream"
+  - "_ungettc function"
+  - "ungetc function"
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# ungetc, ungetwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 Envia um caractere de volta para o fluxo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int ungetc(  
@@ -63,45 +72,45 @@ wint_t ungetwc(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Caractere a ser armazenado.  
+ O caractere a ser enviado.  
   
  `stream`  
- Ponteiro a estrutura de `FILE` .  
+ Ponteiro para a estrutura `FILE`.  
   
-## Valor de retorno  
- Se for bem\-sucedido, cada uma dessas funções retornará o argumento de caractere `c`*.* Se `c` não puder ser empurrado novamente ou se nenhum caractere tiver sido lido, a alteração no fluxo de entrada é desfeita e `EOF` retorna `ungetc`; retorna `WEOF` `ungetwc`.  Se `stream` é `NULL`, o parâmetro de manipulador inválido é invocado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, `EOF` ou `WEOF` será retornado e `errno` definido como `EINVAL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Se tiver sucesso, cada uma dessas funções retornará o argumento do caractere `c`*.* Se `c` não pode ser enviado de volta ou se nenhum caractere for lido, o fluxo de entrada não é alterado e `ungetc` retorna `EOF`; `ungetwc` retorna `WEOF`. Se `stream` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se for permitido que a execução continue, `EOF` ou `WEOF` será definido como `errno` é definido como `EINVAL`.  
   
- Para obter informações sobre esses e outros códigos de erro, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- A função `ungetc` empurra o caractere `c` de volta ao `stream` e limpa o indicador de fim do arquivo.  O fluxo deve estar aberto para leitura.  Uma operação de leitura subsequente em `stream` começa com `c`*.* Será ignorada uma tentativa de empurrar `EOF` no fluxo que usa `ungetc`.  
+## <a name="remarks"></a>Comentários  
+ A função `ungetc` envia o caractere `c` de volta para `stream` e limpa o indicador de final do arquivo. O fluxo deve estar aberto para leitura. Uma operação de leitura subsequente em `stream` começa com `c` *.* Uma tentativa de envio `EOF` para o fluxo usando `ungetc` será ignorada.  
   
- Os caracteres colocados no fluxo por `ungetc` podem ser apagados se `fflush`, `fseek`, `fsetpos` ou `rewind` for chamado antes que o caractere seja lido do fluxo.  O indicador de posição de arquivo terá o valor que tinha antes de os caracteres serem enviados de volta por push.  O armazenamento externo que corresponde ao fluxo é inalterado.  Em cada chamada bem\-sucedida do `ungetc` em um fluxo de texto, o indicador de posição do arquivo não é especificado até que todos os caracteres enviados por push sejam lidos ou descartados.  Em cada chamada `ungetc` bem\-sucedida em um fluxo binário, o indicador de posição de arquivo é diminuído; se o seu valor era 0 antes de uma chamada, o valor será indefinido após a chamada.  
+ Caracteres colocados no fluxo por `ungetc` podem ser apagados se `fflush`, `fseek`, `fsetpos` ou `rewind` é chamado antes que o caractere é lido do fluxo. O indicador de posição do arquivo terá o valor que tinha antes que os caracteres foram enviados de volta. O armazenamento externo correspondente para o fluxo não é alterado. Em uma chamada de `ungetc` bem-sucedida em um fluxo de texto, o indicador de posição do arquivo não é especificado até que todos os caracteres de retorno enviado sejam lidos ou descartados. Em cada chamada de `ungetc` bem-sucedida em um fluxo binário, o indicador de posição do arquivo será reduzido; se o valor for 0 antes de uma chamada, o valor será indefinido após a chamada.  
   
- Os resultados serão imprevisíveis se `ungetc` for chamada duas vezes sem uma operação de leitura ou de posicionamento de arquivo entre as duas chamadas.  Após uma chamada a `fscanf`, uma chamada a `ungetc` pode falhar, a menos que outra operação de leitura \(como `getc`\) seja executada.  Isso ocorre porque o próprio `fscanf` chama `ungetc`.  
+ Resultados serão imprevisíveis se `ungetc` for chamado duas vezes sem uma operação de leitura ou posicionamento de arquivo entre as duas chamadas. Após uma chamada para `fscanf`, uma chamada para `ungetc` pode falhar, a menos que outra operação de leitura (como `getc`) tenha sido executada. Isso ocorre porque `fscanf` chama `ungetc`.  
   
- `ungetwc` é uma versão de caracteres largos de `ungetc`.  No entanto, em cada chamada bem\-sucedida do `ungetwc` em um texto ou fluxo binário, o valor do indicador de posição do arquivo não é especificado até que todos os caracteres enviados por push sejam lidos ou descartados.  
+ `ungetwc` é uma versão de caractere largo de `ungetc`. No entanto, em cada chamada de `ungetwc` bem-sucedida em um fluxo de texto ou binário, o valor do indicador de posição do arquivo não é especificado até que todos os caracteres de retorno enviado sejam lidos ou descartados.  
   
- Essas funções são safe\-thread e bloqueiam dados confidenciais durante a execução.  Para uma versão sem bloqueio, consulte [\_ungetc\_nolock, \_ungetwc\_nolock](../Topic/_ungetc_nolock,%20_ungetwc_nolock.md).  
+ Essas funções são thread-safe e bloqueiam dados confidenciais durante a execução. Para ver uma versão sem bloqueio, consulte [_ungetc_nolock, _ungetwc_nolock](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettc`|`ungetc`|`ungetc`|`ungetwc`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`ungetc`|\<stdio.h\>|  
-|`ungetwc`|\<stdio.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`ungetc`|\<stdio.h>|  
+|`ungetwc`|\<stdio.h> ou \<wchar.h>|  
   
- O console não tem suporte em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Os manipuladores de fluxo padrão associados ao console — `stdin`, `stdout` e `stderr` — devem ser redirecionados antes que as funções de tempo de execução do C possam utilizá\-los em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_ungetc.c  
@@ -129,12 +138,16 @@ int main( void )
 }  
 ```  
   
-  **Número `521a` \= 521**  
-**Próximo caractere no fluxo \= “a”**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+      521aNumber = 521  
+Next character in stream = 'a'  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

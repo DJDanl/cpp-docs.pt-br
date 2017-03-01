@@ -1,8 +1,7 @@
 ---
 title: "Classe is_trivially_move_constructible | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,52 +19,66 @@ helpviewer_keywords:
   - "is_trivially_move_constructible"
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
 caps.latest.revision: 11
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_trivially_move_constructible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testa se o tipo tem trivial construtor de movimentação.  
+# <a name="istriviallymoveconstructible-class"></a>Classe is_trivially_move_constructible
+Testa se o tipo tem construtor de movimentação trivial.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Ty>  
-    struct is_trivially_move_constructible;  
+```
+template <class Ty>
+struct is_trivially_move_constructible;
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é uma classe que tem um simples construtor de movimentação, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe que tem um construtor de movimentação trivial; caso contrário, será falsa.  
   
- Um construtor de movimentação de uma classe `Ty` é trivial se:  
+ Um construtor de movimentação de uma classe `Ty` será trivial se:  
   
- ele é declarado implicitamente  
+ for implicitamente declarado  
   
- seus tipos de parâmetro são equivalentes da declaração implícita  
+ seus tipos de parâmetro forem equivalentes aos de uma declaração implícita  
   
- a classe `Ty` não tem nenhuma função virtual  
+ a classe `Ty` não tiver funções virtuais  
   
- a classe `Ty` não tem nenhum bases virtuais  
+ a classe `Ty` não tiver bases virtuais  
   
- a classe não possui nenhum membro de dados estático não voláteis  
+ a classe não tiver membros de dados não estáticos voláteis  
   
- o direct todas as bases da classe `Ty` têm construtores de movimentação trivial  
+ todas as bases diretas da classe `Ty` tiverem construtores de movimentação trivial  
   
- as classes de todos os membros de dados não estático do tipo de classe têm construtores de movimentação trivial  
+ as classes de todos os membros de dados não estáticos do tipo de classe tiverem construtores de movimentação trivial  
   
- as classes de todos os membros de dados não estático de matriz do tipo de classe têm construtores de movimentação trivial  
+ as classes de todos os membros de dados não estáticos da matriz de tipo de classe tiverem construtores de movimentação trivial  
   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+

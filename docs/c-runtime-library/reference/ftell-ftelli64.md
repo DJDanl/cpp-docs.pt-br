@@ -1,8 +1,7 @@
 ---
 title: "ftell, _ftelli64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,26 +29,36 @@ f1_keywords:
   - "ftell"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _ftelli64"
-  - "ponteiros de arquivo [C++]"
-  - "ponteiros de arquivo [C++], obtendo posição atual"
-  - "Função ftell"
-  - "Função ftelli64"
+  - "ftell function"
+  - "ftelli64 function"
+  - "_ftelli64 function"
+  - "file pointers [C++], getting current position"
+  - "file pointers [C++]"
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# ftell, _ftelli64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Obtém a posição atual de um ponteiro de arquivo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 long ftell(   
@@ -60,34 +69,34 @@ __int64 _ftelli64(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
- Estrutura de `FILE` de destino.  
+ Estrutura `FILE` de destino.  
   
-## Valor de retorno  
- `ftell` e `_ftelli64` retorna a posição atual do arquivo.  O valor retornado por `ftell` e por `_ftelli64` não reflita o deslocamento físico de byte para os fluxos abertos no modo de texto, como o modo de texto faz com que a conversão de retorno\- avanço de linha de carro.  Use `ftell` com `fseek`ou`_ftelli64`com`_fseeki64` para retornar para arquivar corretamente locais.  Em erro, `ftell`e`_ftelli64` invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, essas funções retornam – 1L e `errno` defina como uma das constantes, definido em. ERRNO.H.  A constante de `EBADF` significa que o argumento de `stream` não é um valor de ponteiro válido do arquivo ou não se refere a um arquivo aberto.  `EINVAL` significa que um argumento inválido de `stream` esteve passada para a função.  Dispositivos pôde buscar \(como os terminais e impressoras\), ou quando `stream` não se refere a um arquivo aberto, o valor de retorno será indefinido.  
+## <a name="return-value"></a>Valor de retorno  
+ `ftell` e `_ftelli64` retornam a posição do arquivo atual. O valor retornado por `ftell` e `_ftelli64` pode não refletir o deslocamento de bytes físico para fluxos abertos no modo de texto porque o modo de texto causa uma conversão de retorno de carro – avanço de linha. Use `ftell` com `fseek` ou `_ftelli64` com `_fseeki64` para retornar para os locais de arquivo corretamente. Quando ocorre um erro, `ftell` e `_ftelli64` invocam o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão –1L e definirão `errno` como uma de duas constantes, definida em ERRNO.H. A constante `EBADF` significa que o argumento `stream` não é um valor de ponteiro de arquivo válido ou não faz referência a um arquivo aberto. `EINVAL` significa que um argumento `stream` inválido foi passado para a função. Em dispositivos incapazes de fazer buscas (como terminais e impressoras) ou quando `stream` não se referir a um arquivo aberto, o valor retornado será indefinido.  
   
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.  
   
-## Comentários  
- As funções de `ftell` ede `_ftelli64`recuperam a posição atual do ponteiro de arquivo \(se houver\) associado a `stream`*.* A posição é expressa como um desvio relativo ao início do fluxo.  
+## <a name="remarks"></a>Comentários  
+ A funções `ftell` e `_ftelli64` recuperam a posição atual do ponteiro do arquivo (se houver) associado a `stream`*.* A posição é expressa como um deslocamento relativo ao início do fluxo.  
   
- Observe que quando um arquivo é aberto com dados, a posição atual do arquivo é determinada pela última operação de E\/S, não por onde a gravação seguinte ocorrerá.  Por exemplo, se um arquivo é aberto para anexar e a última operação era uma leitura, a posição do arquivo é onde a operação de leitura seguir não teria iniciado, onde a seguir começaria gravação. \(Quando um arquivo é aberto com, a posição do arquivo é movida para um fim de arquivo antes de qualquer operação de gravação.\) Se nenhuma operação de E\/S ocorreu ainda em um arquivo aberto, anexando a posição do arquivo é o início do arquivo.  
+ Observe que quando um arquivo é aberto para acrescentar dados, a posição do arquivo atual é determinada pela última operação de E/S e não por onde a gravação seguinte ocorreria. Por exemplo, se um arquivo for aberto para fazer um acréscimo e a última operação tiver sido uma leitura, a posição do arquivo será o ponto em que a operação de leitura seguinte começaria e não onde a próxima gravação começaria. (Quando um arquivo é aberto para fazer um acréscimo, a posição do arquivo é movida para o final do arquivo antes de qualquer operação de gravação.) Se nenhuma operação de E/S tiver ocorrido em um arquivo aberto para acréscimo, a posição do arquivo será o início do arquivo.  
   
- No modo de texto, CTRL\+Z é interpretado como um caractere de participante de Arquivo na entrada.  Em arquivos abertos leitura\/gravação, `fopen` e qualquer verificação de rotinas relacionada para um CTRL\+Z no final do arquivo e solte\-o se possível.  Isso é feito como usar a combinação de `ftell` e `fseek` ou `_ftelli64` e `_fseeki64`, para se mover dentro de um arquivo que termina com um CTRL\+Z pode fazer com que `ftell` ou `_ftelli64` se comportem de forma incorreta próximo do fim do arquivo.  
+ No modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação, `fopen` e todas as rotinas relacionadas verificam se há um CTRL+Z no fim do arquivo e o removem, se possível. Isso é feito porque usar a combinação de `ftell` e `fseek` ou de `_ftelli64` e `_fseeki64` para movimentação dentro de um arquivo que termina com CTRL+Z pode fazer com que `ftell` ou `_ftelli64` se comporte incorretamente perto do fim do arquivo.  
   
- Essa função bloqueia o thread de chamada durante a execução e em virtude disso é seguro para threads.  Para uma versão sem bloqueio, consulte `_ftell_nolock`.  
+ Essa função bloqueia o thread de chamada durante a execução e, portanto, é thread-safe. Para uma versão sem bloqueio, consulte `_ftell_nolock`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|Cabeçalhos opcionais|  
-|------------|--------------------------|--------------------------|  
-|`ftell`|\<stdio.h\>|\<errno.h\>|  
-|`_ftelli64`|\<stdio.h\>|\<errno.h\>|  
+|--------------|---------------------|----------------------|  
+|`ftell`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_ftell.c  
@@ -117,13 +126,16 @@ int main( void )
 }  
 ```  
   
-  **Posição depois de tentar ler 100 bytes: 100**   
-## Equivalência do .NET Framework  
+```Output  
+Position after trying to read 100 bytes: 100  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, \_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

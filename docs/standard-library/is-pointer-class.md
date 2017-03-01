@@ -1,8 +1,7 @@
 ---
 title: "Classe is_pointer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,47 +9,55 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
-  - "std.tr1.is_pointer"
   - "is_pointer"
-  - "std::tr1::is_pointer"
-  - "std.is_pointer"
   - "std::is_pointer"
   - "type_traits/std::is_pointer"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe is_pointer [TR1]"
+  - "is_pointer class"
   - "is_pointer"
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_pointer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ispointer-class"></a>Classe is_pointer
 Testa se o tipo é um ponteiro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_pointer;  
+template <class Ty>  
+struct is_pointer;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é um ponteiro para `void`, um ponteiro para um objeto ou um ponteiro para uma função ou um `cv-qualified` formulário de um deles, caso contrário, manterá false.  Observe que `is_pointer` mantém falso se `Ty` é um ponteiro para membro ou um ponteiro para função de membro.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um ponteiro para `void`, um ponteiro para um objeto ou um ponteiro para uma função ou uma forma `cv-qualified` de um deles; caso contrário, será falsa. Observe que `is_pointer` será falso se `Ty` for um ponteiro para um membro ou uma função de ponteiro para membro.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_pointer.cpp   
+```cpp  
+// std__type_traits__is_pointer.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -78,17 +85,20 @@ int main()
   
 ```  
   
-  **is\_pointer \< trivial \> \= \= false**  
-**is\_pointer \< int trivial:: \* \> \= \= false**  
-**is\_pointer \< trivial \* \> \= \= true**  
-**is\_pointer \< int \> \= \= false**  
-**is\_pointer \< int \* \> \= \= true**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_pointer<trivial> == false  
+is_pointer<int trivial::*> == false  
+is_pointer<trivial *> == true  
+is_pointer<int> == false  
+is_pointer<int *> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_member\_pointer](../standard-library/is-member-pointer-class.md)   
- [Classe is\_reference](../Topic/is_reference%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_member_pointer](../standard-library/is-member-pointer-class.md)   
+ [Classe is_reference](../standard-library/is-reference-class.md)

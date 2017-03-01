@@ -1,51 +1,65 @@
 ---
-title: "_aligned_free | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_free"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "aligned_free"
-  - "_aligned_free"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _aligned_free"
-  - "Função aligned_free"
+title: _aligned_free | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_free
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- aligned_free
+- _aligned_free
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_free function
+- aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _aligned_free
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8cd24f11b79ef4148c1a56521ef85593cf766e2e
+ms.lasthandoff: 02/25/2017
 
-Libera um bloco de memória que foi atribuído com [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
+---
+# <a name="alignedfree"></a>_aligned_free
+Libera um bloco de memória que foi alocado com [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void _aligned_free (  
@@ -53,26 +67,26 @@ void _aligned_free (
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `memblock`  
- Um ponteiro para o bloco de memória que foi retornado à função de `_aligned_malloc` ou de `_aligned_offset_malloc` .  
+ Um ponteiro para o bloco de memória que foi retornado para a função `_aligned_malloc` ou `_aligned_offset_malloc`.  
   
-## Comentários  
- `_aligned_free` é marcado `__declspec(noalias)`, o que significa que a função não é garantida para modificar as variáveis globais.  Para obter mais informações, consulte [noalias](../../cpp/noalias.md).  
+## <a name="remarks"></a>Comentários  
+ `_aligned_free` é marcado como `__declspec(noalias)`, o significa que há uma garantia de que a função não modifica variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).  
   
- Essa função não valida o parâmetro, diferentemente de outras funções \_aligned de CRT.  Se `memblock` é um ponteiro de `NULL` , essa função não simplesmente executa nenhuma ação.  Não altera `errno` e não chama o manipulador inválido do parâmetro.  Se ocorrer um erro na função devido a usar funções \_aligned anteriormente para atribuir o bloco de memória ou um desalinhamento de memória ocorre devido a qualquer calamidade imprevisto, a função gerencie um relatório de depuração de [Macros \_RPT, \_RPTF, \_RPTW, \_RPTFW](../Topic/_RPT,%20_RPTF,%20_RPTW,%20_RPTFW%20Macros.md).  
+ Essa função não valida seu parâmetro, ao contrário das outras funções de CRT _aligned. Se `memblock` for um ponteiro `NULL`, essa função simplesmente não executará nenhuma ação. Ela não altera `errno` nem chama o manipulador de parâmetro inválido. Se ocorrer um erro na função porque as funções _aligned não foram usadas anteriormente para alocar o bloco de memória ou se ocorrer um desalinhamento de memória devido a algum problema imprevisto, a função gerará um relatório de depuração das [Macros _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_aligned_free`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_free`|\<malloc.h>|  
   
-## Exemplo  
- Para obter mais informações, consulte [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
+## <a name="example"></a>Exemplo  
+ Para obter mais informações, consulte [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Alinhamento de dados](../../c-runtime-library/data-alignment.md)

@@ -1,8 +1,7 @@
 ---
 title: "Classe is_literal_type | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,34 +20,48 @@ helpviewer_keywords:
   - "is_literal_type"
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
 caps.latest.revision: 12
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_literal_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testa se um tipo pode ser usado como um `constexpr` variável ou ser construído, usado pelo ou retornado de `constexpr` funções.  
+# <a name="isliteraltype-class"></a>Classe is_literal_type
+Testa se um tipo pode ser usado como uma variável `constexpr` ou pode ser construído, usado ou retornado de funções `constexpr`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
+```
 template <class T>  
-    struct is_literal_type;  
+struct is_literal_type;
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de consulta.  
+ O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `T` é um *tipo literal*, caso contrário, manterá false. Um tipo de literal é `void`, um tipo escalar, um tipo de referência, uma matriz de tipo literal ou um tipo de classe literal. Um tipo de classe literal é um tipo de classe que tem um destruidor trivial, é um tipo de agregação ou tem pelo menos um não\-mover, copiar não `constexpr` construtor e todas as suas classes base e membros de dados não estáticos são tipos de literal não\-volátil. Embora o tipo de um literal é sempre um tipo literal, o conceito de um tipo literal inclui tudo o que o compilador pode avaliar como uma `constexpr` em tempo de compilação.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `T` for um *tipo literal*; caso contrário, será falsa. Um tipo literal é `void`, um tipo escalar, um tipo de referência, uma matriz de tipo literal ou um tipo de classe literal. Um tipo de classe literal é um tipo de classe que tem um destruidor trivial, é um tipo agregado ou tem pelo menos construtor `constexpr` que não é de movimentação e não é de cópia, e todas as suas classes base e membros de dados não estáticos são tipos literais não voláteis. Embora o tipo de um literal sempre seja um tipo literal, o conceito de um tipo literal inclui tudo que o compilador puder avaliar como `constexpr` em tempo de compilação.  
   
-## Requisitos  
- **Cabeçalho:** \< type\_traits \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+

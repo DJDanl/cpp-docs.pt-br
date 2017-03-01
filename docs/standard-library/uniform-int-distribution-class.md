@@ -1,60 +1,128 @@
 ---
-title: "Classe uniform_int_distribution | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1.uniform_int_distribution"
-  - "random/std::tr1::uniform_int_distribution"
-  - "uniform_int_distribution"
-  - "tr1::uniform_int_distribution"
-  - "std.tr1.uniform_int_distribution"
-  - "std::tr1::uniform_int_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe uniform_int_distribution"
+title: Classe uniform_int_distribution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- uniform_int_distribution
+- std::uniform_int_distribution
+- random/std::uniform_int_distribution
+- std::uniform_int_distribution::reset
+- random/std::uniform_int_distribution::reset
+- std::uniform_int_distribution::a
+- random/std::uniform_int_distribution::a
+- std::uniform_int_distribution::b
+- random/std::uniform_int_distribution::b
+- std::uniform_int_distribution::param
+- random/std::uniform_int_distribution::param
+- std::uniform_int_distribution::min
+- random/std::uniform_int_distribution::min
+- std::uniform_int_distribution::max
+- random/std::uniform_int_distribution::max
+- std::uniform_int_distribution::operator()
+- random/std::uniform_int_distribution::operator()
+- std::uniform_int_distribution::param_type
+- random/std::uniform_int_distribution::param_type
+- std::uniform_int_distribution::param_type::a
+- random/std::uniform_int_distribution::param_type::a
+- std::uniform_int_distribution::param_type::b
+- random/std::uniform_int_distribution::param_type::b
+- std::uniform_int_distribution::param_type::operator==
+- random/std::uniform_int_distribution::param_type::operator==
+- std::uniform_int_distribution::param_type::operator!=
+- random/std::uniform_int_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- uniform_int_distribution class
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
 caps.latest.revision: 20
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe uniform_int_distribution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 56ce46ec6b19a0ac5068193d5e1d3dfb0c9b4ee9
+ms.lasthandoff: 02/25/2017
 
-Gera uma distribuição de inteiro uniforme \(todo valor é igualmente provável\) em um intervalo de saídas inclusive\-inclusive.  
+---
+# <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
+Gera uma distribuição de inteiro uniforme (todo valor é igualmente provável) em um intervalo de saídas inclusive-inclusive.  
   
-## Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe  
 ```  
-template<class IntType = int> class uniform_int_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit uniform_int_distribution(IntType a = 0, IntType b = numeric_limits<IntType>::max());     explicit uniform_int_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     result_type a() const;     result_type b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+   class uniform_int_distribution {
+public:    
+   // types 
+   typedef IntType result_type;    
+   struct param_type;    
+   
+   // constructors and reset functions 
+   explicit uniform_int_distribution(
+      result_type a = 0, result_type b = numeric_limits<result_type>::max());
+   explicit uniform_int_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions 
+   template <class URNG>  
+      result_type operator()(URNG& gen);
+   template <class URNG>  
+      result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions 
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+};  
 ```  
+### <a name="parameters"></a>Parâmetros  
+*IntType*  
+O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
   
-#### Parâmetros  
- `IntType`  
- O tipo de resultado do inteiro assume `int` como padrão.  Para obter os tipos possíveis, consulte [\<random\>](../standard-library/random.md).  
-  
-## Comentários  
- A classe de modelo descreve uma distribuição inclusive\-inclusive que produz valores de um tipo integral especificado por usuário com uma distribuição, de forma que todo valor seja igualmente provável.  A tabela a seguir contém links para artigos sobre cada um dos membros.  
+## <a name="remarks"></a>Comentários  
+A classe de modelo descreve uma distribuição inclusive-inclusive que produz valores de um tipo integral especificado por usuário com uma distribuição, de forma que todo valor seja igualmente provável. A tabela a seguir contém links para artigos sobre cada um dos membros.  
   
 ||||  
 |-|-|-|  
-|[uniform\_int\_distribution::uniform\_int\_distribution](../Topic/uniform_int_distribution::uniform_int_distribution.md)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform\_int\_distribution::param\_type](../Topic/uniform_int_distribution::param_type.md)|  
+|[uniform_int_distribution::uniform_int_distribution](#uniform_int_distribution__uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform_int_distribution::param_type](#uniform_int_distribution__param_type)|  
   
- O membro da propriedade `a()` retorna o limite mínimo armazenado no momento da distribuição e `b()` retorna o limite máximo armazenado no momento.  Para essa classe de distribuição, esses valores mínimo e máximo são os mesmos retornados pelas funções de propriedade comuns `min()` e `max()`, descritas no tópico [\<random\>](../standard-library/random.md).  
+O membro da propriedade `a()` retorna o limite mínimo armazenado no momento da distribuição e `b()` retorna o limite máximo armazenado no momento. Para essa classe de distribuição, esses valores mínimo e máximo são os mesmos retornados pelas funções de propriedade comuns `min()` e `max()`.  
   
- Para obter mais informações sobre classes de distribuição e seus membros, consulte [\<random\>](../standard-library/random.md).  
+O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.  
+
+As funções membro `min()` e `max()` retornam o menor resultado possível e o maior resultado possível, respectivamente.  
   
-## Exemplo  
+A função membro `reset()` descarta qualquer valor armazenado em cache, de forma que o resultado da próxima chamada para `operator()` não dependerá dos valores obtidos do mecanismo antes da chamada.  
+  
+As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
+  
+Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
+  
+## <a name="example"></a>Exemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -107,33 +175,95 @@ int main()
   
     test(a_dist, b_dist, samples);  
 }  
-  
 ```  
   
-## Saída  
-  **Use CTRL\-Z para efetuar o bypass da entrada de dados e executar usando valores padrão.  Insira um valor inteiro para o limite mínimo da distribuição: 0**  
-**Insira um valor inteiro para o limite máximo da distribuição: 12**  
-**Insira um valor inteiro para a contagem de amostra: 200**  
-**lower bound \=\= 0**  
-**upper bound \=\= 12**  
-**Distribuição para 200 amostras:**  
- **0 :::::::::::::::**  
- **1 :::::::::::::::::::::**  
- **2 ::::::::::::::::::**  
- **3 :::::::::::::::**  
- **4 :::::::**  
- **5 :::::::::::::::::::::**  
- **6 :::::::::::::**  
- **7 ::::::::::**  
- **8 :::::::::::::::**  
- **9 :::::::::::::**  
- **10 ::::::::::::::::::::::**  
- **11 :::::::::::::**  
- **12 :::::::::::::::::**    
-## Requisitos  
- **Cabeçalho:** \<random\>  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter an integer value for the lower bound of the distribution: 0
+Enter an integer value for the upper bound of the distribution: 12
+Enter an integer value for the sample count: 200
+lower bound == 0
+upper bound == 12
+Distribution for 200 samples:
+    0 :::::::::::::::
+    1 :::::::::::::::::::::
+    2 ::::::::::::::::::
+    3 :::::::::::::::
+    4 :::::::
+    5 :::::::::::::::::::::
+    6 :::::::::::::
+    7 ::::::::::
+    8 :::::::::::::::
+    9 :::::::::::::
+   10 ::::::::::::::::::::::
+   11 :::::::::::::
+   12 :::::::::::::::::
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<random>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameuniformintdistributionuniformintdistributiona--uniformintdistributionuniformintdistribution"></a><a name="uniform_int_distribution__uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
+Constrói a distribuição.  
+  
+```  
+explicit uniform_int_distribution(
+   result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
+explicit uniform_int_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+*a*  
+O limite inferior para valor aleatório (inclusivo).  
+  
+*b*  
+O limite superior para valor aleatório (inclusivo).  
+  
+*parm*  
+A estrutura `param_type` usada para construir a distribuição.  
+  
+### <a name="remarks"></a>Comentários  
+**Pré-condição:** `a ≤ b`  
+  
+O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o valor *a* e cujo valor `b` armazenado contém o valor *b*.  
+  
+O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
+  
+##  <a name="a-nameuniformintdistributionparamtypea--uniformintdistributionparamtype"></a><a name="uniform_int_distribution__param_type"></a>  uniform_int_distribution::param_type  
+ Armazena os parâmetros da distribuição.  
+```cpp  
+struct param_type {  
+   typedef uniform_int_distribution<result_type> distribution_type;  
+   param_type(
+      result_type a = 0, result_type b = std::numeric_limits<result_type>::max());
+   result_type a() const;
+   result_type b() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+
+### <a name="parameters"></a>Parâmetros  
+*a*  
+O limite inferior para valor aleatório (inclusivo).  
+  
+*b*  
+O limite superior para valor aleatório (inclusivo).  
+  
+*right*  
+O objeto `param_type` a ser comparado a este.  
+  
+### <a name="remarks"></a>Comentários  
+**Pré-condição:** `a ≤ b`  
+  
+Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.  
+  
+## <a name="see-also"></a>Consulte também  
+ [\<random>](../standard-library/random.md)
+
+
+
+

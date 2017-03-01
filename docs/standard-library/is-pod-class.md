@@ -1,8 +1,7 @@
 ---
 title: "Classe is_pod | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,99 +9,94 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
-  - "std.tr1.is_pod"
   - "is_pod"
-  - "std::tr1::is_pod"
-  - "std.is_pod"
   - "std::is_pod"
   - "type_traits/std::is_pod"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe is_pod [TR1]"
+  - "is_pod class"
   - "is_pod"
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_pod
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Testa se o tipo é POD.  
+# <a name="ispod-class"></a>Classe is_pod
+Testa se o tipo é um POD.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Ty>  
-    struct is_pod;  
+```
+template <class T>
+struct is_pod;
 ```  
   
-#### Parâmetros  
- `Ty`  
- O tipo a ser consultado.  
+#### <a name="parameters"></a>Parâmetros  
+*T*  
+O tipo a ser consultado.  
   
-## Comentários  
- `is_pod<Ty>::value` é `true` se o tipo `Ty` é dados antigos simples \(POD\).  Caso contrário, será `false`.  
+## <a name="remarks"></a>Comentários  
+`is_pod<T>::value` será `true` se o tipo *T* for POD (Plain Old Data). Caso contrário, será `false`.  
   
- Ponteiro para tipos de membro, tipos de enumeração, tipos de ponteiro e tipos aritméticos são POD.  
+Tipos aritméticos, tipos de enumeração, tipos de ponteiro e tipos de ponteiro para membro são POD.  
   
- Uma versão VC qualificado de um tipo POD em si é um tipo POD.  
+Uma versão qualificada para CV de um tipo POD também é um tipo POD.  
   
- Uma matriz de POD é POD.  
+Uma matriz de POD também é POD.  
   
- Uma estrutura ou união, todos os membros de dados não estáticos são POD, é POD se ele tem:  
+Um struct ou união, de que todos os membros de dados não estáticos forem POD, também será POD se não tiver:  
   
--   Nenhum construtor declarado pelo usuário.  
+-   nenhum construtor declarado pelo usuário.  
   
--   Não há membros de dados de não estático particular ou protegido.  
+-   nenhum membro de dados não estáticos particular ou protegido.  
   
 -   Nenhuma classe base.  
   
--   Não há funções virtuais.  
+-   nenhuma função virtual.  
   
--   Nenhum membro de dados não estático do tipo de referência.  
+-   nenhum membro de dados não estáticos do tipo de referência.  
   
--   Nenhum operador de atribuição de cópia definido pelo usuário.  
+-   nenhum operador de atribuição de cópia definido pelo usuário.  
   
--   Nenhum destruidor definido pelo usuário.  
+-   nenhum destruidor definido pelo usuário.  
   
- Portanto, você pode recursivamente compilação POD estruturas e matrizes que contêm matrizes e structs POD.  
+Portanto, é possível compilar recursivamente structs e matrizes POD que contêm structs e matrizes POD.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_pod.cpp   
+```cpp  
+// std__type_traits__is_pod.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
   
-struct trivial   
-    {   
+struct trivial {   
     int val;   
-    };   
+};   
   
-struct throws   
-    {   
-    throws() throw(int)   
-        {   
-        }   
-  
-    throws(const throws&) throw(int)   
-        {   
-        }   
-  
-    throws& operator=(const throws&) throw(int)   
-        {   
-        }   
+struct throws {   
+    throws() {}  // User-declared ctor, so not POD
   
     int val;   
-    };   
+};   
   
-int main()   
-    {   
+int main() {   
     std::cout << "is_pod<trivial> == " << std::boolalpha   
         << std::is_pod<trivial>::value << std::endl;   
     std::cout << "is_pod<int> == " << std::boolalpha   
@@ -111,17 +105,22 @@ int main()
         << std::is_pod<throws>::value << std::endl;   
   
     return (0);   
-    }  
-  
+}  
 ```  
   
-  **is\_pod \< trivial \> \= \= true**  
-**is\_pod \< int \> \= \= true**  
-**is\_pod \< lança \> \= \= false**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_pod<trivial> == true  
+is_pod<int> == true  
+is_pod<throws> == false  
+```  
   
- **Namespace:** std  
+## <a name="requirements"></a>Requisitos  
+**Cabeçalho:** \<type_traits>  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)
+**Namespace:** std  
+  
+## <a name="see-also"></a>Consulte também  
+[<type_traits>](../standard-library/type-traits.md)
+
+
+

@@ -1,8 +1,7 @@
 ---
 title: "Classe moneypunct_byname | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,46 +16,61 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe moneypunct_byname"
+  - "moneypunct_byname class"
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
 caps.latest.revision: 22
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe moneypunct_byname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="moneypunctbyname-class"></a>Classe moneypunct_byname
+Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta `moneypunct` de uma determinada localidade, permitindo a formatação do campo de entrada monetário ou campos de saída monetários.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```
+template <class CharType, bool Intl = false>
+class moneypunct_byname : public moneypunct<CharType, Intl>
+{
+public:
+    explicit moneypunct_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
 
-Uma classe derivada do modelo que descreve um objeto que pode servir como uma faceta de `moneypunct` de uma localidade específica, habilitando o campo monetário de entrada de formatação ou os campos monetários de saída.  
-  
-## Sintaxe  
-  
-```  
-template<class CharType, bool Intl = false>  
-class moneypunct_byname : public moneypunct<CharType, Intl>  
-{  
-public:  
-    explicit moneypunct_byname(  
-        const char *_Locname,  
-        size_t _Refs = 0  
-    );  
-    explicit moneypunct_byname(  
-        const string& _Locname,  
-        size_t _Refs = 0  
-    );   
-protected:  
-    virtual ~moneypunct_byname();  
-};  
+    explicit moneypunct_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual ~moneypunct_byname();
+
+};
 ```  
   
-## Comentários  
- O comportamento é determinado pela localidade nomeada `_Locname`.  Cada construtor inicializa o objeto base com [moneypunct](../Topic/moneypunct::moneypunct.md)\<CharType, internacional\>\(`_Refs`\).  
+## <a name="remarks"></a>Comentários  
+ Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [moneypunct](../standard-library/moneypunct-class.md#moneypunct__moneypunct)\<CharType, Intl>( `_Refs`).  
   
-## Requisitos  
- localidade \<de**Cabeçalho:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<locale>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

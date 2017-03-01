@@ -1,8 +1,7 @@
 ---
 title: "_CrtSetBreakAlloc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,55 +27,67 @@ f1_keywords:
   - "_CrtSetBreakAlloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _CrtSetBreakAlloc"
-  - "Função CrtSetBreakAlloc"
+  - "CrtSetBreakAlloc function"
+  - "_CrtSetBreakAlloc function"
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _CrtSetBreakAlloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Estabelece um ponto de interrupção em um número de ordem de alocação de objeto especificado \(somente versão de depuração\).  
+# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+Estabelece um ponto de interrupção em um número de ordem de alocação de objeto especificado (somente versão de depuração).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-long _CrtSetBreakAlloc(     long lBreakAlloc  );  
+      long _CrtSetBreakAlloc(   
+   long lBreakAlloc   
+);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *lBreakAlloc*  
  Número da ordem de alocação para qual o ponto de interrupção deve ser definido.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Retorna o número da ordem de alocação do objeto anterior que continha um ponto de interrupção definido.  
   
-## Comentários  
- `_CrtSetBreakAlloc` permite que um aplicativo realize detecção de vazamento de memória, interrompendo em um ponto específico da alocação de memória e rastreando a origem da solicitação.  A função usa o número da ordem de alocação do objeto sequencial atribuído ao bloco de memória quando ele foi alocado no heap.  Quando [\_DEBUG](../Topic/_DEBUG.md) não está definido, as chamadas a `_CrtSetBreakAlloc` são removidas durante o pré\-processamento.  
+## <a name="remarks"></a>Comentários  
+ `_CrtSetBreakAlloc` permite que um aplicativo realize a detecção de perda de memória interrompendo em um ponto específico da alocação de memória e rastreando de volta até a origem da solicitação. A função usa o número da ordem de alocação do objeto sequencial atribuído ao bloco de memória quando ele foi alocado no heap. Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, as chamadas a `_CrtSetBreakAlloc` são removidas durante o pré-processamento.  
   
- O número da ordem de alocação do objeto é armazenado no campo *lRequest* da estrutura **\_CrtMemBlockHeader**, definida em Crtdbg.h.  Quando as informações sobre um bloco de memória são relatadas por uma das funções de despejo de depuração, esse número é colocado entre chaves, como {36}.  
+ O número de ordem de alocação do objeto é armazenado no campo *lRequest* da estrutura **_CrtMemBlockHeader**, definida em Crtdbg.h. Quando as informações sobre um bloco de memória são relatadas por uma das funções de despejo de depuração, esse número é colocado entre chaves, como {36}.  
   
- Para obter mais informações sobre como `_CrtSetBreakAlloc` pode ser usado com outras funções de gerenciamento de memória, consulte [Solicitações de alocação da heap de rastreamento](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Track_Heap_Allocation_Requests).  Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes da pilha de depuração CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Para obter mais informações sobre como `_CrtSetBreakAlloc` pode ser usado com outras funções de gerenciamento de memória, consulte [Acompanhando solicitações de alocação de heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_CrtSetBreakAlloc`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Libraries  
  Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_setbrkal.c  
@@ -122,8 +133,8 @@ int main( )
 }  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)

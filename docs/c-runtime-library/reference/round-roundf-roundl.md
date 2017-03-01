@@ -1,8 +1,7 @@
 ---
 title: "round, roundf, roundl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,22 +32,33 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Função round"
-  - "Função roundf"
-  - "Função roundl"
+  - "roundl function"
+  - "round function"
+  - "roundf function"
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 caps.latest.revision: 6
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# round, roundf, roundl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="round-roundf-roundl"></a>round, roundf, roundl
 Arredonda um valor de ponto flutuante para o inteiro mais próximo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double round(   
@@ -68,29 +78,29 @@ long double roundl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
- O valor exponencial de ponto flutuante para arredondar.  
+ O valor do ponto flutuante a ser arredondado.  
   
-## Valor de retorno  
- As funções de `round` retornam um valor de ponto flutuante que representa o inteiro mais próximo a `x`.  Os valores incompletos são arredondados para cima, independentemente da configuração do modo por arredondamento de ponto flutuante.  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ As funções `round` retornam um valor de ponto flutuante que representa o inteiro mais próximo a `x`. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
-|-------------|-----------------|---------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|nenhum|`_DOMAIN`|  
   
-## Comentários  
- Como o C\+\+ permite a sobrecarga, você pode chamar as sobrecargas de `round` que levam e retornam valores `float` e `long double`.  Em um programa em C, `round` sempre obterá e retornará um `double`.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `round` que tomam e retornam valores de `float` e `long double`. Em um programa C, `round` sempre toma e retorna um `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`round`, `roundf`, `roundl`|\<math.h\>|  
+|-------------|---------------------|  
+|`round`, `roundf`, `roundl`|\<math.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_round.c  
@@ -117,21 +127,24 @@ int main( void )
 }  
 ```  
   
-  **o arredondamento de \(2,499999\) é 2**  
-**o arredondamento de \(\-2,499999\) é \-2**  
-**o arredondamento de \(2,800000\) é 3**  
-**o arredondamento de \(\-2,800000\) é \-3**  
-**o arredondamento de \(2,500000\) é 3**  
-**o arredondamento de \(\-2,500000\) é \-3**   
-## Equivalência do .NET Framework  
+```Output  
+round(2.499999) is 2  
+round(-2.499999) is -2  
+roundf(2.800000) is 3  
+roundf(-2.800000) is -3  
+roundl(2.500000) is 3  
+roundl(-2.500000) is -3  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Math::Round](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../Topic/fmod,%20fmodf.md)   
- [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/pt-br/312fd869-a9c0-4107-bb23-ab8299d04385)   
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
+ [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/en-us/312fd869-a9c0-4107-bb23-ab8299d04385)   
  [lround, lroundf, lroundl, llround, llroundf, llroundl](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)   
- [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/pt-br/15111e73-331d-41d1-81b7-3e10df894848)   
+ [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/en-us/15111e73-331d-41d1-81b7-3e10df894848)   
  [rint, rintf, rintl](../../c-runtime-library/reference/rint-rintf-rintl.md)

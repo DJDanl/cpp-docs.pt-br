@@ -1,57 +1,71 @@
 ---
-title: "_chmod, _wchmod | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chmod"
-  - "_wchmod"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_chmod"
-  - "_wchmod"
-  - "wchmod"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _chmod"
-  - "Função _wchmod"
-  - "Função chmod"
-  - "permissões de arquivo [C++]"
-  - "Arquivos  [C++], alterando permissões"
-  - "Função wchmod"
+title: _chmod, _wchmod | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chmod
+- _wchmod
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chmod
+- _wchmod
+- wchmod
+dev_langs:
+- C++
+helpviewer_keywords:
+- _chmod function
+- wchmod function
+- file permissions [C++]
+- chmod function
+- files [C++], changing permissions
+- _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 caps.latest.revision: 23
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _chmod, _wchmod
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 48d359b47a2372182900bf3bbfac0742de02cd5c
+ms.lasthandoff: 02/25/2017
 
-Altera as configurações de arquivo permissão.  
+---
+# <a name="chmod-wchmod"></a>_chmod, _wchmod
+Altera as configurações de permissão de arquivo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -65,50 +79,50 @@ int _wchmod(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `filename`  
- Nome do arquivo.  
+ Nome do arquivo existente.  
   
  `pmode`  
  Configuração de permissão para o arquivo.  
   
-## Valor de retorno  
- Essas funções retornam 0 se a configuração de permissão é alterada com êxito.  Um valor de retorno – 1 indica falha.  Se o arquivo especificado não pôde ser encontrado, `errno` é definido como `ENOENT`; se um parâmetro for inválido, `errno` está definido como `EINVAL`.  
+## <a name="return-value"></a>Valor retornado  
+ Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor retornado de -1 indica uma falha. Se não for possível localizar o arquivo especificado, `errno` será definido como `ENOENT`; se um parâmetro for inválido, `errno` será definido como `EINVAL`.  
   
-## Comentários  
- As alterações de função de `_chmod` a configuração de permissão do arquivo especificado por `filename`*.* A configuração de permissão controla o acesso de leitura e gravação no arquivo.  A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes manifestas, definido no sistema \\ Stat.h.  
+## <a name="remarks"></a>Comentários  
+ A função `_chmod` altera a configuração de permissão do arquivo especificado por `filename`*.* A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat.h.  
   
  `_S_IWRITE`  
- Gravando permitida.  
+ Gravação permitida.  
   
  `_S_IREAD`  
- Leitura permitidas.  
+ Leitura permitida.  
   
  `_S_IREAD | _S_IWRITE`  
  Leitura e gravação permitidas.  
   
- Quando ambas as constantes são fornecidas, são adicionadas com o operador bit a bit de `OR` \(          `|` \).  Se a permissão de gravação não for especificado, o arquivo é somente leitura.  Observe que todos os arquivos são sempre legíveis; não é possível atribuir a permissão somente gravação.  Portanto, os modos `_S_IWRITE` e `_S_IREAD | _S_IWRITE` são equivalentes.  
+ Quando as duas constantes são fornecidas, elas são unidas com o operador `OR` bit a bit (`|`). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos `_S_IWRITE` e `_S_IREAD | _S_IWRITE` são equivalentes.  
   
- `_wchmod` é uma versão de caractere longo de `_chmod`; o argumento `filename` para `_wchmod` é uma cadeia de caractere longo.  Caso contrário, `_wchmod` e `_chmod`, ao contrário, se comportam de forma idêntica.  
+ A função `_wchmod` é uma versão de caractere largo da função `_chmod`; o argumento `filename` para `_wchmod` é uma cadeia de caracteres larga. Caso contrário, `_wchmod` e `_chmod` se comportam de forma idêntica.  
   
- Essa função valida seus parâmetros.  Se `pmode` não é uma combinação de uma das constantes manifestas nem inserir um conjunto de substituição de constantes, a função ignora somente as.  Se `filename` é `NULL`, o parâmetro de manipulador inválido é invocado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, `errno` está definido como `EINVAL` e a função retorna \-1.  
+ Essa função valida seus parâmetros. Se `pmode` não for uma combinação de uma das constantes do manifesto nem incorporar um conjunto alternativo de constantes, a função simplesmente as ignorará. Se `filename` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EINVAL` e a função retornará -1.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_chmod`|\<io.h\>|\<o sistema\/types.h, o sistema\>\<\/stat.h, errno.h\>\<\>|  
-|`_wchmod`|\<io.h ou\> wchar.h \<\>|\<o sistema\/types.h, o sistema\>\<\/stat.h, errno.h\>\<\>|  
+|-------------|---------------------|---------------------|  
+|`_chmod`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
+|`_wchmod`|\<io.h> ou \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_chmod.c  
@@ -172,19 +186,29 @@ int main( void )
 }   
 ```  
   
-  **`Uma linha de texto.`  `Uma linha de texto.` Modo definido como somente leitura**  
-**O acesso foi negado.**  
-**Modo definido como leitura\/gravação**   
-## Equivalência do .NET Framework  
+```Output  
+  
+A line of text.  
+  
+```  
+  
+```Output  
+  
+      A line of text.Mode set to read-only  
+Access is denied.  
+Mode set to read/write  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
   
 -   [System::Security::Permissions::FileIOPermission](https://msdn.microsoft.com/en-us/library/system.security.permissions.fileiopermission.aspx)  
   
-## Consulte também  
- [Manipulação de arquivos](../../c-runtime-library/file-handling.md)   
- [\_access, \_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_fstat, \_fstat32, \_fstat64, \_fstati64, \_fstat32i64, \_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [Funções \_stat, \_wstat](../../c-runtime-library/reference/stat-functions.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [Funções _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)

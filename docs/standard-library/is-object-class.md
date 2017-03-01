@@ -1,8 +1,7 @@
 ---
 title: "Classe is_object | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,46 +10,54 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_object"
-  - "std.tr1.is_object"
-  - "std::tr1::is_object"
-  - "std.is_object"
   - "std::is_object"
   - "type_traits/std::is_object"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe is_object [TR1]"
+  - "is_object class"
   - "is_object"
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_object
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="isobject-class"></a>Classe is_object
 Testa se o tipo é um tipo de objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_object;  
+template <class Ty>  
+struct is_object;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo mantém falso se o tipo `Ty` é um tipo de referência, um tipo de função ou nulo, ou um `cv-qualified` formulário de um deles, se aplica.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será falsa se o tipo `Ty` for um tipo de referência, um tipo de função ou nulo ou uma forma `cv-qualified` de um deles; caso contrário, será verdadeira.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_object.cpp   
+```cpp  
+// std__type_traits__is_object.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -83,16 +90,19 @@ int main()
   
 ```  
   
-  **is\_object \< trivial \> \= \= true**  
-**is\_object \< funcional \> \= \= true**  
-**is\_object \< trivial & \> \= \= false**  
-**is\_object \< float\(\) \> \= \= false**  
-**is\_object \< void \> \= \= false**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_object<trivial> == true  
+is_object<functional> == true  
+is_object<trivial&> == false  
+is_object<float()> == false  
+is_object<void> == false  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_function](../standard-library/is-function-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_function](../standard-library/is-function-class.md)

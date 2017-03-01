@@ -1,8 +1,7 @@
 ---
 title: "_set_doserrno | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,50 +28,60 @@ f1_keywords:
   - "set_doserrno"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Variável global _doserrno"
-  - "Função _set_doserrno"
-  - "variável global doserrno"
-  - "Função set_doserrno"
+  - "_set_doserrno function"
+  - "doserrno global variable"
+  - "set_doserrno function"
+  - "_doserrno global variable"
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _set_doserrno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Define o valor da variável global de [\_doserrno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) .  
+# <a name="setdoserrno"></a>_set_doserrno
+Obtém o valor atual da variável global [_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-errno_t _set_doserrno(   
-   int value   
+errno_t _set_doserrno(   
+   int value   
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `value`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `value`  
  O novo valor de `_doserrno`.  
   
-## Valor de retorno  
- Retornará nulo se com êxito.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna zero se bem-sucedido.  
   
-## Comentários  
- Os valores possíveis são definidos em Errno.h.  
+## <a name="remarks"></a>Comentários  
+ Os possíveis valores são definidos em Errno.h.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|  
-|------------|--------------------------|------------------------|  
-|`_set_doserrno`|\<stdlib.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_set_doserrno`|\<stdlib.h>|\<errno.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Consulte também  
- [\_get\_doserrno](../Topic/_get_doserrno.md)   
- [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)
+## <a name="see-also"></a>Consulte também  
+ [_get_doserrno](../../c-runtime-library/reference/get-doserrno.md)   
+ [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

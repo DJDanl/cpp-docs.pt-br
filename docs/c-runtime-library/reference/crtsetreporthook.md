@@ -1,50 +1,65 @@
 ---
-title: "_CrtSetReportHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetReportHook"
-  - "CrtSetReportHook"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função CrtSetReportHook"
-  - "Função _CrtSetReportHook"
+title: _CrtSetReportHook | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetReportHook
+- CrtSetReportHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetReportHook function
+- _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _CrtSetReportHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0815dc124612d4f7d3acd3df147bbfb4e3a5fda0
+ms.lasthandoff: 02/25/2017
 
-Instala uma função definida pelo cliente de relatório enganchando a no processo de relatório de depuração de tempo de execução C \(versão de depuração somente\).  
+---
+# <a name="crtsetreporthook"></a>_CrtSetReportHook
+Instala uma função de relatório definida pelo cliente vinculando-a ao processo de relatório de depuração em tempo de execução C (somente versão de depuração).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _CRT_REPORT_HOOK _CrtSetReportHook(   
@@ -52,47 +67,47 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `reportHook`  
- Nova função definida pelo cliente de relatório para conectar no relatório de depuração de tempo de execução C o processo.  
+ Nova função de relatório definida pelo cliente a ser vinculada ao processo de relatório de depuração em tempo de execução C.  
   
-## Valor de retorno  
- Retorna a função definida pelo cliente anterior do relatório.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna a função de relatório anterior definida pelo cliente.  
   
-## Comentários  
- `_CrtSetReportHook` permite que um aplicativo usar sua própria função de relatório no processo de relatório da biblioteca de depuração de tempo de execução C.  No resultado, sempre que [\_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) é chamado para gerar um relatório de depuração, a função de relatório do aplicativo é chamada primeiro.  Essa funcionalidade permite que um aplicativo executar operações como relatórios de depuração de filtragem para que possa se concentrarem em tipos específicos de alocação ou enviar um relatório aos destinos não disponíveis usando `_CrtDbgReport`.  Quando [\_DEBUG](../Topic/_DEBUG.md) não for definido, as chamadas para `_CrtSetReportHook` serão removidos durante pré\-processamento.  
+## <a name="remarks"></a>Comentários  
+ `_CrtSetReportHook` permite que um aplicativo use sua própria função de relatório no processo de relatório da biblioteca de depuração em tempo de execução C. Como resultado, sempre que [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) for chamado para gerar um relatório de depuração, a função de relatório do aplicativo será chamada primeiro. Essa funcionalidade permite que um aplicativo execute operações como filtragem de relatórios de depuração, para ele possa se concentrar em tipos de alocação específicos ou enviar um relatório para os destinos não disponíveis com o uso de `_CrtDbgReport`. Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, as chamadas a `_CrtSetReportHook` são removidas durante o pré-processamento.  
   
- Para uma versão mais robusta de `_CrtSetReportHook`, consulte [\_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
+ Para obter uma versão mais robusta de `_CrtSetReportHook`, consulte [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
   
- A função de `_CrtSetReportHook` instalar a nova função definida pelo cliente de relatório especificada em `reportHook` e retorna o gancho cliente definido anterior.  O exemplo a seguir demonstra como um gancho definido pelo cliente de relatório deve ser protótipo:  
+ A função `_CrtSetReportHook` instala a nova função de relatório definida pelo cliente especificada em `reportHook` e retorna o gancho anterior definido pelo cliente. O seguinte exemplo demonstra como um gancho de relatório definido pelo cliente deve ser prototipado:  
   
 ```  
 int YourReportHook( int reportType, char *message, int *returnValue );  
 ```  
   
- onde `reportType` é o tipo de relatório de depuração \(`_CRT_WARN`, `_CRT_ERROR`, ou `_CRT_ASSERT`\), `message` a mensagem é completamente montada do usuário de depuração a ser contidas no relatório e, `returnValue` é o valor especificado pela função definida pelo cliente de relatório que deve ser retornada por `_CrtDbgReport`.  Para obter uma descrição completa dos tipos de relatórios disponíveis, consulte a função de [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) .  
+ em que `reportType` é o tipo de relatório de depuração (`_CRT_WARN`, `_CRT_ERROR` ou `_CRT_ASSERT`), `message` é a mensagem do usuário de depuração totalmente montada a ser contida no relatório e `returnValue` é o valor especificado pela função de relatório definida pelo cliente que deve ser retornada por `_CrtDbgReport`. Para obter uma descrição completa dos tipos de relatório disponíveis, consulte a função [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
   
- Se a função definida pelo cliente de relatório manipula completamente a mensagem de depuração de modo que nenhum relatório adicional será necessário, a função deve retornar `TRUE`.  Quando a função retorna `FALSE`, `_CrtDbgReport` é chamado para gerar o relatório de depuração usando as configurações atuais para o tipo de relatório, o modo, e o arquivo.  Além disso, especificando o valor de retorno de `_CrtDbgReport` em `returnValue`, o aplicativo também pode controlar se uma quebra de depuração ocorre.  Para obter uma descrição completa de como o relatório de depuração estiver configurado e gerada, consulte `_CrtSetReportMode`, [\_CrtSetReportFile](../Topic/_CrtSetReportFile.md), e `_CrtDbgReport`.  
+ Se a função de relatório definida pelo cliente manipular totalmente a mensagem de depuração, de modo que nenhum relatório adicional seja necessário, a função deverá retornar `TRUE`. Quando a função retorna `FALSE`, `_CrtDbgReport` é chamado para gerar o relatório de depuração usando as configurações atuais para o tipo de relatório, modo e arquivo. Além disso, ao especificar o valor retornado `_CrtDbgReport` em `returnValue`, o aplicativo também poderá controlar se uma interrupção de depuração deverá ocorrer. Para obter uma descrição completa de como o relatório de depuração é configurado e gerado, consulte `_CrtSetReportMode`, [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) e `_CrtDbgReport`.  
   
- Para obter mais informações sobre como usar outras funções gancho\- capazes de tempo de execução e de escrever suas próprias funções definidas pelo cliente de gancho, consulte [Gravação da função de gancho de depuração](../Topic/Debug%20Hook%20Function%20Writing.md).  
+ Para obter mais informações sobre como usar outras funções em tempo de execução compatíveis com gancho e escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
->  Se seu aplicativo for compilado com `/clr` e a função de relatório é chamada depois que o aplicativo encerrou o main CLR, lançará uma exceção se a função chamar qualquer CRT do relatório funcionam.  
+>  Se o aplicativo for compilado com `/clr` e a função de relatório for chamada depois que o aplicativo tiver saído da principal, o CLR gerará uma exceção, caso a função de relatório chame todas as funções CRT.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetReportHook`|\<crtdbg.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Versões de depuração das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md) somente.  
+## <a name="libraries"></a>Libraries  
+ Somente versões de depuração de [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   
- [\_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+ [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)

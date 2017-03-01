@@ -1,8 +1,7 @@
 ---
-title: "asctime_s, _wasctime_s | Microsoft Docs"
+title: "asctime_s, wasctime_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,28 +30,38 @@ f1_keywords:
   - "_tasctime_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _tasctime_s"
-  - "Função _wasctime_s"
-  - "Função asctime_s"
-  - "Função tasctime_s"
-  - "conversão de estrutura de tempo"
-  - "hora, convertendo"
-  - "Função wasctime_s"
+  - "tasctime_s function"
+  - "_tasctime_s function"
+  - "time structure conversion"
+  - "wasctime_s function"
+  - "time, converting"
+  - "_wasctime_s function"
+  - "asctime_s function"
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 caps.latest.revision: 29
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# asctime_s, _wasctime_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Converter uma estrutura de tempo de `tm` a uma cadeia de caracteres.  Essas funções são versões de [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+# <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
+Converter uma estrutura de hora `tm` para uma cadeia de caracteres. Essas funções são versões de [asctime, wasctime](../../c-runtime-library/reference/asctime-wasctime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 errno_t asctime_s(   
@@ -77,75 +86,75 @@ errno_t _wasctime_s(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `buffer`  
- \[out\] de ponteiro para um buffer para armazenar o resultado da cadeia de caracteres.  Essa função assume um ponteiro para um local de memória válida com um tamanho especificado por `numberOfElements`.  
+ [out] Um ponteiro para um buffer para armazenar o resultado de cadeia de caracteres. Essa função assume um ponteiro para um local de memória válido com um tamanho especificado por `numberOfElements`.  
   
  `numberOfElements`  
- \[in\] o tamanho do buffer usado para armazenar o resultado.  
+ [in] O tamanho do buffer usado para armazenar o resultado.  
   
  `_tm`  
- \[in\] estrutura de data\/hora.  Essa função assume um ponteiro para um objeto válido de `struct``tm` .  
+ [in] Estrutura de hora/data. Essa função assume um ponteiro para um objeto `struct``tm` válido.  
   
-## Valor de retorno  
- Nulo se com êxito.  Se houver uma falha, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução for permitida continuar, o valor de retorno é um código de erro.  Os códigos de erro são definidos em ERRNO.H.  Para obter mais informações, consulte [Constantes errno](../../c-runtime-library/errno-constants.md).  Os códigos de erro retornados reais para cada condição de erro são mostrados na tabela a seguir.  
+## <a name="return-value"></a>Valor de retorno  
+ Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO.H. Para obter mais informações, consulte [Constantes errno](../../c-runtime-library/errno-constants.md). Os códigos de erro reais retornados para cada condição de erro são mostrados na tabela a seguir.  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|`buffer`|`numberOfElements`|`tm`|Return|Valor em `buffer`|  
+|`buffer`|`numberOfElements`|`tm`|Valor de|Valor em `buffer`|  
 |--------------|------------------------|----------|------------|-----------------------|  
-|`NULL`|Alguns|Alguns|`EINVAL`|Não modificados|  
-|Não`NULL` \(pontos para a memória válido\)|0|Alguns|`EINVAL`|Não modificados|  
-|Não `NULL`|0\< tamanhos \< 26|Alguns|`EINVAL`|Cadeia de caracteres vazia|  
-|Não `NULL`|\>\= 26|`NULL`|`EINVAL`|Cadeia de caracteres vazia|  
-|Não `NULL`|\>\= 26|Estrutura de hora inválido ou fora dos valores de intervalo para componentes de hora|`EINVAL`|Cadeia de caracteres vazia|  
+|`NULL`|Qualquer|Qualquer|`EINVAL`|Não modificado|  
+|Não `NULL` (aponta para a memória válida)|0|Qualquer|`EINVAL`|Não modificado|  
+|Não é `NULL`|0< tamanho < 26|Qualquer|`EINVAL`|Cadeia de caracteres vazia|  
+|Não é `NULL`|>= 26|`NULL`|`EINVAL`|Cadeia de caracteres vazia|  
+|Não é `NULL`|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|`EINVAL`|Cadeia de caracteres vazia|  
   
 > [!NOTE]
->  As condições de erro para `wasctime_s` são semelhantes a `asctime_s` com exceção do limite de tamanho é medido no word.  
+>  Condições de erro para `wasctime_s` são semelhantes a `asctime_s`, com a exceção de que o limite de tamanho é medido em palavras.  
   
-## Comentários  
- A função de `asctime` converte uma hora armazenados como uma estrutura para uma cadeia de caracteres.  O valor de `_tm` geralmente é obtido de uma chamada para `gmtime` ou a `localtime`.  Ambas as funções podem ser usadas para preencher uma estrutura de `tm` , conforme definido em. TIME.H.  
+## <a name="remarks"></a>Comentários  
+ A função `asctime` converte uma hora armazenada como uma estrutura para uma cadeia de caracteres. O valor de `_tm` geralmente é obtido de uma chamada para `gmtime` ou `localtime`. Ambas as funções podem ser usadas para preencher uma estrutura `tm`, conforme definido em TIME.H.  
   
-|membro de timeptr|Valor|  
-|-----------------------|-----------|  
-|`tm_hour`|Hora desde meia\-noite \(0\-23\)|  
-|`tm_isdst`|Positivo se o horário de verão é aplicado; 0 se o horário de verão não for aplicado; negativo se o status do horário de verão é desconhecido.  A biblioteca de tempo de execução C assumirá as regras dos Estados Unidos para implementar o cálculo de horário de verão \(DST\).|  
-|`tm_mday`|Dia do mês \(1\-31\)|  
-|`tm_min`|Minutos depois da hora \(0\-59\)|  
-|`tm_mon`|Mês \(0\-11; janeiro \= 0\)|  
-|`tm_sec`|Segundos após o minuto \(0\-59\)|  
-|`tm_wday`|Dia da semana \(0\-6; Domingo \= 0\)|  
-|`tm_yday`|Dia do ano \(0\-365; 1º de janeiro \= 0\)|  
-|`tm_year`|Ano \(o ano atual menos 1900\)|  
+|membro timeptr|Valor|  
+|--------------------|-----------|  
+|`tm_hour`|Horas desde a meia-noite (0 –&23;)|  
+|`tm_isdst`|Positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status de horário de verão for desconhecido. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).|  
+|`tm_mday`|Dia do mês (1 –&31;)|  
+|`tm_min`|Minutos após a hora (0 –&59;)|  
+|`tm_mon`|Mês (0 – 11; janeiro = 0)|  
+|`tm_sec`|Segundos após o minuto (0-59)|  
+|`tm_wday`|Dia da semana (0 – 6; domingo = 0)|  
+|`tm_yday`|Dia do ano (0 – 365; 1º de janeiro = 0)|  
+|`tm_year`|Ano (ano atual menos 1900)|  
   
- A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local.  Consulte [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md), [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), e as funções de [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) para obter informações sobre como configurar a hora local e a função de [\_tzset](../Topic/_tzset.md) para obter mais informações sobre como configurar o ambiente de fuso horário e variáveis globais.  
+ A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md), [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](../../c-runtime-library/reference/tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.  
   
- O resultado da cadeia de caracteres gerado por `asctime_s` contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`.  Um relógio de 24 horas é usado.  Todos os campos têm uma largura constante.  O caractere de nova linha e o caractere nulo ocupam as duas posições as mais recentes de cadeia de caracteres.  O valor passado como o segundo parâmetro deve ser pelo menos este grande.  Se for menos, um código de erro, `EINVAL`, será retornado.  
+ O resultado da cadeia de caracteres produzido por `asctime_s` contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro, `EINVAL`, será retornado.  
   
- `_wasctime_s` é uma versão de caracteres largos de `asctime_s`.  Caso contrário, `_wasctime_s` e `asctime_s`, ao contrário, se comportam de forma idêntica.  
+ `_wasctime_s` é uma versão de caractere largo de `asctime_s`. Caso contrário, `_wasctime_s` e `asctime_s` se comportam de forma idêntica.  
   
-### Mapeamento de rotina de Genérico\- texto  
+### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
   
- No C\+\+, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem interpretar o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`asctime_s`|\<time.h\>|  
-|`_wasctime_s`|\<time.h ou\> wchar.h \<\>|  
+|-------------|---------------------|  
+|`asctime_s`|\<time.h>|  
+|`_wasctime_s`|\<time.h> ou \<wchar.h>|  
   
-## Segurança  
- Se o ponteiro de buffer não é `NULL` e não o ponteiro para um buffer válido, a função substituirá o que existir no local.  Isso também pode levar a uma violação de acesso.  
+## <a name="security"></a>Segurança  
+ Se o ponteiro do buffer não for `NULL` e o ponteiro não apontar para um buffer válido, a função substituirá qualquer item que esteja nesse local. Isso também pode resultar em uma violação de acesso.  
   
- [excesso de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795) pode ocorrer se o argumento de tamanho passado for maior que o tamanho real do buffer.  
+ O [estouro de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795) poderá ocorrer se o argumento de tamanho passado for maior que o tamanho real do buffer.  
   
-## Exemplo  
- Esse programa coloca a hora do sistema em inteiro longo `aclock`, tradu\-los na estrutura `newtime` e converte a cadeia de caracteres no formato de saída, usando a função de `asctime_s` .  
+## <a name="example"></a>Exemplo  
+ Esse programa coloca a hora do sistema no inteiro longo `aclock`, converte-a para a estrutura `newtime` e então converte-a para forma de cadeia de caracteres para saída, usando a função `asctime_s`.  
   
 ```  
 // crt_asctime_s.c  
@@ -175,8 +184,11 @@ int main( void )
 }  
 ```  
   
-  **Data e hora: Quarta\-feira 14 de maio de 15: 30:17 2003**   
-## Equivalência do .NET Framework  
+```Output  
+Current date and time: Wed May 14 15:30:17 2003  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
 -   <xref:System.DateTime.ToLongDateString%2A?displayProperty=fullName>  
   
@@ -188,11 +200,11 @@ int main( void )
   
 -   <xref:System.DateTime.ToString%2A?displayProperty=fullName>  
   
-## Consulte também  
- [Gerenciamento de tempo](../../c-runtime-library/time-management.md)   
- [ctime\_s, \_ctime32\_s, \_ctime64\_s, \_wctime\_s, \_wctime32\_s, \_wctime64\_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time, \_time32, \_time64](../Topic/time,%20_time32,%20_time64.md)   
- [\_tzset](../Topic/_tzset.md)
+## <a name="see-also"></a>Consulte também  
+ [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)

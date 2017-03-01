@@ -1,8 +1,7 @@
 ---
-title: "_alloca | Microsoft Docs"
+title: "alloca | Documentos do Microsoft"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,24 +27,34 @@ f1_keywords:
   - "alloca"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _alloca"
-  - "Função alloca"
-  - "alocação de memória, stack"
+  - "memory allocation, stack"
+  - "alloca function"
+  - "_alloca function"
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _alloca
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aloca memória na pilha.  Esta função é substituída por uma versão mais segura estiver disponível; consulte [\_malloca](../../c-runtime-library/reference/malloca.md).  
+# <a name="alloca"></a>_alloca
+Aloca memória na pilha. Essa função é preterida porque uma versão mais segura está disponível. consulte [malloca](../../c-runtime-library/reference/malloca.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void *_alloca(   
@@ -53,40 +62,40 @@ void *_alloca(
 );  
 ```  
   
-#### Parâmetros  
- \[entrada\] `size`  
- Bytes a ser atribuídos de pilha.  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `size`  
+ Bytes a serem alocados da pilha.  
   
-## Valor de retorno  
- A rotina de `_alloca` retorna um ponteiro de `void` ao espaço alocado, que tem a garantia de ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto.  Se `size` é 0, `_alloca` atribui um item de comprimento zero e retorna um ponteiro válido para o item.  
+## <a name="return-value"></a>Valor de retorno  
+ A rotina `_alloca` retorna um ponteiro `void` para o espaço alocado, que deve ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto. Se `size` for 0, o `_alloca` alocará um item de comprimento zero e retornará um ponteiro válido para esse item.  
   
- Uma exceção de estouro de pilha é gerada se o espaço não pode ser atribuído.  A exceção de estouro de pilhas não é exception c; criando é uma exceção estruturados.  Em vez de usar a manipulação de exceção C\+\+, você deve usar [Manipulação de exceção estruturado](../../cpp/structured-exception-handling-c-cpp.md) \(ELA\).  
+ Uma exceção de excedente de pilha será gerada se não for possível alocar o espaço. A exceção de excedente de pilha não é uma exceção de C++; ela é uma exceção estruturada. Em vez de usar o tratamento de exceções de C++, você deve usar a [SEH](../../cpp/structured-exception-handling-c-cpp.md) (Manipulação de Exceção Estruturada).  
   
-## Comentários  
- `_alloca` atribui bytes de `size` da pilha de programa.  O espaço alocado será liberado automaticamente quando a função de chamada é encerrado \(não quando a alocação passa então fora do escopo\).  Consequentemente, não transmita o valor do ponteiro retornado por `_alloca` como um argumento para [livre](../../c-runtime-library/reference/free.md).  
+## <a name="remarks"></a>Comentários  
+ `_alloca`aloca `size` bytes da pilha do programa. O espaço alocado é liberado automaticamente quando a função de chamada sair (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por `_alloca` como um argumento para [livre](../../c-runtime-library/reference/free.md).  
   
- Há restrições explicitamente a `_alloca` chamar em um identificador \(EH\) da exceção.  As rotinas de EH executadas em processadores de x86\-class operam em seu próprio quadro de memória: Executam as tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função inclusive.  As implementações mais comuns incluem expressões estruturadas o Windows NT a cláusula FROM de manipulação de exceção \(SEH\) e de captura C\+\+.  Consequentemente, chamar explicitamente `_alloca` em qualquer um dos seguintes cenários resulta na falha do programa durante o retorno para a rotina chamando de EH:  
+ Há restrições para chamar `_alloca` explicitamente em um EH (manipulador de exceção). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar `_alloca` explicitamente em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:  
   
--   Windows NT ELA expressão de filtro de exceção: `__except` \(`_alloca ()` \)  
+-   Expressão de filtro de exceção SEH do Windows NT: `__except` (`_alloca ()` )  
   
--   Windows NT ELA manipulador final de exceção: `__finally``_alloca ()` {}  
+-   Manipulador de exceção final do Windows NT SEH: `__finally` {`_alloca ()` }  
   
--   Expressão da cláusula de captura de EH C\+\+  
+-   Expressão da cláusula catch do EH de C++  
   
- No entanto, `_alloca` pode ser chamado diretamente de uma rotina de EH ou de um retorno de chamada fornecido pelo aplicativo que é invocado por um dos cenários de EH listados anteriormente.  
+ No entanto, `_alloca` pode ser chamado diretamente de dentro de uma rotina do EH ou de um retorno de chamada fornecido pelo aplicativo, que é invocado por um dos cenários do EH listados anteriormente.  
   
 > [!IMPORTANT]
->  No Windows XP, se `_alloca` é chamado dentro de um bloco try\/catch, você deve chamar [\_resetstkoflw](../Topic/_resetstkoflw.md) no bloco de captura.  
+>  No Windows XP, se `_alloca` for chamado dentro de um bloco try/catch, você deverá chamar [resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) no bloco catch.  
   
- Além das restrições anteriores, ao usar a opção de[\/clr \(Compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) , `_alloca` não pode ser usado em blocos de `__except` .  Para obter mais informações, consulte [Limitações do \/clr](../../build/reference/clr-restrictions.md).  
+ Além das restrições acima, ao usar o[/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opção `_alloca` não pode ser usado em `__except` blocos. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_alloca`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_alloca`|\<malloc.h>|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_alloca.c  
@@ -140,14 +149,17 @@ int main()
 }  
 ```  
   
-  **Atribuído 1000 bytes da pilha em 0x0012FB50**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocated 1000 bytes of stack at 0x0012FB50  
+```  
   
-## Consulte também  
- [Alocação de memória](../../c-runtime-library/memory-allocation.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_resetstkoflw](../Topic/_resetstkoflw.md)   
- [\_malloca](../../c-runtime-library/reference/malloca.md)
+ [resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)   
+ [_malloca](../../c-runtime-library/reference/malloca.md)

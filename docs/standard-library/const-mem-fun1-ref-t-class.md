@@ -1,8 +1,7 @@
 ---
 title: "Classe const_mem_fun1_ref_t | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,57 +16,69 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe const_mem_fun1_ref_t"
+  - "const_mem_fun1_ref_t class"
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
 caps.latest.revision: 20
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe const_mem_fun1_ref_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Uma classe de adaptador que permite uma função de membro de **const** que usa um único argumento a ser chamado como um objeto binário da função quando inicializada com um argumento de referência.  
+# <a name="constmemfun1reft-class"></a>Classe const_mem_fun1_ref_t
+Uma classe de adaptador que permite que uma função membro **const** que usa um único argumento seja chamada como um objeto de função binária quando inicializado com um argumento de referência.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
-template<class Result, class Type, class Arg>  
-   class const_mem_fun1_ref_t  
-      : public binary_function<Type, Arg, Result> {  
-   explicit const_mem_fun1_ref_t( Result (Type::*_Pm )( Arg ) const );  
-   Result operator()(  
-      const Type& _Left,  
-      Arg _Right  
-   ) const;  
-   };  
+```
+template <class Result, class Type, class Arg>
+class const_mem_fun1_ref_t
+ : public binary_function<Type, Arg, Result> 
+ {
+    explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
+    Result operator()(const Type& left, Arg right) const;
+ };
 ```  
   
-#### Parâmetros  
- `_Pm`  
- Um ponteiro para a função de membro da classe **Tipo** a ser convertido em um objeto da função.  
+#### <a name="parameters"></a>Parâmetros  
+ `Pm`  
+ Um ponteiro para a função membro da classe **Type** a ser convertido em um objeto de função.  
   
- `_Left`  
- O objeto de **const** que a função de membro de `_Pm` será chamada.  
+ `left`  
+ O objeto **const** no qual a função membro `Pm` é chamada.  
   
- `_Right`  
- O argumento que está sendo atribuído a `_Pm`.  
+ `right`  
+ O argumento que está sendo fornecido para `Pm`.  
   
-## Valor de retorno  
- Uma função adaptávela binário.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma função binária adaptável.  
   
-## Comentários  
- A classe do modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função de membro da classe **Tipo**, em um objeto de membro particular.  Define sua função de membro `operator()` como retornar \(`_Left`. \* *\_Pm*\) \(`_Right`\) **const**.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo armazena uma cópia de `Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função membro `operator()` como de retorno ( `left`.\* *Pm*)( `right`) **const**.  
   
-## Exemplo  
- O construtor de `const_mem_fun1_ref_t` geralmente não é usado diretamente; a função `mem_fun_ref` auxiliar é usada para adaptar funções de membro.  Consulte [mem\_fun\_ref](../Topic/mem_fun_ref%20Function.md) para obter exemplos de como usar adaptadores da função de membro.  
+## <a name="example"></a>Exemplo  
+ Normalmente, o construtor de `const_mem_fun1_ref_t` não é usado diretamente; a função auxiliar `mem_fun_ref` é usada para adaptar funções membro. Consulte [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function) para obter exemplos de como usar adaptadores de função membro.  
   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+

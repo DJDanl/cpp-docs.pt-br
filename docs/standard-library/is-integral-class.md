@@ -1,8 +1,7 @@
 ---
 title: "Classe is_integral | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,49 +9,57 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
-  - "std::tr1::is_integral"
-  - "std.tr1.is_integral"
   - "is_integral"
-  - "std.is_integral"
   - "std::is_integral"
   - "type_traits/std::is_integral"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Classe is_integral [TR1]"
+  - "is_integral class"
   - "is_integral"
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.mt: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# Classe is_integral
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="isintegral-class"></a>Classe is_integral
 Testa se o tipo é integral.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_integral;  
+template <class Ty>  
+struct is_integral;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é um dos tipos integrais, ou um `cv-qualified` formulário de um dos tipos integrais, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um dos tipos integrais ou uma forma `cv-qualified` de um dos tipos integrais; caso contrário, será falsa.  
   
- Um tipo integral é um dos `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, e `unsigned long`.  Além disso, com os compiladores que fornecem\-las, um tipo integral pode ser um dos `long long`, `unsigned long long`, `__int64`, e `unsigned __int64`.  
+ Um tipo integral é um de `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` e `unsigned long`. Além disso, com os compiladores que os fornecem, um tipo integral pode ser um de `long long`, `unsigned long long`, `__int64` e `unsigned __int64`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_integral.cpp   
+```cpp  
+// std__type_traits__is_integral.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,15 +83,18 @@ int main()
   
 ```  
   
-  **is\_integral \< trivial \> \= \= false**  
-**is\_integral \< int \> \= \= true**  
-**is\_integral \< float \> \= \= false**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_integral<trivial> == false  
+is_integral<int> == true  
+is_integral<float> == false  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_enum](../standard-library/is-enum-class.md)   
- [Classe is\_floating\_point](../standard-library/is-floating-point-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_enum](../standard-library/is-enum-class.md)   
+ [Classe is_floating_point](../standard-library/is-floating-point-class.md)

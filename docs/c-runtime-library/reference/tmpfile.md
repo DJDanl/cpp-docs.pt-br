@@ -1,78 +1,93 @@
 ---
-title: "tmpfile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tmpfile"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tmpfile"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "arquivos temporários"
-  - "Função tmpfile"
-  - "arquivos temporários, criando"
+title: tmpfile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tmpfile
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tmpfile
+dev_langs:
+- C++
+helpviewer_keywords:
+- temporary files
+- tmpfile function
+- temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
 caps.latest.revision: 21
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# tmpfile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 05edefa97701ebd70d86ff4fc78dc6cee7f083fa
+ms.lasthandoff: 02/25/2017
 
-Cria um arquivo temporário.  Esta função é substituída por uma versão mais segura estiver disponível; consulte [tmpfile\_s](../Topic/tmpfile_s.md).  
+---
+# <a name="tmpfile"></a>tmpfile
+Cria um arquivo temporário. Essa função foi preterida pois uma versão mais segura está disponível; consulte [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 FILE *tmpfile( void );  
 ```  
   
-## Valor de retorno  
- Se tiver êxito, `tmpfile` retorna um ponteiro de fluxo.  Caso contrário, retorna um ponteiro de `NULL` .  
+## <a name="return-value"></a>Valor de retorno  
+ Se tiver êxito, `tmpfile` retornará um ponteiro de fluxo. Caso contrário, ele retornará um ponteiro `NULL`.  
   
-## Comentários  
- A função de `tmpfile` cria um arquivo temporário e retorna um ponteiro para o fluxo.  O arquivo temporário é criado no diretório raiz.  Para criar um arquivo temporário em um diretório diferente da raiz, use [tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) junto com [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
+## <a name="remarks"></a>Comentários  
+ A função `tmpfile` cria um arquivo temporário e retorna um ponteiro nesse fluxo. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
- Se o arquivo não pode ser aberto, `tmpfile` retorna um ponteiro de `NULL` .  Esse arquivo temporário será excluído automaticamente quando o arquivo estiver fechado, quando o programa será encerrado normalmente, ou quando `_rmtmp` for chamado, supondo que o diretório de trabalho atual não se altera.  O arquivo temporário é aberto em modo de leitura\/gravação \( `w+b` binário\).  
+ Se não for possível abrir o arquivo, `tmpfile` retornará um ponteiro `NULL`. O arquivo temporário é excluído automaticamente quando o arquivo é fechado, quando o programa é encerrado normalmente ou quando `_rmtmp` é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no modo `w+b` (leitura/gravação binária).  
   
- A falha pode ocorrer se você tentar mais do que TMP\_MAX \(consulte\) STDIO.H chama com `tmpfile`.  
+ Poderá ocorrer uma falha se você tentar mais de TMP_MAX chamadas (consulte STDIO.H) com `tmpfile`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`tmpfile`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`tmpfile`|\<stdio.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 > [!NOTE]
->  Este exemplo requer privilégios administrativos executar no Windows Vista.  
+>  Esse exemplo exige privilégios administrativos para ser executado no Windows Vista.  
   
 ```  
 // crt_tmpfile.c  
@@ -101,14 +116,17 @@ int main( void )
 }  
 ```  
   
-  **O arquivo temporário 1 foi criado**  
-**O arquivo temporário 2 foi criado**  
-**O arquivo temporário 3 foi criado**  
-**3 arquivos temporários excluídos**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Temporary file 1 was created  
+Temporary file 2 was created  
+Temporary file 3 was created  
+3 temporary files deleted  
+```  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [\_rmtmp](../Topic/_rmtmp.md)   
- [\_tempnam, \_wtempnam, tmpnam, \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)

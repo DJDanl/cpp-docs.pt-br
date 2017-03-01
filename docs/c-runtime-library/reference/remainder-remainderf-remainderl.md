@@ -1,54 +1,70 @@
 ---
-title: "remainder, remainderf, remainderl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remainderl"
-  - "remainder"
-  - "remainderf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remainderf"
-  - "remainder"
-  - "remainderl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remainderf"
-  - "remainderl"
-  - "restante"
+title: remainder, remainderf, remainderl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remainderl
+- remainder
+- remainderf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remainderf
+- remainder
+- remainderl
+dev_langs:
+- C++
+helpviewer_keywords:
+- remainderf
+- remainderl
+- remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# remainder, remainderf, remainderl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e482d061fa5692a6a6ca54c618ffcf90a194c6c9
+ms.lasthandoff: 02/25/2017
 
-Computa o restante do quociente de dois valores de ponto flutuante, arredondado para o valor integral o mais próximo.  
+---
+# <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
+Calcula o restante do quociente de dois valores de ponto flutuantes, arredondados para o valor integral mais próximo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double remainder(   
@@ -74,32 +90,32 @@ long double remainderl(
   
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `numer`  
  O numerador.  
   
  `denom`  
  O denominador.  
   
-## Valor de retorno  
- O restante de ponto flutuante de `x` \/ `y`.  Se o valor de `y` for 0,0, `remainder` retornará um NaN silencioso.  Para obter informações sobre a representação de um NaN quieto pela família `printf`, consulte [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="return-value"></a>Valor de retorno  
+ O restante do ponto flutuante de `x` / `y`. Se o valor de `y` for 0,0, `remainder` retornará um NaN silencioso. Para obter informações sobre representação de um NaN silencioso pela família `printf`, consulte [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Comentários  
- A função de `remainder` calcula o resto de ponto flutuante `r` de  `x`\/`y` de modo que `x` \= `n` \* `y` \+ `r`, onde `n` é o inteiro mais próximo valor na `x`\/`y` e é sempre que `n` mesmo &#124; `n` \- `x` \/ `y` &#124; \= 1\/2.  Quando `r` \= 0, `r` tenha o mesmo sinal de `x`.  
+## <a name="remarks"></a>Comentários  
+ A função `remainder` calcula o restante do ponto flutuante `r` de `x` / `y` que `x` = `n` * `y` + `r`, em que `n` é o inteiro mais próximo em valor a `x` / `y` e `n` é o mesmo sempre que &#124; `n` - `x` / `y` &#124; = 1/2. Quando `r` = 0, `r` tem o mesmo sinal que `x`.  
   
- Como o C\+\+ permite a sobrecarga, você pode chamar as sobrecargas de `remainder` que levam e retornam valores `float` ou `long double`.  Em um programa em C, `remainder` sempre obterá dois doubles e retornará um double.  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `remainder` e que utilizam e retornam valores de `float` ou `long double`. Em um programa C, `remainder` sempre usa dois duplos e retorna um duplo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`remainder`, `remainderf`, `remainderl`|\<math.h\>|  
+|--------------|---------------------|  
+|`remainder`, `remainderf`, `remainderl`|\<math.h>|  
   
- Para obter informações de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```c  
+```C  
 // crt_remainder.c  
 // This program displays a floating-point remainder.  
   
@@ -115,13 +131,16 @@ int main( void )
 }  
 ```  
   
-  **O restante de \-10,00\/3,00 é \-1,000000**   
-## Equivalência do .NET Framework  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [ldiv, lldiv](../Topic/ldiv,%20lldiv.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
- [fmod, fmodf](../Topic/fmod,%20fmodf.md)   
- [remquo, remquof, remquol](../Topic/remquo,%20remquof,%20remquol.md)
+ [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
+ [remquo, remquof, remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

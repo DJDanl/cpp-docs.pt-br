@@ -1,77 +1,92 @@
 ---
-title: "atodbl, atodbl_l, atoldbl, atoldbl_l, atoflt, atoflt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "_atodbl"
-  - "_atoflt"
-  - "_atoflt_l"
-  - "_atodbl_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atoflt"
-  - "_atoflt_l"
-  - "atodbl_l"
-  - "atoflt_l"
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "atodbl"
-  - "_atodbl_l"
-  - "atoldbl"
-  - "atoflt"
-  - "atoldbl_l"
-  - "_atodbl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _atodbl"
-  - "Função _atoldbl_l"
-  - "Função atoflt"
-  - "Função atoflt_l"
-  - "Função atoldbl"
-  - "Função _atoldbl"
-  - "Função atodbl_l"
-  - "Função _atoflt_l"
-  - "Função atoldbl_l"
-  - "Função atodbl"
-  - "conversão de cadeia de caracteres para valores de ponto flutuante"
-  - "Função _atoflt"
-  - "Função _atodbl_l"
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _atoldbl
+- _atoldbl_l
+- _atodbl
+- _atoflt
+- _atoflt_l
+- _atodbl_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atoflt
+- _atoflt_l
+- atodbl_l
+- atoflt_l
+- _atoldbl
+- _atoldbl_l
+- atodbl
+- _atodbl_l
+- atoldbl
+- atoflt
+- atoldbl_l
+- _atodbl
+dev_langs:
+- C++
+helpviewer_keywords:
+- _atodbl function
+- _atoldbl_l function
+- atoflt function
+- atoflt_l function
+- atoldbl function
+- _atoldbl function
+- atodbl_l function
+- _atoflt_l function
+- atoldbl_l function
+- atodbl function
+- string conversion, to floating point values
+- _atoflt function
+- _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
 caps.latest.revision: 22
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# atodbl, atodbl_l, atoldbl, atoldbl_l, atoflt, atoflt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5dc40e701e50343c26e03a1d2a4fccfeb710504d
+ms.lasthandoff: 02/25/2017
 
-Converte uma cadeia de caracteres em um double \(`_atodbl`\), double longo \(`_atoldbl`\), ou float \(`_atoflt`\).  
+---
+# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+Converte uma cadeia de caracteres para um duplo (`_atodbl`), duplo longo (`_atoldbl`) ou float (`_atoflt`).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _atodbl(  
@@ -103,33 +118,33 @@ int _atoflt_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `value`  
- O valor double, long double ou float que é gerado convertendo a cadeia de caracteres em um valor de ponto flutuante.  Esses valores são envolvidos em uma estrutura.  
+ O valor de duplo, duplo longo ou float gerado ao converter a cadeia de caracteres em um valor de ponto flutuante. Esses valores são encapsulados em uma estrutura.  
   
  `str`  
- A cadeia de caracteres a ser analisada para conversão em um valor de ponto flutuante.  
+ A cadeia de caracteres a ser analisada para converter em um valor de ponto flutuante.  
   
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Retorna 0 se tiver êxito.  Os códigos de erro possíveis são `_UNDERFLOW` ou `_OVERFLOW`, que são definidos no arquivo de cabeçalho Math.h.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna 0 se for bem-sucedido. Códigos de erro possíveis são `_UNDERFLOW` ou `_OVERFLOW`, que são definidos no arquivo de cabeçalho Math.h.  
   
-## Comentários  
- Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante.  A diferença entre essas funções e a família de funções `atof` é que essas funções não geram o código de ponto flutuante e não causam exceções de hardware.  Em vez disso, as condições de erro são relatadas como códigos de erro.  
+## <a name="remarks"></a>Comentários  
+ Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante. A diferença entre essas funções e a família de funções `atof` é que essas funções não geram código de ponto flutuante e não causam exceções de hardware. Em vez disso, condições de erro são relatadas como códigos de erro.  
   
- Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante, `value` é definido como zero e o valor de retorno é zero.  
+ Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante, `value` será definido como zero e o valor retornado será zero.  
   
- As versões dessas funções que têm o sufixo de `_l` são idênticas às versões que não têm, exceto que elas usam o parâmetro de localidade que é informado em vez da localidade de thread atual.  
+ As versões dessas funções que têm o sufixo `_l` são idênticas às versões que não têm o sufixo, exceto por usarem o parâmetro de localidade que é passado no lugar da localidade do thread atual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotinas|Cabeçalho necessário|  
-|-------------|--------------------------|  
-|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h>|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_atodbl.c  
@@ -171,16 +186,22 @@ int main()
 }  
 ```  
   
-  **Valor double: 3,141593**  
-**Valor de retorno: 0**  
-**Valor de flutuante: 3,141593**  
-**Valor de retorno: 0**  
-**Valor de flutuação: 0,000000**  
-**Valor de retorno: 0**  
-**Valor de flutuante: 1.\#INF00**  
-**Valor de retorno: 3**   
-## Consulte também  
- [Conversão de dados](../../c-runtime-library/data-conversion.md)   
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+```Output  
+Double value: 3.141593  
+Return value: 0  
+  
+Float value: 3.141593  
+Return value: 0  
+  
+Float value: 0.000000  
+Return value: 0  
+  
+Float value: 1.#INF00  
+Return value: 3  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [Localidade](../../c-runtime-library/locale.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

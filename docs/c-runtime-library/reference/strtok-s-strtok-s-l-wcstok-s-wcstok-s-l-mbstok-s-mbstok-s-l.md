@@ -1,78 +1,92 @@
 ---
-title: "strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcstok_s_l"
-  - "_mbstok_s_l"
-  - "_mbstok_s"
-  - "strtok_s"
-  - "wcstok_s"
-  - "_strtok_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcstok_s_l"
-  - "_wcstok_s_l"
-  - "_tcstok_s"
-  - "_mbstok_s_l"
-  - "strtok_s"
-  - "wcstok_s"
-  - "_mbstok_s"
-  - "_strtok_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _mbstok_s"
-  - "Função _mbstok_s_l"
-  - "Função _strtok_s_l"
-  - "Função _tcstok_s"
-  - "Função _tcstok_s_l"
-  - "Função _wcstok_s_l"
-  - "Função mbstok_s"
-  - "Função mbstok_s_l"
-  - "cadeias de caracteres [C++], procurando"
-  - "Função strtok_s"
-  - "Função strtok_s_l"
-  - "tokens, localizando em cadeias de caracteres"
-  - "Função wcstok_s"
-  - "Função wcstok_s_l"
+title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcstok_s_l
+- _mbstok_s_l
+- _mbstok_s
+- strtok_s
+- wcstok_s
+- _strtok_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcstok_s_l
+- _wcstok_s_l
+- _tcstok_s
+- _mbstok_s_l
+- strtok_s
+- wcstok_s
+- _mbstok_s
+- _strtok_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strtok_s_l function
+- _mbstok_s_l function
+- strings [C++], searching
+- mbstok_s_l function
+- wcstok_s_l function
+- _wcstok_s_l function
+- _tcstok_s function
+- _tcstok_s_l function
+- strtok_s_l function
+- wcstok_s function
+- tokens, finding in strings
+- mbstok_s function
+- _mbstok_s function
+- strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
 caps.latest.revision: 28
-caps.handback.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bd731aed33b3c05a55b9a6dc2a365f68a5d343dc
+ms.lasthandoff: 02/25/2017
 
-Localiza o próximo token em uma cadeia de caracteres, usando a localidade atual ou uma localidade que é transmitida.  Essas versões de [strtok, \_strtok\_l, wcstok, \_wcstok\_l, \_mbstok, \_mbstok\_l](../Topic/strtok,%20_strtok_l,%20wcstok,%20_wcstok_l,%20_mbstok,%20_mbstok_l.md) têm aprimoramentos de segurança, como descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
+Localiza o próximo token em uma cadeia de caracteres, usando a localidade atual ou uma localidade específica que é informada. Essas versões de [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbstok_s` e `_mbstok_s_l` não podem ser usados em aplicativos executados no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok_s` e `_mbstok_s_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -111,62 +125,62 @@ _locale_tlocale
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `strToken`  
  Cadeia de caracteres que contém o token ou os tokens.  
   
  `strDelimit`  
- Conjunto de caracteres do delimitador.  
+ Conjunto de caracteres delimitadores.  
   
  `context`  
- Usado para armazenar informações da posição entre as chamadas para `strtok_s`  
+ Usado para armazenar informações de posição entre as chamadas para `strtok_s`  
   
  `locale`  
- Localidade a ser usada.  
+ Localidade a usar.  
   
-## Valor de retorno  
- Retorna um ponteiro para o próximo token localizado em `strToken`.  Retornam `NULL` quando não mais token é encontrado.  Cada chamada para alterar `strToken` substituindo um caractere de `NULL` para o primeiro delimitador que ocorre após o token retornado.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna um ponteiro para o próximo token encontrado em `strToken`. Retornam `NULL` quando tokens não são mais encontrados. Cada chamada modifica `strToken` substituindo um caractere `NULL` para o primeiro delimitador que ocorre após o token retornado.  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
-|`strToken`|`strDelimit`|`context`|Valor de retorno|`errno`|  
-|----------------|------------------|---------------|----------------------|-------------|  
-|`NULL`|any|ponteiro para um ponteiro nulo|`NULL`|`EINVAL`|  
-|any|`NULL`|any|`NULL`|`EINVAL`|  
-|any|any|`NULL`|`NULL`|`EINVAL`|  
+|`strToken`|`strDelimit`|`context`|Valor retornado|`errno`|  
+|----------------|------------------|---------------|------------------|-------------|  
+|`NULL`|qualquer|ponteiro para um ponteiro nulo|`NULL`|`EINVAL`|  
+|qualquer|`NULL`|qualquer|`NULL`|`EINVAL`|  
+|qualquer|qualquer|`NULL`|`NULL`|`EINVAL`|  
   
- Se `strToken` é `NULL` mas o contexto é um ponteiro para um ponteiro válido de contexto, não há nenhum erro.  
+ Se `strToken` é `NULL`, mas contexto é um ponteiro para um ponteiro de contexto válido, não há nenhum erro.  
   
-## Comentários  
- A função de `strtok_s` localiza o próximo token em `strToken`.  O conjunto de caracteres em `strDelimit` especifica possíveis delimitadores de token a ser localizado em `strToken` na chamada atual.  `wcstok_s` e `_mbstok_s`são versões de ampla caractere e de multibyte\- caractere de `strtok_s`.  Os argumentos e os valores de retorno de `wcstok_s` e `_wcstok_s_l` são cadeias de caracteres de ampla caractere; essas de `_mbstok_s` e `_mbstok_s_l` são cadeias de caracteres de multibyte\- caractere.  Essas três funções se comportam de forma idêntica.  
+## <a name="remarks"></a>Comentários  
+ A função `strtok_s` localiza o próximo token em `strToken`. O conjunto de caracteres em `strDelimit` especifica possíveis delimitadores de token a serem encontrados em `strToken` na chamada atual. `wcstok_s` e `_mbstok_s` são versões de caractere largo e caracteres multibyte de `strtok_s`. Os argumentos e os valores de retorno de `wcstok_s` e `_wcstok_s_l` são cadeias de caracteres largos; desses de `_mbstok_s` e `_mbstok_s_l` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
   
- Essa função valida seus parâmetros.  Se uma condição de erro ocorrer, como na tabela de condições de erro, o manipulador inválido do parâmetro será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão `NULL`.  
+ Essa função valida seus parâmetros. Se ocorrer uma condição de erro, como na tabela de Condições de Erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EINVAL` e retornarão `NULL`.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstok_s`|`strtok_s`|`_mbstok_s`|`wcstok_s`|  
 |`_tcstok_s_l`|`_strtok_s_l`|`_mbstok_s_l`|`_wcstok_s_l`|  
   
- Na primeira chamada a `strtok_s` a função ignora delimitadores principais e retorna um ponteiro para o primeiro token em `strToken`, encerrando o token com um caractere nulo.  Mais tokens podem ser incluídos do restante de `strToken` por uma série de chamadas a `strtok_s`.  Cada chamada para `strtok_s` altera `strToken` inserindo um caractere nulo após o token retornado por essa chamada.  O ponteiro de `context` controlam a cadeia de caracteres está sendo lido e onde na cadeia de caracteres o próximo token deve ser lido.  Para ler o próximo token de `strToken`, chame `strtok_s` com um valor de `NULL` para o argumento de `strToken` , e passe o mesmo parâmetro de `context` .  O argumento de `NULL``strToken` faz com que `strtok_s` pesquise pelo próximo token em `strToken`alterado.  O argumento de `strDelimit` pode aceitar qualquer valor de uma chamada a seguir de modo que o conjunto de delimitadores pode variar.  
+ Na primeira chamada para `strtok_s`, a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no `strToken`, encerrando o token com um caractere nulo. Mais tokens podem ser divididos, fora o restante do `strToken` por uma série de chamadas para `strtok_s`. Cada chamada para `strtok_s` modifica `strToken` inserindo um caractere nulo após o token retornado pela chamada. O `context` ponteiro mantém controle de cadeia de caracteres que está sendo lido e no qual o próximo token na cadeia de caracteres deve ser lido. Para ler o próximo token de `strToken`, chame `strtok_s` com um valor `NULL` para o `strToken` argumento e passe o mesmo parâmetro `context`. O argumento `NULL` `strToken` faz com que o `strtok_s` pesquise o próximo token no `strToken` modificado. O argumento `strDelimit` pode assumir qualquer valor de uma chamada para o próximo, para que o conjunto de delimitadores possa variar.  
   
- Desde que o parâmetro de `context` substitui os buffers estáticos usados em `strtok` e em `_strtok_l`, é possível analisar simultaneamente duas cadeias de caracteres no mesmo thread.  
+ Como o `context` parâmetro substitui os buffers estáticos usados em `strtok` e `_strtok_l`, é possível analisar as duas cadeias de caracteres simultaneamente no mesmo thread.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções sem o sufixo `_l` usam a localidade atual para esse comportamento dependente da localidade; as versões com o sufixo `_l` são idênticas, exceto que elas usam o parâmetro de localidade informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`strtok_s`|\<string.h\>|  
-|`_strtok_s_l`|\<string.h\>|  
-|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h\> ou \<wchar.h\>|  
-|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strtok_s`|\<string.h>|  
+|`_strtok_s_l`|\<string.h>|  
+|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h> ou \<wchar.h>|  
+|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_strtok_s.c  
@@ -214,28 +228,31 @@ int main( void )
 }  
 ```  
   
-  **Tokens:**  
- **A**  
- **Outros**  
- **cadeia de caracteres**  
- **cadeia de caracteres**  
- **de**  
- **analisado**  
- **tokens**  
- **em**  
- **e**  
- **the**  
- **alguns**  
- **mesmos**  
- **mais**  
- **tempo.**  
- **tokens**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Tokens:  
+ A  
+        Another  
+ string  
+        string  
+ of  
+        parsed  
+ tokens  
+        at  
+ and  
+        the  
+ some  
+        same  
+ more  
+        time.  
+ tokens  
+```  
   
-## Consulte também  
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../Topic/strcspn,%20wcscspn,%20_mbscspn,%20_mbscspn_l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

@@ -1,8 +1,7 @@
 ---
 title: "_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -46,46 +45,56 @@ f1_keywords:
   - "_tcsncicoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _ftcsncicoll"
-  - "Função _ftcsnicoll"
-  - "Função _mbsnicoll"
-  - "Função _mbsnicoll_l"
-  - "Função _strnicoll"
-  - "Função _strnicoll_l"
-  - "Função _tcsncicoll"
-  - "Função _tcsnicoll"
-  - "Função _wcsnicoll"
-  - "Função _wcsnicoll_l"
-  - "páginas de código, usando para comparações de cadeias de caracteres"
-  - "Função ftcsncicoll"
-  - "Função ftcsnicoll"
-  - "Função mbsnicoll"
-  - "Função mbsnicoll_l"
-  - "cadeias de caracteres [C++], comparando por página de código"
-  - "Função strnicoll"
-  - "Função strnicoll_l"
-  - "Função tcsncicoll"
-  - "Função tcsnicoll"
-  - "Função wcsnicoll"
-  - "Função wcsnicoll_l"
+  - "code pages, using for string comparisons"
+  - "ftcsncicoll function"
+  - "mbsnicoll_l function"
+  - "_ftcsnicoll function"
+  - "mbsnicoll function"
+  - "_tcsnicoll function"
+  - "_wcsnicoll_l function"
+  - "_mbsnicoll function"
+  - "tcsncicoll function"
+  - "strnicoll function"
+  - "_ftcsncicoll function"
+  - "wcsnicoll_l function"
+  - "_mbsnicoll_l function"
+  - "_tcsncicoll function"
+  - "strnicoll_l function"
+  - "wcsnicoll function"
+  - "_strnicoll_l function"
+  - "_wcsnicoll function"
+  - "ftcsnicoll function"
+  - "strings [C++], comparing by code page"
+  - "tcsnicoll function"
+  - "_strnicoll function"
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Compara as cadeias de caracteres usando informações específicas da localidade.  
+# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
+Compara cadeias de caracteres usando informações específicas de localidade.  
   
 > [!IMPORTANT]
->  `_mbsnicoll` e `_mbsnicoll_l` não podem ser usados em aplicativos executados no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnicoll` e `_mbsnicoll_l` não podem ser usados em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _strnicoll(  
@@ -123,62 +132,62 @@ int _mbsnicoll_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `string1, string2`  
- Cadeias de caracteres terminadas com Null para comparação  
+ Cadeias de caracteres com encerramento nulo a serem comparadas  
   
  `count`  
- Número de caracteres para comparação.  
+ Número de caracteres a ser comparado  
   
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna um valor que indica a relação de subcadeias de `string1` e `string2`*,* conforme a seguir  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna um valor que indica a relação de subcadeias de caracteres de `string1` e `string2`*,* da seguinte maneira.  
   
-|Valor de retorno|Relação de string1 com string2|  
-|----------------------|------------------------------------|  
-|\< 0|`string1` menor que `string2`|  
-|0|`string1` idêntico a `string2`|  
-|\> 0|`string1` maior que `string2`|  
+|Valor retornado|Relação da string1 com a string2|  
+|------------------|----------------------------------------|  
+|< 0|`string1` é menor que `string2`|  
+|0|`string1` é idêntica a `string2`|  
+|> 0|`string1` é maior que `string2`|  
   
- Cada uma dessas funções retorna `_NLSCMPERROR`.  Para usar `_NLSCMPERROR`, inclua STRING.H ou MBSTRING.H.  `_wcsnicoll` pode falhar se `string1` ou `string2` contiver código de caracteres largos fora do domínio da sequência de agrupamento.  Quando ocorre um erro, `_wcsnicoll` pode definir `errno` como `EINVAL`.  Para verificar se há um erro em uma chamada a `_wcsnicoll`, defina `errno` para 0 e verifique `errno` após a chamada a `_wcsnicoll`**.**  
+ Cada uma dessas funções retorna `_NLSCMPERROR`. Para usar `_NLSCMPERROR`, inclua STRING.H ou MBSTRING.H. `_wcsnicoll` pode falhar se `string1` ou `string2` contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando um erro ocorre, `_wcsnicoll` pode definir `errno` para `EINVAL`. Para verificar se há um erro em uma chamada para `_wcsnicoll`, defina `errno` como 0 e, em seguida, verifique `errno` depois de chamar `_wcsnicoll`**.**  
   
-## Comentários  
- Cada uma dessas funções executa uma comparação que não diferencia maiúsculas de minúsculas dos primeiros caracteres de `count` em `string1` e `string2` de acordo com a página de código.  Essas funções devem ser usadas somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem de caracteres lexicográficos na página de código, e essa diferença é interessante para comparação de cadeia de caracteres.  As versões dessas funções sem o sufixo `_l` usam a localidade atual e a página de código.  As versões com o sufixo `_l` são idênticas, exceto pelo fato de que usam a localidade informada.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Comentários  
+ Cada uma dessas funções executa uma comparação não diferencia maiúsculas e minúsculas dos primeiros `count` caracteres em `string1` e `string2`, de acordo com a página de código. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código e essa diferença é de interesse para a comparação de cadeia de caracteres. As versões dessas funções sem o sufixo `_l` usam a localidade atual e a página de código. As versões com o sufixo`_l` são idênticas, com exceção de que usam a localidade passada, em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- Todas essas funções validam seus parâmetros.  Se `string1` ou `string2` for um ponteiro nulo, ou se a contagem for maior que `INT_MAX`, o manipulador de parâmetro inválido será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essas funções retornarão `_NLSCMPERROR` e definirão `errno` como `EINVAL`**.**  
+ Todas essas funções validam seus parâmetros. Se `string1` ou `string2` for um ponteiro nulo ou se a contagem é maior que `INT_MAX`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão `_NLSCMPERROR` e `errno` será definido como `EINVAL`**.**  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncicoll`|`_strnicoll`|`_mbsnbicoll`|`_wcsnicoll`|  
-|`_tcsnicoll`|`_strnicoll`|[\_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
+|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
 |`_tcsnicoll_l`|`_strnicoll_l`|`_mbsnbicoll_l`|`_wcsnicoll_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_strnicoll`, `_strnicoll_l`|\<string.h\>|  
-|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h\> ou \<string.h\>|  
-|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strnicoll`, `_strnicoll_l`|\<string.h>|  
+|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h> or \<string.h>|  
+|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Localidade](../../c-runtime-library/locale.md)   
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
  [Funções strcoll](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

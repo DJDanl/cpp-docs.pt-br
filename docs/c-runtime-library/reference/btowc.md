@@ -1,49 +1,63 @@
 ---
-title: "btowc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "btowc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "btowc"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função btowc"
+title: btowc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- btowc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- btowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# btowc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce9c4250fef70323b4e1b899efc1e5fe2e593881
+ms.lasthandoff: 02/25/2017
 
-Determina se um inteiro representa um caractere válido de byte único no estado inicial de turno.  
+---
+# <a name="btowc"></a>btowc
+Determine se um inteiro representa um caractere de byte único válido no estado inicial do deslocamento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 wint_t btowc(  
@@ -51,23 +65,23 @@ wint_t btowc(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
  Inteiro a ser testado.  
   
-## Valor de retorno  
- Retorna a representação de caractere ampla de caracteres se o inteiro representa um caractere válido de byte único no estado inicial de turno.  Retorna WEOF se o inteiro é EOF ou não é válido um caractere de byte único no estado inicial de turno.  A saída dessa função são afetadas pela localidade atual de `LC_TYPE` .  
+## <a name="return-value"></a>Valor retornado  
+ Retornará a representação de caractere largo do caractere se o inteiro representar um caractere de byte único válido no estado inicial do deslocamento. Retornará WEOF se o inteiro for EOF ou não for um caractere de byte único válido no estado inicial do deslocamento. A saída dessa função é afetada pela localidade `LC_TYPE` atual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`btowc`|\<stdio.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`btowc`|\<stdio.h> ou \<wchar.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [mbtowc, \_mbtowc\_l](../Topic/mbtowc,%20_mbtowc_l.md)
+## <a name="see-also"></a>Consulte também  
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)

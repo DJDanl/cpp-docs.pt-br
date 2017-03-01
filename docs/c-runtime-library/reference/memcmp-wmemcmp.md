@@ -1,51 +1,66 @@
 ---
-title: "memcmp, wmemcmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memcmp"
-  - "wmemcmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memcmp"
-  - "wmemcmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função memcmp"
-  - "Função wmemcmp"
+title: memcmp, wmemcmp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memcmp
+- wmemcmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memcmp
+- wmemcmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemcmp function
+- memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# memcmp, wmemcmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 902d19ff7e548fcf2847ab492e1237b36035d06f
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 Compara caracteres em dois buffers.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -61,7 +76,7 @@ int wmemcmp(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `buf1`  
  Primeiro buffer.  
   
@@ -69,36 +84,37 @@ int wmemcmp(
  Segundo buffer.  
   
  `count`  
- Número de caracteres a ser comparado. \(Compara os bytes para `memcmp`, caracteres amplos para `wmemcmp`\).  
+ O número de caracteres a serem comparados. (Compara bytes para `memcmp` e caracteres largos para `wmemcmp`).  
   
-## Valor de retorno  
- O valor de retorno indica a relação entre os buffers.  
+## <a name="return-value"></a>Valor de retorno  
+ O valor retornado indica a relação entre os buffers.  
   
-|Valor de retorno|Relação de primeiros caracteres de `count` de buf1 e de buf2|  
-|----------------------|------------------------------------------------------------------|  
-|\< 0|`buf1` menor que `buf2`|  
-|0|`buf1` idêntico a `buf2`|  
-|\> 0|`buf1` maior que `buf2`|  
+|Valor retornado|Relação dos primeiros `count` caracteres de buf1 e buf2|  
+|------------------|---------------------------------------------------------------|  
+|< 0|`buf1` é menor que `buf2`|  
+|0|`buf1` é idêntica a `buf2`|  
+|> 0|`buf1` é maior que `buf2`|  
   
-## Comentários  
- Compara os primeiros caracteres de `count` de `buf1` e de `buf2` e retorna um valor que indica sua relação.  O sinal de um valor de retorno diferente de zero é o sinal a diferença entre os primeiros pares de diferentes de valores nos buffers.  Os valores são interpretados como `unsigned char` para `memcmp`, e como `wchar_t` para `wmemcmp`.  
+## <a name="remarks"></a>Comentários  
+ Compara os primeiros `count` caracteres de `buf1` e `buf2` e retorna um valor que indica sua relação. O sinal de um valor retornado diferente de zero é o sinal da diferença entre o primeiro par de valores diferentes nos buffers. Os valores são interpretados como `unsigned char` para `memcmp` e como `wchar_t` para `wmemcmp`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`memcmp`|\<memory.h ou\> string.h \<\>|  
-|`wmemcmp`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memcmp`|\<memory.h> ou \<string.h>|  
+|`wmemcmp`|\<wchar.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Bibliotecas  
- Todas as versões de [Biblioteca de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões da [biblioteca de tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
-// crt_memcmp.c  
+  
+      // crt_memcmp.c  
 /* This program uses memcmp to compare  
  * the strings named first and second. If the first  
  * 19 bytes of the strings are equal, the program  
@@ -136,7 +152,7 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 Compare '1234567890123456789' to '1234567890123456789':  
@@ -145,14 +161,14 @@ Compare '1,2' to '1,2':
 int_arr1 is equal to int_arr2.  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Manipulação de buffer](../Topic/Buffer%20Manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../Topic/memchr,%20wmemchr.md)   
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)

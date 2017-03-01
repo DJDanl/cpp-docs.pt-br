@@ -1,8 +1,7 @@
 ---
 title: "strcat, wcscat, _mbscat | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,36 +34,46 @@ f1_keywords:
   - "wcscat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _ftcscat"
-  - "Função _mbscat"
-  - "Função _tcscat"
-  - "acrescentando cadeias de caracteres"
-  - "concatenando cadeias de caracteres"
-  - "Função ftcscat"
-  - "Função mbscat"
-  - "Função strcat"
-  - "cadeias de caracteres [C++], anexando"
-  - "cadeias de caracteres [C++], concatenação"
-  - "Função tcscat"
-  - "Função wcscat"
+  - "concatenating strings"
+  - "mbscat function"
+  - "_ftcscat function"
+  - "_tcscat function"
+  - "ftcscat function"
+  - "strcat function"
+  - "strings [C++], appending"
+  - "_mbscat function"
+  - "tcscat function"
+  - "strings [C++], concatenating"
+  - "appending strings"
+  - "wcscat function"
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# strcat, wcscat, _mbscat
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Acrescenta uma cadeia de caracteres.  Versões mais seguras dessas funções estão disponíveis; consulte [strcat\_s, wcscat\_s, \_mbscat\_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
+# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+Acrescenta uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
   
 > [!IMPORTANT]
->  `_mbscat_s` não pode ser usado em aplicativos executados em Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscat_s` não pode ser usada em aplicativos executados no Windows Runtime. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *strcat(  
@@ -96,53 +105,53 @@ unsigned char *_mbscat(
 ); // C++ only  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `strDestination`  
- Cadeia de caracteres de destino terminada com Null.  
+ Cadeia de caracteres de destino terminada em nulo.  
   
  `strSource`  
- Cadeia de caracteres de origem terminada com Null.  
+ Cadeia de caracteres de origem com terminação nula.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna a cadeia de caracteres de destino \(`strDestination`\).  Nenhum valor de retorno é reservado para indicar um erro.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna a cadeia de caracteres de destino (`strDestination`). Nenhum valor retornado é reservado para indicar um erro.  
   
-## Comentários  
- A função de `strcat` acrescenta `strSource` a `strDestination` e encerra a cadeia de caracteres resultante com um caractere nulo.  O caractere inicial de `strSource` substituirá o caractere nulo de terminação de `strDestination`.  O comportamento de `strcat` será indefinido se as cadeias de caracteres de origem e de destino se sobrepuserem.  
+## <a name="remarks"></a>Comentários  
+ A função `strcat` acrescenta `strSource` para `strDestination` e encerra a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de `strSource` substitui o caractere nulo de terminação de `strDestination`. O comportamento de `strcat` é indefinido se as cadeias de origem e destino se sobrepõem.  
   
 > [!IMPORTANT]
->  Como `strcat` não verifica se há espaço suficiente em `strDestination` antes de anexar `strSource`, é uma causa potencial de excesso de buffer.  Considere usar [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) em vez disso.  
+>  Já que `strcat` não verifica se há espaço suficiente em `strDestination` antes de anexar `strSource`, isso é uma causa potencial de sobrecargas de buffer. Ao invés disso, considere usar [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).  
   
- `wcscat` e `_mbscat` são versões de caracteres largos e de multibyte de `strcat`.  Os argumentos e o valor de retorno de `wcscat` são cadeias de caracteres largos; `_mbscat` são cadeias de caracteres de vários bytes.  Essas três funções se comportam de forma idêntica.  
+ `wcscat` e `_mbscat` são versões de caracteres largos e de caracteres multibyte de `strcat`. Os argumentos e o valor retornado de `wcscat` são cadeias de caracteres largos; aqueles de `_mbscat` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
   
- No C\+\+, essas funções têm as sobrecargas de modelo que invocam as correspondentes seguras mais recentes dessas funções.  Para obter mais informações, consulte [Sobrecargas de modelo seguras](../Topic/Secure%20Template%20Overloads.md).  
+ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat`|`strcat`|`_mbscat`|`wcscat`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`strcat`|\<string.h\>|  
-|`wcscat`|\<string.h\> ou \<wchar.h\>|  
-|`_mbscat`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strcat`|\<string.h>|  
+|`wcscat`|\<string.h> ou \<wchar.h>|  
+|`_mbscat`|\<mbstring.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
- Consulte o exemplo de [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
+## <a name="example"></a>Exemplo  
+ Veja o exemplo de [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
-## Consulte também  
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

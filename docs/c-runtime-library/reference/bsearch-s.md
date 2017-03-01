@@ -1,50 +1,65 @@
 ---
-title: "bsearch_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "bsearch_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "bsearch_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "matrizes [CRT], pesquisa binária"
-  - "Função bsearch_s"
+title: bsearch_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- bsearch_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- bsearch_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [CRT], binary search
+- bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# bsearch_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2938586e1d899255f6e342bbf7bac2a317d5b7aa
+ms.lasthandoff: 02/25/2017
 
-Executa uma pesquisa binária de uma matriz classificada. Esta é a versão de [bsearch](../../c-runtime-library/reference/bsearch.md) com aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="bsearchs"></a>bsearch_s
+Executa uma pesquisa binária de uma matriz classificada. Essa é uma versão de [bsearch](../../c-runtime-library/reference/bsearch.md) com melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void *bsearch_s(   
@@ -57,9 +72,9 @@ void *bsearch_s(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `key`  
- Objeto pesquisar.  
+ O objeto a ser pesquisado.  
   
  `base`  
  Ponteiro para a base de dados de pesquisa.  
@@ -71,47 +86,47 @@ void *bsearch_s(
  Largura de elementos.  
   
  `compare`  
- Função de retorno de chamada que compara dois elementos. O primeiro argumento é o `context` ponteiro. O segundo argumento é um ponteiro para o `key` para a pesquisa. O terceiro argumento é um ponteiro para o elemento de matriz a ser comparada com `key`.  
+ Função de retorno de chamada que compara dois elementos. O primeiro argumento é o ponteiro `context`. O segundo argumento é um ponteiro para o `key` para a pesquisa. O terceiro argumento é um ponteiro para o elemento de matriz a ser comparado com `key`.  
   
  `context`  
  Um ponteiro para um objeto que pode ser acessado na função de comparação.  
   
-## Valor de retorno  
- `bsearch_s` Retorna um ponteiro para uma ocorrência de`key` na matriz apontada por `base`. Se `key` não for encontrado, a função retornará `NULL`. Se a matriz não está em ordem de classificação crescente ou contém registros duplicados com chaves idênticas, o resultado é imprevisível.  
+## <a name="return-value"></a>Valor retornado  
+ `bsearch_s` retorna um ponteiro para uma ocorrência de `key` na matriz apontada por `base`. Se `key` não for encontrado, a função retornará `NULL`. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.  
   
- Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno`é definido como `EINVAL` e a função retorna `NULL`. Para obter mais informações, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EINVAL` e a função retornará `NULL`. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Condições de erro  
+### <a name="error-conditions"></a>Condições de Erro  
   
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
 |`NULL`|qualquer|qualquer|qualquer|qualquer|`EINVAL`|  
-|qualquer|`NULL`|qualquer|\!\= 0|qualquer|`EINVAL`|  
-|qualquer|qualquer|qualquer|qualquer|\= 0|`EINVAL`|  
-|qualquer|qualquer|`NULL`|um|qualquer|`EINVAL`|  
+|qualquer|`NULL`|qualquer|!= 0|qualquer|`EINVAL`|  
+|qualquer|qualquer|qualquer|qualquer|= 0|`EINVAL`|  
+|qualquer|qualquer|`NULL`|an|qualquer|`EINVAL`|  
   
-## Comentários  
- O `bsearch_s` função realiza uma pesquisa binária de uma matriz classificada de `num` elementos, cada um dos `width` bytes de tamanho. O `base` valor é um ponteiro para a base da matriz a ser pesquisada, e `key` é o valor que está sendo procurado. O `compare` parâmetro é um ponteiro para uma rotina fornecido pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir, especificando sua relação:  
+## <a name="remarks"></a>Comentários  
+ A função `bsearch_s` realiza uma pesquisa binária de uma matriz classificada de `num` elementos, cada um com `width` bytes de tamanho. O valor `base` é um ponteiro para a base da matriz a ser pesquisada e `key` é o valor que está sendo procurado. O parâmetro `compare` é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir especificando seu relacionamento:  
   
-|Valor retornado por `compare` rotina|Descrição|  
-|------------------------------------------|---------------|  
-|\< 0|Chave é menor que o elemento da matriz.|  
-|0|Chave é igual ao elemento de matriz.|  
-|\> 0|Chave é maior que o elemento da matriz.|  
+|Valor retornado pela rotina `compare`|Descrição|  
+|-----------------------------------------|-----------------|  
+|\< 0|A chave é menor que o elemento da matriz.|  
+|0|A chave é igual ao elemento da matriz.|  
+|> 0|A chave é maior que o elemento da matriz.|  
   
- O `context` ponteiro pode ser útil se a estrutura de dados pesquisada é parte de um objeto, e a função comparar precisa acessar membros do objeto. O `compare` função pode converter o ponteiro nulo em membros de tipo e acesso a objeto apropriado desse objeto. A adição do `context` parâmetro torna `bsearch_s` mais segura, pois o contexto adicional pode ser usado para evitar bugs de reentrância associadas ao uso de variáveis estáticas para tornar dados disponíveis para o `compare` função.  
+ O ponteiro `context` poderá ser útil se a estrutura de dados pesquisada fizer parte de um objeto e a função compare precisar acessar membros do objeto. A função `compare` pode converter o ponteiro void no tipo de objeto apropriado e acessar membros desse objeto. A adição do parâmetro `context` torna `bsearch_s` mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar dados para a função `compare`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`bsearch_s`|\< stdlib. h \> e \< h \>|  
+|-------------|---------------------|  
+|`bsearch_s`|\<stdlib.h> e \<search.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
- Este programa classifica uma matriz de cadeia de caracteres com [qsort\_s](../../c-runtime-library/reference/qsort-s.md), e, em seguida, usa bsearch\_s para localizar a palavra "gato".  
+## <a name="example"></a>Exemplo  
+ Este programa classifica uma matriz de cadeia de caracteres com [qsort_s](../../c-runtime-library/reference/qsort-s.md) e então usa bsearch_s para localizar a palavra "gato".  
   
 ```  
 // crt_bsearch_s.cpp  
@@ -191,14 +206,15 @@ int main( void )
 ```  
   
 ```Output  
-cat cow dog goat horse human pig rat cat found at 002F0F04  
+cat cow dog goat horse human pig rat  
+cat found at 002F0F04  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  <xref:System.Collections.ArrayList.BinarySearch%2A>  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lfind](../../c-runtime-library/reference/lfind.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

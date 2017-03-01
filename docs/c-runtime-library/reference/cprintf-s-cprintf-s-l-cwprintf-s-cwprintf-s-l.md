@@ -1,74 +1,88 @@
 ---
-title: "_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwprintf_s_l"
-  - "_cprintf_s_l"
-  - "_cprintf_s"
-  - "_cwprintf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_cwprintf_s_l"
-  - "_cprintf_s"
-  - "cwprintf_s"
-  - "_cprintf_s_l"
-  - "cwprintf_s_l"
-  - "cprintf_s_l"
-  - "_tcprintf_s"
-  - "cprintf_s"
-  - "_cwprintf_s"
-  - "tcprintf_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _cprintf_s"
-  - "Função _cprintf_s_l"
-  - "Função _cwprintf_s"
-  - "Função _cwprintf_s_l"
-  - "Função _tcprintf_s"
-  - "Função _tcprintf_s_l"
-  - "Função cprintf_s"
-  - "Função cprintf_s_l"
-  - "Função cwprintf_s"
-  - "Função cwprintf_s_l"
-  - "Função tcprintf_s"
-  - "Função tcprintf_s_l"
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwprintf_s_l
+- _cprintf_s_l
+- _cprintf_s
+- _cwprintf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _cwprintf_s_l
+- _cprintf_s
+- cwprintf_s
+- _cprintf_s_l
+- cwprintf_s_l
+- cprintf_s_l
+- _tcprintf_s
+- cprintf_s
+- _cwprintf_s
+- tcprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcprintf_s_l function
+- _cprintf_s_l function
+- _cwprintf_s_l function
+- tcprintf_s function
+- _tcprintf_s_l function
+- _cwprintf_s function
+- cwprintf_s function
+- _cprintf_s function
+- cprintf_s function
+- _tcprintf_s function
+- cprintf_s_l function
+- cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dbb97bd9b9518f1b6ab81cffeef29c7c8f5f5585
+ms.lasthandoff: 02/25/2017
 
-Formata e exibe no console.  Essas versões de [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) têm aprimoramentos de segurança, como descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
+Formata e imprime no console. Estas versões de [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) contêm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Esta API não pode ser usada em aplicativos que executam no Tempo de Execução do Windows.  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _cprintf_s(   
@@ -91,7 +105,7 @@ int _cwprintf_s_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `format`  
  Cadeia de caracteres de controle de formato.  
   
@@ -101,41 +115,41 @@ int _cwprintf_s_l(
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  O número de caracteres impressos.  
   
-## Comentários  
- Essas funções formatam e imprimem uma série de caracteres e valores diretamente para o console, usando a função `_putch` \(`_putwch` para `_cwprintf_s`\) para caracteres de saída.  Cada `argument` \(se houver\) é convertido e gerado de acordo com a especificação de formato correspondente em `format`.  O formato tem o mesmo formulário e a mesma função que o parâmetro `format` para a função [printf\_s](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md).  Ao contrário, as funções de `fprintf_s`, de `printf_s` e `sprintf_s` ou `_cprintf_s` ou `_cwprintf_s` traduz caracteres de alimentação de linha em combinações de alimentação da linha de retorno de transporte \(CR\-LF\) na saída.  
+## <a name="remarks"></a>Comentários  
+ Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função `_putch` (`_putwch` para `_cwprintf_s`) para gerar caracteres. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato tem a mesma forma e função que o parâmetro `format` da função [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário das funções `fprintf_s`, `printf_s` e `sprintf_s`, `_cprintf_s` nem `_cwprintf_s` movem caracteres de alimentação de linha em combinações CR-LF (retorno de carro-alimentação de linha) durante a geração.  
   
- Uma distinção importante é que `_cwprintf_s` exibe caracteres Unicode quando usado no Windows NT.  Ao contrário de `_cprintf_s`, `_cwprintf_s` usa a localidade atual de console  
+ Uma distinção importante é que `_cwprintf_s` exibe caracteres Unicode quando usado no Windows NT. Ao contrário de `_cprintf_s`, `_cwprintf_s` usa a localidade do console atual  
   
- As versões dessas funções com o sufixo `_l` são idênticas, exceto que elas usam o parâmetro de localidade informado em vez da localidade atual.  
+ As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de que usam o parâmetro de localidade passado em vez da localidade atual.  
   
 > [!IMPORTANT]
 >  Verifique se `format` não é uma cadeia de caracteres definida pelo usuário.  
   
- Assim como as versões não seguras \(consulte [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)\), essas funções validam seus parâmetros e chamam o manipulador de parâmetro inválido, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md), se `format` for um ponteiro nulo.  Essas funções diferem das versões não seguras porque a cadeia de caracteres de formato em si também é validada.  Se houver especificadores de formatação desconhecidos ou mal formatados, essas funções chamarão o manipulador de parâmetro inválido.  Em todos os casos, se a execução puder continuar, as funções retornarão \-1 e definirão `errno` como `EINVAL`.  
+ Assim como as versões não seguras (consulte [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)), essas funções validam seus parâmetros e invocam o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), se `format` for um ponteiro nulo. Essas funções diferem das versões não seguras pelo fato da própria cadeia de formato também ser validada. Se houver algum especificador de formatação desconhecido ou mal formado, essas funções invocarão o manipulador de parâmetro inválido. Em todo caso, se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|  
 |`_tcprintf_s_l`|`_cprintf_s_l`|`_cprintf_s_l`|`_cwprintf_s_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_cprintf_s`,`_cprintf_s_l`|\<conio.h\>|  
-|`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h\>|  
+|-------------|---------------------|  
+|`_cprintf_s`,`_cprintf_s_l`|\<conio.h>|  
+|`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_cprintf_s.c  
@@ -158,17 +172,17 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 -16  001d  62511  A Test  
 ```  
   
-## Consulte também  
- [Console e E\/S de porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [sprintf\_s, \_sprintf\_s\_l, swprintf\_s, \_swprintf\_s\_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
- [vfprintf\_s, \_vfprintf\_s\_l, vfwprintf\_s, \_vfwprintf\_s\_l](../Topic/vfprintf_s,%20_vfprintf_s_l,%20vfwprintf_s,%20_vfwprintf_s_l.md)   
- [Sintaxe de especificação de formato: funções printf e and wprintf](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md)
+## <a name="see-also"></a>Consulte também  
+ [E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
+ [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)   
+ [Sintaxe de especificação de formato: funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

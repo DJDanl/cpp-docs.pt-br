@@ -1,8 +1,7 @@
 ---
 title: "stricmp, wcsicmp | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,18 +28,29 @@ f1_keywords:
   - "wcsicmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função stricmp"
-  - "Função wcsicmp"
+  - "stricmp function"
+  - "wcsicmp function"
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "ru-ru"
+  - "zh-cn"
+  - "zh-tw"
+translation.priority.mt: 
+  - "cs-cz"
+  - "pl-pl"
+  - "pt-br"
+  - "tr-tr"
 ---
-# stricmp, wcsicmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Essas funções de POSIX são preteridas.  Use a conformidade ISO C\+\+ [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) em vez disso.
+# <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
+Essas funções POSIX foram preteridas. Ao invés disso, use ISO C++ compatível com [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).

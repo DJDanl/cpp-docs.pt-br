@@ -1,61 +1,75 @@
 ---
-title: "_rmdir, _wrmdir | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wrmdir"
-  - "_rmdir"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "trmdir"
-  - "_trmdir"
-  - "wrmdir"
-  - "_rmdir"
-  - "_wrmdir"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _rmdir"
-  - "Função _trmdir"
-  - "Função _wrmdir"
-  - "diretórios [C++], excluindo"
-  - "diretórios [C++], removendo"
-  - "Função rmdir"
-  - "Função trmdir"
-  - "Função wrmdir"
+title: _rmdir, _wrmdir | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wrmdir
+- _rmdir
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- trmdir
+- _trmdir
+- wrmdir
+- _rmdir
+- _wrmdir
+dev_langs:
+- C++
+helpviewer_keywords:
+- _rmdir function
+- directories [C++], deleting
+- rmdir function
+- directories [C++], removing
+- trmdir function
+- _trmdir function
+- _wrmdir function
+- wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _rmdir, _wrmdir
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 277adddab2c9aa318315f44e203624bc22eb5131
+ms.lasthandoff: 02/25/2017
 
-Exclui um Diretório.  
+---
+# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+Exclui um diretório.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -67,54 +81,54 @@ int _wrmdir(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `dirname`  
- Caminho do diretório a ser removido.  
+ O caminho do diretório a ser removido.  
   
-## Valor de retorno  
- Cada uma dessas funções retornará 0 se o diretório é excluído com êxito.  Um valor de retorno – 1 indica que ocorreu um erro e `errno` são definidos como um dos seguintes valores:  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retornará 0 se o diretório for excluído com êxito. Um valor retornado de -1 indica que há um erro e `errno` é definido com um dos valores a seguir:  
   
  **ENOTEMPTY**  
- O caminho especificado não é um diretório, o diretório não estiver vazia, o diretório é o diretório de trabalho atual ou o diretório raiz.  
+ O caminho especificado não é um diretório, o diretório não está vazio ou o diretório é o diretório de trabalho atual ou o diretório raiz.  
   
  `ENOENT`  
- O caminho é inválido.  
+ Caminho inválido.  
   
  **EACCES**  
- Um programa tem um identificador aberto no diretório.  
+ Um programa tem um identificador aberto para o diretório.  
   
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- A função de `_rmdir` exclui o diretório especificado por `dirname`.  O diretório deve estar vazia, e não deve ser o diretório de trabalho atual ou o diretório raiz.  
+## <a name="remarks"></a>Comentários  
+ A função `_rmdir` exclui o diretório especificado por `dirname`. O diretório deve estar vazio e não deve ser o diretório de trabalho atual ou o diretório raiz.  
   
- `_wrmdir` é uma versão de caractere longo de `_rmdir`; o argumento `dirname` para `_wrmdir` é uma cadeia de caractere longo.  Caso contrário, `_wrmdir` e `_rmdir`, ao contrário, se comportam de forma idêntica.  
+ A função `_wrmdir` é uma versão de caractere largo da função `_rmdir`; o argumento `dirname` para `_wrmdir` é uma cadeia de caracteres larga. Caso contrário, `_wrmdir` e `_rmdir` se comportam de forma idêntica.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_trmdir`|`_rmdir`|`_rmdir`|`_wrmdir`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_rmdir`|\<direct.h\>|  
-|`_wrmdir`|\<direct.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`_rmdir`|\<direct.h>|  
+|`_wrmdir`|\<direct.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
- Consulte o exemplo de [\_mkdir](../Topic/_mkdir,%20_wmkdir.md).  
+## <a name="example"></a>Exemplo  
+ Consulte o exemplo de [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::Directory::Delete](https://msdn.microsoft.com/en-us/library/system.io.directory.delete.aspx)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   
- [\_chdir, \_wchdir](../Topic/_chdir,%20_wchdir.md)   
- [\_mkdir, \_wmkdir](../Topic/_mkdir,%20_wmkdir.md)
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)

@@ -1,8 +1,7 @@
 ---
 title: "fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,34 +34,44 @@ f1_keywords:
   - "_fscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _fscanf_l"
-  - "Função _ftscanf"
-  - "Função _ftscanf_l"
-  - "Função _fwscanf_l"
-  - "dados [CRT], lendo a partir de fluxos"
-  - "dados formatados [C++], lendo a partir de fluxos"
-  - "Função fscanf"
-  - "Função fscanf_l"
-  - "Função ftscanf"
-  - "Função ftscanf_l"
-  - "Função fwscanf"
-  - "Função fwscanf_l"
-  - "fluxos [C++], lendo dados formatados de"
+  - "fscanf function"
+  - "fwscanf function"
+  - "formatted data [C++], reading from streams"
+  - "ftscanf_l function"
+  - "_ftscanf_l function"
+  - "_fwscanf_l function"
+  - "data [CRT], reading from streams"
+  - "_fscanf_l function"
+  - "ftscanf function"
+  - "fscanf_l function"
+  - "streams [C++], reading formatted data from"
+  - "_ftscanf function"
+  - "fwscanf_l function"
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# fscanf, _fscanf_l, fwscanf, _fwscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ler dados formatados de um fluxo.  Versões mais seguras dessas funções estão disponíveis; consulte [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
+# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
+Leia dados formatados de um fluxo. Versões mais seguras dessas funções estão disponíveis; consulte [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int fscanf(   
@@ -89,9 +98,9 @@ int _fwscanf_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `stream`  
- Ponteiro a estrutura de `FILE` .  
+ Ponteiro para a estrutura `FILE`.  
   
  `format`  
  Cadeia de caracteres de controle de formato.  
@@ -102,37 +111,37 @@ int _fwscanf_l(
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna o número de campos com êxito convertidos e atribuídos; o valor de retorno não inclui os campos que foram lidos mas não atribuído.  Um valor de retorno 0 indica que nenhum campo foi atribuído.  Se ocorrer um erro ou se o final do fluxo de arquivos for atingido antes da primeira conversão, o valor do retorno será `EOF` para `fscanf` e `fwscanf`.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. Se ocorrer um erro ou se o final do fluxo de arquivo for atingido antes da primeira conversão, o valor retornado será `EOF` para `fscanf` e `fwscanf`.  
   
- Essas funções validam seus parâmetros.  Se `stream` ou `format` são um ponteiro nulo, o parâmetro de manipulador inválido é invocado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essas funções retornarão `EOF` e definirão `errno` para `EINVAL`.  
+ Essas funções validam seus parâmetros. Se `stream` ou `format` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EOF` e definirão `errno` para `EINVAL`.  
   
-## Comentários  
- A função de `fscanf` ler dados da posição atual de `stream` em locais dados por `argument` \(se houver\).  Cada `argument` deve ser um ponteiro para uma variável de tipo que corresponde a um especificador do tipo em `format`.  `format` controla a interpretação dos campos de entrada e tem o mesmo formulário e função que o argumento de `format` para `scanf`; consulte [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) para obter uma descrição de `format`*.*  
+## <a name="remarks"></a>Comentários  
+ A função `fscanf` lê dados da posição atual de `stream` nos locais fornecidos por `argument` (se houver). Cada `argument` deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em `format`. `format` controla a interpretação dos campos de entrada e tem o mesmo formato e função que o argumento `format` para `scanf`. Consulte [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) para ver uma descrição de `format`*.*  
   
- `fwscanf` é uma versão de caractere largo de `fscanf`; os argumentos de formato para `fwscanf` referem\-se à cadeia de caracteres ampla.  Essas funções se comportam de forma idêntica se o fluxo for aberto no modo de ANSI.  `fscanf` não oferece suporte a entrada de um fluxo de UNICODE.  
+ `fwscanf` é uma versão de caractere largo de `fscanf`; o argumento de formato para `fwscanf` é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `fscanf` não dá suporte à entrada de um fluxo UNICODE.  
   
- As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam o parâmetro de localidade passado em vez da localidade de thread atual.  
+ As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftscanf`|`fscanf`|`fscanf`|`fwscanf`|  
 |`_ftscanf_l`|`_fscanf_l`|`_fscanf_l`|`_fwscanf_l`|  
   
- Para obter mais informações, consulte [Formatar campos da especificação – funções de scanf e funções de wscanf](../Topic/Format%20Specification%20Fields:%20scanf%20and%20wscanf%20Functions.md).  
+ Para obter mais informações, consulte [Campos de especificação de formato – funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`fscanf`, `_fscanf_l`|\<stdio.h\>|  
-|`fwscanf`, `_fwscanf_l`|\<stdio.h\> ou \<wchar.h\>|  
+|--------------|---------------------|  
+|`fscanf`, `_fscanf_l`|\<stdio.h>|  
+|`fwscanf`, `_fwscanf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_fscanf.c  
@@ -184,17 +193,20 @@ int main( void )
 }  
 ```  
   
-  **Cadeia de caracteres a**  
-**65000**  
-**3.141590**  
-**x**   
-## Equivalência do .NET Framework  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Consulte também métodos de `Parse` , como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+a-string  
+65000  
+3.141590  
+x  
+```  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Consulte também métodos `Parse`, como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+  
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

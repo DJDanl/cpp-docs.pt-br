@@ -1,8 +1,7 @@
 ---
 title: "&lt;cassert&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,32 +15,45 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "Cabeçalho cassert"
+  - "cassert header"
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# &lt;cassert&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inclui o cabeçalho \<assert.h\> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.  
+# <a name="ltcassertgt"></a>&lt;cassert&gt;
+Inclui o cabeçalho da biblioteca C Padrão \<assert.h> e adiciona os nomes associados ao namespace `std`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 #include <cassert>  
   
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.  
   
-## Consulte também  
- [Macro Assert, \_wassert de declaração](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Visão geral da STL](../standard-library/cpp-standard-library-overview.md)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Consulte também  
+ [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+ [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

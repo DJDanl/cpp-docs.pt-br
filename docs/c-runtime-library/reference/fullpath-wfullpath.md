@@ -1,8 +1,7 @@
 ---
 title: "_fullpath, _wfullpath | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,27 +31,37 @@ f1_keywords:
   - "_fullpath"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "Função _fullpath"
-  - "Função _wfullpath"
-  - "caminhos absolutos"
-  - "Função fullpath"
-  - "caminhos de arquivo relativos"
-  - "Função wfullpath"
+  - "_wfullpath function"
+  - "relative file paths"
+  - "absolute paths"
+  - "wfullpath function"
+  - "_fullpath function"
+  - "fullpath function"
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+translation.priority.ht: 
+  - "cs-cz"
+  - "de-de"
+  - "es-es"
+  - "fr-fr"
+  - "it-it"
+  - "ja-jp"
+  - "ko-kr"
+  - "pl-pl"
+  - "pt-br"
+  - "ru-ru"
+  - "tr-tr"
+  - "zh-cn"
+  - "zh-tw"
 ---
-# _fullpath, _wfullpath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cria um absoluta ou um nome de caminho completo para o nome do caminho relativo especificado.  
+# <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
+Cria um nome de caminho absoluto ou completo para o nome de caminho relativo especificado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *_fullpath(   
@@ -67,58 +76,58 @@ wchar_t *_wfullpath(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `absPath`  
- Ponteiro para um buffer que contém o absoluta ou o nome do caminho completo, ou NULL.  
+ Ponteiro para um buffer contendo o nome de caminho absoluto ou completo ou NULL.  
   
  `relPath`  
- Nome do caminho relativo.  
+ Nome de caminho relativo.  
   
  `maxLength`  
- Comprimento máximo do buffer do nome de caminho absoluto \(`absPath`\).  Esse comprimento é em bytes para `_fullpath` mas em caracteres amplos`wchar_t`\(\) para `_wfullpath`.  
+ Comprimento máximo do buffer do nome de caminho absoluto (`absPath`). Esse comprimento é em bytes para `_fullpath` mas em caracteres largos (`wchar_t`) para `_wfullpath`.  
   
-## Valor de retorno  
- Cada uma dessas funções retorna um ponteiro para um buffer que contém o nome do caminho absoluto \(`absPath`\).  Se houver um erro \(por exemplo, se o valor transmitido em `relPath` inclui uma letra de unidade que não é válido ou não pode ser localizada, ou se o comprimento do nome de caminho absoluta criado \(`absPath`\) é maior do que `maxLength`\), a função retornará `NULL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada uma dessas funções retorna um ponteiro para um buffer contendo o nome de caminho absoluto (`absPath`). Se houver um erro (por exemplo, se o valor passado em `relPath` incluir uma letra da unidade inválida ou que não possa ser encontrada ou se o tamanho do nome de caminho absoluto criado (`absPath`) for maior que `maxLength`), a função retornará `NULL`.  
   
-## Comentários  
- A função de `_fullpath` expande o nome de caminho relativa em `relPath` a seu totalmente qualificado ou caminho absoluta e armazena esse nome em `absPath`*.* Se `absPath` for NULL, `malloc` é usada para atribuir um buffer de comprimento suficiente para conter o nome de caminho.  É responsabilidade do chamador liberar esse buffer.  Um nome de caminho especifica um caminho relativo para outro local atual \(como o diretório de trabalho atual: “."\).  Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro exigida para alcançar o local desejado da raiz do sistema de arquivos.  Ao contrário de `_makepath`, `_fullpath` pode ser usado para obter o nome de caminho absoluto para os caminhos relativos`relPath`\(\) que incluem “. \/” ou “. \/” em seus nomes.  
+## <a name="remarks"></a>Comentários  
+ A função `_fullpath` expande o nome do caminho relativo em `relPath` para seu caminho totalmente qualificado ou absoluto e armazena esse nome em `absPath`*.* Se `absPath` for NULL, `malloc` será usado para alocar um buffer de tamanho suficiente para armazenar o nome do caminho. É responsabilidade do chamador liberar esse buffer. Um nome de caminho relativo especifica um caminho para outro local do local atual (como o diretório de trabalho atual: "."). Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro necessário para alcançar o local desejado da raiz do sistema de arquivos. Diferente de `_makepath`, `_fullpath` pode ser usado para obter o nome de caminho absoluto para caminhos relativos (`relPath`) que incluem "./"ou"../" em seus nomes.  
   
- Por exemplo, para usar rotinas de tempo de execução C, o aplicativo deve incluir os arquivos de cabeçalho que contêm as declarações para as rotinas.  Cada arquivo de cabeçalho inclui referências de instrução o local do arquivo em um modo relativo \(o diretório de trabalho de aplicativo\):  
+ Por exemplo, para usar rotinas de tempo de execução de C, o aplicativo deve incluir os arquivos de cabeçalho que contêm as declarações para as rotinas. Cada instrução include do arquivo de cabeçalho faz referência ao local do arquivo de forma relativa (do diretório de trabalho do aplicativo):  
   
 ```  
 #include <stdlib.h>  
 ```  
   
- quando o caminho absoluto \(local real do sistema de arquivos\) do arquivo poderia ser:  
+ quando o caminho absoluto (local do sistema de arquivos real) do arquivo pode ser:  
   
 ```  
 \\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h  
 ```  
   
- `_fullpath` controla automaticamente argumentos de cadeia de caracteres de multibyte\- caracteres conforme apropriado, confirmando sequências de multibyte\- caractere de acordo com a página de código de multibyte atualmente em uso.  `_wfullpath` é uma versão de ampla caractere de `_fullpath`; os argumentos de cadeia de caracteres a `_wfullpath` são cadeias de caracteres de ampla caractere.  `_wfullpath` e `_fullpath` se comportam idêntica exceto que `_wfullpath` não trata as cadeias de caracteres de multibyte\- caractere.  
+ `_fullpath` manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo sequências de caracteres multibyte de acordo com a página de código multibyte que está sendo usada no momento. `_wfullpath` é uma versão de caractere largo de `_fullpath`; os argumentos de cadeia de caracteres `_wfullpath` são cadeias de caracteres largos. `_wfullpath` e `_fullpath` têm comportamento idêntico, exceto pelo fato de que `_wfullpath` não manipula cadeias de caracteres multibyte.  
   
- Se `_DEBUG` e `_CRTDBG_MAP_ALLOC` ambos são definidas, as chamadas para `_fullpath` e `_wfullpath` são substituídos por chamadas a `_fullpath_dbg` e a `_wfullpath_dbg` para permitir depuração alocações de memória.  Para obter mais informações, consulte [\_fullpath\_dbg, \_wfullpath\_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
+ Se `_DEBUG` e `_CRTDBG_MAP_ALLOC` forem definidos, chamadas para `_fullpath` e `_wfullpath` serão substituídas por chamadas para `_fullpath_dbg` e `_wfullpath_dbg`, para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_fullpath_dbg, _wfullpath_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
- Essa função invoca o manipulador inválido do parâmetro, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md), se `maxlen` é menor ou igual a 0.  Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `NULL`.  
+ Essa função invoca o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md), se `maxlen` for menor ou igual a 0. Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `NULL`.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfullpath`|`_fullpath`|`_fullpath`|`_wfullpath`|  
   
- Se o buffer de `absPath` é `NULL`, `_fullpath` chama [malloc](../../c-runtime-library/reference/malloc.md) para alocar um buffer e ignora o argumento de `maxLength` .  É responsabilidade do chamador desaloque esse buffer \(usando [livre](../../c-runtime-library/reference/free.md)\) conforme apropriado.  Se o argumento de `relPath` especifica uma unidade de disco, o diretório atual dessa unidade é combinado com o caminho.  
+ Se o buffer `absPath` for `NULL`, `_fullpath` chamará [malloc](../../c-runtime-library/reference/malloc.md) para alocar um buffer e ignorará o argumento `maxLength`. É responsabilidade do chamador desalocar esse buffer (usando [free](../../c-runtime-library/reference/free.md)) conforme apropriado. Se o argumento `relPath` especificar uma unidade de disco, o diretório atual da unidade será combinado ao caminho.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_fullpath`|\<stdlib.h\>|  
-|`_wfullpath`|\<stdlib.h\> ou \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fullpath`|\<stdlib.h>|  
+|`_wfullpath`|\<stdlib.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_fullpath.c  
@@ -147,15 +156,18 @@ int main( void )
 }  
 ```  
   
-  **O caminho completo é: C:\\Documents and settings \\ usuário \\ meus documentos \\ teste**  
-**O caminho completo é: C:\\test**  
-**O caminho completo é: C:\\Documents and Settings\\user\\test**   
-## Equivalência do .NET Framework  
+```Output  
+Full path is: C:\Documents and Settings\user\My Documents\test  
+Full path is: C:\test  
+Full path is: C:\Documents and Settings\user\test  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
   
-## Consulte também  
- [Manipulação de arquivos](../../c-runtime-library/file-handling.md)   
- [\_getcwd, \_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdcwd, \_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_splitpath, \_wsplitpath](../Topic/_splitpath,%20_wsplitpath.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)

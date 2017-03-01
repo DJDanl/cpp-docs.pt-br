@@ -1,57 +1,72 @@
 ---
-title: "acosh, acoshf, acoshl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "acoshf"
-  - "acosh"
-  - "acoshl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "acosh"
-  - "acoshf"
-  - "acoshl"
-  - "math/acosh"
-  - "math/acoshf"
-  - "math/acoshl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função acoshf"
-  - "Função acosh"
-  - "função acoshl"
+title: acosh, acoshf, acoshl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- acoshf
+- acosh
+- acoshl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- acosh
+- acoshf
+- acoshl
+- math/acosh
+- math/acoshf
+- math/acoshl
+dev_langs:
+- C++
+helpviewer_keywords:
+- acoshf function
+- acosh function
+- acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# acosh, acoshf, acoshl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ac8ef965bd904ecfa17f78d6898c2e21ccb1591a
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 Calcula o cosseno hiperbólico inverso.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 double acosh(  
@@ -71,32 +86,32 @@ long double acoshl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `x`  
  Valor de ponto flutuante.  
   
-## Valor de retorno  
- O `acosh` funções retornam o cosseno hiperbólico inverso \(arco cosseno hiperbólico\) de `x`. Essas funções são válidas no domínio `x` ≥ 1. Se `x` for menor que 1, `errno` é definido como `EDOM` e o resultado será um NaN silencioso. Se `x` for um NaN silencioso, indefinido, ou infinito, o mesmo valor é retornado.  
+## <a name="return-value"></a>Valor de retorno  
+ As funções `acosh` retornam o cosseno hiperbólico inverso (arcosseno hiperbólico) de `x`. Essas funções são válidas no domínio `x` ≥ 1. Se `x` for menor que 1, `errno` será definido como `EDOM` e o resultado será um NaN silencioso. Se `x` for um NaN silencioso, indefinido ou de infinidade, será retornado o mesmo valor.  
   
-|Entrada|Exceção SEH|`_matherr` Exceção|  
-|-------------|-----------------|------------------------|  
-|± QNAN, IND INF|nenhum|nenhum|  
-|x \< 1|nenhum|nenhum|  
+|Entrada|Exceção SEH|Exceção `_matherr`|  
+|-----------|-------------------|--------------------------|  
+|± QNAN, IND, INF|nenhum|nenhum|  
+|x < 1|nenhum|nenhum|  
   
-## Comentários  
- Quando você usar o C\+\+, você pode chamar sobrecargas de `acosh` que tomam e retornam `float` ou `long double` valores. Em um programa C, `acosh` sempre toma e retorna `double`.  
+## <a name="remarks"></a>Comentários  
+ Ao usar C++, é possível chamar sobrecargas de `acosh` que usam e retornam os valores `float` ou `long double`. Em programas C, `acosh` sempre usa e retorna `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Função|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`acosh`, `acoshf`, `acoshl`|\< Math \>|\<cmath\>|  
+|Função|Cabeçalho C|Cabeçalho C++|  
+|--------------|--------------|------------------|  
+|`acosh`, `acoshf`, `acoshl`|\<math.h>|\<cmath>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```c  
+```C  
 // crt_acosh.c  
 // Compile by using: cl /W4 crt_acosh.c  
 // This program displays the hyperbolic cosine of pi / 4  
@@ -118,18 +133,18 @@ int main( void )
 ```  
   
 ```Output  
-COSH (0,785398) = 1.324609 acosh (1.324609) = 0,785398  
+cosh( 0.785398 ) = 1.324609  
+acosh( 1.324609 ) = 0.785398  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [Duplo longo](../../misc/long-double.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [asinh, asinhf, asinhl](../../c-runtime-library/reference/asinh-asinhf-asinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [atanh, atanhf, atanhl](../Topic/atanh,%20atanhf,%20atanhl.md)   
- [\_CItan](../../c-runtime-library/citan.md)
+ [atanh, atanhf, atanhl](../../c-runtime-library/reference/atanh-atanhf-atanhl.md)   
+ [_CItan](../../c-runtime-library/citan.md)

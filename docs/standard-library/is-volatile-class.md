@@ -1,56 +1,68 @@
 ---
-title: "Classe is_volatile | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_volatile"
-  - "std.tr1.is_volatile"
-  - "is_volatile"
-  - "std.is_volatile"
-  - "std::is_volatile"
-  - "type_traits/std::is_volatile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe is_volatile [TR1]"
-  - "is_volatile"
+title: Classe is_volatile | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_volatile
+- std::is_volatile
+- type_traits/std::is_volatile
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_volatile class
+- is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
 caps.latest.revision: 19
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe is_volatile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 367ae42b0e5e01cbbb346f1f74ac2ebfef20ce26
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="isvolatile-class"></a>Classe is_volatile
 Testa se o tipo é volátil.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_volatile;  
+template <class Ty>  
+struct is_volatile;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo contém true se `Ty` é `volatile-qualified`.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se `Ty` for `volatile-qualified`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_volatile.cpp   
+```cpp  
+// std__type_traits__is_volatile.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_volatile \< trivial \> \= \= false**  
-**is\_volatile \< volátil trivial \> \= \= true**  
-**is\_volatile \< int \> \= \= false**  
-**is\_volatile \< int volátil \> \= \= true**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_volatile<trivial> == false  
+is_volatile<volatile trivial> == true  
+is_volatile<int> == false  
+is_volatile<volatile int> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_const](../Topic/is_const%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_const](../standard-library/is-const-class.md)
+

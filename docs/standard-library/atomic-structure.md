@@ -1,81 +1,95 @@
 ---
-title: "Estrutura atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic/std::atomic"
-dev_langs: 
-  - "C++"
+title: "Estrutura atômica | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 caps.latest.revision: 10
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Estrutura atomic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
+ms.lasthandoff: 02/25/2017
 
-Descreve um objeto que executa operações atômicas em um valor armazenado de tipo `Ty`.  
+---
+# <a name="atomic-structure"></a>Estrutura atomic
+Descreve um objeto que executa operações atômicas em um valor armazenado do tipo `Ty`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class Ty>
+struct atomic;
 ```  
-template <class Ty>  
-struct atomic;  
-```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Construtor atomic::atomic](../Topic/atomic::atomic%20Constructor.md)|Constrói um objeto atômico.|  
+|----------|-----------------|  
+|[Construtor atomic::atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Constrói um objeto atômico.|  
   
-### Operadores Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Operador atomic::operator Ty](../Topic/atomic::operator%20Ty%20Operator.md)|Lê e retorna o valor armazenado. \([Método atomic::load](../Topic/atomic::load%20Method.md)\)|  
-|[Operador atomic::operator\=](../Topic/atomic::operator=%20Operator.md)|Usa um valor especificado para substituir o valor armazenado. \([Método atomic::store](../Topic/atomic::store%20Method.md)\)|  
-|||  
-|[Operador atomic::operator\+\+](../Topic/atomic::operator++%20Operator.md)|Aumenta o valor armazenado.  Usado somente por especializações integrais e de ponteiro.|  
-|[Operador atomic::operator\+\=](../Topic/atomic::operator+=%20Operator.md)|Adiciona um valor especificado ao valor armazenado.  Usado somente por especializações integrais e de ponteiro.|  
-|[Operador atomic::operator\-\-](../Topic/atomic::operator--%20Operator.md)|Diminui o valor armazenado.  Usado somente por especializações integrais e de ponteiro.|  
-|[Operador atomic::operator\-\=](../Topic/atomic::operator-=%20Operator.md)|Subtrai um valor especificado do valor armazenado.  Usado somente por especializações integrais e de ponteiro.|  
-|[Operador atomic::operator&\=](../Topic/atomic::operator&=%20Operator.md)|Executa `and` bit a bit em um valor especificado e o valor armazenado.  Usado somente por especializações integrais.|  
-|[Operador atomic::operator&#124;\=](../Topic/atomic::operator%7C=%20Operator.md)|Executa `or` bit a bit em um valor especificado e o valor armazenado.  Usado somente por especializações integrais.|  
-|[Operador atomic::operator^\=](../Topic/atomic::operator%5E=%20Operator.md)|Executa `exclusive or` bit a bit em um valor especificado e o valor armazenado.  Usado somente por especializações integrais.|  
-  
-### Métodos Públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método atomic::compare\_exchange\_strong](../Topic/atomic::compare_exchange_strong%20Method.md)|Executa uma operação `atomic_compare_and_exchange` em `this` e retorna o resultado.|  
-|[Método atomic::compare\_exchange\_weak](../Topic/atomic::compare_exchange_weak%20Method.md)|Executa uma `weak_atomic_compare_and_exchange` operação em `this` e retorna o resultado.|  
-|[Método atomic::fetch\_add](../Topic/atomic::fetch_add%20Method.md)|Adiciona um valor especificado ao valor armazenado.|  
-|[Método atomic::fetch\_and](../Topic/atomic::fetch_and%20Method.md)|Executa `and` bit a bit em um valor especificado e o valor armazenado.|  
-|[Método atomic::fetch\_or](../Topic/atomic::fetch_or%20Method.md)|Executa `or` bit a bit em um valor especificado e o valor armazenado.|  
-|[Método atomic::fetch\_sub](../Topic/atomic::fetch_sub%20Method.md)|Subtrai um valor especificado do valor armazenado.|  
-|[Método atomic::fetch\_xor](../Topic/atomic::fetch_xor%20Method.md)|Executa `exclusive or` bit a bit em um valor especificado e o valor armazenado.|  
-|[Método atomic::is\_lock\_free](../Topic/atomic::is_lock_free%20Method.md)|Especifica se as operações atômicas em `this` são *livre de bloqueio*.  Um tipo atômico será *livre de bloqueio* se nenhuma operação atômica nesse tipo usar bloqueios.|  
-|[Método atomic::load](../Topic/atomic::load%20Method.md)|Lê e retorna o valor armazenado.|  
-|[Método atomic::store](../Topic/atomic::store%20Method.md)|Usa um valor especificado para substituir o valor armazenado.|  
+|----------|-----------------|  
+|[Operador atomic::operator Ty](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Lê e retorna o valor armazenado. ([Método atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[Operador atomic::operator=](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Usa um valor especificado para substituir o valor armazenado. ([Método atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[Operador atomic::operator++](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Incrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.|  
+|[Operador atomic::operator+=](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Adiciona um valor especificado ao valor armazenado. Usado somente por especializações integrais e de ponteiro.|  
+|[Operador atomic::operator--](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Decrementa o valor armazenado. Usado somente por especializações integrais e de ponteiro.|  
+|[Operador atomic::operator-=](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Subtrai um valor especificado do valor armazenado. Usado somente por especializações integrais e de ponteiro.|  
+|[Operador atomic::operator&=](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Executa um `and` bit a bit em um valor especificado e no valor armazenado. Usado somente por especializações integrais.|  
+|[Operador atomic::operator&#124;=](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Executa um `or` bit a bit em um valor especificado e no valor armazenado. Usado somente por especializações integrais.|  
+|[Operador atomic::operator^=](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Executa um `exclusive or` bit a bit em um valor especificado e no valor armazenado. Usado somente por especializações integrais.|  
   
-## Comentários  
- O tipo `Ty` deve ser *trivialmente copiável*.  Ou seja, o uso de [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) para copiar bytes deve gerar um objeto `Ty` válido que compare igual ao objeto original.  As funções de membro `compare_exchange_weak` e `compare_exchange_strong` usam [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar se dois valores `Ty` são iguais.  Essas funções não usarão um `operator==` definido por `Ty`.  As funções membro de `atomic` usam `memcpy` para copiar valores do tipo `Ty`.  
+### <a name="public-methods"></a>Métodos públicos  
   
- Uma especialização parcial, `atomic<Ty *>`, existe para todos os tipos de ponteiro.  A especialização permite a adição de um deslocamento ao valor de ponteiro gerenciado ou à subtração de um deslocamento dela.  As operações aritméticas usam um argumento de tipo `ptrdiff_t` e ajustam esse argumento de acordo com o tamanho de `Ty` para que fique consistente com a aritmética de endereço comum.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Método atomic::compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Executa uma operação `atomic_compare_and_exchange` em `this` e retorna o resultado.|  
+|[Método atomic::compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Executa uma operação `weak_atomic_compare_and_exchange` em `this` e retorna o resultado.|  
+|[Método atomic::fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Adiciona um valor especificado ao valor armazenado.|  
+|[Método atomic::fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Executa um `and` bit a bit em um valor especificado e no valor armazenado.|  
+|[Método atomic::fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Executa um `or` bit a bit em um valor especificado e no valor armazenado.|  
+|[Método atomic::fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Subtrai um valor especificado do valor armazenado.|  
+|[Método atomic::fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Executa um `exclusive or` bit a bit em um valor especificado e no valor armazenado.|  
+|[Método atomic::is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Especifica se operações atômicas em um `this` são *livres de bloqueio*. Um tipo atômico é *livre de bloqueio* se nenhuma operação atômica no tipo usar bloqueios.|  
+|[Método atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Lê e retorna o valor armazenado.|  
+|[Método atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Usa um valor especificado para substituir o valor armazenado.|  
   
- Existe uma especialização para cada tipo integral, exceto `bool`.  Cada especialização fornece um vasto conjunto de métodos para operações aritméticas e lógicas atômicas.  
+## <a name="remarks"></a>Comentários  
+ O tipo `Ty` deve ser *facilmente copiado*. Ou seja, usar [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) para copiar seus bytes deve produzir um objeto `Ty` válido comparável ao objeto original. As funções membro `compare_exchange_weak` e `compare_exchange_strong` usam [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar se dois valores `Ty` são iguais. Essas funções não usarão um `operator==` definido por `Ty`. As funções membro de `atomic` usam `memcpy` para copiar valores do tipo `Ty`.  
+  
+ Uma especialização parcial, `atomic<Ty *>`, existe para todos os tipos de ponteiro. A especialização permite a adição de um deslocamento para o valor do ponteiro gerenciado ou subtração de um deslocamento dele. Operações aritméticas obtêm um argumento do tipo `ptrdiff_t` e ajustam esse argumento de acordo com o tamanho de `Ty` para serem consistentes com endereço comum aritmético.  
+  
+ Existe uma especialização para cada tipo integral, exceto `bool`. Cada especialização fornece um rico conjunto de métodos para operações aritméticas e lógicas atômicas.  
   
 ||||  
 |-|-|-|  
@@ -85,13 +99,17 @@ struct atomic;
 |`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
 |`atomic<long long>`|`atomic<unsigned long long>`|  
   
- As especializações integrais são derivadas dos tipos de `atomic_``integral`.  Por exemplo, `atomic<unsigned int>` é derivado de `atomic_uint`.  
+ Especializações integrais são derivadas de tipos `atomic_``integral` correspondentes. Por exemplo, `atomic<unsigned int>` é derivado de `atomic_uint`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atômico  
   
- std de **Namespace:**  
+ **Namespace:** std  
   
-## Consulte também  
- [\<atomic\>](../standard-library/atomic.md)   
- [Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>Consulte também  
+ [\<atomic>](../standard-library/atomic.md)   
+ [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

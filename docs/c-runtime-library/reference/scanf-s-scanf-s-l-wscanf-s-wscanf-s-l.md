@@ -1,70 +1,84 @@
 ---
-title: "scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wscanf_s"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_scanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wscanf_s"
-  - "_tscanf_s_l"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_tscanf_s"
-  - "_scanf_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Lendo dados [C++], fluxos de entrada"
-  - "buffers [C++], saturações de buffer"
-  - "Função _scanf_s_l"
-  - "Função _wscanf_s_l"
-  - "Função tscanf_s_l"
-  - "Função tscanf_s"
-  - "Função scanf_s"
-  - "dados [C++], lendo de fluxo de entrada"
-  - "Função wscanf_s"
-  - "Função _tscanf_s_l"
-  - "Função _tscanf_s"
-  - "Função scanf_s_l"
-  - "dados formatados [C++], fluxos de entrada"
-  - "Função wscanf_s_l"
-  - "buffers [C++], evitando saturações"
+title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wscanf_s
+- _wscanf_s_l
+- scanf_s
+- _scanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wscanf_s
+- _tscanf_s_l
+- _wscanf_s_l
+- scanf_s
+- _tscanf_s
+- _scanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- buffers [C++], buffer overruns
+- _scanf_s_l function
+- _wscanf_s_l function
+- tscanf_s_l function
+- tscanf_s function
+- scanf_s function
+- data [C++], reading from input stream
+- wscanf_s function
+- _tscanf_s_l function
+- _tscanf_s function
+- scanf_s_l function
+- formatted data [C++], from input streams
+- wscanf_s_l function
+- buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
 caps.latest.revision: 33
-caps.handback.revision: 33
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: db7acae9e531f5cf1a0e90048997d550b309b586
+ms.lasthandoff: 02/25/2017
 
-Lê dados formatados de fluxo de entrada padrão. Essas versões do [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md).  
+---
+# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
+Lê dados formatados do fluxo de entrada padrão. Essas versões de [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int scanf_s(  
@@ -87,7 +101,7 @@ int _wscanf_s_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `format`  
  Cadeia de caracteres de controle de formato.  
   
@@ -97,71 +111,71 @@ int _wscanf_s_l(
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Retorna o número de campos convertido com êxito e atribuídos; o valor de retorno não inclui campos que foram lidos, mas não atribuídos. Um valor de retorno 0 indica que nenhum campo foi atribuído. O valor de retorno é `EOF` para um erro, ou se o caractere de final de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se `format` é um `NULL` ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `scanf_s` e `wscanf_s` retornar `EOF` e defina `errno` para `EINVAL`.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será `EOF` para um erro ou se o caractere de final de arquivo ou o caractere de fim de cadeia de caracteres for encontrado na primeira tentativa de ler um caractere. Se `format` for um ponteiro `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `scanf_s` e `wscanf_s` retornarão `EOF` e definirão `errno` como `EINVAL`.  
   
- Para obter informações sobre esses e outros códigos de erro, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- O `scanf_s` função lê dados do fluxo de entrada padrão `stdin` e grava os dados no local que é determinado por `argument`. Cada `argument` deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em `format`. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
+## <a name="remarks"></a>Comentários  
+ A função `scanf_s` lê dados do fluxo de entrada padrão `stdin` e grava os dados no local fornecido por `argument`. Cada `argument` deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em `format`. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
   
- `wscanf_s` é uma versão de caractere largo de `scanf_s`; o `format` argumento `wscanf_s` é uma cadeia de caracteres largos.`wscanf_s` e `scanf_s` tenham comportamento idêntico quando o fluxo é aberto no modo ANSI.`scanf_s` no momento não oferece suporte a entrada de um fluxo UNICODE.  
+ A função `wscanf_s` é uma versão de caractere largo da função `scanf_s`; o argumento `format` para `wscanf_s` é uma cadeia de caracteres larga. `wscanf_s` e `scanf_s` terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `scanf_s` não dá suporte à entrada de um fluxo UNICODE.  
   
- As versões dessas funções que têm o `_l` sufixo são idênticas, exceto que elas usam o parâmetro de localidade que é passado em vez da localidade do thread atual.  
+ As versões dessas funções que têm o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade que é informado em vez da localidade do thread atual.  
   
- Ao contrário de `scanf` e `wscanf`, `scanf_s` e `wscanf_s` exigem o tamanho do buffer a ser especificado para todos os parâmetros de tipo de entrada `c`, `C`, `s`, `S`, ou conjuntos de controles que são incluídos na cadeia de caracteres `[]`. O tamanho do buffer em caracteres é passado como um parâmetro adicional imediatamente seguindo o ponteiro para o buffer ou variável. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres é passado como a seguir:  
+ Ao contrário de `scanf` e `wscanf`, `scanf_s` e `wscanf_s` exigem que o tamanho do buffer seja especificado para todos os parâmetros de entrada do tipo `c`, `C`, `s`, `S` ou conjuntos de controles de cadeia de caracteres que são incluídos em `[]`. O tamanho do buffer em caracteres é passado como um parâmetro adicional imediatamente após o ponteiro para o buffer ou variável. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres será passado conforme demonstrado a seguir:  
   
  `char s[10];`  
   
  `scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9`  
   
- O tamanho do buffer inclui a terminação nula. Você pode usar um campo de especificação de largura para garantir que o token que é lido em caiba no buffer. Se nenhum campo de especificação de largura for usado, e o token lido é muito grande para caber no buffer, nada é gravado em buffer.  
+ O tamanho do buffer inclui o nulo de terminação. Você pode usar um campo de especificação de largura para garantir que o token lido caiba no buffer. Se nenhum campo de especificação de largura for usado e o token lido for muito grande para caber no buffer, nada será gravado no buffer.  
   
 > [!NOTE]
->  O parâmetro de tamanho é do tipo `unsigned`, e não `size_t`. Use uma conversão estática para converter um `size_t` valor `unsigned` configurações de compilação para 64 bits.  
+>  O parâmetro de tamanho é do tipo `unsigned`, não `size_t`. Use uma conversão estática para converter um valor `size_t` em `unsigned` para configurações de build de 64 bits.  
   
- O exemplo a seguir mostra que o parâmetro de tamanho de buffer descreve o número máximo de caracteres, não em bytes. Na chamada para `wscanf_s`, a largura de caractere que é indicada pelo tipo de buffer não coincide com a largura de caractere que é indicada pelo especificador de formato.  
+ O exemplo a seguir mostra que o parâmetro de tamanho do buffer descreve o número máximo de caracteres, não de bytes. Na chamada para `wscanf_s`, a largura de caractere indicada pelo tipo de buffer não corresponde à largura de caractere indicada pelo especificador de formato.  
   
 ```  
 wchar_t ws[10];  
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));  
 ```  
   
- O `S` especificador de formato indica o uso da largura de caractere que é "a largura padrão que é compatível com a função oposto". A largura do caractere é um byte, mas a função oferece suporte a caracteres de byte duplo. Este exemplo lê uma cadeia de caracteres de até 9 caracteres de largura de byte simples e coloca\-os em um buffer de caracteres de byte duplo\-todo. Os caracteres são tratados como valores de byte único; os dois primeiros caracteres são armazenados em `ws[0]`, os dois são armazenados em `ws[1]`, e assim por diante.  
+ O especificador de formato `S` indica o uso da largura de caractere que é "oposta" à largura padrão que tem suporte pela função. A largura do caractere é de um byte, mas a função dá suporte a caracteres de dois bytes. Este exemplo lê uma cadeia de caracteres de até 9 caracteres com um byte de largura e coloca-os em um buffer de caracteres com dois bytes de largura. Os caracteres são tratados como valores de byte único; os dois primeiros caracteres são armazenados em `ws[0]`, os próximos dois são armazenados em `ws[1]` e assim por diante.  
   
- No caso de caracteres, um único caractere pode ser lida como segue:  
+ No caso de caracteres, um único caractere pode ser lido como demonstrado a seguir:  
   
  `char c;`  
   
  `scanf_s("%c", &c, 1);`  
   
- Quando vários caracteres para cadeias de caracteres terminadas nulos são lidos, inteiros são usados como a especificação de largura e o tamanho do buffer.  
+ Quando vários caracteres para cadeias de caracteres terminadas em não nulo são lidos, inteiros são usados como a especificação de largura e o tamanho do buffer.  
   
  `char c[4];`  
   
  `scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- Para obter mais informações, consulte [Especificação de largura scanf Width](../../c-runtime-library/scanf-width-specification.md).  
+ Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).  
   
-### Mapeamentos de rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|TCHAR. Rotina H|Unicode e MBCS não definidos|MBCS definido|Unicode definido|  
-|---------------------|----------------------------------|-------------------|----------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tscanf_s`|`scanf_s`|`scanf_s`|`wscanf_s`|  
 |`_tscanf_s_l`|`_scanf_s_l`|`_scanf_s_l`|`_wscanf_s_l`|  
   
- Para obter mais informações, consulte [Campos de especificação de formato: funções scanf e wscanf](../Topic/Format%20Specification%20Fields:%20scanf%20and%20wscanf%20Functions.md).  
+ Para obter mais informações, consulte [Campos de especificação de formato: funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`scanf_s`, `_scanf_s_l`|\< stdio \>|  
-|`wscanf_s`, `_wscanf_s_l`|\< stdio \> ou \< WCHAR \>|  
+|-------------|---------------------|  
+|`scanf_s`, `_scanf_s_l`|\<stdio.h>|  
+|`wscanf_s`, `_wscanf_s_l`|\<stdio.h> ou \<wchar.h>|  
   
- Não há suporte para o console no [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. Os identificadores de fluxo padrão que estão associados com o console —`stdin`, `stdout`, e `stderr`— devem ser redirecionados para funções de tempo de execução C podem usá\-los em [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicativos. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_scanf_s.c  
@@ -194,29 +208,32 @@ int main( void )
 }  
 ```  
   
- Este programa produz a seguinte saída quando recebe esta entrada:  
+ Este programa produz a seguinte saída quando recebe essa entrada:  
   
  `71 98.6 h z Byte characters`  
   
  `36 92.3 y n Wide characters`  
   
 ```Output  
-O número de campos de entrada é o conteúdo é de 6: 71 z h 98.599998 o número de campos de entrada de caracteres de Byte é o conteúdo é de 6: 36 92.300003 y n caracteres largos  
+The number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
 ```  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
--   [System::console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
+-   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
--   [System::console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
+-   [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
   
--   Consulte também `Parse` métodos, tais como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+-   Consulte também métodos `Parse`, como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [Localidade](../../c-runtime-library/locale.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
