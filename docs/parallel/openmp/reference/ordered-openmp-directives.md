@@ -1,47 +1,62 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: ordenado (diretivas OpenMP) | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ordered
+dev_langs:
+- C++
+helpviewer_keywords:
+- ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
 caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 2674c1356bb4c985d1dd7cd40c65e1ea845f836c
+ms.lasthandoff: 02/25/2017
 
-Especifica que o código em um paralelo loop deve ser executado como um loop seqüencial.  
+---
+# <a name="ordered-openmp-directives"></a>ordered (diretivas OpenMP)
+Especifica o código em um em paralelo para loop deve ser executado como um loop sequencial.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## Comentários  
- O  **ordenada** diretiva deve estar dentro da extensão dinâmica um [for](../Topic/for%20\(OpenMP\).md) ou  **paralela para** construir com um  **ordenados** cláusula.  
+## <a name="remarks"></a>Comentários  
+ O **ordenados** diretiva deve estar dentro da extensão dinâmica de um [para](../../../parallel/openmp/reference/for-openmp.md) ou **paralela para** construir com um **ordenados** cláusula.  
   
- O  **ordenada** diretiva oferece suporte a cláusulas sem OpenMP.  
+ O **ordenados** diretiva oferece suporte a nenhum cláusulas OpenMP.  
   
- Para obter mais informações, consulte [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md).  
+ Para obter mais informações, consulte [2.6.6 constructo ordered](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_ordered.cpp  
@@ -83,14 +98,17 @@ int main( )
 }  
 ```  
   
-  **iteração de Test \(\) 1**  
-**iteração de Test \(\) 3**  
-**iteração de Test \(\) 5**  
-**iteração de Test \(\) 7**  
-**iteração de Test2\(\) 0**  
-**iteração de Test2\(\) 1**  
-**iteração de Test2\(\) 2**  
-**iteração de Test2\(\) 3**  
-**iteração de Test2\(\) 4**   
-## Consulte também  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Diretivas](../../../parallel/openmp/reference/openmp-directives.md)

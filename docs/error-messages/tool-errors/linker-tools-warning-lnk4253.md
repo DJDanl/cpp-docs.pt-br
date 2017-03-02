@@ -1,48 +1,63 @@
 ---
-title: "Aviso LNK4253 (Ferramentas de Vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4253"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4253"
+title: Aviso LNK4253 das ferramentas de vinculador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4253
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso LNK4253 (Ferramentas de Vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7a8500b427a9e6aa57bf12f0ecda9afaee8aadd1
+ms.lasthandoff: 02/25/2017
 
-seção “section1” não mesclada em section2”; “ já mesclada em “section3”  
+---
+# <a name="linker-tools-warning-lnk4253"></a>Aviso LNK4253 (Ferramentas de Vinculador)
+seção 'section1' não são mesclados em 'section2'; já mesclados 'Remoções3'  
   
- O múltiplo detectado, o vinculador conflitante solicitações de mesclagem.  O vinculador ignorará uma das solicitações.  
+ Mesclar conflitante o vinculador detectou várias solicitações. O vinculador irá ignorar uma das solicitações.  
   
- Uma política de **\/MERGE** são encontradas e a seção de `from` já tiver sido mesclada em uma seção diferente devido a uma opção ou a uma política anterior de **\/MERGE** \(ou devido a uma mesclagem implícita do vinculador\).  
+ A **/mesclar** opção ou diretiva é encontrada e o `from` seção já foram mesclada em uma seção diferente devido a uma anterior **/mesclar** opção ou diretiva (ou devido a uma mesclagem implícita do vinculador).  
   
- Para resolver LNK4253, remover uma das solicitações de mesclagem.  
+ Para resolver LNK4253, remova uma das solicitações de mesclagem.  
   
- Ao atingir os computadores x86 e destinos do Windows CE edition \(BRAÇO, MIPS, SH4, e polegar\) com Visual C\+\+, a seção de .CRT agora é somente leitura.  Se seu código depende do comportamento anterior \(seções de .CRT são de leitura\/gravação\), você pode consultar comportamento inesperado.  
+ Ao direcionar x86 máquinas e destinos do Windows CE (ARM, MIPS, SH4 e Thumb) com o Visual C++, o. Seção de CRT agora é somente leitura. Se seu código depende do comportamento anterior (. Seções de CRT são leitura/gravação), você pode ver um comportamento inesperado.  
   
- Para obter mais informações, consulte,  
+ Para obter mais informações, consulte  
   
--   [\/MERGE \(combinar seções\)](../../build/reference/merge-combine-sections.md)  
+-   [/Merge (combinar seções)](../../build/reference/merge-combine-sections.md)  
   
--   [comment](../../preprocessor/comment-c-cpp.md)  
+-   [comentário (C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## Exemplo  
- No exemplo a seguir, o vinculador for instruído para mesclar duas vezes na seção de `.rdata` , mas em seções diferentes.  O exemplo a seguir produz LNK4253.  
+## <a name="example"></a>Exemplo  
+ No exemplo a seguir, o vinculador é instruído para mesclar o `.rdata` seção duas vezes, mas em diferentes seções. O exemplo a seguir gera LNK4253.  
   
 ```  
 // LNK4253.cpp  

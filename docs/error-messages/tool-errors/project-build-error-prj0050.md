@@ -1,34 +1,49 @@
 ---
-title: "Erro PRJ0050 (compila&#231;&#227;o de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0050"
+title: "PRJ0050 de erro de compilação de projeto | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- PRJ0050
+dev_langs:
+- C++
+helpviewer_keywords:
+- PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro PRJ0050 (compila&#231;&#227;o de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c434e329846967544d4cb2a84c7b48c83ba6f55f
+ms.lasthandoff: 02/25/2017
 
-falha ao registrar saída.Verifique se você possui as permissões apropriadas para modificar o registro.  
+---
+# <a name="project-build-error-prj0050"></a>Erro de Build PRJ0050 no Projeto
+Falha ao registrar a saída. Verifique se que você tem as permissões apropriadas para modificar o registro.  
   
- O sistema de compilação do Visual C\+\+ não pode registrar a saída de construção \(DLL ou .exe\).  Você precisa estar conectado como um administrador para alterar o Registro.  
+ O sistema de compilação do Visual C++ não pôde registrar a saída da compilação (dll ou .exe). Você precisa estar conectado como administrador para modificar o registro.  
   
- Se você estiver criando um .dll, você pode tentar registrar o .dll manualmente usando o regsvr32.exe, isso deve exibir informações sobre como a construção falhou.  
+ Se você estiver criando um arquivo. dll, você pode tentar registrar o arquivo. dll manualmente usando regsvr32.exe, isso deve exibir informações sobre por que a compilação falhou.  
   
- Se você não estiver criando um .dll, verifique no log de compilação para o comando que causa um erro.
+ Se você não estiver criando um arquivo. dll, examine o log de compilação para o comando que causa um erro.

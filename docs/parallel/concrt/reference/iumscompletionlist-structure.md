@@ -1,58 +1,87 @@
 ---
-title: "Estrutura IUMSCompletionList | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IUMSCompletionList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura IUMSCompletionList"
+title: Estrutura IUMSCompletionList | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IUMSCompletionList
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
 caps.latest.revision: 19
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura IUMSCompletionList
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
+ms.lasthandoff: 02/25/2017
 
-Representa uma lista de conclusão UMS.  Quando os blocos UMS thread, o agendador designado contexto está agendando despachados para tomar uma decisão de agendamento na raiz virtual subjacente do processador quando o thread original estiver bloqueado.  Quando o thread original desbloqueia, o sistema operacional enfileira\-o à lista de conclusão que é acessível através dessa interface.  O agendador poderá ver a lista de conclusão no contexto de agendamento designado ou em qualquer outro local que pesquisa por trabalho.  
+---
+# <a name="iumscompletionlist-structure"></a>Estrutura IUMSCompletionList
+Representa uma lista de conclusão UMS. Quando bloqueia um thread UMS, o Agendador designado de agendamento de contexto é despachado para tomar uma decisão do que agendar na raiz do processador virtual subjacente enquanto o thread original está bloqueado. Quando o thread original desbloqueia, o sistema operacional enfileira à lista de conclusão que pode ser acessada por meio dessa interface. O Agendador pode consultar a lista de conclusão no contexto de programação designado ou qualquer outro lugar, que ele procura por trabalho.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+struct IUMSCompletionList;
 ```  
-struct IUMSCompletionList;  
-```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos Públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Método IUMSCompletionList::GetUnblockNotifications](../Topic/IUMSCompletionList::GetUnblockNotifications%20Method.md)|Recupera uma cadeia das interfaces de `IUMSUnblockNotification` que representam os contextos de execução cujos proxies associados de thread desbloquearam desde a última vez em que esse método foi chamado.|  
+|----------|-----------------|  
+|[Método Getunblocknotifications](#getunblocknotifications)|Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies tiveram desbloqueado desde a última vez que esse método foi chamado.|  
   
-## Comentários  
- Um agendador deve ser extraordinària cuidado que ações forem executadas após superutilizado essa interface para remover da fila itens da lista de conclusão.  Os itens devem ser colocados na lista de agendador de contextos executáveis e geralmente acessíveis ser o mais rápido possível.  O é totalmente possível que um dos itens removidas da fila esteve determinado a propriedade de um bloqueio arbitrário.  O agendador não pode fazer nenhuma chamada de função arbitrária que pode bloquear entre a chamada para remover itens da fila e o posicionamento desses itens em uma lista que pode ser acessada em geral do agendador.  
+## <a name="remarks"></a>Comentários  
+ Um programador deve ser extremamente cuidadoso com os quais ações são executadas depois de utilizar essa interface para remover itens da lista de conclusão. Os itens devem ser colocados na lista do Agendador de contextos de execução e ser acessível geralmente assim que possível. É inteiramente possível que um dos itens da fila tem a propriedade de um bloqueio arbitrário. O Agendador não pode fazer nenhuma chamadas de função arbitrário que podem bloquear entre a chamada para remoção da fila de itens e o posicionamento desses itens em uma lista que podem ser acessados em geral de dentro do Agendador.  
   
-## Hierarquia de Herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IUMSCompletionList`  
   
-## Requisitos  
- **Cabeçalho:** concrtrm.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** concrtrm. h  
   
  **Namespace:** simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Estrutura IUMSScheduler](../../../parallel/concrt/reference/iumsscheduler-structure.md)   
- [Estrutura IUMSUnblockNotification](../../../parallel/concrt/reference/iumsunblocknotification-structure.md)
+##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Método Getunblocknotifications  
+ Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies tiveram desbloqueado desde a última vez que esse método foi chamado.  
+  
+```
+virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Uma cadeia de `IUMSUnblockNotification` interfaces.  
+  
+### <a name="remarks"></a>Comentários  
+ As notificações retornadas são inválidas depois que os contextos de execução são reagendados.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade](concurrency-namespace.md)   
+ [Estrutura IUMSScheduler](iumsscheduler-structure.md)   
+ [Estrutura IUMSUnblockNotification](iumsunblocknotification-structure.md)
+

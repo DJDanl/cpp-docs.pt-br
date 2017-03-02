@@ -1,36 +1,53 @@
 ---
-title: "Erro fatal C1021 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C1021"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1021"
+title: Erro fatal C1021 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C1021
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1021
 ms.assetid: e23171f4-ca6b-40c0-a913-a2edc6fa3766
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal C1021
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f08c8f4f94b109be4f45535568ce036cdc0c0a82
+ms.lasthandoff: 02/25/2017
 
-comando do pré\-processador inválido 'string'  
+---
+# <a name="fatal-error-c1021"></a>Erro fatal C1021
+comando do pré-processador inválido 'string'  
   
- `string` não é válido [diretiva de pré\-processador](../../preprocessor/preprocessor-directives.md). Para resolver o erro, use um nome válido de pré\-processador para `string`.  
+ `string`não é válido [diretiva de pré-processador](../../preprocessor/preprocessor-directives.md). Para resolver o erro, use um nome válido de pré-processador para `string`.  
   
  O exemplo a seguir gera C1021:  
   
 ```  
-// C1021.cpp #BadPreProcName    // C1021 delete line  
+// C1021.cpp  
+#BadPreProcName    // C1021 delete line  
 ```

@@ -1,64 +1,80 @@
 ---
-title: "Declarando uma vari&#225;vel com base na nova classe de controle | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.control.variable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], declarando variáveis com base em"
-  - "classes de controle, variáveis"
-  - "variáveis, classes de controle"
+title: "Declarando uma variável com base na nova classe de controle | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.classes.control.variable
+dev_langs:
+- C++
+helpviewer_keywords:
+- variables, control classes
+- control classes, variables
+- classes [C++], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Declarando uma vari&#225;vel com base na nova classe de controle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: a5777019ca87616fbb7c6a0d27140b3fabbf7fde
+ms.lasthandoff: 02/25/2017
 
-Depois que você tiver criado uma classe de controle de MFC, você pode declarar uma variável com base nele.  Para fornecer um contexto para a nova variável, você deve abrir o editor da caixa de diálogo e editar a caixa de diálogo na qual você deseja usar o controle reutilizável.  Além disso, a caixa de diálogo já deve ter uma classe associada a ela.  Para obter informações sobre como usar o editor da caixa de diálogo, consulte [Editor da caixa de diálogo](../../mfc/dialog-editor.md).  
+---
+# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declarando uma variável com base na nova classe de controle
+Depois de criar uma classe de controle do MFC, você pode declarar uma variável com base nele. Para fornecer um contexto para a nova variável, você deve abrir o editor de caixa de diálogo e edite a caixa de diálogo na qual você deseja usar o controle reutilizável. Além disso, a caixa de diálogo já deve ter uma classe associada a ele. Para obter informações sobre como usar o editor de diálogo, consulte [Editor de diálogo](../../windows/dialog-editor.md).  
   
-### Para declarar uma variável com base em sua classe reutilizável  
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Para declarar uma variável com base em sua classe reutilizável  
   
-1.  Ao editar a caixa de diálogo, arraste um controle do mesmo tipo que a classe base de seu novo controle da barra de ferramentas dos controles na caixa de diálogo.  
+1.  Ao editar a caixa de diálogo, arraste um controle do mesmo tipo como a classe base do seu novo controle na barra de ferramentas de controles para a caixa de diálogo.  
   
-2.  Coloque o ponteiro sobre o controle removido.  
+2.  Coloque o ponteiro do mouse sobre o controle descartado.  
   
-3.  Ao pressionar a tecla CTRL, clique duas vezes no controle.  
+3.  Enquanto pressiona a tecla CTRL pressionada, clique duas vezes no controle.  
   
-     A caixa de diálogo de [Adicione a variável de membro](../../ide/add-member-variable-wizard.md) é exibida.  
+     O [Adicionar variável membro](../../ide/add-member-variable-wizard.md) caixa de diálogo é exibida.  
   
-4.  Na caixa de **Acesso** , selecione o acesso correto para o controle.  
+4.  No **acesso** , selecione o acesso correto para o seu controle.  
   
-5.  Clique na caixa de seleção de **Control variable** .  
+5.  Clique o **variável de controle** caixa de seleção.  
   
-6.  Na caixa de **Nome da variável** , digite um nome.  
+6.  No **o nome da variável** , digite um nome.  
   
-7.  Em **Categoria**, clique em **Controle**.  
+7.  Em **categoria**, clique em **controle**.  
   
-8.  Na lista de **ID de Controle** , escolha o controle que você adicionou.  A lista de **Tipo de variável** deve exibir o tipo variável correto, e a caixa de **Tipo de controle** deve exibir o tipo correto do controle.  
+8.  No **ID do controle** lista, selecione o controle que você adicionou. O **tipo de variável** lista deve exibir o tipo de variável correto e o **tipo de controle** caixa deve exibir o tipo de controle correto.  
   
-9. Na caixa de **Comentário** , adicione o comentário que você deseja exibir em seu código.  
+9. No **comentário** caixa, adicione qualquer comentário que você deseja que apareça no seu código.  
   
 10. Clique em **OK**.  
   
-## Consulte também  
- [Mapeando mensagens para funções](../Topic/Mapping%20Messages%20to%20Functions.md)   
+## <a name="see-also"></a>Consulte também  
+ [Mapeando mensagens para funções](../../mfc/reference/mapping-messages-to-functions.md)   
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
+ [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
  [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
  [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função virtual](../Topic/Overriding%20a%20Virtual%20Function%20\(Visual%20C++\).md)   
+ [Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navegando na estrutura da classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+

@@ -1,34 +1,49 @@
 ---
-title: "Aviso LNK4070 (Ferramentas de Vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4070"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4070"
+title: Aviso LNK4070 das ferramentas de vinculador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4070
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso LNK4070 (Ferramentas de Vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6d8c784e4c174baaf5e5b35607973cda452e445a
+ms.lasthandoff: 02/25/2017
 
-a política de\/OUT:filename em .EXP difere do nome de arquivo “nome do arquivo de saída;” ignorando a política  
+---
+# <a name="linker-tools-warning-lnk4070"></a>Aviso LNK4070 (Ferramentas de Vinculador)
+/Out: nome_do_arquivo diretiva em. EXP é diferente do nome de arquivo de saída 'filename'; Ignorando a diretiva  
   
- `filename` especificado na instrução de [NAME](../Topic/NAME%20\(C-C++\).md) ou de [BIBLIOTECA](../../build/reference/library.md) quando o arquivo de .exp foi criado difere de saída `filename` que foram assumidas por padrão ou especificado com a opção de [\/OUT](../../build/reference/out-output-file-name.md) .  
+ O `filename` especificado no [nome](../../build/reference/name-c-cpp.md) ou [biblioteca](../../build/reference/library.md) instrução quando foi criado o arquivo. EXP difere da saída `filename` que foi considerado por padrão ou especificado com o [/out](../../build/reference/out-output-file-name.md) opção.  
   
- Você verá esse aviso se você alterar o nome de um arquivo de saída no ambiente de desenvolvimento e onde o arquivo .def do projeto não esteve atualizado.  Atualizar manualmente o arquivo .def para resolver esse aviso.  
+ Você verá esse aviso se você alterar o nome de um arquivo de saída no ambiente de desenvolvimento e onde o arquivo do projeto. def não foi atualizado. Atualize manualmente o arquivo. def para resolver esse aviso.  
   
- Um programa cliente que usa a DLL resultante poderá encontrar problemas.
+ Um programa cliente que usa a DLL resultante poderá ter problemas.

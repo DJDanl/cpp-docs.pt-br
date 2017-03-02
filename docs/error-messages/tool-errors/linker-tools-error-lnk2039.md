@@ -1,40 +1,55 @@
 ---
-title: "Erro das Ferramentas de Vinculador LNK2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2039"
+title: Ferramentas de vinculador LNK2039 erro | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro das Ferramentas de Vinculador LNK2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4ba7ca8e0b8bbfb93b2148354fde839f99e8e6df
+ms.lasthandoff: 02/25/2017
 
-importando o tipo de classe '\<de referência\>' que está definido em another.obj; deve ser importado ou definida, mas não ambos  
+---
+# <a name="linker-tools-error-lnk2039"></a>Erro das Ferramentas de Vinculador LNK2039
+Importar classes de ref\<tipo >' que é definido em another.obj; ele deve ser importado ou definido, mas não ambos  
   
- A classe`type` '\<\>' de referência é importada no arquivo especificado de .obj mas também definida em outro arquivo de .obj.  Essa condição pode causar a falha de tempo de execução ou outro comportamento inesperado.  
+ A classe ref`type`>' é importado no arquivo. obj especificado, mas também é definido em outro arquivo. obj. Essa condição pode causar falha de tempo de execução ou outro comportamento inesperado.  
   
-### Para corrigir este erro  
+### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se '`type`' deve ser definido em outro arquivo e na verificação de .obj se deve ser importada do arquivo de .winmd.  
+1.  Verifique se '`type`' deve ser definido no arquivo. obj e verifique se ele deve ser importado do arquivo. winmd.  
   
-2.  Descarte a definição ou a importação.  
+2.  Remova a definição ou a importação.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Erros e avisos das ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)   
- [Erro das Ferramentas de Vinculador LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
+ [Erro das ferramentas de vinculador LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

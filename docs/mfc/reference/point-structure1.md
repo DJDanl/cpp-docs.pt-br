@@ -1,57 +1,72 @@
 ---
-title: "Estrutura POINT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "POINT"
-  - "LPPOINT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Estrutura LPPOINT"
-  - "Estrutura POINT"
+title: Estrutura ponto&1; | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- POINT
+- LPPOINT
+dev_langs:
+- C++
+helpviewer_keywords:
+- LPPOINT structure
+- POINT structure
 ms.assetid: 965736d8-4e53-41b6-9b8b-6961992dd21f
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estrutura POINT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: d1e2bb05f9bad785b13e79413866d8e0ce1e1faa
+ms.lasthandoff: 02/25/2017
 
-A estrutura **POINT** define as coordenadas x*\-* e y de um ponto.  
+---
+# <a name="point-structure1"></a>Estrutura de&1; ponto
+O **ponto** estrutura define x* - * e coordenadas y de um ponto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      typedef struct tagPOINT {  
-   LONG x;  
-   LONG y;  
+typedef struct tagPOINT {  
+    LONG x;  
+    LONG y;  
 } POINT;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *x*  
- Especifica a coordenada x de um ponto.  
+ Especifica a coordenada x do ponto.  
   
  *y*  
  Especifica a coordenada y de um ponto.  
   
-## Exemplo  
- [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/CPP/point-structure1_1.cpp)]  
+## <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFC_Utilities&#37;](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
   
-## Requisitos  
- **Header:** windef.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** windef.h  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Classe de CPoint](../Topic/CPoint%20Class.md)
+ [Classe CPoint](../../atl-mfc-shared/reference/cpoint-class.md)
+

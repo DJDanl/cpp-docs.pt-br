@@ -1,40 +1,55 @@
 ---
-title: "Erro fatal RC1120 (compilador de recurso) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1120"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1120"
+title: Recurso compilador Erro Fatal RC1120 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- RC1120
+dev_langs:
+- C++
+helpviewer_keywords:
+- RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal RC1120 (compilador de recurso)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 270317b1caede6e297038771dd33d8a5098788ac
+ms.lasthandoff: 02/25/2017
 
-fora de memória, número de bytes necessária  
+---
+# <a name="resource-compiler-fatal-error-rc1120"></a>Erro fatal RC1120 (compilador de recurso)
+sem memória, necessário bytes de números  
   
- O compilador de recursos faltou de armazenamento para os itens no heap.  Normalmente esse é o resultado de ter muitos símbolos.  
+ O compilador de recurso insuficiente de armazenamento para itens que ele armazena em seu heap. Geralmente, esse é o resultado de ter muitos símbolos.  
   
-### Para corrigir usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
   
-1.  Aumentar o espaço de arquivo de permuta do windows.  Para obter mais informações sobre como aumentar o espaço de arquivo de permuta, consulte a memória virtual em uma ajuda do windows.  
+1.  Aumente o espaço de arquivo de permuta do Windows. Para obter mais informações sobre como aumentar o espaço do arquivo de permuta, consulte memória virtual na Ajuda do Windows.  
   
-2.  Eliminar desnecessário incluem arquivos, especialmente `#define`desnecessários s e protótipos de função.  
+2.  Eliminar desnecessário incluem arquivos, especialmente desnecessários `#define`s protótipos de função.  
   
-3.  Divida o arquivo atual em dois ou mais arquivos e criá\-las separadamente.  
+3.  Dividir o arquivo atual em dois ou mais arquivos e compilá-los separadamente.  
   
-4.  Remover outros programas ou drivers em execução no sistema, que pode consumir quantidades significativas de memória.
+4.  Remova outros programas ou drivers em execução no sistema, o que poderia estar consumindo uma quantidade significativa de memória.

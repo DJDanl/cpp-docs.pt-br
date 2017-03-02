@@ -1,36 +1,51 @@
 ---
-title: "Erro das Ferramentas de Vinculador LNK2028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2028"
+title: Ferramentas de vinculador LNK2028 erro | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2028
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro das Ferramentas de Vinculador LNK2028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 25845cd1b0dcba6566ac4ab596a26f4b6bde191b
+ms.lasthandoff: 02/25/2017
 
-o “exported\_function” \(\) decorated\_name mencionado na função “function\_containing\_function\_call” \(o decorated\_name\)  
+---
+# <a name="linker-tools-error-lnk2028"></a>Erro das Ferramentas de Vinculador LNK2028
+"exported_function" (decorated_name) referenciada na função "function_containing_function_call" (decorated_name)  
   
- Ao tentar importar uma função nativo em uma imagem pura, lembre\-se de que as convenções implícitas de chamada diferem entre compilações nativas e puras.  
+ Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícitas diferem entre compilações puras e nativas.  
   
-## Exemplo  
- Este exemplo de código gerenciado um componente COM exportado, nativo, a função cuja convenção de chamada é implicitamente [\_\_cdecl](../Topic/__cdecl.md).  
+## <a name="example"></a>Exemplo  
+ Este exemplo de código gera um componente com uma função exportada, nativo, cuja convenção de chamada é implicitamente [cdecl](../../cpp/cdecl.md).  
   
 ```  
 // LNK2028.cpp  
@@ -40,8 +55,8 @@ __declspec(dllexport) int func() {
 }  
 ```  
   
-## Exemplo  
- O exemplo a seguir cria um puro cliente que consome a função nativo.  No entanto, a convenção de chamada em **\/clr:pure** é [\_\_clrcall](../../cpp/clrcall.md).  O exemplo a seguir produz LNK2028.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir cria um cliente simples que consome a função nativa. No entanto, a convenção de chamada em **/clr: puro** é [clrcall](../../cpp/clrcall.md). O exemplo a seguir gera LNK2028.  
   
 ```  
 // LNK2028_b.cpp  

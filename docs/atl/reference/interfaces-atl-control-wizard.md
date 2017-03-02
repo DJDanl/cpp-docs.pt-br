@@ -1,47 +1,64 @@
 ---
-title: "Interfaces, exportar assistente de controle de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.interfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente de controle de ATL, interfaces"
+title: Interfaces, o Assistente de controle ATL | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.control.interfaces
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Interfaces, exportar assistente de controle de ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3b29563b3a584f2f220927fd36016efb1f9bfb22
+ms.lasthandoff: 02/25/2017
 
-Esta página do assistente identifica as interfaces que o controle suporta.  Por padrão, as interfaces suportados são aquelas normalmente usadas pela maioria de contêiner.  
+---
+# <a name="interfaces-atl-control-wizard"></a>Interfaces de Assistente de controle ATL
+Esta página do assistente identifica as interfaces que o controle oferece suporte. Por padrão, as interfaces com suporte são normalmente usadas pela maioria dos contêineres.  
   
 > [!NOTE]
->  Se você selecionou **Minimal control** na guia de [Opções](../../atl/reference/options-atl-control-wizard.md) , nenhuma interface por padrão aparece na caixa de listagem de **Com Suporte** .  
+>  Se você selecionou **controle mínimo** no [opções](../../atl/reference/options-atl-control-wizard.md) guia, nenhuma interface aparece por padrão no **com suporte** caixa de listagem.  
   
  **Sem suporte**  
- Indica as interfaces disponíveis que não são suportadas atualmente para o controle.  
+ Indica as interfaces disponíveis no momento não há suporte para o controle.  
   
- **Suportado**  
- Indica que as interfaces são atualmente suportados para o controle.  
+ **Com suporte**  
+ Indica as interfaces que atualmente têm suporte para o controle.  
   
 |Botão de transferência|Descrição|  
-|----------------------------|---------------|  
-|**\>**|Adiciona a **Com Suporte** a lista que o nome da interface selecionou na lista de **Sem Suporte** .|  
-|**\>\>**|Adiciona à lista de **Com Suporte** todos os nomes de interface disponíveis na lista de **Sem Suporte** .|  
-|**\<**|Remove o nome da interface atualmente selecionado na lista de **Com Suporte** .|  
-|**\<\<**|Remove todos os nomes de interface listados na lista de **Com Suporte** .|  
+|---------------------|-----------------|  
+|**>**|Adiciona o **com suporte** lista o nome da interface selecionado no momento o **não tem suporte** lista.|  
+|**>>**|Adiciona o **com suporte** lista todos os nomes de interface disponíveis no **não tem suporte** lista.|  
+|**<**|Remove o nome da interface selecionado no momento o **com suporte** lista.|  
+|**<<**|Remove todos os nomes listados da interface de **com suporte** lista.|  
   
-## Consulte também  
- [Assistente de controle de ATL](../../atl/reference/atl-control-wizard.md)
+## <a name="see-also"></a>Consulte também  
+ [Assistente de controle ATL](../../atl/reference/atl-control-wizard.md)
+
+

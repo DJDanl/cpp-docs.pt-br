@@ -1,56 +1,71 @@
 ---
-title: "if (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "if OpenMP clause"
+title: Se (OpenMP) | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- if
+dev_langs:
+- C++
+helpviewer_keywords:
+- if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# if (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: fc179d8d96cbabbc7060a89ba0f2922a5edcff5b
+ms.lasthandoff: 02/25/2017
 
-Especifica se deve ser executado um loop em paralelo ou serial.  
+---
+# <a name="if-openmp"></a>if (OpenMP)
+Especifica se deve ser executado um loop em paralelo ou em série.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 if(expression)  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  onde,  
   
  `expression`  
- Uma expressão integral que, se for avaliada como true \(diferente de zero\), faz com que o código na região paralela para executar em paralelo.  Se a expressão for avaliada como false \(zero\), a região paralela é executado na série \(por um único thread\).  
+ Uma expressão integral que, se for avaliada como true (diferente de zero), faz com que o código na região paralela para executar em paralelo. Se a expressão for avaliada como false (zero), a região paralela é executado em série (por um único thread).  
   
-## Comentários  
- `if`aplica as diretivas a seguir:  
+## <a name="remarks"></a>Comentários  
+ `if`aplica-se para as seguintes diretivas:  
   
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
+-   [paralelo](../../../parallel/openmp/reference/parallel.md)  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [seções](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Para obter mais informações, consulte [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Para obter mais informações, consulte [2.3 construto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_if.cpp  
@@ -81,7 +96,10 @@ int main( )
 }  
 ```  
   
-  **Val \= 0, serializado**  
-**Val \= 2, colocados em paralelo com 2 segmentos**   
-## Consulte também  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+val = 0, serialized  
+val = 2, parallelized with 2 threads  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,38 +1,53 @@
 ---
-title: "Erro fatal C1002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1002"
+title: Erro fatal C1002 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1002
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1002
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal C1002
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 97bab6c8efe6030bc19d3e5557fd152e09c593d1
+ms.lasthandoff: 02/25/2017
 
-o compilador tem espaço do heap na passagem 2  
+---
+# <a name="fatal-error-c1002"></a>Erro fatal C1002
+espaço de heap do compilador insuficiente no passo 2  
   
- O compilador faltou espaço de memória dinâmica durante sua segunda fase, provavelmente devido a um programa com símbolos ou expressões complexas demais.  
+ O compilador ficou sem espaço de memória dinâmica durante a segunda fase, provavelmente devido a um programa com muitos símbolos ou expressões complexas.  
   
-### Para corrigir usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
   
 1.  Divida o arquivo de origem em vários arquivos menores.  
   
-2.  Interromper expressões em subexpressões menores.  
+2.  Divida expressões em subexpressões menores.  
   
-3.  Remover outros programas ou drivers que consomem memória.
+3.  Remova outros programas ou drivers que consomem memória.

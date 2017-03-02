@@ -1,34 +1,49 @@
 ---
-title: "Aviso RC4005 (compilador de recurso) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC4005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC4005"
+title: RC4005 de aviso do compilador de recurso | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- RC4005
+dev_langs:
+- C++
+helpviewer_keywords:
+- RC4005
 ms.assetid: 71f03b4a-c9a9-415d-920f-bf2e58507f93
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso RC4005 (compilador de recurso)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 0822ded31af1de15bb224ca5bfe736e8596f84b1
+ms.lasthandoff: 02/25/2017
 
-“identificador”: redefinição macro  
+---
+# <a name="resource-compiler-warning-rc4005"></a>Aviso RC4005 (compilador de recurso)
+'identifier': redefinição de macro  
   
- O identificador é definido duas vezes.  O compilador usou a segunda definição macro.  
+ O identificador está definido duas vezes. O compilador usado da segunda definição de macro.  
   
- Esse aviso pode ser causado por uma macro na linha de comando e em código com uma política de `#define` .  Também pode ser causado por macros importados do inclui arquivos.  
+ Esse aviso pode ser causado por definindo uma macro na linha de comando e no código com um `#define` diretiva. Ele também pode ser causado por macros importadas de arquivos de inclusão.  
   
- Para eliminar o aviso, remover uma das definições ou use uma política de `#undef` antes da segunda definição.
+ Para eliminar o aviso, remova uma das definições ou use um `#undef` diretiva antes da definição de segundo.

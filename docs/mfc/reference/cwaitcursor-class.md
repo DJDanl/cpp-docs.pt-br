@@ -1,86 +1,140 @@
 ---
-title: "Classe de CWaitCursor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWaitCursor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursores, cursor de espera"
-  - "Classe de CWaitCursor"
-  - "cursores de espera"
+title: Classe CWaitCursor | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWaitCursor
+dev_langs:
+- C++
+helpviewer_keywords:
+- cursors, wait cursor
+- CWaitCursor class
+- wait cursors
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
 caps.latest.revision: 22
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CWaitCursor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f72598c356add5d891b013f1fd7b87665c5a6c63
+ms.lasthandoff: 02/25/2017
 
-Fornece uma maneira da linha mostrar um cursor de espera, que geralmente é exibido como uma ampulheta, quando você faz uma operação longa.  
+---
+# <a name="cwaitcursor-class"></a>Classe CWaitCursor
+Fornece uma maneira de uma linha para mostrar um cursor de espera, que normalmente é exibido como uma ampulheta, enquanto você estiver fazendo uma operação demorada.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CWaitCursor  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CWaitCursor::CWaitCursor](../Topic/CWaitCursor::CWaitCursor.md)|Constrói um objeto de `CWaitCursor` e exibe o cursor de espera.|  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CWaitCursor::Restore](../Topic/CWaitCursor::Restore.md)|Restaura o cursor de espera depois que foi alterado.|  
+|----------|-----------------|  
+|[CWaitCursor::CWaitCursor](#cwaitcursor)|Constrói um `CWaitCursor` do objeto e exibe o cursor de espera.|  
   
-## Comentários  
- `CWaitCursor` não tem uma classe base.  
+### <a name="public-methods"></a>Métodos públicos  
   
- As boas práticas de programação windows requerem que você exibe um cursor de espera sempre que você está executando uma operação que leva uma quantidade considerável de tempo.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CWaitCursor::Restore](#restore)|Restaura o cursor de espera depois que ela tiver sido alterada.|  
   
- Para exibir um cursor de espera, define apenas uma variável de `CWaitCursor` antes do código que executa a operação longa.  O construtor do objeto faz automaticamente o cursor de espera a ser exibido.  
+## <a name="remarks"></a>Comentários  
+ `CWaitCursor`não tem uma classe base.  
   
- Quando o objeto sair do escopo \(no final do bloco no qual o objeto de `CWaitCursor` está declarado\), o destrutor define o cursor para o cursor anterior.  Ou seja o objeto realiza a limpeza necessário automaticamente.  
+ Windows boas práticas de programação exigem que você exibe um cursor de espera sempre que você está executando uma operação que leva uma quantidade considerável de tempo.  
+  
+ Para exibir um cursor de espera, basta definir um `CWaitCursor` variável antes do código que executa a operação demorada. O construtor do objeto automaticamente faz com que o cursor de espera ser exibido.  
+  
+ Quando o objeto sai do escopo (ao final do bloco no qual o `CWaitCursor` objeto for declarado), seu destruidor define o cursor até o cursor anterior. Em outras palavras, o objeto executa automaticamente a limpeza necessária.  
   
 > [!NOTE]
->  Devido a como os construtores e destructors funcionam, os objetos de `CWaitCursor` sempre são declarados como variáveis locais — nunca são declarados como variáveis globais não são atribuiu com **new**.  
+>  Devido a como seus construtores e destruidores funcionam, `CWaitCursor` objetos sempre são declarados como variáveis locais — nunca são declaradas como variáveis globais, nem são alocados com **novo**.  
   
- Se você executar uma operação que pode causar o cursor seja alterado, como exibir uma caixa de mensagem ou caixa de diálogo, chame a função de membro de [Restaurar](../Topic/CWaitCursor::Restore.md) para restaurar o cursor de espera.  É certo chamar **Restaurar** mesmo quando o cursor de espera é exibido no momento.  
+ Se você executar uma operação que pode fazer com que o cursor seja alterado, como exibir uma caixa de mensagem ou caixa de diálogo, chame o [restauração](#restore) função de membro para restaurar o cursor de espera. É okey chamar **restauração** mesmo quando um cursor de espera é exibido no momento.  
   
- Outra maneira de exibir um cursor de espera é usar a combinação de [CCmdTarget::BeginWaitCursor](../Topic/CCmdTarget::BeginWaitCursor.md), de [CCmdTarget::EndWaitCursor](../Topic/CCmdTarget::EndWaitCursor.md), e talvez de [CCmdTarget::RestoreWaitCursor](../Topic/CCmdTarget::RestoreWaitCursor.md).  Em o entanto, `CWaitCursor` é mais fácil de usar porque você não precisa definir o cursor para o cursor anterior quando você concluiu a operação longa.  
+ Outra maneira de exibir um cursor de espera é usar a combinação de [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)e talvez [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). No entanto, `CWaitCursor` é mais fácil de usar porque você não precisa definir o cursor até o cursor anterior quando tiver terminado com a operação demorada.  
   
 > [!NOTE]
->  O MFC define e restaura o cursor usando a função virtual de [CWinApp::DoWaitCursor](../Topic/CWinApp::DoWaitCursor.md) .  Você pode substituir essa função para fornecer um comportamento personalizado.  
+>  O MFC define e restaura o cursor usando o [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) função virtual. Você pode substituir essa função para fornecer um comportamento personalizado.  
   
-## Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CWaitCursor`  
   
-## Requisitos  
- **Cabeçalho:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxwin. h  
   
-## Exemplo  
- [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/CPP/cwaitcursor-class_1.cpp)]  
+## <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCWindowing&#62;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-## Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [CCmdTarget::BeginWaitCursor](../Topic/CCmdTarget::BeginWaitCursor.md)   
- [CCmdTarget::EndWaitCursor](../Topic/CCmdTarget::EndWaitCursor.md)   
- [CCmdTarget::RestoreWaitCursor](../Topic/CCmdTarget::RestoreWaitCursor.md)   
- [CWinApp::DoWaitCursor](../Topic/CWinApp::DoWaitCursor.md)   
- [Como: eu faço Altere o cursor do mouse em um aplicativo da classe da Microsoft foundation?](http://go.microsoft.com/fwlink/?LinkID=128044)
+##  <a name="a-namecwaitcursora--cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+ Para exibir um cursor de espera, basta declarar uma `CWaitCursor` objeto antes que o código que executa a operação demorada.  
+  
+```  
+CWaitCursor();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ O construtor automaticamente faz com que o cursor de espera ser exibido.  
+  
+ Quando o objeto sai do escopo (ao final do bloco no qual o `CWaitCursor` objeto for declarado), seu destruidor define o cursor até o cursor anterior. Em outras palavras, o objeto executa automaticamente a limpeza necessária.  
+  
+ Você pode tirar proveito do fato de que o destruidor é chamado no final do bloco (que pode ser antes do final da função) para tornar o cursor de espera ativo apenas parte de sua função. Essa técnica é mostrada no segundo exemplo abaixo.  
+  
+> [!NOTE]
+>  Devido a como seus construtores e destruidores funcionam, `CWaitCursor` objetos sempre são declarados como variáveis locais — nunca são declaradas como variáveis globais, nem são alocados com **novo**.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCWindowing&#63;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
+  
+##  <a name="a-namerestorea--cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::Restore  
+ Para restaurar o cursor de espera, chame essa função depois de executar uma operação, como exibir uma caixa de mensagem ou caixa de diálogo que pode alterar o cursor de espera para outro cursor.  
+  
+```  
+void Restore();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ É Okey para chamar **restauração** mesmo quando o cursor de espera é exibido no momento.  
+  
+ Se você precisar restaurar o cursor de espera enquanto estiver em uma função diferente no qual o `CWaitCursor` objeto for declarado, você pode chamar [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCWindowing&#64;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)   
+ [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)   
+ [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)   
+ [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)   
+ [Como alterar o Cursor do Mouse em um aplicativo do Microsoft Foundation classe i:](http://go.microsoft.com/fwlink/linkid=128044)
+
+
+
+

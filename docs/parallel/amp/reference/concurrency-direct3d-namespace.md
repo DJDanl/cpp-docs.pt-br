@@ -1,90 +1,106 @@
 ---
-title: "Namespace Concurrency::direct3d | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::direct3d"
-  - "amprt/Concurrency::direct3d"
-  - "amp_short_vectors/Concurrency::direct3d"
-  - "amp_graphics/Concurrency::direct3d"
-  - "amp_math/Concurrency::direct3d"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Namespace direct3d"
+title: 'Namespace Concurrency:: Direct3D | Documentos do Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d
+- amprt/Concurrency::direct3d
+- amp_short_vectors/Concurrency::direct3d
+- amp_graphics/Concurrency::direct3d
+- amp_math/Concurrency::direct3d
+dev_langs:
+- C++
+helpviewer_keywords:
+- direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
 caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Namespace Concurrency::direct3d
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fe9121d6e054446d3adb70da9f78884f4198517e
+ms.lasthandoff: 02/25/2017
 
-O namespace `direct3d` fornece funções que suportam a interoperabilidade D3D.  Permite o uso contínuo de recursos de D3D para cálculos no código AMP bem como permite o uso de recursos criados no AMP no código D3D, sem criar cópias intermediárias redundantes.  Você pode acelerar de forma crescente as seções intensas de cálculo dos seus aplicativos DirectX usando o C\+\+ AMP, e usar o D3D API em dados gerados pelos cálculos AMP.  
+---
+# <a name="concurrencydirect3d-namespace"></a>Namespace Concurrency::direct3d
+O `direct3d` namespace fornece funções que têm suporte D3D interoperabilidade. Ele permite o uso direto de D3D recursos de computação no código AMP, bem como permitir o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Pode acelerar as seções com uso intensivo de computação dos aplicativos DirectX usando C++ AMP e usar a API D3D dados produzidos de computações AMP incrementalmente.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Classes  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Classe scoped\_d3d\_access\_lock](../Topic/scoped_d3d_access_lock%20Class.md)|Um wrapper de RAII para um bloqueio de acesso de D3D em um objeto de `accelerator_view`.|  
-  
-### Estruturas  
+### <a name="classes"></a>Classes  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Estrutura adopt\_d3d\_access\_lock\_t](../../../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md)|O tipo de marca para indicar o bloqueio de acesso de D3D deve ser adotado em vez de adquirido.|  
+|----------|-----------------|  
+|[Classe scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Um wrapper RAII para um bloqueio de acesso D3D uma `accelerator_view` objeto.|  
   
-### Funções  
+### <a name="structures"></a>Estruturas  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Função abs](../Topic/abs%20Function.md)|Retorna o valor absoluto do argumento|  
-|[Função clamp](../Topic/clamp%20Function.md)|Sobrecarregado.  Redimensiona \_X para caber no intervalo especificado \_Min e \_Max|  
-|[Função countbits](../Topic/countbits%20Function.md)|Conta o número de bits definidos em \_X|  
-|[Função create\_accelerator\_view](../Topic/create_accelerator_view%20Function.md)|Criar um [Classe accelerator\_view](../Topic/accelerator_view%20Class.md) de um ponteiro para a interface de dispositivo Direct3D|  
-|[Função d3d\_access\_lock](../Topic/d3d_access_lock%20Function.md)|Adquire um bloqueio em um accelerator\_view com a finalidade de executar operações de D3D de forma segura em recursos compartilhados com o accelerator\_view|  
-|[Função d3d\_access\_try\_lock](../Topic/d3d_access_try_lock%20Function.md)|Tentativa de adquirir o bloqueio de acesso D3D em um accelerator\_view sem bloqueio.|  
-|[Função d3d\_access\_unlock](../Topic/d3d_access_unlock%20Function.md)|Liberar o bloqueio de acesso de D3D no accelerator\_view determinado.|  
-|[Função firstbithigh](../Topic/firstbithigh%20Function.md)|Obtém o local do primeiro bit definido em \_X, partindo do bit de ordem mais alta e segue descendo|  
-|[Função firstbitlow](../Topic/firstbitlow%20Function.md)|Obtém o local do primeiro bit definido em \_X, partindo do bit de menor ordem em direção aos de maior ordem|  
-|[Função get\_buffer](../Topic/get_buffer%20Function.md)|Obtém a interface do buffer D3D subjacente a uma matriz.|  
-|[Função imax](../Topic/imax%20Function.md)|Compara dois valores, retornando o valor que for maior.|  
-|[Função imin](../Topic/imin%20Function.md)|Compara dois valores, retornando o valor que for menor.|  
-|[Função is\_timeout\_disabled](../Topic/is_timeout_disabled%20Function.md)|Retorna um sinalizador booleano que indica se o tempo limite está desativado para o accelerator\_view especificado.|  
-|[Função mad](../Topic/mad%20Function.md)|Sobrecarregado.  Executa uma operação aritmética multiplicação\/adição em três argumentos: \_X \* \_Y \+ \_Z|  
-|[Função make\_array](../Topic/make_array%20Function.md)|Criar uma matriz a partir de um ponteiro para interface do buffer D3D.|  
-|[Função noise](../Topic/noise%20Function.md)|Gera um valor aleatório usando o algoritmo de ruído de Perlin|  
-|[Função radians](../Topic/radians%20Function.md)|Converte \_X de graus para radianos|  
-|[Função rcp](../Topic/rcp%20Function.md)|Calcula um recíproco rápido e aproximado do argumento|  
-|[Função reversebits](../Topic/reversebits%20Function.md)|Inverte a ordem dos bits em \_X|  
-|[Função saturate](../Topic/saturate%20Function.md)|Aperta o \_X dentro do intervalo de 0 a 1|  
-|[Função sign](../Topic/sign%20Function.md)|Sobrecarregado.  Retorna o sinal do argumento|  
-|[Função smoothstep](../Topic/smoothstep%20Function.md)|Retorna uma interpolação suave de Hermite entre 0 e 1, se \_X estiver no intervalo \[\_Min, \_Max\].|  
-|[Função step](../Topic/step%20Function.md)|Compara dois valores, retornando 0 ou 1 baseado em qual valor é maior|  
-|[Função umax](../Topic/umax%20Function.md)|Compara dois valores não assinados, retornando o valor que for maior.|  
-|[Função umin](../Topic/umin%20Function.md)|Compara dois valores não assinados, retornando o valor que for menor.|  
+|----------|-----------------|  
+|[Estrutura adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Tipo de marca para indicar o bloqueio de acesso D3D deve ser adotado em vez de adquirida.|  
   
-## Requisitos  
+### <a name="functions"></a>Funções  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Função ABS](concurrency-direct3d-namespace-functions-amp.md#abs)|Retorna o valor absoluto do argumento|  
+|[Função Clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Sobrecarregado. Clamps x para o intervalo especificado de min e máx|  
+|[Função countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Conta o número de bits de conjunto em x|  
+|[Função create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Cria um [accelerator_view classe](accelerator-view-class.md) de um ponteiro para uma interface de dispositivo Direct3D|  
+|[Função d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Adquire um bloqueio em um accelerator_view para fins de segurança executar operações D3D em recursos compartilhados com o accelerator_view|  
+|[Função d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Tentativa de adquirir o bloqueio de acesso D3D em um accelerator_view sem bloqueio.|  
+|[Função d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Libere o bloqueio D3D acesso a determinado accelerator_view.|  
+|[Função firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Obtém o local do primeiro conjunto de bits em x, a partir do bit de ordem mais alto e trabalhando para baixo|  
+|[Função firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Obtém o local do primeiro conjunto de bits em x, a partir do bit de ordem mais baixo e trabalhando para cima|  
+|[Função get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Obter a interface de buffer D3D subjacente de uma matriz.|  
+|[Função IMAX](concurrency-direct3d-namespace-functions-amp.md#imax)|Compara dois valores, retornando o valor que é maior.|  
+|[Função imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Compara dois valores, retornando o valor que é menor.|  
+|[Função is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retorna um sinalizador booleano indicando se o tempo limite será desabilitada para o accelerator_view especificado.|  
+|[Função MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecarregado. Executa uma operação aritmética multiplicar ou adicionar três argumentos: x * y + z|  
+|[Função make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crie uma matriz de um ponteiro de interface D3D buffer.|  
+|[Função Noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Gera um valor aleatório usando o algoritmo de ruído Perlin|  
+|[Função radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x de graus em radianos|  
+|[Função rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula um rápido, aproximado recíproco do argumento|  
+|[Função reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte a ordem dos bits em x|  
+|[Função saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Clamps x dentro do intervalo de 0 a 1|  
+|[Função Sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Sobrecarregado. Retorna o sinal do argumento|  
+|[Função smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Retorna uma interpolação Hermite suave entre 0 e 1, se x está no intervalo [ min, máx].|  
+|[Função Step](concurrency-direct3d-namespace-functions-amp.md#step)|Compara dois valores, retornando 0 ou 1 com base em qual valor é maior|  
+|[Função UMAX](concurrency-direct3d-namespace-functions-amp.md#umax)|Compara dois valores não assinados, retornando o valor que é maior.|  
+|[Função umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compara dois valores não assinados, retornando o valor que é menor.|  
+
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** amp.h  
   
  **Namespace:** Simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

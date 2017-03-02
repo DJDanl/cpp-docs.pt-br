@@ -1,98 +1,114 @@
 ---
-title: "Namespace Concurrency::graphics | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics"
-  - "amp_short_vectors/Concurrency::graphics"
-dev_langs: 
-  - "C++"
+title: 'Namespace Concurrency:: Graphics | Documentos do Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics
+- amp_short_vectors/Concurrency::graphics
+dev_langs:
+- C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Namespace Concurrency::graphics
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
+ms.lasthandoff: 02/25/2017
 
-O namespace de elementos gráficos fornece tipos e funções projetadas para a programação de elementos gráficos.  
+---
+# <a name="concurrencygraphics-namespace"></a>Namespace Concurrency::graphics
+O namespace de gráficos fornece tipos e funções que são projetadas para programação de gráficos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 namespace graphics;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Namespaces  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Namespace Concurrency::graphics::direct3d](../../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)|Fornece funções para a interoperabilidade de Direct3D.|  
-  
-### Typedefs  
+### <a name="namespaces"></a>Namespaces  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|`uint`|O tipo de elemento para [Classe uint\_2](../../../parallel/amp/reference/uint-2-class.md), [Classe uint\_3](../../../parallel/amp/reference/uint-3-class.md), e [Classe uint\_4](../../../parallel/amp/reference/uint-4-class.md).  Definido como `typedef unsigned int uint;`.|  
+|----------|-----------------|  
+|[Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)|Fornece funções para interoperabilidade do Direct3D.|  
   
-### Enumerações  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Enumeração address\_mode](../Topic/address_mode%20Enumeration.md)|Especifica modos de endereço com suporte para a amostragem de textura.|  
-|[Enumeração filter\_mode](../Topic/filter_mode%20Enumeration.md)|Especifica modos de filtro com suporte para a amostragem de textura.|  
-  
-### Classes  
+### <a name="typedefs"></a>Typedefs  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Classe texture](../Topic/texture%20Class.md)|Uma textura é um agregado de dados em um accelerator\_view no domínio de extensão.  É uma coleção de variáveis, uma para cada elemento em um domínio de extensão.  Cada variável contém um valor correspondente a um tipo primitivo em C\+\+ \(unsigned int, int, float, double\), ou a um tipo escalar norm, ou unorm \(definido em concurrency::graphics\) ou a um tipo de vetor curto qualificado definido em concurrency::graphics.|  
-|[Classe writeonly\_texture\_view](../Topic/writeonly_texture_view%20Class.md)|Um writeonly\_texture\_view fornece acesso somente\-escrita para uma textura.|  
-|[Classe double\_2](../Topic/double_2%20Class.md)|Representa um vetor curto de 2 valores `double`.|  
-|[Classe double\_3](../../../parallel/amp/reference/double-3-class.md)|Representa um vetor curto de 3 valores `double`.|  
-|[Classe double\_4](../Topic/double_4%20Class.md)|Representa um vetor curto de 4 valores `double`.|  
-|[Classe float\_2](../../../parallel/amp/reference/float-2-class.md)|Representa um vetor curto de 2 valores `float`.|  
-|[Classe float\_3](../../../parallel/amp/reference/float-3-class.md)|Representa um vetor curto de 3 valores `float`.|  
-|[Classe float\_4](../../../parallel/amp/reference/float-4-class.md)|Representa um vetor curto de 4 valores `float`.|  
-|[Classe int\_2](../Topic/int_2%20Class.md)|Representa um vetor curto de 2 valores `int`.|  
-|[Classe int\_3](../../../parallel/amp/reference/int-3-class.md)|Representa um vetor curto de 3 valores `int`.|  
-|[Classe int\_4](../../../parallel/amp/reference/int-4-class.md)|Representa um vetor curto de 4 valores `int`.|  
-|[Classe norm\_2](../../../parallel/amp/reference/norm-2-class.md)|Representa um vetor curto de 2 valores `norm`.|  
-|[Classe norm\_3](../../../parallel/amp/reference/norm-3-class.md)|Representa um vetor curto de 3 valores `norm`.|  
-|[Classe norm\_4](../../../parallel/amp/reference/norm-4-class.md)|Representa um vetor curto de 4 valores `norm`.|  
-|[Classe uint\_2](../../../parallel/amp/reference/uint-2-class.md)|Representa um vetor curto de 2 valores `uint`.|  
-|[Classe uint\_3](../../../parallel/amp/reference/uint-3-class.md)|Representa um vetor curto de 3 valores `uint`.|  
-|[Classe uint\_4](../../../parallel/amp/reference/uint-4-class.md)|Representa um vetor curto de 4 valores `uint`.|  
-|[Classe unorm\_2](../../../parallel/amp/reference/unorm-2-class.md)|Representa um vetor curto de 2 valores `unorm`.|  
-|[Classe unorm\_3](../../../parallel/amp/reference/unorm-3-class.md)|Representa um vetor curto de 3 valores `unorm`.|  
-|[Classe unorm\_4](../../../parallel/amp/reference/unorm-4-class.md)|Representa um vetor curto de 4 valores `unorm`.|  
-|[Classe de amostra](../../../parallel/amp/reference/sampler-class.md)|Representa a configuração de amostra usada para amostragem de textura.|  
-|[Estrutura short\_vector](../../../parallel/amp/reference/short-vector-structure.md)|Fornece uma implementação básica de um vetor curto de valores.|  
-|[Estrutura short\_vector\_traits](../../../parallel/amp/reference/short-vector-traits-structure.md)|Fornece recuperação do comprimento e tipo de um vetor curto.|  
-|[Classe texture\_view](../../../parallel/amp/reference/texture-view-class.md)|Fornece acesso de leitura e acesso de gravação a uma textura.|  
+|----------|-----------------|  
+|`uint`|O tipo de elemento para [classe uint_2](uint-2-class.md), [classe uint_3](uint-3-class.md), e [classe uint_4](uint-4-class.md). Definido como `typedef unsigned int uint;`.|  
   
-### Funções  
+### <a name="enumerations"></a>Enumerações  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[Função copy](../Topic/copy%20Function.md)|Sobrecarregado.  Copia o conteúdo da textura de origem para o buffer do host de destino.|  
-|[Função copy\_async](../Topic/copy_async%20Function.md)|Sobrecarregado.  Copia assincronamente o conteúdo da textura de origem para o buffer do host de destino.|  
+|----------|-----------------|  
+|[Enumeração address_mode](concurrency-graphics-namespace-enums.md#address_mode).|Especifica os modos de endereço com suporte para amostragem de textura.|  
+|[Enumeração filter_mode](concurrency-graphics-namespace-enums.md#filter_mode)|Especifica os modos de filtro com suporte para amostragem de textura.|  
   
-## Requisitos  
- **Cabeçalho:** amp\_graphics.h  
+### <a name="classes"></a>Classes  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Classe Texture](texture-class.md)|Uma textura é uma agregação em um accelerator_view no domínio do ponto de dados. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor correspondente ao tipo primitivo do C++ (unsigned int, int, float, double), ou a norma de tipo escalar ou unorm (definido em Concurrency:: Graphics) ou tipos de vetor curto qualificados definidas no Concurrency:: Graphics.|  
+|[Classe writeonly_texture_view](writeonly-texture-view-class.md)|Um writeonly_texture_view fornece acesso writeonly com uma textura.|  
+|[Classe double_2](double-2-class.md)|Representa um vetor curto de 2 `double` valores.|  
+|[Classe double_3](double-3-class.md)|Representa um vetor curto de 3 `double` valores.|  
+|[Classe double_4](double-4-class.md)|Representa um vetor curto de 4 `double` valores.|  
+|[Classe float_2](float-2-class.md)|Representa um vetor curto de 2 `float` valores.|  
+|[Classe float_3](float-3-class.md)|Representa um vetor curto de 3 `float` valores.|  
+|[Classe float_4](float-4-class.md)|Representa um vetor curto de 4 `float` valores.|  
+|[Classe int_2](int-2-class.md)|Representa um vetor curto de 2 `int` valores.|  
+|[Classe int_3](int-3-class.md)|Representa um vetor curto de 3 `int` valores.|  
+|[Classe int_4](int-4-class.md)|Representa um vetor curto de 4 `int` valores.|  
+|[Classe norm_2](norm-2-class.md)|Representa um vetor curto de 2 `norm` valores.|  
+|[Classe norm_3](norm-3-class.md)|Representa um vetor curto de 3 `norm` valores.|  
+|[Classe norm_4](norm-4-class.md)|Representa um vetor curto de 4 `norm` valores.|  
+|[Classe uint_2](uint-2-class.md)|Representa um vetor curto de 2 `uint` valores.|  
+|[Classe uint_3](uint-3-class.md)|Representa um vetor curto de 3 `uint` valores.|  
+|[Classe uint_4](uint-4-class.md)|Representa um vetor curto de 4 `uint` valores.|  
+|[Classe unorm_2](unorm-2-class.md)|Representa um vetor curto de 2 `unorm` valores.|  
+|[Classe unorm_3](unorm-3-class.md)|Representa um vetor curto de 3 `unorm` valores.|  
+|[Classe unorm_4](unorm-4-class.md)|Representa um vetor curto de 4 `unorm` valores.|  
+|[Classe de amostra](sampler-class.md)|Representa a configuração de amostra usada para amostragem de textura.|  
+|[Estrutura short_vector](short-vector-structure.md)|Fornece uma implementação básica de um vetor curta de valores.|  
+|[Estrutura short_vector_traits](short-vector-traits-structure.md)|Fornece para recuperação de comprimento e tipo de um vetor curto.|  
+|[Classe texture_view](texture-view-class.md)|Fornece acesso de leitura e gravação para uma textura.|  
+  
+### <a name="functions"></a>Funções  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[Função Copy](concurrency-graphics-namespace-functions.md#copy)|Sobrecarregado. Copia o conteúdo da textura de origem para o buffer do host de destino.|  
+|[Função copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Sobrecarregado. Assincronamente copia o conteúdo da textura de origem para o buffer do host de destino.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_graphics.h  
   
  **Namespace:** Simultaneidade  
   
-## Consulte também  
- [Namespace Concurrency \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>Consulte também  
+ [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

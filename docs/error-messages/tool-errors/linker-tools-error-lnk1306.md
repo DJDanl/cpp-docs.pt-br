@@ -1,52 +1,67 @@
 ---
-title: "Erro das Ferramentas de Vinculador LNK1306 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1306"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1306"
+title: Ferramentas de vinculador LNK1306 erro | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK1306
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro das Ferramentas de Vinculador LNK1306
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 85ccd30abe8784a185fadc39dcdf91b8ac6cd125
+ms.lasthandoff: 02/25/2017
 
-A função do ponto de entrada da DLL não pode ser gerenciada; ao criar nativo  
+---
+# <a name="linker-tools-error-lnk1306"></a>Erro das Ferramentas de Vinculador LNK1306
+Não é possível gerenciar a função de ponto de entrada DLL; compilar para nativo  
   
- DllMain não pode ser compilado a MSIL; deve ser compilado em código nativo.  
+ DllMain não pode ser compilado para MSIL; ele deve ser compilado para nativo.  
   
  Para resolver,  
   
--   Cria o arquivo que contém o ponto de entrada sem **\/clr**.  
+-   Compile o arquivo que contém o ponto de entrada sem **/clr**.  
   
--   Posicione o ponto de entrada em uma seção de `#pragma unmanaged` .  
+-   Coloque o ponto de entrada em um `#pragma unmanaged` seção.  
   
--   Para obter mais informações, consulte  
+-   Para saber mais, veja  
   
--   [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md)  
   
--   [Inicialização de assemblies mistos](../Topic/Initialization%20of%20Mixed%20Assemblies.md)  
+-   [Inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md)  
   
 -   [Comportamento da biblioteca em tempo de execução](../../build/run-time-library-behavior.md)  
   
-## Exemplo  
- O exemplo a seguir produz LNK1306.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera LNK1306.  
   
 ```  
 // LNK1306.cpp  

@@ -1,36 +1,51 @@
 ---
-title: "Erro fatal C1001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1001"
+title: Erro fatal C1001 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal C1001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f95edeec288ab04b7c3a0aa66d4bfa96784b23ad
+ms.lasthandoff: 02/25/2017
 
-ERROR INNER de COMPILADOR \(o arquivo do compilador, número de linha\)  
+---
+# <a name="fatal-error-c1001"></a>Erro fatal C1001
+INTERNO ERROR(compiler file file, line number) COMPILADOR  
   
- O compilador não pode gerar código correta para uma construção, provavelmente devido à combinação de uma expressão e uma opção de otimização.  Tente remover uma ou mais opções de otimização e recompile a função que contém a linha especificada na mensagem de erro.  
+ O compilador não pode gerar o código correto para uma construção, provavelmente devido à combinação de uma expressão e uma opção de otimização. Tente remover uma ou mais opções de otimização e recompilar a função que contém a linha indicado na mensagem de erro.  
   
- Você provavelmente poderá corrigir o problema removendo uma ou mais opções de otimização.  Para determinar quais opção é culpada, remova as opções um de cada vez e recompilar\-las até que a mensagem de erro parta.  As opções do geralmente são responsáveis **\/Og**, **\/Oi**, e `/Oa`.  Uma vez que você considerar a opção é responsável, você pode desabilitá\-la que usa o pragma de [otimizar](../../preprocessor/optimize.md) em torno da função em que ocorreu o erro e continua a usar a opção para o restante do módulo.  
+ Provavelmente, você pode corrigir o problema removendo uma ou mais opções de otimização. Para determinar qual opção está com defeito, remova uma opção em uma hora e recompile até que a mensagem de erro desaparece. As opções mais comumente responsáveis são **/Og**, **/Oi**, e `/Oa`. Depois de determinar qual opção é responsável, você pode desabilitá-lo usando o [otimizar](../../preprocessor/optimize.md) pragma em torno da função onde o erro ocorre e continuar a usar a opção para o restante do módulo.  
   
- Base de Dados de Conhecimento Microsoft tem mais informações sobre C1001; consulte [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
+ A Base de dados de Conhecimento da Microsoft possui mais informações sobre C1001; consulte [http://support.microsoft.com/default.aspx?scid=kb;en-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
   
- Tente reescrever a linha em que o erro for relatado, ou várias linhas de código que cercam essa linha.
+ Tente reescrever a linha onde o erro é relatado, ou várias linhas de código ao redor dessa linha.

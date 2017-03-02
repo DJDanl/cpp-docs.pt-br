@@ -1,82 +1,162 @@
 ---
-title: "Classe de IPersistStreamInitImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::IPersistStreamInitImpl"
-  - "ATL::IPersistStreamInitImpl<T>"
-  - "ATL.IPersistStreamInitImpl<T>"
-  - "IPersistStreamInitImpl"
-  - "ATL.IPersistStreamInitImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Implementação de IPersistStreamInit ATL"
-  - "Classe de IPersistStreamInitImpl"
-  - "fluxos, ATL"
+title: Classe IPersistStreamInitImpl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::IPersistStreamInitImpl
+- ATL::IPersistStreamInitImpl<T>
+- ATL.IPersistStreamInitImpl<T>
+- IPersistStreamInitImpl
+- ATL.IPersistStreamInitImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IPersistStreamInit ATL implementation
+- IPersistStreamInitImpl class
+- streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de IPersistStreamInitImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: aa8427a891ac8d8e18ec7794a12e838a55bc23c8
+ms.lasthandoff: 02/25/2017
 
-Essa classe implementa **IUnknown** e fornece uma implementação padrão de interface de [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) .  
+---
+# <a name="ipersiststreaminitimpl-class"></a>Classe IPersistStreamInitImpl
+Essa classe implementa **IUnknown** e fornece uma implementação padrão da [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados em [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<class T>  
+class ATL_NO_VTABLE IPersistStreamInitImpl 
+   : public IPersistStreamInit
 ```  
   
-      template<  
-class T   
->  
-class ATL_NO_VTABLE IPersistStreamInitImpl :  
-public IPersistStreamInit  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- Sua classe, derivada de `IPersistStreamInitImpl`.  
+ Sua classe derivada de `IPersistStreamInitImpl`.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[IPersistStreamInitImpl::GetClassID](../Topic/IPersistStreamInitImpl::GetClassID.md)|Recupera o CLSID do objeto.|  
-|[IPersistStreamInitImpl::GetSizeMax](../Topic/IPersistStreamInitImpl::GetSizeMax.md)|Retorna o tamanho de fluxo necessário salvar os dados do objeto.  a implementação de ATL retorna **E\_NOTIMPL**.|  
-|[IPersistStreamInitImpl::InitNew](../Topic/IPersistStreamInitImpl::InitNew.md)|Inicializa um objeto criado.|  
-|[IPersistStreamInitImpl::IsDirty](../Topic/IPersistStreamInitImpl::IsDirty.md)|Verifica se os dados do objeto foram alterado desde que os foram salvos o último.|  
-|[IPersistStreamInitImpl::Load](../Topic/IPersistStreamInitImpl::Load.md)|Carrega as propriedades do objeto de fluxo especificado.|  
-|[IPersistStreamInitImpl::Save](../Topic/IPersistStreamInitImpl::Save.md)|Salva as propriedades do objeto para o fluxo especificado.|  
+|----------|-----------------|  
+|[IPersistStreamInitImpl::GetClassID](#getclassid)|Recupera o CLSID do objeto.|  
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Recupera o tamanho do fluxo necessário para salvar os dados do objeto. Retorna a implementação de ATL **E_NOTIMPL**.|  
+|[IPersistStreamInitImpl::InitNew](#initnew)|Inicializa um objeto recém-criado.|  
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.|  
+|[IPersistStreamInitImpl::Load](#load)|Carrega as propriedades do objeto do fluxo especificado.|  
+|[IPersistStreamInitImpl::Save](#save)|Salva as propriedades do objeto para o fluxo especificado.|  
   
-## Comentários  
- A interface de [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) permite que um cliente peça ao objeto carregar e salvar os dados persistentes a um único fluxo.  A classe `IPersistStreamInitImpl` fornece uma implementação padrão de esta interface e implementa **IUnknown** enviar informações para o dispositivo de despejo em compilações de depuração.  
+## <a name="remarks"></a>Comentários  
+ O [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interface permite que um cliente solicite que seu objeto carrega e salva os dados persistentes em um único fluxo. Classe `IPersistStreamInitImpl` fornece uma implementação padrão dessa interface e implementa **IUnknown** enviando informações para o despejo de compilações de dispositivo no modo de depuração.  
   
- **Artigos relacionados** [tutorial de ATL](../Topic/Active%20Template%20Library%20\(ATL\)%20Tutorial.md), [criando um projeto de ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IPersistStreamInit`  
   
  `IPersistStreamInitImpl`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-## Consulte também  
- [Storages and Streams](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-namegetclassida--ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+ Recupera o CLSID do objeto.  
+  
+```
+STDMETHOD(GetClassID)(CLSID* pClassID);
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namegetsizemaxa--ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+ Recupera o tamanho do fluxo necessário para salvar os dados do objeto.  
+  
+```
+STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameinitnewa--ipersiststreaminitimplinitnew"></a><a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+ Inicializa um objeto recém-criado.  
+  
+```
+STDMETHOD(InitNew)();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameisdirtya--ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+ Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.  
+  
+```
+STDMETHOD(IsDirty)();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Consulte [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameloada--ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::Load  
+ Carrega as propriedades do objeto do fluxo especificado.  
+  
+```
+STDMETHOD(Load)(LPSTREAM pStm);
+```  
+  
+### <a name="remarks"></a>Comentários  
+ ATL usa mapa de propriedade do objeto para recuperar essas informações.  
+  
+ Consulte [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesavea--ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::Save  
+ Salva as propriedades do objeto para o fluxo especificado.  
+  
+```
+STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
+```  
+  
+### <a name="remarks"></a>Comentários  
+ ATL usa mapa de propriedade do objeto para armazenar essas informações.  
+  
+ Consulte [IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>Consulte também  
+ [Fluxos e armazenamentos](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

@@ -1,40 +1,55 @@
 ---
-title: "Erro fatal RW1022 (compilador de recurso) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW1022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW1022"
+title: Recurso compilador Erro Fatal RW1022 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- RW1022
+dev_langs:
+- C++
+helpviewer_keywords:
+- RW1022
 ms.assetid: 6747c8a9-9c9b-4422-b414-0645d22092d0
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal RW1022 (compilador de recurso)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 563fc22d27011c301cc7815c9826e91f63edb32c
+ms.lasthandoff: 02/25/2017
 
-**Arquivo de gravação do erro de E\/S**  
+---
+# <a name="resource-compiler-fatal-error-rw1022"></a>Erro fatal RW1022 (compilador de recurso)
+**Erro ao gravar arquivo de e/s**  
   
- O compilador de recursos não pode gravar em um arquivo.  
+ O compilador de recurso não pôde gravar em um arquivo.  
   
-### Para corrigir verificando as seguintes causas possíveis  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
-1.  Espaço insuficiente em disco.  O espaço livre deve ser pelo menos duas vezes o tamanho do arquivo executável que você está criando.  
+1.  Espaço em disco insuficiente. Espaço livre deve ser igual a pelo menos duas vezes o tamanho do arquivo executável que você está criando.  
   
 2.  O volume é somente leitura.  
   
-3.  A indústria incorreto.  
+3.  Setor defeituoso.  
   
-4.  Compartilhando a violação.
+4.  Violação de compartilhamento.

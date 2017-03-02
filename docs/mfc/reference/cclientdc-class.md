@@ -1,74 +1,120 @@
 ---
-title: "Classe de CClientDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CClientDC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CClientDC"
-  - "Classe de CDC, contextos de dispositivo para áreas cliente"
-  - "contexto de dispositivo da área cliente"
-  - "contextos de dispositivo, a área cliente"
+title: Classe CClientDC | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CClientDC
+dev_langs:
+- C++
+helpviewer_keywords:
+- CClientDC class
+- device contexts, client area
+- client-area device context
+- CDC class, device contexts for client areas
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 caps.latest.revision: 22
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CClientDC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 619bed4d31994bde8464ad710e9f050d6ba0696a
+ms.lasthandoff: 02/25/2017
 
-Cuida do chamar funções do windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) em tempo de compilação e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) no momento da destruição.  
+---
+# <a name="cclientdc-class"></a>Classe CClientDC
+Se encarrega de chamar as funções do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) na ocasião da construção e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) em tempo de destruição.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 class CClientDC : public CDC  
-  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CClientDC::CClientDC](../Topic/CClientDC::CClientDC.md)|Constrói um objeto de `CClientDC` conectado a `CWnd`.|  
-  
-### Membros de dados protegidos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CClientDC::m\_hWnd](../Topic/CClientDC::m_hWnd.md)|`HWND` da janela para que este `CClientDC` é válido.|  
+|----------|-----------------|  
+|[CClientDC::CClientDC](#cclientdc)|Constrói uma `CClientDC` objeto conectado para o `CWnd`.|  
   
-## Comentários  
- Isso significa que o contexto de dispositivo associado a um objeto de `CClientDC` é a área cliente de uma janela.  
+### <a name="protected-data-members"></a>Membros de dados protegidos  
   
- Para obter mais informações sobre `CClientDC`, consulte [Contextos de dispositivo](../Topic/Device%20Contexts.md).  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CClientDC::m_hWnd](#m_hwnd)|O `HWND` da janela para o qual o `CClientDC` é válido.|  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="remarks"></a>Comentários  
+ Isso significa que o contexto de dispositivo associado um `CClientDC` objeto é a área de cliente de uma janela.  
   
- [CDC](../Topic/CDC%20Class.md)  
+ Para obter mais informações sobre `CClientDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CDC](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
-## Requisitos  
- **Cabeçalho:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxwin. h  
   
-## Consulte também  
- [O MFC prova MDI](../../top/visual-cpp-samples.md)   
- [CDC Class](../Topic/CDC%20Class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [CDC Class](../Topic/CDC%20Class.md)
+##  <a name="a-namecclientdca--cclientdccclientdc"></a><a name="cclientdc"></a>CClientDC::CClientDC  
+ Constrói uma `CClientDC` objeto que acessa a área do cliente do [CWnd](../../mfc/reference/cwnd-class.md) apontada por `pWnd`.  
+  
+```  
+explicit CClientDC(CWnd* pWnd);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pWnd`  
+ A janela cuja área cliente acessará o objeto de contexto de dispositivo.  
+  
+### <a name="remarks"></a>Comentários  
+ O construtor chama a função do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+  
+ Uma exceção (do tipo `CResourceException`) é gerada se o Windows `GetDC` chamada falhará. Um contexto de dispositivo pode não estar disponível se Windows já alocado todos seus contextos de dispositivo disponível. Seu aplicativo compete para cinco comuns exibição contextos disponíveis a qualquer momento no Windows.  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCDocView&42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
+  
+##  <a name="a-namemhwnda--cclientdcmhwnd"></a><a name="m_hwnd"></a>CClientDC::m_hWnd  
+ O `HWND` do `CWnd` ponteiro usado para construir o `CClientDC` objeto.  
+  
+```  
+HWND m_hWnd;  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ `m_hWnd`é uma variável protegida.  
+  
+### <a name="example"></a>Exemplo  
+  Veja o exemplo de [CClientDC::CClientDC](#cclientdc).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Exemplo MFC MDI](../../visual-cpp-samples.md)   
+ [Classe CDC](../../mfc/reference/cdc-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CDC](../../mfc/reference/cdc-class.md)
+

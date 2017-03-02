@@ -1,71 +1,121 @@
 ---
-title: "Classe de CReversalTransition | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CReversalTransition"
-  - "CReversalTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CReversalTransition"
+title: Classe CReversalTransition | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CReversalTransition
+- CReversalTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReversalTransition class
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CReversalTransition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 028ea275cc345513248e76dcf5b0eba931823b7a
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="creversaltransition-class"></a>Classe de CReversalTransition
 Encapsula uma transição de reversão.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CReversalTransition : public CBaseTransition;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CReversalTransition::CReversalTransition](../Topic/CReversalTransition::CReversalTransition.md)|Constrói um objeto de transição de reversão e inicializa sua duração.|  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CReversalTransition::Create](../Topic/CReversalTransition::Create.md)|Chama a biblioteca de transição para criar o objeto COM encapsulado de transição.  Overrides \( [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|----------|-----------------|  
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Constrói um objeto de transição de reversão e inicializa sua duração.|  
   
-### Membros públicos de dados  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CReversalTransition::m\_duration](../Topic/CReversalTransition::m_duration.md)|A duração de transição.|  
+|----------|-----------------|  
+|[CReversalTransition::Create](#create)|Chama a biblioteca de transição para criar o objeto de transição encapsulado COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-## Comentários  
- Uma transição de reversão altera suavemente a direção em uma duração determinada.  O valor final será o mesmo como o valor inicial e final a velocidade serão negativo a velocidade inicial.  Como todas as transições são desmarcadas automaticamente, é recomendável atribuiu\-as que usam o novo operador.  O IUIAnimationTransition que encapsulado o objeto COM é criado por CAnimationController::AnimateGroup até lá, ele é NULO.  Alterando variáveis de membro após a criação de esse objeto COM não tem efeito.  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CReversalTransition::m_duration](#m_duration)|A duração da transição.|  
+  
+## <a name="remarks"></a>Comentários  
+ Uma transição de reversão suavemente muda de direção ao longo de um período especificado. O valor final será o mesmo que o valor inicial e a velocidade final será negativo da velocidade inicial. Como todas as transições são limpas automaticamente, é recomendável para alocada-los usando o operador novo. O objeto IUIAnimationTransition COM encapsulado é criado por CAnimationController::AnimateGroup, até é NULL. Alterar as variáveis de membro após a criação deste objeto COM não tem nenhum efeito.  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-## Consulte também  
- [Classes](../Topic/MFC%20Classes.md)
+##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+ Chama a biblioteca de transição para criar o objeto de transição encapsulado COM.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* \*not used*\);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pLibrary`  
+ Um ponteiro para a biblioteca de transição, que é responsável pela criação de transições padrão.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ TRUE se a transição é criada com êxito; Caso contrário, FALSE.  
+  
+##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+ Constrói um objeto de transição de reversão e inicializa sua duração.  
+  
+```  
+CReversalTransition(UI_ANIMATION_SECONDS duration);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `duration`  
+ A duração da transição.  
+  
+##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+ A duração da transição.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classes](../../mfc/reference/mfc-classes.md)
+

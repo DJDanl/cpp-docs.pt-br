@@ -1,39 +1,54 @@
 ---
-title: "Aviso PRJ0042 (compila&#231;&#227;o de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0042"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0042"
+title: "PRJ0042 de aviso de compilação de projeto | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- PRJ0042
+dev_langs:
+- C++
+helpviewer_keywords:
+- PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso PRJ0042 (compila&#231;&#227;o de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 91f664f40045533a618a84074777e5457a491437
+ms.lasthandoff: 02/25/2017
 
-**A propriedade de “saída da etapa de criação personalizado para o arquivo “**   
- ***arquivo* ” não é definida. A etapa de compilação personalizada será ignorada.**  
+---
+# <a name="project-build-warning-prj0042"></a>Aviso PRJ0042 no Build do Projeto
+**A 'propriedade às saídas para a etapa de compilação personalizada para o arquivo'**   
+ ***arquivo* ' não está definido. A etapa de compilação personalizada será ignorada.**  
   
- Uma etapa personalizado de construção não foi executada porque nenhuma saída foi especificada.  
+ Uma etapa de compilação personalizada não foi executada porque nenhuma saída foi especificada.  
   
- Para resolver esse erro, siga um o seguinte:  
+ Para resolver esse erro, faça um o seguinte:  
   
--   Exclua a etapa personalizado de construção de compilação.  
+-   Exclua a etapa de compilação personalizada da compilação.  
   
 -   Adicione uma saída.  
   
--   Excluir o conteúdo do comando personalizado da etapa de compilação.
+-   Exclua o conteúdo do comando da etapa de compilação personalizada.

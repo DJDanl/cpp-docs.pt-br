@@ -1,96 +1,113 @@
 ---
-title: "Estilos de caixa de listagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LBS_STANDARD"
-  - "LBS_NODATA"
-  - "LBS_OWNERDRAWVARIABLE"
-  - "LBS_EXTENDEDSEL"
-  - "LBS_USETABSTOPS"
-  - "LBS_WANTKEYBOARDINPUT"
-  - "LBS_NOTIFY"
-  - "LBS_DISABLENOSCROLL"
-  - "LBS_HASSTRINGS"
-  - "LBS_NOREDRAW"
-  - "LBS_NOSEL"
-  - "LBS_NOINTEGRALHEIGHT"
-  - "LBS_MULTICOLUMN"
-  - "LBS_SORT"
-  - "LBS_MULTIPLESEL"
-  - "LBS_OWNERDRAWFIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Constante LBS_DISABLENOSCROLL"
-  - "Constante LBS_EXTENDEDSEL"
-  - "Constante LBS_HASSTRINGS"
-  - "Constante LBS_MULTICOLUMN"
-  - "Constante LBS_MULTIPLESEL"
-  - "Constante LBS_NODATA"
-  - "Constante LBS_NOINTEGRALHEIGHT"
-  - "Constante LBS_NOREDRAW"
-  - "Constante LBS_NOSEL"
-  - "Constante LBS_NOTIFY"
-  - "Constante LBS_OWNERDRAWFIXED"
-  - "Constante LBS_OWNERDRAWVARIABLE"
-  - "Constante LBS_SORT"
-  - "Constante LBS_STANDARD"
-  - "Constante LBS_USETABSTOPS"
-  - "Constante LBS_WANTKEYBOARDINPUT"
-  - "caixas de listagem, estilos"
+title: Estilos de caixa de listagem | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LBS_STANDARD
+- LBS_NODATA
+- LBS_OWNERDRAWVARIABLE
+- LBS_EXTENDEDSEL
+- LBS_USETABSTOPS
+- LBS_WANTKEYBOARDINPUT
+- LBS_NOTIFY
+- LBS_DISABLENOSCROLL
+- LBS_HASSTRINGS
+- LBS_NOREDRAW
+- LBS_NOSEL
+- LBS_NOINTEGRALHEIGHT
+- LBS_MULTICOLUMN
+- LBS_SORT
+- LBS_MULTIPLESEL
+- LBS_OWNERDRAWFIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- LBS_NOSEL constant
+- LBS_NOREDRAW constant
+- LBS_HASSTRINGS constant
+- LBS_OWNERDRAWFIXED constant
+- LBS_WANTKEYBOARDINPUT constant
+- LBS_STANDARD constant
+- LBS_MULTIPLESEL constant
+- LBS_OWNERDRAWVARIABLE constant
+- LBS_DISABLENOSCROLL constant
+- LBS_NODATA constant
+- list boxes, styles
+- LBS_EXTENDEDSEL constant
+- LBS_MULTICOLUMN constant
+- LBS_NOTIFY constant
+- LBS_USETABSTOPS constant
+- LBS_NOINTEGRALHEIGHT constant
+- LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estilos de caixa de listagem
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.lasthandoff: 02/25/2017
 
--   **LBS\_DISABLENOSCROLL** a caixa de listagem exibe uma barra de rolagem vertical desabilitado quando a caixa de listagem não contém itens suficiente para rolar.  Sem esse estilo, a barra de rolagem ficará oculta se a caixa de listagem não contém itens suficiente.  
+---
+# <a name="list-box-styles"></a>Estilos de caixa de listagem
+-   **LBS_DISABLENOSCROLL** a caixa de listagem mostra uma desabilitado barra de rolagem vertical quando a caixa de listagem não contiver itens suficientes para rolar. Sem esse estilo, a barra de rolagem é ocultada quando a caixa de listagem não contém itens suficientes.  
   
--   **LBS\_EXTENDEDSEL** o usuário pode selecionar vários itens usando a tecla SHIFT e as combinações de tecla do mouse em ou nas especiais.  
+-   **LBS_EXTENDEDSEL** o usuário pode selecionar vários itens usando a tecla SHIFT e o mouse ou combinações de teclas especiais.  
   
--   **LBS\_HASSTRINGS** especifica uma caixa de listagem da proprietário\- descompasso que contém os itens que consistem em cadeias de caracteres.  A caixa de listagem mantém a memória e os ponteiros para as cadeias de caracteres assim que o aplicativo pode usar a função de membro de `GetText` para recuperar o texto de um item específico.  
+-   **LBS_HASSTRINGS** Especifica uma caixa de listagem de desenho proprietário que contém itens que consiste em cadeias de caracteres. A caixa de listagem mantém a memória e os ponteiros para as cadeias de caracteres, portanto, o aplicativo pode usar o `GetText` a função de membro para recuperar o texto de um item específico.  
   
--   **LBS\_MULTICOLUMN** especifica uma caixa de listagem com várias colunas que seja enrolada horizontalmente.  A função de membro de `SetColumnWidth` define a largura das colunas.  
+-   **LBS_MULTICOLUMN** Especifica uma caixa de listagem de várias colunas que é rolada horizontalmente. O `SetColumnWidth` função membro define a largura das colunas.  
   
--   A seleção de cadeia de caracteres de**LBS\_MULTIPLESEL**é ativada \/desativar cada vez que o usuário clica em ou clique duas vezes na cadeia de caracteres.  Qualquer número de cadeias de caracteres pode ser selecionado.  
+-   **LBS_MULTIPLESEL** seleção de cadeia de caracteres é alternada sempre que o usuário clica ou clica duas vezes a cadeia de caracteres. Qualquer número de cadeias de caracteres pode ser selecionado.  
   
--   **LBS\_NODATA** especifica uma caixa de listagem de dados não.  Especificar esse estilo quando a contagem de itens na caixa de listagem excederá de milhar.  Uma caixa de listagem de dados não deve ter o estilo de **LBS\_OWNERDRAWFIXED** , mas não deve ter o estilo de **LBS\_SORT** ou de **LBS\_HASSTRINGS** .  
+-   **LBS_NODATA** Especifica uma caixa de listagem sem dados. Especifique esse estilo quando a contagem de itens na caixa de listagem excederá mil. Uma caixa de listagem sem dados também deve ter o **LBS_OWNERDRAWFIXED** de estilo, mas não deve ter o **LBS_SORT** ou **LBS_HASSTRINGS** estilo.  
   
-     Uma caixa de listagem de dados não é semelhante a uma caixa de listagem proprietário\- desenhada exceto que não contém nenhum cadeia de caracteres ou dados de bitmap para um item.  Os comandos adicionar, inserir, ou excluir um item sempre ignora todos os dados dados de item; solicitações localizar sempre uma cadeia de caracteres dentro da falha da caixa de listagem.  O sistema envia a mensagem de `WM_DRAWITEM` à janela do proprietário quando um item deve ser desenhado.  O membro de itemID da estrutura de `DRAWITEMSTRUCT` passada com a mensagem de `WM_DRAWITEM` especifica o número da linha do item a ser desenhado.  Uma caixa de listagem de dados sem não envia uma mensagem de `WM_DELETEITEM` .  
+     Uma caixa de listagem de nenhum dado é semelhante a uma caixa de listagem de desenho proprietário exceto que não contém nenhum dado de cadeia de caracteres ou bitmap para um item. Comandos para adicionar, inserir ou excluir um item sempre ignorar qualquer item dados; solicitações para localizar uma cadeia de caracteres na caixa de listagem sempre falharem. O sistema envia a `WM_DRAWITEM` mensagem na janela de proprietário quando um item deve ser desenhado. O membro itemID o `DRAWITEMSTRUCT` estrutura passado com a `WM_DRAWITEM` mensagem especifica o número da linha do item a ser desenhada. Uma caixa de listagem sem dados não envia um `WM_DELETEITEM` mensagem.  
   
--   **LBS\_NOINTEGRALHEIGHT** o tamanho da caixa de listagem é exatamente ao tamanho especificado pelo aplicativo quando criou a caixa de listagem.  Geralmente, as janelas tamanhos de uma caixa de listagem de forma que a caixa de listagem não exibirá itens parciais.  
+-   **LBS_NOINTEGRALHEIGHT** o tamanho da caixa de listagem é exatamente o tamanho especificado pelo aplicativo quando ele criado a caixa de listagem. Normalmente, o Windows dimensiona uma caixa de listagem para que a caixa de listagem exibe itens parciais.  
   
--   A exibição da caixa de listagem de**LBS\_NOREDRAW**não é atualizada quando são feitas alterações.  Esse estilo pode ser alterado a qualquer momento enviando uma mensagem de **WM\_SETREDRAW** .  
+-   **LBS_NOREDRAW** exibição da caixa de lista não é atualizada quando as alterações são feitas. Esse estilo pode ser alterado a qualquer momento, enviando uma **WM_SETREDRAW** mensagem.  
   
--   **LBS\_NOSEL** especifica que a caixa de listagem contém os itens que podem ser exibidos mas não selecionado.  
+-   **LBS_NOSEL** Especifica que a caixa de listagem contém itens que podem ser exibidos, mas não selecionados.  
   
--   A janela pai de**LBS\_NOTIFY**recebe uma mensagem de entrada sempre que o usuário clica em ou clique duas vezes em uma cadeia de caracteres.  
+-   **LBS_NOTIFY** janela pai recebe uma mensagem de entrada sempre que o usuário clica ou clica duas vezes em uma cadeia de caracteres.  
   
--   **LBS\_OWNERDRAWFIXED** o proprietário da caixa de listagem é responsável para desenhar seu conteúdo; os itens na caixa de listagem têm a mesma altura.  
+-   **LBS_OWNERDRAWFIXED** o proprietário da caixa de listagem é responsável por seu conteúdo de desenho; os itens na caixa de listagem têm a mesma altura.  
   
--   **LBS\_OWNERDRAWVARIABLE** o proprietário da caixa de listagem é responsável para desenhar seu conteúdo; os itens na caixa de listagem são variáveis no momento.  
+-   **LBS_OWNERDRAWVARIABLE** o proprietário da caixa de listagem é responsável por seu conteúdo de desenho; os itens na caixa de listagem são variáveis de altura.  
   
--   As cadeias de caracteres de**LBS\_SORT**na caixa de listagem são classificadas em ordem alfabética.  
+-   **LBS_SORT** cadeias de caracteres na caixa de listagem são classificadas em ordem alfabética.  
   
--   As cadeias de caracteres de**LBS\_STANDARD**na caixa de listagem são classificadas em ordem alfabética, e a janela pai recebe uma mensagem de entrada sempre que o usuário clica em ou clique duas vezes em uma cadeia de caracteres.  A caixa de listagem contém bordas por todos os lados.  
+-   **LBS_STANDARD** cadeias de caracteres na caixa de listagem são classificadas em ordem alfabética, e a janela pai recebe uma mensagem de entrada sempre que o usuário clica ou clica duas vezes em uma cadeia de caracteres. A caixa de listagem contém bordas em todos os lados.  
   
--   **LBS\_USETABSTOPS** permite que uma caixa de listagem reconheça e expanda caracteres de tabulação para desenhar as cadeias de caracteres.  As posições da guia padrão são 32 unidades da caixa de diálogo. \(A unidade da caixa de diálogo é a distância horizontal ou vertical.  Uma unidade horizontal da caixa de diálogo é igual a um quarto de unidade atual da largura da base da caixa de diálogo.  As unidades de base da caixa de diálogo são computadas com base na altura e a largura da fonte atual do sistema.  A função do windows de **GetDialogBaseUnits** retorna as unidades de base da caixa de diálogo atual em pixels.\) Esse estilo não deve ser usado com **LBS\_OWNERDRAWFIXED**.  
+-   **LBS_USETABSTOPS** permite uma caixa de lista reconheça e expanda caracteres de tabulação ao desenhar suas sequências de caracteres. As posições de tabulação padrão são 32 unidades de caixa de diálogo. (Uma unidade de diálogo é uma distância horizontal ou vertical. Uma unidade de diálogo horizontal é igual a um quarto da unidade de largura de base da caixa de diálogo atual. As unidades base da caixa de diálogo são calculadas com base na altura e largura da fonte atual do sistema. O **GetDialogBaseUnits** função Windows retorna a caixa de diálogo atual unidades base em pixels.) Este estilo não deve ser usado com **LBS_OWNERDRAWFIXED**.  
   
--   **LBS\_WANTKEYBOARDINPUT** o proprietário da caixa de listagem `WM_VKEYTOITEM` ou recebe mensagens de `WM_CHARTOITEM` sempre que o usuário digite uma chave quando a caixa de listagem entre o foco.  Isso permite que um aplicativo execute um processamento especial na entrada de teclado.  
+-   **LBS_WANTKEYBOARDINPUT** recebe o proprietário da caixa de listagem `WM_VKEYTOITEM` ou `WM_CHARTOITEM` mensagens sempre que o usuário pressiona uma tecla enquanto a caixa de listagem tem o foco de entrada. Isso permite que um aplicativo executa processamento especial no teclado de entrada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Estilos usados pelo MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CListBox::Create](../Topic/CListBox::Create.md)   
- [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
+ [Estilos de caixa de lista](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+
+

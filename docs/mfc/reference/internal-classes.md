@@ -1,2324 +1,2341 @@
 ---
-title: "Classes internas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CPreviewViewEx"
-  - "m_bPreMultiplyCheck"
-  - "CMFCRibbonPanelMenuBar.IsCategoryPopup"
-  - "CMFCCustomizeMenuButton.SetSiblingsButton"
-  - "COleCntrFrameWndEx::ShowPane"
-  - "COleCntrFrameWndEx.COleCntrFrameWndEx"
-  - "RemoveItem"
-  - "CSmartDockingManager.GetHighlightedGuideNo"
-  - "OnCloseMiniFrame"
-  - "CFullScreenImpl::EnableMainMenu"
-  - "CVSListBoxBase::OnAfterRenameItem"
-  - "CMFCRibbonPanelMenu.EnableCustomizeMenu"
-  - "DoesMDITabExist"
-  - "CMFCRibbonPanelMenuBar::PopTooltip"
-  - "COleCntrFrameWndEx.EnableAutoHidePanes"
-  - "CMFCRibbonTab::IsSelected"
-  - "COleCntrFrameWndEx::RecalcLayout"
-  - "CMFCRibbonPanelMenuBar.OnSetAccData"
-  - "CVSListBoxBase::SetStandardButtons"
-  - "CMFCToolBarSystemMenuButton::OnCancelMode"
-  - "CFrameImpl::GetFullScreenMinMaxInfo"
-  - "lpszText"
-  - "nCurrFrame"
-  - "CMFCCustomizeMenuButton::SetSeparator"
-  - "CMFCCustomizeButton::GetParentToolbar"
-  - "CMemDC.IsVistaDC"
-  - "CMFCToolBarEditCtrl.CMFCToolBarEditCtrl"
-  - "CMFCRibbonGalleryIcon::IsLastInColumn"
-  - "CVSToolsListBox::OnSelectionChanged"
-  - "COleDocIPFrameWndEx.OnDrawMenuImage"
-  - "~CMFCControlRenderer"
-  - "CMFCOutlookBarToolBar.OnCustomizeMode"
-  - "CMemDC::IsMemDC"
-  - "CMFCToolBarMenuButtonsButton::CopyFrom"
-  - "CSmartDockingGroupGuidesManager.GetWindowRect"
-  - "OnChangeSelButton"
-  - "CMFCControlRendererInfo.m_rectSides"
-  - "ParseColor"
-  - "CMFCToolBarNameDialog::CMFCToolBarNameDialog"
-  - "m_strBmpResID"
-  - "RemoveChunk"
-  - "GetThisClass"
-  - "CMFCControlRendererInfo::m_strBmpResID"
-  - "ShowMenu"
-  - "IsDefaultMenuLook"
-  - "CVSListBoxBase::RemoveItem"
-  - "CMFCRibbonPanelMenu::GetMenuBar"
-  - "CMFCCustomizeButton.CreatePopupMenu"
-  - "SetAllCategory"
-  - "CMFCToolBarSystemMenuButton::GetSysMenu"
-  - "GetDefaultResId"
-  - "CMFCToolBarsCommandsPropertyPage::SetUserCategory"
-  - "RemoveMenu"
-  - "CMFCControlRendererInfo::m_rectImage"
-  - "CMFCRibbonCommandsListBox::GetSelected"
-  - "CFullScreenImpl.RestoreState"
-  - "EnableAutoHidePanes"
-  - "CMFCColorPropertySheet::CMFCColorPropertySheet"
-  - "SetText"
-  - "CSmartDockingManager::ShowTabbedPlaceAt"
-  - "ParseRect"
-  - "CMFCControlRenderer.CleanUp"
-  - "CMFCOutlookBarPaneButton.OnChangeParentWnd"
-  - "UpdateMenuButtonText"
-  - "ReadRect"
-  - "EnableButton"
-  - "CMFCToolBarSpinEditBoxButton.SetACCData"
-  - "CMFCCaptionButtonEx::CMFCCaptionButtonEx"
-  - "CVSToolsListBox::OnAfterRenameItem"
-  - "CMFCCaptionButtonEx"
-  - "CMFCDropDownListBox::GetText"
-  - "CMFCRibbonPanelMenuBar::OnChangeHighlighted"
-  - "CTagManager.ParsePoint"
-  - "COleDocIPFrameWndEx::OnShowPopupMenu"
-  - "CVSToolsListBox.OnAfterAddItem"
-  - "CMFCRibbonKeyTip.IsMenuKey"
-  - "CTagManager.ExcludeTag"
-  - "CMFCControlBarImpl.CMFCControlBarImpl"
-  - "CMFCRibbonDefaultPanelButton.OnClick"
-  - "CMFCToolBarSpinEditBoxButton::CMFCToolBarSpinEditBoxButton"
-  - "GetCurSel"
-  - "OnSendCommand"
-  - "CMFCCustomizeButton.IsEmptyMenuAllowed"
-  - "OnChooseItem"
-  - "OnDrawItem"
-  - "SetColor"
-  - "OnAfterRenameItem"
-  - "DockPaneLeftOf"
-  - "CMFCOutlookBarToolBar.OnSetCursor"
-  - "COleDocIPFrameWndEx::InsertPane"
-  - "COleDocIPFrameWndEx::GetDefaultResId"
-  - "CMFCRibbonPanelMenuBar::OnSetAccData"
-  - "COleDocIPFrameWndEx::GetActivePopup"
-  - "CVSListBoxBase.SetItemText"
-  - "CMenuHash.SaveMenuBar"
-  - "ShowTabbedAt"
-  - "CMFCToolBarDropSource.QueryContinueDrag"
-  - "CFullScreenImpl::EnableTabsArea"
-  - "CVSListBoxBase::OnClickButton"
-  - "CVSListBoxBase.OnAfterRenameItem"
-  - "CMFCControlRenderer.DrawFrame"
-  - "CMFCRibbonGalleryIcon::IsFirstInColumn"
-  - "COleCntrFrameWndEx::IsPointNearDockSite"
-  - "GetIndex"
-  - "OnCancelMode"
-  - "CMFCRibbonCmdUI::SetText"
-  - "~CTagManager"
-  - "CFullScreenImpl"
-  - "CMFCCustomizeButton.AddInvisibleButton"
-  - "SetChunkValue"
-  - "CVSListBoxBase.GetItemData"
-  - "CMFCToolBarSystemMenuButton::IsBorder"
-  - "CMFCRibbonDefaultPanelButton"
-  - "CMFCCustomizeButton.SetMenuRightAlign"
-  - "CMFCRibbonCommandsListBox.FillAll"
-  - "CMFCRibbonGalleryIcon.SetACCData"
-  - "CMFCRibbonPanelMenu"
-  - "CSmartDockingStandaloneGuideWnd.Assign"
-  - "SetTaskPaneCaptionButtons"
-  - "CMFCShadowRenderer.Create"
-  - "CVSListBoxBase::GetButtonID"
-  - "CMFCRibbonPanelMenu.IsScrollUpAvailable"
-  - "SetTaskbarTabOrder"
-  - "CMFCStatusBarPaneInfo::clrProgressBar"
-  - "nID"
-  - "CMFCRibbonPanelMenuBar.OnClickButton"
-  - "bProgressText"
-  - "CMFCToolBarButtonsListButton.SetImages"
-  - "OnCloseDockingPane"
-  - "RestoreDelayedSubMenu"
-  - "CMFCPropertySheetCategoryInfo.CMFCPropertySheetCategoryInfo"
-  - "CVSListBoxBase::GetItemData"
-  - "CSmartDockingManager.ShowCentralGroup"
-  - "CMFCVisualManagerBitmapCache"
-  - "COleDocIPFrameWndEx::GetDockingManager"
-  - "CMFCDropDownListBox.SetCurSel"
-  - "CMFCTabInfo::SetRect"
-  - "CMenuImages::Draw"
-  - "CTagManager.ReadPoint"
-  - "CMFCShadowRenderer.GetRuntimeClass"
-  - "CMFCToolBarDropTarget::OnDragLeave"
-  - "SetExtraSize"
-  - "OnMenuButtonToolHitTest"
-  - "COleCntrFrameWndEx::EnableDocking"
-  - "ClearChunkList"
-  - "CDialogImpl"
-  - "CMFCToolBarButtonsListButton.GetScrollBarCtrl"
-  - "CMFCControlRendererInfo.SetResourceID"
-  - "CMFCCustomizeButton.OnDraw"
-  - "CMFCVisualManagerBitmapCache.Cache"
-  - "HitTestEx"
-  - "CMFCControlRendererInfo.m_uiBmpResID"
-  - "CMFCRibbonPanelMenu::SetActive"
-  - "CMFCCustomizeButton::CreatePopupMenu"
-  - "SetActive"
-  - "GetButtonsCount"
-  - "CMFCControlRenderer.Mirror"
-  - "CVSListBoxBase.GetItemText"
-  - "CVSListBoxBase::EnableButton"
-  - "CMFCTasksPaneToolBar::UpdateButtons"
-  - "OpenPopupMenu"
-  - "CMFCRibbonTab.IsSelected"
-  - "CMFCRibbonPanelMenu.IsDefaultMenuLook"
-  - "COleCntrFrameWndEx.CreateDockingManager"
-  - "CSmartDockingGroupGuide.IsVisible"
-  - "Get"
-  - "CMFCRibbonDefaultPanelButton.OnShowPopupMenu"
-  - "COleCntrFrameWndEx.AdjustClientArea"
-  - "CMenuHash.CleanUp"
-  - "CMFCRibbonPanelMenuBar::RestoreDelayedSubMenu"
-  - "CMFCOutlookBarToolBar.OnUpdateCmdUI"
-  - "OnShowPopupMenu"
-  - "CMFCRibbonCommandsListBox::CMFCRibbonCommandsListBox"
-  - "COleDocIPFrameWndEx::GetMenuBar"
-  - "CMFCOutlookBarToolBar.OnSendCommand"
-  - "CMFCDropDownListBox::DefaultMouseClickOnClose"
-  - "OnDraw"
-  - "CMFCCaptionButtonEx.SetRect"
-  - "CVSListBoxBase.OnBeforeRemoveItem"
-  - "CMFCRibbonPanelMenu::FindByOrigin"
-  - "CMFCCustomizeMenuButton.RestoreRecentlyUsedState"
-  - "CFrameClientAreaWnd"
-  - "CMFCControlRenderer::Create"
-  - "CMDIClientAreaWnd"
-  - "CMFCRibbonPanelMenuBar.FindByOrigin"
-  - "CMFCShowAllButton.OnDraw"
-  - "CMFCCaptionMenuButton::ShowMenu"
-  - "CMFCToolBarsMenuPropertyPage::SelectMenu"
-  - "CMFCRibbonDefaultPanelButton.OnLButtonDown"
-  - "COleDocIPFrameWndEx.GetPane"
-  - "CMFCOutlookBarToolBar::CMFCOutlookBarToolBar"
-  - "hImage"
-  - "CMFCToolBarMenuButtonsButton.OnCalculateSize"
-  - "GetButtonID"
-  - "CMFCRibbonPanelMenuBar::IsDefaultMenuLook"
-  - "CMFCDropDownListBox.ResetContent"
-  - "GetSysMenuIcon"
-  - "CMFCRibbonPanelMenuBar.IsMainPanel"
-  - "CMFCRibbonKeyTip::GetElement"
-  - "CMFCToolBarsCommandsListBox.DrawItem"
-  - "CMFCToolBarSystemMenuButton::OnDraw"
-  - "RemovePaneFromDockManager"
-  - "CCommandManager"
-  - "CVSToolsListBox::OnAfterMoveItemUp"
-  - "GetGuide"
-  - "CTagManager::LoadFromResource"
-  - "CMFCToolBarDropSource::QueryContinueDrag"
-  - "COleDocIPFrameWndEx.LoadFrame"
-  - "CTagManager.SetBuffer"
-  - "CMFCShowAllButton.OnToolHitTest"
-  - "CMFCToolBarMenuButtonsButton.HaveHotBorder"
-  - "CMFCTabButton"
-  - "CMFCRibbonPanelMenuBar.IsDefaultMenuLook"
-  - "OnDblClk"
-  - "CMFCCustomizeButton::GetInvisibleButtons"
-  - "CMFCRibbonDefaultPanelButton::CMFCRibbonDefaultPanelButton"
-  - "CMFCControlRendererInfo.m_rectCorners"
-  - "COleDocIPFrameWndEx.EnableDocking"
-  - "CMFCToolBarsToolsPropertyPage"
-  - "CVSListBoxBase::OnGetImage"
-  - "CMFCRibbonDefaultPanelButton::OnClick"
-  - "afxwin/CDocumentAdapter::~CDocumentAdapter"
-  - "IsLeftScroll"
-  - "COleCntrFrameWndEx::CreateDockingManager"
-  - "COleDocIPFrameWndEx::SetupToolbarMenu"
-  - "CMFCCustomizeMenuButton"
-  - "SetPipeStyle"
-  - "CRecentPaneContainerInfo.StoreDockInfo"
-  - "CSmartDockingManager.Stop"
-  - "CSmartDockingGroupGuide::Show"
-  - "CSmartDockingHighlighterWnd::Hide"
-  - "AdjustDockingLayout"
-  - "CMFCRibbonPanelMenu::IsMenuMode"
-  - "CMFCStatusBarPaneInfo::rect"
-  - "CMFCCustomizeButton::InvokeCommand"
-  - "CVSListBoxBase.OnClickButton"
-  - "CMFCTasksPaneToolBar::AllowShowOnList"
-  - "CMFCRibbonDefaultPanelButton::OnShowPopupMenu"
-  - "CTagManager.ParseString"
-  - "CMFCCustomizeButton::GetCustomizeText"
-  - "CVSListBoxBase::OnBeforeRemoveItem"
-  - "OnClick"
-  - "CFullScreenImpl::SetFullScreenID"
-  - "CTagManager::ReadControlRendererInfo"
-  - "CMFCDropDownListBox.OnDrawItem"
-  - "CSmartDockingManager.ShowTabbedPlaceAt"
-  - "SetupToolbarMenu"
-  - "CMFCStatusBarPaneInfo.lpszText"
-  - "OnBeginDrag"
-  - "SetRange"
-  - "CMFCControlBarImpl"
-  - "cyIcon"
-  - "CMFCCustomizeMenuButton::GetParentToolbar"
-  - "CMFCVisualManagerBitmapCache.Get"
-  - "CMFCToolBarDropTarget.Register"
-  - "CSmartDockingGroupGuidesManager::GetWindowRect"
-  - "CVSListBoxEditCtrl.LockSize"
-  - "CMFCPropertySheetCategoryInfo::CMFCPropertySheetCategoryInfo"
-  - "CSmartDockingStandaloneGuide.AdjustPos"
-  - "CMFCCustomizeButton"
-  - "CTagManager::ReadPoint"
-  - "CMFCCustomizeButton.OnCalculateSize"
-  - "CMenuImages.Size"
-  - "GetCount"
-  - "CSmartDockingStandaloneGuide.Destroy"
-  - "CCommandManager::GetMenuUserImage"
-  - "CMFCStatusBarPaneInfo::lpszText"
-  - "IsCommandExist"
-  - "CMFCToolBarsOptionsPropertyPage::CMFCToolBarsOptionsPropertyPage"
-  - "CMFCOutlookBarToolBar"
-  - "AddInvisibleButton"
-  - "GetRibbonBar"
-  - "ExcludeTag"
-  - "CMFCRibbonPanelMenuBar.AdjustLocations"
-  - "OnPaint"
-  - "CMFCRibbonQuickAccessToolBar"
-  - "CMFCToolBarDropTarget::OnDragOver"
-  - "GetContainerFrameWindow"
-  - "CMFCRibbonPanelMenuBar.PopTooltip"
-  - "CMFCRibbonPanelMenuBar.SetActive"
-  - "CVSToolsListBox::OnBeforeRemoveItem"
-  - "CTagManager.IsEmpty"
-  - "COleDocIPFrameWndEx::IsPointNearDockSite"
-  - "IsCheckEnabled"
-  - "CVSListBoxBase.EnableBrowseButton"
-  - "CMFCRibbonPanelMenuBar::DoPaint"
-  - "GetResId"
-  - "CMFCToolBarButtonsListButton::SelectButton"
-  - "CMFCRibbonPanelMenu::IsScrollUpAvailable"
-  - "CFrameImpl::OnChangeVisualManager"
-  - "CMFCToolBarButtonsListButton::RemoveButtons"
-  - "CMFCRibbonPanelMenuBar::OnUpdateCmdUI"
-  - "CMFCOutlookBarPaneButton.OnCalculateSize"
-  - "CSmartDockingGroupGuide.Show"
-  - "CMFCCustomizeButton.GetExtraSize"
-  - "CMFCColorPropertySheet"
-  - "CMemDC.GetDC"
-  - "CFrameImpl::GetRibbonBar"
-  - "CMFCRibbonPanelMenuBar.GetPanel"
-  - "CMFCRibbonCommandsListBox.FillFromCategory"
-  - "CVSListBoxBase.OnSelectionChanged"
-  - "GetMenuUserImage"
-  - "CMFCRibbonKeyTip"
-  - "CSmartDockingGroupGuidesManager.ShowGuide"
-  - "CSmartDockingManager::GetHighlightedGuideNo"
-  - "CMFCToolBarsListCheckBox"
-  - "CMFCRibbonCommandsListBox.FillFromIDs"
-  - "CMFCStatusBarPaneInfo.cxIcon"
-  - "GetExtraSize"
-  - "CMFCRibbonCmdUI"
-  - "SmoothResize"
-  - "OnDragEnter"
-  - "CSmartDockingManager::Start"
-  - "OnUserToolTip"
-  - "CMFCStatusBarPaneInfo::bProgressText"
-  - "COleDocIPFrameWndEx.OnMoveMiniFrame"
-  - "CMFCRibbonPanelMenuBar.IsMenuMode"
-  - "CVSToolsListBox.OnAfterMoveItemUp"
-  - "FindIndex"
-  - "Show"
-  - "COleServerDocEx"
-  - "CMFCCustomizeButton.IsMenuRightAlign"
-  - "CSmartDockingManager::Show"
-  - "CMFCVisualManagerBitmapCache::IsCached"
-  - "CMFCCustomizeButton::OnDraw"
-  - "CMFCControlBarImpl::GetGripperRect"
-  - "Size"
-  - "CMFCRibbonDefaultPanelButton.OnDraw"
-  - "CMFCRibbonPanelMenuBar.SetDefaultMenuLook"
-  - "CMFCDropDownListBox::OnChooseItem"
-  - "CSmartDockingGroupGuidesManager.Destroy"
-  - "SetItemIndex"
-  - "CFrameImpl::AddFrame"
-  - "IsActive"
-  - "GetPanel"
-  - "CMFCDropDownListBox::CMFCDropDownListBox"
-  - "CMFCRibbonPanelMenu::IsDefaultMenuLook"
-  - "CMFCRibbonPanelMenu::CMFCRibbonPanelMenu"
-  - "COleDocIPFrameWndEx::ShowPane"
-  - "CMFCRibbonKeyboardCustomizeDialog::CMFCRibbonKeyboardCustomizeDialog"
-  - "CMFCControlRendererInfo::SetResourceID"
-  - "OnPosChange"
-  - "CSmartDockingGroupGuidesWnd::OnEraseBkgnd"
-  - "OnChangeVisualManager"
-  - "CVSListBoxBase.GetButtonsCount"
-  - "CMFCRibbonDefaultPanelButton.OnKey"
-  - "CMFCCustomizeButton.GetCustomizeCmdId"
-  - "IsBrowseButton"
-  - "CTagManager::ReadBool"
-  - "OnBrowse"
-  - "CMFCRibbonGalleryIcon::IsFirst"
-  - "CSmartDockingManager::CauseCancelMode"
-  - "CRecentPaneContainerInfo.SetInfo"
-  - "GetContainer"
-  - "CSmartDockingManager::OnPosChange"
-  - "CMFCToolBarEditCtrl"
-  - "CMFCToolBarEditCtrl::PreTranslateMessage"
-  - "CMFCRibbonDefaultPanelButton.DrawImage"
-  - "CreatePopupMenu"
-  - "CMFCRibbonPanelMenu.SetDefaultMenuLook"
-  - "EnableMDITabs"
-  - "CMFCRibbonPanelMenuBar::IsQATPopup"
-  - "CTagManager::ParseControlRenderer"
-  - "ReadInt"
-  - "CPaneContainerGC::CleanUp"
-  - "CVSListBoxBase::SetGrayDisabledButtons"
-  - "CMFCStatusBarPaneInfo::clrProgressText"
-  - "COleDocIPFrameWndEx::GetContainerFrameWindow"
-  - "CMFCCaptionButtonEx::SetRect"
-  - "CSmartDockingGroupGuidesManager.AdjustPos"
-  - "CFullScreenImpl.SetFullScreenID"
-  - "OnOK"
-  - "CMFCControlRendererInfo.m_rectImage"
-  - "UpdateButtons"
-  - "AddPaneContainer"
-  - "CMFCToolBarsCommandsListBox"
-  - "CMFCCustomizeMenuButton::EnableCustomization"
-  - "SetFullScreenID"
-  - "CMFCCustomizeMenuButton.CMFCCustomizeMenuButton"
-  - "CMFCRibbonCmdUI.SetText"
-  - "CMFCRibbonTab::SetACCData"
-  - "CMFCRibbonGalleryIcon::SetACCData"
-  - "QueryContinueDrag"
-  - "IsMenuMode"
-  - "CMFCTasksPaneToolBar.IsButtonExtraSizeAvailable"
-  - "CMFCShadowRenderer"
-  - "GetScrollBarCtrl"
-  - "CMFCCustomizeButton::IsPipeStyle"
-  - "OnSysColorChange"
-  - "CCommandManager::SetUserImages"
-  - "COleCntrFrameWndEx.AddDockSite"
-  - "CMFCRibbonPanelMenu.IsScrollDnAvailable"
-  - "CMFCToolBarsCommandsListBox::DrawItem"
-  - "CMFCToolBarSystemMenuButton.OnCalculateSize"
-  - "CreateMenu"
-  - "nFrameCount"
-  - "COleDocIPFrameWndEx::AddPane"
-  - "CMFCRibbonCommandsListBox.GetCommandIndex"
-  - "CMFCControlRendererInfo.GetResourceID"
-  - "CMFCToolBarsKeyboardPropertyPage"
-  - "CMemDC.~CMemDC"
-  - "CSmartDockingGroupGuide::AdjustPos"
-  - "CMFCControlRendererInfo::~CMFCControlRendererInfo"
-  - "GetSysMenu"
-  - "CMFCRibbonCaptionButton"
-  - "CMFCToolBarSystemMenuButton::GetSysMenuIcon"
-  - "operator="
-  - "DrawItem"
-  - "lpszToolTip"
-  - "CMFCControlRendererInfo::CMFCControlRendererInfo"
-  - "GetDC"
-  - "CMFCRibbonPanelMenu.SetMenuMode"
-  - "CTagManager::ReadFont"
-  - "Mirror"
-  - "IsMenuRightAlign"
-  - "GetParentToolbar"
-  - "OnSelectionChanged"
-  - "CMFCRibbonKeyTip.CMFCRibbonKeyTip"
-  - "CTagManager::ParseControlRendererInfo"
-  - "CMFCDropDownListBox::AddString"
-  - "EnableCustomization"
-  - "CMFCToolBarSystemMenuButton::OnAfterCreatePopupMenu"
-  - "afxwin/CDocumentAdapter::GetContainer"
-  - "CMFCControlRenderer.OnSysColorChange"
-  - "CMFCRibbonKeyboardCustomizeDialog.CMFCRibbonKeyboardCustomizeDialog"
-  - "CMFCTasksPanePropertyPage.SetACCData"
-  - "CMFCCustomizeButton.InvokeCommand"
-  - "CSmartDockingGroupGuide"
-  - "CMFCColorPropertySheet::LoadAcceleratorTable"
-  - "CMFCRibbonCommandsListBox::GetCommandIndex"
-  - "COleCntrFrameWndEx::AddDockSite"
-  - "CMFCControlRenderer.GetParams"
-  - "m_rectInter"
-  - "COleDocIPFrameWndEx.ShowPane"
-  - "SetDockState"
-  - "Highlight"
-  - "CMDIClientAreaWnd::EnableMDITabs"
-  - "CMFCRibbonGalleryIcon.IsLast"
-  - "CMFCDropDownListBox.IsEditFocused"
-  - "CSmartDockingGroupGuide.SetVisible"
-  - "CMFCShowAllButton.OnClick"
-  - "CMFCToolBarMenuButtonsButton::HaveHotBorder"
-  - "CFrameImpl.SetDockingManager"
-  - "CMFCRibbonPanelMenuBar::GetCategory"
-  - "CMFCRibbonPanelMenuBar.CalcSize"
-  - "CMFCToolBarsListCheckBox.IsCheckEnabled"
-  - "OnSetPreviewMode"
-  - "CMFCStatusBarPaneInfo::CMFCStatusBarPaneInfo"
-  - "RestoreState"
-  - "CTagManager::ParseSize"
-  - "CMDIClientAreaWnd::DoesMDITabExist"
-  - "CTagManager.ReadColor"
-  - "CTagManager.ReadInt"
-  - "SetGrayDisabledButtons"
-  - "CRecentPaneContainerInfo.Init"
-  - "CFrameImpl::HasRegion"
-  - "CMFCCustomizeButton.SetDefaultDraw"
-  - "CMFCRibbonDefaultPanelButton::GetImageSize"
-  - "CSmartDockingGroupGuidesManager::Destroy"
-  - "CMFCControlRenderer::CMFCControlRenderer"
-  - "CVSListBoxBase.IsGrayDisabledButtons"
-  - "CSmartDockingGroupGuidesManager::ShowGuide"
-  - "CMFCRibbonPanelMenuBar.DoPaint"
-  - "CCommandManager.SetUserImages"
-  - "OnTearOffMenu"
-  - "GetCommand"
-  - "IsEmptyMenuAllowed"
-  - "CSmartDockingGroupGuidesWnd.OnPaint"
-  - "COleDocIPFrameWndEx.GetDefaultResId"
-  - "CMFCRibbonDefaultPanelButton.CMFCRibbonDefaultPanelButton"
-  - "CMDIClientAreaWnd::CFrameClientAreaWnd"
-  - "ParsePoint"
-  - "CMFCToolBarButtonsListButton.SelectButton"
-  - "DockPane"
-  - "AllowShowOnList"
-  - "CFullScreenImpl::OnGetMinMaxInfo"
-  - "OnCalculateSize"
-  - "CVSToolsListBox::OnAfterMoveItemDown"
-  - "m_rectImage"
-  - "CTagManager.ReadToolBarImages"
-  - "OnEndEditLabel"
-  - "CMFCControlBarImpl.GetGripperRect"
-  - "CanBeStored"
-  - "COleCntrFrameWndEx.ShowPane"
-  - "CMFCToolBarDropSource.OnBeginDrag"
-  - "COleCntrFrameWndEx.DockPaneLeftOf"
-  - "CCommandManager::CleanUp"
-  - "CMFCRibbonPanelMenuBar::IsRibbonMiniToolBar"
-  - "CMFCRibbonKeyTip::Hide"
-  - "CMDIClientAreaWnd::GetMDITabs"
-  - "CMFCToolBarSpinEditBoxButton.GetSpinControl"
-  - "CMFCRibbonGalleryIcon::GetIndex"
-  - "FillInterior"
-  - "Start"
-  - "CMFCToolBarsListPropertyPage"
-  - "CSmartDockingManager::SetOuterRect"
-  - "COleCntrFrameWndEx::PaneFromPoint"
-  - "CreateFromMenu"
-  - "CMFCVisualManagerBitmapCache::Cache"
-  - "CMFCCaptionButtonEx::GetRect"
-  - "CMFCToolBarMenuButtonsButton.Serialize"
-  - "CMFCRibbonKeyboardCustomizeDialog"
-  - "CMFCControlRenderer::Mirror"
-  - "FillFromArray"
-  - "COleDocIPFrameWndEx.PreTranslateMessage"
-  - "COleDocIPFrameWndEx::DockPane"
-  - "CMFCRibbonDefaultPanelButton.GetToolTipText"
-  - "CTagManager.ParseColorHEX"
-  - "CMFCRibbonRichEditCtrl::CMFCRibbonRichEditCtrl"
-  - "IsScaled"
-  - "CMFCShadowRenderer.OnSysColorChange"
-  - "CCommandManager.CleanUp"
-  - "CMFCCustomizeButton::GetCustomizeCmdId"
-  - "COleCntrFrameWndEx::OnShowPanes"
-  - "CMFCRibbonPanelMenu.FindByOrigin"
-  - "CMFCTasksPaneFrameWnd::CalcBorderSize"
-  - "CMFCToolBarsKeyboardPropertyPage.SetAllCategory"
-  - "CMFCToolBarMenuButtonsButton::OnDraw"
-  - "CMFCOutlookBarToolBar::AdjustLocations"
-  - "CMFCReBarState::SaveState"
-  - "CSmartDockingStandaloneGuideWnd"
-  - "GetSelItem"
-  - "SetResourceID"
-  - "COleDocIPFrameWndEx.IsMenuBarAvailable"
-  - "CFullScreenImpl::CFullScreenImpl"
-  - "CSmartDockingHighlighterWnd::ShowTabbedAt"
-  - "COleDocIPFrameWndEx.RecalcLayout"
-  - "Destroy"
-  - "CMFCStatusBarPaneInfo.nStyle"
-  - "CSmartDockingGroupGuidesWnd::OnClose"
-  - "CSmartDockingGroupGuide.Destroy"
-  - "CTagManager.ParseToolBarImages"
-  - "CMFCRibbonCaptionButton.IsMDIChildButton"
-  - "CMFCRibbonPanelMenuBar.GetDroppedDown"
-  - "CMFCCustomizeButton.GetInvisibleButtons"
-  - "LoadFrame"
-  - "afxwin/CDocumentAdapter::BeginReadChunks"
-  - "CMFCRibbonPanelMenuBar::SetMenuMode"
-  - "IsPtIn"
-  - "CMFCCustomizeMenuButton.SetParentToolbar"
-  - "COleCntrFrameWndEx::InsertPane"
-  - "CSmartDockingManager::Stop"
-  - "ReadToolTipInfo"
-  - "Stop"
-  - "ShowFullScreen"
-  - "CSmartDockingHighlighterWnd::Create"
-  - "CMDIClientAreaWnd::UpdateTabs"
-  - "HasRegion"
-  - "CMFCTabButton.SetPressed"
-  - "GetCmdImage"
-  - "CCommandManager::ClearUserCmdImages"
-  - "COleCntrFrameWndEx.PaneFromPoint"
-  - "OnBeforeRemoveItem"
-  - "CMFCToolBarMenuButtonsButton.CanBeStored"
-  - "CMFCToolBarSystemMenuButton.CreateMenu"
-  - "COleDocIPFrameWndEx.GetToolbarButtonToolTipText"
-  - "CMFCRibbonGalleryIcon::IsLastInRow"
-  - "SetACCData"
-  - "CTagManager.ParseControlRendererInfo"
-  - "CTagManager.CTagManager"
-  - "CMFCControlRendererInfo::m_clrTransparent"
-  - "CTagManager::CTagManager"
-  - "Assign"
-  - "CMFCStatusBarPaneInfo::nProgressTotal"
-  - "GetFullScreenMinMaxInfo"
-  - "SetRect"
-  - "COleDocIPFrameWndEx::LoadFrame"
-  - "CMFCToolBarDropTarget"
-  - "CMFCToolBarsOptionsPropertyPage.CMFCToolBarsOptionsPropertyPage"
-  - "CMFCTabInfo::GetRect"
-  - "CVSListBoxBase.EnableButton"
-  - "CMFCOutlookBarToolBar::OnUserToolTip"
-  - "COleCntrFrameWndEx::OnMoveMiniFrame"
-  - "LoadFromFile"
-  - "GetParentRibbonMenuBar"
-  - "CMFCCustomizeMenuButton.SetItemIndex"
-  - "OnAfterAddItem"
-  - "CMFCRibbonPanelMenu.SetActive"
-  - "CVSListBoxBase.GetCount"
-  - "CVSListBoxBase::SetItemData"
-  - "CMFCCustomizeButton::IsMenuRightAlign"
-  - "GetToolbarButtonToolTipText"
-  - "CMFCRibbonPanelMenuBar"
-  - "CPngImage::LoadFromFile"
-  - "CSmartDockingGroupGuidesManager::Create"
-  - "CMFCControlRenderer::GetImageCount"
-  - "CMFCRibbonGalleryIcon.CMFCRibbonGalleryIcon"
-  - "SetStandardButtons"
-  - "StoreDockInfo"
-  - "CMenuImages::CleanUp"
-  - "CTagManager::ReadSize"
-  - "CSmartDockingStandaloneGuide.Highlight"
-  - "AddCommand"
-  - "CMFCRibbonDefaultPanelButton.GetParentPanel"
-  - "CVSListBoxBase::AddItem"
-  - "OnDrawMenuImage"
-  - "CVSToolsListBox.OnAfterRenameItem"
-  - "CMFCPropertySheetCategoryInfo"
-  - "CRecentPaneContainerInfo::operator="
-  - "CSmartDockingHighlighterWnd::ShowAt"
-  - "CMFCRibbonPanelMenu::SetDefaultMenuLook"
-  - "CMFCToolBarSystemMenuButton::CMFCToolBarSystemMenuButton"
-  - "CMFCToolBarsListPropertyPage::EnableUserDefinedToolbars"
-  - "CMFCControlRendererInfo.~CMFCControlRendererInfo"
-  - "CMFCToolBarSystemMenuButton.GetSysMenuIcon"
-  - "AllowShowOnPaneMenu"
-  - "CMFCStatusBarPaneInfo.nFrameCount"
-  - "CTagManager::GetBuffer"
-  - "CMFCToolBarsToolsPropertyPage::OnKillActive"
-  - "IsFirstInColumn"
-  - "CMFCControlRenderer.IsMirror"
-  - "COleDocIPFrameWndEx::EnableDocking"
-  - "CMFCRibbonKeyTip.GetElement"
-  - "OnCmdMsg"
-  - "CMFCToolBarsListPropertyPage.EnableUserDefinedToolbars"
-  - "CVSListBoxBase::EditItem"
-  - "CMenuHash.LoadMenuBar"
-  - "CMFCRibbonPanelMenuBar.IsRibbonPanelInRegularMode"
-  - "CalcBorderSize"
-  - "IsFullScreen"
-  - "CMFCCustomizeButton::OnChangeParentWnd"
-  - "CMFCToolBarSpinEditBoxButton.SetRange"
-  - "CMFCCustomizeButton.SetExtraSize"
-  - "CMFCOutlookBarPaneButton"
-  - "CMFCRibbonDefaultPanelButton::CopyFrom"
-  - "clrProgressBarDest"
-  - "CMFCOutlookBarToolBar.CMFCOutlookBarToolBar"
-  - "CMFCStatusBarPaneInfo::lpszToolTip"
-  - "CFrameImpl::GetMenuBar"
-  - "COleDocIPFrameWndEx::DockPaneLeftOf"
-  - "CVSListBoxBase.GetButtonNum"
-  - "COleDocIPFrameWndEx::OnCloseDockingPane"
-  - "CVSListBoxBase::SelectItem"
-  - "IsMenuItemWithoutImage"
-  - "CTagManager::ParseColorHEX"
-  - "CMFCStatusBarPaneInfo::nCurrFrame"
-  - "CMFCRibbonPanelMenuBar.RestoreDelayedSubMenu"
-  - "IsMirror"
-  - "CSmartDockingGroupGuidesWnd"
-  - "CMFCCustomizeButton::SetExtraSize"
-  - "COleDocIPFrameWndEx.DockPane"
-  - "CMFCToolBarSystemMenuButton.CreateFromMenu"
-  - "CCommandManager::ClearAllCmdImages"
-  - "CPngImage.LoadFromFile"
-  - "CMFCStatusBarPaneInfo.nProgressCurr"
-  - "SetBuffer"
-  - "CMFCTabInfo.GetRect"
-  - "CMFCCustomizeButton.GetCustomizeText"
-  - "nProgressTotal"
-  - "CRecentPaneContainerInfo::SetInfo"
-  - "PaneFromPoint"
-  - "CMFCStatusBarPaneInfo.clrProgressBarDest"
-  - "GetPane"
-  - "CMFCRibbonCmdUI::SetCheck"
-  - "CMFCToolBarSpinEditBoxButton::GetSpinControl"
-  - "CMFCDropDownListBox.OnGetItemSize"
-  - "CFrameImpl.OnChangeVisualManager"
-  - "ClearUserCmdImages"
-  - "CMFCRibbonKeyTip::IsMenuKey"
-  - "CMFCDropDownListBox.DefaultMouseClickOnClose"
-  - "COleCntrFrameWndEx.DockPane"
-  - "CVSListBoxBase::SetItemText"
-  - "CMFCStatusBarPaneInfo.nProgressTotal"
-  - "CMFCReBarState"
-  - "COleDocIPFrameWndEx.OnCloseDockingPane"
-  - "CMFCCustomizeButton.SetPipeStyle"
-  - "CFullScreenImpl.~CFullScreenImpl"
-  - "CSmartDockingManager::Destroy"
-  - "CSmartDockingManager::HidePlace"
-  - "CMFCRibbonPanelMenuBar::CalcSize"
-  - "CMFCRibbonPanelMenu.GetMenuBar"
-  - "CMFCCustomizeButton.OnCancelMode"
-  - "CSmartDockingGroupGuide::IsPtIn"
-  - "SaveMenuBar"
-  - "OnClickButton"
-  - "COleDocIPFrameWndEx::PaneFromPoint"
-  - "CCommandManager::ClearCmdImage"
-  - "OnKey"
-  - "CMultiDocTemplateEx.GetResId"
-  - "CMFCControlRenderer::CreateObject"
-  - "CFullScreenImpl.OnGetMinMaxInfo"
-  - "CTagManager.ReadFont"
-  - "CPngImage::CleanUp"
-  - "SetInfo"
-  - "CMFCCustomizeButton::CopyFrom"
-  - "CMenuHash::CleanUp"
-  - "OnUpdateCmdUI"
-  - "CMFCToolBarMenuButtonsButton.OnDraw"
-  - "COleDocIPFrameWndEx::RecalcLayout"
-  - "CMFCToolBarsOptionsPropertyPage"
-  - "COleDocIPFrameWndEx::GetToolbarButtonToolTipText"
-  - "COleDocIPFrameWndEx::OnSetPreviewMode"
-  - "OnEraseBkgnd"
-  - "CTagManager::ExcludeTag"
-  - "OnClose"
-  - "CMFCRibbonPanelMenuBar.OnKey"
-  - "CSmartDockingManager.Start"
-  - "CMDIClientAreaWnd.EnableMDITabs"
-  - "CPngImage"
-  - "CVSListBoxBase::OnAfterAddItem"
-  - "afxcontrolrenderer/CMFCControlRenderer::IsScaled"
-  - "CMFCToolBarSpinEditBoxButton::SetRange"
-  - "PopTooltip"
-  - "CMFCCustomizeButton.CMFCCustomizeButton"
-  - "COleCntrFrameWndEx"
-  - "OnToolHitTest"
-  - "FindTabWndByChild"
-  - "CVSListBoxBase.OnAfterMoveItemUp"
-  - "FillFromCategory"
-  - "CSmartDockingGroupGuidesManager"
-  - "CMFCControlRenderer::IsMirror"
-  - "CMFCRibbonCommandsListBox.GetSelected"
-  - "CFrameImpl::GetFrameList"
-  - "CMFCReBarState.SaveState"
-  - "CMFCToolBarEditCtrl.PreTranslateMessage"
-  - "CMFCCustomizeButton::SetDefaultDraw"
-  - "CVSListBoxBase::AddButton"
-  - "GetRange"
-  - "CMFCDropDownListBox.GetText"
-  - "ParseControlRendererInfo"
-  - "CMFCShadowRenderer::Draw"
-  - "SetItemText"
-  - "CVSToolsListBox::OnAfterAddItem"
-  - "CMFCRibbonPanelMenu::IsAlwaysClose"
-  - "CVSListBoxBase.GetButtonID"
-  - "CMFCStatusBarPaneInfo::cxIcon"
-  - "SetCaptionButtons"
-  - "SetSiblingsButton"
-  - "CMFCRibbonDefaultPanelButton::OnDraw"
-  - "CMFCControlRenderer::DrawFrame"
-  - "CMFCRibbonDefaultPanelButton::OnKey"
-  - "CMFCShowAllButton"
-  - "COleDocIPFrameWndEx::OnTearOffMenu"
-  - "CMFCStatusBarPaneInfo::nStyle"
-  - "CMFCDropDownListBox.Track"
-  - "CMFCControlRendererInfo::CommonInit"
-  - "Init"
-  - "IsBorder"
-  - "GetParams"
-  - "CTagManager.ReadControlRenderer"
-  - "CacheY"
-  - "CMDIClientAreaWnd.DoesMDITabExist"
-  - "SetCmdImage"
-  - "IsRibbonMiniToolBar"
-  - "CMFCControlRendererInfo::m_rectInter"
-  - "CMFCToolBarSystemMenuButton.CopyFrom"
-  - "CMFCToolBarsMenuPropertyPage.CMFCToolBarsMenuPropertyPage"
-  - "OnGetImage"
-  - "CMFCToolBarDropSource::OnBeginDrag"
-  - "CSmartDockingManager::OnMouseMove"
-  - "CPreviewViewEx::EnableScaleLargeImages"
-  - "CMFCTasksPaneToolBar::AllowShowOnPaneMenu"
-  - "CSmartDockingManager::MoveCentralGroup"
-  - "EnableDocking"
-  - "CMFCToolBarButtonsListButton::EnableDragFromList"
-  - "CMFCReBarState.LoadState"
-  - "CMFCRibbonPanelMenu::GetPanel"
-  - "CSmartDockingStandaloneGuide.Create"
-  - "CMFCToolBarsCommandsListBox::MeasureItem"
-  - "COleCntrFrameWndEx.RecalcLayout"
-  - "CTagManager::ReadToolTipInfo"
-  - "CSmartDockingGroupGuide::Destroy"
-  - "CMFCControlRenderer.~CMFCControlRenderer"
-  - "OnAfterCreatePopupMenu"
-  - "CMFCRibbonCommandsListBox.AddCommand"
-  - "CFrameImpl.AddFrame"
-  - "CPngImage::LoadFromBuffer"
-  - "CMFCDropDownListBox.SetMaxHeight"
-  - "CTagManager.ParseRect"
-  - "CMFCToolBarSystemMenuButton.OnAfterCreatePopupMenu"
-  - "CloseDelayedSubMenu"
-  - "COleDocIPFrameWndEx.OnDrawMenuLogo"
-  - "COleDocIPFrameWndEx.AddDockSite"
-  - "clrProgressText"
-  - "ResetContent"
-  - "COleDocIPFrameWndEx::OnShowPanes"
-  - "CPngImage.LoadFromBuffer"
-  - "COleDocIPFrameWndEx.OnShowCustomizePane"
-  - "CMemDC.CMemDC"
-  - "CMFCToolBarSystemMenuButton::OnCalculateSize"
-  - "CMFCOutlookBarToolBar::OnUpdateCmdUI"
-  - "CMFCControlBarImpl::CMFCControlBarImpl"
-  - "Create"
-  - "CFullScreenImpl.EnableMainMenu"
-  - "CVSListBoxBase.SetGrayDisabledButtons"
-  - "COleCntrFrameWndEx::AdjustDockingLayout"
-  - "CMFCToolBarsMenuPropertyPage::CloseContextMenu"
-  - "CSmartDockingManager::Create"
-  - "IsCategoryPopup"
-  - "CSmartDockingHighlighterWnd::SetDockingWnd"
-  - "CTagManager.LoadFromFile"
-  - "IsMemDC"
-  - "CMFCTabButton::SetPressed"
-  - "CMFCOutlookBarPaneButton::OnChangeParentWnd"
-  - "COleCntrFrameWndEx.AddPane"
-  - "COleDocIPFrameWndEx::OnClosePopupMenu"
-  - "SelectMenu"
-  - "CMFCDropDownListBox::OnDrawItem"
-  - "CMFCStatusBarPaneInfo.CMFCStatusBarPaneInfo"
-  - "CTagManager.ParseToolTipInfo"
-  - "CCommandManager.EnableMenuItemImage"
-  - "CMFCToolBarSystemMenuButton::HaveHotBorder"
-  - "IsLastInRow"
-  - "CMFCTasksPaneFrameWnd.CalcBorderSize"
-  - "CVSListBoxBase::IsBrowseButton"
-  - "AddString"
-  - "afxwin/CDocumentAdapter::GetThumbnail"
-  - "CVSListBoxBase.OnEndEditLabel"
-  - "CMFCColorPropertySheet::OnInitDialog"
-  - "CRibbonCategoryScroll::IsLeftScroll"
-  - "CSmartDockingManager::ShowCentralGroup"
-  - "ReadControlRenderer"
-  - "CSmartDockingManager.OnMouseMove"
-  - "CTagManager::ParseString"
-  - "CMFCStatusBarPaneInfo::cyIcon"
-  - "CMFCRibbonPanelMenuBar::OnKey"
-  - "CTagManager::LoadFromFile"
-  - "CMFCRibbonRichEditCtrl.PreTranslateMessage"
-  - "CTagManager::ParseFont"
-  - "BeginReadChunks"
-  - "CSmartDockingManager.IsStarted"
-  - "IsLast"
-  - "CMFCToolBarMenuButtonsButton.CopyFrom"
-  - "CTagManager::ReadRect"
-  - "CMFCRibbonDefaultPanelButton.OnDrawOnList"
-  - "OnInitDialog"
-  - "CMFCDropDownListBox::SetMaxHeight"
-  - "CSmartDockingGroupGuide::Highlight"
-  - "CMFCTasksPaneToolBar::UpdateMenuButtonText"
-  - "CMFCToolBarDropTarget.OnDragEnter"
-  - "CMFCToolBarButtonsListButton.RemoveButtons"
-  - "CMFCRibbonPanelMenuBar.GetTopLevelRibbonBar"
-  - "CSmartDockingManager.GetOwner"
-  - "COleDocIPFrameWndEx::OnMenuButtonToolHitTest"
-  - "SetUserImages"
-  - "CMFCVisualManagerBitmapCache.CacheY"
-  - "CMFCRibbonTab.SetACCData"
-  - "OnDragOver"
-  - "COleDocIPFrameWndEx.GetDockingManager"
-  - "CMenuHash::IsActive"
-  - "CSmartDockingGroupGuide::IsVisible"
-  - "CMFCVisualManagerBitmapCache.IsCached"
-  - "HitTest"
-  - "CVSListBoxBase::OnEndEditLabel"
-  - "CMFCRibbonDefaultPanelButton.GetImageSize"
-  - "COleDocIPFrameWndEx.GetTearOffBars"
-  - "CMFCStatusBarPaneInfo.cxText"
-  - "CPngImage.Load"
-  - "CMFCTasksPaneFrameWnd::SetTaskPaneCaptionButtons"
-  - "CCommandManager::SaveState"
-  - "SetMaxHeight"
-  - "CMFCToolBarDropTarget.OnDropEx"
-  - "COleServerDocEx::Serialize"
-  - "SetImage"
-  - "CMFCRibbonPanelMenu::IsCustomizeMenu"
-  - "GiveFeedback"
-  - "COleDocIPFrameWndEx::WinHelp"
-  - "SelectItem"
-  - "CMFCDropDownListBox::Track"
-  - "afxwin/CDocumentAdapter::InitializeSearchContent"
-  - "CMFCCustomizeButton::CMFCCustomizeButton"
-  - "CSmartDockingStandaloneGuide.Show"
-  - "EnableCustomizeMenu"
-  - "IsEditable"
-  - "CTagManager.ParseColor"
-  - "GetFullScreenRect"
-  - "CMFCDropDownListBox.GetCount"
-  - "CMFCDropDownListBox.AddString"
-  - "IsSelected"
-  - "CMFCCustomizeMenuButton::CMFCCustomizeMenuButton"
-  - "OnSetCursor"
-  - "COleDocIPFrameWndEx.GetActivePopup"
-  - "CTagManager.ParseFont"
-  - "CMFCOutlookBarPaneButton::OnDraw"
-  - "CMFCToolBarsCommandsListBox.MeasureItem"
-  - "CTagManager::ParseToolBarImages"
-  - "afxwin/CDocumentAdapter::ClearChunkList"
-  - "CSmartDockingManager::GetOwner"
-  - "CMFCToolBarSystemMenuButton::CopyFrom"
-  - "GetSpinControl"
-  - "CMDIClientAreaWnd.UpdateTabs"
-  - "GetRuntimeClass"
-  - "CFrameImpl.GetRibbonBar"
-  - "CMultiDocTemplateEx::GetResId"
-  - "CMFCVisualManagerBitmapCache::Clear"
-  - "CMFCOutlookBarPaneList"
-  - "CSmartDockingStandaloneGuideWnd::Highlight"
-  - "CTagManager.ReadBool"
-  - "PreTranslateMessage"
-  - "AdjustClientArea"
-  - "SetPressed"
-  - "CMFCControlRendererInfo::m_rectSides"
-  - "CSmartDockingManager.Create"
-  - "CMFCRibbonPanelMenuBar.IsRibbonMiniToolBar"
-  - "CMFCRibbonPanelMenuBar.IsQATPopup"
-  - "OnClosePopupMenu"
-  - "COleDocIPFrameWndEx.SetupToolbarMenu"
-  - "~CDocumentAdapter"
-  - "CVSListBoxBase::OnKey"
-  - "IsStarted"
-  - "CMFCRibbonPanelMenuBar::FindByOrigin"
-  - "CMFCRibbonDefaultPanelButton.CopyFrom"
-  - "COleDocIPFrameWndEx.OnSetPreviewMode"
-  - "CMFCStatusBarPaneInfo::nFrameCount"
-  - "m_clrTransparent"
-  - "CMFCToolBarButtonsListButton.GetSelectedButton"
-  - "FindByOrigin"
-  - "OnAfterMoveItemUp"
-  - "CMFCControlRenderer::IsValid"
-  - "CMFCOutlookBarScrollButton"
-  - "CMFCRibbonGalleryIcon.IsFirstInColumn"
-  - "clrProgressBar"
-  - "CPaneContainerGC"
-  - "CMFCCustomizeMenuButton.SetSeparator"
-  - "CTagManager::ReadInt"
-  - "CSmartDockingManager.Show"
-  - "GetThumbnail"
-  - "CMFCOutlookBarToolBar::OnSendCommand"
-  - "CSmartDockingStandaloneGuideWnd.Create"
-  - "EnableUserDefinedToolbars"
-  - "CSmartDockingHighlighterWnd.Hide"
-  - "afxwin/CDocumentAdapter::LoadFromStream"
-  - "CMFCMousePropertyPage"
-  - "COleDocIPFrameWndEx.IsPointNearDockSite"
-  - "CMFCRibbonCommandsListBox::FillFromCategory"
-  - "CSmartDockingGroupGuide::SetVisible"
-  - "IsMenuKey"
-  - "CVSListBoxBase::GetSelItem"
-  - "CMFCCustomizeButton::IsEmptyMenuAllowed"
-  - "IsGrayDisabledButtons"
-  - "CFrameImpl::SetNewUserToolBarRTC"
-  - "CRibbonCategoryScroll"
-  - "CMFCVisualManagerBitmapCache.Clear"
-  - "CMFCStatusBarPaneInfo"
-  - "Register"
-  - "CMFCDropDownListBox::SetCurSel"
-  - "LockSize"
-  - "HidePlace"
-  - "CFrameImpl.GetMenuBar"
-  - "CMFCControlRendererInfo.operator ="
-  - "CMFCToolBarsCommandsPropertyPage.OnChangeSelButton"
-  - "GetOwner"
-  - "COleDocIPFrameWndEx::OnDrawMenuLogo"
-  - "m_uiBmpResID"
-  - "GetHighlightedGuideNo"
-  - "CMFCShadowRenderer::Create"
-  - "COleDocIPFrameWndEx.PaneFromPoint"
-  - "CMFCVisualManagerBitmapCache::Get"
-  - "CMFCRibbonPanelMenuBar::GetDroppedDown"
-  - "IsFirstInRow"
-  - "CMFCOutlookBarToolBar::OnSetCursor"
-  - "RestoreRecentlyUsedState"
-  - "COleCntrFrameWndEx::COleCntrFrameWndEx"
-  - "CVSListBoxBase::GetCount"
-  - "CMFCRibbonPanelMenuBar::SetActive"
-  - "DrawImage"
-  - "CMFCRibbonCmdUI.SetRadio"
-  - "DefaultMouseClickOnClose"
-  - "CloseContextMenu"
-  - "CMFCControlRenderer.CreateObject"
-  - "CMFCStatusBarPaneInfo::clrText"
-  - "CFullScreenImpl.ShowFullScreen"
-  - "clrBackground"
-  - "CMFCToolBarDropSource::GiveFeedback"
-  - "GetText"
-  - "CFrameImpl::SetDockingManager"
-  - "CMFCStatusBarPaneInfo.nID"
-  - "CMFCControlRendererInfo.m_rectInter"
-  - "CMFCCaptionButtonEx.GetRect"
-  - "GetCustomizeCmdId"
-  - "ShowPlaceAt"
-  - "CMFCToolBarsListPropertyPage::ShowToolBar"
-  - "CCommandManager.GetCmdImage"
-  - "ClearCmdImage"
-  - "CFrameImpl::SetControlbarsMenuId"
-  - "CMFCControlRendererInfo::m_bPremultiplyCheck"
-  - "SetImages"
-  - "CVSListBoxBase.AddButton"
-  - "CMFCToolBarsKeyboardPropertyPage.CMFCToolBarsKeyboardPropertyPage"
-  - "CSmartDockingGroupGuide.Highlight"
-  - "CMFCToolBarSystemMenuButton.HaveHotBorder"
-  - "CMemDC::IsVistaDC"
-  - "CVSListBoxBase::IsGrayDisabledButtons"
-  - "CMFCRibbonPanelMenuBar::SetDefaultMenuLook"
-  - "CMFCCustomizeMenuButton::RestoreRecentlyUsedState"
-  - "COleDocIPFrameWndEx.GetContainerFrameWindow"
-  - "CMFCOutlookBarPaneAdapter"
-  - "FillFromIDs"
-  - "~CMemDC"
-  - "CSmartDockingGroupGuidesManager.GetGuide"
-  - "COleDocIPFrameWndEx.OnClosePopupMenu"
-  - "CCommandManager::IsMenuItemWithoutImage"
-  - "CMFCRibbonPanelMenuBar.SetMenuMode"
-  - "IsAlwaysClose"
-  - "AddDockSite"
-  - "CMFCToolBarDropSource"
-  - "COleCntrFrameWndEx.InsertPane"
-  - "COleDocIPFrameWndEx.OnMenuButtonToolHitTest"
-  - "CMFCToolBarMenuButtonsButton"
-  - "CSmartDockingHighlighterWnd"
-  - "CMFCVisualManagerBitmapCache.FindIndex"
-  - "CMFCCustomizeButton::CanBeStored"
-  - "CMFCRibbonPanelMenuBar::AdjustLocations"
-  - "IsEmpty"
-  - "CMFCShowAllButton::OnToolHitTest"
-  - "CMFCToolBarSpinEditBoxButton::SetACCData"
-  - "CMFCOutlookBarPaneButton::SetImage"
-  - "CMFCRibbonPanelMenu::EnableCustomizeMenu"
-  - "LoadFromBuffer"
-  - "CTagManager::ParseColor"
-  - "COleDocIPFrameWndEx::IsMenuBarAvailable"
-  - "ClearAllCmdImages"
-  - "IsScrollDnAvailable"
-  - "CommonInit"
-  - "CMFCRibbonPanelMenuBar.OnUpdateCmdUI"
-  - "CMemDC::CMemDC"
-  - "CSmartDockingStandaloneGuideWnd.Highlight"
-  - "COleDocIPFrameWndEx::RemovePaneFromDockManager"
-  - "CMFCRibbonKeyTip::Show"
-  - "OnCustomizeMode"
-  - "CFrameImpl.GetFrameList"
-  - "CVSListBoxBase::EnableBrowseButton"
-  - "OnChangeParentWnd"
-  - "CMFCCustomizeButton::OnCalculateSize"
-  - "CVSListBoxBase.IsBrowseButton"
-  - "CMFCToolBarButtonsListButton::DrawItem"
-  - "CSmartDockingStandaloneGuide.IsPtIn"
-  - "CMFCControlRenderer.FillInterior"
-  - "COleCntrFrameWndEx::EnableAutoHidePanes"
-  - "CMFCDropDownListBox.SetMinWidth"
-  - "CMFCShowAllButton.OnCalculateSize"
-  - "CMFCToolBarDropTarget::OnDropEx"
-  - "CMFCRibbonPanelMenuBar.HitTestEx"
-  - "CMFCRibbonCmdUI::SetRadio"
-  - "SetItemData"
-  - "CMFCRibbonPanelMenu.IsCustomizeMenu"
-  - "afxwin/CDocumentAdapter::ReadNextChunkValue"
-  - "CMFCControlRendererInfo"
-  - "CRecentPaneContainerInfo"
-  - "GetParentPanel"
-  - "CMFCToolBarsListCheckBox::IsCheckEnabled"
-  - "CVSToolsListBox"
-  - "CMFCRibbonPanelMenu.IsMenuMode"
-  - "CCommandManager.SetCmdImage"
-  - "CMFCToolBarDropSource.GiveFeedback"
-  - "CMFCStatusBarPaneInfo.lpszToolTip"
-  - "CMFCToolBarButtonsListButton"
-  - "CFullScreenImpl.GetFullScreenRect"
-  - "CMFCRibbonKeyTip.Hide"
-  - "clrText"
-  - "CMFCToolBarsToolsPropertyPage.OnKillActive"
-  - "ParseString"
-  - "CMemDC::~CMemDC"
-  - "COleCntrFrameWndEx::RemovePaneFromDockManager"
-  - "SetMenuRightAlign"
-  - "CMFCRibbonPanelMenu.GetCategory"
-  - "CMFCToolBarSystemMenuButton.GetSysMenu"
-  - "SetUserCategory"
-  - "CMFCCustomizeButton.OnChangeParentWnd"
-  - "CTagManager::ParseRect"
-  - "CVSListBoxBase.SetStandardButtons"
-  - "afxmdiclientareawnd/CMDIClientAreaWnd::FindNextRegisteredWithTaskbarMDIChild"
-  - "CPaneContainerGC.CleanUp"
-  - "CMFCRibbonPanelMenu::SetMenuMode"
-  - "CSmartDockingManager.MoveCentralGroup"
-  - "CMenuImages.SetColor"
-  - "CMFCOutlookBarToolBar::OnCustomizeMode"
-  - "nProgressCurr"
-  - "CPreviewViewEx.EnableScaleLargeImages"
-  - "GetToolTipText"
-  - "COleDocIPFrameWndEx.OnCmdMsg"
-  - "CMFCVisualManagerBitmapCache::CacheY"
-  - "SetParentToolbar"
-  - "CMFCRibbonCmdUI::Enable"
-  - "CFullScreenImpl::~CFullScreenImpl"
-  - "CFullScreenImpl.IsFullScreen"
-  - "CMFCStatusBarPaneInfo.hImage"
-  - "COleCntrFrameWndEx.OnMoveMiniFrame"
-  - "CVSListBoxBase.OnAfterMoveItemDown"
-  - "IsQATPopup"
-  - "nStyle"
-  - "CMFCToolBarEditCtrl::CMFCToolBarEditCtrl"
-  - "afxcontrolrenderer/CMFCControlRenderer::SmoothResize"
-  - "CMultiDocTemplateEx"
-  - "CMFCTasksPaneToolBar"
-  - "SetNewUserToolBarRTC"
-  - "CMFCToolBarSystemMenuButton::CreateFromMenu"
-  - "CMFCDropDownListBox.GetCurSel"
-  - "CMFCToolBarSystemMenuButton.CMFCToolBarSystemMenuButton"
-  - "COleCntrFrameWndEx.IsPointNearDockSite"
-  - "COleDocIPFrameWndEx"
-  - "CMFCRibbonGalleryIcon.IsFirstInRow"
-  - "WinHelp"
-  - "CMFCControlRendererInfo::m_uiBmpResID"
-  - "CMFCToolBarSpinEditBoxButton.GetRange"
-  - "CMFCStatusBarPaneInfo.rect"
-  - "CMFCShadowRenderer::OnSysColorChange"
-  - "m_rectCorners"
-  - "UpdateTabs"
-  - "GetCommandIndex"
-  - "CMFCRibbonGalleryIcon::CMFCRibbonGalleryIcon"
-  - "CMFCRibbonCommandsListBox::AddCommand"
-  - "GetWindowRect"
-  - "Enable"
-  - "SetCurSel"
-  - "CMenuImages"
-  - "CMFCOutlookBarPaneButton.SetImage"
-  - "CMFCRibbonPanelMenu.IsAlwaysClose"
-  - "CMFCToolBarButtonsListButton.DrawItem"
-  - "CMFCRibbonPanelMenu.DefaultMouseClickOnClose"
-  - "CMFCDropDownListBox::OnGetItemSize"
-  - "CMFCRibbonTab"
-  - "CTagManager.ReadRect"
-  - "COleCntrFrameWndEx.GetPane"
-  - "CMFCRibbonPanelMenuBar.HitTest"
-  - "CMFCRibbonPanelMenu::SetPreferedSize"
-  - "Draw"
-  - "CSmartDockingGroupGuidesManager.Show"
-  - "CMFCToolBarSystemMenuButton.OnDraw"
-  - "CMFCToolBarSystemMenuButton"
-  - "COleDocIPFrameWndEx.EnablePaneMenu"
-  - "CMFCControlRenderer::GetThisClass"
-  - "CMFCRibbonPanelMenu.SetPreferedSize"
-  - "GetItemText"
-  - "ShowPane"
-  - "CMFCToolBarsCommandsPropertyPage.SetAllCategory"
-  - "COleDocIPFrameWndEx.InsertPane"
-  - "COleDocIPFrameWndEx::OnDrawMenuImage"
-  - "LoadFromResource"
-  - "CMFCRibbonPanelMenu::GetCategory"
-  - "CMFCCaptionMenuButton"
-  - "CMFCCustomizeMenuButton.GetParentToolbar"
-  - "CMFCShadowRenderer.Draw"
-  - "CVSListBoxBase.RemoveItem"
-  - "CMFCRibbonPanelMenuBar::IsMenuMode"
-  - "CopyFrom"
-  - "CMFCToolBarsListCheckBox::EnableCheck"
-  - "CMFCToolBarButtonsListButton::GetSelectedButton"
-  - "FindChunk"
-  - "CVSListBoxBase.SelectItem"
-  - "CVSListBoxBase.OnKey"
-  - "CMFCRibbonDefaultPanelButton::GetToolTipText"
-  - "CSmartDockingStandaloneGuide::Show"
-  - "OnChangeHot"
-  - "CMFCToolBarsListPropertyPage.CMFCToolBarsListPropertyPage"
-  - "CFullScreenImpl::ShowFullScreen"
-  - "CTagManager::SetBuffer"
-  - "AddButton"
-  - "SelectButton"
-  - "CTagManager.GetBuffer"
-  - "GetCustomizeText"
-  - "CMFCTasksPaneToolBar::IsButtonExtraSizeAvailable"
-  - "CMenuHash"
-  - "COleDocIPFrameWndEx::OnMoveMiniFrame"
-  - "CVSListBoxBase.AddItem"
-  - "CMenuImages::SetColor"
-  - "COleDocIPFrameWndEx.RemovePaneFromDockManager"
-  - "CMFCCaptionMenuButton.ShowMenu"
-  - "CMFCDropDownListBox::GetCurSel"
-  - "CMFCTasksPaneToolBar.AllowShowOnPaneMenu"
-  - "RemoveButtons"
-  - "CMFCToolBarMenuButtonsButton::CMFCToolBarMenuButtonsButton"
-  - "CMFCStatusBarPaneInfo.clrBackground"
-  - "afxwin/CDocumentAdapter::m_pParentDoc"
-  - "CSmartDockingHighlighterWnd.Create"
-  - "CMFCStatusBarPaneInfo.clrProgressText"
-  - "CMFCRibbonGalleryIcon.GetIndex"
-  - "COleCntrFrameWndEx::DockPane"
-  - "CVSToolsListBox.OnSelectionChanged"
-  - "COleDocIPFrameWndEx.AdjustDockingLayout"
-  - "~CFullScreenImpl"
-  - "COleDocIPFrameWndEx::EnableAutoHidePanes"
-  - "AdjustLocations"
-  - "COleDocIPFrameWndEx.OnCloseMiniFrame"
-  - "CMenuImages::Size"
-  - "OnChangeHighlighted"
-  - "OnLButtonDown"
-  - "EnableBrowseButton"
-  - "CMFCToolBarDateTimeCtrlImpl"
-  - "AddItem"
-  - "OnDropEx"
-  - "CMFCCustomizeButton::SetMenuRightAlign"
-  - "IsLastInColumn"
-  - "OnGetItemSize"
-  - "SetActiveTab"
-  - "IsCached"
-  - "COleCntrFrameWndEx::AdjustClientArea"
-  - "ShowGuide"
-  - "OnShowCustomizePane"
-  - "CMFCRibbonPanelMenuBar.GetCategory"
-  - "GetFrameList"
-  - "CMFCToolBarButtonsListButton.EnableDragFromList"
-  - "AdjustPos"
-  - "CCommandManager::GetCmdImage"
-  - "CMFCToolBarButtonsListButton::AddButton"
-  - "CMFCCustomizeButton.IsEditable"
-  - "IsEditFocused"
-  - "CMFCToolBarButtonsListButton::GetScrollBarCtrl"
-  - "CMFCStatusBarPaneInfo.clrProgressBar"
-  - "afxwin/CDocumentAdapter::RemoveChunk"
-  - "CSmartDockingManager.SetOuterRect"
-  - "CFullScreenImpl::RestoreState"
-  - "CMFCToolBarSystemMenuButton::OnDblClk"
-  - "CMFCControlRendererInfo::GetResourceID"
-  - "CMFCTasksPaneFrameWnd::SetCaptionButtons"
-  - "CMDIClientAreaWnd.GetMDITabs"
-  - "CMFCTabInfo"
-  - "CVSListBoxBase::GetItemText"
-  - "ParseColorHEX"
-  - "CMFCRibbonGalleryIcon::IsLast"
-  - "InsertPane"
-  - "CMFCToolBarMenuButtonsButton::OnCalculateSize"
-  - "CMFCDropDownListBox.OnChangeHot"
-  - "CreateObject"
-  - "CMFCTasksPaneToolBar.UpdateButtons"
-  - "CMFCStatusBarPaneInfo.clrText"
-  - "COleDocIPFrameWndEx::GetTearOffBars"
-  - "CMFCCustomizeMenuButton::IsCommandExist"
-  - "CanBeDropped"
-  - "COleDocIPFrameWndEx.OnShowPopupMenu"
-  - "CSmartDockingHighlighterWnd.ShowTabbedAt"
-  - "operator ="
-  - "ParseFont"
-  - "CMFCToolBarsToolsPropertyPage::OnOK"
-  - "CMFCRibbonPanelMenuBar::IsCategoryPopup"
-  - "SetMinWidth"
-  - "CMFCRibbonPanelMenuBar::IsMainPanel"
-  - "CMFCTabInfo.SetRect"
-  - "CSmartDockingStandaloneGuide::AdjustPos"
-  - "COleDocIPFrameWndEx::EnablePaneMenu"
-  - "CMFCCustomizeButton::OnCancelMode"
-  - "CMFCShadowRenderer::DrawFrame"
-  - "CMenuImages.CleanUp"
-  - "CMFCControlRendererInfo.m_bPreMultiplyCheck"
-  - "CMFCDropDownListBox::ResetContent"
-  - "CVSListBoxBase.OnGetImage"
-  - "CTagManager.ReadSize"
-  - "GetImageSize"
-  - "CPaneContainerGC::AddPaneContainer"
-  - "EnableTabsArea"
-  - "CMFCRibbonPanelMenuBar::GetPanel"
-  - "CMFCCaptionMenuButton.OnDraw"
-  - "CMFCStatusBarPaneInfo::nID"
-  - "CMFCColorPropertySheet.OnInitDialog"
-  - "CMenuHash.IsActive"
-  - "CSmartDockingHighlighterWnd.ShowAt"
-  - "GetMenuBar"
-  - "CSmartDockingStandaloneGuide::Create"
-  - "CSmartDockingStandaloneGuide::IsPtIn"
-  - "CMFCColorPropertySheet.CMFCColorPropertySheet"
-  - "CTagManager.LoadFromResource"
-  - "CTagManager::ReadControlRenderer"
-  - "CCommandManager::LoadState"
-  - "CMenuHash::LoadMenuBar"
-  - "CMFCToolBarDropTarget.OnDragOver"
-  - "OnDrawOnList"
-  - "CVSListBoxBase.GetSelItem"
-  - "afxwin/CDocumentAdapter::CDocumentAdapter"
-  - "CVSListBoxBase::OnSelectionChanged"
-  - "CMFCCustomizeButton.CanBeStored"
-  - "CMFCCustomizeMenuButton::SetSiblingsButton"
-  - "CMFCCustomizeButton::IsEditable"
-  - "GetElement"
-  - "CFrameImpl"
-  - "CMFCControlRendererInfo::m_rectCorners"
-  - "CMFCOutlookBarPaneButton.OnDraw"
-  - "CMFCOutlookBarToolBar.OnUserToolTip"
-  - "CVSListBoxBase.OnBrowse"
-  - "CMFCDropDownListBox.OnChooseItem"
-  - "CMFCRibbonGalleryIcon::IsFirstInRow"
-  - "CRecentPaneContainerInfo.operator="
-  - "CMFCCaptionButtonEx.CMFCCaptionButtonEx"
-  - "afxmdiclientareawnd/CMDIClientAreaWnd::FindTabWndByChild"
-  - "COleDocIPFrameWndEx::OnCmdMsg"
-  - "CVSListBoxBase.SetItemData"
-  - "CMFCToolBarDropTarget.OnDragLeave"
-  - "COleDocIPFrameWndEx::AdjustDockingLayout"
-  - "CFrameImpl.RemoveFrame"
-  - "CMFCControlRenderer.GetThisClass"
-  - "CVSListBoxEditCtrl::LockSize"
-  - "ShowAt"
-  - "GetTearOffBars"
-  - "CMFCRibbonCommandsListBox.FillFromArray"
-  - "CMFCStatusBarPaneInfo.bProgressText"
-  - "CMFCToolBarsCommandsPropertyPage::OnChangeSelButton"
-  - "CMFCDropDownListBox"
-  - "AddFrame"
-  - "CFrameImpl::RemoveFrame"
-  - "CSmartDockingGroupGuide.IsPtIn"
-  - "COleDocIPFrameWndEx.WinHelp"
-  - "CMFCTasksPaneFrameWnd"
-  - "ParseSize"
-  - "SetPreferedSize"
-  - "CMFCCustomizeButton.CopyFrom"
-  - "CVSListBoxBase::OnAfterMoveItemDown"
-  - "CMFCOutlookBarPaneButton.CanBeDropped"
-  - "CMFCToolBarsToolsPropertyPage.OnOK"
-  - "CMFCToolBarButtonsListButton::SetImages"
-  - "IsMenuBarAvailable"
-  - "CMFCTasksPaneFrameWnd.SetCaptionButtons"
-  - "CauseCancelMode"
-  - "AddPane"
-  - "CMFCRibbonGalleryIcon.IsLastInRow"
-  - "CSmartDockingManager.HidePlace"
-  - "CMFCToolBarButtonsListButton.AddButton"
-  - "COleCntrFrameWndEx.GetDockingManager"
-  - "CSmartDockingManager::IsStarted"
-  - "COleDocIPFrameWndEx::PreTranslateMessage"
-  - "CSmartDockingGroupGuide.Create"
-  - "CMFCTasksPanePropertyPage::SetACCData"
-  - "CMenuImages.Draw"
-  - "CDocumentAdapter"
-  - "CFrameImpl.CFrameImpl"
-  - "CMFCRibbonGalleryIcon"
-  - "CMFCRibbonCaptionButton::IsMDIChildButton"
-  - "CSmartDockingHighlighterWnd.SetDockingWnd"
-  - "CMFCRibbonPanelMenu.GetPanel"
-  - "CMDIClientAreaWnd::SetActiveTab"
-  - "CTagManager"
-  - "CTagManager::ReadToolBarImages"
-  - "ReadColor"
-  - "Load"
-  - "ReadFont"
-  - "CMFCRibbonCommandsListBox"
-  - "SetDefaultDraw"
-  - "CMFCVisualManagerBitmapCache::FindIndex"
-  - "CMFCControlRenderer.Create"
-  - "EnableDragFromList"
-  - "CSmartDockingGroupGuide.AdjustPos"
-  - "CMFCShowAllButton::OnClick"
-  - "CSmartDockingManager.ShowPlaceAt"
-  - "RemoveFrame"
-  - "CCommandManager::SetCmdImage"
-  - "OnDragLeave"
-  - "CMFCStatusBarPaneInfo::cxText"
-  - "CMFCOutlookBarPaneButton::CanBeDropped"
-  - "COleDocIPFrameWndEx.OnTearOffMenu"
-  - "EnableMenuItemImage"
-  - "CMenuHash.RemoveMenu"
-  - "CMFCCaptionMenuButton::CMFCCaptionMenuButton"
-  - "CVSToolsListBox.OnBeforeRemoveItem"
-  - "OnShowPanes"
-  - "CleanUp"
-  - "CMFCRibbonCommandsListBox::GetCommand"
-  - "CSmartDockingStandaloneGuideWnd::Create"
-  - "CCommandManager.ClearUserCmdImages"
-  - "OnDrawMenuLogo"
-  - "CRecentPaneContainerInfo::StoreDockInfo"
-  - "CSmartDockingGroupGuidesWnd.OnEraseBkgnd"
-  - "CFullScreenImpl::GetFullScreenRect"
-  - "CMFCRibbonPanelMenuBar::CloseDelayedSubMenu"
-  - "CRibbonCategoryScroll.IsLeftScroll"
-  - "CMFCRibbonCmdUI.Enable"
-  - "CMFCToolBarSystemMenuButton::Serialize"
-  - "CFrameImpl::CFrameImpl"
-  - "CMemDC"
-  - "ReadPoint"
-  - "CRecentPaneContainerInfo::Init"
-  - "CSmartDockingManager.CauseCancelMode"
-  - "CMFCControlRenderer"
-  - "CVSListBoxBase::OnAfterMoveItemUp"
-  - "IsValid"
-  - "GetCategory"
-  - "CMFCToolBarMenuButtonsButton::CanBeStored"
-  - "SetDockingManager"
-  - "CMFCProperySheetListBox"
-  - "CMFCToolBarsListPropertyPage::CMFCToolBarsListPropertyPage"
-  - "CCommandManager.ClearCmdImage"
-  - "CMFCCustomizeButton.IsDefaultDraw"
-  - "CTagManager.~CTagManager"
-  - "OnMoveMiniFrame"
-  - "COleDocIPFrameWndEx.EnableAutoHidePanes"
-  - "CMemDC.IsMemDC"
-  - "ParseToolTipInfo"
-  - "CMFCReBarState::LoadState"
-  - "CMFCControlRendererInfo.m_strBmpResID"
-  - "CMFCControlRenderer.IsValid"
-  - "CMFCRibbonPanelMenu::DefaultMouseClickOnClose"
-  - "GetMDITabs"
-  - "m_pParentDoc"
-  - "InitializeSearchContent"
-  - "CMFCRibbonCommandsListBox::FillAll"
-  - "CTagManager.ParseControlRenderer"
-  - "CMFCDropDownListBox.CMFCDropDownListBox"
-  - "CMFCCustomizeMenuButton::SetItemIndex"
-  - "CTagManager::ParseToolTipInfo"
-  - "CMFCToolBarSystemMenuButton.OnDblClk"
-  - "CSmartDockingManager.Destroy"
-  - "CPaneContainerGC.AddPaneContainer"
-  - "CMFCShowAllButton::OnDraw"
-  - "GetBuffer"
-  - "CMFCToolBarsMenuPropertyPage.SelectMenu"
-  - "CFullScreenImpl.CFullScreenImpl"
-  - "CVSToolsListBox.OnAfterMoveItemDown"
-  - "m_rectSides"
-  - "CFullScreenImpl.EnableTabsArea"
-  - "CTagManager.ParseSize"
-  - "CMFCCustomizeButton::SetPipeStyle"
-  - "COleDocIPFrameWndEx.SetDockState"
-  - "CMFCToolBarSystemMenuButton::CanBeStored"
-  - "CMFCRibbonPanelMenu.CMFCRibbonPanelMenu"
-  - "CMFCTasksPanePropertyPage"
-  - "CMFCStatusBarPaneInfo::hImage"
-  - "CMFCToolBarSystemMenuButton.Serialize"
-  - "COleCntrFrameWndEx.AdjustDockingLayout"
-  - "CVSListBoxEditCtrl"
-  - "SetOuterRect"
-  - "CTagManager.ReadControlRendererInfo"
-  - "Hide"
-  - "IsCustomizeMenu"
-  - "CMFCToolBarSystemMenuButton::CreateMenu"
-  - "CMFCControlRendererInfo.CommonInit"
-  - "CMFCRibbonPanelMenuBar::CMFCRibbonPanelMenuBar"
-  - "CMFCToolBarsCommandsPropertyPage::SetAllCategory"
-  - "ReadNextChunkValue"
-  - "CVSListBoxBase::GetButtonsCount"
-  - "CMFCToolBarsCommandsPropertyPage.SetUserCategory"
-  - "CMFCRibbonKeyTip.Show"
-  - "IsVisible"
-  - "CVSListBoxBase::GetButtonNum"
-  - "CMFCCaptionMenuButton.CMFCCaptionMenuButton"
-  - "CSmartDockingGroupGuidesManager::Show"
-  - "SetMenuMode"
-  - "ReadSize"
-  - "ReadToolBarImages"
-  - "CMFCShowAllButton::OpenPopupMenu"
-  - "COleCntrFrameWndEx::AddPane"
-  - "CSmartDockingGroupGuidesManager.Create"
-  - "CMFCRibbonPanelMenuBar::HitTestEx"
-  - "CMFCControlRenderer.GetImageCount"
-  - "CFrameImpl.HasRegion"
-  - "CMFCStatusBarPaneInfo::nProgressCurr"
-  - "CSmartDockingGroupGuidesManager::GetGuide"
-  - "CMFCCustomizeButton::IsDefaultDraw"
-  - "CMFCRibbonPanelMenuBar.CMFCRibbonPanelMenuBar"
-  - "CMFCToolBarsMenuPropertyPage"
-  - "~CMFCControlRendererInfo"
-  - "IsPipeStyle"
-  - "CMFCPropertySheetTabCtrl"
-  - "CMFCShadowRenderer.DrawFrame"
-  - "HaveHotBorder"
-  - "CSmartDockingGroupGuidesManager::AdjustPos"
-  - "CMFCCustomizeMenuButton.IsCommandExist"
-  - "CMFCRibbonPanelMenu::GetParentRibbonMenuBar"
-  - "CMFCControlRendererInfo.m_clrTransparent"
-  - "FindNextRegisteredWithTaskbarMDIChild"
-  - "CMFCToolBarsKeyboardPropertyPage::CMFCToolBarsKeyboardPropertyPage"
-  - "CCommandManager.IsMenuItemWithoutImage"
-  - "SaveState"
-  - "CreateDockingManager"
-  - "ShowToolBar"
-  - "CMFCToolBarSystemMenuButton.CanBeStored"
-  - "CMFCShadowRenderer::GetRuntimeClass"
-  - "Track"
-  - "CMFCToolBarSpinEditBoxButton::GetRange"
-  - "CMFCToolBarSpinEditBoxButton"
-  - "CMFCStatusBarPaneInfo::clrProgressBarDest"
-  - "CMFCRibbonDefaultPanelButton::GetParentPanel"
-  - "IsButtonExtraSizeAvailable"
-  - "LoadAcceleratorTable"
-  - "CMFCDropDownListBox::OnChangeHot"
-  - "rect"
-  - "CMFCRibbonDefaultPanelButton::DrawImage"
-  - "CMFCToolBarDropTarget::OnDragEnter"
-  - "CMFCShowAllButton.OpenPopupMenu"
-  - "CMFCControlRenderer::CleanUp"
-  - "CMFCDropDownListBox::GetCount"
-  - "CSmartDockingStandaloneGuide::Highlight"
-  - "IsScrollUpAvailable"
-  - "CMFCControlRenderer::~CMFCControlRenderer"
-  - "CFrameImpl.SetNewUserToolBarRTC"
-  - "CMFCCustomizeButton::AddInvisibleButton"
-  - "COleCntrFrameWndEx.EnableDocking"
-  - "CVSListBoxBase"
-  - "LoadMenuBar"
-  - "CMFCControlRenderer::GetParams"
-  - "OnKillActive"
-  - "SetSeparator"
-  - "CSmartDockingManager"
-  - "COleDocIPFrameWndEx::GetPane"
-  - "DrawFrame"
-  - "CMFCControlRenderer.CMFCControlRenderer"
-  - "ParseToolBarImages"
-  - "CFrameImpl.SetControlbarsMenuId"
-  - "CPngImage.CleanUp"
-  - "CMFCRibbonGalleryIcon.IsLastInColumn"
-  - "CMFCToolBarMenuButtonsButton::Serialize"
-  - "GetGripperRect"
-  - "LoadFromStream"
-  - "CCommandManager::EnableMenuItemImage"
-  - "CMFCControlRendererInfo.CMFCControlRendererInfo"
-  - "COleDocIPFrameWndEx::SetDockState"
-  - "GetItemData"
-  - "ReadBool"
-  - "CMFCRibbonCommandsListBox::FillFromIDs"
-  - "COleDocIPFrameWndEx::OnShowCustomizePane"
-  - "COleCntrFrameWndEx::GetDockingManager"
-  - "CSmartDockingStandaloneGuideWnd::Assign"
-  - "SetVisible"
-  - "CMFCRibbonPanelMenuBar::IsRibbonPanelInRegularMode"
-  - "CCommandManager.SaveState"
-  - "CMDIClientAreaWnd.SetActiveTab"
-  - "CMFCOutlookBarPaneButton::OnCalculateSize"
-  - "MeasureItem"
-  - "Serialize"
-  - "InvokeCommand"
-  - "CMFCDropDownListBox::IsEditFocused"
-  - "GetButtonNum"
-  - "GetResourceID"
-  - "cxText"
-  - "CMFCToolBarsListCheckBox.EnableCheck"
-  - "COleDocIPFrameWndEx.OnShowPanes"
-  - "CMenuHash::RemoveMenu"
-  - "ShowCentralGroup"
-  - "CMFCRibbonCommandsListBox.GetCommand"
-  - "CTagManager::~CTagManager"
-  - "CSmartDockingGroupGuidesWnd.OnClose"
-  - "CMFCTasksPaneToolBar.UpdateMenuButtonText"
-  - "CVSListBoxBase.EditItem"
-  - "COleCntrFrameWndEx::GetPane"
-  - "CMFCRibbonRichEditCtrl.CMFCRibbonRichEditCtrl"
-  - "CMFCRibbonDefaultPanelButton::OnLButtonDown"
-  - "CMFCCustomizeButton.IsPipeStyle"
-  - "ShowTabbedPlaceAt"
-  - "CSmartDockingManager::ShowPlaceAt"
-  - "CFrameImpl.GetFullScreenMinMaxInfo"
-  - "CSmartDockingStandaloneGuide::Destroy"
-  - "CMFCOutlookBarToolBar.AdjustLocations"
-  - "CMFCRibbonKeyTip::CMFCRibbonKeyTip"
-  - "SetDefaultMenuLook"
-  - "CMenuHash::SaveMenuBar"
-  - "CMFCRibbonPanelMenu.GetParentRibbonMenuBar"
-  - "CVSListBoxBase.OnAfterAddItem"
-  - "EnableScaleLargeImages"
-  - "CMFCToolBarDropTarget::Register"
-  - "CMFCRibbonCommandsListBox::FillFromArray"
-  - "CVSListBoxBase::OnBrowse"
-  - "GetActivePopup"
-  - "IsVistaDC"
-  - "CMFCToolBarSystemMenuButton.OnCancelMode"
-  - "CCommandManager.LoadState"
-  - "CMFCToolBarsListPropertyPage.ShowToolBar"
-  - "FillAll"
-  - "CMDIClientAreaWnd.CFrameClientAreaWnd"
-  - "CMFCRibbonGalleryIcon.IsFirst"
-  - "COleCntrFrameWndEx.OnShowPanes"
-  - "afxwin/CDocumentAdapter::FindChunk"
-  - "IsRibbonPanelInRegularMode"
-  - "CMFCRibbonPanelMenuBar.OnChangeHighlighted"
-  - "EnablePaneMenu"
-  - "EnableMainMenu"
-  - "CMFCRibbonPanelMenuBar::HitTest"
-  - "Clear"
-  - "CMFCCustomizeMenuButton::SetParentToolbar"
-  - "IsMainPanel"
-  - "SetCheck"
-  - "CMFCRibbonRichEditCtrl::PreTranslateMessage"
-  - "ReadControlRendererInfo"
-  - "GetSelected"
-  - "CMFCStatusBarPaneInfo::clrBackground"
-  - "GetDroppedDown"
-  - "GetSelectedButton"
-  - "DoPaint"
-  - "LoadState"
-  - "CMFCRibbonPanelMenuBar.CloseDelayedSubMenu"
-  - "afxwin/CDocumentAdapter::SetChunkValue"
-  - "OnMouseMove"
-  - "CMFCRibbonDefaultPanelButton::OnDrawOnList"
-  - "OnSetAccData"
-  - "afxmdiclientareawnd/CMDIClientAreaWnd::SetTaskbarTabOrder"
-  - "ParseControlRenderer"
-  - "GetDockingManager"
-  - "COleDocIPFrameWndEx::OnCloseMiniFrame"
-  - "CMFCToolBarsMenuPropertyPage.CloseContextMenu"
-  - "IsMDIChildButton"
-  - "CMFCTasksPaneFrameWnd.SetTaskPaneCaptionButtons"
-  - "CSmartDockingGroupGuide::Create"
-  - "OnGetMinMaxInfo"
-  - "CFullScreenImpl::IsFullScreen"
-  - "CTagManager::ParsePoint"
-  - "IsDefaultDraw"
-  - "EnableCheck"
-  - "CMFCControlRenderer.Draw"
-  - "CMFCRibbonPanelMenu::IsScrollDnAvailable"
-  - "GetTopLevelRibbonBar"
-  - "CTagManager::ReadColor"
-  - "OnAfterMoveItemDown"
-  - "RecalcLayout"
-  - "CMFCToolBarMenuButtonsButton.CMFCToolBarMenuButtonsButton"
-  - "CCommandManager.ClearAllCmdImages"
-  - "COleDocIPFrameWndEx.GetMenuBar"
-  - "CMFCToolBarsKeyboardPropertyPage::SetAllCategory"
-  - "GetInvisibleButtons"
-  - "CMFCToolBarNameDialog.CMFCToolBarNameDialog"
-  - "COleCntrFrameWndEx::DockPaneLeftOf"
-  - "SetDockingWnd"
-  - "CMFCCaptionMenuButton::OnDraw"
-  - "CSmartDockingManager.OnPosChange"
-  - "CMFCToolBarsCommandsPropertyPage"
-  - "COleCntrFrameWndEx.RemovePaneFromDockManager"
-  - "CMFCCustomizeMenuButton.EnableCustomization"
-  - "CMFCControlRendererInfo::operator ="
-  - "afxwin/CDocument::CDocumentAdapter"
-  - "CPngImage::Load"
-  - "CalcSize"
-  - "CMFCDropDownListBox::SetMinWidth"
-  - "CMemDC::GetDC"
-  - "CMFCToolBarsMenuPropertyPage::CMFCToolBarsMenuPropertyPage"
-  - "MoveCentralGroup"
-  - "COleDocIPFrameWndEx.DockPaneLeftOf"
-  - "CMFCTasksPaneToolBar.AllowShowOnList"
-  - "CMFCRibbonCommandsListBox.CMFCRibbonCommandsListBox"
-  - "CMFCCustomizeButton.GetParentToolbar"
-  - "CMFCToolBarSystemMenuButton.IsBorder"
-  - "GetRect"
-  - "CCommandManager.GetMenuUserImage"
-  - "CMFCControlRenderer::Draw"
-  - "CMFCRibbonPanelMenuBar::OnClickButton"
-  - "CMFCRibbonPanelMenuBar::GetTopLevelRibbonBar"
-  - "CMFCRibbonCmdUI.SetCheck"
-  - "CMFCToolBarSpinEditBoxButton.CMFCToolBarSpinEditBoxButton"
-  - "SetRadio"
-  - "cxIcon"
-  - "COleDocIPFrameWndEx::AddDockSite"
-  - "CMFCColorPropertySheet.LoadAcceleratorTable"
-  - "CSmartDockingGroupGuidesWnd::OnPaint"
-  - "CMFCControlRenderer::OnSysColorChange"
-  - "CTagManager.ReadToolTipInfo"
-  - "CTagManager::IsEmpty"
-  - "CSmartDockingStandaloneGuide"
-  - "EditItem"
-  - "SetControlbarsMenuId"
-  - "GetImageCount"
-  - "CMFCCustomizeButton::GetExtraSize"
-  - "CMFCControlRenderer::FillInterior"
-  - "CMFCStatusBarPaneInfo.nCurrFrame"
-  - "IsPointNearDockSite"
-  - "CMFCRibbonRichEditCtrl"
-  - "COleDocIPFrameWndEx.AddPane"
-  - "Cache"
-  - "COleServerDocEx.Serialize"
-  - "CMFCShowAllButton::OnCalculateSize"
-  - "IsFirst"
-  - "CMFCStatusBarPaneInfo.cyIcon"
-  - "CMFCToolBarNameDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~CDocumentAdapter, Destruidor "
-  - "Destruidor ~CFullScreenImpl"
-  - "Destruidor ~CMemDC"
-  - "Destruidor ~CMFCControlRenderer"
-  - "Destruidor ~CMFCControlRendererInfo"
-  - "Destruidor ~CTagManager"
-  - "Método AddButton"
-  - "Método AddCommand"
-  - "Método AddDockSite"
-  - "Método AddFrame"
-  - "Método AddInvisibleButton"
-  - "Método AddItem"
-  - "Método AddPane"
-  - "Método AddPaneContainer"
-  - "Método AddString"
-  - "Método AdjustClientArea"
-  - "Método AdjustDockingLayout"
-  - "Método AdjustLocations"
-  - "Método AdjustPos"
-  - "Método AllowShowOnList"
-  - "Método AllowShowOnPaneMenu"
-  - "Método Assign"
-  - "BeginReadChunks"
-  - "bProgressText"
-  - "Método Cache"
-  - "Método CacheY"
-  - "Método CalcBorderSize"
-  - "Método CalcSize"
-  - "Método CanBeDropped"
-  - "Método CanBeStored"
-  - "Método CauseCancelMode"
-  - "Classe CCommandManager"
-  - "Classe CDialogImpl"
-  - "Classe CDocumentAdapter"
-  - "CDocumentAdapter, construtor"
-  - "Classe CFrameClientAreaWnd, construtor"
-  - "Classe CFrameImpl"
-  - "Classe CFrameImpl, construtor"
-  - "Classe CFullScreenImpl"
-  - "Classe CFullScreenImpl, construtor"
-  - "Classe CFullScreenImpl, Destruidor "
-  - "Método CleanUp"
-  - "Método Clear"
-  - "Método ClearAllCmdImages"
-  - "ClearChunkList"
-  - "Método ClearCmdImage"
-  - "Método ClearUserCmdImages"
-  - "Método CloseContextMenu"
-  - "Método CloseDelayedSubMenu"
-  - "clrBackground"
-  - "clrProgressBar"
-  - "clrProgressBarDest"
-  - "clrProgressText"
-  - "clrText"
-  - "Classe CMDIClientAreaWnd"
-  - "Classe CMemDC"
-  - "Classe CMemDC, construtor"
-  - "Classe CMemDC, Destruidor "
-  - "Classe CMenuHash"
-  - "Classe CMenuImages"
-  - "Classe CMFCCaptionButtonEx"
-  - "CMFCCaptionButtonEx, construtor"
-  - "Classe CMFCCaptionMenuButton"
-  - "CMFCCaptionMenuButton, construtor"
-  - "Classe CMFCColorPropertySheet"
-  - "CMFCColorPropertySheet, construtor"
-  - "Classe CMFCControlBarImpl"
-  - "CMFCControlBarImpl, construtor"
-  - "Classe CMFCControlRenderer"
-  - "Classe CMFCControlRenderer, construtor"
-  - "Classe CMFCControlRenderer, Destruidor "
-  - "Classe CMFCControlRendererInfo"
-  - "Classe CMFCControlRendererInfo, construtor"
-  - "Classe CMFCControlRendererInfo, Destruidor "
-  - "Classe CMFCCustomizeButton"
-  - "CMFCCustomizeButton, construtor"
-  - "Classe CMFCCustomizeMenuButton"
-  - "CMFCCustomizeMenuButton, construtor"
-  - "Classe CMFCDropDownListBox"
-  - "CMFCDropDownListBox, construtor"
-  - "Classe CMFCMousePropertyPage"
-  - "Classe CMFCOutlookBarPaneAdapter"
-  - "Classe CMFCOutlookBarPaneButton"
-  - "Classe CMFCOutlookBarPaneList"
-  - "Classe CMFCOutlookBarScrollButton"
-  - "Classe CMFCOutlookBarToolBar"
-  - "CMFCOutlookBarToolBar, construtor"
-  - "Classe CMFCPropertySheetCategoryInfo"
-  - "CMFCPropertySheetCategoryInfo, construtor"
-  - "Classe CMFCPropertySheetTabCtrl"
-  - "Classe CMFCProperySheetListBox"
-  - "Classe CMFCReBarState"
-  - "Classe CMFCRibbonCaptionButton"
-  - "Classe CMFCRibbonCmdUI"
-  - "Classe CMFCRibbonCommandsListBox"
-  - "CMFCRibbonCommandsListBox, construtor"
-  - "Classe CMFCRibbonDefaultPanelButton"
-  - "CMFCRibbonDefaultPanelButton, construtor"
-  - "Classe CMFCRibbonGalleryIcon"
-  - "CMFCRibbonGalleryIcon, construtor"
-  - "Classe CMFCRibbonKeyboardCustomizeDialog"
-  - "CMFCRibbonKeyboardCustomizeDialog, construtor"
-  - "Classe CMFCRibbonKeyTip"
-  - "CMFCRibbonKeyTip, construtor"
-  - "Classe CMFCRibbonPanelMenu"
-  - "CMFCRibbonPanelMenu, construtor"
-  - "Classe CMFCRibbonPanelMenuBar"
-  - "CMFCRibbonPanelMenuBar, construtor"
-  - "Classe CMFCRibbonQuickAccessToolBar"
-  - "Classe CMFCRibbonRichEditCtrl"
-  - "CMFCRibbonRichEditCtrl, construtor"
-  - "Classe CMFCRibbonTab"
-  - "Classe CMFCShadowRenderer"
-  - "Classe CMFCShowAllButton"
-  - "Classe CMFCStatusBarPaneInfo"
-  - "Classe CMFCStatusBarPaneInfo, construtor"
-  - "Classe CMFCTabButton"
-  - "Classe CMFCTabInfo"
-  - "Classe CMFCTasksPaneFrameWnd"
-  - "Classe CMFCTasksPanePropertyPage"
-  - "Classe CMFCTasksPaneToolBar"
-  - "Classe CMFCToolBarButtonsListButton"
-  - "Classe CMFCToolBarDateTimeCtrlImpl"
-  - "Classe CMFCToolBarDropSource"
-  - "Classe CMFCToolBarDropTarget"
-  - "Classe CMFCToolBarEditCtrl"
-  - "CMFCToolBarEditCtrl, construtor"
-  - "Classe CMFCToolBarMenuButtonsButton"
-  - "CMFCToolBarMenuButtonsButton, construtor"
-  - "Classe CMFCToolBarNameDialog"
-  - "CMFCToolBarNameDialog, construtor"
-  - "Classe CMFCToolBarsCommandsListBox"
-  - "Classe CMFCToolBarsCommandsPropertyPage"
-  - "Classe CMFCToolBarsKeyboardPropertyPage"
-  - "CMFCToolBarsKeyboardPropertyPage, construtor"
-  - "Classe CMFCToolBarsListCheckBox"
-  - "Classe CMFCToolBarsListPropertyPage"
-  - "CMFCToolBarsListPropertyPage, construtor"
-  - "Classe CMFCToolBarsMenuPropertyPage"
-  - "CMFCToolBarsMenuPropertyPage, construtor"
-  - "Classe CMFCToolBarsOptionsPropertyPage"
-  - "CMFCToolBarsOptionsPropertyPage, construtor"
-  - "Classe CMFCToolBarSpinEditBoxButton"
-  - "CMFCToolBarSpinEditBoxButton, construtor"
-  - "Classe CMFCToolBarsToolsPropertyPage"
-  - "Classe CMFCToolBarSystemMenuButton"
-  - "CMFCToolBarSystemMenuButton, construtor"
-  - "Método CMFCToolBarSystemMenuButton::CreateObject"
-  - "Classe CMFCVisualManagerBitmapCache"
-  - "Classe CMultiDocTemplateEx"
-  - "Classe COleCntrFrameWndEx"
-  - "COleCntrFrameWndEx, construtor"
-  - "Classe COleDocIPFrameWndEx"
-  - "Classe COleServerDocEx"
-  - "Método CommonInit"
-  - "Método CopyFrom"
-  - "Classe CPaneContainerGC"
-  - "Classe CPngImage"
-  - "Classe CPreviewViewEx"
-  - "Método Create"
-  - "Método CreateDockingManager"
-  - "Método CreateFromMenu"
-  - "Método CreateMenu"
-  - "Método CreateObject"
-  - "Método CreatePopupMenu"
-  - "Classe CRecentPaneContainerInfo"
-  - "Classe CRibbonCategoryScroll"
-  - "Classe CSmartDockingGroupGuide"
-  - "Classe CSmartDockingGroupGuidesManager"
-  - "Classe CSmartDockingGroupGuidesWnd"
-  - "Classe CSmartDockingHighlighterWnd"
-  - "Classe CSmartDockingManager"
-  - "Classe CSmartDockingStandaloneGuide"
-  - "Classe CSmartDockingStandaloneGuideWnd"
-  - "Classe CTagManager"
-  - "Classe CTagManager, construtor"
-  - "Classe CTagManager, Destruidor "
-  - "Classe CVSListBoxBase"
-  - "Classe CVSListBoxEditCtrl"
-  - "Classe CVSToolsListBox"
-  - "cxIcon"
-  - "cxText"
-  - "cyIcon"
-  - "Método DefaultMouseClickOnClose"
-  - "Método Destroy"
-  - "Método DockPane"
-  - "Método DockPaneLeftOf"
-  - "Método DoesMDITabExist"
-  - "Método DoPaint"
-  - "Método Draw"
-  - "Método DrawFrame"
-  - "Método DrawImage"
-  - "Método DrawItem"
-  - "Método EditItem"
-  - "Método Enable"
-  - "Método EnableAutoHidePanes"
-  - "Método EnableBrowseButton"
-  - "Método EnableButton"
-  - "Método EnableCheck"
-  - "Método EnableCustomization"
-  - "Método EnableCustomizeMenu"
-  - "Método EnableDocking"
-  - "Método EnableDragFromList"
-  - "Método EnableMainMenu"
-  - "Método EnableMDITabs"
-  - "Método EnableMenuItemImage"
-  - "Método EnablePaneMenu"
-  - "Método EnableScaleLargeImages"
-  - "Método EnableTabsArea"
-  - "Método EnableUserDefinedToolbars"
-  - "Método ExcludeTag"
-  - "Método FillAll"
-  - "Método FillFromArray"
-  - "Método FillFromCategory"
-  - "Método FillFromIDs"
-  - "Método FillInterior"
-  - "Método FindByOrigin"
-  - "FindChunk"
-  - "Método FindIndex"
-  - "FindNextRegisteredWithTaskbarMDIChild"
-  - "FindTabWndByChild"
-  - "método Get"
-  - "Método GetActivePopup"
-  - "Método GetBuffer"
-  - "Método GetButtonID"
-  - "Método GetButtonNum"
-  - "Método GetButtonsCount"
-  - "Método GetCategory"
-  - "Método GetCmdImage"
-  - "Método GetCommand"
-  - "Método GetCommandIndex"
-  - "GetContainer"
-  - "Método GetContainerFrameWindow"
-  - "Método GetCount"
-  - "Método GetCurSel"
-  - "Método GetCustomizeCmdId"
-  - "Método GetCustomizeText"
-  - "Método GetDC"
-  - "Método GetDefaultResId"
-  - "Método GetDockingManager"
-  - "Método GetDroppedDown"
-  - "Método GetElement"
-  - "Método GetExtraSize"
-  - "Método GetFrameList"
-  - "Método GetFullScreenMinMaxInfo"
-  - "Método GetFullScreenRect"
-  - "Método GetGripperRect"
-  - "Método GetGuide"
-  - "Método GetHighlightedGuideNo"
-  - "Método GetImageCount"
-  - "Método GetImageSize"
-  - "Método GetIndex"
-  - "Método GetInvisibleButtons"
-  - "Método GetItemData"
-  - "Método GetItemText"
-  - "Método GetMDITabs"
-  - "Método GetMenuBar"
-  - "Método GetMenuUserImage"
-  - "Método GetOwner"
-  - "Método GetPane"
-  - "Método GetPanel"
-  - "Método GetParams"
-  - "Método GetParentPanel"
-  - "Método GetParentRibbonMenuBar"
-  - "Método GetParentToolbar"
-  - "Método GetRange"
-  - "Método GetRect"
-  - "Método GetResId"
-  - "Método GetResourceID"
-  - "Método GetRibbonBar"
-  - "Método GetRuntimeClass"
-  - "Método GetScrollBarCtrl"
-  - "Método GetSelected"
-  - "Método GetSelectedButton"
-  - "Método GetSelItem"
-  - "Método GetSpinControl"
-  - "Método GetSysMenu"
-  - "Método GetSysMenuIcon"
-  - "Método GetTearOffBars"
-  - "Método GetText"
-  - "Método GetThisClass"
-  - "GetThumbnail"
-  - "Método GetToolbarButtonToolTipText"
-  - "Método GetToolTipText"
-  - "Método GetTopLevelRibbonBar"
-  - "Método GetWindowRect"
-  - "Método GiveFeedback"
-  - "Método HasRegion"
-  - "Método HaveHotBorder"
-  - "Método Hide"
-  - "Método HidePlace"
-  - "Método Highlight"
-  - "hImage"
-  - "Método HitTest"
-  - "Método HitTestEx"
-  - "Método Init"
-  - "InitializeSearchContent"
-  - "Método InsertPane"
-  - "Método InvokeCommand"
-  - "Método IsActive"
-  - "Método IsAlwaysClose"
-  - "Método IsBorder"
-  - "Método IsBrowseButton"
-  - "Método IsButtonExtraSizeAvailable"
-  - "Método IsCached"
-  - "Método IsCategoryPopup"
-  - "Método IsCheckEnabled"
-  - "Método IsCommandExist"
-  - "Método IsCustomizeMenu"
-  - "Método IsDefaultDraw"
-  - "Método IsDefaultMenuLook"
-  - "Método IsEditable"
-  - "Método IsEditFocused"
-  - "Método IsEmpty"
-  - "Método IsEmptyMenuAllowed"
-  - "Método IsFirst"
-  - "Método IsFirstInColumn"
-  - "Método IsFirstInRow"
-  - "Método IsFullScreen"
-  - "Método IsGrayDisabledButtons"
-  - "Método IsLast"
-  - "Método IsLastInColumn"
-  - "Método IsLastInRow"
-  - "Método IsLeftScroll"
-  - "Método IsMainPanel"
-  - "Método IsMDIChildButton"
-  - "Método IsMemDC"
-  - "Método IsMenuBarAvailable"
-  - "Método IsMenuItemWithoutImage"
-  - "Método IsMenuKey"
-  - "Método IsMenuMode"
-  - "Método IsMenuRightAlign"
-  - "Método IsMirror"
-  - "Método IsPipeStyle"
-  - "Método IsPointNearDockSite"
-  - "Método IsPtIn"
-  - "Método IsQATPopup"
-  - "Método IsRibbonMiniToolBar"
-  - "Método IsRibbonPanelInRegularMode"
-  - "IsScaled"
-  - "Método IsScrollDnAvailable"
-  - "Método IsScrollUpAvailable"
-  - "Método IsSelected"
-  - "Método IsStarted"
-  - "Método IsValid"
-  - "Método IsVisible"
-  - "Método IsVistaDC"
-  - "Método Load"
-  - "Método LoadAcceleratorTable"
-  - "Método LoadFrame"
-  - "Método LoadFromBuffer"
-  - "Método LoadFromFile"
-  - "Método LoadFromResource"
-  - "LoadFromStream"
-  - "Método LoadMenuBar"
-  - "Método LoadState"
-  - "Método LockSize"
-  - "lpszText"
-  - "lpszToolTip"
-  - "m_bPreMultiplyCheck"
-  - "m_clrTransparent"
-  - "Membro de dados m_pParentDoc"
-  - "m_rectCorners"
-  - "m_rectImage"
-  - "m_rectInter"
-  - "m_rectSides"
-  - "m_strBmpResID"
-  - "m_uiBmpResID"
-  - "Método MeasureItem"
-  - "Método Mirror"
-  - "Método MoveCentralGroup"
-  - "nCurrFrame"
-  - "nFrameCount"
-  - "nID"
-  - "nProgressCurr"
-  - "nProgressTotal"
-  - "nStyle"
-  - "Método OnAfterAddItem"
-  - "Método OnAfterCreatePopupMenu"
-  - "Método OnAfterMoveItemDown"
-  - "Método OnAfterMoveItemUp"
-  - "Método OnAfterRenameItem"
-  - "Método OnBeforeRemoveItem"
-  - "Método OnBeginDrag"
-  - "Método OnBrowse"
-  - "Método OnCalculateSize"
-  - "Método OnCancelMode"
-  - "Método OnChangeHighlighted"
-  - "Método OnChangeHot"
-  - "Método OnChangeParentWnd"
-  - "Método OnChangeSelButton"
-  - "Método OnChangeVisualManager"
-  - "Método OnChooseItem"
-  - "Método OnClick"
-  - "Método OnClickButton"
-  - "Método OnClose"
-  - "Método OnCloseDockingPane"
-  - "Método OnCloseMiniFrame"
-  - "Método OnClosePopupMenu"
-  - "Método OnCmdMsg"
-  - "Método OnCustomizeMode"
-  - "Método OnDblClk"
-  - "Método OnDragEnter"
-  - "Método OnDragLeave"
-  - "Método OnDragOver"
-  - "Método OnDraw"
-  - "Método OnDrawItem"
-  - "Método OnDrawMenuImage"
-  - "Método OnDrawMenuLogo"
-  - "Método OnDrawOnList"
-  - "Método OnDropEx"
-  - "Método OnEndEditLabel"
-  - "Método OnEraseBkgnd"
-  - "Método OnGetImage"
-  - "Método OnGetItemSize"
-  - "Método OnGetMinMaxInfo"
-  - "Método OnInitDialog"
-  - "Método OnKey"
-  - "Método OnKillActive"
-  - "Método OnLButtonDown"
-  - "Método OnMenuButtonToolHitTest"
-  - "Método OnMouseMove"
-  - "Método OnMoveMiniFrame"
-  - "Método OnOK"
-  - "Método OnPaint"
-  - "Método OnPosChange"
-  - "Método OnSelectionChanged"
-  - "Método OnSendCommand"
-  - "Método OnSetAccData"
-  - "Método OnSetCursor"
-  - "Método OnSetPreviewMode"
-  - "Método OnShowCustomizePane"
-  - "Método OnShowPanes"
-  - "Método OnShowPopupMenu"
-  - "Método OnSysColorChange"
-  - "Método OnTearOffMenu"
-  - "Método OnToolHitTest"
-  - "Método OnUpdateCmdUI"
-  - "Método OnUserToolTip"
-  - "Método OpenPopupMenu"
-  - "Operador ="
-  - "Operador= método"
-  - "Método PaneFromPoint"
-  - "Método ParseColor"
-  - "Método ParseColorHEX"
-  - "Método ParseControlRender"
-  - "Método ParseControlRendererInfo"
-  - "Método ParseFont"
-  - "Método ParsePoint"
-  - "Método ParseRect"
-  - "Método ParseSize"
-  - "Método ParseString"
-  - "Método ParseToolBarImages"
-  - "Método ParseToolTipInfo"
-  - "Método PopTooltip"
-  - "Método PreTranslateMessage"
-  - "Método QueryContinueDrag"
-  - "Método ReadBool"
-  - "Método ReadColor"
-  - "Método ReadControlRenderer"
-  - "Método ReadControlRendererInfo"
-  - "Método ReadFont"
-  - "Método ReadInt"
-  - "ReadNextChunkValue"
-  - "Método ReadPoint"
-  - "Método ReadRect"
-  - "Método ReadSize"
-  - "Método ReadToolBarImages"
-  - "Método ReadToolTipInfo"
-  - "Método RecalcLayout"
-  - "rect"
-  - "Método Register"
-  - "Método RemoveButtons"
-  - "RemoveChunk"
-  - "Método RemoveFrame"
-  - "Método RemoveItem"
-  - "Método RemoveMenu"
-  - "Método RemovePaneFromDockManager"
-  - "Método ResetContent"
-  - "Método RestoreDelayedSubMenu"
-  - "Método RestoreRecentlyUsedState"
-  - "Método RestoreState"
-  - "Método SaveMenuBar"
-  - "Método SaveState"
-  - "Método SelectButton"
-  - "Método SelectItem"
-  - "Método SelectMenu"
-  - "Método Serialize"
-  - "Método SetACCData"
-  - "Método SetActive"
-  - "Método SetActiveTab"
-  - "Método SetAllCategory"
-  - "Método SetBuffer"
-  - "Método SetCaptionButtons"
-  - "Método SetCheck"
-  - "SetChunkValue"
-  - "Método SetCmdImage"
-  - "Método SetColor"
-  - "Método SetControlbarsMenuId"
-  - "Método SetCurSel"
-  - "Método SetDefaultDraw"
-  - "Método SetDefaultMenuLook"
-  - "Método SetDockingManager"
-  - "Método SetDockingWnd"
-  - "Método SetDockState"
-  - "Método SetExtraSize"
-  - "Método SetFullScreenID"
-  - "Método SetGrayDisabledButtons"
-  - "Método SetImage"
-  - "Método SetImages"
-  - "Método SetInfo"
-  - "Método SetItemData"
-  - "Método SetItemIndex"
-  - "Método SetItemText"
-  - "Método SetMaxHeight"
-  - "Método SetMenuMode"
-  - "Método SetMenuRightAlign"
-  - "Método SetMinWidth"
-  - "Método SetNewUserToolBarRTC"
-  - "Método SetOuterRect"
-  - "Método SetParentToolbar"
-  - "Método SetPipeStyle"
-  - "Método SetPreferedSize"
-  - "Método SetPressed"
-  - "Método SetRadio"
-  - "Método SetRange"
-  - "Método SetRect"
-  - "Método SetResourceID"
-  - "Método SetSeparator"
-  - "Método SetSiblingsButton"
-  - "Método SetStandardButtons"
-  - "SetTaskbarTabOrder"
-  - "Método SetTaskPaneCaptionButtons"
-  - "Método SetText"
-  - "Método SetupToolbarMenu"
-  - "Método SetUserCategory"
-  - "Método SetUserImages"
-  - "Método SetVisible"
-  - "Método Show"
-  - "Método ShowAt"
-  - "Método ShowCentralGroup"
-  - "Método ShowFullScreen"
-  - "Método ShowGuide"
-  - "Método ShowMenu"
-  - "Método ShowPane"
-  - "Método ShowPlaceAt"
-  - "Método ShowTabbedAt"
-  - "Método ShowTabbedPlaceAt"
-  - "Método ShowToolBar"
-  - "Método Size"
-  - "SmoothResize"
-  - "Método Start"
-  - "Método Stop"
-  - "Método StoreDockInfo"
-  - "Método Track"
-  - "Método UpdateButtons"
-  - "Método UpdateMenuButtonText"
-  - "Método UpdateTabs"
-  - "Método WinHelp"
+title: Classes internas | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CPreviewViewEx
+- m_bPreMultiplyCheck
+- CMFCRibbonPanelMenuBar.IsCategoryPopup
+- CMFCCustomizeMenuButton.SetSiblingsButton
+- COleCntrFrameWndEx::ShowPane
+- COleCntrFrameWndEx.COleCntrFrameWndEx
+- RemoveItem
+- CSmartDockingManager.GetHighlightedGuideNo
+- OnCloseMiniFrame
+- CFullScreenImpl::EnableMainMenu
+- CVSListBoxBase::OnAfterRenameItem
+- CMFCRibbonPanelMenu.EnableCustomizeMenu
+- DoesMDITabExist
+- CMFCRibbonPanelMenuBar::PopTooltip
+- COleCntrFrameWndEx.EnableAutoHidePanes
+- CMFCRibbonTab::IsSelected
+- COleCntrFrameWndEx::RecalcLayout
+- CMFCRibbonPanelMenuBar.OnSetAccData
+- CVSListBoxBase::SetStandardButtons
+- CMFCToolBarSystemMenuButton::OnCancelMode
+- CFrameImpl::GetFullScreenMinMaxInfo
+- lpszText
+- nCurrFrame
+- CMFCCustomizeMenuButton::SetSeparator
+- CMFCCustomizeButton::GetParentToolbar
+- CMemDC.IsVistaDC
+- CMFCToolBarEditCtrl.CMFCToolBarEditCtrl
+- CMFCRibbonGalleryIcon::IsLastInColumn
+- CVSToolsListBox::OnSelectionChanged
+- COleDocIPFrameWndEx.OnDrawMenuImage
+- ~CMFCControlRenderer
+- CMFCOutlookBarToolBar.OnCustomizeMode
+- CMemDC::IsMemDC
+- CMFCToolBarMenuButtonsButton::CopyFrom
+- CSmartDockingGroupGuidesManager.GetWindowRect
+- OnChangeSelButton
+- CMFCControlRendererInfo.m_rectSides
+- ParseColor
+- CMFCToolBarNameDialog::CMFCToolBarNameDialog
+- m_strBmpResID
+- RemoveChunk
+- GetThisClass
+- CMFCControlRendererInfo::m_strBmpResID
+- ShowMenu
+- IsDefaultMenuLook
+- CVSListBoxBase::RemoveItem
+- CMFCRibbonPanelMenu::GetMenuBar
+- CMFCCustomizeButton.CreatePopupMenu
+- SetAllCategory
+- CMFCToolBarSystemMenuButton::GetSysMenu
+- GetDefaultResId
+- CMFCToolBarsCommandsPropertyPage::SetUserCategory
+- RemoveMenu
+- CMFCControlRendererInfo::m_rectImage
+- CMFCRibbonCommandsListBox::GetSelected
+- CFullScreenImpl.RestoreState
+- EnableAutoHidePanes
+- CMFCColorPropertySheet::CMFCColorPropertySheet
+- SetText
+- CSmartDockingManager::ShowTabbedPlaceAt
+- ParseRect
+- CMFCControlRenderer.CleanUp
+- CMFCOutlookBarPaneButton.OnChangeParentWnd
+- UpdateMenuButtonText
+- ReadRect
+- EnableButton
+- CMFCToolBarSpinEditBoxButton.SetACCData
+- CMFCCaptionButtonEx::CMFCCaptionButtonEx
+- CVSToolsListBox::OnAfterRenameItem
+- CMFCCaptionButtonEx
+- CMFCDropDownListBox::GetText
+- CMFCRibbonPanelMenuBar::OnChangeHighlighted
+- CTagManager.ParsePoint
+- COleDocIPFrameWndEx::OnShowPopupMenu
+- CVSToolsListBox.OnAfterAddItem
+- CMFCRibbonKeyTip.IsMenuKey
+- CTagManager.ExcludeTag
+- CMFCControlBarImpl.CMFCControlBarImpl
+- CMFCRibbonDefaultPanelButton.OnClick
+- CMFCToolBarSpinEditBoxButton::CMFCToolBarSpinEditBoxButton
+- GetCurSel
+- OnSendCommand
+- CMFCCustomizeButton.IsEmptyMenuAllowed
+- OnChooseItem
+- OnDrawItem
+- SetColor
+- OnAfterRenameItem
+- DockPaneLeftOf
+- CMFCOutlookBarToolBar.OnSetCursor
+- COleDocIPFrameWndEx::InsertPane
+- COleDocIPFrameWndEx::GetDefaultResId
+- CMFCRibbonPanelMenuBar::OnSetAccData
+- COleDocIPFrameWndEx::GetActivePopup
+- CVSListBoxBase.SetItemText
+- CMenuHash.SaveMenuBar
+- ShowTabbedAt
+- CMFCToolBarDropSource.QueryContinueDrag
+- CFullScreenImpl::EnableTabsArea
+- CVSListBoxBase::OnClickButton
+- CVSListBoxBase.OnAfterRenameItem
+- CMFCControlRenderer.DrawFrame
+- CMFCRibbonGalleryIcon::IsFirstInColumn
+- COleCntrFrameWndEx::IsPointNearDockSite
+- GetIndex
+- OnCancelMode
+- CMFCRibbonCmdUI::SetText
+- ~CTagManager
+- CFullScreenImpl
+- CMFCCustomizeButton.AddInvisibleButton
+- SetChunkValue
+- CVSListBoxBase.GetItemData
+- CMFCToolBarSystemMenuButton::IsBorder
+- CMFCRibbonDefaultPanelButton
+- CMFCCustomizeButton.SetMenuRightAlign
+- CMFCRibbonCommandsListBox.FillAll
+- CMFCRibbonGalleryIcon.SetACCData
+- CMFCRibbonPanelMenu
+- CSmartDockingStandaloneGuideWnd.Assign
+- SetTaskPaneCaptionButtons
+- CMFCShadowRenderer.Create
+- CVSListBoxBase::GetButtonID
+- CMFCRibbonPanelMenu.IsScrollUpAvailable
+- SetTaskbarTabOrder
+- CMFCStatusBarPaneInfo::clrProgressBar
+- nID
+- CMFCRibbonPanelMenuBar.OnClickButton
+- bProgressText
+- CMFCToolBarButtonsListButton.SetImages
+- OnCloseDockingPane
+- RestoreDelayedSubMenu
+- CMFCPropertySheetCategoryInfo.CMFCPropertySheetCategoryInfo
+- CVSListBoxBase::GetItemData
+- CSmartDockingManager.ShowCentralGroup
+- CMFCVisualManagerBitmapCache
+- COleDocIPFrameWndEx::GetDockingManager
+- CMFCDropDownListBox.SetCurSel
+- CMFCTabInfo::SetRect
+- CMenuImages::Draw
+- CTagManager.ReadPoint
+- CMFCShadowRenderer.GetRuntimeClass
+- CMFCToolBarDropTarget::OnDragLeave
+- SetExtraSize
+- OnMenuButtonToolHitTest
+- COleCntrFrameWndEx::EnableDocking
+- ClearChunkList
+- CDialogImpl
+- CMFCToolBarButtonsListButton.GetScrollBarCtrl
+- CMFCControlRendererInfo.SetResourceID
+- CMFCCustomizeButton.OnDraw
+- CMFCVisualManagerBitmapCache.Cache
+- HitTestEx
+- CMFCControlRendererInfo.m_uiBmpResID
+- CMFCRibbonPanelMenu::SetActive
+- CMFCCustomizeButton::CreatePopupMenu
+- SetActive
+- GetButtonsCount
+- CMFCControlRenderer.Mirror
+- CVSListBoxBase.GetItemText
+- CVSListBoxBase::EnableButton
+- CMFCTasksPaneToolBar::UpdateButtons
+- OpenPopupMenu
+- CMFCRibbonTab.IsSelected
+- CMFCRibbonPanelMenu.IsDefaultMenuLook
+- COleCntrFrameWndEx.CreateDockingManager
+- CSmartDockingGroupGuide.IsVisible
+- Get
+- CMFCRibbonDefaultPanelButton.OnShowPopupMenu
+- COleCntrFrameWndEx.AdjustClientArea
+- CMenuHash.CleanUp
+- CMFCRibbonPanelMenuBar::RestoreDelayedSubMenu
+- CMFCOutlookBarToolBar.OnUpdateCmdUI
+- OnShowPopupMenu
+- CMFCRibbonCommandsListBox::CMFCRibbonCommandsListBox
+- COleDocIPFrameWndEx::GetMenuBar
+- CMFCOutlookBarToolBar.OnSendCommand
+- CMFCDropDownListBox::DefaultMouseClickOnClose
+- OnDraw
+- CMFCCaptionButtonEx.SetRect
+- CVSListBoxBase.OnBeforeRemoveItem
+- CMFCRibbonPanelMenu::FindByOrigin
+- CMFCCustomizeMenuButton.RestoreRecentlyUsedState
+- CFrameClientAreaWnd
+- CMFCControlRenderer::Create
+- CMDIClientAreaWnd
+- CMFCRibbonPanelMenuBar.FindByOrigin
+- CMFCShowAllButton.OnDraw
+- CMFCCaptionMenuButton::ShowMenu
+- CMFCToolBarsMenuPropertyPage::SelectMenu
+- CMFCRibbonDefaultPanelButton.OnLButtonDown
+- COleDocIPFrameWndEx.GetPane
+- CMFCOutlookBarToolBar::CMFCOutlookBarToolBar
+- hImage
+- CMFCToolBarMenuButtonsButton.OnCalculateSize
+- GetButtonID
+- CMFCRibbonPanelMenuBar::IsDefaultMenuLook
+- CMFCDropDownListBox.ResetContent
+- GetSysMenuIcon
+- CMFCRibbonPanelMenuBar.IsMainPanel
+- CMFCRibbonKeyTip::GetElement
+- CMFCToolBarsCommandsListBox.DrawItem
+- CMFCToolBarSystemMenuButton::OnDraw
+- RemovePaneFromDockManager
+- CCommandManager
+- CVSToolsListBox::OnAfterMoveItemUp
+- GetGuide
+- CTagManager::LoadFromResource
+- CMFCToolBarDropSource::QueryContinueDrag
+- COleDocIPFrameWndEx.LoadFrame
+- CTagManager.SetBuffer
+- CMFCShowAllButton.OnToolHitTest
+- CMFCToolBarMenuButtonsButton.HaveHotBorder
+- CMFCTabButton
+- CMFCRibbonPanelMenuBar.IsDefaultMenuLook
+- OnDblClk
+- CMFCCustomizeButton::GetInvisibleButtons
+- CMFCRibbonDefaultPanelButton::CMFCRibbonDefaultPanelButton
+- CMFCControlRendererInfo.m_rectCorners
+- COleDocIPFrameWndEx.EnableDocking
+- CMFCToolBarsToolsPropertyPage
+- CVSListBoxBase::OnGetImage
+- CMFCRibbonDefaultPanelButton::OnClick
+- afxwin/CDocumentAdapter::~CDocumentAdapter
+- IsLeftScroll
+- COleCntrFrameWndEx::CreateDockingManager
+- COleDocIPFrameWndEx::SetupToolbarMenu
+- CMFCCustomizeMenuButton
+- SetPipeStyle
+- CRecentPaneContainerInfo.StoreDockInfo
+- CSmartDockingManager.Stop
+- CSmartDockingGroupGuide::Show
+- CSmartDockingHighlighterWnd::Hide
+- AdjustDockingLayout
+- CMFCRibbonPanelMenu::IsMenuMode
+- CMFCStatusBarPaneInfo::rect
+- CMFCCustomizeButton::InvokeCommand
+- CVSListBoxBase.OnClickButton
+- CMFCTasksPaneToolBar::AllowShowOnList
+- CMFCRibbonDefaultPanelButton::OnShowPopupMenu
+- CTagManager.ParseString
+- CMFCCustomizeButton::GetCustomizeText
+- CVSListBoxBase::OnBeforeRemoveItem
+- OnClick
+- CFullScreenImpl::SetFullScreenID
+- CTagManager::ReadControlRendererInfo
+- CMFCDropDownListBox.OnDrawItem
+- CSmartDockingManager.ShowTabbedPlaceAt
+- SetupToolbarMenu
+- CMFCStatusBarPaneInfo.lpszText
+- OnBeginDrag
+- SetRange
+- CMFCControlBarImpl
+- cyIcon
+- CMFCCustomizeMenuButton::GetParentToolbar
+- CMFCVisualManagerBitmapCache.Get
+- CMFCToolBarDropTarget.Register
+- CSmartDockingGroupGuidesManager::GetWindowRect
+- CVSListBoxEditCtrl.LockSize
+- CMFCPropertySheetCategoryInfo::CMFCPropertySheetCategoryInfo
+- CSmartDockingStandaloneGuide.AdjustPos
+- CMFCCustomizeButton
+- CTagManager::ReadPoint
+- CMFCCustomizeButton.OnCalculateSize
+- CMenuImages.Size
+- GetCount
+- CSmartDockingStandaloneGuide.Destroy
+- CCommandManager::GetMenuUserImage
+- CMFCStatusBarPaneInfo::lpszText
+- IsCommandExist
+- CMFCToolBarsOptionsPropertyPage::CMFCToolBarsOptionsPropertyPage
+- CMFCOutlookBarToolBar
+- AddInvisibleButton
+- GetRibbonBar
+- ExcludeTag
+- CMFCRibbonPanelMenuBar.AdjustLocations
+- OnPaint
+- CMFCRibbonQuickAccessToolBar
+- CMFCToolBarDropTarget::OnDragOver
+- GetContainerFrameWindow
+- CMFCRibbonPanelMenuBar.PopTooltip
+- CMFCRibbonPanelMenuBar.SetActive
+- CVSToolsListBox::OnBeforeRemoveItem
+- CTagManager.IsEmpty
+- COleDocIPFrameWndEx::IsPointNearDockSite
+- IsCheckEnabled
+- CVSListBoxBase.EnableBrowseButton
+- CMFCRibbonPanelMenuBar::DoPaint
+- GetResId
+- CMFCToolBarButtonsListButton::SelectButton
+- CMFCRibbonPanelMenu::IsScrollUpAvailable
+- CFrameImpl::OnChangeVisualManager
+- CMFCToolBarButtonsListButton::RemoveButtons
+- CMFCRibbonPanelMenuBar::OnUpdateCmdUI
+- CMFCOutlookBarPaneButton.OnCalculateSize
+- CSmartDockingGroupGuide.Show
+- CMFCCustomizeButton.GetExtraSize
+- CMFCColorPropertySheet
+- CMemDC.GetDC
+- CFrameImpl::GetRibbonBar
+- CMFCRibbonPanelMenuBar.GetPanel
+- CMFCRibbonCommandsListBox.FillFromCategory
+- CVSListBoxBase.OnSelectionChanged
+- GetMenuUserImage
+- CMFCRibbonKeyTip
+- CSmartDockingGroupGuidesManager.ShowGuide
+- CSmartDockingManager::GetHighlightedGuideNo
+- CMFCToolBarsListCheckBox
+- CMFCRibbonCommandsListBox.FillFromIDs
+- CMFCStatusBarPaneInfo.cxIcon
+- GetExtraSize
+- CMFCRibbonCmdUI
+- SmoothResize
+- OnDragEnter
+- CSmartDockingManager::Start
+- OnUserToolTip
+- CMFCStatusBarPaneInfo::bProgressText
+- COleDocIPFrameWndEx.OnMoveMiniFrame
+- CMFCRibbonPanelMenuBar.IsMenuMode
+- CVSToolsListBox.OnAfterMoveItemUp
+- FindIndex
+- Show
+- COleServerDocEx
+- CMFCCustomizeButton.IsMenuRightAlign
+- CSmartDockingManager::Show
+- CMFCVisualManagerBitmapCache::IsCached
+- CMFCCustomizeButton::OnDraw
+- CMFCControlBarImpl::GetGripperRect
+- Size
+- CMFCRibbonDefaultPanelButton.OnDraw
+- CMFCRibbonPanelMenuBar.SetDefaultMenuLook
+- CMFCDropDownListBox::OnChooseItem
+- CSmartDockingGroupGuidesManager.Destroy
+- SetItemIndex
+- CFrameImpl::AddFrame
+- IsActive
+- GetPanel
+- CMFCDropDownListBox::CMFCDropDownListBox
+- CMFCRibbonPanelMenu::IsDefaultMenuLook
+- CMFCRibbonPanelMenu::CMFCRibbonPanelMenu
+- COleDocIPFrameWndEx::ShowPane
+- CMFCRibbonKeyboardCustomizeDialog::CMFCRibbonKeyboardCustomizeDialog
+- CMFCControlRendererInfo::SetResourceID
+- OnPosChange
+- CSmartDockingGroupGuidesWnd::OnEraseBkgnd
+- OnChangeVisualManager
+- CVSListBoxBase.GetButtonsCount
+- CMFCRibbonDefaultPanelButton.OnKey
+- CMFCCustomizeButton.GetCustomizeCmdId
+- IsBrowseButton
+- CTagManager::ReadBool
+- OnBrowse
+- CMFCRibbonGalleryIcon::IsFirst
+- CSmartDockingManager::CauseCancelMode
+- CRecentPaneContainerInfo.SetInfo
+- GetContainer
+- CSmartDockingManager::OnPosChange
+- CMFCToolBarEditCtrl
+- CMFCToolBarEditCtrl::PreTranslateMessage
+- CMFCRibbonDefaultPanelButton.DrawImage
+- CreatePopupMenu
+- CMFCRibbonPanelMenu.SetDefaultMenuLook
+- EnableMDITabs
+- CMFCRibbonPanelMenuBar::IsQATPopup
+- CTagManager::ParseControlRenderer
+- ReadInt
+- CPaneContainerGC::CleanUp
+- CVSListBoxBase::SetGrayDisabledButtons
+- CMFCStatusBarPaneInfo::clrProgressText
+- COleDocIPFrameWndEx::GetContainerFrameWindow
+- CMFCCaptionButtonEx::SetRect
+- CSmartDockingGroupGuidesManager.AdjustPos
+- CFullScreenImpl.SetFullScreenID
+- OnOK
+- CMFCControlRendererInfo.m_rectImage
+- UpdateButtons
+- AddPaneContainer
+- CMFCToolBarsCommandsListBox
+- CMFCCustomizeMenuButton::EnableCustomization
+- SetFullScreenID
+- CMFCCustomizeMenuButton.CMFCCustomizeMenuButton
+- CMFCRibbonCmdUI.SetText
+- CMFCRibbonTab::SetACCData
+- CMFCRibbonGalleryIcon::SetACCData
+- QueryContinueDrag
+- IsMenuMode
+- CMFCTasksPaneToolBar.IsButtonExtraSizeAvailable
+- CMFCShadowRenderer
+- GetScrollBarCtrl
+- CMFCCustomizeButton::IsPipeStyle
+- OnSysColorChange
+- CCommandManager::SetUserImages
+- COleCntrFrameWndEx.AddDockSite
+- CMFCRibbonPanelMenu.IsScrollDnAvailable
+- CMFCToolBarsCommandsListBox::DrawItem
+- CMFCToolBarSystemMenuButton.OnCalculateSize
+- CreateMenu
+- nFrameCount
+- COleDocIPFrameWndEx::AddPane
+- CMFCRibbonCommandsListBox.GetCommandIndex
+- CMFCControlRendererInfo.GetResourceID
+- CMFCToolBarsKeyboardPropertyPage
+- CMemDC.~CMemDC
+- CSmartDockingGroupGuide::AdjustPos
+- CMFCControlRendererInfo::~CMFCControlRendererInfo
+- GetSysMenu
+- CMFCRibbonCaptionButton
+- CMFCToolBarSystemMenuButton::GetSysMenuIcon
+- operator=
+- DrawItem
+- lpszToolTip
+- CMFCControlRendererInfo::CMFCControlRendererInfo
+- GetDC
+- CMFCRibbonPanelMenu.SetMenuMode
+- CTagManager::ReadFont
+- Mirror
+- IsMenuRightAlign
+- GetParentToolbar
+- OnSelectionChanged
+- CMFCRibbonKeyTip.CMFCRibbonKeyTip
+- CTagManager::ParseControlRendererInfo
+- CMFCDropDownListBox::AddString
+- EnableCustomization
+- CMFCToolBarSystemMenuButton::OnAfterCreatePopupMenu
+- afxwin/CDocumentAdapter::GetContainer
+- CMFCControlRenderer.OnSysColorChange
+- CMFCRibbonKeyboardCustomizeDialog.CMFCRibbonKeyboardCustomizeDialog
+- CMFCTasksPanePropertyPage.SetACCData
+- CMFCCustomizeButton.InvokeCommand
+- CSmartDockingGroupGuide
+- CMFCColorPropertySheet::LoadAcceleratorTable
+- CMFCRibbonCommandsListBox::GetCommandIndex
+- COleCntrFrameWndEx::AddDockSite
+- CMFCControlRenderer.GetParams
+- m_rectInter
+- COleDocIPFrameWndEx.ShowPane
+- SetDockState
+- Highlight
+- CMDIClientAreaWnd::EnableMDITabs
+- CMFCRibbonGalleryIcon.IsLast
+- CMFCDropDownListBox.IsEditFocused
+- CSmartDockingGroupGuide.SetVisible
+- CMFCShowAllButton.OnClick
+- CMFCToolBarMenuButtonsButton::HaveHotBorder
+- CFrameImpl.SetDockingManager
+- CMFCRibbonPanelMenuBar::GetCategory
+- CMFCRibbonPanelMenuBar.CalcSize
+- CMFCToolBarsListCheckBox.IsCheckEnabled
+- OnSetPreviewMode
+- CMFCStatusBarPaneInfo::CMFCStatusBarPaneInfo
+- RestoreState
+- CTagManager::ParseSize
+- CMDIClientAreaWnd::DoesMDITabExist
+- CTagManager.ReadColor
+- CTagManager.ReadInt
+- SetGrayDisabledButtons
+- CRecentPaneContainerInfo.Init
+- CFrameImpl::HasRegion
+- CMFCCustomizeButton.SetDefaultDraw
+- CMFCRibbonDefaultPanelButton::GetImageSize
+- CSmartDockingGroupGuidesManager::Destroy
+- CMFCControlRenderer::CMFCControlRenderer
+- CVSListBoxBase.IsGrayDisabledButtons
+- CSmartDockingGroupGuidesManager::ShowGuide
+- CMFCRibbonPanelMenuBar.DoPaint
+- CCommandManager.SetUserImages
+- OnTearOffMenu
+- GetCommand
+- IsEmptyMenuAllowed
+- CSmartDockingGroupGuidesWnd.OnPaint
+- COleDocIPFrameWndEx.GetDefaultResId
+- CMFCRibbonDefaultPanelButton.CMFCRibbonDefaultPanelButton
+- CMDIClientAreaWnd::CFrameClientAreaWnd
+- ParsePoint
+- CMFCToolBarButtonsListButton.SelectButton
+- DockPane
+- AllowShowOnList
+- CFullScreenImpl::OnGetMinMaxInfo
+- OnCalculateSize
+- CVSToolsListBox::OnAfterMoveItemDown
+- m_rectImage
+- CTagManager.ReadToolBarImages
+- OnEndEditLabel
+- CMFCControlBarImpl.GetGripperRect
+- CanBeStored
+- COleCntrFrameWndEx.ShowPane
+- CMFCToolBarDropSource.OnBeginDrag
+- COleCntrFrameWndEx.DockPaneLeftOf
+- CCommandManager::CleanUp
+- CMFCRibbonPanelMenuBar::IsRibbonMiniToolBar
+- CMFCRibbonKeyTip::Hide
+- CMDIClientAreaWnd::GetMDITabs
+- CMFCToolBarSpinEditBoxButton.GetSpinControl
+- CMFCRibbonGalleryIcon::GetIndex
+- FillInterior
+- Start
+- CMFCToolBarsListPropertyPage
+- CSmartDockingManager::SetOuterRect
+- COleCntrFrameWndEx::PaneFromPoint
+- CreateFromMenu
+- CMFCVisualManagerBitmapCache::Cache
+- CMFCCaptionButtonEx::GetRect
+- CMFCToolBarMenuButtonsButton.Serialize
+- CMFCRibbonKeyboardCustomizeDialog
+- CMFCControlRenderer::Mirror
+- FillFromArray
+- COleDocIPFrameWndEx.PreTranslateMessage
+- COleDocIPFrameWndEx::DockPane
+- CMFCRibbonDefaultPanelButton.GetToolTipText
+- CTagManager.ParseColorHEX
+- CMFCRibbonRichEditCtrl::CMFCRibbonRichEditCtrl
+- IsScaled
+- CMFCShadowRenderer.OnSysColorChange
+- CCommandManager.CleanUp
+- CMFCCustomizeButton::GetCustomizeCmdId
+- COleCntrFrameWndEx::OnShowPanes
+- CMFCRibbonPanelMenu.FindByOrigin
+- CMFCTasksPaneFrameWnd::CalcBorderSize
+- CMFCToolBarsKeyboardPropertyPage.SetAllCategory
+- CMFCToolBarMenuButtonsButton::OnDraw
+- CMFCOutlookBarToolBar::AdjustLocations
+- CMFCReBarState::SaveState
+- CSmartDockingStandaloneGuideWnd
+- GetSelItem
+- SetResourceID
+- COleDocIPFrameWndEx.IsMenuBarAvailable
+- CFullScreenImpl::CFullScreenImpl
+- CSmartDockingHighlighterWnd::ShowTabbedAt
+- COleDocIPFrameWndEx.RecalcLayout
+- Destroy
+- CMFCStatusBarPaneInfo.nStyle
+- CSmartDockingGroupGuidesWnd::OnClose
+- CSmartDockingGroupGuide.Destroy
+- CTagManager.ParseToolBarImages
+- CMFCRibbonCaptionButton.IsMDIChildButton
+- CMFCRibbonPanelMenuBar.GetDroppedDown
+- CMFCCustomizeButton.GetInvisibleButtons
+- LoadFrame
+- afxwin/CDocumentAdapter::BeginReadChunks
+- CMFCRibbonPanelMenuBar::SetMenuMode
+- IsPtIn
+- CMFCCustomizeMenuButton.SetParentToolbar
+- COleCntrFrameWndEx::InsertPane
+- CSmartDockingManager::Stop
+- ReadToolTipInfo
+- Stop
+- ShowFullScreen
+- CSmartDockingHighlighterWnd::Create
+- CMDIClientAreaWnd::UpdateTabs
+- HasRegion
+- CMFCTabButton.SetPressed
+- GetCmdImage
+- CCommandManager::ClearUserCmdImages
+- COleCntrFrameWndEx.PaneFromPoint
+- OnBeforeRemoveItem
+- CMFCToolBarMenuButtonsButton.CanBeStored
+- CMFCToolBarSystemMenuButton.CreateMenu
+- COleDocIPFrameWndEx.GetToolbarButtonToolTipText
+- CMFCRibbonGalleryIcon::IsLastInRow
+- SetACCData
+- CTagManager.ParseControlRendererInfo
+- CTagManager.CTagManager
+- CMFCControlRendererInfo::m_clrTransparent
+- CTagManager::CTagManager
+- Assign
+- CMFCStatusBarPaneInfo::nProgressTotal
+- GetFullScreenMinMaxInfo
+- SetRect
+- COleDocIPFrameWndEx::LoadFrame
+- CMFCToolBarDropTarget
+- CMFCToolBarsOptionsPropertyPage.CMFCToolBarsOptionsPropertyPage
+- CMFCTabInfo::GetRect
+- CVSListBoxBase.EnableButton
+- CMFCOutlookBarToolBar::OnUserToolTip
+- COleCntrFrameWndEx::OnMoveMiniFrame
+- LoadFromFile
+- GetParentRibbonMenuBar
+- CMFCCustomizeMenuButton.SetItemIndex
+- OnAfterAddItem
+- CMFCRibbonPanelMenu.SetActive
+- CVSListBoxBase.GetCount
+- CVSListBoxBase::SetItemData
+- CMFCCustomizeButton::IsMenuRightAlign
+- GetToolbarButtonToolTipText
+- CMFCRibbonPanelMenuBar
+- CPngImage::LoadFromFile
+- CSmartDockingGroupGuidesManager::Create
+- CMFCControlRenderer::GetImageCount
+- CMFCRibbonGalleryIcon.CMFCRibbonGalleryIcon
+- SetStandardButtons
+- StoreDockInfo
+- CMenuImages::CleanUp
+- CTagManager::ReadSize
+- CSmartDockingStandaloneGuide.Highlight
+- AddCommand
+- CMFCRibbonDefaultPanelButton.GetParentPanel
+- CVSListBoxBase::AddItem
+- OnDrawMenuImage
+- CVSToolsListBox.OnAfterRenameItem
+- CMFCPropertySheetCategoryInfo
+- CRecentPaneContainerInfo::operator=
+- CSmartDockingHighlighterWnd::ShowAt
+- CMFCRibbonPanelMenu::SetDefaultMenuLook
+- CMFCToolBarSystemMenuButton::CMFCToolBarSystemMenuButton
+- CMFCToolBarsListPropertyPage::EnableUserDefinedToolbars
+- CMFCControlRendererInfo.~CMFCControlRendererInfo
+- CMFCToolBarSystemMenuButton.GetSysMenuIcon
+- AllowShowOnPaneMenu
+- CMFCStatusBarPaneInfo.nFrameCount
+- CTagManager::GetBuffer
+- CMFCToolBarsToolsPropertyPage::OnKillActive
+- IsFirstInColumn
+- CMFCControlRenderer.IsMirror
+- COleDocIPFrameWndEx::EnableDocking
+- CMFCRibbonKeyTip.GetElement
+- OnCmdMsg
+- CMFCToolBarsListPropertyPage.EnableUserDefinedToolbars
+- CVSListBoxBase::EditItem
+- CMenuHash.LoadMenuBar
+- CMFCRibbonPanelMenuBar.IsRibbonPanelInRegularMode
+- CalcBorderSize
+- IsFullScreen
+- CMFCCustomizeButton::OnChangeParentWnd
+- CMFCToolBarSpinEditBoxButton.SetRange
+- CMFCCustomizeButton.SetExtraSize
+- CMFCOutlookBarPaneButton
+- CMFCRibbonDefaultPanelButton::CopyFrom
+- clrProgressBarDest
+- CMFCOutlookBarToolBar.CMFCOutlookBarToolBar
+- CMFCStatusBarPaneInfo::lpszToolTip
+- CFrameImpl::GetMenuBar
+- COleDocIPFrameWndEx::DockPaneLeftOf
+- CVSListBoxBase.GetButtonNum
+- COleDocIPFrameWndEx::OnCloseDockingPane
+- CVSListBoxBase::SelectItem
+- IsMenuItemWithoutImage
+- CTagManager::ParseColorHEX
+- CMFCStatusBarPaneInfo::nCurrFrame
+- CMFCRibbonPanelMenuBar.RestoreDelayedSubMenu
+- IsMirror
+- CSmartDockingGroupGuidesWnd
+- CMFCCustomizeButton::SetExtraSize
+- COleDocIPFrameWndEx.DockPane
+- CMFCToolBarSystemMenuButton.CreateFromMenu
+- CCommandManager::ClearAllCmdImages
+- CPngImage.LoadFromFile
+- CMFCStatusBarPaneInfo.nProgressCurr
+- SetBuffer
+- CMFCTabInfo.GetRect
+- CMFCCustomizeButton.GetCustomizeText
+- nProgressTotal
+- CRecentPaneContainerInfo::SetInfo
+- PaneFromPoint
+- CMFCStatusBarPaneInfo.clrProgressBarDest
+- GetPane
+- CMFCRibbonCmdUI::SetCheck
+- CMFCToolBarSpinEditBoxButton::GetSpinControl
+- CMFCDropDownListBox.OnGetItemSize
+- CFrameImpl.OnChangeVisualManager
+- ClearUserCmdImages
+- CMFCRibbonKeyTip::IsMenuKey
+- CMFCDropDownListBox.DefaultMouseClickOnClose
+- COleCntrFrameWndEx.DockPane
+- CVSListBoxBase::SetItemText
+- CMFCStatusBarPaneInfo.nProgressTotal
+- CMFCReBarState
+- COleDocIPFrameWndEx.OnCloseDockingPane
+- CMFCCustomizeButton.SetPipeStyle
+- CFullScreenImpl.~CFullScreenImpl
+- CSmartDockingManager::Destroy
+- CSmartDockingManager::HidePlace
+- CMFCRibbonPanelMenuBar::CalcSize
+- CMFCRibbonPanelMenu.GetMenuBar
+- CMFCCustomizeButton.OnCancelMode
+- CSmartDockingGroupGuide::IsPtIn
+- SaveMenuBar
+- OnClickButton
+- COleDocIPFrameWndEx::PaneFromPoint
+- CCommandManager::ClearCmdImage
+- OnKey
+- CMultiDocTemplateEx.GetResId
+- CMFCControlRenderer::CreateObject
+- CFullScreenImpl.OnGetMinMaxInfo
+- CTagManager.ReadFont
+- CPngImage::CleanUp
+- SetInfo
+- CMFCCustomizeButton::CopyFrom
+- CMenuHash::CleanUp
+- OnUpdateCmdUI
+- CMFCToolBarMenuButtonsButton.OnDraw
+- COleDocIPFrameWndEx::RecalcLayout
+- CMFCToolBarsOptionsPropertyPage
+- COleDocIPFrameWndEx::GetToolbarButtonToolTipText
+- COleDocIPFrameWndEx::OnSetPreviewMode
+- OnEraseBkgnd
+- CTagManager::ExcludeTag
+- OnClose
+- CMFCRibbonPanelMenuBar.OnKey
+- CSmartDockingManager.Start
+- CMDIClientAreaWnd.EnableMDITabs
+- CPngImage
+- CVSListBoxBase::OnAfterAddItem
+- afxcontrolrenderer/CMFCControlRenderer::IsScaled
+- CMFCToolBarSpinEditBoxButton::SetRange
+- PopTooltip
+- CMFCCustomizeButton.CMFCCustomizeButton
+- COleCntrFrameWndEx
+- OnToolHitTest
+- FindTabWndByChild
+- CVSListBoxBase.OnAfterMoveItemUp
+- FillFromCategory
+- CSmartDockingGroupGuidesManager
+- CMFCControlRenderer::IsMirror
+- CMFCRibbonCommandsListBox.GetSelected
+- CFrameImpl::GetFrameList
+- CMFCReBarState.SaveState
+- CMFCToolBarEditCtrl.PreTranslateMessage
+- CMFCCustomizeButton::SetDefaultDraw
+- CVSListBoxBase::AddButton
+- GetRange
+- CMFCDropDownListBox.GetText
+- ParseControlRendererInfo
+- CMFCShadowRenderer::Draw
+- SetItemText
+- CVSToolsListBox::OnAfterAddItem
+- CMFCRibbonPanelMenu::IsAlwaysClose
+- CVSListBoxBase.GetButtonID
+- CMFCStatusBarPaneInfo::cxIcon
+- SetCaptionButtons
+- SetSiblingsButton
+- CMFCRibbonDefaultPanelButton::OnDraw
+- CMFCControlRenderer::DrawFrame
+- CMFCRibbonDefaultPanelButton::OnKey
+- CMFCShowAllButton
+- COleDocIPFrameWndEx::OnTearOffMenu
+- CMFCStatusBarPaneInfo::nStyle
+- CMFCDropDownListBox.Track
+- CMFCControlRendererInfo::CommonInit
+- Init
+- IsBorder
+- GetParams
+- CTagManager.ReadControlRenderer
+- CacheY
+- CMDIClientAreaWnd.DoesMDITabExist
+- SetCmdImage
+- IsRibbonMiniToolBar
+- CMFCControlRendererInfo::m_rectInter
+- CMFCToolBarSystemMenuButton.CopyFrom
+- CMFCToolBarsMenuPropertyPage.CMFCToolBarsMenuPropertyPage
+- OnGetImage
+- CMFCToolBarDropSource::OnBeginDrag
+- CSmartDockingManager::OnMouseMove
+- CPreviewViewEx::EnableScaleLargeImages
+- CMFCTasksPaneToolBar::AllowShowOnPaneMenu
+- CSmartDockingManager::MoveCentralGroup
+- EnableDocking
+- CMFCToolBarButtonsListButton::EnableDragFromList
+- CMFCReBarState.LoadState
+- CMFCRibbonPanelMenu::GetPanel
+- CSmartDockingStandaloneGuide.Create
+- CMFCToolBarsCommandsListBox::MeasureItem
+- COleCntrFrameWndEx.RecalcLayout
+- CTagManager::ReadToolTipInfo
+- CSmartDockingGroupGuide::Destroy
+- CMFCControlRenderer.~CMFCControlRenderer
+- OnAfterCreatePopupMenu
+- CMFCRibbonCommandsListBox.AddCommand
+- CFrameImpl.AddFrame
+- CPngImage::LoadFromBuffer
+- CMFCDropDownListBox.SetMaxHeight
+- CTagManager.ParseRect
+- CMFCToolBarSystemMenuButton.OnAfterCreatePopupMenu
+- CloseDelayedSubMenu
+- COleDocIPFrameWndEx.OnDrawMenuLogo
+- COleDocIPFrameWndEx.AddDockSite
+- clrProgressText
+- ResetContent
+- COleDocIPFrameWndEx::OnShowPanes
+- CPngImage.LoadFromBuffer
+- COleDocIPFrameWndEx.OnShowCustomizePane
+- CMemDC.CMemDC
+- CMFCToolBarSystemMenuButton::OnCalculateSize
+- CMFCOutlookBarToolBar::OnUpdateCmdUI
+- CMFCControlBarImpl::CMFCControlBarImpl
+- Create
+- CFullScreenImpl.EnableMainMenu
+- CVSListBoxBase.SetGrayDisabledButtons
+- COleCntrFrameWndEx::AdjustDockingLayout
+- CMFCToolBarsMenuPropertyPage::CloseContextMenu
+- CSmartDockingManager::Create
+- IsCategoryPopup
+- CSmartDockingHighlighterWnd::SetDockingWnd
+- CTagManager.LoadFromFile
+- IsMemDC
+- CMFCTabButton::SetPressed
+- CMFCOutlookBarPaneButton::OnChangeParentWnd
+- COleCntrFrameWndEx.AddPane
+- COleDocIPFrameWndEx::OnClosePopupMenu
+- SelectMenu
+- CMFCDropDownListBox::OnDrawItem
+- CMFCStatusBarPaneInfo.CMFCStatusBarPaneInfo
+- CTagManager.ParseToolTipInfo
+- CCommandManager.EnableMenuItemImage
+- CMFCToolBarSystemMenuButton::HaveHotBorder
+- IsLastInRow
+- CMFCTasksPaneFrameWnd.CalcBorderSize
+- CVSListBoxBase::IsBrowseButton
+- AddString
+- afxwin/CDocumentAdapter::GetThumbnail
+- CVSListBoxBase.OnEndEditLabel
+- CMFCColorPropertySheet::OnInitDialog
+- CRibbonCategoryScroll::IsLeftScroll
+- CSmartDockingManager::ShowCentralGroup
+- ReadControlRenderer
+- CSmartDockingManager.OnMouseMove
+- CTagManager::ParseString
+- CMFCStatusBarPaneInfo::cyIcon
+- CMFCRibbonPanelMenuBar::OnKey
+- CTagManager::LoadFromFile
+- CMFCRibbonRichEditCtrl.PreTranslateMessage
+- CTagManager::ParseFont
+- BeginReadChunks
+- CSmartDockingManager.IsStarted
+- IsLast
+- CMFCToolBarMenuButtonsButton.CopyFrom
+- CTagManager::ReadRect
+- CMFCRibbonDefaultPanelButton.OnDrawOnList
+- OnInitDialog
+- CMFCDropDownListBox::SetMaxHeight
+- CSmartDockingGroupGuide::Highlight
+- CMFCTasksPaneToolBar::UpdateMenuButtonText
+- CMFCToolBarDropTarget.OnDragEnter
+- CMFCToolBarButtonsListButton.RemoveButtons
+- CMFCRibbonPanelMenuBar.GetTopLevelRibbonBar
+- CSmartDockingManager.GetOwner
+- COleDocIPFrameWndEx::OnMenuButtonToolHitTest
+- SetUserImages
+- CMFCVisualManagerBitmapCache.CacheY
+- CMFCRibbonTab.SetACCData
+- OnDragOver
+- COleDocIPFrameWndEx.GetDockingManager
+- CMenuHash::IsActive
+- CSmartDockingGroupGuide::IsVisible
+- CMFCVisualManagerBitmapCache.IsCached
+- HitTest
+- CVSListBoxBase::OnEndEditLabel
+- CMFCRibbonDefaultPanelButton.GetImageSize
+- COleDocIPFrameWndEx.GetTearOffBars
+- CMFCStatusBarPaneInfo.cxText
+- CPngImage.Load
+- CMFCTasksPaneFrameWnd::SetTaskPaneCaptionButtons
+- CCommandManager::SaveState
+- SetMaxHeight
+- CMFCToolBarDropTarget.OnDropEx
+- COleServerDocEx::Serialize
+- SetImage
+- CMFCRibbonPanelMenu::IsCustomizeMenu
+- GiveFeedback
+- COleDocIPFrameWndEx::WinHelp
+- SelectItem
+- CMFCDropDownListBox::Track
+- afxwin/CDocumentAdapter::InitializeSearchContent
+- CMFCCustomizeButton::CMFCCustomizeButton
+- CSmartDockingStandaloneGuide.Show
+- EnableCustomizeMenu
+- IsEditable
+- CTagManager.ParseColor
+- GetFullScreenRect
+- CMFCDropDownListBox.GetCount
+- CMFCDropDownListBox.AddString
+- IsSelected
+- CMFCCustomizeMenuButton::CMFCCustomizeMenuButton
+- OnSetCursor
+- COleDocIPFrameWndEx.GetActivePopup
+- CTagManager.ParseFont
+- CMFCOutlookBarPaneButton::OnDraw
+- CMFCToolBarsCommandsListBox.MeasureItem
+- CTagManager::ParseToolBarImages
+- afxwin/CDocumentAdapter::ClearChunkList
+- CSmartDockingManager::GetOwner
+- CMFCToolBarSystemMenuButton::CopyFrom
+- GetSpinControl
+- CMDIClientAreaWnd.UpdateTabs
+- GetRuntimeClass
+- CFrameImpl.GetRibbonBar
+- CMultiDocTemplateEx::GetResId
+- CMFCVisualManagerBitmapCache::Clear
+- CMFCOutlookBarPaneList
+- CSmartDockingStandaloneGuideWnd::Highlight
+- CTagManager.ReadBool
+- PreTranslateMessage
+- AdjustClientArea
+- SetPressed
+- CMFCControlRendererInfo::m_rectSides
+- CSmartDockingManager.Create
+- CMFCRibbonPanelMenuBar.IsRibbonMiniToolBar
+- CMFCRibbonPanelMenuBar.IsQATPopup
+- OnClosePopupMenu
+- COleDocIPFrameWndEx.SetupToolbarMenu
+- ~CDocumentAdapter
+- CVSListBoxBase::OnKey
+- IsStarted
+- CMFCRibbonPanelMenuBar::FindByOrigin
+- CMFCRibbonDefaultPanelButton.CopyFrom
+- COleDocIPFrameWndEx.OnSetPreviewMode
+- CMFCStatusBarPaneInfo::nFrameCount
+- m_clrTransparent
+- CMFCToolBarButtonsListButton.GetSelectedButton
+- FindByOrigin
+- OnAfterMoveItemUp
+- CMFCControlRenderer::IsValid
+- CMFCOutlookBarScrollButton
+- CMFCRibbonGalleryIcon.IsFirstInColumn
+- clrProgressBar
+- CPaneContainerGC
+- CMFCCustomizeMenuButton.SetSeparator
+- CTagManager::ReadInt
+- CSmartDockingManager.Show
+- GetThumbnail
+- CMFCOutlookBarToolBar::OnSendCommand
+- CSmartDockingStandaloneGuideWnd.Create
+- EnableUserDefinedToolbars
+- CSmartDockingHighlighterWnd.Hide
+- afxwin/CDocumentAdapter::LoadFromStream
+- CMFCMousePropertyPage
+- COleDocIPFrameWndEx.IsPointNearDockSite
+- CMFCRibbonCommandsListBox::FillFromCategory
+- CSmartDockingGroupGuide::SetVisible
+- IsMenuKey
+- CVSListBoxBase::GetSelItem
+- CMFCCustomizeButton::IsEmptyMenuAllowed
+- IsGrayDisabledButtons
+- CFrameImpl::SetNewUserToolBarRTC
+- CRibbonCategoryScroll
+- CMFCVisualManagerBitmapCache.Clear
+- CMFCStatusBarPaneInfo
+- Register
+- CMFCDropDownListBox::SetCurSel
+- LockSize
+- HidePlace
+- CFrameImpl.GetMenuBar
+- CMFCControlRendererInfo.operator =
+- CMFCToolBarsCommandsPropertyPage.OnChangeSelButton
+- GetOwner
+- COleDocIPFrameWndEx::OnDrawMenuLogo
+- m_uiBmpResID
+- GetHighlightedGuideNo
+- CMFCShadowRenderer::Create
+- COleDocIPFrameWndEx.PaneFromPoint
+- CMFCVisualManagerBitmapCache::Get
+- CMFCRibbonPanelMenuBar::GetDroppedDown
+- IsFirstInRow
+- CMFCOutlookBarToolBar::OnSetCursor
+- RestoreRecentlyUsedState
+- COleCntrFrameWndEx::COleCntrFrameWndEx
+- CVSListBoxBase::GetCount
+- CMFCRibbonPanelMenuBar::SetActive
+- DrawImage
+- CMFCRibbonCmdUI.SetRadio
+- DefaultMouseClickOnClose
+- CloseContextMenu
+- CMFCControlRenderer.CreateObject
+- CMFCStatusBarPaneInfo::clrText
+- CFullScreenImpl.ShowFullScreen
+- clrBackground
+- CMFCToolBarDropSource::GiveFeedback
+- GetText
+- CFrameImpl::SetDockingManager
+- CMFCStatusBarPaneInfo.nID
+- CMFCControlRendererInfo.m_rectInter
+- CMFCCaptionButtonEx.GetRect
+- GetCustomizeCmdId
+- ShowPlaceAt
+- CMFCToolBarsListPropertyPage::ShowToolBar
+- CCommandManager.GetCmdImage
+- ClearCmdImage
+- CFrameImpl::SetControlbarsMenuId
+- CMFCControlRendererInfo::m_bPremultiplyCheck
+- SetImages
+- CVSListBoxBase.AddButton
+- CMFCToolBarsKeyboardPropertyPage.CMFCToolBarsKeyboardPropertyPage
+- CSmartDockingGroupGuide.Highlight
+- CMFCToolBarSystemMenuButton.HaveHotBorder
+- CMemDC::IsVistaDC
+- CVSListBoxBase::IsGrayDisabledButtons
+- CMFCRibbonPanelMenuBar::SetDefaultMenuLook
+- CMFCCustomizeMenuButton::RestoreRecentlyUsedState
+- COleDocIPFrameWndEx.GetContainerFrameWindow
+- CMFCOutlookBarPaneAdapter
+- FillFromIDs
+- ~CMemDC
+- CSmartDockingGroupGuidesManager.GetGuide
+- COleDocIPFrameWndEx.OnClosePopupMenu
+- CCommandManager::IsMenuItemWithoutImage
+- CMFCRibbonPanelMenuBar.SetMenuMode
+- IsAlwaysClose
+- AddDockSite
+- CMFCToolBarDropSource
+- COleCntrFrameWndEx.InsertPane
+- COleDocIPFrameWndEx.OnMenuButtonToolHitTest
+- CMFCToolBarMenuButtonsButton
+- CSmartDockingHighlighterWnd
+- CMFCVisualManagerBitmapCache.FindIndex
+- CMFCCustomizeButton::CanBeStored
+- CMFCRibbonPanelMenuBar::AdjustLocations
+- IsEmpty
+- CMFCShowAllButton::OnToolHitTest
+- CMFCToolBarSpinEditBoxButton::SetACCData
+- CMFCOutlookBarPaneButton::SetImage
+- CMFCRibbonPanelMenu::EnableCustomizeMenu
+- LoadFromBuffer
+- CTagManager::ParseColor
+- COleDocIPFrameWndEx::IsMenuBarAvailable
+- ClearAllCmdImages
+- IsScrollDnAvailable
+- CommonInit
+- CMFCRibbonPanelMenuBar.OnUpdateCmdUI
+- CMemDC::CMemDC
+- CSmartDockingStandaloneGuideWnd.Highlight
+- COleDocIPFrameWndEx::RemovePaneFromDockManager
+- CMFCRibbonKeyTip::Show
+- OnCustomizeMode
+- CFrameImpl.GetFrameList
+- CVSListBoxBase::EnableBrowseButton
+- OnChangeParentWnd
+- CMFCCustomizeButton::OnCalculateSize
+- CVSListBoxBase.IsBrowseButton
+- CMFCToolBarButtonsListButton::DrawItem
+- CSmartDockingStandaloneGuide.IsPtIn
+- CMFCControlRenderer.FillInterior
+- COleCntrFrameWndEx::EnableAutoHidePanes
+- CMFCDropDownListBox.SetMinWidth
+- CMFCShowAllButton.OnCalculateSize
+- CMFCToolBarDropTarget::OnDropEx
+- CMFCRibbonPanelMenuBar.HitTestEx
+- CMFCRibbonCmdUI::SetRadio
+- SetItemData
+- CMFCRibbonPanelMenu.IsCustomizeMenu
+- afxwin/CDocumentAdapter::ReadNextChunkValue
+- CMFCControlRendererInfo
+- CRecentPaneContainerInfo
+- GetParentPanel
+- CMFCToolBarsListCheckBox::IsCheckEnabled
+- CVSToolsListBox
+- CMFCRibbonPanelMenu.IsMenuMode
+- CCommandManager.SetCmdImage
+- CMFCToolBarDropSource.GiveFeedback
+- CMFCStatusBarPaneInfo.lpszToolTip
+- CMFCToolBarButtonsListButton
+- CFullScreenImpl.GetFullScreenRect
+- CMFCRibbonKeyTip.Hide
+- clrText
+- CMFCToolBarsToolsPropertyPage.OnKillActive
+- ParseString
+- CMemDC::~CMemDC
+- COleCntrFrameWndEx::RemovePaneFromDockManager
+- SetMenuRightAlign
+- CMFCRibbonPanelMenu.GetCategory
+- CMFCToolBarSystemMenuButton.GetSysMenu
+- SetUserCategory
+- CMFCCustomizeButton.OnChangeParentWnd
+- CTagManager::ParseRect
+- CVSListBoxBase.SetStandardButtons
+- afxmdiclientareawnd/CMDIClientAreaWnd::FindNextRegisteredWithTaskbarMDIChild
+- CPaneContainerGC.CleanUp
+- CMFCRibbonPanelMenu::SetMenuMode
+- CSmartDockingManager.MoveCentralGroup
+- CMenuImages.SetColor
+- CMFCOutlookBarToolBar::OnCustomizeMode
+- nProgressCurr
+- CPreviewViewEx.EnableScaleLargeImages
+- GetToolTipText
+- COleDocIPFrameWndEx.OnCmdMsg
+- CMFCVisualManagerBitmapCache::CacheY
+- SetParentToolbar
+- CMFCRibbonCmdUI::Enable
+- CFullScreenImpl::~CFullScreenImpl
+- CFullScreenImpl.IsFullScreen
+- CMFCStatusBarPaneInfo.hImage
+- COleCntrFrameWndEx.OnMoveMiniFrame
+- CVSListBoxBase.OnAfterMoveItemDown
+- IsQATPopup
+- nStyle
+- CMFCToolBarEditCtrl::CMFCToolBarEditCtrl
+- afxcontrolrenderer/CMFCControlRenderer::SmoothResize
+- CMultiDocTemplateEx
+- CMFCTasksPaneToolBar
+- SetNewUserToolBarRTC
+- CMFCToolBarSystemMenuButton::CreateFromMenu
+- CMFCDropDownListBox.GetCurSel
+- CMFCToolBarSystemMenuButton.CMFCToolBarSystemMenuButton
+- COleCntrFrameWndEx.IsPointNearDockSite
+- COleDocIPFrameWndEx
+- CMFCRibbonGalleryIcon.IsFirstInRow
+- WinHelp
+- CMFCControlRendererInfo::m_uiBmpResID
+- CMFCToolBarSpinEditBoxButton.GetRange
+- CMFCStatusBarPaneInfo.rect
+- CMFCShadowRenderer::OnSysColorChange
+- m_rectCorners
+- UpdateTabs
+- GetCommandIndex
+- CMFCRibbonGalleryIcon::CMFCRibbonGalleryIcon
+- CMFCRibbonCommandsListBox::AddCommand
+- GetWindowRect
+- Enable
+- SetCurSel
+- CMenuImages
+- CMFCOutlookBarPaneButton.SetImage
+- CMFCRibbonPanelMenu.IsAlwaysClose
+- CMFCToolBarButtonsListButton.DrawItem
+- CMFCRibbonPanelMenu.DefaultMouseClickOnClose
+- CMFCDropDownListBox::OnGetItemSize
+- CMFCRibbonTab
+- CTagManager.ReadRect
+- COleCntrFrameWndEx.GetPane
+- CMFCRibbonPanelMenuBar.HitTest
+- CMFCRibbonPanelMenu::SetPreferedSize
+- Draw
+- CSmartDockingGroupGuidesManager.Show
+- CMFCToolBarSystemMenuButton.OnDraw
+- CMFCToolBarSystemMenuButton
+- COleDocIPFrameWndEx.EnablePaneMenu
+- CMFCControlRenderer::GetThisClass
+- CMFCRibbonPanelMenu.SetPreferedSize
+- GetItemText
+- ShowPane
+- CMFCToolBarsCommandsPropertyPage.SetAllCategory
+- COleDocIPFrameWndEx.InsertPane
+- COleDocIPFrameWndEx::OnDrawMenuImage
+- LoadFromResource
+- CMFCRibbonPanelMenu::GetCategory
+- CMFCCaptionMenuButton
+- CMFCCustomizeMenuButton.GetParentToolbar
+- CMFCShadowRenderer.Draw
+- CVSListBoxBase.RemoveItem
+- CMFCRibbonPanelMenuBar::IsMenuMode
+- CopyFrom
+- CMFCToolBarsListCheckBox::EnableCheck
+- CMFCToolBarButtonsListButton::GetSelectedButton
+- FindChunk
+- CVSListBoxBase.SelectItem
+- CVSListBoxBase.OnKey
+- CMFCRibbonDefaultPanelButton::GetToolTipText
+- CSmartDockingStandaloneGuide::Show
+- OnChangeHot
+- CMFCToolBarsListPropertyPage.CMFCToolBarsListPropertyPage
+- CFullScreenImpl::ShowFullScreen
+- CTagManager::SetBuffer
+- AddButton
+- SelectButton
+- CTagManager.GetBuffer
+- GetCustomizeText
+- CMFCTasksPaneToolBar::IsButtonExtraSizeAvailable
+- CMenuHash
+- COleDocIPFrameWndEx::OnMoveMiniFrame
+- CVSListBoxBase.AddItem
+- CMenuImages::SetColor
+- COleDocIPFrameWndEx.RemovePaneFromDockManager
+- CMFCCaptionMenuButton.ShowMenu
+- CMFCDropDownListBox::GetCurSel
+- CMFCTasksPaneToolBar.AllowShowOnPaneMenu
+- RemoveButtons
+- CMFCToolBarMenuButtonsButton::CMFCToolBarMenuButtonsButton
+- CMFCStatusBarPaneInfo.clrBackground
+- afxwin/CDocumentAdapter::m_pParentDoc
+- CSmartDockingHighlighterWnd.Create
+- CMFCStatusBarPaneInfo.clrProgressText
+- CMFCRibbonGalleryIcon.GetIndex
+- COleCntrFrameWndEx::DockPane
+- CVSToolsListBox.OnSelectionChanged
+- COleDocIPFrameWndEx.AdjustDockingLayout
+- ~CFullScreenImpl
+- COleDocIPFrameWndEx::EnableAutoHidePanes
+- AdjustLocations
+- COleDocIPFrameWndEx.OnCloseMiniFrame
+- CMenuImages::Size
+- OnChangeHighlighted
+- OnLButtonDown
+- EnableBrowseButton
+- CMFCToolBarDateTimeCtrlImpl
+- AddItem
+- OnDropEx
+- CMFCCustomizeButton::SetMenuRightAlign
+- IsLastInColumn
+- OnGetItemSize
+- SetActiveTab
+- IsCached
+- COleCntrFrameWndEx::AdjustClientArea
+- ShowGuide
+- OnShowCustomizePane
+- CMFCRibbonPanelMenuBar.GetCategory
+- GetFrameList
+- CMFCToolBarButtonsListButton.EnableDragFromList
+- AdjustPos
+- CCommandManager::GetCmdImage
+- CMFCToolBarButtonsListButton::AddButton
+- CMFCCustomizeButton.IsEditable
+- IsEditFocused
+- CMFCToolBarButtonsListButton::GetScrollBarCtrl
+- CMFCStatusBarPaneInfo.clrProgressBar
+- afxwin/CDocumentAdapter::RemoveChunk
+- CSmartDockingManager.SetOuterRect
+- CFullScreenImpl::RestoreState
+- CMFCToolBarSystemMenuButton::OnDblClk
+- CMFCControlRendererInfo::GetResourceID
+- CMFCTasksPaneFrameWnd::SetCaptionButtons
+- CMDIClientAreaWnd.GetMDITabs
+- CMFCTabInfo
+- CVSListBoxBase::GetItemText
+- ParseColorHEX
+- CMFCRibbonGalleryIcon::IsLast
+- InsertPane
+- CMFCToolBarMenuButtonsButton::OnCalculateSize
+- CMFCDropDownListBox.OnChangeHot
+- CreateObject
+- CMFCTasksPaneToolBar.UpdateButtons
+- CMFCStatusBarPaneInfo.clrText
+- COleDocIPFrameWndEx::GetTearOffBars
+- CMFCCustomizeMenuButton::IsCommandExist
+- CanBeDropped
+- COleDocIPFrameWndEx.OnShowPopupMenu
+- CSmartDockingHighlighterWnd.ShowTabbedAt
+- operator =
+- ParseFont
+- CMFCToolBarsToolsPropertyPage::OnOK
+- CMFCRibbonPanelMenuBar::IsCategoryPopup
+- SetMinWidth
+- CMFCRibbonPanelMenuBar::IsMainPanel
+- CMFCTabInfo.SetRect
+- CSmartDockingStandaloneGuide::AdjustPos
+- COleDocIPFrameWndEx::EnablePaneMenu
+- CMFCCustomizeButton::OnCancelMode
+- CMFCShadowRenderer::DrawFrame
+- CMenuImages.CleanUp
+- CMFCControlRendererInfo.m_bPreMultiplyCheck
+- CMFCDropDownListBox::ResetContent
+- CVSListBoxBase.OnGetImage
+- CTagManager.ReadSize
+- GetImageSize
+- CPaneContainerGC::AddPaneContainer
+- EnableTabsArea
+- CMFCRibbonPanelMenuBar::GetPanel
+- CMFCCaptionMenuButton.OnDraw
+- CMFCStatusBarPaneInfo::nID
+- CMFCColorPropertySheet.OnInitDialog
+- CMenuHash.IsActive
+- CSmartDockingHighlighterWnd.ShowAt
+- GetMenuBar
+- CSmartDockingStandaloneGuide::Create
+- CSmartDockingStandaloneGuide::IsPtIn
+- CMFCColorPropertySheet.CMFCColorPropertySheet
+- CTagManager.LoadFromResource
+- CTagManager::ReadControlRenderer
+- CCommandManager::LoadState
+- CMenuHash::LoadMenuBar
+- CMFCToolBarDropTarget.OnDragOver
+- OnDrawOnList
+- CVSListBoxBase.GetSelItem
+- afxwin/CDocumentAdapter::CDocumentAdapter
+- CVSListBoxBase::OnSelectionChanged
+- CMFCCustomizeButton.CanBeStored
+- CMFCCustomizeMenuButton::SetSiblingsButton
+- CMFCCustomizeButton::IsEditable
+- GetElement
+- CFrameImpl
+- CMFCControlRendererInfo::m_rectCorners
+- CMFCOutlookBarPaneButton.OnDraw
+- CMFCOutlookBarToolBar.OnUserToolTip
+- CVSListBoxBase.OnBrowse
+- CMFCDropDownListBox.OnChooseItem
+- CMFCRibbonGalleryIcon::IsFirstInRow
+- CRecentPaneContainerInfo.operator=
+- CMFCCaptionButtonEx.CMFCCaptionButtonEx
+- afxmdiclientareawnd/CMDIClientAreaWnd::FindTabWndByChild
+- COleDocIPFrameWndEx::OnCmdMsg
+- CVSListBoxBase.SetItemData
+- CMFCToolBarDropTarget.OnDragLeave
+- COleDocIPFrameWndEx::AdjustDockingLayout
+- CFrameImpl.RemoveFrame
+- CMFCControlRenderer.GetThisClass
+- CVSListBoxEditCtrl::LockSize
+- ShowAt
+- GetTearOffBars
+- CMFCRibbonCommandsListBox.FillFromArray
+- CMFCStatusBarPaneInfo.bProgressText
+- CMFCToolBarsCommandsPropertyPage::OnChangeSelButton
+- CMFCDropDownListBox
+- AddFrame
+- CFrameImpl::RemoveFrame
+- CSmartDockingGroupGuide.IsPtIn
+- COleDocIPFrameWndEx.WinHelp
+- CMFCTasksPaneFrameWnd
+- ParseSize
+- SetPreferedSize
+- CMFCCustomizeButton.CopyFrom
+- CVSListBoxBase::OnAfterMoveItemDown
+- CMFCOutlookBarPaneButton.CanBeDropped
+- CMFCToolBarsToolsPropertyPage.OnOK
+- CMFCToolBarButtonsListButton::SetImages
+- IsMenuBarAvailable
+- CMFCTasksPaneFrameWnd.SetCaptionButtons
+- CauseCancelMode
+- AddPane
+- CMFCRibbonGalleryIcon.IsLastInRow
+- CSmartDockingManager.HidePlace
+- CMFCToolBarButtonsListButton.AddButton
+- COleCntrFrameWndEx.GetDockingManager
+- CSmartDockingManager::IsStarted
+- COleDocIPFrameWndEx::PreTranslateMessage
+- CSmartDockingGroupGuide.Create
+- CMFCTasksPanePropertyPage::SetACCData
+- CMenuImages.Draw
+- CDocumentAdapter
+- CFrameImpl.CFrameImpl
+- CMFCRibbonGalleryIcon
+- CMFCRibbonCaptionButton::IsMDIChildButton
+- CSmartDockingHighlighterWnd.SetDockingWnd
+- CMFCRibbonPanelMenu.GetPanel
+- CMDIClientAreaWnd::SetActiveTab
+- CTagManager
+- CTagManager::ReadToolBarImages
+- ReadColor
+- Load
+- ReadFont
+- CMFCRibbonCommandsListBox
+- SetDefaultDraw
+- CMFCVisualManagerBitmapCache::FindIndex
+- CMFCControlRenderer.Create
+- EnableDragFromList
+- CSmartDockingGroupGuide.AdjustPos
+- CMFCShowAllButton::OnClick
+- CSmartDockingManager.ShowPlaceAt
+- RemoveFrame
+- CCommandManager::SetCmdImage
+- OnDragLeave
+- CMFCStatusBarPaneInfo::cxText
+- CMFCOutlookBarPaneButton::CanBeDropped
+- COleDocIPFrameWndEx.OnTearOffMenu
+- EnableMenuItemImage
+- CMenuHash.RemoveMenu
+- CMFCCaptionMenuButton::CMFCCaptionMenuButton
+- CVSToolsListBox.OnBeforeRemoveItem
+- OnShowPanes
+- CleanUp
+- CMFCRibbonCommandsListBox::GetCommand
+- CSmartDockingStandaloneGuideWnd::Create
+- CCommandManager.ClearUserCmdImages
+- OnDrawMenuLogo
+- CRecentPaneContainerInfo::StoreDockInfo
+- CSmartDockingGroupGuidesWnd.OnEraseBkgnd
+- CFullScreenImpl::GetFullScreenRect
+- CMFCRibbonPanelMenuBar::CloseDelayedSubMenu
+- CRibbonCategoryScroll.IsLeftScroll
+- CMFCRibbonCmdUI.Enable
+- CMFCToolBarSystemMenuButton::Serialize
+- CFrameImpl::CFrameImpl
+- CMemDC
+- ReadPoint
+- CRecentPaneContainerInfo::Init
+- CSmartDockingManager.CauseCancelMode
+- CMFCControlRenderer
+- CVSListBoxBase::OnAfterMoveItemUp
+- IsValid
+- GetCategory
+- CMFCToolBarMenuButtonsButton::CanBeStored
+- SetDockingManager
+- CMFCProperySheetListBox
+- CMFCToolBarsListPropertyPage::CMFCToolBarsListPropertyPage
+- CCommandManager.ClearCmdImage
+- CMFCCustomizeButton.IsDefaultDraw
+- CTagManager.~CTagManager
+- OnMoveMiniFrame
+- COleDocIPFrameWndEx.EnableAutoHidePanes
+- CMemDC.IsMemDC
+- ParseToolTipInfo
+- CMFCReBarState::LoadState
+- CMFCControlRendererInfo.m_strBmpResID
+- CMFCControlRenderer.IsValid
+- CMFCRibbonPanelMenu::DefaultMouseClickOnClose
+- GetMDITabs
+- m_pParentDoc
+- InitializeSearchContent
+- CMFCRibbonCommandsListBox::FillAll
+- CTagManager.ParseControlRenderer
+- CMFCDropDownListBox.CMFCDropDownListBox
+- CMFCCustomizeMenuButton::SetItemIndex
+- CTagManager::ParseToolTipInfo
+- CMFCToolBarSystemMenuButton.OnDblClk
+- CSmartDockingManager.Destroy
+- CPaneContainerGC.AddPaneContainer
+- CMFCShowAllButton::OnDraw
+- GetBuffer
+- CMFCToolBarsMenuPropertyPage.SelectMenu
+- CFullScreenImpl.CFullScreenImpl
+- CVSToolsListBox.OnAfterMoveItemDown
+- m_rectSides
+- CFullScreenImpl.EnableTabsArea
+- CTagManager.ParseSize
+- CMFCCustomizeButton::SetPipeStyle
+- COleDocIPFrameWndEx.SetDockState
+- CMFCToolBarSystemMenuButton::CanBeStored
+- CMFCRibbonPanelMenu.CMFCRibbonPanelMenu
+- CMFCTasksPanePropertyPage
+- CMFCStatusBarPaneInfo::hImage
+- CMFCToolBarSystemMenuButton.Serialize
+- COleCntrFrameWndEx.AdjustDockingLayout
+- CVSListBoxEditCtrl
+- SetOuterRect
+- CTagManager.ReadControlRendererInfo
+- Hide
+- IsCustomizeMenu
+- CMFCToolBarSystemMenuButton::CreateMenu
+- CMFCControlRendererInfo.CommonInit
+- CMFCRibbonPanelMenuBar::CMFCRibbonPanelMenuBar
+- CMFCToolBarsCommandsPropertyPage::SetAllCategory
+- ReadNextChunkValue
+- CVSListBoxBase::GetButtonsCount
+- CMFCToolBarsCommandsPropertyPage.SetUserCategory
+- CMFCRibbonKeyTip.Show
+- IsVisible
+- CVSListBoxBase::GetButtonNum
+- CMFCCaptionMenuButton.CMFCCaptionMenuButton
+- CSmartDockingGroupGuidesManager::Show
+- SetMenuMode
+- ReadSize
+- ReadToolBarImages
+- CMFCShowAllButton::OpenPopupMenu
+- COleCntrFrameWndEx::AddPane
+- CSmartDockingGroupGuidesManager.Create
+- CMFCRibbonPanelMenuBar::HitTestEx
+- CMFCControlRenderer.GetImageCount
+- CFrameImpl.HasRegion
+- CMFCStatusBarPaneInfo::nProgressCurr
+- CSmartDockingGroupGuidesManager::GetGuide
+- CMFCCustomizeButton::IsDefaultDraw
+- CMFCRibbonPanelMenuBar.CMFCRibbonPanelMenuBar
+- CMFCToolBarsMenuPropertyPage
+- ~CMFCControlRendererInfo
+- IsPipeStyle
+- CMFCPropertySheetTabCtrl
+- CMFCShadowRenderer.DrawFrame
+- HaveHotBorder
+- CSmartDockingGroupGuidesManager::AdjustPos
+- CMFCCustomizeMenuButton.IsCommandExist
+- CMFCRibbonPanelMenu::GetParentRibbonMenuBar
+- CMFCControlRendererInfo.m_clrTransparent
+- FindNextRegisteredWithTaskbarMDIChild
+- CMFCToolBarsKeyboardPropertyPage::CMFCToolBarsKeyboardPropertyPage
+- CCommandManager.IsMenuItemWithoutImage
+- SaveState
+- CreateDockingManager
+- ShowToolBar
+- CMFCToolBarSystemMenuButton.CanBeStored
+- CMFCShadowRenderer::GetRuntimeClass
+- Track
+- CMFCToolBarSpinEditBoxButton::GetRange
+- CMFCToolBarSpinEditBoxButton
+- CMFCStatusBarPaneInfo::clrProgressBarDest
+- CMFCRibbonDefaultPanelButton::GetParentPanel
+- IsButtonExtraSizeAvailable
+- LoadAcceleratorTable
+- CMFCDropDownListBox::OnChangeHot
+- rect
+- CMFCRibbonDefaultPanelButton::DrawImage
+- CMFCToolBarDropTarget::OnDragEnter
+- CMFCShowAllButton.OpenPopupMenu
+- CMFCControlRenderer::CleanUp
+- CMFCDropDownListBox::GetCount
+- CSmartDockingStandaloneGuide::Highlight
+- IsScrollUpAvailable
+- CMFCControlRenderer::~CMFCControlRenderer
+- CFrameImpl.SetNewUserToolBarRTC
+- CMFCCustomizeButton::AddInvisibleButton
+- COleCntrFrameWndEx.EnableDocking
+- CVSListBoxBase
+- LoadMenuBar
+- CMFCControlRenderer::GetParams
+- OnKillActive
+- SetSeparator
+- CSmartDockingManager
+- COleDocIPFrameWndEx::GetPane
+- DrawFrame
+- CMFCControlRenderer.CMFCControlRenderer
+- ParseToolBarImages
+- CFrameImpl.SetControlbarsMenuId
+- CPngImage.CleanUp
+- CMFCRibbonGalleryIcon.IsLastInColumn
+- CMFCToolBarMenuButtonsButton::Serialize
+- GetGripperRect
+- LoadFromStream
+- CCommandManager::EnableMenuItemImage
+- CMFCControlRendererInfo.CMFCControlRendererInfo
+- COleDocIPFrameWndEx::SetDockState
+- GetItemData
+- ReadBool
+- CMFCRibbonCommandsListBox::FillFromIDs
+- COleDocIPFrameWndEx::OnShowCustomizePane
+- COleCntrFrameWndEx::GetDockingManager
+- CSmartDockingStandaloneGuideWnd::Assign
+- SetVisible
+- CMFCRibbonPanelMenuBar::IsRibbonPanelInRegularMode
+- CCommandManager.SaveState
+- CMDIClientAreaWnd.SetActiveTab
+- CMFCOutlookBarPaneButton::OnCalculateSize
+- MeasureItem
+- Serialize
+- InvokeCommand
+- CMFCDropDownListBox::IsEditFocused
+- GetButtonNum
+- GetResourceID
+- cxText
+- CMFCToolBarsListCheckBox.EnableCheck
+- COleDocIPFrameWndEx.OnShowPanes
+- CMenuHash::RemoveMenu
+- ShowCentralGroup
+- CMFCRibbonCommandsListBox.GetCommand
+- CTagManager::~CTagManager
+- CSmartDockingGroupGuidesWnd.OnClose
+- CMFCTasksPaneToolBar.UpdateMenuButtonText
+- CVSListBoxBase.EditItem
+- COleCntrFrameWndEx::GetPane
+- CMFCRibbonRichEditCtrl.CMFCRibbonRichEditCtrl
+- CMFCRibbonDefaultPanelButton::OnLButtonDown
+- CMFCCustomizeButton.IsPipeStyle
+- ShowTabbedPlaceAt
+- CSmartDockingManager::ShowPlaceAt
+- CFrameImpl.GetFullScreenMinMaxInfo
+- CSmartDockingStandaloneGuide::Destroy
+- CMFCOutlookBarToolBar.AdjustLocations
+- CMFCRibbonKeyTip::CMFCRibbonKeyTip
+- SetDefaultMenuLook
+- CMenuHash::SaveMenuBar
+- CMFCRibbonPanelMenu.GetParentRibbonMenuBar
+- CVSListBoxBase.OnAfterAddItem
+- EnableScaleLargeImages
+- CMFCToolBarDropTarget::Register
+- CMFCRibbonCommandsListBox::FillFromArray
+- CVSListBoxBase::OnBrowse
+- GetActivePopup
+- IsVistaDC
+- CMFCToolBarSystemMenuButton.OnCancelMode
+- CCommandManager.LoadState
+- CMFCToolBarsListPropertyPage.ShowToolBar
+- FillAll
+- CMDIClientAreaWnd.CFrameClientAreaWnd
+- CMFCRibbonGalleryIcon.IsFirst
+- COleCntrFrameWndEx.OnShowPanes
+- afxwin/CDocumentAdapter::FindChunk
+- IsRibbonPanelInRegularMode
+- CMFCRibbonPanelMenuBar.OnChangeHighlighted
+- EnablePaneMenu
+- EnableMainMenu
+- CMFCRibbonPanelMenuBar::HitTest
+- Clear
+- CMFCCustomizeMenuButton::SetParentToolbar
+- IsMainPanel
+- SetCheck
+- CMFCRibbonRichEditCtrl::PreTranslateMessage
+- ReadControlRendererInfo
+- GetSelected
+- CMFCStatusBarPaneInfo::clrBackground
+- GetDroppedDown
+- GetSelectedButton
+- DoPaint
+- LoadState
+- CMFCRibbonPanelMenuBar.CloseDelayedSubMenu
+- afxwin/CDocumentAdapter::SetChunkValue
+- OnMouseMove
+- CMFCRibbonDefaultPanelButton::OnDrawOnList
+- OnSetAccData
+- afxmdiclientareawnd/CMDIClientAreaWnd::SetTaskbarTabOrder
+- ParseControlRenderer
+- GetDockingManager
+- COleDocIPFrameWndEx::OnCloseMiniFrame
+- CMFCToolBarsMenuPropertyPage.CloseContextMenu
+- IsMDIChildButton
+- CMFCTasksPaneFrameWnd.SetTaskPaneCaptionButtons
+- CSmartDockingGroupGuide::Create
+- OnGetMinMaxInfo
+- CFullScreenImpl::IsFullScreen
+- CTagManager::ParsePoint
+- IsDefaultDraw
+- EnableCheck
+- CMFCControlRenderer.Draw
+- CMFCRibbonPanelMenu::IsScrollDnAvailable
+- GetTopLevelRibbonBar
+- CTagManager::ReadColor
+- OnAfterMoveItemDown
+- RecalcLayout
+- CMFCToolBarMenuButtonsButton.CMFCToolBarMenuButtonsButton
+- CCommandManager.ClearAllCmdImages
+- COleDocIPFrameWndEx.GetMenuBar
+- CMFCToolBarsKeyboardPropertyPage::SetAllCategory
+- GetInvisibleButtons
+- CMFCToolBarNameDialog.CMFCToolBarNameDialog
+- COleCntrFrameWndEx::DockPaneLeftOf
+- SetDockingWnd
+- CMFCCaptionMenuButton::OnDraw
+- CSmartDockingManager.OnPosChange
+- CMFCToolBarsCommandsPropertyPage
+- COleCntrFrameWndEx.RemovePaneFromDockManager
+- CMFCCustomizeMenuButton.EnableCustomization
+- CMFCControlRendererInfo::operator =
+- afxwin/CDocument::CDocumentAdapter
+- CPngImage::Load
+- CalcSize
+- CMFCDropDownListBox::SetMinWidth
+- CMemDC::GetDC
+- CMFCToolBarsMenuPropertyPage::CMFCToolBarsMenuPropertyPage
+- MoveCentralGroup
+- COleDocIPFrameWndEx.DockPaneLeftOf
+- CMFCTasksPaneToolBar.AllowShowOnList
+- CMFCRibbonCommandsListBox.CMFCRibbonCommandsListBox
+- CMFCCustomizeButton.GetParentToolbar
+- CMFCToolBarSystemMenuButton.IsBorder
+- GetRect
+- CCommandManager.GetMenuUserImage
+- CMFCControlRenderer::Draw
+- CMFCRibbonPanelMenuBar::OnClickButton
+- CMFCRibbonPanelMenuBar::GetTopLevelRibbonBar
+- CMFCRibbonCmdUI.SetCheck
+- CMFCToolBarSpinEditBoxButton.CMFCToolBarSpinEditBoxButton
+- SetRadio
+- cxIcon
+- COleDocIPFrameWndEx::AddDockSite
+- CMFCColorPropertySheet.LoadAcceleratorTable
+- CSmartDockingGroupGuidesWnd::OnPaint
+- CMFCControlRenderer::OnSysColorChange
+- CTagManager.ReadToolTipInfo
+- CTagManager::IsEmpty
+- CSmartDockingStandaloneGuide
+- EditItem
+- SetControlbarsMenuId
+- GetImageCount
+- CMFCCustomizeButton::GetExtraSize
+- CMFCControlRenderer::FillInterior
+- CMFCStatusBarPaneInfo.nCurrFrame
+- IsPointNearDockSite
+- CMFCRibbonRichEditCtrl
+- COleDocIPFrameWndEx.AddPane
+- Cache
+- COleServerDocEx.Serialize
+- CMFCShowAllButton::OnCalculateSize
+- IsFirst
+- CMFCStatusBarPaneInfo.cyIcon
+- CMFCToolBarNameDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateTabs method
+- Start method
+- IsLast method
+- EnableAutoHidePanes method
+- CMFCOutlookBarScrollButton class
+- CMFCToolBarsListPropertyPage, constructor
+- SetExtraSize method
+- FindNextRegisteredWithTaskbarMDIChild
+- CMFCRibbonCommandsListBox, constructor
+- EnableMenuItemImage method
+- OnInitDialog method
+- RecalcLayout method
+- OnGetItemSize method
+- ParseToolBarImages method
+- CreateFromMenu method
+- CMFCOutlookBarToolBar, constructor
+- CSmartDockingGroupGuidesManager class
+- OnSetCursor method
+- CMFCToolBarDropSource class
+- CTagManager class
+- OnChangeParentWnd method
+- UpdateButtons method
+- CFullScreenImpl class, destructor
+- FillInterior method
+- AddPaneContainer method
+- CDocumentAdapter, constructor
+- EnableBrowseButton method
+- CMFCControlRendererInfo class, constructor
+- FillFromCategory method
+- CRecentPaneContainerInfo class
+- ReadRect method
+- ClearUserCmdImages method
+- CMFCToolBarsOptionsPropertyPage, constructor
+- CMFCMousePropertyPage class
+- SetActive method
+- RemoveMenu method
+- OnOK method
+- IsMenuBarAvailable method
+- CMFCRibbonCommandsListBox class
+- InsertPane method
+- SetPressed method
+- Destroy method
+- SetACCData method
+- GetOwner method
+- SetFullScreenID method
+- CFrameImpl class, constructor
+- SetDockingWnd method
+- CauseCancelMode method
+- OnDropEx method
+- CMFCPropertySheetCategoryInfo class
+- GetExtraSize method
+- CMFCRibbonKeyTip class
+- ClearChunkList
+- CMFCToolBarsListPropertyPage class
+- CVSToolsListBox class
+- SetMaxHeight method
+- OnDrawMenuLogo method
+- CacheY method
+- ~CDocumentAdapter, destructor
+- GetImageSize method
+- EnableTabsArea method
+- CMFCToolBarMenuButtonsButton class
+- CFullScreenImpl class
+- COleCntrFrameWndEx, constructor
+- EditItem method
+- cxIcon
+- OnMouseMove method
+- ~CMFCControlRenderer destructor
+- GetButtonID method
+- CPaneContainerGC class
+- CMFCControlRendererInfo class, destructor
+- nFrameCount
+- m_clrTransparent
+- SetAllCategory method
+- CMFCToolBarsKeyboardPropertyPage class
+- GetScrollBarCtrl method
+- InitializeSearchContent
+- ParseColor method
+- ShowFullScreen method
+- IsFirstInRow method
+- GetText method
+- EnableCheck method
+- SetNewUserToolBarRTC method
+- OnDragEnter method
+- OnChooseItem method
+- OnClosePopupMenu method
+- CMFCCaptionButtonEx class
+- IsMenuItemWithoutImage method
+- CFullScreenImpl class, constructor
+- CMFCTabButton class
+- CMFCToolBarsCommandsPropertyPage class
+- CMFCToolBarsOptionsPropertyPage class
+- CMFCRibbonGalleryIcon, constructor
+- OnKillActive method
+- Register method
+- CanBeDropped method
+- CopyFrom method
+- CSmartDockingManager class
+- SelectButton method
+- CMFCToolBarMenuButtonsButton, constructor
+- BeginReadChunks
+- CSmartDockingGroupGuidesWnd class
+- EnableMainMenu method
+- Create method
+- m_pParentDoc data member
+- IsCategoryPopup method
+- OnDblClk method
+- ReadToolTipInfo method
+- OnCustomizeMode method
+- IsLeftScroll method
+- OnChangeVisualManager method
+- OnClick method
+- EnableScaleLargeImages method
+- SetParentToolbar method
+- CMFCRibbonPanelMenu class
+- SetDockState method
+- Cache method
+- SetRadio method
+- CMFCStatusBarPaneInfo class
+- IsDefaultDraw method
+- CMFCRibbonCmdUI class
+- CMFCToolBarEditCtrl class
+- OnSetPreviewMode method
+- nID
+- EnableCustomizeMenu method
+- IsEmptyMenuAllowed method
+- m_rectCorners
+- ExcludeTag method
+- CMFCCustomizeMenuButton, constructor
+- AdjustDockingLayout method
+- GetToolTipText method
+- ReadBool method
+- GetButtonNum method
+- SetUserImages method
+- GetContainer
+- COleCntrFrameWndEx class
+- Assign method
+- CMFCCaptionButtonEx, constructor
+- LoadFromResource method
+- GetFullScreenRect method
+- OnPaint method
+- GetTopLevelRibbonBar method
+- CMFCRibbonPanelMenu, constructor
+- AddItem method
+- CMFCToolBarSystemMenuButton, constructor
+- CMFCDropDownListBox, constructor
+- IsQATPopup method
+- ParseControlRendererInfo method
+- nProgressTotal
+- SetMenuMode method
+- GetHighlightedGuideNo method
+- m_rectImage
+- lpszToolTip
+- RemoveChunk
+- GetElement method
+- clrProgressBarDest
+- operator= method
+- ParseString method
+- GetItemData method
+- CMFCProperySheetListBox class
+- ShowToolBar method
+- SetCurSel method
+- CMFCRibbonKeyboardCustomizeDialog, constructor
+- EnableCustomization method
+- GetSysMenu method
+- ShowPlaceAt method
+- AdjustPos method
+- Show method
+- GetDC method
+- ShowMenu method
+- GetItemText method
+- GetCommandIndex method
+- IsGrayDisabledButtons method
+- OnCmdMsg method
+- CMemDC class, constructor
+- LoadFrame method
+- OnPosChange method
+- COleServerDocEx class
+- IsFirstInColumn method
+- ReadControlRendererInfo method
+- IsAlwaysClose method
+- Mirror method
+- ~CFullScreenImpl destructor
+- OnShowPopupMenu method
+- GetBuffer method
+- SetRect method
+- OnSendCommand method
+- GetCommand method
+- CMFCToolBarSpinEditBoxButton, constructor
+- OnBrowse method
+- SetTaskPaneCaptionButtons method
+- SetSeparator method
+- CMFCToolBarsCommandsListBox class
+- SetImages method
+- GetFullScreenMinMaxInfo method
+- OnCloseDockingPane method
+- CMFCRibbonPanelMenuBar, constructor
+- FillAll method
+- IsRibbonMiniToolBar method
+- clrProgressBar
+- OnAfterRenameItem method
+- CMFCPropertySheetCategoryInfo, constructor
+- SmoothResize
+- ResetContent method
+- CPngImage class
+- OnCalculateSize method
+- OnDragOver method
+- LockSize method
+- SetTaskbarTabOrder
+- IsEditable method
+- GetResId method
+- SetItemData method
+- GetActivePopup method
+- GetCategory method
+- lpszText
+- SetControlbarsMenuId method
+- Track method
+- IsEditFocused method
+- CMFCRibbonRichEditCtrl class
+- CMFCToolBarsMenuPropertyPage class
+- bProgressText
+- OnDrawMenuImage method
+- IsFirst method
+- CMFCToolBarsListCheckBox class
+- RestoreRecentlyUsedState method
+- GetContainerFrameWindow method
+- Size method
+- MeasureItem method
+- OnToolHitTest method
+- IsVistaDC method
+- SetPipeStyle method
+- OnDraw method
+- OnAfterMoveItemUp method
+- OnEndEditLabel method
+- ShowTabbedAt method
+- CloseDelayedSubMenu method
+- CalcBorderSize method
+- OnUserToolTip method
+- LoadFromStream
+- rect
+- GetButtonsCount method
+- AdjustLocations method
+- GetTearOffBars method
+- GetDefaultResId method
+- SetVisible method
+- Clear method
+- CMFCControlRenderer class
+- CMFCToolBarSpinEditBoxButton class
+- DrawItem method
+- IsMDIChildButton method
+- clrText
+- SetGrayDisabledButtons method
+- RestoreState method
+- IsMainPanel method
+- EnableDragFromList method
+- m_strBmpResID
+- IsPipeStyle method
+- m_rectSides
+- SaveMenuBar method
+- GiveFeedback method
+- m_bPreMultiplyCheck
+- GetParentRibbonMenuBar method
+- IsButtonExtraSizeAvailable method
+- AddDockSite method
+- CMFCRibbonQuickAccessToolBar class
+- CSmartDockingStandaloneGuide class
+- IsMirror method
+- SetDefaultDraw method
+- CMFCTasksPanePropertyPage class
+- RestoreDelayedSubMenu method
+- CloseContextMenu method
+- cxText
+- OnClickButton method
+- AdjustClientArea method
+- GetMDITabs method
+- CPreviewViewEx class
+- OnGetImage method
+- IsPointNearDockSite method
+- ShowTabbedPlaceAt method
+- GetResourceID method
+- SetMenuRightAlign method
+- CMFCToolBarNameDialog class
+- CVSListBoxEditCtrl class
+- nCurrFrame
+- EnableButton method
+- CTagManager class, destructor
+- FindChunk
+- operator =
+- OnAfterCreatePopupMenu method
+- SetupToolbarMenu method
+- CMFCCustomizeMenuButton class
+- CDocumentAdapter class
+- CMFCControlRendererInfo class
+- AddString method
+- CMFCColorPropertySheet, constructor
+- CMFCControlRenderer class, constructor
+- CMemDC class, destructor
+- CMenuImages class
+- CleanUp method
+- CMFCToolBarSystemMenuButton::CreateObject method
+- AddPane method
+- IsLastInRow method
+- DoesMDITabExist method
+- CSmartDockingGroupGuide class
+- IsDefaultMenuLook method
+- OnChangeSelButton method
+- GetRuntimeClass method
+- DockPane method
+- GetParams method
+- SetUserCategory method
+- CMFCTasksPaneToolBar class
+- m_uiBmpResID
+- AddFrame method
+- OnCloseMiniFrame method
+- IsLastInColumn method
+- SetActiveTab method
+- ~CMemDC destructor
+- SetSiblingsButton method
+- CMFCOutlookBarPaneAdapter class
+- GetGripperRect method
+- OnSysColorChange method
+- IsScrollUpAvailable method
+- IsStarted method
+- SetResourceID method
+- GetSpinControl method
+- Enable method
+- ParseToolTipInfo method
+- CreateDockingManager method
+- CMFCOutlookBarPaneList class
+- OnShowCustomizePane method
+- GetParentPanel method
+- SetInfo method
+- CMFCToolBarNameDialog, constructor
+- GetRange method
+- CFrameClientAreaWnd class, constructor
+- IsCustomizeMenu method
+- IsCommandExist method
+- CMemDC class
+- ShowCentralGroup method
+- SetChunkValue
+- CMFCRibbonKeyTip, constructor
+- CMFCRibbonTab class
+- GetSelItem method
+- CCommandManager class
+- IsMenuMode method
+- ParseColorHEX method
+- GetCmdImage method
+- InvokeCommand method
+- CMFCToolBarsMenuPropertyPage, constructor
+- ParseFont method
+- IsCheckEnabled method
+- OnCancelMode method
+- EnableDocking method
+- CMFCCaptionMenuButton, constructor
+- SelectMenu method
+- ~CMFCControlRendererInfo destructor
+- GetRibbonBar method
+- CommonInit method
+- IsCached method
+- GetSelectedButton method
+- ReadPoint method
+- OnUpdateCmdUI method
+- AddCommand method
+- CMFCCustomizeButton, constructor
+- Stop method
+- GetSysMenuIcon method
+- GetCurSel method
+- CMFCToolBarEditCtrl, constructor
+- IsVisible method
+- Init method
+- DrawFrame method
+- CMFCReBarState class
+- nProgressCurr
+- CMFCRibbonDefaultPanelButton class
+- SetText method
+- CMFCTasksPaneFrameWnd class
+- CMFCControlRenderer class, destructor
+- ParseControlRender method
+- GetMenuUserImage method
+- ReadSize method
+- RemovePaneFromDockManager method
+- CMDIClientAreaWnd class
+- ~CTagManager destructor
+- OnAfterMoveItemDown method
+- CVSListBoxBase class
+- OnClose method
+- SetDockingManager method
+- SetPreferedSize method
+- CMFCToolBarDropTarget class
+- CalcSize method
+- IsRibbonPanelInRegularMode method
+- IsMenuRightAlign method
+- IsMenuKey method
+- CMFCDropDownListBox class
+- CTagManager class, constructor
+- OnBeginDrag method
+- GetToolbarButtonToolTipText method
+- CMFCTabInfo class
+- HitTest method
+- SetOuterRect method
+- OpenPopupMenu method
+- AllowShowOnPaneMenu method
+- ReadColor method
+- ParseRect method
+- DockPaneLeftOf method
+- RemoveFrame method
+- CMFCPropertySheetTabCtrl class
+- CreatePopupMenu method
+- Serialize method
+- OnMoveMiniFrame method
+- PreTranslateMessage method
+- IsSelected method
+- GetDockingManager method
+- MoveCentralGroup method
+- EnableUserDefinedToolbars method
+- CMFCColorPropertySheet class
+- OnShowPanes method
+- ReadInt method
+- AllowShowOnList method
+- GetThisClass method
+- AddInvisibleButton method
+- IsMemDC method
+- LoadMenuBar method
+- IsBorder method
+- UpdateMenuButtonText method
+- Draw method
+- GetPanel method
+- CMFCToolBarSystemMenuButton class
+- clrBackground
+- CMFCOutlookBarPaneButton class
+- HitTestEx method
+- GetCustomizeText method
+- CMFCOutlookBarToolBar class
+- nStyle
+- OnSetAccData method
+- CMFCCustomizeButton class
+- cyIcon
+- SetMinWidth method
+- GetRect method
+- Get method
+- OnGetMinMaxInfo method
+- OnAfterAddItem method
+- SetCheck method
+- DrawImage method
+- CMFCToolBarsToolsPropertyPage class
+- COleDocIPFrameWndEx class
+- CMultiDocTemplateEx class
+- HaveHotBorder method
+- SetItemIndex method
+- AddButton method
+- OnChangeHot method
+- GetCount method
+- Highlight method
+- ClearCmdImage method
+- SetCaptionButtons method
+- GetIndex method
+- clrProgressText
+- OnKey method
+- CMFCToolBarButtonsListButton class
+- DefaultMouseClickOnClose method
+- RemoveButtons method
+- CreateObject method
+- ReadNextChunkValue
+- SetCmdImage method
+- CMenuHash class
+- LoadFromBuffer method
+- SetStandardButtons method
+- CMFCControlBarImpl, constructor
+- GetInvisibleButtons method
+- IsEmpty method
+- IsFullScreen method
+- DoPaint method
+- SaveState method
+- OnLButtonDown method
+- OnDragLeave method
+- FillFromIDs method
+- RemoveItem method
+- GetDroppedDown method
+- OnDrawOnList method
+- ShowAt method
+- GetThumbnail
+- HidePlace method
+- FindTabWndByChild
+- EnablePaneMenu method
+- FindByOrigin method
+- OnBeforeRemoveItem method
+- IsBrowseButton method
+- IsPtIn method
+- IsActive method
+- GetMenuBar method
+- CRibbonCategoryScroll class
+- PopTooltip method
+- CMFCVisualManagerBitmapCache class
+- CreateMenu method
+- CMFCToolBarDateTimeCtrlImpl class
+- hImage
+- GetFrameList method
+- StoreDockInfo method
+- LoadState method
+- m_rectInter
+- ClearAllCmdImages method
+- IsScaled
+- PaneFromPoint method
+- FindIndex method
+- QueryContinueDrag method
+- CMFCRibbonKeyboardCustomizeDialog class
+- FillFromArray method
+- CFrameImpl class
+- IsScrollDnAvailable method
+- SetImage method
+- CMFCStatusBarPaneInfo class, constructor
+- CMFCCaptionMenuButton class
+- GetPane method
+- SetColor method
+- ReadToolBarImages method
+- CMFCControlBarImpl class
+- ParsePoint method
+- LoadAcceleratorTable method
+- Hide method
+- SelectItem method
+- CSmartDockingHighlighterWnd class
+- SetRange method
+- CMFCShadowRenderer class
+- GetSelected method
+- ReadFont method
+- CMFCShowAllButton class
+- IsValid method
+- CDialogImpl class
+- SetItemText method
+- ShowGuide method
+- ReadControlRenderer method
+- GetWindowRect method
+- SetBuffer method
+- OnTearOffMenu method
+- HasRegion method
+- CMFCRibbonGalleryIcon class
+- CMFCToolBarsKeyboardPropertyPage, constructor
+- Load method
+- OnEraseBkgnd method
+- GetParentToolbar method
+- SetDefaultMenuLook method
+- GetImageCount method
+- EnableMDITabs method
+- OnChangeHighlighted method
+- WinHelp method
+- GetGuide method
+- CanBeStored method
+- CMFCRibbonDefaultPanelButton, constructor
+- CMFCRibbonCaptionButton class
+- OnDrawItem method
+- ShowPane method
+- CMFCRibbonRichEditCtrl, constructor
+- LoadFromFile method
+- ParseSize method
+- OnMenuButtonToolHitTest method
+- CSmartDockingStandaloneGuideWnd class
+- GetCustomizeCmdId method
+- CMFCRibbonPanelMenuBar class
+- OnSelectionChanged method
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
 caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes internas
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 59f2249b55a23ca793b2061c73d7324b3763a379
+ms.lasthandoff: 02/25/2017
 
-As classes a seguir são usadas internamente em MFC.  Para abrangência, esta seção descreve essas classes internas, mas elas não se destinam a serem usadas diretamente no seu código.  
+---
+# <a name="internal-classes"></a>Classes internas
+As classes a seguir são usadas internamente no MFC. Para ser completo, esta seção descreve essas classes internas, mas eles não se destina a ser usada diretamente no seu código.  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 |Classe|Descrição|  
-|------------|---------------|  
-|`CCommandManager Class`|A classe de `CCommandManager` gerencia comandos e sua associação com imagens.|  
-|`CDialogImpl Class (MFC)`|Fornece detalhes de implementação para classes \- base na caixa de diálogo, como `CDialogEx`.|  
-|`CDocumentAdapter Class`|A interface de IDocument das ferramentas necessárias para Pesquisar e manipuladores organiza.|  
-|`CFrameImpl Class`|A personalização da barra de ferramentas dos identificadores da classe de `CFrameImpl` para a próxima janela do quadro classifica: [Classe de CFrameWndEx](../../mfc/reference/cframewndex-class.md), [Classe CMDIFrameWndEx](../Topic/CMDIFrameWndEx%20Class.md), e [Classe COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|  
-|`CFullScreenImpl Class`|Comuns da funcionalidade de tela cheia das ferramentas para aplicativos de SDI e de documentos.|  
-|`CMDIClientAreaWnd Class`|A classe é uma classe de `CMDIClientAreaWnd` auxiliar que simplifica a implementação de guias MDI e grupos com guia documentos.|  
-|`CMemDC Class`|Uma classe de auxiliar para um contexto do dispositivo de memória.  O oferece suporte o contexto do dispositivo de memória que desenha offscreen.|  
-|`CMenuHash Class`|Lê o estado de objetos de `CMFCToolBar` de um arquivo morto ou escrever o estado como um arquivo morto.|  
-|`CMenuImages Class`|Fornece a funcionalidade para as imagens predefinidas exibição como os próximos botões, maximizar os botões, os botões de opção, e as setas.|  
-|`CMFCCaptionButtonEx Class`|Mantém a área de cliente não dos botões da legenda do sistema.|  
-|`CMFCCaptionMenuButton Class`|Representa um botão no menu que está localizado na área da legenda de um painel de tarefas ou de uma barra de ferramentas.|  
-|`CMFCColorPropertySheet Class`|Usado por [Classe de CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) para fornecer uma caixa de diálogo tabulada.|  
-|`CMFCControlBarImpl Class`|Fornece detalhes de implementação para classes barra e baseadas controle, como `CMFCReBar` e `CMFCToolBar`.|  
-|`CMFCControlRenderer Class`|Uma classe de auxiliar que trata a renderização de imagem.|  
-|`CMFCControlRendererInfo Class`|Uma classe de auxiliar para transmitir parâmetros à classe de `CMFCControlRenderer` .|  
-|`CMFCCustomizeButton Class`|Oferece suporte a um comando de menu ou botão da barra de ferramentas que inicie uma caixa de diálogo personalizadas.|  
+|-----------|-----------------|  
+|`CCommandManager Class`|O `CCommandManager` classe gerencia comandos e sua associação com imagens.|  
+|`CDialogImpl Class (MFC)`|Fornece detalhes de implementação para classes com base em caixa de diálogo, como `CDialogEx`.|  
+|`CDocumentAdapter Class`|Interface de IDocument implementa necessária para pesquisar e organizar os manipuladores.|  
+|`CFrameImpl Class`|O `CFrameImpl` classe lida com a personalização da barra de ferramentas para as seguintes classes de janela de quadro: [classe CWinAppEx é](../../mfc/reference/cframewndex-class.md), [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), e [COleIPFrameWndEx classe](../../mfc/reference/coleipframewndex-class.md).|  
+|`CFullScreenImpl Class`|Implementar a funcionalidade de tela cheia comuns a aplicativos SDI e MDI.|  
+|`CMDIClientAreaWnd Class`|O `CMDIClientAreaWnd` classe é uma classe auxiliar que simplifica a implementação de guias MDI e grupos MDI com guias.|  
+|`CMemDC Class`|Uma classe auxiliar para um contexto de dispositivo de memória. O contexto de dispositivo de memória oferece suporte a desenho fora da tela.|  
+|`CMenuHash Class`|Lê o estado das `CMFCToolBar` objetos de um arquivo ou grava o estado para um arquivo morto.|  
+|`CMenuImages Class`|Fornece a funcionalidade para exibir imagens predefinidas, como botões para fechar, maximizar botões, botões de opção e setas.|  
+|`CMFCCaptionButtonEx Class`|Mantém a área não cliente de botões de legenda do sistema.|  
+|`CMFCCaptionMenuButton Class`|Representa um botão de menu que está localizado na área de legenda de um painel de tarefas ou barra de ferramentas.|  
+|`CMFCColorPropertySheet Class`|Usado por [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md) para fornecer uma caixa de diálogo com guias.|  
+|`CMFCControlBarImpl Class`|Fornece detalhes de implementação para controlar as classes com base em barras, como `CMFCReBar` e `CMFCToolBar`.|  
+|`CMFCControlRenderer Class`|Uma classe auxiliar que manipula o processamento de imagem.|  
+|`CMFCControlRendererInfo Class`|Uma classe auxiliar para passar parâmetros para `CMFCControlRenderer` classe.|  
+|`CMFCCustomizeButton Class`|Oferece suporte a um comando de menu ou um botão que inicia uma caixa de diálogo de personalização.|  
 |`CMFCCustomizeMenuButton Class`|Representa um único botão em um menu de personalização.|  
-|`CMFCDropDownListBox Class`|Fornece a funcionalidade da caixa de listagem suspensa para as caixas de combinação de fita.|  
-|`CMFCMousePropertyPage Class`|Uma página de propriedades que permite que o usuário para personalizar o comportamento do mouse em.|  
+|`CMFCDropDownListBox Class`|Fornece a funcionalidade de caixa de lista suspensa para caixas de combinação da faixa de opções.|  
+|`CMFCMousePropertyPage Class`|Uma página de propriedades que permite que o usuário personalize o comportamento do mouse.|  
 |`CMFCOutlookBarPaneAdapter Class`||  
-|`CMFCOutlookBarPaneButton Class`|Implementa um botão que a estrutura adiciona a `CMFCOutlookBarPane` um objeto.|  
-|`CMFCOutlookBarPaneList Class`|Estende a classe de `CMFCOutlookBarPane` para fornecer o Outlook estilo visual.|  
-|`CMFCOutlookBarScrollButton Class`|Fornece a funcionalidade de rolagem à classe de `CMFCOutlookBarTabCtrl` .|  
-|`CMFCOutlookBarToolBar Class`|Implementa uma barra de ferramentas que tenha o estilo visual do Outlook 2003.|  
+|`CMFCOutlookBarPaneButton Class`|Implementa um botão que adiciona a estrutura para um `CMFCOutlookBarPane` objeto.|  
+|`CMFCOutlookBarPaneList Class`|Estende o `CMFCOutlookBarPane` classe para fornecer o estilo visual do Outlook.|  
+|`CMFCOutlookBarScrollButton Class`|Fornece a funcionalidade de rolagem para o `CMFCOutlookBarTabCtrl` classe.|  
+|`CMFCOutlookBarToolBar Class`|Implementa uma barra de ferramentas que tem o estilo visual do Outlook 2003.|  
 |`CMFCPropertySheetCategoryInfo Class`|Representa um nó em um controle de árvore.|  
-|`CMFCPropertySheetTabCtrl Class`|Estende a classe de `CMFCTabCtrl` para fornecer a funcionalidade de folha de propriedades.|  
-|`CMFCProperySheetListBox Class`|Estende a classe de `CListBox` para fornecer a funcionalidade de folha de propriedades.|  
+|`CMFCPropertySheetTabCtrl Class`|Estende o `CMFCTabCtrl` classe para fornecer a funcionalidade de folha de propriedade.|  
+|`CMFCProperySheetListBox Class`|Estende o `CListBox` classe para fornecer a funcionalidade de folha de propriedade.|  
 |`CMFCReBarState Class`||  
-|`CMFCRibbonCaptionButton Class`|Implementa um botão da legenda do sistema.|  
-|`CMFCRibbonCmdUI Class`|A barra de fita atualizações objetos quando necessário quando o aplicativo está ocioso.|  
+|`CMFCRibbonCaptionButton Class`|Implementa um botão de legenda do sistema.|  
+|`CMFCRibbonCmdUI Class`|Atualizações da faixa de opções da barra objetos conforme necessário quando o aplicativo está ocioso.|  
 |`CMFCRibbonCommandsListBox Class`||  
 |`CMFCRibbonDefaultPanelButton Class`||  
-|`CMFCRibbonGalleryIcon Class`|Representa um item em um objeto de `CMFCRibbonGallery` .|  
-|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementa uma caixa de diálogo de personalização do teclado para aplicativos que contêm barras de fita.|  
-|`CMFCRibbonKeyTip Class`|Implementa uma janela pop\-up que exibe uma dica chave para uma barra de fita.|  
+|`CMFCRibbonGalleryIcon Class`|Representa um item em uma `CMFCRibbonGallery` objeto.|  
+|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementa uma caixa de diálogo de personalização de teclado para aplicativos que contêm barras de faixa de opções.|  
+|`CMFCRibbonKeyTip Class`|Implementa uma janela pop-up que exibe uma dica de chave para uma barra de faixa de opções.|  
 |`CMFCRibbonPanelMenu Class`||  
-|`CMFCRibbonPanelMenuBar Class`|Representa uma barra de menu pop\-up em uma barra de fita.|  
-|`CMFCRibbonQuickAccessToolBar Class`|Implementa a barra de ferramentas de acesso rápido para um elemento de fita.|  
-|`CMFCRibbonRichEditCtrl Class`|Implementa um controle de edição localizado em uma barra de fita.|  
-|`CMFCRibbonTab Class`|Representa uma guia em uma barra de fita.|  
+|`CMFCRibbonPanelMenuBar Class`|Representa uma barra de menus pop-up em uma barra de faixa de opções.|  
+|`CMFCRibbonQuickAccessToolBar Class`|Implementa a barra de ferramentas de acesso rápido para um elemento de faixa de opções.|  
+|`CMFCRibbonRichEditCtrl Class`|Implementa um controle de edição que está localizado em uma barra de faixa de opções.|  
+|`CMFCRibbonTab Class`|Representa uma guia em uma barra de faixa de opções.|  
 |`CMFCShadowRenderer Class`||  
-|`CMFCShowAllButton Class`|Representa um botão que é posicionado na parte inferior de um menu pop\-up que expande para mostrar ocultos comandos.|  
-|`CMFCStatusBarPaneInfo Class`|Descreve o conteúdo e a aparência de um painel de `CMFCStatusBar` .|  
-|`CMFCTabButton Class`|Fornece a funcionalidade do botão da guia nos controles da guia.|  
-|`CMFCTabInfo Class`|Fornece informações sobre um guia para os controles da guia.|  
-|`CMFCTasksPaneFrameWnd Class`|Gerencia os botões personalizados da legenda de um painel de tarefas.|  
-|`CMFCTasksPanePropertyPage Class`|Gerencia a relação entre um objeto de `CMFCTasksPane` e seu nome.|  
-|`CMFCTasksPaneToolBar Class`|Implementa uma barra de ferramentas de navegação que é localizada na parte superior de um objeto de `CMFCTasksPane` .|  
-|`CMFCToolBarButtonsListButton Class`|Exibe uma lista de imagens que o usuário pode selecionar durante a personalização na caixa de diálogo de **Aparência do botão** .|  
-|`CMFCToolBarDateTimeCtrlImpl Class`|Implementa uma origem de remoção para objetos de `CMFCToolBar` .|  
-|`CMFCToolBarDropSource Class`|Implementa uma origem de remoção para objetos de `CMFCToolBar` .|  
-|`CMFCToolBarDropTarget Class`|Implementa um destino de descarte para objetos de `CMFCToolBar` .|  
-|`CMFCToolBarEditCtrl Class`|Fornece a funcionalidade de controle de edição a objetos de `CMFCToolBarEditBoxButton` .|  
-|`CMFCToolBarMenuButtonsButton Class`|Representa os botões da legenda do sistema que são posicionados à direita de uma barra de menus.|  
-|`CMFCToolBarNameDialog Class`|Representa uma caixa de diálogo que permite que o usuário especifica uma nova legenda da barra de ferramentas.|  
+|`CMFCShowAllButton Class`|Representa um botão que está localizado na parte inferior de um menu pop-up que se expande para mostrar os comandos ocultos.|  
+|`CMFCStatusBarPaneInfo Class`|Descreve o conteúdo e a aparência de um `CMFCStatusBar` painel.|  
+|`CMFCTabButton Class`|Fornece funcionalidade de botão de tabulação para controles de guia.|  
+|`CMFCTabInfo Class`|Fornece informações sobre os controles de guia para guia.|  
+|`CMFCTasksPaneFrameWnd Class`|Gerencia os botões de legenda personalizado de um painel de tarefas.|  
+|`CMFCTasksPanePropertyPage Class`|Gerencia a relação entre um `CMFCTasksPane` objeto e seu nome.|  
+|`CMFCTasksPaneToolBar Class`|Implementa uma barra de ferramentas de navegação que está localizada na parte superior de uma `CMFCTasksPane` objeto.|  
+|`CMFCToolBarButtonsListButton Class`|Exibe uma lista de imagens que o usuário pode selecionar durante a personalização no **aparência do botão** caixa de diálogo.|  
+|`CMFCToolBarDateTimeCtrlImpl Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|  
+|`CMFCToolBarDropSource Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|  
+|`CMFCToolBarDropTarget Class`|Implementa um destino para `CMFCToolBar` objetos.|  
+|`CMFCToolBarEditCtrl Class`|Fornece a funcionalidade de controle de edição para `CMFCToolBarEditBoxButton` objetos.|  
+|`CMFCToolBarMenuButtonsButton Class`|Representa os botões de legenda sistema localizado à direita de uma barra de menus.|  
+|`CMFCToolBarNameDialog Class`|Representa uma caixa de diálogo que permite que o usuário especifique uma nova legenda na barra de ferramentas.|  
 |`CMFCToolBarsCommandsListBox Class`|Representa uma caixa de listagem que contém uma lista de comandos da barra de ferramentas.|  
-|`CMFCToolBarsCommandsPropertyPage Class`|Personalização dos comandos das ferramentas em uma página de propriedades.|  
+|`CMFCToolBarsCommandsPropertyPage Class`|Personalização de comandos implementa em uma página de propriedades.|  
 |`CMFCToolBarsKeyboardPropertyPage Class`||  
-|`CMFCToolBarsListCheckBox Class`|Exibe uma lista de barras de ferramentas na página de **Barras de Ferramentas** de uma caixa de diálogo de **Personalizar** .|  
-|`CMFCToolBarsListPropertyPage Class`|Representa uma página de propriedades que mostra a lista de barras de ferramentas em uma caixa de diálogo de **Personalizar** .|  
-|`CMFCToolBarsMenuPropertyPage Class`|Representa uma página de propriedades que contém opções de personalização de menu em uma caixa de diálogo de **Personalizar** .|  
-|`CMFCToolBarsOptionsPropertyPage Class`|Representa a página de **Opções** em uma caixa de diálogo de **Personalizar** .|  
-|`CMFCToolBarSpinEditBoxButton Class`|Representa um botão de rotação que é posicionado em uma caixa de edição.|  
-|`CMFCToolBarsToolsPropertyPage Class`|Representa uma página de propriedades que permite que o usuário personalize ferramentas do usuário.|  
-|`CMFCToolBarSystemMenuButton Class`|Implementa um botão da legenda do sistema que a estrutura adicionou a barra de menus principal quando um usuário maximiza uma janela filho MDI.|  
-|`CMFCVisualManagerBitmapCache Class`|Gerencia objetos de `CMFCControlRenderer` para melhorar o desempenho de operações em bitmaps.|  
-|`CMultiDocTemplateEx Class`|Estende a classe de `CMultiDocTemplate` para fornecer acesso a ID do recurso do menu|  
+|`CMFCToolBarsListCheckBox Class`|Exibe uma lista das barras de ferramentas sobre o **barras de ferramentas** página de um **personalizar** caixa de diálogo.|  
+|`CMFCToolBarsListPropertyPage Class`|Representa uma página de propriedades que mostra a lista das barras de ferramentas em uma **personalizar** caixa de diálogo.|  
+|`CMFCToolBarsMenuPropertyPage Class`|Representa uma página de propriedade que contém opções de personalização de menu em um **personalizar** caixa de diálogo.|  
+|`CMFCToolBarsOptionsPropertyPage Class`|Representa o **opções** página em uma **personalizar** caixa de diálogo.|  
+|`CMFCToolBarSpinEditBoxButton Class`|Representa um botão de rotação que está localizado em uma caixa de edição.|  
+|`CMFCToolBarsToolsPropertyPage Class`|Representa uma página de propriedades que permite ao usuário personalizar ferramentas de usuário.|  
+|`CMFCToolBarSystemMenuButton Class`|Implementa um botão de legenda do sistema que o framework adiciona a barra de menus principal quando um usuário maximiza uma janela filho MDI.|  
+|`CMFCVisualManagerBitmapCache Class`|Gerencia `CMFCControlRenderer` objetos para melhorar o desempenho de operações em bitmaps.|  
+|`CMultiDocTemplateEx Class`|Estende o `CMultiDocTemplate` classe para fornecer acesso para a ID de recurso do menu.|  
 |`COleCntrFrameWndEx Class`||  
-|`COleDocIPFrameWndEx Class`|Fornece suporte OLE.|  
-|`COleServerDocEx Class`|Fornece operações em documentos com OLE DB do servidor.|  
+|`COleDocIPFrameWndEx Class`|Oferece suporte a OLE.|  
+|`COleServerDocEx Class`|Fornece operações em documentos de servidor OLE.|  
 |`CPaneContainerGC Class`||  
-|`CPngImage Class`|Fornece acesso aos recursos de imagem que usam o formato de arquivo .png.|  
+|`CPngImage Class`|Fornece acesso aos recursos de imagem que usam o formato de arquivo. PNG.|  
 |`CPreviewViewEx Class`||  
 |`CRecentPaneContainerInfo Class`|Mantém o estado anterior de um painel de encaixe.|  
-|`CRibbonCategoryScroll Class`|Implementa um botão de rolagem que seja exibido quando nem todos os elementos são ajustados na área de uma barra de fita.|  
-|`CSmartDockingGroupGuide Class`|Representa o elemento central de um grupo de Smart\- encaixe.|  
-|`CSmartDockingGroupGuidesManager Class`|Gerencia as guias do grupo de Smart\- encaixe.|  
-|`CSmartDockingGroupGuidesWnd Class`|Implementa uma janela camadas, não retangular que a estrutura usa para exibir o grupo central de guias de Smart\- encaixe.|  
-|`CSmartDockingHighlighterWnd Class`|Implementa uma janela semitransparente que abrange a área a ser tomada pelo objeto encaixável do painel que está sendo registrado.|  
-|`CSmartDockingManager Class`|Fornece a funcionalidade de Smart\- encaixe a objetos de `CDockingManager` .|  
-|`CSmartDockingStandaloneGuide Class`|Implementa a guia de Smart\- encaixe.|  
-|`CSmartDockingStandaloneGuideWnd Class`|Implementa uma janela camadas, não retangular que a estrutura usa para exibir guias de Smart\- encaixe.|  
-|`CTagManager Class`|A classe de `CTagManager` precisa ler os valores que são armazenados em um formato parecido marcado.|  
-|`CVSListBoxBase Class`|Fornece a funcionalidade básica da classe `CVSListBox` .|  
-|`CVSListBoxEditCtrl Class`|Estende o controle de edição padrão da caixa de listagem exibindo um pequeno botão que abre uma caixa de diálogo.|  
-|`CVSToolsListBox Class`|Estende o controle padrão da caixa de listagem fornecendo os botões adicionais para adicionar, excluir e mover itens na caixa de listagem.|  
+|`CRibbonCategoryScroll Class`|Implementa um botão de rolagem é exibida quando não que se ajustar todos os elementos na área de uma barra de faixa de opções.|  
+|`CSmartDockingGroupGuide Class`|Representa o elemento central de um grupo de encaixe inteligente.|  
+|`CSmartDockingGroupGuidesManager Class`|Gerencia os guias de encaixe inteligente de grupo.|  
+|`CSmartDockingGroupGuidesWnd Class`|Implementa uma janela não retangular em camadas que a estrutura usa para exibir o grupo central de guias de encaixe inteligente.|  
+|`CSmartDockingHighlighterWnd Class`|Implementa uma janela semitransparente que cobre a área a ser tomada pelo objeto de painel acoplável que está sendo encaixado.|  
+|`CSmartDockingManager Class`|Fornece a funcionalidade de encaixe inteligente para `CDockingManager` objetos.|  
+|`CSmartDockingStandaloneGuide Class`|Implementa o guia de encaixe inteligente.|  
+|`CSmartDockingStandaloneGuideWnd Class`|Implementa uma janela não retangular em camadas que a estrutura usa para exibir guias de encaixe inteligente.|  
+|`CTagManager Class`|O `CTagManager` classe destina-se a ler os valores que são armazenados em formato XML marcado.|  
+|`CVSListBoxBase Class`|Fornece a funcionalidade básica para a `CVSListBox` classe.|  
+|`CVSListBoxEditCtrl Class`|Estende o controle de edição de caixa de listagem padrão exibindo um pequeno botão que abre uma caixa de diálogo.|  
+|`CVSToolsListBox Class`|Estende o controle de caixa de listagem padrão fornecendo outros botões para adicionar, excluir e mover itens na caixa de listagem.|  
   
-## Consulte também  
- [Aplicativos para desktop do MFC](../../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>Consulte também  
+ [Aplicativos de Desktop do MFC](../../mfc/mfc-desktop-applications.md)
+
+

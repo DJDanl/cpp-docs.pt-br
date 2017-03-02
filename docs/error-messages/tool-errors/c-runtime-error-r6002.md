@@ -1,30 +1,46 @@
 ---
-title: "R6002 de erro de tempo de execu&#231;&#227;o do C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6002"
+title: "R6002 de erro de tempo de execução C | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- R6002
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# R6002 de erro de tempo de execu&#231;&#227;o do C
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e9b50be6f1fd646f45ea1530c78e652f38b09c90
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="c-runtime-error-r6002"></a>R6002 de erro de tempo de execução do C
 suporte de ponto flutuante não carregado  
   
  A biblioteca de ponto flutuante necessária não foi vinculada.  
@@ -32,10 +48,10 @@ suporte de ponto flutuante não carregado
 > [!NOTE]
 >  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Há várias razões possíveis para esse erro, mas geralmente é causado por um defeito no código do aplicativo ou ao tentar executar um aplicativo que não foi criado para o processador do computador específico.  
 >   
->  Você pode tentar estas etapas para corrigir esse erro:  
+>  Você pode tentar corrigir esse erro com estas etapas:  
 >   
->  -   Use o **os aplicativos e recursos** ou **programas e recursos** página o **Painel de controle** para reparar ou reinstalar o programa.  
-> -   Verificar **Windows Update** no **Painel de controle** atualizações de software.  
+>  -   Use o **os aplicativos e recursos** ou **programas e recursos** página de **painel de controle** para reparar ou reinstalar o programa.  
+> -   Verificar **Windows Update** no **painel de controle** atualizações de software.  
 > -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
   
  **Informações para programadores**  

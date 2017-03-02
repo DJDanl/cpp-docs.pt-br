@@ -1,97 +1,251 @@
 ---
-title: "Classe de CSocket | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CSocket"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CSocket"
-  - "Identificador de SOQUETE"
-  - "classes de soquetes"
-  - "Classe de CSocket de Winsock"
+title: Classe CSocket | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSocket
+dev_langs:
+- C++
+helpviewer_keywords:
+- WinSock CSocket class
+- CSocket class
+- SOCKET handle
+- sockets classes
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 caps.latest.revision: 30
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CSocket
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 451ea100dbf02e365204fe4fdf1c380e855d8231
+ms.lasthandoff: 02/25/2017
 
-Deriva de `CAsyncSocket`, herda\-se o encapsulamento da API do windows, e representa\-se um nível mais alto de abstração do que a de um objeto de `CAsyncSocket` .  
+---
+# <a name="csocket-class"></a>Classe CSocket
+Deriva de `CAsyncSocket`, herda o encapsulamento de API do Windows Sockets e representa um nível mais alto de abstração do que uma `CAsyncSocket` objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CSocket : public CAsyncSocket  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CSocket::CSocket](../Topic/CSocket::CSocket.md)|constrói um objeto de `CSocket` .|  
-  
-### métodos públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CSocket::Attach](../Topic/CSocket::Attach.md)|Anexa um tratador de **SOCKET** a um objeto de `CSocket` .|  
-|[CSocket::CancelBlockingCall](../Topic/CSocket::CancelBlockingCall.md)|Cancela uma chamada de bloqueio que está atualmente em andamento.|  
-|[CSocket::Create](../Topic/CSocket::Create.md)|cria um soquete.|  
-|[CSocket::FromHandle](../Topic/CSocket::FromHandle.md)|Retorna um ponteiro para um objeto de `CSocket` , dado um identificador de **SOCKET** .|  
-|[CSocket::IsBlocking](../Topic/CSocket::IsBlocking.md)|Determina se uma chamada de bloqueio está em andamento.|  
+|----------|-----------------|  
+|[CSocket::CSocket](#csocket)|Constrói um objeto `CSocket`.|  
   
-### métodos protegidos  
+### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CSocket::OnMessagePending](../Topic/CSocket::OnMessagePending.md)|Chamado para processar mensagens enquanto espera durante uma chamada de bloqueio para concluir.|  
+|----------|-----------------|  
+|[CSocket::Attach](#attach)|Anexa uma **soquete** identificador para uma `CSocket` objeto.|  
+|[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancela uma chamada de bloqueio está em andamento.|  
+|[CSocket::Create](#create)|Cria um soquete.|  
+|[CSocket::FromHandle](#fromhandle)|Retorna um ponteiro para um `CSocket` objeto, dado um **soquete** tratar.|  
+|[CSocket::IsBlocking](#isblocking)|Determina se uma chamada de bloqueio está em andamento.|  
   
-## Comentários  
- `CSocket` trabalha com classes `CSocketFile` e `CArchive` para gerenciar enviar e receber os dados.  
+### <a name="protected-methods"></a>Métodos Protegidos  
   
- Um objeto de `CSocket` também fornece o bloqueio, que é essencial para a operação de `CArchive`síncrona.  O bloqueio funciona, como `Receive`, `Send`, `ReceiveFrom`, `SendTo`, e `Accept` qualquer `CAsyncSocket`\(herdadas de\), não retorna um erro de `WSAEWOULDBLOCK` em `CSocket`.  Em vez de isso, essas funções espera até que a operação seja concluído.  Além de isso, a chamada original terminará com o erro `WSAEINTR` se `CancelBlockingCall` é chamado quando uma de essas funções bloquear.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CSocket::OnMessagePending](#onmessagepending)|Chamado para processar as mensagens pendentes enquanto aguarda a conclusão de uma chamada de bloqueio.|  
   
- Para usar um objeto de `CSocket` , chamar o construtor, então a chamada `Create` para criar o identificador de tipo subjacente `SOCKET` \( `SOCKET`\).  Os parâmetros padrão de `Create` criam um soquete de fluxo, mas se você não estiver usando o soquete com um objeto de `CArchive` , você pode especificar um parâmetro para criar vez de um soquete de datagrama, ou associação a uma porta específica para criar um soquete do servidor.  Se conectar a um soquete de cliente usando `Connect` no lado do cliente e `Accept` no lado do servidor.  Então criar um objeto de `CSocketFile` e associá\-lo ao objeto de `CSocket` no construtor de `CSocketFile` .  Em seguida, cria um objeto de `CArchive` para enviar e um para receber dados \(quando necessário\), e associá\-los ao objeto de `CSocketFile` no construtor de `CArchive` .  Quando as comunicações está concluída, destrua `CArchive`, `CSocketFile`, e objetos de `CSocket` .  O tipo de dados de `SOCKET` é descrito no artigo [Soquetes do windows: plano de fundo](../../mfc/windows-sockets-background.md).  
+## <a name="remarks"></a>Comentários  
+ `CSocket`funciona com classes `CSocketFile` e `CArchive` para gerenciar o envio e recebimento de dados.  
   
- Quando você usa `CArchive` com `CSocketFile` e `CSocket`, você pode encontrar uma situação onde `CSocket::Receive` incorpora um loop \(por `PumpMessages(FD_READ)`\) que espera a quantidade solicitada de bytes.  Isso ocorre porque os soquetes do windows permitem apenas uma chamada de recv por notificação de FD\_READ, mas `CSocketFile` e `CSocket` permitem várias chamadas de recv por FD\_READ.  Se você obtém um FD\_READ quando não há nenhum dados para ler, o aplicativo pendura.  Se você nunca é outro FD\_READ, o aplicativo pára de se comunicar sobre o soquete.  
+ A `CSocket` objeto também fornece o bloqueio, que é essencial para a operação síncrona de `CArchive`. Bloqueio de funções, como `Receive`, `Send`, `ReceiveFrom`, `SendTo`, e `Accept` (todas as herdadas de `CAsyncSocket`), não retornam um `WSAEWOULDBLOCK` erro na `CSocket`. Em vez disso, essas funções Aguarde até que a operação seja concluída. Além disso, a chamada original será encerrado com o erro `WSAEINTR` se `CancelBlockingCall` é chamado quando uma dessas funções está bloqueando.  
   
- Você pode resolver esse problema como segue.  Em o método de `OnReceive` de sua classe de soquete, chamada `CAsyncSocket::IOCtl(FIONREAD, ...)` antes de chamar o método de `Serialize` da classe de mensagem quando os dados esperados a ser lidos de soquete excederem o tamanho de um pacote TCP \(Maximum Transmission Unit do meio de rede, geralmente pelo menos de 1096 bytes\).  Se o tamanho dos dados disponíveis é menos que necessário, espere todos os dados a ser recebidos e apenas iniciar a operação de leitura.  
+ Para usar um `CSocket` de objeto, chame o construtor chame `Create` criar subjacente `SOCKET` tratar (tipo `SOCKET`). Os parâmetros padrão de `Create` criar um soquete de fluxo, mas se você não estiver usando o soquete com uma `CArchive` objeto, você pode especificar um parâmetro para criar um soquete de datagrama em vez disso, ou vincular a uma porta específica para criar um servidor de soquete. Conectar-se a um soquete de cliente usando `Connect` no lado do cliente e `Accept` no lado do servidor. Crie um `CSocketFile` do objeto e associá-la para o `CSocket` o objeto no `CSocketFile` construtor. Em seguida, crie um `CArchive` objeto para o envio e outra para receber dados (conforme necessário), em seguida, associá-los com o `CSocketFile` objeto o `CArchive` construtor. Quando as comunicações forem concluídas, destruir o `CArchive`, `CSocketFile`, e `CSocket` objetos. O `SOCKET` tipo de dados é descrito no artigo [Windows Sockets: plano de fundo](../../mfc/windows-sockets-background.md).  
   
- Em o exemplo, `m_dwExpected` é o número de bytes próximo que o usuário receber espera.  Assume\-se que você o declara em qualquer lugar no seu código.  
+ Quando você usa `CArchive` com `CSocketFile` e `CSocket`, você pode encontrar uma situação onde `CSocket::Receive` entra em um loop (pelo `PumpMessages(FD_READ)`) aguardando a quantidade de bytes solicitada. Isso ocorre porque o Windows sockets permite somente uma chamada de recebimento por notificação FD_READ, mas `CSocketFile` e `CSocket` permitir várias chamadas de recebimento por FD_READ. Se você receber um FD_READ quando não há nenhum dado a ser lido, o aplicativo trava. Se você nunca receber outra FD_READ, o aplicativo para se comunicar por soquete.  
   
- [!CODE [NVC_MFCSocketThread#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSocketThread#4)]  
+ Você pode resolver esse problema, da seguinte maneira. No `OnReceive` método da classe do soquete, chamada `CAsyncSocket::IOCtl(FIONREAD, ...)` antes de chamar o `Serialize` método de sua classe de mensagem quando os dados esperados para leitura a partir do soquete excedem o tamanho de um pacote TCP (unidade máxima de transmissão de mídia de rede geralmente pelo menos 1096 bytes). Se o tamanho dos dados disponíveis é menor que o necessário, aguarde todos os dados recebidos e apenas iniciar a operação de leitura.  
+  
+ No exemplo a seguir, `m_dwExpected` é o número aproximado de bytes que o usuário espera receber. Supõe-se que você declare-o em outro lugar no seu código.  
+  
+ [!code-cpp[NVC_MFCSocketThread n º&4;](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]  
   
 > [!NOTE]
->  A o usar os soquetes MFC em segmentos secundários em um aplicativo MFC estaticamente associado, você deve chamar `AfxSocketInit` em cada segmento que usa os soquetes para inicializar as bibliotecas de soquete.  Por padrão, `AfxSocketInit` é chamado somente no segmento principal.  
+>  Ao usar soquetes MFC em threads secundários em um aplicativo MFC vinculado estaticamente, você deve chamar `AfxSocketInit` em cada thread que usa soquetes para inicializar as bibliotecas de soquete. Por padrão, `AfxSocketInit` é chamado somente no thread primário.  
   
- Para obter mais informações, consulte [Soquetes do windows no MFC](../../mfc/windows-sockets-in-mfc.md), [Soquetes do windows: usando os soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md), [Soquetes do windows: Como os arquivos mortos funcionam com soquetes](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Soquetes do windows: Seqüência das operações](../Topic/Windows%20Sockets:%20Sequence%20of%20Operations.md), [Soquetes do windows: Exemplo da usando arquivos mortos](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
+ Para obter mais informações, consulte [Windows Sockets em MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets: como soquetes com arquivos mortos trabalho](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets: sequência de operações](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets: exemplo de soquetes usando arquivos](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CAsyncSocket](../Topic/CAsyncSocket%20Class.md)  
+ [CAsyncSocket](../../mfc/reference/casyncsocket-class.md)  
   
  `CSocket`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxsock.h  
   
-## Consulte também  
- [Classe de CAsyncSocket](../Topic/CAsyncSocket%20Class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe de CAsyncSocket](../Topic/CAsyncSocket%20Class.md)   
- [Classe de CSocketFile](../Topic/CSocketFile%20Class.md)
+##  <a name="a-nameattacha--csocketattach"></a><a name="attach"></a>CSocket::Attach  
+ Chame essa função de membro para anexar o `hSocket` identificador para uma `CSocket` objeto.  
+  
+```  
+BOOL Attach(SOCKET hSocket);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `hSocket`  
+ Contém um identificador para um soquete.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a função for bem-sucedida.  
+  
+### <a name="remarks"></a>Comentários  
+ O **soquete** identificador é armazenado no objeto de [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) membro de dados.  
+  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+### <a name="example"></a>Exemplo  
+ [!code-cpp[NVC_MFCSocketThread n º&1;](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
+  
+ [!code-cpp[NVC_MFCSocketThread n º&2;](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
+  
+ [!code-cpp[NVC_MFCSocketThread n º&3;](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
+  
+##  <a name="a-namecancelblockingcalla--csocketcancelblockingcall"></a><a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+ Chame essa função de membro para cancelar uma chamada de bloqueio atualmente em andamento.  
+  
+```  
+void CancelBlockingCall();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Essa função cancela qualquer operação pendente de bloqueio para esse soquete. A chamada de bloqueio original será encerrado assim que possível com o erro **WSAEINTR**.  
+  
+ No caso de um bloqueio **conectar** operação, a implementação do Windows Sockets encerrará a chamada de bloqueio assim que possível, mas ele pode não ser possível para os recursos de soquete ser liberado até que a conexão foi concluída (e, em seguida, foi redefinida) ou atingiu o tempo limite. Isso é provavelmente será percebido somente se o aplicativo imediatamente tenta abrir um soquete novo (se nenhum soquetes disponíveis), ou para se conectar ao mesmo ponto.  
+  
+ Cancelar qualquer operação que **aceitar** pode deixar o soquete em um estado indeterminado. Se um aplicativo cancela uma operação em um soquete de bloqueio, a única operação que o aplicativo pode depender de poder executar no soquete é uma chamada para **fechar**, embora outras operações podem funcionar em algumas implementações de Windows Sockets. Se você desejar portabilidade máximo para o seu aplicativo, você deve ser cuidado para não dependem de executar operações após um cancelamento.  
+  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+##  <a name="a-namecreatea--csocketcreate"></a><a name="create"></a>CSocket::Create  
+ Chamar o **criar** função de membro depois de criar um objeto de soquete para criar o soquete do Windows e anexá-lo.  
+  
+```  
+BOOL Create(
+    UINT nSocketPort = 0,  
+    int nSocketType = SOCK_STREAM,  
+    LPCTSTR lpszSocketAddress = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `nSocketPort`  
+ Uma porta específica a ser usada com o soquete ou 0 se desejar que o MFC para selecionar uma porta.  
+  
+ `nSocketType`  
+ **SOCK_STREAM** ou **SOCK_DGRAM**.  
+  
+ `lpszSocketAddress`  
+ Um ponteiro para uma cadeia de caracteres que contém o endereço de rede do soquete conectado, um número pontilhado, como "128.56.22.8". Passando o **nulo** cadeia de caracteres para esse parâmetro indica o **CSocket** instância deve ouvir para atividade de cliente em todas as interfaces de rede.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a função for bem-sucedida; Caso contrário, 0 e um código de erro específico podem ser recuperada chamando `GetLastError`.  
+  
+### <a name="remarks"></a>Comentários  
+ **Criar** , em seguida, chama **ligar** ligar o soquete para o endereço especificado. Os seguintes tipos de soquete são suportados:  
+  
+- **SOCK_STREAM** fornece sequenciado, fluxos de bytes bidirecionais, confiável e baseada em conexão. Usa o protocolo de controle de transmissão (TCP) para a família de endereço de Internet.  
+  
+- **SOCK_DGRAM** suporta datagramas, que são buffers sem conexão e não confiáveis de comprimento máximo fixo (normalmente pequeno). Usa o protocolo de datagrama de usuário (UDP) para a família de endereço de Internet. Para usar essa opção, você não deve usar o soquete com uma `CArchive` objeto.  
+  
+    > [!NOTE]
+    >  O **aceitar** função de membro pega uma referência para um novo e vazio `CSocket` objeto como seu parâmetro. Você deve construir esse objeto antes de chamar **aceitar**. Tenha em mente que, se esse objeto de soquete sai do escopo, fecha a conexão. Não chame **criar** para esse novo objeto de soquete.  
+  
+ Para obter mais informações sobre os soquetes de datagrama e de fluxo, consulte os artigos [Windows Sockets: plano de fundo](../../mfc/windows-sockets-background.md), [Windows Sockets: portas e endereços de soquete](../../mfc/windows-sockets-ports-and-socket-addresses.md), e [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+##  <a name="a-namecsocketa--csocketcsocket"></a><a name="csocket"></a>CSocket::CSocket  
+ Constrói um objeto `CSocket`.  
+  
+```  
+CSocket();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Após a compilação, você deve chamar o **criar** função de membro.  
+  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+##  <a name="a-namefromhandlea--csocketfromhandle"></a><a name="fromhandle"></a>CSocket::FromHandle  
+ Retorna um ponteiro para um `CSocket` objeto.  
+  
+```  
+static CSocket* PASCAL FromHandle(SOCKET hSocket);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `hSocket`  
+ Contém um identificador para um soquete.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para um `CSocket` objeto, ou **nulo** se não houver nenhum `CSocket` objeto anexado a `hSocket`.  
+  
+### <a name="remarks"></a>Comentários  
+ Quando é atribuído um **soquete** tratar, se um `CSocket` objeto não está anexado ao identificador, retorna a função de membro **nulo** e não cria um objeto temporário.  
+  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+##  <a name="a-nameisblockinga--csocketisblocking"></a><a name="isblocking"></a>CSocket::IsBlocking  
+ Chame essa função de membro para determinar se uma chamada de bloqueio está em andamento.  
+  
+```  
+BOOL IsBlocking();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se o bloqueio de soquete; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+##  <a name="a-nameonmessagependinga--csocketonmessagepending"></a><a name="onmessagepending"></a>CSocket::OnMessagePending  
+ Substitua essa função de membro para procurar mensagens específicas do Windows e respondê-los em seu soquete.  
+  
+```  
+virtual BOOL OnMessagePending();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a mensagem foi tratada; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Isso é uma avançada substituível.  
+  
+ O framework chama `OnMessagePending` enquanto o soquete está bombeando mensagens do Windows para lhe dar uma oportunidade para lidar com mensagens de interesse para o seu aplicativo. Para obter exemplos de como você pode usar `OnMessagePending`, consulte o artigo [Windows Sockets: derivando de Classes de soquete](../../mfc/windows-sockets-deriving-from-socket-classes.md).  
+  
+ Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CAsyncSocket](../../mfc/reference/casyncsocket-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CAsyncSocket](../../mfc/reference/casyncsocket-class.md)   
+ [Classe CSocketFile](../../mfc/reference/csocketfile-class.md)
+

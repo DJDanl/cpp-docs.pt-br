@@ -1,107 +1,172 @@
 ---
-title: "Classe de ICollectionOnSTLImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.ICollectionOnSTLImpl"
-  - "ATL::ICollectionOnSTLImpl"
-  - "ICollectionOnSTLImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de ICollectionOnSTLImpl"
+title: Classe ICollectionOnSTLImpl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.ICollectionOnSTLImpl
+- ATL::ICollectionOnSTLImpl
+- ICollectionOnSTLImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
 caps.latest.revision: 21
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de ICollectionOnSTLImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: d413fec8d22d3925dc8755e758e964fcc4e6b855
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece os métodos usados por uma classe de coleção.  
+---
+# <a name="icollectiononstlimpl-class"></a>Classe ICollectionOnSTLImpl
+Essa classe fornece métodos usados por uma classe de coleção.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
-```  
+```
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+class ICollectionOnSTLImpl : public T```  
   
-      template <  
-   class T,  
-   class CollType,  
-   class ItemType,  
-   class CopyItem,  
-   class EnumType  
->  
-class ICollectionOnSTLImpl :  
-   public T  
-```  
-  
-#### Parâmetros  
+#### Parameters  
  `T`  
- Uma interface de coleção COM.  
+ A COM collection interface.  
   
  `CollType`  
- Uma classe do contêiner de STL.  
+ A C++ Standard Library container class.  
   
  *ItemType*  
- O tipo de item exposto pela interface do recipiente.  
+ The type of item exposed by the container interface.  
   
  *CopyItem*  
- [classe de diretiva de impressão](../Topic/ATL%20Copy%20Policy%20Classes.md).  
+ A [copy policy class](../../atl/atl-copy-policy-classes.md).  
   
  *EnumType*  
- [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)\- classe compatível do enumerador.  
+ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-compatible enumerator class.  
   
-## Membros  
+## Members  
   
-### Métodos públicos  
+### Public Methods  
   
-|Nome|Descrição|  
-|----------|---------------|  
-|[ICollectionOnSTLImpl::get\_\_NewEnum](../Topic/ICollectionOnSTLImpl::get__NewEnum.md)|Retorna um objeto enumerator para a coleção.|  
-|[ICollectionOnSTLImpl::get\_Count](../Topic/ICollectionOnSTLImpl::get_Count.md)|Retorna o número de elementos na coleção.|  
-|[ICollectionOnSTLImpl::get\_Item](../Topic/ICollectionOnSTLImpl::get_Item.md)|Retorna o item solicitado a coleção.|  
+|Name|Description|  
+|----------|-----------------|  
+|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Returns an enumerator object for the collection.|  
+|[ICollectionOnSTLImpl::getcount](#get_count)|Returns the number of elements in the collection.|  
+|[ICollectionOnSTLImpl::get_Item](#get_item)|Returns the requested item from the collection.|  
   
-### Membros públicos de dados  
+### Public Data Members  
   
-|Nome|Descrição|  
-|----------|---------------|  
-|[ICollectionOnSTLImpl::m\_coll](../Topic/ICollectionOnSTLImpl::m_coll.md)|a coleção.|  
+|Name|Description|  
+|----------|-----------------|  
+|[ICollectionOnSTLImpl::m_coll](#m_coll)|The collection.|  
   
-## Comentários  
- Essa classe fornece a implementação para três métodos de uma interface de coleção: [get\_Count](../Topic/ICollectionOnSTLImpl::get_Count.md), [get\_Item](../Topic/ICollectionOnSTLImpl::get_Item.md), e [get\_\_NewEnum](../Topic/ICollectionOnSTLImpl::get__NewEnum.md).  
+## Remarks  
+ This class provides the implementation for three methods of a collection interface: [getcount](#get_count), [get_Item](#get_item), and [get__NewEnum](#newenum).  
   
- Para usar esta classe:  
+ To use this class:  
   
--   Defina \(ou empréstimo\) uma interface de coleção que você deseja implementar.  
+-   Define (or borrow) a collection interface that you wish to implement.  
   
--   A classe deriva de uma especialização de `ICollectionOnSTLImpl` com base em esta interface de coleção.  
+-   Derive your class from a specialization of `ICollectionOnSTLImpl` based on this collection interface.  
   
--   Use a classe derivada para implementar todos os métodos de interface da coleção não tratada por `ICollectionOnSTLImpl`.  
+-   Use your derived class to implement any methods from the collection interface not handled by `ICollectionOnSTLImpl`.  
   
 > [!NOTE]
->  Se a interface de coleção é uma interface dupla, derive da classe [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passando a especialização de `ICollectionOnSTLImpl` como o primeiro parâmetro do modelo se você deseja ATL para fornecer a implementação dos métodos de `IDispatch` .  
+>  If the collection interface is a dual interface, derive your class from [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passing the `ICollectionOnSTLImpl` specialization as the first template parameter if you want ATL to provide the implementation of the `IDispatch` methods.  
   
--   Adicionar itens ao membro de [m\_coll](../Topic/ICollectionOnSTLImpl::m_coll.md) para preencher a coleção.  
+-   Add items to the [m_coll](#m_coll) member to populate the collection.  
   
- Para mais informações e exemplos, consulte [coleções e enumeradores de ATL](../../atl/atl-collections-and-enumerators.md).  
+ For more information and examples, see [ATL Collections and Enumerators](../../atl/atl-collections-and-enumerators.md).  
   
-## Hierarquia de herança  
+## Inheritance Hierarchy  
  `T`  
   
  `ICollectionOnSTLImpl`  
   
-## Requisitos  
- **Cabeçalho:** atlcom.h  
+## Requirements  
+ **Header:** atlcom.h  
   
-## Consulte também  
- [exemplo de ATLCollections](../../top/visual-cpp-samples.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount  
+ This method returns the number of items in the collection.  
+  
+```
+STDMETHOD(GetCount) (long * pcount);
+```  
+  
+### Parameters  
+ *pcount*  
+ [out] The number of elements in the collection.  
+  
+### Return Value  
+ A standard `HRESULT` value.  
+  
+##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item  
+ This method returns the specified item from the collection.  
+  
+```
+STDMETHOD(get_Item) (índice longo, ItemType * pvar);
+```  
+  
+### Parameters  
+ `Index`  
+ [in] The 1-based index of an item in the collection.  
+  
+ `pvar`  
+ [out] The item corresponding to `Index`.  
+  
+### Return Value  
+ A standard `HRESULT` value.  
+  
+### Remarks  
+ The item is obtained by copying the data at the specified position in [m_coll](#m_coll) using the copy method of the [copy policy class](../../atl/atl-copy-policy-classes.md) passed as a template argument in the `ICollectionOnSTLImpl` specialization.  
+  
+##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum  
+ Returns an enumerator object for the collection.  
+  
+```
+STDMETHOD(get__NewEnum) (IUnknown * * ppUnk);
+```  
+  
+### Parameters  
+ `ppUnk`  
+ [out] The **IUnknown** pointer of a newly created enumerator object.  
+  
+### Return Value  
+ A standard `HRESULT` value.  
+  
+### Remarks  
+ The newly created enumerator maintains an iterator on the original collection, `m_coll`, (so no copy is made) and holds a COM reference on the collection object to ensure that the collection remains alive while there are outstanding enumerators.  
+  
+##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll  
+ This member holds the items represented by the collection.  
+  
+```
+CollType m_coll;
+```  
+  
+## See Also  
+ [ATLCollections Sample](../../visual-cpp-samples.md)   
+ [Class Overview](../../atl/atl-class-overview.md)
+

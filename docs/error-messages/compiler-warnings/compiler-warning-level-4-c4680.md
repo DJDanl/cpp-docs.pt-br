@@ -1,35 +1,50 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4680"
+title: "Compilador aviso (nível 4) C4680 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ce8aedc8c1093b596efa8d79cf22edfb0b79c117
+ms.lasthandoff: 02/25/2017
 
-“classes: os coclass não especificam uma interface padrão  
+---
+# <a name="compiler-warning-level-4-c4680"></a>Compilador C4680 de aviso (nível 4)
+'class': coclass não especifica uma interface padrão  
   
- Uma interface de [opção](../../windows/default-cpp.md) não foi especificada para uma classe que é marcada com o atributo de [coclass](../../windows/coclass.md) .  Para que um objeto é útil, ele deve implementa uma interface.  
+ A [padrão](../../windows/default-cpp.md) interface não foi especificada para uma classe marcada com o [coclass](../../windows/coclass.md) atributo. Para um objeto para ser útil, ele deve implementar uma interface.  
   
- O seguinte exemplo gera C4680:  
+ O exemplo a seguir gera C4680:  
   
 ```  
 // C4680.cpp  

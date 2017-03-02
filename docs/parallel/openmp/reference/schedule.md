@@ -1,39 +1,54 @@
 ---
-title: "schedule | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "schedule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "schedule OpenMP clause"
+title: agenda | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- schedule
+dev_langs:
+- C++
+helpviewer_keywords:
+- schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# schedule
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9f39e46f38c09967c6109470f7ed8f4f15135ff8
+ms.lasthandoff: 02/25/2017
 
-Aplica\-se para o [for](../Topic/for%20\(OpenMP\).md) diretiva.  
+---
+# <a name="schedule"></a>agenda
+Aplica-se para o [para](../../../parallel/openmp/reference/for-openmp.md) diretiva.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 schedule(type[,size])  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `type`  
  O tipo de agendamento:  
   
@@ -45,13 +60,13 @@ schedule(type[,size])
   
 -   `static`  
   
- `size`\(opcional\)  
- Especifica o tamanho de iterações.  `size`deve ser um inteiro.  Not valid when `type` is `runtime`.  
+ `size` (opcional)  
+ Especifica o tamanho de iterações. `size`deve ser um inteiro. Não é válida quando `type` é `runtime`.  
   
-## Comentários  
- Para obter mais informações, consulte [2.4.1 for Construct](../../../parallel/openmp/2-4-1-for-construct.md).  
+## <a name="remarks"></a>Comentários  
+ Para obter mais informações, consulte [2.4.1 constructo for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_schedule.cpp  
@@ -137,30 +152,34 @@ int main( )
 }  
 ```  
   
-  **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124; estático &#124; estático &#124; dinâmica &#124; dinâmica &#124; interativa &#124;**  
-**&#124;    1   &#124;    5   &#124;    1    &#124;    5    &#124;        &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124;    0   &#124;    0   &#124;    0    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    2   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    3   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    0   &#124;    0   &#124;    2    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    2   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    3   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    0   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    1   &#124;    1   &#124;    0    &#124;    3    &#124;    2   &#124;**  
-**&#124;    2   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    3   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    0   &#124;    2   &#124;    1    &#124;    0    &#124;    3   &#124;**  
-**&#124;    1   &#124;    2   &#124;    2    &#124;    0    &#124;    3   &#124;**  
-**&#124;    2   &#124;    2   &#124;    2    &#124;    0    &#124;    0   &#124;**  
-**&#124;    3   &#124;    3   &#124;    2    &#124;    1    &#124;    0   &#124;**  
-**&#124;    0   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    1   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    2   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    3   &#124;    3   &#124;    0    &#124;    1    &#124;    3   &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**   
-## Consulte também  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+------------------------------------------------  
+| static | static | dynamic | dynamic | guided |  
+|    1   |    5   |    1    |    5    |        |  
+------------------------------------------------  
+|    0   |    0   |    0    |    2    |    1   |  
+|    1   |    0   |    3    |    2    |    1   |  
+|    2   |    0   |    3    |    2    |    1   |  
+|    3   |    0   |    3    |    2    |    1   |  
+|    0   |    0   |    2    |    2    |    1   |  
+|    1   |    1   |    2    |    3    |    3   |  
+|    2   |    1   |    2    |    3    |    3   |  
+|    3   |    1   |    0    |    3    |    3   |  
+|    0   |    1   |    0    |    3    |    3   |  
+|    1   |    1   |    0    |    3    |    2   |  
+|    2   |    2   |    1    |    0    |    2   |  
+|    3   |    2   |    1    |    0    |    2   |  
+|    0   |    2   |    1    |    0    |    3   |  
+|    1   |    2   |    2    |    0    |    3   |  
+|    2   |    2   |    2    |    0    |    0   |  
+|    3   |    3   |    2    |    1    |    0   |  
+|    0   |    3   |    3    |    1    |    1   |  
+|    1   |    3   |    3    |    1    |    1   |  
+|    2   |    3   |    3    |    1    |    1   |  
+|    3   |    3   |    0    |    1    |    3   |  
+------------------------------------------------  
+  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

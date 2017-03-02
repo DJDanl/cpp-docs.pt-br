@@ -1,33 +1,48 @@
 ---
-title: "omp_destroy_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_destroy_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_destroy_lock OpenMP function"
+title: omp_destroy_lock | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_destroy_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_destroy_lock OpenMP function
 ms.assetid: b73ab036-b76f-4e42-82ff-c89db2edf7c0
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_destroy_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: de0aef447ccea48fc6cf045bca67413e51241231
+ms.lasthandoff: 02/25/2017
 
-Uninitializes um bloqueio.  
+---
+# <a name="ompdestroylock"></a>omp_destroy_lock
+Cancela a inicialização de um bloqueio.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void omp_destroy_lock(  
@@ -35,17 +50,17 @@ void omp_destroy_lock(
 );  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  onde,  
   
  `lock`  
- Uma variável do tipo [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+ Uma variável do tipo [omp_lock_t ()](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
-## Comentários  
- Para obter mais informações, consulte [3.2.2 omp\_destroy\_lock and omp\_destroy\_nest\_lock Functions](../Topic/3.2.2%20omp_destroy_lock%20and%20omp_destroy_nest_lock%20Functions.md).  
+## <a name="remarks"></a>Comentários  
+ Para obter mais informações, consulte [3.2.2 funções omp_destroy_lock e omp_destroy_nest_lock](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).  
   
-## Exemplo  
- Consulte [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md) para obter um exemplo do uso de `omp_destroy_lock`.  
+## <a name="example"></a>Exemplo  
+ Consulte [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) para obter um exemplo de como usar `omp_destroy_lock`.  
   
-## Consulte também  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Consulte também  
+ [Funções](../../../parallel/openmp/reference/openmp-functions.md)
