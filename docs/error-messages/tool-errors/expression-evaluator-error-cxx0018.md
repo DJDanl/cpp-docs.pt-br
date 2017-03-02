@@ -1,51 +1,66 @@
 ---
-title: "Erro CXX0018 (avaliador de express&#227;o) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0018"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0018"
-  - "CXX0018"
+title: "CXX0018 de erro do avaliador de expressão | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- CXX0018
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAN0018
+- CXX0018
 ms.assetid: d3d115d6-8981-4651-b615-566de867a263
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro CXX0018 (avaliador de express&#227;o)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 628f918704f3cd78db815432b4a5fe41607b30dc
+ms.lasthandoff: 02/25/2017
 
-nome do registro incorreta  
+---
+# <a name="expression-evaluator-error-cxx0018"></a>Erro CXX0018 (avaliador de expressão)
+nome de registro incorreto  
   
  Um registro especificado não existe ou não pode ser exibido.  
   
- A janela de inspeção pode exibir os seguintes registros:  
+ A janela Watch pode exibir os seguintes registros:  
   
- SP DS IP FROM MACHADO  
+ AX SP DS IP  
   
- BX BP ES FL  
+ BX BP ES FL  
   
- SI SS GS FROM CX  
+ CX SI SS GS  
   
- DX DI CS SS  
+ DX DI CS SS  
   
- EAX ESP DS EIP  
+ EAX ESP DS EIP  
   
- EBX EBP ES EFL  
+ EBX EBP ES EFL  
   
- ECX ESI FS  
+ ECX ESI FS  
   
- CS FROM EDX EDI  
+ EDX EDI CS  
   
- Esse erro é idêntico a CAN0018.
+ Esse erro é idêntico ao CAN0018.

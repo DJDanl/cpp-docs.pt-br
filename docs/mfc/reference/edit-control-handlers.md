@@ -1,57 +1,74 @@
 ---
-title: "Manipuladores do controle de edi&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_EN_ERRSPACE"
-  - "ON_EN_UPDATE"
-  - "ON_EN_VSCROLL"
-  - "ON_EN_HSCROLL"
-  - "ON_EN_KILLFOCUS"
-  - "ON_EN_MAXTEXT"
-  - "ON_EN_SETFOCUS"
-  - "ON_EN_CHANGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles de edição, manipuladores do controle de edição"
-  - "Macro ON_EN_CHANGE"
-  - "Macro ON_EN_ERRSPACE"
-  - "Macro ON_EN_HSCROLL"
-  - "Macro ON_EN_KILLFOCUS"
-  - "Macro ON_EN_MAXTEXT"
-  - "Macro ON_EN_SETFOCUS"
-  - "Macro ON_EN_UPDATE"
-  - "Macro ON_EN_VSCROLL"
+title: "Manipuladores do controle de edição | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_EN_ERRSPACE
+- ON_EN_UPDATE
+- ON_EN_VSCROLL
+- ON_EN_HSCROLL
+- ON_EN_KILLFOCUS
+- ON_EN_MAXTEXT
+- ON_EN_SETFOCUS
+- ON_EN_CHANGE
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_EN_ERRSPACE macro
+- ON_EN_SETFOCUS macro
+- ON_EN_UPDATE macro
+- ON_EN_MAXTEXT macro
+- ON_EN_CHANGE macro
+- ON_EN_HSCROLL macro
+- ON_EN_VSCROLL macro
+- ON_EN_KILLFOCUS macro
+- edit controls, edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Manipuladores do controle de edi&#231;&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8ec4f95f284d850b6a780d9a8c8154e0b6154337
+ms.lasthandoff: 02/25/2017
 
-As entradas de mapa seguir correspondem ao protótipo da função.  
+---
+# <a name="edit-control-handlers"></a>Manipuladores do controle de edição
+As seguintes entradas de mapa correspondem ao protótipo da função.  
   
-|Entrada do mapa|Protótipo de função|  
-|---------------------|-------------------------|  
-|ON\_EN\_CHANGE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_ERRSPACE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_HSCROLL \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_KILLFOCUS \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_MAXTEXT \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_SETFOCUS \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_UPDATE \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
-|ON\_EN\_VSCROLL \( \<ID\>, \<memberFxn\> \)|memberFxn void de afx\_msg \(\);|  
+|Entrada de mapa|Protótipo da função|  
+|---------------|------------------------|  
+|ON_EN_CHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_HSCROLL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_UPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_VSCROLL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+

@@ -1,101 +1,159 @@
 ---
-title: "CW2CWEX Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CW2CWEX"
-  - "ATL::CW2CWEX"
-  - "ATL.CW2CWEX"
-  - "ATL.CW2CWEX<t_nBufferLength>"
-  - "ATL::CW2CWEX<t_nBufferLength>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CW2CWEX"
+title: Classe CW2CWEX | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CW2CWEX
+- ATL::CW2CWEX
+- ATL.CW2CWEX
+- ATL.CW2CWEX<t_nBufferLength>
+- ATL::CW2CWEX<t_nBufferLength>
+dev_langs:
+- C++
+helpviewer_keywords:
+- CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CW2CWEX Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: a85b67a58553dada36f4472ea0683e18bc775493
+ms.lasthandoff: 02/25/2017
 
-Essa classe é usada por macros `CW2CTEX` e `CT2CWEX`de conversão de cadeia de caracteres, e o typedef `CW2W`.  
+---
+# <a name="cw2cwex-class"></a>Classe CW2CWEX
+Essa classe é usada, as macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef `CW2W`.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados em tempo de execução do windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template<int t_nBufferLength = 128>  
+class CW2CWEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CW2CWEX  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `t_nBufferLength`  
- O tamanho do buffer usado no processo de conversão.  o comprimento padrão é 128 bytes.  
+ O tamanho do buffer usado no processo de conversão. O comprimento padrão é 128 bytes.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[CW2CWEX::CW2CWEX](../Topic/CW2CWEX::CW2CWEX.md)|o construtor.|  
-|[CW2CWEX::~CW2CWEX](../Topic/CW2CWEX::~CW2CWEX.md)|O destrutor.|  
-  
-### Operadores públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CW2CWEX::operator LPCWSTR](../Topic/CW2CWEX::operator%20LPCWSTR.md)|Operador de conversão.|  
+|----------|-----------------|  
+|[CW2CWEX::CW2CWEX](#cw2cwex)|O construtor.|  
+|[CW2CWEX:: ~ CW2CWEX](#dtor)|O destruidor.|  
   
-### Membros públicos de dados  
+### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CW2CWEX::m\_psz](../Topic/CW2CWEX::m_psz.md)|O membro de dados que armazena a cadeia de caracteres de origem.|  
+|----------|-----------------|  
+|[CW2CWEX::Operator LPCWSTR](#operator_lpcwstr)|Operador de conversão.|  
   
-## Comentários  
- A menos que a funcionalidade adicional é necessária, use `CW2CTEX`, `CT2CWEX`, ou `CW2W` no seu código.  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
   
- Essa classe é seguro para usar em loop e não transbordará a pilha.  Por padrão, as classes de conversão de ATL e macros usam a página de código ANSI atual da thread para a conversão.  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CW2CWEX::m_psz](#m_psz)|O membro de dados que armazena a cadeia de caracteres de origem.|  
   
- Os seguintes macros são baseados em essa classe:  
+## <a name="remarks"></a>Comentários  
+ A menos que a funcionalidade adicional for necessária, use `CW2CTEX`, `CT2CWEX`, ou `CW2W` em seu código.  
   
--   `CW2CTEX`  
+ Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.  
   
--   `CT2CWEX`  
+ As macros a seguir baseiam-se em sua classe:  
   
- O exemplo a seguir typedef é baseado em essa classe:  
+- `CW2CTEX`  
   
--   `CW2W`  
+- `CT2CWEX`  
   
- Para uma discussão de esses macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres de ATL e de MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ Typedef a seguir baseia-se em sua classe:  
   
-## Exemplo  
- [Macros de conversão de cadeia de caracteres de ATL e de MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) consulte para um exemplo de como usar esses macros de conversão de cadeia de caracteres.  
+- `CW2W`  
   
-## Requisitos  
- **Cabeçalho:** atlconv.h  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## Consulte também  
- [CA2AEX Class](../../atl/reference/ca2aex-class.md)   
- [CA2CAEX Class](../../atl/reference/ca2caex-class.md)   
+## <a name="example"></a>Exemplo  
+ Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** Atlconv. h  
+  
+##  <a name="a-namecw2cwexa--cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+ O construtor.  
+  
+```
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `psz`  
+ A cadeia de caracteres de texto a ser convertido.  
+  
+ `nCodePage`  
+ A página de código. Não usado nessa classe.  
+  
+### <a name="remarks"></a>Comentários  
+ Aloca o buffer usado no processo de conversão.  
+  
+##  <a name="a-namedtora--cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+ O destruidor.  
+  
+```
+~CW2CWEX() throw();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Libera o buffer alocado.  
+  
+##  <a name="a-namempsza--cw2cwexmpsz"></a><a name="m_psz"></a>CW2CWEX::m_psz  
+ O membro de dados que armazena a cadeia de caracteres de origem.  
+  
+```
+LPCWSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcwstra--cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::Operator LPCWSTR  
+ Operador de conversão.  
+  
+```  
+operator LPCWSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Retorna a cadeia de caracteres de texto como tipo **LPCWSTR.**  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
+ [Classe CA2CAEX](../../atl/reference/ca2caex-class.md)   
  [Classe CA2WEX](../../atl/reference/ca2wex-class.md)   
- [CW2AEX Class](../../atl/reference/cw2aex-class.md)   
- [CW2WEX Class](../../atl/reference/cw2wex-class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+ [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
+ [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

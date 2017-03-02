@@ -1,36 +1,51 @@
 ---
-title: "Aviso do compilador (n&#237;vel 4) C4710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4710"
+title: "Compilador aviso (nível 4) C4710 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4710
 ms.assetid: 76381ec7-3fc1-4bee-9a0a-c2c8307b92e2
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 4) C4710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f72293adf411fb35873dbadd24631f2ec342f667
+ms.lasthandoff: 02/25/2017
 
-função “”: função será embutida  
+---
+# <a name="compiler-warning-level-4-c4710"></a>Compilador C4710 de aviso (nível 4)
+'function': função não embutida  
   
- A função determinada foi selecionada para a expansão embutido, mas o compilador não executou inlining.  
+ A função fornecida foi selecionada para a expansão embutida, mas o compilador não executou o inlining.  
   
- Inlining é executado na discreção do compilador.  A palavra\-chave de **inline** , como a palavra\-chave de **register** , é usado como uma dica para o compilador.  O compilador usa heurística para determinar se ele deve embutido uma função específica acelerar o código durante a criação da velocidade, ou se ele deve embutido uma função específica tornar código durante a criação menor do espaço.  O compilador somente funções muito pequenas embutidos ao criar para o espaço.  
+ Embutir é executada a critério do compilador. O **embutido** palavra-chave, como o **registrar** palavra-chave é usada como uma dica para o compilador. O compilador usa heurística para determinar se deveria embutir uma função específica para acelerar o código durante a compilação de velocidade, ou se ele deve embutir uma função específica para diminuir o código durante a compilação para o espaço. O compilador criará somente embutido muito pequenas funções durante a compilação de espaço.  
   
- Em alguns casos, o compilador não embutida uma função específica para razões mecânicas.  Consulte [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obter uma lista dos motivos que o compilador não é uma função embutida.  
+ Em alguns casos, o compilador criará não embutir uma função específica por motivos mecânicos. Consulte [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obter uma lista dos motivos que o compilador pode embutir uma função.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.

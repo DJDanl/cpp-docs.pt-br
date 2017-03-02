@@ -1,30 +1,46 @@
 ---
-title: "C2082 de erro do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2082"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2082"
+title: C2082 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2082
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2082
 ms.assetid: 87a6d442-157c-46e8-9bff-8388f8338ae0
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C2082 de erro do compilador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f639fe8521caf20e534ee85bc4e5a1e9990b302d
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="compiler-error-c2082"></a>C2082 de erro do compilador
 redefinição do parâmetro formal 'Identificador'  
   
  Um parâmetro formal para uma função é declarado novamente dentro do corpo da função. Para resolver o erro, remova a redefinição.  
@@ -32,5 +48,9 @@ redefinição do parâmetro formal 'Identificador'
  O exemplo a seguir gera C2082:  
   
 ```  
-// C2082.cpp void func(int i) { int i;   // C2082 int ii;   // OK }  
+// C2082.cpp  
+void func(int i) {  
+   int i;   // C2082  
+   int ii;   // OK  
+}  
 ```

@@ -1,74 +1,89 @@
 ---
-title: "Classe de CMFCBaseToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCBaseToolBar::CreateObject"
-  - "~CMFCBaseToolBar"
-  - "CMFCBaseToolBar"
-  - "CMFCBaseToolBar::CMFCBaseToolBar"
-  - "CMFCBaseToolBar::~CMFCBaseToolBar"
-  - "CMFCBaseToolBar.~CMFCBaseToolBar"
-  - "CreateObject"
-  - "CMFCBaseToolBar.CMFCBaseToolBar"
-  - "CMFCBaseToolBar.CreateObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Destruidor ~CMFCBaseToolBar"
-  - "Classe de CMFCBaseToolBar"
-  - "Classe de CMFCBaseToolBar, construtor"
-  - "Classe de CMFCBaseToolBar, destruidor"
-  - "Método de CreateObject"
+title: Classe CMFCBaseToolBar | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCBaseToolBar::CreateObject
+- ~CMFCBaseToolBar
+- CMFCBaseToolBar
+- CMFCBaseToolBar::CMFCBaseToolBar
+- CMFCBaseToolBar::~CMFCBaseToolBar
+- CMFCBaseToolBar.~CMFCBaseToolBar
+- CreateObject
+- CMFCBaseToolBar.CMFCBaseToolBar
+- CMFCBaseToolBar.CreateObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCBaseToolBar class, constructor
+- CMFCBaseToolBar class, destructor
+- ~CMFCBaseToolBar destructor
+- CreateObject method
+- CMFCBaseToolBar class
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CMFCBaseToolBar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
+ms.lasthandoff: 02/25/2017
 
-Classe base para barras de ferramentas.  
+---
+# <a name="cmfcbasetoolbar-class"></a>Classe CMFCBaseToolBar
+Classe base para as barras de ferramentas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class CMFCBaseToolBar : public CPane  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores public  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
+|----------|-----------------|  
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Construtor padrão.|  
 |`CMFCBaseToolBar::~CMFCBaseToolBar`|Destruidor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|`CMFCBaseToolBar::CreateObject`|Usado pela estrutura dinâmica para criar uma instância de esse tipo da classe.|  
-|[CMFCBaseToolBar::GetDockingMode](../Topic/CMFCBaseToolBar::GetDockingMode.md)|Retorna o modo de encaixe.  Overrides \( [CBasePane::GetDockingMode](../Topic/CBasePane::GetDockingMode.md).\)|  
-|[CMFCBaseToolBar::GetMinSize](../Topic/CMFCBaseToolBar::GetMinSize.md)|Retorna o tamanho mínimo de uma barra de ferramentas.  Overrides \( [CPane::GetMinSize](../Topic/CPane::GetMinSize.md).\)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](../Topic/CMFCBaseToolBar::OnAfterChangeParent.md)|Chamado pela estrutura após o pai do painel muda.  Overrides \( [CBasePane::OnAfterChangeParent](../Topic/CBasePane::OnAfterChangeParent.md).\)|  
+|----------|-----------------|  
+|`CMFCBaseToolBar::CreateObject`|Usado pelo framework para criar uma instância desse tipo de classe dinâmica.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retorna o modo de encaixe. (Substitui [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Retorna o tamanho mínimo de uma barra de ferramentas. (Substitui [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Chamado pela estrutura depois das alterações do pai do painel. (Substitui [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## Hierarquia de herança  
- [CObject](../Topic/CObject%20Class.md)  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CWnd](../Topic/CWnd%20Class.md)  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md)  
   
@@ -76,9 +91,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxbasetoolbar.h  
   
-## Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../Topic/MFC%20Classes.md)
+##  <a name="a-namegetdockingmodea--cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+ Retorna o modo de encaixe.  
+  
+```  
+virtual AFX_DOCK_TYPE GetDockingMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O modo de encaixe.  
+  
+##  <a name="a-namegetminsizea--cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+ Retorna o tamanho mínimo de uma barra de ferramentas.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [out] `size`  
+ O tamanho mínimo de uma barra de ferramentas.  
+  
+##  <a name="a-nameonafterchangeparenta--cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+ Chamado pela estrutura depois das alterações do pai do painel.  
+  
+```  
+virtual void OnAfterChangeParent(CWnd* pWndOldParent);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ [in] `pWndOldParent`  
+ Um ponteiro para a janela pai anterior.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
+

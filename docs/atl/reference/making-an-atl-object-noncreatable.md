@@ -1,55 +1,71 @@
 ---
-title: "Tornando um objeto ATL n&#227;o cri&#225;vel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.ATL.objects"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "projetos ATL, objetos não criáveis"
-  - "objetos ATL não criáveis"
+title: Tornando um Noncreatable de objeto ATL | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.appwiz.ATL.objects
+dev_langs:
+- C++
+helpviewer_keywords:
+- noncreatable ATL objects
+- ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Tornando um objeto ATL n&#227;o cri&#225;vel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
+ms.lasthandoff: 02/25/2017
 
-Você pode alterar os atributos de um objeto COM base ATL\- para que um cliente não pode diretamente criar o objeto.  Em esse caso, o objeto deve ser retornado chama um método com outro objeto em vez de diretamente criado.  
+---
+# <a name="making-an-atl-object-noncreatable"></a>Tornando um Noncreatable de objeto do ATL
+Você pode alterar os atributos de um objeto COM baseados em ATL para que um cliente não pode criar diretamente o objeto. Nesse caso, o objeto deve ser retornado por uma chamada de método em outro objeto em vez de criado diretamente.  
   
-### para fazer um objeto noncreatable  
+### <a name="to-make-an-object-noncreatable"></a>Para fazer um objeto noncreatable  
   
-1.  Remova [OBJECT\_ENTRY\_AUTO](../Topic/OBJECT_ENTRY_AUTO.md) para o objeto.  Se você desejar que o objeto para ser noncreatable mas o controle a ser registrado, substitua OBJECT\_ENTRY\_AUTO com [OBJECT\_ENTRY\_NON\_CREATEABLE\_EX\_AUTO](../Topic/OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO.md).  
+1.  Remover o [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) para o objeto. Se você deseja que o objeto noncreatable, mas o controle a ser registrado, substitua OBJECT_ENTRY_AUTO com [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
   
-2.  Adicione o atributo de [noncreatable](../../windows/noncreatable.md) a coclass no arquivo de .idl.  Por exemplo:  
+2.  Adicionar o [noncreatable](../../windows/noncreatable.md) atributo coclass no arquivo. idl. Por exemplo:  
   
-    ```  
-    [  
-       uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851),  
-       helpstring("MyObject"),  
-      noncreatable  
-    ]  
+ ```  
+ [  
+    uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
+    helpstring("MyObject"), 
+    noncreatable]  
     coclass MyObject  
-    {  
-       [default] interface IMyInterface;  
-    }  
-    ```  
+ {  
+ [default] interface IMyInterface;  
+ }  
+ ```  
   
-## Consulte também  
- [Assistente de Projeto ATL](../Topic/ATL%20Project%20Wizard.md)   
- [Tipos de projeto do Visual C\+\+](../../ide/visual-cpp-project-types.md)   
- [Criando projetos para desktop com Assistentes de Aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Programando com código de tempo de execução ATL e C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Fundamentos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Configurações padrão do projeto ATL](../../atl/reference/default-atl-project-configurations.md)
+## <a name="see-also"></a>Consulte também  
+ [ATL Project Wizard](../../atl/reference/atl-project-wizard.md)   
+ [Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)   
+ [Criando projetos de Desktop com assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Programando com código ATL e C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Configurações de projeto padrão ATL](../../atl/reference/default-atl-project-configurations.md)
+
+

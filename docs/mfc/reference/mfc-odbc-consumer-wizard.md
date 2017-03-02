@@ -1,75 +1,92 @@
 ---
-title: "Assistente de consumidor ODBC MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.mfc.consumer.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente de consumidor ODBC MFC"
-  - "assistentes [MFC]"
+title: Assistente de consumidor ODBC do MFC | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.mfc.consumer.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ODBC Consumer Wizard
+- wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
 caps.latest.revision: 7
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Assistente de consumidor ODBC MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c0d4b56caa29091f24cb5fd3fca1c3c44e459c33
+ms.lasthandoff: 02/25/2017
 
-Resumo dos “resultados da pesquisa” de inserção aqui.  
+---
+# <a name="mfc-odbc-consumer-wizard"></a>Assistente de consumidor ODBC MFC
+Insira "Resultados da pesquisa" Resumo aqui.  
   
- Esse assistente configura de uma classe do conjunto de registros ODBC e associações de dados necessárias para acessar a fonte de dados especificada.  
+ Este assistente define uma classe de conjunto de registros ODBC e as ligações de dados necessário para acessar a fonte de dados especificado.  
   
-## Lista UIElement  
+## <a name="uielement-list"></a>Lista UIElement  
  **Fonte de dados**  
- O botão de **Fonte de dados** permite configurar a fonte de dados especificada usando o driver ODBC especificado.  Para obter mais informações sobre os arquivos de fonte de dados \(DSN\), consulte [Fontes de dados de Arquivo](https://msdn.microsoft.com/en-us/library/ms715401.aspx) no ODBC SDK.  A caixa de diálogo de **Selecionar Fonte de Dados** tem duas guias:  
+ O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o driver ODBC especificado. Para obter mais informações sobre arquivos de fonte de dados (DSN), consulte [fontes de dados de arquivo](https://msdn.microsoft.com/library/ms715401.aspx) no SDK do ODBC. O **Selecionar fonte de dados** caixa de diálogo tem duas guias:  
   
--   guia de**Fonte de dados de Arquivo** : A caixa de **Examinar** especifica o diretório no qual o para selecionar os arquivos a serem usados como fontes de dados.  O padrão é \\Arquivos de programas\\Common Files\\ODBC\\Data Sources.  As fontes de dados do arquivo existente \(arquivos de .dsn\) são exibidos na caixa de listagem principal.  Você pode configurar as fontes de dados antecedência que usam o guia de **DSN de Arquivo** em [Administrador de fonte de dados ODBC](https://msdn.microsoft.com/en-us/library/ms714024.aspx), ou criar novos usando essa caixa de diálogo.  
+-   **Fonte de dados de arquivo** guia: O **examinar** caixa especifica o diretório no qual selecionar arquivos a serem usados como fontes de dados. O padrão é \Program Comuns\odbc\fontes. As fontes de dados de arquivo existente (arquivos. DSN) aparecem na caixa de lista principal. Você pode configurar as fontes de dados antes do tempo usando o **DSN de arquivo** guia de [administrador de fonte de dados ODBC](https://msdn.microsoft.com/library/ms714024.aspx), ou criar novos objetos usando essa caixa de diálogo.  
   
-     Para criar uma fonte de dados do novo arquivo dessa caixa de diálogo, clique em `New` para especificar um nome de DSN; a caixa de diálogo de **Criar nova fonte de dados** é exibida.  Na caixa de diálogo de **Criar nova fonte de dados** , selecione um driver apropriado e clique `Next`; clique **Procurar**, e selecione o nome do arquivo a ser usado como uma fonte de dados \(é necessário selecionar “todos os arquivos” para exibir arquivos de não DSN, como arquivos .xls\); clique `Next`, e clique em **Concluir**. \(Se você selecionou um arquivo de configuração do DSN não, será exibida uma caixa de diálogo específicas de driver, como “a configuração ODBC o Microsoft Excel,” que o converterá o arquivo em um DSN.\)  
+     Para criar uma nova fonte de dados de arquivo da caixa de diálogo, clique em `New` para especificar um nome DSN; o **criar nova fonte de dados** caixa de diálogo é exibida. No **criar nova fonte de dados** caixa de diálogo Selecione um driver apropriado e clique em `Next`; clique em **procurar**e selecione o nome do arquivo a ser usado como uma fonte de dados (você precisa selecionar "Todos os arquivos" para exibir arquivos sem DSN, como arquivos. xls); clique em `Next`e, em seguida, clique em **concluir**. (Se você selecionou um arquivo DSN não, você obterá uma caixa de diálogo específica do driver, como "Configuração ODBC do Microsoft Excel," que converterá o arquivo em um DSN.)  
   
     > [!NOTE]
-    >  Você também pode criar uma fonte de dados do novo arquivo que usa com antecedência o administrador de fonte de dados ODBC.  No menu de **Iniciar** , de **Configurações**selecione, de **Painel de Controle**, de **Ferramentas Administrativas**, de **Data Sources \(ODBC\)**e, depois de **Administrador de fonte de dados ODBC**.  
+    >  Você também pode criar uma nova fonte de dados de arquivo antes de usar o administrador de fonte de dados ODBC. Do **iniciar** menu, selecione **configurações**, **painel de controle**, **ferramentas administrativas**, **fontes de dados (ODBC)**e então **administrador de fonte de dados ODBC**.  
   
-     A caixa de **Nome da fonte** permite que você especifique um nome para a fonte de dados do arquivo.  Você deve garantir que o nome de um DSN termine com a extensão de arquivo apropriado, como .xls para arquivos do Excel ou .mdb para acessar arquivos.  
+     O **nome de DSN** caixa permite que você especifique um nome para o arquivo de origem de dados. Certifique-se de que o nome de DSN termina com a extensão de arquivo apropriado, como. xls para arquivos do Excel ou. mdb para acessar os arquivos.  
   
-     Para obter mais informações sobre como DSNs, consulte [Fontes de dados de Arquivo](https://msdn.microsoft.com/en-us/library/ms715401.aspx) no ODBC SDK.  
+     Para obter mais informações sobre DSNs, consulte [fontes de dados de arquivo](https://msdn.microsoft.com/library/ms715401.aspx) no SDK do ODBC.  
   
--   Guia de**Machine Data Source** : Essa guia lista fontes de dados de sistema e usuário.  As fontes de dados de usuários são específicas a um usuário neste computador.  As fontes de dados do sistema podem ser usadas por todos os usuários neste computador ou pelo sistema em um serviço.  Consulte [Fontes de dados do computador](https://msdn.microsoft.com/en-us/library/ms710952.aspx) no ODBC SDK  
+-   **Fonte de dados da máquina** guia: essa guia lista fontes de dados de usuário e sistema. Fontes de dados do usuário são específicas para um usuário nesse computador. Fontes de dados do sistema podem ser usados por todos os usuários neste computador ou em um serviço de todo o sistema. Consulte [fontes de dados de máquina](https://msdn.microsoft.com/library/ms710952.aspx) no SDK do ODBC  
   
- Para obter mais informações sobre as fontes de dados ODBC, consulte [Fontes de dados](https://msdn.microsoft.com/en-us/library/ms711688.aspx) no ODBC SDK.  
+ Para obter mais informações sobre fontes de dados ODBC, consulte [fontes de dados](https://msdn.microsoft.com/library/ms711688.aspx) no SDK do ODBC.  
   
- Clique em **OK** a conclusão.  A caixa de diálogo de **Selecionar Objeto do Banco de Dados** é exibida.  Essa caixa de diálogo, selecione a tabela ou exibição que o consumidor usará.  Observe que você pode selecionar várias exibições e tabelas com a tecla de controle ao clicar em itens.  
+ Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caixa de diálogo é exibida. Nessa caixa de diálogo, selecione a tabela ou exibição que o consumidor usará. Observe que você pode selecionar várias exibições e tabelas mantendo a tecla control enquanto clica nos itens.  
   
- **Class**  
- O nome da classe do consumidor, por padrão com base no nome da fonte de dados do arquivo ou do computador que você selecionou.  
+ **Classe**  
+ O nome da classe do consumidor, baseada por padrão o nome da máquina ou arquivo de fonte de dados que você selecionou.  
   
- **arquivo .h**  
- O nome do arquivo de cabeçalho da classe do consumidor, por padrão com base no nome da fonte de dados do arquivo ou do computador que você selecionou.  
+ **arquivo. h**  
+ O nome do arquivo de cabeçalho de classe consumidor, baseado por padrão o nome da máquina ou arquivo de fonte de dados que você selecionou.  
   
- **arquivo .cpp**  
- O nome do arquivo de implementação da classe do consumidor, por padrão com base no nome da fonte de dados do arquivo ou do computador que você selecionou.  
+ **arquivo. cpp**  
+ O nome do arquivo de implementação de classe consumidor, baseado por padrão o nome da máquina ou arquivo de fonte de dados que você selecionou.  
   
  **Tipo**  
- Especifica se o conjunto de registros é um dynaset \(padrão\) ou um instantâneo.  
+ Especifica se o conjunto de registros é um dynaset (padrão) ou um instantâneo.  
   
--   **Dynaset**: Especifica que o conjunto de registros é um dynaset.  Um dynaset é o resultado de uma consulta que fornece uma exibição indexada nos dados da base de dados consultado.  Um dynaset armazena em cachê apenas um índice completo aos dados originais e oferece o ganho de desempenho sobre um instantâneo.  Os pontos de índice diretamente para cada registro localizado no resultado de uma consulta e indica se um registro é removido.  Você também tem acesso às informações atualizadas nos registros consultados.  Esse é o padrão.  
+-   **Dynaset**: Especifica que o conjunto de registros é um dynaset. Dynaset é o resultado de uma consulta que fornece uma exibição indexada em dados do banco de dados consultados. Dynaset armazena em cache apenas um índice integral para os dados originais e, portanto, oferece um desempenho obter um instantâneo. Os pontos de índice diretamente a cada registro encontrado como resultado de uma consulta e indica se um registro for removido. Você também tem acesso a informações atualizadas nos registros consultados. Esse é o padrão.  
   
--   **Instantâneo**: Especifica que o conjunto de registros é um instantâneo.  Um instantâneo é o resultado de uma consulta e é uma exibição em um base de dados ao certo ponto.  Registra todos localizado no resultado da consulta é armazenado em cachê, para que você não vir nenhuma alteração nos registros originais.  
+-   **Instantâneo**: Especifica que o conjunto de registros é um instantâneo. Um instantâneo é o resultado de uma consulta e é uma exibição de um banco de dados em um ponto no tempo. Todos os registros em virtude da consulta são armazenados em cache, para que você não veja todas as alterações nos registros originais.  
   
  **Associar todas as colunas**  
- Especifica se todas as colunas na tabela selecionada estão associadas.  Se você selecionar essa caixa \(padrão\), todas as colunas são associadas; se você não selecionar essa caixa, nenhuma coluna é associada, e é preciso associá\-la manualmente na classe do conjunto de registros.  
+ Especifica se todas as colunas na tabela selecionada estão vinculadas. Se você selecionar essa caixa (padrão), todas as colunas são vinculadas; Se você não selecionar essa caixa, não há colunas associadas e você deve associá-las manualmente na classe de conjunto de registros.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Consumidor ODBC do MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

@@ -1,33 +1,48 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: mestre | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- master
+dev_langs:
+- C++
+helpviewer_keywords:
+- master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8b991a6bd15474347d68bf316d71cb5a1ac90bee
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="master"></a>master
 Especifica que somente o mestre threadshould executar uma seção do programa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma omp master  
@@ -36,14 +51,14 @@ Especifica que somente o mestre threadshould executar uma seção do programa.
 }  
 ```  
   
-## Comentários  
- O  **mestre** diretiva oferece suporte a cláusulas sem OpenMP.  
+## <a name="remarks"></a>Comentários  
+ O **mestre** diretiva oferece suporte a nenhum cláusulas OpenMP.  
   
- O [single](../Topic/single.md) diretiva permite especificar que uma seção de código deve ser executada em um único segmento, não necessariamente o thread mestre.  
+ O [único](../../../parallel/openmp/reference/single.md) diretiva permite especificar que uma seção de código deve ser executada em um único thread, não necessariamente o thread principal.  
   
- Para obter mais informações, consulte [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md).  
+ Para obter mais informações, consulte [2.6.1 mestre construção](../../../parallel/openmp/2-6-1-master-construct.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_master.cpp  
@@ -78,10 +93,13 @@ int main( )
 }  
 ```  
   
-  **a \[0\] \= 0**  
-**\[1\] \= 1**  
-**\[2\] \= 4**  
-**\[3\] \= 9**  
-**\[4\] \= 16**   
-## Consulte também  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Diretivas](../../../parallel/openmp/reference/openmp-directives.md)

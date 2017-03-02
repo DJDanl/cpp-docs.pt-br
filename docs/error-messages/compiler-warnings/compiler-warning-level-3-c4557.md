@@ -1,37 +1,52 @@
 ---
-title: "Aviso do compilador (n&#237;vel 3) C4557 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4557"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4557"
+title: "Compilador aviso (nível 3) C4557 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4557
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4557
 ms.assetid: 7d9db716-03b2-4ee5-9b09-ba8aa5aa7e4c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 3) C4557
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a445e63751a6afee890d52ecc73a24a322a2cc5b
+ms.lasthandoff: 02/25/2017
 
-o “\_\_assume” contém o efeito “efeito”  
+---
+# <a name="compiler-warning-level-3-c4557"></a>Compilador C4557 de aviso (nível 3)
+'__assume' contém efeito 'effect'  
   
- O valor passado para [\_\_assume](../../intrinsics/assume.md) statement2 foi alterado.  
+ O valor passado para um [assume](../../intrinsics/assume.md) statement2 foi modificada.  
   
- Esse aviso é desativada por padrão.  Consulte [Avisos do compilador que estão por padrão](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md) para obter mais informações.  
+ Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
- O seguinte exemplo gera C4557:  
+ O exemplo a seguir gera C4557:  
   
 ```  
 // C4557.cpp  

@@ -1,34 +1,49 @@
 ---
-title: "Erro PRJ0022 (compila&#231;&#227;o de projeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0022"
+title: "PRJ0022 de erro de compilação de projeto | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- PRJ0022
+dev_langs:
+- C++
+helpviewer_keywords:
+- PRJ0022
 ms.assetid: 691344a8-fc70-4aeb-9372-dde72f4588a4
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro PRJ0022 (compila&#231;&#227;o de projeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3ab42ddd24f6a724ccbcc523e8b1a2a893e50903
+ms.lasthandoff: 02/25/2017
 
-A ferramenta propriedade desconhecida, “propriedade” contém o nome de arquivo inválido “arquivo”.  
+---
+# <a name="project-build-error-prj0022"></a>Erro de Build PRJ0022 no Projeto
+Ferramenta desconhecida, propriedade 'property' contém o arquivo' nome de arquivo inválido'.  
   
- O nome de arquivo, ***file***, especificado na propriedade, ***property***, era inválido.  
+ O nome do arquivo ***arquivo***, especificado na propriedade de ***propriedade***, era inválido.  
   
- Você pode usar um valor desconhecido ou uma macro inválido.  
+ Você pode ter usado uma macro desconhecida ou inválida.  
   
- Consulte [Propriedades do projeto do Visual C\+\+ de configuração](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+ Consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.

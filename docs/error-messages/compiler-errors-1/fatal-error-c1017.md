@@ -1,37 +1,52 @@
 ---
-title: "Erro fatal C1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1017"
+title: Erro fatal C1017 | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro fatal C1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 40ec8c04960e091198cb2a81605f377273c3de45
+ms.lasthandoff: 02/25/2017
 
-expressão de inteiro constante inválido  
+---
+# <a name="fatal-error-c1017"></a>Erro fatal C1017
+expressão de constante inteira inválida  
   
- A expressão em uma política de `#if` não existia nem avaliada como uma constante.  
+ A expressão em um `#if` diretiva não existe ou não avaliada como uma constante.  
   
- Constantes definidas usando `#define` devem ter os valores que são avaliadas como uma constante inteira se forem usadas em `#if`, em `#elif`, ou na política de `#else` .  
+ Constantes definidas usando `#define` devem ter valores que são avaliadas como uma constante de inteiro se eles forem usados em uma `#if`, `#elif`, ou `#else` diretiva.  
   
- O seguinte exemplo gera C1017:  
+ O exemplo a seguir gera C1017:  
   
 ```  
 // C1017.cpp  
@@ -40,7 +55,7 @@ expressão de inteiro constante inválido
 #endif  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C1017b.cpp  
@@ -50,9 +65,9 @@ expressão de inteiro constante inválido
 #endif  
 ```  
   
- Como `CONSTANT_NAME` for avaliada como uma cadeia de caracteres e não em um inteiro, a política de `#if` gerencia o erro fatal C1017.  
+ Porque `CONSTANT_NAME` for avaliada como uma cadeia de caracteres e não um inteiro, o `#if` diretiva gera erro fatal C1017.  
   
- Em outros casos, o pré\-processador avalia uma constante não como zero.  Isso pode causar resultados não intencionais, conforme mostrado no exemplo a seguir.  `YES` é indefinido, o que é avaliada como zero.  A expressão `#if` `CONSTANT_NAME` for avaliada como false e o código a ser usada em `YES` é removido por pré\-processador.  `NO` também é indefinido \(zero\), portanto `#elif` `CONSTANT_NAME==NO` avalia para retificar \(`0 == 0`\), fazendo com que o pré\-processador deixe o código na parte de `#elif` da instrução — exatamente o oposto de comportamento pretendido.  
+ Em outros casos, o pré-processador avalia uma constante não definida como zero. Isso pode causar resultados inesperados, como mostrado no exemplo a seguir. `YES`é indefinido, portanto, ela é avaliada como zero. A expressão `#if` `CONSTANT_NAME` for avaliada como false e o código a ser usado em `YES` é removido pelo pré-processador. `NO`também é indefinido (zero), então `#elif` `CONSTANT_NAME==NO` for avaliada como true (`0 == 0`), fazendo com que o pré-processador deixar o código o `#elif` parte da instrução — exatamente o oposto do comportamento pretendido.  
   
 ```  
 // C1017c.cpp  
@@ -65,4 +80,4 @@ expressão de inteiro constante inválido
 #endif  
 ```  
   
- Para ver exatamente como o compilador trata políticas de pré\-processador, use [\/P](../../build/reference/p-preprocess-to-a-file.md), [\/E](../../build/reference/e-preprocess-to-stdout.md), ou [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).
+ Para ver exatamente como o compilador trata as diretivas do pré-processador, use [/p](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md), ou [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).

@@ -1,44 +1,59 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4656 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4656"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4656"
+title: "Compilador aviso (nível 1) C4656 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4656
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4656
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: b88f2add0a7b8f365d3617b8eb28eecdfa5a0a26
+ms.lasthandoff: 02/25/2017
 
-símbolo “”: o tipo de dados é novo ou foi alterado desde que o versão mais recente, ou é definido de forma diferente em outro lugar  
+---
+# <a name="compiler-warning-level-1-c4656"></a>Compilador C4656 de aviso (nível 1)
+'symbol': tipo de dados é novo ou tiver sido alterado desde a última compilação ou é definido de forma diferente em outro lugar  
   
- Você adicionou ou modificou um tipo de dados, tornando o novo ao código\-fonte desde que a compilação bem\-sucedida a última vez.  A edição e Continue não dão suporte a alterações nos tipos de dados existentes.  
+ Você adicionou ou alterou um tipo de dados, tornando-o novo ao código-fonte desde a última compilação bem-sucedida. Editar e continuar não dá suporte a alterações em tipos de dados existente.  
   
- Esse aviso será sempre seguido por [Erro fatal C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md).  Para obter mais informações, consulte [Alterações de código com suporte](../Topic/Supported%20Code%20Changes%20\(C++\).md).  
+ Esse aviso sempre será seguido por [C1092 de Erro Fatal](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Para obter mais informações, consulte o [Supported Code Changes](/visualstudio/debugger/supported-code-changes-cpp).  
   
-### Para remover esse aviso sem terminar a sessão atual de depuração  
+### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Para remover esse aviso sem encerrar a sessão de depuração atual  
   
-1.  Alterar o tipo de dados a seu estado antes do erro.  
+1.  Altere o tipo de dados a seu estado antes do erro.  
   
-2.  No menu de **Depurar** , escolha **Aplicar Alterações de Código**.  
+2.  Do **depurar** menu, escolha **aplicar alterações de código**.  
   
-### Para remover este erro sem alterar seu código\-fonte  
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>Para remover este erro sem alterar o código-fonte  
   
-1.  A partir do Menu **Debug**, escolha **Stop Debugging**.  
+1.  Do **depurar** menu, escolha **parar depuração**.  
   
-2.  No menu **Build**, escolha **Build**.
+2.  Do **criar** menu, escolha **criar**.

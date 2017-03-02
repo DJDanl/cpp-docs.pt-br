@@ -1,50 +1,65 @@
 ---
-title: "flush (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Flush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flush OpenMP directive"
+title: liberar (OpenMP) | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Flush
+dev_langs:
+- C++
+helpviewer_keywords:
+- flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# flush (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 30a713da7c1096043b3e48db2453b647717cb163
+ms.lasthandoff: 02/25/2017
 
-Especifica que todos os segmentos têm o mesmo modo de exibição de memória para todos os objetos compartilhados.  
+---
+# <a name="flush-openmp"></a>flush (OpenMP)
+Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #pragma omp flush [(var)]  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  onde,  
   
- `var`\(opcional\)  
- Uma lista separada por vírgulas de variáveis que representam objetos que você deseja sincronizar.  Se `var` não for especificado, toda a memória seja liberada.  
+ `var` (opcional)  
+ Uma lista separada por vírgulas de variáveis que representam os objetos que você deseja sincronizar. Se `var` não for especificado, toda a memória é liberada.  
   
-## Comentários  
- O  **liberar** diretiva oferece suporte a cláusulas sem OpenMP.  
+## <a name="remarks"></a>Comentários  
+ O **liberar** diretiva oferece suporte a nenhum cláusulas OpenMP.  
   
- Para obter mais informações, consulte [2.6.5 flush Directive](../Topic/2.6.5%20flush%20Directive.md).  
+ Para obter mais informações, consulte [2.6.5 diretiva flush](../../../parallel/openmp/2-6-5-flush-directive.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // omp_flush.cpp  
@@ -95,8 +110,11 @@ int main() {
 }  
 ```  
   
-  **O segmento 0: ler dados**  
-**Thread 1: dados de processo**  
-**dados \= 2**   
-## Consulte também  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Thread 0: read data  
+Thread 1: process data  
+data = 2  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Diretivas](../../../parallel/openmp/reference/openmp-directives.md)

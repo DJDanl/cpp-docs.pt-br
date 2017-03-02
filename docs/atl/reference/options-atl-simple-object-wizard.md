@@ -1,75 +1,92 @@
 ---
-title: "Op&#231;&#245;es, assistente simples de objeto de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.simple.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistente simples de objeto de ATL, options"
+title: "Opções, ATL Simple Object Wizard | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.simple.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
 caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#231;&#245;es, assistente simples de objeto de ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: dee92503a4a14a270c04ab102e2599ec0333388d
+ms.lasthandoff: 02/25/2017
 
-Use esta página do assistente simples de objeto de ATL o design para suporte gerado e a eficiência de erro para o objeto.  
+---
+# <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
+Use esta página do ATL Simple Object Wizard para criar para maior eficiência e suporte de erro para o objeto.  
   
- Para obter mais informações sobre projetos de ATL e classes de ATL COM [Componentes da área de trabalho COM ATL](../../atl/atl-com-desktop-components.md), consulte.  
+ Para obter mais informações sobre projetos ATL e classes ATL COM, consulte [componentes de área de trabalho do ATL COM](../../atl/atl-com-desktop-components.md).  
   
- **Threading model**  
- Indica o método para gerenciar segmentos.  Por padrão, o projeto usa **Apartment** threads.  
+ **Modelo de Threading**  
+ Indica o método de gerenciamento de threads. Por padrão, o projeto usa **Apartment** threading.  
   
- Consulte [Especificando o modelo de segmentação do projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para mais informações.  
-  
-|Opção|Descrição|  
-|-----------|---------------|  
-|`Single`|Especifica que o objeto sempre executa no segmento principal COM.  Consulte [Construção de thread única](http://msdn.microsoft.com/library/windows/desktop/ms680112) e [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) para mais informações.|  
-|**Apartment**|Especifica que o objeto usa o Apartment threads.  Equivalente para escolher o compartimento de segmento.  Cada objeto de um componente de apartamento\- é atribuído um compartimento para o segmento, durante a vida útil do objeto; no entanto, vários segmentos podem ser usados para vários objetos.  Cada apartment é vinculado a um determinado segmento e tem uma mensagem bomba do windows \(padrão\).<br /><br /> Consulte [Construção de thread única](http://msdn.microsoft.com/library/windows/desktop/ms680112) para mais informações.|  
-|**Ambos**|Especifica que o objeto pode usar o apartment ou livre segmentação, dependendo do tipo de um segmento é criado.|  
-|**Livre**|Especifica que o objeto liberam segmentação.  Segmentação livre é equivalente a um modelo multithread apartment.  Consulte [Construção multisegmentados](http://msdn.microsoft.com/library/windows/desktop/ms693421) para mais informações.|  
-|**Neutro** Windows 2000 \(somente\)|Especifica que o objeto siga as diretrizes para construção de vários segmentos, mas pode executar em qualquer tipo de segmento.|  
-  
- **Aggregation**  
- Indica se o objeto [agregado](http://msdn.microsoft.com/library/windows/desktop/ms686558).  O objeto agregado escolher que interfaces para expor os clientes, e interfaces são expostos como se o objeto agregado os implementou.  Os clientes do objeto agregado se comunicam somente com o objeto agregado.  
+ Consulte [especificando o modelo de Threading do projeto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obter mais informações.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|Sim|Especifica que o objeto pode ser agregado.  a opção.|  
+|------------|-----------------|  
+|`Single`|Especifica que o objeto sempre é executado no thread primário COM. Consulte [single-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) e [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) para obter mais informações.|  
+|**Apartment**|Especifica que o objeto usa apartment threading. Apartment equivalente a único thread. Cada objeto de um componente apartamento é atribuído um apartamento de seu segmento, durante a vida útil do objeto; No entanto, vários threads podem ser usados para vários objetos. Cada compartimento estiver associado a um thread específico e tem uma bomba de mensagem do Windows (padrão).<br /><br /> Consulte [single-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obter mais informações.|  
+|**Ambos**|Especifica que o objeto pode usar apartment ou thread livre, dependendo de qual tipo de um thread é criada.|  
+|**Livre**|Especifica que o objeto usa thread livre. Thread livre equivale a um modelo de apartment com vários threads. Consulte [multi-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693421) para obter mais informações.|  
+|**Neutro** (apenas Windows 2000)|Especifica que o objeto segue as diretrizes para multi-threaded apartments, mas ela pode ser executada em qualquer tipo de thread.|  
+  
+ **Agregação**  
+ Indica se o objeto usa [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558). O objeto de agregação escolhe quais interfaces para expor aos clientes e as interfaces são expostas como se o objeto de agregação implementadas. Clientes do objeto agregação se comunicar somente com o objeto de agregação.  
+  
+|Opção|Descrição|  
+|------------|-----------------|  
+|Sim|Especifica se o objeto pode ser agregado. O padrão.|  
 |Não|Especifica que o objeto não é agregado.|  
 |Somente|Especifica que o objeto deve ser agregado.|  
   
  **Interface**  
- Indica que o tipo de interface que o objeto suporta.  Por padrão, o objeto suporta uma interface dupla.  
+ Indica o tipo de interface que o objeto oferece suporte. Por padrão, o objeto oferece suporte a uma interface dupla.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|**Double**|Especifica que o objeto suporta uma interface dupla \(o vtable tem funções personalizados de interface mais métodos de `IDispatch` de associação tardia\).  Permite que clientes e [Controladores de automação](../../mfc/automation-clients.md) COM acessem o objeto.  a opção.|  
-|**Personalizado**|Especifica que o objeto suporta uma interface \(o vtable tem funções personalizados de interface\).  Uma interface pode ser mais rápido do que uma interface dupla, especialmente através dos limites de processo.<br /><br /> -   **Automation compatible** permite que os controladores de automação de acessar um objeto que tenha suporte personalizado de interface.|  
+|------------|-----------------|  
+|**Dual**|Especifica que o objeto oferece suporte a uma interface dupla (seu vtable tem associação tardia além de funções de interface personalizada `IDispatch` métodos). Permite que os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|  
+|**Personalizado**|Especifica que o objeto oferece suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente nos limites do processo.<br /><br /> -   **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|  
   
  **Suporte**  
  Indica suporte adicional para o objeto.  
   
 |Opção|Descrição|  
-|-----------|---------------|  
-|**ISupportErrorInfo**|Cria suporte para a interface de [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) assim que o objeto pode retornar informações de erro para o cliente.|  
-|**Pontos de conexão**|Permite pontos de conexão para o objeto fazendo a classe de objeto derivam de [IConnectionPointContainerImpl](../Topic/IConnectionPointContainerImpl%20Class.md).|  
-|**o empacotador de segmentação livre**|Cria um objeto de segmentação livre de marshaler para ponteiros da interface de empacotar forma eficiente entre segmentos no mesmo processo.  Disponível para **Ambos** objeto especificando como o modelo.|  
-|**IObjectWithSite \(suporte do objeto de IE\)**|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que fornece uma maneira simples para oferecer suporte a comunicação entre um objeto e seu site em um contêiner.|  
+|------------|-----------------|  
+|**ISupportErrorInfo**|Cria o suporte para o [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) de interface para o objeto possa retornar informações de erro para o cliente.|  
+|**Pontos de Conexão**|Permite que os pontos de conexão para o objeto fazendo a classe do objeto derivam [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|  
+|**Empacotamento de segmentação livre**|Cria um objeto de empacotamento de segmentação livre para marshaling de ponteiros de interface com eficiência entre threads no mesmo processo. Disponível para objetos especificando **ambos** como o modelo de threading.|  
+|**IObjectWithSite (suporte de objeto do Internet Explorer)**|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que fornece uma maneira simples de oferecer suporte a comunicação entre um objeto e seu site em um contêiner.|  
   
-## Consulte também  
- [Assistente simples de objeto de ATL](../../atl/reference/atl-simple-object-wizard.md)   
- [Objeto simples de ATL](../../atl/reference/adding-an-atl-simple-object.md)   
- [Problemas de threads em processo do servidor](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+## <a name="see-also"></a>Consulte também  
+ [ATL Simple Object Wizard](../../atl/reference/atl-simple-object-wizard.md)   
+ [ATL Simple Object](../../atl/reference/adding-an-atl-simple-object.md)   
+ [Problemas de Threading de servidor em processo](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+
+

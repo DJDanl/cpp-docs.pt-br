@@ -1,33 +1,48 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4532"
+title: "Compilador aviso (nível 1) C4532 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7a188878267ce6889106183fd1bf9db3533134f0
+ms.lasthandoff: 02/25/2017
 
-“acompanhamento”: ignore do bloco de \_\_finally\/finally tem comportamento indefinido durante a manipulação de término  
+---
+# <a name="compiler-warning-level-1-c4532"></a>Compilador C4532 de aviso (nível 1)
+'continue': Finally/bloco finally de saída tem um comportamento indefinido durante a manipulação de término  
   
- O compilador encontrou uma das seguintes palavras\-chave:  
+ O compilador encontrou uma das seguintes palavras-chave:  
   
 -   [continue](../../cpp/continue-statement-cpp.md)  
   
@@ -35,13 +50,13 @@ manager: "ghogen"
   
 -   [goto](../../cpp/goto-statement-cpp.md)  
   
- causando ignorar de um bloco de [\_\_finally](../../cpp/try-finally-statement.md) ou de [finalmente](../../dotnet/finally.md) durante o encerramento anormal.  
+ causando um salto de um [Finally](../../cpp/try-finally-statement.md) ou [finalmente](../../dotnet/finally.md) bloco durante o encerramento anormal.  
   
- Se ocorrer uma exceção, e quando a pilha é distribuída depois durante a execução de manipuladores de término \( `__finally` ou finalmente os blocos\), e seu código ignora de um bloco de `__finally` antes das extremidades do bloco de `__finally` , o comportamento será indefinido.  O controle não pode retornar para o código de desenrolamento, a exceção não pode ser tratado adequadamente.  
+ Se ocorrer uma exceção, e enquanto a pilha está sendo desenrolada durante a execução de manipuladores de terminação (o `__finally` ou blocos finally), e seu código ignora uma `__finally` bloquear antes do `__finally` bloco termina, o comportamento é indefinido. Controle pode não retornar para o código de desenrolamento, para que a exceção não pode ser tratada adequadamente.  
   
- Se você deverá ignorar de um bloco de **\_\_finally** , verifique se há o encerramento anormal primeiro.  
+ Se você deve ignorar um **Finally** bloco, verifique primeiro para encerramento anormal.  
   
- O exemplo a seguir gerenciar C4532; comentam somente das instruções de salto para resolver os avisos.  
+ O exemplo a seguir gera C4532; Comente simplesmente as instruções de salto para resolver os avisos.  
   
 ```  
 // C4532.cpp  

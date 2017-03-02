@@ -1,65 +1,129 @@
 ---
-title: "Classe norm | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::norm"
-dev_langs: 
-  - "C++"
+title: Classe NORM | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::norm
+dev_langs:
+- C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
 caps.latest.revision: 8
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe norm
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
+ms.lasthandoff: 02/25/2017
 
-Representa um número norm.  Cada elemento é um número de ponto flutuante no intervalo \[\-1.0f, 1.0f\].  
+---
+# <a name="norm-class"></a>Classe norm
+Representa um número de norma. Cada elemento é flutuante ponto número no intervalo de [-1, 0F, 1.0 f].  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 class norm;  
 ```  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|---------------|  
-|[Construtor norm::norm](../Topic/norm::norm%20Constructor.md)|Sobrecarregado.  Construtor padrão.  Inicializar em 0.0f.|  
-  
-### Operadores Públicos  
+### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|Operador norm::operator\-||  
-|Operador norm::operator\-\-||  
-|Operador norm::operator float|Operador de conversão.  Converte o número norm para um valor de ponto flutuante.|  
-|Operador norm::operator\*\=||  
-|Operador norm::operator\/\=||  
-|Operador norm::operator\+\+||  
-|Operador norm::operator\+\=||  
-|Operador norm::operator\=||  
-|Operador norm::operator\-\=||  
+|----------|-----------------|  
+|[Construtor NORM](#ctor)|Sobrecarregado. Construtor padrão. Inicialize 0.0 f.|  
   
-## Hierarquia de Herança  
+### <a name="public-operators"></a>Operadores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|Operador-NORM::Operator||  
+|NORM::Operator - operador||  
+|NORM::operator float operador|Operador de conversão. Converter o número de norma flutuante valor de ponto.|  
+|NORM::Operator * operador =||  
+|Operador de NORM::Operator / =||  
+|NORM::Operator operador + +||  
+|Operador + = NORM::Operator||  
+|NORM::Operator = operador||  
+|NORM::Operator-= operador||  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `norm`  
   
-## Requisitos  
- **Cabeçalho:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Consulte também  
- [Namespace Concurrency::graphics](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-norm"></a><a name="ctor"></a>NORM 
+
+ Construtor padrão. Inicialize 0.0 f.  
+  
+```  
+norm(
+    void) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    unsigned int _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    int _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    double _V) restrict(amp,
+    cpu);
+
+ 
+norm(
+    const norm& _Other) restrict(amp,
+    cpu);
+
+ 
+norm(
+    const unorm& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_V`  
+ O valor usado para inicializar.  
+  
+ `_Other`  
+ O objeto usado para inicializar.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+

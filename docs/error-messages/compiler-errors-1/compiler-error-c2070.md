@@ -1,35 +1,50 @@
 ---
-title: "Erro do Compilador C2070 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2070"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2070"
+title: C2070 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2070
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2070
 ms.assetid: 4c8dea63-1227-4aba-be26-2462537f86fb
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erro do Compilador C2070
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: b0be3ac37a3dfd053c743ddbc7bd2f3daebaff93
+ms.lasthandoff: 02/25/2017
 
-“tipo”: operando ilegal de sizeof  
+---
+# <a name="compiler-error-c2070"></a>C2070 de erro do compilador
+'type': operando sizeof ilegal  
   
- O operador de [sizeof](../../cpp/sizeof-operator.md) requer um nome da expressão ou do tipo.  
+ O [sizeof](../../cpp/sizeof-operator.md) operador requer um nome de tipo ou expressão.  
   
- O seguinte exemplo gera C2070:  
+ O exemplo a seguir gera C2070:  
   
 ```  
 // C2070.cpp  
@@ -40,7 +55,7 @@ int main() {
 }  
 ```  
   
- Solução possível:  
+ Resolução possível:  
   
 ```  
 // C2070b.cpp  

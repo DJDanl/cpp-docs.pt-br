@@ -1,65 +1,77 @@
 ---
-title: "Classe de CPrimitiveElementTraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CPrimitiveElementTraits<T>"
-  - "CPrimitiveElementTraits"
-  - "ATL.CPrimitiveElementTraits"
-  - "ATL::CPrimitiveElementTraits<T>"
-  - "ATL::CPrimitiveElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe de CPrimitiveElementTraits"
+title: Classe CPrimitiveElementTraits | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CPrimitiveElementTraits<T>
+- CPrimitiveElementTraits
+- ATL.CPrimitiveElementTraits
+- ATL::CPrimitiveElementTraits<T>
+- ATL::CPrimitiveElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
 caps.latest.revision: 19
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe de CPrimitiveElementTraits
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
+ms.lasthandoff: 02/25/2017
 
-Essa classe fornece métodos padrão e funções para uma classe de coleção composta de tipos de dados primitivos.  
+---
+# <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
+Essa classe fornece métodos padrão e composto de funções para uma classe de coleção de tipos de dados primitivos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <typename T>  
+class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
-> class CPrimitiveElementTraits :   
-   public CDefaultElementTraits< T >  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo de dados a serem armazenados no objeto da classe de coleção.  
+ O tipo de dados a ser armazenado no objeto de classe de coleção.  
   
-## Membros  
+## <a name="members"></a>Membros  
   
-### Typedefs público  
+### <a name="public-typedefs"></a>Typedefs públicos  
   
 |Nome|Descrição|  
-|----------|---------------|  
-|[CPrimitiveElementTraits::INARGTYPE](../Topic/CPrimitiveElementTraits::INARGTYPE.md)|O tipo de dados a ser usado para adicionar elementos ao objeto da classe de coleção.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](../Topic/CPrimitiveElementTraits::OUTARGTYPE.md)|O tipo de dados a ser usado para recuperar elementos de objeto da classe de coleção.|  
+|----------|-----------------|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
   
-## Comentários  
- Essa classe fornece funções estáticas padrão e os métodos para mover, copiar, comparar, e os elementos de tipo de dados primitivos picando armazenados em uma classe de objeto de coleção.  
+## <a name="remarks"></a>Comentários  
+ Essa classe fornece métodos para mover, copiar, comparar e armazenados em um objeto de classe de coleção de elementos de tipo de dados primitivo de hash e funções estáticas padrão.  
   
- Para obter mais informações, consulte [Classes de coleção de ATL](../../atl/atl-collection-classes.md).  
+ Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
-## Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -70,9 +82,24 @@ Essa classe fornece métodos padrão e funções para uma classe de coleção co
   
  `CPrimitiveElementTraits`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-## Consulte também  
- [Classe de CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Visão geral de classe](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+ O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.  
+  
+```
+typedef T INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+ O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.  
+  
+```
+typedef T& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

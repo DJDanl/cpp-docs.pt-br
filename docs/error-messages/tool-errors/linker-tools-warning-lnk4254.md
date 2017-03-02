@@ -1,46 +1,61 @@
 ---
-title: "Aviso LNK4254 (Ferramentas de Vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4254"
+title: Aviso LNK4254 das ferramentas de vinculador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4254
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso LNK4254 (Ferramentas de Vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e69e6808e17cd3694c8d075a4763d6b4689a0a76
+ms.lasthandoff: 02/25/2017
 
-secione “section1” \(deslocamento\) mesclada em “section2” \(deslocamento\) com atributos diferentes  
+---
+# <a name="linker-tools-warning-lnk4254"></a>Aviso LNK4254 (Ferramentas de Vinculador)
+a seção 'section1' (deslocamento) mesclados 'section2' (deslocamento) com diferentes atributos  
   
- O conteúdo de uma seção foram mesclados em outra, mas os atributos das duas seções são diferentes.  O programa pode gerar resultados inesperados.  Por exemplo, os dados que você quisesse ser somente leitura agora podem estar em uma seção gravável.  
+ O conteúdo de uma seção foram mesclado em outro, mas os atributos das duas seções são diferentes. Seu programa pode gerar resultados inesperados. Por exemplo, dados que você queria ser lidos somente podem ser agora em uma seção gravável.  
   
- Para resolver LNK4254, alterar ou remover a solicitação de mesclagem.  
+ Para resolver LNK4254, modificar ou remover a solicitação de mesclagem.  
   
- Ao atingir os computadores x86 e destinos do Windows CE edition \(BRAÇO, MIPS, SH4, e polegar\) com Visual C\+\+, a seção de .CRT é somente leitura.  Se seu código depende do comportamento anterior \(seções de .CRT são de leitura\/gravação\), você pode consultar comportamento inesperado.  
+ Ao direcionar x86 máquinas e destinos do Windows CE (ARM, MIPS, SH4 e Thumb) com o Visual C++, o. Seção de CRT é somente leitura. Se seu código depende do comportamento anterior (. Seções de CRT são leitura/gravação), você pode ver um comportamento inesperado.  
   
- Para obter mais informações, consulte,  
+ Para obter mais informações, consulte  
   
--   [\/MERGE \(combinar seções\)](../../build/reference/merge-combine-sections.md)  
+-   [/Merge (combinar seções)](../../build/reference/merge-combine-sections.md)  
   
--   [comment](../../preprocessor/comment-c-cpp.md)  
+-   [comentário (C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## Exemplo  
- O exemplo a seguir produz LNK4254.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera LNK4254.  
   
 ```  
 // LNK4254.cpp  

@@ -1,39 +1,54 @@
 ---
-title: "Aviso do compilador (n&#237;vel 1) C4503 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4503"
+title: "Compilador aviso (nível 1) C4503 | Documentos do Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4503
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Aviso do compilador (n&#237;vel 1) C4503
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
+ms.lasthandoff: 02/25/2017
 
-“identificador”: o comprimento decorado excedido, o nome do nome foi truncado  
+---
+# <a name="compiler-warning-level-1-c4503"></a>Compilador C4503 de aviso (nível 1)
+'identifier': decorados excedido, comprimento do nome nome foi truncado.  
   
- O nome decorado era maior que o limite do compilador \(4096\), e foi truncado.  Para evitar esse aviso e o truncamento, reduza o número de argumentos ou comprimento do nome dos identificadores usados.  
+ O nome decorado era maior que o limite do compilador (4096) e foi truncado. Para evitar esse aviso e o truncamento, reduza o número de argumentos ou o comprimento do nome dos identificadores usados.  
   
- Uma situação em que esse aviso será emitido quando o código é contém os modelos especializados em modelos repetidamente.  Por exemplo, um mapa dos mapas de biblioteca padrão \(C\+\+\).  Nessa situação, você pode fazer a seus typedefs um tipo \(struct, por exemplo\) que contém o mapa.  
+ Uma situação em que o aviso será emitido é quando seu código contém modelos especializados em modelos repetidamente.  Por exemplo, um mapa de mapas (da biblioteca padrão C++).  Nessa situação, você pode fazer suas definições de tipo um tipo (por exemplo, struct) que contém o mapa.  
   
- Você pode, no entanto, decidir não reestruturar seu código.  É possível enviar um aplicativo que gerencia C4503, mas se você obtiver erros de tempo de link em um símbolo truncado, será mais difícil determinar o tipo do símbolo em erro.  A depuração também será mais difícil; o depurador também terá difìcil mapear o nome do símbolo para digite o nome.  A exatidão do programa, porém, não é afetada pelo nome truncado.  
+ Você pode, no entanto, decidir não reestruturar seu código.  É possível enviar um aplicativo que gera C4503, mas se você obtiver erros de tempo de link em um símbolo truncado, será mais difícil determinar o tipo do símbolo no erro.  Depuração também será mais difícil; o depurador também terá dificuldade mapeamento de nome do símbolo para o tipo de nome.  A correção do programa, no entanto, não é afetada pelo nome truncado.  
   
- O seguinte exemplo gera C4503:  
+ O exemplo a seguir gera C4503:  
   
 ```  
 // C4503.cpp  
@@ -51,7 +66,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- O exemplo a seguir mostra uma maneira da recriação de seu código para resolver C4503:  
+ O exemplo a seguir mostra uma maneira de reescrever o código para resolver C4503:  
   
 ```  
 // C4503b.cpp  
