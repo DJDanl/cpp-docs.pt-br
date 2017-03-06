@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>Classe CStringT
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Uma cadeia de caracteres é interpretada como um conjunto de caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma subcadeia de caracteres que contém os caracteres na cadeia de caracteres que estão em `pszCharSet`, começando com o primeiro caractere na cadeia de caracteres e terminando quando encontra um caractere na cadeia de caracteres que não está em `pszCharSet.``SpanIncluding` retorna uma subcadeia de caracteres vazia se o primeiro caractere na cadeia de caracteres não está no conjunto especificado.  
+ Uma subcadeia de caracteres que contém os caracteres na cadeia de caracteres que estão em `pszCharSet`, começando com o primeiro caractere na cadeia de caracteres e terminando quando encontra um caractere na cadeia de caracteres que não está em `pszCharSet`. `SpanIncluding`Retorna uma subcadeia de caracteres vazia se o primeiro caractere na cadeia de caracteres não está no conjunto especificado.  
   
 ### <a name="remarks"></a>Comentários  
  Se o primeiro caractere da cadeia de caracteres não está no conjunto de caracteres, em seguida, `SpanIncluding` retorna uma cadeia de caracteres vazia. Caso contrário, ele retorna uma sequência de caracteres consecutivos que estão no conjunto.  

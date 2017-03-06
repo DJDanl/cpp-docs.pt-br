@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>Classe CTime
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Comentários  
  Cada construtor é descrito abaixo:  
   
-- **CTime (); **Constrói uma inicializado `CTime` objeto. Este construtor permite que você defina `CTime` matrizes de objetos. Você deve inicializar essas matrizes com tempos válidos antes de usar.  
+- **CTime(); ** Constrói uma inicializado `CTime` objeto. Este construtor permite que você defina `CTime` matrizes de objetos. Você deve inicializar essas matrizes com tempos válidos antes de usar.  
   
-- **CTime (CTime const < /); **Constrói uma `CTime` objeto de outro `CTime` valor.  
+- **CTime (CTime const < /); ** Constrói uma `CTime` objeto de outro `CTime` valor.  
   
-- **CTime (__time64_t); **Constrói uma `CTime` de objeto um **__time64_t** tipo. Este construtor espera uma hora UTC e converte o resultado em uma hora local antes de armazenar o resultado.  
+- **CTime (__time64_t); ** Constrói uma `CTime` de objeto um **__time64_t** tipo. Este construtor espera uma hora UTC e converte o resultado em uma hora local antes de armazenar o resultado.  
   
-- **CTime (int, int,...); **Constrói uma `CTime` objeto dos componentes de hora local com cada componente restrito a intervalos a seguir:  
+- **CTime (int, int,...); ** Constrói uma `CTime` objeto dos componentes de hora local com cada componente restrito a intervalos a seguir:  
   
     |Componente|Intervalo|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Este construtor faz a conversão apropriada para UTC. A versão de depuração da Microsoft Foundation Class Library declara se um ou mais dos componentes de tempo estão fora do intervalo. Você deve validar os argumentos antes de chamar. Este construtor espera uma hora local.  
   
-- `CTime`( **WORD, WORD** ) **;** Constrói uma `CTime` objeto a partir de valores de data e hora de MS-DOS especificados. Este construtor espera uma hora local.  
+- **CTime (WORD, WORD); ** Constrói uma `CTime` objeto a partir de valores de data e hora de MS-DOS especificados. Este construtor espera uma hora local.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** Constrói uma `CTime` de objeto um `SYSTEMTIME` estrutura. Este construtor espera uma hora local.  
+- **CTime (SYSTEMTIME const < /); ** Constrói uma `CTime` de objeto um `SYSTEMTIME` estrutura. Este construtor espera uma hora local.  
   
-- `CTime`( **const FILETIME&** ) **;** Constrói uma `CTime` de objeto um `FILETIME` estrutura. Você provavelmente não usará `CTime``FILETIME` inicialização diretamente. Se você usar um `CFile` objeto para manipular um arquivo `CFile::GetStatus` recupera o carimbo de hora do arquivo para você por meio de um `CTime` objeto inicializado com um `FILETIME` estrutura. Esse construtor assume um tempo com base no UTC e converte o valor automaticamente para a hora local antes de armazenar o resultado.  
+- **CTime (FILETIME const < /); ** Constrói uma `CTime` de objeto um `FILETIME` estrutura. Você provavelmente não usará `CTime FILETIME` inicialização diretamente. Se você usar um `CFile` objeto para manipular um arquivo `CFile::GetStatus` recupera o carimbo de hora do arquivo para você por meio de um `CTime` objeto inicializado com um `FILETIME` estrutura. Esse construtor assume um tempo com base no UTC e converte o valor automaticamente para a hora local antes de armazenar o resultado.  
   
     > [!NOTE]
     >  Usando o construtor **DBTIMESTAMP** parâmetro está disponível apenas quando OLEDB é incluído.  
