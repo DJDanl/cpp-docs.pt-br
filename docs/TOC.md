@@ -1,6 +1,7 @@
 # [Visual C++ no Visual Studio 2017 RC](visual-cpp-in-visual-studio.md)
 # [Novidades do Visual C++ no Visual Studio 2017 RC](what-s-new-for-visual-cpp-in-visual-studio.md)
 # [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)
+## [Conformidade com a linguagem Visual C/C++](c-cpp-language-conformance.md)
 # [Plataformas com suporte (Visual C++)](supported-platforms-visual-cpp.md)
 # [Linguagem C](c-language/c-language-reference.md)
 # [Linguagem C++](cpp/cpp-language-reference.md)
