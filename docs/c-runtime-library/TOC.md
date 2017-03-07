@@ -12,7 +12,6 @@
 ### [Byte e fluxos largos](byte-and-wide-streams.md)
 ### [Controlando fluxos](controlling-streams.md)
 ### [Estados de fluxo](stream-states.md)
-## [Entrada e saída formatadas](formatted-input-and-output.md)
 ## [Recomendações para a escolha entre funções e macros](recommendations-for-choosing-between-functions-and-macros.md)
 ## [Verificação de tipo (CRT)](type-checking-crt.md)
 ## [Sinalizador de direção](direction-flag.md)
@@ -171,7 +170,6 @@
 # [Visões gerais das famílias de funções](function-family-overviews.md)
 ## [Funções _exec, _wexec](exec-wexec-functions.md)
 ## [Funções de pesquisa de nome de arquivo](filename-search-functions.md)
-## [Diretivas de sinalizador](flag-directives.md)
 ## [Sintaxe de especificação de formato: funções printf e wprintf](format-specification-syntax-printf-and-wprintf-functions.md)
 ## [Campos de especificação de formato: funções scanf e wscanf](format-specification-fields-scanf-and-wscanf-functions.md)
 ## [Rotinas is, isw](is-isw-routines.md)
@@ -181,13 +179,9 @@
 ## [operator new (CRT)](operator-new-crt.md)
 ## [operator delete(CRT)](delete-operator-crt.md)
 ## [operator delete (CRT)](operator-delete-crt.md)
-## [Especificação da precisão](precision-specification.md)
-## [Caracteres de campo de tipo printf](printf-type-field-characters.md)
-## [Especificação de largura printf](printf-width-specification.md)
 ## [Parâmetros posicionais printf_p](printf-p-positional-parameters.md)
 ## [Caracteres de campo de tipo scanf](scanf-type-field-characters.md)
 ## [Especificação de largura scanf](scanf-width-specification.md)
-## [Especificação de tamanho](size-specification.md)
 ## [Funções _spawn, _wspawn](spawn-wspawn-functions.md)
 ## [Funções strcoll](strcoll-functions.md)
 ## [Funções de valor de cadeia de caracteres para numérico](string-to-numeric-value-functions.md)
@@ -207,7 +201,3 @@
 ## [_set_output_format](set-output-format.md)
 ## [_unlock](unlock.md)
 # [Referência da Função Alfabética](reference/TOC.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
