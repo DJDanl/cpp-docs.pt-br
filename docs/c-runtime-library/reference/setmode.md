@@ -1,90 +1,107 @@
 ---
-title: "_setmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_setmode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_setmode"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _setmode"
-  - "tradução de arquivo [C++], definindo modo"
-  - "Arquivos  [C++], modos"
-  - "Arquivos  [C++], tradução"
-  - "Função setmode"
-  - "Unicode [C++], saída de console"
+title: _setmode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _setmode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _setmode
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode [C++], console output
+- files [C++], modes
+- _setmode function
+- file translation [C++], setting mode
+- files [C++], translation
+- setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 caps.latest.revision: 23
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _setmode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e1037e5dcdf75ffae6197a32d4be0c2d17c57d78
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="setmode"></a>_setmode
 Define o modo de tradução do arquivo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-int _setmode (    int fd,    int mode  );  
+int _setmode (  
+   int fd,  
+   int mode   
+);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `fd`  
  Descritor de arquivo.  
   
  `mode`  
  Novo modo de conversão.  
   
-## Valor de retorno  
- Se bem\-sucedido, retorna para o modo de conversão anterior.  
+## <a name="return-value"></a>Valor de retorno  
+ Se bem-sucedido, retorna para o modo de conversão anterior.  
   
- Se parâmetros inválidos forem enviados a essa função, o manipulador de parâmetro inválido é chamado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essa função retorna –1 e define `errno` para `EBADF`, que indica um descritor de arquivo inválido ou `EINVAL`, que indica um argumento `mode` inválido.  
+ Se parâmetros inválidos forem passados para essa função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna –1 e define `errno` para `EBADF`, que indica um descritor de arquivo inválido ou `EINVAL`, que indica um argumento `mode` inválido.  
   
- Para obter mais informações sobre esses e outros códigos de retorno, consulte [\_doserrno, errno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- A função `_setmode` define para `mode` o modo de conversão do arquivo fornecido por `fd`.  Passar `_O_TEXT` como `mode` define o modo de texto \(ou seja, convertido\).  Combinações CR\-LF \(Retorno de carro–alimentação de linha\) são convertidas para um único caractere de alimentação de linha na entrada.  Os caracteres de alimentação de linha são convertidos para combinações CR\-LF na saída.  Passar `_O_BINARY` define o modo binário \(não traduzido\), em que essas conversões são suprimidas.  
+## <a name="remarks"></a>Comentários  
+ A função `_setmode` define para `mode` o modo de conversão do arquivo fornecido por `fd`. Passar `_O_TEXT` como `mode` define o modo de texto (ou seja, convertido). Combinações CR-LF (Retorno de carro–alimentação de linha) são convertidas para um único caractere de alimentação de linha na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passar `_O_BINARY` define o modo binário (não traduzido), em que essas conversões são suprimidas.  
   
- Você também pode passar `_O_U16TEXT`, `_O_U8TEXT` ou \_`O_WTEXT` para habilitar o modo Unicode, como demonstrado no segundo exemplo mais adiante neste documento.  `_setmode` normalmente é usado para modificar o modo de conversão padrão de `stdin` e `stdout`, mas você pode usá\-lo em qualquer arquivo.  Se você aplicar `_setmode` ao descritor de arquivo para um fluxo, chame `_setmode` antes de realizar alguma operação de entrada ou saída no fluxo.  
+ Você também pode passar `_O_U16TEXT`, `_O_U8TEXT` ou _`O_WTEXT` para habilitar o modo Unicode, como demonstrado no segundo exemplo mais adiante neste documento. `_setmode` normalmente é usado para modificar o modo de conversão padrão de `stdin` e `stdout`, mas você pode usá-lo em qualquer arquivo. Se você aplicar `_setmode` ao descritor de arquivo para um fluxo, chame `_setmode` antes de realizar alguma operação de entrada ou saída no fluxo.  
   
 > [!CAUTION]
->  Se você gravar dados em um fluxo de arquivo, limpe explicitamente o código usando [fflush](../Topic/fflush.md) antes de usar `_setmode` para alterar o modo.  Se você não limpar o código, pode ocorrer comportamento inesperado.  Se você não tiver dados gravados no fluxo, não será preciso limpar o código.  
+>  Se você gravar dados em um fluxo de arquivo, limpe explicitamente o código usando [fflush](../../c-runtime-library/reference/fflush.md) antes de usar `_setmode` para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|  
-|------------|--------------------------|--------------------------|  
-|`_setmode`|\<io.h\>|\<fcntl.h\>|  
+|-------------|---------------------|----------------------|  
+|`_setmode`|\<io.h>|\<fcntl.h>|  
   
- Para obter mais informações de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_setmode.c  
@@ -108,8 +125,11 @@ int main( void )
 }  
 ```  
   
-  **'stdin' foi alterado com sucesso para o modo binário**   
-## Exemplo  
+```Output  
+'stdin' successfully changed to binary mode  
+```  
+  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_setmodeunicode.c  
@@ -127,18 +147,17 @@ int main(void) {
     wprintf(L"\x043a\x043e\x0448\x043a\x0430 \x65e5\x672c\x56fd\n");  
     return 0;  
 }  
-  
 ```  
   
-## Equivalente ao .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
--   [\<caps:sentence id\="tgt28" sentenceid\="fe03c471a7a38d5378cea62467482dae" class\="tgtSentence"\>Classe System::IO::BinaryReader\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.aspx)  
+-   [Classe System::IO::BinaryReader](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.aspx)  
   
--   [\<caps:sentence id\="tgt29" sentenceid\="105e62b7505c25e3e182779c87f145eb" class\="tgtSentence"\>Classe System::IO::TextReader\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.io.textreader.aspx)  
+-   [Classe System::IO::TextReader](https://msdn.microsoft.com/en-us/library/system.io.textreader.aspx)  
   
-## Consulte também  
- [Manipulação de arquivos](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_set\_fmode](../../c-runtime-library/reference/set-fmode.md)
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_set_fmode](../../c-runtime-library/reference/set-fmode.md)

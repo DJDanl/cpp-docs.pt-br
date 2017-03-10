@@ -1,40 +1,58 @@
 ---
-title: "Classe de Cont&#234;iner::begin | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "método begin"
+title: "Contêiner Class::begin | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
 caps.latest.revision: 8
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe de Cont&#234;iner::begin
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 79bb21c0943bd56b51b3ec7cf0823e99c9be8098
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="container-classbegin"></a>Classe de Contêiner::begin
 > [!NOTE]
->  Este tópico está na documentação do Visual C\+\+ como um exemplo nonfunctional contêineres usados na biblioteca padrão C\+\+.  Para obter mais informações, consulte [Contêineres STL](../standard-library/stl-containers.md).  
+>  Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).  
   
- Retorna um iterador que aponta no primeiro elemento da sequência \(ou apenas além do de uma sequência vazia\).  
+ Retorna um iterador que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      const_iterator begin( ) const;   
-iterator begin( );  
+ 
+    const_iterator begin() const;
+
+ 
+iterator begin();
 ```  
   
-## Consulte também  
- [Exemplo de Classe de Contêiner](../Topic/Sample%20Container%20Class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe de contêiner de amostra](../standard-library/sample-container-class.md)
+

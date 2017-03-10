@@ -1,90 +1,104 @@
 ---
-title: "_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsset"
-  - "_mbsset"
-  - "_strset_l"
-  - "_strset"
-  - "_wcsset_l"
-  - "_mbsset_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsset"
-  - "_strset_l"
-  - "_mbsset"
-  - "_strset"
-  - "mbsset_l"
-  - "strset_l"
-  - "_wcsset"
-  - "_ftcsset"
-  - "wcsset_l"
-  - "_tcsset_l"
-  - "_mbsset_l"
-  - "_wcsset_l"
-  - "_fstrset"
-  - "_tcsset"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _fstrset"
-  - "Função _ftcsset"
-  - "Função _mbsset"
-  - "Função _mbsset_l"
-  - "Função _strset"
-  - "Função _strset_l"
-  - "Função _tcsset"
-  - "Função _tcsset_l"
-  - "Função _wcsset"
-  - "Função _wcsset_l"
-  - "caracteres [C++], configuração"
-  - "Função fstrset"
-  - "Função ftcsset"
-  - "Função mbsset"
-  - "Função mbsset_l"
-  - "cadeias de caracteres [C++], definindo caracteres"
-  - "Função strset_l"
-  - "Função tcsset"
-  - "Função tcsset_l"
-  - "Função wcsset_l"
+title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsset
+- _mbsset
+- _strset_l
+- _strset
+- _wcsset_l
+- _mbsset_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsset
+- _strset_l
+- _mbsset
+- _strset
+- mbsset_l
+- strset_l
+- _wcsset
+- _ftcsset
+- wcsset_l
+- _tcsset_l
+- _mbsset_l
+- _wcsset_l
+- _fstrset
+- _tcsset
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsset_l function
+- _tcsset function
+- wcsset_l function
+- _ftcsset function
+- characters [C++], setting
+- _strset function
+- ftcsset function
+- strings [C++], setting characters
+- mbsset function
+- tcsset_l function
+- _fstrset function
+- mbsset_l function
+- strset_l function
+- _wcsset function
+- _mbsset function
+- _mbsset_l function
+- tcsset function
+- _strset_l function
+- fstrset function
+- _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
 caps.latest.revision: 31
-caps.handback.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 33fbfa70740b7a179aaf817ad61579d752d351ba
+ms.lasthandoff: 02/25/2017
 
-Define caracteres de uma cadeia de caracteres para um caractere.  Versões mais seguras dessas funções estão disponíveis; consulte [\_strset\_s, \_strset\_s\_l, \_wcsset\_s, \_wcsset\_s\_l, \_mbsset\_s, \_mbsset\_s\_l](../Topic/_strset_s,%20_strset_s_l,%20_wcsset_s,%20_wcsset_s_l,%20_mbsset_s,%20_mbsset_s_l.md).  
+---
+# <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
+Define os caracteres de uma cadeia de caracteres para um determinado caractere. Versões mais seguras dessas funções estão disponíveis; consulte [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsset` e `_mbsset_l` não podem ser usados em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Para obter mais informações, consulte [Funções CRT sem suporte pelo \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsset` e `_mbsset_l` não podem ser usados em aplicativos executados no [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 char *_strset(  
@@ -116,49 +130,49 @@ unsigned char *_mbsset_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `str`  
- Cadeia de caracteres terminada com Null a ser definida.  
+ Cadeia de caracteres terminada em nulo a ser definida.  
   
  `c`  
- Configuração de caracteres.  
+ Configuração de caractere.  
   
  `locale`  
- Localidade a ser usada.  
+ Localidade a usar.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para a cadeia de caracteres alterada.  
   
-## Comentários  
- A função `_strset` define todos os caracteres \(exceto o caractere nulo de terminação\) de `str` como `c`, convertidos em `char`.  `_wcsset` e `_mbsset_l` são versões de caracteres largos e de caracteres multibyte de `_strset`, e os tipos de dados dos argumentos e os valores de retorno variam de acordo.  Essas funções se comportam exatamente o contrário.  
+## <a name="remarks"></a>Comentários  
+ A função `_strset` define todos os caracteres (exceto o caractere nulo de terminação) de `str` para `c`, convertido para `char`. `_wcsset` e `_mbsset_l` são versões de caractere largo e caracteres multibyte de `_strset` e os tipos de dados dos argumentos e valores de retorno variam de acordo. Caso contrário, essas funções se comportam de forma idêntica.  
   
- `_mbsset` valida seus parâmetros.  Se `str` for um ponteiro nulo, o manipulador de parâmetro inválido será chamado, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar,`_mbsset` retornará `NULL` e definirá `errno` como `EINVAL`.  `_strset` e `_wcsset` não validam seus parâmetros.  
+ `_mbsset` valida seus parâmetros. Se `str` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_mbsset` retorna `NULL` e define `errno` para `EINVAL`. `_strset` e `_wcsset` não validam seus parâmetros.  
   
- O valor de saída é afetado pela configuração da categoria `LC_CTYPE` de localidade. Para obter mais informações, consulte [setlocale, \_wsetlocale](../Topic/setlocale,%20_wsetlocale.md).  As versões dessas funções são idênticas, exceto aquelas que não têm o sufixo `_l` usam a localidade atual e aquelas que têm o sufixo `_l`, ao contrário, usam o parâmetro de localidade que foi informado.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o sufixo `_l` usam a localidade atual e as com um sufixo `_l` usam o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
 > [!IMPORTANT]
->  Essas funções podem ser vulneráveis às ameaças de saturação de buffer.  As saturações de buffer podem ser usadas para ataques ao sistema, pois podem causar uma elevação de privilégios injustificável.  Para obter mais informações, consulte [Evitando saturações de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsset`|`_strset`|`_mbsset`|`_wcsset`|  
 |`_tcsset_l`|`_strset_l`|`_mbsset_l`|`_wcsset_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_strset`|\<string.h\>|  
-|`_strset_l`|\<tchar.h\>|  
-|`_wcsset`|\<string.h\> ou \<wchar.h\>|  
-|`_wcsset_l`|\<tchar.h\>|  
-|`_mbsset`, `_mbsset_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strset`|\<string.h>|  
+|`_strset_l`|\<tchar.h>|  
+|`_wcsset`|\<string.h> ou \<wchar.h>|  
+|`_wcsset_l`|\<tchar.h>|  
+|`_mbsset`, `_mbsset_l`|\<mbstring.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_strset.c  
@@ -177,18 +191,21 @@ int main( void )
 }  
 ```  
   
-  **Antes: preenchimento da cadeia de caracteres com algo.**  
-**Após:  \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Before: Fill the string with something.  
+After:  *******************************  
+```  
   
-## Consulte também  
- [Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbset, \_mbsnbset\_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
+ [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../Topic/strcmp,%20wcscmp,%20_mbscmp.md)   
- [strcpy, wcscpy, \_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strnset, \_strnset\_l, \_wcsnset, \_wcsnset\_l, \_mbsnset, \_mbsnset\_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

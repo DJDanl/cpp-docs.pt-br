@@ -1,92 +1,788 @@
 ---
-title: "Classe complex | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "complex"
-  - "std::complex"
-  - "std.complex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe complex"
-  - "números complexos"
+title: Class complex | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- complex
+- std::complex
+- std.complex
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex numbers
+- complex class
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 caps.latest.revision: 18
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe complex
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9d7c96371920a858fab024b0838c5a1bdba5718c
+ms.lasthandoff: 02/25/2017
 
-A classe do modelo descreve um objeto que armazena dois objetos de tipo **Tipo**, um que representa a parte real de um número complexo e um que representa a parte fictícia.  
+---
+# <a name="complex-class"></a>Classe complex
+A classe de modelo descreve um objeto que armazena dois objetos do tipo **Type**, um que representa a parte real de um número complexo e outro que representa a parte imaginária.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-   template<class   
-   Type  
-   >  
+ 
+template <class   
+Type>  
 class complex  
 ```  
   
-## Comentários  
- Um objeto da classe **Tipo**:  
+## <a name="remarks"></a>Comentários  
+ Um objeto da classe **Type**:  
   
--   Tem um construtor, um destruidor, um construtor de impressão, e um operador de atribuição padrão públicos com comportamento convencional.  
+-   Tem um construtor padrão público, um destruidor, um construtor de cópia e um operador de atribuição com comportamento convencional.  
   
--   Pode ser atribuído o inteiro ou valores de ponto flutuante, ou conversão de tipos para esses valores com comportamento convencional.  
+-   Pode receber valores inteiros ou de ponto flutuante ou uma conversão de tipo para esses valores com comportamento convencional.  
   
--   Define os operadores aritméticos e a matemática funções, quando necessário, que é definida para os tipos de ponto flutuante com comportamento convencional.  
+-   Define os operadores aritméticos e funções matemáticas, conforme necessário, definidos para os tipos de ponto flutuante com comportamento convencional.  
   
- Em particular, nenhuma diferença sutil pode existir entre a construção de cópia e a compilação da opção seguidas pela atribuição.  Nenhuma das operações em objetos da classe **Tipo** podem lançar exceções.  
+ Em particular, talvez não exista nenhuma diferença sutil entre a construção da cópia e a construção padrão seguida pela atribuição. Nenhuma das operações em objetos da classe **Type** pode gerar exceções.  
   
- As especializações explícitas de classificação do modelo complexo existem para os três tipos de ponto flutuante.  Nessa implementação, um valor de qualquer outro tipo **Tipo** é typecast a **double** para cálculos reais, com o resultado de **double** atribuído de volta ao objeto armazenado do tipo **Tipo**`.`  
+ Existem especializações explícitas do complexo de classe de modelo para os três tipos de ponto flutuante. Nessa implementação, um valor de qualquer outro tipo **Type** é estereotipado para **double** para cálculos reais, com o resultado **double** atribuído de volta ao objeto armazenado do tipo **Type**`.`  
   
-### Construtores  
-  
-|||  
-|-|-|  
-|[complexo](../Topic/complex::complex.md)|Constrói um número complexo com as partes e reais imaginárias especificadas ou como uma cópia de qualquer outro número complexo.|  
-  
-### Typedefs  
+### <a name="constructors"></a>Construtores  
   
 |||  
 |-|-|  
-|[tipo de valor](../Topic/complex::value_type.md)|Um tipo que representa o tipo de dados usado para representar as partes e reais imaginárias de um número complexo.|  
+|[complex](#complex__complex)|Constrói um número complexo com partes reais e imaginárias especificadas ou como uma cópia de algum outro número complexo.|  
   
-### Funções de membro  
-  
-|||  
-|-|-|  
-|[imag](../Topic/complex::imag.md)|Extrai o componente fictício de um número complexo.|  
-|[real](../Topic/complex::real.md)|Extrai o componente real de um número complexo.|  
-  
-### Operadores  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\*\=](../Topic/complex::operator*=.md)|Multiplica um número complexo de destino por um fator, que pode ser complexa ou é o mesmo tipo que são partes reais e imaginárias de número complexo.|  
-|[operador\+\=](../Topic/complex::operator+=.md)|Adiciona um número em um número complexo de destino, onde o número adicionado pode ser complexa ou do mesmo tipo que são partes reais e imaginárias de número complexo ao qual ele é adicionado.|  
-|[operator\-\=](../Topic/complex::operator-=1.md)|Subtrai um número de um número complexo de destino, onde o número complexo ou pode ser subtraído do mesmo tipo que são partes reais e imaginárias de número complexo ao qual ele é adicionado.|  
-|[operator\/\=](../Topic/complex::operator-=2.md)|Divide um número complexo de destino por um divisor, que pode ser complexa ou é o mesmo tipo que são partes reais e imaginárias de número complexo.|  
-|[operador\=](../Topic/complex::operator=.md)|Atribui um número em um número complexo de destino, onde o número atribuído pode ser complexa ou do mesmo tipo que são partes reais e imaginárias número complexo do que está sendo atribuído.|  
+|[value_type](#complex__value_type)|Um tipo que representa o tipo de dados usado para representar as partes reais e imaginárias de um número complexo.|  
   
-## Requisitos  
- **Cabeçalho**: \<complexo\>  
+### <a name="member-functions"></a>Funções membro  
+  
+|||  
+|-|-|  
+|[imag](#complex__imag)|Extrai o componente imaginário de um número complexo.|  
+|[real](#complex__real)|Extrai o componente real de um número complexo.|  
+  
+### <a name="operators"></a>Operadores  
+  
+|||  
+|-|-|  
+|[operator*=](#complex__operator_star_eq)|Multiplica um número complexo de destino por um fator, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.|  
+|[operator+=](#complex__operator_add_eq)|Adiciona um número a um número complexo de destino, em que o número adicionado pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.|  
+|[operator-=](#complex__operator-_eq)|Subtrai um número de um número complexo de destino, em que o número subtraído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.|  
+|[operator/=](#complex__operator__eq)|Divide um número complexo de destino por um divisor, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.|  
+|[operator=](#complex__operator_eq)|Atribui um número a um número complexo de destino, em que o número atribuído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele está sendo atribuído.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho**: \<complexo>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Membros complexos](http://msdn.microsoft.com/pt-br/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+##  <a name="complex__complex"></a>  complex::complex  
+ Constrói um número complexo com partes reais e imaginárias especificadas ou como uma cópia de algum outro número complexo.  
+  
+```  
+constexpr complex(
+    const T& 
+    _RealVal = 0  ,   
+    const T& 
+    _ImagVal = 0);
+
+    template <class Other>  
+constexpr complex(
+    const complex<Other>& 
+    complexNum);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `_RealVal`  
+ O valor da parte real usada para inicializar o número complexo que está sendo construído.  
+  
+ `_ImagVal`  
+ O valor da parte imaginária usada para inicializar o número complexo que está sendo construído.  
+  
+ ` complexNum`  
+ O número complexo cujas partes reais e imaginárias são usadas para inicializar o número complexo que está sendo construído.  
+  
+### <a name="remarks"></a>Comentários  
+ O primeiro construtor inicializa a parte real armazenada para _ *RealVal* e a parte imaginária armazenada para \_ *Imagval*. O segundo construtor inicializa a parte real armazenada para ` complexNum`**.real**() e a parte imaginária armazenada ` complexNum`**.imag**().  
+  
+ Nessa implementação, se um tradutor não dá suporte a funções membro de modelo, o modelo:  
+  
+```  
+template <class Other>  
+complex(const complex<Other>& right);
+```  
+  
+ é substituído por:  
+  
+```  
+ 
+complex(const complex& right);
+```  
+  
+ que é o construtor de cópia.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_complex.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;   
+  
+   // The first constructor specifies real & imaginary parts  
+   complex <double> c1 ( 4.0 , 5.0 );  
+   cout << "Specifying initial real & imaginary parts,"  
+        << "c1 = " << c1 << endl;   
+  
+   // The second constructor initializes values of the real &  
+   // imaginary parts using those of another complex number  
+   complex <double> c2 ( c1 );  
+   cout << "Initializing with the real and imaginary parts of c1,"  
+        << " c2 = " << c2 << endl;   
+  
+   // Complex numbers can be initialized in polar form  
+   // but will be stored in Cartesian form  
+   complex <double> c3 ( polar ( sqrt( (double)8 ) , pi / 4 ) );  
+   cout << "c3 = polar ( sqrt ( 8 ) , pi / 4 ) = " << c3 << endl;   
+  
+   // The modulus and argument of a complex number can be recovered  
+   double absc3 = abs ( c3 );  
+   double argc3 = arg ( c3 );  
+   cout << "The modulus of c3 is recovered from c3 using: abs ( c3 ) = "  
+        << absc3 << endl;  
+   cout << "Argument of c3 is recovered from c3 using:\n arg ( c3 ) = "  
+        << argc3 << " radians, which is " << argc3 * 180 / pi  
+        << " degrees." << endl;  
+}  
+```  
+  
+##  <a name="complex__imag"></a>  complex::imag  
+ Extrai o componente imaginário de um número complexo.  
+  
+```  
+T imag() const;
+
+ 
+T imag(const T& right);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um número complexo cujo valor imaginário deve ser extraído.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A parte imaginária do número complexo.  
+  
+### <a name="remarks"></a>Comentários  
+ Para um número complexo *a + bi*, a parte ou componente imaginário é *Im(a + bi) = b.*  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_imag.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   complex <double> c1 ( 4.0 , 3.0 );  
+   cout << "The complex number c1 = " << c1 << endl;  
+  
+   double dr1 = c1.real ( );  
+   cout << "The real part of c1 is c1.real ( ) = "  
+        << dr1 << "." << endl;  
+  
+   double di1 = c1.imag ( );  
+   cout << "The imaginary part of c1 is c1.imag ( ) = "  
+        << di1 << "." << endl;  
+}  
+```  
+  
+```Output  
+The complex number c1 = (4,3)  
+The real part of c1 is c1.real ( ) = 4.  
+The imaginary part of c1 is c1.imag ( ) = 3.  
+```  
+  
+##  <a name="complex__operator_star_eq"></a>  complex::operator*=  
+ Multiplica um número complexo de destino por um fator, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.  
+  
+```  
+template <class Other>  
+complex& operator*=(const complex<Other>& right);
+
+complex<Type>& operator*=(const Type& right);
+
+complex<Type>& operator*=(const complex<Type>& right);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um número complexo multiplicado pelo número especificado como um parâmetro.  
+  
+### <a name="remarks"></a>Comentários  
+ A operação está sobrecarregada para que operações aritméticas simples possam ser executadas sem a conversão dos dados em um formato específico.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_op_me.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main() {  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> multiplied by type complex<double>  
+   complex <double> cl1 ( polar ( 3.0 , pi / 6 ) );  
+   complex <double> cr1 ( polar ( 2.0 , pi / 3 ) );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 * cr1;  
+   cout << "Quotient of two complex numbers is: cs1 = cl1 * cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 *= cr1;  
+   cout << "Quotient of two complex numbers is also: cl1 *= cr1 = "  
+        << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type complex<double> multiplied by type double  
+   complex <double> cl2 ( polar ( 3.0 , pi / 6 ) );  
+   double cr2 = 5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 * cr2;  
+   cout << "Quotient of two complex numbers is: cs2 = cl2 * cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 *= cr2;  
+   cout << "Quotient of two complex numbers is also: cl2 *= cr2 = "  
+        << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl;  
+}  
+```  
+  
+##  <a name="complex__operator_add_eq"></a>  complex::operator+=  
+ Adiciona um número a um número complexo de destino, em que o número adicionado pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.  
+  
+```  
+template <class Other>  
+complex<Type>& operator+=(const complex<Other>& right);
+
+complex<Type>& operator+=(const Type& right);
+
+complex<Type>& operator+=(const complex<Type>& right);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um número complexo que tem o número especificado como um parâmetro adicionado.  
+  
+### <a name="remarks"></a>Comentários  
+ A operação está sobrecarregada para que operações aritméticas simples possam ser executadas sem a conversão dos dados em um formato específico.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_op_pe.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> added to type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 + cr1;  
+   cout << "The sum of the two complex numbers is: cs1 = cl1 + cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 += cr1;  
+   cout << "The complex number cr1 added to the complex number cl1 is:"  
+        << "\n cl1 += cr1 = " << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type double added to type complex<double>  
+   complex <double> cl2 ( -2 , 4 );  
+   double cr2 =5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 + cr2;  
+   cout << "The sum of the two complex numbers is: cs2 = cl2 + cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 += cr2;  
+   cout << "The complex number cr2 added to the complex number cl2 is:"  
+        << "\n cl2 += cr2 = " << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)  
+The complex number cr1 added to the complex number cl1 is:  
+ cl1 += cr1 = (5,3)  
+The modulus of cl1 is: 5.83095  
+The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.  
+  
+The left-side complex number is cl2 = (-2,4)  
+The right-side complex number is cr2 = 5  
+The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)  
+The complex number cr2 added to the complex number cl2 is:  
+ cl2 += cr2 = (3,4)  
+The modulus of cl2 is: 5  
+The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.  
+```  
+  
+##  <a name="complex__operator-_eq"></a>  complex::operator-=  
+ Subtrai um número de um número complexo de destino, em que o número subtraído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele é adicionado.  
+  
+```  
+template <class Other>  
+complex<Type>& operator-=(const complex<Other>& complexNum);
+
+complex<Type>& operator-=(const Type& _RealPart);
+
+complex<Type>& operator-=(const complex<Type>& complexNum);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` complexNum`  
+ Um número complexo a ser subtraído do número complexo de destino.  
+  
+ `_RealPart`  
+ Um número real a ser subtraído do número complexo de destino.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um número complexo que tem o número especificado como um parâmetro subtraído dele.  
+  
+### <a name="remarks"></a>Comentários  
+ A operação está sobrecarregada para que operações aritméticas simples possam ser executadas sem a conversão dos dados em um formato específico.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_op_se.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> subtracted from type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 - cr1;  
+   cout << "The difference between the two complex numbers is:"  
+        << "\n cs1 = cl1 - cr1 = " << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 -= cr1;  
+   cout << "Complex number cr1 subtracted from complex number cl1 is:"  
+        << "\n cl1 -= cr1 = " << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type double subtracted from type complex<double>  
+   complex <double> cl2 ( 2.0 , 4.0 );  
+   double cr2 = 5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 - cr2;  
+   cout << "The difference between the two complex numbers is:"  
+        << "\n cs2 = cl2 - cr2 = " << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2  -= cr2;  
+   cout << "Complex number cr2 subtracted from complex number cl2 is:"  
+        << "\n cl2 -= cr2 = " << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The difference between the two complex numbers is:  
+ cs1 = cl1 - cr1 = (1,5)  
+Complex number cr1 subtracted from complex number cl1 is:  
+ cl1 -= cr1 = (1,5)  
+The modulus of cl1 is: 5.09902  
+The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.  
+  
+The left-side complex number is cl2 = (2,4)  
+The right-side complex number is cr2 = 5  
+The difference between the two complex numbers is:  
+ cs2 = cl2 - cr2 = (-3,4)  
+Complex number cr2 subtracted from complex number cl2 is:  
+ cl2 -= cr2 = (-3,4)  
+The modulus of cl2 is: 5  
+The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.  
+```  
+  
+##  <a name="complex__operator__eq"></a>  complex::operator/=  
+ Divide um número complexo de destino por um divisor, que pode ser complexo ou ser do mesmo tipo que as partes reais e imaginárias do número complexo.  
+  
+```  
+template <class Other>  
+complex<Type>& operator/=(const complex<Other>& complexNum);
+
+complex<Type>& operator/=(const Type& _RealPart);
+
+complex<Type>& operator/=(const complex<Type>& complexNum);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` complexNum`  
+ Um número complexo a ser subtraído do número complexo de destino.  
+  
+ `_RealPart`  
+ Um número real a ser subtraído do número complexo de destino.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um número complexo dividido pelo número especificado como um parâmetro.  
+  
+### <a name="remarks"></a>Comentários  
+ A operação está sobrecarregada para que operações aritméticas simples possam ser executadas sem a conversão dos dados em um formato específico.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_op_de.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> divided by type complex<double>  
+   complex <double> cl1 ( polar (3.0 , pi / 6 ) );  
+   complex <double> cr1 ( polar (2.0 , pi / 3 ) );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 / cr1;  
+   cout << "The quotient of the two complex numbers is: cs1 = cl1 /cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 /= cr1;  
+   cout << "Quotient of two complex numbers is also: cl1 /= cr1 = "  
+        << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type complex<double> divided by type double  
+   complex <double> cl2 ( polar (3.0 , pi / 6 ) );  
+   double cr2 =5;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 / cr2;  
+   cout << "The quotient of the two complex numbers is: cs2 /= cl2 cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 /= cr2;  
+   cout << "Quotient of two complex numbers is also: cl2 = /cr2 = "  
+        << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (2.59808,1.5)  
+The right-side complex number is cr1 = (1,1.73205)  
+The quotient of the two complex numbers is: cs1 = cl1 /cr1 = (1.29904,-0.75)  
+Quotient of two complex numbers is also: cl1 /= cr1 = (1.29904,-0.75)  
+The modulus of cl1 is: 1.5  
+The argument of cl1 is: -0.523599 radians, which is -30 degrees.  
+  
+The left-side complex number is cl2 = (2.59808,1.5)  
+The right-side complex number is cr2 = 5  
+The quotient of the two complex numbers is: cs2 /= cl2 cr2 = (0.519615,0.3)  
+Quotient of two complex numbers is also: cl2 = /cr2 = (0.519615,0.3)  
+The modulus of cl2 is: 0.6  
+The argument of cl2 is: 0.523599 radians, which is 30 degrees.  
+```  
+  
+##  <a name="complex__operator_eq"></a>  complex::operator=  
+ Atribui um número a um número complexo de destino, em que o número atribuído pode ser complexo ou do mesmo tipo que as partes reais e imaginárias do número complexo ao qual ele está sendo atribuído.  
+  
+```  
+template <class Other>  
+complex<Type>& operator=(const complex<Other>& right);
+
+complex<Type>& operator=(const Type& right);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um número complexo ou um número que é do mesmo tipo que o parâmetro do número complexo de destino.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um número complexo que recebeu o número especificado como um parâmetro.  
+  
+### <a name="remarks"></a>Comentários  
+ A operação está sobrecarregada para que operações aritméticas simples possam ser executadas sem a conversão dos dados em um formato específico.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_op_as.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> assigned to type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   cl1  = cr1;  
+   cout << "The complex number cr1 assigned to the complex number cl1 is:"  
+        << "\n cl1 = cr1 = " << cl1 << endl;  
+  
+   // Example of the second member function  
+   // type double assigned to type complex<double>  
+   complex <double> cl2 ( -2 , 4 );  
+   double cr2 =5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   cl2 = cr2;  
+   cout << "The complex number cr2 assigned to the complex number cl2 is:"  
+        << "\n cl2 = cr2 = " << cl2 << endl;  
+  
+   cl2 = complex<double>(3.0, 4.0);  
+   cout << "The complex number (3, 4) assigned to the complex number cl2 is:"  
+        << "\n cl2 = " << cl2 << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The complex number cr1 assigned to the complex number cl1 is:  
+ cl1 = cr1 = (2,-1)  
+The left-side complex number is cl2 = (-2,4)  
+The right-side complex number is cr2 = 5  
+The complex number cr2 assigned to the complex number cl2 is:  
+ cl2 = cr2 = (5,0)  
+The complex number (3, 4) assigned to the complex number cl2 is:  
+ cl2 = (3,4)  
+```  
+  
+##  <a name="complex__real"></a>  complex::real  
+ Obtém ou define o componente real de um número complexo.  
+  
+```  
+constexpr T real() const;
+
+ 
+T real(const T& right);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ ` right`  
+ Um número complexo cujo valor real deve ser extraído.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ A parte real do número complexo.  
+  
+### <a name="remarks"></a>Comentários  
+ Para um número complexo *a + bi*, a parte ou componente real é *Re(a + bi) = a.*  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_class_real.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   complex <double> c1 ( 4.0 , 3.0 );  
+   cout << "The complex number c1 = " << c1 << endl;  
+  
+   double dr1 = c1.real ( );  
+   cout << "The real part of c1 is c1.real ( ) = "  
+        << dr1 << "." << endl;  
+  
+   double di1 = c1.imag ( );  
+   cout << "The imaginary part of c1 is c1.imag ( ) = "  
+        << di1 << "." << endl;  
+}  
+```  
+  
+```Output  
+The complex number c1 = (4,3)  
+The real part of c1 is c1.real ( ) = 4.  
+The imaginary part of c1 is c1.imag ( ) = 3.  
+```  
+  
+##  <a name="complex__value_type"></a>  complex::value_type  
+ Um tipo que representa o tipo de dados usado para representar as partes reais e imaginárias de um número complexo.  
+  
+```  
+ 
+typedef Type value_type;  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ `value_type` é um sinônimo do parâmetro do modelo **Type** complexo da classe.  
+  
+### <a name="example"></a>Exemplo  
+  
+```cpp  
+// complex_valuetype.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   complex <double>::value_type a = 3, b = 4;  
+  
+   complex <double> c1 ( a , b );  
+   cout << "Specifying initial real & imaginary parts"  
+      << "\nof type value_type: "  
+      << "c1 = " << c1 << "." << endl;  
+}  
+```  
+  
+```Output  
+Specifying initial real & imaginary parts  
+of type value_type: c1 = (3,4).  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Membros complexos](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

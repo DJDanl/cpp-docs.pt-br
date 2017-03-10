@@ -1,72 +1,86 @@
 ---
-title: "_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vwprintf_p"
-  - "_vprintf_p"
-  - "_vprintf_p_l"
-  - "_vwprintf_p_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vwprintf_p_l"
-  - "vprintf_p"
-  - "_vprintf_p_l"
-  - "_vwprintf_p"
-  - "vprintf_p_l"
-  - "vwprintf_p_l"
-  - "vwprintf_p"
-  - "vtprintf_p"
-  - "_vtprintf_p"
-  - "_vprintf_p"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _vprintf_p"
-  - "Função _vprintf_p_l"
-  - "Função _vtprintf_p"
-  - "Função _vtprintf_p_l"
-  - "Função _vwprintf_p"
-  - "Função _vwprintf_p_l"
-  - "texto formatado [C++]"
-  - "Função vprintf_p"
-  - "Função vprintf_p_l"
-  - "Função vtprintf_p"
-  - "Função vtprintf_p_l"
-  - "Função vwprintf_p"
-  - "Função vwprintf_p_l"
+title: _vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vwprintf_p
+- _vprintf_p
+- _vprintf_p_l
+- _vwprintf_p_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vwprintf_p_l
+- vprintf_p
+- _vprintf_p_l
+- _vwprintf_p
+- vprintf_p_l
+- vwprintf_p_l
+- vwprintf_p
+- vtprintf_p
+- _vtprintf_p
+- _vprintf_p
+dev_langs:
+- C++
+helpviewer_keywords:
+- _vtprintf_p_l function
+- _vtprintf_p function
+- vtprintf_p function
+- _vwprintf_p function
+- _vwprintf_p_l function
+- _vprintf_p function
+- _vprintf_p_l function
+- vprintf_p_l function
+- vwprintf_p function
+- vprintf_p function
+- vtprintf_p_l function
+- vwprintf_p_l function
+- formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 968944835ed3a3da26378018c7d73ceb94f987db
+ms.lasthandoff: 02/25/2017
 
-Grava a saída formatada usando um ponteiro para uma lista de argumentos, e habilita a especificação da ordem em que os argumentos são usados.  
+---
+# <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
+Grava a saída formatada usando um ponteiro para uma lista de argumentos e permite a especificação da ordem na qual os argumentos são usados.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int _vprintf_p(  
@@ -89,7 +103,7 @@ int _vwprintf_p_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `format`  
  Especificação de formato.  
   
@@ -99,52 +113,52 @@ int _vwprintf_p_l(
  `locale`  
  A localidade a ser usada.  
   
- Para obter mais informações, consulte [Especificações de formato](../Topic/Format%20Specification%20Syntax:%20printf%20and%20wprintf%20Functions.md).  
+ Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valor de retorno  
- `_vprintf_p` e `_vwprintf_p` retornam o número de caracteres gravados, sem incluir o caractere nulo de terminação ou um valor negativo, no caso de ocorrer um erro de saída.  
+## <a name="return-value"></a>Valor de retorno  
+ `_vprintf_p` e `_vwprintf_p` retornam o número de caracteres gravados, sem incluir o caractere nulo de terminação nem um valor negativo, se ocorrer um erro de saída.  
   
-## Comentários  
- Cada uma dessas funções leva um ponteiro a uma lista de argumentos e, em seguida, formata e grava os dados fornecidos em `stdout`.  Essas funções diferem de `vprintf_s` e `vwprintf_s` somente porque oferecem suporte à capacidade de especificar a ordem em que os argumentos são usados.  Para obter mais informações, consulte [Parâmetros posicionais printf\_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+## <a name="remarks"></a>Comentários  
+ Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados fornecidos no `stdout`. Essas funções diferem de `vprintf_s` e `vwprintf_s` apenas no sentido de que dão suporte à capacidade de especificar a ordem em que o argumentos são usados. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_vwprintf_p` é a versão de caracteres largos de `_vprintf_p`; as duas funções se comportarão de forma idêntica se o fluxo for aberto no modo de ANSI.  No momento, `_vprintf_p` não tem suporte para saída em fluxo UNICODE.  
+ `_vwprintf_p` é a versão de caractere largo de `_vprintf_p`; as duas funções se comportam de forma idêntica quando o fluxo é aberto no modo ANSI. Atualmente, `_vprintf_p` não dá suporte para a saída em um fluxo UNICODE.  
   
- As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam o parâmetro de localidade passado em vez da localidade de thread atual.  
+ As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   
 > [!IMPORTANT]
->  Verifique se `format` não é uma cadeia de caracteres definida pelo usuário.  Para obter mais informações, consulte [Evitando saturações de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Verifique se `format` não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).  
   
- Se `format` for um ponteiro nulo, ou se a cadeia de caracteres de formato conter caracteres inválidos de formatação, o manipulador de parâmetro inválido será chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, as funções retornarão \-1 e definirão `errno` como `EINVAL`.  
+ Se `format` for um ponteiro nulo, se a contagem for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vtprintf_p`|`_vprintf_p`|`_vprintf_p`|`_vwprintf_p`|  
 |`_vtprintf_p_l`|`_vprintf_p_l`|`_vprintf_p_l`|`_vwprintf_p_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|Cabeçalhos opcionais|  
-|------------|--------------------------|--------------------------|  
-|`_vprintf_p`, `_vprintf_p_l`|\<stdio.h\> e \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vwprintf_p`, `_vwprintf_p_l`|\<stdio.h\> ou \<wchar.h\> e \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`_vprintf_p`, `_vprintf_p_l`|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|  
+|`_vwprintf_p`, `_vwprintf_p_l`|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|  
   
- \* Necessário para a compatibilidade de UNIX V.  
+ \* Necessário para compatibilidade com UNIX V.  
   
- O console não tem suporte em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Os manipuladores de fluxo padrão associados ao console — `stdin`, `stdout` e `stderr` — devem ser redirecionados antes que as funções de tempo de execução do C possam utilizá\-los em aplicativos do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Para informações adicionais de compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
-## Consulte também  
- [E\/S de fluxo](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Consulte também  
+ [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
  [Funções vprintf](../../c-runtime-library/vprintf-functions.md)   
- [\_fprintf\_p, \_fprintf\_p\_l, \_fwprintf\_p, \_fwprintf\_p\_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [\_printf\_p, \_printf\_p\_l, \_wprintf\_p, \_wprintf\_p\_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [sprintf\_p, sprintf\_p\_l, swprintf\_p, swprintf\_p\_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
- [vsprintf\_s, \_vsprintf\_s\_l, vswprintf\_s, \_vswprintf\_s\_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
- [\_vfprintf\_p, \_vfprintf\_p\_l, \_vfwprintf\_p, \_vfwprintf\_p\_l](../../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)   
- [\_printf\_p, \_printf\_p\_l, \_wprintf\_p, \_wprintf\_p\_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [Parâmetros posicionais printf\_p](../../c-runtime-library/printf-p-positional-parameters.md)
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
+ [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
+ [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
+ [_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)   
+ [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
+ [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md)

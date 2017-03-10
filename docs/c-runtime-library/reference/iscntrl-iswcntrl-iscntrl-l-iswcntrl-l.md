@@ -1,63 +1,77 @@
 ---
-title: "iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "iscntrl"
-  - "_iswcntrl_l"
-  - "_iscntrl_l"
-  - "iswcntrl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_istcntrl_l"
-  - "_iswcntrl_l"
-  - "iswcntrl"
-  - "_iscntrl_l"
-  - "iscntrl"
-  - "_istcntrl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _iscntrl_l"
-  - "Função _istcntrl"
-  - "Função _istcntrl_l"
-  - "Função _iswcntrl_l"
-  - "Função iscntrl"
-  - "Função istcntrl"
-  - "Função iswcntrl"
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- iscntrl
+- _iswcntrl_l
+- _iscntrl_l
+- iswcntrl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _istcntrl_l
+- _iswcntrl_l
+- iswcntrl
+- _iscntrl_l
+- iscntrl
+- _istcntrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- iscntrl function
+- _iscntrl_l function
+- _iswcntrl_l function
+- _istcntrl function
+- istcntrl function
+- iswcntrl function
+- _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 657006caf00ba0ef5ccd404d0b83a97bf01f8b28
+ms.lasthandoff: 02/25/2017
 
-Determina se um número inteiro representa um caractere de controle.  
+---
+# <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
+Determina se um inteiro representa um caractere de controle.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 int iscntrl(   
@@ -76,42 +90,42 @@ int _iswcntrl_l(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `c`  
- Número inteiro a ser testado  
+ Inteiro ser testado  
   
  `locale`  
  A localidade a ser usada.  
   
-## Valor de retorno  
- Cada uma dessas rotinas retorna diferente de zero se `c` for uma representação específica de um caractere de controle.  `iscntrl` retorna um valor diferente de zero caso `c` seja um caractere de controle \(0x00 – 0x1F ou 0x7F\).  `iswcntrl` retorna um valor diferente de zero se `c` for um caractere largo de controle.  Cada uma dessas rotinas retornará 0 se `c` não atender à condição de teste.  
+## <a name="return-value"></a>Valor de retorno  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de controle. `iscntrl` retornará um valor diferente de zero se `c` for um caractere de controle (0x00 a 0x1F ou 0x7F). `iswcntrl` retornará um valor diferente de zero se `c` for um caractere largo de controle. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
- As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade informado em vez da localidade atual.  Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- O comportamento de `iscntrl` e de `_iscntrl_l` é indefinido se `c` não é EOF ou no intervalo 0 0xFF direto, inclusive.  Quando uma biblioteca de CRT de depuração é usada e o `c` e não é um desses valores, as funções geram uma declaração.  
+ O comportamento de `iscntrl` e `_iscntrl_l` será indefinido se `c` não for EOF ou não estiver no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e `c` não é um desses valores, as funções geram uma asserção.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
 |`_istcntrl_l`|`_iscntrl_l`|`_iscntrl_l`|`_iswcntrl_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`iscntrl`|\<ctype.h\>|  
-|`iswcntrl`|\<ctype.h\> ou \<wchar.h\>|  
-|`_iscntrl_l`|\<ctype.h\>|  
-|`_iswcntrl_l`|\<ctype.h\> ou \<wchar.h\>|  
+|-------------|---------------------|  
+|`iscntrl`|\<ctype.h>|  
+|`iswcntrl`|\<ctype.h> ou \<wchar.h>|  
+|`_iscntrl_l`|\<ctype.h>|  
+|`_iswcntrl_l`|\<ctype.h> ou \<wchar.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Equivalência do .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
  [System::Char::IsControl](https://msdn.microsoft.com/en-us/library/system.char.iscontrol.aspx)  
   
-## Consulte também  
- [Classificação de caractere](../../c-runtime-library/character-classification.md)   
+## <a name="see-also"></a>Consulte também  
+ [Classificação de caracteres](../../c-runtime-library/character-classification.md)   
  [Localidade](../../c-runtime-library/locale.md)   
  [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)

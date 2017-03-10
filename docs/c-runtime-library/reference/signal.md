@@ -1,52 +1,66 @@
 ---
-title: "signal | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "signal"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "signal"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função signal"
+title: signal | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- signal
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 ms.assetid: 094118de-d789-4063-b4f4-cffcc80bf29d
 caps.latest.revision: 26
-caps.handback.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# signal
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1f05c16dff5bd490866a58fcd36ae28cba862fdd
+ms.lasthandoff: 02/25/2017
 
-Define a manipulação de sinais de interrupção.  
+---
+# <a name="signal"></a>signal
+Define a manipulação de sinal de interrupção.  
   
 > [!IMPORTANT]
->  Não use este método para fechar um aplicativo de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], exceto em cenários de teste e depuração.  As maneiras programáticas ou de interface de usuário de fechar um aplicativo do [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] não são permitidas de acordo com a seção 3.6 dos [Requisitos de certificação de aplicativo do Windows 8](http://go.microsoft.com/fwlink/?LinkId=262889).  Para obter mais informações, consulte [Ciclo de vida do aplicativo \(aplicativos da Windows Store\)](http://go.microsoft.com/fwlink/?LinkId=262853).  
+>  Não use esse método para desligar um aplicativo [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], exceto em cenários de teste ou depuração. As formas programáticas ou de interface do usuário de fechar um aplicativo [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] não são permitidas de acordo com a Seção 3.6 dos [Requisitos de certificação de aplicativos do Windows 8](http://go.microsoft.com/fwlink/?LinkId=262889). Para obter mais informações, consulte [Ciclo de vida do aplicativo (aplicativos da Windows Store)](http://go.microsoft.com/fwlink/?LinkId=262853).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void (__cdecl *signal(  
@@ -55,118 +69,118 @@ void (__cdecl *signal(
    (int);  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `sig`  
- Valor do sinal.  
+ Valor de sinal.  
   
  `func`  
- Função a ser executada.  O primeiro parâmetro é um valor de sinal e o segundo parâmetro é um subcódigo que pode ser usado quando o primeiro parâmetro é SIGFPE.  
+ Função a ser executada. O primeiro parâmetro é um valor de sinal e o segundo parâmetro é um subcódigo que pode ser usado quando o primeiro parâmetro é SIGFPE.  
   
-## Valor de retorno  
- `signal` retorna o valor anterior `func` que está associado ao sinal especificado.  Por exemplo, se o valor anterior de `func` era `SIG_IGN`, o valor de retorno também é `SIG_IGN`.  Um valor de retorno de `SIG_ERR` indica um erro; nesse caso, `errno` é definido como `EINVAL`.  
+## <a name="return-value"></a>Valor de retorno  
+ `signal` retorna o valor anterior de `func` que é associado ao sinal informado. Por exemplo, se o valor anterior de `func` era `SIG_IGN`, o valor retornado também é `SIG_IGN`. Um valor retornado de `SIG_ERR` indica um erro; nesse caso, `errno` é definido como `EINVAL`.  
   
- Para obter mais informações sobre códigos de retorno, consulte [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+ Para obter mais informações sobre esses códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentários  
- A função `signal` permite que um processo escolha uma das várias maneiras de manipular um sinal de interrupção do sistema operacional.  O argumento `sig` é a interrupção à qual `signal` responde; ele deve ser uma das constantes de manifesto a seguir, que são definidas em SIGNAL.H.  
+## <a name="remarks"></a>Comentários  
+ A função `signal` permite que um processo escolha uma das várias maneiras de lidar com um sinal de interrupção do sistema operacional. O argumento `sig` é a interrupção à qual `signal` responde; ele deve ser uma das constantes de manifesto a seguir, que são definidas em SIGNAL.H.  
   
 |Valor `sig`|Descrição|  
-|-----------------|---------------|  
+|-----------------|-----------------|  
 |`SIGABRT`|Encerramento anormal|  
 |`SIGFPE`|Erro de ponto flutuante|  
 |`SIGILL`|Instrução ilegal|  
-|`SIGINT`|Sinal de CTRL\+C|  
-|`SIGSEGV`|Acesso ilegal ao armazenamento|  
-|`SIGTERM`|Solicitação de finalização|  
+|`SIGINT`|Sinal de CTRL+C|  
+|`SIGSEGV`|Acesso ao armazenamento inválido|  
+|`SIGTERM`|Solicitação de encerramento|  
   
- Se `sig` não for um dos valores acima, o manipulador de parâmetro inválido é chamado, conforme definido em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essa função definirá `errno` como `EINVAL` e retornará `SIG_ERR`.  
+ Se `sig` não é nenhum dos valores acima, o manipulador de parâmetro inválido é invocado conforme definido em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `SIG_ERR`.  
   
- Por padrão, `signal` finaliza o programa de chamada com código de saída 3, independentemente do valor de `sig`.  
+ Por padrão, `signal` encerra o programa de chamada com o código de saída 3, independentemente do valor de `sig`.  
   
 > [!NOTE]
->  `SIGINT` não tem suporte em aplicativos do Win32.  Quando uma interrupção de CTRL\+C ocorre, os sistemas operacionais Win32 geram um novo thread para manipular especificamente essa interrupção.  Isso pode gerar um aplicativo single\-thread, como um em UNIX, para se tornar multi\-threaded e gerar comportamento inesperado.  
+> Nenhum aplicativo Win32 dá suporte a  `SIGINT`. Quando ocorre uma interrupção CTRL+C, sistemas operacionais Win32 geram um novo thread para manipular especificamente essa interrupção. Isso pode fazer com que um aplicativo de thread único, tal como um no UNIX, torne-se multithread e cause um comportamento inesperado.  
   
- O argumento `func` é um endereço para um manipulador de sinal que você escreve ou para uma das constantes predefinidas `SIG_DFL` ou `SIG_IGN`, que também são definidas em SIGNAL.H.  Se `func` for uma função, será instalado como manipulador de sinal para o sinal determinado.  O protótipo do manipulador de sinais requer um argumento formal, `sig`, do tipo `int`.  O sistema operacional fornece o argumento real por meio de `sig` quando ocorre uma interrupção; o argumento é o sinal que gerou a interrupção.  Portanto, você pode usar as seis constantes de manifesto \(listadas na tabela acima\) em seu manipulador de sinal para determinar qual interrupção ocorreu e executar a ação adequada.  Por exemplo, você pode chamar `signal` duas vezes para atribuir o mesmo manipulador a dois sinais diferentes, e testa o argumento de `sig` no manipulador para executar diferentes ações com base no sinal recebido.  
+ O argumento `func` é um endereço para um manipulador de sinal que você escreve ou uma das constantes predefinidas `SIG_DFL` ou `SIG_IGN`, que também são definidas em SIGNAL.H. Se `func` for uma função, ela será instalada como o manipulador de sinal para o sinal fornecido. O protótipo do manipulador de sinal requer um argumento formal, `sig`, do tipo `int`. O sistema operacional fornece o argumento real por meio de `sig` quando ocorre uma interrupção; o argumento é o sinal que gerou a interrupção. Portanto, você pode usar as seis constantes de manifesto (listadas na tabela anterior) no seu manipulador de sinal para determinar qual interrupção ocorreu e tomar ações adequadas. Por exemplo, você pode chamar `signal` duas vezes para atribuir o mesmo manipulador para dois sinais diferentes e, em seguida, testar o argumento `sig` no manipulador para executar ações diferentes com base no sinal recebido.  
   
- Se você estiver testando exceções de ponto flutuante \(`SIGFPE`\), `func` apontará para uma função que recebe um segundo argumento opcional que é uma das várias restrições do manifesto, definidas em FLOAT.H, do formulário `FPE_xxx`.  Quando um sinal `SIGFPE` ocorre, você pode testar o valor do segundo argumento para determinar o tipo de exceção de ponto flutuante e, então, executar a ação apropriada.  Esse argumento e seus valores possíveis são extensões da Microsoft.  
+ Se você estiver testando para exceções de ponto flutuante (`SIGFPE`), `func` apontará para uma função que leva um segundo argumento opcional que é uma das várias constantes de manifesto – definidas em FLOAT.H – do formulário `FPE_xxx`. Quando um sinal `SIGFPE` ocorre, você pode testar o valor do segundo argumento para determinar o tipo de exceção de ponto flutuante e, em seguida, realizar a ação apropriada. Esse argumento e seus possíveis valores são extensões da Microsoft.  
   
- Para exceções de ponto flutuante, o valor de `func` não é redefinido quando o sinal é recebido.  Para recuperar as exceções de ponto flutuante, use as cláusulas try\/except para cercar as operações de ponto flutuante.  Também é possível recuperar usando [setjmp](../../c-runtime-library/reference/setjmp.md) com [longjmp](../../c-runtime-library/reference/longjmp.md).  Em ambos os casos, o processo de chamada continua a execução e deixa o estado de ponto flutuante de processo indefinido.  
+ Para exceções de ponto flutuante, o valor de `func` não é redefinido quando o sinal é recebido. Para recuperar-se de exceções de ponto flutuante, use cláusulas try/except ao redor de operações de ponto flutuante. Também é possível recuperar-se usando [setjmp](../../c-runtime-library/reference/setjmp.md) com [longjmp](../../c-runtime-library/reference/longjmp.md). Em ambos os casos, o processo de chamada continua a execução e deixa o estado de ponto flutuante do processo indefinido.  
   
- Se o manipulador de sinal retornar, o processo de chamada continua a execução imediatamente após o ponto em que recebeu o sinal de interrupção.  Isso é verdadeiro, independentemente do tipo de sinal ou modo operacional.  
+ Se o manipulador de sinal retorna, a execução do processo de chamada é retomada imediatamente após o ponto em que ele recebeu o sinal de interrupção. Isso é verdadeiro independentemente do tipo de sinal ou modo de operação.  
   
- Antes da execução da função especificada, o valor de `func` será definido como `SIG_DFL`.  O próximo sinal de interrupção é tratado conforme descrito para `SIG_DFL`, a menos que uma chamada interveniente a `signal` especifique o contrário.  Você pode usar esse recurso para redefinir sinais na função chamada.  
+ Antes da função especificada ser executada, o valor de `func` é definido como `SIG_DFL`. O próximo sinal de interrupção é tratado como descrito para `SIG_DFL`, a menos que uma chamada intermediária para `signal` especifique o contrário. Você pode usar esse recurso para redefinir os sinais na função chamada.  
   
- Como as rotinas de manipulador por sinal são geralmente chamadas de forma assíncrona quando ocorre uma interrupção, sua função de manipulador por sinal pode obter o controle quando uma operação de tempo de execução está incompleta e em estado desconhecido.  A lista a seguir resume as restrições que determinam as funções que você pode usar na sua rotina de manipulador por sinal.  
+ Já que rotinas de manipulador de sinal são geralmente chamadas de forma assíncrona quando ocorre uma interrupção, a função de manipulador de sinal pode obter controle quando uma operação em tempo de execução está incompleta e está em um estado desconhecido. A lista a seguir resume as restrições que determinam quais funções você pode usar em sua rotina de manipulador de sinal.  
   
--   Não emita rotinas de baixo nível ou de E\/S de STDIO.H \(por exemplo, `printf` ou `fread`\).  
+-   Não emita rotinas de E/S de baixo nível ou STDIO.H (por exemplo, `printf` ou `fread`).  
   
--   Não chame rotinas da heap ou nenhuma rotina que usa rotinas da heap \(por exemplo, `malloc`, `_strdup`, ou `_putenv`\).  Consulte [malloc](../../c-runtime-library/reference/malloc.md) para maiores informações.  
+-   Não chame rotinas de heap nem qualquer rotina que use as rotinas de heap (por exemplo, `malloc`, `_strdup` ou `_putenv`). Consulte [malloc](../../c-runtime-library/reference/malloc.md) para obter mais informações.  
   
--   Não use nenhuma função que produz uma chamada do sistema \(por exemplo, `_getcwd` ou `time`\).  
+-   Não use nenhuma função que gere uma chamada do sistema (por exemplo, `_getcwd` ou `time`).  
   
--   Não use `longjmp` a menos que a interrupção seja causada por uma exceção de ponto flutuante \(ou seja, `sig` é `SIGFPE`\).  Nesse caso, reinicializar primeiro o pacote de ponto flutuante usando uma chamada a `_fpreset`.  
+-   Não use `longjmp` a menos que a interrupção seja causada por uma exceção de ponto flutuante (ou seja, se `sig` for `SIGFPE`). Nesse caso, reinicialize primeiro o pacote de ponto flutuante usando uma chamada para `_fpreset`.  
   
 -   Não use nenhuma rotina de sobreposição.  
   
- Um programa deve conter o código de ponto flutuante se for interceptar a exceção de `SIGFPE` usando a função.  Se seu programa não possuir código de ponto flutuante e não exigir o código de tratamento de sinal da biblioteca em tempo de execução, apenas declare um double temporário e inicialize\-o com o valor de zero:  
+ Um programa deverá conter código de ponto flutuante se for interceptar a exceção `SIGFPE` usando a função. Se o seu programa não tem código de ponto flutuante e requer o código de manipulação de sinal da biblioteca em tempo de execução, basta declarar um volatile double e inicializá-lo a zero:  
   
-```  
-volatile double d = 0.0f;   
-```  
+`volatile double d = 0.0f;`  
   
- Os sinais `SIGILL` e `SIGTERM` não são gerados no Windows.  Eles foram incluídos para compatibilidade ANSI.  Portanto, você pode definir manipuladores de sinal para esses sinais usando `signal` e também pode gerar explicitamente esses sinais chamando [raise](../../c-runtime-library/reference/raise.md).  
+ Os sinais `SIGILL` e `SIGTERM` não são gerados no Windows. Eles são incluídos para compatibilidade ANSI. Portanto, você pode definir manipuladores de sinal para esses sinais usando `signal` e você também pode gerar esses sinais explicitamente, chamando [raise](../../c-runtime-library/reference/raise.md).  
   
- As configurações de sinal não são mantidas em processos gerados criados por chamadas para `_exec` ou funções `_spawn` .  As configurações de sinal são redefinidas para valores padrão no novo processo.  
+ As configurações de sinal não são preservadas em processos gerados criados por chamadas para funções `_exec` ou `_spawn`. As configurações de sinal são redefinidas para os valores padrão no novo processo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`signal`|\<signal.h\>|  
+|-------------|---------------------|  
+|`signal`|\<signal.h>|  
   
- Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
- O exemplo a seguir mostra como usar `signal` para adicionar um comportamento personalizado ao sinal `SIGABRT`.  Para obter mais informações sobre o comportamento do cancelamento, consulte [\_set\_abort\_behavior](../../c-runtime-library/reference/set-abort-behavior.md).  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como usar `signal` para adicionar um comportamento personalizado para o sinal `SIGABRT`. Para obter informações adicionais sobre o comportamento de anulação, consulte [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md).  
   
 ```cpp  
-// crt_signal.c  
-// compile with: /EHsc /W4  
-// Use signal to attach a signal handler to the abort routine  
-#include <stdlib.h>  
-#include <signal.h>  
-#include <tchar.h>  
+// crt_signal.c  
+// compile with: /EHsc /W4  
+// Use signal to attach a signal handler to the abort routine  
+#include <stdlib.h>  
+#include <signal.h>  
+#include <tchar.h>  
   
-void SignalHandler(int signal)  
+void SignalHandler(int signal)  
 {  
-    if (signal == SIGABRT) {  
-        // abort signal handler code  
-    } else {  
-        // ...  
-    }  
+    if (signal == SIGABRT) {  
+        // abort signal handler code  
+    } else {  
+        // ...  
+    }  
 }  
   
-int main()  
+int main()  
 {  
-    typedef void (*SignalHandlerPointer)(int);  
+    typedef void (*SignalHandlerPointer)(int);  
   
-    SignalHandlerPointer previousHandler;  
-    previousHandler = signal(SIGABRT, SignalHandler);  
+    SignalHandlerPointer previousHandler;  
+    previousHandler = signal(SIGABRT, SignalHandler);  
   
-    abort();  
+    abort();  
 }  
-  
 ```  
   
-  **Esse aplicativo solicitou que o Tempo de Execução o encerre de maneira incomum.**  
-**Entre em contato com a equipe de suporte do aplicativo para obter mais informações.**   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+This application has requested the Runtime to terminate it in an unusual way.  
+Please contact the application's support team for more information.  
+```  
   
-## Consulte também  
- [Processo e controle de ambiente](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Consulte também  
+ [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [Funções \_exec, \_wexec](../../c-runtime-library/exec-wexec-functions.md)   
- [sair, Exit, Exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_fpreset](../../c-runtime-library/reference/fpreset.md)   
- [Funções \_spawn, \_wspawn](../Topic/_spawn,%20_wspawn%20Functions.md)
+ [Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_fpreset](../../c-runtime-library/reference/fpreset.md)   
+ [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)

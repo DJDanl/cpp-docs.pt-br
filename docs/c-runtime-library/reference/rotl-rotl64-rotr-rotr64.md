@@ -1,68 +1,82 @@
 ---
-title: "_rotl, _rotl64, _rotr, _rotr64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_rotr64"
-  - "_rotl"
-  - "_rotr"
-  - "_rotl64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_rotr64"
-  - "rotl64"
-  - "_rotl64"
-  - "rotr64"
-  - "rotr"
-  - "_rotr"
-  - "_rotl"
-  - "rotl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _rotl"
-  - "Função _rotl64"
-  - "Função _rotr"
-  - "Função _rotr64"
-  - "bits, girando"
-  - "girando bits"
-  - "Função rotl"
-  - "Função rotl64"
-  - "Função rotr"
-  - "Função rotr64"
+title: _rotl, _rotl64, _rotr, _rotr64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _rotr64
+- _rotl
+- _rotr
+- _rotl64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _rotr64
+- rotl64
+- _rotl64
+- rotr64
+- rotr
+- _rotr
+- _rotl
+- rotl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rotl64 function
+- _rotl function
+- rotr function
+- rotr64 function
+- _rotr function
+- rotl function
+- _rotl64 function
+- rotating bits
+- _rotr64 function
+- bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _rotl, _rotl64, _rotr, _rotr64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 88d9d6937c75813709dd5558f67ed7e16b1da5c4
+ms.lasthandoff: 02/25/2017
 
-Gerencie bit para a esquerda \(`_rotl`\) ou direito \(`_rotr`\).  
+---
+# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+Gira bits para a esquerda (`_rotl`) ou para a direita (`_rotr`).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -84,32 +98,32 @@ unsigned __int64 _rotr64(
 );  
 ```  
   
-#### Parâmetros  
- *valor*  
- Valor a ser ativado.  
+#### <a name="parameters"></a>Parâmetros  
+ *value*  
+ O valor a ser girado.  
   
  `shift`  
- Número de bits a ser deslocada.  
+ O número de bits a deslocar.  
   
-## Valor de retorno  
- O valor girado.  Não há nenhum retorno de erro.  
+## <a name="return-value"></a>Valor de retorno  
+ O valor girado. Nenhum erro é retornado.  
   
-## Comentários  
- As funções de `_rotl` e de `_rotr` gerenciem *o valor* não assinado por bit de `shift` .  `_rotl` gerencia o valor esquerda.  `_rotr` gerencia à direita do valor.  Ambos os bits de quebra automática das funções dinâmicas fora de um final do *valor* para outro extremidade.  
+## <a name="remarks"></a>Comentários  
+ As funções `_rotl` e `_rotr` giram sem o *value* sem sinal `shift` bits. `_rotl` gira o valor para a esquerda. `_rotr` gira o valor para a direita. Ambas as funções encapsulam bits girados de uma extremidade do *value* para a outra.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|**\_rotl, \_rotl64**|\<stdlib.h\>|  
-|**\_rotr, \_rotr64**|\<stdlib.h\>|  
+|-------------|---------------------|  
+|**_rotl, _rotl64**|\<stdlib.h>|  
+|**_rotr, _rotr64**|\<stdlib.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+ Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_rot.c  
@@ -136,7 +150,7 @@ int main( void )
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 0xfd93 rotated left three times is 0x7ec98  
@@ -145,9 +159,9 @@ int main( void )
 101010101010101 rotated right four times is 1010101010101010  
 ```  
   
-## Equivalência do .NET Framework  
- Não aplicável. Para chamar a função padrão de C, use `PInvoke`. Para obter mais informações, consulte [Exemplos de chamadas de plataformas](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
+ Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Consulte também  
- [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [\_lrotl, \_lrotr](../../c-runtime-library/reference/lrotl-lrotr.md)
+## <a name="see-also"></a>Consulte também  
+ [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
+ [_lrotl, _lrotr](../../c-runtime-library/reference/lrotl-lrotr.md)

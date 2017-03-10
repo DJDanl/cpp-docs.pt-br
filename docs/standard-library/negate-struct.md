@@ -1,71 +1,84 @@
 ---
-title: "Struct negate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "negate"
-  - "std.negate"
-  - "std::negate"
-  - "xfunctional/std::negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Struct negate"
-  - "Classe negate"
+title: Struct negate | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- negate
+- std.negate
+- std::negate
+- xfunctional/std::negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- negate struct
+- negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
 caps.latest.revision: 20
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Struct negate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 810861f1f1343d13b5e539a1a21206a72bcb3ec1
+ms.lasthandoff: 02/25/2017
 
-Um objeto predefinido de função que executa a operação aritmética negação \( `operator-`unário\) no argumento.  
+---
+# <a name="negate-struct"></a>Struct negate
+Um objeto de função predefinido que executa a operação de negação aritmética (`operator-` unário) em seu argumento.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class Type = void>
+struct negate : public unary_function<Type, Type>  
+{
+    Type operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for unary operator-
+template <>
+struct negate<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+    -> decltype(-std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct negate : public unary_function<Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for unary operator-  
-template<>  
-   struct negate<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(-std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Type`  
- Qualquer tipo que ofereça suporte `operator-` que tem um operando do tipo especificado ou deduzido.  
+ Qualquer tipo que dê suporte a um `operator-` que usa um operando do tipo especificado ou inferido.  
   
  `Left`  
- O operando a ser negado.  O modelo especializado aperfeiçoa a transmissão de argumentos de referência de lvalue e de rvalue de tipo inferido `Type`.  
+ O operando que deve ser negado. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `Type`.  
   
-## Valor de retorno  
- O resultado de `-``Left.` o modelo especializado aperfeiçoa a transmissão de resultado, que contém o tipo que é retornado por `operator-`unário.  
+## <a name="return-value"></a>Valor de retorno  
+ O resultado de `-``Left.`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado pelo unário `operator-`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // functional_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -99,15 +112,21 @@ int main( )
       cout << *Iter2 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )  
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )  
+*\  
 ```  
   
-  **O vetor v1 \= \(\-10 \-5 0 5 10 15 20 25\)**  
-**Os elementos negado de vetor \= \(10 5 0 \-5 \-10 \-15 \-20 \-25\)**   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

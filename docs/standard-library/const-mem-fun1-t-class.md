@@ -1,74 +1,90 @@
 ---
-title: "Classe const_mem_fun1_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.const_mem_fun1_t"
-  - "xfunctional/std::const_mem_fun1_t"
-  - "std::const_mem_fun1_t"
-  - "const_mem_fun1_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe const_mem_fun1_t"
+title: Classe const_mem_fun1_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.const_mem_fun1_t
+- xfunctional/std::const_mem_fun1_t
+- std::const_mem_fun1_t
+- const_mem_fun1_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
 caps.latest.revision: 20
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe const_mem_fun1_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 3a2664541cd1f1a44988f81e227e553b75b4faa6
+ms.lasthandoff: 02/25/2017
 
-Uma classe de adaptador que permite uma função de membro de **const** que usa um único argumento a ser chamado como um objeto binário da função quando inicializada com um argumento do ponteiro.  
+---
+# <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
+Uma classe de adaptador que permite que uma função de membro **const** que usa um único argumento seja chamada como um objeto de função binário quando inicializada com um argumento de ponteiro.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
+```
+template <class Result, class Type, class Arg>
+class const_mem_fun1_t
+ : public binary_function<const Type *, Arg, Result>  
+{
+    explicit const_mem_fun1_t(Result (Type::* _Pm)(Arg) const);
+    Result operator()(const Type* _Pleft, Arg right) const;
+ };
 ```  
-template<class Result, class Type, class Arg>  
-   class const_mem_fun1_t  
-      : public binary_function<const Type *, Arg, Result>   
-   {  
-   explicit const_mem_fun1_t( Result ( Type::* _Pm )( Arg ) const );  
-   Result operator()(  
-      const Type* _Pleft,   
-      Arg _Right  
-   ) const;  
-   };  
-```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `_Pm`  
- Um ponteiro para a função de membro da classe **Tipo** a ser convertido em um objeto da função.  
+ Um ponteiro para a função membro da classe **Type** a ser convertido em um objeto de função.  
   
  `_Pleft`  
- O objeto de **const** que a função de membro de `_Pm` será chamada.  
+ O objeto **const** no qual a função membro `_Pm` é chamada.  
   
- `_Right`  
- O argumento que está sendo atribuído a `_Pm`.  
+ `right`  
+ O argumento que está sendo fornecido para `_Pm`.  
   
-## Valor de retorno  
- Uma função adaptávela binário.  
+## <a name="return-value"></a>Valor de retorno  
+ Uma função binária adaptável.  
   
-## Comentários  
- A classe do modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função de membro da classe **Tipo**, em um objeto de membro particular.  Define sua função de membro `operator()` como retornar \(**\_Pleft**\-\>\* *Pm\)\(***Right**\) **const**.  
+## <a name="remarks"></a>Comentários  
+ A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno ( **_Pleft**->\* *Pm)(***Right**) **const**.  
   
-## Exemplo  
- O construtor de `const_mem_fun1_t` geralmente não é usado diretamente; a função `mem_fun` auxiliar é usada para adaptar funções de membro.  Consulte [mem\_fun](../Topic/mem_fun%20Function.md) para obter um exemplo de como usar adaptadores da função de membro.  
+## <a name="example"></a>Exemplo  
+ Normalmente, o construtor de `const_mem_fun1_t` não é usado diretamente; a função auxiliar `mem_fun` é usada para adaptar funções membro. Consulte [mem_fun](../standard-library/functional-functions.md#mem_fun_function) para obter um exemplo de como usar adaptadores de função membro.  
   
-## Requisitos  
- **Cabeçalho:** \<funcional\>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-## Consulte também  
- [Segurança de threads na Biblioteca Padrão C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de Modelos Padrão](../misc/standard-template-library.md)
+## <a name="see-also"></a>Consulte também  
+ [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

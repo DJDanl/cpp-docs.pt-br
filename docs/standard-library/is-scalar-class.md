@@ -1,56 +1,68 @@
 ---
-title: "Classe is_scalar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_scalar"
-  - "std::tr1::is_scalar"
-  - "is_scalar"
-  - "std.is_scalar"
-  - "std::is_scalar"
-  - "type_traits/std::is_scalar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe is_scalar [TR1]"
-  - "is_scalar"
+title: Classe is_scalar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_scalar
+- std::is_scalar
+- type_traits/std::is_scalar
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_scalar class
+- is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
 caps.latest.revision: 19
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe is_scalar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 7025e3eb4545689522375a9b7943360d9144c0f8
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="isscalar-class"></a>Classe is_scalar
 Testa se o tipo é escalar.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class Ty>  
-    struct is_scalar;  
+template <class Ty>  
+struct is_scalar;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `Ty`  
  O tipo a ser consultado.  
   
-## Comentários  
- Uma instância do predicado do tipo manterá true se o tipo `Ty` é um tipo integral, um ponto flutuante tipo, um tipo de enumeração, um tipo de ponteiro ou um ponteiro para o tipo de membro ou uma `cv-qualified` formulário de um deles, caso contrário, manterá false.  
+## <a name="remarks"></a>Comentários  
+ Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo integral, um tipo de ponto flutuante, um tipo de enumeração, um tipo de ponteiro ou um tipo de ponteiro para membro ou uma forma `cv-qualified` de algum deles; caso contrário, será falsa.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
-// std_tr1__type_traits__is_scalar.cpp   
+```cpp  
+// std__type_traits__is_scalar.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_scalar \< trivial \> \= \= false**  
-**is\_scalar \< trivial \* \> \= \= true**  
-**is\_scalar \< int \> \= \= true**  
-**is\_scalar \< float \> \= \= true**   
-## Requisitos  
- **Cabeçalho:** \<type\_traits\>  
+```Output  
+is_scalar<trivial> == false  
+is_scalar<trivial *> == true  
+is_scalar<int> == true  
+is_scalar<float> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe is\_compound](../standard-library/is-compound-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe is_compound](../standard-library/is-compound-class.md)
+

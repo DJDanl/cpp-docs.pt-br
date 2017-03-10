@@ -1,57 +1,70 @@
 ---
-title: "Classe remove_reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.remove_reference"
-  - "std::tr1::remove_reference"
-  - "remove_reference"
-  - "std.remove_reference"
-  - "std::remove_reference"
-  - "type_traits/std::remove_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe remove_reference [TR1]"
-  - "remove_reference"
+title: Classe remove_reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- remove_reference
+- std::remove_reference
+- type_traits/std::remove_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- remove_reference class
+- remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
 caps.latest.revision: 20
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Classe remove_reference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 873efb477296b9f6765eb9a85d9ac62f63405382
+ms.lasthandoff: 02/25/2017
 
-Faz referência não do tipo de.  
+---
+# <a name="removereference-class"></a>Classe remove_reference
+Cria tipo de não referência do tipo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-template<class T>  
-    struct remove_reference;  
-  
-template<class T>  using remove_reference_t = typename remove_reference<T>::type;  
+template <class T>  
+struct remove_reference;  
+ 
+template <class T>  
+using remove_reference_t = typename remove_reference<T>::type;  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `T`  
- O tipo para modificar.  
+ O tipo a ser modificado.  
   
-## Comentários  
- Uma instância de `remove_reference<T>` mantém um tipo modificado que é `T1` quando `T` está no formato `T1&`, caso contrário, `T`.  
+## <a name="remarks"></a>Comentários  
+ Uma instância de `remove_reference<T>` mantém um tipo modificado que é `T1` quando `T` é da forma `T1&`, caso contrário, `T`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -65,18 +78,18 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
-remove_reference_t < int & > = = int  
+remove_reference_t<int&> == int  
 ```  
   
-## Requisitos  
- **Cabeçalho:** \< type\_traits \>  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** \<type_traits>  
   
  **Namespace:** std  
   
-## Consulte também  
- [\< type\_traits \>](../standard-library/type-traits.md)   
- [Classe add\_lvalue\_reference](../standard-library/add-lvalue-reference-class.md)
+## <a name="see-also"></a>Consulte também  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Classe add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)
+

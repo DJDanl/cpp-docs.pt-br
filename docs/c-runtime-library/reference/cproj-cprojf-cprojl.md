@@ -1,59 +1,73 @@
 ---
-title: "cproj, cprojf, cprojl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cproj"
-  - "cprojf"
-  - "cprojl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cproj"
-  - "cprojf"
-  - "cprojl"
-  - "complex/cproj"
-  - "complex/cprojf"
-  - "complex/cprojl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "função cproj"
-  - "função cprojf"
-  - "função cprojl"
+title: cproj, cprojf, cprojl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cproj
+- cprojf
+- cprojl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cproj
+- cprojf
+- cprojl
+- complex/cproj
+- complex/cprojf
+- complex/cprojl
+dev_langs:
+- C++
+helpviewer_keywords:
+- cproj function
+- cprojf function
+- cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# cproj, cprojf, cprojl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 830f2e6e59c5f94b68bf2ecccda39e6a2a9e3b9c
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 Recupera a projeção de um número complexo na esfera de Reimann.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _Dcomplex cproj(   
@@ -73,29 +87,29 @@ _Lcomplex cprojl(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `z`  
  Um número complexo.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  A projeção de `z` na esfera de Reimann.  
   
-## Comentários  
- Como C\+\+ permite sobrecargas, é possível chamar sobrecargas de `cproj` que tomam e retornam `_Fcomplex` e `_Lcomplex` valores. Em um programa C, `cproj` sempre toma e retorna um `_Dcomplex` valor.  
+## <a name="remarks"></a>Comentários  
+ Como C++ permite sobrecargas, é possível chamar sobrecargas de `cproj` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `cproj` sempre usa e retorna um valor `_Dcomplex`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rotina|Cabeçalho C|Cabeçalho C\+\+|  
-|------------|-----------------|---------------------|  
-|`cproj`, `cprojf`, `cprojl`|\< Complex. h \>|\< ccomplex \>|  
+|Rotina|Cabeçalho C|Cabeçalho C++|  
+|-------------|--------------|------------------|  
+|`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex>|  
   
- Para obter informações de compatibilidade, consulte [compatibilidade](../../c-runtime-library/compatibility.md) na introdução.  
+ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
-## Consulte também  
- [Referência da função alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norma, normf, norml](../Topic/norm,%20normf,%20norml1.md)   
+## <a name="see-also"></a>Consulte também  
+ [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
  [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [Conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../Topic/cimag,%20cimagf,%20cimagl.md)   
- [carg, cargf, cargl](../Topic/carg,%20cargf,%20cargl.md)   
- [arquivos CAB, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+ [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
+ [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
+ [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
+ [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)

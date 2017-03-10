@@ -1,55 +1,69 @@
 ---
-title: "set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_invalid_parameter_handler"
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "manipulador de parâmetro inválido"
-  - "Função set_invalid_parameter_handler"
-  - "Função _set_invalid_parameter_handler"
-  - "função _set_thread_local_invalid_parameter_handler"
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_invalid_parameter_handler
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid parameter handler
+- set_invalid_parameter_handler function
+- _set_invalid_parameter_handler function
+- _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ed6a98651cea023f8175eca8c9d04d6668cecf5a
+ms.lasthandoff: 02/25/2017
 
-Define uma função a ser chamada quando o CRT detecta um argumento inválido.  
+---
+# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+Define a função a ser chamada quando o CRT detecta um argumento inválido.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 _invalid_parameter_handler _set_invalid_parameter_handler(  
@@ -60,21 +74,21 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );  
 ```  
   
-#### Parâmetros  
- \[in\] `pNew`  
+#### <a name="parameters"></a>Parâmetros  
+ [in] `pNew`  
  O ponteiro de função para o novo manipulador de parâmetro inválido.  
   
-## Valor de retorno  
+## <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o manipulador de parâmetro inválido antes da chamada.  
   
-## Comentários  
- Muitas funções de tempo de execução C verificam a validade dos argumentos passados para eles. Se um argumento inválido for passado, a função pode definir o `errno` número do erro ou retornar um código de erro. Nesses casos, o manipulador de parâmetro inválido também é chamado. O tempo de execução do C fornece um manipulador de parâmetro inválido global padrão que encerra o programa e exibe uma mensagem de erro de tempo de execução. Você pode usar o `_set_invalid_parameter_handler` para definir sua própria função como o manipulador de parâmetro inválido global. O tempo de execução C também oferece suporte a um manipulador de parâmetro inválido de thread local. Se um manipulador de parâmetro de thread local é definido em um thread usando `_set_thread_local_invalid_parameter_handler`, as funções de tempo de execução C chamadas do thread de usarem esse manipulador em vez do manipulador global. Apenas uma função pode ser especificada como o manipulador de argumento inválido global por vez. Apenas uma função pode ser especificada como o manipulador de argumento inválido de thread local por thread, mas os threads diferentes podem ter diferentes manipuladores de thread local. Isso permite que você altere o manipulador usado em uma parte do seu código sem afetar o comportamento de outros threads.  
+## <a name="remarks"></a>Comentários  
+ Muitas funções em tempo de execução C verificam a validade dos argumentos passados para elas. Se um argumento inválido for passado, a função poderá definir o número de erro `errno` ou retornar um código de erro. Nesses casos, o manipulador de parâmetro inválido também é chamado. O tempo de execução C fornece um manipulador de parâmetro inválido global padrão que encerra o programa e exibe uma mensagem de erro em tempo de execução. Você pode usar o `_set_invalid_parameter_handler` para definir sua própria função como o manipulador de parâmetro inválido global. O tempo de execução C também dá suporte a um manipulador de parâmetro inválido local de thread. Se um manipulador de parâmetro local de thread é definido em um thread usando `_set_thread_local_invalid_parameter_handler`, as funções em tempo de execução C chamadas do thread usam esse manipulador em vez do manipulador global. Apenas uma função por vez pode ser especificada como o manipulador de argumento inválido global. Apenas uma função por thread pode ser especificada como o manipulador de argumento inválido local de thread, mas threads diferentes podem ter diferentes manipuladores locais de thread. Isso permite que você altere o manipulador usado em uma parte do seu código sem afetar o comportamento de outros threads.  
   
- Quando o tempo de execução chama a função de parâmetro inválido, isso normalmente significa que ocorreu um erro irrecuperável. A função do manipulador de parâmetro inválido fornecido deve salvar quaisquer dados que podem e, em seguida, anular. Ele não deve retornar o controle para a função principal se tiver certeza de que o erro recuperável.  
+ Quando o tempo de execução chama a função de parâmetro inválido, isso normalmente significa que ocorreu um erro irrecuperável. A função de manipulador de parâmetro inválido fornecida por você deve salvar todos os dados que puder e, em seguida, anular. Ela não deve retornar o controle para a função principal a menos que você tenha certeza de que o erro é recuperável.  
   
  A função de manipulador de parâmetro inválido deve ter o seguinte protótipo:  
   
-```c  
+```  
 void _invalid_parameter(  
    const wchar_t * expression,  
    const wchar_t * function,   
@@ -84,20 +98,20 @@ void _invalid_parameter(
 );  
 ```  
   
- O `expression` argumento é uma representação de cadeia de caracteres larga da expressão do argumento que gerou o erro. O `function` argumento é o nome da função CRT que recebeu o argumento inválido. O `file` argumento é o nome do arquivo de origem CRT que contém a função. O `line` é o número da linha no arquivo. O último argumento é reservado. Os parâmetros todos têm o valor `NULL` a menos que uma versão de depuração da biblioteca CRT é usada.  
+ O argumento `expression` é uma representação de cadeia de caracteres largos da expressão do argumento que gerou o erro. O argumento `function` é o nome da função CRT que recebeu o argumento inválido. O argumento `file` é o nome do arquivo de origem CRT que contém a função. O argumento `line` é o número de linha nesse arquivo. O último argumento é reservado. Todos os parâmetros têm o valor `NULL`, exceto quando uma versão de depuração da biblioteca CRT é usada.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \< stdlib. h \><br /><br /> C\+\+: \< cstdlib \> ou \< stdlib. h \>|  
+|-------------|---------------------|  
+|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib> ou \<stdlib.h>|  
   
- O `_set_invalid_parameter_handler` e `_set_thread_local_invalid_parameter_handler` funções são específicas da Microsoft. Para informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
+ As funções `_set_invalid_parameter_handler` e `_set_thread_local_invalid_parameter_handler` são específicas da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
-## Exemplo  
- No exemplo a seguir, um manipulador de erro de parâmetro inválido é usado para imprimir a função que recebeu o parâmetro inválido e o arquivo e a linha em fontes de CRT. Quando a biblioteca de depuração CRT é usada, erros de parâmetro inválido também geram uma asserção, que é desabilitada usando este exemplo [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
+## <a name="example"></a>Exemplo  
+ No exemplo a seguir, um manipulador de erro de parâmetro inválido é usado para imprimir a função que recebeu o parâmetro inválido e o arquivo e a linha em fontes de CRT. Quando a biblioteca de depuração CRT é usada, erros de parâmetro inválido também geram uma asserção, que é desabilitada neste exemplo usando [CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
   
-```c  
+```C  
 // crt_set_invalid_parameter_handler.c  
 // compile with: /Zi /MTd  
 #include <stdio.h>  
@@ -135,10 +149,11 @@ int main( )
 ```  
   
 ```Output  
-Parâmetro inválido detectado na função common_vfprintf. Arquivo: minkernel\crts\ucrt\src\appcrt\stdio\output.cpp linha: expressão 32: formato! = nullptr  
+Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucrt\src\appcrt\stdio\output.cpp Line: 32  
+Expression: format != nullptr  
 ```  
   
-## Consulte também  
- [\_get\_invalid\_parameter\_handler, \_get\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
- [Versões aprimoradas de segurança de funções CRT](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)   
- [errno, \_doserrno, \_sys\_errlist e \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)
+## <a name="see-also"></a>Consulte também  
+ [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
+ [Versões de funções CRT com segurança aprimorada](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)   
+ [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
