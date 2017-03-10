@@ -1,141 +1,155 @@
 ---
-title: "Constantes errno | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENOEXEC"
-  - "ENOMEM"
-  - "E2BIG"
-  - "STRUNCATE"
-  - "ENOENT"
-  - "EMFILE"
-  - "EBADF"
-  - "EDEADLOCK"
-  - "EXDEV"
-  - "EILSEQ"
-  - "EINVAL"
-  - "EDOM"
-  - "EACCES"
-  - "ERANGE"
-  - "ENOSPC"
-  - "EAGAIN"
-  - "EEXIST"
-  - "ECHILD"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante E2BIG"
-  - "Constante EACCES"
-  - "Constante EAGAIN"
-  - "Constante EBADF"
-  - "Constante ECHILD"
-  - "Constante EDEADLOCK"
-  - "Constante EDOM"
-  - "Constante EEXIST"
-  - "Constante EILSEQ"
-  - "Constante EINVAL"
-  - "Constante EMFILE"
-  - "Constante ENOENT"
-  - "Constante ENOEXEC"
-  - "Constante ENOMEM"
-  - "Constante ENOSPC"
-  - "Constante ERANGE"
-  - "Constantes errno"
-  - "Constante EXDEV"
-  - "Constante STRUNCATE"
+title: Constantes errno | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ENOEXEC
+- ENOMEM
+- E2BIG
+- STRUNCATE
+- ENOENT
+- EMFILE
+- EBADF
+- EDEADLOCK
+- EXDEV
+- EILSEQ
+- EINVAL
+- EDOM
+- EACCES
+- ERANGE
+- ENOSPC
+- EAGAIN
+- EEXIST
+- ECHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- ENOEXEC constant
+- EBADF constant
+- EAGAIN constant
+- EINVAL constant
+- ENOENT constant
+- errno constants
+- E2BIG constant
+- EMFILE constant
+- EDEADLOCK constant
+- ENOSPC constant
+- EDOM constant
+- ENOMEM constant
+- EACCES constant
+- EEXIST constant
+- STRUNCATE constant
+- ERANGE constant
+- ECHILD constant
+- EXDEV constant
+- EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Constantes errno
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f0a0529b7f96a53d9116a127b641859d97740d11
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="errno-constants"></a>Constantes errno
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 #include <errno.h>  
 ```  
   
-## Comentários  
- Os valores de **errno** constantes são atribuídas a [errno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) no caso de várias condições de erro.  
+## <a name="remarks"></a>Comentários  
+ Os valores de **errno** são constantes atribuídas a [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) no caso de várias condições de erro.  
   
- ERRNO.H contém as definições dos valores de **errno** .  Porém, nem todas as definições fornecidas em ERRNO.H são usadas em sistemas operacionais Windows de 32 bits.  Alguns dos valores em ERRNO.H estão presentes para manter a compatibilidade com a família do UNIX de sistemas operacionais.  
+ ERRNO.H contém as definições dos valores de **errno**. No entanto, nem todas as definições fornecidas em ERRNO.H são usadas em sistemas operacionais Windows de 32 bits. Alguns dos valores em ERRNO.H estão presentes para manter a compatibilidade com a família UNIX de sistemas operacionais.  
   
- Os valores de **errno** em um sistema operacional Windows de 32 bits são um subconjunto dos valores para **errno** em sistemas de XENIX.  Assim, o valor de **errno** não é necessariamente o mesmo que o código de erro real retornado por uma chamada do sistema dos sistemas operacionais Windows.  Para acessar o código de erro real do sistema operacional, use a variável de [\_doserrno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md) , que contém esse valor.  
+ Os valores de **errno** em um sistema de operacional Windows de 32 bits são um subconjunto dos valores de **errno** em sistemas XENIX. Portanto, o valor de **errno** não é necessariamente o mesmo que o código de erro retornado por uma chamada de sistema dos sistemas operacionais Windows. Para acessar o código de erro do sistema operacional, use a variável [doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que contém esse valor.  
   
- Os seguintes valores de **errno** têm suporte:  
+ Há suporte para os seguintes valores de **errno**:  
   
  **ECHILD**  
- Nenhum processos desovados.  
+ Nenhum processo gerado.  
   
  **EAGAIN**  
- Não mais processos.  Uma tentativa de criar um novo processo falhou porque não há mais slot do processo, ou se não houver memória suficiente, ou o nível de aninhamento máximo for atingido.  
+ Sem mais processos. Ocorreu uma falha ao tentar criar um novo processo, pois não há mais slot do processo, ou não há mais memória suficiente ou o nível de aninhamento máximo foi atingido.  
   
  **E2BIG**  
- Lista de argumentos muito longa.  
+ A lista de argumentos é muito longa.  
   
  **EACCES**  
- Permissão negada.  A configuração de permissão do arquivo não permite o acesso especificado.  Esse erro significa que esteve feita uma tentativa de acessar um arquivo \(ou, em alguns casos, um diretório\) de uma maneira que seja incompatível com os atributos de arquivo.  
+ Permissão negada. A configuração de permissão do arquivo não permite o acesso especificado. Esse erro indica que foi feita uma tentativa de acessar um arquivo (ou, em alguns casos, um diretório) de um modo incompatível com os atributos do arquivo.  
   
- Por exemplo, o erro pode ocorrer quando for feita uma tentativa de ler de um arquivo que não está aberto, para abrir um arquivo somente leitura existente para escrever, ou para abrir um diretório em vez de um arquivo.  Nas versões 3,0 do sistema operacional do MS\-DOS e posterior, **EACCES** também pode indicar um bloqueio ou violação compartilhar.  
+ Por exemplo, o erro pode ocorrer quando é feita uma tentativa de leitura de um arquivo que não está aberto, de abertura de um arquivo existente somente leitura para gravação ou de abertura de um diretório em vez de um arquivo. Em versões do sistema operacional MS-DOS 3.0 e posteriores, **EACCES** também pode indicar um bloqueio ou violação de compartilhamento.  
   
- O erro também pode ocorrer na tentativa de renomear um arquivo ou um diretório ou remover um diretório existente.  
+ O erro também pode ocorrer em uma tentativa de renomear um arquivo ou diretório ou remover um diretório existente.  
   
  **EBADF**  
- Número de arquivo incorreto.  Há duas causas possíveis: 1\) O descritor de arquivo especificado não é um valor válido ou não se refere a um arquivo aberto. 2\) Foi feita uma tentativa de gravar em um arquivo ou um dispositivo aberto para acesso somente leitura.  
+ Número de arquivo incorreto.. Há duas causas possíveis: 1) o descritor de arquivo especificado não é um valor válido ou não faz referência a um arquivo aberto. 2) uma tentativa foi feita para gravar em um arquivo ou dispositivo aberto para acesso somente leitura.  
   
  **EDEADLOCK**  
- O deadlock de recursos ocorrerá.  O argumento para uma função matemática não estiver no domínio da função.  
+ Ocorreria um deadlock de recursos. O argumento para uma função matemática não está no domínio da função.  
   
  **EDOM**  
- Argumento matemática.  
+ Argumento matemático.  
   
  **EEXIST**  
- Os arquivos existentes.  Foi feita uma tentativa de criar um arquivo que já existe.  Por exemplo, **\_O\_CREAT** e sinalizadores de **\_O\_EXCL** são especificados em uma chamada de **\_open** , mas o arquivo nomeado já existe.  
+ Há arquivos. Foi feita uma tentativa de criar um arquivo que já existe. Por exemplo, os sinalizadores **_O_CREAT** e **_O_EXCL** são especificados em uma chamada **_open**, mas o arquivo denominado já existe.  
   
  **EILSEQ**  
- Sequência ilegal de bytes \(por exemplo, em uma cadeia de caracteres de MBCS\).  
+ Sequência ilegal de bytes (por exemplo, em uma cadeia de caracteres MBCS).  
   
  **EINVAL**  
- Argumento inválido.  Um valor inválido foi atribuído a um dos argumentos para uma função.  Por exemplo, o valor atribuído à origem quando posicionar um ponteiro de arquivo \(por meio de uma chamada a **fseek**\) é antes do início do arquivo.  
+ Argumento inválido. Um valor inválido foi fornecido para um dos argumentos de uma função. Por exemplo, o valor fornecido para a origem ao posicionar o ponteiro do arquivo (por meio de uma chamada para **fseek**) ocorre antes do início do arquivo.  
   
  **EMFILE**  
- Arquivos abertos demais.  Não mais descritor de arquivo estiver disponível, o que não mais arquivo pode ser aberto.  
+ Muitos arquivos abertos. Não há outros descritores de arquivos disponíveis, portanto, não é possível abrir outros arquivos.  
   
  **ENOENT**  
- Tal arquivo ou diretório.  O arquivo ou diretório especificado não existir ou não podem ser encontrados.  Essa mensagem pode ocorrer sempre que um arquivo especificado não existe ou um componente de um caminho não especificar um diretório existente.  
+ Arquivo ou diretório inexistente. O arquivo ou diretório especificado não existe ou não pode ser encontrado. Essa mensagem pode ocorrer sempre que um arquivo especificado não existir ou um componente de um caminho não especificar um diretório existente.  
   
  **ENOEXEC**  
- Erro de formato exec.  Foi feita uma tentativa de executar um arquivo que não sejam executável ou que tem um formato de arquivo executável inválido.  
+ Erro de formato exec. Foi feita uma tentativa de executar um arquivo que não é executável, ou que tem um formato inválido de arquivo executável.  
   
  **ENOMEM**  
- Insuficiente retiram o principal.  Não há memória suficiente para o operador tentado.  Por exemplo, essa mensagem pode ocorrer quando memória insuficiente disponível para executar um processo filho, ou quando a solicitação de alocação em uma chamada de **\_getcwd** não pode ser atendida.  
+ Não há núcleos suficientes. Não há memória suficiente disponível para o operador tentado. Por exemplo, essa mensagem pode ocorrer quando não houver memória suficiente disponível para executar um processo filho, ou quando a solicitação de alocação em uma chamada **getcwd** não puder ser satisfeita.  
   
  **ENOSPC**  
- Nenhum espaço remanescente no dispositivo.  Não mais espaço para gravar está disponível no dispositivo \(por exemplo, quando o disco está cheio\).  
+ Nenhum espaço remanescente no dispositivo. Não há mais espaço para gravação disponível no dispositivo (por exemplo, quando o disco está cheio).  
   
  **ERANGE**  
- Resultado muito grande.  Um argumento para uma função matemática é muito grande, o que resulta em perda de significância parcial ou total no resultado.  Esse erro também pode ocorrer em outras funções quando um argumento é maior do que o esperado \(por exemplo, quando o argumento *de buffer* a **\_getcwd** for mais longo que o esperado.\)  
+ Resultado muito grande. Um argumento para uma função matemática é muito grande, resultando na perda parcial ou total de significado no resultado. Esse erro também pode ocorrer em outras funções quando um argumento for maior do que o esperado (por exemplo, quando o argumento *buffer* para **getcwd** for maior do que o esperado).  
   
  **EXDEV**  
- Link entre de dispositivo.  Foi feita uma tentativa de mover um arquivo a um dispositivo diferente \(que usa a função de **rename** \).  
+ Link de dispositivo cruzado. Foi feita uma tentativa de mover um arquivo para um dispositivo diferente (usando a função **rename**).  
   
  **STRUNCATE**  
- Uma cópia ou uma concatenação de cadeia de caracteres resultaram em uma cadeia de caracteres truncado.  Consulte [\_TRUNCATE](../c-runtime-library/truncate.md).  
+ Uma cópia ou concatenação da cadeia de caracteres resultou em uma cadeia de caracteres truncada. Confira [_TRUNCATE](../c-runtime-library/truncate.md).  
   
- Os seguintes valores têm suporte para compatibilidade com Posix.  Valores são necessários em sistemas de non\-Posix.  
+ Os valores a seguir têm suporte para compatibilidade com o Posix. Eles são os valores necessários em sistemas não Posix.  
   
 ```  
 #define E2BIG [argument list too long]  
@@ -219,5 +233,5 @@ manager: "ghogen"
 #define EXDEV [cross device link]  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Constantes globais](../c-runtime-library/global-constants.md)

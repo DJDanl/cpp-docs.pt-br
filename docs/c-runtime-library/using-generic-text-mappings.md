@@ -1,116 +1,130 @@
 ---
-title: "Usando mapeamentos de texto gen&#233;rico | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_UNICODE"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Tipo de dados _MBCS"
-  - "Tipo _T"
-  - "Tipo _TCHAR"
-  - "Tipo _TEXT"
-  - "Tipo _TINT"
-  - "Tipo _TSCHAR"
-  - "Tipo _TUCHAR"
-  - "Tipo _TXCHAR"
-  - "Constante _UNICODE"
-  - "tipos de dados de texto genérico"
-  - "mapeamentos de texto genérico"
-  - "mapeamentos, texto genérico"
-  - "Tipo de dados MBCS"
-  - "Tipo T"
-  - "Tipo TCHAR"
-  - "Tipos de dados TCHAR.H, mapeamentos definidos em"
-  - "Tipo TEXT"
-  - "Tipo TINT"
-  - "Tipo TSCHAR"
-  - "Tipo TUCHAR"
-  - "Tipo TXCHAR"
-  - "Constante UNICODE"
+title: "Usando mapeamentos de texto genérico | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _UNICODE
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- _UNICODE constant
+- TXCHAR type
+- generic-text mappings
+- _TSCHAR type
+- T type
+- mappings, generic-text
+- _TUCHAR type
+- MBCS data type
+- _MBCS data type
+- _TEXT type
+- UNICODE constant
+- _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Usando mapeamentos de texto gen&#233;rico
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5520dd95196cfbcac9eb84659aa444b8fad55c36
+ms.lasthandoff: 02/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="using-generic-text-mappings"></a>Usando mapeamentos de texto genérico
+**Seção específica da Microsoft**  
   
- Para simplificar o desenvolvimento do código para vários data marts internacionais, a biblioteca de tempo de execução do Microsoft fornece mapeamentos específicos da microsoft “genérico\- texto” para muitos tipos de dados, rotinas, e outros objetos.  Esses mapeamentos são definidos em TCHAR.H.  Você pode usar esses mapeamentos de nome para escrever o código genérico que pode ser compilado para qualquer um dos três tipos de conjuntos de caracteres: SBCS ASCII \(\), MBCS, ou Unicode, como uma constante manifesta você define usando uma instrução de `#define` .  Os mapeamentos de Genérico\- texto são as extensões da Microsoft que não são ANSI compatível.  
+ Para simplificar o desenvolvimento de código para vários mercados internacionais, a biblioteca de tempo de execução da Microsoft fornece mapeamentos de "texto genérico" específico da Microsoft para vários tipos de dados, rotinas e outros objetos. Esses mapeamentos são definidos em TCHAR. H. Você pode usar esses mapeamentos de nome para escrever código genérico que pode ser compilado para qualquer um dos três tipos de conjuntos de caracteres: ASCII (SBCS), MBCS ou Unicode, dependendo de uma constante de manifesto que você define usando uma instrução `#define`. Mapeamentos de texto genérico são extensões da Microsoft não compatíveis com ANSI.  
   
-### Políticas de pré\-processador para mapeamentos de Genérico\- texto  
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Diretivas de pré-processador para mapeamentos de texto genérico  
   
-|\#define|Versão compilada|Exemplo|  
+|#define|Versão compilada|Exemplo|  
 |--------------|----------------------|-------------|  
-|`_UNICODE`|Ampla caractere Unicode \(\)|mapas de`_tcsrev` a `_wcsrev`|  
-|`_MBCS`|Multibyte\-caractere|mapas de`_tcsrev` a `_mbsrev`|  
-|Nenhum \(a opção: nem `_UNICODE` ou `_MBCS` definidas\)|SBCS \(ASCII\)|mapas de`_tcsrev` a `strrev`|  
+|`_UNICODE`|Unicode (caracteres largos)|`_tcsrev` mapeia para `_wcsrev`|  
+|`_MBCS`|Caracteres multibyte|`_tcsrev` mapeia para `_mbsrev`|  
+|Nenhum (padrão: não há definição de `_UNICODE` ou `_MBCS`)|SBCS (ASCII)|`_tcsrev` mapeia para `strrev`|  
   
- Por exemplo, a função `_tcsrev`de genérico\- texto, definido em TCHAR.H, mapas na `mbsrev` se `MBCS` foi definido em seu programa, ou a `_wcsrev` se `_UNICODE` foi definido.  Se não mapas de `_tcsrev` a `strrev`.  
+ Por exemplo, a função de texto genérico `_tcsrev`, definida em TCHAR.H, é mapeada para `mbsrev`, caso `MBCS` tenha sido definida em seu programa, ou para `_wcsrev`, caso `_UNICODE` tenha sido definida. Caso contrário, `_tcsrev` é mapeada para `strrev`.  
   
- O tipo de dados `_TCHAR`de genérico\- texto, também definido em TCHAR.H, em mapa para digitar `char` se `_MBCS` é definido, digite `wchar_t` se `_UNICODE` é definido, e digite `char` se nenhuma constante é definida.  Outros mapeamentos de tipo de dados são fornecidos em TCHAR.H para conveniência de programação, mas `_TCHAR` é o tipo que é mais útil.  
+ O tipo de dados de texto genérico `_TCHAR`, também definido em TCHAR. H, é mapeado para o tipo `char`, se `_MBCS` estiver definida, para o tipo `wchar_t`, se `_UNICODE` estiver definida, e para o tipo `char`, se nenhuma constante estiver definida. Outros mapeamentos de tipo de dados são fornecidos em TCHAR. H para conveniência de programação, mas o tipo `_TCHAR` é o mais útil.  
   
-### Mapeamentos de tipo de dados de Genérico\- texto  
+### <a name="generic-text-data-type-mappings"></a>Mapeamentos de tipo de dados de texto genérico  
   
-|Nome do tipo de dados de Genérico\- texto|SBCS \(\_UNICODE, \_MBCS não definidos\)|\_MBCS definido|\_UNICODE definido|  
-|-----------------------------------------------|----------------------------------------------|---------------------|------------------------|  
+|Nome do tipo de dados de texto genérico|SBCS (_UNICODE, _MBCS não definidos)|_MBCS definido|_UNICODE definido|  
+|----------------------------------|--------------------------------------------|--------------------|-----------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` ou `_TEXT`|Nenhum efeito \(cancelado por pré\-processador\)|Nenhum efeito \(cancelado por pré\-processador\)|`L` \(converte após o caractere ou cadeia de caracteres à sua contraparte Unicode\)|  
+|`_T` ou `_TEXT`|Nenhum efeito (removido pelo pré-processador)|Nenhum efeito (removido pelo pré-processador)|`L` (converte o próximo caractere ou a próxima cadeia de caracteres no equivalente em Unicode)|  
   
- Para obter uma lista completa de mapeamentos de genérico\- texto rotinas, variáveis, e outros objetos, consulte [Mapeamentos de Genérico\- texto](../c-runtime-library/generic-text-mappings.md).  
+ Para obter uma lista completa de mapeamentos de texto genérico de rotinas, variáveis e outros objetos, consulte [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md).  
   
- Estes fragmentos de código a seguir ilustram o uso de `_TCHAR` e de `_tcsrev` para mapear para o MBCS, para Unicode, e a modelos de SBCS.  
+ Os fragmentos de código a seguir ilustram o uso de `_TCHAR` e `_tcsrev` para mapear os modelos MBCS, Unicode e SBCS.  
   
 ```  
 _TCHAR *RetVal, *szString;  
 RetVal = _tcsrev(szString);  
 ```  
   
- Se `MBCS` foi definido, o pré\-processador mapeia o fragmento anterior ao seguinte código:  
+ Se `MBCS` tiver sido definido, o pré-processador mapeia o fragmento anterior para o código a seguir:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = _mbsrev(szString);  
 ```  
   
- Se `_UNICODE` foi definido, o pré\-processador mapeia o mesmo fragmento o seguinte código:  
+ Se `_UNICODE` tiver sido definido, o pré-processador mapeia o mesmo fragmento para o código a seguir:  
   
 ```  
 wchar_t *RetVal, *szString;  
 RetVal = _wcsrev(szString);  
 ```  
   
- Se nem nem `_MBCS``_UNICODE` foram definidas, o pré\-processador mapeia o fragmento ao código ASCII de byte único, como segue:  
+ Se `_MBCS` ou `_UNICODE` não tiver sido definido, o pré-processador mapeará o fragmento para o código ASCII de byte único, da seguinte maneira:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = strrev(szString);  
 ```  
   
- Assim, você pode escrever manter, e criar um único arquivo de código\-fonte para executar com rotinas que são específicas a qualquer um dos três tipos de conjuntos de caracteres.  
+ Portanto, você pode escrever, manter e compilar um arquivo de código fonte único para execução com rotinas que sejam específicas para qualquer um dos três tipos de conjuntos de caracteres.  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Mapeamentos de texto genérico](../c-runtime-library/generic-text-mappings.md)   
  [Mapeamentos de tipo de dados](../c-runtime-library/data-type-mappings.md)   
- [Constante e mapeamentos de variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
+ [Mapeamentos de constante e variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Mapeamentos de rotina](../c-runtime-library/routine-mappings.md)   
- [Um programa de texto genérico de exemplo](../c-runtime-library/a-sample-generic-text-program.md)
+ [Um programa de texto genérico de amostra](../c-runtime-library/a-sample-generic-text-program.md)

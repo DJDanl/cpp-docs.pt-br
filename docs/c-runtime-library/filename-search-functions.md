@@ -1,120 +1,135 @@
 ---
-title: "Fun&#231;&#245;es de pesquisa de nome de arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr100.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "nomes de arquivo [C++], procurando por"
-  - "Função _find"
-  - "Função wfind"
-  - "Função find"
-  - "Função _wfind"
+title: "Funções de pesquisa de nome de arquivo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr100.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+apitype: DLLExport
+dev_langs:
+- C++
+helpviewer_keywords:
+- file names [C++], searching for
+- _find function
+- wfind function
+- find function
+- _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
 caps.latest.revision: 26
-caps.handback.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fun&#231;&#245;es de pesquisa de nome de arquivo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b3bb460f5c777643a73f766833bfb2cfd569bd59
+ms.lasthandoff: 02/25/2017
 
-Essas funções pesquisam por e fecha procura nomes de arquivo especificados:  
+---
+# <a name="filename-search-functions"></a>Funções de pesquisa de nome de arquivo
+Essas funções procuram por e fecham pesquisas de nomes de arquivo especificados:  
   
--   [\_findnext, \_wfindnext](../Topic/_findnext,%20_findnext32,%20_findnext32i64,%20_findnext64,%20_findnext64i32,%20_findnexti64,%20_wfindnext,%20_wfindnext32,%20_wfindnext32i64,%20_wfindnext64,%20_wfindnext64i32,%20_wfindnexti64.md)  
+-   [_findnext, _wfindnext](../c-runtime-library/reference/findnext-functions.md)  
   
--   [\_findfirst, \_wfindfirst](../Topic/_findfirst,%20_findfirst32,%20_findfirst32i64,%20_findfirst64,%20_findfirst64i32,%20_findfirsti64,%20_wfindfirst,%20_wfindfirst32,%20_wfindfirst32i64,%20_wfindfirst64,%20_wfindfirst64i32,%20_wfindfirsti64.md)  
+-   [_findfirst, _wfindfirst](../c-runtime-library/reference/findfirst-functions.md)  
   
--   [\_findclose](../c-runtime-library/reference/findclose.md)  
+-   [_findclose](../c-runtime-library/reference/findclose.md)  
   
-## Comentários  
- A função de `_findfirst` fornece informações sobre a primeira instância de um nome de arquivo que corresponda ao arquivo especificado no argumento de `filespec` .  Você pode usar em `filespec` qualquer combinação de caracteres curinga que tem suporte pelo sistema operacional do host.  
+## <a name="remarks"></a>Comentários  
+ A função `_findfirst` fornece informações sobre a primeira instância de um nome de arquivo que corresponde ao arquivo especificado no argumento `filespec`. Você pode usar `filespec` em qualquer combinação de caracteres curinga que tenha suporte do sistema operacional do host.  
   
- As informações do arquivo de retorno de funções em uma estrutura de`finddata_t` \_, que é definida em IO.h.  As várias funções da família usam muitas variações na estrutura de `_finddata_t` .  A estrutura básica de `_finddata_t` inclui os seguintes elementos:  
+ As funções retornam informações sobre o arquivo em uma estrutura _`finddata_t`, que é definida em ES.h. Várias funções na família usam muitas variações da estrutura `_finddata_t`. A estrutura `_finddata_t` básica inclui os seguintes elementos:  
   
  `unsigned attrib`  
- Atributo de Arquivo.  
+ Atributo do arquivo.  
   
  `time_t time_create`  
- Hora de criação do arquivo \(– 1L para sistemas de arquivos FAT\).  Essas vezes são armazenadas em formato UTC.  Para converter para hora local, use [localtime\_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
+ Hora de criação do arquivo (–1L para sistemas de arquivos FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use [localtime_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
   
  `time_t time_access`  
- Hora do acesso ao arquivo o último \(– 1L para sistemas de arquivos FAT\).  Essas vezes são armazenadas em formato UTC.  Para converter para hora local, use `localtime_s`.  
+ Hora do último acesso do arquivo (–1L para sistemas de arquivo FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use `localtime_s`.  
   
  `time_t time_write`  
- Hora da última gravação arquivamento.  Essas vezes são armazenadas em formato UTC.  Para converter para hora local, use `localtime_s`.  
+ Hora da última gravação no arquivo. Essa hora é armazenada no formato UTC. Para converter para a hora local, use `localtime_s`.  
   
  `_fsize_t size`  
  Comprimento do arquivo em bytes.  
   
- `char name`\[ `_MAX_PATH`\]  
+ `char name`[ `_MAX_PATH`]  
  Nome com terminação nula do arquivo ou diretório correspondente, sem o caminho.  
   
- Em sistemas de arquivos que não dão suporte à criação e hora do último de um arquivo, como o sistema GORDO, `time_create` e os campos de `time_access` é sempre – 1L.  
+ Em sistemas de arquivos que não dão suporte aos horários de criação e de último acessos de um arquivo, como o sistema FAT, os campos `time_create` e `time_access` são sempre –1L.  
   
- `_MAX_PATH` é definido em Stdlib.h como 260 bytes.  
+ `_MAX_PATH` é definidos em Stdlib.h como 260 bytes.  
   
- Você não pode especificar atributos de destino \(como `_A_RDONLY`\) para limitar a operação de localização.  Esses atributos são retornados no campo de `attrib` da estrutura de `_finddata_t` e podem ter os seguintes valores \(definidas em IO.h\).  Os usuários não devem confiar em que esses são os únicos valores possíveis para o campo de `attrib` .  
+ Não é possível especificar atributos de destino (como `_A_RDONLY`) para limitar a operação de localização. Esses atributos retornam no campo `attrib` da estrutura `_finddata_t` e podem ter os seguintes valores (definidos em ES.h). Os usuários não devem depender exclusivamente desses valores possíveis para o campo `attrib`.  
   
  `_A_ARCH`  
- Arquivo morto.  Defina sempre que o arquivo for alterado e limpo pelo comando de **BACKUP** .  Valor: 0x20.  
+ Arquivo morto. Definido sempre que o arquivo é alterado e limpo com o comando **BACKUP**. Valor: 0x20.  
   
  `_A_HIDDEN`  
- Arquivo oculto.  Visto normalmente não com o comando de DIR, a menos que você use a opção de **\/AH** .  Retorna informações sobre arquivos normais e arquivos com esse atributo.  Valor: 0x02.  
+ Arquivo oculto. Normalmente não visto com o comando DIR, a menos que você use a opção **/AH**. Retorna informações sobre arquivos normais e arquivos que possuem esse atributo. Valor: 0x02.  
   
  `_A_NORMAL`  
- Normal.  Arquivo não tem nenhum outro atributo definido e pode ser lida ou gravada sem à restrição.  Valor: 0x00.  
+ Normal. O arquivo não tem outros atributos definidos e pode ser lido ou gravado sem restrição. Valor: 0x00.  
   
  `_A_RDONLY`  
- Somente leitura.  Arquivo não pode ser aberto para gravação e um arquivo com o mesmo nome não pode ser criado.  Valor: 0x01.  
+ Somente leitura. O arquivo não pode ser aberto para gravação, e não é possível criar um arquivo com o mesmo nome. Valor: 0x01.  
   
  `_A_SUBDIR`  
- Subdiretório.  Valor: 0x10.  
+ Subdiretório. Valor: 0x10.  
   
  `_A_SYSTEM`  
- Sistema de arquivos  Consultado não normalmente com o comando de **DIR** , a menos que a opção de **\/A** ou de **\/A:S** é usada.  Valor: 0x04.  
+ Arquivo do sistema. Normalmente não visto com o comando **DIR**, a menos que a opção **/A** ou **/A:S** seja usada. Valor: 0x04.  
   
- `_findnext` acha o nome seguir, se houver, que corresponde ao argumento de `filespec` especificado em uma chamada anterior a `_findfirst`.  O argumento de `fileinfo` deve apontar para uma estrutura inicializada pela chamada anterior a `_findfirst`.  Se for encontrada uma correspondência, o conteúdo da estrutura de `fileinfo` serão modificados conforme descrito anteriormente.  Caso contrário, será deixada inalterado.  `_findclose` fecha o identificador especificado da pesquisa e libera todos os recursos associados para `_findfirst` e `_findnext`.  O identificador retornado por `_findfirst` ou por `_findnext` deve primeiro ser passada a `_findclose`, antes que as operações de alteração, como excluir, possam ser executadas nos diretórios que formam os caminhos passados a ele.  
+ `_findnext` localiza o próximo nome, se houver algum, que corresponde ao argumento `filespec` especificado em uma chamada anterior para `_findfirst`. O argumento `fileinfo` deve apontar para uma estrutura inicializada pela chamada anterior a `_findfirst`. Se uma correspondência for encontrada, o conteúdo da estrutura de `fileinfo` será alterado conforme descrito anteriormente. Caso contrário, ele permanecerá inalterado. `_findclose` fecha o identificador de pesquisa especificado e libera todos os recursos associados a `_findfirst` e `_findnext`. O identificador retornado por `_findfirst` ou `_findnext` deve ser passado primeiro para `_findclose`, antes que as operações de modificação, como excluir, possam ser executadas nos diretórios que formam os caminhos passados a eles.  
   
- Você pode aninhar funções de `_find` .  Por exemplo, se uma chamada a `_findfirst` ou a `_findnext` localiza o arquivo que é um subdiretório, uma nova pesquisa pode ser iniciada com outra chamada para `_findfirst` ou a `_findnext`.  
+ Você pode aninhar as funções `_find`. Por exemplo, se uma chamada para `_findfirst` ou `_findnext` localizar o arquivo que é um subdiretório, uma nova pesquisa poderá ser iniciada com outra chamada para `_findfirst` ou `_findnext`.  
   
- `_wfindfirst` e `_wfindnext` são versões de ampla caractere de `_findfirst` e de `_findnext`.  O argumento da estrutura das versões de ampla caractere tem o tipo de dados `_wfinddata_t` , que é definido em IO.h e em Wchar.h.  Os campos desse tipo de dados são iguais aos do tipo de dados de `_finddata_t` , exceto que `_wfinddata_t` no campo nome é do tipo `wchar_t` em vez do tipo `char`.  Se não `_wfindfirst` e `_wfindnext` se comportam idêntica a `_findfirst` e a `_findnext`.  
+ `_wfindfirst`e `_wfindnext` são versões de caractere largo de `_findfirst` e `_findnext`. O argumento da estrutura das versões de caractere largo tem o tipo de dados `_wfinddata_t`, que é definido em ES.h e em Wchar.h. Os campos desse tipo de dados são iguais àqueles do tipo de dados `_finddata_t`, exceto que no `_wfinddata_t` o campo nome é do tipo `wchar_t`, em vez do tipo `char`. Caso contrário, `_wfindfirst`, `_wfindnext` se comportarão de modo idêntico a `_findfirst` e `_findnext`.  
   
- `_findfirst` e `_findnext` usam o tipo de 64 bits de tempo.  Se você deve usar o tipo de 32 bits antigo tempo, você pode definir `_USE_32BIT_TIME_T`.  As versões dessas funções que têm o sufixo de `32` em seus nomes usam o tipo de 32 bits de tempo, e esses com o uso do sufixo de `64` o tipo de 64 bits de tempo.  
+ `_findfirst` e `_findnext` usam o tipo de tempo de 64 bits. Se você precisar usar o tipo de tempo de 32 bits antigo, defina `_USE_32BIT_TIME_T`. As versões dessas funções que têm o sufixo `32` em seus nomes usam o tipo de tempo de 32 bits, e aquelas com o sufixo `64` usam o tipo de tempo de 64 bits.  
   
- Funções `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, e `_wfindnext32i64` também se comporta idêntica as versões de 32 bits do tipo de tempo dessas funções a não ser que usem e retorna comprimentos de 64 bits de arquivo.  Função `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`, e o usode `_wfindnext64i32`o tipo de 64 bits de tempo mas usam comprimentos de 32 bits de arquivo.  Essas variações apropriados do uso de funções de `_finddata_t` nos campos que têm tipos diferentes para o tempo e o tamanho do arquivo.  
+ As funções `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64` e `_wfindnext32i64` também se comportam de forma idêntica às versões de tipo de tempo de 32 bits dessas funções, exceto que usam e retornam os comprimentos de arquivo de 64 bits. As funções `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32` e `_wfindnext64i32` usam o tipo de tempo de 64 bits, mas usam os comprimentos de arquivo de 32 bits. Essas funções usam variações apropriadas do tipo `_finddata_t` no qual os campos têm tipos diferentes para o tempo e o tamanho do arquivo.  
   
- `_finddata_t` é realmente uma macro que é avaliada para `_finddata64i32_t` \(ou a `_finddata32_t` se `_USE_32BIT_TIME_T` é definido\).  A tabela a seguir resume as variações em `_finddata_t`:  
+ `_finddata_t` é na verdade uma macro avaliada como `_finddata64i32_t` (ou `_finddata32_t` se `_USE_32BIT_TIME_T` for definido). A tabela a seguir resume as variações em `_finddata_t`:  
   
-|Estrutura|Tipo de tempo|Tipo de tamanho de arquivo|  
-|---------------|-------------------|--------------------------------|  
+|Estrutura|Tipo de hora|Tipo de tamanho do arquivo|  
+|---------------|---------------|--------------------|  
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|  
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|  
 |`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|  
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|  
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|  
   
- `_fsize_t` é `typedef` para `unsigned long` \(32 bits\).  
+ `_fsize_t` é um `typedef` para `unsigned long` (32 bits).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_find.c  
@@ -155,10 +170,14 @@ int main( void )
 }  
 ```  
   
-  **Listagem de arquivos de .c**  
-**RDO ESCONDEU DATE SIZE DATABASE FROM SYSTEM ARC FILE**  
-**\-\-\- \-\-\- \-\-\- \-\-\-  \-\-\-\-         \-\-\-\-                           \-\-\-\-**  
- **N N Em Y blah.c quarta\-feira 13 de fevereiro de 09: 21:42 2002 1715**  
- **N N Em Y test.c quarta\-feira 6 de fevereiro de 14: 30:44 2002 312**   
-## Consulte também  
- [Chamadas do sistema](../Topic/System%20Calls.md)
+```Output  
+Listing of .c files  
+  
+RDO HID SYS ARC  FILE         DATE                           SIZE  
+--- --- --- ---  ----         ----                           ----  
+ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715  
+ N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Chamadas do sistema](../c-runtime-library/system-calls.md)

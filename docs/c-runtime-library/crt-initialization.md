@@ -1,33 +1,48 @@
 ---
-title: "Inicializa&#231;&#227;o CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inicialização CRT [C++]"
+title: "Inicialização CRT | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Inicializa&#231;&#227;o CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 593dad6bf8d80ccc588a11c59fd737b55ae798c4
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="crt-initialization"></a>Inicialização CRT
 Este tópico descreve como o CRT inicializa estados globais em código nativo.  
   
- Por padrão, o vinculador inclui a biblioteca de CRT, que fornece seu próprio código de inicialização.  Este código de inicialização inicializa a biblioteca de CRT, chama inicializadores globais, e depois chame fornecido pela função de `main` para aplicativos do console.  
+ Por padrão, o vinculador inclui a biblioteca CRT, que fornece seu próprio código de inicialização. Esse código de inicialização inicializa a biblioteca CRT, chama inicializadores globais e, em seguida, chama a função `main` fornecida pelo usuário para aplicativos de console.  
   
-## Inicializando um objeto global  
+## <a name="initializing-a-global-object"></a>Inicializando um objeto global  
  Considere o código a seguir:  
   
 ```  
@@ -44,13 +59,13 @@ int main()
 }  
 ```  
   
- De acordo com o padrão do C\/C\+\+, `func()` deve ser chamado antes de `main()` ser executado.  Mas que chame?  
+ Segundo o padrão C/C++, `func()` deve ser chamado antes que `main()` seja executado. Mas, quem chama?  
   
- Uma maneira de determinar isso é definir um ponto de interrupção em `func()`, depurar o aplicativo, e examinar a pilha.  Isso é possível porque o código\-fonte do CRT é incluído com o Visual Studio.  
+ Uma maneira de determinar isso é definir um ponto de interrupção em `func()`, depurar o aplicativo e examinar a pilha. Isso é possível porque o código-fonte CRT está incluído no Visual Studio.  
   
- Quando você procura as funções na pilha, descobrirá que o CRT estiver fazendo um loop por meio de uma lista de ponteiros da função e está chamando cada um como os encontra.  Essas funções são semelhantes a `func()` ou aos construtores para instâncias da classe.  
+ Quando procura as funções na pilha, você encontra o que o CRT está em loop através de uma lista de ponteiros de função e chamar cada um ao encontrá-los. Essas funções são semelhantes a `func()` ou construtores de instâncias de classe.  
   
- O CRT obtém a lista de ponteiros da função do compilador do Visual C\+\+.  Quando o compilador consulta um inicializador global, gerencie um inicializador dinâmico na seção de `.CRT$XCU` \(onde `CRT` é o nome da seção e `XCU` é o nome do grupo\).  Para obter uma lista dos inicializadores dinâmicos executar o comando **dumpbin \/all main.obj**, e pesquise na seção de `.CRT$XCU` \(quando main.cpp é compilado como arquivo criando c, não arquivo c\).  Será semelhante à seguinte:  
+ A CRT obtém a lista de ponteiros de função do compilador do Visual C++. Quando o compilador vê um inicializador global, ele gera um inicializador dinâmico na seção `.CRT$XCU` (em que `CRT` é o nome da seção e `XCU` é o nome do grupo). Para obter uma lista dos inicializadores dinâmicos, execute o comando **dumpbin/all main.obj** e, em seguida, procure a seção `.CRT$XCU` (quando main.cpp é compilado como arquivo C++, e não como arquivo C). Ele será semelhante ao seguinte:  
   
 ```  
 SECTION HEADER #6  
@@ -78,17 +93,17 @@ RELOCATIONS #6
  00000000  DIR32                      00000000         C  ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))  
 ```  
   
- O CRT define dois ponteiros:  
+ A CRT define dois ponteiros:  
   
--   `__xc_a` em `.CRT$XCA`  
+-   `__xc_a` in `.CRT$XCA`  
   
--   `__xc_z` em `.CRT$XCZ`  
+-   `__xc_z` in `.CRT$XCZ`  
   
- Os dois grupos não têm nenhum outros símbolos definida `__xc_a` exceto e `__xc_z`.  
+ Ambos os grupos não têm outros símbolos definidos, apenas `__xc_a` e `__xc_z`.  
   
- Agora, quando o vinculador ler vários grupos de `.CRT` , os combina em uma seção e as classifica em ordem alfabética.  Isso significa que os inicializadores globais definidos pelo usuário \(que o compilador do Visual C\+\+ coloca em `.CRT$XCU`\) virão sempre `.CRT$XCA` depois de e antes de `.CRT$XCZ`.  
+ Agora, quando lê vários grupos `.CRT`, o vinculador os combina em uma seção e os classifica em ordem alfabética. Isso significa que os inicializadores globais definidos pelo usuário (que o compilador C++ do Visual coloca em `.CRT$XCU`) sempre virão depois de `.CRT$XCA` e antes de `.CRT$XCZ`.  
   
- A seção se assemelhará ao seguinte:  
+ A seção será semelhante ao que segue:  
   
 ```  
 .CRT$XCA  
@@ -100,7 +115,7 @@ RELOCATIONS #6
             __xc_z  
 ```  
   
- Assim, a biblioteca de CRT usa `__xc_a` e `__xc_z` para determinar o início e o término de inicializadores globais lista devido ao modo em que são apresentados na memória depois que a imagem é carregada.  
+ Portanto, a biblioteca CRT usa `__xc_a` e `__xc_z` para determinar o início e fim da lista de inicializadores global devido à forma como são dispostos na memória depois que a imagem é carregada.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

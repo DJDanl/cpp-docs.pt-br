@@ -1,41 +1,55 @@
 ---
-title: "Conjuntos de caracteres de byte &#250;nico e multibyte | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.character.multibyte"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "conjunto de caracteres [C++], multibyte"
-  - "conjunto de caracteres [C++], byte único"
-  - "MBCS [C++], sobre MBCS"
-  - "SBCS (conjunto de caracteres de byte único)"
+title: "Conjuntos de caracteres de byte único e multibyte | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.character.multibyte
+dev_langs:
+- C++
+helpviewer_keywords:
+- SBCS (single byte character set)
+- MBCS [C++], about MBCS
+- character sets [C++], multibyte
+- character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Conjuntos de caracteres de byte &#250;nico e multibyte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5f44c4583a68edae4a424d236db3b78c649111c6
+ms.lasthandoff: 02/25/2017
 
-O conjunto de caracteres ASCII define caracteres no intervalo 0x00 – 0x7F.  Há vários outros conjuntos de caracteres, primeiro europeus, que definem os caracteres dentro do intervalo 0x00 – 0x7F idêntica ao conjunto de caracteres ASCII e também define um conjunto de caracteres estendida de 0x80 – 0xFF.  Para um de 8 bits, conjunto de caracteres de um byte \(`SBCS`\) é suficiente para representar o conjunto de caracteres ASCII bem como os conjuntos de caracteres para muitos idiomas europeus.  No entanto, alguns conjuntos de caracteres não europeus, como o Kanji japonês, incluem muito mais caracteres de que pode ser representado em um código de um byte e, consequentemente exigem codificação de conjunto de multibyte\- caractere \(`MBCS`\).  
+---
+# <a name="single-byte-and-multibyte-character-sets"></a>Conjuntos de caracteres de byte único e multibyte
+O conjunto de caracteres ASCII define caracteres no intervalo 0x00 – 0x7F. Há uma série de outros conjuntos de caracteres, principalmente europeus, que definem os caracteres dentro do intervalo 0x00 – 0x7F de forma idêntica ao conjunto de caracteres ASCII e também definem um conjunto de caracteres estendido de 0x80 – 0xFF. Portanto, um conjunto de caracteres de byte único de 8 bits (`SBCS`) é suficiente para representar o conjunto de caracteres ASCII e também os conjuntos de caracteres de vários idiomas europeus. No entanto, alguns conjuntos de caracteres não europeus, como japonês Kanji, incluem muitos caracteres além dos que podem ser representados em um esquema de codificação de byte único e, portanto, exigem a codificação de um conjunto de caracteres multibyte (`MBCS`).  
   
 > [!NOTE]
->  Muitas rotinas de `SBCS` em bytes, em caracteres, e nas cadeias de caracteres multibyte do identificador da biblioteca de tempo de execução Microsoft conforme apropriado.  Muitos conjuntos de multibyte\- caractere definem o conjunto de caracteres ASCII como um subconjunto.  Em muitos conjuntos de caracteres multibyte, cada caractere no intervalo 0x00 – 0x7F é idêntico ao caractere que tem o mesmo valor no conjunto de caracteres ASCII.  Por exemplo, em `ASCII` e em cadeias de caracteres de `MBCS` , o caractere de `NULL` de um byte \(“\\ " 0\) tem o valor 0x00 e indica o caractere nulo sendo encerrado.  
+>  Muitos rotinas de `SBCS` da biblioteca de tempo de execução do Microsoft tratam bytes, caracteres e cadeias de caracteres multibyte apropriadamente. Muitos conjuntos de caracteres multibyte definem o conjunto de caracteres ASCII como um subconjunto. Em muitos conjuntos de caracteres multibyte, cada caractere no intervalo 0x00 – 0x7F é idêntico ao caractere que tem o mesmo valor no conjunto de caracteres ASCII. Por exemplo, nas cadeias de caracteres `ASCII` e `MBCS`, o caractere de um byte `NULL` ('\0') tem valor 0x00 e indica o caractere nulo de terminação.  
   
- Um conjunto de caracteres multibyte pode consistir em um byte e em caracteres de dois bytes.  Para uma cadeia de caracteres de multibyte\- caractere pode conter uma mistura de byte único e de caracteres de dois bytes.  Um caracteres de dois bytes multibyte tem um byte inicial e um byte final.  Em um conjunto específico de multibyte\- caractere, os bytes iniciais estão em um determinado intervalo, como faz os bytes finais.  Quando esses intervalos sobrepostos, pode ser necessário avaliar o contexto específico para determinar se um byte determinado está funcionando como um byte inicial ou um byte final.  
+ Um conjunto de caracteres multibyte pode consistir em caracteres de um byte e dois bytes. Portanto, uma cadeia de caracteres multibyte pode conter uma mistura de caracteres de byte único e duplo. Um caractere multibyte de dois bytes tem um byte inicial e um byte final. Em um conjunto de caracteres multibyte, os bytes iniciais ficam dentro de um determinado intervalo, assim como os bytes finais. Quando esses intervalos se sobrepõem, pode ser necessário avaliar o contexto específico para determinar se um byte está funcionando como byte inicial ou byte final.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Internacionalização](../c-runtime-library/internationalization.md)   
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)
