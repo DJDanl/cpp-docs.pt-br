@@ -1,45 +1,59 @@
 ---
-title: "Constantes (_locking) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_LK_RLCK"
-  - "_LK_NBLCK"
-  - "_LK_LOCK"
-  - "_LK_NBRLCK"
-  - "_LK_UNLCK"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante _LK_LOCK"
-  - "Constante _LK_NBLCK"
-  - "Constante _LK_NBRLCK"
-  - "Constante _LK_RLCK"
-  - "Constante _LK_UNLCK"
-  - "Constante LK_LOCK"
-  - "Constante LK_NBLCK"
-  - "Constante LK_NBRLCK"
-  - "Constante LK_RLCK"
-  - "Constante LK_UNLCK"
+title: Constantes _locking | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _LK_RLCK
+- _LK_NBLCK
+- _LK_LOCK
+- _LK_NBRLCK
+- _LK_UNLCK
+dev_langs:
+- C++
+helpviewer_keywords:
+- LK_UNLCK constant
+- LK_NBRLCK constant
+- _LK_NBRLCK constant
+- _LK_NBLCK constant
+- _LK_LOCK constant
+- LK_NBLCK constant
+- _LK_UNLCK constant
+- LK_RLCK constant
+- _LK_RLCK constant
+- LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Constantes (_locking)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 883e7ea979cbc4afd83ac8bfb5fa3ec4d68491c4
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="locking-constants"></a>Constantes (_locking)
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -47,26 +61,26 @@ manager: "ghogen"
   
 ```  
   
-## Comentários  
- O argumento *do modo* na chamada à função de `_locking` especifica a ação de bloqueio ser executado.  
+## <a name="remarks"></a>Comentários  
+ O argumento *mode* na chamada para a função `_locking` especifica a ação de bloqueio que será executada.  
   
- O argumento *de modo* deve ser uma das seguintes constantes manifestas.  
+ O argumento *mode* deve ser uma das constantes de manifesto a seguir.  
   
  `_LK_LOCK`  
- Bloqueia os bytes especificados.  Se os bytes não podem ser bloqueadas, a função tentará novamente depois de 1 segundos.  Se, depois de 10 tentativas, os bytes não podem ser bloqueadas, a função retornará um erro.  
+ Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a função retornará um erro.  
   
  `_LK_RLCK`  
  Mesmo que `_LK_LOCK`.  
   
  `_LK_NBLCK`  
- Bloqueia os bytes especificados.  Se os bytes não podem ser bloqueadas, a função retornará um erro.  
+ Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função retornará um erro.  
   
  `_LK_NBRLCK`  
  Mesmo que `_LK_NBLCK`.  
   
  `_LK_UNLCK`  
- Desbloqueia os bytes especificados. \(Os bytes devem ter sido previamente bloqueada.\)  
+ Desbloqueia os bytes especificados. (Os bytes devem ter sido protegidos anteriormente.)  
   
-## Consulte também  
- [\_locking](../Topic/_locking.md)   
+## <a name="see-also"></a>Consulte também  
+ [_locking](../c-runtime-library/reference/locking.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)
