@@ -1,103 +1,117 @@
 ---
-title: "Fun&#231;&#245;es _exec, _wexec | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_texecve"
-  - "texecl"
-  - "_texeclpe"
-  - "texecve"
-  - "texecv"
-  - "texeclp"
-  - "texecle"
-  - "exec"
-  - "texeclpe"
-  - "_texecvp"
-  - "_texecl"
-  - "_texecle"
-  - "wexec"
-  - "_exec"
-  - "_texeclp"
-  - "_texecvpe"
-  - "texecvpe"
-  - "_texecv"
-  - "_wexec"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _exec"
-  - "Função _texecl"
-  - "Função _texecle"
-  - "Função _texeclp"
-  - "Função _texeclpe"
-  - "Função _texecv"
-  - "Função _texecve"
-  - "Função _texecvp"
-  - "Função _texecvpe"
-  - "Funções _wexec"
-  - "Função exec"
-  - "processos, executando novo"
-  - "Função texecl"
-  - "Função texecle"
-  - "Função texeclp"
-  - "Função texeclpe"
-  - "Função texecv"
-  - "Função texecve"
-  - "Função texecvp"
-  - "Função texecvpe"
-  - "Funções wexec"
+title: "Funções _exec, _wexec | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr80.dll
+apitype: DLLExport
+f1_keywords:
+- _texecve
+- texecl
+- _texeclpe
+- texecve
+- texecv
+- texeclp
+- texecle
+- exec
+- texeclpe
+- _texecvp
+- _texecl
+- _texecle
+- wexec
+- _exec
+- _texeclp
+- _texecvpe
+- texecvpe
+- _texecv
+- _wexec
+dev_langs:
+- C++
+helpviewer_keywords:
+- _texecle function
+- _texecv function
+- texeclpe function
+- texecle function
+- _texecl function
+- texecv function
+- _texeclp function
+- _texecve function
+- texecl function
+- texecve function
+- exec function
+- texeclp function
+- texecvp function
+- texecvpe function
+- processes, executing new
+- _texecvp function
+- _texeclpe function
+- _wexec functions
+- wexec functions
+- _exec function
+- _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fun&#231;&#245;es _exec, _wexec
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dad821100c76f20011dff46a67e210d3b75d4cc3
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="exec-wexec-functions"></a>Funções _exec, _wexec
 Cada função desta família carrega e executa um novo processo:  
   
 |||  
 |-|-|  
-|[\_execl, \_wexecl](../Topic/_execl,%20_wexecl.md)|[\_execv, \_wexecv](../c-runtime-library/reference/execv-wexecv.md)|  
-|[\_execle, \_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[\_execve, \_wexecve](../c-runtime-library/reference/execve-wexecve.md)|  
-|[\_execlp, \_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[\_execvp, \_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|  
-|[\_execlpe, \_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[\_execvpe, \_wexecvpe](../Topic/_execvpe,%20_wexecvpe.md)|  
+|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|  
+|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|  
+|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|  
+|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|  
   
  A letra no final do nome da função determina a variação.  
   
-|\_exec sufixo da função|Descrição|  
-|-----------------------------|---------------|  
+|_exec sufixo da função|Descrição|  
+|----------------------------|-----------------|  
 |`e`|`envp`, matriz de ponteiros para configurações de ambiente, que é passada para o novo processo.|  
-|`l`|Os argumentos da linha de comando são passados individualmente para a função `_exec`.  Normalmente usado quando o número de parâmetros para o novo processo é conhecido de antemão.|  
-|`p`|`PATH` a variável de ambiente é usada para encontrar o arquivo a ser executado.|  
-|`v`|`argv`, matriz de ponteiros para argumentos da linha de comando, que é passada para `_exec`.  Normalmente usado quando o número de parâmetros para o novo processo é variável.|  
+|`l`|Os argumentos da linha de comando são passados individualmente para a função `_exec`. Normalmente usado quando o número de parâmetros para o novo processo é conhecido de antemão.|  
+|`p`|A variável de ambiente `PATH` é usada para encontrar o arquivo a ser executado.|  
+|`v`|`argv`, matriz de ponteiros para argumentos da linha de comando, que é passada para `_exec`. Normalmente usado quando o número de parâmetros para o novo processo é variável.|  
   
-## Comentários  
- Cada função `_exec` carrega e executa um novo processo.  Todas as funções `_exec` usam a mesma função do sistema operacional \([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)\).  As funções `_exec` identificam automaticamente os argumentos da cadeia de caracteres multibyte como apropriados, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento.  As funções `_wexec` são versões de caractere largo das funções `_exec`.  As funções `_wexec` se comportam de maneira idêntica às equivalentes da família `_exec`, exceto por não identificarem cadeias de caracteres multibyte.  
+## <a name="remarks"></a>Comentários  
+ Cada função `_exec` carrega e executa um novo processo. Todas as funções `_exec` usam a mesma função do sistema operacional ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)). As funções `_exec` identificam automaticamente os argumentos da cadeia de caracteres multibyte como apropriados, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. As funções `_wexec` são versões de caractere largo das funções `_exec`. As funções `_wexec` se comportam de maneira idêntica às equivalentes da família `_exec`, exceto por não identificarem cadeias de caracteres multibyte.  
   
-### Mapeamentos da rotina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
-|Rotina Tchar.h|\_UNICODE e \_MBCS não definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|--------------------------------------|---------------------|------------------------|  
+|Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_texecl`|`_execl`|`_execl`|`_wexecl`|  
 |`_texecle`|`_execle`|`_execle`|`_wexecle`|  
 |`_texeclp`|`_execlp`|`_execlp`|`_wexeclp`|  
@@ -107,31 +121,31 @@ Cada função desta família carrega e executa um novo processo:
 |`_texecvp`|`_execvp`|`_execvp`|`_wexecvp`|  
 |`_texecvpe`|`_execvpe`|`_execvpe`|`_wexecvpe`|  
   
- O parâmetro `cmdname` especifica o arquivo a ser executado como novo processo.  Ele pode especificar um caminho completo \(a partir da raiz\), um caminho parcial \(a partir do diretório de trabalho atual\) ou um nome de arquivo.  Se `cmdname` não tiver uma extensão de nome de arquivo ou não terminar com um ponto final \(.\), a função `_exec` procurará o arquivo nomeado.  Se for malsucedida, a pesquisa tentará o mesmo nome base usando a extensão de nome de arquivo e as extensões de nome de arquivo .exe, .bat e .cmd.  Se `cmdname` tiver uma extensão de nome de arquivo, apenas essa extensão será usada na pesquisa.  Se `cmdname` terminar com um ponto final, a função `_exec` procurará `cmdname` sem extensão de nome de arquivo.  `_execlp`, `_execlpe`, `_execvp` e `_execvpe` procuram `cmdname` \(usando os mesmos procedimentos\) nos diretórios especificados pela variável de ambiente `PATH`.  Se `cmdname` contiver um especificador de unidade ou alguma barra \(ou seja, se for um caminho relativo\), a chamada `_exec` procura apenas o arquivo especificado. O caminho não é pesquisado.  
+ O parâmetro `cmdname` especifica o arquivo a ser executado como novo processo. Ele pode especificar um caminho completo (a partir da raiz), um caminho parcial (a partir do diretório de trabalho atual) ou um nome de arquivo. Se `cmdname` não tiver uma extensão de nome de arquivo ou não terminar com um ponto final (.), a função `_exec` procurará o arquivo nomeado. Se for malsucedida, a pesquisa tentará o mesmo nome base usando a extensão de nome de arquivo e as extensões de nome de arquivo .exe, .bat e .cmd. Se `cmdname` tiver uma extensão de nome de arquivo, apenas essa extensão será usada na pesquisa. Se `cmdname` terminar com um ponto final, a função `_exec` procurará `cmdname` sem extensão de nome de arquivo. `_execlp`, `_execlpe`, `_execvp` e `_execvpe` pesquisam `cmdname` (usando os mesmos procedimentos) nos diretórios especificados pela variável de ambiente `PATH`. Se `cmdname` contiver um especificador de unidade ou alguma barra (ou seja, se for um caminho relativo), a chamada `_exec` procura apenas o arquivo especificado. O caminho não é pesquisado.  
   
- Os parâmetros são passados para o novo processo atribuindo um ou mais ponteiros às cadeias de caracteres como parâmetros na chamada `_exec`.  Essas cadeias de caracteres formam a lista de parâmetros do novo processo.  O tamanho combinado das configurações de ambiente herdadas e as cadeias de caracteres que formam a lista de parâmetros do novo processo não devem exceder 32 quilobytes.  O caractere nulo de terminação \('\\0'\) para cada cadeia de caracteres não está incluído na contagem, mas os caracteres de espaço \(inseridos automaticamente para separar os parâmetros\) são contados.  
+ Os parâmetros são passados para o novo processo atribuindo um ou mais ponteiros às cadeias de caracteres como parâmetros na chamada `_exec`. Essas cadeias de caracteres formam a lista de parâmetros do novo processo. O tamanho combinado das configurações de ambiente herdadas e as cadeias de caracteres que formam a lista de parâmetros do novo processo não devem exceder 32 quilobytes. O caractere nulo de terminação ('\0') para cada cadeia de caracteres não está incluído na contagem, mas os caracteres de espaço (inseridos automaticamente para separar os parâmetros) são contados.  
   
 > [!NOTE]
->  Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_exec`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`.  Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará.  É possível evitar isso cotando a cadeia de caracteres: `"\"hi there\""`.  
+>  Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_exec`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`. Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará. É possível evitar isso colocando a cadeia de caracteres entre aspas: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo.  `_exec` resultará em uma chamada para [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx). Assim, tenha em mente que nomes de caminho desqualificados poderiam levar a possíveis vulnerabilidades de segurança.  
+>  Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo. `_exec` resultará em uma chamada para [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.  
   
- As funções `_exec` validam seus parâmetros.  Se os parâmetros esperados forem ponteiros nulos, cadeias de caracteres vazias ou omitidas, as funções `_exec` invocarão o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../c-runtime-library/parameter-validation.md).  Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão \-1.  Nenhum processo novo é executado.  
+ As funções `_exec` validam seus parâmetros. Se os parâmetros esperados forem ponteiros nulos, cadeias de caracteres vazias ou omitidos, as funções `_exec` invocarão o manipulador de parâmetro inválido, como descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão -1. Nenhum processo novo é executado.  
   
- Os ponteiros de argumento podem ser passados como parâmetros separados \(em `_execl`, `_execle`, `_execlp` e `_execlpe`\) ou como uma matriz de ponteiros \(em `_execv`, `_execve`, `_execvp` e `_execvpe`\).  Pelo menos um parâmetro, `arg0`, deve ser passado para o novo processo. Esse parâmetro é `argv`\[0\] do novo processo.  Normalmente, esse ponteiro é uma cópia de `cmdname`.  \(Um valor diferente não produz um erro.\)  
+ Os ponteiros de argumento podem ser passados como parâmetros separados (em `_execl`, `_execle`, `_execlp` e `_execlpe`) ou como uma matriz de ponteiros (em `_execv`, `_execve`, `_execvp` e `_execvpe`). Pelo menos um parâmetro, `arg0`, deve ser passado para o novo processo. Esse parâmetro é `argv`[0] do novo processo. Normalmente, esse ponteiro é uma cópia de `cmdname`. (Um valor diferente não produz um erro.)  
   
- As chamadas `_execl`, `_execle`, `_execlp` e `_execlpe` costumam ser usadas quando o número de parâmetros é conhecido de antemão.  O parâmetro `arg0` costuma ser um ponteiro para `cmdname`.  Os parâmetros de `arg1` até `argn` apontam para as cadeias de caracteres que formam a nova lista de parâmetros.  Um ponteiro nulo deve seguir `argn` para marcar o final da lista de parâmetros.  
+ As chamadas `_execl`, `_execle`, `_execlp` e `_execlpe` costumam ser usadas quando o número de parâmetros é conhecido de antemão. O parâmetro `arg0` costuma ser um ponteiro para `cmdname`. Os parâmetros de `arg1` até `argn` apontam para as cadeias de caracteres que formam a nova lista de parâmetros. Um ponteiro nulo deve seguir `argn` para marcar o final da lista de parâmetros.  
   
- As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável.  Os ponteiros para os parâmetros são passados como uma matriz, `argv`.  O parâmetro `argv`\[0\] costuma ser um ponteiro para `cmdname`.  Os parâmetros de `argv`\[1\] até `argv`\[`n`\] apontam para as cadeias de caracteres que formam a nova lista de parâmetros.  O parâmetro `argv`\[`n`\+1\] deve ser um ponteiro `NULL` para marcar o final da lista de parâmetros.  
+ As chamadas `_execv`, `_execve`, `_execvp` e `_execvpe` são úteis quando o número de parâmetros para o novo processo é variável. Os ponteiros para os parâmetros são passados como uma matriz, `argv`. O parâmetro `argv`[0] costuma ser um ponteiro para `cmdname`. Os parâmetros de `argv`[1] até `argv`[`n`] apontam para as cadeias de caracteres que formam a nova lista de parâmetros. O parâmetro `argv`[`n`+1] deve ser um ponteiro `NULL` para marcar o final da lista de parâmetros.  
   
- Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo.  Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada.  `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente do novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`.  `envp` é uma matriz de ponteiros de caractere, e cada elemento \(exceto o elemento final\) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente.  Normalmente, uma cadeia de caracteres assim tem a forma `NAME`\=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida.  \(Observe que o `value` não está entre aspas duplas.\) O elemento final da matriz `envp` deve ser `NULL`.  Quando o próprio `envp` é `NULL`, o novo processo herda as configurações de ambiente do processo de chamada.  
+ Os arquivos abertos quando uma chamada `_exec` é feita continuam abertos no novo processo. Nas chamadas `_execl`, `_execlp`, `_execv` e `_execvp`, o novo processo herda o ambiente do processo de chamada. Chamadas `_execle`, `_execlpe`, `_execve` e `_execvpe` alteram o ambiente para o novo processo passando uma lista de configurações de ambiente por meio do parâmetro `envp`. `envp` é uma matriz de ponteiros de caractere e cada elemento (exceto o elemento final) aponta para uma cadeia de caracteres encerrada nula que define uma variável de ambiente. Normalmente, uma cadeia de caracteres assim tem a forma `NAME`=`value`, em que `NAME` é o nome de uma variável de ambiente e `value` é o valor da cadeia de caracteres cuja variável está definida. (Observe que o `value` não está entre aspas duplas.) O elemento final da matriz `envp` deve ser `NULL`. Quando o próprio `envp` é `NULL`, o novo processo herda as configurações de ambiente do processo de chamada.  
   
  Um programa executado com uma das funções `_exec` é sempre carregado na memória como se o campo de alocação máximo no cabeçalho do arquivo .exe do programa estivesse definido com o valor padrão de 0xFFFFH.  
   
- As chamadas `_exec` não preservam os modos de conversão de arquivos abertos.  Se o novo processo precisar usar arquivos herdados do processo de chamada, use a rotina [\_setmode](../c-runtime-library/reference/setmode.md) para definir o modo de conversão desses arquivos como o modo desejado.  Você deve liberar explicitamente \(usando `fflush` ou `_flushall`\) ou fechar qualquer fluxo antes da chamada da função `_exec`.  As configurações de sinal não são preservadas em novos processos criados por chamadas para rotinas `_exec`.  As configurações de sinal padrão são restauradas no novo processo.  
+ As chamadas `_exec` não preservam os modos de conversão de arquivos abertos. Se o novo processo precisar usar arquivos herdados do processo de chamada, use a rotina [_setmode](../c-runtime-library/reference/setmode.md) para definir o modo de translação desses arquivos como o modo desejado. Você deve liberar explicitamente (usando `fflush` ou `_flushall`) ou fechar qualquer fluxo antes da chamada da função `_exec`. As configurações de sinal não são preservadas em novos processos criados por chamadas para rotinas `_exec`. As configurações de sinal padrão são restauradas no novo processo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // crt_args.c  
@@ -162,7 +176,7 @@ int main( int argc,  // Number of strings in array argv
 }  
 ```  
   
- Execute o seguinte programa para executar Crt\_args.exe:  
+ Execute o seguinte programa para executar Crt_args.exe:  
   
 ```  
 // crt_exec.c  
@@ -239,19 +253,19 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-## Equivalente ao .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
   
--   [\<caps:sentence id\="tgt114" sentenceid\="628d3b0b3928d3339d0f73bebf79c8d2" class\="tgtSentence"\>System::Diagnostics::Process Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
+-   [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
   
--   [\<caps:sentence id\="tgt115" sentenceid\="1f7e7c2cf2fa400c45c5c92839d0f5f2" class\="tgtSentence"\>System::Diagnostics::ProcessStartInfo Class\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
+-   [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
  **Header:** process.h  
   
-## Consulte também  
- [Processo e controle de ambiente](../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Consulte também  
+ [Controle de processo e de ambiente](../c-runtime-library/process-and-environment-control.md)   
  [abort](../c-runtime-library/reference/abort.md)   
  [atexit](../c-runtime-library/reference/atexit.md)   
- [sair, Exit, Exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [\_onexit, \_onexit\_m](../c-runtime-library/reference/onexit-onexit-m.md)   
- [Funções \_spawn, \_wspawn](../Topic/_spawn,%20_wspawn%20Functions.md)   
- [system, \_wsystem](../c-runtime-library/reference/system-wsystem.md)
+ [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
+ [Funções _spawn, _wspawn](../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

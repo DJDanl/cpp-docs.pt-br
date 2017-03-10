@@ -1,32 +1,46 @@
 ---
-title: "Subtra&#231;&#227;o de ponteiro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "subtração de ponteiro"
+title: "Subtração do ponteiro | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pointer subtraction
 ms.assetid: 4d515690-088a-43f6-bb8c-57b849f7ccf7
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Subtra&#231;&#227;o de ponteiro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f630024f0228f154274111044610ebe4022a12cd
+ms.lasthandoff: 02/25/2017
 
-**ANSI 3.3.6, 4.1.1** O tipo de inteiro necessário para manter a diferença entre dois ponteiros para os elementos da mesma matriz, **ptrdiff\_t**  
+---
+# <a name="pointer-subtraction"></a>Subtração do ponteiro
+**ANSI 3.3.6, 4.1.1** O tipo de inteiro necessário para manter a diferença entre dois ponteiros em relação aos elementos da mesma matriz, **ptrdiff_t**  
   
- **ptrdiff\_t** é **signed int**.  
+ Um **ptrdiff_t** é um **signed int**.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Matrizes e ponteiros](../c-language/arrays-and-pointers.md)

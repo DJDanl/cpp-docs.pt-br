@@ -1,40 +1,54 @@
 ---
-title: "Fun&#231;&#245;es embutidas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "código rápido"
-  - "funções [C++], funções embutidas"
-  - "funções embutidas, Palavra-chave __inline"
+title: "Funções embutidas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- fast code
+- inline functions, __inline keyword
+- functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#245;es embutidas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: cdcf109b76725855aeb6daae1628bbc6a57e6e32
+ms.lasthandoff: 02/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="inline-functions"></a>Funções embutidas
+**Seção específica da Microsoft**  
   
- A palavra\-chave `__inline` diz para o compilador substituir o código na definição de função para cada instância de uma chamada de função.  No entanto, a substituição ocorre apenas ao critério do compilador.  Por exemplo, o compilador não uma embute uma função se seu endereço já estiver em uso ou se for muito grande para embutir.  
+ A palavra-chave `__inline` diz para o compilador substituir o código na definição de função para cada instância de uma chamada de função. No entanto, a substituição ocorre apenas ao critério do compilador. Por exemplo, o compilador não uma embute uma função se seu endereço já estiver em uso ou se for muito grande para embutir.  
   
  Para que uma função seja considerada candidata para embutir, ela deve usar a definição de função de novo estilo.  
   
  Use esse formato para especificar uma função embutida:  
   
- `__inline` *type*opt *function\-definition*`;`  
+ `__inline`*tipo*aceitação*definição de função*`;`  
   
  O uso de funções embutidas gera código mais rápido e às vezes pode gerar código menor do que a chamada de função equivalente gera pelos seguintes motivos:  
   
@@ -44,9 +58,11 @@ manager: "ghogen"
   
 -   As funções geradas embutidas estão sujeitas às otimizações de código não disponíveis para funções normais porque o compilador não executa otimizações entre procedimentos.  
   
- As funções que usam `__inline` não devem ser confundidas com o código de assembler embutido.  Consulte [Assembler embutido](../c-language/inline-assembler-c.md) para obter mais informações.  
+ As funções que usam `__inline` não devem ser confundidas com o código de assembler embutido. Consulte [Assembler embutido](../c-language/inline-assembler-c.md) para obter mais informações.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [inline, \_\_inline, \_\_forceinline](../misc/inline-inline-forceinline.md)
+## <a name="see-also"></a>Consulte também  
+ [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
+
+

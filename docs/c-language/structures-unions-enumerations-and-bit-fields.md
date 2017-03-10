@@ -1,36 +1,50 @@
 ---
-title: "Estruturas, uni&#245;es, enumera&#231;&#245;es e campos de bit | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
+title: "Estruturas, uniões, enumerações e campos de bit| Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estruturas, uni&#245;es, enumera&#231;&#245;es e campos de bit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ab9b6f5da724e0e12be0d88ad9e423736a4ee2c1
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="structures-unions-enumerations-and-bit-fields"></a>Estruturas, uniões, enumerações e campos de bit
 -   [Acesso inadequado a uma união](../c-language/improper-access-to-a-union.md)  
   
--   [Preenchimento e alinhamento de membros da estrutura](../Topic/Padding%20and%20Alignment%20of%20Structure%20Members.md)  
+-   [Preenchimento e alinhamento de membros da estrutura](../c-language/padding-and-alignment-of-structure-members.md)  
   
--   [Sinal de campos de bits](../Topic/Sign%20of%20Bit%20Fields.md)  
+-   [Sinal de campos de bit](../c-language/sign-of-bit-fields.md)  
   
--   [Armazenamento de campos de bits](../Topic/Storage%20of%20Bit%20Fields.md)  
+-   [Armazenamento de campos de bit](../c-language/storage-of-bit-fields.md)  
   
 -   [O tipo enum](../c-language/enum-type.md)  
   
-## Consulte também  
- [Comportamento definido por implementação](../c-language/implementation-defined-behavior.md)
+## <a name="see-also"></a>Consulte também  
+ [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)

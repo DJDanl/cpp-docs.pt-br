@@ -1,48 +1,62 @@
 ---
-title: "Desempenho de bibliotecas multithread | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "bibliotecas, com multithread"
-  - "bibliotecas com multithread"
-  - "desempenho, multithreading"
-  - "threading [C++], desempenho"
+title: Desempenho de bibliotecas multithread | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- threading [C++], performance
+- libraries, multithreaded
+- performance, multithreading
+- multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Desempenho de bibliotecas multithread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c4a51b3e27379be4a798b1ae0db7403293577975
+ms.lasthandoff: 02/25/2017
 
-O CRT de thread único não está mais disponível.  Este tópico discute como obter o máximo desempenho das bibliotecas multi\-threaded.  
+---
+# <a name="multithreaded-libraries-performance"></a>Desempenho de bibliotecas multithread
+A CRT single-thread não está mais disponível. Este tópico trata de como obter o máximo desempenho de bibliotecas multithread.  
   
-## Aumentando o desempenho  
- O desempenho das bibliotecas multi\-threaded foi aprimorado e é semelhante ao do desempenho das bibliotecas de thread único agora eliminadas.  Para essas situações quando mesmo alto desempenho é necessário, há vários novos recursos.  
+## <a name="maximizing-performance"></a>Maximizar o desempenho  
+ O desempenho das bibliotecas multithread foi aprimorado e está próximo do desempenho das bibliotecas single-thread que foram eliminadas. Existem vários recursos novos para essas situações, mesmo quando é necessário um desempenho superior.  
   
--   O bloqueio de forma independente de fluxo permite que você impede um fluxo e então use [Funções \(\_nolock\)](../c-runtime-library/nolock-functions.md) que acessa o fluxo diretamente.  Isso permite que o uso de bloqueio é içado fora de loops críticos.  
+-   O bloqueio de fluxo independente permite bloquear um fluxo e, em seguida, usar as [funções _nolock](../c-runtime-library/nolock-functions.md), que acessam o fluxo diretamente. Assim, o uso de bloqueio pode ser suspenso fora de loops críticos.  
   
--   a localidade do thread reduz os custos de acesso à localidade para cenários de vários threads \(consulte [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)\).  
+-   A opção de acordo com a localidade do thread reduz o custo de acesso de localidade para cenários multithread (consulte [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)).  
   
--   As funções de localidade dependente \(com os nomes que terminam em \_l\) levam a localidade como um parâmetro, removendo os custos substanciais \(por exemplo, [printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)\).  
+-   As funções dependentes da localidade (com nomes que terminam em _l) usam a localidade como parâmetro, removendo um custo substancial (por exemplo, [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)).  
   
--   As otimizações para páginas de código comum reduzem o custo de muitas operações curtos.  
+-   Otimizações para páginas de código comuns reduzem o custo de muitas operações curtas.  
   
--   Definindo [\_CRT\_DISABLE\_PERFCRIT\_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md) força todas as operações de E\/S para assumir um modelo de thread único de E\/S e usar os formulários de \_nolock de funções.  Isso permite altamente a I\/O\-based aplicativos de thread único obter o melhor desempenho.  
+-   A definição de [_CRT_DISABLE_PERFCRIT_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md) força todas as operações de E/S a assumir um modelo de E/S single-thread e a usar as formas _nolock das funções. Isso permite que aplicativos single-thread altamente baseados em E/S tenham um melhor desempenho.  
   
--   A possibilidade de identificador de heap de CRT permite que você habilite heap \(LFH\) de fragmentação do windows baixo para o heap de CRT substancialmente, o que pode melhorar o desempenho em cenários bem dimensionados.  
+-   Com a exposição do identificador de heap CRT, é possível habilitar o Heap de Baixa Fragmentação do (LFH) do Windows para o heap de CRT, o que pode melhorar substancialmente o desempenho em cenários altamente dimensionados.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

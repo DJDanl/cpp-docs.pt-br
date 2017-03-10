@@ -1,46 +1,60 @@
 ---
-title: "Chamadas de fun&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "chamadas de função"
-  - "chamadas de função, sobre chamadas de função"
-  - "chamadas de função, funções C"
-  - "funções [C], Chamando "
+title: "Chamadas de função | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, C functions
+- functions [C], calling
+- function calls, about function calls
+- function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Chamadas de fun&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b0e3a3ec6041496d1bf6567695dae70bd0aac878
+ms.lasthandoff: 02/25/2017
 
-Uma *chamada de função* é uma expressão que passa o controle e os argumentos \(se houver\) para uma função e tem o formato:  
+---
+# <a name="function-calls"></a>Chamadas de função
+Uma *chamada de função* é uma expressão que passa o controle e os argumentos (se houver) para uma função e tem o formato:  
   
- *expression* \(*expression\-list* opt\)  
+ *expression* (*expression-list*opt)  
   
- onde *expression* é um nome de função ou é avaliado em um endereço de função, e *expression\-list* é uma lista de expressões \(separadas por vírgula\).  Os valores dessas últimas expressões são os argumentos passados para a função.  Se a função não retorna um valor, você a declara para ser uma função que retorna `void`.  
+ em que *expression* é um nome de função ou é avaliado em um endereço de função e *expression-list* é uma lista de expressões (separadas por vírgulas). Os valores dessas últimas expressões são os argumentos passados para a função. Se a função não retorna um valor, você a declara para ser uma função que retorna `void`.  
   
  Se uma declaração existe antes da chamada de função, mas nenhuma informação é fornecida quanto aos parâmetros, os argumentos não declarados simplesmente passam pelas conversões aritméticas comuns.  
   
 > [!NOTE]
->  As expressões na lista de argumentos da função podem ser avaliadas em qualquer ordem, portanto, os argumentos cujos valores podem ser alterados por efeitos colaterais de outro argumento têm valores indefinidos.  O ponto de sequência definido pelo operador de chamada de função apenas garante que todos os efeitos colaterais na lista de argumentos sejam avaliados antes que o controle passe para a função chamada. \(Observe que a ordem em que os argumentos são enviados por push na pilha é uma questão à parte.\) Consulte [Pontos de sequência](../c-language/c-sequence-points.md) para obter mais informações.  
+>  As expressões na lista de argumentos da função podem ser avaliadas em qualquer ordem, portanto, os argumentos cujos valores podem ser alterados por efeitos colaterais de outro argumento têm valores indefinidos. O ponto de sequência definido pelo operador de chamada de função apenas garante que todos os efeitos colaterais na lista de argumentos sejam avaliados antes que o controle passe para a função chamada. (Observe que a ordem em que os argumentos são enviados por push na pilha é uma questão à parte.) Consulte [Pontos de sequência](../c-language/c-sequence-points.md) para obter mais informações.  
   
- O único requisito em qualquer chamada de função é que a expressão antes dos parênteses devem ser avaliadas como um endereço de função.  Isso significa que uma função pode ser chamada por qualquer expressão de ponteiro de função.  
+ O único requisito em qualquer chamada de função é que a expressão antes dos parênteses devem ser avaliadas como um endereço de função. Isso significa que uma função pode ser chamada por qualquer expressão de ponteiro de função.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Este exemplo ilustra as chamadas de função de uma instrução `switch`:  
   
 ```  
@@ -89,9 +103,9 @@ void work( int number, long (*function)(int i) )
 work( count, lift );  
 ```  
   
- passa uma variável de inteiro, `count`, e o endereço da função `lift` para a função `work`.  Observe que o endereço da função é passado simplesmente fornecendo o identificador de função, pois um identificador de função é avaliado em uma expressão de ponteiro.  Para usar um identificador de função dessa forma, a função deve ser declarada ou definida antes que o identificador seja usado; caso contrário, o identificador não é reconhecido.  Nesse caso, um protótipo para `work` é fornecido no início da função `main`.  
+ passa uma variável de inteiro, `count`, e o endereço da função `lift` para a função `work`. Observe que o endereço da função é passado simplesmente fornecendo o identificador de função, pois um identificador de função é avaliado em uma expressão de ponteiro. Para usar um identificador de função dessa forma, a função deve ser declarada ou definida antes que o identificador seja usado; caso contrário, o identificador não é reconhecido. Nesse caso, um protótipo para `work` é fornecido no início da função `main`.  
   
- O parâmetro `function` em `work` é declarado para ser um ponteiro para uma função usando um argumento `int` e retornando um valor **long**.  Os parênteses ao redor do nome do parâmetro são necessários; sem eles, a declaração especificaria uma função retornando um ponteiro para um valor **long**.  
+ O parâmetro `function` em `work` é declarado para ser um ponteiro para uma função usando um argumento `int` e retornando um valor **long**. Os parênteses ao redor do nome do parâmetro são necessários; sem eles, a declaração especificaria uma função que retorna um ponteiro para um valor **long**.  
   
  A função `work` chama a função selecionada de dentro do loop **for** usando a seguinte chamada de função:  
   
@@ -101,5 +115,5 @@ work( count, lift );
   
  Um argumento, `i`, é passado para a função chamada.  
   
-## Consulte também  
- [Funções \(\)](../Topic/Functions%20\(C\).md)
+## <a name="see-also"></a>Consulte também  
+ [Funções](../c-language/functions-c.md)

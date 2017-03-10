@@ -1,39 +1,53 @@
 ---
-title: "Constantes setvbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_IOFBF"
-  - "_IONBF"
-  - "_IOLBF"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante _IOFBF"
-  - "Constante _IOLBF"
-  - "Constante _IONBF"
-  - "Constante IOFBF"
-  - "Constante IOLBF"
-  - "Constante IONBF"
+title: Constantes setvbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _IOFBF
+- _IONBF
+- _IOLBF
+dev_langs:
+- C++
+helpviewer_keywords:
+- _IOFBF constant
+- IOFBF constant
+- IONBF constant
+- _IOLBF constant
+- IOLBF constant
+- _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Constantes setvbuf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 17b914a593122bb11d62af2ba9c2ba9e32e6bb7c
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="setvbuf-constants"></a>Constantes setvbuf
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -41,17 +55,17 @@ manager: "ghogen"
   
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Essas constantes representam o tipo de buffer para `setvbuf`.  
   
- Os valores possíveis são dados por seguintes constantes manifestas:  
+ Os valores possíveis são fornecidos pelas constantes de manifesto a seguir:  
   
 |Constante|Significado|  
-|---------------|-----------------|  
-|`_IOFBF`|Proteção completa: O buffer especificado na chamada de `setvbuf` é usado e seu tamanho é como especificado na chamada de `setvbuf` .  Se o ponteiro de buffer é **nulo**, o buffer atribuído automaticamente o tamanho especificado será usado.|  
+|--------------|-------------|  
+|`_IOFBF`|Buffer cheio: O buffer especificado na chamada para `setvbuf` está sendo usado e seu tamanho é como especificado na chamada `setvbuf`. Se o ponteiro do buffer for **NULO**, é usado o buffer de tamanho especificado alocado automaticamente.|  
 |`_IOLBF`|Mesmo que `_IOFBF`.|  
-|`_IONBF`|Nenhum buffer é usado, independentemente dos argumentos na chamada de `setvbuf`.|  
+|`_IONBF`|Nenhum buffer é usado, independentemente de argumentos na chamada para `setvbuf`.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [setbuf](../c-runtime-library/reference/setbuf.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)

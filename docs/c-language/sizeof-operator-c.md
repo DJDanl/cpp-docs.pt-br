@@ -1,66 +1,81 @@
 ---
-title: "Operador sizeof (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sizeof"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Operador sizeof"
+title: Operador sizeof (C) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sizeof
+dev_langs:
+- C++
+helpviewer_keywords:
+- sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador sizeof (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 051f54958d3ba0523d6047f77d7a8217d60bd51c
+ms.lasthandoff: 02/25/2017
 
-O operador `sizeof` indica a quantidade de armazenamento, em bytes, necessária para armazenar um objeto do tipo do operando.  Esse operador permite que você evite especificar tamanhos de dados dependentes do computador em seus programas.  
+---
+# <a name="sizeof-operator-c"></a>Operador sizeof (C)
+O operador `sizeof` indica a quantidade de armazenamento, em bytes, necessária para armazenar um objeto do tipo do operando. Esse operador permite que você evite especificar tamanhos de dados dependentes do computador em seus programas.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      sizeof unary-expression  
+sizeof unary-expression  
 sizeof ( type-name )  
 ```  
   
-## Comentários  
- O operando é um identificador que é uma *unary\-expression* ou uma expressão de conversão de tipo \(ou seja, um especificador de tipo incluído entre parênteses\).  A *unary\-expression* não pode representar um objeto de campo de bits, um tipo incompleto ou um designador de função.  O resultado é uma constante integral sem sinal.  O cabeçalho padrão STDDEF.H define esse tipo como **size\_t**.  
+## <a name="remarks"></a>Comentários  
+O operando é um identificador que é uma *unary-expression* ou uma expressão de conversão de tipo (ou seja, um especificador de tipo incluído entre parênteses). A *unary-expression* não pode representar um objeto de campo de bits, um tipo incompleto ou um designador de função. O resultado é uma constante integral sem sinal. O cabeçalho padrão STDDEF.H define esse tipo como **size_t**.  
   
- Quando você aplica o operador `sizeof` a um identificador de matriz, o resultado é o tamanho da matriz inteira, não o tamanho do ponteiro representado pelo identificador de matriz.  
+Quando você aplica o operador `sizeof` a um identificador de matriz, o resultado é o tamanho da matriz inteira, não o tamanho do ponteiro representado pelo identificador de matriz.  
   
- Quando você aplica o operador `sizeof` a um nome de tipo de estrutura ou união, ou a um identificador de tipo de estrutura ou união, o resultado é o número de bytes na estrutura ou união, incluindo o preenchimento interno e à direita.  Esse tamanho pode incluir o preenchimento interno e à direita usado para alinhar os membros da estrutura ou união nos limites de memória.  Assim, o resultado pode não corresponder ao tamanho calculado pela adição dos requisitos de armazenamento dos membros individuais.  
+Quando você aplica o operador `sizeof` a um nome de tipo de estrutura ou união, ou a um identificador de tipo de estrutura ou união, o resultado é o número de bytes na estrutura ou união, incluindo o preenchimento interno e à direita. Esse tamanho pode incluir o preenchimento interno e à direita usado para alinhar os membros da estrutura ou união nos limites de memória. Assim, o resultado pode não corresponder ao tamanho calculado pela adição dos requisitos de armazenamento dos membros individuais.  
   
- Se uma matriz não dimensionada é o último elemento de uma estrutura, o operador `sizeof` retorna o tamanho da estrutura sem a matriz.  
+Se uma matriz não dimensionada é o último elemento de uma estrutura, o operador `sizeof` retorna o tamanho da estrutura sem a matriz.  
   
 ```  
 buffer = calloc(100, sizeof (int) );  
 ```  
   
- Esse exemplo usa o operador `sizeof` para passar o tamanho de um `int`, que varia de um computador para outro, como um argumento para uma função em tempo de execução nomeada `calloc`.  O valor retornado pela função é armazenado em `buffer`.  
+Esse exemplo usa o operador `sizeof` para passar o tamanho de um `int`, que varia de um computador para outro, como um argumento para uma função em tempo de execução nomeada `calloc`. O valor retornado pela função é armazenado em `buffer`.  
   
 ```  
-static char *strings[] ={  
-          "this is string one",  
-          "this is string two",  
-          "this is string three",  
-         };  
+static char *strings[] = {  
+      "this is string one",  
+      "this is string two",  
+      "this is string three",  
+   };  
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );   
 ```  
   
- Nesse exemplo, `strings` é uma matriz de ponteiros para `char`.  O número de ponteiros é o número de elementos na matriz, mas não é especificado.  É fácil determinar o número de ponteiros usando o operador `sizeof` para calcular o número de elementos na matriz.  O valor inteiro **const** `string_no` é inicializado nesse número.  Como se trata de um valor **const**, `string_no` não pode ser modificado.  
+Nesse exemplo, `strings` é uma matriz de ponteiros para `char`. O número de ponteiros é o número de elementos na matriz, mas não é especificado. É fácil determinar o número de ponteiros usando o operador `sizeof` para calcular o número de elementos na matriz. O valor inteiro **const** `string_no` é inicializado nesse número. Como se trata de um valor **const**, `string_no` não pode ser modificado.  
   
-## Consulte também  
- [Operadores C\+\+](../misc/cpp-operators.md)
+## <a name="see-also"></a>Consulte também  
+[Operadores C](c-operators.md)  
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+  

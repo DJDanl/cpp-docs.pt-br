@@ -1,49 +1,63 @@
 ---
-title: "Operadores shift bit a bit | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "operadores shift bit a bit"
-  - "operadores [C++], bit a bit"
-  - "operadores [C++], shift"
-  - "operadores shift, bit a bit"
+title: Operadores shift bit a bit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], bitwise
+- shift operators, bitwise
+- bitwise-shift operators
+- operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores shift bit a bit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7bed4fd7a0d77f2759e7ce4aa2de253dfb3542fb
+ms.lasthandoff: 02/25/2017
 
-Os operadores Shift deslocam o primeiro operando da esquerda \(`<<`\) ou da direita \(`>>`\) pelo número de posições que o segundo operando especifica.  
+---
+# <a name="bitwise-shift-operators"></a>Operadores shift bit a bit
+Os operadores Shift deslocam o primeiro operando da esquerda (`<<`) ou da direita (`>>`) pelo número de posições que o segundo operando especifica.  
   
-## Sintaxe  
- *shift\-expression*:  
- *additive\-expression*  
+## <a name="syntax"></a>Sintaxe  
+ *shift-expression*:  
+ *additive-expression*  
   
- *shift\-expression*  `<<`  *additive\-expression shift\-expression*  `>>`  *additive\-expression*  
+ *shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*  
   
- Ambos os operandos devem ser valores integrais.  Esses operadores executam conversões aritméticas comuns; o tipo de resultado é o tipo do operando à esquerda após a conversão.  
+ Ambos os operandos devem ser valores integrais. Esses operadores executam conversões aritméticas comuns; o tipo de resultado é o tipo do operando à esquerda após a conversão.  
   
- Para mudanças à esquerda, os bits vazios à direita são definidos como 0.  Para a mudança à direita, os bits vazios à esquerda são preenchidos com base no tipo do primeiro operando após a conversão.  Se o tipo for `unsigned`, eles são definidos como 0.  Caso contrário, eles são preenchidos com cópias do bit de sinal.  Para os operadores Left Shift sem estouro, a instrução  
+ Para mudanças à esquerda, os bits vazios à direita são definidos como 0. Para a mudança à direita, os bits vazios à esquerda são preenchidos com base no tipo do primeiro operando após a conversão. Se o tipo for `unsigned`, eles são definidos como 0. Caso contrário, eles são preenchidos com cópias do bit de sinal. Para os operadores Left Shift sem estouro, a instrução  
   
 ```  
 expr1 << expr2   
 ```  
   
- é equivalente à multiplicação por 2<sup>expr2</sup> Para os operadores Right Shift,  
+ é equivalente à multiplicação por 2<sup>expr2</sup>. Para os operadores Right Shift,  
   
 ```  
 expr1 >> expr2   
@@ -64,11 +78,11 @@ y = 0x5500;
 z = ( x << 8 ) + ( y >> 8 );  
 ```  
   
- Neste exemplo, `x` é deslocado para a esquerda oito posições e `y` é deslocado para a direita oito posições.  Os valores deslocados são adicionados, resultando em 0xAA55 e atribuídos a `z`.  
+ Neste exemplo, `x` é deslocado para a esquerda oito posições e `y` é deslocado para a direita oito posições. Os valores deslocados são adicionados, resultando em 0xAA55 e atribuídos a `z`.  
   
- O deslocamento de um valor negativo para a direita gera a metade do valor original, arredondado para baixo.  Por exemplo, – 253 \(binário 11111111 00000011\) com o deslocamento para a direita de um de bit produz – 127 \(11111111 10000001\).  Um deslocamento positivo de 253 para a direita gera \+126.  
+ O deslocamento de um valor negativo para a direita gera a metade do valor original, arredondado para baixo. Por exemplo, – 253 (binário 11111111 00000011) com o deslocamento para a direita de um de bit produz – 127 (11111111 10000001). Um deslocamento positivo de 253 para a direita gera +126.  
   
- Os deslocamentos para a direita preservam o bit de sinal.  Quando um inteiro assinado é deslocado para a direita, o bit mais significativo permanece definido.  Quando um inteiro não assinado é deslocado para a direita, o bit mais significativo é limpo.  
+ Os deslocamentos para a direita preservam o bit de sinal. Quando um inteiro assinado é deslocado para a direita, o bit mais significativo permanece definido. Quando um inteiro não assinado é deslocado para a direita, o bit mais significativo é limpo.  
   
-## Consulte também  
- [Operadores de deslocamento à esquerda e deslocamento à direita \(\>\> e \<\<\)](../Topic/Left%20Shift%20and%20Right%20Shift%20Operators%20\(%3E%3E%20and%20%3C%3C\).md)
+## <a name="see-also"></a>Consulte também  
+ [Operadores de deslocamento à esquerda e deslocamento à direita (>> e <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

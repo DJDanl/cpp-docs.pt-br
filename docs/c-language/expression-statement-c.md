@@ -1,37 +1,51 @@
 ---
-title: "Instru&#231;&#227;o de express&#227;o (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "instruções de expressão"
-  - "instruções, expressão"
+title: "Instrução de expressão (C) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- statements, expression
+- expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instru&#231;&#227;o de express&#227;o (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d47cce488419bb309297da15b500d65b8362bce4
+ms.lasthandoff: 02/25/2017
 
-Quando uma instrução de expressão é executada, a expressão é avaliada de acordo com as regras descritas em [Expressões e atribuições](../c-language/expressions-and-assignments.md).  
+---
+# <a name="expression-statement-c"></a>Instrução de expressão (C)
+Quando uma instrução de expressão é executada, ela é avaliada de acordo com as regras descritas em [Expressões e atribuições](../c-language/expressions-and-assignments.md).  
   
-## Sintaxe  
- *expression\-statement*:  
- *expression*  opt **;**  
+## <a name="syntax"></a>Sintaxe  
+ *expression-statement*:  
+ *expression* opt**;**  
   
- Todos os efeitos colaterais de avaliação da expressão são concluídos antes de a próxima instrução ser executada.  Uma instrução expression vazia é chamada de instrução null.  Consulte [A instrução null](../c-language/null-statement-c.md) para obter mais informações.  
+ Todos os efeitos colaterais de avaliação da expressão são concluídos antes de a próxima instrução ser executada. Uma instrução expression vazia é chamada de instrução null. Consulte [A instrução null](../c-language/null-statement-c.md) para obter mais informações.  
   
  Estes exemplos demonstram instruções expression.  
   
@@ -45,5 +59,5 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
   
  Na última instrução, a expressão de chamada de função, o valor da expressão, que inclui os valores retornados pela função, é aumentada em 3 e atribuída às duas variáveis `y` e `z`.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Instruções](../c-language/statements-c.md)

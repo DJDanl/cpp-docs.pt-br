@@ -1,39 +1,53 @@
 ---
-title: "Express&#245;es e atribui&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "atribuindo valores em C"
-  - "operadores de atribuição, atribuindo valores em expressões"
-  - "instruções de atribuição, valores em expressões"
-  - "expressões [C]"
-  - "expressões [C], atribuindo valores"
-  - "operadores [C], atribuindo valores"
-  - "Visual C, atribuições"
-  - "Visual C, expressões"
+title: "Expressões e atribuições | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- assignment statements, values in expressions
+- expressions [C]
+- expressions [C], assigning values
+- Visual C, expressions
+- assignment operators, assigning values in expressions
+- operators [C], assigning values
+- assigning values in C
+- Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Express&#245;es e atribui&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3804ead9b0e1e9e854cc7ca9dcb6af42e75afafe
+ms.lasthandoff: 02/25/2017
 
-Esta seção descreve como formar expressões e atribuir valores na linguagem C.  As constantes, os identificadores, as cadeias de caracteres e as chamadas de função são operandos manipulados em expressões.  A linguagem C tem todos os operadores comuns de linguagem.  Esta seção aborda esses operadores, bem como operadores que são exclusivos de C ou do Microsoft C.  Os tópicos abordados incluem:  
+---
+# <a name="expressions-and-assignments"></a>Expressões e atribuições
+Esta seção descreve como formar expressões e atribuir valores na linguagem C. As constantes, os identificadores, as cadeias de caracteres e as chamadas de função são operandos manipulados em expressões. A linguagem C tem todos os operadores comuns de linguagem. Esta seção aborda esses operadores, bem como operadores que são exclusivos de C ou do Microsoft C. Os tópicos abordados incluem:  
   
--   [Expressões L\-value e r\-value](../Topic/L-Value%20and%20R-Value%20Expressions.md)  
+-   [Expressões l-value e r-value](../c-language/l-value-and-r-value-expressions.md)  
   
 -   [Expressões constantes](../c-language/c-constant-expressions.md)  
   
@@ -43,11 +57,11 @@ Esta seção descreve como formar expressões e atribuir valores na linguagem C.
   
 -   [Operadores](../c-language/c-operators.md)  
   
--   [Precedência do operador](../Topic/Precedence%20and%20Order%20of%20Evaluation.md)  
+-   [Precedência do operador](../c-language/precedence-and-order-of-evaluation.md)  
   
 -   [Conversões de tipo](../c-language/type-conversions-c.md)  
   
 -   [Conversões de tipo](../c-language/type-cast-conversions.md)  
   
-## Consulte também  
- [Referência de linguagem C](../Topic/C%20Language%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência da linguagem C](../c-language/c-language-reference.md)

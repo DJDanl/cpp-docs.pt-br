@@ -1,33 +1,47 @@
 ---
-title: "Data e hora padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "datas, padrão para _DATE e _TIME"
-  - "hora, default"
+title: "Data e hora padrão | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- time, default
+- dates, default for _DATE and _TIME
 ms.assetid: 2a00a772-94f9-4513-a76b-63441456c1e6
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Data e hora padr&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f20ab90d7d77919b64fd9903972959dc42a6f9b1
+ms.lasthandoff: 02/25/2017
 
-**ANSI 3.8.8** As definições para \_DATE\_ and \_TIME\_ quando, respectivamente, a data e a hora da conversão não estão disponíveis  
+---
+# <a name="default-date-and-time"></a>Data e hora padrão
+**ANSI 3.8.8** As definições para _DATE\_ e _TIME\_ quando, respectivamente, a data e a hora da conversão não estão disponíveis  
   
- Quando o sistema operacional não fornece a data e a hora da conversão, os valores padrão para DATE\_ and \_TIME são `May 03 1957` e `17:00:00"`.  
+ Quando o sistema operacional não fornece a data e a hora da translação, os valores padrão para _DATE\_ e _TIME\_ são `May 03 1957` e `17:00:00"`.  
   
-## Consulte também  
- [Pré\-processando diretivas](../Topic/Preprocessing%20Directives.md)
+## <a name="see-also"></a>Consulte também  
+ [Diretivas de pré-processamento](../c-language/preprocessing-directives.md)

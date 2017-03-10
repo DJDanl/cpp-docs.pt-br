@@ -1,71 +1,85 @@
 ---
-title: "Constantes de acesso de leitura/grava&#231;&#227;o de arquivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.constants.file"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "constantes de acesso para leitura/gravação de arquivo"
-  - "constantes [C++], atributos de arquivo"
-  - "constantes de acesso de leitura/gravação de arquivo"
-  - "constantes de acesso de leitura/gravação"
-  - "constantes de acesso de gravação"
+title: "Constantes de acesso de leitura/gravação de arquivo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.constants.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- read/write access constants
+- write access constants
+- access constants for file read/write
+- constants [C++], file attributes
+- file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Constantes de acesso de leitura/grava&#231;&#227;o de arquivo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 93279d1399ebc2395c29f7aac674cb83ddad0048
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="file-readwrite-access-constants"></a>Constantes de acesso de leitura/gravação de arquivo
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## Comentários  
- Essas constantes especificam o tipo de acesso \(“a”, “r”,” ou “w\) solicitado para o arquivo.  [modo de conversão](../c-runtime-library/file-translation-constants.md) \(“b” ou “t”\) e [modo de confirmação\-à\- disco](../Topic/Commit-To-Disk%20Constants.md) \(“c” ou “n”\) podem ser especificados com o tipo de acesso.  
+## <a name="remarks"></a>Comentários  
+ Essas constantes especificam o tipo de acesso ("a", "r" ou "w") solicitado para o arquivo. O [modo de translação](../c-runtime-library/file-translation-constants.md) ("b" ou "t") e o [modo commit-to-disk](../c-runtime-library/commit-to-disk-constants.md) ("c" ou "n") podem ser especificados com o tipo de acesso.  
   
  Os tipos de acesso são descritos abaixo.  
   
  **"a"**  
- Abre gravando no final do arquivo \(adicionar\); cria o arquivo primeiro se não existir.  Todas as operações de gravação ocorrem no final do arquivo.  Embora o ponteiro de arquivo pode ser reposicionado usando `fseek` ou **rewind**, sempre é movido de volta ao final do arquivo antes que qualquer operação de gravação foi executada.  
+ Abre para gravação no final do arquivo (acréscimo); cria o arquivo primeiro se ele não existir. Todas as operações de gravação ocorrem no final do arquivo. Embora o ponteiro do arquivo possa ser reposicionado usando `fseek` ou **rewind**, ele é sempre movido de volta para o final do arquivo antes que qualquer operação de gravação seja realizada.  
   
- **"a\+"**  
- Mesmo que acima, mas também permite ao ler.  
+ **"a+"**  
+ Idem acima, mas também permite a leitura.  
   
  **"r"**  
- Abre para leitura.  Se o arquivo não existir ou não for encontrado, a chamada para abrir o arquivo falhará.  
+ Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, ocorrerá uma falha na chamada para abrir o arquivo.  
   
- **"r\+"**  
- Abre para leitura e gravação.  Se o arquivo não existir ou não for encontrado, a chamada para abrir o arquivo falhará.  
+ **"r+"**  
+ Abre para leitura e gravação. Se o arquivo não existir ou não puder ser encontrado, ocorrerá uma falha na chamada para abrir o arquivo.  
   
  **"w"**  
- Abre um arquivo vazio para gravação.  Se o arquivo determinado existir, seu conteúdo será destruído.  
+ Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.  
   
- **"w\+"**  
- Abre um arquivo vazio para a leitura e gravação.  Se o arquivo determinado existir, seu conteúdo será destruído.  
+ **"w+"**  
+ Abre um arquivo vazio para leitura e gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.  
   
- Quando o “r\+”, “w\+ o tipo”,” ou “a\+ forem especificados, a leitura e gravação são permitidas \(o arquivo é aberto para “atualização”\).  No entanto, quando você alternar entre a leitura e a gravação, deve haver `fflush`de intervenção, `fsetpos`, `fseek`, ou uma operação de **rewind** .  A posição atual pode ser especificado para a operação de `fsetpos` ou de `fseek` .  
+ Quando o tipo "r+", "w+" ou "a+" é especificado, são permitidas leitura e gravação (diz-se que o arquivo está aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma operação `fflush`, `fsetpos`, `fseek` ou **rewind** intermediária. A posição atual pode ser especificada para a operação `fsetpos` ou `fseek`.  
   
-## Consulte também  
- [\_fdopen, \_wfdopen](../Topic/_fdopen,%20_wfdopen.md)   
- [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [\_popen, \_wpopen](../c-runtime-library/reference/popen-wpopen.md)   
+## <a name="see-also"></a>Consulte também  
+ [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
+ [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)

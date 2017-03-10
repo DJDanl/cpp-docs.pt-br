@@ -1,42 +1,56 @@
 ---
-title: "Constantes ambientais | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante _MAX_ENV"
-  - "Constante MAX_ENV"
+title: Constantes ambientais | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MAX_ENV constant
+- _MAX_ENV constant
 ms.assetid: 5224f540-231c-47aa-be9a-467efd1db281
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Constantes ambientais
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3b85bfe03ef6290a9cdf3141c3f612ba632a58a3
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="environmental-constants"></a>Constantes ambientais
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #include <stdlib.h>  
 ```  
   
-## Comentários  
- Esta constante define o comprimento variável para cadeias de caracteres.  
+## <a name="remarks"></a>Comentários  
+ Essa constante define o comprimento ambiental para cadeias de caracteres.  
   
 |Constante|Significado|  
-|---------------|-----------------|  
-|`_MAX_ENV`|Tamanho máximo da cadeia de caracteres de uma cadeia de caracteres de ambiente.|  
+|--------------|-------------|  
+|`_MAX_ENV`|Tamanho máximo da cadeia de caracteres de uma cadeia de caracteres ambiental.|  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Constantes globais](../c-runtime-library/global-constants.md)

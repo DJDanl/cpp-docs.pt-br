@@ -1,90 +1,55 @@
 ---
-title: "operator delete (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "delete"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "operator delete"
-  - "exclusão escalar"
+title: operator delete (CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr80.dll
+- msvcr90.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- delete
+dev_langs:
+- C++
+helpviewer_keywords:
+- scalar delete
+- operator delete
 ms.assetid: bcd0066a-0022-45f5-af4c-9007c64a6b89
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# operator delete (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9402187512cb1bc077a0666c557d0219a5751b66
+ms.lasthandoff: 02/25/2017
 
-Frees atribuiu o bloco.  
-  
-## Sintaxe  
-  
-```  
-  
-      void __cdecl operator delete(  
-   void * object  
-);  
-void __cdecl operator delete(  
-   void * object,   
-   void * memory  
-) throw();  
-void __cdecl operator delete(  
-   void * object,   
-   const std::nothrow_t&  
-) throw();  
-```  
-  
-#### Parâmetros  
- *memória*  
- O local de memória que está sendo liberado.  
-  
- *objeto*  
- Um ponteiro para o objeto que está sendo excluído.  
-  
-## Comentários  
- Esse formulário de **operator delete** é conhecido como a exclusão escalar, em contraste com o formulário de exclusão de vetor[a exclusão do operador &#91;&#93;](../c-runtime-library/delete-operator-crt.md)\(\).  
-  
- **operator delete** libera memória alocada por [operador novo](../c-runtime-library/operator-new-crt.md).  
-  
- O primeiro formulário desse operador é conhecido como o formulário de nonplacement.  O segundo e o terceiro formas desse operador não serão chamados em geral de código mas para existir para dar ao compilador uma exclusão compatível para chamar quando uma nova posição falha.  
-  
- O primeiro formulário do operador é definido pelo compilador e não requer new.h ser incluído em seu programa.  
-  
- Com exceção do comportamento de reprodução ou de reprodução, o CRT **operator delete** se comporta como [a exclusão do operador](../Topic/operator%20delete%20\(%3Cnew%3E\).md) na biblioteca padrão C\+\+.  
-  
-## Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|------------|--------------------------|  
-|**excluir**|\<new.h\>|  
-  
- Para informações adicionais de compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md) na Introdução.  
-  
-## Bibliotecas  
- Todas as versões das [Bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md).  
-  
-## Exemplo  
- Consulte [operador novo](../c-runtime-library/operator-new-crt.md) para obter exemplos de uso do operador **delete**.  
-  
-## Consulte também  
- [Alocação de memória](../c-runtime-library/memory-allocation.md)
+---
+# <a name="operator-delete-crt"></a>operator delete (CRT)
+
+A partir do Visual Studio 2013, o tempo de execução do C Universal (UCRT) não dá suporte às funções operator new e operator delete específicas de C++. Elas agora fazem parte da biblioteca C++ padrão. Para obter mais informações, consulte os [operadores new e delete](../cpp/new-and-delete-operators.md) e [operador delete](../cpp/delete-operator-cpp.md) na Referência da Linguagem C++. 
+
+

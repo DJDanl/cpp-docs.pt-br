@@ -1,148 +1,162 @@
 ---
-title: "Resumo de constantes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "constantes, C"
+title: Resumo de Constantes| Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Resumo de constantes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 787e3b590db9078b9dc1bfc67c2c3fedc62c4eff
+ms.lasthandoff: 02/25/2017
 
+---
+# <a name="summary-of-constants"></a>Resumo de constantes
 `constant`:  
- *floating\-point\-constant*  
+ *floating-point-constant*  
   
- *integer\-constant*  
+ *integer-constant*  
   
- *enumeration\-constant*  
+ *enumeration-constant*  
   
- *character\-constant*  
+ *character-constant*  
   
- *floating\-point\-constant*:  
- *fractional\-constant exponent\-part*  opt *floating\-suffix* opt  
+ *floating-point-constant*:  
+ *fractional-constant exponent-part* opt*floating-suffix* opt  
   
- *digit\-sequence exponent\-part floating\-suffix*  opt  
+ *digit-sequence exponent-part floating-suffix* opt  
   
- *fractional\-constant*:  
- *digit\-sequence*  opt **.***digit\-sequence*  
+ *fractional-constant*:  
+ *digit-sequence* opt**.***digit-sequence*  
   
- *digit\-sequence*  **.**  
+ *digit-sequence*  **.**  
   
- *exponent\-part*:  
- **e**  *sign*  opt *digit\-sequence*  
+ *exponent-part*:  
+ **e**  *sign* opt*digit-sequence*  
   
- **E**  *sign*  opt *digit\-sequence*  
+ **E**  *sign* opt*digit-sequence*  
   
  *sign*: one of  
- **\+ –**  
+ **+ –**  
   
- *digit\-sequence*:  
+ *digit-sequence*:  
  *digit*  
   
- *digit\-sequence digit*  
+ *digit-sequence digit*  
   
- *floating\-suffix*: one of  
+ *floating-suffix*: one of  
  **f l F L**  
   
- *integer\-constant*:  
- *decimal\-constant integer\-suffix*  opt  
+ *integer-constant*:  
+ *decimal-constant integer-suffix* opt  
   
- *octal\-constant integer\-suffix*  opt  
+ *octal-constant integer-suffix* opt  
   
- *hexadecimal\-constant integer\-suffix*  opt  
+ *hexadecimal-constant integer-suffix* opt  
   
- *decimal\-constant*:  
- *nonzero\-digit*  
+ *decimal-constant*:  
+ *nonzero-digit*  
   
- *decimal\-constant digit*  
+ *decimal-constant digit*  
   
- *octal\-constant*:  
+ *octal-constant*:  
  **0**  
   
- *octal\-constant octal\-digit*  
+ *octal-constant octal-digit*  
   
- *hexadecimal\-constant*:  
- **0x**  *hexadecimal\-digit*  
+ *hexadecimal-constant*:  
+ **0x**  *hexadecimal-digit*  
   
- **0X**  *hexadecimal\-digit*  
+ **0X**  *hexadecimal-digit*  
   
- *hexadecimal\-constant hexadecimal\-digit*  
+ *hexadecimal-constant hexadecimal-digit*  
   
- *nonzero\-digit*: um de  
+ *nonzero-digit*: one of  
  **1 2 3 4 5 6 7 8 9**  
   
- *octal\-digit*: um de  
+ *octal-digit*: one of  
  **0 1 2 3 4 5 6 7**  
   
- *hexadecimal\-digit*: um de  
+ *hexadecimal-digit*: one of  
  **0 1 2 3 4 5 6 7 8 9**  
   
  **a b c d e f**  
   
  **A B C D E F**  
   
- *unsigned\-suffix*: um de  
+ *unsigned-suffix*: one of  
  **u U**  
   
- *long\-suffix*: um de  
+ *long-suffix*: one of  
  **l L**  
   
- *character\-constant*:  
- **'** *c\-char\-sequence*  
+ *character-constant*:  
+ **'** *c-char-sequence*  
   
- **'L'** *c\-char\-sequence* **'**  
+ **'L'** *c-char-sequence* **'**  
   
- *integer\-suffix*:  
- *unsigned\-suffix long\-suffix*  opt  
+ *integer-suffix*:  
+ *unsigned-suffix long-suffix* opt  
   
- *long\-suffix unsigned\-suffix*  opt  
+ *long-suffix unsigned-suffix* opt  
   
- *c\-char\-sequence*:  
- *c\-char*  
+ *c-char-sequence*:  
+ *c-char*  
   
- *c\-char\-sequence c\-char*  
+ *c-char-sequence c-char*  
   
- *c\-char*:  
- Qualquer membro do conjunto de caracteres de origem, exceto aspas simples \('\), barra invertida \(**\\**\) ou *sequência de escape* de caractere de nova linha  
+ *c-char*:  
+ Qualquer membro do conjunto de caracteres de origem, exceto aspas simples ('), barra invertida (**\\**) ou *escape-sequence* de caractere de nova linha  
   
- *escape\-sequence*:  
- *simple\-escape\-sequence*  
+ *escape-sequence*:  
+ *simple-escape-sequence*  
   
- *octal\-escape\-sequence*  
+ *octal-escape-sequence*  
   
- *hexadecimal\-escape\-sequence*  
+ *hexadecimal-escape-sequence*  
   
- *simple\-escape\-sequence*: um de  
- **\\a \\b \\f \\n \\r \\t \\v**  
+ *simple-escape-sequence*: one of  
+ **\a \b \f \n \r \t \v**  
   
- **\\' \\" \\\\ \\?**  
+ **\\' \\" \\\ \\?**  
   
- *octal\-escape\-sequence*:  
- **\\** *octal\-digit*  
+ *octal-escape-sequence*:  
+ **\\** *octal-digit*  
   
- **\\** *octal\-digit octal\-digit*  
+ **\\** *octal-digit octal-digit*  
   
- **\\** *octal\-digit octal\-digit octal\-digit*  
+ **\\** *octal-digit octal-digit octal-digit*  
   
- *hexadecimal\-escape\-sequence*:  
- **\\x**  *hexadecimal\-digit*  
+ *hexadecimal-escape-sequence*:  
+ **\x**  *hexadecimal-digit*  
   
- *hexadecimal\-escape\-sequence hexadecimal\-digit*  
+ *hexadecimal-escape-sequence hexadecimal-digit*  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Gramática lexical](../c-language/lexical-grammar.md)

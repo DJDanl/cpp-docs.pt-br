@@ -1,43 +1,57 @@
 ---
-title: "Conformidade com ANSI C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Ansi"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "ANSI [C++], Padrão C"
-  - "compatibilidade [C++], ANSI C"
-  - "conformidade com ANSI C"
-  - "convenções [C++], extensões da Microsoft"
-  - "convenções de nomenclatura de extensões da Microsoft"
-  - "convenções de nomenclatura [C++], biblioteca da Microsoft"
-  - "sublinhados"
-  - "sublinhados, à esquerda"
+title: Conformidade com ANSI C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Ansi
+dev_langs:
+- C++
+helpviewer_keywords:
+- underscores, leading
+- compatibility [C++], ANSI C
+- compliance with ANSI C
+- conventions [C++], Microsoft extensions
+- underscores
+- naming conventions [C++], Microsoft library
+- ANSI [C++], C standard
+- Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Conformidade com ANSI C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae908d7fd204bd46c0d68cde0882ac9cf5874d22
+ms.lasthandoff: 02/25/2017
 
-A convenção de nomenclatura para todos os identificadores microsoft específicos no sistema de tempo de execução \(como funções, macros, constantes, variáveis, e definições de tipo\) é ANSI\- compatível.  Nesta documentação, qualquer função de tempo de execução e que os padrões de ANSI\/ISO C for notada como sendo ANSI compatível.  Os aplicativos ANSI\- correspondentes devem usar somente essas funções correspondentes ANSI.  
+---
+# <a name="ansi-c-compliance"></a>Conformidade com ANSI C
+A convenção de nomenclatura para todos os identificadores específicos da Microsoft no sistema de tempo de execução (como funções, macros, constantes, variáveis e definições de tipo) está em conformidade com ANSI. Nessa documentação, qualquer função de tempo de execução que segue os padrões ANSI/ISO C é registrada como sendo compatível com ANSI. Os aplicativos em conformidade com ANSI devem usar apenas essas funções compatíveis com ANSI.  
   
- Os nomes de funções específicas da microsoft e variáveis globais começam com um sublinhado único.  Esses nomes podem ser substituída apenas localmente, no escopo do código.  Por exemplo, quando você inclui arquivos de cabeçalho de tempo de execução da Microsoft, você pode ainda assim poderá substituir a função microsoft específica nomeada `_open` declarando uma variável local com o mesmo nome.  Porém, você não pode usar esse nome para seu próprio função global ou variável global.  
+ Os nomes de funções específicas e de variáveis globais da Microsoft começam com um sublinhado simples. Esses nomes podem ser substituídos apenas localmente, dentro do escopo do seu código. Por exemplo, quando você inclui arquivos de cabeçalho de tempo de execução da Microsoft, ainda pode substituir localmente a função específica da Microsoft chamada `_open` declarando uma variável local de mesmo nome. No entanto, não pode usar esse nome para sua própria função global ou variável global.  
   
- Os nomes de macros microsoft específicos e constantes manifestas começam com dois sublinhados, ou com um único sublinhado principal imediatamente seguido por uma letra maiúscula.  O escopo desses identificadores é absoluto.  Por exemplo, você não pode usar o microsoft identificador específico **\_UPPER** por isso.  
+ Os nomes de macros e constantes de manifesto específicas da Microsoft começam com dois sublinhados ou com um único sublinhado à esquerda seguido imediatamente por uma letra maiúscula. O escopo desses identificadores é absoluto. Por exemplo, não é possível usar o identificador **_UPPER** específico da Microsoft por esse motivo.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Compatibilidade](../c-runtime-library/compatibility.md)

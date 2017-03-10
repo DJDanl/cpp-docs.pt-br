@@ -1,46 +1,60 @@
 ---
-title: "_FREEENTRY, _USEDENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "USEDENTRY"
-  - "_USEDENTRY"
-  - "_FREEENTRY"
-  - "FREEENTRY"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Constante _FREEENTRY"
-  - "Constante _USEDENTRY"
-  - "Constante FREEENTRY"
-  - "Constante USEDENTRY"
+title: _FREEENTRY, _USEDENTRY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- USEDENTRY
+- _USEDENTRY
+- _FREEENTRY
+- FREEENTRY
+dev_langs:
+- C++
+helpviewer_keywords:
+- _USEDENTRY constant
+- _FREEENTRY constant
+- FREEENTRY constant
+- USEDENTRY constant
 ms.assetid: 26f658e6-6846-4a4e-9984-262cfe392770
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _FREEENTRY, _USEDENTRY
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 82dfbfd8691037be66dd648b873fc2174ae10cc3
+ms.lasthandoff: 02/25/2017
 
-## Sintaxe  
+---
+# <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 #include <malloc.h>  
 ```  
   
-## Comentários  
- Essas constantes representam os valores atribuídos por rotinas de `_heapwalk` ao elemento de **\_useflag** da estrutura de **\_HEAPINFO** .  Indica o status de entrada do heap.  
+## <a name="remarks"></a>Comentários  
+ Essas constantes representam valores atribuídos pelas rotinas `_heapwalk` ao elemento **_useflag** da estrutura **_HEAPINFO**. Eles indicam o status da entrada de heap.  
   
-## Consulte também  
- [\_heapwalk](../Topic/_heapwalk.md)   
+## <a name="see-also"></a>Consulte também  
+ [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)

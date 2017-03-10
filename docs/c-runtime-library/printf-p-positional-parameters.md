@@ -1,139 +1,141 @@
 ---
-title: "Par&#226;metros posicionais printf_p | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr120.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Função _printf_p, parâmetros posicionais"
-  - "Função printf_p, parâmetros posicionais"
+title: "Parâmetros posicionais printf_p | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr120.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+apitype: DLLExport
+dev_langs:
+- C++
+helpviewer_keywords:
+- _printf_p function, positional parameters
+- printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Par&#226;metros posicionais printf_p
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 75b4ad98b67e0e1d5063711c7a40d68fda581d50
+ms.openlocfilehash: 26784cb38c68df644b64f591313bda2e57edc239
+ms.lasthandoff: 02/25/2017
 
-Parâmetros posicionais fornecem a capacidade de especificar pelo número de argumentos deve ser substituído em um campo em uma cadeia de caracteres de formato.  O seguinte parâmetro posicional`printf`funções estão disponíveis:  
+---
+# <a name="printfp-positional-parameters"></a>Parâmetros posicionais printf_p
+Parâmetros posicionais fornecem a capacidade de especificar por número quais dos argumentos deve ser substituído em um campo de uma cadeia de caracteres. As funções `printf` do seguinte parâmetro posicional estão disponíveis:  
   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
- [\_printf\_p, \_printf\_p\_l, \_wprintf\_p, \_wprintf\_p\_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)  
+| Funções printf não posicionais | Equivalentes de parâmetro posicional |  
+|---|---|  
+|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|  
+|[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|  
+|[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|[_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)|  
+|[fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|  
+|[vprintf, _vprintf_l, vwprintf, _vwprintf_l](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|  
+|[vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|[_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|  
+|[vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|  
   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)  
- [sprintf\_p, sprintf\_p\_l, swprintf\_p, swprintf\_p\_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)  
+## <a name="how-to-specify-positional-parameters"></a>Como especificar parâmetros posicionais  
   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)  
- [\_cprintf\_p, \_cprintf\_p\_l, \_cwprintf\_p, \_cwprintf\_p\_l](../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)  
+### <a name="parameter-indexing"></a>Indexação de parâmetro  
+Por padrão, se nenhuma formatação posicional estiver presente, as funções posicionais tem comportamento idêntico as não posicionais. Especifique o parâmetro posicional para formatar usando `%n$` no início do especificador de formato, em que `n` é a posição do parâmetro para o formato na lista de parâmetros. A posição de parâmetro começa em 1 para o primeiro argumento após a cadeia de caracteres de formato. O restante do especificador de formato segue as mesmas regras que o `printf` especificador de formato. Para obter mais informações, consulte [Sintaxe de especificação de formato: funções printf e wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)  
- [\_fprintf\_p, \_fprintf\_p\_l, \_fwprintf\_p, \_fwprintf\_p\_l](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)  
+Aqui está um exemplo de formatação posicional:  
   
- [vprintf, \_vprintf\_l, vwprintf, \_vwprintf\_l](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)  
- [\_vprintf\_p, \_vprintf\_p\_l, \_vwprintf\_p, \_vwprintf\_p\_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)  
-  
- [vfprintf, \_vfprintf\_l, vfwprintf, \_vfwprintf\_l](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)  
- [\_vfprintf\_p, \_vfprintf\_p\_l, \_vfwprintf\_p, \_vfwprintf\_p\_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)  
-  
- [vsprintf, \_vsprintf\_l, vswprintf, \_vswprintf\_l, \_\_vswprintf\_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)  
- [\_vsprintf\_p, \_vsprintf\_p\_l, \_vswprintf\_p, \_vswprintf\_p\_l](../Topic/_vsprintf_p,%20_vsprintf_p_l,%20_vswprintf_p,%20_vswprintf_p_l.md)  
-  
-## Especificando parâmetros posicionais  
-  
-##### Indexação de parâmetro  
- Por padrão as funções posicionais comportam idêntico à posição não aquelas, se nenhuma formatação posicional estiver presente.  Parâmetros posicionais são especificados usando o formato "`%m$x`", onde`m`denota um número ordinal que indica a posição do parâmetro na lista de parâmetros, que precedem a cadeia de caracteres de formato e `x`indica o tipo de caractere de campo do tipo especificado no`printf`função.  Os parâmetros na lista são indexados a partir do valor de 1 para o primeiro elemento na lista e assim por diante.  Para obter informações adicionais sobre os caracteres de campo de tipo, consulte[Caracteres de campo de tipo printf](../c-runtime-library/printf-type-field-characters.md).  
-  
- Para obter um exemplo desse comportamento:  
-  
-```  
+```C  
 _printf_p("%1$s %2$s", "November", "10");  
 ```  
   
- impressão  
+Isso imprime:  
   
 ```  
 November 10  
 ```  
   
- A ordem dos números usados não precisa corresponder a ordem dos argumentos fornecido.  Assim, o seguinte é válido:  
+A ordem dos números usada não precisa corresponder à ordem dos argumentos fornecidos. Por exemplo, isso é uma cadeia de caracteres de formato válido:  
   
-```  
+```C  
 _printf_p("%2$s %1$s", "November", "10");  
 ```  
   
- impressão  
+Isso imprime:  
   
 ```  
 10 November  
 ```  
   
- Parâmetro pode ser usado mais de uma vez durante a formatação, diferentemente em tradicional cadeias de formato, então esse  
+Ao contrário de cadeias de caracteres de formato tradicional, parâmetros posicionais podem ser usados mais de uma vez em uma cadeia de caracteres de formato. Por exemplo,  
   
-```  
+```C  
 _printf_p("%1$d times %1$d is %2$d", 10, 100);  
 ```  
   
- impressão  
+Isso imprime:  
   
 ```  
 10 times 10 is 100  
 ```  
   
- No entanto, todos os argumentos devem ser usados pelo menos uma vez em algum lugar na cadeia de caracteres de formato.  
+Todos os argumentos devem ser usados pelo menos uma vez em algum lugar na cadeia de caracteres de formato. O número máximo de parâmetros posicionais permitidos em uma cadeia de caracteres de formato é dado por `_ARGMAX`.  
   
- O número máximo de parâmetros posicionais permitido em uma cadeia de caracteres de formato é fornecido pelo`_ARGMAX`.  
+### <a name="width-and-precision"></a>Largura e Precisão  
+Você pode usar `*n$` para especificar um parâmetro posicional como um especificador de precisão ou de largura, em que `n` é a posição da largura ou precisão do parâmetro na lista de parâmetros. A posição do valor de largura ou precisão deve aparecer imediatamente seguinte ao \* símbolo. Por exemplo,  
   
-##### Largura e precisão  
- Quando o \* símbolo é usado para especificar que a largura ou precisão deve ser determinado a partir de um argumento, em seguida, a posição do valor largura ou precisão deve aparecer imediatamente seguinte a \* símbolo.  Por exemplo,  
-  
-```  
+```C  
 _printf_p("%1$*2$s","Hello", 10);  
 ```  
   
- ou  
+ou  
   
+```C  
+_printf_p("%2$*1$s", 10, "Hello");  
 ```  
-_printf_p("%2$*1$s",10, "Hello");  
-```  
   
-##### Misturando argumentos posicionais posicional e não  
- Parâmetros posicionais não podem ser combinados com parâmetros não posicionais na mesma cadeia de caracteres de formato.  No entanto,`printf_p`e funções relacionadas ainda oferece suporte a parâmetros não posicionais em cadeias de caracteres de formato que contém sem parâmetros posicionais.  
+### <a name="mixing-positional-and-non-positional-arguments"></a>Combinando argumentos posicionais e não posicionais  
+Parâmetros posicionais não podem ser combinados com parâmetros não posicionais na mesma cadeia de caracteres de formato. Se qualquer formatação posicional for usada, todos os especificadores de formato devem usar a formatação posicional. No entanto, `printf_p` e funções relacionadas ainda dão suporte a parâmetros não posicionais em cadeias de caracteres de formato que não contém parâmetros posicionais.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // positional_args.c  
+// Build by using: cl /W4 positional_args.c  
 // Positional arguments allow the specification of the order  
 // in which arguments are consumed in a formatting string.  
   
 #include <stdio.h>  
   
-int main(int argc, char *argv[])  
+int main()  
 {  
     int     i = 1,  
             j = 2,  
             k = 3;  
     double  x = 0.1,  
-            y = 0.2,  
-            z = 0.3;  
+            y = 2.22,  
+            z = 333.3333;  
     char    *s1 = "abc",  
             *s2 = "def",  
             *s3 = "ghi";  
@@ -142,25 +144,31 @@ int main(int argc, char *argv[])
     // normal input order is used.  
     _printf_p("%d %d %d\n", i, j, k);  
   
-    // Positional args are numbers indicating the  
-    // argument enclosed in curly braces.  
+    // Positional arguments are numbers followed by a $ character.  
     _printf_p("%3$d %1$d %2$d\n", i, j, k);  
   
     // The same positional argument may be reused.  
     _printf_p("%1$d %2$d %1$d\n", i, j);  
   
+    // The positional arguments may appear in any order.
     _printf_p("%1$s %2$s %3$s\n", s1, s2, s3);  
-  
     _printf_p("%3$s %1$s %2$s\n", s1, s2, s3);  
+  
+    // Precision and width specifiers must be int types.  
+    _printf_p("%3$*5$f %2$.*4$f %1$*4$.*5$f\n", x, y, z, j, k);  
 }  
 ```  
   
-  **1 2 3**  
-**3 1 2**  
-**1 2 1**  
-**ghi do abc def**  
-**GHI abc def**   
-## Consulte também  
+```Output  
+1 2 3
+3 1 2
+1 2 1
+abc def ghi
+ghi abc def
+333.333300 2.22 0.100
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Caracteres de campo de tipo printf](../c-runtime-library/printf-type-field-characters.md)   
  [Especificação de largura printf](../c-runtime-library/printf-width-specification.md)   
  [Especificação da precisão](../c-runtime-library/precision-specification.md)
