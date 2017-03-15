@@ -1,0 +1,63 @@
+---
+title: C3655 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3655
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3655
+ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
+caps.latest.revision: 10
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6d45686377be80b363227b5b6d708f1c81153f01
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c3655"></a>C3655 de erro do compilador
+'function': função já explicitamente substituído  
+  
+ Uma função pode somente ser explicitamente substituída uma vez. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
+  
+ O exemplo a seguir gera C3655:  
+  
+```  
+// C3655.cpp  
+// compile with: /clr /c  
+public ref struct B {  
+   virtual void f();  
+   virtual void g();  
+};  
+  
+public ref struct D : B {  
+   virtual void f() new sealed = B::f;  
+   virtual void g() new sealed = B::f;   // C3655  
+   // try the following line instead  
+   // virtual void g() new sealed = B::g;  
+};  
+```

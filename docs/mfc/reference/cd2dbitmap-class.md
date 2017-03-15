@@ -1,0 +1,418 @@
+---
+title: Classe CD2DBitmap | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DBitmap
+- CD2DBitmap
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DBitmap class
+ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
+caps.latest.revision: 17
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f88a6376069c07c61311d74faca104e821a259bd
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="cd2dbitmap-class"></a>Classe CD2DBitmap
+Um wrapper para ID2D1Bitmap.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+class CD2DBitmap : public CD2DResource;  
+```  
+  
+## <a name="members"></a>Membros  
+  
+### <a name="public-constructors"></a>Construtores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Sobrecarregado. Constrói um objeto de CD2DBitmap de HBITMAP.|  
+|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|O destruidor. Chamado quando um objeto de bitmap D2D está sendo destruído.|  
+  
+### <a name="protected-constructors"></a>Construtores Protegidos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Sobrecarregado. Constrói um objeto CD2DBitmap.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::Attach](#attach)|Conexões existentes de interface de recursos para o objeto|  
+|[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Copia a região especificada do bitmap especificado para o bitmap do atual|  
+|[CD2DBitmap::CopyFromMemory](#copyfrommemory)|Copia a região especificada de memória para o bitmap do atual|  
+|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Cópias de destino de renderização de região especificada especificado para o bitmap atual|  
+|[CD2DBitmap::Create](#create)|Cria um CD2DBitmap. (Substitui [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DBitmap::Destroy](#destroy)|Destrói um objeto CD2DBitmap. (Substitui [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DBitmap::Detach](#detach)|Desconecta a interface do recurso do objeto|  
+|[CD2DBitmap::Get](#get)|Interface de ID2D1Bitmap retorna|  
+|[CD2DBitmap::GetDPI](#getdpi)|Retornar os pontos por polegada (DPI) do bitmap|  
+|[CD2DBitmap::GetPixelFormat](#getpixelformat)|Recupera o modo de formato e alfa do pixel do bitmap|  
+|[CD2DBitmap::GetPixelSize](#getpixelsize)|Retorna o tamanho, em unidades dependentes de dispositivo (pixels), do bitmap|  
+|[CD2DBitmap::GetSize](#getsize)|Retorna o tamanho, em pixels independentes de dispositivo (DIPs), do bitmap|  
+|[CD2DBitmap::IsValid](#isvalid)|Verifica a validade do recurso (substituições [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+  
+### <a name="protected-methods"></a>Métodos Protegidos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::CommonInit](#commoninit)|Inicializa o objeto|  
+  
+### <a name="public-operators"></a>Operadores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::Operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Interface de ID2D1Bitmap retorna|  
+  
+### <a name="protected-data-members"></a>Membros de dados protegidos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE se m_hBmpSrc deve ser destruído; Caso contrário, FALSE.|  
+|[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Identificador da fonte de bitmap.|  
+|[CD2DBitmap::m_lpszType](#m_lpsztype)|Tipo de recurso.|  
+|[CD2DBitmap::m_pBitmap](#m_pbitmap)|Armazena um ponteiro para um objeto ID2D1Bitmap.|  
+|[CD2DBitmap::m_sizeDest](#m_sizedest)|Tamanho do destino de bitmap.|  
+|[CD2DBitmap::m_strPath](#m_strpath)|Caminho do arquivo botmap.|  
+|[CD2DBitmap::m_uiResID](#m_uiresid)|ID do recurso de bitmap.|  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
+  
+ `CD2DBitmap`
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxrendertarget.h  
+  
+##  <a name="a-namedtorcd2dbitmapa--cd2dbitmapcd2dbitmap"></a><a name="_dtorcd2dbitmap"></a>CD2DBitmap:: ~ CD2DBitmap  
+ O destruidor. Chamado quando um objeto de bitmap D2D está sendo destruído.  
+  
+```  
+virtual ~CD2DBitmap();
+```  
+  
+##  <a name="a-nameattacha--cd2dbitmapattach"></a><a name="attach"></a>CD2DBitmap::Attach  
+ Conexões existentes de interface de recursos para o objeto  
+  
+```  
+void Attach(ID2D1Bitmap* pResource);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pResource`  
+ Interface de recursos existente. Não pode ser nulo  
+  
+##  <a name="a-namecd2dbitmapa--cd2dbitmapcd2dbitmap"></a><a name="cd2dbitmap"></a>CD2DBitmap::CD2DBitmap  
+ Constrói um objeto CD2DBitmap de recurso.  
+  
+```  
+CD2DBitmap(
+    CRenderTarget* pParentTarget,  
+    UINT uiResID,  
+    LPCTSTR lpszType = NULL,  
+    CD2DSizeU sizeDest = CD2DSizeU(0, 0), 
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DBitmap(
+    CRenderTarget* pParentTarget,  
+    LPCTSTR lpszPath,  
+    CD2DSizeU sizeDest = CD2DSizeU(0, 0), 
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DBitmap(
+    CRenderTarget* pParentTarget,  
+    HBITMAP hbmpSrc,  
+    CD2DSizeU sizeDest = CD2DSizeU(0, 0), 
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DBitmap(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pParentTarget`  
+ Um ponteiro para o destino de renderização.  
+  
+ `uiResID`  
+ O número de identificação de recurso do recurso.  
+  
+ `lpszType`  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que contém o tipo de recurso.  
+  
+ `sizeDest`  
+ Tamanho do destino do bitmap.  
+  
+ `bAutoDestroy`  
+ Indica que o objeto será destruído pelo proprietário (pParentTarget).  
+  
+ `lpszPath`  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do arquivo.  
+  
+ `hbmpSrc`  
+ Identificador para o bitmap.  
+  
+##  <a name="a-namecommoninita--cd2dbitmapcommoninit"></a><a name="commoninit"></a>CD2DBitmap::CommonInit  
+ Inicializa o objeto  
+  
+```  
+void CommonInit();
+```  
+  
+##  <a name="a-namecopyfrombitmapa--cd2dbitmapcopyfrombitmap"></a><a name="copyfrombitmap"></a>CD2DBitmap::CopyFromBitmap  
+ Copia a região especificada do bitmap especificado para o bitmap do atual  
+  
+```  
+HRESULT CopyFromBitmap(
+    const CD2DBitmap* pBitmap,  
+    const CD2DPointU* destPoint = NULL,  
+    const CD2DRectU* srcRect = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pBitmap`  
+ O bitmap para copiar de  
+  
+ `destPoint`  
+ O bitmap atual, o canto superior esquerdo da área ao qual a região especificado por srcRect é copiado  
+  
+ `srcRect`  
+ A área do bitmap a copiar  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
+  
+##  <a name="a-namecopyfrommemorya--cd2dbitmapcopyfrommemory"></a><a name="copyfrommemory"></a>CD2DBitmap::CopyFromMemory  
+ Copia a região especificada de memória para o bitmap do atual  
+  
+```  
+HRESULT CopyFromMemory(
+    const void* srcData,  
+    UINT32 pitch,  
+    const CD2DRectU* destRect = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `srcData`  
+ Os dados a serem copiados  
+  
+ `pitch`  
+ O stride ou inclinação do bitmap de origem armazenado em srcData. O stride é a contagem de bytes de uma verificação de linha (uma linha dos pixels na memória). O stride pode ser computado da seguinte fórmula: pixels de largura * bytes por pixel + preenchimento de memória  
+  
+ `destRect`  
+ O bitmap atual, o canto superior esquerdo da área ao qual a região especificado por srcRect é copiado  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
+  
+##  <a name="a-namecopyfromrendertargeta--cd2dbitmapcopyfromrendertarget"></a><a name="copyfromrendertarget"></a>CD2DBitmap::CopyFromRenderTarget  
+ Cópias de destino de renderização de região especificada especificado para o bitmap atual  
+  
+```  
+HRESULT CopyFromRenderTarget(
+    const CRenderTarget* pRenderTarget,  
+    const CD2DPointU* destPoint = NULL,  
+    const CD2DRectU* srcRect = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pRenderTarget`  
+ O destino de renderização que contém a região para copiar  
+  
+ `destPoint`  
+ O bitmap atual, o canto superior esquerdo da área ao qual a região especificado por srcRect é copiado  
+  
+ `srcRect`  
+ A área de renderTarget copiar  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
+  
+##  <a name="a-namecreatea--cd2dbitmapcreate"></a><a name="create"></a>CD2DBitmap::Create  
+ Cria um CD2DBitmap.  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `pRenderTarget`  
+ Um ponteiro para o destino de renderização.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Se o método for bem-sucedido, retornará S_OK. Caso contrário, ele retorna um código de erro HRESULT.  
+  
+##  <a name="a-namedestroya--cd2dbitmapdestroy"></a><a name="destroy"></a>CD2DBitmap::Destroy  
+ Destrói um objeto CD2DBitmap.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dbitmapdetach"></a><a name="detach"></a>CD2DBitmap::Detach  
+ Desconecta a interface do recurso do objeto  
+  
+```  
+ID2D1Bitmap* Detach();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Ponteiro para interface de recursos separado.  
+  
+##  <a name="a-namegeta--cd2dbitmapget"></a><a name="get"></a>CD2DBitmap::Get  
+ Interface de ID2D1Bitmap retorna  
+  
+```  
+ID2D1Bitmap* Get();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Ponteiro para uma interface ID2D1Bitmap ou NULL se o objeto ainda não foi inicializado.  
+  
+##  <a name="a-namegetdpia--cd2dbitmapgetdpi"></a><a name="getdpi"></a>CD2DBitmap::GetDPI  
+ Retornar os pontos por polegada (DPI) do bitmap  
+  
+```  
+CD2DSizeF GetDPI() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O DPI horizontal e vertical do bitmap.  
+  
+##  <a name="a-namegetpixelformata--cd2dbitmapgetpixelformat"></a><a name="getpixelformat"></a>CD2DBitmap::GetPixelFormat  
+ Recupera o modo de formato e alfa do pixel do bitmap  
+  
+```  
+D2D1_PIXEL_FORMAT GetPixelFormat() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O pixel formato e alfa modo do bitmap.  
+  
+##  <a name="a-namegetpixelsizea--cd2dbitmapgetpixelsize"></a><a name="getpixelsize"></a>CD2DBitmap::GetPixelSize  
+ Retorna o tamanho, em unidades dependentes de dispositivo (pixels), do bitmap  
+  
+```  
+CD2DSizeU GetPixelSize() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O tamanho, em pixels, do bitmap.  
+  
+##  <a name="a-namegetsizea--cd2dbitmapgetsize"></a><a name="getsize"></a>CD2DBitmap::GetSize  
+ Retorna o tamanho, em pixels independentes de dispositivo (DIPs), do bitmap  
+  
+```  
+CD2DSizeF GetSize() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ O tamanho, em queda do bitmap.  
+  
+##  <a name="a-nameisvalida--cd2dbitmapisvalid"></a><a name="isvalid"></a>CD2DBitmap::IsValid  
+ Verificações de validade de recursos  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ TRUE se o recurso é válido. Caso contrário, FALSE.  
+  
+##  <a name="a-namembautodestroyhbmpa--cd2dbitmapmbautodestroyhbmp"></a><a name="m_bautodestroyhbmp"></a>CD2DBitmap::m_bAutoDestroyHBMP  
+ TRUE se m_hBmpSrc deve ser destruído; Caso contrário, FALSE.  
+  
+```  
+BOOL m_bAutoDestroyHBMP;  
+```  
+  
+##  <a name="a-namemhbmpsrca--cd2dbitmapmhbmpsrc"></a><a name="m_hbmpsrc"></a>CD2DBitmap::m_hBmpSrc  
+ Identificador da fonte de bitmap.  
+  
+```  
+HBITMAP m_hBmpSrc;  
+```  
+  
+##  <a name="a-namemlpsztypea--cd2dbitmapmlpsztype"></a><a name="m_lpsztype"></a>CD2DBitmap::m_lpszType  
+ Tipo de recurso.  
+  
+```  
+LPCTSTR m_lpszType;  
+```  
+  
+##  <a name="a-namempbitmapa--cd2dbitmapmpbitmap"></a><a name="m_pbitmap"></a>CD2DBitmap::m_pBitmap  
+ Armazena um ponteiro para um objeto ID2D1Bitmap.  
+  
+```  
+ID2D1Bitmap* m_pBitmap;  
+```  
+  
+##  <a name="a-namemsizedesta--cd2dbitmapmsizedest"></a><a name="m_sizedest"></a>CD2DBitmap::m_sizeDest  
+ Tamanho do destino de bitmap.  
+  
+```  
+CD2DSizeU m_sizeDest;  
+```  
+  
+##  <a name="a-namemstrpatha--cd2dbitmapmstrpath"></a><a name="m_strpath"></a>CD2DBitmap::m_strPath  
+ Caminho do arquivo botmap.  
+  
+```  
+CString m_strPath;  
+```  
+  
+##  <a name="a-namemuiresida--cd2dbitmapmuiresid"></a><a name="m_uiresid"></a>CD2DBitmap::m_uiResID  
+ ID do recurso de bitmap.  
+  
+```  
+UINT m_uiResID;  
+```  
+  
+##  <a name="a-nameoperatorid2d1bitmapstara--cd2dbitmapoperator-id2d1bitmap"></a><a name="operator_id2d1bitmap_star"></a>CD2DBitmap::Operator ID2D1Bitmap *  
+ Interface de ID2D1Bitmap retorna  
+  
+```  
+operator ID2D1Bitmap*();
+```   
+  
+### <a name="return-value"></a>Valor de retorno  
+ Ponteiro para uma interface ID2D1Bitmap ou NULL se o objeto ainda não foi inicializado.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classes](../../mfc/reference/mfc-classes.md)
+

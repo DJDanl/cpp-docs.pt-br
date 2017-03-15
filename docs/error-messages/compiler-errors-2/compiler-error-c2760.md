@@ -1,0 +1,59 @@
+---
+title: C2760 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2760
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2760
+ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
+caps.latest.revision: 7
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ef8240992c891a84a230bf4079bffc1143b51c4a
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2760"></a>C2760 de erro do compilador
+Erro de sintaxe: esperado 'Nome1' não 'nome2'  
+  
+ Um operador de conversão é usado com um operador inválido.  
+  
+ O exemplo a seguir gera C2760:  
+  
+```  
+// C2760.cpp  
+class B {};  
+class D : public B {};  
+  
+void f(B* pb) {  
+    D* pd1 = static_cast<D*>(pb);  
+    D* pd2 = static_cast<D*>=(pb);  // C2760  
+    D* pd3 = static_cast<D*=(pb);   // C2760  
+}  
+```

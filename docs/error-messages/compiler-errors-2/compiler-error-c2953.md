@@ -1,0 +1,56 @@
+---
+title: C2953 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2953
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2953
+ms.assetid: 8dbcfa24-8296-4e40-bdc4-5526c07d8892
+caps.latest.revision: 8
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 6f0329754efcbac68dfa52558a4af6901b8c50d6
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2953"></a>C2953 de erro do compilador
+'identifier': modelo de classe já foi definido  
+  
+ Verifique o arquivo de origem e incluir arquivos para outras definições.  
+  
+ O exemplo a seguir gera C2953:  
+  
+```  
+// C2953.cpp  
+// compile with: /c  
+template <class T>  class A {};  
+template <class T>  class A {};   // C2953  
+template <class T>  class B {};   // OK  
+```

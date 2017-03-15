@@ -1,0 +1,75 @@
+---
+title: C2936 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2936
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2936
+ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
+caps.latest.revision: 9
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9d1a0b64d06c54b80874010cdc26d758274897d2
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2936"></a>C2936 de erro do compilador
+'class': id de classe de tipo é redefinida como uma variável de dados globais  
+  
+ Você não pode usar uma classe genérica ou modelo como uma variável de dados globais.  
+  
+ Esse erro pode ser causado se chaves serão comparados incorretamente.  
+  
+ O exemplo a seguir gera C2936:  
+  
+```  
+// C2936.cpp  
+// compile with: /c  
+template<class T> struct TC { };   
+int TC<int>;   // C2936  
+  
+// OK  
+struct TC2 { };   
+int TC2;  
+```  
+  
+ C2936 também pode ocorrer ao usar genéricos:  
+  
+```  
+// C2936b.cpp  
+// compile with: /clr /c  
+generic<class T>  
+ref struct GC {};  
+int GC<int>;   // C2936  
+  
+// OK  
+ref struct GC2 {};  
+int GC2;  
+```

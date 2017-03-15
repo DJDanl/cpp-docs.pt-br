@@ -1,0 +1,39 @@
+---
+title: "@@: | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "@@:"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "@@: symbol"
+ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# @@:
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Define um rótulo de código reconhecível somente entre  *label1* e  *label2*, onde  *label1* é o início do código ou o anterior `@@:` rótulo, e  *label2* é o próximo ou fim do código de `@@:` rótulo.  See [@B](../../assembler/masm/at-b.md) and [@F](../../assembler/masm/at-f.md).  
+  
+## Sintaxe  
+  
+```  
+  
+@@:  
+  
+```  
+  
+## Consulte também  
+ [Symbols Reference](../../assembler/masm/symbols-reference.md)

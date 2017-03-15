@@ -1,0 +1,318 @@
+---
+title: Classe CSnapInPropertyPageImpl | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSnapInPropertyPageImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- snap-ins, property pages
+- snap-ins
+- property pages, ATL
+- CSnapInPropertyPageImpl class
+ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
+caps.latest.revision: 20
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: f5db4d0742a423e9574db2a4268a9376491b2ed2
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="csnapinpropertypageimpl-class"></a>Classe CSnapInPropertyPageImpl
+Essa classe fornece métodos para a implementação de um objeto de página de propriedade do snap-in.  
+  
+> [!IMPORTANT]
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```
+CSnapInPropertyPageImpl : public CDialogImplBase
+```  
+  
+## <a name="members"></a>Membros  
+  
+### <a name="public-constructors"></a>Construtores públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|Construtor.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Altera o status de **Okey** e **Cancelar** botões.|  
+|[CSnapInPropertyPageImpl::Create](#create)|Inicializa uma recém-criado `CSnapInPropertyPageImpl` objeto.|  
+|[CSnapInPropertyPageImpl::OnApply](#onapply)|Chamado pela estrutura quando o usuário clica o **aplicar agora** botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Chamado pela estrutura quando o usuário clica o **ajuda** botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Chamado pela estrutura quando a página atual não está mais ativa.|  
+|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Chamado pela estrutura quando o usuário clica o **Cancelar** botão e antes que o cancelamento aconteça.|  
+|[CSnapInPropertyPageImpl::OnReset](#onreset)|Chamado pela estrutura quando o usuário clica o **redefinir** botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Chamado pela estrutura quando a página atual se torna ativa.|  
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Chamado pela estrutura quando o usuário clica o **novamente** botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Chamado pela estrutura quando o usuário clica o **concluir** botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Chamado pela estrutura quando o usuário clica o `Next` botão ao usar uma folha de propriedades de tipo de assistente.|  
+|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Encaminha a mensagem atual para todas as páginas de folha de propriedades.|  
+|[CSnapInPropertyPageImpl::SetModified](#setmodified)|Chamada para ativar ou desativar o **aplicar agora** botão.|  
+  
+### <a name="public-data-members"></a>Membros de Dados Públicos  
+  
+|Nome|Descrição|  
+|----------|-----------------|  
+|[CSnapInPropertyPageImpl::m_psp](#m_psp)|O Windows **PROPSHEETPAGE** estrutura usada pelo `CSnapInPropertyPageImpl` objeto.|  
+  
+## <a name="remarks"></a>Comentários  
+ `CSnapInPropertyPageImpl`Fornece uma implementação básica de um objeto de página de propriedade snap-in. Os recursos básicos de uma página de propriedades do snap-in são implementados usando várias interfaces diferentes e mapeiam tipos.  
+  
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+ `CDialogImplBase`  
+  
+ `CSnapInPropertyPageImpl`  
+  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** atlsnap.h  
+  
+##  <a name="a-namecanceltoclosea--csnapinpropertypageimplcanceltoclose"></a><a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+ Depois que uma alteração irrecuperável foi feita para os dados em uma página de uma folha de propriedades modal, chame essa função.  
+  
+```
+void CancelToClose();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Esta função irá alterar o **Okey** botão **fechar** e desabilitar o **Cancelar** botão. Isso altera os alertas que o usuário que uma alteração é permanente e as modificações não pode ser cancelado.  
+  
+ O `CancelToClose` função de membro não faz nada em uma folha de propriedades sem janela restrita, porque uma folha de propriedades sem janela restrita não tem um **Cancelar** botão por padrão.  
+  
+##  <a name="a-namecsnapinpropertypageimpla--csnapinpropertypageimplcsnapinpropertypageimpl"></a><a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+ Constrói um objeto `CSnapInPropertyPageImpl`.  
+  
+```
+CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `lpszTitle`  
+ [in] O título da página de propriedades.  
+  
+### <a name="remarks"></a>Comentários  
+ Para inicializar a estrutura subjacente, chame [CSnapInPropertyPageImpl::Create](#create).  
+  
+##  <a name="a-namecreatea--csnapinpropertypageimplcreate"></a><a name="create"></a>CSnapInPropertyPageImpl::Create  
+ Chame essa função para inicializar a estrutura subjacente da página de propriedades.  
+  
+```
+HPROPSHEETPAGE Create();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Um identificador para um **PROPSHEETPAGE** estrutura que contém os atributos da folha de propriedades recém-criado.  
+  
+### <a name="remarks"></a>Comentários  
+ Primeiro você deve chamar [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) antes de chamar essa função.  
+  
+##  <a name="a-namempspa--csnapinpropertypageimplmpsp"></a><a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
+ `m_psp`é uma estrutura cujos membros armazenam as características de **PROPSHEETPAGE**.  
+  
+```
+PROPSHEETPAGE m_psp;
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Use essa estrutura para inicializar a aparência de uma página de propriedade depois que ela é construída.  
+  
+ Para obter mais informações sobre essa estrutura, incluindo uma lista de seus membros, consulte [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameonapplya--csnapinpropertypageimplonapply"></a><a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+ Essa função de membro é chamada quando o usuário clica o **Okey** ou **aplicar agora** botão.  
+  
+```
+BOOL OnApply();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se as alterações são aceitas; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Antes de `OnApply` pode ser chamado pelo framework, você deverá ter chamado `SetModified` e defina o parâmetro como **TRUE**. Isso ativará o **aplicar agora** botão assim que o usuário faz uma alteração na página de propriedades.  
+  
+ Substituir essa função de membro para especificar a ação que seu programa usa quando o usuário clica o **aplicar agora** botão. Durante a substituição, a função deve retornar **TRUE** para aceitar as alterações e **FALSE** para impedir alterações de serem efetivadas.  
+  
+ A implementação padrão de `OnApply` retorna **TRUE**.  
+  
+##  <a name="a-nameonhelpa--csnapinpropertypageimplonhelp"></a><a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+ Essa função de membro é chamada quando o usuário clica o **ajuda** botão da página de propriedades.  
+  
+```
+void OnHelp();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Substitua essa função de membro para exibir a Ajuda para a página de propriedades.  
+  
+##  <a name="a-nameonkillactivea--csnapinpropertypageimplonkillactive"></a><a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+ Essa função de membro é chamada quando a página não é mais a página ativa.  
+  
+```
+BOOL OnKillActive();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se dados foram atualizados com êxito; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Substitua essa função de membro para executar tarefas de validação de dados especiais.  
+  
+##  <a name="a-nameonquerycancela--csnapinpropertypageimplonquerycancel"></a><a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+ Essa função de membro é chamada quando o usuário clica o **Cancelar** botão e antes de cancelar a ação tiver ocorrido.  
+  
+```
+BOOL OnQueryCancel();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero para permitir que a operação de cancelamento; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Substituir essa função de membro para especificar uma ação que o programa usa quando o usuário clica o **Cancelar** botão.  
+  
+ A implementação padrão de `OnQueryCancel` retorna **TRUE**.  
+  
+##  <a name="a-nameonreseta--csnapinpropertypageimplonreset"></a><a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+ Essa função de membro é chamada quando o usuário clica o **Cancelar** botão.  
+  
+```
+void OnReset();
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Quando essa função é chamada, altera para todas as páginas de propriedade que foram feitas pelo usuário anteriormente clicando o **aplicar agora** botão são descartados e a folha de propriedades retém o foco.  
+  
+ Substituir essa função de membro para especificar a ação que o programa usa quando o usuário clica o **Cancelar** botão.  
+  
+##  <a name="a-nameonsetactivea--csnapinpropertypageimplonsetactive"></a><a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+ Essa função de membro é chamada quando a página é escolhida pelo usuário e se torna a página ativa.  
+  
+```
+BOOL OnSetActive();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a página foi definida com êxito ativa; Caso contrário, 0.  
+  
+### <a name="remarks"></a>Comentários  
+ Substitua essa função de membro para executar tarefas quando uma página é ativada. Sua substituição dessa função de membro deve chamar a versão padrão antes de qualquer outro processamento é feito.  
+  
+ Retorna a implementação padrão **TRUE**.  
+  
+##  <a name="a-nameonwizardbacka--csnapinpropertypageimplonwizardback"></a><a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+ Essa função de membro é chamada quando o usuário clica o **novamente** botão em um assistente.  
+  
+```
+BOOL OnWizardBack();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+-   0 para automaticamente ir para a página anterior.  
+  
+-   –&1; para evitar que a página alterar.  
+  
+ Para saltar para uma página que não seja o próximo, retorne o identificador da caixa de diálogo a ser exibido.  
+  
+### <a name="remarks"></a>Comentários  
+ Substituir essa função de membro para especificar uma ação que o usuário deve ser executada quando o **novamente** botão é clicado.  
+  
+##  <a name="a-nameonwizardfinisha--csnapinpropertypageimplonwizardfinish"></a><a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+ Essa função de membro é chamada quando o usuário clica o **concluir** botão em um assistente.  
+  
+```
+BOOL OnWizardFinish();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a folha de propriedades é destruída quando o assistente terminar; Caso contrário, zero.  
+  
+### <a name="remarks"></a>Comentários  
+ Substituir essa função de membro para especificar uma ação que o usuário deve ser executada quando o **concluir** botão é clicado.  
+  
+##  <a name="a-nameonwizardnexta--csnapinpropertypageimplonwizardnext"></a><a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+ Essa função de membro é chamada quando o usuário clica o `Next` botão em um assistente.  
+  
+```
+BOOL OnWizardNext();
+```  
+  
+### <a name="return-value"></a>Valor de retorno  
+  
+-   0 para automaticamente ir para a próxima página.  
+  
+-   –&1; para evitar que a página alterar.  
+  
+ Para saltar para uma página que não seja o próximo, retorne o identificador da caixa de diálogo a ser exibido.  
+  
+### <a name="remarks"></a>Comentários  
+ Substituir essa função de membro para especificar uma ação que o usuário deve ser executada quando o `Next` botão é clicado.  
+  
+##  <a name="a-namequerysiblingsa--csnapinpropertypageimplquerysiblings"></a><a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+ Chame essa função de membro para encaminhar uma mensagem para cada página na folha de propriedades.  
+  
+```
+LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `wParam`  
+ [in] Especifica informações adicionais de dependentes de mensagem.  
+  
+ `lParam`  
+ [in] Especifica informações adicionais de dependentes de mensagem.  
+  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se a mensagem não deve ser encaminhada para a próxima página de propriedade; Caso contrário, zero.  
+  
+### <a name="remarks"></a>Comentários  
+ Se uma página retorna um valor diferente de zero, a folha de propriedades não envia a mensagem para páginas subsequentes.  
+  
+##  <a name="a-namesetmodifieda--csnapinpropertypageimplsetmodified"></a><a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+ Chame essa função de membro para habilitar ou desabilitar o **aplicar agora** botão, com base em se as configurações na página de propriedades devem ser aplicadas ao objeto apropriado externo.  
+  
+```
+void SetModified(BOOL bChanged = TRUE);
+```  
+  
+### <a name="parameters"></a>Parâmetros  
+ `bChanged`  
+ [in] **TRUE** para indicar que as configurações de página de propriedade foram modificadas desde a última vez em que elas foram aplicadas; **FALSE** para indicar que as configurações de página de propriedade foram aplicadas ou devem ser ignoradas.  
+  
+### <a name="remarks"></a>Comentários  
+ A folha de propriedades mantém controle de quais páginas estão "sujas", isto é, páginas de propriedades para o qual você chamou **SetModified (TRUE)**. O **aplicar agora** botão sempre será habilitado se você chamar **SetModified (TRUE)** para uma das páginas. O **aplicar agora** botão será desabilitado quando você chama **SetModified (FALSE)** para uma das páginas, mas apenas se nenhuma das outras páginas é "suja".  
+  
+## <a name="see-also"></a>Consulte também  
+ [Visão geral da classe](../../atl/atl-class-overview.md)
+

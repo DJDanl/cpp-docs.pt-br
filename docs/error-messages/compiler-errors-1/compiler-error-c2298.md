@@ -1,0 +1,101 @@
+---
+title: C2298 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2298
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2298
+ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
+caps.latest.revision: 10
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 158571e6a565788a58df6546c64ee0c685839f4d
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2298"></a>C2298 de erro do compilador
+'operation': operação ilegal no ponteiro, a expressão de função de membro  
+  
+ Um ponteiro para a expressão de função de membro deve chamar a função de membro.  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2298.  
+  
+```  
+// C2298.cpp  
+#include <stdio.h>  
+  
+struct X {  
+   void mf() {  
+      puts("in X::mf");  
+   }  
+  
+   void mf2() {  
+      puts("in X::mf2");  
+   }  
+};  
+  
+X x;  
+// pointer to member functions with no params and void return in X  
+typedef void (X::*pmf_t)();   
+  
+// a pointer to member function X::mf  
+void (X::*pmf)() = &X::mf;  
+  
+int main() {  
+   int (*pf)();  
+   pf = x.*pmf;   // C2298  
+   +(x.*pmf);     // C2298  
+  
+   pmf_t pf2 = &X::mf2;  
+   (x.*pf2)();   // uses X::mf2  
+   (x.*pmf)();   // uses X::mf  
+}  
+```  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2298.  
+  
+```  
+// C2298_b.cpp  
+// compile with: /c  
+void F() {}  
+  
+class Measure {  
+public:  
+   void SetTrackingFunction(void (Measure::*fnc)()) {  
+      TrackingFunction = this->*fnc;   // C2298  
+      TrackingFunction = fnc;   // OK  
+      GlobalTracker = F;   // OK  
+   }  
+private:  
+   void (Measure::*TrackingFunction)(void);  
+   void (*GlobalTracker)(void);  
+};  
+```

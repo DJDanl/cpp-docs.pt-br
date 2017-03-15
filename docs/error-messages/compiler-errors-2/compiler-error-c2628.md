@@ -1,0 +1,61 @@
+---
+title: C2628 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2628
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2628
+ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
+caps.latest.revision: 8
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: cd2e49e7c7f731cf7a9496c09bc436291b08f5d5
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2628"></a>C2628 de erro do compilador
+'type1' seguido de 'type2' é ilegal (você esquecer um ';'?)  
+  
+ Um ponto e vírgula pode estar faltando.  
+  
+ O exemplo a seguir gera C2628:  
+  
+```  
+// C2628.cpp  
+class CMyClass {}  
+int main(){}   // C2628 error  
+```  
+  
+ Resolução possível:  
+  
+```  
+// C2628b.cpp  
+class CMyClass {};  
+int main(){}  
+```

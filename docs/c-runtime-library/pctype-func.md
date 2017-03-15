@@ -1,0 +1,81 @@
+---
+title: __pctype_func | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __pctype_func
+apilocation:
+- msvcrt.dll
+- msvcr110_clr0400.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr80.dll
+apitype: DLLExport
+f1_keywords:
+- __pctype_func
+dev_langs:
+- C++
+helpviewer_keywords:
+- __pctype_func
+ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
+caps.latest.revision: 2
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 1588468be6176d04a0c5f3bbdcfaf17aa5091356
+
+---
+# <a name="pctypefunc"></a>__pctype_func
+Recupera um ponteiro para uma matriz de informações de classificação de caracteres.  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```cpp  
+const unsigned short *__pctype_func(  
+   )  
+```  
+  
+## <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para uma matriz de informações de classificação de caracteres.  
+  
+## <a name="remarks"></a>Comentários  
+ As informações na tabela de classificação de caracteres destina-se apenas a uso interno e são usadas por várias funções que classificam caracteres do tipo `char`. Para obter mais informações, consulte a seção `Remarks` de [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).  
+  
+## <a name="requirements"></a>Requisitos  
+  
+|Rotina|Cabeçalho necessário|  
+|-------------|---------------------|  
+|__pctype_func|ctype.h|  
+  
+## <a name="see-also"></a>Consulte também  
+ [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

@@ -1,0 +1,140 @@
+---
+title: "Rotinas de depuração | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.debug
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], using macros
+- macros, debugging with
+- debug routines
+- debug macros
+- debugging [CRT], run-time routines
+ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
+caps.latest.revision: 11
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: fc61db0c2078432ab32030ce897884275d8d2084
+
+---
+# <a name="debug-routines"></a>Rotinas de depuração
+A versão de depuração da biblioteca em tempo de execução C fornece vários serviços de diagnóstico que facilitam a depuração de programas e permitem aos desenvolvedores:  
+  
+-   Ir diretamente para as funções em tempo de execução durante a depuração  
+  
+-   Resolver declarações, erros e exceções  
+  
+-   Rastrear alocações de heap e prevenir perdas de memória  
+  
+-   Relatar mensagens de depuração para o usuário  
+  
+ Para usar essas rotinas, o sinalizador [_DEBUG](../c-runtime-library/debug.md) deve ser definido. Todas essas rotinas não executam nenhuma ação em um build de varejo de um aplicativo. Para obter mais informações sobre como usar as novas rotinas de depuração, consulte [Técnicas de depuração do CRT](/visualstudio/debugger/crt-debugging-techniques).  
+  
+### <a name="debug-versions-of-the-c-run-time-library-routines"></a>Versões de depuração das rotinas da biblioteca em tempo de execução C  
+  
+|Rotina|Uso|Equivalente ao .NET Framework|  
+|-------------|---------|-------------------------------|  
+|[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Avalia uma expressão e gera um relatório de depuração quando o resultado é FALSE|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Semelhante a `_ASSERT`, mas inclui a expressão com falha no relatório gerado|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|[_CrtCheckMemory](../c-runtime-library/reference/crtcheckmemory.md)|Confirma a integridade dos blocos de memória alocados no heap de depuração|[System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)|  
+|[_CrtDbgBreak](../c-runtime-library/reference/crtdbgbreak.md)|Define um ponto de interrupção.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtDbgReport, _CrtDbgReportW](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)|Gera um relatório de depuração com uma mensagem do usuário e envia o relatório para três destinos possíveis|[System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx), [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx), [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx), [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)|  
+|[_CrtDoForAllClientObjects](../c-runtime-library/reference/crtdoforallclientobjects.md)|Chama uma função fornecida pelo aplicativo para todos os tipos `_CLIENT_BLOCK` no heap|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtDumpMemoryLeaks](../c-runtime-library/reference/crtdumpmemoryleaks.md)|Despeja todos os blocos de memória no heap de depuração quando ocorre uma perda de memória significativa|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtIsMemoryBlock](../c-runtime-library/reference/crtismemoryblock.md)|Verifica se um bloco de memória especificado está localizado no heap local e se ele tem um identificador de tipo de bloco de heap de depuração válido|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtIsValidHeapPointer](../c-runtime-library/reference/crtisvalidheappointer.md)|Verifica se um ponteiro especificado está no heap local|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtIsValidPointer](../c-runtime-library/reference/crtisvalidpointer.md)|Verifica se um intervalo de memória especificado é válido para leitura e gravação|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtMemCheckpoint](../c-runtime-library/reference/crtmemcheckpoint.md)|Obtém o estado atual do heap de depuração e o armazena em uma estrutura `_CrtMemState` fornecida pelo aplicativo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtMemDifference](../c-runtime-library/reference/crtmemdifference.md)|Compara dois estados de memória em busca de diferenças significativas e retorna os resultados|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtMemDumpAllObjectsSince](../c-runtime-library/reference/crtmemdumpallobjectssince.md)|Despeja informações sobre objetos no heap desde a realização de um ponto de verificação especificado ou do início da execução do programa|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtMemDumpStatistics](../c-runtime-library/reference/crtmemdumpstatistics.md)|Despeja as informações do cabeçalho de depuração de um estado de memória especificado em um formato legível pelo usuário|[System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)|  
+|[_CrtReportBlockType](../c-runtime-library/reference/crtreportblocktype.md)|Retorna o tipo/subtipo do bloco associado a determinado ponteiro de bloco do heap de depuração.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetAllocHook](../c-runtime-library/reference/crtsetallochook.md)|Instala uma função de alocação definida pelo cliente vinculando-a ao processo de alocação de memória de depuração em tempo de execução C|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetBreakAlloc](../c-runtime-library/reference/crtsetbreakalloc.md)|Define um ponto de interrupção em um número de ordem de alocação de objeto especificado|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md)|Recupera ou modifica o estado do sinalizador `_crtDbgFlag` para controlar o comportamento de alocação do gerenciador de heap de depuração|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetDumpClient](../c-runtime-library/reference/crtsetdumpclient.md)|Instala uma função definida pelo aplicativo que é chamada sempre que uma função de despejo de depuração é chamada para despejar blocos de memória do tipo `_CLIENT_BLOCK`|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetReportFile](../c-runtime-library/reference/crtsetreportfile.md)|Identifica o arquivo ou o fluxo a ser usado como um destino para um tipo de relatório específico por `_CrtDbgReport`|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetReportHook](../c-runtime-library/reference/crtsetreporthook.md)|Instala uma função de relatório definida pelo cliente vinculando-a ao processo de relatório de depuração em tempo de execução C|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetReportHook2, _CrtSetReportHookW2](../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)|Instala ou desinstala uma função de relatório definida pelo cliente vinculando-a ao processo de relatório de depuração em tempo de execução C.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_CrtSetReportMode](../c-runtime-library/reference/crtsetreportmode.md)|Especifica os destinos gerais para um tipo de relatório específico gerado por `_CrtDbgReport`|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_RPT&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Acompanha o progresso do aplicativo gerando um relatório de depuração por meio da chamada a `_CrtDbgReport` com uma cadeia de formato e um número variável de argumentos. Não fornece informações sobre o arquivo de origem e o número de linha.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_RPTF&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Semelhante às macros `_RPTn`, mas fornece o nome do arquivo de origem e o número de linha que deu origem à solicitação de relatório|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Aloca um número especificado de blocos de memória no heap com espaço adicional para um cabeçalho de depuração e buffers de substituição|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Redimensiona um bloco especificado de memória no heap pela expansão ou contração do bloco|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Libera um bloco de memória no heap|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Cria um nome de caminho absoluto ou completo para o nome de caminho relativo especificado, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para alocar memória.|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|  
+|[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Obtém o diretório de trabalho atual, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para alocar memória.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Aloca um bloco de memória no heap com espaço adicional para um cabeçalho de depuração e buffers de substituição|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Calcula o tamanho de um bloco de memória no heap|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|Realoca um bloco de memória especificado no heap pela movimentação e/ou pelo redimensionamento do bloco|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_strdup_dbg, _wcsdup_dbg](../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)|Duplica uma cadeia de caracteres, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para alocar memória.|[System::String::Clone](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)|  
+|[_tempnam_dbg, _wtempnam_dbg](../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md)|Gera nomes que podem ser usados para criar arquivos temporários, usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) para alocar memória.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+  
+ As rotinas de depuração podem ser usadas para percorrer o código-fonte da maioria das outras rotinas em tempo de execução C durante o processo de depuração. No entanto, a Microsoft considera algumas tecnologias proprietárias e, portanto, não fornece o código-fonte para essas rotinas. A maioria dessas rotinas pertence a grupos de tratamento de exceção ou de processamento de ponto flutuante, mas algumas outras também são incluídas. A tabela a seguir lista essas rotinas.  
+  
+### <a name="c-run-time-routines-that-are-not-available-in-source-code-form"></a>Rotinas em tempo de execução C que não estão disponíveis na forma de código-fonte  
+  
+||||  
+|-|-|-|  
+|[acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|[_fpclass](../c-runtime-library/reference/fpclass-fpclassf.md)|[_nextafter](../c-runtime-library/reference/nextafter-functions.md)|  
+|[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|  
+|[atan, atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[_fpreset](../c-runtime-library/reference/fpreset.md)|[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)*|  
+|[_cabs](../c-runtime-library/reference/cabs.md)|[frexp](../c-runtime-library/reference/frexp.md)|[_scalb](../c-runtime-library/reference/scalb.md)|  
+|[ceil](../c-runtime-library/reference/ceil-ceilf-ceill.md)|[_hypot](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)*|  
+|[_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|[_isnan](../c-runtime-library/reference/isnan-isnan-isnanf.md)|[setjmp](../c-runtime-library/reference/setjmp.md)|  
+|[_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)|[_j0](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)|  
+|[_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md)|[_j1](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|[sinh](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)|  
+|[copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|[_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|  
+|[cos](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|[ldexp](../c-runtime-library/reference/ldexp.md)|[_status87, _statusfp](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|  
+|[cosh](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)|  
+|[Exp](../c-runtime-library/reference/exp-expf.md)|[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|[tanh](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)|  
+|[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|[_logb](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|[_y0](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|  
+|[_finite](../c-runtime-library/reference/finite-finitef.md)|[longjmp](../c-runtime-library/reference/longjmp.md)|[_y1](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|  
+|[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|[_matherr](../c-runtime-library/reference/matherr.md)|[_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|  
+|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[modf](../c-runtime-library/reference/modf-modff-modfl.md)||  
+  
+ \*   Embora o código-fonte esteja disponível para a maior parte dessa rotina, ele faz uma chamada interna a outra rotina para a qual o código-fonte não é fornecido.  
+  
+ Algumas funções em tempo de execução C e alguns operadores do C++ se comportam de maneira diferente quando chamados por meio de um build de depuração de um aplicativo. (Observe que é possível fazer um build de depuração de um aplicativo definindo o sinalizador `_DEBUG` ou vinculando a uma versão de depuração da biblioteca em tempo de execução C.) Geralmente, as diferenças de comportamento consistem em recursos extras ou informações fornecidas pela rotina para dar suporte ao processo de depuração. A tabela a seguir lista essas rotinas.  
+  
+### <a name="routines-that-behave-differently-in-a-debug-build-of-an-application"></a>Rotinas que se comportam de maneira diferente em um build de depuração de um aplicativo  
+  
+|||  
+|-|-|  
+|Rotina [abort](../c-runtime-library/reference/abort.md) do C|Operador [delete](../cpp/delete-operator-cpp.md) do C++|  
+|Rotina [assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) do C|Operador [new](../cpp/new-operator-cpp.md) do C++|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)   
+ [Verificação de erros em tempo de execução](../c-runtime-library/run-time-error-checking.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

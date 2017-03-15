@@ -1,0 +1,60 @@
+---
+title: C2311 de erro do compilador | Documentos do Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2311
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2311
+ms.assetid: 1aff9bd5-ed0b-4db6-bbc0-01ac89850cf2
+caps.latest.revision: 8
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 881bffb33209bdbe02aa1fdd77274e5e536a6fae
+ms.lasthandoff: 02/25/2017
+
+---
+# <a name="compiler-error-c2311"></a>C2311 de erro do compilador
+'exceção': detectada pelo '...' número de linha  
+  
+ O manipulador catch para o botão de reticências (...) deve ser o último manipulador para lançamento.  
+  
+ O exemplo a seguir gera C2311:  
+  
+```  
+// C2311.cpp  
+// compile with: /EHsc  
+#include <eh.h>  
+int main() {  
+   try {  
+      throw "ooops!";  
+   }  
+   catch( ... ) {}  
+   catch( int ) {}   // C2311  ellipsis handler not last catch  
+}  
+```
