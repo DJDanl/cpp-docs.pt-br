@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx
+- AFXSPLITTERWNDEX/CSplitterWndEx::OnDrawSplitter
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +85,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxsplitterwndex.h  
   
-##  <a name="a-nameondrawsplittera--csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
  Chamado pela estrutura para desenhar uma janela separadora.  
   
 ```  

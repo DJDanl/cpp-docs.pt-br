@@ -9,12 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATLCONV/CA2WEX
-- ATL.CA2WEX
-- ATL.CA2WEX<t_nBufferLength>
-- ATL::CA2WEX
-- ATL::CA2WEX<t_nBufferLength>
 - CA2WEX
+- ATLCONV/ATL::CA2WEX
+- ATLCONV/ATL::CA2WEX::CA2WEX
+- ATLCONV/ATL::CA2WEX::m_psz
+- ATLCONV/ATL::CA2WEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +114,7 @@ class CA2WEX
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** Atlconv. h  
   
-##  <a name="a-nameca2wexa--ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX  
+##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
  O construtor.  
   
 ```
@@ -133,7 +132,7 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentários  
  Aloca o buffer usado no processo de conversão.  
   
-##  <a name="a-namedtora--ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
  O destruidor.  
   
 ```
@@ -143,21 +142,21 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentários  
  Libera o buffer alocado.  
   
-##  <a name="a-namempsza--ca2wexmpsz"></a><a name="m_psz"></a>CA2WEX::m_psz  
+##  <a name="m_psz"></a>CA2WEX::m_psz  
  O membro de dados que armazena a cadeia de caracteres de origem.  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--ca2wexmszbuffer"></a><a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
  O buffer estático, usado para armazenar a cadeia de caracteres convertida.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpwstra--ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX::Operator LPWSTR  
+##  <a name="operator_lpwstr"></a>CA2WEX::Operator LPWSTR  
  Operador de conversão.  
   
 ```  

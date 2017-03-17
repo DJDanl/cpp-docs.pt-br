@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/25/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==   
+##  <a name="operator_eq_eq"></a>  operator==   
  Determina se os argumentos especificados são iguais.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se as tuplas forem iguais; Caso contrário, `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=   
+##  <a name="operator_neq"></a>  operator!=   
  Determina se os argumentos especificados não são iguais.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se as tuplas não forem iguais; Caso contrário, `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  Calcula a soma de component-wise dos argumentos especificados.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Valor de retorno  
  A soma de component-wise dos argumentos especificados.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  Calcula a diferença component-wise entre os argumentos especificados.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Valor de retorno  
  A diferença component-wise entre os argumentos especificados.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  Calcula o produto component-wise dos argumentos especificados.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  O produto component-wise dos argumentos especificados.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  Calcula o quociente component-wise dos argumentos especificados.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Valor de retorno  
  O quociente component-wise dos argumentos especificados.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a> operator%   
+##  <a name="operator_mod"></a> operator%   
 
  Calcula o módulo do primeiro argumento especificado pelo segundo argumento especificado.  
   

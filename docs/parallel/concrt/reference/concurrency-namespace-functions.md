@@ -6,6 +6,39 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- concrt/concurrency::Alloc
+- concrt/concurrency::DisableTracing
+- concrt/concurrency::EnableTracing
+- concrtrm/concurrency::GetExecutionContextId
+- concrtrm/concurrency::GetOSVersion
+- concrtrm/concurrency::GetProcessorNodeCount
+- concrtrm/concurrency::GetSchedulerId
+- agents/concurrency::asend
+- ppltasks/concurrency::cancel_current_task
+- ppltasks/concurrency::create_async
+- ppltasks/concurrency::create_task
+- concurrent_vector/concurrency::internal_assign_iterators
+- ppl/concurrency::interruption_point
+- agents/concurrency::make_choice
+- agents/concurrency::make_greedy_join
+- ppl/concurrency::make_task
+- ppl/concurrency::parallel_buffered_sort
+- ppl/concurrency::parallel_for_each
+- ppl/concurrency::parallel_invoke
+- ppl/concurrency::parallel_reduce
+- ppl/concurrency::parallel_sort
+- agents/concurrency::receive
+- ppl/concurrency::run_with_cancellation_token
+- pplconcrt/concurrency::set_ambient_scheduler
+- concrt/concurrency::set_task_execution_resources
+- ppltasks/concurrency::task_from_exception
+- ppltasks/concurrency::task_from_result
+- concrt/concurrency::wait
+- ppltasks/concurrency::when_all
+- ppltasks/concurrency::when_any
+dev_langs:
+- C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 caps.latest.revision: 6
 author: mikeblome
@@ -36,7 +69,7 @@ ms.lasthandoff: 02/25/2017
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Aguarde](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="a-namealloca--alloc"></a><a name="alloc"></a>Alocação  
+##  <a name="alloc"></a>Alocação  
  Aloca um bloco de memória do tamanho especificado de Suballocator de cache de simultaneidade em tempo de execução.  
   
 ```
@@ -53,7 +86,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre quais cenários em seu aplicativo podem se beneficiar do uso Suballocator o armazenamento em cache, consulte [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="a-nameasenda--asend"></a><a name="asend"></a>asend  
+##  <a name="asend"></a>asend  
  Uma operação de envio assíncronas que agenda uma tarefa para propagar os dados para o bloco de destino.  
   
 ```
@@ -84,7 +117,7 @@ bool asend(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [mensagem passando funções](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="a-namecancelcurrenttaska--cancelcurrenttask"></a><a name="cancel_current_task"></a>cancel_current_task  
+##  <a name="cancel_current_task"></a>cancel_current_task  
  Cancela a tarefa atualmente em execução. Essa função pode ser chamada de dentro do corpo de uma tarefa para interromper a execução da tarefa e fazer com que ela entre no estado `canceled`.  
   
  Não é um cenário com suporte para chamar essa função se você não estiver dentro do corpo de uma `task`. Isso resultará em um comportamento indefinido, tal como um travamento ou um desligamento em seu aplicativo.  
@@ -93,7 +126,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="a-namecleara--clear"></a><a name="clear"></a>Limpar  
+##  <a name="clear"></a>Limpar  
  Limpa a fila simultânea, destruindo qualquer atualmente enfileiradas elementos. Esse método não é uma prova de simultaneidade.  
   
 ```
@@ -105,7 +138,7 @@ void concurrent_queue<T, _Ax>::clear();
  `T`  
  `_Ax`  
   
-##  <a name="a-namecreateasynca--createasync"></a><a name="create_async"></a>create_async  
+##  <a name="create_async"></a>create_async  
  Cria uma construção assíncrona de Tempo de execução do Windows com base em um objeto de função ou lambda fornecido pelo usuário. O tipo de retorno de `create_async` é `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` ou `IAsyncOperationWithProgress<TResult, TProgress>^` com base na assinatura do lambda passada para o método.  
   
 ```
@@ -137,7 +170,7 @@ __declspec(noinline) auto create_async(const _Function& _Func)
   
  Essa função só está disponível para aplicativos da Windows Store.  
   
-##  <a name="a-namecreateresourcemanagera--createresourcemanager"></a><a name="createresourcemanager"></a>CreateResourceManager  
+##  <a name="createresourcemanager"></a>CreateResourceManager  
  Retorna uma interface que representa a instância singleton do Gerenciador de recursos do tempo de execução de simultaneidade. O Gerenciador de recursos é responsável por atribuir recursos a agendadores que deseja cooperar entre si.  
   
 ```
@@ -152,7 +185,7 @@ IResourceManager* __cdecl CreateResourceManager();
   
  [unsupported_os](unsupported-os-class.md) será lançada se o sistema operacional não é suportado pelo tempo de execução de simultaneidade.  
   
-##  <a name="a-namecreatetaska--createtask"></a><a name="create_task"></a>create_task  
+##  <a name="create_task"></a>create_task  
  Cria um PPL [tarefa](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) objeto. `create_task`pode ser usado em qualquer lugar você teria que usar um construtor de tarefa. Ele é fornecido principalmente para sua conveniência, pois permite o uso do `auto` palavra-chave durante a criação de tarefas.  
   
 ```
@@ -187,7 +220,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  Em um aplicativo da Windows Store, se `_Param` é do tipo Windows::Foundation::IAsyncOperation\<T > ^ ou Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^, ou um functor que retorna qualquer um desses tipos, a tarefa criada será do tipo `task<T>`. Se `_Param` é do tipo Windows::Foundation::IAsyncAction ^ ou Windows::Foundation::IAsyncActionWithProgress\<P > ^, ou um functor que retorna qualquer um desses tipos, a tarefa criada será ter tipo `task<void>`.  
   
-##  <a name="a-namedisabletracinga--disabletracing"></a><a name="disabletracing"></a>DisableTracing  
+##  <a name="disabletracing"></a>DisableTracing  
  Desabilita o rastreamento em tempo de execução de simultaneidade. Essa função é substituída porque o rastreamento ETW não é registrado por padrão.  
   
 ```
@@ -197,7 +230,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>Valor de retorno  
  Se o rastreamento foi desabilitado corretamente, `S_OK` é retornado. Se o rastreamento não foi iniciado anteriormente, `E_NOT_STARTED` será retornado  
   
-##  <a name="a-nameenabletracinga--enabletracing"></a><a name="enabletracing"></a>EnableTracing  
+##  <a name="enabletracing"></a>EnableTracing  
  Habilita o rastreamento em tempo de execução de simultaneidade. Essa função é substituída porque o rastreamento ETW está ativada por padrão.  
   
 ```
@@ -207,7 +240,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>Valor de retorno  
  Se o rastreamento foi iniciado corretamente, `S_OK` retornado; caso contrário, `E_NOT_STARTED` será retornado.  
   
-##  <a name="a-namefreea--free"></a><a name="free"></a>Livre  
+##  <a name="free"></a>Livre  
  Libera um bloco de memória alocado anteriormente pelo `Alloc` método Suballocator de cache de simultaneidade em tempo de execução.  
   
 ```
@@ -221,7 +254,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre quais cenários em seu aplicativo podem se beneficiar do uso Suballocator o armazenamento em cache, consulte [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-##  <a name="a-namegetambientschedulera--getambientscheduler"></a><a name="get_ambient_scheduler"></a>get_ambient_scheduler  
+##  <a name="get_ambient_scheduler"></a>get_ambient_scheduler  
   
 ```
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
@@ -229,7 +262,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-namegetexecutioncontextida--getexecutioncontextid"></a><a name="getexecutioncontextid"></a>GetExecutionContextId  
+##  <a name="getexecutioncontextid"></a>GetExecutionContextId  
  Retorna um identificador exclusivo que pode ser atribuído a um contexto de execução que implementa o `IExecutionContext` interface.  
   
 ```
@@ -242,7 +275,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>Comentários  
  Use este método para obter um identificador para o contexto de execução antes de você passar um `IExecutionContext` interface como um parâmetro para qualquer um dos métodos oferecidos pelo Gerenciador de recursos.  
   
-##  <a name="a-namegetosversiona--getosversion"></a><a name="getosversion"></a>GetOSVersion  
+##  <a name="getosversion"></a>GetOSVersion  
  Retorna a versão do sistema operacional.  
   
 ```
@@ -255,7 +288,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 ### <a name="remarks"></a>Comentários  
  [unsupported_os](unsupported-os-class.md) será lançada se o sistema operacional não é suportado pelo tempo de execução de simultaneidade.  
   
-##  <a name="a-namegetprocessorcounta--getprocessorcount"></a><a name="getprocessorcount"></a>GetProcessorCount  
+##  <a name="getprocessorcount"></a>GetProcessorCount  
  Retorna o número de threads de hardware no sistema subjacente.  
   
 ```
@@ -268,7 +301,7 @@ unsigned int __cdecl GetProcessorCount();
 ### <a name="remarks"></a>Comentários  
  [unsupported_os](unsupported-os-class.md) será lançada se o sistema operacional não é suportado pelo tempo de execução de simultaneidade.  
   
-##  <a name="a-namegetprocessornodecounta--getprocessornodecount"></a><a name="getprocessornodecount"></a>GetProcessorNodeCount  
+##  <a name="getprocessornodecount"></a>GetProcessorNodeCount  
  Retorna o número de nós NUMA ou pacotes de processador no sistema subjacente.  
   
 ```
@@ -283,7 +316,7 @@ unsigned int __cdecl GetProcessorNodeCount();
   
  [unsupported_os](unsupported-os-class.md) será lançada se o sistema operacional não é suportado pelo tempo de execução de simultaneidade.  
   
-##  <a name="a-namegetschedulerida--getschedulerid"></a><a name="getschedulerid"></a>GetSchedulerId  
+##  <a name="getschedulerid"></a>GetSchedulerId  
  Retorna um identificador exclusivo que pode ser atribuído a um agendador que implementa o `IScheduler` interface.  
   
 ```
@@ -296,7 +329,7 @@ unsigned int __cdecl GetSchedulerId();
 ### <a name="remarks"></a>Comentários  
  Use esse método para obter um identificador para o Agendador antes de passar um `IScheduler` interface como um parâmetro para qualquer um dos métodos oferecidos pelo Gerenciador de recursos.  
   
-##  <a name="a-nameinternalassigniteratorsa--internalassigniterators"></a><a name="internal_assign_iterators"></a>internal_assign_iterators  
+##  <a name="internal_assign_iterators"></a>internal_assign_iterators  
   
 ```
 template<typename T, class _Ax>
@@ -313,7 +346,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
  `first`  
  `last`  
   
-##  <a name="a-nameinterruptionpointa--interruptionpoint"></a><a name="interruption_point"></a>interruption_point  
+##  <a name="interruption_point"></a>interruption_point  
  Cria um ponto de interrupção para cancelamento. Se um cancelamento está em andamento no contexto em que essa função é chamada, isso gerará uma exceção interna que anula a execução do trabalho atualmente em execução paralela. Se o cancelamento não está em andamento, a função não faz nada.  
   
 ```
@@ -323,7 +356,7 @@ inline void interruption_point();
 ### <a name="remarks"></a>Comentários  
  Você não deve capturar a exceção de cancelamento interno gerada pelo `interruption_point()` função. A exceção será capturada e tratada pelo tempo de execução, e capturá-la pode fazer com que seu programa se comporte de maneira anormal.  
   
-##  <a name="a-nameiscurrenttaskgroupcancelinga--iscurrenttaskgroupcanceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling  
+##  <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling  
  Retorna uma indicação de se a tarefa de grupo que está atualmente em execução embutido no contexto atual está no meio de um cancelamento ativo (ou estarão em breve). Observe que, se não houver nenhum grupo de tarefas atualmente em execução embutido no contexto atual, `false` será retornado.  
   
 ```
@@ -336,7 +369,7 @@ bool __cdecl is_current_task_group_canceling();
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-namemakechoicea--makechoice"></a><a name="make_choice"></a>make_choice  
+##  <a name="make_choice"></a>make_choice  
  Constrói uma `choice` bloco de mensagens de um recurso opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.  
   
 ```
@@ -386,7 +419,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 ### <a name="return-value"></a>Valor de retorno  
  Um `choice` SMB com duas ou mais fontes de entrada.  
   
-##  <a name="a-namemakegreedyjoina--makegreedyjoin"></a><a name="make_greedy_join"></a>make_greedy_join  
+##  <a name="make_greedy_join"></a>make_greedy_join  
  Constrói uma `greedy multitype_join` bloco de mensagens de um recurso opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.  
   
 ```
@@ -436,7 +469,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 ### <a name="return-value"></a>Valor de retorno  
  Um `greedy multitype_join` SMB com duas ou mais fontes de entrada.  
   
-##  <a name="a-namemakejoina--makejoin"></a><a name="make_join"></a>make_join  
+##  <a name="make_join"></a>make_join  
  Constrói uma `non_greedy multitype_join` bloco de mensagens de um recurso opcional `Scheduler` ou `ScheduleGroup` e duas ou mais fontes de entrada.  
   
 ```
@@ -487,7 +520,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 ### <a name="return-value"></a>Valor de retorno  
  Um `non_greedy multitype_join` SMB com duas ou mais fontes de entrada.  
   
-##  <a name="a-namemaketaska--maketask"></a><a name="make_task"></a>make_task  
+##  <a name="make_task"></a>make_task  
  Um método de fábrica para criar um `task_handle` objeto.  
   
 ```
@@ -508,7 +541,7 @@ task_handle<_Function> make_task(const _Function& _Func);
 ### <a name="remarks"></a>Comentários  
  Essa função é útil quando você precisa criar um `task_handle` do objeto com uma expressão lambda, pois ele permite que você crie o objeto sem saber o tipo true de functor o lambda.  
   
-##  <a name="a-nameparallelbufferedsorta--parallelbufferedsort"></a><a name="parallel_buffered_sort"></a>parallel_buffered_sort  
+##  <a name="parallel_buffered_sort"></a>parallel_buffered_sort  
  Organiza os elementos em um intervalo especificado em uma ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário, em paralelo. Essa função é semanticamente similar a `std::sort` pois ela é uma classificação de comparação instável, baseada no local, exceto que ele precisa `O(n)` espaço adicional e requer inicialização padrão para os elementos que estão sendo classificados.  
   
 ```
@@ -592,7 +625,7 @@ inline void parallel_buffered_sort(
   
  O algoritmo divide o intervalo de entrada em duas partes e sucessivamente cada bloco se divide em duas partes sub para execução em paralelo. O argumento opcional `_Chunk_size` pode ser usado para indicar para o algoritmo que ele deve lida com blocos de tamanho <> `_Chunk_size` em série.  
   
-##  <a name="a-nameparallelfora--parallelfor"></a><a name="parallel_for"></a>parallel_for  
+##  <a name="parallel_for"></a>parallel_for  
  `parallel_for`itera em um intervalo de índices e executa uma função fornecida pelo usuário em cada iteração em paralelo.  
   
 ```
@@ -668,7 +701,7 @@ void parallel_for(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="a-nameparallelforeacha--parallelforeach"></a><a name="parallel_for_each"></a>parallel_for_each  
+##  <a name="parallel_for_each"></a>parallel_for_each  
  `parallel_for_each`aplica uma função especificada a cada elemento dentro de um intervalo, em paralelo. É semanticamente equivalente ao `for_each` funcionar a `std` namespace, exceto iteração sobre os elementos é executada em paralelo, e a ordem de iteração é especificada. O argumento `_Func` deve oferecer suporte a um operador de chamada de função do formulário `operator()(T)` onde o parâmetro `T` é o tipo de item do contêiner que está sendo iterado.  
   
 ```
@@ -713,7 +746,7 @@ void parallel_for_each(
   
  Para obter mais informações, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="a-nameparallelinvokea--parallelinvoke"></a><a name="parallel_invoke"></a>parallel_invoke  
+##  <a name="parallel_invoke"></a>parallel_invoke  
  Executa os objetos de função fornecidos como parâmetros em paralelo e bloqueia até que tem terminado a execução. Cada objeto de função pode ser uma expressão lambda, um ponteiro para função, ou qualquer objeto que suporta o operador de chamada de função com a assinatura `void operator()()`.  
   
 ```
@@ -909,7 +942,7 @@ void parallel_invoke(
   
  Para obter mais informações, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="a-nameparallelradixsorta--parallelradixsort"></a><a name="parallel_radixsort"></a>parallel_radixsort  
+##  <a name="parallel_radixsort"></a>parallel_radixsort  
  Organiza elementos em um intervalo especificado em uma ordem não decrescente usando um algoritmo de classificação de base. Essa é uma função de classificação estável que exige uma função de projeção que pode projetar os elementos a serem classificados em chaves de tipo inteiro não assinadas. Inicialização padrão é necessária para os elementos que estão sendo classificados.  
   
 ```
@@ -989,7 +1022,7 @@ inline void parallel_radixsort(
   
  O algoritmo divide o intervalo de entrada em duas partes e sucessivamente cada bloco se divide em duas partes sub para execução em paralelo. O argumento opcional `_Chunk_size` pode ser usado para indicar para o algoritmo que ele deve lida com blocos de tamanho <> `_Chunk_size` em série.  
   
-##  <a name="a-nameparallelreducea--parallelreduce"></a><a name="parallel_reduce"></a>parallel_reduce  
+##  <a name="parallel_reduce"></a>parallel_reduce  
  Calcula a soma de todos os elementos em um intervalo especificado por Calculando somas parciais sucessivas ou calcula o resultado de resultados parciais sucessivos da mesma forma obtidos com o uso de uma operação binária especificada diferente da soma, em paralelo. `parallel_reduce`é semanticamente similar a `std::accumulate`, exceto que ele requer que a operação de binário a ser associativa e requer um valor de identidade em vez de um valor inicial.  
   
 ```
@@ -1058,7 +1091,7 @@ inline _Reduce_type parallel_reduce(
   
  Para a terceira sobrecarga, o tipo de valor de identidade deve ser o mesmo que o tipo de resultado de redução, mas o iterador `value_type` pode ser diferente de ambos. A função de redução do intervalo `_Range_fun` é usado na primeira fase com o valor de identidade como o valor inicial e a função binária `_Sym_reduce_fun` é aplicado para sub resultados na segunda fase.  
   
-##  <a name="a-nameparallelsorta--parallelsort"></a><a name="parallel_sort"></a>parallel_sort  
+##  <a name="parallel_sort"></a>parallel_sort  
  Organiza os elementos em um intervalo especificado em uma ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário, em paralelo. Essa função é semanticamente similar a `std::sort` que é uma espécie de comparar instável, baseada no local.  
   
 ```
@@ -1101,7 +1134,7 @@ inline void parallel_sort(
   
  O algoritmo divide o intervalo de entrada em duas partes e sucessivamente cada bloco se divide em duas partes sub para execução em paralelo. O argumento opcional `_Chunk_size` pode ser usado para indicar para o algoritmo que ele deve lida com blocos de tamanho <> `_Chunk_size` em série.  
   
-##  <a name="a-nameparalleltransforma--paralleltransform"></a><a name="parallel_transform"></a>parallel_transform  
+##  <a name="parallel_transform"></a>parallel_transform  
  Aplica um objeto de função especificado para cada elemento em um intervalo de origem ou para um par de elementos de dois intervalos de origem e copia os valores de retorno do objeto de função em um intervalo de destino, em paralelo. Nesse funcional é semanticamente equivalente a `std::transform`.  
   
 ```
@@ -1224,7 +1257,7 @@ _Output_iterator parallel_transform(
   
  Para obter mais informações, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="a-namereceivea--receive"></a><a name="receive"></a>receber  
+##  <a name="receive"></a>receber  
  Geral receber implementação, permitindo um contexto de esperar para dados de exatamente uma fonte e filtrar os valores aceitos.  
   
 ```
@@ -1272,7 +1305,7 @@ T receive(
   
  Para obter mais informações, consulte [mensagem passando funções](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="a-namerunwithcancellationtokena--runwithcancellationtoken"></a><a name="run_with_cancellation_token"></a>run_with_cancellation_token  
+##  <a name="run_with_cancellation_token"></a>run_with_cancellation_token  
  Executa um objeto de função imediatamente e de forma síncrona no contexto de um token de cancelamento fornecido.  
   
 ```
@@ -1295,7 +1328,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Comentários  
  Os pontos de interrupção no objeto de função serão disparados quando o `cancellation_token` é cancelada. O token explícito `_Ct` isolará isso `_Func` de cancelamento pai se o pai tiver um token diferente ou não.  
   
-##  <a name="a-namesenda--send"></a><a name="send"></a>Enviar  
+##  <a name="send"></a>Enviar  
  Uma operação de envio síncrono, que aguarda até que o destino aceita ou recusa a mensagem.  
   
 ```
@@ -1322,7 +1355,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [mensagem passando funções](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="a-namesetambientschedulera--setambientscheduler"></a><a name="set_ambient_scheduler"></a>set_ambient_scheduler  
+##  <a name="set_ambient_scheduler"></a>set_ambient_scheduler  
   
 ```
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
@@ -1331,7 +1364,7 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ### <a name="parameters"></a>Parâmetros  
  `_Scheduler`  
   
-##  <a name="a-namesettaskexecutionresourcesa--settaskexecutionresources"></a><a name="set_task_execution_resources"></a>set_task_execution_resources  
+##  <a name="set_task_execution_resources"></a>set_task_execution_resources  
  Restringe os recursos de execução usados pelos threads de trabalho interno de tempo de execução de simultaneidade para a afinidade do conjunto especificado.  
   
  Ele é válido para chamar esse método antes do Gerenciador de recursos tiver sido criado, ou entre dois tempos de vida do Gerenciador de recursos. Ele pode ser chamado várias vezes enquanto o Gerenciador de recursos não existe no momento da invocação. Após um limite de afinidade foi definido, ela permanecerá em vigor até a próxima chamada válida para o `set_task_execution_resources` método.  
@@ -1364,7 +1397,7 @@ void __cdecl set_task_execution_resources(
   
  Modificar programaticamente a afinidade do processo após esse método foi chamado não fará com que o Gerenciador de recursos para reavaliar a afinidade é restrito. Portanto, todas as alterações de afinidade de processo devem ser feitas antes de chamar esse método.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Troca os elementos de dois objetos `concurrent_vector`.  
   
 ```
@@ -1392,7 +1425,7 @@ inline void swap(
   
  Esse método não é uma prova de simultaneidade. Certifique-se de que nenhum outro thread está realizando operações em qualquer um dos vetores de simultâneas quando você chamar esse método.  
   
-##  <a name="a-nametaskfromexceptiona--taskfromexception"></a><a name="task_from_exception"></a>task_from_exception  
+##  <a name="task_from_exception"></a>task_from_exception  
   
 ```
 template<typename _TaskType, typename _ExType>
@@ -1409,7 +1442,7 @@ task<_TaskType> task_from_exception(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nametaskfromresulta--taskfromresult"></a><a name="task_from_result"></a>task_from_result  
+##  <a name="task_from_result"></a>task_from_result  
   
 ```
 template<typename T>
@@ -1430,7 +1463,7 @@ inline task<void> task_from_result(
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nametraceagentsregisternamea--traceagentsregistername"></a><a name="trace_agents_register_name"></a>Trace_agents_register_name  
+##  <a name="trace_agents_register_name"></a>Trace_agents_register_name  
  Associa o nome fornecido para o bloco de mensagens ou o agente no rastreamento ETW.  
   
 ```
@@ -1450,7 +1483,7 @@ void Trace_agents_register_name(
  `_Name`  
  O nome para o objeto fornecido.  
   
-##  <a name="a-nametryreceivea--tryreceive"></a><a name="try_receive"></a>try_receive  
+##  <a name="try_receive"></a>try_receive  
  Geral try-receive implementação, permitindo um contexto procurar dados de exatamente uma fonte e filtrar os valores aceitos. Se os dados não estiverem prontos, o método retornará false.  
   
 ``` 
@@ -1492,7 +1525,7 @@ bool try_receive(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [mensagem passando funções](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="a-namewaita--wait"></a><a name="wait"></a>Aguarde  
+##  <a name="wait"></a>Aguarde  
  Pausa o contexto atual para um período de tempo especificado.  
   
 ```
@@ -1506,7 +1539,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="remarks"></a>Comentários  
  Se esse método for chamado em um contexto de Agendador do tempo de execução de simultaneidade, o Agendador encontrará um contexto diferente para executar o recurso subjacente. Como o Agendador é cooperativo por natureza, neste contexto não é possível retomar exatamente após o número de milissegundos especificado. Se o Agendador está ocupado executando outras tarefas que não geram cooperativamente ao Agendador, o período de espera pode ser indefinido.  
   
-##  <a name="a-namewhenalla--whenall"></a><a name="when_all"></a>when_all  
+##  <a name="when_all"></a>when_all  
  Cria uma tarefa que será concluída com êxito quando todas as tarefas fornecidas como argumentos forem concluídas com êxito.  
   
 ```
@@ -1541,7 +1574,7 @@ auto when_all(
   
  Para obter mais informações, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namewhenanya--whenany"></a><a name="when_any"></a>when_any  
+##  <a name="when_any"></a>when_any  
  Cria uma tarefa que será concluída com êxito quando todas as tarefas fornecidas como argumentos forem concluídas com êxito.  
   
 ```

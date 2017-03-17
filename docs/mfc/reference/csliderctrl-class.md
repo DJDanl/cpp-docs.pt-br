@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSliderCtrl
+- AFXCMN/CSliderCtrl
+- AFXCMN/CSliderCtrl::CSliderCtrl
+- AFXCMN/CSliderCtrl::ClearSel
+- AFXCMN/CSliderCtrl::ClearTics
+- AFXCMN/CSliderCtrl::Create
+- AFXCMN/CSliderCtrl::CreateEx
+- AFXCMN/CSliderCtrl::GetBuddy
+- AFXCMN/CSliderCtrl::GetChannelRect
+- AFXCMN/CSliderCtrl::GetLineSize
+- AFXCMN/CSliderCtrl::GetNumTics
+- AFXCMN/CSliderCtrl::GetPageSize
+- AFXCMN/CSliderCtrl::GetPos
+- AFXCMN/CSliderCtrl::GetRange
+- AFXCMN/CSliderCtrl::GetRangeMax
+- AFXCMN/CSliderCtrl::GetRangeMin
+- AFXCMN/CSliderCtrl::GetSelection
+- AFXCMN/CSliderCtrl::GetThumbLength
+- AFXCMN/CSliderCtrl::GetThumbRect
+- AFXCMN/CSliderCtrl::GetTic
+- AFXCMN/CSliderCtrl::GetTicArray
+- AFXCMN/CSliderCtrl::GetTicPos
+- AFXCMN/CSliderCtrl::GetToolTips
+- AFXCMN/CSliderCtrl::SetBuddy
+- AFXCMN/CSliderCtrl::SetLineSize
+- AFXCMN/CSliderCtrl::SetPageSize
+- AFXCMN/CSliderCtrl::SetPos
+- AFXCMN/CSliderCtrl::SetRange
+- AFXCMN/CSliderCtrl::SetRangeMax
+- AFXCMN/CSliderCtrl::SetRangeMin
+- AFXCMN/CSliderCtrl::SetSelection
+- AFXCMN/CSliderCtrl::SetThumbLength
+- AFXCMN/CSliderCtrl::SetTic
+- AFXCMN/CSliderCtrl::SetTicFreq
+- AFXCMN/CSliderCtrl::SetTipSide
+- AFXCMN/CSliderCtrl::SetToolTips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +157,7 @@ class CSliderCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="a-nameclearsela--csliderctrlclearsel"></a><a name="clearsel"></a>CSliderCtrl::ClearSel  
+##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
  Limpa a seleção atual em um controle deslizante.  
   
 ```  
@@ -133,7 +168,7 @@ void ClearSel(BOOL bRedraw = FALSE);
  `bRedraw`  
  Redesenhe o sinalizador. Se esse parâmetro for **TRUE**, o controle deslizante é redesenhado após a seleção é desmarcada; caso contrário, o controle deslizante não é redesenhado.  
   
-##  <a name="a-nameclearticsa--csliderctrlcleartics"></a><a name="cleartics"></a>CSliderCtrl::ClearTics  
+##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
  Remove as marcas de escala atual de um controle deslizante.  
   
 ```  
@@ -144,7 +179,7 @@ void ClearTics(BOOL bRedraw = FALSE);
  `bRedraw`  
  Redesenhe o sinalizador. Se esse parâmetro for **TRUE**, o controle deslizante é redesenhado depois que as marcas de escala são desmarcadas; caso contrário, o controle deslizante não é redesenhado.  
   
-##  <a name="a-namecreatea--csliderctrlcreate"></a><a name="create"></a>CSliderCtrl::Create  
+##  <a name="create"></a>CSliderCtrl::Create  
  Cria um controle deslizante e anexa-o para um `CSliderCtrl` objeto.  
   
 ```  
@@ -178,7 +213,7 @@ virtual BOOL Create(
   
  Para aplicar estilos de janela estendidos para o controle deslizante, chame [CreateEx](#createex) em vez de **criar**.  
   
-##  <a name="a-namecreateexa--csliderctrlcreateex"></a><a name="createex"></a>CSliderCtrl::CreateEx  
+##  <a name="createex"></a>CSliderCtrl::CreateEx  
  Cria um controle (uma janela filho) e o associa a `CSliderCtrl` objeto.  
   
 ```  
@@ -212,14 +247,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido Windows **WS_EX_**.  
   
-##  <a name="a-namecsliderctrla--csliderctrlcsliderctrl"></a><a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
  Constrói um objeto `CSliderCtrl`.  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="a-namegetbuddya--csliderctrlgetbuddy"></a><a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
  Recupera o identificador para uma janela de amigo do controle deslizante em um determinado local.  
   
 ```  
@@ -240,7 +275,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetchannelrecta--csliderctrlgetchannelrect"></a><a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
  Recupera o tamanho e posição do retângulo delimitador do canal de um controle deslizante.  
   
 ```  
@@ -254,7 +289,7 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="remarks"></a>Comentários  
  O canal é a área em que move o controle deslizante e que contém o realce quando um intervalo está selecionado.  
   
-##  <a name="a-namegetlinesizea--csliderctrlgetlinesize"></a><a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
  Recupera o tamanho da linha de um controle deslizante.  
   
 ```  
@@ -267,7 +302,7 @@ int GetLineSize() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho de linha afeta quanto o controle deslizante é movido para o **TB_LINEUP** e **TB_LINEDOWN** notificações. A configuração padrão para o tamanho de linha é 1.  
   
-##  <a name="a-namegetnumticsa--csliderctrlgetnumtics"></a><a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
  Recupera o número de marcas de escala em um controle deslizante.  
   
 ```  
@@ -277,7 +312,7 @@ UINT GetNumTics() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de marcas de escala no controle deslizante.  
   
-##  <a name="a-namegetpagesizea--csliderctrlgetpagesize"></a><a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
  Recupera o tamanho da página de um controle deslizante.  
   
 ```  
@@ -290,7 +325,7 @@ int GetPageSize() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho de página afeta quanto o controle deslizante é movido para o **TB_PAGEUP** e **TB_PAGEDOWN** notificações.  
   
-##  <a name="a-namegetposa--csliderctrlgetpos"></a><a name="getpos"></a>CSliderCtrl::GetPos  
+##  <a name="getpos"></a>CSliderCtrl::GetPos  
  Recupera a posição atual do controle deslizante em um controle deslizante.  
   
 ```  
@@ -300,7 +335,7 @@ int GetPos() const;
 ### <a name="return-value"></a>Valor de retorno  
  A posição atual.  
   
-##  <a name="a-namegetrangea--csliderctrlgetrange"></a><a name="getrange"></a>CSliderCtrl::GetRange  
+##  <a name="getrange"></a>CSliderCtrl::GetRange  
  Recupera as posições de mínimas e máxima para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -319,7 +354,7 @@ void GetRange(
 ### <a name="remarks"></a>Comentários  
  Esta função copia os valores em inteiros referenciados por `nMin` e `nMax`.  
   
-##  <a name="a-namegetrangemaxa--csliderctrlgetrangemax"></a><a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
  Recupera a posição máxima para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -329,7 +364,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>Valor de retorno  
  A posição do controle máximo.  
   
-##  <a name="a-namegetrangemina--csliderctrlgetrangemin"></a><a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
  Recupera a posição mínima para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -339,7 +374,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Valor de retorno  
  A posição do controle mínimo.  
   
-##  <a name="a-namegetselectiona--csliderctrlgetselection"></a><a name="getselection"></a>CSliderCtrl::GetSelection  
+##  <a name="getselection"></a>CSliderCtrl::GetSelection  
  Recupera as posições inicial e final da seleção atual em um controle deslizante.  
   
 ```  
@@ -355,7 +390,7 @@ void GetSelection(
  `nMax`  
  Referência a um número inteiro que recebe a posição final da seleção atual.  
   
-##  <a name="a-namegetthumblengtha--csliderctrlgetthumblength"></a><a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
  Recupera o tamanho do controle deslizante no controle trackbar atual.  
   
 ```  
@@ -368,7 +403,7 @@ int GetThumbLength() const;
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) mensagem, que é descrita o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetthumbrecta--csliderctrlgetthumbrect"></a><a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
  Recupera o tamanho e posição do retângulo delimitador para o controle deslizante (miniatura) em um controle deslizante.  
   
 ```  
@@ -379,7 +414,7 @@ void GetThumbRect(LPRECT lprc) const;
  `lprc`  
  Um ponteiro para um `CRect` objeto que contém o retângulo delimitador para o controle deslizante quando a função retorna.  
   
-##  <a name="a-namegettica--csliderctrlgettic"></a><a name="gettic"></a>CSliderCtrl::GetTic  
+##  <a name="gettic"></a>CSliderCtrl::GetTic  
  Recupera a posição de uma marca de escala em um controle deslizante.  
   
 ```  
@@ -393,7 +428,7 @@ int GetTic(int nTic) const;
 ### <a name="return-value"></a>Valor de retorno  
  A posição da marca de escala especificado ou -1 se `nTic` não especificar um índice válido.  
   
-##  <a name="a-namegetticarraya--csliderctrlgetticarray"></a><a name="getticarray"></a>CSliderCtrl::GetTicArray  
+##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
  Recupera o endereço da matriz que contém as posições das marcas de escala para um controle deslizante.  
   
 ```  
@@ -403,7 +438,7 @@ DWORD* GetTicArray() const;
 ### <a name="return-value"></a>Valor de retorno  
  O endereço da matriz que contém posições de marca de escala para o controle deslizante.  
   
-##  <a name="a-namegetticposa--csliderctrlgetticpos"></a><a name="getticpos"></a>CSliderCtrl::GetTicPos  
+##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
  Recupera a posição atual física de uma marca de escala em um controle deslizante.  
   
 ```  
@@ -417,7 +452,7 @@ int GetTicPos(int nTic) const;
 ### <a name="return-value"></a>Valor de retorno  
  A posição física, em coordenadas do cliente, de marca de escala especificado ou -1 se `nTic` não especificar um índice válido.  
   
-##  <a name="a-namegettooltipsa--csliderctrlgettooltips"></a><a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
  Recupera o identificador para o controle de dica de ferramenta com o controle deslizante, se houver.  
   
 ```  
@@ -432,7 +467,7 @@ CToolTipCtrl* GetToolTips() const;
   
  Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetbuddya--csliderctrlsetbuddy"></a><a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
  Atribui uma janela como a janela buddy para um controle deslizante.  
   
 ```  
@@ -460,7 +495,7 @@ CWnd* SetBuddy(
   
  Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetlinesizea--csliderctrlsetlinesize"></a><a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
  Define o tamanho da linha de um controle deslizante.  
   
 ```  
@@ -477,7 +512,7 @@ int SetLineSize(int nSize);
 ### <a name="remarks"></a>Comentários  
  O tamanho de linha afeta quanto o controle deslizante é movido para o **TB_LINEUP** e **TB_LINEDOWN** notificações.  
   
-##  <a name="a-namesetpagesizea--csliderctrlsetpagesize"></a><a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
  Define o tamanho da página de um controle deslizante.  
   
 ```  
@@ -494,7 +529,7 @@ int SetPageSize(int nSize);
 ### <a name="remarks"></a>Comentários  
  O tamanho de página afeta quanto o controle deslizante é movido para o **TB_PAGEUP** e **TB_PAGEDOWN** notificações.  
   
-##  <a name="a-namesetposa--csliderctrlsetpos"></a><a name="setpos"></a>CSliderCtrl::SetPos  
+##  <a name="setpos"></a>CSliderCtrl::SetPos  
  Define a posição atual do controle deslizante em um controle deslizante.  
   
 ```  
@@ -505,7 +540,7 @@ void SetPos(int nPos);
  `nPos`  
  Especifica a nova posição do controle deslizante.  
   
-##  <a name="a-namesetrangea--csliderctrlsetrange"></a><a name="setrange"></a>CSliderCtrl::SetRange  
+##  <a name="setrange"></a>CSliderCtrl::SetRange  
  Define o intervalo (posições mínimos e máximo) para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -525,7 +560,7 @@ void SetRange(
  `bRedraw`  
  O sinalizador de redesenho. Se esse parâmetro for **TRUE**, o controle deslizante é redesenhado depois que o intervalo é definido; caso contrário, o controle deslizante não é redesenhado.  
   
-##  <a name="a-namesetrangemaxa--csliderctrlsetrangemax"></a><a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
  Define o intervalo máximo para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -541,7 +576,7 @@ void SetRangeMax(
  `bRedraw`  
  O sinalizador de redesenho. Se esse parâmetro for **TRUE**, o controle deslizante é redesenhado depois que o intervalo é definido; caso contrário, o controle deslizante não é redesenhado.  
   
-##  <a name="a-namesetrangemina--csliderctrlsetrangemin"></a><a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
  Define o período mínimo para o controle deslizante em um controle deslizante.  
   
 ```  
@@ -557,7 +592,7 @@ void SetRangeMin(
  `bRedraw`  
  O sinalizador de redesenho. Se esse parâmetro for **TRUE**, o controle deslizante é redesenhado depois que o intervalo é definido; caso contrário, o controle deslizante não é redesenhado.  
   
-##  <a name="a-namesetselectiona--csliderctrlsetselection"></a><a name="setselection"></a>CSliderCtrl::SetSelection  
+##  <a name="setselection"></a>CSliderCtrl::SetSelection  
  Define as posições inicial e final para a seleção atual em um controle deslizante.  
   
 ```  
@@ -573,7 +608,7 @@ void SetSelection(
  `nMax`  
  Posição final para o controle deslizante.  
   
-##  <a name="a-namesetthumblengtha--csliderctrlsetthumblength"></a><a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
  Define o comprimento do controle deslizante no controle trackbar atual.  
   
 ```  
@@ -601,7 +636,7 @@ void SetThumbLength(int nLength);
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1 n º&2;](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="a-namesettica--csliderctrlsettic"></a><a name="settic"></a>CSliderCtrl::SetTic  
+##  <a name="settic"></a>CSliderCtrl::SetTic  
  Define a posição de uma marca de escala em um controle deslizante.  
   
 ```  
@@ -615,7 +650,7 @@ BOOL SetTic(int nTic);
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a marca de escala é definida; Caso contrário, 0.  
   
-##  <a name="a-namesetticfreqa--csliderctrlsetticfreq"></a><a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
  Define a frequência com que escala marcas são exibidas em um controle deslizante.  
   
 ```  
@@ -631,7 +666,7 @@ void SetTicFreq(int nFreq);
   
  Você deve criar o controle com o `TBS_AUTOTICKS` estilo usar essa função. Para obter mais informações, consulte [CSliderCtrl::Create](#create).  
   
-##  <a name="a-namesettipsidea--csliderctrlsettipside"></a><a name="settipside"></a>CSliderCtrl::SetTipSide  
+##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
  Posições de um controle de dica de ferramenta usada por uma barra de controle.  
   
 ```  
@@ -648,7 +683,7 @@ int SetTipSide(int nLocation);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da mensagem Win32 **TBM_SETTIPSIDE**, conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Controle deslizante controles que usam o **TBS_TOOLTIPS** dicas de ferramentas de exibição de estilo. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-##  <a name="a-namesettooltipsa--csliderctrlsettooltips"></a><a name="settooltips"></a>CSliderCtrl::SetToolTips  
+##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
  Atribui um controle de dica de ferramenta para um controle deslizante.  
   
 ```  

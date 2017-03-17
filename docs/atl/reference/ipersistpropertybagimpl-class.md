@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
-- ATL.IPersistPropertyBagImpl<T>
-- ATL::IPersistPropertyBagImpl
-- ATL::IPersistPropertyBagImpl<T>
-- ATL.IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl
+- ATLCOM/ATL::IPersistPropertyBagImpl::GetClassID
+- ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
+- ATLCOM/ATL::IPersistPropertyBagImpl::Load
+- ATLCOM/ATL::IPersistPropertyBagImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +87,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersistpropertybagimplgetclassid"></a><a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  Recupera o CLSID do objeto.  
   
 ```
@@ -96,7 +97,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Comentários  
  Consulte [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersistpropertybagimplinitnew"></a><a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Inicializa um objeto recém-criado.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Comentários  
  Consulte [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersistpropertybagimplload"></a><a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Carrega as propriedades do objeto de um recipiente de propriedades fornecido pelo cliente.  
   
 ```
@@ -121,7 +122,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  Consulte [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersistpropertybagimplsave"></a><a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Salva as propriedades do objeto em um recipiente de propriedades fornecido pelo cliente.  
   
 ```

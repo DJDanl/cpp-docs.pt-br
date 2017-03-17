@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IConnectionPointImpl
 - IConnectionPointImpl
-- ATL::IConnectionPointImpl
+- ATLCOM/ATL::IConnectionPointImpl
+- ATLCOM/ATL::IConnectionPointImpl::Advise
+- ATLCOM/ATL::IConnectionPointImpl::EnumConnections
+- ATLCOM/ATL::IConnectionPointImpl::GetConnectionInterface
+- ATLCOM/ATL::IConnectionPointImpl::GetConnectionPointContainer
+- ATLCOM/ATL::IConnectionPointImpl::Unadvise
+- ATLCOM/ATL::IConnectionPointImpl::m_vec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="a-nameadvisea--iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>IConnectionPointImpl::Advise  
  Estabelece uma conexão entre o ponto de conexão e um coletor.  
   
 ```
@@ -109,7 +114,7 @@ STDMETHOD(Advise)(
   
  Consulte [IConnectionPoint::](http://msdn.microsoft.com/library/windows/desktop/ms678815) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumconnectionsa--iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
  Cria um enumerador para iterar através de conexões para o ponto de conexão.  
   
 ```
@@ -119,7 +124,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>Comentários  
  Consulte [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetconnectioninterfacea--iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
  Recupera o IID da interface representado pelo ponto de conexão.  
   
 ```
@@ -129,7 +134,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>Comentários  
  Consulte [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetconnectionpointcontainera--iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
  Recupera um ponteiro de interface para o objeto conectável.  
   
 ```
@@ -139,7 +144,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>Comentários  
  Consulte [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemveca--iconnectionpointimplmvec"></a><a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
  Gerencia as conexões entre o objeto de ponto de conexão e um coletor.  
   
 ```
@@ -149,7 +154,7 @@ CDV m_vec;
 ### <a name="remarks"></a>Comentários  
  Por padrão, `m_vec` é do tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
-##  <a name="a-nameunadvisea--iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
  Encerra uma conexão estabelecida anteriormente por meio de [Advise](#advise).  
   
 ```

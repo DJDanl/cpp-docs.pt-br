@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/25/2017
 |-|-|  
 |[Enumeração access_type](#access_type)|[Enumeração queuing_mode](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>Enumeração access_type  
+##  <a name="access_type"></a>Enumeração access_type  
  Tipo de enumeração usado para indicar vários tipos de acesso a dados.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Compartilhado. A alocação é acessível do Accelerator e legível e gravável na CPU.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>Enumeração queuing_mode  
+##  <a name="queuing_mode"></a>Enumeração queuing_mode  
  Especifica os modos de enfileiramento de mensagens que são compatíveis com o acelerador.  
   
 ```  

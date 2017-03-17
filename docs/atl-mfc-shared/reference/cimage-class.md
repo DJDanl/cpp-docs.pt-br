@@ -10,8 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CImage
-- ATL.CImage
-- ATL::CImage
+- ATLIMAGE/ATL::CImage
+- ATLIMAGE/ATL::CImage::CImage
+- ATLIMAGE/ATL::CImage::AlphaBlend
+- ATLIMAGE/ATL::CImage::Attach
+- ATLIMAGE/ATL::CImage::BitBlt
+- ATLIMAGE/ATL::CImage::Create
+- ATLIMAGE/ATL::CImage::CreateEx
+- ATLIMAGE/ATL::CImage::Destroy
+- ATLIMAGE/ATL::CImage::Detach
+- ATLIMAGE/ATL::CImage::Draw
+- ATLIMAGE/ATL::CImage::GetBits
+- ATLIMAGE/ATL::CImage::GetBPP
+- ATLIMAGE/ATL::CImage::GetColorTable
+- ATLIMAGE/ATL::CImage::GetDC
+- ATLIMAGE/ATL::CImage::GetExporterFilterString
+- ATLIMAGE/ATL::CImage::GetHeight
+- ATLIMAGE/ATL::CImage::GetImporterFilterString
+- ATLIMAGE/ATL::CImage::GetMaxColorTableEntries
+- ATLIMAGE/ATL::CImage::GetPitch
+- ATLIMAGE/ATL::CImage::GetPixel
+- ATLIMAGE/ATL::CImage::GetPixelAddress
+- ATLIMAGE/ATL::CImage::GetTransparentColor
+- ATLIMAGE/ATL::CImage::GetWidth
+- ATLIMAGE/ATL::CImage::IsDIBSection
+- ATLIMAGE/ATL::CImage::IsIndexed
+- ATLIMAGE/ATL::CImage::IsNull
+- ATLIMAGE/ATL::CImage::IsTransparencySupported
+- ATLIMAGE/ATL::CImage::Load
+- ATLIMAGE/ATL::CImage::LoadFromResource
+- ATLIMAGE/ATL::CImage::MaskBlt
+- ATLIMAGE/ATL::CImage::PlgBlt
+- ATLIMAGE/ATL::CImage::ReleaseDC
+- ATLIMAGE/ATL::CImage::ReleaseGDIPlus
+- ATLIMAGE/ATL::CImage::Save
+- ATLIMAGE/ATL::CImage::SetColorTable
+- ATLIMAGE/ATL::CImage::SetPixel
+- ATLIMAGE/ATL::CImage::SetPixelIndexed
+- ATLIMAGE/ATL::CImage::SetPixelRGB
+- ATLIMAGE/ATL::CImage::SetTransparentColor
+- ATLIMAGE/ATL::CImage::StretchBlt
+- ATLIMAGE/ATL::CImage::TransparentBlt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -196,7 +235,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlimage.h  
   
-##  <a name="a-namealphablenda--cimagealphablend"></a><a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>CImage::AlphaBlend  
  Exibe a bitmaps que possuem transparentes ou semitransparentes pixels.  
   
 ```
@@ -285,7 +324,7 @@ BOOL AlphaBlend(
   
  Quando `bBlendOp` é definido como o padrão de **AC_SRC_OVER**, o bitmap de origem é colocado sobre o bitmap de destino com base nos valores alfabéticos de pixels de origem.  
 
-##  <a name="a-nameattacha--cimageattach"></a><a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>CImage::Attach  
  Anexa `hBitmap` para um `CImage` objeto.  
   
 ```
@@ -308,7 +347,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>Comentários  
  O bitmap pode ser um bitmap de seção não DIB ou um bitmap de seção DIB. Consulte [IsDIBSection](#isdibsection) para obter uma lista dos métodos que podem ser usados somente com DIB seção bitmaps.  
   
-##  <a name="a-namebitblta--cimagebitblt"></a><a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>CImage::BitBlt  
  Copia um bitmap do contexto do dispositivo de origem para este contexto de dispositivo atual.  
   
 ```
@@ -380,7 +419,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) no [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
   
-##  <a name="a-namecimagea--cimagecimage"></a><a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>CImage::CImage  
  Constrói um objeto `CImage`.  
   
 ```
@@ -394,7 +433,7 @@ CImage() throw();
   
  Usando global `CImage` objetos em uma DLL não é recomendado. Se você precisar usar um global `CImage` objeto em uma DLL, chamada [CImage::ReleaseGDIPlus](#releasegdiplus) para liberar recursos usados pelo GDI+ explicitamente.  
   
-##  <a name="a-namecreatea--cimagecreate"></a><a name="create"></a>CImage::Create  
+##  <a name="create"></a>CImage::Create  
  Cria um `CImage` bitmap e anexá-lo a criado anteriormente `CImage` objeto.  
   
 ```
@@ -426,7 +465,7 @@ BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
-##  <a name="a-namecreateexa--cimagecreateex"></a><a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>CImage::CreateEx  
  Cria um `CImage` bitmap e anexá-lo a criado anteriormente `CImage` objeto.  
   
 ```
@@ -479,14 +518,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="a-namedestroya--cimagedestroy"></a><a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>CImage::Destroy  
  Desanexa o bitmap a partir de `CImage` de objeto e destrói o bitmap.  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="a-namedetacha--cimagedetach"></a><a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>CImage::Detach  
  Desanexa um bitmap de um `CImage` objeto.  
   
 ```
@@ -496,7 +535,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para o bitmap desanexado, ou **nulo** se nenhum bitmap é anexado.  
   
-##  <a name="a-namedrawa--cimagedraw"></a><a name="draw"></a>CImage::Draw  
+##  <a name="draw"></a>CImage::Draw  
  Copia um bitmap do contexto do dispositivo de origem para o contexto do dispositivo atual.  
   
 ```
@@ -582,7 +621,7 @@ BOOL Draw(
   
  Para versões do **desenhar** que não especificam um retângulo de origem, a imagem de origem inteiro é o padrão. Para a versão do **desenhar** que não especifique um tamanho para o retângulo de destino, o tamanho da imagem de origem é o padrão e sem alongamento ou redução ocorre.  
   
-##  <a name="a-namegetbitsa--cimagegetbits"></a><a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>CImage::GetBits  
  Recupera um ponteiro para os valores de bits real de um determinado pixel no bitmap.  
   
 ```
@@ -598,7 +637,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  Este método aceita apenas os bitmaps de seção DIB; Consequentemente, você pode acessar os pixels de um `CImage` da mesma maneira que faria com os pixels de uma seção DIB do objeto. O ponteiro retornado aponta para o pixel no local (0, 0).  
   
-##  <a name="a-namegetbppa--cimagegetbpp"></a><a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>CImage::GetBPP  
  Recupera o valor de bits por pixel.  
   
 ```
@@ -613,7 +652,7 @@ int GetBPP() const throw();
   
  Geralmente, os bits por pixel é 1, 4, 8, 16, 24 ou 32. Consulte o **biBitCount** membro do [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) no [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obter mais informações sobre esse valor.  
   
-##  <a name="a-namegetcolortablea--cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>CImage::GetColorTable  
  Recupera os valores de cor vermelhos, verdes e azuis (RGB) de um intervalo de entradas na paleta de seção DIB.  
   
 ```
@@ -632,7 +671,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  Um ponteiro para a matriz de [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) estruturas para recuperar a cor de entradas de tabela.  
   
-##  <a name="a-namegetdca--cimagegetdc"></a><a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>CImage::GetDC  
  Recupera o contexto de dispositivo que tem a imagem selecionada para ele no momento.  
   
 ```
@@ -645,7 +684,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>Comentários  
  Cada chamada para `GetDC`, você deve ter uma chamada subsequente para [ReleaseDC](#releasedc).  
   
-##  <a name="a-namegetexporterfilterstringa--cimagegetexporterfilterstring"></a><a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
  Localiza os formatos de imagem disponíveis para salvar as imagens.  
   
 ```
@@ -724,7 +763,7 @@ CImage::GetExporterFilterString(
   
  Use o separador padrão ' |' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador nulo '\0' se você passar essa cadeia de caracteres para uma caixa de diálogo Salvar arquivo comum.  
   
-##  <a name="a-namegetheighta--cimagegetheight"></a><a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>CImage::GetHeight  
  Recupera a altura, em pixels, de uma imagem.  
   
 ```
@@ -734,7 +773,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  A altura, em pixels, de uma imagem.  
   
-##  <a name="a-namegetimporterfilterstringa--cimagegetimporterfilterstring"></a><a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
  Localiza os formatos de imagem disponíveis para carregar imagens.  
   
 ```
@@ -810,7 +849,7 @@ CImage::GetImporterFilterString(
   
  Use o separador padrão ' |' se você passar essa cadeia de caracteres para um MFC `CFileDialog` objeto. Use o separador de nulo '\0' se você passar essa cadeia de caracteres para um comum **abrir arquivo** caixa de diálogo.  
   
-##  <a name="a-namegetmaxcolortableentriesa--cimagegetmaxcolortableentries"></a><a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  Recupera o número máximo de entradas na tabela de cores.  
   
 ```
@@ -823,7 +862,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>Comentários  
  Este método aceita apenas os bitmaps de seção DIB.  
   
-##  <a name="a-namegetpitcha--cimagegetpitch"></a><a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>CImage::GetPitch  
  Recupera o tom de uma imagem.  
   
 ```
@@ -841,7 +880,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  Este método aceita apenas os bitmaps de seção DIB.  
   
-##  <a name="a-namegetpixela--cimagegetpixel"></a><a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>CImage::GetPixel  
  Recupera a cor do pixel no local especificado por *x* e *y*.  
   
 ```
@@ -858,7 +897,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>Valor de retorno  
  O vermelho, verde e azul (valor RGB) do pixel. Se o pixel estiver fora da região de recorte atual, o valor de retorno é **CLR_INVALID**.  
   
-##  <a name="a-namegetpixeladdressa--cimagegetpixeladdress"></a><a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
  Recupera o endereço exato de um pixel.  
   
 ```
@@ -880,7 +919,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  Este método aceita apenas os bitmaps de seção DIB.  
   
-##  <a name="a-namegettransparentcolora--cimagegettransparentcolor"></a><a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
  Recupera o local indexado da cor transparente na paleta de cores.  
   
 ```
@@ -890,7 +929,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  O índice da cor transparente.  
   
-##  <a name="a-namegetwidtha--cimagegetwidth"></a><a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>CImage::GetWidth  
  Recupera a largura, em pixels, de uma imagem.  
   
 ```
@@ -900,7 +939,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  A largura do bitmap, em pixels.  
   
-##  <a name="a-nameisdibsectiona--cimageisdibsection"></a><a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>CImage::IsDIBSection  
  Determina se o bitmap anexado é uma seção DIB.  
   
 ```
@@ -927,7 +966,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="a-nameisindexeda--cimageisindexed"></a><a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>CImage::IsIndexed  
  Determina se os pixels do bitmap são mapeados para uma paleta de cores.  
   
 ```
@@ -943,7 +982,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  Este método aceita apenas os bitmaps de seção DIB.  
   
-##  <a name="a-nameisnulla--cimageisnull"></a><a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>CImage::IsNull  
  Determina se um bitmap é carregado no momento.  
   
 ```
@@ -953,7 +992,7 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>Comentários  
  Esse método retorna **True** se um bitmap não está carregado; caso contrário **False**.  
   
-##  <a name="a-nameistransparencysupporteda--cimageistransparencysupported"></a><a name="istransparencysupported"></a>CImage::IsTransparencySupported  
+##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
  Indica se o aplicativo dá suporte a bitmaps transparentes e foi compilado para o Windows 2000 ou posterior.  
   
 ```
@@ -969,7 +1008,7 @@ static BOOL IsTransparencySupported() throw();
  Se o aplicativo é compilado para uso com os sistemas operacionais antes do Windows 2000 ou o Windows 98, esse método sempre retornará 0, mesmo em sistemas operacionais mais recentes.  
   
 
-##  <a name="a-nameloada--cimageload"></a><a name="load"></a>CImage::Load  
+##  <a name="load"></a>CImage::Load  
  Carrega uma imagem.  
   
 ```
@@ -992,7 +1031,7 @@ HRESULT Load(IStream* pStream) throw();
   
  Tipos de imagem válido são BMP, GIF, JPEG, PNG e TIFF.  
   
-##  <a name="a-nameloadfromresourcea--cimageloadfromresource"></a><a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>CImage::LoadFromResource  
  Carrega uma imagem de um `BITMAP` recursos.  
   
 ```
@@ -1018,7 +1057,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>Comentários  
  O recurso deve ser do tipo `BITMAP`.  
   
-##  <a name="a-namemaskblta--cimagemaskblt"></a><a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>CImage::MaskBlt  
  Combina os dados de cor para bitmaps de origem e de destino usando a operação de varredura e a máscara especificada.  
   
 ```
@@ -1109,10 +1148,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Comentários  
  Esse método se aplica ao Windows NT, as versões 4.0 e posterior.  
   
-##  <a name="a-nameoperatorhbitmapa--cimageoperator-hbitmap"></a><a name="operator_hbitmap"></a>CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>CImage::operator HBITMAP  
  Usar esse operador para obter o identificador do Windows GDI anexado do `CImage` objeto. Este operador é um operador de conversão, que oferece suporte ao uso direto de um `HBITMAP` objeto.  
   
-##  <a name="a-nameplgblta--cimageplgblt"></a><a name="plgblt"></a>CImage::PlgBlt  
+##  <a name="plgblt"></a>CImage::PlgBlt  
  Executa uma transferência de bloco de bits de um retângulo em um contexto de dispositivo de origem em um paralelogramo em um contexto de dispositivo de destino.  
   
 ```
@@ -1182,7 +1221,7 @@ BOOL PlgBlt(
   
  Esse método se aplica ao Windows NT, as versões 4.0 e posterior. Consulte [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) no [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obter mais informações.  
   
-##  <a name="a-namereleasedca--cimagereleasedc"></a><a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>CImage::ReleaseDC  
  Libera o contexto do dispositivo.  
   
 ```
@@ -1192,7 +1231,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>Comentários  
  Como apenas um bitmap pode ser selecionado em um contexto de dispositivo por vez, você deve chamar `ReleaseDC` para cada chamada para [GetDC](#getdc).  
   
-##  <a name="a-namereleasegdiplusa--cimagereleasegdiplus"></a><a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
  Libera recursos usados pelo GDI+.  
   
 ```
@@ -1202,7 +1241,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>Comentários  
  Esse método deve ser chamado para liberar recursos alocados por global `CImage` objeto. Consulte [CImage::CImage](#cimage).  
   
-##  <a name="a-namesavea--cimagesave"></a><a name="save"></a>CImage::Save  
+##  <a name="save"></a>CImage::Save  
  Salva uma imagem do fluxo especificado ou o arquivo no disco.  
   
 ```
@@ -1240,7 +1279,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>Comentários  
  Chame essa função para salvar a imagem usando um nome e tipo especificados. Se o `guidFileType` parâmetro não for incluído, a extensão do nome de arquivo será usado para determinar o formato de imagem. Se nenhuma extensão for fornecido, a imagem será salva no formato BMP.  
   
-##  <a name="a-namesetcolortablea--cimagesetcolortable"></a><a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>CImage::SetColorTable  
  Define valores de cor vermelhos, verdes e azuis (RGB) para um intervalo de entradas na paleta de seção DIB.  
   
 ```
@@ -1263,7 +1302,7 @@ void SetColorTable(
 ### <a name="remarks"></a>Comentários  
  Este método aceita apenas os bitmaps de seção DIB.  
   
-##  <a name="a-namesetpixela--cimagesetpixel"></a><a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>CImage::SetPixel  
  Define a cor de um pixel em um determinado local no bitmap.  
   
 ```
@@ -1283,7 +1322,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>Comentários  
  Esse método falhará se o pixel coordena se situa fora da região de recorte selecionado.  
   
-##  <a name="a-namesetpixelindexeda--cimagesetpixelindexed"></a><a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
  Define a cor do pixel com a cor localizada em `iIndex` na paleta de cores.  
   
 ```
@@ -1300,7 +1339,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  O índice de uma cor na paleta de cores.  
   
-##  <a name="a-namesetpixelrgba--cimagesetpixelrgb"></a><a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
  Define o pixel nos locais especificados por *x* e *y* das cores indicado por *r*, *g*, e *b*, em um vermelho, verde, azul imagem (RGB).  
   
 ```
@@ -1331,7 +1370,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>Comentários  
  Os parâmetros de vermelhos, verde e azuis são representados por um número entre 0 e 255. Se você definir todos os três parâmetros como zero, a cor resultante combinada é preta. Se você definir todos os três parâmetros a 255, a cor resultante combinada é branca.  
   
-##  <a name="a-namesettransparentcolora--cimagesettransparentcolor"></a><a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
  Define uma cor em um determinado local indexado como transparente.  
   
 ```
@@ -1345,7 +1384,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>Valor de retorno  
  O índice da cor definida anteriormente como transparente.  
   
-##  <a name="a-namestretchblta--cimagestretchblt"></a><a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>CImage::StretchBlt  
  Copia um bitmap do contexto do dispositivo de origem para este contexto de dispositivo atual.  
   
 ```
@@ -1424,7 +1463,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) no [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
   
-##  <a name="a-nametransparentblta--cimagetransparentblt"></a><a name="transparentblt"></a>CImage::TransparentBlt  
+##  <a name="transparentblt"></a>CImage::TransparentBlt  
  Copia um bitmap do contexto do dispositivo de origem para este contexto de dispositivo atual.  
   
 ```

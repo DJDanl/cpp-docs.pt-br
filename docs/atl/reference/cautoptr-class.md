@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
+- ATLBASE/ATL::CAutoPtr
+- ATLBASE/ATL::CAutoPtr::CAutoPtr
+- ATLBASE/ATL::CAutoPtr::Attach
+- ATLBASE/ATL::CAutoPtr::Detach
+- ATLBASE/ATL::CAutoPtr::Free
+- ATLBASE/ATL::CAutoPtr::m_p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +110,7 @@ class CAutoPtr
 ## <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities&#74;](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="a-nameattacha--cautoptrattach"></a><a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>CAutoPtr::Attach  
  Chame esse método para apropriar-se de um ponteiro existente.  
   
 ```
@@ -123,7 +129,7 @@ void Attach(T* p) throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="a-namecautoptra--cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
  O construtor.  
   
 ```
@@ -150,7 +156,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="a-namedtora--cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
  O destruidor.  
   
 ```
@@ -160,7 +166,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>Comentários  
  Libera todos os recursos alocados. Chamadas [CAutoPtr::Free](#free).  
   
-##  <a name="a-namedetacha--cautoptrdetach"></a><a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>CAutoPtr::Detach  
  Chame esse método para liberar a propriedade de um ponteiro.  
   
 ```
@@ -176,7 +182,7 @@ T* Detach() throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="a-namefreea--cautoptrfree"></a><a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>CAutoPtr::Free  
  Chame esse método para excluir um objeto apontado por um `CAutoPtr`.  
   
 ```
@@ -186,7 +192,7 @@ void Free() throw();
 ### <a name="remarks"></a>Comentários  
  O objeto apontado pelo `CAutoPtr` é liberado e o [CAutoPtr::m_p](#m_p) variável de membro de dados é definido como NULL.  
   
-##  <a name="a-namempa--cautoptrmp"></a><a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>CAutoPtr::m_p  
  A variável de membro de dados do ponteiro.  
   
 ```
@@ -196,7 +202,7 @@ T* m_p;
 ### <a name="remarks"></a>Comentários  
  Essa variável de membro contém as informações do ponteiro.  
   
-##  <a name="a-nameoperatoreqa--cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>CAutoPtr::operator =  
  O operador de atribuição.  
   
 ```
@@ -223,7 +229,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="a-nameoperatorptra--cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
  O operador de ponteiro para membro.  
   
 ```
@@ -239,7 +245,7 @@ T* operator->() const throw();
 ### <a name="example"></a>Exemplo  
  Consulte o exemplo de [visão geral de CAutoPtr](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="a-nameoperatortstara--cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
  O operador cast.  
   
 ```  

@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComFakeCriticalSection
 - CComFakeCriticalSection
-- ATL::CComFakeCriticalSection
+- ATLCORE/ATL::CComFakeCriticalSection
+- ATLCORE/ATL::CComFakeCriticalSection::Init
+- ATLCORE/ATL::CComFakeCriticalSection::Lock
+- ATLCORE/ATL::CComFakeCriticalSection::Term
+- ATLCORE/ATL::CComFakeCriticalSection::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -69,7 +72,7 @@ class CComFakeCriticalSection
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-##  <a name="a-nameinita--ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init  
+##  <a name="init"></a>CComFakeCriticalSection::Init  
  Não fará nada, pois há uma seção crítica.  
   
 ```
@@ -79,7 +82,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="a-namelocka--ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock  
+##  <a name="lock"></a>CComFakeCriticalSection::Lock  
  Não fará nada, pois há uma seção crítica.  
   
 ```
@@ -89,7 +92,7 @@ HRESULT Lock() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="a-nameterma--ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Term  
+##  <a name="term"></a>CComFakeCriticalSection::Term  
  Não fará nada, pois há uma seção crítica.  
   
 ```
@@ -99,7 +102,7 @@ HRESULT Term() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK.  
   
-##  <a name="a-nameunlocka--ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock  
+##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
  Não fará nada, pois há uma seção crítica.  
   
 ```

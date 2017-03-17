@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchive
+- AFX/CArchive
+- AFX/CArchive::CArchive
+- AFX/CArchive::Abort
+- AFX/CArchive::Close
+- AFX/CArchive::Flush
+- AFX/CArchive::GetFile
+- AFX/CArchive::GetObjectSchema
+- AFX/CArchive::IsBufferEmpty
+- AFX/CArchive::IsLoading
+- AFX/CArchive::IsStoring
+- AFX/CArchive::MapObject
+- AFX/CArchive::Read
+- AFX/CArchive::ReadClass
+- AFX/CArchive::ReadObject
+- AFX/CArchive::ReadString
+- AFX/CArchive::SerializeClass
+- AFX/CArchive::SetLoadParams
+- AFX/CArchive::SetObjectSchema
+- AFX/CArchive::SetStoreParams
+- AFX/CArchive::Write
+- AFX/CArchive::WriteClass
+- AFX/CArchive::WriteObject
+- AFX/CArchive::WriteString
+- AFX/CArchive::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +146,7 @@ class CArchive
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX. h  
   
-##  <a name="a-nameaborta--carchiveabort"></a><a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>CArchive::Abort  
  Chame essa função para fechar o arquivo sem lançar uma exceção.  
   
 ```  
@@ -139,7 +163,7 @@ void Abort ();
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CArchive::WriteClass](#writeclass).  
   
-##  <a name="a-namecarchivea--carchivecarchive"></a><a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>CArchive::CArchive  
  Constrói um `CArchive` object e especifica se será usada para carregar ou armazenar objetos.  
   
 ```  
@@ -177,7 +201,7 @@ CArchive(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#12;](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="a-nameclosea--carchiveclose"></a><a name="close"></a>CArchive::Close  
+##  <a name="close"></a>CArchive::Close  
  Libera todos os dados restantes no buffer, fecha o arquivo morto e desconecta o arquivo morto do arquivo.  
   
 ```  
@@ -192,7 +216,7 @@ void Close();
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CArchive::WriteString](#writestring).  
   
-##  <a name="a-nameflusha--carchiveflush"></a><a name="flush"></a>CArchive::Flush  
+##  <a name="flush"></a>CArchive::Flush  
  Força todos os dados restantes no buffer de arquivo morto para ser gravado no arquivo.  
   
 ```  
@@ -205,7 +229,7 @@ void Flush();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&13;](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="a-namegetfilea--carchivegetfile"></a><a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>CArchive::GetFile  
  Obtém o `CFile` ponteiro de objeto para este arquivo.  
   
 ```  
@@ -221,7 +245,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#14;](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="a-namegetobjectschemaa--carchivegetobjectschema"></a><a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
  Chamar essa função a partir de `Serialize` função para determinar a versão do objeto que está atualmente sendo desserializado.  
   
 ```  
@@ -239,7 +263,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#15;](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="a-nameisbufferemptya--carchiveisbufferempty"></a><a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
  Chame essa função de membro para determinar se o buffer interno do objeto do arquivo está vazio.  
   
 ```  
@@ -256,7 +280,7 @@ BOOL IsBufferEmpty() const;
   
  Para obter mais informações, consulte [Windows Sockets: usando soquetes com arquivos mortos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-nameisloadinga--carchiveisloading"></a><a name="isloading"></a>CArchive::IsLoading  
+##  <a name="isloading"></a>CArchive::IsLoading  
  Determina se o arquivo está carregando dados.  
   
 ```  
@@ -272,7 +296,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization n º&16;](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="a-nameisstoringa--carchiveisstoring"></a><a name="isstoring"></a>CArchive::IsStoring  
+##  <a name="isstoring"></a>CArchive::IsStoring  
  Determina se o arquivo é armazenar dados.  
   
 ```  
@@ -290,7 +314,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[17 NVC_MFCSerialization](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="a-namemapobjecta--carchivemapobject"></a><a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>CArchive::MapObject  
  Chame essa função de membro para posicionar objetos no mapa do que realmente não são serializados para o arquivo, mas que estão disponíveis para subobjetos para referência.  
   
 ```  
@@ -315,7 +339,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization&#21;](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="a-namempdocumenta--carchivempdocument"></a><a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>CArchive::m_pDocument  
  Definido como **nulo** por padrão, esse ponteiro para um **CDocument** pode ser definido como qualquer coisa o usuário a `CArchive` desejos de instância.  
   
 ```  
@@ -330,7 +354,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#35;](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="a-nameoperatorltlta--carchiveoperator-ltlt"></a><a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
  Armazena o objeto indicado ou um tipo primitivo para o arquivo morto.  
   
 ```  
@@ -400,7 +424,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[32 NVC_MFCSerialization](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="a-nameoperatorgtgta--carchiveoperator-gtgt"></a><a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
  Carrega o objeto indicado ou um tipo primitivo do arquivo morto.  
   
 ```  
@@ -482,7 +506,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization&#34;](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="a-namereada--carchiveread"></a><a name="read"></a>CArchive::Read  
+##  <a name="read"></a>CArchive::Read  
  Lê um número especificado de bytes do arquivo morto.  
   
 ```  
@@ -507,7 +531,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#24;](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="a-namereadclassa--carchivereadclass"></a><a name="readclass"></a>CArchive::ReadClass  
+##  <a name="readclass"></a>CArchive::ReadClass  
  Chame essa função de membro para ler uma referência a uma classe previamente armazenada com [WriteClass](#writeclass).  
   
 ```  
@@ -542,7 +566,7 @@ CRuntimeClass* ReadClass(
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CArchive::WriteClass](#writeclass).  
   
-##  <a name="a-namereadobjecta--carchivereadobject"></a><a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>CArchive::ReadObject  
  Lê dados de objeto do arquivo morto e constrói um objeto do tipo apropriado.  
   
 ```  
@@ -564,7 +588,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CArchive::WriteObject](#writeobject).  
   
-##  <a name="a-namereadstringa--carchivereadstring"></a><a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>CArchive::ReadString  
  Chame essa função de membro para ler dados de texto em um buffer de arquivo associado a `CArchive` objeto.  
   
 ```  
@@ -595,7 +619,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CArchive::WriteString](#writestring).  
   
-##  <a name="a-nameserializeclassa--carchiveserializeclass"></a><a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>CArchive::SerializeClass  
  Chame essa função de membro para armazenar e carregar as informações de versão de uma classe base.  
   
 ```  
@@ -618,7 +642,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[25 NVC_MFCSerialization](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="a-namesetloadparamsa--carchivesetloadparams"></a><a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>CArchive::SetLoadParams  
  Chamar `SetLoadParams` quando você pretende ler um grande número de `CObject`-objetos derivados de um arquivo.  
   
 ```  
@@ -637,7 +661,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namesetobjectschemaa--carchivesetobjectschema"></a><a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
  Chame essa função de membro para definir o esquema de objeto armazenado no objeto de arquivamento para `nSchema`.  
   
 ```  
@@ -656,7 +680,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#27;](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="a-namesetstoreparamsa--carchivesetstoreparams"></a><a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
  Use `SetStoreParams` ao armazenar um grande número de `CObject`-derivado objetos em um arquivo morto.  
   
 ```  
@@ -678,7 +702,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namewritea--carchivewrite"></a><a name="write"></a>CArchive::Write  
+##  <a name="write"></a>CArchive::Write  
  Grava um número especificado de bytes no arquivo morto.  
   
 ```  
@@ -700,7 +724,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#23;](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="a-namewriteclassa--carchivewriteclass"></a><a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>CArchive::WriteClass  
  Use `WriteClass` para armazenar as informações de versão e a classe de uma classe base durante a serialização da classe derivada.  
   
 ```  
@@ -723,7 +747,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCSerialization&#28;](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="a-namewriteobjecta--carchivewriteobject"></a><a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>CArchive::WriteObject  
  Armazena especificado `CObject` para o arquivo morto.  
   
 ```  
@@ -749,7 +773,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[29 NVC_MFCSerialization](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="a-namewritestringa--carchivewritestring"></a><a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>CArchive::WriteString  
  Use esta função de membro para gravar dados de um buffer para o arquivo associado a `CArchive` objeto.  
   
 ```  

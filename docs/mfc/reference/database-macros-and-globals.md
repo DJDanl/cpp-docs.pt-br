@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDB/AFX_ODBC_CALL
+- AFXDB/AFX_SQL_ASYNC
+- AFXDB/AFX_SQL_SYNC
+- AFXDB/AfxGetHENV
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +65,7 @@ As macros e globais listadas abaixo se aplicam a aplicativos de banco de dados b
 |-|-|  
 |[AfxGetHENV](#afxgethenv)|Recupera um identificador de ambiente ODBC atualmente em uso pelo MFC. Você pode usar esse identificador em chamadas diretas de ODBC.|  
   
-##  <a name="a-nameafxodbccalla--afxodbccall"></a><a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
  Usar essa macro para chamar qualquer função de API ODBC que pode retornar `SQL_STILL_EXECUTING`.  
   
 ```  
@@ -89,7 +92,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdb. h  
 
-##  <a name="a-nameafxsqlasynca--afxsqlasync"></a><a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
  A implementação dessa macro alterado no MFC 4.2.  
   
 ```   
@@ -112,7 +115,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdb. h  
   
-##  <a name="a-nameafxsqlsynca--afxsqlsync"></a><a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
  O `AFX_SQL_SYNC` macro simplesmente chama a função `SQLFunc`.  
   
 ```   
@@ -139,7 +142,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdb. h  
   
-##  <a name="a-nameafxgethenva--afxgethenv"></a><a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>AfxGetHENV  
  Você pode usar o identificador retornado em chamadas diretas de ODBC, mas você não deve fechar o identificador ou supõem que o identificador é ainda válido e disponível após qualquer existente `CDatabase`- ou `CRecordset`-objetos derivados tiverem sido destruídos.  
   
 ```   

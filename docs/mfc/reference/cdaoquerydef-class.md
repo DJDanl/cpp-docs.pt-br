@@ -10,6 +10,37 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
+- AFXDAO/CDaoQueryDef
+- AFXDAO/CDaoQueryDef::CDaoQueryDef
+- AFXDAO/CDaoQueryDef::Append
+- AFXDAO/CDaoQueryDef::CanUpdate
+- AFXDAO/CDaoQueryDef::Close
+- AFXDAO/CDaoQueryDef::Create
+- AFXDAO/CDaoQueryDef::Execute
+- AFXDAO/CDaoQueryDef::GetConnect
+- AFXDAO/CDaoQueryDef::GetDateCreated
+- AFXDAO/CDaoQueryDef::GetDateLastUpdated
+- AFXDAO/CDaoQueryDef::GetFieldCount
+- AFXDAO/CDaoQueryDef::GetFieldInfo
+- AFXDAO/CDaoQueryDef::GetName
+- AFXDAO/CDaoQueryDef::GetODBCTimeout
+- AFXDAO/CDaoQueryDef::GetParameterCount
+- AFXDAO/CDaoQueryDef::GetParameterInfo
+- AFXDAO/CDaoQueryDef::GetParamValue
+- AFXDAO/CDaoQueryDef::GetRecordsAffected
+- AFXDAO/CDaoQueryDef::GetReturnsRecords
+- AFXDAO/CDaoQueryDef::GetSQL
+- AFXDAO/CDaoQueryDef::GetType
+- AFXDAO/CDaoQueryDef::IsOpen
+- AFXDAO/CDaoQueryDef::Open
+- AFXDAO/CDaoQueryDef::SetConnect
+- AFXDAO/CDaoQueryDef::SetName
+- AFXDAO/CDaoQueryDef::SetODBCTimeout
+- AFXDAO/CDaoQueryDef::SetParamValue
+- AFXDAO/CDaoQueryDef::SetReturnsRecords
+- AFXDAO/CDaoQueryDef::SetSQL
+- AFXDAO/CDaoQueryDef::m_pDAOQueryDef
+- AFXDAO/CDaoQueryDef::m_pDatabase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -151,7 +182,7 @@ class CDaoQueryDef : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdao.h  
   
-##  <a name="a-nameappenda--cdaoquerydefappend"></a><a name="append"></a>CDaoQueryDef::Append  
+##  <a name="append"></a>CDaoQueryDef::Append  
  Chame essa função de membro depois de você chamar [criar](#create) para criar um novo objeto querydef.  
   
 ```  
@@ -163,7 +194,7 @@ virtual void Append();
   
  Se você tentar anexar um objeto querydef temporária, MFC lança uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="a-namecanupdatea--cdaoquerydefcanupdate"></a><a name="canupdate"></a>CDaoQueryDef::CanUpdate  
+##  <a name="canupdate"></a>CDaoQueryDef::CanUpdate  
  Chame essa função de membro para determinar se é possível modificar querydef — como alterar seu nome ou uma cadeia de caracteres SQL.  
   
 ```  
@@ -182,7 +213,7 @@ BOOL CanUpdate();
   
      Isso depende se você implementou os recursos de segurança. MFC não fornece suporte de segurança. Você deve implementá-lo por conta própria chamando DAO diretamente ou usando o Microsoft Access. Consulte o tópico "Propriedade permissões" na Ajuda do DAO.  
   
-##  <a name="a-namecdaoquerydefa--cdaoquerydefcdaoquerydef"></a><a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
+##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
  Constrói uma **CDaoQueryDef** objeto.  
   
 ```  
@@ -206,7 +237,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
  Quando terminar com o objeto querydef, chame seu [fechar](#close) função de membro. Se você tiver um ponteiro para querydef, use o **excluir** operador para destruir o objeto C++.  
   
-##  <a name="a-nameclosea--cdaoquerydefclose"></a><a name="close"></a>CDaoQueryDef::Close  
+##  <a name="close"></a>CDaoQueryDef::Close  
  Quando você terminar de usar o objeto querydef, chame essa função de membro.  
   
 ```  
@@ -216,7 +247,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentários  
  Fechar querydef libera o objeto DAO subjacente, mas não destrói o objeto salvo de querydef do DAO ou C++ `CDaoQueryDef` objeto. Isso não é o mesmo que [CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef), que exclui querydef da coleção QueryDefs do banco de dados no DAO (se não for um querydef temporário).  
   
-##  <a name="a-namecreatea--cdaoquerydefcreate"></a><a name="create"></a>CDaoQueryDef::Create  
+##  <a name="create"></a>CDaoQueryDef::Create  
  Chame essa função de membro para criar uma nova consulta salva ou uma nova consulta temporária.  
   
 ```  
@@ -237,7 +268,7 @@ virtual void Create(
   
  Se você não fornecer uma instrução SQL na `lpszSQL`, você não pode executar a consulta com **Execute** , mas você pode usá-lo para criar um conjunto de registros. Nesse caso, o MFC usa instrução de SQL padrão do conjunto de registros.  
   
-##  <a name="a-nameexecutea--cdaoquerydefexecute"></a><a name="execute"></a>CDaoQueryDef::Execute  
+##  <a name="execute"></a>CDaoQueryDef::Execute  
  Chame essa função de membro para executar a consulta definida pelo objeto querydef.  
   
 ```  
@@ -281,7 +312,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
  **Executar** não retorna um conjunto de registros. Usando **Execute** em uma consulta que seleciona registros faz com que o MFC acionar uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="a-namegetconnecta--cdaoquerydefgetconnect"></a><a name="getconnect"></a>CDaoQueryDef::GetConnect  
+##  <a name="getconnect"></a>CDaoQueryDef::GetConnect  
  Chame essa função de membro para obter a cadeia de conexão associada à fonte de dados do querydef.  
   
 ```  
@@ -299,7 +330,7 @@ CString GetConnect();
   
  Para obter informações sobre cadeias de conexão, consulte o tópico "Propriedade conectar" na Ajuda do DAO.  
   
-##  <a name="a-namegetdatecreateda--cdaoquerydefgetdatecreated"></a><a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
  Chame essa função de membro para obter a data em que o objeto querydef foi criado.  
   
 ```  
@@ -312,7 +343,7 @@ COleDateTime GetDateCreated();
 ### <a name="remarks"></a>Comentários  
  Para obter informações relacionadas, consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
-##  <a name="a-namegetdatelastupdateda--cdaoquerydefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
  Chamada para essa função de membro para obter a data do objeto querydef foi atualizado pela última vez — quando uma de suas propriedades foram alterada, como seu nome, sua cadeia de caracteres SQL ou sua cadeia de caracteres de conexão.  
   
 ```  
@@ -325,7 +356,7 @@ COleDateTime GetDateLastUpdated();
 ### <a name="remarks"></a>Comentários  
  Para obter informações relacionadas, consulte o tópico "Propriedades DateCreated e LastUpdated" na Ajuda do DAO.  
   
-##  <a name="a-namegetfieldcounta--cdaoquerydefgetfieldcount"></a><a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
  Chame essa função de membro para recuperar o número de campos na consulta.  
   
 ```  
@@ -338,7 +369,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Comentários  
  `GetFieldCount`é útil para percorrer todos os campos em querydef. Para essa finalidade, use `GetFieldCount` em conjunto com [GetFieldInfo](#getfieldinfo).  
   
-##  <a name="a-namegetfieldinfoa--cdaoquerydefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
  Chame essa função de membro para obter vários tipos de informações sobre um campo definido em querydef.  
   
 ```  
@@ -376,7 +407,7 @@ void GetFieldInfo(
 ### <a name="remarks"></a>Comentários  
  Para obter uma descrição das informações retornadas em `fieldinfo`, consulte o [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estrutura. Essa estrutura tem membros que correspondem às informações descritivas em `dwInfoOptions` acima. Se você solicitar um nível de informações, você obterá quaisquer níveis anteriores de informações também.  
   
-##  <a name="a-namegetnamea--cdaoquerydefgetname"></a><a name="getname"></a>CDaoQueryDef::GetName  
+##  <a name="getname"></a>CDaoQueryDef::GetName  
  Chame essa função de membro para recuperar o nome da consulta representado por querydef.  
   
 ```  
@@ -389,7 +420,7 @@ CString GetName();
 ### <a name="remarks"></a>Comentários  
  Nomes de QueryDef são nomes exclusivos definidos pelo usuário. Para obter mais informações sobre nomes de querydef, consulte o tópico "Propriedade Name" na Ajuda do DAO.  
   
-##  <a name="a-namegetodbctimeouta--cdaoquerydefgetodbctimeout"></a><a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
+##  <a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
  Chame essa função de membro para recuperar o limite de tempo atual antes de uma consulta a uma fonte de dados ODBC expire.  
   
 ```  
@@ -405,7 +436,7 @@ short GetODBCTimeout();
 > [!TIP]
 >  A melhor maneira de trabalhar com tabelas ODBC é anexá-los a um Microsoft Jet (. Banco de dados MDB). Para obter mais informações, consulte o tópico "Acessando externo bancos de dados com DAO" na Ajuda do DAO.  
   
-##  <a name="a-namegetparametercounta--cdaoquerydefgetparametercount"></a><a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
+##  <a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
  Chame essa função de membro para recuperar o número de parâmetros na consulta salva.  
   
 ```  
@@ -420,7 +451,7 @@ short GetParameterCount();
   
  Para obter informações relacionadas, consulte os tópicos "Parâmetro Object", "Coleção Parameters" e "parâmetros de declaração (SQL)" na Ajuda do DAO.  
   
-##  <a name="a-namegetparameterinfoa--cdaoquerydefgetparameterinfo"></a><a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
+##  <a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
  Chame essa função de membro para obter informações sobre um parâmetro definido em querydef.  
   
 ```  
@@ -456,7 +487,7 @@ void GetParameterInfo(
   
  Para obter informações relacionadas, consulte o tópico "parâmetros de declaração (SQL)" na Ajuda do DAO.  
   
-##  <a name="a-namegetparamvaluea--cdaoquerydefgetparamvalue"></a><a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
+##  <a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
  Chame essa função de membro para recuperar o valor atual do parâmetro especificado armazenado na coleção de parâmetros do querydef.  
   
 ```  
@@ -479,7 +510,7 @@ virtual COleVariant GetParamValue(int nIndex);
   
  Para obter informações relacionadas, consulte o tópico "parâmetros de declaração (SQL)" na Ajuda do DAO.  
   
-##  <a name="a-namegetrecordsaffecteda--cdaoquerydefgetrecordsaffected"></a><a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
  Chame essa função de membro para determinar quantos registros foram afetados pela última chamada de [Execute](#execute).  
   
 ```  
@@ -494,7 +525,7 @@ long GetRecordsAffected();
   
  Para obter informações relacionadas, consulte o tópico "Propriedade RecordsAffected" na Ajuda do DAO.  
   
-##  <a name="a-namegetreturnsrecordsa--cdaoquerydefgetreturnsrecords"></a><a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
+##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
  Chame essa função de membro para determinar se querydef é baseada em uma consulta que retorna registros.  
   
 ```  
@@ -509,7 +540,7 @@ BOOL GetReturnsRecords();
   
  Para obter informações relacionadas, consulte o tópico "Propriedade ReturnsRecords" na Ajuda do DAO.  
   
-##  <a name="a-namegetsqla--cdaoquerydefgetsql"></a><a name="getsql"></a>CDaoQueryDef::GetSQL  
+##  <a name="getsql"></a>CDaoQueryDef::GetSQL  
  Chame essa função de membro para recuperar a instrução SQL que define a consulta na qual querydef se baseia.  
   
 ```  
@@ -524,7 +555,7 @@ CString GetSQL();
   
  Para obter informações relacionadas, consulte os tópicos "Propriedade SQL", "Comparação de banco de dados do mecanismo de SQL e ANSI SQL do Microsoft Jet" e "Consultando um banco de dados com o SQL em código" na Ajuda do DAO.  
   
-##  <a name="a-namegettypea--cdaoquerydefgettype"></a><a name="gettype"></a>CDaoQueryDef::GetType  
+##  <a name="gettype"></a>CDaoQueryDef::GetType  
  Chame essa função de membro para determinar o tipo de consulta de querydef.  
   
 ```  
@@ -564,7 +595,7 @@ short GetType();
   
  Para obter informações sobre cadeias de caracteres SQL, consulte [GetSQL](#getsql). Para obter informações sobre tipos de consulta, consulte [Execute](#execute).  
   
-##  <a name="a-nameisopena--cdaoquerydefisopen"></a><a name="isopen"></a>CDaoQueryDef::IsOpen  
+##  <a name="isopen"></a>CDaoQueryDef::IsOpen  
  Chame essa função de membro para determinar se o `CDaoQueryDef` objeto está aberto.  
   
 ```  
@@ -577,19 +608,19 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Comentários  
  Querydef deve estar no estado aberto antes de usá-lo para chamar [Execute](#execute) ou para criar um [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto. Para colocar um querydef em uma chamada de estado aberto ou [criar](#create) (para um novo querydef) ou [abrir](#open) (para uma querydef existente).  
   
-##  <a name="a-namempdatabasea--cdaoquerydefmpdatabase"></a><a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
  Contém um ponteiro para o [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto associado ao objeto querydef.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse ponteiro se você precisar acessar diretamente o banco de dados — por exemplo obter ponteiros para outros recordset ou querydef objetos nas coleções do banco de dados.  
   
-##  <a name="a-namempdaoquerydefa--cdaoquerydefmpdaoquerydef"></a><a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
+##  <a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
  Contém um ponteiro para a interface OLE para o objeto subjacente de querydef do DAO.  
   
 ### <a name="remarks"></a>Comentários  
  Esse ponteiro é fornecido para a integridade e a consistência com as outras classes. No entanto, porque MFC bastante totalmente encapsula querydefs DAO for improvável que você precisa. Se você usá-lo, faça isso com cuidado — em particular, não altere o valor do ponteiro, a menos que você sabe o que está fazendo.  
   
-##  <a name="a-nameopena--cdaoquerydefopen"></a><a name="open"></a>CDaoQueryDef::Open  
+##  <a name="open"></a>CDaoQueryDef::Open  
  Chame essa função de membro para abrir querydef salvo anteriormente na coleção QueryDefs do banco de dados.  
   
 ```  
@@ -603,7 +634,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="remarks"></a>Comentários  
  Quando querydef for aberta, você pode chamar seu [Execute](#execute) função de membro ou use querydef para criar um [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto.  
   
-##  <a name="a-namesetconnecta--cdaoquerydefsetconnect"></a><a name="setconnect"></a>CDaoQueryDef::SetConnect  
+##  <a name="setconnect"></a>CDaoQueryDef::SetConnect  
  Chame essa função de membro para definir a cadeia de caracteres de conexão do objeto.  
   
 ```  
@@ -624,7 +655,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Para obter mais informações sobre a estrutura e exemplos de componentes de cadeia de caracteres de conexão a cadeia de caracteres de conexão, consulte o tópico "Propriedade conectar" na Ajuda do DAO.  
   
-##  <a name="a-namesetnamea--cdaoquerydefsetname"></a><a name="setname"></a>CDaoQueryDef::SetName  
+##  <a name="setname"></a>CDaoQueryDef::SetName  
  Chame essa função de membro, se você quiser alterar o nome de um querydef não é temporário.  
   
 ```  
@@ -638,7 +669,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>Comentários  
  Nomes de QueryDef são nomes exclusivos, definidos pelo usuário. Você pode chamar `SetName` antes de querydef objeto é acrescentado à coleção QueryDefs.  
   
-##  <a name="a-namesetodbctimeouta--cdaoquerydefsetodbctimeout"></a><a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
+##  <a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
  Chame essa função de membro para definir o tempo limite antes de uma consulta a uma fonte de dados ODBC expire.  
   
 ```  
@@ -654,7 +685,7 @@ void SetODBCTimeout(short nODBCTimeout);
   
  O valor padrão de tempo limite de consulta é 60 segundos.  
   
-##  <a name="a-namesetparamvaluea--cdaoquerydefsetparamvalue"></a><a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
+##  <a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
  Chame essa função de membro para definir o valor de um parâmetro em querydef em tempo de execução.  
   
 ```  
@@ -683,7 +714,7 @@ virtual void SetParamValue(
   
  Especifique o valor a ser definido como um `COleVariant` objeto. Para obter informações sobre como definir o valor desejado e digite sua `COleVariant` de objeto, consulte a classe [COleVariant](../../mfc/reference/colevariant-class.md).  
   
-##  <a name="a-namesetreturnsrecordsa--cdaoquerydefsetreturnsrecords"></a><a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
+##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
  Chame essa função de membro como parte do processo de configuração de uma consulta de passagem para um banco de dados externo.  
   
 ```  
@@ -697,7 +728,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="remarks"></a>Comentários  
  Nesse caso, você deve criar querydef e defina suas propriedades usando outros `CDaoQueryDef` funções de membro. Para obter uma descrição dos bancos de dados externos, consulte [SetConnect](#setconnect).  
   
-##  <a name="a-namesetsqla--cdaoquerydefsetsql"></a><a name="setsql"></a>CDaoQueryDef::SetSQL  
+##  <a name="setsql"></a>CDaoQueryDef::SetSQL  
  Chame essa função de membro para definir a instrução SQL que executa querydef.  
   
 ```  

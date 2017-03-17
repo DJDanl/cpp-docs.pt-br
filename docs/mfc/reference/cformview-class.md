@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFormView
+- AFXEXT/CFormView
+- AFXEXT/CFormView::CFormView
+- AFXEXT/CFormView::IsInitDlgCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFormView : public CScrollView
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxext.h  
   
-##  <a name="a-namecformviewa--cformviewcformview"></a><a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>CFormView::CFormView  
  Constrói um objeto `CFormView`.  
   
 ```  
@@ -117,7 +120,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView&#91;](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="a-nameisinitdlgcompleteda--cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
  Usado pela MFC para garantir que a inicialização seja concluída antes de executar outras operações.  
   
 ```  

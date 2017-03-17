@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCReBar
+- AFXREBAR/CMFCReBar
+- AFXREBAR/CMFCReBar::AddBar
+- AFXREBAR/CMFCReBar::CalcFixedLayout
+- AFXREBAR/CMFCReBar::CanFloat
+- AFXREBAR/CMFCReBar::Create
+- AFXREBAR/CMFCReBar::EnableDocking
+- AFXREBAR/CMFCReBar::GetReBarBandInfoSize
+- AFXREBAR/CMFCReBar::GetReBarCtrl
+- AFXREBAR/CMFCReBar::OnShowControlBarMenu
+- AFXREBAR/CMFCReBar::OnToolHitTest
+- AFXREBAR/CMFCReBar::OnUpdateCmdUI
+- AFXREBAR/CMFCReBar::SetPaneAlignment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +97,7 @@ class CMFCReBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxRebar.h  
   
-##  <a name="a-nameaddbara--cmfcrebaraddbar"></a><a name="addbar"></a>CMFCReBar::AddBar  
+##  <a name="addbar"></a>CMFCReBar::AddBar  
  Adiciona uma faixa um rebar.  
   
 ```  
@@ -125,7 +137,7 @@ BOOL AddBar(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE`Se a faixa foi adicionada com êxito para o rebar; Caso contrário, `FALSE`.  
   
-##  <a name="a-namecreatea--cmfcrebarcreate"></a><a name="create"></a>CMFCReBar::Create  
+##  <a name="create"></a>CMFCReBar::Create  
  Cria um controle rebar e anexa-o para o [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) objeto.  
   
 ```  
@@ -154,7 +166,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegetrebarctrla--cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
  Fornece acesso direto a `CReBarCtrl` controle comum subjacente para `CMFCReBar` objetos.  
   
 ```  
@@ -167,7 +179,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="remarks"></a>Comentários  
  Chame esse método para aproveitar a funcionalidade de controle do Windows rebar comuns ao personalizar o rebar.  
   
-##  <a name="a-namecalcfixedlayouta--cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -184,7 +196,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecanfloata--cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCReBar::CanFloat  
+##  <a name="canfloat"></a>CMFCReBar::CanFloat  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -195,7 +207,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameenabledockinga--cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar::EnableDocking  
+##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +219,7 @@ void EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegetrebarbandinfosizea--cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -218,7 +230,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameonshowcontrolbarmenua--cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -232,7 +244,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameontoolhittesta--cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -249,7 +261,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameonupdatecmduia--cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -264,7 +276,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesetpanealignmenta--cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

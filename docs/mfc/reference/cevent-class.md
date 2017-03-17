@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  Constrói um nome ou sem nome `CEvent` objeto.  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  Depois de criar o `CEvent` de objeto, use [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para garantir que o mutex não existe. Se o mutex existia inesperadamente, isso pode indicar um processo não autorizado é apropriação indevida e pode ser pretende usar o mutex de maneira mal-intencionada. Nesse caso, o procedimento sensível à segurança recomendado é fechar o identificador e continuará como se houve uma falha na criação do objeto.  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  Define o estado do evento para sinalizar (disponível), libera os threads em espera e ela não sinalizado (não disponível) é redefinido automaticamente.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`usa o Win32 subjacente `PulseEvent` função, que pode ser momentaneamente removida do estado de espera por uma chamada de procedimento assíncrona de modo kernel. Portanto, `PulseEvent` não é confiável e não deve ser usado por aplicativos novos. Para obter mais informações, consulte o [PulseEvent função](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  Define o estado do evento para não sinalizado até à sinalizado por definir explicitamente o [SetEvent](#setevent) função de membro.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  Essa função de membro não é usada pelos eventos automática.  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  Define o estado do evento a ser sinalizado, liberando os threads em espera.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Comentários  
  Se o evento for manual, o evento permanecerá sinalizado até [ResetEvent](#resetevent) é chamado. Mais de um thread pode ser liberado nesse caso. Se o evento for automático, o evento permanecerá sinalizado até que um único thread seja liberado. O sistema, em seguida, definirá o estado do evento para não sinalizado. Se nenhum segmento estiver aguardando, o estado permanece sinalizado até que um thread seja liberado.  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  Libera o objeto de evento.  
   
 ```  
