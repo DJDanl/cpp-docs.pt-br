@@ -43,8 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 20a65ed9a4b8ee8e2435a685b6a0cee8d6ecce77
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7a9d13924a14b51ed78256825dee6d9a59475c51
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf
@@ -64,12 +65,12 @@ As informações a seguir se aplicam a qualquer função da família de funçõe
 |`p`|Um endereço de ponteiro em dígitos hexadecimais. O número máximo de dígitos de leitura depende do tamanho de um ponteiro (32 ou 64 bits), que depende da arquitetura do computador. "0x" ou "0X" são aceitos como prefixos.|Ponteiro para `void*`.|Nº|  
 |`u`|Inteiro decimal sem sinal.|Ponteiro para `unsigned``int`.|Nº|  
 |`x`|Inteiro hexadecimal.|Ponteiro para `int`.|Nº|  
-|`e`, `E`, `f`, `g`, `G`|Valor de ponto flutuante consistindo de um sinal opcional (+ ou -), de uma série de um ou mais dígitos decimais que contém o ponto decimal e também de um expoente opcional ("e" ou "E"), seguido por um valor inteiro com sinal opcionalmente.|Ponteiro para `float`.|Nº|  
+|`e`, `E`, `f`, `F`, `g`, `G`|Valor de ponto flutuante consistindo de um sinal opcional (+ ou -), de uma série de um ou mais dígitos decimais que contém o ponto decimal e também de um expoente opcional ("e" ou "E"), seguido por um valor inteiro com sinal opcionalmente.|Ponteiro para `float`.|Nº|  
+|`a`, `A`|Valor de ponto flutuante que consiste em uma série de um ou mais dígitos hexadecimais com um ponto decimal opcional e um expoente ("p" ou "P") seguido de um valor decimal.|Ponteiro para `float`.|Nº|  
 |`n`|Nenhuma entrada lida do fluxo ou buffer.|Ponteiro para `int`, no qual é armazenado o número de caracteres lidos com êxito do fluxo ou buffer até esse ponto na chamada atual para funções `scanf` ou funções `wscanf`.|Nº|  
 |`s`|Cadeia de caracteres, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres de byte único; quando usado com funções `wscanf`, significa matriz de caracteres largos. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Necessário. O tamanho inclui espaço para um terminador nulo.|  
 |`S`|Cadeia de caracteres de tamanho oposto, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres largos; quando usado com funções `wscanf`, significa matriz de caracteres de byte único. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Necessário. O tamanho inclui espaço para um terminador nulo.|  
   
- Os especificadores `a` e `A` (consulte [Caracteres de campo de tipo printf](../c-runtime-library/printf-type-field-characters.md)) não estão disponíveis com `scanf`.  
   
  Os argumentos de tamanho, se necessário, devem ser transmitidos na lista de parâmetros imediatamente após o argumento a que se aplicam. Por exemplo, o código a seguir:  
   
@@ -93,8 +94,3 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 ## <a name="see-also"></a>Consulte também  
  [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
