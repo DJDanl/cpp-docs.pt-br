@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::location
+- location
+- CONCRT/concurrency::location
+- CONCRT/concurrency::location::location
+- CONCRT/concurrency::location::current
+- CONCRT/concurrency::location::from_numa_node
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="location-class"></a>Classe location
@@ -54,23 +58,23 @@ class location;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[local de construtor](#ctor)|Sobrecarregado. Constrói um objeto `location`.|  
+|[local](#ctor)|Sobrecarregado. Constrói um objeto `location`.|  
 |[~ local destruidor](#dtor)|Destrói um objeto `location`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método atual](#current)|Retorna um `location` objeto que representa o local mais específico que o thread de chamada está em execução.|  
-|[Método from_numa_node](#from_numa_node)|Retorna um `location` objeto que representa um nó NUMA.|  
+|[atual](#current)|Retorna um `location` objeto que representa o local mais específico que o thread de chamada está em execução.|  
+|[from_numa_node](#from_numa_node)|Retorna um `location` objeto que representa um nó NUMA.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador! = operador](#operator_neq)|Determina se dois `location` objetos representam um local diferente.|  
-|[operador Operator =](#operator_eq)|Atribui o conteúdo de um outro `location` objeto a este.|  
-|[operador Operator = =](#operator_eq_eq)|Determina se dois `location` objetos representam o mesmo local.|  
+|[operator!=](#operator_neq)|Determina se dois `location` objetos representam um local diferente.|  
+|[operator=](#operator_eq)|Atribui o conteúdo de um outro `location` objeto a este.|  
+|[operator==](#operator_eq_eq)|Determina se dois `location` objetos representam o mesmo local.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `location`  
@@ -80,7 +84,7 @@ class location;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ local 
+##  <a name="dtor"></a>~ local 
 
  Destrói um objeto `location`.  
   
@@ -88,7 +92,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="a-namecurrenta-current"></a><a name="current"></a>atual 
+##  <a name="current"></a>atual 
 
  Retorna um `location` objeto que representa o local mais específico que o thread de chamada está em execução.  
   
@@ -99,7 +103,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>Valor de retorno  
  Um local que representa o local mais específico o thread de chamada está em execução.  
   
-##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a>from_numa_node 
 
  Retorna um `location` objeto que representa um nó NUMA.  
   
@@ -114,7 +118,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Valor de retorno  
  Um local que representa o nó NUMA especificado pelo `_NumaNodeNumber` parâmetro.  
   
-##  <a name="a-namectora-location"></a><a name="ctor"></a>local 
+##  <a name="ctor"></a>local 
 
  Constrói um objeto `location`.  
   
@@ -141,7 +145,7 @@ location(
 ### <a name="remarks"></a>Comentários  
  Um local padrão construído representa o sistema como um todo.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operador! = 
+##  <a name="operator_neq"></a>operador! = 
 
  Determina se dois `location` objetos representam um local diferente.  
   
@@ -155,7 +159,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se os dois locais forem diferentes, `false` caso contrário.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Atribui o conteúdo de um outro `location` objeto a este.  
   
@@ -169,7 +173,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operador = = 
+##  <a name="operator_eq_eq"></a>operador = = 
 
  Determina se dois `location` objetos representam o mesmo local.  
   

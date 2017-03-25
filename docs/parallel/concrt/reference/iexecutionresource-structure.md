@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>Estrutura IExecutionResource
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Currentsubscriptionlevel](#currentsubscriptionlevel)|Retorna o número de processadores virtuais ativado raízes e inscritos externos threads atualmente associados ao thread de hardware subjacentes que representa esse recurso de execução.|  
-|[Método Getexecutionresourceid](#getexecutionresourceid)|Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.|  
-|[Método Getnodeid](#getnodeid)|Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.|  
-|[Método Iexecutionresource::](#remove)|Esse recurso de execução retorna para o Gerenciador de recursos.|  
+|[Currentsubscriptionlevel](#currentsubscriptionlevel)|Retorna o número de processadores virtuais ativado raízes e inscritos externos threads atualmente associados ao thread de hardware subjacentes que representa esse recurso de execução.|  
+|[Getexecutionresourceid](#getexecutionresourceid)|Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.|  
+|[Getnodeid](#getnodeid)|Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.|  
+|[Iexecutionresource](#remove)|Esse recurso de execução retorna para o Gerenciador de recursos.|  
   
 ## <a name="remarks"></a>Comentários  
  Recursos de execução podem ser autônomo ou associadas a raízes do processador virtual. Um recurso de execução autônoma é criado quando um thread em seu aplicativo cria uma assinatura de thread. Os métodos [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) criar assinaturas de thread e retornar um `IExecutionResource` interface que representa a assinatura. Criar uma assinatura de thread é uma maneira de informar o Gerenciador de recursos que um determinado thread farão parte do trabalho na fila para um programador, juntamente com as raízes de processador virtual Gerenciador de recursos atribui ao Agendador. O Gerenciador de recursos usa as informações para evitar o aproveitamento de threads de hardware onde possível.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>Método Currentsubscriptionlevel  
+##  <a name="currentsubscriptionlevel"></a>Método Currentsubscriptionlevel  
  Retorna o número de processadores virtuais ativado raízes e inscritos externos threads atualmente associados ao thread de hardware subjacentes que representa esse recurso de execução.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  O Gerenciador de recursos usa informações de nível de assinatura como uma das maneiras de determinar quando mover recursos entre os agendadores.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>Método Getexecutionresourceid  
+##  <a name="getexecutionresourceid"></a>Método Getexecutionresourceid  
  Retorna um identificador exclusivo para o thread de hardware que representa esse recurso de execução.  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Comentários  
  Cada thread de hardware é atribuído um identificador exclusivo no tempo de execução de simultaneidade. Se vários recursos de execução são hardware associado thread, eles terão o mesmo identificador de recurso de execução.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>Método Getnodeid  
+##  <a name="getnodeid"></a>Método Getnodeid  
  Retorna um identificador exclusivo para o nó de processador que esse recurso de execução pertence.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  A contagem de nós pode ser obtida da função [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>Método Iexecutionresource::  
+##  <a name="remove"></a>Método Iexecutionresource::  
  Esse recurso de execução retorna para o Gerenciador de recursos.  
   
 ```
@@ -129,7 +134,7 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
  Uma interface para o Agendador de fazer a solicitação para remover esse recurso de execução.  
   
 ### <a name="remarks"></a>Comentários  
- Use este método para retornar os recursos de execução autônoma, bem como recursos de execução associados a raízes do processador virtual para o Gerenciador de recursos.  
+ Use este método para retornar os recursos de execução autônoma, bem como recursos de execução associados raízes do processador virtual para o Gerenciador de recursos.  
   
  Se esse é um recurso de execução autônoma recebido de um dos métodos [Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread) ou [Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), chamando o método `Remove` terminará a assinatura de thread que o recurso foi criado para representar. São necessárias para encerrar todas as assinaturas de thread antes de desligar um proxy do Agendador e deve chamar `Remove` do thread que criou a assinatura.  
   

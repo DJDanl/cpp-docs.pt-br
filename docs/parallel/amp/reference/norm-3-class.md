@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 51769d252d82ff1f307517a93ce01e22b8b69fdd
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm3-class"></a>Classe norm_3
@@ -132,55 +132,55 @@ class norm_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Método norm_3::get_x||  
-|Método norm_3::get_xy||  
-|Método norm_3::get_xyz||  
-|Método norm_3::get_xz||  
-|Método norm_3::get_xzy||  
-|Método norm_3::get_y||  
-|Método norm_3::get_yx||  
-|Método norm_3::get_yxz||  
-|Método norm_3::get_yz||  
-|Método norm_3::get_yzx||  
-|Método norm_3::get_z||  
-|Método norm_3::get_zx||  
-|Método norm_3::get_zxy||  
-|Método norm_3::get_zy||  
-|Método norm_3::get_zyx||  
-|Método norm_3::ref_b||  
-|Método norm_3::ref_g||  
-|Método norm_3::ref_r||  
-|Método norm_3::ref_x||  
-|Método norm_3::ref_y||  
-|Método norm_3::ref_z||  
-|Método norm_3::set_x||  
-|Método norm_3::set_xy||  
-|Método norm_3::set_xyz||  
-|Método norm_3::set_xz||  
-|Método norm_3::set_xzy||  
-|Método norm_3::set_y||  
-|Método norm_3::set_yx||  
-|Método norm_3::set_yxz||  
-|Método norm_3::set_yz||  
-|Método norm_3::set_yzx||  
-|Método norm_3::set_z||  
-|Método norm_3::set_zx||  
-|Método norm_3::set_zxy||  
-|Método norm_3::set_zy||  
-|Método norm_3::set_zyx||  
+|norm_3::get_x||  
+|norm_3::get_xy||  
+|norm_3::get_xyz||  
+|norm_3::get_xz||  
+|norm_3::get_xzy||  
+|norm_3::get_y||  
+|norm_3::get_yx||  
+|norm_3::get_yxz||  
+|norm_3::get_yz||  
+|norm_3::get_yzx||  
+|norm_3::get_z||  
+|norm_3::get_zx||  
+|norm_3::get_zxy||  
+|norm_3::get_zy||  
+|norm_3::get_zyx||  
+|norm_3::ref_b||  
+|norm_3::ref_g||  
+|norm_3::ref_r||  
+|norm_3::ref_x||  
+|norm_3::ref_y||  
+|norm_3::ref_z||  
+|norm_3::set_x||  
+|norm_3::set_xy||  
+|norm_3::set_xyz||  
+|norm_3::set_xz||  
+|norm_3::set_xzy||  
+|norm_3::set_y||  
+|norm_3::set_yx||  
+|norm_3::set_yxz||  
+|norm_3::set_yz||  
+|norm_3::set_yzx||  
+|norm_3::set_z||  
+|norm_3::set_zx||  
+|norm_3::set_zxy||  
+|norm_3::set_zy||  
+|norm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Operador-norm_3::Operator||  
-|norm_3::Operator - operador||  
-|norm_3::Operator * operador =||  
-|Operador de norm_3::Operator / =||  
-|norm_3::Operator operador + +||  
-|Operador + = norm_3::Operator||  
-|norm_3::Operator = operador||  
-|norm_3::Operator-= operador||  
+|norm_3::Operator-||  
+|norm_3::Operator-||  
+|norm_3::Operator * =||  
+|norm_3::Operator / =||  
+|norm_3::Operator + +||  
+|+ = norm_3::Operator||  
+|norm_3::Operator =||  
+|norm_3::Operator =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -192,36 +192,36 @@ class norm_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Membro de dados norm_3::b||  
-|Membro de dados norm_3::BG||  
-|Membro de dados norm_3::BGR||  
-|Membro de dados norm_3::br||  
-|Membro de dados norm_3::brg||  
-|Membro de dados norm_3::g||  
-|Membro de dados norm_3::GB||  
-|Membro de dados norm_3::GBR||  
-|Membro de dados norm_3::GR||  
-|Membro de dados norm_3::grb||  
-|Membro de dados norm_3::r||  
-|Membro de dados norm_3::RB||  
-|Membro de dados norm_3::rbg||  
-|Membro de dados norm_3::RG||  
-|Membro de dados norm_3::RGB||  
-|Membro de dados norm_3::x||  
-|Membro de dados norm_3::xy||  
-|Membro de dados norm_3::XYZ||  
-|Membro de dados norm_3::XZ||  
-|Membro de dados norm_3::xzy||  
-|Membro de dados norm_3::y||  
-|Membro de dados norm_3::YX||  
-|Membro de dados norm_3::yxz||  
-|Membro de dados norm_3::YZ||  
-|Membro de dados norm_3::yzx||  
-|Membro de dados norm_3::z||  
-|Membro de dados norm_3::ZX||  
-|Membro de dados norm_3::zxy||  
-|Membro de dados norm_3::ZY||  
-|Membro de dados norm_3::zyx||  
+|norm_3::b||  
+|norm_3::BG||  
+|norm_3::BGR||  
+|norm_3::br||  
+|norm_3::brg||  
+|norm_3::g||  
+|norm_3::GB||  
+|norm_3::GBR||  
+|norm_3::GR||  
+|norm_3::grb||  
+|norm_3::r||  
+|norm_3::RB||  
+|norm_3::rbg||  
+|norm_3::RG||  
+|norm_3::RGB||  
+|norm_3::x||  
+|norm_3::xy||  
+|norm_3::XYZ||  
+|norm_3::XZ||  
+|norm_3::xzy||  
+|norm_3::y||  
+|norm_3::YX||  
+|norm_3::yxz||  
+|norm_3::YZ||  
+|norm_3::yzx||  
+|norm_3::z||  
+|norm_3::ZX||  
+|norm_3::zxy||  
+|norm_3::ZY||  
+|norm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `norm_3`  
@@ -231,7 +231,7 @@ class norm_3;
   
  **Namespace:** Concurrency:: Graphics  
 
-## <a name="a-namectora-norm3-constructor"></a><a name="ctor"></a>Construtor norm_3
+## <a name="ctor"></a>Construtor norm_3
 Padrão construtor inicializa todos os elementos com 0.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -303,5 +303,5 @@ static const int size = 3;
 ```   
  
 ## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+ [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
 

@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
-- concrtrm/concurrency::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::GetPolicyValue
+- concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
+- concrt/concurrency::SchedulerPolicy::SetPolicyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 68707be387590cf04745d5a53872558d7af8da8c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
@@ -55,25 +59,25 @@ class SchedulerPolicy;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor SchedulerPolicy](#ctor)|Sobrecarregado. Constrói uma nova política de agendador e o preenche com valores de [chaves de política](concurrency-namespace-enums.md) agendadores de tempo de execução de simultaneidade e o Gerenciador de recursos de suporte.|  
+|[SchedulerPolicy](#ctor)|Sobrecarregado. Constrói uma nova política de agendador e o preenche com valores de [chaves de política](concurrency-namespace-enums.md) agendadores de tempo de execução de simultaneidade e o Gerenciador de recursos de suporte.|  
 |[~ Destruidor SchedulerPolicy](#dtor)|Destrói uma política do Agendador.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método GetPolicyValue](#getpolicyvalue)|Recupera o valor da chave de política fornecido como o `key` parâmetro.|  
-|[Método SetConcurrencyLimits](#setconcurrencylimits)|Define simultaneamente o `MinConcurrency` e `MaxConcurrency` diretivas no `SchedulerPolicy` objeto.|  
-|[Método SetPolicyValue](#setpolicyvalue)|Define o valor da chave de política fornecido como o `key` parâmetro e retorna o valor antigo.|  
+|[GetPolicyValue](#getpolicyvalue)|Recupera o valor da chave de política fornecido como o `key` parâmetro.|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|Define simultaneamente o `MinConcurrency` e `MaxConcurrency` diretivas no `SchedulerPolicy` objeto.|  
+|[SetPolicyValue](#setpolicyvalue)|Define o valor da chave de política fornecido como o `key` parâmetro e retorna o valor antigo.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador Operator =](#operator_eq)|Atribui a política do Agendador de outra política de Agendador.|  
+|[operator=](#operator_eq)|Atribui a política do Agendador de outra política de Agendador.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre as políticas que pode ser controlado usando o `SchedulerPolicy` classe, consulte [enumeração PolicyElementKey](concurrency-namespace-enums.md).  
+ Para obter mais informações sobre as políticas que pode ser controlado usando o `SchedulerPolicy` classe, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `SchedulerPolicy`  
@@ -83,7 +87,7 @@ class SchedulerPolicy;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namegetpolicyvaluea-getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a>GetPolicyValue 
 
  Recupera o valor da chave de política fornecido como o `key` parâmetro.  
   
@@ -101,7 +105,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Comentários  
  O método gerará [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) de uma chave de política inválido.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Atribui a política do Agendador de outra política de Agendador.  
   
@@ -119,7 +123,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Comentários  
  Em geral, a maneira mais conveniente para definir uma nova diretiva do Agendador é copiar uma política existente e modificá-lo usando o `SetPolicyValue` ou `SetConcurrencyLimits` métodos.  
   
-##  <a name="a-namectora-schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a>SchedulerPolicy 
 
  Constrói uma nova política de agendador e o preenche com valores de [chaves de política](concurrency-namespace-enums.md) agendadores de tempo de execução de simultaneidade e o Gerenciador de recursos de suporte.  
   
@@ -148,7 +152,7 @@ SchedulerPolicy(
   
  O terceiro construtor é um construtor de cópia. Em geral, a maneira mais conveniente para definir uma nova diretiva do Agendador é copiar uma política existente e modificá-lo usando o `SetPolicyValue` ou `SetConcurrencyLimits` métodos.  
   
-##  <a name="a-namedtora-schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a>~ SchedulerPolicy 
 
  Destrói uma política do Agendador.  
   
@@ -156,7 +160,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="a-namesetconcurrencylimitsa-setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
 
  Define simultaneamente o `MinConcurrency` e `MaxConcurrency` diretivas no `SchedulerPolicy` objeto.  
   
@@ -178,7 +182,7 @@ void SetConcurrencyLimits(
   
  O método também pode lançar [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para outros valores inválidos.  
   
-##  <a name="a-namesetpolicyvaluea-setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
  Define o valor da chave de política fornecido como o `key` parâmetro e retorna o valor antigo.  
   
@@ -207,7 +211,7 @@ unsigned int SetPolicyValue(
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
- [Enumeração PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Classe CurrentScheduler](currentscheduler-class.md)   
  [Classe de Agendador](scheduler-class.md)   
  [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

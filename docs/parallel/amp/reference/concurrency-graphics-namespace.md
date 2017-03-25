@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Namespace Concurrency::graphics
@@ -53,7 +52,7 @@ namespace graphics;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)|Fornece funções para interoperabilidade do Direct3D.|  
+|[Namespace Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Fornece funções para interoperabilidade do Direct3D.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -72,7 +71,7 @@ namespace graphics;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Classe Texture](texture-class.md)|Uma textura é uma agregação em um accelerator_view no domínio do ponto de dados. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor correspondente ao tipo primitivo do C++ (unsigned int, int, float, double), ou a norma de tipo escalar ou unorm (definido em Concurrency:: Graphics) ou tipos de vetor curto qualificados definidas no Concurrency:: Graphics.|  
+|[Classe texture](texture-class.md)|Uma textura é uma agregação em um accelerator_view no domínio do ponto de dados. É uma coleção de variáveis para cada elemento em um domínio de extensão. Cada variável contém um valor correspondente ao tipo primitivo do C++ (unsigned int, int, float, double), ou a norma de tipo escalar ou unorm (definido em Concurrency:: Graphics) ou tipos de vetor curto qualificados definidas no Concurrency:: Graphics.|  
 |[Classe writeonly_texture_view](writeonly-texture-view-class.md)|Um writeonly_texture_view fornece acesso writeonly com uma textura.|  
 |[Classe double_2](double-2-class.md)|Representa um vetor curto de 2 `double` valores.|  
 |[Classe double_3](double-3-class.md)|Representa um vetor curto de 3 `double` valores.|  
@@ -92,7 +91,7 @@ namespace graphics;
 |[Classe unorm_2](unorm-2-class.md)|Representa um vetor curto de 2 `unorm` valores.|  
 |[Classe unorm_3](unorm-3-class.md)|Representa um vetor curto de 3 `unorm` valores.|  
 |[Classe unorm_4](unorm-4-class.md)|Representa um vetor curto de 4 `unorm` valores.|  
-|[Classe de amostra](sampler-class.md)|Representa a configuração de amostra usada para amostragem de textura.|  
+|[Classe sampler](sampler-class.md)|Representa a configuração de amostra usada para amostragem de textura.|  
 |[Estrutura short_vector](short-vector-structure.md)|Fornece uma implementação básica de um vetor curta de valores.|  
 |[Estrutura short_vector_traits](short-vector-traits-structure.md)|Fornece para recuperação de comprimento e tipo de um vetor curto.|  
 |[Classe texture_view](texture-view-class.md)|Fornece acesso de leitura e gravação para uma textura.|  
@@ -101,8 +100,8 @@ namespace graphics;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Função Copy](concurrency-graphics-namespace-functions.md#copy)|Sobrecarregado. Copia o conteúdo da textura de origem para o buffer do host de destino.|  
-|[Função copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Sobrecarregado. Assincronamente copia o conteúdo da textura de origem para o buffer do host de destino.|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|Sobrecarregado. Copia o conteúdo da textura de origem para o buffer do host de destino.|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Sobrecarregado. Assincronamente copia o conteúdo da textura de origem para o buffer do host de destino.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** amp_graphics.h  

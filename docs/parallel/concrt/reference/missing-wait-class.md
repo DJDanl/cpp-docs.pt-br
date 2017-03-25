@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>Classe missing_wait
@@ -54,7 +56,7 @@ class missing_wait : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor missing_wait](#ctor)|Sobrecarregado. Constrói um objeto `missing_wait`.|  
+|[missing_wait](#ctor)|Sobrecarregado. Constrói um objeto `missing_wait`.|  
   
 ## <a name="remarks"></a>Comentários  
  Ausência de fluxo de exceção, você é responsável por chamar o `wait` ou `run_and_wait` método de um `task_group` ou `structured_task_group` objeto antes de permitir que esse objeto para destruct. O tempo de execução lança esta exceção como uma indicação de que você se esqueceu de chamar o `wait` ou `run_and_wait` método.  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  Constrói um objeto `missing_wait`.  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe task_group](task-group-class.md)   
- [Método Wait](task-group-class.md)   
- [Método run_and_wait](task-group-class.md)   
+ [Aguarde](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [Classe structured_task_group](structured-task-group-class.md)
 

@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionContext
+- IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::Dispatch
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetId
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 5ad3f21e55371b904ac8a597a7a66d5c5deb8339
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4c4301d7afe46249d6d67ab2a6ec0a9fc2c7935e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutioncontext-structure"></a>Estrutura IExecutionContext
@@ -54,11 +60,11 @@ struct IExecutionContext;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Iexecutioncontext::](#dispatch)|O método é chamado quando um proxy de thread se inicia um contexto de execução específico. Isso deve ser a rotina de trabalho principal para o Agendador.|  
-|[Método Iexecutioncontext::](#getid)|Retorna um identificador exclusivo para o contexto de execução.|  
-|[Método Iexecutioncontext::](#getproxy)|Retorna uma interface para o proxy do thread que está em execução neste contexto.|  
-|[Método Getscheduler](#getscheduler)|Retorna uma interface para o Agendador este contexto de execução pertence.|  
-|[Método Iexecutioncontext::](#setproxy)|Associa um proxy de thread nesse contexto de execução. O proxy do segmento associado invoca esse método logo antes de iniciar a execução do contexto `Dispatch` método.|  
+|[Iexecutioncontext](#dispatch)|O método é chamado quando um proxy de thread se inicia um contexto de execução específico. Isso deve ser a rotina de trabalho principal para o Agendador.|  
+|[Iexecutioncontext](#getid)|Retorna um identificador exclusivo para o contexto de execução.|  
+|[Iexecutioncontext](#getproxy)|Retorna uma interface para o proxy do thread que está em execução neste contexto.|  
+|[Getscheduler](#getscheduler)|Retorna uma interface para o Agendador este contexto de execução pertence.|  
+|[Iexecutioncontext](#setproxy)|Associa um proxy de thread nesse contexto de execução. O proxy do segmento associado invoca esse método logo antes de iniciar a execução do contexto `Dispatch` método.|  
   
 ## <a name="remarks"></a>Comentários  
  Se você estiver implementando um agendador personalizado que interage com o Gerenciador de recursos do tempo de execução de simultaneidade, você precisa implementar o `IExecutionContext` interface. Os threads criados pelo Gerenciador de recursos realizar o trabalho em nome do seu Agendador executando o `IExecutionContext::Dispatch` método.  
@@ -71,7 +77,7 @@ struct IExecutionContext;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namedispatcha--iexecutioncontextdispatch-method"></a><a name="dispatch"></a>Método Iexecutioncontext::  
+##  <a name="dispatch"></a>Método Iexecutioncontext::  
  O método é chamado quando um proxy de thread se inicia um contexto de execução específico. Isso deve ser a rotina de trabalho principal para o Agendador.  
   
 ```
@@ -82,7 +88,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Um ponteiro para o estado sob a qual este contexto de execução está sendo enviado. Para obter mais informações sobre o estado de expedição, consulte [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="a-namegetida--iexecutioncontextgetid-method"></a><a name="getid"></a>Método Iexecutioncontext::  
+##  <a name="getid"></a>Método Iexecutioncontext::  
  Retorna um identificador exclusivo para o contexto de execução.  
   
 ```
@@ -97,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Um identificador obtido de uma fonte diferente pode resultar em um comportamento indefinido.  
   
-##  <a name="a-namegetproxya--iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>Método Iexecutioncontext::  
+##  <a name="getproxy"></a>Método Iexecutioncontext::  
  Retorna uma interface para o proxy do thread que está em execução neste contexto.  
   
 ```
@@ -110,7 +116,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Comentários  
  Invocará o Gerenciador de recursos o `SetProxy` método em um contexto de execução, com um `IThreadProxy` interface como um parâmetro, antes de entrar a `Dispatch` método no contexto. Você deve armazenar esse argumento e retorná-lo em chamadas para `GetProxy()`.  
   
-##  <a name="a-namegetschedulera--iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>Método Getscheduler  
+##  <a name="getscheduler"></a>Método Getscheduler  
  Retorna uma interface para o Agendador este contexto de execução pertence.  
   
 ```
@@ -123,7 +129,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Comentários  
  Você deve inicializar o contexto de execução com uma validade `IScheduler` interface antes de usá-lo como um parâmetro para métodos fornecidos pelo Gerenciador de recursos.  
   
-##  <a name="a-namesetproxya--iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>Método Iexecutioncontext::  
+##  <a name="setproxy"></a>Método Iexecutioncontext::  
  Associa um proxy de thread nesse contexto de execução. O proxy do segmento associado invoca esse método logo antes de iniciar a execução do contexto `Dispatch` método.  
   
 ```

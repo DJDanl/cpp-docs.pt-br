@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::structured_task_group
+- structured_task_group
+- PPL/concurrency::structured_task_group
+- PPL/concurrency::structured_task_group::structured_task_group
+- PPL/concurrency::structured_task_group::cancel
+- PPL/concurrency::structured_task_group::is_canceling
+- PPL/concurrency::structured_task_group::run
+- PPL/concurrency::structured_task_group::run_and_wait
+- PPL/concurrency::structured_task_group::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ef20ff7fef8683cec4a3856c80c09846aa69a89a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a1817080506150a8a25918988e18b76dd7a04def
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
@@ -54,18 +61,18 @@ class structured_task_group;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor structured_task_group](#ctor)|Sobrecarregado. Constrói um novo `structured_task_group` objeto.|  
+|[structured_task_group](#ctor)|Sobrecarregado. Constrói um novo `structured_task_group` objeto.|  
 |[~ structured_task_group destruidor](#dtor)|Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está sendo executado como resultado de desenrolamento de pilha devido a uma exceção.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Cancel](#cancel)|Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.|  
-|[Método is_canceling](#is_canceling)|Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `structured_task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `structured_task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `structured_task_group` objeto, `true` também será retornado.|  
-|[o método Run](#run)|Sobrecarregado. Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.|  
-|[Método run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `structured_task_group` objeto para suporte ao cancelamento completa. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A função, em seguida, aguarda até que todo o trabalho no `structured_task_group` objeto foi concluída ou cancelado.|  
-|[Método Wait](#wait)|Aguarda até que todo o trabalho na `structured_task_group` foi concluída ou é cancelado.|  
+|[Cancelar](#cancel)|Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.|  
+|[is_canceling](#is_canceling)|Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `structured_task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `structured_task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `structured_task_group` objeto, `true` também será retornado.|  
+|[run](#run)|Sobrecarregado. Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.|  
+|[run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `structured_task_group` objeto para suporte ao cancelamento completa. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A função, em seguida, aguarda até que todo o trabalho no `structured_task_group` objeto foi concluída ou cancelado.|  
+|[Aguarde](#wait)|Aguarda até que todo o trabalho na `structured_task_group` foi concluída ou é cancelado.|  
   
 ## <a name="remarks"></a>Comentários  
  Há várias restrições severas colocado no uso de um `structured_task_group` objeto para obter um melhor desempenho:  
@@ -88,7 +95,7 @@ class structured_task_group;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Cancelar 
+##  <a name="cancel"></a>Cancelar 
 
  Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.  
   
@@ -99,7 +106,7 @@ void cancel();
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameiscancelinga-iscanceling"></a><a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a>is_canceling 
 
  Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `structured_task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `structured_task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `structured_task_group` objeto, `true` também será retornado.  
   
@@ -113,7 +120,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [cancelamento](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>executar 
+##  <a name="run"></a>executar 
 
  Agenda uma tarefa no `structured_task_group` objeto. O chamador gerencia a vida útil do `task_handle` objeto passado a `_Task_handle` parâmetro. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.  
   
@@ -145,7 +152,7 @@ void run(
   
  Lança um [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exceção se a tarefa manipular determinado pelo `_Task_handle` parâmetro já foi agendado para um objeto de grupo de tarefa por meio o `run` método e não houve nenhuma chamada intermediária para o `wait` ou `run_and_wait` método nesse grupo de tarefas.  
   
-##  <a name="a-namerunandwaita-runandwait"></a><a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a>run_and_wait 
 
  Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `structured_task_group` objeto para suporte ao cancelamento completa. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A função, em seguida, aguarda até que todo o trabalho no `structured_task_group` objeto foi concluída ou cancelado.  
   
@@ -179,7 +186,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  O caminho não excepcional de execução, você tem uma exigência para chamar esse método qualquer ou o `wait` método antes do destruidor do `structured_task_group` executa.  
   
-##  <a name="a-namectora-structuredtaskgroup"></a><a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a>structured_task_group 
 
  Constrói um novo `structured_task_group` objeto.  
   
@@ -196,7 +203,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Comentários  
  O construtor que usa um token de cancelamento cria um `structured_task_group` que serão canceladas quando o código-fonte associado ao token é cancelada. Também fornecer um token de cancelamento explícita isola a esse grupo de tarefas estruturadas da participação em um cancelamento implícito de um grupo pai com um token diferente ou não.  
   
-##  <a name="a-namedtora-structuredtaskgroup"></a><a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a>~ structured_task_group 
 
  Destrói um objeto `structured_task_group`. Você deve chamar o `wait` ou `run_and_wait` método no objeto antes de executar o destruidor, a menos que o destruidor está sendo executado como resultado de desenrolamento de pilha devido a uma exceção.  
   
@@ -207,7 +214,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Comentários  
  Se o destruidor é executado como resultado da execução normal (por exemplo, não desenrolamento da pilha devido a uma exceção) e não o `wait` nem `run_and_wait` métodos têm sido chamados, o destruidor pode lançar uma [missing_wait](missing-wait-class.md) exceção.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+##  <a name="wait"></a>Aguarde 
 
  Aguarda até que todo o trabalho na `structured_task_group` foi concluída ou é cancelado.  
   

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::norm
+- norm
+- AMP_SHORT_VECTORS/norm
+- AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
@@ -33,13 +35,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm-class"></a>Classe norm
-Representa um número de norma. Cada elemento é flutuante ponto número no intervalo de [-1, 0F, 1.0 f].  
+Representa um número de norma. Cada elemento é flutuante aponte número no intervalo de [-1, 0F, 1.0 f].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,15 +61,15 @@ class norm;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Operador-NORM::Operator||  
-|NORM::Operator - operador||  
-|NORM::operator float operador|Operador de conversão. Converter o número de norma flutuante valor de ponto.|  
-|NORM::Operator * operador =||  
-|Operador de NORM::Operator / =||  
-|NORM::Operator operador + +||  
-|Operador + = NORM::Operator||  
-|NORM::Operator = operador||  
-|NORM::Operator-= operador||  
+|NORM::Operator-||  
+|NORM::Operator-||  
+|NORM::operator float|Operador de conversão. Converter o número de norma flutuante valor de ponto.|  
+|NORM::Operator * =||  
+|NORM::Operator / =||  
+|NORM::Operator + +||  
+|+ = NORM::Operator||  
+|NORM::Operator =||  
+|NORM::Operator =||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `norm`  
@@ -77,7 +79,7 @@ class norm;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-norm"></a><a name="ctor"></a>NORM 
+##  <a name="ctor"></a>NORM 
 
  Construtor padrão. Inicialize 0.0 f.  
   
@@ -125,5 +127,5 @@ norm(
  O objeto usado para inicializar.  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+ [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
 

@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>Estrutura IResourceManager
@@ -54,18 +62,18 @@ struct IResourceManager;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Enumeração iresourcemanager:: osversion](#osversion)|Um tipo enumerado que representa a versão do sistema operacional.|  
+|[Iresourcemanager:: osversion](#osversion)|Um tipo enumerado que representa a versão do sistema operacional.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Createnodetopology](#createnodetopology)|Presente somente no modo de depuração compilações do tempo de execução, esse método é um gancho de teste criado para facilitar os testes do Gerenciador de recursos em diferentes topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
-|[Método Getavailablenodecount](#getavailablenodecount)|Retorna o número de nós disponíveis para o Gerenciador de recursos.|  
-|[Método Getfirstnode](#getfirstnode)|Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.|  
-|[Método Iresourcemanager::](#reference)|Incrementa a contagem de referência na instância do Gerenciador de recursos.|  
-|[Método Registerscheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface é retornado.|  
-|[Método Iresourcemanager::](#release)|Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência vai para `0`.|  
+|[Createnodetopology](#createnodetopology)|Presente somente no modo de depuração compilações do tempo de execução, esse método é um gancho de teste criado para facilitar os testes do Gerenciador de recursos em diferentes topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
+|[Getavailablenodecount](#getavailablenodecount)|Retorna o número de nós disponíveis para o Gerenciador de recursos.|  
+|[Getfirstnode](#getfirstnode)|Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.|  
+|[Iresourcemanager](#reference)|Incrementa a contagem de referência na instância do Gerenciador de recursos.|  
+|[Registerscheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface é retornado.|  
+|[Iresourcemanager](#release)|Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência vai para `0`.|  
   
 ## <a name="remarks"></a>Comentários  
  Use o [CreateResourceManager](concurrency-namespace-functions.md) função para obter uma interface para a instância do Gerenciador de recursos de singleton. O método incrementa uma contagem de referência no Gerenciador de recursos, e você deve chamar o [Iresourcemanager](#release) método para liberar a referência quando terminar com o Gerenciador de recursos. Normalmente, cada Agendador que você criar será invocar esse método durante a criação e liberar a referência ao Gerenciador de recursos após desligar.  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>Método Createnodetopology  
+##  <a name="createnodetopology"></a>Método Createnodetopology  
  Presente somente no modo de depuração compilações do tempo de execução, esse método é um gancho de teste criado para facilitar os testes do Gerenciador de recursos em diferentes topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.  
   
 ```
@@ -107,7 +115,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) será lançada se esse método é chamado, enquanto outros agendadores existem no processo.  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>Método Getavailablenodecount  
+##  <a name="getavailablenodecount"></a>Método Getavailablenodecount  
  Retorna o número de nós disponíveis para o Gerenciador de recursos.  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de nós disponíveis para o Gerenciador de recursos.  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>Método Getfirstnode  
+##  <a name="getfirstnode"></a>Método Getfirstnode  
  Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>Enumeração iresourcemanager:: osversion  
+##  <a name="iresourcemanager__osversion"></a>Enumeração iresourcemanager:: osversion  
  Um tipo enumerado que representa a versão do sistema operacional.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>Método Iresourcemanager::  
+##  <a name="reference"></a>Método Iresourcemanager::  
  Incrementa a contagem de referência na instância do Gerenciador de recursos.  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de referência resultante.  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>Método Registerscheduler  
+##  <a name="registerscheduler"></a>Método Registerscheduler  
  Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface é retornado.  
   
 ```
@@ -168,7 +176,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  O método lança um `invalid_argument` exceção se o parâmetro `pScheduler` tem o valor `NULL` ou se o parâmetro `version` não é uma versão válida para a interface de comunicação.  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>Método Iresourcemanager::  
+##  <a name="release"></a>Método Iresourcemanager::  
  Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência vai para `0`.  
   
 ```

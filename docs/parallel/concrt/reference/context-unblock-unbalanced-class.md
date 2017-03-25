@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::context_unblock_unbalanced
+- context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="contextunblockunbalanced-class"></a>Classe context_unblock_unbalanced
@@ -54,7 +56,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor context_unblock_unbalanced](#ctor)|Sobrecarregado. Constrói um objeto `context_unblock_unbalanced`.|  
+|[context_unblock_unbalanced](#ctor)|Sobrecarregado. Constrói um objeto `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Comentários  
  Chamadas para o `Block` e `Unblock` métodos de um `Context` objeto sempre deve ser combinado corretamente. O tempo de execução de simultaneidade permite que as operações de acontecer em qualquer ordem. Por exemplo, uma chamada para `Block` pode ser seguido por uma chamada para `Unblock`, ou vice-versa. Esta exceção seria lançada se, por exemplo, duas chamadas para o `Unblock` método foram feitas em uma linha em uma `Context` objeto que não foi bloqueado.  
@@ -69,7 +71,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+##  <a name="ctor"></a>context_unblock_unbalanced 
 
  Constrói um objeto `context_unblock_unbalanced`.  
   

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>Estrutura IUMSCompletionList
@@ -54,10 +56,10 @@ struct IUMSCompletionList;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Getunblocknotifications](#getunblocknotifications)|Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies tiveram desbloqueado desde a última vez que esse método foi chamado.|  
+|[Getunblocknotifications](#getunblocknotifications)|Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies tiveram desbloqueado desde a última vez que esse método foi chamado.|  
   
 ## <a name="remarks"></a>Comentários  
- Um programador deve ser extremamente cuidadoso com os quais ações são executadas depois de utilizar essa interface para remover itens da lista de conclusão. Os itens devem ser colocados na lista do Agendador de contextos de execução e ser acessível geralmente assim que possível. É inteiramente possível que um dos itens da fila tem a propriedade de um bloqueio arbitrário. O Agendador não pode fazer nenhuma chamadas de função arbitrário que podem bloquear entre a chamada para remoção da fila de itens e o posicionamento desses itens em uma lista que podem ser acessados em geral de dentro do Agendador.  
+ Um programador deve ser extremamente cuidadoso com os quais ações são executadas depois de utilizar essa interface para remover itens da lista de conclusão. Os itens devem ser colocados na lista do Agendador de contextos de executáveis e estar acessível geralmente mais rápido possível. É inteiramente possível que um dos itens da fila tem a propriedade de um bloqueio arbitrário. O Agendador não pode fazer nenhuma chamadas de função arbitrário que podem bloquear entre a chamada para remoção da fila de itens e o posicionamento desses itens em uma lista que podem ser acessados em geral de dentro do Agendador.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IUMSCompletionList`  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Método Getunblocknotifications  
+##  <a name="getunblocknotifications"></a>Método Getunblocknotifications  
  Recupera uma cadeia de `IUMSUnblockNotification` interfaces que representa os contextos de execução cujo thread associado proxies tiveram desbloqueado desde a última vez que esse método foi chamado.  
   
 ```

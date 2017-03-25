@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyNode
+- ITopologyNode
+- CONCRTRM/concurrency::ITopologyNode
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetExecutionResourceCount
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetFirstExecutionResource
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 8274da148f9f74cad73d63363bbbaff307943539
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c0a4e8365d7d0ef9912bb84e4a2a4cfe7e9ef0f1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologynode-structure"></a>Estrutura ITopologyNode
@@ -54,11 +60,11 @@ struct ITopologyNode;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Getexecutionresourcecount](#getexecutionresourcecount)|Retorna o número de recursos de execução agrupados sob este nó.|  
-|[Método Getfirstexecutionresource](#getfirstexecutionresource)|Retorna o primeiro recurso de execução agrupado sob esse nó na ordem de enumeração.|  
-|[Método Itopologynode::](#getid)|Retorna o identificador exclusivo do Gerenciador de recursos desse nó.|  
-|[Método Itopologynode::](#getnext)|Retorna uma interface para o próximo nó de topologia na ordem de enumeração.|  
-|[Método Getnumanode](#getnumanode)|Retorna o Windows atribuído ao qual pertence este nó Maanger do recurso de número de nó NUMA.|  
+|[Getexecutionresourcecount](#getexecutionresourcecount)|Retorna o número de recursos de execução agrupados sob este nó.|  
+|[Getfirstexecutionresource](#getfirstexecutionresource)|Retorna o primeiro recurso de execução agrupado sob esse nó na ordem de enumeração.|  
+|[Itopologynode](#getid)|Retorna o identificador exclusivo do Gerenciador de recursos desse nó.|  
+|[Itopologynode](#getnext)|Retorna uma interface para o próximo nó de topologia na ordem de enumeração.|  
+|[Getnumanode](#getnumanode)|Retorna o Windows atribuído ao qual pertence este nó Maanger do recurso de número de nó NUMA.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface é normalmente usada para percorrer a topologia do sistema observado pelo Gerenciador de recursos.  
@@ -71,7 +77,7 @@ struct ITopologyNode;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namegetexecutionresourcecounta--itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>Método Getexecutionresourcecount  
+##  <a name="getexecutionresourcecount"></a>Método Getexecutionresourcecount  
  Retorna o número de recursos de execução agrupados sob este nó.  
   
 ```
@@ -81,7 +87,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de recursos de execução agrupados sob este nó.  
   
-##  <a name="a-namegetfirstexecutionresourcea--itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>Método Getfirstexecutionresource  
+##  <a name="getfirstexecutionresource"></a>Método Getfirstexecutionresource  
  Retorna o primeiro recurso de execução agrupado sob esse nó na ordem de enumeração.  
   
 ```
@@ -91,7 +97,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O primeiro recurso de execução agrupados sob esse nó na ordem de enumeração.  
   
-##  <a name="a-namegetida--itopologynodegetid-method"></a><a name="getid"></a>Método Itopologynode::  
+##  <a name="getid"></a>Método Itopologynode::  
  Retorna o identificador exclusivo do Gerenciador de recursos desse nó.  
   
 ```
@@ -106,7 +112,7 @@ virtual unsigned int GetId() const = 0;
   
  A contagem de nós pode ser obtida da função [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-namegetnexta--itopologynodegetnext-method"></a><a name="getnext"></a>Método Itopologynode::  
+##  <a name="getnext"></a>Método Itopologynode::  
  Retorna uma interface para o próximo nó de topologia na ordem de enumeração.  
   
 ```
@@ -116,7 +122,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  Uma interface para o próximo nó na ordem de enumeração. Não se houver mais nenhum nó na ordem de enumeração da topologia do sistema, este método retornará o valor `NULL`.  
   
-##  <a name="a-namegetnumanodea--itopologynodegetnumanode-method"></a><a name="getnumanode"></a>Método Getnumanode  
+##  <a name="getnumanode"></a>Método Getnumanode  
  Retorna o Windows atribuído ao qual pertence este nó Maanger do recurso de número de nó NUMA.  
   
 ```

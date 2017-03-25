@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::bad_target
+- bad_target
+- CONCRT/concurrency::bad_target
+- CONCRT/concurrency::bad_target::bad_target
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a22ebb69195dcea91799dc1c2e301a578dd227bc
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 145aa17b4589fb572f3b6594360ec69db5e15287
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="badtarget-class"></a>Classe bad_target
@@ -54,7 +56,7 @@ class bad_target : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor bad_target](#ctor)|Sobrecarregado. Constrói um objeto `bad_target`.|  
+|[bad_target](#ctor)|Sobrecarregado. Constrói um objeto `bad_target`.|  
   
 ## <a name="remarks"></a>Comentários  
  Normalmente, essa exceção é lançada por motivos como um destino de tentativa de receber uma mensagem que é reservada para um destino diferente ou liberar uma reserva de que ele não mantém.  
@@ -69,7 +71,7 @@ class bad_target : public std::exception;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-badtarget"></a><a name="ctor"></a>bad_target 
+##  <a name="ctor"></a>bad_target 
 
  Constrói um objeto `bad_target`.  
   

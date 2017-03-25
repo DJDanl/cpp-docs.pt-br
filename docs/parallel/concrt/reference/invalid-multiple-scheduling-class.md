@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_multiple_scheduling
+- invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 762648e65a7fcbda29daf31412e42bbd0e63f3d6
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
@@ -54,7 +56,7 @@ class invalid_multiple_scheduling : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor invalid_multiple_scheduling](#ctor)|Sobrecarregado. Constrói uma `invalid_multiple_scheduling` objeto.|  
+|[invalid_multiple_scheduling](#ctor)|Sobrecarregado. Constrói uma `invalid_multiple_scheduling` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-invalidmultiplescheduling"></a><a name="ctor"></a>invalid_multiple_scheduling 
+##  <a name="ctor"></a>invalid_multiple_scheduling 
 
  Constrói uma `invalid_multiple_scheduling` objeto.  
   
@@ -84,8 +86,8 @@ invalid_multiple_scheduling() throw();
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe task_handle](task-handle-class.md)   
  [Classe task_group](task-group-class.md)   
- [o método Run](task-group-class.md)   
- [Método Wait](task-group-class.md)   
- [Método run_and_wait](task-group-class.md)   
+ [executar](task-group-class.md)   
+ [Aguarde](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [Classe structured_task_group](structured-task-group-class.md)
 

@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
@@ -65,15 +70,15 @@ class message_processor;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método async_send](#async_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.|  
-|[Método sync_send](#sync_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.|  
-|[Método Wait](#wait)|Quando substituído em uma classe derivada, espera por todas as operações assíncronas concluir.|  
+|[async_send](#async_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.|  
+|[sync_send](#sync_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.|  
+|[Aguarde](#wait)|Quando substituído em uma classe derivada, espera por todas as operações assíncronas concluir.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem é adicionada e a fila é encontrada estar vazio.|  
+|[process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem é adicionada e a fila é encontrada estar vazio.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de processador devem substituir esse método.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem é adicionada e a fila é encontrada estar vazio.  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de bloco de mensagens devem substituir esse método.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentários  
  Implementações de processador devem substituir esse método.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+##  <a name="wait"></a>Aguarde 
 
  Quando substituído em uma classe derivada, espera por todas as operações assíncronas concluir.  
   

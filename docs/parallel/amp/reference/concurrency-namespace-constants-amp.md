@@ -6,30 +6,35 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::HLSL_MAX_NUM_BUFFERS
+- amp/Concurrency::MODULENAME_MAX_LENGTH
+dev_langs:
+- C++
 ms.assetid: 13a8e8cd-2eec-4e60-a91d-5d271072747b
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 852408f309c00aa284ce710a3612d0654ed7b768
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 26106b632e13dd339ba058108c04801f8018d5b4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-constants-amp"></a>Constantes de namespace de simultaneidade (AMP)
 |||  
 |-|-|  
-|[Constante HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[Constante MODULENAME_MAX_LENGTH](#modulename_max_length)|  
+|[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|  
   
-##  <a name="a-namehlslmaxnumbuffersa--hlslmaxnumbuffers-constant"></a><a name="hlsl_max_num_buffers"></a>Constante HLSL_MAX_NUM_BUFFERS  
+##  <a name="hlsl_max_num_buffers"></a>Constante HLSL_MAX_NUM_BUFFERS  
  O número máximo de buffers permitido pelo DirectX.  
   
 ```  
 static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;  
 ```  
   
-##  <a name="a-namemodulenamemaxlengtha--modulenamemaxlength-constant"></a><a name="modulename_max_length"></a>Constante MODULENAME_MAX_LENGTH  
+##  <a name="modulename_max_length"></a>Constante MODULENAME_MAX_LENGTH  
  Armazena o comprimento máximo do nome do módulo. Esse valor deve ser o mesmo no compilador e no tempo de execução.  
   
 ```  

@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sampler
+- AMP_GRAPHICS/sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_filter_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 dev_langs:
 - C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
@@ -30,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 090e05e294646b7571a3d06ca8ed23583a306756
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="sampler-class"></a>Classe de amostra
@@ -56,23 +66,23 @@ class sampler;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método get_address_mode](#get_address_mode)|Retorna o `address_mode` que foi associado ao objeto de amostra.|  
-|[Método get_border_color](#get_border_color)|Retorna a cor da borda que está associado com o objeto de amostra.|  
-|[Método get_filter_mode](#get_filter_mode)|Retorna o `filter_mode` que foi associado ao objeto de amostra.|  
+|[get_address_mode](#get_address_mode)|Retorna o `address_mode` que foi associado ao objeto de amostra.|  
+|[get_border_color](#get_border_color)|Retorna a cor da borda que está associado com o objeto de amostra.|  
+|[get_filter_mode](#get_filter_mode)|Retorna o `filter_mode` que foi associado ao objeto de amostra.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador Operator =](#operator_eq)|Sobrecarregado. Operador de atribuição.|  
+|[operator=](#operator_eq)|Sobrecarregado. Operador de atribuição.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Membro de dados address_mode](#address_mode)|Obtém o modo de endereço do `sampler` objeto.|  
-|[Membro de dados border_color](#border_color)|Obtém a cor da borda do `sampler` objeto.|  
-|[Membro de dados filter_mode](#filter_mode)|Obtém o modo de filtro do `sampler` objeto.|  
+|[address_mode](#address_mode)|Obtém o modo de endereço do `sampler` objeto.|  
+|[border_color](#border_color)|Obtém a cor da borda do `sampler` objeto.|  
+|[filter_mode](#filter_mode)|Obtém o modo de filtro do `sampler` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `sampler`  
@@ -82,7 +92,7 @@ class sampler;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-sampler"></a><a name="ctor"></a>amostra de 
+##  <a name="ctor"></a>amostra de 
 
  Constrói uma instância do [classe de amostra](sampler-class.md).  
   
@@ -139,7 +149,7 @@ sampler(// [6] move constructor
  [6] construtor de movimentação  
  O `sampler` objeto se mova para a nova `sampler` instância.  
   
-##  <a name="a-nameaddressmodea-addressmode"></a><a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a>address_mode 
 
  Obtém o modo de endereço do `sampler` objeto.  
   
@@ -147,7 +157,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="a-namebordercolora-bordercolor"></a><a name="border_color"></a>border_color 
+##  <a name="border_color"></a>border_color 
 
  Obtém a cor da borda do `sampler` objeto.  
   
@@ -155,7 +165,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="a-namefiltermodea-filtermode"></a><a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a>filter_mode 
 
  Obtém o modo de filtro do `sampler` objeto.  
   
@@ -163,7 +173,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="a-namegetaddressmodea-getaddressmode"></a><a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a>get_address_mode 
 
  Retorna o modo de filtro que está configurado para este `sampler`.  
   
@@ -174,7 +184,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>Valor de retorno  
  O modo de endereço que está configurado para a amostra.  
   
-##  <a name="a-namegetbordercolora-getbordercolor"></a><a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a>get_border_color 
 
  Retorna a cor da borda que está configurada para este `sampler`.  
   
@@ -185,7 +195,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valor de retorno  
  Um float_4 que contém a cor da borda.  
   
-##  <a name="a-namegetfiltermodea-getfiltermode"></a><a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a>get_filter_mode 
 
  Retorna o modo de filtro que está configurado para este `sampler`.  
   
@@ -196,7 +206,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O modo de filtro que está configurado para a amostra.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Atribui o valor de outro objeto de amostra para uma amostra existente.  
   
@@ -221,5 +231,5 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
  Uma referência a essa instância de amostra.  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+ [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
 
