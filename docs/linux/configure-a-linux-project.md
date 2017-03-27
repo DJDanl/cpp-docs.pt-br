@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ Quando os arquivos forem copiados, use o item **Diretórios VC ++** item nas Pro
 ## <a name="copy-sources"></a>Fontes de dados
 Durante a criação, os arquivos de origem em seu computador de desenvolvimento são copiados para o computador Linux e compilados lá.  Por padrão, todas as fontes no projeto do Visual Studio são copiadas para os locais definidos nas configurações acima.  No entanto, outras fontes também podem ser adicionadas à lista ou copiar fontes pode ser totalmente desativado, que é o padrão para um projeto Makefile.
 
-* **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto.  Por padrão, o **@(SourcesToCopyRemotely)** define todos os arquivos como padrão no projeto.
+* **Fontes a serem copiadas** determina quais fontes são copiadas para o computador remoto.  Por padrão, o **@(SourcesToCopyRemotely)** define todos os arquivos de código-fonte do projeto como padrão, mas não inclui arquivos de ativo/recurso, como imagens.
 
 * **Copiar fontes** pode ser ativado e desativado para habilitar e desabilitar a cópia de arquivos de origem para o computador remoto.
 
