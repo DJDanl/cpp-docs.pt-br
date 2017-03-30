@@ -949,7 +949,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
      Além disso, embora o compilador não forneça um diagnóstico específico, o operador new embutido é considerado mal formado.  
   
--   **Chamar 'operator *type*()' (conversão definida pelo usuário) em tipos de não classe**  
+-   **Chamar 'operator*type*()' (conversão definida pelo usuário) em tipos de não classe**  
   
      As versões anteriores do compilador permitiam que o 'operator *type*()' fosse chamado em tipos de não classe ignorando-o silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.  
   
