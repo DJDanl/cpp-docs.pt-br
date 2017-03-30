@@ -1,7 +1,7 @@
 ---
-title: C2440 de erro do compilador | Documentos do Microsoft
+title: C2440 de erro do compilador | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,18 +34,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5f0472f7d318de24c38898388906a264cf56db7b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-error-c2440"></a>C2440 de erro do compilador
-'conversion': não é possível converter de 'type1' em 'type2'  
+'conversão de ': não é possível converter de 'type1' em 'type2'  
   
 O compilador não pode converter de `type1` para `type2`.  
   
 ## <a name="example"></a>Exemplo  
-C2440 pode ser causado se você tentar inicializar não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de um literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
+C2440 pode ocorrer se você tentar inicializar a não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de uma literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -63,7 +63,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também pode ser causado se você tentar converter um ponteiro para membro void *. O exemplo a seguir gera C2440:  
+ C2440 também pode ser causado se você tentar converter um ponteiro para membro para void *. O próximo exemplo gera C2440:  
   
 ```cpp  
 // C2440.cpp  
@@ -85,7 +85,7 @@ public:
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também pode ser causado se você tentar converter de um tipo que é declarado apenas para frente, mas não definido. Este exemplo gera C2440:  
+ C2440 também pode ser causado se você tentar converter de um tipo que está declarado apenas para a frente, mas não definido. Este exemplo gera C2440:  
   
 ```cpp  
 // c2440a.cpp   
@@ -100,13 +100,13 @@ Base * func(Derived * d) {
 ```  
   
 ## <a name="example"></a>Exemplo  
- Os erros de C2440 nas linhas 15 e 16 do próximo exemplo estão qualificados com o `Incompatible calling conventions for UDT return value` mensagem. A *UDT* é um tipo definido pelo usuário, como uma classe, estrutura ou união. Esses tipos de erros de incompatibilidade são causados quando a convenção de chamada de um UDT especificado no tipo de retorno de um conflito de declaração de encaminhamento com a convenção de chamada real do UDT e um ponteiro de função está envolvido.  
+ Os erros de C2440 nas linhas 15 e 16 do próximo exemplo são qualificados com o `Incompatible calling conventions for UDT return value` mensagem. Um *UDT* é um tipo definido pelo usuário, como uma classe, struct ou união. Esses tipos de erros de incompatibilidade são causados quando a convenção de chamada de um UDT especificado no tipo de retorno de uma declaração de encaminhamento está em conflito com a convenção de chamada real do UDT e um ponteiro de função está envolvido.  
   
- No exemplo, pela primeira vez há declarações de encaminhamento para uma estrutura em uma função que retorna a estrutura; o compilador pressupõe que a estrutura usa a convenção de chamada de C++. Em seguida é a definição de estrutura, que, por padrão, usa o C convenção de chamada. Porque o compilador não sabe a convenção de chamada da estrutura até terminar de ler a estrutura inteira, a convenção de chamada para a estrutura no tipo de retorno de `get_c2` também é considerado como C++.  
+ No exemplo, primeiro há declarações de encaminhamento para um struct e para uma função que retorna a estrutura; o compilador assumirá que o struct usa a convenção de chamada de C++. Em seguida é a definição de struct, que, por padrão, usa o C convenção de chamada. Porque o compilador não sabe a convenção de chamada da estrutura até terminar de ler a estrutura inteira, a convenção de chamada para a estrutura do tipo de retorno de `get_c2` devem também para ser C++.  
   
- A estrutura é seguida por outra declaração de função que retorna a estrutura, mas neste ponto, o compilador sabe que a convenção de chamada do struct é C++. Da mesma forma, o ponteiro de função, que retorna a estrutura, é definido após a definição de estrutura para que o compilador sabe que a estrutura usa a convenção de chamada de C++.  
+ A estrutura é seguida por outra declaração de função que retorna a estrutura, mas nesse ponto, o compilador sabe que há convenção de chamada de struct C++. Da mesma forma, o ponteiro de função, que retorna a estrutura, é definido após a definição de estrutura para que o compilador sabe que a estrutura usa a convenção de chamada de C++.  
   
- Para resolver C2440 ocorre devido às convenções de chamada incompatíveis, declare funções que retornam uma UDT após a definição de UDT.  
+ Para resolver C2440 ocorre por causa de convenções de chamada incompatíveis, declare as funções que retornam um UDT após a definição de UDT.  
   
 ```cpp  
 // C2440b.cpp  
@@ -149,7 +149,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também pode ocorrer se você atribuir zero para um ponteiro interno:  
+ C2440 também pode ocorrer se você atribuir zero para um ponteiro interior:  
   
 ```cpp  
 // C2440c.cpp  
@@ -163,7 +163,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário. Por exemplo, quando um operador de conversão foi definido como `explicit`, o compilador não pode usá-lo em uma conversão implícita. Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C + + / CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Este exemplo gera C2440:  
+ C2440 também pode ocorrer para um uso incorreto de uma conversão definida pelo usuário. Por exemplo, quando um operador de conversão foi definido como `explicit`, o compilador não pode usá-lo em uma conversão implícita. Para obter mais informações sobre conversões definidas pelo usuário, consulte [conversões definidas pelo usuário (C + + CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Este exemplo gera C2440:  
   
 ```cpp  
 // C2440d.cpp  
@@ -186,7 +186,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também pode ocorrer se você tentar criar uma instância de uma matriz do Visual C++ cujo tipo é <xref:System.Array>.</xref:System.Array>  Para obter mais informações, consulte [matrizes](../../windows/arrays-cpp-component-extensions.md).  O exemplo a seguir gera C2440:  
+ C2440 também poderá ocorrer se você tentar criar uma instância de uma matriz de Visual C++ cujo tipo é <xref:System.Array>.</xref:System.Array>  Para obter mais informações, consulte [matrizes](../../windows/arrays-cpp-component-extensions.md).  O próximo exemplo gera C2440:  
   
 ```cpp  
 // C2440e.cpp  
@@ -213,7 +213,7 @@ int main() {
 ## <a name="example"></a>Exemplo  
  O compilador do Visual C++ não permite que o [operador const_cast](../../cpp/const-cast-operator.md) converter para baixo ao código-fonte que usa **/clr** programação é compilada.  
   
- Para resolver essa C2440, use o operador cast correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).  
+ Para resolver este C2440, use o operador cast correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).  
   
  Este exemplo gera C2440:  
   
@@ -231,7 +231,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
-C2440 pode ocorrer devido a alterações de conformidade do compilador no Visual Studio 2015 atualização 3. Anteriormente, o compilador incorretamente consideradas determinadas expressões distintas do mesmo tipo ao identificar uma correspondência de modelo para um `static_cast` operação. Agora, o compilador distingue os tipos corretamente e código que dependiam anterior `static_cast` comportamento for interrompido. Para corrigir esse problema, altere o argumento de modelo para corresponder ao tipo de parâmetro de modelo ou usar um `reinterpret_cast` ou lançamento de estilo C.
+C2440 pode ocorrer devido a alterações de conformidade para o compilador do Visual Studio 2015 atualização 3. Anteriormente, o compilador incorretamente consideradas determinadas expressões distintas do mesmo tipo ao identificar uma correspondência de modelo para um `static_cast` operação. Agora, o compilador distingue os tipos corretamente e de código que dependiam anterior `static_cast` comportamento foi interrompido. Para corrigir esse problema, altere o argumento de modelo para coincidir com o tipo de parâmetro de modelo, ou usar um `reinterpret_cast` ou conversão C-style.
   
 Este exemplo gera C2440:  
   
@@ -256,4 +256,49 @@ int main()
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 
 ```
+
+## <a name="example"></a>Exemplo  
+### <a name="copy-list-initialization"></a>Inicialização de lista de cópia
+
+Visual Studio posterior e 2017 corretamente geram erros de compilador relacionados à criação de objetos usando listas de inicializadores não foram detectadas no Visual Studio 2015 e podem causar falhas ou comportamento de tempo de execução indefinido. De acordo com a N4594 13.3.1.7p1, na inicialização de lista de cópia, o compilador deverá considerar um construtor explícito para resolução de sobrecarga, mas deverá gerar um erro se essa sobrecarga for realmente escolhida.
+Os dois exemplos a seguir são compilados no Visual Studio 2015, mas não no Visual Studio 2017.
+
+```
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
+
+int main()
+{
+    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
+
+}
+```
+
+Para corrigir o erro, use a inicialização direta:
+
+```
+A a1{ 1 };
+const A& a2{ 1 };
+```
+
+## <a name="example"></a>Exemplo
+### <a name="cv-qualifiers-in-class-construction"></a>Qualificadores CV na construção de classe
+
+No Visual Studio 2015, às vezes, o compilador ignora incorretamente o qualificador CV ao gerar um objeto de classe por meio de uma chamada do construtor. Eventualmente, isso pode gerar uma falha ou comportamento inesperado do tempo de execução. O exemplo a seguir é compilado no Visual Studio 2015, mas gera um erro do compilador no Visual Studio de 2017 e posterior:
+
+```
+struct S 
+{
+    S(int);
+    operator int();
+};
+
+int i = (const S)0; // error C2440
+```
+
+Para corrigir o erro, declare o operador int() como const.
 
