@@ -9,11 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CElementTraits<T>
-- ATL::CElementTraits
-- ATL.CElementTraits
-- ATL::CElementTraits<T>
 - CElementTraits
+- atlcoll/ATL::CElementTraits
 dev_langs:
 - C++
 helpviewer_keywords:
