@@ -56,8 +56,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 88a3ba45575669e577d1a3629d2dc28464a617d5
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: dd8739365a4523fe1ecb9aee9931b376edf2b390
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="gets-getws"></a>gets, _getws
@@ -143,16 +144,8 @@ int main( void )
 Hello there!The line entered was: Hello there!  
 ```  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../c-runtime-library/stream-i-o.md)   
  [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)   
  [fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)   
  [puts, _putws](../c-runtime-library/reference/puts-putws.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

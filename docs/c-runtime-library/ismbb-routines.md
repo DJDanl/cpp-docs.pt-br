@@ -46,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c1a7eb99df0fb240cbcd302592f8f7a51bd397b2
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fc4d8a98d8ab3c482b19af683c2f1428f5164290
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbb-routines"></a>Rotinas _ismbb
@@ -100,9 +100,6 @@ Testa o valor inteiro dado `c` para uma determinada condição, usando a localid
 |`_ismbbpunct`|—|—|—|x|—|—|x|  
   
  As rotinas `_ismbb` são implementadas como funções e macros. Para obter informações sobre como escolher a implementação, consulte [Recomendações para escolher entre funções e macros](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável, mas consulte [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../c-runtime-library/byte-classification.md)   

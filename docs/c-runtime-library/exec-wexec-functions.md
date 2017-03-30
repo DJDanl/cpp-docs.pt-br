@@ -81,9 +81,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dad821100c76f20011dff46a67e210d3b75d4cc3
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e0c4b4aaf9088fa9fcf6b59c348a54f618e4be62
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="exec-wexec-functions"></a>Funções _exec, _wexec
@@ -253,11 +253,7 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
+## <a name="requirements"></a>Requisitos  
   
  **Header:** process.h  
   

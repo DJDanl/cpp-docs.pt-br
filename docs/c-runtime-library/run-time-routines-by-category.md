@@ -37,15 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da31bd1080865ffa0f56f129761517d9d8af1ea8
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="run-time-routines-by-category"></a>Rotinas de tempo de execução por categoria
 Esta seção lista e descreve rotinas de biblioteca em tempo de execução da Microsoft por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. Rotinas de caracteres multibyte e largos são agrupadas com contrapartes de um byte – caractere, onde elas existem.  
-  
- Esta seção também fornece classes ou métodos equivalentes do .NET Framework, quando disponíveis.  
   
  As principais categorias de rotinas de biblioteca em tempo de execução da Microsoft são:  
   
