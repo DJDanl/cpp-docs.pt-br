@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
@@ -44,7 +45,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
   
 -   [Aprimoramentos de conformidade na Atualização 3](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Aprimoramentos de conformidade no Visual C++ 2015  
+##  <a name="VS_RTM"></a> Aprimoramentos de conformidade no Visual C++ 2015  
   
 -   Opção /Zc:forScope-  
   
@@ -527,7 +528,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
   
      Em ambos [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] e [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], o compilador gera um construtor de cópia para uma classe se essa classe tem um construtor de movimentação definido pelo usuário, mas não tem um construtor de cópia definido pelo usuário. No Dev14, esse construtor de cópia implicitamente gerado também é marcado "= delete".  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Aprimoramentos de conformidade na Atualização 1  
+##  <a name="VS_Update1"></a> Aprimoramentos de conformidade na Atualização 1  
   
 -   **Classes base virtuais particulares e herança indireta**  
   
@@ -605,7 +606,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
   
      Além disso, embora o compilador não forneça um diagnóstico específico, o operador new embutido é considerado mal formado.  
   
--   **Chamar 'operator *type*()' (conversão definida pelo usuário) em tipos de não classe**  
+-   **Chamar 'operator*type*()' (conversão definida pelo usuário) em tipos de não classe**  
   
      As versões anteriores do compilador permitiam que o 'operator *type*()' fosse chamado em tipos de não classe ignorando-o silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.  
   
@@ -1038,7 +1039,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Aprimoramentos de conformidade na Atualização 2  
+##  <a name="VS_Update2"></a> Aprimoramentos de conformidade na Atualização 2  
   
 -   **Erros e avisos adicionais podem ser emitidos como resultado do suporte parcial à expressão SFINAE**  
   
@@ -1303,7 +1304,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
   
      A correção do código escrito dessa maneira pode exigir que as definições de operador sejam retiradas de um arquivo de cabeçalho e movidas para um arquivo de origem correspondente.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Aprimoramentos de conformidade na Atualização 3  
+##  <a name="VS_Update3"></a> Aprimoramentos de conformidade na Atualização 3  
   
 -   **std::is_convertable agora detecta a autoatribuição** (biblioteca padrão)  
   
@@ -1542,8 +1543,3 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-
