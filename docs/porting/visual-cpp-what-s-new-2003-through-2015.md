@@ -1020,7 +1020,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1033,7 +1033,7 @@ Algumas vezes, os aprimoramentos contínuos para conformidade do compilador no V
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
