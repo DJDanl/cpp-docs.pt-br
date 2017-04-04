@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>Valor de retorno  
  Um valor a partir de **confiança** enumeração, que é definida da seguinte maneira:  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>Comentários  
  Use esta função para determinar o tipo de modelo de documento a ser usado para abrir um arquivo. Se seu aplicativo oferecer suporte a vários tipos de arquivo, por exemplo, você pode usar esta função para determinar qual dos modelos de documento disponíveis é apropriado para um determinado arquivo chamando `MatchDocType` para cada modelo no turno e escolhendo um modelo de acordo com o valor de confiança retornado.  

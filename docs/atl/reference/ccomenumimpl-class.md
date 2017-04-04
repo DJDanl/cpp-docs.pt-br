@@ -172,17 +172,14 @@ HRESULT Init(
   
  O `flags` parâmetro permite que você especifique como o enumerador deve tratar os elementos da matriz passados para ele. `flags`pode ter um dos valores a partir de **CComEnumFlags** enumeração mostrada abaixo:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** significa que o tempo de vida da matriz não é controlado pelo enumerador. Nesse caso, a matriz será estático ou o objeto identificado por *pUnk* será responsável por liberar a matriz quando ele não for mais necessário.  
   

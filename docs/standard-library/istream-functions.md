@@ -22,7 +22,7 @@ ms.lasthandoff: 02/25/2017
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="a-nameistreamswapa--swap"></a><a name="istream_swap"></a>  swap  
+##  <a name="istream_swap"></a>  swap  
  Troca os elementos de dois objetos de fluxo.  
   
 ```  
@@ -38,13 +38,13 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um fluxo.  
   
- ` right`  
+ `right`  
  Um fluxo.  
   
-##  <a name="a-namewsa--ws"></a><a name="ws"></a>  ws  
+##  <a name="ws"></a>  ws  
  Ignora o espaço em branco no fluxo.  
   
 ```  

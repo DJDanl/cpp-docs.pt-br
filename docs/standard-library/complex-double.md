@@ -1,40 +1,45 @@
 ---
-title: "complex&lt;double&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.complex<double>"
-  - "complex<double>"
-  - "std::complex<double>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "complex<double> function"
+title: complex&lt;double&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.complex<double>
+- complex<double>
+- std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 428c6b917d70e90277aaf35a4c251d8895576095
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 Descreve um objeto que armazena um par ordenado de objetos do tipo **double***,* o primeiro representando a parte real de um número complexo e o segundo representando a parte imaginária.  
@@ -63,7 +68,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
  `ImagVal`  
  O valor do tipo **double** da parte imaginária do número complexo que está sendo construído.  
   
- ` complexNum`  
+ `complexNum`  
  O número complexo do tipo **float** ou do tipo `long double` cujas partes reais e imaginárias são usadas para inicializar um número complexo do tipo **double** que está sendo construído.  
   
 ## <a name="return-value"></a>Valor de retorno  
@@ -137,6 +142,7 @@ Argument of c3 is recovered from c3 using:
 ## <a name="see-also"></a>Consulte também  
  [Classe complex](../standard-library/complex-class.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

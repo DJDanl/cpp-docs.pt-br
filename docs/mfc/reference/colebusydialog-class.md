@@ -173,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Comentários  
  Os valores de tipo de retorno são especificados pelo **seleção** tipo de enumeração declarada no `COleBusyDialog` classe.  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  Execute as breves descrições desses valores:  
   

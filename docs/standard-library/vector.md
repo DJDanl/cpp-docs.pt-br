@@ -105,10 +105,10 @@ void swap (
  Allocator  
  O parâmetro de modelo do objeto allocator armazenado responsável pela alocação e desalocação de memória.  
   
- ` left`  
+ `left`  
  O primeiro vetor (à esquerda) em uma operação de comparação  
   
- ` right`  
+ `right`  
  O segundo vetor (à direita) em uma operação de comparação.  
   
 ### <a name="operators"></a>Operadores  

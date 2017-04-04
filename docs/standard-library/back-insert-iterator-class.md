@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` val`  
+ `val`  
  O valor a ser inserido no contêiner.  
   
 ### <a name="return-value"></a>Valor de retorno  
