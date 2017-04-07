@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4281 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4281 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a891b040eeddafa954eb5c1c9e84995769a08adc
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: cfe21418e4f5fdbdfb82c79c7cd50a1d3fa0a97e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-3-c4281"></a>Compilador C4281 de aviso (nível 3)
-' operador – >' Ocorreu recursão por meio do tipo 'type'  
+recursão 'operator->' Ocorreu através do tipo 'type'  
   
- Permite que seu código **operador – >** chame a mesmo.  
+ Permite que seu código **operador->** para chamar a mesmo.  
   
  O exemplo a seguir gera C4281:  
   

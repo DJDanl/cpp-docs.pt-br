@@ -1,5 +1,5 @@
 ---
-title: C2435 de erro do compilador | Documentos do Microsoft
+title: C2435 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>C2435 de erro do compilador
-'var': inicialização dinâmica requer CRT gerenciado, não pode ser compilado com /CLR: safe  
+'var': inicialização dinâmica requer CRT gerenciado, não é possível compilar com /CLR: safe  
   
- O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
+ As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
- CRT compilado com a inicialização da variável global por aplicativo domínio requer `/clr:pure`, que não produz uma imagem pode ser verificada.  
+ A inicialização da variável global de domínio de aplicativo requer CRT compilado com `/clr:pure`, que não produz uma imagem pode ser verificada.  
   
  Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).  
   

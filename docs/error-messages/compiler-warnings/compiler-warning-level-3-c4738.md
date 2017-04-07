@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4738 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4738 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4c05725e155f4b3f5de4a17f66ae15d3b2885a1e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ce2db890b7b90eedf5b4456e875a06f8f92b0289
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-warning-level-3-c4738"></a>Compilador C4738 de aviso (nível 3)
 armazenando o resultado float de 32 bits na memória, possível perda de desempenho  
   
- C4738 avisa que o resultado de uma atribuição, converter, passou um argumento ou outra operação pode precisar ser arredondado ou que a operação foi executado sem registros e precisava usar memória (derramamento). Isso pode resultar em perda de desempenho.  
+ C4738 avisa que o resultado de uma atribuição, converter, passou um argumento ou outra operação pode precisar ser arredondado ou que a operação ficou sem registros e necessárias para usar memória (derramada). Isso pode resultar em perda de desempenho.  
   
- Para resolver esse aviso e evitar arredondamento, compilar com [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) ou use `double`s em vez de `float`s.  
+ Para resolver este aviso e evitar arredondamento, compile com [Fast](../../build/reference/fp-specify-floating-point-behavior.md) ou use `double` em vez de `float`.  
   
- Para resolver esse aviso e evitar a falta de registros, alterar a ordem de cálculo e modificar seu uso de inlining  
+ Para resolver este aviso e evitar a falta de registros, alterar a ordem de cálculo e modificar seu uso de inlining  
   
  Esse aviso é desativada por padrão. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
