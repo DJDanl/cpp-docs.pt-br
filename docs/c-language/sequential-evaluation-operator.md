@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ab6b3342a19f788bf39a7b7ce8f21ca0b3c866e3
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 59e3fa3daec861d580fda1d5605fdd33e7e955cc
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="sequential-evaluation-operator"></a>Operador de avaliação sequencial
@@ -61,7 +61,7 @@ O operador de avaliação sequencial, também chamado de "operador vírgula", av
 for ( i = j = 1; i + j < 20; i += i, j-- );  
 ```  
   
- Neste exemplo, cada operando da terceira expressão da instrução **for** é avaliado de maneira independente. O operando esquerdo, `i += i`, é avaliado primeiro; em seguida, é a vez do operando direito, `j––`.  
+ Neste exemplo, cada operando da terceira expressão da instrução **for** é avaliado de maneira independente. O operando esquerdo, `i += i`, é avaliado primeiro; em seguida, é a vez do operando direito, `j--`.  
   
 ```  
 func_one( x, y + 2, z );  

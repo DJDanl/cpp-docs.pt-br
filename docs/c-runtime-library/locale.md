@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1d6cbfc315c3a0b796b989412d11d03529d6becf
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 748d880d8b00a1d9576a70e79b45cdc66a878e72
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="locale"></a>Localidade
