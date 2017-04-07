@@ -1,5 +1,5 @@
 ---
-title: Linha de comando aviso D9027 | Documentos do Microsoft
+title: Linha de comando D9027 de aviso | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b8d7841b6dbf3cdf42573104d958e53f7f2e115d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7d569243a6d0d1669a8964ab9c419cb0e7428ba9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="command-line-warning-d9027"></a>Aviso D9027 (linha de comando)
@@ -50,7 +50,7 @@ arquivo de origem '\<filename >' ignorado
 cl /c /Fo output.obj input.c   
 ```  
   
- Porque há um espaço entre /Fo e `output.obj,` CL.exe usa `output.obj` como o nome do arquivo de entrada. Para corrigir o problema, remova o espaço:  
+ Porque há um espaço entre /Fo e `output.obj`, CL.exe usa `output.obj` como o nome do arquivo de entrada. Para corrigir o problema, remova o espaço:  
   
 ```  
 cl /c /Fooutput.obj input.c   

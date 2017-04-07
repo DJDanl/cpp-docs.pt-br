@@ -1,5 +1,5 @@
 ---
-title: Classe CDialogImpl | Documentos do Microsoft
+title: Classe CDialogImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -45,16 +45,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 732227ef8566ce5e2985a3e65a1153a130df6b20
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 Essa classe fornece métodos para criar uma caixa de diálogo modal ou sem janela restrita.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,7 +68,7 @@ template <class T,
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- Sua classe derivada de `CDialogImpl`.  
+ A classe derivada de `CDialogImpl`.  
   
  *TBase*  
  A classe base da nova classe. A classe base padrão é [CWindow](../../atl/reference/cwindow-class.md).  
@@ -88,7 +88,7 @@ template <class T,
   
 |||  
 |-|-|  
-|[GetDialogProc](#getdialogproc)|Retorna o procedimento de caixa de diálogo atual.|  
+|[GetDialogProc](#getdialogproc)|Retorna o procedimento da caixa de diálogo atual.|  
 |[MapDialogRect](#mapdialogrect)|Mapeia as unidades de caixa de diálogo do retângulo especificado para unidades de tela (pixels).|  
 |[OnFinalMessage](#onfinalmessage)|Chamado após o recebimento da última mensagem, normalmente `WM_NCDESTROY`.|  
   
@@ -100,25 +100,25 @@ template <class T,
 |[StartDialogProc](#startdialogproc)|Chamado quando a primeira mensagem é recebida para processar as mensagens enviadas para a caixa de diálogo.|  
   
 ## <a name="remarks"></a>Comentários  
- Com `CDialogImpl` você pode criar uma caixa de diálogo modal ou sem janela restrita. `CDialogImpl`fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar mensagens para manipuladores adequados.  
+ Com `CDialogImpl` você pode criar uma caixa de diálogo modal ou sem janela restrita. `CDialogImpl`fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar as mensagens para os manipuladores apropriados.  
   
- O destruidor de classe base **~ CWindowImplRoot** garante que a janela desapareceu antes de destruir o objeto.  
+ O destruidor da classe base **~ CWindowImplRoot** garante que a janela desapareceu antes de destruir o objeto.  
   
- `CDialogImpl`deriva de **CDialogImplBaseT**, que por sua vez deriva de **CWindowImplRoot**.  
+ `CDialogImpl`deriva **CDialogImplBaseT**, que por sua vez é derivada de **CWindowImplRoot**.  
   
 > [!NOTE]
->  Sua classe deve definir um **IDD** membro que especifica a ID de recurso de modelo de caixa de diálogo. Por exemplo, ATL Project Wizard adiciona automaticamente a linha a seguir à sua classe:  
+>  A classe deve definir um **IDD** membro que especifica a ID de recurso de modelo de caixa de diálogo. Por exemplo, o Assistente de projeto de ATL adiciona automaticamente a linha a seguir à sua classe:  
   
- [!code-cpp[41 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
- onde `MyDlg` é o **nome curto** digitado no Assistente do **nomes** página.  
+ onde `MyDlg` é o **nome curto** inseridas no Assistente de **nomes** página.  
   
 |Para obter mais informações sobre|Consulte|  
 |--------------------------------|---------|  
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
-|Usando caixas de diálogo do ATL|[Classes de janela ATL](../../atl/atl-window-classes.md)|  
-|Assistente de Projeto da ATL|[Criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Caixas de diálogo|[Caixas de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes a[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Usando caixas de diálogo do ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
+|Assistente de Projeto da ATL|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
+|Caixas de diálogo|[Caixas de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes de[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
@@ -141,17 +141,17 @@ HWND Create(
  `hWndParent`  
  [in] O identificador para a janela do proprietário.  
   
- **RECT < /**`rect`  
- [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.  
+ **RECT &**`rect`  
+ [in] Um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.  
   
  `dwInitParam`  
- [in] Especifica o valor para passar para a caixa de diálogo no **lParam** parâmetro o **WM_INITDIALOG** mensagem.  
+ [in] Especifica o valor para passar para a caixa de diálogo o **lParam** parâmetro o **WM_INITDIALOG** mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador para a caixa de diálogo recém-criado.  
   
 ### <a name="remarks"></a>Comentários  
- Essa caixa de diálogo é anexada automaticamente para o `CDialogImpl` objeto. Para criar uma caixa de diálogo modal, chame [DoModal](#domodal). A segunda substituição acima é usada apenas com [CComControl](../../atl/reference/ccomcontrol-class.md).  
+ Essa caixa de diálogo é anexada automaticamente para o `CDialogImpl` objeto. Para criar uma caixa de diálogo modal, chame [DoModal](#domodal). A segundo substituição acima é usada somente com [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
 ##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Destrói a uma caixa de diálogo sem janela restrita.  
@@ -164,13 +164,13 @@ BOOL DestroyWindow();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- **TRUE** se a caixa de diálogo foi destruído com êxito; do contrário **FALSE**.  
+ **TRUE** se a caixa de diálogo foi com êxito destruído; caso contrário **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- Retorna **TRUE** se a caixa de diálogo foi destruído com êxito; do contrário **FALSE**.  
+ Retorna **TRUE** se a caixa de diálogo foi com êxito destruído; caso contrário **FALSE**.  
   
 ##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
- A função estática implementa o procedimento da caixa de diálogo.  
+ Função estática implementa o procedimento da caixa de diálogo.  
   
 ```  
  
@@ -200,9 +200,9 @@ static LRESULT CALLBACK DialogProc(
  **TRUE** se a mensagem for processada; caso contrário, **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- `DialogProc`usa o mapa da mensagem padrão para direcionar mensagens para manipuladores adequados.  
+ `DialogProc`usa o mapa da mensagem padrão para direcionar as mensagens para os manipuladores apropriados.  
   
- Você pode substituir `DialogProc` para fornecer um mecanismo para manipulação de mensagens diferente.  
+ Você pode substituir `DialogProc` para fornecer um mecanismo diferente para manipulação de mensagens.  
   
 ##  <a name="domodal"></a>CDialogImpl::DoModal  
  Cria uma caixa de diálogo modal.  
@@ -215,10 +215,10 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parâmetros  
  `hWndParent`  
- [in] O identificador para a janela do proprietário. O valor padrão é o valor de retorno de [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) função do Win32.  
+ [in] O identificador para a janela do proprietário. O valor padrão é o valor de retorno de [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) função Win32.  
   
  `dwInitParam`  
- [in] Especifica o valor para passar para a caixa de diálogo no **lParam** parâmetro o **WM_INITDIALOG** mensagem.  
+ [in] Especifica o valor para passar para a caixa de diálogo o **lParam** parâmetro o **WM_INITDIALOG** mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, o valor de `nRetCode` parâmetro especificado na chamada para [EndDialog](#enddialog). Caso contrário, retornará -1.  
@@ -240,10 +240,10 @@ BOOL EndDialog(int nRetCode);
  [in] O valor a ser retornado por [CDialogImpl::DoModal](#domodal).  
   
 ### <a name="return-value"></a>Valor de retorno  
- **TRUE** se a caixa de diálogo for destruído; caso contrário, **FALSE**.  
+ **TRUE** se a caixa de diálogo é destruído; caso contrário, **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- `EndDialog`deve ser chamado por meio do procedimento de diálogo. Depois que a caixa de diálogo for destruída, o Windows usa o valor de `nRetCode` como o valor de retorno para `DoModal`, que criou a caixa de diálogo.  
+ `EndDialog`deve ser chamado por meio do procedimento de caixa de diálogo. Depois que a caixa de diálogo é destruída, o Windows usará o valor de `nRetCode` como o valor de retorno para `DoModal`, que criou a caixa de diálogo.  
   
 > [!NOTE]
 >  Não chame `EndDialog` destruir uma caixa de diálogo sem janela restrita. Chamar [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) em vez disso.  
@@ -262,7 +262,7 @@ virtual WNDPROC GetDialogProc();
  Substitua este método para substituir o procedimento da caixa de diálogo com seus próprios.  
   
 ##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
- Converte unidades (maps) as unidades de caixa de diálogo do retângulo especificado à tela (pixels).  
+ Converte (maps) as unidades de caixa de diálogo do retângulo especificado à tela de unidades (pixels).  
   
 ```   
 BOOL MapDialogRect(LPRECT lpRect); 
@@ -270,13 +270,13 @@ BOOL MapDialogRect(LPRECT lpRect);
   
 ### <a name="parameters"></a>Parâmetros  
  `lpRect`  
- Aponta para um `CRect` objeto ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que receberá as coordenadas do cliente da atualização que inclui a região de atualização.  
+ Aponta para um `CRect` objeto ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que deve receber as coordenadas do cliente da atualização que inclui a região de atualização.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a atualização for bem-sucedida; 0 se a atualização falhar. Para obter outras informações sobre o erro, chame `GetLastError`.  
   
 ### <a name="remarks"></a>Comentários  
- A função substitui as coordenadas do `RECT` estrutura com as coordenadas de convertido, que permite que a estrutura a ser usada para criar uma caixa de diálogo ou posicionar um controle em uma caixa de diálogo.  
+ A função substitui as coordenadas do `RECT` estrutura com as coordenadas de convertido, que permite que a estrutura a ser usada para criar uma caixa de diálogo ou posicionar um controle dentro de uma caixa de diálogo.  
   
 ##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  Chamado após o recebimento da última mensagem (geralmente `WM_NCDESTROY`).  
@@ -320,8 +320,8 @@ static LRESULT CALLBACK StartDialogProc(
  O procedimento de janela.  
   
 ### <a name="remarks"></a>Comentários  
- Após a chamada inicial para `StartDialogProc`, `DialogProc` estiver definido como um procedimento de caixa de diálogo e outras chamadas por aí.  
+ Após a chamada inicial para `StartDialogProc`, `DialogProc` estiver definido como um procedimento de caixa de diálogo e outras chamadas de ir para lá.  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)   
+ [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

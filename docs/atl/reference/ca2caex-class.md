@@ -1,5 +1,5 @@
 ---
-title: Classe CA2CAEX | Documentos do Microsoft
+title: Classe CA2CAEX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
 Essa classe é usada por macros de conversão de cadeia de caracteres `CA2CTEX` e `CT2CAEX`e o typedef **CA2CA**.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,25 +83,25 @@ class CA2CAEX
 ## <a name="remarks"></a>Comentários  
  A menos que a funcionalidade adicional for necessária, use `CA2CTEX`, `CT2CAEX`, ou **CA2CA** em seu próprio código.  
   
- Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam a página de código ANSI dos threads atuais para a conversão.  
+ Esta classe é seguro usar em loops e não de estouro de pilha. Por padrão, as macros e classes de conversão ATL usam a página de código ANSI dos threads atuais para a conversão.  
   
- As macros a seguir baseiam-se em sua classe:  
+ As seguintes macros baseiam-se esta classe:  
   
 - `CA2CTEX`  
   
 - `CT2CAEX`  
   
- Typedef a seguir baseia-se em sua classe:  
+ Typedef seguir baseia-se essa classe:  
   
 - **CA2CA**  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Atlconv. h  
+ **Cabeçalho:** atlconv.h  
   
 ##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
  O construtor.  

@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4282 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4282 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,12 +34,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9170b44cc08e414039f726fe6b7ff537eba58564
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 792fecefca5ef21c1b08bf54a78bdb63ffb6cc07
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-3-c4282"></a>Compilador C4282 de aviso (nível 3)
 em seguida, por meio do tipo 'type'  
   
- Essa continuação de aviso C4281shows que **operador – >** chama a mesmo por meio de `type`.
+ Este continuação de aviso C4281shows que **operador->** chama a mesmo por meio de `type`.

@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlWinModule | Documentos do Microsoft
+title: Classe CAtlWinModule | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
-Esta classe oferece suporte para componentes de janela ATL.  
+Essa classe fornece suporte para componentes de janelas ATL.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -72,7 +72,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retorna um ponteiro para o objeto de dados do módulo de janela.|  
   
 ## <a name="remarks"></a>Comentários  
- Esta classe oferece suporte para todas as classes ATL que exigem recursos de janelas.  
+ Essa classe fornece suporte para todas as classes ATL que exigem recursos de janelas.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
@@ -80,7 +80,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
  `CAtlWinModule`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
  Esse método inicializa e adiciona um `_AtlCreateWndData` estrutura.  
@@ -97,7 +97,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
  Ponteiro para um objeto **isso** ponteiro.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método chama [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) que inicializa um [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estrutura. Essa estrutura armazenará o **isso** ponteiro, usado para obter a instância da classe nos procedimentos de janela.  
+ Este método chama [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa um [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estrutura. Essa estrutura armazenará o **isso** ponteiro, usado para obter a instância da classe nos procedimentos de janela.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  O construtor.  
@@ -107,7 +107,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se a inicialização falhar, uma **EXCEPTION_NONCONTINUABLE** exceção é gerada.  
+ Se a inicialização falhar, um **EXCEPTION_NONCONTINUABLE** exceção será gerada.  
   
 ##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  O destruidor.  
@@ -127,7 +127,7 @@ void* ExtractCreateWndData();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para o `_AtlCreateWndData` estrutura adicionada anteriormente com [CAtlWinModule::AddCreateWndData](#addcreatewnddata), ou nulo se o objeto não está disponível.  
+ Retorna um ponteiro para o `_AtlCreateWndData` estrutura adicionada anteriormente com [CAtlWinModule::AddCreateWndData](#addcreatewnddata), ou nulo se nenhum objeto está disponível.  
   
 ## <a name="see-also"></a>Consulte também  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   

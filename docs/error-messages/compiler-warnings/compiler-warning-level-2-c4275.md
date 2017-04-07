@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 2) C4275 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4275 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 873a96d4595b75ff6b9567500723c32d7ba5bd2b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f9ecbe931c14cfde1d48438bdb76f70452e324d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Compilador C4275 de aviso (nível 2)
-não – classkey 'Identificador de interface de DLL' usada como base para interface de DLL classkey 'Identificador'  
+não - DLL-interface classkey 'Identificador' usado como base para classkey 'Identificador de interface de DLL'  
   
  Uma classe exportada foi derivada de uma classe que não foram exportada.  
   
  Para minimizar a possibilidade de corrupção de dados ao exportar uma classe com [dllexport](../../cpp/dllexport-dllimport.md), certifique-se de que:  
   
--   Todos os seus dados estáticos é acessado por meio das funções exportadas da DLL.  
+-   Todos os seus dados estáticos é acessado por meio de funções exportadas da DLL.  
   
 -   Nenhum método embutido da sua classe pode modificar dados estáticos.  
   
@@ -54,13 +54,13 @@ não – classkey 'Identificador de interface de DLL' usada como base para inter
   
 -   Nenhuma função de classe embutida usa funções de CRT ou outras funções de biblioteca, onde, por exemplo, acessar dados estáticos.  
   
--   Nenhum método de sua classe (independentemente de inlining) podem usar tipos de onde a instanciação no EXE e DLL têm diferenças de dados estáticos.  
+-   Nenhum método de sua classe (independentemente de inlining) podem usar os tipos de onde a instanciação na DLL e EXE têm diferenças de dados estáticos.  
   
- Você pode evitar exportando classes definindo uma DLL que define uma classe com funções virtuais e funções que você pode chamar para criar e excluir objetos do tipo.  Você pode chamar funções virtuais apenas no tipo.  
+ Você pode evitar exportando classes definindo uma DLL que define uma classe com funções virtuais e funções que você pode chamar para instanciar e excluir objetos do tipo.  Em seguida, você pode chamar apenas funções virtuais no tipo.  
   
- Para obter mais informações sobre como exportar modelos, consulte [http://support.microsoft.com/default.aspx?scid=KB; EN-US;&16895;8](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
+ Para obter mais informações sobre como exportar modelos, consulte [http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
   
- C4275 pode ser ignorado no Visual C++, se você estiver derivando de um tipo de biblioteca padrão C++, compilar uma versão de depuração (**/MTd**) e onde a mensagem de erro do compilador se refere ao _Container_base.  
+ C4275 pode ser ignorado em Visual C++ se você estiver derivando de um tipo de biblioteca padrão C++, Compilando uma versão de depuração (**/MTd**) e onde a mensagem de erro do compilador se refere à _Container_base.  
   
 ```  
 // C4275.cpp  

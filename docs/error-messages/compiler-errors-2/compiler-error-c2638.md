@@ -1,5 +1,5 @@
 ---
-title: C2638 de erro do compilador | Documentos do Microsoft
+title: C2638 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 99432d2466ae684aa552e5b69ea48e02fffd6e70
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f99b518b19c884177bee363edd126011b1fe1293
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-error-c2638"></a>C2638 de erro do compilador
-'identifier': based ilegal de modificador em ponteiro para membro  
+'Identificador': based modificador inválido em ponteiro para membro  
   
- O `__based`modificador não pode ser usado para ponteiros para membros.  
+ O `__based` modificador não pode ser usado para ponteiros para membros.  
   
  O exemplo a seguir gera C2638:  
   

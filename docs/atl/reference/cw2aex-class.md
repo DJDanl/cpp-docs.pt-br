@@ -1,5 +1,5 @@
 ---
-title: Classe CW2AEX | Documentos do Microsoft
+title: Classe CW2AEX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8bf433224396f54b81fb5310ec29dfed213c6855
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2aex-class"></a>Classe CW2AEX
-Essa classe é usada, as macros de conversão de cadeia de caracteres `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e o typedef **CW2A**.  
+Essa classe é usada pelas macros de conversão de cadeia de caracteres `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e o typedef **CW2A**.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,13 +85,13 @@ class CW2AEX
 ## <a name="remarks"></a>Comentários  
  A menos que a funcionalidade adicional for necessária, use `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, ou **CW2A** em seu código.  
   
- Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é seguro usar em loops e que ele não estouram a pilha.  
+ Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é segura usar em loops e que ele não estouro de pilha.  
   
  Se a classe tenta alocar memória no heap e falhar, ele chamará `AtlThrow` com um argumento de **E_OUTOFMEMORY**.  
   
- Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor da classe.  
+ Por padrão, as classes de conversão de ATL e macros usam página de código ANSI do thread atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor da classe.  
   
- As macros a seguir baseiam-se em sua classe:  
+ As seguintes macros baseiam-se esta classe:  
   
 - `CT2AEX`  
   
@@ -101,17 +101,17 @@ class CW2AEX
   
 - `CT2CAEX`  
   
- Typedef a seguir baseia-se em sua classe:  
+ Typedef seguir baseia-se essa classe:  
   
 - **CW2A**  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Atlconv. h  
+ **Cabeçalho:** atlconv.h  
   
 ##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  O construtor.  

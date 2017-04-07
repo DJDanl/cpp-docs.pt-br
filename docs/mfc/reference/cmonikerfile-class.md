@@ -1,5 +1,5 @@
 ---
-title: Classe CMonikerFile | Documentos do Microsoft
+title: Classe CMonikerFile | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -44,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4668672af1b33170ece1cb4d449ed5a20f6040e7
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0f348328a4be4b934e00acdb43ba47fa919bac75
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmonikerfile-class"></a>Classe CMonikerFile
@@ -79,16 +79,16 @@ class CMonikerFile : public COleStreamFile
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtém o contexto de ligação ou cria um contexto de associação padrão inicializado.|  
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtém o contexto de associação ou cria um contexto de associação padrão inicializado.|  
   
 ## <a name="remarks"></a>Comentários  
- Um identificador de origem contém informações muito parecido com um nome de caminho para um arquivo. Se você tiver um ponteiro para um objeto de moniker `IMoniker` interface, você pode obter acesso ao arquivo identificado sem a necessidade de quaisquer outras informações específicas sobre onde o arquivo está realmente localizado.  
+ Um identificador de origem contém informações como um nome de caminho para um arquivo. Se você tem um ponteiro para um objeto de moniker `IMoniker` interface, você pode obter acesso ao arquivo identificado sem ter que quaisquer informações específicas sobre onde o arquivo está localizado na verdade.  
   
- Derivado de `COleStreamFile`, `CMonikerFile` usa um identificador de origem ou uma representação de cadeia de caracteres pode fazer em um identificador de origem e associa o fluxo para que o identificador de origem é um nome. Em seguida, você pode ler e gravar no fluxo. A finalidade real `CMonikerFile` é fornecer acesso simples às `IStream`s nomeado pelo `IMoniker`s para que você não precisa associar a um fluxo, ainda têm `CFile` funcionalidade no fluxo.  
+ Derivado `COleStreamFile`, `CMonikerFile` usa um identificador de origem ou uma representação de cadeia de caracteres pode fazer em um identificador de origem e associa o fluxo para o qual o identificador de origem é um nome. Em seguida, você pode ler e gravar no fluxo. O propósito de `CMonikerFile` é fornecer acesso simples às `IStream`s nomeado pelo `IMoniker`s para que você não precisa associar a um fluxo por conta própria, ainda têm `CFile` funcionalidade no fluxo.  
   
- `CMonikerFile`não pode ser usado para ligar a algo diferente de um fluxo. Se você deseja associar ao armazenamento ou a um objeto, você deve usar o `IMoniker` interface diretamente.  
+ `CMonikerFile`não pode ser usada para ligar para algo diferente de um fluxo. Se você deseja vincular a um objeto ou de armazenamento, você deve usar o `IMoniker` interface diretamente.  
   
- Para obter mais informações sobre fluxos e identificadores, consulte [COleStreamFile](../../mfc/reference/colestreamfile-class.md) no *referência da MFC* e [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) e [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obter mais informações sobre fluxos e identificadores, consulte [COleStreamFile](../../mfc/reference/colestreamfile-class.md) no *referência MFC* e [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) e [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -103,14 +103,14 @@ class CMonikerFile : public COleStreamFile
  **Cabeçalho:** afxole.h  
   
 ##  <a name="close"></a>CMonikerFile::Close  
- Chame essa função para desanexar e liberar o fluxo e liberar o identificador de origem.  
+ Chame essa função para desanexar e liberar o fluxo de e para liberar o identificador de origem.  
   
 ```  
 virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Pode ser chamado em fluxos não abertos ou fechados já.  
+ Pode ser chamado em fluxos não abertos ou já está fechados.  
   
 ##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  Constrói um objeto `CMonikerFile`.  
@@ -128,13 +128,13 @@ IBindCtx* CreateBindContext(CFileException* pError);
   
 ### <a name="parameters"></a>Parâmetros  
  `pError`  
- Um ponteiro para uma exceção de arquivo. Se ocorrer um erro, ele definirá a causa.  
+ Um ponteiro para uma exceção de arquivo. Em caso de erro, será definido para a causa.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o contexto de ligação [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) para associar com êxito, caso contrário **nulo**. Se a instância tiver sido aberta com um `IBindHost` interface, o contexto de ligação é obtido a `IBindHost`. Se não houver nenhum `IBindHost` interface ou a interface não retornar um contexto de ligação, um contexto de ligação é criado. Para obter uma descrição de [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) de interface, consulte o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Um ponteiro para o contexto de ligação [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) para associar com se bem-sucedido; caso contrário **nulo**. Se a instância foi aberta com um `IBindHost` interface, o contexto de associação é recuperado do `IBindHost`. Se não houver nenhum `IBindHost` interface ou a interface não retornar um contexto de ligação, um contexto de associação é criado. Para obter uma descrição de [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interface, consulte o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="remarks"></a>Comentários  
- Um contexto de associação é um objeto que armazena informações sobre uma operação de vinculação do moniker específico. Você pode substituir essa função para fornecer um contexto de associação personalizado.  
+ Um contexto de associação é um objeto que armazena informações sobre uma operação de associação de moniker específico. Você pode substituir essa função para fornecer um contexto de associação personalizada.  
   
 ##  <a name="detach"></a>CMonikerFile::Detach  
  Chame essa função para fechar o fluxo.  
@@ -145,7 +145,7 @@ BOOL Detach(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>Parâmetros  
  `pError`  
- Um ponteiro para uma exceção de arquivo. Se ocorrer um erro, ele definirá a causa.  
+ Um ponteiro para uma exceção de arquivo. Em caso de erro, será definido para a causa.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
@@ -161,7 +161,7 @@ IMoniker* GetMoniker() const;
  Um ponteiro para a interface do moniker atual ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
   
 ### <a name="remarks"></a>Comentários  
- Como `CMonikerFile` não é uma interface, o ponteiro retornado não incrementa a contagem de referência (por meio de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), e o moniker é liberado quando o `CMonikerFile` o objeto é liberado. Se você quiser manter o moniker ou liberá-lo, você deve `AddRef` -lo.  
+ Como `CMonikerFile` não é uma interface, o ponteiro retornado não incrementa a contagem de referência (por meio de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), e o moniker é liberado quando o `CMonikerFile` objeto é liberado. Se você quiser manter o moniker ou liberá-lo, você deve `AddRef` -lo.  
   
 ##  <a name="open"></a>CMonikerFile::Open  
  Chame essa função de membro para abrir um objeto de arquivo ou o identificador de origem.  
@@ -182,7 +182,7 @@ virtual BOOL Open(
  Uma URL ou o nome do arquivo a ser aberto.  
   
  `pError`  
- Um ponteiro para uma exceção de arquivo. Se ocorrer um erro, ele definirá a causa.  
+ Um ponteiro para uma exceção de arquivo. Em caso de erro, será definido para a causa.  
   
  `pMoniker`  
  Um ponteiro para a interface do moniker `IMoniker` a ser usado para obter um fluxo.  
@@ -195,11 +195,11 @@ virtual BOOL Open(
   
  Você pode usar uma URL ou um nome de arquivo para o `lpszURL` parâmetro. Por exemplo:  
   
- [!code-cpp[NVC_MFCWinInet n º&6;](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWinInet 6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
- – ou –  
+ - ou –  
   
- [!code-cpp[NVC_MFCWinInet&#7;](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWinInet #7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe COleStreamFile](../../mfc/reference/colestreamfile-class.md)   

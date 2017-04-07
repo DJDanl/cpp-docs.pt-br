@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4283 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4283 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,12 +34,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a4953bfe93bacd1a20b723b3adc26621b32db048
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c54b9b96ecc68a058b62df34d95d9be1eef3cb09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-3-c4283"></a>Compilador C4283 de aviso (nível 3)
 e por meio do tipo 'type'  
   
- Essa continuação de aviso [C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md) mostra que **operador – >** chama a mesmo por meio de `type`.
+ Este continuação de aviso [C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md) mostra que **operador->** chama a mesmo por meio de `type`.

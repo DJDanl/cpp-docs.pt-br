@@ -1,5 +1,5 @@
 ---
-title: Classe CPathT | Documentos do Microsoft
+title: Classe CPathT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -77,16 +77,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8cbd91ae1c4318788b38b2daaa7721d1a29fca98
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 Essa classe representa um caminho.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -119,52 +119,52 @@ class CPathT
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CPathT::AddBackslash](#addbackslash)|Chame esse método para adicionar uma barra invertida ao final de uma cadeia de caracteres para criar a sintaxe correta para um caminho.|  
-|[CPathT::AddExtension](#addextension)|Chame esse método para adicionar uma extensão de arquivo em um caminho.|  
-|[CPathT::Append](#append)|Chame esse método para acrescentar uma cadeia de caracteres para o caminho atual.|  
-|[CPathT::BuildRoot](#buildroot)|Chame esse método para criar um caminho raiz de um número de unidade especificada.|  
-|[CPathT::Canonicalize](#canonicalize)|Chame esse método para converter o caminho em forma canônica.|  
-|[CPathT::Combine](#combine)|Chame esse método para concatenar uma cadeia de caracteres que representa um nome de diretório e uma cadeia de caracteres que representa um nome de caminho de arquivo em um caminho.|  
-|[CPathT::CommonPrefix](#commonprefix)|Chame esse método para determinar se o caminho especificado compartilha um prefixo comum com o caminho atual.|  
-|[CPathT::CompactPath](#compactpath)|Chame esse método para truncar um caminho de arquivo para se ajustarem à largura de um determinado pixel com a substituição de componentes de caminho com reticências.|  
-|[CPathT::CompactPathEx](#compactpathex)|Chame esse método para truncar um caminho de arquivo para se ajustar dentro de um determinado número de caracteres com a substituição de componentes de caminho com reticências.|  
-|[CPathT::FileExists](#fileexists)|Chame esse método para verificar se existe o arquivo com esse nome de caminho.|  
-|[CPathT::FindExtension](#findextension)|Chame esse método para localizar a posição da extensão do arquivo no caminho.|  
-|[CPathT::FindFileName](#findfilename)|Chame esse método para localizar a posição do nome do arquivo no caminho.|  
-|[CPathT::GetDriveNumber](#getdrivenumber)|Chame esse método para procurar o caminho para uma letra de unidade dentro do intervalo de 'A' a 'Z' e retornar o número de unidade correspondente.|  
-|[CPathT::GetExtension](#getextension)|Chame esse método para obter a extensão de arquivo do caminho.|  
-|[CPathT::IsDirectory](#isdirectory)|Chame esse método para verificar se o caminho é um diretório válido.|  
-|[CPathT::IsFileSpec](#isfilespec)|Chame esse método para pesquisar um caminho para todos os caracteres de delimitação de caminho (por exemplo, ':' ou '\\'). Se não houver nenhum caractere de delimitação de caminho presente, o caminho é considerado um caminho de especificação de arquivo.|  
-|[CPathT::IsPrefix](#isprefix)|Chame esse método para determinar se um caminho contém um prefixo válido de tipo passado `pszPrefix`.|  
-|[CPathT::IsRelative](#isrelative)|Chame esse método para determinar se o caminho é relativo.|  
-|[CPathT::IsRoot](#isroot)|Chame esse método para determinar se o caminho é uma diretório raiz.|  
-|[CPathT::IsSameRoot](#issameroot)|Chame esse método para determinar se outro caminho tem um componente raiz comuns com o caminho atual.|  
+|[CPathT::AddBackslash](#addbackslash)|Chame este método para adicionar uma barra invertida no final de uma cadeia de caracteres para criar a sintaxe correta para um caminho.|  
+|[CPathT::AddExtension](#addextension)|Chame este método para adicionar uma extensão de arquivo a um caminho.|  
+|[CPathT::Append](#append)|Chame este método para acrescentar uma cadeia de caracteres para o caminho atual.|  
+|[CPathT::BuildRoot](#buildroot)|Chame este método para criar um caminho de raiz de um número determinado de unidade.|  
+|[CPathT::Canonicalize](#canonicalize)|Chame este método para converter o caminho em forma canônica.|  
+|[CPathT::Combine](#combine)|Chame este método para concatenar uma cadeia de caracteres que representa um nome de diretório e uma cadeia de caracteres que representa um nome de caminho de arquivo em um caminho.|  
+|[CPathT::CommonPrefix](#commonprefix)|Chame este método para determinar se o caminho especificado compartilha um prefixo comum com o caminho atual.|  
+|[CPathT::CompactPath](#compactpath)|Chame este método para truncar um caminho de arquivo para se ajustar dentro de uma largura de pixel fornecido com a substituição de componentes de caminho com reticências.|  
+|[CPathT::CompactPathEx](#compactpathex)|Chame este método para truncar um caminho de arquivo para se ajustar dentro de um determinado número de caracteres com a substituição de componentes de caminho com reticências.|  
+|[CPathT::FileExists](#fileexists)|Chame esse método para verificar se existe o arquivo com este nome de caminho.|  
+|[CPathT::FindExtension](#findextension)|Chame este método para localizar a posição da extensão do arquivo no caminho.|  
+|[CPathT::FindFileName](#findfilename)|Chame este método para localizar a posição do nome do arquivo no caminho.|  
+|[CPathT::GetDriveNumber](#getdrivenumber)|Chame esse método para pesquisar o caminho para uma letra de unidade dentro do intervalo de 'A' a 'Z' e retornar o número de unidade correspondente.|  
+|[CPathT::GetExtension](#getextension)|Chame este método para obter a extensão de arquivo do caminho.|  
+|[CPathT::IsDirectory](#isdirectory)|Chame este método para verificar se o caminho é um diretório válido.|  
+|[CPathT::IsFileSpec](#isfilespec)|Chame esse método para pesquisar um caminho para qualquer caractere de delimitação de caminho (por exemplo, ':' ou '\\'). Se não houver nenhum caractere de delimitação de caminho presente, o caminho é considerado um caminho de especificação de arquivo.|  
+|[CPathT::IsPrefix](#isprefix)|Chame esse método para determinar se um caminho contém um prefixo válido do tipo passado `pszPrefix`.|  
+|[CPathT::IsRelative](#isrelative)|Chame este método para determinar se o caminho é relativo.|  
+|[CPathT::IsRoot](#isroot)|Chame este método para determinar se o caminho é uma diretório raiz.|  
+|[CPathT::IsSameRoot](#issameroot)|Chame este método para determinar se outro caminho tem um componente raiz comum com o caminho atual.|  
 |[CPathT::IsUNC](#isunc)|Chame esse método para determinar se o caminho é um caminho UNC (convenção de nomenclatura universal) válido para um servidor e compartilhamento.|  
-|[CPathT::IsUNCServer](#isuncserver)|Chame esse método para determinar se o caminho é um caminho UNC (convenção de nomenclatura universal) válido para um servidor.|  
-|[CPathT::IsUNCServerShare](#isuncservershare)|Chame esse método para determinar se o caminho é um caminho válido de compartilhamento UNC (convenção de nomenclatura universal), \\ \  *servidor*\ *compartilhar*.|  
-|[CPathT::MakePretty](#makepretty)|Chame esse método para converter um caminho em todos os caracteres minúsculos para fornecer o caminho de uma aparência consistente.|  
-|[CPathT::MatchSpec](#matchspec)|Chame esse método para pesquisar o caminho para uma cadeia de caracteres que contém um tipo de correspondência de curingas.|  
+|[CPathT::IsUNCServer](#isuncserver)|Chame este método para determinar se o caminho é um caminho UNC (convenção de nomenclatura universal) válido para um servidor.|  
+|[CPathT::IsUNCServerShare](#isuncservershare)|Chame esse método para determinar se o caminho é um caminho de compartilhamento UNC (convenção de nomenclatura universal) válido, \\ \  *servidor*\ *compartilhar*.|  
+|[CPathT::MakePretty](#makepretty)|Chame este método para converter um caminho em todos os caracteres minúsculos, para que o caminho de uma aparência consistente.|  
+|[CPathT::MatchSpec](#matchspec)|Chame esse método para pesquisar o caminho para uma cadeia de caracteres que contém um tipo de correspondência de curinga.|  
 |[CPathT::QuoteSpaces](#quotespaces)|Chame esse método para colocar o caminho entre aspas se ele contiver espaços.|  
 |[CPathT::RelativePathTo](#relativepathto)|Chame esse método para criar um caminho relativo de um arquivo ou pasta para outra.|  
 |[CPathT::RemoveArgs](#removeargs)|Chame esse método para remover quaisquer argumentos de linha de comando do caminho.|  
 |[CPathT::RemoveBackslash](#removebackslash)|Chame esse método para remover a barra invertida à direita do caminho.|  
 |[CPathT::RemoveBlanks](#removeblanks)|Chame esse método para remover todos os espaços à esquerda e à direita do caminho.|  
-|[CPathT::RemoveExtension](#removeextension)|Chame esse método para remover a extensão do arquivo do caminho, se houver.|  
+|[CPathT::RemoveExtension](#removeextension)|Chame esse método para remover a extensão de arquivo do caminho, se houver um.|  
 |[CPathT::RemoveFileSpec](#removefilespec)|Chame esse método para remover o nome de arquivo à direita e a barra invertida do caminho, caso existam.|  
-|[CPathT::RenameExtension](#renameextension)|Chame esse método para substituir a extensão de nome de arquivo no caminho com uma nova extensão. Se o nome do arquivo não contém uma extensão, a extensão será anexada ao final da cadeia de caracteres.|  
+|[CPathT::RenameExtension](#renameextension)|Chame este método para substituir a extensão de nome de arquivo no caminho com uma nova extensão. Se o nome do arquivo não contém uma extensão, a extensão será anexada ao final da cadeia de caracteres.|  
 |[CPathT::SkipRoot](#skiproot)|Chame esse método para analisar um caminho, ignorando a letra da unidade ou partes do caminho de compartilhamento do servidor UNC.|  
 |[CPathT::StripPath](#strippath)|Chame esse método para remover a parte do caminho de um caminho totalmente qualificado e o nome do arquivo.|  
 |[CPathT::StripToRoot](#striptoroot)|Chame esse método para remover todas as partes do caminho, exceto as informações da raiz.|  
-|[CPathT::UnquoteSpaces](#unquotespaces)|Chame esse método para remover as aspas no início e no final de um caminho.|  
+|[CPathT::UnquoteSpaces](#unquotespaces)|Chame este método para remover as aspas de início e término de um caminho.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[StringType const CPathT::operator < /](#operator_const_stringtype_amp)|Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.|  
-|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.|  
-|[CPathT::operator StringType < /](#operator_stringtype)|Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.|  
-|[+ = CPathT::operator](#operator_add_eq)|Este operador acrescenta uma cadeia de caracteres para o caminho.|  
+|[StringType const CPathT::operator &](#operator_const_stringtype_amp)|Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.|  
+|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.|  
+|[CPathT::operator StringType &](#operator_stringtype)|Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.|  
+|[+ CPathT::operator =](#operator_add_eq)|Este operador acrescenta uma cadeia de caracteres para o caminho.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -173,7 +173,7 @@ class CPathT
 |[CPathT::m_strPath](#m_strpath)|O caminho.|  
   
 ## <a name="remarks"></a>Comentários  
- `CPath`, `CPathA`, e `CPathW` são instanciações de `CPathT` definida da seguinte maneira:  
+ `CPath`, `CPathA`, e `CPathW` são instanciações de `CPathT` definido da seguinte maneira:  
   
  `typedef CPathT< CString > CPath;`  
   
@@ -185,7 +185,7 @@ class CPathT
  **Cabeçalho:** atlpath.h  
   
 ##  <a name="addbackslash"></a>CPathT::AddBackslash  
- Chame esse método para adicionar uma barra invertida ao final de uma cadeia de caracteres para criar a sintaxe correta para um caminho. Se o caminho já tiver uma barra invertida, sem barras invertidas serão adicionada.  
+ Chame este método para adicionar uma barra invertida no final de uma cadeia de caracteres para criar a sintaxe correta para um caminho. Se o caminho já tem uma barra invertida, sem barras invertidas serão adicionada.  
   
 ```
 void AddBackslash();
@@ -195,7 +195,7 @@ void AddBackslash();
  Para obter mais informações, consulte [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
 ##  <a name="addextension"></a>CPathT::AddExtension  
- Chame esse método para adicionar uma extensão de arquivo em um caminho.  
+ Chame este método para adicionar uma extensão de arquivo a um caminho.  
   
 ```
 BOOL AddExtension(PCXSTR pszExtension);
@@ -206,13 +206,13 @@ BOOL AddExtension(PCXSTR pszExtension);
  A extensão de arquivo para adicionar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
 ##  <a name="append"></a>CPathT::Append  
- Chame esse método para acrescentar uma cadeia de caracteres para o caminho atual.  
+ Chame este método para acrescentar uma cadeia de caracteres para o caminho atual.  
   
 ```
 BOOL Append(PCXSTR pszMore);
@@ -223,13 +223,13 @@ BOOL Append(PCXSTR pszMore);
  A cadeia de caracteres a ser acrescentada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ##  <a name="buildroot"></a>CPathT::BuildRoot  
- Chame esse método para criar um caminho raiz de um número de unidade especificada.  
+ Chame este método para criar um caminho de raiz de um número determinado de unidade.  
   
 ```
 void BuildRoot(int iDrive);
@@ -237,13 +237,13 @@ void BuildRoot(int iDrive);
   
 ### <a name="parameters"></a>Parâmetros  
  *iDrive*  
- O número da unidade (0 é r:, 1 é b: e assim por diante).  
+ O número de unidade (0 é r:, 1 é b: e assim por diante).  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
 ##  <a name="canonicalize"></a>CPathT::Canonicalize  
- Chame esse método para converter o caminho em forma canônica.  
+ Chame este método para converter o caminho em forma canônica.  
   
 ```
 void Canonicalize();
@@ -253,7 +253,7 @@ void Canonicalize();
  Para obter mais informações, consulte [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
 ##  <a name="combine"></a>CPathT::Combine  
- Chame esse método para concatenar uma cadeia de caracteres que representa um nome de diretório e uma cadeia de caracteres que representa um nome de caminho de arquivo em um caminho.  
+ Chame este método para concatenar uma cadeia de caracteres que representa um nome de diretório e uma cadeia de caracteres que representa um nome de caminho de arquivo em um caminho.  
   
 ```
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -270,7 +270,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  Para obter mais informações, consulte [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
   
 ##  <a name="commonprefix"></a>CPathT::CommonPrefix  
- Chame esse método para determinar se o caminho especificado compartilha um prefixo comum com o caminho atual.  
+ Chame este método para determinar se o caminho especificado compartilha um prefixo comum com o caminho atual.  
   
 ```
 CPathT<StringType> CommonPrefix(PCXSTR pszOther);
@@ -284,10 +284,10 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  Retorna o prefixo comum.  
   
 ### <a name="remarks"></a>Comentários  
- Um prefixo é um destes tipos: "c:\\\\",".","..","... \\\\". Para obter mais informações, consulte [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Um prefixo é um destes tipos: "c:\\\\",".","...","... \\\\". Para obter mais informações, consulte [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ##  <a name="compactpath"></a>CPathT::CompactPath  
- Chame esse método para truncar um caminho de arquivo para se ajustarem à largura de um determinado pixel com a substituição de componentes de caminho com reticências.  
+ Chame este método para truncar um caminho de arquivo para se ajustar dentro de uma largura de pixel fornecido com a substituição de componentes de caminho com reticências.  
   
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -298,16 +298,16 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  O contexto de dispositivo usado para métricas de fonte.  
   
  `nWidth`  
- A largura, em pixels, que será forçada a cadeia de caracteres para caber em.  
+ A largura, em pixels, que será forçada a cadeia de caracteres para se ajustar no.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
 ##  <a name="compactpathex"></a>CPathT::CompactPathEx  
- Chame esse método para truncar um caminho de arquivo para se ajustar dentro de um determinado número de caracteres com a substituição de componentes de caminho com reticências.  
+ Chame este método para truncar um caminho de arquivo para se ajustar dentro de um determinado número de caracteres com a substituição de componentes de caminho com reticências.  
   
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -315,13 +315,13 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
   
 ### <a name="parameters"></a>Parâmetros  
  `nMaxChars`  
- O número máximo de caracteres para ser contida na nova cadeia de caracteres, incluindo o caractere de terminação nula.  
+ O número máximo de caracteres para ser contida na nova cadeia de caracteres, incluindo o caractere NULL de terminação.  
   
  `dwFlags`  
  Reservado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
@@ -337,65 +337,65 @@ CPathT() throw();
   
 ### <a name="parameters"></a>Parâmetros  
  *pszPath*  
- O ponteiro para uma cadeia de caracteres do caminho.  
+ O ponteiro para uma cadeia de caracteres de caminho.  
   
  *path*  
- A cadeia de caracteres do caminho.  
+ A cadeia de caracteres de caminho.  
   
 ##  <a name="fileexists"></a>CPathT::FileExists  
- Chame esse método para verificar se existe o arquivo com esse nome de caminho.  
+ Chame esse método para verificar se existe o arquivo com este nome de caminho.  
   
 ```
 BOOL FileExists() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna TRUE se o arquivo existir, FALSO caso contrário.  
+ Retorna VERDADEIRO se o arquivo existir, FALSO caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
 ##  <a name="findextension"></a>CPathT::FindExtension  
- Chame esse método para localizar a posição da extensão do arquivo no caminho.  
+ Chame este método para localizar a posição da extensão do arquivo no caminho.  
   
 ```
 int FindExtension() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a posição do "." precede a extensão. Se não for encontrada nenhuma extensão, retornará –&1;.  
+ Retorna a posição do "." antes da extensão. Se não for encontrada nenhuma extensão, retornará -1.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
 ##  <a name="findfilename"></a>CPathT::FindFileName  
- Chame esse método para localizar a posição do nome do arquivo no caminho.  
+ Chame este método para localizar a posição do nome do arquivo no caminho.  
   
 ```
 int FindFileName() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a posição do nome do arquivo. Se nenhum nome de arquivo for encontrado, retorna –&1;.  
+ Retorna a posição do nome do arquivo. Se nenhum nome de arquivo for encontrado, retorna -1.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
- Chame esse método para procurar o caminho para uma letra de unidade dentro do intervalo de 'A' a 'Z' e retornar o número de unidade correspondente.  
+ Chame esse método para pesquisar o caminho para uma letra de unidade dentro do intervalo de 'A' a 'Z' e retornar o número de unidade correspondente.  
   
 ```
 int GetDriveNumber() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o número de unidade como um inteiro de 0 a 25 (correspondente a 'A' a 'Z') se o caminho tem uma letra de unidade, ou -1, caso contrário.  
+ Retorna o número de unidade como um inteiro de 0 a 25 (correspondente a 'A' a 'Z') se o caminho tem uma letra de unidade ou -1, caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ##  <a name="getextension"></a>CPathT::GetExtension  
- Chame esse método para obter a extensão de arquivo do caminho.  
+ Chame este método para obter a extensão de arquivo do caminho.  
   
 ```
 StringType GetExtension() const;
@@ -405,33 +405,33 @@ StringType GetExtension() const;
  Retorna a extensão de arquivo.  
   
 ##  <a name="isdirectory"></a>CPathT::IsDirectory  
- Chame esse método para verificar se o caminho é um diretório válido.  
+ Chame este método para verificar se o caminho é um diretório válido.  
   
 ```
 BOOL IsDirectory() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um valor diferente de zero (16) se o caminho for um diretório, `FALSE` caso contrário.  
+ Retorna um valor diferente de zero (16) se o caminho é um diretório, `FALSE` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
   
 ##  <a name="isfilespec"></a>CPathT::IsFileSpec  
- Chame esse método para pesquisar um caminho para todos os caracteres de delimitação de caminho (por exemplo, ':' ou '\\'). Se não houver nenhum caractere de delimitação de caminho presente, o caminho é considerado um caminho de especificação de arquivo.  
+ Chame esse método para pesquisar um caminho para qualquer caractere de delimitação de caminho (por exemplo, ':' ou '\\'). Se não houver nenhum caractere de delimitação de caminho presente, o caminho é considerado um caminho de especificação de arquivo.  
   
 ```
 BOOL IsFileSpec() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna TRUE se não houver nenhum caractere de delimitação de caminho dentro do caminho, ou falsa se há caracteres de delimitação de caminho.  
+ Retorna VERDADEIRO se não houver nenhum caractere de delimitação de caminho dentro do caminho, ou falso se há caracteres de delimitação de caminho.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
 ##  <a name="isprefix"></a>CPathT::IsPrefix  
- Chame esse método para determinar se um caminho contém um prefixo válido de tipo passado `pszPrefix`.  
+ Chame esse método para determinar se um caminho contém um prefixo válido do tipo passado `pszPrefix`.  
   
 ```
 BOOL IsPrefix(PCXSTR pszPrefix) const;
@@ -439,29 +439,29 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `pszPrefix`  
- O prefixo que deseja pesquisar. Um prefixo é um destes tipos: "c:\\\\",".","..","... \\\\".  
+ O prefixo que deseja pesquisar. Um prefixo é um destes tipos: "c:\\\\",".","...","... \\\\".  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se o caminho contém o prefixo, ou FALSO caso contrário.  
+ Retorna VERDADEIRO se o caminho contiver o prefixo, ou FALSO caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ##  <a name="isrelative"></a>CPathT::IsRelative  
- Chame esse método para determinar se o caminho é relativo.  
+ Chame este método para determinar se o caminho é relativo.  
   
 ```
 BOOL IsRelative() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se o caminho for relativo, ou falso se for absoluta.  
+ Retorna VERDADEIRO se o caminho for relativo, ou FALSE se for absoluto.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ##  <a name="isroot"></a>CPathT::IsRoot  
- Chame esse método para determinar se o caminho é uma diretório raiz.  
+ Chame este método para determinar se o caminho é uma diretório raiz.  
   
 ```
 BOOL IsRoot() const;
@@ -474,7 +474,7 @@ BOOL IsRoot() const;
  Para obter mais informações, consulte [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
 ##  <a name="issameroot"></a>CPathT::IsSameRoot  
- Chame esse método para determinar se outro caminho tem um componente raiz comuns com o caminho atual.  
+ Chame este método para determinar se outro caminho tem um componente raiz comum com o caminho atual.  
   
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -485,7 +485,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  O caminho.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se ambas as cadeias de caracteres têm o mesmo componente raiz, ou FALSO caso contrário.  
+ Retorna VERDADEIRO se ambas as cadeias possuem o mesmo componente raiz, ou FALSO caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
@@ -504,20 +504,20 @@ BOOL IsUNC() const;
  Para obter mais informações, consulte [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
 ##  <a name="isuncserver"></a>CPathT::IsUNCServer  
- Chame esse método para determinar se o caminho é um caminho UNC (convenção de nomenclatura universal) válido para um servidor.  
+ Chame este método para determinar se o caminho é um caminho UNC (convenção de nomenclatura universal) válido para um servidor.  
   
 ```
 BOOL IsUNCServer() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna TRUE se a cadeia de caracteres for um caminho UNC para um servidor somente (sem nome de compartilhamento) válido, ou FALSO caso contrário.  
+ Retorna VERDADEIRO se a cadeia de caracteres é um caminho UNC para um servidor somente (sem nome de compartilhamento) válido, ou FALSO caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
- Chame esse método para determinar se o caminho é um caminho válido de compartilhamento UNC (convenção de nomenclatura universal), \\ \  *servidor*\ *compartilhar*.  
+ Chame esse método para determinar se o caminho é um caminho de compartilhamento UNC (convenção de nomenclatura universal) válido, \\ \  *servidor*\ *compartilhar*.  
   
 ```
 BOOL IsUNCServerShare() const;
@@ -537,23 +537,23 @@ StringType m_strPath;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `StringType`é o parâmetro de modelo `CPathT`.  
+ `StringType`é o parâmetro de modelo para `CPathT`.  
   
 ##  <a name="makepretty"></a>CPathT::MakePretty  
- Chame esse método para converter um caminho em todos os caracteres minúsculos para fornecer o caminho de uma aparência consistente.  
+ Chame este método para converter um caminho em todos os caracteres minúsculos, para que o caminho de uma aparência consistente.  
   
 ```
 BOOL MakePretty();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Caso contrário, retornará verdadeiro se o caminho tiver sido convertido, ou falso.  
+ Caso contrário, retornará TRUE se o caminho tiver sido convertido, ou FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ##  <a name="matchspec"></a>CPathT::MatchSpec  
- Chame esse método para pesquisar o caminho para uma cadeia de caracteres que contém um tipo de correspondência de curingas.  
+ Chame esse método para pesquisar o caminho para uma cadeia de caracteres que contém um tipo de correspondência de curinga.  
   
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -564,12 +564,12 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  Ponteiro para uma cadeia de caracteres terminada em nulo com o tipo de arquivo que deseja pesquisar. Por exemplo, para testar se o arquivo no caminho atual é um arquivo de documento, `pszSpec` deve ser definido como "*. doc".  
   
 ### <a name="return-value"></a>Valor de retorno  
- Caso contrário, retornará TRUE se a cadeia de caracteres corresponde ou FALSE.  
+ Caso contrário, retornará TRUE se a cadeia de caracteres corresponder, ou FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
-##  <a name="operator_add_eq"></a>+ = CPathT::operator  
+##  <a name="operator_add_eq"></a>+ CPathT::operator =  
  Este operador acrescenta uma cadeia de caracteres para o caminho.  
   
 ```
@@ -584,34 +584,34 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
  Retorna o caminho de atualização.  
   
 ##  <a name="operator_const_stringtype_amp"></a>StringType const CPathT::operator&amp;  
- Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.  
+ Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.  
   
 ```
  operatorconst StringType&() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por esse objeto.  
+ Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por este objeto.  
   
 ##  <a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
- Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.  
+ Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.  
   
 ```
  operatorPCXSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por esse objeto.  
+ Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por este objeto.  
   
 ##  <a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
- Este operador permite que o objeto deve ser tratada como uma cadeia de caracteres.  
+ Este operador permite que o objeto a ser tratada como uma cadeia de caracteres.  
   
 ```
  operatorStringType&() throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por esse objeto.  
+ Retorna uma cadeia de caracteres que representa o caminho atual gerenciado por este objeto.  
   
 ##  <a name="pcxstr"></a>CPathT::PCXSTR  
  Um tipo de cadeia de caracteres constante.  
@@ -621,7 +621,7 @@ typedef StringType::PCXSTR PCXSTR;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `StringType`é o parâmetro de modelo `CPathT`.  
+ `StringType`é o parâmetro de modelo para `CPathT`.  
   
 ##  <a name="pxstr"></a>CPathT::PXSTR  
  Um tipo de cadeia de caracteres.  
@@ -631,7 +631,7 @@ typedef StringType::PXSTR PXSTR;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `StringType`é o parâmetro de modelo `CPathT`.  
+ `StringType`é o parâmetro de modelo para `CPathT`.  
   
 ##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
  Chame esse método para colocar o caminho entre aspas se ele contiver espaços.  
@@ -659,16 +659,16 @@ BOOL RelativePathTo(
  O início do caminho relativo.  
   
  *dwAttrFrom*  
- Os atributos do `pszFrom`. Se esse valor contiver FILE_ATTRIBUTE_DIRECTORY, `pszFrom` é assumido ser um diretório; caso contrário, `pszFrom` é considerado como um arquivo.  
+ Os atributos de arquivo de `pszFrom`. Se esse valor contém FILE_ATTRIBUTE_DIRECTORY, `pszFrom` presume-se um diretório; caso contrário, `pszFrom` é considerado como um arquivo.  
   
  `pszTo`  
- O ponto final do caminho relativo.  
+ O ponto de extremidade do caminho relativo.  
   
  *dwAttrTo*  
- Os atributos do `pszTo`. Se esse valor contiver FILE_ATTRIBUTE_DIRECTORY, `pszTo` é assumido ser um diretório; caso contrário, `pszTo` é considerado como um arquivo.  
+ Os atributos de arquivo de `pszTo`. Se esse valor contém FILE_ATTRIBUTE_DIRECTORY, `pszTo` presume-se um diretório; caso contrário, `pszTo` é considerado como um arquivo.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
@@ -704,7 +704,7 @@ void RemoveBlanks();
  Para obter mais informações, consulte [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ##  <a name="removeextension"></a>CPathT::RemoveExtension  
- Chame esse método para remover a extensão do arquivo do caminho, se houver.  
+ Chame esse método para remover a extensão de arquivo do caminho, se houver um.  
   
 ```
 void RemoveExtension();
@@ -721,13 +721,13 @@ BOOL RemoveFileSpec();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
 ##  <a name="renameextension"></a>CPathT::RenameExtension  
- Chame esse método para substituir a extensão de nome de arquivo no caminho com uma nova extensão. Se o nome do arquivo não contém uma extensão, a extensão será anexada ao final do caminho.  
+ Chame este método para substituir a extensão de nome de arquivo no caminho com uma nova extensão. Se o nome do arquivo não contém uma extensão, a extensão será anexada ao final do caminho.  
   
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -738,7 +738,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  A nova extensão de nome de arquivo, precedido por um "." caracteres.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
@@ -751,7 +751,7 @@ int SkipRoot() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a posição de início de subcaminho que segue a raiz (letra da unidade ou servidor/compartilhamento UNC).  
+ Retorna a posição de início de subcaminho que segue a raiz (letra de unidade ou UNC/compartilhamento de servidor).  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
@@ -780,7 +780,7 @@ BOOL StripToRoot();
  Para obter mais informações, consulte [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
 ##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
- Chame esse método para remover as aspas no início e no final de um caminho.  
+ Chame este método para remover as aspas de início e término de um caminho.  
   
 ```
 void UnquoteSpaces();
@@ -797,7 +797,7 @@ typedef StringType::XCHAR XCHAR;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `StringType`é o parâmetro de modelo `CPathT`.  
+ `StringType`é o parâmetro de modelo para `CPathT`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../atl/reference/atl-classes.md)   

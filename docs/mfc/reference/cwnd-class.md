@@ -443,9 +443,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 77be7b572bd5fa6d90d52d14a40706f251176a2b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 8888bd1296b5397daf288fa81f00a8783d9cde46
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwnd-class"></a>Classe CWnd
@@ -664,7 +664,7 @@ class CWnd : public CCmdTarget
 |[CWnd::SendDlgItemMessage](#senddlgitemmessage)|Envia uma mensagem para o controle especificado.|  
 |[CWnd::SendMessage](#sendmessage)|Envia uma mensagem para o `CWnd` do objeto e não retorna até que ele processou a mensagem.|  
 |[CWnd::SendMessageToDescendants](#sendmessagetodescendants)|Envia uma mensagem para todas as janelas descendentes da janela.|  
-|[CWnd::SendNotifyMessage](#sendnotifymessage)|Envia a mensagem especificada para a janela e retorna assim que possível, dependendo se o thread de chamada criada a janela.|  
+|[CWnd::SendNotifyMessage](#sendnotifymessage)|Envia a mensagem especificada para a janela e retorna assim que possível, dependendo se o thread de chamada criado a janela.|  
 |[CWnd::SetActiveWindow](#setactivewindow)|Ativa a janela.|  
 |[CWnd::SetCapture](#setcapture)|Faz com que todas as demais entradas do mouse sejam enviados para o `CWnd`.|  
 |[CWnd::SetCaretPos](#setcaretpos)|Move o cursor para uma posição especificada.|  
@@ -848,10 +848,10 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Chamado a partir do Gerenciador de impressão sempre que um trabalho é adicionado ou removido da fila de impressão Manager.|  
 |[CWnd::OnStyleChanged](#onstylechanged)|Indica que o [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) função do Windows foi alterada de um ou mais estilos da janela.|  
 |[CWnd::OnStyleChanging](#onstylechanging)|Indica que o [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) função do Windows está prestes a alterar um ou mais estilos da janela.|  
-|[CWnd::OnSysChar](#onsyschar)|Chamado quando uma tecla é convertida para um caractere de sistema.|  
+|[CWnd::OnSysChar](#onsyschar)|Chamado quando uma tecla é convertido para um caractere de sistema.|  
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Chamado para todas as janelas de nível superior quando uma alteração é feita na configuração de cores do sistema.|  
 |[CWnd::OnSysCommand](#onsyscommand)|Chamado quando o usuário seleciona um comando de menu de controle, ou quando o usuário seleciona o botão Maximizar ou minimizar.|  
-|[CWnd::OnSysDeadChar](#onsysdeadchar)|Chamado quando um pressionamento de tecla é convertida para um caractere inativo do sistema (como caracteres de acentos).|  
+|[CWnd::OnSysDeadChar](#onsysdeadchar)|Chamado quando um pressionamento de tecla converte em um caractere de inatividade de sistema (como caracteres de acentos).|  
 |[CWnd::OnSysKeyDown](#onsyskeydown)|Chamado quando o usuário mantém pressionada a tecla ALT e, em seguida, pressionar outra chave.|  
 |[CWnd::OnSysKeyUp](#onsyskeyup)|Chamado quando o usuário solta uma tecla que foi pressionada enquanto a tecla ALT foi pressionada.|  
 |[CWnd::OnTCard](#ontcard)|Chamado quando o usuário clica em um botão authorable.|  
@@ -862,13 +862,13 @@ class CWnd : public CCmdTarget
 |[CWnd::OnUniChar](#onunichar)|Chamado quando uma tecla é pressionada. Ou seja, a janela atual tem o foco do teclado e um [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) mensagem é convertida pelo [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) função.|  
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Chamado quando um menu suspenso ou submenu foi destruído.|  
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Chamado para alterar o estado de interface do usuário para a janela especificada e todas as janelas filho.|  
-|[CWnd::OnUserChanged](#onuserchanged)|Chamado depois que o usuário fez ativado ou desativado.|  
+|[CWnd::OnUserChanged](#onuserchanged)|Chamado depois que o usuário tem efetuou logon ou logoff.|  
 |[CWnd::OnVKeyToItem](#onvkeytoitem)|Chamado por uma caixa de listagem de propriedade `CWnd` em resposta a um [WM_KEYDOWN](#onkeydown) mensagem.|  
 |[CWnd::OnVScroll](#onvscroll)|Chamado quando o usuário clica em barras de rolagem vertical da janela.|  
 |[CWnd::OnVScrollClipboard](#onvscrollclipboard)|Chamado quando o proprietário deve rolar a imagem da área de transferência, invalidar a seção correspondente e atualizar os valores da barra de rolagem.|  
 |[CWnd::OnWindowPosChanged](#onwindowposchanged)|Chamado quando o tamanho, a posição ou a ordem Z é alterado como resultado de uma chamada para [SetWindowPos](#setwindowpos) ou outra função de gerenciamento de janela.|  
 |[CWnd::OnWindowPosChanging](#onwindowposchanging)|Chamado quando o tamanho, a posição ou a ordem Z está prestes a ser alterada como resultado de uma chamada para [SetWindowPos](#setwindowpos) ou outra função de gerenciamento de janela.|  
-|[CWnd::OnWinIniChange](#onwininichange)|Chamado para todas as janelas de nível superior do arquivo de inicialização do Windows, WIN. INI, é alterado.|  
+|[CWnd::OnWinIniChange](#onwininichange)|Chamado para todas as janelas de nível superior após o arquivo de inicialização do Windows, WIN. INI, é alterado.|  
 |[CWnd::OnWndMsg](#onwndmsg)|Indica se uma mensagem do windows foi tratada.|  
 |[CWnd::OnXButtonDblClk](#onxbuttondblclk)|Chamado quando o usuário clica duas vezes em XBUTTON1 ou XBUTTON2 enquanto o cursor estiver na área de cliente de uma janela.|  
 |[CWnd::OnXButtonDown](#onxbuttondown)|Chamado quando o usuário pressiona XBUTTON1 ou XBUTTON2 enquanto o cursor estiver na área de cliente de uma janela.|  
@@ -1373,7 +1373,7 @@ CWnd* ChildWindowFromPoint(
 |**CWP_ALL**|Não ignore todas as janelas filho|  
 |**CWP_SKIPINVISIBLE**|Ignorar janelas filho invisível|  
 |**CWP_SKIPDISABLED**|Ignorar desabilitado janelas filho|  
-|**CWP_SKIPTRANSPARENT**|Ignorar as janelas filho transparente|  
+|**CWP_SKIPTRANSPARENT**|Ignorar janelas filho transparente|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Identifica a janela filho que contém o ponto. É **nulo** se o ponto fornecido está fora da área do cliente. Se o ponto estiver dentro da área do cliente, mas não está contido em qualquer janela filho, `CWnd` será retornado.  
@@ -1526,7 +1526,7 @@ void CreateCaret(CBitmap* pBitmap);
 ### <a name="remarks"></a>Comentários  
  O bitmap deve ter sido criado anteriormente pelo [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) função de membro, o [CreateDIBitmap](http://msdn.microsoft.com/library/windows/desktop/dd183491) função do Windows, ou o [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) função de membro.  
   
- `CreateCaret`destrói automaticamente a forma anterior de cursor, se houver, independentemente de qual janela possui o cursor. Depois de criado, o cursor fica inicialmente oculto. Para mostrar o cursor, o [ShowCaret](#showcaret) deve ser chamada de função de membro.  
+ `CreateCaret`destrói automaticamente a forma de cursor anterior, se houver, independentemente de qual janela possui o cursor. Depois de criado, o cursor fica inicialmente oculto. Para mostrar o cursor, o [ShowCaret](#showcaret) deve ser chamada de função de membro.  
   
  O cursor do sistema é um recurso compartilhado. `CWnd`Crie um cursor somente quando ele tem o foco de entrada ou está ativo. Ele deve destruir o cursor antes de ele perde o foco de entrada ou se torna inativo.  
   
@@ -2039,7 +2039,7 @@ BOOL DlgDirSelect(
   
  O `DlgDirSelect` função membro copia a seleção para o buffer fornecido pelo `lpString`. Se não houver nenhuma seleção `lpString` não é alterado.  
   
- `DlgDirSelect`Envia [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) e [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) as mensagens para a caixa de listagem.  
+ `DlgDirSelect`Envia [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) e [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) mensagens para a caixa de listagem.  
   
  Ele não permite mais de um nome de arquivo a ser retornado de uma caixa de listagem. A caixa de listagem não deve ser uma caixa de listagem de seleção múltipla.  
   
@@ -2067,7 +2067,7 @@ BOOL DlgDirSelectComboBox(
   
  O `DlgDirSelectComboBox` função membro copia a seleção para o buffer especificado. Se não houver nenhuma seleção, o conteúdo do buffer não é alterado.  
   
- `DlgDirSelectComboBox`Envia [CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845) e [CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862) as mensagens para a caixa de combinação.  
+ `DlgDirSelectComboBox`Envia [CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845) e [CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862) mensagens para a caixa de combinação.  
   
  Ele não permite mais de um nome de arquivo a ser retornado de uma caixa de combinação.  
   
@@ -2352,9 +2352,9 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentários  
  Quando a entrada é desabilitada, entrada, como cliques do mouse e pressionamentos de tecla será ignorado. Quando a entrada é habilitada, a janela processa todas as entradas.  
   
- Se está alterando o estado habilitado, o [WM_ENABLE](#onenable) mensagem é enviada antes que essa função retorna.  
+ Se estiver alterando o estado habilitado, o [WM_ENABLE](#onenable) mensagem é enviada antes que essa função retorna.  
   
- Se desabilitada, todas as janelas filho implicitamente são desabilitadas, embora eles não são enviados `WM_ENABLE` as mensagens.  
+ Se desabilitada, todas as janelas filho implicitamente são desabilitadas, embora eles não são enviados `WM_ENABLE` mensagens.  
   
  Uma janela deve ser habilitada antes que ele pode ser ativado. Por exemplo, se um aplicativo está exibindo uma caixa de diálogo sem janela restrita e tiver desabilitado a janela principal, a janela principal deve habilitada antes da caixa de diálogo é destruída. Caso contrário, outra janela receberá o foco de entrada e ser ativada. Se uma janela filho é desabilitada, ele será ignorado quando o Windows tenta determinar que janela deve receber mensagens de mouse.  
   
@@ -2424,7 +2424,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
  **TRUE** se um recurso de caixa de diálogo for executado; caso contrário **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- `ExecuteDlgInit`usará o associado para o módulo de execução, recursos ou outras fontes. Para fazer isso, `ExecuteDlgInit` localiza um identificador de recurso chamando `AfxFindResourceHandle`. Se seu aplicativo do MFC não usa a DLL compartilhada (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** chamadas [AfxGetResourceHandle](http://msdn.microsoft.com/library/d0eff6c4-f566-471a-96b7-a5a70a751a92), que retorna o identificador de recurso atual para o executável. Se seu aplicativo do MFC que usa MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` atravessa o **CDynLinkLibrary** lista de objeto compartilhado e procurando o recurso correto de DLLs de extensão lidar com.  
+ `ExecuteDlgInit`usará o associado para o módulo de execução, recursos ou outras fontes. Para fazer isso, `ExecuteDlgInit` localiza um identificador de recurso chamando `AfxFindResourceHandle`. Se seu aplicativo do MFC não usa a DLL compartilhada (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** chamadas [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), que retorna o identificador de recurso atual para o executável. Se seu aplicativo do MFC que usa MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` atravessa o **CDynLinkLibrary** lista de objeto compartilhado e procurando o recurso correto de DLLs de extensão lidar com.  
   
 ##  <a name="filtertooltipmessage"></a>CWnd::FilterToolTipMessage  
  Chamado pelo framework para exibir mensagens de dica de ferramenta.  
@@ -2440,7 +2440,7 @@ void FilterToolTipMessage(MSG* pMsg);
 ### <a name="remarks"></a>Comentários  
  Na maioria dos aplicativos MFC este método é chamado pelo framework do [PreTranslateMessage](#pretranslatemessage) e [EnableToolTips](#enabletooltips), e você não precisa chamá-lo.  
   
- No entanto, em certos aplicativos, por exemplo, alguns controles ActiveX, esses métodos não podem ser chamados pelo framework e você precisará chamar FilterToolTipMessage por conta própria. Para obter mais informações, consulte [métodos de dicas de ferramenta criando](../../mfc/methods-of-creating-tool-tips.md).  
+ No entanto, em certos aplicativos, por exemplo, alguns controles ActiveX, esses métodos não podem ser chamados pelo framework, e você precisará chamar FilterToolTipMessage por conta própria. Para obter mais informações, consulte [métodos de dicas de ferramenta criando](../../mfc/methods-of-creating-tool-tips.md).  
   
 ##  <a name="findwindow"></a>CWnd::FindWindow  
  Retorna o nível superior `CWnd` cuja classe de janela é determinado pelo `lpszClassName` e cujo nome de janela, ou o título, for fornecido pelo `lpszWindowName`.  
@@ -2514,7 +2514,7 @@ BOOL FlashWindow(BOOL bInvert);
  Diferente de zero se a janela estava ativa antes da chamada para o `FlashWindow` função de membro; caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Piscando sucessivo, crie um timer de sistema e chamar repetidamente `FlashWindow`. Piscando o `CWnd` significa alterar a aparência de sua barra de título como se o `CWnd` foram a alteração do status inativo para ativo, ou vice-versa. (Uma barra de título inativa alterações em uma barra de título ativa; alterações de uma barra de título ativa em uma barra de título inativa).  
+ Piscando sucessivo, crie um timer de sistema e chamar repetidamente `FlashWindow`. Piscando o `CWnd` significa alterar a aparência de sua barra de título como se o `CWnd` foram a alteração do status inativo para ativo, ou vice-versa. (Uma barra de título inativa muda para uma barra de título ativa; alterações de uma barra de título ativa em uma barra de título inativa).  
   
  Normalmente, uma janela é atualizada para informar ao usuário que ele requer atenção, mas se ele não tem atualmente o foco de entrada.  
   
@@ -2673,7 +2673,7 @@ virtual HRESULT get_accDescription(
  Especifica se a descrição a ser recuperado do objeto ou um dos elementos de filhos do objeto. Esse parâmetro pode ser CHILDID_SELF (para obter informações sobre o objeto) ou uma ID de filho (para obter informações sobre o elemento do filho do objeto).  
   
  `pszDescription`  
- Endereço de um `BSTR` que recebe um cadeia de caracteres que descreve o objeto especificado ou nulo se nenhuma descrição estiver disponível para este objeto.  
+ Endereço de um `BSTR` que recebe um cadeia de caracteres que descreve o objeto especificado ou nulo se nenhuma descrição disponível para este objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK em caso de sucesso, um código de erro COM falha. Consulte **retornar valores** na [IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
@@ -3147,7 +3147,7 @@ CDC* GetDCEx(
   
  Para obter um contexto de dispositivo em cache, um aplicativo deve especificar [DCX_CACHE](http://msdn.microsoft.com/library/windows/desktop/dd144873). Se **DCX_CACHE** não for especificado e a janela não é nem **CS_OWNDC** nem [CS_CLASSDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), essa função retorna **nulo**.  
   
- Um contexto de dispositivo com características especiais é retornado pelo [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) funcionar se o **CS_CLASSDC**, [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), ou [CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576) estilo foi especificado no [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estruturar quando a classe foi registrada.  
+ Um contexto de dispositivo com características especiais é retornado pelo [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) funcionar se o **CS_CLASSDC**, [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), ou [CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576) estilo foi especificado no [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura quando a classe foi registrada.  
   
  Para obter mais informações sobre essas características, consulte a descrição do **WNDCLASS** estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -3387,7 +3387,7 @@ static CWnd* PASCAL GetForegroundWindow();
  Um ponteiro para a janela de primeiro plano. Isso pode ser um temporário `CWnd` objeto.  
   
 ### <a name="remarks"></a>Comentários  
- A janela de primeiro plano se aplica somente a janelas de nível superior (janelas com moldura ou caixas de diálogo).  
+ A janela de primeiro plano se aplica somente a janelas de nível superior (quadro janelas ou caixas de diálogo).  
   
 ##  <a name="geticon"></a>CWnd::GetIcon  
  Chamar essa função de membro para obter o identificador para a um grande (32x32) ou o identificador para um pequeno ícone (16 x 16), conforme indicado pelo `bBigIcon`.  
@@ -3415,7 +3415,7 @@ CWnd* GetLastActivePopup() const;
   
 -   A própria janela estava ativa mais recentemente.  
   
--   A janela não possui todas as janelas pop-up.  
+-   A janela não possui qualquer janelas pop-up.  
   
 -   A janela não é uma janela de nível superior ou pertence a outra janela.  
   
@@ -5152,7 +5152,7 @@ afx_msg int OnCharToItem(
  Especifica a posição do cursor atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O framework chama esta função de membro para especificar a ação que o aplicativo é executado em resposta à chamada. Um valor de retorno de – 2 indica que o aplicativo tratados todos os aspectos de seleção do item e não quer nenhuma ação adicional a caixa de listagem. Um valor de retorno de -1 indica que a caixa de listagem deve realizar a ação padrão em resposta ao pressionamento de tecla. Um valor de 0 ou maior retorno Especifica o índice de base zero de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para pressionamento de tecla em um determinado item.  
+ O framework chama esta função de membro para especificar a ação que o aplicativo é executado em resposta à chamada. Um valor de retorno de -2 indica que o aplicativo tratados todos os aspectos de seleção do item e não quer nenhuma ação adicional a caixa de listagem. Um valor de retorno de -1 indica que a caixa de listagem deve realizar a ação padrão em resposta ao pressionamento de tecla. Um valor de 0 ou maior retorno Especifica o índice de base zero de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para pressionamento de tecla em um determinado item.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -5275,7 +5275,7 @@ afx_msg void OnCompacting(UINT nCpuTime);
   
 ### <a name="parameters"></a>Parâmetros  
  *nCpuTime*  
- Especifica a proporção de tempo de CPU atualmente usada pelo Windows compactar memória para o tempo de CPU gasto na execução de outras operações. Por exemplo, h 8000 representa 50% da memória de compactação de tempo de CPU.  
+ Especifica a proporção de tempo de CPU usada atualmente pelo Windows compactar memória para o tempo de CPU gasto na execução de outras operações. Por exemplo, h 8000 representa 50% da memória de compactação de tempo de CPU.  
   
 ### <a name="remarks"></a>Comentários  
  Isso indica que a memória do sistema está baixa.  
@@ -5306,7 +5306,7 @@ afx_msg int OnCompareItem(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|–1|Item 1 classifica antes do item 2.|  
+|-1|Item 1 classifica antes do item 2.|  
 |0|Item 1 e item 2 classificados iguais.|  
 |1|Item 1 classificado depois item 2.|  
   
@@ -5483,10 +5483,10 @@ afx_msg void OnDeadChar(
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0–7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
+|0-7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida; caso contrário, 0).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada; caso contrário, 0).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes da chamada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -6088,7 +6088,7 @@ afx_msg void OnHScrollClipboard(
 >  Essa função de membro é chamada pelo framework para permitir que seu aplicativo lidar com uma mensagem do Windows. Os parâmetros passados para a função refletem os parâmetros recebidos pelo framework quando a mensagem foi recebida. Se você chamar a implementação de classe base desta função, essa implementação usará os parâmetros passados originalmente com a mensagem e não os parâmetros que você fornecer para a função.  
   
 ##  <a name="oniconerasebkgnd"></a>CWnd::OnIconEraseBkgnd  
- O framework chama esta função de membro para um minimizado (ícone) `CWnd` quando o plano de fundo do ícone deve ser preenchido antes do ícone de pintura do objeto.  
+ O framework chama esta função de membro para um minimizada (ícone) `CWnd` quando o plano de fundo do ícone deve ser preenchido antes do ícone de pintura do objeto.  
   
 ```  
 afx_msg void OnIconEraseBkgnd(CDC* pDC);
@@ -6236,10 +6236,10 @@ afx_msg void OnKeyDown(
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0–7|Verificar código (valor dependente de OEM).|  
+|0-7|Verificar código (valor dependente de OEM).|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada; caso contrário, 0).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes da chamada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -6278,10 +6278,10 @@ afx_msg void OnKeyUp(
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0–7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
+|0-7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida; caso contrário, 0).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada; caso contrário, 0).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes da chamada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -8281,10 +8281,10 @@ afx_msg void OnSysDeadChar(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
+|0-7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida; caso contrário, 0).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada; caso contrário, 0).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes da chamada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -8317,10 +8317,10 @@ afx_msg void OnSysKeyDown(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
+|0-7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida; caso contrário, 0).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada, 0 caso contrário).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes que a mensagem é enviada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -8361,10 +8361,10 @@ afx_msg void OnSysKeyUp(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
+|0-7|Verificar código (valor dependente de OEM). Byte baixo de palavra de ordem superior.|  
 |8|Chave estendido, como uma tecla de função ou uma chave no teclado numérico (1 se ela for uma chave estendida; caso contrário, 0).|  
-|9–10|Não usado.|  
-|11–12|Usado internamente pelo Windows.|  
+|9-10|Não usado.|  
+|11-12|Usado internamente pelo Windows.|  
 |13|Código de contexto (1 se a tecla ALT é pressionada enquanto a tecla é pressionada, 0 caso contrário).|  
 |14|Estado da chave anterior (1 se a chave estiver inativo antes que a mensagem é enviada, 0 se a chave for para cima).|  
 |15|Fazer a transição de estado (1 se a chave está sendo lançada, 0 se a chave está sendo pressionada).|  
@@ -8660,7 +8660,7 @@ afx_msg int OnVKeyToItem(
  Especifica a posição do cursor atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Especifica a ação que o aplicativo é executado em resposta à mensagem. Um valor de retorno de – 2 indica que o aplicativo tratados todos os aspectos de seleção do item e não requer nenhuma ação adicional pela caixa de listagem. Um valor de retorno de -1 indica que a caixa de listagem deve realizar a ação padrão em resposta ao pressionamento de tecla. Um valor de 0 ou maior retorno Especifica o índice de base zero de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para pressionamento de tecla em um determinado item.  
+ Especifica a ação que o aplicativo é executado em resposta à mensagem. Um valor de retorno de -2 indica que o aplicativo tratados todos os aspectos de seleção do item e não requer nenhuma ação adicional pela caixa de listagem. Um valor de retorno de -1 indica que a caixa de listagem deve realizar a ação padrão em resposta ao pressionamento de tecla. Um valor de 0 ou maior retorno Especifica o índice de base zero de um item na caixa de listagem e indica que a caixa de listagem deve executar a ação padrão para pressionamento de tecla em um determinado item.  
   
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é chamada pelo framework somente para caixas de listagem que têm o [LBS_HASSTRINGS](../../mfc/reference/list-box-styles.md) estilo.  
@@ -9394,7 +9394,7 @@ void RepositionBars(UINT nIDFirst,
   
 - **CWnd::reposQuery** o layout das barras de controle não é feito; em vez disso, `lpRectParam` é inicializada com o tamanho da área de cliente, como se o layout, na verdade, foi feito.  
   
-- **CWnd::reposExtra** adiciona os valores de `lpRectParam` para a área do cliente `nIDLast` e também executa o layout *.*  
+- **CWnd::reposExtra** adiciona os valores de `lpRectParam` para a área cliente de `nIDLast` e também executa o layout.  
   
  `lpRectParam`  
  Aponta para um [estrutura RECT](../../mfc/reference/rect-structure1.md); o uso dos quais depende do valor de `nFlag`.  
@@ -10273,7 +10273,7 @@ BOOL SetWindowPos(
  Diferente de zero se a função for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Windows é ordenado na tela de acordo com sua ordem Z; a janela na parte superior da ordem Z é exibida na parte superior de todas as outras janelas na ordem.  
+ Windows é ordenado na tela de acordo com sua ordem Z; a janela na parte superior da ordem Z aparece na parte superior de todas as outras janelas na ordem.  
   
  Todas as coordenadas de janelas filho são coordenadas do cliente (em relação ao canto superior esquerdo da área cliente da janela pai).  
   
@@ -10536,7 +10536,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
  O framework chama automaticamente `UpdateData` com `bSaveAndValidate` definida como **FALSE** quando a caixa de diálogo modal é criada na implementação do padrão de [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). A chamada ocorre antes que a caixa de diálogo está visível. A implementação padrão de [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) chama esta função de membro com `bSaveAndValidate` definida como **TRUE** para recuperar os dados e se for bem-sucedido, fechará a caixa de diálogo. (Se o botão Cancelar é clicado na caixa de diálogo, a caixa de diálogo será fechada sem os dados que estão sendo recuperados).  
   
 ##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
- Chamar essa função de membro para atualizar o estado da caixa de diálogo botões e outros controles em uma caixa de diálogo ou janela que usa o [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) mecanismo de retorno de chamada.  
+ Chamar essa função de membro para atualizar o estado da caixa de diálogo botões e outros controles em uma caixa de diálogo ou janela que usa o [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) mecanismo de retorno de chamada.  
   
 ```  
 void UpdateDialogControls(
@@ -10546,7 +10546,7 @@ void UpdateDialogControls(
   
 ### <a name="parameters"></a>Parâmetros  
  `pTarget`  
- Aponta para a janela do quadro principal do aplicativo e é usado para roteamento de mensagens de atualização *.*  
+ Aponta para a janela do quadro principal do aplicativo e é usado para roteamento de mensagens de atualização.  
   
  `bDisableIfNoHndler`  
  Sinalizador que indica se um controle que não possui nenhum manipulador de atualização deve ser exibido automaticamente como desabilitado.  

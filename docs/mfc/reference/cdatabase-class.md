@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Inicia um \u2012 "transação" uma série de chamadas reversíveis para a `AddNew`, **editar**, **excluir**, e **atualização** funções membro de classe `CRecordset` \u2012 na fonte de dados conectada. A fonte de dados deve oferecer suporte a transações para **BeginTrans** tenha efeito.|  
+|[CDatabase::BeginTrans](#begintrans)|Inicia uma transação de"" — uma série de chamadas reversíveis para a `AddNew`, **editar**, **excluir**, e **atualização** funções membro de classe `CRecordset` — na fonte de dados conectada. A fonte de dados deve oferecer suporte a transações para **BeginTrans** tenha efeito.|  
 |[CDatabase::BindParameters](#bindparameters)|Permite que você associe parâmetros antes de chamar `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Cancela uma operação assíncrona ou um processo de um thread de segundo.|  
 |[CDatabase::CanTransact](#cantransact)|Retorna zero se a fonte de dados oferece suporte a transações.|  
@@ -97,7 +97,7 @@ class CDatabase : public CObject
 |[CDatabase::CommitTrans](#committrans)|Conclui uma transação iniciada por **BeginTrans**. Comandos na transação que alterar a fonte de dados são executados.|  
 |[CDatabase::](#executesql)|Executa uma instrução SQL. Não há registros de dados são retornados.|  
 |[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifica as operações por meio do qual os indicadores persistirem em objetos de conjunto de registros.|  
-|[CDatabase::GetConnect](#getconnect)|Retorna a cadeia de conexão do ODBC usada para conectar-se a `CDatabase` o objeto para uma fonte de dados.|  
+|[CDatabase::GetConnect](#getconnect)|Retorna a cadeia de conexão do ODBC usada para conectar-se a `CDatabase` objeto para uma fonte de dados.|  
 |[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifica o efeito de confirmar uma transação em um objeto recordset aberto.|  
 |[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifica o efeito da reversão de uma transação em um objeto recordset aberto.|  
 |[CDatabase::GetDatabaseName](#getdatabasename)|Retorna o nome do banco de dados atualmente em uso.|  
@@ -246,7 +246,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentários  
  Você deve fechar qualquer conjunto de registros associado a `CDatabase` antes de chamar essa função de membro de objeto. Porque **fechar** não destrói o `CDatabase` do objeto, você pode reutilizar o objeto abrindo uma nova conexão para a mesma fonte de dados ou outra fonte de dados.  
   
- Todas as pendentes `AddNew` ou **editar** instruções de conjuntos de registros usando o banco de dados são canceladas, e todas as transações pendentes serão revertidas. Qualquer conjunto de registros depende de `CDatabase` objeto são mantidos em um estado indefinido.  
+ Todas as pendentes `AddNew` ou **editar** instruções de conjuntos de registros usando o banco de dados são canceladas, e todas as transações pendentes serão revertidas. Qualquer conjunto de registros dependentes de `CDatabase` objeto são mantidos em um estado indefinido.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDatabase #12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
@@ -398,7 +398,7 @@ BOOL IsOpen() const;
  Diferente de zero se o `CDatabase` objeto está atualmente conectado; caso contrário, 0.  
   
 ##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- Contém um identificador público para uma origem do ODBC dados conexão \u2012 "identificador de conexão".  
+ Contém um identificador público para uma conexão de fonte de dados ODBC — "identificador de conexão".  
   
 ### <a name="remarks"></a>Comentários  
  Normalmente, você terá que precisam acessar essa variável de membro diretamente. Em vez disso, o framework aloca o identificador ao chamar `OpenEx` ou **abrir**. A estrutura desaloca a alça quando você chama o **excluir** operador no `CDatabase` objeto. Observe que o **fechar** função de membro não desalocar o identificador.  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Parâmetros  
  `lpszDSN`  
- Especifica uma data source nome \u2012 um nome registrado com ODBC por meio do programa Administrador ODBC. Se for especificado um valor DSN no `lpszConnect` (no formato "DSN =\<fonte de dados >"), ele não deve ser especificado novamente na `lpszDSN`. Nesse caso, `lpszDSN` devem ser **nulo**. Caso contrário, você pode passar **nulo** para apresentar ao usuário uma caixa de diálogo de fonte de dados no qual o usuário pode selecionar uma fonte de dados. Para obter mais informações, consulte comentários.  
+ Especifica um nome de fonte de dados — um nome registrado com ODBC por meio do programa Administrador ODBC. Se for especificado um valor DSN no `lpszConnect` (no formato "DSN =\<fonte de dados >"), ele não deve ser especificado novamente na `lpszDSN`. Nesse caso, `lpszDSN` devem ser **nulo**. Caso contrário, você pode passar **nulo** para apresentar ao usuário uma caixa de diálogo de fonte de dados no qual o usuário pode selecionar uma fonte de dados. Para obter mais informações, consulte comentários.  
   
  `bExclusive`  
  Não tem suporte nesta versão da biblioteca de classes. Atualmente, uma declaração falha se esse parâmetro for **TRUE**. A fonte de dados sempre é aberta como compartilhado (não exclusivo).  
@@ -457,7 +457,7 @@ virtual BOOL Open(
  Especifica uma cadeia de caracteres de conexão. A cadeia de caracteres de conexão concatena informações, possivelmente incluindo um nome de fonte de dados, uma ID de usuário válida na fonte de dados, uma cadeia de caracteres de autenticação de usuário (senha, se a fonte de dados requer uma) e outras informações. A cadeia de caracteres de conexão inteira deve ser precedida pela cadeia de caracteres "ODBC"; (letras maiusculas ou minúsculas). O "ODBC"; cadeia de caracteres é usada para indicar que a conexão a uma fonte de dados ODBC; Isso é para compatibilidade com versões posteriores quando futuras versões da biblioteca de classes podem dar suporte a fontes de dados ODBC não.  
   
  `bUseCursorLib`  
- **TRUE** se você quiser que a DLL de biblioteca de Cursor ODBC a ser carregado. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores somente terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. O valor padrão é **TRUE**. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
+ **TRUE** se você quiser que a DLL de biblioteca de Cursor ODBC a ser carregado. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores de somente terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. O valor padrão é **TRUE**. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a conexão é estabelecida com êxito; Caso contrário, 0 se o usuário escolher Cancelar quando apresentada uma caixa de diálogo solicitando mais informações de conexão. Em todos os outros casos, a estrutura gera uma exceção.  
@@ -466,7 +466,7 @@ virtual BOOL Open(
  O objeto de banco de dados deve ser inicializado antes de você pode usá-lo para construir um objeto de conjunto de registros.  
   
 > [!NOTE]
->  Chamando o [OpenEx](#openex) função de membro é a melhor maneira para se conectar a uma fonte de dados e inicializar o objeto de banco de dados.  
+>  Chamando o [OpenEx](#openex) função de membro é a melhor maneira de se conectar a uma fonte de dados e inicializar o objeto de banco de dados.  
   
  Se os parâmetros em seu **abrir** chamada não contêm informações suficientes para fazer a conexão, o driver ODBC abre uma caixa de diálogo para obter as informações necessárias do usuário. Quando você chama **abrir**, sua cadeia de caracteres de conexão, `lpszConnect`, são armazenados em particular no `CDatabase` do objeto e está disponível por meio da chamada a [GetConnect](#getconnect) função de membro.  
   
@@ -499,7 +499,7 @@ virtual BOOL OpenEx(
   
 - **CDatabase::openReadOnly** Abrir fonte de dados como somente leitura.  
   
-- **CDatabase::useCursorLib** carregar a biblioteca de cursores ODBC DLL. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores somente terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
+- **CDatabase::useCursorLib** carregar a biblioteca de cursores ODBC DLL. A biblioteca de cursores mascara alguma funcionalidade do ODBC driver subjacente, efetivamente evitar o uso de dynasets (se o driver oferece suporte a eles). Os cursores de somente terá suportados se a biblioteca de cursores é carregada são instantâneos estáticos e cursores de somente avanço. Se você planeja criar um objeto recordset diretamente do `CRecordset` sem derivados dele, você não deve carregar a biblioteca de cursores.  
   
 - **CDatabase::noOdbcDialog** não exibir a caixa de diálogo de conexão ODBC, independentemente se suficiente informações de conexão são fornecidas.  
   
@@ -543,7 +543,7 @@ BOOL Rollback();
   Consulte o artigo [transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- Chamar esse membro função \u2012 antes de chamar `OpenEx` ou **abrir** \u2012 para substituir o número padrão de segundos permitidos antes que uma tentativa dados conexão de origem expire.  
+ Chamar essa função de membro — antes de chamar `OpenEx` ou **abrir** — para substituir o número de segundos permitido antes de uma tentativa de dados padrão conexão de origem expire.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

@@ -1,5 +1,5 @@
 ---
-title: C2662 de erro do compilador | Documentos do Microsoft
+title: C2662 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f5deca868c1233f6d652035403e933a4c9877724
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-error-c2662"></a>C2662 de erro do compilador
-'function': não é possível converter o ponteiro 'this' de 'type1' em 'type2'  
+'function': não é possível converter ponteiro 'this' de 'type1' em 'type2'  
   
- O compilador não foi possível converter o `this` ponteiro de `type1`para `type2`.  
+ O compilador não foi possível converter o `this` ponteiro de `type1` para `type2`.  
   
- Esse erro pode ser causado invocando um não -`const` função de membro em uma `const` objeto.  Possíveis resoluções:  
+ Esse erro pode ser causado por meio de invocação não`const` função de membro em uma `const` objeto.  Possíveis resoluções:  
   
--   Remover o `const` da declaração de objeto.  
+-   Remover o `const` na declaração de objeto.  
   
 -   Adicionar `const` à função de membro.  
   
@@ -66,7 +66,7 @@ int main() {
 }  
 ```  
   
- Ao compilar com **/clr**, você não pode chamar uma função em uma `const` ou `volatile` qualificado tipo gerenciado. Você não pode declarar uma função de membro const de uma classe gerenciada, portanto não é possível chamar métodos em objetos gerenciados constantes.  
+ Ao compilar com **/clr**, você não pode chamar uma função em um `const` ou `volatile` qualificado tipo gerenciado. Você não pode declarar uma função de membro const de uma classe gerenciada, portanto você não pode chamar métodos em objetos gerenciados constantes.  
   
 ```  
 // C2662_b.cpp  

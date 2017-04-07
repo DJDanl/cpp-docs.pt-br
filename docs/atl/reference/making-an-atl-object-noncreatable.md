@@ -1,5 +1,5 @@
 ---
-title: Tornando um Noncreatable de objeto ATL | Documentos do Microsoft
+title: Fazer um Noncreatable de objeto ATL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="making-an-atl-object-noncreatable"></a>Tornando um Noncreatable de objeto do ATL
-Você pode alterar os atributos de um objeto COM baseados em ATL para que um cliente não pode criar diretamente o objeto. Nesse caso, o objeto deve ser retornado por uma chamada de método em outro objeto em vez de criado diretamente.  
+# <a name="making-an-atl-object-noncreatable"></a>Fazer um Noncreatable de objeto ATL
+Você pode alterar os atributos de um objeto COM baseado na ATL para que um cliente diretamente não é possível criar o objeto. Nesse caso, o objeto deve ser retornado por meio de uma chamada de método em outro objeto em vez de criado diretamente.  
   
 ### <a name="to-make-an-object-noncreatable"></a>Para fazer um objeto noncreatable  
   
-1.  Remover o [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) para o objeto. Se você deseja que o objeto noncreatable, mas o controle a ser registrado, substitua OBJECT_ENTRY_AUTO com [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
+1.  Remover o [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) para o objeto. Se você deseja que o objeto a ser noncreatable, mas o controle a ser registrado, substitua OBJECT_ENTRY_AUTO com [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
 2.  Adicionar o [noncreatable](../../windows/noncreatable.md) atributo coclass no arquivo. idl. Por exemplo:  
   
@@ -61,11 +61,11 @@ Você pode alterar os atributos de um objeto COM baseados em ATL para que um cli
  ```  
   
 ## <a name="see-also"></a>Consulte também  
- [ATL Project Wizard](../../atl/reference/atl-project-wizard.md)   
+ [Assistente de projeto ATL](../../atl/reference/atl-project-wizard.md)   
  [Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)   
- [Criando projetos de Desktop com assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Criando projetos de área de trabalho usando os assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Programando com código ATL e C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Configurações de projeto padrão ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Configurações de projeto padrão da ATL](../../atl/reference/default-atl-project-configurations.md)
 
 

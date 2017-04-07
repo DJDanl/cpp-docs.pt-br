@@ -1,5 +1,5 @@
 ---
-title: Classe CW2WEX | Documentos do Microsoft
+title: Classe CW2WEX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9382f8404c1469b3f847500f35ab26499b6579bc
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
-Essa classe é usada, as macros de conversão de cadeia de caracteres `CW2TEX` e `CT2WEX`e o typedef `CW2W`.  
+Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2TEX` e `CT2WEX`e o typedef `CW2W`.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,29 +85,29 @@ class CW2WEX
 ## <a name="remarks"></a>Comentários  
  A menos que a funcionalidade adicional for necessária, use `CW2TEX`, `CT2WEX`, ou `CW2W` em seu código.  
   
- Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é seguro usar em loops e que ele não estouram a pilha.  
+ Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é segura usar em loops e que ele não estouro de pilha.  
   
  Se a classe tenta alocar memória no heap e falhar, ele chamará `AtlThrow` com um argumento de **E_OUTOFMEMORY**.  
   
- Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.  
+ Por padrão, as classes de conversão de ATL e macros usam página de código ANSI do thread atual para a conversão.  
   
- As macros a seguir baseiam-se em sua classe:  
+ As seguintes macros baseiam-se esta classe:  
   
 - `CW2TEX`  
   
 - `CT2WEX`  
   
- Typedef a seguir baseia-se em sua classe:  
+ Typedef seguir baseia-se essa classe:  
   
 - `CW2W`  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Atlconv. h  
+ **Cabeçalho:** atlconv.h  
   
 ##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
  O construtor.  
@@ -128,7 +128,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
  Cria o buffer necessário para a tradução.  
   
 ##  <a name="dtor"></a>CW2WEX:: ~ CW2WEX  
- O destruidor...  
+ O destruidor.  
   
 ```
 ~CW2WEX() throw();

@@ -1,5 +1,5 @@
 ---
-title: C4335 de aviso do compilador | Documentos do Microsoft
+title: C4335 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 167d7c0340b607be856c08462d02b63058689227
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dc8436664038d3f53f3a01d5006c41c3d0e4c8f0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-c4335"></a>C4335 de aviso do compilador
@@ -44,9 +44,9 @@ formato de arquivo Mac detectado: converta o arquivo fonte para formato DOS ou U
   
  O caractere de terminação de linha da primeira linha de um arquivo de origem é o estilo de Macintosh ('\r') em vez de UNIX ('\n') ou DOS ('\r\n').  
   
- Esse aviso é emitido sempre que um erro.  Consulte [aviso](../../preprocessor/warning.md) pragma para obter informações sobre como desabilitar esse aviso.  Além disso, esse aviso somente é emitido uma vez por compiland. Portanto, se houver vários `#include` diretivas que especificam os arquivos no formato Macintosh, C4335 só serão emitidos uma vez.  
+ Esse aviso é emitido sempre como um erro.  Consulte [aviso](../../preprocessor/warning.md) pragma para obter informações sobre como desativar esse aviso.  Além disso, esse aviso somente é emitido uma vez por compiland. Portanto, se houver várias `#include` diretivas que especificam os arquivos no formato Macintosh, C4335 só serão emitidos uma vez.  
   
- É uma maneira de gerar arquivos no formato Macintosh usando o **opções de salvamento avançadas** (sobre o **arquivo** menu) no Visual Studio.  
+ Uma maneira de gerar arquivos em formato Macintosh é usando o **opções avançadas de salvar** (no **arquivo** menu) no Visual Studio.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4335.  

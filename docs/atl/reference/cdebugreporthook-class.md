@@ -1,5 +1,5 @@
 ---
-title: Classe CDebugReportHook | Documentos do Microsoft
+title: Classe CDebugReportHook | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 632167d4f78ef930673450d6d087f32e91b6541f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1de883341e0a53a1520fa44d99e7907ee1fe10b6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
@@ -68,16 +68,16 @@ class CDebugReportHook
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Estático) A função personalizada de relatório que está conectada ao tempo de execução do C depurar o processo de emissão.|  
-|[CDebugReportHook::RemoveHook](#removehook)|Chame esse método para parar de enviar relatórios de depuração para o pipe nomeado e restaure o gancho do relatório anterior.|  
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Estático) A função de relatório personalizada que está conectada ao tempo de execução do C depurar o processo de geração de relatórios.|  
+|[CDebugReportHook::RemoveHook](#removehook)|Chame esse método para parar de enviar relatórios de depuração para o pipe nomeado e restaure o gancho de relatório anterior.|  
 |[CDebugReportHook::SetHook](#sethook)|Chame esse método para começar a enviar relatórios de depuração para o pipe nomeado.|  
-|[CDebugReportHook::SetPipeName](#setpipename)|Chame esse método para definir a máquina e o nome do pipe ao qual os relatórios de depuração serão enviados.|  
-|[CDebugReportHook::SetTimeout](#settimeout)|Chame esse método para definir o tempo em milissegundos que essa classe aguardará o pipe nomeado para se tornarem disponíveis.|  
+|[CDebugReportHook::SetPipeName](#setpipename)|Chame este método para definir o computador e o nome do pipe para que os relatórios de depuração serão enviados.|  
+|[CDebugReportHook::SetTimeout](#settimeout)|Chame esse método para definir o tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.|  
   
 ## <a name="remarks"></a>Comentários  
- Crie uma instância dessa classe em compilações de depuração de seus serviços ou aplicativos de enviar relatórios de depuração para um pipe nomeado. Relatórios de depuração são gerados chamando [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ou usando um wrapper para essa função, como o [ATLTRACE](http://msdn.microsoft.com/library/c796baa5-e2b9-4814-a27d-d800590b102e) e [ATLASSERT](http://msdn.microsoft.com/library/98e3e0fc-77e2-499b-a6f6-b17a21c6fbd3) macros.  
+ Crie uma instância dessa classe em compilações de depuração dos seus serviços ou aplicativos a enviar relatórios de depuração para um pipe nomeado. Relatórios de depuração são gerados chamando [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ou usando um wrapper para essa função como o [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) e [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) macros.  
   
- Uso dessa classe permite que você depure interativamente componentes em execução não-interativa [estações de janela](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Uso dessa classe permite que você depure interativamente os componentes executados não interativo [estações de janela](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
   
  Observe que os relatórios de depuração são enviados usando o contexto de segurança subjacente do thread. Representação está temporariamente desabilitada para que os relatórios de depuração podem ser exibidos em situações onde a representação de usuários de baixo privilégio está ocorrendo, como em aplicativos da web.  
   
@@ -99,10 +99,10 @@ CDebugReportHook(
  O nome da máquina para o qual a saída de depuração deve ser enviada. O padrão é o computador local.  
   
  `szPipeName`  
- O nome do pipe nomeado para o qual a saída de depuração deve ser enviada.  
+ O nome do pipe nomeado que a saída de depuração deve ser enviada.  
   
  `dwTimeout`  
- O tempo em milissegundos que essa classe aguardará o pipe nomeado para se tornarem disponíveis.  
+ O tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.  
   
 ##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
  Chamadas [CDebugReportHook::RemoveHook](#removehook).  
@@ -112,7 +112,7 @@ CDebugReportHook(
 ```  
   
 ##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
- A função personalizada de relatório que está conectada ao tempo de execução do C depurar o processo de emissão.  
+ A função de relatório personalizada que está conectada ao tempo de execução do C depurar o processo de geração de relatórios.  
   
 ```
 static int __cdecl CDebugReportHookProc(
@@ -132,22 +132,22 @@ static int __cdecl CDebugReportHookProc(
  O valor deve ser retornado por [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna FALSE se o gancho tratar completamente a mensagem em questão para que nenhum relatório adicional é necessária. Retorna TRUE se `_CrtDbgReport` deve relatar a mensagem da maneira normal.  
+ Retorna FALSE se o gancho gerencia completamente a mensagem em questão para que nenhum relatório adicional é necessária. Retorna VERDADEIRO se `_CrtDbgReport` devem relatar a mensagem da maneira normal.  
   
 ### <a name="remarks"></a>Comentários  
- A função de relatório tenta abrir o pipe nomeado e se comunicar com o processo na outra extremidade. Se o pipe estiver ocupado, a função de relatório aguardará até que o pipe é gratuito ou o tempo limite expirar. O tempo limite pode ser definido pelo construtor ou uma chamada para [CDebugReportHook::SetTimeout](#settimeout).  
+ A função de relatório tenta abrir o pipe nomeado e se comunicar com o processo na outra extremidade. Se o pipe estiver ocupado, a função de relatório aguardará até que o pipe está livre ou o tempo limite expirar. O tempo limite pode ser definido por uma chamada para ou de construtor [CDebugReportHook::SetTimeout](#settimeout).  
   
- O código nessa função é executado no contexto de segurança subjacente do thread de chamada, ou seja, a representação está desativada para a duração dessa função.  
+ O código nessa função for executado no contexto de segurança subjacente no thread de chamada, ou seja, a representação está desabilitada para a duração dessa função.  
   
 ##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
- Chame esse método para parar de enviar relatórios de depuração para o pipe nomeado e restaure o gancho do relatório anterior.  
+ Chame esse método para parar de enviar relatórios de depuração para o pipe nomeado e restaure o gancho de relatório anterior.  
   
 ```
 void RemoveHook() throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) para restaurar o gancho do relatório anterior.  
+ Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) para restaurar o gancho de relatório anterior.  
   
 ##  <a name="sethook"></a>CDebugReportHook::SetHook  
  Chame esse método para começar a enviar relatórios de depuração para o pipe nomeado.  
@@ -157,10 +157,10 @@ void SetHook() throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) roteadas através de relatórios de depuração [CDebugReportHookProc](#cdebugreporthookproc) ao pipe nomeado. Essa classe mantém controle sobre o gancho de relatório anterior para que ele possa ser restaurado quando [RemoveHook](#removehook) é chamado.  
+ Chamadas [crtsetreporthook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) roteada por meio de relatórios de depuração [CDebugReportHookProc](#cdebugreporthookproc) ao pipe nomeado. Essa classe mantém controle sobre o gancho de relatório anterior para que ele possa ser restaurado quando [RemoveHook](#removehook) é chamado.  
   
 ##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
- Chame esse método para definir a máquina e o nome do pipe ao qual os relatórios de depuração serão enviados.  
+ Chame este método para definir o computador e o nome do pipe para que os relatórios de depuração serão enviados.  
   
 ```
 BOOL SetPipeName(
@@ -173,13 +173,13 @@ BOOL SetPipeName(
  O nome da máquina para o qual a saída de depuração deve ser enviada.  
   
  `szPipeName`  
- O nome do pipe nomeado para o qual a saída de depuração deve ser enviada.  
+ O nome do pipe nomeado que a saída de depuração deve ser enviada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
+ Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
   
 ##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
- Chame esse método para definir o tempo em milissegundos que essa classe aguardará o pipe nomeado para se tornarem disponíveis.  
+ Chame esse método para definir o tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.  
   
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -187,7 +187,7 @@ void SetTimeout(DWORD dwTimeout);
   
 ### <a name="parameters"></a>Parâmetros  
  `dwTimeout`  
- O tempo em milissegundos que essa classe aguardará o pipe nomeado para se tornarem disponíveis.  
+ O tempo em milissegundos que esta classe aguardará o pipe nomeado para se tornar disponível.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classes](../../atl/reference/atl-classes.md)
