@@ -126,7 +126,7 @@
 #### [Operadores multiplicativos C](c-multiplicative-operators.md)
 #### [Operadores aditivos C](c-additive-operators.md)
 ##### [Adição (+)](addition-plus.md)
-##### [Subtração (–)](subtraction-minus.md)
+##### [Subtração (-)](subtraction-minus.md)
 ##### [Usando os operadores aditivos](using-the-additive-operators.md)
 ##### [Aritmética de ponteiro](pointer-arithmetic.md)
 #### [Operadores shift bit a bit](bitwise-shift-operators.md)
@@ -282,8 +282,3 @@
 #### [Função strerror](strerror-function.md)
 #### [Fuso horário](time-zone.md)
 #### [Função clock (C)](clock-function-c.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
