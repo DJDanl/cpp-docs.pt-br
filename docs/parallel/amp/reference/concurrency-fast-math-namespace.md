@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 293452bf0a01f7f83a8a41bcb511bc57c9d45f26
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d8a94b0911b772f4972416722757bec24a4826ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencyfastmath-namespace"></a>Namespace Concurrency::fast_math
@@ -52,71 +52,71 @@ namespace fast_math;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CoS função (fast_math)](concurrency-fast-math-namespace-functions.md#cos)|Calcula o arco cosseno do argumento|  
-|[Função cosf (fast_math)](concurrency-fast-math-namespace-functions.md#cosf)|Calcula o arco cosseno do argumento|  
-|[Função ASIN (fast_math)](concurrency-fast-math-namespace-functions.md#asin)|Calcula o arco seno do argumento|  
-|[Função asinf (fast_math)](concurrency-fast-math-namespace-functions.md#asinf)|Calcula o arco seno do argumento|  
-|[Função ATAN (fast_math)](concurrency-fast-math-namespace-functions.md#atan)|Calcula o arco tangente do argumento|  
-|[Função ATAN2 (fast_math)](concurrency-fast-math-namespace-functions.md#atan2)|Calcula o arco tangente de y/x|  
-|[Função atan2f (fast_math)](concurrency-fast-math-namespace-functions.md#atan2f)|Calcula o arco tangente de y/x|  
-|[Função atanf (fast_math)](concurrency-fast-math-namespace-functions.md#atanf)|Calcula o arco tangente do argumento|  
-|[Função ceil (fast_math)](concurrency-fast-math-namespace-functions.md#ceil)|Calcula o teto do argumento|  
-|[Função ceilf (fast_math)](concurrency-fast-math-namespace-functions.md#ceilf)|Calcula o teto do argumento|  
-|[CoS função (fast_math)](concurrency-fast-math-namespace-functions.md#cos)|Calcula o cosseno do argumento|  
-|[Função cosf (fast_math)](concurrency-fast-math-namespace-functions.md#cosf)|Calcula o cosseno do argumento|  
-|[Função COSH (fast_math)](concurrency-fast-math-namespace-functions.md#cosh)|Calcula o valor cosseno hiperbólico do argumento|  
-|[Função coshf (fast_math)](concurrency-fast-math-namespace-functions.md#coshf)|Calcula o valor cosseno hiperbólico do argumento|  
-|[Função Exp (fast_math)](concurrency-fast-math-namespace-functions.md#exp)|Calcula a exponencial do argumento de base-e|  
-|[Função exp2 (fast_math)](concurrency-fast-math-namespace-functions.md#exp2)|Calcula o exponencial do argumento de base-2|  
-|[Função exp2f (fast_math)](concurrency-fast-math-namespace-functions.md#exp2f)|Calcula o exponencial do argumento de base-2|  
-|[Função expf (fast_math)](concurrency-fast-math-namespace-functions.md#expf)|Calcula a exponencial do argumento de base-e|  
-|[Função fabs (fast_math)](concurrency-fast-math-namespace-functions.md#fabs)|Retorna o valor absoluto do argumento|  
-|[Função fabsf (fast_math)](concurrency-fast-math-namespace-functions.md#fabsf)|Retorna o valor absoluto do argumento|  
-|[Função Floor (fast_math)](concurrency-fast-math-namespace-functions.md#floor)|Calcula a base do argumento|  
-|[Função floorf (fast_math)](concurrency-fast-math-namespace-functions.md#floorf)|Calcula a base do argumento|  
-|[Função fmax (fast_math)](concurrency-fast-math-namespace-functions.md#fmax)|Determinar o valor numérico máximo dos argumentos|  
-|[Função fmaxf (fast_math)](concurrency-fast-math-namespace-functions.md#fmaxf)|Determinar o valor numérico máximo dos argumentos|  
-|[Função fmin (fast_math)](concurrency-fast-math-namespace-functions.md#fmin)|Determinar o valor numérico mínimo dos argumentos|  
-|[Função fminf (fast_math)](concurrency-fast-math-namespace-functions.md#fminf)|Determinar o valor numérico mínimo dos argumentos|  
-|[Função fmod (fast_math)](concurrency-fast-math-namespace-functions.md#fmod)|Calcula o restante de ponto flutuante de x/y|  
-|[Função fmodf (fast_math)](concurrency-fast-math-namespace-functions.md#fmodf)|Calcula o restante de ponto flutuante de x/y|  
-|[Função frexp (fast_math)](concurrency-fast-math-namespace-functions.md#frexp)|Obtém a mantissa e expoente de x|  
-|[Função frexpf (fast_math)](concurrency-fast-math-namespace-functions.md#frexpf)|Obtém a mantissa e expoente de x|  
-|[Função isfinite (fast_math)](concurrency-fast-math-namespace-functions.md#isfinite)|Determina se o argumento tem um valor finito|  
-|[Função isinf (fast_math)](concurrency-fast-math-namespace-functions.md#isinf)|Determina se o argumento for um infinito|  
-|[Função isNaN (fast_math)](concurrency-fast-math-namespace-functions.md#isnan)|Determina se o argumento é um NaN|  
-|[Função ldexp (fast_math)](concurrency-fast-math-namespace-functions.md#ldexp)|Calcula um número real de mantissa e expoente|  
-|[Função ldexpf (fast_math)](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcula um número real de mantissa e expoente|  
-|[Função log (fast_math)](concurrency-fast-math-namespace-functions.md#log)|Calcula o logaritmo de base e do argumento|  
-|[Função LOG10 (fast_math)](concurrency-fast-math-namespace-functions.md#log10)|Calcula o logaritmo de base&10; do argumento|  
-|[Função log10f (fast_math)](concurrency-fast-math-namespace-functions.md#log10f)|Calcula o logaritmo de base&10; do argumento|  
-|[Função log2 (fast_math)](concurrency-fast-math-namespace-functions.md#log2)|Calcula o logaritmo de base&2; do argumento|  
-|[Função log2f (fast_math)](concurrency-fast-math-namespace-functions.md#log2f)|Calcula o logaritmo de base&2; do argumento|  
-|[Função logf (fast_math)](concurrency-fast-math-namespace-functions.md#logf)|Calcula o logaritmo de base e do argumento|  
-|[Função modf (fast_math)](concurrency-fast-math-namespace-functions.md#modf)|Divide x em frações e partes do inteiro.|  
-|[Função modff (fast_math)](concurrency-fast-math-namespace-functions.md#modff)|Divide x em frações e partes do inteiro.|  
-|[pow função (fast_math)](concurrency-fast-math-namespace-functions.md#pow)|Calcula x elevado à potência de y|  
-|[Função powf (fast_math)](concurrency-fast-math-namespace-functions.md#powf)|Calcula x elevado à potência de y|  
-|[Função Round (fast_math)](concurrency-fast-math-namespace-functions.md#round)|Arredonda x para o inteiro mais próximo|  
-|[Função roundf (fast_math)](concurrency-fast-math-namespace-functions.md#roundf)|Arredonda x para o inteiro mais próximo|  
-|[Função rsqrt (fast_math)](concurrency-fast-math-namespace-functions.md#rsqrt)|Retorna o recíproco da raiz quadrada do argumento|  
-|[Função rsqrtf (fast_math)](concurrency-fast-math-namespace-functions.md#rsqrtf)|Retorna o recíproco da raiz quadrada do argumento|  
-|[Função signbit (fast_math)](concurrency-fast-math-namespace-functions.md#signbit)|Retorna o sinal do argumento|  
-|[Função signbitf (fast_math)](concurrency-fast-math-namespace-functions.md#signbitf)|Retorna o sinal do argumento|  
-|[Função sin (fast_math)](concurrency-fast-math-namespace-functions.md#sin)|Calcula o valor do seno do argumento|  
-|[Função sincos (fast_math)](concurrency-fast-math-namespace-functions.md#sincos)|Calcula o seno e o cosseno o valor de x|  
-|[Função sincosf (fast_math)](concurrency-fast-math-namespace-functions.md#sincosf)|Calcula o seno e o cosseno o valor de x|  
-|[Função sinf (fast_math)](concurrency-fast-math-namespace-functions.md#sinf)|Calcula o valor do seno do argumento|  
-|[Função SINH (fast_math)](concurrency-fast-math-namespace-functions.md#sinh)|Calcula o valor do seno hiperbólico do argumento|  
-|[Função sinhf (fast_math)](concurrency-fast-math-namespace-functions.md#sinhf)|Calcula o valor do seno hiperbólico do argumento|  
-|[Função Sqrt (fast_math)](concurrency-fast-math-namespace-functions.md#sqrt)|Calcula a raiz quadrada do argumento|  
-|[Função sqrtf (fast_math)](concurrency-fast-math-namespace-functions.md#sqrtf)|Calcula a raiz quadrada do argumento|  
-|[Função TAN (fast_math)](concurrency-fast-math-namespace-functions.md#tan)|Calcula o valor tangente do argumento|  
-|[Função tanf (fast_math)](concurrency-fast-math-namespace-functions.md#tanf)|Calcula o valor tangente do argumento|  
-|[Função TANH (fast_math)](concurrency-fast-math-namespace-functions.md#tanh)|Calcula o valor de tangente hiperbólico do argumento|  
-|[Função tanhf (fast_math)](concurrency-fast-math-namespace-functions.md#tanhf)|Calcula o valor de tangente hiperbólico do argumento|  
-|[Função trunc (fast_math)](concurrency-fast-math-namespace-functions.md#trunc)|Trunca o argumento para o componente inteiro|  
-|[Função truncf (fast_math)](concurrency-fast-math-namespace-functions.md#truncf)|Trunca o argumento para o componente inteiro|  
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcula o arco cosseno do argumento|  
+|[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcula o arco cosseno do argumento|  
+|[asin](concurrency-fast-math-namespace-functions.md#asin)|Calcula o arco seno do argumento|  
+|[asinf](concurrency-fast-math-namespace-functions.md#asinf)|Calcula o arco seno do argumento|  
+|[atan](concurrency-fast-math-namespace-functions.md#atan)|Calcula o arco tangente do argumento|  
+|[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Calcula o arco tangente de y/x|  
+|[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Calcula o arco tangente de y/x|  
+|[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Calcula o arco tangente do argumento|  
+|[ceil](concurrency-fast-math-namespace-functions.md#ceil)|Calcula o teto do argumento|  
+|[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Calcula o teto do argumento|  
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcula o cosseno do argumento|  
+|[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcula o cosseno do argumento|  
+|[cosh](concurrency-fast-math-namespace-functions.md#cosh)|Calcula o valor cosseno hiperbólico do argumento|  
+|[coshf](concurrency-fast-math-namespace-functions.md#coshf)|Calcula o valor cosseno hiperbólico do argumento|  
+|[exp](concurrency-fast-math-namespace-functions.md#exp)|Calcula a exponencial do argumento de base-e|  
+|[exp2](concurrency-fast-math-namespace-functions.md#exp2)|Calcula o exponencial do argumento de base-2|  
+|[exp2f](concurrency-fast-math-namespace-functions.md#exp2f)|Calcula o exponencial do argumento de base-2|  
+|[expf](concurrency-fast-math-namespace-functions.md#expf)|Calcula a exponencial do argumento de base-e|  
+|[fabs](concurrency-fast-math-namespace-functions.md#fabs)|Retorna o valor absoluto do argumento|  
+|[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|Retorna o valor absoluto do argumento|  
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|Calcula a base do argumento|  
+|[floorf](concurrency-fast-math-namespace-functions.md#floorf)|Calcula a base do argumento|  
+|[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Determinar o valor numérico máximo dos argumentos|  
+|[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Determinar o valor numérico máximo dos argumentos|  
+|[fmin](concurrency-fast-math-namespace-functions.md#fmin)|Determinar o valor numérico mínimo dos argumentos|  
+|[fminf](concurrency-fast-math-namespace-functions.md#fminf)|Determinar o valor numérico mínimo dos argumentos|  
+|[fmod](concurrency-fast-math-namespace-functions.md#fmod)|Calcula o restante de ponto flutuante de x/y|  
+|[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Calcula o restante de ponto flutuante de x/y|  
+|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Obtém a mantissa e expoente de x|  
+|[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Obtém a mantissa e expoente de x|  
+|[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Determina se o argumento tem um valor finito|  
+|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Determina se o argumento for um infinito|  
+|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Determina se o argumento é um NaN|  
+|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Calcula um número real de mantissa e expoente|  
+|[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcula um número real de mantissa e expoente|  
+|[log](concurrency-fast-math-namespace-functions.md#log)|Calcula o logaritmo de base e do argumento|  
+|[log10](concurrency-fast-math-namespace-functions.md#log10)|Calcula o logaritmo de base&10; do argumento|  
+|[log10f](concurrency-fast-math-namespace-functions.md#log10f)|Calcula o logaritmo de base&10; do argumento|  
+|[log2](concurrency-fast-math-namespace-functions.md#log2)|Calcula o logaritmo de base&2; do argumento|  
+|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Calcula o logaritmo de base&2; do argumento|  
+|[logf](concurrency-fast-math-namespace-functions.md#logf)|Calcula o logaritmo de base e do argumento|  
+|[modf](concurrency-fast-math-namespace-functions.md#modf)|Divide x em frações e partes do inteiro.|  
+|[modff](concurrency-fast-math-namespace-functions.md#modff)|Divide x em frações e partes do inteiro.|  
+|[pow](concurrency-fast-math-namespace-functions.md#pow)|Calcula x elevado à potência de y|  
+|[powf](concurrency-fast-math-namespace-functions.md#powf)|Calcula x elevado à potência de y|  
+|[round](concurrency-fast-math-namespace-functions.md#round)|Arredonda x para o inteiro mais próximo|  
+|[roundf](concurrency-fast-math-namespace-functions.md#roundf)|Arredonda x para o inteiro mais próximo|  
+|[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|Retorna o recíproco da raiz quadrada do argumento|  
+|[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Retorna o recíproco da raiz quadrada do argumento|  
+|[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Retorna o sinal do argumento|  
+|[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Retorna o sinal do argumento|  
+|[sin](concurrency-fast-math-namespace-functions.md#sin)|Calcula o valor do seno do argumento|  
+|[sincos](concurrency-fast-math-namespace-functions.md#sincos)|Calcula o seno e o cosseno o valor de x|  
+|[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Calcula o seno e o cosseno o valor de x|  
+|[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Calcula o valor do seno do argumento|  
+|[sinh](concurrency-fast-math-namespace-functions.md#sinh)|Calcula o valor do seno hiperbólico do argumento|  
+|[sinhf](concurrency-fast-math-namespace-functions.md#sinhf)|Calcula o valor do seno hiperbólico do argumento|  
+|[sqrt](concurrency-fast-math-namespace-functions.md#sqrt)|Calcula a raiz quadrada do argumento|  
+|[sqrtf](concurrency-fast-math-namespace-functions.md#sqrtf)|Calcula a raiz quadrada do argumento|  
+|[tan](concurrency-fast-math-namespace-functions.md#tan)|Calcula o valor tangente do argumento|  
+|[tanf](concurrency-fast-math-namespace-functions.md#tanf)|Calcula o valor tangente do argumento|  
+|[tanh](concurrency-fast-math-namespace-functions.md#tanh)|Calcula o valor de tangente hiperbólico do argumento|  
+|[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|Calcula o valor de tangente hiperbólico do argumento|  
+|[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Trunca o argumento para o componente inteiro|  
+|[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Trunca o argumento para o componente inteiro|  
 
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** amp_math. h  

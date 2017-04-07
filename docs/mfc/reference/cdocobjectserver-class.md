@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
+- AFXDOCOB/CDocObjectServer
+- AFXDOCOB/CDocObjectServer::CDocObjectServer
+- AFXDOCOB/CDocObjectServer::ActivateDocObject
+- AFXDOCOB/CDocObjectServer::OnActivateView
+- AFXDOCOB/CDocObjectServer::OnApplyViewState
+- AFXDOCOB/CDocObjectServer::OnSaveViewState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdocob.h  
   
-##  <a name="a-nameactivatedocobjecta--cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
  Chame essa função para ativar o servidor de objeto de documento (mas não mostrar uma).  
   
 ```  
@@ -110,7 +116,7 @@ void ActivateDocObject();
   
  Juntos, `ActivateDocObject` e `OnActivateView` ativar e mostrar a exibição DocObject. Ativação DocObject difere de outros tipos de ativação no local de OLE. Ativação DocObject ignora a exibição das bordas de hachura in-loco e adornos de objeto (por exemplo, alças de dimensionamento), ignora as funções de extensão de objeto e desenha as barras de rolagem dentro do retângulo de exibição em vez de desenhá-los fora do retângulo (como ativação in-loco normal).  
   
-##  <a name="a-namecdocobjectservera--cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
  Constrói e inicializa um objeto `CDocObjectServer`.  
   
 ```  
@@ -129,7 +135,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>Comentários  
  Quando um DocObject está ativa, o cliente site interface OLE ( `IOleDocumentSite`) é o que permite que o servidor DocObject para se comunicar com seu cliente (o contêiner). Quando um servidor DocObject é ativado, ele primeiro verifica se o contêiner implementa o `IOleDocumentSite` interface. Nesse caso, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) é chamado para ver se o contêiner oferece suporte a DocObjects. Por padrão, `GetDocObjectServer` retorna **nulo**. Você deve substituir `COleServerDoc::GetDocObjectServer` para construir um novo `CDocObjectServer` objeto ou um objeto derivado de seus próprio com ponteiros para o `COleServerDoc` contêiner e seu `IOleDocumentSite` interface como argumentos para o construtor.  
   
-##  <a name="a-nameonactivateviewa--cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
  Chame essa função para exibir o modo de exibição DocObject.  
   
 ```  
@@ -142,7 +148,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>Comentários  
  Esta função cria uma janela de quadro in-loco, desenha as barras de rolagem no modo de exibição, configura os menus servidor compartilha com seu contêiner, adiciona controles frame, define o objeto ativo, e finalmente mostra a janela de quadro in-loco e define o foco.  
   
-##  <a name="a-nameonapplyviewstatea--cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
  Substitua essa função para restaurar o estado da exibição DocObject.  
   
 ```  
@@ -158,7 +164,7 @@ virtual void OnApplyViewState(CArchive& ar);
   
  Você pode usar `OnSaveViewState` para armazenar informações persistentes específicas para o estado da exibição. Se você substituir `OnSaveViewState` para armazenar informações, você desejará substituir `OnApplyViewState` para ler as informações e aplicá-lo ao modo de exibição quando ela é ativada recentemente.  
   
-##  <a name="a-nameonsaveviewstatea--cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
  Substitua essa função para salvar informações de estado extra sobre o modo de exibição DocObject.  
   
 ```  

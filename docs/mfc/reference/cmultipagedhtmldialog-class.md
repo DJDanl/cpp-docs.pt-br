@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +97,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdhtml.h  
   
-##  <a name="a-namecmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  Constrói um objeto de caixa de diálogo com várias páginas (estilo de assistente) DHTML.  
   
 ```  
@@ -129,7 +131,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  Contém o número de identificação de um recurso HTML.  
   
-##  <a name="a-namedtorcmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
  Destrói um objeto de caixa de diálogo DHTML várias páginas.  
   
 ```  

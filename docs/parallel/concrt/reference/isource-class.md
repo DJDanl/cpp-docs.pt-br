@@ -9,7 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ISource
+- ISource
+- AGENTS/concurrency::ISource
+- AGENTS/concurrency::ISource::accept
+- AGENTS/concurrency::ISource::acquire_ref
+- AGENTS/concurrency::ISource::consume
+- AGENTS/concurrency::ISource::link_target
+- AGENTS/concurrency::ISource::release
+- AGENTS/concurrency::ISource::release_ref
+- AGENTS/concurrency::ISource::reserve
+- AGENTS/concurrency::ISource::unlink_target
+- AGENTS/concurrency::ISource::unlink_targets
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: db3ba296a96b2e77c0ae7d9be3d0a499fe2e7f76
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5545f666dccb251152dc6c9a83101662848be1c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="isource-class"></a>Classe ISource
@@ -71,15 +81,15 @@ class ISource;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Accept](#accept)|Quando substituído em uma classe derivada, aceita uma mensagem que foi oferecida por esse `ISource` bloco, transferir a propriedade para o chamador.|  
-|[Método acquire_ref](#acquire_ref)|Quando substituído em uma classe derivada, obtém uma contagem de referência sobre isso `ISource` bloco, para impedir a exclusão.|  
-|[Método Consume](#consume)|Quando substituído em uma classe derivada, consome uma mensagem anteriormente oferecida por esse `ISource` bloquear e reservada com êxito pelo destino, transferindo a propriedade para o chamador.|  
-|[Método link_target](#link_target)|Quando substituído em uma classe derivada, um bloco de destino está vinculada a esta `ISource` bloco.|  
-|[Método de liberação](#release)|Quando substituído em uma classe derivada, libera uma reserva de mensagem bem-sucedida anterior.|  
-|[Método release_ref](#release_ref)|Quando substituído em uma classe derivada, libera uma contagem de referência sobre isso `ISource` bloco.|  
-|[Método Reserve](#reserve)|Quando substituído em uma classe derivada, reserva uma mensagem anteriormente oferecida por esse `ISource` bloco.|  
-|[Método unlink_target](#unlink_target)|Quando substituído em uma classe derivada, desvincula um bloco de destino deste `ISource` bloquear, se encontrado a ser vinculado anteriormente.|  
-|[Método unlink_targets](#unlink_targets)|Quando substituído em uma classe derivada, desvincula todos os blocos de destino deste `ISource` bloco.|  
+|[aceitar](#accept)|Quando substituído em uma classe derivada, aceita uma mensagem que foi oferecida por esse `ISource` bloco, transferir a propriedade para o chamador.|  
+|[acquire_ref](#acquire_ref)|Quando substituído em uma classe derivada, obtém uma contagem de referência sobre isso `ISource` bloco, para impedir a exclusão.|  
+|[consumir](#consume)|Quando substituído em uma classe derivada, consome uma mensagem anteriormente oferecida por esse `ISource` bloquear e reservada com êxito pelo destino, transferindo a propriedade para o chamador.|  
+|[link_target](#link_target)|Quando substituído em uma classe derivada, um bloco de destino está vinculada a esta `ISource` bloco.|  
+|[release](#release)|Quando substituído em uma classe derivada, libera uma reserva de mensagem bem-sucedida anterior.|  
+|[release_ref](#release_ref)|Quando substituído em uma classe derivada, libera uma contagem de referência sobre isso `ISource` bloco.|  
+|[reserve](#reserve)|Quando substituído em uma classe derivada, reserva uma mensagem anteriormente oferecida por esse `ISource` bloco.|  
+|[unlink_target](#unlink_target)|Quando substituído em uma classe derivada, desvincula um bloco de destino deste `ISource` bloquear, se encontrado a ser vinculado anteriormente.|  
+|[unlink_targets](#unlink_targets)|Quando substituído em uma classe derivada, desvincula todos os blocos de destino deste `ISource` bloco.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [blocos de mensagens assíncronas](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -92,7 +102,7 @@ class ISource;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nameaccepta-accept"></a><a name="accept"></a>aceitar 
+##  <a name="accept"></a>aceitar 
 
  Quando substituído em uma classe derivada, aceita uma mensagem que foi oferecida por esse `ISource` bloco, transferir a propriedade para o chamador.  
   
@@ -115,7 +125,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>Comentários  
  O `accept` método é chamado por um destino, enquanto uma mensagem está sendo oferecida por esse `ISource` bloco. O ponteiro de mensagem retornado pode ser diferente do passado para o `propagate` método o `ITarget` bloquear, se essa fonte decide fazer uma cópia da mensagem.  
   
-##  <a name="a-nameacquirerefa-acquireref"></a><a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a>acquire_ref 
 
  Quando substituído em uma classe derivada, obtém uma contagem de referência sobre isso `ISource` bloco, para impedir a exclusão.  
   
@@ -130,7 +140,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Comentários  
  Este método é chamado um `ITarget` objeto que está sendo vinculado a esta fonte durante o `link_target` método.  
   
-##  <a name="a-nameconsumea-consume"></a><a name="consume"></a>consumir 
+##  <a name="consume"></a>consumir 
 
  Quando substituído em uma classe derivada, consome uma mensagem anteriormente oferecida por esse `ISource` bloquear e reservada com êxito pelo destino, transferindo a propriedade para o chamador.  
   
@@ -153,7 +163,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Comentários  
  O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornou `true`.  
   
-##  <a name="a-namedtora-isource"></a><a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a>~ ISource 
 
  Destrói o `ISource` objeto.  
   
@@ -161,7 +171,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="a-namelinktargeta-linktarget"></a><a name="link_target"></a>link_target 
+##  <a name="link_target"></a>link_target 
 
  Quando substituído em uma classe derivada, um bloco de destino está vinculada a esta `ISource` bloco.  
   
@@ -173,7 +183,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Um ponteiro para o bloco de destino que está sendo vinculado a este `ISource` bloco.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>versão 
+##  <a name="release"></a>versão 
 
  Quando substituído em uma classe derivada, libera uma reserva de mensagem bem-sucedida anterior.  
   
@@ -190,7 +200,7 @@ virtual void release(
  `_PTarget`  
  Um ponteiro para o bloco de destino que está chamando o `release` método.  
   
-##  <a name="a-namereleaserefa-releaseref"></a><a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a>release_ref 
 
  Quando substituído em uma classe derivada, libera uma contagem de referência sobre isso `ISource` bloco.  
   
@@ -205,7 +215,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Comentários  
  Este método é chamado um `ITarget` objeto que está sendo desvinculado dessa fonte. O bloco de código-fonte pode liberar quaisquer recursos reservados para o bloco de destino.  
   
-##  <a name="a-namereservea-reserve"></a><a name="reserve"></a>reservar 
+##  <a name="reserve"></a>reservar 
 
  Quando substituído em uma classe derivada, reserva uma mensagem anteriormente oferecida por esse `ISource` bloco.  
   
@@ -228,7 +238,7 @@ virtual bool reserve(
 ### <a name="remarks"></a>Comentários  
  Depois de você chamar `reserve`, se for bem-sucedida, você deve chamar `consume` ou `release` para levar ou desistir de posse da mensagem, respectivamente.  
   
-##  <a name="a-nameunlinktargeta-unlinktarget"></a><a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a>unlink_target 
 
  Quando substituído em uma classe derivada, desvincula um bloco de destino deste `ISource` bloquear, se encontrado a ser vinculado anteriormente.  
   
@@ -240,7 +250,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Um ponteiro para o bloco de destino que está sendo desvinculado neste `ISource` bloco.  
   
-##  <a name="a-nameunlinktargetsa-unlinktargets"></a><a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a>unlink_targets 
 
  Quando substituído em uma classe derivada, desvincula todos os blocos de destino deste `ISource` bloco.  
   

@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::event
+- event
+- CONCRT/concurrency::event
+- CONCRT/concurrency::event::reset
+- CONCRT/concurrency::event::set
+- CONCRT/concurrency::event::wait
+- CONCRT/concurrency::event::wait_for_multiple
+- CONCRT/concurrency::event::timeout_infinite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: abda6512f391b59cb48c8e96a489714ee117ae68
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="event-class"></a>Classe event
@@ -60,16 +66,16 @@ class event;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[o método Reset](#reset)|Redefine o evento para um estado não-sinalizado.|  
-|[Método Set](#set)|Sinaliza o evento.|  
-|[Método Wait](#wait)|Aguarda o evento ficar sinalizado.|  
-|[Método wait_for_multiple](#wait_for_multiple)|Aguarda vários eventos ficar sinalizado.|  
+|[reset](#reset)|Redefine o evento para um estado não-sinalizado.|  
+|[set](#set)|Sinaliza o evento.|  
+|[Aguarde](#wait)|Aguarda o evento ficar sinalizado.|  
+|[wait_for_multiple](#wait_for_multiple)|Aguarda vários eventos ficar sinalizado.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Constante timeout_infinite](#timeout_infinite)|Valor que indica que uma espera nunca deve atingir o tempo limite.|  
+|[timeout_infinite](#timeout_infinite)|Valor que indica que uma espera nunca deve atingir o tempo limite.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [estruturas de dados](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -82,7 +88,7 @@ class event;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-event"></a><a name="ctor"></a>evento 
+##  <a name="ctor"></a>evento 
 
  Constrói um novo evento.  
   
@@ -92,7 +98,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namedtora-event"></a><a name="dtor"></a>~ eventos 
+##  <a name="dtor"></a>~ eventos 
 
  Destrói um evento.  
   
@@ -103,7 +109,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Comentários  
  Espera-se que não há nenhum thread aguardar o evento quando o destruidor é executado. Permitir que o evento destruct com threads ainda aguardando resulta em um comportamento indefinido.  
   
-##  <a name="a-namereseta-reset"></a><a name="reset"></a>Redefinir 
+##  <a name="reset"></a>Redefinir 
 
  Redefine o evento para um estado não-sinalizado.  
   
@@ -111,7 +117,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>definir 
+##  <a name="set"></a>definir 
 
  Sinaliza o evento.  
   
@@ -122,7 +128,7 @@ void set();
 ### <a name="remarks"></a>Comentários  
  Sinalização do evento pode causar um número arbitrário de contextos de aguardar o evento se torne executável.  
   
-##  <a name="a-nametimeoutinfinitea-timeoutinfinite"></a><a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a>timeout_infinite 
 
  Valor que indica que uma espera nunca deve atingir o tempo limite.  
   
@@ -130,7 +136,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+##  <a name="wait"></a>Aguarde 
 
  Aguarda o evento ficar sinalizado.  
   
@@ -148,7 +154,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 >  Em um [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplicativo, não chame `wait` sobre o ASTA de thread porque essa chamada pode bloquear o thread atual e pode fazer com que o aplicativo pare de responder.  
   
-##  <a name="a-namewaitformultiplea-waitformultiple"></a><a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
  Aguarda vários eventos ficar sinalizado.  
   

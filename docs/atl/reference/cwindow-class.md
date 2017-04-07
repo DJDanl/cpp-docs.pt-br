@@ -9,9 +9,154 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWindow
-- ATL::CWindow
 - CWindow
+- ATLWIN/ATL::CWindow
+- ATLWIN/ATL::CWindow::CWindow
+- ATLWIN/ATL::CWindow::ArrangeIconicWindows
+- ATLWIN/ATL::CWindow::Attach
+- ATLWIN/ATL::CWindow::BeginPaint
+- ATLWIN/ATL::CWindow::BringWindowToTop
+- ATLWIN/ATL::CWindow::CenterWindow
+- ATLWIN/ATL::CWindow::ChangeClipboardChain
+- ATLWIN/ATL::CWindow::CheckDlgButton
+- ATLWIN/ATL::CWindow::CheckRadioButton
+- ATLWIN/ATL::CWindow::ChildWindowFromPoint
+- ATLWIN/ATL::CWindow::ChildWindowFromPointEx
+- ATLWIN/ATL::CWindow::ClientToScreen
+- ATLWIN/ATL::CWindow::Create
+- ATLWIN/ATL::CWindow::CreateCaret
+- ATLWIN/ATL::CWindow::CreateGrayCaret
+- ATLWIN/ATL::CWindow::CreateSolidCaret
+- ATLWIN/ATL::CWindow::DeferWindowPos
+- ATLWIN/ATL::CWindow::DestroyWindow
+- ATLWIN/ATL::CWindow::Detach
+- ATLWIN/ATL::CWindow::DlgDirList
+- ATLWIN/ATL::CWindow::DlgDirListComboBox
+- ATLWIN/ATL::CWindow::DlgDirSelect
+- ATLWIN/ATL::CWindow::DlgDirSelectComboBox
+- ATLWIN/ATL::CWindow::DragAcceptFiles
+- ATLWIN/ATL::CWindow::DrawMenuBar
+- ATLWIN/ATL::CWindow::EnableScrollBar
+- ATLWIN/ATL::CWindow::EnableWindow
+- ATLWIN/ATL::CWindow::EndPaint
+- ATLWIN/ATL::CWindow::FlashWindow
+- ATLWIN/ATL::CWindow::GetClientRect
+- ATLWIN/ATL::CWindow::GetDC
+- ATLWIN/ATL::CWindow::GetDCEx
+- ATLWIN/ATL::CWindow::GetDescendantWindow
+- ATLWIN/ATL::CWindow::GetDlgControl
+- ATLWIN/ATL::CWindow::GetDlgCtrlID
+- ATLWIN/ATL::CWindow::GetDlgHost
+- ATLWIN/ATL::CWindow::GetDlgItem
+- ATLWIN/ATL::CWindow::GetDlgItemInt
+- ATLWIN/ATL::CWindow::GetDlgItemText
+- ATLWIN/ATL::CWindow::GetExStyle
+- ATLWIN/ATL::CWindow::GetFont
+- ATLWIN/ATL::CWindow::GetHotKey
+- ATLWIN/ATL::CWindow::GetIcon
+- ATLWIN/ATL::CWindow::GetLastActivePopup
+- ATLWIN/ATL::CWindow::GetMenu
+- ATLWIN/ATL::CWindow::GetNextDlgGroupItem
+- ATLWIN/ATL::CWindow::GetNextDlgTabItem
+- ATLWIN/ATL::CWindow::GetParent
+- ATLWIN/ATL::CWindow::GetScrollInfo
+- ATLWIN/ATL::CWindow::GetScrollPos
+- ATLWIN/ATL::CWindow::GetScrollRange
+- ATLWIN/ATL::CWindow::GetStyle
+- ATLWIN/ATL::CWindow::GetSystemMenu
+- ATLWIN/ATL::CWindow::GetTopLevelParent
+- ATLWIN/ATL::CWindow::GetTopLevelWindow
+- ATLWIN/ATL::CWindow::GetTopWindow
+- ATLWIN/ATL::CWindow::GetUpdateRect
+- ATLWIN/ATL::CWindow::GetUpdateRgn
+- ATLWIN/ATL::CWindow::GetWindow
+- ATLWIN/ATL::CWindow::GetWindowContextHelpId
+- ATLWIN/ATL::CWindow::GetWindowDC
+- ATLWIN/ATL::CWindow::GetWindowLong
+- ATLWIN/ATL::CWindow::GetWindowLongPtr
+- ATLWIN/ATL::CWindow::GetWindowPlacement
+- ATLWIN/ATL::CWindow::GetWindowProcessID
+- ATLWIN/ATL::CWindow::GetWindowRect
+- ATLWIN/ATL::CWindow::GetWindowRgn
+- ATLWIN/ATL::CWindow::GetWindowText
+- ATLWIN/ATL::CWindow::GetWindowTextLength
+- ATLWIN/ATL::CWindow::GetWindowThreadID
+- ATLWIN/ATL::CWindow::GetWindowWord
+- ATLWIN/ATL::CWindow::GotoDlgCtrl
+- ATLWIN/ATL::CWindow::HideCaret
+- ATLWIN/ATL::CWindow::HiliteMenuItem
+- ATLWIN/ATL::CWindow::Invalidate
+- ATLWIN/ATL::CWindow::InvalidateRect
+- ATLWIN/ATL::CWindow::InvalidateRgn
+- ATLWIN/ATL::CWindow::IsChild
+- ATLWIN/ATL::CWindow::IsDialogMessage
+- ATLWIN/ATL::CWindow::IsDlgButtonChecked
+- ATLWIN/ATL::CWindow::IsIconic
+- ATLWIN/ATL::CWindow::IsParentDialog
+- ATLWIN/ATL::CWindow::IsWindow
+- ATLWIN/ATL::CWindow::IsWindowEnabled
+- ATLWIN/ATL::CWindow::IsWindowUnicode
+- ATLWIN/ATL::CWindow::IsWindowVisible
+- ATLWIN/ATL::CWindow::IsZoomed
+- ATLWIN/ATL::CWindow::KillTimer
+- ATLWIN/ATL::CWindow::LockWindowUpdate
+- ATLWIN/ATL::CWindow::MapWindowPoints
+- ATLWIN/ATL::CWindow::MessageBox
+- ATLWIN/ATL::CWindow::ModifyStyle
+- ATLWIN/ATL::CWindow::ModifyStyleEx
+- ATLWIN/ATL::CWindow::MoveWindow
+- ATLWIN/ATL::CWindow::NextDlgCtrl
+- ATLWIN/ATL::CWindow::OpenClipboard
+- ATLWIN/ATL::CWindow::PostMessage
+- ATLWIN/ATL::CWindow::PrevDlgCtrl
+- ATLWIN/ATL::CWindow::Print
+- ATLWIN/ATL::CWindow::PrintClient
+- ATLWIN/ATL::CWindow::RedrawWindow
+- ATLWIN/ATL::CWindow::ReleaseDC
+- ATLWIN/ATL::CWindow::ResizeClient
+- ATLWIN/ATL::CWindow::ScreenToClient
+- ATLWIN/ATL::CWindow::ScrollWindow
+- ATLWIN/ATL::CWindow::ScrollWindowEx
+- ATLWIN/ATL::CWindow::SendDlgItemMessage
+- ATLWIN/ATL::CWindow::SendMessage
+- ATLWIN/ATL::CWindow::SendMessageToDescendants
+- ATLWIN/ATL::CWindow::SendNotifyMessage
+- ATLWIN/ATL::CWindow::SetActiveWindow
+- ATLWIN/ATL::CWindow::SetCapture
+- ATLWIN/ATL::CWindow::SetClipboardViewer
+- ATLWIN/ATL::CWindow::SetDlgCtrlID
+- ATLWIN/ATL::CWindow::SetDlgItemInt
+- ATLWIN/ATL::CWindow::SetDlgItemText
+- ATLWIN/ATL::CWindow::SetFocus
+- ATLWIN/ATL::CWindow::SetFont
+- ATLWIN/ATL::CWindow::SetHotKey
+- ATLWIN/ATL::CWindow::SetIcon
+- ATLWIN/ATL::CWindow::SetMenu
+- ATLWIN/ATL::CWindow::SetParent
+- ATLWIN/ATL::CWindow::SetRedraw
+- ATLWIN/ATL::CWindow::SetScrollInfo
+- ATLWIN/ATL::CWindow::SetScrollPos
+- ATLWIN/ATL::CWindow::SetScrollRange
+- ATLWIN/ATL::CWindow::SetTimer
+- ATLWIN/ATL::CWindow::SetWindowContextHelpId
+- ATLWIN/ATL::CWindow::SetWindowLong
+- ATLWIN/ATL::CWindow::SetWindowLongPtr
+- ATLWIN/ATL::CWindow::SetWindowPlacement
+- ATLWIN/ATL::CWindow::SetWindowPos
+- ATLWIN/ATL::CWindow::SetWindowRgn
+- ATLWIN/ATL::CWindow::SetWindowText
+- ATLWIN/ATL::CWindow::SetWindowWord
+- ATLWIN/ATL::CWindow::ShowCaret
+- ATLWIN/ATL::CWindow::ShowOwnedPopups
+- ATLWIN/ATL::CWindow::ShowScrollBar
+- ATLWIN/ATL::CWindow::ShowWindow
+- ATLWIN/ATL::CWindow::ShowWindowAsync
+- ATLWIN/ATL::CWindow::UpdateWindow
+- ATLWIN/ATL::CWindow::ValidateRect
+- ATLWIN/ATL::CWindow::ValidateRgn
+- ATLWIN/ATL::CWindow::WinHelp
+- ATLWIN/ATL::CWindow::m_hWnd
+- ATLWIN/ATL::CWindow::rcDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -256,7 +401,7 @@ class CWindow
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="a-namearrangeiconicwindowsa--cwindowarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWindow::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>CWindow::ArrangeIconicWindows  
  Organiza todas as janelas minimizadas filho.  
   
 ```
@@ -266,7 +411,7 @@ UINT ArrangeIconicWindows() throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ArrangeIconicWindows](http://msdn.microsoft.com/library/windows/desktop/ms632671) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameattacha--cwindowattach"></a><a name="attach"></a>CWindow::Attach  
+##  <a name="attach"></a>CWindow::Attach  
  Anexa a janela identificada por `hWndNew` para o `CWindow` objeto.  
   
 ```
@@ -280,7 +425,7 @@ void Attach(HWND hWndNew) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&1;](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]  
   
-##  <a name="a-namebeginpainta--cwindowbeginpaint"></a><a name="beginpaint"></a>CWindow::BeginPaint  
+##  <a name="beginpaint"></a>CWindow::BeginPaint  
  Prepara a janela para pintura.  
   
 ```
@@ -293,7 +438,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&2;](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="a-namebringwindowtotopa--cwindowbringwindowtotop"></a><a name="bringwindowtotop"></a>CWindow::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>CWindow::BringWindowToTop  
  Traz a janela para a parte superior da ordem Z.  
   
 ```
@@ -306,7 +451,7 @@ BOOL BringWindowToTop() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&3;](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]  
   
-##  <a name="a-namecenterwindowa--cwindowcenterwindow"></a><a name="centerwindow"></a>CWindow::CenterWindow  
+##  <a name="centerwindow"></a>CWindow::CenterWindow  
  Centraliza a janela em uma determinada janela.  
   
 ```
@@ -323,7 +468,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&4;](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]  
   
-##  <a name="a-namechangeclipboardchaina--cwindowchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWindow::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>CWindow::ChangeClipboardChain  
  Remove a janela da cadeia de visualizadores de área de transferência.  
   
 ```
@@ -333,7 +478,7 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ChangeClipboardChain](http://msdn.microsoft.com/library/windows/desktop/ms649034) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecheckdlgbuttona--cwindowcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWindow::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>CWindow::CheckDlgButton  
  Altera o estado de seleção do botão especificado.  
   
 ```
@@ -343,7 +488,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [CheckDlgButton](http://msdn.microsoft.com/library/windows/desktop/bb761875) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecheckradiobuttona--cwindowcheckradiobutton"></a><a name="checkradiobutton"></a>CWindow::CheckRadioButton  
+##  <a name="checkradiobutton"></a>CWindow::CheckRadioButton  
  Verifica o botão especificado.  
   
 ```
@@ -356,7 +501,7 @@ BOOL CheckRadioButton(
 ### <a name="remarks"></a>Comentários  
  Consulte [CheckRadioButton](http://msdn.microsoft.com/library/windows/desktop/bb761877) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namechildwindowfrompointa--cwindowchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWindow::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>CWindow::ChildWindowFromPoint  
  Recupera a janela filho que contém o ponto especificado.  
   
 ```
@@ -366,7 +511,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ChildWindowFromPoint](http://msdn.microsoft.com/library/windows/desktop/ms632676) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namechildwindowfrompointexa--cwindowchildwindowfrompointex"></a><a name="childwindowfrompointex"></a>CWindow::ChildWindowFromPointEx  
+##  <a name="childwindowfrompointex"></a>CWindow::ChildWindowFromPointEx  
  Recupera um tipo específico de janela filho que contém o ponto especificado.  
   
 ```
@@ -376,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ChildWindowFromPointEx](http://msdn.microsoft.com/library/windows/desktop/ms632677) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameclienttoscreena--cwindowclienttoscreen"></a><a name="clienttoscreen"></a>CWindow::ClientToScreen  
+##  <a name="clienttoscreen"></a>CWindow::ClientToScreen  
  Converte coordenadas do cliente em coordenadas da tela.  
   
 ```
@@ -389,7 +534,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
   
  A segunda versão desse método permite converter as coordenadas de um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
-##  <a name="a-namecreatea--cwindowcreate"></a><a name="create"></a>CWindow::Create  
+##  <a name="create"></a>CWindow::Create  
  Cria uma janela.  
   
 ```
@@ -439,7 +584,7 @@ HWND Create(
   
  **Observação** se 0 for usado como o valor para o `MenuOrID` parâmetro, ele deverá ser especificado como 0U (o valor padrão) para evitar um erro do compilador.  
   
-##  <a name="a-namecreatecareta--cwindowcreatecaret"></a><a name="createcaret"></a>CWindow::CreateCaret  
+##  <a name="createcaret"></a>CWindow::CreateCaret  
  Cria uma nova forma para o cursor do sistema.  
   
 ```
@@ -449,7 +594,7 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [CreateCaret](http://msdn.microsoft.com/library/windows/desktop/ms648399) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreategraycareta--cwindowcreategraycaret"></a><a name="creategraycaret"></a>CWindow::CreateGrayCaret  
+##  <a name="creategraycaret"></a>CWindow::CreateGrayCaret  
  Cria um retângulo cinza para o cursor do sistema.  
   
 ```
@@ -461,7 +606,7 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
   
  Passa 1 (HBITMAP) para o bitmap lidar com o parâmetro para a função do Win32.  
   
-##  <a name="a-namecreatesolidcareta--cwindowcreatesolidcaret"></a><a name="createsolidcaret"></a>CWindow::CreateSolidCaret  
+##  <a name="createsolidcaret"></a>CWindow::CreateSolidCaret  
  Cria um retângulo sólido para o cursor do sistema.  
   
 ```
@@ -473,7 +618,7 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
   
  Passa 0 (HBITMAP) para o bitmap lidar com o parâmetro para a função do Win32.  
   
-##  <a name="a-namecwindowa--cwindowcwindow"></a><a name="cwindow"></a>CWindow::CWindow  
+##  <a name="cwindow"></a>CWindow::CWindow  
  O construtor.  
   
 ```
@@ -490,7 +635,7 @@ CWindow(HWND hWnd = NULL) throw();
 > [!NOTE]
 > `CWindow::CWindow`não criar uma janela. Classes de [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), e [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (todos os quais derivam `CWindow`) fornecem um método para criar uma caixa de diálogo ou janela, que é então atribuído à `CWindow::m_hWnd`. Você também pode usar o [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) função do Win32.  
   
-##  <a name="a-namedeferwindowposa--cwindowdeferwindowpos"></a><a name="deferwindowpos"></a>CWindow::DeferWindowPos  
+##  <a name="deferwindowpos"></a>CWindow::DeferWindowPos  
  Atualiza a estrutura de posição da janela de vários especificada para a janela especificada.  
   
 ```
@@ -507,7 +652,7 @@ HDWP DeferWindowPos(
 ### <a name="remarks"></a>Comentários  
  Consulte [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedestroywindowa--cwindowdestroywindow"></a><a name="destroywindow"></a>CWindow::DestroyWindow  
+##  <a name="destroywindow"></a>CWindow::DestroyWindow  
  Destrói a janela associada a `CWindow` objeto e define [m_hWnd](#m_hwnd) para **nulo**.  
   
 ```
@@ -522,7 +667,7 @@ BOOL DestroyWindow() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&5;](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]  
   
-##  <a name="a-namedetacha--cwindowdetach"></a><a name="detach"></a>CWindow::Detach  
+##  <a name="detach"></a>CWindow::Detach  
  Desanexa [m_hWnd](#m_hwnd) do `CWindow` objeto e define `m_hWnd` para **nulo**.  
   
 ```
@@ -535,7 +680,7 @@ HWND Detach() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&6;](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]  
   
-##  <a name="a-namedlgdirlista--cwindowdlgdirlist"></a><a name="dlgdirlist"></a>CWindow::DlgDirList  
+##  <a name="dlgdirlist"></a>CWindow::DlgDirList  
  Preenche uma caixa de listagem com os nomes de todos os arquivos que correspondam a um caminho especificado ou o nome de arquivo.  
   
 ```
@@ -549,7 +694,7 @@ int DlgDirList(
 ### <a name="remarks"></a>Comentários  
  Consulte [DlgDirList](http://msdn.microsoft.com/library/windows/desktop/bb761366) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedlgdirlistcomboboxa--cwindowdlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWindow::DlgDirListComboBox  
+##  <a name="dlgdirlistcombobox"></a>CWindow::DlgDirListComboBox  
  Preenche uma caixa de combinação com os nomes de todos os arquivos que correspondam a um caminho especificado ou o nome de arquivo.  
   
 ```
@@ -563,7 +708,7 @@ int DlgDirListComboBox(
 ### <a name="remarks"></a>Comentários  
  Consulte [DlgDirListComboBox](http://msdn.microsoft.com/library/windows/desktop/bb775935) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedlgdirselecta--cwindowdlgdirselect"></a><a name="dlgdirselect"></a>CWindow::DlgDirSelect  
+##  <a name="dlgdirselect"></a>CWindow::DlgDirSelect  
  Recupera a seleção atual de uma caixa de listagem.  
   
 ```
@@ -576,7 +721,7 @@ BOOL DlgDirSelect(
 ### <a name="remarks"></a>Comentários  
  Consulte [DlgDirSelectEx](http://msdn.microsoft.com/library/windows/desktop/bb761368) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedlgdirselectcomboboxa--cwindowdlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWindow::DlgDirSelectComboBox  
+##  <a name="dlgdirselectcombobox"></a>CWindow::DlgDirSelectComboBox  
  Recupera a seleção atual de uma caixa de combinação.  
   
 ```
@@ -589,7 +734,7 @@ BOOL DlgDirSelectComboBox(
 ### <a name="remarks"></a>Comentários  
  Consulte [DlgDirSelectComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775937) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedragacceptfilesa--cwindowdragacceptfiles"></a><a name="dragacceptfiles"></a>CWindow::DragAcceptFiles  
+##  <a name="dragacceptfiles"></a>CWindow::DragAcceptFiles  
  Se a janela aceita arrastado arquivos de registros.  
   
 ```
@@ -599,7 +744,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 ### <a name="remarks"></a>Comentários  
  Consulte [DragAcceptFiles](http://msdn.microsoft.com/library/windows/desktop/bb776406) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedrawmenubara--cwindowdrawmenubar"></a><a name="drawmenubar"></a>CWindow::DrawMenuBar  
+##  <a name="drawmenubar"></a>CWindow::DrawMenuBar  
  Redesenha a barra de menus da janela.  
   
 ```
@@ -609,7 +754,7 @@ BOOL DrawMenuBar() throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [DrawMenuBar](http://msdn.microsoft.com/library/windows/desktop/ms647633) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenablescrollbara--cwindowenablescrollbar"></a><a name="enablescrollbar"></a>CWindow::EnableScrollBar  
+##  <a name="enablescrollbar"></a>CWindow::EnableScrollBar  
  Habilita ou desabilita as setas da barra de rolagem.  
   
 ```
@@ -619,7 +764,7 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [EnableScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787579) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenablewindowa--cwindowenablewindow"></a><a name="enablewindow"></a>CWindow::EnableWindow  
+##  <a name="enablewindow"></a>CWindow::EnableWindow  
  Habilita ou desabilita a entrada.  
   
 ```
@@ -632,7 +777,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#7;](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]  
   
-##  <a name="a-nameendpainta--cwindowendpaint"></a><a name="endpaint"></a>CWindow::EndPaint  
+##  <a name="endpaint"></a>CWindow::EndPaint  
  Marca o fim de pintura.  
   
 ```
@@ -645,7 +790,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&2;](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="a-nameflashwindowa--cwindowflashwindow"></a><a name="flashwindow"></a>CWindow::FlashWindow  
+##  <a name="flashwindow"></a>CWindow::FlashWindow  
  Pisca uma vez a janela.  
   
 ```
@@ -655,7 +800,7 @@ BOOL FlashWindow(BOOL bInvert) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [FlashWindow](http://msdn.microsoft.com/library/windows/desktop/ms679346) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclientrecta--cwindowgetclientrect"></a><a name="getclientrect"></a>CWindow::GetClientRect  
+##  <a name="getclientrect"></a>CWindow::GetClientRect  
  Recupera as coordenadas da área do cliente.  
   
 ```
@@ -668,7 +813,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&8;](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]  
   
-##  <a name="a-namegetdca--cwindowgetdc"></a><a name="getdc"></a>CWindow::GetDC  
+##  <a name="getdc"></a>CWindow::GetDC  
  Recupera um contexto de dispositivo para a área do cliente.  
   
 ```
@@ -681,7 +826,7 @@ HDC GetDC() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&9;](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="a-namegetdcexa--cwindowgetdcex"></a><a name="getdcex"></a>CWindow::GetDCEx  
+##  <a name="getdcex"></a>CWindow::GetDCEx  
  Recupera um contexto de dispositivo para a área do cliente e permite que as opções de recorte.  
   
 ```
@@ -691,7 +836,7 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdescendantwindowa--cwindowgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWindow::GetDescendantWindow  
+##  <a name="getdescendantwindow"></a>CWindow::GetDescendantWindow  
  Localiza a janela descendente especificada pelo identificador especificado.  
   
 ```
@@ -708,7 +853,7 @@ HWND GetDescendantWindow(int nID) const throw();
 ### <a name="remarks"></a>Comentários  
  `GetDescendantWindow`pesquisa toda a árvore de janelas filho, não apenas as janelas filhos imediatos.  
   
-##  <a name="a-namegetdlgcontrola--cwindowgetdlgcontrol"></a><a name="getdlgcontrol"></a>CWindow::GetDlgControl  
+##  <a name="getdlgcontrol"></a>CWindow::GetDlgControl  
  Chame essa função para obter um ponteiro para uma interface de um controle ActiveX que é hospedado por um controle composto ou uma caixa de diálogo controle de hospedagem.  
   
 ```
@@ -734,7 +879,7 @@ HRESULT GetDlgControl(
 ### <a name="remarks"></a>Comentários  
  Usando esse ponteiro, você pode chamar métodos na interface.  
   
-##  <a name="a-namegetdlgctrlida--cwindowgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWindow::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>CWindow::GetDlgCtrlID  
  Recupera o identificador da janela (para janelas filho somente).  
   
 ```
@@ -744,7 +889,7 @@ int GetDlgCtrlID() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetDlgCtrlID](http://msdn.microsoft.com/library/windows/desktop/ms645478) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdlghosta--cwindowgetdlghost"></a><a name="getdlghost"></a>CWindow::GetDlgHost  
+##  <a name="getdlghost"></a>CWindow::GetDlgHost  
  Recupera um ponteiro para uma interface para o controle ATL que hospeda o contêiner.  
   
 ```
@@ -770,7 +915,7 @@ HRESULT GetDlgHost(
 ### <a name="remarks"></a>Comentários  
  Usando esse ponteiro, você pode chamar métodos na interface.  
   
-##  <a name="a-namegetdlgitema--cwindowgetdlgitem"></a><a name="getdlgitem"></a>CWindow::GetDlgItem  
+##  <a name="getdlgitem"></a>CWindow::GetDlgItem  
  Recupera a janela filho especificado.  
   
 ```
@@ -780,7 +925,7 @@ HWND GetDlgItem(int nID) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetDlgItem](http://msdn.microsoft.com/library/windows/desktop/ms645481) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdlgiteminta--cwindowgetdlgitemint"></a><a name="getdlgitemint"></a>CWindow::GetDlgItemInt  
+##  <a name="getdlgitemint"></a>CWindow::GetDlgItemInt  
  Converte o texto do controle como um inteiro.  
   
 ```
@@ -793,7 +938,7 @@ UINT GetDlgItemInt(
 ### <a name="remarks"></a>Comentários  
  Consulte [GetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645485) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdlgitemtexta--cwindowgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWindow::GetDlgItemText  
+##  <a name="getdlgitemtext"></a>CWindow::GetDlgItemText  
  Recupera o texto do controle.  
   
 ```
@@ -813,7 +958,7 @@ BOOL GetDlgItemText(
 ### <a name="remarks"></a>Comentários  
  A segunda versão desse método permite que você copie o texto do controle para um `BSTR`. Esta versão retorna **TRUE** se o texto for com êxito copiados; caso contrário, **FALSE**.  
   
-##  <a name="a-namegetexstylea--cwindowgetexstyle"></a><a name="getexstyle"></a>CWindow::GetExStyle  
+##  <a name="getexstyle"></a>CWindow::GetExStyle  
  Recupera os estilos de janela estendidos da janela.  
   
 ```
@@ -829,7 +974,7 @@ DWORD GetExStyle() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&10;](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]  
   
-##  <a name="a-namegetfonta--cwindowgetfont"></a><a name="getfont"></a>CWindow::GetFont  
+##  <a name="getfont"></a>CWindow::GetFont  
  Recupera a fonte atual da janela enviando uma [WM_GETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632624) mensagem na janela.  
   
 ```
@@ -839,7 +984,7 @@ HFONT GetFont() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador de fonte.  
   
-##  <a name="a-namegethotkeya--cwindowgethotkey"></a><a name="gethotkey"></a>CWindow::GetHotKey  
+##  <a name="gethotkey"></a>CWindow::GetHotKey  
  Determina a tecla de acesso associada à janela enviando uma **WM_GETHOTKEY** mensagem.  
   
 ```
@@ -849,7 +994,7 @@ DWORD GetHotKey() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  O código de tecla virtual e modificadores para a tecla de acesso associados à janela. Para obter uma lista dos possíveis modificadores, consulte [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
   
-##  <a name="a-namegeticona--cwindowgeticon"></a><a name="geticon"></a>CWindow::GetIcon  
+##  <a name="geticon"></a>CWindow::GetIcon  
  Recupera o identificador do ícone da janela de grandes ou pequenos.  
   
 ```
@@ -866,7 +1011,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 ### <a name="remarks"></a>Comentários  
  `GetIcon`envia um [WM_GETICON](http://msdn.microsoft.com/library/windows/desktop/ms632625) mensagem na janela.  
   
-##  <a name="a-namegetlastactivepopupa--cwindowgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWindow::GetLastActivePopup  
+##  <a name="getlastactivepopup"></a>CWindow::GetLastActivePopup  
  Recupera a janela pop-up ativa mais recentemente.  
   
 ```
@@ -876,7 +1021,7 @@ HWND GetLastActivePopup() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetLastActivePopup](http://msdn.microsoft.com/library/windows/desktop/ms633507) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetmenua--cwindowgetmenu"></a><a name="getmenu"></a>CWindow::GetMenu  
+##  <a name="getmenu"></a>CWindow::GetMenu  
  Recupera o menu da janela.  
   
 ```
@@ -886,7 +1031,7 @@ HMENU GetMenu() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647640) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetnextdlggroupitema--cwindowgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWindow::GetNextDlgGroupItem  
+##  <a name="getnextdlggroupitem"></a>CWindow::GetNextDlgGroupItem  
  Recupera o controle anterior ou próximo dentro de um grupo de controles.  
   
 ```
@@ -896,7 +1041,7 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetNextDlgGroupItem](http://msdn.microsoft.com/library/windows/desktop/ms645492) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetnextdlgtabitema--cwindowgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWindow::GetNextDlgTabItem  
+##  <a name="getnextdlgtabitem"></a>CWindow::GetNextDlgTabItem  
  Recupera o controle anterior ou posterior com o **WS_TABSTOP** estilo.  
   
 ```
@@ -906,7 +1051,7 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetNextDlgTabItem](http://msdn.microsoft.com/library/windows/desktop/ms645495) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetparenta--cwindowgetparent"></a><a name="getparent"></a>CWindow::GetParent  
+##  <a name="getparent"></a>CWindow::GetParent  
  Recupera a janela pai imediato.  
   
 ```
@@ -919,7 +1064,7 @@ HWND GetParent() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&11;](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]  
   
-##  <a name="a-namegetscrollinfoa--cwindowgetscrollinfo"></a><a name="getscrollinfo"></a>CWindow::GetScrollInfo  
+##  <a name="getscrollinfo"></a>CWindow::GetScrollInfo  
  Recupera os parâmetros de uma barra de rolagem.  
   
 ```
@@ -929,7 +1074,7 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787583) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetscrollposa--cwindowgetscrollpos"></a><a name="getscrollpos"></a>CWindow::GetScrollPos  
+##  <a name="getscrollpos"></a>CWindow::GetScrollPos  
  Recupera a posição da caixa de rolagem.  
   
 ```
@@ -939,7 +1084,7 @@ int GetScrollPos(int nBar) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetscrollrangea--cwindowgetscrollrange"></a><a name="getscrollrange"></a>CWindow::GetScrollRange  
+##  <a name="getscrollrange"></a>CWindow::GetScrollRange  
  Recupera o intervalo da barra de rolagem.  
   
 ```
@@ -952,7 +1097,7 @@ BOOL GetScrollRange(
 ### <a name="remarks"></a>Comentários  
  Consulte [GetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787587) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstylea--cwindowgetstyle"></a><a name="getstyle"></a>CWindow::GetStyle  
+##  <a name="getstyle"></a>CWindow::GetStyle  
  Recupera os estilos de janela da janela.  
   
 ```
@@ -968,7 +1113,7 @@ DWORD GetStyle() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#12;](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]  
   
-##  <a name="a-namegetsystemmenua--cwindowgetsystemmenu"></a><a name="getsystemmenu"></a>CWindow::GetSystemMenu  
+##  <a name="getsystemmenu"></a>CWindow::GetSystemMenu  
  Cria uma cópia do menu do sistema para modificação.  
   
 ```
@@ -978,7 +1123,7 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetSystemMenu](http://msdn.microsoft.com/library/windows/desktop/ms647985) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettoplevelparenta--cwindowgettoplevelparent"></a><a name="gettoplevelparent"></a>CWindow::GetTopLevelParent  
+##  <a name="gettoplevelparent"></a>CWindow::GetTopLevelParent  
  Recupera a janela do pai de alto nível.  
   
 ```
@@ -988,7 +1133,7 @@ HWND GetTopLevelParent() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  O identificador para a janela pai de nível superior.  
   
-##  <a name="a-namegettoplevelwindowa--cwindowgettoplevelwindow"></a><a name="gettoplevelwindow"></a>CWindow::GetTopLevelWindow  
+##  <a name="gettoplevelwindow"></a>CWindow::GetTopLevelWindow  
  Recupera a janela pai ou proprietário de nível superior da janela.  
   
 ```
@@ -998,7 +1143,7 @@ HWND GetTopLevelWindow() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  O identificador para a janela do proprietário de nível superior.  
   
-##  <a name="a-namegettopwindowa--cwindowgettopwindow"></a><a name="gettopwindow"></a>CWindow::GetTopWindow  
+##  <a name="gettopwindow"></a>CWindow::GetTopWindow  
  Recupera a janela filho de nível superior.  
   
 ```
@@ -1011,7 +1156,7 @@ HWND GetTopWindow() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&13;](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]  
   
-##  <a name="a-namegetupdaterecta--cwindowgetupdaterect"></a><a name="getupdaterect"></a>CWindow::GetUpdateRect  
+##  <a name="getupdaterect"></a>CWindow::GetUpdateRect  
  Recupera as coordenadas do retângulo menor que engloba completamente a região de atualização.  
   
 ```
@@ -1021,7 +1166,7 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetUpdateRect](http://msdn.microsoft.com/library/windows/desktop/dd144943) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetupdatergna--cwindowgetupdatergn"></a><a name="getupdatergn"></a>CWindow::GetUpdateRgn  
+##  <a name="getupdatergn"></a>CWindow::GetUpdateRgn  
  Recupera a região de atualização e a copia em uma região especificada.  
   
 ```
@@ -1031,7 +1176,7 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetUpdateRgn](http://msdn.microsoft.com/library/windows/desktop/dd144944) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowa--cwindowgetwindow"></a><a name="getwindow"></a>CWindow::GetWindow  
+##  <a name="getwindow"></a>CWindow::GetWindow  
  Recupera a janela especificada.  
   
 ```
@@ -1041,7 +1186,7 @@ HWND GetWindow(UINT nCmd) const throw();
 ### <a name="remarks"></a>Comentários  
  See `GetWindow` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowcontexthelpida--cwindowgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWindow::GetWindowContextHelpId  
+##  <a name="getwindowcontexthelpid"></a>CWindow::GetWindowContextHelpId  
  Recupera o identificador de contexto da janela Ajuda.  
   
 ```
@@ -1051,7 +1196,7 @@ DWORD GetWindowContextHelpId() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb776429) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowdca--cwindowgetwindowdc"></a><a name="getwindowdc"></a>CWindow::GetWindowDC  
+##  <a name="getwindowdc"></a>CWindow::GetWindowDC  
  Recupera um contexto de dispositivo para a janela inteira.  
   
 ```
@@ -1064,7 +1209,7 @@ HDC GetWindowDC() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#14;](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]  
   
-##  <a name="a-namegetwindowlonga--cwindowgetwindowlong"></a><a name="getwindowlong"></a>CWindow::GetWindowLong  
+##  <a name="getwindowlong"></a>CWindow::GetWindowLong  
  Recupera um valor de 32 bits em um deslocamento especificado para a memória de janela extra.  
   
 ```
@@ -1077,7 +1222,7 @@ LONG GetWindowLong(int nIndex) const throw();
 > [!NOTE]
 >  Para escrever código que é compatível com as versões de 32 bits e 64 bits do Windows, use [CWindow::GetWindowLongPtr](#getwindowlongptr).  
   
-##  <a name="a-namegetwindowlongptra--cwindowgetwindowlongptr"></a><a name="getwindowlongptr"></a>CWindow::GetWindowLongPtr  
+##  <a name="getwindowlongptr"></a>CWindow::GetWindowLongPtr  
  Recupera informações sobre a janela especificada, incluindo um valor em um deslocamento especificado para a memória de janela extra.  
   
 ```
@@ -1095,7 +1240,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
   
  Para escrever código que é compatível com as versões de 32 bits e 64 bits do Windows, use `CWindow::GetWindowLongPtr`.  
   
-##  <a name="a-namegetwindowplacementa--cwindowgetwindowplacement"></a><a name="getwindowplacement"></a>CWindow::GetWindowPlacement  
+##  <a name="getwindowplacement"></a>CWindow::GetWindowPlacement  
  Recupera o show state e posições.  
   
 ```
@@ -1105,7 +1250,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633518) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowprocessida--cwindowgetwindowprocessid"></a><a name="getwindowprocessid"></a>CWindow::GetWindowProcessID  
+##  <a name="getwindowprocessid"></a>CWindow::GetWindowProcessID  
  Recupera o identificador do processo que criou a janela.  
   
 ```
@@ -1118,7 +1263,7 @@ DWORD GetWindowProcessID() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#15;](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]  
   
-##  <a name="a-namegetwindowrecta--cwindowgetwindowrect"></a><a name="getwindowrect"></a>CWindow::GetWindowRect  
+##  <a name="getwindowrect"></a>CWindow::GetWindowRect  
  Recupera as dimensões da janela delimitadora.  
   
 ```
@@ -1128,7 +1273,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowRect](http://msdn.microsoft.com/library/windows/desktop/ms633519) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowrgna--cwindowgetwindowrgn"></a><a name="getwindowrgn"></a>CWindow::GetWindowRgn  
+##  <a name="getwindowrgn"></a>CWindow::GetWindowRgn  
  Obtém uma cópia da região de janela de uma janela.  
   
 ```
@@ -1138,7 +1283,7 @@ int GetWindowRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd144950) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowtexta--cwindowgetwindowtext"></a><a name="getwindowtext"></a>CWindow::GetWindowText  
+##  <a name="getwindowtext"></a>CWindow::GetWindowText  
  Recupera o texto da janela.  
   
 ```
@@ -1168,7 +1313,7 @@ int GetWindowText(CSimpleString& strText) const;
   
  A segunda versão desse método permite que você armazene o texto em uma `BSTR`; a terceira versão permite que você armazene o resultado em uma [CString](../../atl-mfc-shared/reference/cstringt-class.md), como `CSimpleString` é a classe base de `CString`.  
   
-##  <a name="a-namegetwindowtextlengtha--cwindowgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWindow::GetWindowTextLength  
+##  <a name="getwindowtextlength"></a>CWindow::GetWindowTextLength  
  Recupera o comprimento do texto da janela.  
   
 ```
@@ -1178,7 +1323,7 @@ int GetWindowTextLength() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowTextLength](http://msdn.microsoft.com/library/windows/desktop/ms633521) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowthreadida--cwindowgetwindowthreadid"></a><a name="getwindowthreadid"></a>CWindow::GetWindowThreadID  
+##  <a name="getwindowthreadid"></a>CWindow::GetWindowThreadID  
  Recupera o identificador do thread que criou a janela especificada.  
   
 ```
@@ -1191,7 +1336,7 @@ DWORD GetWindowThreadID() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&16;](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]  
   
-##  <a name="a-namegetwindowworda--cwindowgetwindowword"></a><a name="getwindowword"></a>CWindow::GetWindowWord  
+##  <a name="getwindowword"></a>CWindow::GetWindowWord  
  Recupera um valor de 16 bits em um deslocamento especificado para a memória de janela extra.  
   
 ```
@@ -1201,7 +1346,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegotodlgctrla--cwindowgotodlgctrl"></a><a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl  
  Define o foco do teclado para um controle na caixa de diálogo.  
   
 ```
@@ -1211,7 +1356,7 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehidecareta--cwindowhidecaret"></a><a name="hidecaret"></a>CWindow::HideCaret  
+##  <a name="hidecaret"></a>CWindow::HideCaret  
  Oculta o cursor do sistema.  
   
 ```
@@ -1224,7 +1369,7 @@ BOOL HideCaret() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[17 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]  
   
-##  <a name="a-namehilitemenuitema--cwindowhilitemenuitem"></a><a name="hilitemenuitem"></a>CWindow::HiliteMenuItem  
+##  <a name="hilitemenuitem"></a>CWindow::HiliteMenuItem  
  Realça ou remove o realce de um item de menu de nível superior.  
   
 ```
@@ -1237,7 +1382,7 @@ BOOL HiliteMenuItem(
 ### <a name="remarks"></a>Comentários  
  Consulte [HiliteMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647986) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinvalidatea--cwindowinvalidate"></a><a name="invalidate"></a>CWindow::Invalidate  
+##  <a name="invalidate"></a>CWindow::Invalidate  
  Invalida toda a área cliente.  
   
 ```
@@ -1252,7 +1397,7 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&18;](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]  
   
-##  <a name="a-nameinvalidaterecta--cwindowinvalidaterect"></a><a name="invalidaterect"></a>CWindow::InvalidateRect  
+##  <a name="invalidaterect"></a>CWindow::InvalidateRect  
  Invalida a área do cliente dentro do retângulo especificado.  
   
 ```
@@ -1262,7 +1407,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [InvalidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145002) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinvalidatergna--cwindowinvalidatergn"></a><a name="invalidatergn"></a>CWindow::InvalidateRgn  
+##  <a name="invalidatergn"></a>CWindow::InvalidateRgn  
  Invalida a área do cliente dentro da região especificada.  
   
 ```
@@ -1275,7 +1420,7 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  Especifica um `void` retornar tipo, enquanto o `InvalidateRgn` Win32 função sempre retorna **TRUE**.  
   
-##  <a name="a-nameischilda--cwindowischild"></a><a name="ischild"></a>CWindow::IsChild  
+##  <a name="ischild"></a>CWindow::IsChild  
  Determina se a janela especificada é uma janela filho.  
   
 ```
@@ -1285,7 +1430,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [IsChild](http://msdn.microsoft.com/library/windows/desktop/ms633524) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdialogmessagea--cwindowisdialogmessage"></a><a name="isdialogmessage"></a>CWindow::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CWindow::IsDialogMessage  
  Determina se uma mensagem é destinada a caixa de diálogo especificada.  
   
 ```
@@ -1295,7 +1440,7 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [IsDialogMessage](http://msdn.microsoft.com/library/windows/desktop/ms645498) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdlgbuttoncheckeda--cwindowisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWindow::IsDlgButtonChecked  
+##  <a name="isdlgbuttonchecked"></a>CWindow::IsDlgButtonChecked  
  Determina o estado do botão de seleção.  
   
 ```
@@ -1305,7 +1450,7 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [IsDlgButtonChecked](http://msdn.microsoft.com/library/windows/desktop/bb761879) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisiconica--cwindowisiconic"></a><a name="isiconic"></a>CWindow::IsIconic  
+##  <a name="isiconic"></a>CWindow::IsIconic  
  Determina se a janela está minimizada.  
   
 ```
@@ -1318,7 +1463,7 @@ BOOL IsIconic() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[19 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]  
   
-##  <a name="a-nameisparentdialoga--cwindowisparentdialog"></a><a name="isparentdialog"></a>CWindow::IsParentDialog  
+##  <a name="isparentdialog"></a>CWindow::IsParentDialog  
  Determina se a janela pai do controle é uma janela de diálogo.  
   
 ```
@@ -1328,7 +1473,7 @@ BOOL IsParentDialog() throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna TRUE se a janela pai for uma caixa de diálogo, FALSO caso contrário.  
   
-##  <a name="a-nameiswindowa--cwindowiswindow"></a><a name="iswindow"></a>CWindow::IsWindow  
+##  <a name="iswindow"></a>CWindow::IsWindow  
  Determina se o identificador de janela especificada identifica uma janela existente.  
   
 ```
@@ -1341,7 +1486,7 @@ BOOL IsWindow() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[20 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]  
   
-##  <a name="a-nameiswindowenableda--cwindowiswindowenabled"></a><a name="iswindowenabled"></a>CWindow::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>CWindow::IsWindowEnabled  
  Determina se a janela está habilitada para entrada.  
   
 ```
@@ -1354,7 +1499,7 @@ BOOL IsWindowEnabled() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#21;](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]  
   
-##  <a name="a-nameiswindowvisiblea--cwindowiswindowvisible"></a><a name="iswindowvisible"></a>CWindow::IsWindowVisible  
+##  <a name="iswindowvisible"></a>CWindow::IsWindowVisible  
  Determina o estado de visibilidade da janela.  
   
 ```
@@ -1367,7 +1512,7 @@ BOOL IsWindowVisible() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#22;](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]  
   
-##  <a name="a-nameiswindowunicodea--cwindowiswindowunicode"></a><a name="iswindowunicode"></a>CWindow::IsWindowUnicode  
+##  <a name="iswindowunicode"></a>CWindow::IsWindowUnicode  
  Determina se a janela especificada é uma janela nativa do Unicode.  
   
 ```
@@ -1380,7 +1525,7 @@ BOOL IsWindowUnicode() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#23;](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]  
   
-##  <a name="a-nameiszoomeda--cwindowiszoomed"></a><a name="iszoomed"></a>CWindow::IsZoomed  
+##  <a name="iszoomed"></a>CWindow::IsZoomed  
  Determina se a janela for maximizada.  
   
 ```
@@ -1390,7 +1535,7 @@ BOOL IsZoomed() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [IsZoomed](http://msdn.microsoft.com/library/windows/desktop/ms633531) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namekilltimera--cwindowkilltimer"></a><a name="killtimer"></a>CWindow::KillTimer  
+##  <a name="killtimer"></a>CWindow::KillTimer  
  Destrói um evento de timer criado pelo `CWindow::SetTimer`.  
   
 ```
@@ -1400,7 +1545,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [KillTimer](http://msdn.microsoft.com/library/windows/desktop/ms644903) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namelockwindowupdatea--cwindowlockwindowupdate"></a><a name="lockwindowupdate"></a>CWindow::LockWindowUpdate  
+##  <a name="lockwindowupdate"></a>CWindow::LockWindowUpdate  
  Desativa ou ativa o desenho na janela chamando o [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) função do Win32.  
   
 ```
@@ -1417,14 +1562,14 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  Se `bLock` é **TRUE**, esse método passa [m_hWnd](#m_hwnd) para a função Win32; Caso contrário, ele passa **nulo**.  
   
-##  <a name="a-namemhwnda--cwindowmhwnd"></a><a name="m_hwnd"></a>CWindow::m_hWnd  
+##  <a name="m_hwnd"></a>CWindow::m_hWnd  
  Contém um identificador para a janela associada a `CWindow` objeto.  
   
 ```
 HWND m_hWnd throw() throw();
 ```  
   
-##  <a name="a-namemapwindowpointsa--cwindowmapwindowpoints"></a><a name="mapwindowpoints"></a>CWindow::MapWindowPoints  
+##  <a name="mapwindowpoints"></a>CWindow::MapWindowPoints  
  Converte um conjunto de pontos de espaço de coordenadas da janela para o espaço de coordenadas de outra janela.  
   
 ```
@@ -1443,7 +1588,7 @@ int MapWindowPoints(
   
  A segunda versão desse método permite converter as coordenadas de um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
-##  <a name="a-namemessageboxa--cwindowmessagebox"></a><a name="messagebox"></a>CWindow::MessageBox  
+##  <a name="messagebox"></a>CWindow::MessageBox  
  Exibe uma caixa de mensagem.  
   
 ```
@@ -1459,7 +1604,7 @@ int MessageBox(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#24;](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]  
   
-##  <a name="a-namemodifystylea--cwindowmodifystyle"></a><a name="modifystyle"></a>CWindow::ModifyStyle  
+##  <a name="modifystyle"></a>CWindow::ModifyStyle  
  Modifica os estilos de janela do `CWindow` objeto.  
   
 ```
@@ -1500,7 +1645,7 @@ BOOL ModifyStyle(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[25 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]  
   
-##  <a name="a-namemodifystyleexa--cwindowmodifystyleex"></a><a name="modifystyleex"></a>CWindow::ModifyStyleEx  
+##  <a name="modifystyleex"></a>CWindow::ModifyStyleEx  
  Modifica os estilos de janela estendidos do `CWindow` objeto.  
   
 ```
@@ -1541,7 +1686,7 @@ BOOL ModifyStyleEx(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#26;](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]  
   
-##  <a name="a-namemovewindowa--cwindowmovewindow"></a><a name="movewindow"></a>CWindow::MoveWindow  
+##  <a name="movewindow"></a>CWindow::MoveWindow  
  Altera o tamanho e a posição da janela.  
   
 ```
@@ -1562,7 +1707,7 @@ BOOL MoveWindow(
   
  A segunda versão deste método usa um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura para determinar a nova posição, largura e altura da janela.  
   
-##  <a name="a-namenextdlgctrla--cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>CWindow::NextDlgCtrl  
  Define o foco do teclado para o próximo controle na caixa de diálogo.  
   
 ```
@@ -1572,7 +1717,7 @@ void NextDlgCtrl() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameopenclipboarda--cwindowopenclipboard"></a><a name="openclipboard"></a>CWindow::OpenClipboard  
+##  <a name="openclipboard"></a>CWindow::OpenClipboard  
  Abre a área de transferência.  
   
 ```
@@ -1582,21 +1727,21 @@ BOOL OpenClipboard() throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoperatorhwnda--cwindowoperator-hwnd"></a><a name="operator_hwnd"></a>CWindow::operator HWND  
+##  <a name="operator_hwnd"></a>CWindow::operator HWND  
  Converte um `CWindow` o objeto para um `HWND`.  
   
 ```  
 operator HWND() const throw();
 ```  
   
-##  <a name="a-nameoperatoreqa--cwindowoperator-"></a><a name="operator_eq"></a>CWindow::operator =  
+##  <a name="operator_eq"></a>CWindow::operator =  
  Atribui um `HWND` para o `CWindow` objeto definindo o [m_hWnd](#m_hwnd) membro `hWnd`.  
   
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```  
   
-##  <a name="a-namepostmessagea--cwindowpostmessage"></a><a name="postmessage"></a>CWindow::PostMessage  
+##  <a name="postmessage"></a>CWindow::PostMessage  
  Coloca uma mensagem na fila associada ao thread que criou a janela.  
   
 ```
@@ -1614,7 +1759,7 @@ BOOL PostMessage(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#27;](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]  
   
-##  <a name="a-nameprevdlgctrla--cwindowprevdlgctrl"></a><a name="prevdlgctrl"></a>CWindow::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>CWindow::PrevDlgCtrl  
  Define o foco do teclado para o controle anterior na caixa de diálogo.  
   
 ```
@@ -1624,7 +1769,7 @@ void PrevDlgCtrl() const throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameprinta--cwindowprint"></a><a name="print"></a>CWindow::Print  
+##  <a name="print"></a>CWindow::Print  
  Envia um [WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216) mensagem na janela solicitar que ele desenhar a próprio no contexto do dispositivo especificado.  
   
 ```
@@ -1650,7 +1795,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
   
 - `PRF_OWNED`Desenhe todos os proprietários do windows.  
   
-##  <a name="a-nameprintclienta--cwindowprintclient"></a><a name="printclient"></a>CWindow::PrintClient  
+##  <a name="printclient"></a>CWindow::PrintClient  
  Envia um [WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217) mensagem na janela solicitar que ele desenhar sua área de cliente no contexto de dispositivo especificado.  
   
 ```
@@ -1676,14 +1821,14 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
   
 - `PRF_OWNED`Desenhe todos os proprietários do windows.  
   
-##  <a name="a-namercdefaulta--cwindowrcdefault"></a><a name="rcdefault"></a>CWindow::rcDefault  
+##  <a name="rcdefault"></a>CWindow::rcDefault  
  Contém as dimensões da janela padrão.  
   
 ```
 static RECT rcDefault;
 ```  
   
-##  <a name="a-nameredrawwindowa--cwindowredrawwindow"></a><a name="redrawwindow"></a>CWindow::RedrawWindow  
+##  <a name="redrawwindow"></a>CWindow::RedrawWindow  
  Atualiza um retângulo especificado ou a região na área do cliente.  
   
 ```
@@ -1701,7 +1846,7 @@ throw()
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#28;](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]  
   
-##  <a name="a-namereleasedca--cwindowreleasedc"></a><a name="releasedc"></a>CWindow::ReleaseDC  
+##  <a name="releasedc"></a>CWindow::ReleaseDC  
  Libera um contexto de dispositivo.  
   
 ```
@@ -1714,7 +1859,7 @@ int ReleaseDC(HDC hDC);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing n º&9;](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="a-nameresizeclienta--cwindowresizeclient"></a><a name="resizeclient"></a>CWindow::ResizeClient  
+##  <a name="resizeclient"></a>CWindow::ResizeClient  
  Redimensiona a janela para o tamanho da área de cliente especificado.  
   
 ```
@@ -1734,7 +1879,7 @@ BOOL ResizeClient(
  `bRedraw`  
  Um sinalizador indicando se redesenhar as alterações. O padrão é **FALSE**, indicando que a janela não atualiza as alterações.  
   
-##  <a name="a-namescreentoclienta--cwindowscreentoclient"></a><a name="screentoclient"></a>CWindow::ScreenToClient  
+##  <a name="screentoclient"></a>CWindow::ScreenToClient  
  Converte coordenadas de tela às coordenadas do cliente.  
   
 ```
@@ -1747,7 +1892,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
   
  A segunda versão desse método permite converter as coordenadas de um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
-##  <a name="a-namescrollwindowa--cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow::ScrollWindow  
+##  <a name="scrollwindow"></a>CWindow::ScrollWindow  
  Rola a área de cliente especificado.  
   
 ```
@@ -1761,7 +1906,7 @@ BOOL ScrollWindow(
 ### <a name="remarks"></a>Comentários  
  Consulte [ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namescrollwindowexa--cwindowscrollwindowex"></a><a name="scrollwindowex"></a>CWindow::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>CWindow::ScrollWindowEx  
  Rola a área de cliente especificado com recursos adicionais.  
   
 ```
@@ -1778,7 +1923,7 @@ int ScrollWindowEx(
 ### <a name="remarks"></a>Comentários  
  Consulte [ScrollWindowEx](http://msdn.microsoft.com/library/windows/desktop/bb787593) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesenddlgitemmessagea--cwindowsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWindow::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>CWindow::SendDlgItemMessage  
  Envia uma mensagem a um controle.  
   
 ```
@@ -1792,7 +1937,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="remarks"></a>Comentários  
  Consulte [SendDlgItemMessage](http://msdn.microsoft.com/library/windows/desktop/ms645515) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesendmessagea--cwindowsendmessage"></a><a name="sendmessage"></a>CWindow::SendMessage  
+##  <a name="sendmessage"></a>CWindow::SendMessage  
  Envia uma mensagem para a janela e não retorna até que o procedimento de janela processou a mensagem.  
   
 ```
@@ -1814,7 +1959,7 @@ static LRESULT SendMessage(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[29 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]  
   
-##  <a name="a-namesendmessagetodescendantsa--cwindowsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants  
  Envia a mensagem especificada para todos os filhos imediatos do `CWindow` objeto.  
   
 ```
@@ -1841,7 +1986,7 @@ void SendMessageToDescendants(
 ### <a name="remarks"></a>Comentários  
  Se `bDeep` é **TRUE**, além disso, a mensagem é enviada para todas as outras janelas descendentes.  
   
-##  <a name="a-namesendnotifymessagea--cwindowsendnotifymessage"></a><a name="sendnotifymessage"></a>CWindow::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>CWindow::SendNotifyMessage  
  Envia uma mensagem para a janela.  
   
 ```
@@ -1856,7 +2001,7 @@ BOOL SendNotifyMessage(
   
  Se a janela foi criada, o thread de chamada `SendNotifyMessage` não retorna até que o procedimento de janela processou a mensagem. Caso contrário, ele retorna imediatamente.  
   
-##  <a name="a-namesetactivewindowa--cwindowsetactivewindow"></a><a name="setactivewindow"></a>CWindow::SetActiveWindow  
+##  <a name="setactivewindow"></a>CWindow::SetActiveWindow  
  Ativa a janela.  
   
 ```
@@ -1869,7 +2014,7 @@ HWND SetActiveWindow() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[30 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]  
   
-##  <a name="a-namesetcapturea--cwindowsetcapture"></a><a name="setcapture"></a>CWindow::SetCapture  
+##  <a name="setcapture"></a>CWindow::SetCapture  
  Envia todas as entradas de mouse subsequentes para a janela.  
   
 ```
@@ -1879,7 +2024,7 @@ HWND SetCapture() throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetCapture](http://msdn.microsoft.com/library/windows/desktop/ms646262) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetclipboardviewera--cwindowsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWindow::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>CWindow::SetClipboardViewer  
  Adiciona a janela para a cadeia de Visualizador da área de transferência.  
   
 ```
@@ -1889,7 +2034,7 @@ HWND SetClipboardViewer() throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetClipboardViewer](http://msdn.microsoft.com/library/windows/desktop/ms649052) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdlgctrlida--cwindowsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWindow::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>CWindow::SetDlgCtrlID  
  Define o identificador da janela para o valor especificado.  
   
 ```
@@ -1903,7 +2048,7 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, o identificador anterior da janela. Caso contrário, 0.  
   
-##  <a name="a-namesetdlgiteminta--cwindowsetdlgitemint"></a><a name="setdlgitemint"></a>CWindow::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>CWindow::SetDlgItemInt  
  Altera o texto do controle para a representação de cadeia de caracteres de um valor inteiro.  
   
 ```
@@ -1916,7 +2061,7 @@ BOOL SetDlgItemInt(
 ### <a name="remarks"></a>Comentários  
  Consulte [SetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645518) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdlgitemtexta--cwindowsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWindow::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>CWindow::SetDlgItemText  
  Altera o texto do controle.  
   
 ```
@@ -1926,7 +2071,7 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetDlgItemText](http://msdn.microsoft.com/library/windows/desktop/ms645521) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetfocusa--cwindowsetfocus"></a><a name="setfocus"></a>CWindow::SetFocus  
+##  <a name="setfocus"></a>CWindow::SetFocus  
  Define o foco de entrada para a janela.  
   
 ```
@@ -1939,7 +2084,7 @@ HWND SetFocus() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#31;](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]  
   
-##  <a name="a-namesetfonta--cwindowsetfont"></a><a name="setfont"></a>CWindow::SetFont  
+##  <a name="setfont"></a>CWindow::SetFont  
  Altera a fonte atual da janela enviando uma [WM_SETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632642) mensagem na janela.  
   
 ```
@@ -1953,7 +2098,7 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
  `bRedraw`  
  [in] Se **TRUE** (o valor padrão), a janela é redesenhada. Caso contrário, ele não é.  
   
-##  <a name="a-namesethotkeya--cwindowsethotkey"></a><a name="sethotkey"></a>CWindow::SetHotKey  
+##  <a name="sethotkey"></a>CWindow::SetHotKey  
  Associa uma tecla de acesso com a janela enviando uma **WM_SETHOTKEY** mensagem.  
   
 ```
@@ -1970,7 +2115,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 ### <a name="return-value"></a>Valor de retorno  
  Para obter uma lista de possíveis valores de retorno, consulte [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameseticona--cwindowseticon"></a><a name="seticon"></a>CWindow::SetIcon  
+##  <a name="seticon"></a>CWindow::SetIcon  
  Define o ícone da janela de grandes ou pequenos para o ícone identificado por `hIcon`.  
   
 ```
@@ -1990,7 +2135,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  `SetIcon`envia um [WM_SETICON](http://msdn.microsoft.com/library/windows/desktop/ms632643) mensagem na janela.  
   
-##  <a name="a-namesetmenua--cwindowsetmenu"></a><a name="setmenu"></a>CWindow::SetMenu  
+##  <a name="setmenu"></a>CWindow::SetMenu  
  Altera o menu da janela atual.  
   
 ```
@@ -2000,7 +2145,7 @@ BOOL SetMenu(HMENU hMenu) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647995) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetparenta--cwindowsetparent"></a><a name="setparent"></a>CWindow::SetParent  
+##  <a name="setparent"></a>CWindow::SetParent  
  Altera a janela pai.  
   
 ```
@@ -2013,7 +2158,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[32 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]  
   
-##  <a name="a-namesetredrawa--cwindowsetredraw"></a><a name="setredraw"></a>CWindow::SetRedraw  
+##  <a name="setredraw"></a>CWindow::SetRedraw  
  Define ou limpa o sinalizador de redesenho, enviando uma [WM_SETREDRAW](http://msdn.microsoft.com/library/windows/desktop/dd145219) mensagem na janela.  
   
 ```
@@ -2030,7 +2175,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[33 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]  
   
-##  <a name="a-namesetscrollinfoa--cwindowsetscrollinfo"></a><a name="setscrollinfo"></a>CWindow::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CWindow::SetScrollInfo  
  Define os parâmetros de uma barra de rolagem.  
   
 ```
@@ -2043,7 +2188,7 @@ int SetScrollInfo(
 ### <a name="remarks"></a>Comentários  
  Consulte [SetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787595) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetscrollposa--cwindowsetscrollpos"></a><a name="setscrollpos"></a>CWindow::SetScrollPos  
+##  <a name="setscrollpos"></a>CWindow::SetScrollPos  
  Altera a posição da caixa de rolagem.  
   
 ```
@@ -2056,7 +2201,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>Comentários  
  Consulte [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetscrollrangea--cwindowsetscrollrange"></a><a name="setscrollrange"></a>CWindow::SetScrollRange  
+##  <a name="setscrollrange"></a>CWindow::SetScrollRange  
  Altera o intervalo da barra de rolagem.  
   
 ```
@@ -2070,7 +2215,7 @@ BOOL SetScrollRange(
 ### <a name="remarks"></a>Comentários  
  Consulte [SetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787599) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesettimera--cwindowsettimer"></a><a name="settimer"></a>CWindow::SetTimer  
+##  <a name="settimer"></a>CWindow::SetTimer  
  Cria um evento de timer.  
   
 ```
@@ -2083,7 +2228,7 @@ UINT SetTimer(
 ### <a name="remarks"></a>Comentários  
  Consulte [SetTimer](http://msdn.microsoft.com/library/windows/desktop/ms644906) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowcontexthelpida--cwindowsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWindow::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>CWindow::SetWindowContextHelpId  
  Define o identificador de contexto da janela Ajuda.  
   
 ```
@@ -2093,7 +2238,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb762101) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowlonga--cwindowsetwindowlong"></a><a name="setwindowlong"></a>CWindow::SetWindowLong  
+##  <a name="setwindowlong"></a>CWindow::SetWindowLong  
  Define um valor de 32 bits em um deslocamento especificado para a memória de janela extra.  
   
 ```
@@ -2106,7 +2251,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 > [!NOTE]
 >  Para escrever código que é compatível com as versões de 32 bits e 64 bits do Windows, use [CWindow::SetWindowLongPtr](#setwindowlongptr).  
   
-##  <a name="a-namesetwindowlongptra--cwindowsetwindowlongptr"></a><a name="setwindowlongptr"></a>CWindow::SetWindowLongPtr  
+##  <a name="setwindowlongptr"></a>CWindow::SetWindowLongPtr  
  Altera um atributo da janela especificada e também define um valor no deslocamento especificado na memória da janela extra.  
   
 ```
@@ -2118,7 +2263,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
   
  Essa função substitui o `CWindow::SetWindowLong` método. Para escrever código que é compatível com as versões de 32 bits e 64 bits do Windows, use `CWindow::SetWindowLongPtr`.  
   
-##  <a name="a-namesetwindowplacementa--cwindowsetwindowplacement"></a><a name="setwindowplacement"></a>CWindow::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>CWindow::SetWindowPlacement  
  Define o estado de apresentação e posições.  
   
 ```
@@ -2128,7 +2273,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 ### <a name="remarks"></a>Comentários  
  Consulte [SetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633544) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowposa--cwindowsetwindowpos"></a><a name="setwindowpos"></a>CWindow::SetWindowPos  
+##  <a name="setwindowpos"></a>CWindow::SetWindowPos  
  Define o tamanho, posição e ordem Z.  
   
 ```
@@ -2151,7 +2296,7 @@ BOOL SetWindowPos(
   
  A segunda versão deste método usa um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura para definir a nova posição, largura e altura da janela.  
   
-##  <a name="a-namesetwindowrgna--cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn  
+##  <a name="setwindowrgn"></a>CWindow::SetWindowRgn  
  Define a região da janela de uma janela.  
   
 ```
@@ -2161,7 +2306,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd145102) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowtexta--cwindowsetwindowtext"></a><a name="setwindowtext"></a>CWindow::SetWindowText  
+##  <a name="setwindowtext"></a>CWindow::SetWindowText  
  Altera o texto da janela.  
   
 ```
@@ -2174,7 +2319,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#34;](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]  
   
-##  <a name="a-namesetwindowworda--cwindowsetwindowword"></a><a name="setwindowword"></a>CWindow::SetWindowWord  
+##  <a name="setwindowword"></a>CWindow::SetWindowWord  
  Define um valor de 16 bits em um deslocamento especificado para a memória de janela extra.  
   
 ```
@@ -2184,7 +2329,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameshowcareta--cwindowshowcaret"></a><a name="showcaret"></a>CWindow::ShowCaret  
+##  <a name="showcaret"></a>CWindow::ShowCaret  
  Exibe o cursor do sistema.  
   
 ```
@@ -2197,7 +2342,7 @@ BOOL ShowCaret() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#35;](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]  
   
-##  <a name="a-nameshowownedpopupsa--cwindowshowownedpopups"></a><a name="showownedpopups"></a>CWindow::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>CWindow::ShowOwnedPopups  
  Mostra ou oculta as janelas pop-up pertencentes a janela.  
   
 ```
@@ -2207,7 +2352,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ShowOwnedPopups](http://msdn.microsoft.com/library/windows/desktop/ms633547) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameshowscrollbara--cwindowshowscrollbar"></a><a name="showscrollbar"></a>CWindow::ShowScrollBar  
+##  <a name="showscrollbar"></a>CWindow::ShowScrollBar  
  Mostra ou oculta uma barra de rolagem.  
   
 ```
@@ -2217,7 +2362,7 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ShowScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787601) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameshowwindowa--cwindowshowwindow"></a><a name="showwindow"></a>CWindow::ShowWindow  
+##  <a name="showwindow"></a>CWindow::ShowWindow  
  Define o estado de apresentação da janela.  
   
 ```
@@ -2230,7 +2375,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#36;](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]  
   
-##  <a name="a-nameshowwindowasynca--cwindowshowwindowasync"></a><a name="showwindowasync"></a>CWindow::ShowWindowAsync  
+##  <a name="showwindowasync"></a>CWindow::ShowWindowAsync  
  Define o estado de apresentação de uma janela criada por um thread diferente.  
   
 ```
@@ -2240,7 +2385,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ShowWindowAsync](http://msdn.microsoft.com/library/windows/desktop/ms633549) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameupdatewindowa--cwindowupdatewindow"></a><a name="updatewindow"></a>CWindow::UpdateWindow  
+##  <a name="updatewindow"></a>CWindow::UpdateWindow  
  Atualiza a área do cliente.  
   
 ```
@@ -2253,7 +2398,7 @@ BOOL UpdateWindow() throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#37;](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]  
   
-##  <a name="a-namevalidaterecta--cwindowvalidaterect"></a><a name="validaterect"></a>CWindow::ValidateRect  
+##  <a name="validaterect"></a>CWindow::ValidateRect  
  Valida a área do cliente dentro do retângulo especificado.  
   
 ```
@@ -2263,7 +2408,7 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ValidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145194) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namevalidatergna--cwindowvalidatergn"></a><a name="validatergn"></a>CWindow::ValidateRgn  
+##  <a name="validatergn"></a>CWindow::ValidateRgn  
  Valida a área do cliente dentro da região especificada.  
   
 ```
@@ -2273,7 +2418,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>Comentários  
  Consulte [ValidateRgn](http://msdn.microsoft.com/library/windows/desktop/dd145195) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namewinhelpa--cwindowwinhelp"></a><a name="winhelp"></a>CWindow::WinHelp  
+##  <a name="winhelp"></a>CWindow::WinHelp  
  Inicia a Ajuda do Windows.  
   
 ```

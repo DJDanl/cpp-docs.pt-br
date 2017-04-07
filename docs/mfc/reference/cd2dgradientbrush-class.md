@@ -10,7 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DGradientBrush
-- afxrendertarget/CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush::CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DGradientBrush::m_arGradientStops
+- AFXRENDERTARGET/CD2DGradientBrush::m_colorInterpolationGamma
+- AFXRENDERTARGET/CD2DGradientBrush::m_extendMode
+- AFXRENDERTARGET/CD2DGradientBrush::m_pGradientStops
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +91,14 @@ class CD2DGradientBrush : public CD2DBrush;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgradientbrusha--cd2dgradientbrushcd2dgradientbrush"></a><a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
  O destruidor. Chamado quando um objeto de pincel de gradiente D2D está sendo destruído.  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="a-namecd2dgradientbrusha--cd2dgradientbrushcd2dgradientbrush"></a><a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
  Constrói um objeto CD2DGradientBrush.  
   
 ```  
@@ -128,35 +134,35 @@ CD2DGradientBrush(
  `bAutoDestroy`  
  Indica que o objeto será destruído pelo proprietário (pParentTarget).  
   
-##  <a name="a-namedestroya--cd2dgradientbrushdestroy"></a><a name="destroy"></a>CD2DGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
  Destrói um objeto CD2DGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namemargradientstopsa--cd2dgradientbrushmargradientstops"></a><a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
  Matriz de estruturas de D2D1_GRADIENT_STOP.  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="a-namemcolorinterpolationgammaa--cd2dgradientbrushmcolorinterpolationgamma"></a><a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
  O espaço no qual cor interpolação entre as paradas de gradiente é executada.  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="a-namemextendmodea--cd2dgradientbrushmextendmode"></a><a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
  O comportamento do gradiente fora do intervalo [0,1] de normalizado.  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="a-namempgradientstopsa--cd2dgradientbrushmpgradientstops"></a><a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
  Um ponteiro para uma matriz de estruturas de D2D1_GRADIENT_STOP.  
   
 ```  

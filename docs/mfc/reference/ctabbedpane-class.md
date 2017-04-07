@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
+- AFXTABBEDPANE/CTabbedPane
+- AFXTABBEDPANE/CTabbedPane::DetachPane
+- AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor
+- AFXTABBEDPANE/CTabbedPane::FloatTab
+- AFXTABBEDPANE/CTabbedPane::GetTabArea
+- AFXTABBEDPANE/CTabbedPane::GetTabWnd
+- AFXTABBEDPANE/CTabbedPane::HasAutoHideMode
+- AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom
+- AFXTABBEDPANE/CTabbedPane::ResetTabs
+- AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
+- AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
+- AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +171,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxTabbedPane.h  
   
-##  <a name="a-namedetachpanea--ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CTabbedPane::DetachPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL DetachPane(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameenabletabautocolora--ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
  Habilita ou desabilita a coloração automática das guias.  
   
 ```  
@@ -194,7 +206,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  Por padrão, essa opção está desabilitada.  
   
-##  <a name="a-namefloattaba--ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>CTabbedPane::FloatTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -215,7 +227,7 @@ virtual BOOL FloatTab(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegettabareaa--ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
  Retorna o tamanho e a posição da área da guia na janela com guias.  
   
 ```  
@@ -236,7 +248,7 @@ virtual void GetTabArea(
   
  Substitua esse método em um `CTabbedPane`-derivado da classe para alterar esse comportamento.  
   
-##  <a name="a-namegettabwnda--ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -247,7 +259,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namehasautohidemodea--ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -258,7 +270,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameistablocationbottoma--ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
  Determina se as guias estão localizadas na parte inferior da janela.  
   
 ```  
@@ -270,7 +282,7 @@ virtual BOOL IsTabLocationBottom() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namembtabsalwaystopa--ctabbedpanembtabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
  O local padrão para as guias no aplicativo.  
   
 ```  
@@ -284,7 +296,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  O valor padrão é `FALSE`.  
   
-##  <a name="a-namemptabwndrtca--ctabbedpanemptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
  Informações de classe de tempo de execução para um personalizado `CMFCTabCtrl`-objeto derivado.  
   
 ```  
@@ -294,7 +306,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>Comentários  
  Definir essa variável de membro estático em um ponteiro para as informações de classe de tempo de execução de um `CMFCTabCtrl`-objeto derivado se você estiver usando uma janela com guias personalizada dentro de um painel com guias.  
   
-##  <a name="a-nameresettabsa--ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
  Redefine todos os painéis com guias para o estado padrão.  
   
 ```  
@@ -304,7 +316,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>Comentários  
  Chame esse método para retornar todos os painéis com guias para seu estado padrão. Quando chamado, esse método redefine o estado de cor automática de todos os painéis com guias e tamanhos de borda.  
   
-##  <a name="a-namesettabautocolorsa--ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
  Define uma lista de cores personalizadas que são usadas quando o recurso de cor automático está habilitado.  
   
 ```  

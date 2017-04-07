@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
@@ -78,25 +87,25 @@ template <typename T,
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor concurrent_priority_queue](#ctor)|Sobrecarregado. Constrói uma fila de prioridade simultâneas.|  
+|[concurrent_priority_queue](#ctor)|Sobrecarregado. Constrói uma fila de prioridade simultâneas.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Clear](#clear)|Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é uma prova de simultaneidade.|  
-|[Método Empty](#empty)|Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é uma prova de simultaneidade.|  
-|[Método get_allocator](#get_allocator)|Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[Método push](#push)|Sobrecarregado. Adiciona um elemento para a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[tamanho do método](#size)|Retorna o número de elementos na fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
-|[Método swap](#swap)|Alterna o conteúdo de duas filas de prioridade simultâneas. Esse método não é uma prova de simultaneidade.|  
-|[Método try_pop](#try_pop)|Remove e retorna o elemento mais alto de prioridade da fila se a fila está vazio. Esse método é uma prova de simultaneidade.|  
+|[clear](#clear)|Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é uma prova de simultaneidade.|  
+|[empty](#empty)|Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é uma prova de simultaneidade.|  
+|[get_allocator](#get_allocator)|Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
+|[push](#push)|Sobrecarregado. Adiciona um elemento para a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
+|[size](#size)|Retorna o número de elementos na fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.|  
+|[swap](#swap)|Alterna o conteúdo de duas filas de prioridade simultâneas. Esse método não é uma prova de simultaneidade.|  
+|[try_pop](#try_pop)|Remove e retorna o elemento mais alto de prioridade da fila se a fila está vazio. Esse método é uma prova de simultaneidade.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador Operator =](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_priority_queue` objeto a este. Esse método não é uma prova de simultaneidade.|  
+|[operator=](#operator_eq)|Sobrecarregado. Atribui o conteúdo de outro `concurrent_priority_queue` objeto a este. Esse método não é uma prova de simultaneidade.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter informações detalhadas sobre o `concurrent_priority_queue` classe, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -109,7 +118,7 @@ template <typename T,
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Limpar 
+##  <a name="clear"></a>Limpar 
 
  Apaga todos os elementos na ordem de prioridade simultânea. Esse método não é uma prova de simultaneidade.  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>Comentários  
  `clear`não é seguro de simultaneidade. Certifique-se de que nenhum outro thread está chamando métodos na fila de prioridade simultâneas quando você chamar esse método. `clear`não liberar memória.  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  Constrói uma fila de prioridade simultâneas.  
   
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  Os sexto e o sétimo construtores especificam um movimento da fila de prioridade `_Src`.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>vazio 
+##  <a name="empty"></a>vazio 
 
  Testa se a fila de prioridade simultâneas está vazia no momento em que este método é chamado. Esse método é uma prova de simultaneidade.  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se a fila de prioridade estava vazia no momento em que a função foi chamada, `false` caso contrário.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Retorna uma cópia do alocador usado para construir a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma cópia do alocador usado para construir o `concurrent_priority_queue` objeto.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Atribui o conteúdo de outro `concurrent_priority_queue` objeto a este. Esse método não é uma prova de simultaneidade.  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a esta `concurrent_priority_queue` objeto.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>envio por push 
+##  <a name="push"></a>envio por push 
 
  Adiciona um elemento para a fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  O elemento a ser adicionado à fila de prioridade simultâneas.  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>tamanho 
+##  <a name="size"></a>tamanho 
 
  Retorna o número de elementos na fila de prioridade simultâneas. Esse método é uma prova de simultaneidade.  
   
@@ -251,7 +260,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentários  
  O tamanho retornado é garantido para incluir todos os elementos adicionados por chamadas para a função `push`. No entanto, ele pode não refletir resultados de operações simultâneas pendentes.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>troca 
+##  <a name="swap"></a>troca 
 
  Alterna o conteúdo de duas filas de prioridade simultâneas. Esse método não é uma prova de simultaneidade.  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  O `concurrent_priority_queue` objeto trocar o conteúdo com.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Remove e retorna o elemento mais alto de prioridade da fila se a fila está vazio. Esse método é uma prova de simultaneidade.  
   
@@ -280,7 +289,7 @@ bool try_pop(reference _Elem);
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
- [Objetos e contêineres em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
+ [Contêineres e objetos em paralelo](../../../parallel/concrt/parallel-containers-and-objects.md)
 
 
 

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
+- AFXOLE/COleResizeBar
+- AFXOLE/COleResizeBar::COleResizeBar
+- AFXOLE/COleResizeBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxole.h  
   
-##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
  Constrói um objeto `COleResizeBar`.  
   
 ```  
@@ -98,7 +101,7 @@ COleResizeBar();
 ### <a name="remarks"></a>Comentários  
  Chamar **criar** para criar o objeto de barra de redimensionamento.  
   
-##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>COleResizeBar::Create  
  Cria uma janela filho e o associa a `COleResizeBar` objeto.  
   
 ```  

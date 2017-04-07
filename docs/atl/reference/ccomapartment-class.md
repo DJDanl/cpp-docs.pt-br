@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComApartment
 - CComApartment
-- ATL.CComApartment
+- ATLBASE/ATL::CComApartment
+- ATLBASE/ATL::CComApartment::CComApartment
+- ATLBASE/ATL::CComApartment::Apartment
+- ATLBASE/ATL::CComApartment::GetLockCount
+- ATLBASE/ATL::CComApartment::Lock
+- ATLBASE/ATL::CComApartment::Unlock
+- ATLBASE/ATL::CComApartment::m_dwThreadID
+- ATLBASE/ATL::CComApartment::m_hThread
+- ATLBASE/ATL::CComApartment::m_nLockCnt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +92,7 @@ class CComApartment
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase. h  
   
-##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>CComApartment::Apartment  
  Marca o endereço inicial do segmento.  
   
 ```
@@ -98,7 +105,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>Comentários  
  Definir automaticamente durante a [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>CComApartment::CComApartment  
  O construtor.  
   
 ```
@@ -108,7 +115,7 @@ CComApartment();
 ### <a name="remarks"></a>Comentários  
  Inicializa o `CComApartment` membros de dados [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).  
   
-##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>CComApartment::GetLockCount  
  Retorna a contagem de bloqueio do thread atual.  
   
 ```
@@ -118,7 +125,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de bloqueio no thread.  
   
-##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>CComApartment::Lock  
  Incrementa a contagem de bloqueio do thread.  
   
 ```
@@ -133,28 +140,28 @@ LONG Lock();
   
  A contagem de bloqueio no thread é usada para fins estatísticos.  
   
-##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  Contém o identificador do segmento.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>CComApartment::m_hThread  
  Contém o identificador do segmento.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
  Contém a contagem de bloqueio do thread atual.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>CComApartment::Unlock  
  Contagem de bloqueio do thread diminui.  
   
 ```

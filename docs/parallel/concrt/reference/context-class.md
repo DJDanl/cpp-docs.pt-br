@@ -9,7 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Context
+- Context
+- CONCRT/concurrency::Context
+- CONCRT/concurrency::Context::Block
+- CONCRT/concurrency::Context::CurrentContext
+- CONCRT/concurrency::Context::GetId
+- CONCRT/concurrency::Context::GetScheduleGroupId
+- CONCRT/concurrency::Context::GetVirtualProcessorId
+- CONCRT/concurrency::Context::Id
+- CONCRT/concurrency::Context::IsCurrentTaskCollectionCanceling
+- CONCRT/concurrency::Context::IsSynchronouslyBlocked
+- CONCRT/concurrency::Context::Oversubscribe
+- CONCRT/concurrency::Context::ScheduleGroupId
+- CONCRT/concurrency::Context::Unblock
+- CONCRT/concurrency::Context::VirtualProcessorId
+- CONCRT/concurrency::Context::Yield
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 11d8252afdfe9c02869b14f976f8f348513c46b8
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fd6f59e1e94329ef73e8fdbe946ec22241815e2e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="context-class"></a>Classe Context
@@ -60,19 +74,19 @@ class Context;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Block](#block)|Bloqueia o contexto atual.|  
-|[Método CurrentContext](#currentcontext)|Retorna um ponteiro para o contexto atual.|  
-|[Método GetId](#getid)|Retorna um identificador de contexto que seja exclusivo dentro do Agendador ao qual pertence o contexto.|  
-|[Método GetScheduleGroupId](#getschedulegroupid)|Retorna um identificador para o grupo de programação que o contexto está trabalhando no momento.|  
-|[Método GetVirtualProcessorId](#getvirtualprocessorid)|Retorna um identificador para o processador virtual atualmente em execução no contexto.|  
-|[Método ID](#id)|Retorna um identificador para o contexto atual é exclusivo dentro do Agendador ao qual pertence o contexto atual.|  
-|[Método IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Retorna uma indicação se a coleção de tarefa que está em execução atualmente embutido no contexto atual está no meio de um cancelamento ativo (ou estarão em breve).|  
-|[Método IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina se ou não o contexto de forma síncrona está bloqueado. Um contexto é considerado sincronicamente ser bloqueado se ele explicitamente executou uma ação que levou ao bloqueio.|  
-|[Método oversubscribe](#oversubscribe)|Injeta um processador virtual adicional em um agendador para a duração de um bloco de código quando invocado em um contexto de execução em um dos processadores virtuais em que o Agendador.|  
-|[Método ScheduleGroupId](#schedulegroupid)|Retorna um identificador para o grupo de programação que o contexto atual está trabalhando.|  
-|[Método Unlock](#unblock)|Desbloqueia o contexto e faz com que ele se torne executável.|  
-|[Método VirtualProcessorId](#virtualprocessorid)|Retorna um identificador para o processador virtual que está em execução no contexto atual.|  
-|[Método yield](#yield)|Gera a execução para que possa executar outro contexto. Se nenhum outro contexto estiver disponível para produzir a, o Agendador pode gerar para outro thread do sistema operacional.|  
+|[Bloco](#block)|Bloqueia o contexto atual.|  
+|[CurrentContext](#currentcontext)|Retorna um ponteiro para o contexto atual.|  
+|[GetId](#getid)|Retorna um identificador de contexto que seja exclusivo dentro do Agendador ao qual pertence o contexto.|  
+|[GetScheduleGroupId](#getschedulegroupid)|Retorna um identificador para o grupo de programação que o contexto está trabalhando no momento.|  
+|[GetVirtualProcessorId](#getvirtualprocessorid)|Retorna um identificador para o processador virtual atualmente em execução no contexto.|  
+|[ID](#id)|Retorna um identificador para o contexto atual é exclusivo dentro do Agendador ao qual pertence o contexto atual.|  
+|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Retorna uma indicação se a coleção de tarefa que está em execução atualmente embutido no contexto atual está no meio de um cancelamento ativo (ou estarão em breve).|  
+|[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina se ou não o contexto de forma síncrona está bloqueado. Um contexto é considerado sincronicamente ser bloqueado se ele explicitamente executou uma ação que levou ao bloqueio.|  
+|[Subscrever](#oversubscribe)|Injeta um processador virtual adicional em um agendador para a duração de um bloco de código quando invocado em um contexto de execução em um dos processadores virtuais em que o Agendador.|  
+|[ScheduleGroupId](#schedulegroupid)|Retorna um identificador para o grupo de programação que o contexto atual está trabalhando.|  
+|[Desbloquear](#unblock)|Desbloqueia o contexto e faz com que ele se torne executável.|  
+|[VirtualProcessorId](#virtualprocessorid)|Retorna um identificador para o processador virtual que está em execução no contexto atual.|  
+|[Yield](#yield)|Gera a execução para que possa executar outro contexto. Se nenhum outro contexto estiver disponível para produzir a, o Agendador pode gerar para outro thread do sistema operacional.|  
   
 ## <a name="remarks"></a>Comentários  
  O Agendador de tempo de execução de simultaneidade (consulte [Agendador](scheduler-class.md)) contextos de execução usa para executar o trabalho em fila para ele pelo seu aplicativo. Um thread do Win32 é um exemplo de um contexto de execução em um sistema operacional Windows.  
@@ -89,7 +103,7 @@ class Context;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nameblocka-block"></a><a name="block"></a>Bloco 
+##  <a name="block"></a>Bloco 
 
  Bloqueia o contexto atual.  
   
@@ -106,13 +120,13 @@ static void __cdecl Block();
   
  Esse método pode acionar uma variedade de exceções, incluindo [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="a-namedtora-context"></a><a name="dtor"></a>~ Contexto de 
+##  <a name="dtor"></a>~ Contexto de 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="a-namecurrentcontexta-currentcontext"></a><a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a>CurrentContext 
 
  Retorna um ponteiro para o contexto atual.  
   
@@ -126,7 +140,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>Comentários  
  Este método resultará no Agendador de padrão do processo que está sendo criado e/ou anexados ao contexto de chamada se não houver nenhum Agendador atualmente associado ao contexto de chamada.  
   
-##  <a name="a-namegetida-getid"></a><a name="getid"></a>GetId 
+##  <a name="getid"></a>GetId 
 
  Retorna um identificador de contexto que seja exclusivo dentro do Agendador ao qual pertence o contexto.  
   
@@ -137,7 +151,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para o contexto que seja exclusivo dentro do Agendador ao qual pertence o contexto.  
   
-##  <a name="a-namegetschedulegroupida-getschedulegroupid"></a><a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
 
  Retorna um identificador para o grupo de programação que o contexto está trabalhando no momento.  
   
@@ -151,7 +165,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>Comentários  
  O valor de retorno desse método é uma amostragem instantânea do grupo de agendamento que o contexto está em execução. Se esse método for chamado em um contexto diferente do contexto atual, o valor pode ser atualizado no momento em que ele é retornado e não pode ser considerado. Normalmente, esse método é usado para depuração ou apenas para fins de rastreamento.  
   
-##  <a name="a-namegetvirtualprocessorida-getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
 
  Retorna um identificador para o processador virtual atualmente em execução no contexto.  
   
@@ -165,7 +179,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>Comentários  
  O valor de retorno desse método é uma amostragem instantânea do processador virtual que o contexto está em execução. Esse valor pode ser atualizado no momento em que ele é retornado e não pode ser considerado. Normalmente, esse método é usado para depuração ou apenas para fins de rastreamento.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>ID 
+##  <a name="id"></a>ID 
 
  Retorna um identificador para o contexto atual é exclusivo dentro do Agendador ao qual pertence o contexto atual.  
   
@@ -176,7 +190,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>Valor de retorno  
  Se o contexto atual é anexado a um agendador, um identificador para o contexto atual é exclusivo dentro do Agendador ao qual pertence o contexto atual; Caso contrário, o valor `-1`.  
   
-##  <a name="a-nameiscurrenttaskcollectioncancelinga-iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
 
  Retorna uma indicação se a coleção de tarefa que está em execução atualmente embutido no contexto atual está no meio de um cancelamento ativo (ou estarão em breve).  
   
@@ -187,7 +201,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>Valor de retorno  
  Se um agendador está anexado ao contexto de chamada e um grupo de tarefas está executando uma tarefa em linha nesse contexto, uma indicação se esse grupo de tarefas está no meio de um cancelamento ativo (ou estarão em breve); Caso contrário, o valor `false`.  
   
-##  <a name="a-nameissynchronouslyblockeda-issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
 
  Determina se ou não o contexto de forma síncrona está bloqueado. Um contexto é considerado sincronicamente ser bloqueado se ele explicitamente executou uma ação que levou ao bloqueio.  
   
@@ -203,7 +217,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  O valor de retorno desse método é um exemplo de instantâneo de se o contexto de forma síncrona está bloqueado. Esse valor pode ser atualizado no momento em que ele é retornado e só pode ser usado em circunstâncias muito específicas.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>operador delete 
+##  <a name="operator_delete"></a>operador delete 
 
  Um `Context` objeto é destruído internamente pelo tempo de execução. Ele não pode ser explicitamente excluído.  
   
@@ -215,7 +229,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Um ponteiro para o objeto a ser excluído.  
   
-##  <a name="a-nameoversubscribea-oversubscribe"></a><a name="oversubscribe"></a>Subscrever 
+##  <a name="oversubscribe"></a>Subscrever 
 
  Injeta um processador virtual adicional em um agendador para a duração de um bloco de código quando invocado em um contexto de execução em um dos processadores virtuais em que o Agendador.  
   
@@ -227,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  Se `true`, uma indicação de que um processador virtual extra deve ser adicionado durante o excesso de assinatura. Se `false`, uma indicação de que o excesso de assinatura deve terminar e o processador virtual adicionado anteriormente deve ser removido.  
   
-##  <a name="a-nameschedulegroupida-schedulegroupid"></a><a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a>ScheduleGroupId 
 
  Retorna um identificador para o grupo de programação que o contexto atual está trabalhando.  
   
@@ -238,7 +252,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Valor de retorno  
  Se o contexto atual é anexado a um agendador e trabalhando em um grupo de programação, um identificador para o Agendador de grupo que o contexto atual está funcionando Caso contrário, o valor `-1`.  
   
-##  <a name="a-nameunblocka-unblock"></a><a name="unblock"></a>Desbloquear 
+##  <a name="unblock"></a>Desbloquear 
 
  Desbloqueia o contexto e faz com que ele se torne executável.  
   
@@ -253,7 +267,7 @@ virtual void Unblock() = 0;
   
  Lembre-se de que há um período crítico entre o ponto onde seu código publica seu contexto para outro thread para chamar o `Unblock` método e o ponto em que o método real é chamada para `Block` é feita. Durante esse período, você não deve chamar qualquer método que por sua vez pode bloquear e desbloquear por suas próprias razões (por exemplo, adquirir um bloqueio). Chamadas para o `Block` e `Unblock` método não rastrear o motivo do bloqueio e desbloqueio. Apenas um objeto deve ter a propriedade de um `Block` e `Unblock` par.  
   
-##  <a name="a-namevirtualprocessorida-virtualprocessorid"></a><a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a>VirtualProcessorId 
 
  Retorna um identificador para o processador virtual que está em execução no contexto atual.  
   
@@ -267,7 +281,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>Comentários  
  O valor de retorno desse método é uma amostragem instantânea do processador virtual que está em execução no contexto atual. Esse valor pode ser atualizado no momento em que ele é retornado e não pode ser considerado. Normalmente, esse método é usado para depuração ou apenas para fins de rastreamento.  
   
-##  <a name="a-nameyielda-yield"></a><a name="yield"></a>Yield 
+##  <a name="yield"></a>Yield 
 
  Gera a execução para que possa executar outro contexto. Se nenhum outro contexto estiver disponível para produzir a, o Agendador pode gerar para outro thread do sistema operacional.  
   
@@ -278,7 +292,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>Comentários  
  Este método resultará no Agendador de padrão do processo que está sendo criado e/ou anexados ao contexto de chamada se não houver nenhum Agendador atualmente associado ao contexto de chamada.  
   
-##  <a name="a-nameyieldexecutiona-yieldexecution"></a><a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a>YieldExecution 
 
  Gera a execução para que possa executar outro contexto. Se nenhum outro contexto estiver disponível para produzir a, o Agendador pode gerar para outro thread do sistema operacional.  
   

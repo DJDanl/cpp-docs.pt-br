@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CNoWorkerThread
-- ATL.CNoWorkerThread
 - CNoWorkerThread
+- ATLUTIL/ATL::CNoWorkerThread
+- ATLUTIL/ATL::CNoWorkerThread::AddHandle
+- ATLUTIL/ATL::CNoWorkerThread::AddTimer
+- ATLUTIL/ATL::CNoWorkerThread::GetThreadHandle
+- ATLUTIL/ATL::CNoWorkerThread::GetThreadId
+- ATLUTIL/ATL::CNoWorkerThread::Initialize
+- ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
+- ATLUTIL/ATL::CNoWorkerThread::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +81,7 @@ class CNoWorkerThread
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
   
-##  <a name="a-nameaddhandlea--cnoworkerthreadaddhandle"></a><a name="addhandle"></a>CNoWorkerThread::AddHandle  
+##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
  Não funcional equivalente de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
@@ -93,7 +99,7 @@ HRESULT AddHandle(HANDLE /* hObject
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-nameaddtimera--cnoworkerthreadaddtimer"></a><a name="addtimer"></a>CNoWorkerThread::AddTimer  
+##  <a name="addtimer"></a>CNoWorkerThread::AddTimer  
  Não funcional equivalente de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
@@ -113,7 +119,7 @@ HRESULT AddTimer(DWORD /* dwInterval
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-namegetthreadhandlea--cnoworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
  Não funcional equivalente de [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
@@ -126,7 +132,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-namegetthreadida--cnoworkerthreadgetthreadid"></a><a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
  Não funcional equivalente de [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
@@ -139,7 +145,7 @@ DWORD GetThreadId() throw();
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-nameinitializea--cnoworkerthreadinitialize"></a><a name="initialize"></a>CNoWorkerThread::Initialize  
+##  <a name="initialize"></a>CNoWorkerThread::Initialize  
  Não funcional equivalente de [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
@@ -152,7 +158,7 @@ HRESULT Initialize() throw();
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-nameremovehandlea--cnoworkerthreadremovehandle"></a><a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
  Não funcional equivalente de [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
@@ -166,7 +172,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ### <a name="remarks"></a>Comentários  
  A implementação fornecida por essa classe não fará nada.  
   
-##  <a name="a-nameshutdowna--cnoworkerthreadshutdown"></a><a name="shutdown"></a>CNoWorkerThread::Shutdown  
+##  <a name="shutdown"></a>CNoWorkerThread::Shutdown  
  Não funcional equivalente de [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```

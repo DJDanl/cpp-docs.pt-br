@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMemFile
+- AFX/CMemFile
+- AFX/CMemFile::CMemFile
+- AFX/CMemFile::Attach
+- AFX/CMemFile::Detach
+- AFX/CMemFile::Alloc
+- AFX/CMemFile::Free
+- AFX/CMemFile::GrowFile
+- AFX/CMemFile::Memcpy
+- AFX/CMemFile::Realloc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMemFile : public CFile
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** AFX. h  
   
-##  <a name="a-namealloca--cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>CMemFile::Alloc  
  Essa função é chamada pelo `CMemFile` funções de membro.  
   
 ```  
@@ -121,7 +130,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  A implementação padrão usa a função de biblioteca de tempo de execução [malloc](../../c-runtime-library/reference/malloc.md) ao alocar memória.  
   
-##  <a name="a-nameattacha--cmemfileattach"></a><a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>CMemFile::Attach  
  Chame essa função para anexar um bloco de memória para `CMemFile`.  
   
 ```  
@@ -150,7 +159,7 @@ void Attach(
   
  Se `nGrowBytes` é maior que 0, `CMemFile` irá ignorar o conteúdo do bloco de memória anexado. Você precisará escrever o conteúdo do arquivo de memória de trabalho usando o `CMemFile` substituir de `CFile::Write`. Se você tentar gravar após o final do arquivo ou o tamanho do arquivo chamando o `CMemFile` substituir de `CFile::SetLength`, `CMemFile` aumentará a alocação de memória em incrementos de `nGrowBytes`. Aumentando a alocação de memória falhará se o bloco de memória que você passar para **Attach** não foi alocado com um método compatível com [alocação](#alloc). Para ser compatível com a implementação padrão de `Alloc`, você deve alocar a memória com a função de biblioteca de tempo de execução [malloc](../../c-runtime-library/reference/malloc.md) ou [calloc](../../c-runtime-library/reference/calloc.md).  
   
-##  <a name="a-namecmemfilea--cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>CMemFile::CMemFile  
  A primeira sobrecarga abre um arquivo de memória vazia.  
   
 ```  
@@ -181,7 +190,7 @@ CMemFile(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCFiles&#36;](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="a-namedetacha--cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>CMemFile::Detach  
  Chame essa função para obter um ponteiro para o bloco de memória que está sendo usado por `CMemFile`.  
   
 ```  
@@ -194,7 +203,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>Comentários  
  Chamar essa função também fecha o `CMemFile`. Você pode anexar novamente o bloco de memória para `CMemFile` chamando [Attach](#attach). Se você deseja anexar o arquivo e use os dados, você deve chamar [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) para obter o tamanho do arquivo antes de chamar **desanexar**. Observe que, se você anexar um bloco de memória para `CMemFile` para que você possa usar seus dados ( `nGrowBytes` = = 0), em seguida, você não poderá aumentar o arquivo de memória.  
   
-##  <a name="a-namefreea--cmemfilefree"></a><a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>CMemFile::Free  
  Essa função é chamada pelo `CMemFile` funções de membro.  
   
 ```  
@@ -208,7 +217,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para implementar a desalocação de memória personalizados. Se você substituir essa função, você provavelmente desejará substituir [alocação](#alloc) e [Realloc](#realloc) também.  
   
-##  <a name="a-namegrowfilea--cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>CMemFile::GrowFile  
  Essa função é chamada por vários do `CMemFile` funções de membro.  
   
 ```  
@@ -222,7 +231,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>Comentários  
  Você pode substituí-la se você desejar alterar como `CMemFile` aumenta seu arquivo. As chamadas de implementação padrão [Realloc](#realloc) cresça um bloco existente (ou [alocação](#alloc) para criar um bloco de memória), alocação de memória em múltiplos do `nGrowBytes` valor especificado no construtor ou [Attach](#attach) chamar.  
   
-##  <a name="a-namememcpya--cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>CMemFile::Memcpy  
  Essa função é chamada o `CMemFile` substituições de [CFile::Read](../../mfc/reference/cfile-class.md#read) e [CFile::Write](../../mfc/reference/cfile-class.md#write) para transferir dados de e para o arquivo de memória.  
   
 ```  
@@ -248,7 +257,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>Comentários  
  Substituir essa função se você quiser alterar a maneira que `CMemFile` essas cópias de memória.  
   
-##  <a name="a-namerealloca--cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>CMemFile::Realloc  
  Essa função é chamada pelo `CMemFile` funções de membro.  
   
 ```  

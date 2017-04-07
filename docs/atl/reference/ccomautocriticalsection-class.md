@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAutoCriticalSection
-- ATL::CComAutoCriticalSection
 - CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection
+- ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +75,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcore.h  
   
-##  <a name="a-nameccomautocriticalsectiona--ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
  O construtor.  
   
 ```
@@ -85,7 +85,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>Comentários  
  Chama a função Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa o objeto da seção crítica.  
   
-##  <a name="a-namedtora--ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  O destruidor.  
   
 ```

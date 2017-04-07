@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>Classe combinable
@@ -59,23 +65,23 @@ class combinable;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor combinable](#ctor)|Sobrecarregado. Constrói um novo `combinable` objeto.|  
+|[Combinável](#ctor)|Sobrecarregado. Constrói um novo `combinable` objeto.|  
 |[~ Destruidor Combinável](#dtor)|Destrói um objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Clear](#clear)|Limpa os resultados intermediários computacionais um uso anterior.|  
-|[Método combine](#combine)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor combinar fornecido.|  
-|[Método combine_each](#combine_each)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor fornecido combinar uma vez por computação subpropriedades de thread local. O resultado final é acumulado pelo objeto de função.|  
-|[Método local](#local)|Sobrecarregado. Retorna uma referência ao cálculo thread private sub.|  
+|[clear](#clear)|Limpa os resultados intermediários computacionais um uso anterior.|  
+|[combine](#combine)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor combinar fornecido.|  
+|[combine_each](#combine_each)|Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor fornecido combinar uma vez por computação subpropriedades de thread local. O resultado final é acumulado pelo objeto de função.|  
+|[local](#local)|Sobrecarregado. Retorna uma referência ao cálculo thread private sub.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador Operator =](#operator_eq)|Atribui a um `combinable` objeto de outro `combinable` objeto.|  
+|[operator=](#operator_eq)|Atribui a um `combinable` objeto de outro `combinable` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [paralela contêineres e objetos](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -88,7 +94,7 @@ class combinable;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Limpar 
+##  <a name="clear"></a>Limpar 
 
  Limpa os resultados intermediários computacionais um uso anterior.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>Combinável 
+##  <a name="ctor"></a>Combinável 
 
  Constrói um novo `combinable` objeto.  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  O terceiro construtor é o construtor de cópia.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  Destrói um objeto `combinable`.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>combinar 
+##  <a name="combine"></a>combinar 
 
  Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor combinar fornecido.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valor de retorno  
  O resultado final da combinação de todos os threads privado sub computações.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  Calcula um valor final do conjunto de computações subpropriedades de thread local chamando o functor fornecido combinar uma vez por computação subpropriedades de thread local. O resultado final é acumulado pelo objeto de função.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  O functor é usado para combinar uma computação subpropriedades. A assinatura é `void (T)` ou `void (const T&)`e deve ser associativa e comutativa.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>local 
+##  <a name="local"></a>local 
 
  Retorna uma referência ao cálculo thread private sub.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência ao cálculo thread private sub.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Atribui a um `combinable` objeto de outro `combinable` objeto.  
   

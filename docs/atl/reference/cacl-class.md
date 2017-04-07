@@ -10,9 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAcl
-- ATL::CAcl
-- ATLSECURITY/CAcl
-- ATL.CAcl
+- ATLSECURITY/ATL::CAcl
+- ATLSECURITY/ATL::CAcl::CAccessMaskArray
+- ATLSECURITY/ATL::CAcl::CAceFlagArray
+- ATLSECURITY/ATL::CAcl::CAceTypeArray
+- ATLSECURITY/ATL::CAcl::CAcl
+- ATLSECURITY/ATL::CAcl::GetAceCount
+- ATLSECURITY/ATL::CAcl::GetAclEntries
+- ATLSECURITY/ATL::CAcl::GetAclEntry
+- ATLSECURITY/ATL::CAcl::GetLength
+- ATLSECURITY/ATL::CAcl::GetPACL
+- ATLSECURITY/ATL::CAcl::IsEmpty
+- ATLSECURITY/ATL::CAcl::IsNull
+- ATLSECURITY/ATL::CAcl::RemoveAce
+- ATLSECURITY/ATL::CAcl::RemoveAces
+- ATLSECURITY/ATL::CAcl::SetEmpty
+- ATLSECURITY/ATL::CAcl::SetNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +127,7 @@ class CAcl
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity. h  
   
-##  <a name="a-namecaccessmaskarraya--caclcaccessmaskarray"></a><a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
+##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
  Uma matriz de objetos ACCESS_MASK.  
   
 ```
@@ -124,7 +137,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 ### <a name="remarks"></a>Comentários  
  Este typedef Especifica o tipo de matriz que pode ser usado para armazenar os direitos de acesso usados nas entradas de controle de acesso (ACEs).  
   
-##  <a name="a-namecaceflagarraya--caclcaceflagarray"></a><a name="caceflagarray"></a>CAcl::CAceFlagArray  
+##  <a name="caceflagarray"></a>CAcl::CAceFlagArray  
  Uma matriz de BYTEs.  
   
 ```
@@ -134,7 +147,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ### <a name="remarks"></a>Comentários  
  Este typedef Especifica o tipo de matriz usado para definir os sinalizadores de controle de tipo específico ACE (entrada) do controle de acesso. Consulte o [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definição para a lista completa dos sinalizadores possíveis.  
   
-##  <a name="a-namecacetypearraya--caclcacetypearray"></a><a name="cacetypearray"></a>CAcl::CAceTypeArray  
+##  <a name="cacetypearray"></a>CAcl::CAceTypeArray  
  Uma matriz de BYTEs.  
   
 ```
@@ -144,7 +157,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ### <a name="remarks"></a>Comentários  
  Este typedef Especifica o tipo de matriz usado para definir a natureza dos objetos ACE (entrada) do controle de acesso, como ACCESS_ALLOWED_ACE_TYPE ou ACCESS_DENIED_ACE_TYPE. Consulte o [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) definição para a lista completa de tipos possíveis.  
   
-##  <a name="a-namecacla--caclcacl"></a><a name="cacl"></a>CAcl::CAcl  
+##  <a name="cacl"></a>CAcl::CAcl  
  O construtor.  
   
 ```
@@ -159,7 +172,7 @@ CAcl(const CAcl& rhs) throw(...);
 ### <a name="remarks"></a>Comentários  
  O `CAcl` objeto pode ser criado se desejar usar um existente `CAcl` objeto.  
   
-##  <a name="a-namedtora--caclcacl"></a><a name="dtor"></a>CAcl:: ~ CAcl  
+##  <a name="dtor"></a>CAcl:: ~ CAcl  
  O destruidor.  
   
 ```
@@ -169,7 +182,7 @@ virtual ~CAcl() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos adquiridos pelo objeto.  
   
-##  <a name="a-namegetacecounta--caclgetacecount"></a><a name="getacecount"></a>CAcl::GetAceCount  
+##  <a name="getacecount"></a>CAcl::GetAceCount  
  Retorna o número de controle de acesso a objetos ACE (entrada).  
   
 ```
@@ -179,7 +192,7 @@ virtual UINT GetAceCount() const throw() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de entradas ACE no `CAcl` objeto.  
   
-##  <a name="a-namegetaclentriesa--caclgetaclentries"></a><a name="getaclentries"></a>CAcl::GetAclEntries  
+##  <a name="getaclentries"></a>CAcl::GetAclEntries  
  Recupera as entradas ACL (lista) de controle de acesso da `CAcl` objeto.  
   
 ```
@@ -210,7 +223,7 @@ void GetAclEntries(
   
  Consulte [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obter mais detalhes sobre tipos ACE e sinalizadores.  
   
-##  <a name="a-namegetaclentrya--caclgetaclentry"></a><a name="getaclentry"></a>CAcl::GetAclEntry  
+##  <a name="getaclentry"></a>CAcl::GetAclEntry  
  Recupera todas as informações sobre uma entrada em uma lista de controle de acesso (ACL).  
   
 ```
@@ -251,7 +264,7 @@ void GetAclEntry(
   
  Consulte [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) para obter mais detalhes sobre tipos ACE e sinalizadores.  
   
-##  <a name="a-namegetlengtha--caclgetlength"></a><a name="getlength"></a>CAcl::GetLength  
+##  <a name="getlength"></a>CAcl::GetLength  
  Retorna o comprimento da lista de controle de acesso (ACL).  
   
 ```
@@ -261,7 +274,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o comprimento necessário em bytes necessário para armazenar o **ACL** estrutura.  
   
-##  <a name="a-namegetpacla--caclgetpacl"></a><a name="getpacl"></a>CAcl::GetPACL  
+##  <a name="getpacl"></a>CAcl::GetPACL  
  Retorna um ponteiro para uma lista de controle de acesso (ACL).  
   
 ```
@@ -271,7 +284,7 @@ const ACL* GetPACL() const throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para o **ACL** estrutura.  
   
-##  <a name="a-nameisemptya--caclisempty"></a><a name="isempty"></a>CAcl::IsEmpty  
+##  <a name="isempty"></a>CAcl::IsEmpty  
  Testes de `CAcl` objeto entradas.  
   
 ```
@@ -281,7 +294,7 @@ bool IsEmpty() const throw();
 ### <a name="remarks"></a>Comentários  
  Retorna **true** se o `CAcl` objeto não for nulo e não contém entradas. Retorna **false** se o `CAcl` objeto é NULL ou contém pelo menos uma entrada.  
   
-##  <a name="a-nameisnulla--caclisnull"></a><a name="isnull"></a>CAcl::IsNull  
+##  <a name="isnull"></a>CAcl::IsNull  
  Retorna o status do `CAcl` objeto.  
   
 ```
@@ -291,7 +304,7 @@ bool IsNull() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **true** se o `CAcl` objeto for NULL, **false** caso contrário.  
   
-##  <a name="a-nameoperatorconstaclstara--cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a>ACL const CAcl::operator *  
+##  <a name="operator_const_acl__star"></a>ACL const CAcl::operator *  
  Conversões de uma `CAcl` o objeto para um **ACL** estrutura (lista de controle de acesso).  
   
 ```  
@@ -301,7 +314,7 @@ operator const ACL *() const throw(...);
 ### <a name="remarks"></a>Comentários  
  Retorna o endereço do **ACL** estrutura.  
   
-##  <a name="a-nameoperatoreqa--cacloperator-"></a><a name="operator_eq"></a>CAcl::operator =  
+##  <a name="operator_eq"></a>CAcl::operator =  
  Operador de atribuição.  
   
 ```
@@ -315,7 +328,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna uma referência para a atualização `CAcl` objeto.  
   
-##  <a name="a-nameremoveacea--caclremoveace"></a><a name="removeace"></a>CAcl::RemoveAce  
+##  <a name="removeace"></a>CAcl::RemoveAce  
  Remove uma ACE específica (entrada de controle de acesso) de **CAcl** objeto.  
   
 ```
@@ -329,7 +342,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Comentários  
  Esse método é derivado de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="a-nameremoveacesa--caclremoveaces"></a><a name="removeaces"></a>CAcl::RemoveAces  
+##  <a name="removeaces"></a>CAcl::RemoveAces  
  Remove ama ACEs (entradas de controle de acesso) de `CAcl` que se aplicam à determinado `CSid`.  
   
 ```
@@ -340,7 +353,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
  `rSid`  
  Uma referência a um objeto `CSid`.  
   
-##  <a name="a-namesetemptya--caclsetempty"></a><a name="setempty"></a>CAcl::SetEmpty  
+##  <a name="setempty"></a>CAcl::SetEmpty  
  Marcas de `CAcl` objeto como vazio.  
   
 ```
@@ -350,7 +363,7 @@ void SetEmpty() throw();
 ### <a name="remarks"></a>Comentários  
  O `CAcl` pode ser definido para vazia ou NULL: os dois estados são diferentes.  
   
-##  <a name="a-namesetnulla--caclsetnull"></a><a name="setnull"></a>CAcl::SetNull  
+##  <a name="setnull"></a>CAcl::SetNull  
  Marcas de `CAcl` objeto como NULL.  
   
 ```

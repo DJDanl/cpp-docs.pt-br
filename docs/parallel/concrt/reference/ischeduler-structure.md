@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IScheduler
+- IScheduler
+- CONCRTRM/concurrency::IScheduler
+- CONCRTRM/concurrency::IScheduler::IScheduler::AddVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetId
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetPolicy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyBusy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
+- CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fd8733bdcf113497b82cb2559eaba5a6a4a15165
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 24305fbdded1709ec51270b3a29a239b345a5679
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischeduler-structure"></a>Estrutura IScheduler
@@ -54,13 +62,13 @@ struct IScheduler;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Addvirtualprocessors](#addvirtualprocessors)|Fornece um programador com um conjunto de raízes do processador virtual para seu uso. Cada `IVirtualProcessorRoot` interface representa o direito de executar um thread único que pode executar o trabalho em nome do Agendador.|  
-|[Método Ischeduler::](#getid)|Retorna um identificador exclusivo para o Agendador.|  
-|[Método Getpolicy](#getpolicy)|Retorna uma cópia da política do Agendador. Para obter mais informações sobre políticas de Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|  
-|[Método Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` agora estão sendo usadas por outros agendadores.|  
-|[Método Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` não estão sendo usados por outros agendadores.|  
-|[Método Removevirtualprocessors](#removevirtualprocessors)|Inicia a remoção de raízes do processador virtual que anteriormente foram alocados a este agendador.|  
-|[Método Ischeduler::](#statistics)|Fornece informações relacionadas a taxas de chegada e a conclusão da tarefa e a alteração no comprimento da fila para um agendador.|  
+|[Addvirtualprocessors](#addvirtualprocessors)|Fornece um programador com um conjunto de raízes do processador virtual para seu uso. Cada `IVirtualProcessorRoot` interface representa o direito de executar um thread único que pode executar o trabalho em nome do Agendador.|  
+|[Ischeduler](#getid)|Retorna um identificador exclusivo para o Agendador.|  
+|[Getpolicy](#getpolicy)|Retorna uma cópia da política do Agendador. Para obter mais informações sobre políticas de Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` agora estão sendo usadas por outros agendadores.|  
+|[Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` não estão sendo usados por outros agendadores.|  
+|[Removevirtualprocessors](#removevirtualprocessors)|Inicia a remoção de raízes do processador virtual que anteriormente foram alocados a este agendador.|  
+|[Ischeduler](#statistics)|Fornece informações relacionadas a taxas de chegada e a conclusão da tarefa e a alteração no comprimento da fila para um agendador.|  
   
 ## <a name="remarks"></a>Comentários  
  Se você estiver implementando um agendador personalizado que se comunica com o Gerenciador de recursos, você deve fornecer uma implementação de `IScheduler` interface. Essa interface é uma extremidade de um canal bidirecional de comunicação entre um agendador e o Gerenciador de recursos. A outra extremidade é representada pelo `IResourceManager` e `ISchedulerProxy` interfaces que são implementadas pelo Gerenciador de recursos.  
@@ -73,7 +81,7 @@ struct IScheduler;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nameaddvirtualprocessorsa--ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>Método Addvirtualprocessors  
+##  <a name="addvirtualprocessors"></a>Método Addvirtualprocessors  
  Fornece um programador com um conjunto de raízes do processador virtual para seu uso. Cada `IVirtualProcessorRoot` interface representa o direito de executar um thread único que pode executar o trabalho em nome do Agendador.  
   
 ```
@@ -92,7 +100,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Comentários  
  O Gerenciador de recursos invoca o `AddVirtualProcessor` método de conceder um conjunto inicial de raízes do processador virtual para um agendador. Ele também pode invocar o método para adicionar raízes do processador virtual para o Agendador quando reequilibrar recursos entre os agendadores.  
   
-##  <a name="a-namegetida--ischedulergetid-method"></a><a name="getid"></a>Método Ischeduler::  
+##  <a name="getid"></a>Método Ischeduler::  
  Retorna um identificador exclusivo para o Agendador.  
   
 ```
@@ -107,7 +115,7 @@ virtual unsigned int GetId() const = 0;
   
  Um identificador obtido de uma fonte diferente pode resultar em um comportamento indefinido.  
   
-##  <a name="a-namegetpolicya--ischedulergetpolicy-method"></a><a name="getpolicy"></a>Método Getpolicy  
+##  <a name="getpolicy"></a>Método Getpolicy  
  Retorna uma cópia da política do Agendador. Para obter mais informações sobre políticas de Agendador, consulte [SchedulerPolicy](schedulerpolicy-class.md).  
   
 ```
@@ -117,7 +125,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  Uma cópia da política do Agendador.  
   
-##  <a name="a-namenotifyresourcesexternallybusya--ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>Método Notifyresourcesexternallybusy  
+##  <a name="notifyresourcesexternallybusy"></a>Método Notifyresourcesexternallybusy  
  Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` agora estão sendo usadas por outros agendadores.  
   
 ```
@@ -142,7 +150,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  Um agendador que qualifica-se para notificações obtém um conjunto de notificações inicias quando ela for criada, informando-o se os recursos que ele recebeu são externamente ocupado ou ocioso.  
   
-##  <a name="a-namenotifyresourcesexternallyidlea--ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>Método Notifyresourcesexternallyidle  
+##  <a name="notifyresourcesexternallyidle"></a>Método Notifyresourcesexternallyidle  
  Notifica este Agendador de threads de hardware representados pelo conjunto de raízes do processador virtual na matriz `ppVirtualProcessorRoots` não estão sendo usados por outros agendadores.  
   
 ```
@@ -167,7 +175,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Um agendador que qualifica-se para notificações obtém um conjunto de notificações inicias quando ela for criada, informando-o se os recursos que ele recebeu são externamente ocupado ou ocioso.  
   
-##  <a name="a-nameremovevirtualprocessorsa--ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>Método Removevirtualprocessors  
+##  <a name="removevirtualprocessors"></a>Método Removevirtualprocessors  
  Inicia a remoção de raízes do processador virtual que anteriormente foram alocados a este agendador.  
   
 ```
@@ -188,7 +196,7 @@ virtual void RemoveVirtualProcessors(
   
  O parâmetro `ppVirtualProcessorRoots` aponta para uma matriz de interfaces. Entre o conjunto de raízes do processador virtual a ser removido, as raízes nunca foram ativadas podem ser retornados imediatamente usando o `Remove` método. As raízes que foram ativadas e são a execução do trabalho, ou foi desativadas e estão aguardando trabalho chegar, devem ser retornadas assincronamente. O Agendador deve verificar cada tentativa de remover a raiz do processador virtual assim que possível. Atrasar a remoção das raízes processador virtual pode resultar em excesso de assinatura não intencional no Agendador.  
   
-##  <a name="a-namestatisticsa--ischedulerstatistics-method"></a><a name="statistics"></a>Método Ischeduler::  
+##  <a name="statistics"></a>Método Ischeduler::  
  Fornece informações relacionadas a taxas de chegada e a conclusão da tarefa e a alteração no comprimento da fila para um agendador.  
   
 ```
@@ -217,7 +225,7 @@ virtual void Statistics(
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
- [Enumeração PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Classe SchedulerPolicy](schedulerpolicy-class.md)   
  [Estrutura IExecutionContext](iexecutioncontext-structure.md)   
  [Estrutura IThreadProxy](ithreadproxy-structure.md)   

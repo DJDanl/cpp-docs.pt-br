@@ -10,6 +10,36 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
+- AFXCMN/CHeaderCtrl
+- AFXCMN/CHeaderCtrl::CHeaderCtrl
+- AFXCMN/CHeaderCtrl::ClearAllFilters
+- AFXCMN/CHeaderCtrl::ClearFilter
+- AFXCMN/CHeaderCtrl::Create
+- AFXCMN/CHeaderCtrl::CreateDragImage
+- AFXCMN/CHeaderCtrl::CreateEx
+- AFXCMN/CHeaderCtrl::DeleteItem
+- AFXCMN/CHeaderCtrl::DrawItem
+- AFXCMN/CHeaderCtrl::EditFilter
+- AFXCMN/CHeaderCtrl::GetBitmapMargin
+- AFXCMN/CHeaderCtrl::GetFocusedItem
+- AFXCMN/CHeaderCtrl::GetImageList
+- AFXCMN/CHeaderCtrl::GetItem
+- AFXCMN/CHeaderCtrl::GetItemCount
+- AFXCMN/CHeaderCtrl::GetItemDropDownRect
+- AFXCMN/CHeaderCtrl::GetItemRect
+- AFXCMN/CHeaderCtrl::GetOrderArray
+- AFXCMN/CHeaderCtrl::GetOverflowRect
+- AFXCMN/CHeaderCtrl::HitTest
+- AFXCMN/CHeaderCtrl::InsertItem
+- AFXCMN/CHeaderCtrl::Layout
+- AFXCMN/CHeaderCtrl::OrderToIndex
+- AFXCMN/CHeaderCtrl::SetBitmapMargin
+- AFXCMN/CHeaderCtrl::SetFilterChangeTimeout
+- AFXCMN/CHeaderCtrl::SetFocusedItem
+- AFXCMN/CHeaderCtrl::SetHotDivider
+- AFXCMN/CHeaderCtrl::SetImageList
+- AFXCMN/CHeaderCtrl::SetItem
+- AFXCMN/CHeaderCtrl::SetOrderArray
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +152,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="a-namecheaderctrla--cheaderctrlcheaderctrl"></a><a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
  Constrói um objeto `CHeaderCtrl`.  
   
 ```  
@@ -132,7 +162,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&1;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="a-nameclearallfiltersa--cheaderctrlclearallfilters"></a><a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
  Limpa todos os filtros para um controle de cabeçalho.  
   
 ```  
@@ -148,7 +178,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&2;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="a-nameclearfiltera--cheaderctrlclearfilter"></a><a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
  Limpa o filtro para um controle de cabeçalho.  
   
 ```  
@@ -168,7 +198,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&3;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="a-namecreatea--cheaderctrlcreate"></a><a name="create"></a>CHeaderCtrl::Create  
+##  <a name="create"></a>CHeaderCtrl::Create  
  Cria um controle de cabeçalho e a anexa a um `CHeaderCtrl` objeto.  
   
 ```  
@@ -229,7 +259,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="a-namecreateexa--cheaderctrlcreateex"></a><a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>CHeaderCtrl::CreateEx  
  Cria um controle (uma janela filho) e associá-lo a `CHeaderCtrl` objeto.  
   
 ```  
@@ -263,7 +293,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentários  
  Use `CreateEx` em vez de **criar** para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido Windows **WS_EX_**.  
   
-##  <a name="a-namecreatedragimagea--cheaderctrlcreatedragimage"></a><a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
  Cria uma versão transparente da imagem de um item em um controle de cabeçalho.  
   
 ```  
@@ -282,7 +312,7 @@ CImageList* CreateDragImage(int nIndex);
   
  O `CImageList` objeto ao qual o ponteiro retornado aponta é um objeto temporário e será excluído no próximo processamento de tempo ocioso.  
   
-##  <a name="a-namedeleteitema--cheaderctrldeleteitem"></a><a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
  Exclui um item de um controle de cabeçalho.  
   
 ```  
@@ -299,7 +329,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&5;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="a-namedrawitema--cheaderctrldrawitem"></a><a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
  Chamado pela estrutura quando um aspecto visual das alterações de controle de cabeçalho desenho proprietário.  
   
 ```  
@@ -320,7 +350,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&6;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="a-nameeditfiltera--cheaderctrleditfilter"></a><a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
  Começa a editar o filtro especificado de um controle de cabeçalho.  
   
 ```  
@@ -347,7 +377,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#7;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="a-namegetbitmapmargina--cheaderctrlgetbitmapmargin"></a><a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
  Recupera a largura da margem de um bitmap em um controle de cabeçalho.  
   
 ```  
@@ -363,7 +393,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&8;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="a-namegetfocuseditema--cheaderctrlgetfocuseditem"></a><a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
  Obtém o índice do item que tem o foco no controle de cabeçalho atual.  
   
 ```  
@@ -386,7 +416,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4 n º&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="a-namegetimagelista--cheaderctrlgetimagelist"></a><a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
  Recupera o identificador de uma lista de imagens usada para desenho itens de cabeçalho em um controle de cabeçalho.  
   
 ```  
@@ -402,7 +432,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&9;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="a-namegetitema--cheaderctrlgetitem"></a><a name="getitem"></a>CHeaderCtrl::GetItem  
+##  <a name="getitem"></a>CHeaderCtrl::GetItem  
  Recupera informações sobre um item de controle de cabeçalho.  
   
 ```  
@@ -424,7 +454,7 @@ BOOL GetItem(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&10;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="a-namegetitemcounta--cheaderctrlgetitemcount"></a><a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
  Recupera uma contagem dos itens em um controle de cabeçalho.  
   
 ```  
@@ -437,7 +467,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="a-namegetitemdropdownrecta--cheaderctrlgetitemdropdownrect"></a><a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
  Obtém o retângulo delimitador do botão suspenso para um item de cabeçalho no controle de cabeçalho atual.  
   
 ```  
@@ -469,7 +499,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4 n º&2;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="a-namegetitemrecta--cheaderctrlgetitemrect"></a><a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
  Recupera o retângulo delimitador de um determinado item em um controle de cabeçalho.  
   
 ```  
@@ -491,7 +521,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Comentários  
  Este método implementa o comportamento da mensagem Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetorderarraya--cheaderctrlgetorderarray"></a><a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
+##  <a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
  Recupera a ordem da esquerda para a direita dos itens em um controle de cabeçalho.  
   
 ```  
@@ -516,7 +546,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&11;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="a-namegetoverflowrecta--cheaderctrlgetoverflowrect"></a><a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
  Obtém o retângulo delimitador de botão de estouro do controle de cabeçalho atual.  
   
 ```  
@@ -547,7 +577,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4 n º&3;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="a-namehittesta--cheaderctrlhittest"></a><a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>CHeaderCtrl::HitTest  
  Determina qual item de cabeçalho, se houver, está localizado em um ponto especificado.  
   
 ```  
@@ -576,7 +606,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4 n º&1;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="a-nameinsertitema--cheaderctrlinsertitem"></a><a name="insertitem"></a>CHeaderCtrl::InsertItem  
+##  <a name="insertitem"></a>CHeaderCtrl::InsertItem  
  Insere um novo item em um controle de cabeçalho no índice especificado.  
   
 ```  
@@ -598,7 +628,7 @@ int InsertItem(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#12;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="a-namelayouta--cheaderctrllayout"></a><a name="layout"></a>CHeaderCtrl::Layout  
+##  <a name="layout"></a>CHeaderCtrl::Layout  
  Recupera o tamanho e a posição de um controle de cabeçalho dentro de um retângulo determinado.  
   
 ```  
@@ -618,7 +648,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl&13;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="a-nameordertoindexa--cheaderctrlordertoindex"></a><a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
  Recupera o valor de índice de um item com base em sua ordem no controle de cabeçalho.  
   
 ```  
@@ -635,7 +665,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro implementa o comportamento da macro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Ele é fornecido para oferecer suporte a ordenação de item de cabeçalho.  
   
-##  <a name="a-namesetbitmapmargina--cheaderctrlsetbitmapmargin"></a><a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
  Define a largura da margem de um bitmap em um controle de cabeçalho.  
   
 ```  
@@ -655,7 +685,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#14;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="a-namesetfilterchangetimeouta--cheaderctrlsetfilterchangetimeout"></a><a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
  Define o intervalo de tempo limite entre o momento em que uma alteração é feita nos atributos de filtro e o lançamento de um [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notificação.  
   
 ```  
@@ -675,7 +705,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#15;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="a-namesetfocuseditema--cheaderctrlsetfocuseditem"></a><a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
  Define o foco para um item de cabeçalho especificado no controle de cabeçalho atual.  
   
 ```  
@@ -704,7 +734,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4 n º&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="a-namesethotdividera--cheaderctrlsethotdivider"></a><a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
  Arraste a linha divisória entre itens de cabeçalho para indicar um manual de alterações e soltar um item de cabeçalho.  
   
 ```  
@@ -728,7 +758,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl n º&16;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="a-namesetimagelista--cheaderctrlsetimagelist"></a><a name="setimagelist"></a>CHeaderCtrl::SetImageList  
+##  <a name="setimagelist"></a>CHeaderCtrl::SetImageList  
  Atribui uma lista de imagens a um controle de cabeçalho.  
   
 ```  
@@ -748,7 +778,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="a-namesetitema--cheaderctrlsetitem"></a><a name="setitem"></a>CHeaderCtrl::SetItem  
+##  <a name="setitem"></a>CHeaderCtrl::SetItem  
  Define os atributos do item especificado em um controle de cabeçalho.  
   
 ```  
@@ -770,7 +800,7 @@ BOOL SetItem(
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CHeaderCtrl::GetItem](#getitem).  
   
-##  <a name="a-namesetorderarraya--cheaderctrlsetorderarray"></a><a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
+##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
  Define a ordem da esquerda para a direita dos itens em um controle de cabeçalho.  
   
 ```  

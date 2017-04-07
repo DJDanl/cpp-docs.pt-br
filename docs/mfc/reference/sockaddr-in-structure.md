@@ -71,35 +71,19 @@ struct in_addr sin_addr;
   
  O componente de endereço IP dessa estrutura é do tipo **IN_ADDR**. O **IN_ADDR** estrutura é definida no arquivo de cabeçalho do Windows Sockets WINSOCK. H da seguinte maneira:  
   
- `struct   in_addr {`  
-  
- `union   {`  
-  
- `struct{`  
-  
- `unsigned  char   s_b1,`  
-  
- `s_b2,`  
-  
- `s_b3,`  
-  
- `s_b4;`  
-  
- `}  S_un_b;`  
-  
- `struct  {`  
-  
- `unsigned  short  s_w1,`  
-  
- `s_w2;`  
-  
- `}  S_un_w;`  
-  
- `unsigned long  S_addr;`  
-  
- `} S_un;`  
-  
- `};`  
+```  
+struct in_addr {
+    union {
+        struct {  
+            unsigned char s_b1, s_b2, s_b3, s_b4;  
+        } S_un_b;  
+        struct {  
+            unsigned short s_w1, s_w2;
+        } S_un_w;
+        unsigned long S_addr;
+    } S_un;  
+};  
+```  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** Winsock2  

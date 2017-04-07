@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSScheduler
+- IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58ca59224b5d9cdeb282562349642736a1b22c74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsscheduler-structure"></a>Estrutura IUMSScheduler
@@ -54,7 +56,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Setcompletionlist](#setcompletionlist)|Atribui um `IUMSCompletionList` interface para um agendador de thread UMS.|  
+|[Setcompletionlist](#setcompletionlist)|Atribui um `IUMSCompletionList` interface para um agendador de thread UMS.|  
   
 ## <a name="remarks"></a>Comentários  
  Se você estiver implementando um agendador personalizado que se comunica com o Gerenciador de recursos, e você desejar threads UMS a serem passadas para o Agendador em vez de threads de Win32 comuns, você deve fornecer uma implementação de `IUMSScheduler` interface. Além disso, você deve definir o valor de política para a chave de política Agendador `SchedulerKind` para ser `UmsThreadDefault`. Se a diretiva especifica thread UMS, o `IScheduler` interface é passado como um parâmetro para o [Registerscheduler](iresourcemanager-structure.md#registerscheduler) método deve ser um `IUMSScheduler` interface.  
@@ -73,7 +75,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>Método Setcompletionlist  
+##  <a name="setcompletionlist"></a>Método Setcompletionlist  
  Atribui um `IUMSCompletionList` interface para um agendador de thread UMS.  
   
 ```
@@ -89,7 +91,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
- [Enumeração PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Estrutura IScheduler](ischeduler-structure.md)   
  [Estrutura IUMSCompletionList](iumscompletionlist-structure.md)   
  [Estrutura IResourceManager](iresourcemanager-structure.md)

@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_continuation_context
+- task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context::get_current_winrt_context
+- PPLTASKS/concurrency::task_continuation_context::use_arbitrary
+- PPLTASKS/concurrency::task_continuation_context::use_current
+- PPLTASKS/concurrency::task_continuation_context::use_default
+- PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 627c2adc60c143ef7cd9be62f71a4365eed5aed5
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
@@ -55,11 +61,11 @@ class task_continuation_context : public details::_ContextCallback;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método get_current_winrt_context](#get_current_winrt_context)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de thread atual do winrt.|  
-|[Método use_arbitrary](#use_arbitrary)|Cria um contexto de continuação da tarefa que permite que o Tempo de execução escolha o contexto de execução para uma continuação.|  
-|[Método use_current](#use_current)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução atual.|  
-|[Método use_default](#use_default)|Cria o contexto de continuação da tarefa padrão.|  
-|[Método use_synchronous_execution](#use_synchronous_execution)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução síncrona.|  
+|[get_current_winrt_context](#get_current_winrt_context)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de thread atual do winrt.|  
+|[use_arbitrary](#use_arbitrary)|Cria um contexto de continuação da tarefa que permite que o Tempo de execução escolha o contexto de execução para uma continuação.|  
+|[use_current](#use_current)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução atual.|  
+|[use_default](#use_default)|Cria o contexto de continuação da tarefa padrão.|  
+|[use_synchronous_execution](#use_synchronous_execution)|Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução síncrona.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `_ContextCallback`  
@@ -71,7 +77,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Namespace:** simultaneidade  
 
-## <a name="a-namegetcurrentwinrtcontexta-getcurrentwinrtcontext"></a><a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
  Retorna um objeto de contexto de continuação da tarefa que representa o contexto de thread atual do WinRT.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -91,7 +97,7 @@ static task_continuation_context get_current_winrt_context();
  Esse método é semelhante de `use_current` método, mas ele também está disponível para código C++ nativo sem C + + / suporte à extensão do CX. Ele é destinado para uso por usuários avançados de escrita C + + código de biblioteca CX independente para nativo e chamadores de tempo de execução do Windows. A menos que você precisa dessa funcionalidade, recomendamos o `use_current` método, que só está disponível para o C + + / clientes CX.  
   
   
-##  <a name="a-nameusearbitrarya-usearbitrary"></a><a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a>use_arbitrary 
 
  Cria um contexto de continuação da tarefa que permite que o Tempo de execução escolha o contexto de execução para uma continuação.  
   
@@ -109,7 +115,7 @@ static task_continuation_context use_arbitrary();
   
  Este método só está disponível para aplicativos da Windows Store.  
   
-##  <a name="a-nameusecurrenta-usecurrent"></a><a name="use_current"></a>use_current 
+##  <a name="use_current"></a>use_current 
 
  Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução atual.  
   
@@ -127,7 +133,7 @@ static task_continuation_context use_current();
   
  Este método só está disponível para aplicativos da Windows Store.  
   
-##  <a name="a-nameusedefaulta-usedefault"></a><a name="use_default"></a>use_default 
+##  <a name="use_default"></a>use_default 
 
  Cria o contexto de continuação da tarefa padrão.  
   
@@ -145,7 +151,7 @@ static task_continuation_context use_default();
   
  Uma continuação em uma tarefa com reconhecimento de compartimento não será executado em um contexto que escolhe o tempo de execução.  
 
-## <a name="a-nameusesynchronousexecutiona-taskcontinuationcontextusesynchronousexecution"></a><a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 Retorna um objeto de contexto de continuação da tarefa que representa o contexto de execução síncrona.  
   
 ## <a name="syntax"></a>Sintaxe  

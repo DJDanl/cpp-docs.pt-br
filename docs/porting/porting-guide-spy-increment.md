@@ -32,6 +32,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
@@ -42,7 +43,7 @@ Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de
   
  Consideramos este caso como sendo típico para portabilidade de aplicativos da Área de Trabalho do Windows que usam o MFC e a API do Win32, especialmente para projetos antigos que não foram atualizados com cada versão do Visual C++ desde o Visual C++ 6.0.  
   
-##  <a name="a-nameconvertprojectfilea-step-1-converting-the-project-file"></a><a name="convert_project_file"></a> Etapa 1. Conversão do arquivo de projeto.  
+##  <a name="convert_project_file"></a> Etapa 1. Conversão do arquivo de projeto.  
  O arquivo de projeto, dois arquivos .dsw antigos do Visual C++ 6.0, foram convertidos facilmente e sem problemas que exigissem mais atenção. Um projeto é o aplicativo Spy++. O outro é o SpyHk, escrito em C, uma DLL de suporte. Projetos mais complexos podem não ser atualizados tão facilmente, conforme discutido [aqui](../porting/visual-cpp-porting-and-upgrading-guide.md).  
   
  Depois de atualizar os dois projetos, nossa solução tinha esta aparência:  
@@ -51,7 +52,7 @@ Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de
   
  Temos dois projetos, um com um grande número de arquivos de C++ e o outro com uma DLL que é escrita em C.  
   
-##  <a name="a-nameheaderfileproblemsa-step-2-header-file-problems"></a><a name="header_file_problems"></a> Etapa 2. Problemas de arquivos de cabeçalho  
+##  <a name="header_file_problems"></a> Etapa 2. Problemas de arquivos de cabeçalho  
  Ao compilar um projeto recém-convertido, uma das primeiras coisas que você descobrirá com frequência é que os arquivos de cabeçalho usados por projeto não terão sido encontrados.  
   
  Um dos arquivos que não puderam ser encontrados em Spy++ foi verstamp.h. De uma pesquisa na Internet, determinamos se isso é proveniente de um SDK de DAO, uma tecnologia de dados obsoleta. Gostaríamos de saber quais símbolos estavam sendo usados desse arquivo de cabeçalho, para assim ver se esse arquivo era realmente necessário ou se os símbolos foram definidos em outro lugar, de modo que pudéssemos comentar a declaração do arquivo de cabeçalho e recompilar. Acontece que apenas um símbolo é necessário, VER_FILEFLAGSMASK.  
@@ -62,7 +63,7 @@ Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de
   
  A maneira mais fácil de encontrar um símbolo nos arquivos de inclusão disponíveis é usar Localizar em Arquivos (Ctrl + Shift + F) e especificar **Diretórios de Inclusão do Visual C++**. Nós o encontramos em ntverp.h. Substituímos a inclusão de verstamp.h por ntverp.h e esse erro desapareceu.  
   
-##  <a name="a-namelinkeroutputsettingsa-step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> Etapa 3. Configuração OutputFile do vinculador  
+##  <a name="linker_output_settings"></a> Etapa 3. Configuração OutputFile do vinculador  
  Projetos mais antigos, às vezes, têm arquivos colocados em locais não convencionais que podem causar problemas após a atualização. Nesse caso, precisamos adicionar $(SolutionDir) ao caminho de inclusão nas propriedades do projeto para garantir que o Visual Studio possa encontrar alguns arquivos de cabeçalho colocados nesse local, em vez de em uma das pastas do projeto.  
   
  O MSBuild reclama que a propriedade Link.OutputFile não corresponde aos valores de TargetPath e TargetName, emitindo MSB8012.  
@@ -75,7 +76,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
   
  Nesse caso, a propriedade **Link.OutputFile** no projeto convertido foi definida como .\Debug\Spyxx.exe e .\Release\Spyxx.exe para o projeto Spy++, dependendo da configuração. A melhor opção é simplesmente substituir esses valores codificados com $(TargetDir)$(TargetName)$(TargetExt) para Todas as Configurações. Se isso não funcionar, você poderá personalizar daí ou então alterar as propriedades na seção Geral, em que esses valores são definidos (as propriedades são **Diretório de Saída**, **Nome do Destino** e **Extensão de Destino**. Lembre-se de que se a propriedade que você está exibindo utiliza macros, você pode escolher **Editar** na lista suspensa para exibir uma caixa de diálogo que mostra a cadeia de caracteres final com as substituições de macro feitas. Você pode exibir todas as macros disponíveis e seus valores atuais, escolhendo o botão **Macros**.  
   
-##  <a name="a-nameupdatingwinvera-step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> Etapa 4. Atualizando a Versão de Destino do Windows  
+##  <a name="updating_winver"></a> Etapa 4. Atualizando a Versão de Destino do Windows  
  O próximo erro indica que não há mais suporte para versão WINVER no MFC. WINVER para Windows XP é 0x0501.  
   
 ```Output  
@@ -101,7 +102,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="a-namelinkererrorsa-step-5-linker-errors"></a><a name="linker_errors"></a> Etapa 5. Erros de Vinculador  
+##  <a name="linker_errors"></a> Etapa 5. Erros de Vinculador  
  Com essas alterações, o projeto SpyHk (DLL) é compilado mas produz um erro do vinculador.  
   
 ```  
@@ -118,14 +119,14 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
  O projeto C DLL, SpyHK.dll, agora é compilado e vinculado sem erros.  
   
-##  <a name="a-nameoutdatedheaderfilesa-step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> Etapa 6. Mais arquivos de cabeçalho desatualizados  
+##  <a name="outdated_header_files"></a> Etapa 6. Mais arquivos de cabeçalho desatualizados  
  Agora começamos a trabalhar no principal projeto executável, Spyxx.  
   
  Não foi possível encontrar um par de outros arquivos de inclusão: ctl3d.h e penwin.h. Embora possa ser útil pesquisar na Internet para tentar identificar o que incluiu o cabeçalho, às vezes a informação não é tão útil assim. Descobrimos que ctl3d.h fazia parte do Kit de desenvolvimento do Exchange e dava suporte para um determinado estilo dos controles no Windows 95, enquanto penwin.h está relacionado a Window Pen Computing, uma API obsoleta. Nesse caso, simplesmente comentamos a linha #include e lidamos com os símbolos indefinidos como fizemos com verstamp.h. Tudo que se relaciona aos Controles 3D ou Pen Computing foi removido do projeto.  
   
  Dado um projeto com muitos erros de compilação que você está eliminando gradualmente, não é realista localizar todos os usos de uma API desatualizada imediatamente após você remover a diretiva #include. Nós não o detectamos imediatamente, mas em algum momento posterior encontramos um erro de que WM_DLGBORDER estava indefinido. Ele é, na verdade, apenas um de muitos símbolos indefinidos que vêm de ctl3d.h. Depois de determinarmos que ele se relaciona com uma API desatualizada, removemos todas as referências para ele no código.  
   
-##  <a name="a-nameupdatingiostreamscodea-step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> Etapa 7. Atualizando o código antigo de iostreams  
+##  <a name="updating_iostreams_code"></a> Etapa 7. Atualizando o código antigo de iostreams  
  O próximo erro é comum com código antigo de C++ que usa iostreams.  
   
  mstream.h(40): erro fatal C1083: não é possível abrir o arquivo de inclusão: 'iostream.h': arquivo ou diretório inexistente  
@@ -278,7 +279,7 @@ mstream& operator<<(LPTSTR psz)
   
  Esse tipo de conversão foi permitido sob o compilador mais antigo e menos rígido, mas alterações de conformidade mais recentes requerem código mais correto.  
   
-##  <a name="a-namestricterconversionsa-step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> Etapa 8. As conversões mais restritas do compilador  
+##  <a name="stricter_conversions"></a> Etapa 8. As conversões mais restritas do compilador  
  Também obtemos muitos erros como o seguinte:  
   
 ```  
@@ -289,10 +290,9 @@ error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::
   
 ```cpp  
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)  
-// other message omitted …  
+// other messages omitted...  
 ON_WM_NCHITTEST() // Error occurs on this line.  
 END_MESSAGE_MAP()  
-  
 ```  
   
  Indo para a definição deste macro, podemos ver que ele faz referência à função OnNcHitTest.  
@@ -302,7 +302,6 @@ END_MESSAGE_MAP()
 { WM_NCHITTEST, 0, 0, 0, AfxSig_l_p, \  
 (AFX_PMSG)(AFX_PMSGW) \  
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },  
-  
 ```  
   
  O problema tem a ver com a incompatibilidade no ponteiro para os tipos de função de membro. O problema não é a conversão de CHotLinkCtrl como um tipo de classe para CWnd como o tipo de classe, já que é essa uma conversão válida de classe derivada para classe base. O problema é o tipo de retorno: UINT vs. LRESULT. LRESULT é resolvido para LONG_PTR, que é um ponteiro de 64 bits ou um ponteiro de 32 bits dependendo do tipo binário de destino, então UINT não é convertido para esse tipo. Isso não é incomum ao atualizar o código escrito antes de 2005, já que o tipo de retorno de vários métodos de mapa de mensagens foram alterados de UINT para LRESULT no Visual Studio 2005 como parte das alterações de compatibilidade de 64 bits. Alteramos o tipo de retorno no código a seguir de UINT para LRESULT:  
@@ -319,7 +318,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
  Como há cerca de dez ocorrências dessa função, todas em diferentes classes derivadas de CWnd, é útil usar **Ir Para Definição** (teclado: F12) e **Ir Para Declaração** (teclado: Ctrl + F12) quando o cursor está sobre a função no editor para localizar essas ocorrências e navegar para elas da janela de ferramentas **Localizar Símbolo**. **Ir Para Definição** é geralmente o mais útil dos dois. **Ir Para Declaração** localizará declarações que não sejam a declaração de classe definidora, assim como declarações de classe friend ou referências de encaminhamento.  
   
-##  <a name="a-namemfcchangesa-step-9-mfc-changes"></a><a name="mfc_changes"></a> Etapa 9. Alterações do MFC  
+##  <a name="mfc_changes"></a> Etapa 9. Alterações do MFC  
  O próximo erro também está relacionado a um tipo de declaração alterado e também ocorre em uma macro.  
   
 ```Output  
@@ -340,7 +339,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
   
  Neste ponto, somos capazes de compilar o projeto. No entanto, há alguns avisos que precisamos trabalhar para resolver, além de partes opcionais da atualização como a conversão de MBCS em Unicode ou o aprimoramento da segurança usando as funções de CRT Seguro.  
   
-##  <a name="a-namecompilerwarningsa-step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> Etapa 10. Tratando dos avisos do compilador  
+##  <a name="compiler_warnings"></a> Etapa 10. Tratando dos avisos do compilador  
  Para obter uma lista completa de avisos, você deve executar um **Recompilar Todos** na solução em vez de um build comum para ter certeza de que tudo que anteriormente foi compilado anteriormente será recompilado, já que você obtém apenas os relatórios de aviso do build atual. A outra pergunta é se deseja aceitar o nível de aviso atual ou usar um nível de aviso mais elevado.  Ao realizar portabilidade de muito código, especialmente código antigo, usar um nível de aviso mais elevado pode ser apropriado.  Você também poderá começar com o nível de aviso padrão e, em seguida, aumentar o nível de aviso para obter todos os avisos. Se você usar /Wall, obterá alguns avisos nos arquivos de cabeçalho do sistema, então muitas pessoas usam /W4 para obter os maioria dos avisos no seu código sem obter avisos para os cabeçalhos do sistema. Se desejar que os avisos apareçam como erros, adicione a opção /WX. Essas configurações estão na seção C/C++ da caixa de diálogo Propriedades do Projeto.  
   
  Um dos métodos na classe CSpyApp produz um aviso sobre uma função para a qual não há mais suporte.  
@@ -530,7 +529,7 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  O problema ocorre quando uma variável é primeiro declarada como `extern` e posteriormente declarada como `static`. O significado desses dois especificadores de classe de armazenamento é mutuamente exclusivo, mas isso é permitido como uma extensão da Microsoft. Se você quisesse que o código fosse portátil para outros compiladores ou se você desejasse compilá-lo com /Za (compatibilidade com ANSI), você alteraria as declarações para ter especificadores de classe de armazenamento correspondentes.  
   
-##  <a name="a-nameportingtounicodea-step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> Etapa 11. Portabilidade de MBCS para Unicode  
+##  <a name="porting_to_unicode"></a> Etapa 11. Portabilidade de MBCS para Unicode  
  Observe que, no mundo do Windows, quando dizemos Unicode, normalmente queremos dizer UTF-16. Outros sistemas operacionais como o Linux usam UTF-8, mas o Windows geralmente não. Antes de executar a etapa para realmente portar código MBCS para Unicode UTF-16, provavelmente é melhor eliminar temporariamente os avisos de que MBCS foi preterido para fazer outro trabalho ou adiar a portabilidade até um momento conveniente. O código atual usa MBCS e, para continuar com isso, precisamos baixar a versão MBCS do MFC.  Essa biblioteca consideravelmente grande foi removida da instalação padrão do Visual Studio, então ela deve ser baixada separadamente. Veja o [Complemento de DLL do MBCS do MFC](../mfc/mfc-mbcs-dll-add-on.md). Depois de baixá-la e reiniciar o Visual Studio, você pode compilar e vincular com a versão MBCS do MFC, mas para eliminar os avisos sobre MBCS, você também deve adicionar NO_WARN_MBCS_MFC_DEPRECATION à sua lista de macros predefinidas na seção Pré-processador das propriedades do projeto ou no início do seu arquivo de cabeçalho stdafx.h ou outro arquivo de cabeçalho comum.  
   
  Agora temos alguns erros de vinculador.  
@@ -649,7 +648,7 @@ strFace.ReleaseBuffer();
   
  Em nosso trabalho com essa solução Spy ++, levou aproximadamente dois dias de trabalho para um desenvolvedor de C++ de nível médio converter o código para Unicode. Isso não incluiu o tempo usado para testar novamente.  
   
-##  <a name="a-nameportingtosecurecrta-step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> Etapa 12. Portabilidade para usar o CRT Seguro  
+##  <a name="porting_to_secure_crt"></a> Etapa 12. Portabilidade para usar o CRT Seguro  
  Portabilidade do código para usar as versões seguras (as versões com o sufixo _s) de funções CRT é o próximo tópico. Nesse caso, a estratégia geral é substituir a função pela versão _s e em seguida, geralmente, adicionar os parâmetros de tamanho do buffer adicional necessário. Em muitos casos isso é fácil, já que o tamanho é conhecido. Em outros casos, quando o tamanho não estiver imediatamente disponível, será necessário adicionar parâmetros adicionais à função que estiver usando a função CRT ou talvez examinar o uso do buffer de destino e ver quais são os limites de tamanho apropriados.  
   
  O Visual C++ fornece um truque para facilitar a obtenção de segurança no código sem adicionar tantos parâmetros de tamanho, que é pelo uso das sobrecargas de modelo. Já que essas sobrecargas são modelos, elas só estão disponíveis ao compilar como C++, não como C. Spyxxhk é um projeto C, portanto, o truque não funcionará ele.  No entanto, Spyxx não é e podemos usar o truque. O truque é adicionar uma linha como esta em um local em que ela será compilada em todos os arquivos de projeto, assim como em stdafx.h:  
@@ -666,7 +665,7 @@ strFace.ReleaseBuffer();
   
  Com essas técnicas, levou aproximadamente metade de um dia para converter o código para usar as funções de CRT seguro. Se você optar por não usar as sobrecargas de modelo e adicionar manualmente os parâmetros de tamanho, isso provavelmente levará duas vezes ou três vezes mais tempo.  
   
-##  <a name="a-namedeprecatedforscopea-step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> Etapa 13. /Zc:forScope- foi preterido  
+##  <a name="deprecated_forscope"></a> Etapa 13. /Zc:forScope- foi preterido  
  Desde o Visual C++ 6.0, o compilador está em conformidade com o padrão atual, que limita o escopo de variáveis declaradas em um loop para o escopo do loop. A opção do compilador [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**forçar conformidade para escopo de loop** nas propriedades do projeto) controla se isso é ou não relatado como um erro. Devemos atualizar nosso código para estar em conformidade e adicionar declarações somente fora do loop. Para evitar fazer alterações no código, você pode alterar essa configuração na seção Linguagem das propriedades do projeto C++ para **Nenhum (/Zc:forScope-)**. No entanto, tenha em mente que **/Zc:forScope-** pode ser removido em uma versão futura do Visual C++, portanto, seu código eventualmente precisará ser alterado para estar em conformidade com o padrão.  
   
  Esses problemas são relativamente fáceis de corrigir, mas, dependendo do seu código, eles podem afetar um volume grande de código. Eis aqui um problema comum.  
@@ -706,8 +705,3 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ## <a name="see-also"></a>Consulte também  
  [Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

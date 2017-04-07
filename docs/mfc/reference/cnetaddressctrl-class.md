@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::Create
+- AFXCMN/CNetAddressCtrl::CreateEx
+- AFXCMN/CNetAddressCtrl::DisplayErrorTip
+- AFXCMN/CNetAddressCtrl::GetAddress
+- AFXCMN/CNetAddressCtrl::GetAllowType
+- AFXCMN/CNetAddressCtrl::SetAllowType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class CNetAddressCtrl : public CEdit
   
  Requisitos adicionais para esta classe são descritos em [criar requisitos para Windows Vista controles comuns](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
  Constrói um objeto `CNetAddressCtrl`.  
   
 ```  
@@ -112,7 +122,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>Comentários  
  Use o [CNetAddressCtrl::Create](#create) ou [CNetAddressCtrl::CreateEx](#createex) método para criar um controle de rede e anexá-lo a `CNetAddressCtrl` objeto.  
   
-##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>CNetAddressCtrl::Create  
  Cria um controle de endereço de rede com estilos especificados e o anexa à atual `CNetAddressCtrl` objeto.  
   
 ```  
@@ -135,7 +145,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
   
-##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
  Cria um controle de endereço de rede com estilos estendidos especificados e o anexa à atual `CNetAddressCtrl` objeto.  
   
 ```  
@@ -160,7 +170,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
   
-##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
  Exibe uma mensagem de erro na dica de balão que está associada com o controle de endereço de rede atual.  
   
 ```  
@@ -175,7 +185,7 @@ HRESULT DisplayErrorTip();
   
  Essa mensagem invoca o [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) macro, que é descrita no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Essa macro envia o `NCM_DISPLAYERRORTIP` mensagem.  
   
-##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
  Recupera uma representação validada e analisada do endereço de rede que está associado com o controle de endereço de rede atual.  
   
 ```  
@@ -198,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  Esse método chama o [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro, que é descrita no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Essa macro envia o `NCM_GETADDRESS` mensagem.  
   
-##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
  Recupera o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.  
   
 ```  
@@ -211,7 +221,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>Comentários  
  Essa mensagem invoca o [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, que é descrita no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Essa macro envia o `NCM_GETALLOWTYPE` mensagem.  
   
-##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
  Define o tipo de endereço de rede que pode dar suporte a controle de endereço de rede atual.  
   
 ```  

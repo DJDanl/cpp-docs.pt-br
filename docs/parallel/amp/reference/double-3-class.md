@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 41cef906c326e7b113faa70fadfe347a11b58f87
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4ead4c4bd9aac91c4a0db7e2dfbc4976664120bd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double3-class"></a>Classe double_3
@@ -132,55 +132,55 @@ class double_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Método double_3::get_x||  
-|Método double_3::get_xy||  
-|Método double_3::get_xyz||  
-|Método double_3::get_xz||  
-|Método double_3::get_xzy||  
-|Método double_3::get_y||  
-|Método double_3::get_yx||  
-|Método double_3::get_yxz||  
-|Método double_3::get_yz||  
-|Método double_3::get_yzx||  
-|Método double_3::get_z||  
-|Método double_3::get_zx||  
-|Método double_3::get_zxy||  
-|Método double_3::get_zy||  
-|Método double_3::get_zyx||  
-|Método double_3::ref_b||  
-|Método double_3::ref_g||  
-|Método double_3::ref_r||  
-|Método double_3::ref_x||  
-|Método double_3::ref_y||  
-|Método double_3::ref_z||  
-|Método double_3::set_x||  
-|Método double_3::set_xy||  
-|Método double_3::set_xyz||  
-|Método double_3::set_xz||  
-|Método double_3::set_xzy||  
-|Método double_3::set_y||  
-|Método double_3::set_yx||  
-|Método double_3::set_yxz||  
-|Método double_3::set_yz||  
-|Método double_3::set_yzx||  
-|Método double_3::set_z||  
-|Método double_3::set_zx||  
-|Método double_3::set_zxy||  
-|Método double_3::set_zy||  
-|Método double_3::set_zyx||  
+|double_3::get_x||  
+|double_3::get_xy||  
+|double_3::get_xyz||  
+|double_3::get_xz||  
+|double_3::get_xzy||  
+|double_3::get_y||  
+|double_3::get_yx||  
+|double_3::get_yxz||  
+|double_3::get_yz||  
+|double_3::get_yzx||  
+|double_3::get_z||  
+|double_3::get_zx||  
+|double_3::get_zxy||  
+|double_3::get_zy||  
+|double_3::get_zyx||  
+|double_3::ref_b||  
+|double_3::ref_g||  
+|double_3::ref_r||  
+|double_3::ref_x||  
+|double_3::ref_y||  
+|double_3::ref_z||  
+|double_3::set_x||  
+|double_3::set_xy||  
+|double_3::set_xyz||  
+|double_3::set_xz||  
+|double_3::set_xzy||  
+|double_3::set_y||  
+|double_3::set_yx||  
+|double_3::set_yxz||  
+|double_3::set_yz||  
+|double_3::set_yzx||  
+|double_3::set_z||  
+|double_3::set_zx||  
+|double_3::set_zxy||  
+|double_3::set_zy||  
+|double_3::set_zyx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Operador-double_3::Operator||  
-|double_3::Operator - operador||  
-|double_3::Operator * operador =||  
-|Operador de double_3::Operator / =||  
-|double_3::Operator operador + +||  
-|Operador + = double_3::Operator||  
-|double_3::Operator = operador||  
-|double_3::Operator-= operador||  
+|double_3::Operator-||  
+|double_3::Operator-||  
+|double_3::Operator * =||  
+|double_3::Operator / =||  
+|double_3::Operator + +||  
+|+ = double_3::Operator||  
+|double_3::Operator =||  
+|double_3::Operator =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -192,36 +192,36 @@ class double_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|Membro de dados double_3::b||  
-|Membro de dados double_3::BG||  
-|Membro de dados double_3::BGR||  
-|Membro de dados double_3::br||  
-|Membro de dados double_3::brg||  
-|Membro de dados double_3::g||  
-|Membro de dados double_3::GB||  
-|Membro de dados double_3::GBR||  
-|Membro de dados double_3::GR||  
-|Membro de dados double_3::grb||  
-|Membro de dados double_3::r||  
-|Membro de dados double_3::RB||  
-|Membro de dados double_3::rbg||  
-|Membro de dados double_3::RG||  
-|Membro de dados double_3::RGB||  
-|Membro de dados double_3::x||  
-|Membro de dados double_3::xy||  
-|Membro de dados double_3::XYZ||  
-|Membro de dados double_3::XZ||  
-|Membro de dados double_3::xzy||  
-|Membro de dados double_3::y||  
-|Membro de dados double_3::YX||  
-|Membro de dados double_3::yxz||  
-|Membro de dados double_3::YZ||  
-|Membro de dados double_3::yzx||  
-|Membro de dados double_3::z||  
-|Membro de dados double_3::ZX||  
-|Membro de dados double_3::zxy||  
-|Membro de dados double_3::ZY||  
-|Membro de dados double_3::zyx||  
+|double_3::b||  
+|double_3::BG||  
+|double_3::BGR||  
+|double_3::br||  
+|double_3::brg||  
+|double_3::g||  
+|double_3::GB||  
+|double_3::GBR||  
+|double_3::GR||  
+|double_3::grb||  
+|double_3::r||  
+|double_3::RB||  
+|double_3::rbg||  
+|double_3::RG||  
+|double_3::RGB||  
+|double_3::x||  
+|double_3::xy||  
+|double_3::XYZ||  
+|double_3::XZ||  
+|double_3::xzy||  
+|double_3::y||  
+|double_3::YX||  
+|double_3::yxz||  
+|double_3::YZ||  
+|double_3::yzx||  
+|double_3::z||  
+|double_3::ZX||  
+|double_3::zxy||  
+|double_3::ZY||  
+|double_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `double_3`  
@@ -231,7 +231,7 @@ class double_3;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-double3"></a><a name="ctor"></a>double_3 
+##  <a name="ctor"></a>double_3 
 
  Padrão construtor inicializa todos os elementos com 0.  
   
@@ -298,12 +298,12 @@ explicit inline double_3(
  `_Other`  
  O objeto usado para inicializar.  
   
-##  <a name="a-namedouble3sizea-size"></a><a name="double_3__size"></a>tamanho 
+##  <a name="double_3__size"></a>tamanho 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)
+ [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
 

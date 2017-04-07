@@ -73,7 +73,7 @@ constexpr complex(
  `_ImagVal`  
  O valor do tipo **float** da parte imaginária do número complexo que está sendo construído.  
   
- ` complexNum`  
+ `complexNum`  
  O número complexo do tipo **double** ou do tipo `long double` cujas partes reais e imaginárias são usadas para inicializar um número complexo do tipo **float** que está sendo construído.  
   
 ## <a name="return-value"></a>Valor de retorno  

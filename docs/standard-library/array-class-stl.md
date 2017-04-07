@@ -1,102 +1,107 @@
 ---
 title: "Classe array (Biblioteca Padrão C++)| Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "array"
-  - "std::array"
-  - "array/std::array"
-  - "std::array::const_iterator"
-  - "array/std::array::const_iterator"
-  - "std::array::const_pointer"
-  - "array/std::array::const_pointer"
-  - "std::array::const_reference"
-  - "array/std::array::const_reference"
-  - "std::array::const_reverse_iterator"
-  - "array/std::array::const_reverse_iterator"
-  - "std::array::difference_type"
-  - "array/std::array::difference_type"
-  - "std::array::iterator"
-  - "array/std::array::iterator"
-  - "std::array::pointer"
-  - "array/std::array::pointer"
-  - "std::array::reference"
-  - "array/std::array::reference"
-  - "std::array::reverse_iterator"
-  - "array/std::array::reverse_iterator"
-  - "std::array::size_type"
-  - "array/std::array::size_type"
-  - "std::array::value_type"
-  - "array/std::array::value_type"
-  - "std::array::assign"
-  - "array/std::array::assign"
-  - "std::array::at"
-  - "array/std::array::at"
-  - "std::array::back"
-  - "array/std::array::back"
-  - "std::array::begin"
-  - "array/std::array::begin"
-  - "std::array::cbegin"
-  - "array/std::array::cbegin"
-  - "std::array::cend"
-  - "array/std::array::cend"
-  - "std::array::crbegin"
-  - "array/std::array::crbegin"
-  - "std::array::crend"
-  - "array/std::array::crend"
-  - "std::array::data"
-  - "array/std::array::data"
-  - "std::array::empty"
-  - "array/std::array::empty"
-  - "std::array::end"
-  - "array/std::array::end"
-  - "std::array::fill"
-  - "array/std::array::fill"
-  - "std::array::front"
-  - "array/std::array::front"
-  - "std::array::max_size"
-  - "array/std::array::max_size"
-  - "std::array::rbegin"
-  - "array/std::array::rbegin"
-  - "std::array::rend"
-  - "array/std::array::rend"
-  - "std::array::size"
-  - "array/std::array::size"
-  - "std::array::swap"
-  - "array/std::array::swap"
-  - "std::array::operator="
-  - "array/std::array::operator="
-  - "std::array::operator[]"
-  - "array/std::array::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array class"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- array
+- std::array
+- array/std::array
+- std::array::const_iterator
+- array/std::array::const_iterator
+- std::array::const_pointer
+- array/std::array::const_pointer
+- std::array::const_reference
+- array/std::array::const_reference
+- std::array::const_reverse_iterator
+- array/std::array::const_reverse_iterator
+- std::array::difference_type
+- array/std::array::difference_type
+- std::array::iterator
+- array/std::array::iterator
+- std::array::pointer
+- array/std::array::pointer
+- std::array::reference
+- array/std::array::reference
+- std::array::reverse_iterator
+- array/std::array::reverse_iterator
+- std::array::size_type
+- array/std::array::size_type
+- std::array::value_type
+- array/std::array::value_type
+- std::array::assign
+- array/std::array::assign
+- std::array::at
+- array/std::array::at
+- std::array::back
+- array/std::array::back
+- std::array::begin
+- array/std::array::begin
+- std::array::cbegin
+- array/std::array::cbegin
+- std::array::cend
+- array/std::array::cend
+- std::array::crbegin
+- array/std::array::crbegin
+- std::array::crend
+- array/std::array::crend
+- std::array::data
+- array/std::array::data
+- std::array::empty
+- array/std::array::empty
+- std::array::end
+- array/std::array::end
+- std::array::fill
+- array/std::array::fill
+- std::array::front
+- array/std::array::front
+- std::array::max_size
+- array/std::array::max_size
+- std::array::rbegin
+- array/std::array::rbegin
+- std::array::rend
+- array/std::array::rend
+- std::array::size
+- array/std::array::size
+- std::array::swap
+- array/std::array::swap
+- std::array::operator=
+- array/std::array::operator=
+- std::array::operator[]
+- array/std::array::operator[]
+dev_langs:
+- C++
+helpviewer_keywords:
+- array class
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0e5e79e423d268da61ac9062edd099330f742b59
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 Descreve um objeto que controla uma sequência de tamanho `N` de elementos do tipo `Ty`. A sequência é armazenada como uma matriz de `Ty`, contida no objeto `array<Ty, N>`.  
@@ -176,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **Namespace:** std  
   
-##  <a name="a-namearrayarraya--arrayarray"></a><a name="array__array"></a>  array::array  
+##  <a name="array__array"></a>  array::array  
  Constrói um objeto de matriz.  
   
 ```  
@@ -231,7 +236,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayassigna--arrayassign"></a><a name="array__assign"></a>  array::assign  
+##  <a name="array__assign"></a>  array::assign  
 Obsoleto no C++&11;, substituído por [preenchimento](#array__fill). Substitui todos os elementos.  
   
 ```  
@@ -283,7 +288,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="a-namearrayata--arrayat"></a><a name="array__at"></a>  array::at  
+##  <a name="array__at"></a>  array::at  
  Acessa um elemento em uma posição especificada.  
   
 ```  
@@ -328,7 +333,7 @@ int main()
   
 ```  
   
-##  <a name="a-namearraybacka--arrayback"></a><a name="array__back"></a>  array::back  
+##  <a name="array__back"></a>  array::back  
  Acessa o último elemento.  
   
 ```  
@@ -373,7 +378,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraybegina--arraybegin"></a><a name="array__begin"></a>  array::begin  
+##  <a name="array__begin"></a>  array::begin  
  Designa o início da sequência controlada.  
   
 ```  
@@ -418,7 +423,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraycbegina--arraycbegin"></a><a name="array__cbegin"></a>  array::cbegin  
+##  <a name="array__cbegin"></a>  array::cbegin  
  Retorna um iterador `const` que trata o primeiro elemento no intervalo.  
   
 ```  
@@ -441,7 +446,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namearraycenda--arraycend"></a><a name="array__cend"></a>  array::cend  
+##  <a name="array__cend"></a>  array::cend  
  Retorna um iterador `const` que trata o local logo após o último elemento em um intervalo.  
   
 ```  
@@ -466,7 +471,7 @@ auto i2 = Container.cend();
   
  O valor retornado por `cend` não deve ser desreferenciado.  
   
-##  <a name="a-namearrayconstiteratora--arrayconstiterator"></a><a name="array__const_iterator"></a>  array::const_iterator  
+##  <a name="array__const_iterator"></a>  array::const_iterator  
  O tipo de um iterador de constante para a sequência controlada.  
   
 ```  
@@ -517,7 +522,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearrayconstpointera--arrayconstpointer"></a><a name="array__const_pointer"></a>  array::const_pointer  
+##  <a name="array__const_pointer"></a>  array::const_pointer  
  O tipo de um ponteiro de constante para um elemento.  
   
 ```  
@@ -561,7 +566,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreferencea--arrayconstreference"></a><a name="array__const_reference"></a>  array::const_reference  
+##  <a name="array__const_reference"></a>  array::const_reference  
  O tipo de uma referência de constante para um elemento.  
   
 ```  
@@ -605,7 +610,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreverseiteratora--arrayconstreverseiterator"></a><a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
+##  <a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
  O tipo de um iterador reverso de constante para a sequência controlada.  
   
 ```  
@@ -649,7 +654,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraycrbegina--arraycrbegin"></a><a name="array__crbegin"></a>  array::crbegin  
+##  <a name="array__crbegin"></a>  array::crbegin  
  Retorna um iterador const para o primeiro elemento em uma matriz invertida.  
   
 ```  
@@ -692,7 +697,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="a-namearraycrenda--arraycrend"></a><a name="array__crend"></a>  array::crend  
+##  <a name="array__crend"></a>  array::crend  
  Retorna um iterador const que trata o local após o último elemento em uma matriz invertida.  
   
 ```  
@@ -735,7 +740,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namearraydataa--arraydata"></a><a name="array__data"></a>  array::data  
+##  <a name="array__data"></a>  array::data  
  Obtém o endereço do primeiro elemento.  
   
 ```  
@@ -781,7 +786,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraydifferencetypea--arraydifferencetype"></a><a name="array__difference_type"></a>  array::difference_type  
+##  <a name="array__difference_type"></a>  array::difference_type  
  O tipo de uma distância com sinal entre dois elementos.  
   
 ```  
@@ -825,7 +830,7 @@ int main()
 -4  
 ```  
   
-##  <a name="a-namearrayemptya--arrayempty"></a><a name="array__empty"></a>  array::empty  
+##  <a name="array__empty"></a>  array::empty  
  Testa se nenhum elemento está presente.  
   
 ```  
@@ -875,7 +880,7 @@ false
 true  
 ```  
   
-##  <a name="a-namearrayenda--arrayend"></a><a name="array__end"></a>  array::end  
+##  <a name="array__end"></a>  array::end  
  Designa o fim da sequência controlada.  
   
 ```  
@@ -921,7 +926,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayfilla--arrayfill"></a><a name="array__fill"></a>  array::fill  
+##  <a name="array__fill"></a>  array::fill  
  Apaga uma matriz e copia os elementos especificados para a matriz vazia.  
   
 ```  
@@ -933,7 +938,7 @@ void fill(const Type& val);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|` val`|O valor do elemento sendo inserido na matriz.|  
+|`val`|O valor do elemento sendo inserido na matriz.|  
   
 ### <a name="remarks"></a>Comentários  
  `fill` substitui cada elemento da matriz pelo valor especificado.  
@@ -965,7 +970,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namearrayfronta--arrayfront"></a><a name="array__front"></a>  array::front  
+##  <a name="array__front"></a>  array::front  
  Acessa o primeiro elemento.  
   
 ```  
@@ -1010,7 +1015,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayiteratora--arrayiterator"></a><a name="array__iterator"></a>  array::iterator  
+##  <a name="array__iterator"></a>  array::iterator  
  O tipo de um iterador para a sequência controlada.  
   
 ```  
@@ -1061,7 +1066,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearraymaxsizea--arraymaxsize"></a><a name="array__max_size"></a>  array::max_size  
+##  <a name="array__max_size"></a>  array::max_size  
  Conta o número de elementos.  
   
 ```  
@@ -1104,7 +1109,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayoperatorata--arrayoperator"></a><a name="array__operator_at"></a>  array::operator[]  
+##  <a name="array__operator_at"></a>  array::operator[]  
  Acessa um elemento em uma posição especificada.  
   
 ```  
@@ -1156,7 +1161,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="a-namearrayoperatoreqa--arrayoperator"></a><a name="array__operator_eq"></a>  array::operator=  
+##  <a name="array__operator_eq"></a>  array::operator=  
  Substitui a sequência controlada.  
   
 ```  
@@ -1208,7 +1213,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearraypointera--arraypointer"></a><a name="array__pointer"></a>  array::pointer  
+##  <a name="array__pointer"></a>  array::pointer  
  O tipo de um ponteiro para um elemento.  
   
 ```  
@@ -1252,7 +1257,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrbegina--arrayrbegin"></a><a name="array__rbegin"></a>  array::rbegin  
+##  <a name="array__rbegin"></a>  array::rbegin  
  Designa o início da sequência controlada invertida.  
   
 ```  
@@ -1297,7 +1302,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayreferencea--arrayreference"></a><a name="array__reference"></a>  array::reference  
+##  <a name="array__reference"></a>  array::reference  
  O tipo de uma referência para um elemento.  
   
 ```  
@@ -1341,7 +1346,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrenda--arrayrend"></a><a name="array__rend"></a>  array::rend  
+##  <a name="array__rend"></a>  array::rend  
  Designa o fim da sequência controlada invertida.  
   
 ```  
@@ -1386,7 +1391,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayreverseiteratora--arrayreverseiterator"></a><a name="array__reverse_iterator"></a>  array::reverse_iterator  
+##  <a name="array__reverse_iterator"></a>  array::reverse_iterator  
  O tipo de um iterador inverso para a sequência controlada.  
   
 ```  
@@ -1430,7 +1435,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraysizea--arraysize"></a><a name="array__size"></a>  array::size  
+##  <a name="array__size"></a>  array::size  
  Conta o número de elementos.  
   
 ```  
@@ -1473,7 +1478,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearraysizetypea--arraysizetype"></a><a name="array__size_type"></a>  array::size_type  
+##  <a name="array__size_type"></a>  array::size_type  
  O tipo de uma distância sem sinal entre dois elementos.  
   
 ```  
@@ -1517,7 +1522,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayswapa--arrayswap"></a><a name="array__swap"></a>  array::swap  
+##  <a name="array__swap"></a>  array::swap  
 Troca o conteúdo dessa matriz com outra matriz.  
   
 ```  
@@ -1580,7 +1585,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayvaluetypea--arrayvaluetype"></a><a name="array__value_type"></a>  array::value_type  
+##  <a name="array__value_type"></a>  array::value_type  
  O tipo de um elemento.  
   
 ```  
@@ -1630,4 +1635,5 @@ int main()
   
 ## <a name="see-also"></a>Consulte também  
  [\<array>](../standard-library/array.md)
+
 

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token
+- cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::deregister_callback
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_cancelable
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 93d5abe132203a53f3ffac8490fe32604e7e896e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
@@ -54,26 +61,26 @@ class cancellation_token;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor cancellation_token](#ctor)||  
+|[cancellation_token](#ctor)||  
 |[~ cancellation_token destruidor](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método deregister_callback](#deregister_callback)|Remove um retorno de chamada registrado anteriormente por meio de `register` método com base no `cancellation_token_registration` objeto retornado no momento do registro.|  
-|[Método is_cancelable](#is_cancelable)|Retorna uma indicação de se esse token pode ser cancelado ou não.|  
-|[Método is_canceled](#is_canceled)|Retorna `true` se o token foi cancelado.|  
-|[Nenhum método](#none)|Retorna um token de cancelamento que nunca pode estar sujeitos a cancelamento.|  
-|[Método register_callback](#register_callback)|Registra uma função de retorno de chamada com o token. Quando o token for cancelado, o retorno de chamada será feito. Observe que, se o token já está cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.|  
+|[deregister_callback](#deregister_callback)|Remove um retorno de chamada registrado anteriormente por meio de `register` método com base no `cancellation_token_registration` objeto retornado no momento do registro.|  
+|[is_cancelable](#is_cancelable)|Retorna uma indicação de se esse token pode ser cancelado ou não.|  
+|[is_canceled](#is_canceled)|Retorna `true` se o token foi cancelado.|  
+|[none](#none)|Retorna um token de cancelamento que nunca pode estar sujeitos a cancelamento.|  
+|[register_callback](#register_callback)|Registra uma função de retorno de chamada com o token. Quando o token for cancelado, o retorno de chamada será feito. Observe que, se o token já está cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador! = operador](#operator_neq)||  
-|[operador Operator =](#operator_eq)||  
-|[operador Operator = =](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `cancellation_token`  
@@ -83,13 +90,13 @@ class cancellation_token;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namedtora-cancellationtoken"></a><a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a>~ cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="a-namectora-cancellationtoken"></a><a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -100,7 +107,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parâmetros  
  `_Src`  
   
-##  <a name="a-namederegistercallbacka-deregistercallback"></a><a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a>deregister_callback 
 
  Remove um retorno de chamada registrado anteriormente por meio de `register` método com base no `cancellation_token_registration` objeto retornado no momento do registro.  
   
@@ -112,7 +119,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  O `cancellation_token_registration` objeto correspondente para o retorno de chamada para ter o registro cancelado. Esse token deve ter sido retornado de uma chamada para o `register` método.  
   
-##  <a name="a-nameiscancelablea-iscancelable"></a><a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a>is_cancelable 
 
  Retorna uma indicação de se esse token pode ser cancelado ou não.  
   
@@ -123,7 +130,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Valor de retorno  
  Uma indicação de se esse token pode ser cancelado ou não.  
   
-##  <a name="a-nameiscanceleda-iscanceled"></a><a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a>is_canceled 
 
  Retorna `true` se o token foi cancelado.  
   
@@ -134,7 +141,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Valor de retorno  
  O valor `true` se o token tiver sido cancelada; caso contrário, o valor `false`.  
   
-##  <a name="a-namenonea-none"></a><a name="none"></a>Nenhum 
+##  <a name="none"></a>Nenhum 
 
  Retorna um token de cancelamento que nunca pode estar sujeitos a cancelamento.  
   
@@ -145,7 +152,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Valor de retorno  
  Um token de cancelamento que não pode ser cancelado.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operador! = 
+##  <a name="operator_neq"></a>operador! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -156,7 +163,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -169,7 +176,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operador = = 
+##  <a name="operator_eq_eq"></a>operador = = 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -180,7 +187,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valor de retorno  
   
-##  <a name="a-nameregistercallbacka-registercallback"></a><a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a>register_callback 
 
  Registra uma função de retorno de chamada com o token. Quando o token for cancelado, o retorno de chamada será feito. Observe que, se o token já está cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.  
   

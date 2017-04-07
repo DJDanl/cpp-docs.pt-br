@@ -1,7 +1,7 @@
 ---
-title: C2955 de erro do compilador | Documentos do Microsoft
+title: C2955 de erro do compilador | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a5fe88611e7a91bcd7347297b3962397201a50fe
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 1d2d589ad29896cda2657888c616388e50cc397a
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-error-c2955"></a>C2955 de erro do compilador
-'identifier': uso do modelo de classe ou alias genérico requer o modelo ou a lista de argumentos genéricos  
+'Identificador': uso do modelo de classe ou alias genérico requer o modelo ou a lista de argumentos genéricos  
   
- Você não pode usar uma classe genérica ou modelo de classe como um identificador sem um modelo ou uma lista de argumentos genéricos.  
+ Você não pode usar uma classe genérica ou um modelo de classe como um identificador sem um modelo ou uma lista de argumentos genéricos.  
   
  Para obter mais informações, consulte [modelos de classe](../../cpp/class-templates.md).  
   
@@ -58,7 +58,7 @@ X x1;   // C2955
 X<int> x2;   // OK - this is how to fix it.  
 ```  
   
- C2955 também pode ocorrer quando você tenta uma definição fora de linha para uma função declarada em um modelo de classe:  
+ C2955 também pode ocorrer durante a tentativa de uma definição de fora de linha para uma função declarada em um modelo de classe:  
   
 ```  
 // C2955_b.cpp  
@@ -93,3 +93,16 @@ int main() {
    GC <int>^ g;  
 }  
 ```
+
+## <a name="example"></a>Exemplo
+**Visual Studio 2017 e posterior:** o compilador corretamente diagnostica listas de argumentos de modelo ausente quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de template padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
+
+```
+template <class T> class ListNode;
+template <class T> using ListNodeMember = ListNode<T> T::*;
+template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias 
+                                                     // template requires template argument list
+
+// correct:  template <class T, ListNodeMember<T> M> class ListHead;
+```
+

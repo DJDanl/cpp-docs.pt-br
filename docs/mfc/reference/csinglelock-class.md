@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSingleLock
+- AFXMT/CSingleLock
+- AFXMT/CSingleLock::CSingleLock
+- AFXMT/CSingleLock::IsLocked
+- AFXMT/CSingleLock::Lock
+- AFXMT/CSingleLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CSingleLock
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmt.h  
   
-##  <a name="a-namecsinglelocka--csinglelockcsinglelock"></a><a name="csinglelock"></a>CSingleLock::CSingleLock  
+##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
  Constrói um objeto `CSingleLock`.  
   
 ```  
@@ -104,7 +109,7 @@ explicit CSingleLock(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[19 NVC_MFC_Utilities](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="a-nameislockeda--csinglelockislocked"></a><a name="islocked"></a>CSingleLock::IsLocked  
+##  <a name="islocked"></a>CSingleLock::IsLocked  
  Determina se o objeto associado a `CSingleLock` objeto é sinalizado (não disponível).  
   
 ```  
@@ -117,7 +122,7 @@ BOOL IsLocked();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[20 NVC_MFC_Utilities](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="a-namelocka--csinglelocklock"></a><a name="lock"></a>CSingleLock::Lock  
+##  <a name="lock"></a>CSingleLock::Lock  
  Chame essa função para acessar o recurso controlado pelo objeto de sincronização fornecido para o `CSingleLock` construtor.  
   
 ```  
@@ -137,7 +142,7 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_Utilities&#21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="a-nameunlocka--csinglelockunlock"></a><a name="unlock"></a>CSingleLock::Unlock  
+##  <a name="unlock"></a>CSingleLock::Unlock  
  Libera o objeto de sincronização de propriedade `CSingleLock`.  
   
 ```  

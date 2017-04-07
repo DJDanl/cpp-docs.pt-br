@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::ISupportErrorInfoImpl<piid>
-- ATL::ISupportErrorInfoImpl
 - ISupportErrorInfoImpl
-- ATL.ISupportErrorInfoImpl<piid>
-- ATL.ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +84,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="a-nameinterfacesupportserrorinfoa--isupporterrorinfoimplinterfacesupportserrorinfo"></a><a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  Indica se a interface identificada por `riid` oferece suporte a [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interface.  
   
 ```
@@ -96,7 +94,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>Comentários  
  Consulte [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  Chame esse método para obter o número de threads no pool.  
   
 ```
@@ -113,7 +111,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities&#134;](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  Chame esse método para obter o tempo máximo em milissegundos que o pool de threads irá aguardar por um segmento para desligar.  
   
 ```
@@ -130,7 +128,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Exemplo  
  Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  Chame esse método para definir o número de threads no pool.  
   
 ```
@@ -151,7 +149,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Exemplo  
  Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  Chame esse método para definir o tempo máximo em milissegundos que o pool de threads irá aguardar por um segmento para desligar.  
   
 ```

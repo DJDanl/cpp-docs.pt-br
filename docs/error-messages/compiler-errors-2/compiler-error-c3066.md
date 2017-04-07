@@ -1,7 +1,7 @@
 ---
-title: C3066 de erro do compilador | Documentos do Microsoft
+title: C3066 de erro do compilador | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ab4a25ae01bab87abe0adb865e84f0731150d5d9
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 196074fe2ad14ae0ab86fea19b707ee575a0c8a4
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-error-c3066"></a>C3066 de erro do compilador
 há várias maneiras de um objeto deste tipo pode ser chamado com estes argumentos  
   
- O compilador detectou uma chamada de função ambígua envolvendo substitutos.  
+ O compilador detectada uma chamada de função ambígua envolvendo substitutos.  
   
  O exemplo a seguir gera C3066:  
   
@@ -76,4 +76,28 @@ int main() {
    a(&i, &c);   // C3066  
    a(&i, (const char *) &c);   // OK  
 }  
+```
+
+## <a name="copy-list-initialization"></a>Inicialização de lista de cópia
+No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga. No exemplo a seguir, o Visual Studio 2015 escolhe MyInt(23), mas o Visual Studio 2017 gera o erro corretamente.
+
+```
+// From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
+struct MyList {
+       explicit MyStore(int initialCapacity);
+};
+
+struct MyInt {
+       MyInt(int i);
+};
+
+struct Printer {
+       void operator()(MyStore const& s);
+       void operator()(MyInt const& i);
+};
+
+void f() {
+       Printer p;
+       p({ 23 }); // C3066: there are multiple ways that an object of this type can be called with these arguments
+}
 ```

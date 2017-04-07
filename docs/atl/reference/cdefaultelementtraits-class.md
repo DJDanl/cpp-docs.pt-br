@@ -9,11 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDefaultElementTraits<T>
-- ATL.CDefaultElementTraits
-- ATL::CDefaultElementTraits
-- ATL.CDefaultElementTraits<T>
 - CDefaultElementTraits
+- atlcoll/ATL::CDefaultElementTraits
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -49,7 +46,7 @@ Essa classe fornece funções e métodos padrão para uma classe de coleção.
 ## <a name="syntax"></a>Sintaxe  
   
 ```
-template<typename T>  
+template <typename T>  
 class CDefaultElementTraits : public CElementTraitsBase<T>,
     public CDefaultHashTraits<T>,
     public CDefaultCompareTraits<T>

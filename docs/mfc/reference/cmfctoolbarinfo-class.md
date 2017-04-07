@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -72,56 +81,56 @@ class CMFCToolBarInfo
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtoolbar. h  
   
-##  <a name="a-namemuicoldresida--cmfctoolbarinfomuicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
+##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
  Especifica uma ID de recurso para todas as imagens de botão regular da barra de ferramentas.  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="a-namemuidisabledresida--cmfctoolbarinfomuidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
+##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
  Especifica uma ID de recurso para as imagens disponíveis com o botão da barra de ferramentas.  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="a-namemuihotresida--cmfctoolbarinfomuihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
+##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
  Especifica uma ID de recurso para todas as imagens de botão realçado da barra de ferramentas.  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="a-namemuilargecoldresida--cmfctoolbarinfomuilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
+##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
  Especifica uma ID de recurso para todas as imagens grandes button normal de uma barra de ferramentas.  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="a-namemuilargedisabledresida--cmfctoolbarinfomuilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
+##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
  Especifica uma ID de recurso para todas as imagens de botões desabilitados grandes da barra de ferramentas.  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="a-namemuilargehotresida--cmfctoolbarinfomuilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
+##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
  Especifica uma ID de recurso para todas as imagens realçadas grandes da barra de ferramentas.  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="a-namemuimenudisabledresida--cmfctoolbarinfomuimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
+##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
  Especifica uma ID de recurso para as imagens disponíveis com o comando de uma barra de ferramentas.  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="a-namemuimenuresida--cmfctoolbarinfomuimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
+##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
  Especifica uma ID de recurso para todas as imagens de item de menu regular da barra de ferramentas.  
   
 ```  

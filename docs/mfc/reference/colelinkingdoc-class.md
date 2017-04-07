@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
+- AFXOLE/COleLinkingDoc
+- AFXOLE/COleLinkingDoc::COleLinkingDoc
+- AFXOLE/COleLinkingDoc::Register
+- AFXOLE/COleLinkingDoc::Revoke
+- AFXOLE/COleLinkingDoc::OnFindEmbeddedItem
+- AFXOLE/COleLinkingDoc::OnGetLinkedItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +114,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxole.h  
   
-##  <a name="a-namecolelinkingdoca--colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
  Constrói uma `COleLinkingDoc` objeto sem iniciar comunicações com DLLs do sistema OLE.  
   
 ```  
@@ -118,7 +124,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>Comentários  
  Você deve chamar o `Register` a função de membro para informar OLE que o documento está aberto.  
   
-##  <a name="a-nameonfindembeddeditema--colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
  Chamado pela estrutura para determinar se o documento contém um item OLE incorporado com o nome especificado.  
   
 ```  
@@ -135,7 +141,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Comentários  
  A implementação padrão de pesquisa a lista de itens inseridos por um item com o nome especificado (a comparação de nome diferencia maiusculas de minúsculas). Substitua essa função se você tiver seu próprio método de armazenamento ou nomenclatura itens inseridos OLE.  
   
-##  <a name="a-nameongetlinkeditema--colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
  Chamado pela estrutura para verificar se o documento contém um item de servidor vinculado com o nome especificado.  
   
 ```  
@@ -152,7 +158,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Comentários  
  O padrão `COleLinkingDoc` implementação sempre retorna **nulo**. Essa função é substituído na classe derivada `COleServerDoc` para pesquisar a lista de itens de servidor OLE para um item vinculado com o nome especificado (a comparação de nome diferencia maiusculas de minúsculas). Substitua essa função se você implementou o seu próprio método de armazenar ou recuperar itens do servidor vinculado.  
   
-##  <a name="a-nameregistera--colelinkingdocregister"></a><a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>COleLinkingDoc::Register  
  Informa a DLLs do sistema OLE que o documento está aberto.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL Register(
   
  Se você estiver usando `COleTemplateServer` em seu aplicativo, `Register` é chamado para você por `COleLinkingDoc`da implementação de `OnNewDocument`, `OnOpenDocument`, e `OnSaveDocument`.  
   
-##  <a name="a-namerevokea--colelinkingdocrevoke"></a><a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>COleLinkingDoc::Revoke  
  Informa a DLLs do sistema OLE que o documento não estiver aberto.  
   
 ```  

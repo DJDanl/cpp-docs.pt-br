@@ -9,12 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CA2CAEX
-- ATL.CA2CAEX<t_nBufferLength>
-- ATLCONV/CA2CAEX
-- ATL::CA2CAEX<t_nBufferLength>
-- ATL::CA2CAEX
 - CA2CAEX
+- ATLCONV/ATL::CA2CAEX
+- ATLCONV/ATL::CA2CAEX::CA2CAEX
+- ATLCONV/ATL::CA2CAEX::m_psz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +103,7 @@ class CA2CAEX
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** Atlconv. h  
   
-##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
  O construtor.  
   
 ```
@@ -123,7 +121,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentários  
  Cria o buffer necessário para a tradução.  
   
-##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
  O destruidor.  
   
 ```
@@ -133,14 +131,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentários  
  Libera o buffer alocado.  
   
-##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>CA2CAEX::m_psz  
  O membro de dados que armazena a cadeia de caracteres de origem.  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::Operator LPCSTR  
+##  <a name="operator_lpcstr"></a>CA2CAEX::Operator LPCSTR  
  Operador de conversão.  
   
 ```  

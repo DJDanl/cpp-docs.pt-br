@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimationRect
-- afxanimationcontroller/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetBottom
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetLeft
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetRight
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetTop
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bFixedSize
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bottomValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_leftValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +128,7 @@ class CAnimationRect : public CAnimationBaseObject;
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition  
+##  <a name="addtransition"></a>CAnimationRect::AddTransition  
  Adiciona as transições para coordenadas esquerda, superior, direita e inferior.  
   
 ```  
@@ -139,7 +155,7 @@ void AddTransition(
 ### <a name="remarks"></a>Comentários  
  Chame essa função para adicionar as transições especificadas para a lista interna de transições a serem aplicadas às variáveis de animação para cada lado do retângulo. Ao adicionar transições, eles não são aplicados imediatamente e armazenados em uma lista interna. As transições são aplicadas (adicionadas a um storyboard para um determinado valor) quando você chamar CAnimationController::AnimateGroup. Se você não precisa aplicar uma transição para um dos lados do retângulo, é possível passar NULL.  
   
-##  <a name="a-namecanimationrecta--canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect  
+##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
  Constrói um objeto CAnimationRect.  
   
 ```  
@@ -205,7 +221,7 @@ CAnimationRect(
 ### <a name="remarks"></a>Comentários  
  O objeto é criado com valores padrão para a esquerda, superior, direita e inferior, ID de objeto e identificação de grupo, que será definido como 0. Eles podem ser alterados posteriormente em tempo de execução usando SetDefaultValue e SetID.  
   
-##  <a name="a-namegetanimationvariablelista--canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
  Coloca as variáveis de animação encapsulado em uma lista.  
   
 ```  
@@ -218,7 +234,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Quando a função retorna, contém ponteiros para quatro objetos CAnimationVariable que representam as coordenadas do retângulo.  
   
-##  <a name="a-namegetbottoma--canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom  
+##  <a name="getbottom"></a>CAnimationRect::GetBottom  
  Fornece acesso a CAnimationVariable que representa a coordenada inferior.  
   
 ```  
@@ -231,7 +247,7 @@ CAnimationVariable& GetBottom();
 ### <a name="remarks"></a>Comentários  
  Você pode chamar esse método para obter acesso direto ao CAnimationVariable subjacente que representa a coordenada inferior.  
   
-##  <a name="a-namegetdefaultvaluea--canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
  Retorna os valores padrão para os limites do retângulo.  
   
 ```  
@@ -244,7 +260,7 @@ CRect GetDefaultValue();
 ### <a name="remarks"></a>Comentários  
  Chame essa função para recuperar o valor padrão, que foi definida anteriormente pelo construtor ou SetDefaultValue.  
   
-##  <a name="a-namegetlefta--canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft  
+##  <a name="getleft"></a>CAnimationRect::GetLeft  
  Fornece acesso a CAnimationVariable que representa a coordenada esquerda.  
   
 ```  
@@ -257,7 +273,7 @@ CAnimationVariable& GetLeft();
 ### <a name="remarks"></a>Comentários  
  Você pode chamar esse método para obter acesso direto ao CAnimationVariable subjacente que representa a coordenada esquerda.  
   
-##  <a name="a-namegetrighta--canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight  
+##  <a name="getright"></a>CAnimationRect::GetRight  
  Fornece acesso a CAnimationVariable que representa a coordenada à direita.  
   
 ```  
@@ -270,7 +286,7 @@ CAnimationVariable& GetRight();
 ### <a name="remarks"></a>Comentários  
  Você pode chamar esse método para obter acesso direto ao CAnimationVariable subjacente que representa a coordenada à direita.  
   
-##  <a name="a-namegettopa--canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop  
+##  <a name="gettop"></a>CAnimationRect::GetTop  
  Fornece acesso a CAnimationVariable que representa a coordenada superior.  
   
 ```  
@@ -283,7 +299,7 @@ CAnimationVariable& GetTop();
 ### <a name="remarks"></a>Comentários  
  Você pode chamar esse método para obter acesso direto ao CAnimationVariable subjacente que representa a coordenada superior.  
   
-##  <a name="a-namegetvaluea--canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::GetValue  
+##  <a name="getvalue"></a>CAnimationRect::GetValue  
  Retorna o valor atual.  
   
 ```  
@@ -300,7 +316,7 @@ BOOL GetValue(CRect& rect);
 ### <a name="remarks"></a>Comentários  
  Chame essa função para recuperar o valor atual do retângulo de animação. Se esse método falhar ou subjacente COM objetos para a esquerda, superior, direita e inferior não foram inicializadas, rect contém o valor padrão, que foi anteriormente definido no construtor ou por SetDefaultValue.  
   
-##  <a name="a-namembfixedsizea--canimationrectmbfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
+##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
  Especifica se o retângulo tem tamanho fixo.  
   
 ```  
@@ -310,42 +326,42 @@ BOOL m_bFixedSize;
 ### <a name="remarks"></a>Comentários  
  Se esse membro for true, o tamanho do retângulo é fixo e à direita e valores inferiores serão recalculados sempre que o canto superior esquerdo é movido de acordo com o tamanho fixo. Defina esse valor como TRUE para mover facilmente o retângulo ao redor da tela. Nesse caso, transições aplicadas às coordenadas direita e inferior são ignoradas. O tamanho é armazenado internamente quando você construir o objeto e/ou chame SetDefaultValue. Por padrão, esse membro é definido como FALSE.  
   
-##  <a name="a-namembottomvaluea--canimationrectmbottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
+##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
  Associado a variável de animação encapsulado que representa a parte inferior do retângulo de animação.  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="a-namemleftvaluea--canimationrectmleftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
+##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
  A variável de animação encapsulado representando esquerda associado do retângulo de animação.  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="a-namemrightvaluea--canimationrectmrightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
+##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
  A variável de animação encapsulado que representa o direito de limite do retângulo de animação.  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="a-namemszinitiala--canimationrectmszinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial  
+##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
  Especifica o tamanho inicial do retângulo de animação.  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="a-namemtopvaluea--canimationrectmtopvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue  
+##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
  Associado a variável de animação encapsulado que representa a parte superior do retângulo de animação.  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="a-nameoperatorrecta--canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::operator RECT  
+##  <a name="operator_rect"></a>CAnimationRect::operator RECT  
  Converte um CAnimationRect Rect.  
   
 ```  
@@ -358,7 +374,7 @@ operator RECT();
 ### <a name="remarks"></a>Comentários  
  Essa função chama internamente GetValue. Se falhar GetValue por algum motivo, o RECT retornado conterá valores padrão para todas as coordenadas do retângulo.  
   
-##  <a name="a-nameoperatoreqa--canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::operator =  
+##  <a name="operator_eq"></a>CAnimationRect::operator =  
  Atribui rect para CAnimationRect.  
   
 ```  
@@ -372,7 +388,7 @@ void operator=(const RECT& rect);
 ### <a name="remarks"></a>Comentários  
  Recomenda-se para fazer isso antes do início da animação, porque esse operador chama SetDefaultValue, que recria os objetos subjacentes para componentes de cor se eles foram criados. Se você se inscreveu nesse objeto de animação para eventos (ValueChanged ou IntegerValueChanged), você precisa habilitar novamente esses eventos.  
   
-##  <a name="a-namesetdefaultvaluea--canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
  Define o valor padrão.  
   
 ```  

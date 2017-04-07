@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IAxWinAmbientDispatchEx
 - IAxWinAmbientDispatchEx
-- ATL::IAxWinAmbientDispatchEx
+- No header/ATL::IAxWinAmbientDispatchEx
+- No header/ATL::SetAmbientDispatch
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |Biblioteca de Tipos|ATL.dll|  
 |C++|atliface (também incluído no atlbase. H)|  
   
-##  <a name="a-namesetambientdispatcha--iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
  Esse método é chamado para complementar a interface de propriedade de ambiente padrão com uma interface definida pelo usuário.  
   
 ```

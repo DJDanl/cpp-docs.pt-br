@@ -67,7 +67,7 @@ complex(
  `_ImagVal`  
  O valor do tipo `long double` da parte imaginária do número complexo que está sendo construído.  
   
- ` complexNum`  
+ `complexNum`  
  O número complexo do tipo **double** ou do tipo **float** cujas partes reais e imaginárias são usadas para inicializar um número complexo do tipo `long double` que está sendo construído.  
   
 ## <a name="return-value"></a>Valor de retorno  

@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialog
+- AFXWIN/CDialog
+- AFXWIN/CDialog::CDialog
+- AFXWIN/CDialog::Create
+- AFXWIN/CDialog::CreateIndirect
+- AFXWIN/CDialog::DoModal
+- AFXWIN/CDialog::EndDialog
+- AFXWIN/CDialog::GetDefID
+- AFXWIN/CDialog::GotoDlgCtrl
+- AFXWIN/CDialog::InitModalIndirect
+- AFXWIN/CDialog::MapDialogRect
+- AFXWIN/CDialog::NextDlgCtrl
+- AFXWIN/CDialog::OnInitDialog
+- AFXWIN/CDialog::OnSetFont
+- AFXWIN/CDialog::PrevDlgCtrl
+- AFXWIN/CDialog::SetDefID
+- AFXWIN/CDialog::SetHelpID
+- AFXWIN/CDialog::OnCancel
+- AFXWIN/CDialog::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +153,7 @@ class CDialog : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin. h  
   
-##  <a name="a-namecdialoga--cdialogcdialog"></a><a name="cdialog"></a>CDialog::CDialog  
+##  <a name="cdialog"></a>CDialog::CDialog  
  Para criar uma caixa de diálogo modal com base em recursos, chame qualquer forma pública do construtor.  
   
 ```  
@@ -170,7 +188,7 @@ CDialog();
   
  Para criar uma caixa de diálogo sem janela restrita, use o formulário protegido do `CDialog` construtor. O construtor é protegido porque você deve derivar sua própria classe de caixa de diálogo para implementar uma caixa de diálogo sem janela restrita. Construção de uma caixa de diálogo sem janela restrita é um processo de duas etapas. Primeiro, chame o construtor; em seguida, chame o **criar** a função de membro para criar uma caixa de diálogo baseada em recursos ou chamar `CreateIndirect` para criar a caixa de diálogo de um modelo na memória.  
   
-##  <a name="a-namecreatea--cdialogcreate"></a><a name="create"></a>CDialog::Create  
+##  <a name="create"></a>CDialog::Create  
  Chamar **criar** para criar uma caixa de diálogo sem janela restrita usando um modelo de caixa de diálogo de um recurso.  
   
 ```  
@@ -213,7 +231,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#62;](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateindirecta--cdialogcreateindirect"></a><a name="createindirect"></a>CDialog::CreateIndirect  
+##  <a name="createindirect"></a>CDialog::CreateIndirect  
  Chame essa função de membro para criar uma caixa de diálogo sem janela restrita a partir de um modelo de caixa de diálogo na memória.  
   
 ```  
@@ -253,7 +271,7 @@ virtual BOOL CreateIndirect(
   
  Caixas de diálogo que contenham controles ActiveX exigem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de Conhecimento estão disponíveis na documentação da biblioteca MSDN Visual Studio ou no [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namedomodala--cdialogdomodal"></a><a name="domodal"></a>CDialog::DoModal  
+##  <a name="domodal"></a>CDialog::DoModal  
  Chame essa função de membro para invocar a caixa de diálogo modal e retornar o resultado da caixa de diálogo quando terminar.  
   
 ```  
@@ -274,7 +292,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#63;](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="a-nameenddialoga--cdialogenddialog"></a><a name="enddialog"></a>CDialog::EndDialog  
+##  <a name="enddialog"></a>CDialog::EndDialog  
  Chame essa função de membro para encerrar uma caixa de diálogo modal.  
   
 ```  
@@ -297,7 +315,7 @@ void EndDialog(int nResult);
   
  [!code-cpp[NVC_MFCControlLadenDialog&#65;](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="a-namegetdefida--cdialoggetdefid"></a><a name="getdefid"></a>CDialog::GetDefID  
+##  <a name="getdefid"></a>CDialog::GetDefID  
  Chamar o `GetDefID` a função de membro para obter a ID do controle de botão de pressão padrão para uma caixa de diálogo.  
   
 ```  
@@ -310,7 +328,7 @@ DWORD GetDefID() const;
 ### <a name="remarks"></a>Comentários  
  Isso geralmente é um botão Okey.  
   
-##  <a name="a-namegotodlgctrla--cdialoggotodlgctrl"></a><a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
  Move o foco para o controle especificado na caixa de diálogo.  
   
 ```  
@@ -327,7 +345,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
   
-##  <a name="a-nameinitmodalindirecta--cdialoginitmodalindirect"></a><a name="initmodalindirect"></a>CDialog::InitModalIndirect  
+##  <a name="initmodalindirect"></a>CDialog::InitModalIndirect  
  Chame essa função de membro para inicializar um objeto de caixa de diálogo modal usando um modelo de caixa de diálogo construir na memória.  
   
 ```  
@@ -363,7 +381,7 @@ BOOL InitModalIndirect(
   
  Caixas de diálogo que contenham controles ActiveX exigem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de Conhecimento estão disponíveis na documentação da biblioteca MSDN Visual Studio ou no [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namemapdialogrecta--cdialogmapdialogrect"></a><a name="mapdialogrect"></a>CDialog::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  Chamada para converter as unidades de caixa de diálogo de um retângulo em unidades de tela.  
   
 ```  
@@ -381,7 +399,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  O `MapDialogRect` função membro substitui as unidades de caixa de diálogo em `lpRect` com tela unidades (pixels) para que o retângulo pode ser usado para criar uma caixa de diálogo ou posicionar um controle em uma caixa.  
   
-##  <a name="a-namenextdlgctrla--cdialognextdlgctrl"></a><a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
  Move o foco para o próximo controle na caixa de diálogo.  
   
 ```  
@@ -391,7 +409,7 @@ void NextDlgCtrl() const;
 ### <a name="remarks"></a>Comentários  
  Se o foco estiver no último controle na caixa de diálogo, ele move para o primeiro controle.  
   
-##  <a name="a-nameoncancela--cdialogoncancel"></a><a name="oncancel"></a>CDialog::OnCancel  
+##  <a name="oncancel"></a>CDialog::OnCancel  
  O framework chama esse método quando o usuário clica **Cancelar** ou pressionar a tecla ESC em uma caixa de diálogo modal ou sem janela restrita.  
   
 ```  
@@ -409,7 +427,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#66;](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="a-nameoninitdialoga--cdialogoninitdialog"></a><a name="oninitdialog"></a>CDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CDialog::OnInitDialog  
  Este método é chamado em resposta ao `WM_INITDIALOG` mensagem.  
   
 ```  
@@ -432,7 +450,7 @@ virtual BOOL OnInitDialog();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#67;](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="a-nameonoka--cdialogonok"></a><a name="onok"></a>CDialog::OnOK  
+##  <a name="onok"></a>CDialog::OnOK  
  Chamado quando o usuário clica o **Okey** botão (o botão com uma ID de IDOK).  
   
 ```  
@@ -450,7 +468,7 @@ virtual void OnOK();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#68;](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="a-nameonsetfonta--cdialogonsetfont"></a><a name="onsetfont"></a>CDialog::OnSetFont  
+##  <a name="onsetfont"></a>CDialog::OnSetFont  
  Especifica a fonte de que um controle de caixa de diálogo usará ao desenho de texto.  
   
 ```  
@@ -469,7 +487,7 @@ Virtual void OnSetFont(CFont* pFont);
 > [!NOTE]
 >  Não é possível substituir esse método quando você usa um `CFileDialog` objeto em um programa que é compilado em [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Para obter mais informações sobre alterações para `CFileDialog` em [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] consulte [classe CFileDialog](../../mfc/reference/cfiledialog-class.md).  
   
-##  <a name="a-nameprevdlgctrla--cdialogprevdlgctrl"></a><a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
  Define o foco para o controle anterior na caixa de diálogo.  
   
 ```  
@@ -479,7 +497,7 @@ void PrevDlgCtrl() const;
 ### <a name="remarks"></a>Comentários  
  Se o foco estiver no primeiro controle na caixa de diálogo, ele move para o último controle na caixa.  
   
-##  <a name="a-namesetdefida--cdialogsetdefid"></a><a name="setdefid"></a>CDialog::SetDefID  
+##  <a name="setdefid"></a>CDialog::SetDefID  
  Altera o controle de botão de pressão de padrão de uma caixa de diálogo.  
   
 ```  
@@ -490,7 +508,7 @@ void SetDefID(UINT nID);
  `nID`  
  Especifica a ID do controle botão de pressão que se tornará o padrão.  
   
-##  <a name="a-namesethelpida--cdialogsethelpid"></a><a name="sethelpid"></a>CDialog::SetHelpID  
+##  <a name="sethelpid"></a>CDialog::SetHelpID  
  Define uma ID de ajuda contextual para a caixa de diálogo.  
   
 ```  

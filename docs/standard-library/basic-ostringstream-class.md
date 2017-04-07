@@ -89,14 +89,14 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
   
  **Namespace:** std  
   
-##  <a name="a-namebasicostringstreamallocatortypea--basicostringstreamallocatortype"></a><a name="basic_ostringstream__allocator_type"></a>  basic_ostringstream::allocator_type  
+##  <a name="basic_ostringstream__allocator_type"></a>  basic_ostringstream::allocator_type  
  O tipo é um sinônimo do parâmetro de modelo `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="a-namebasicostringstreambasicostringstreama--basicostringstreambasicostringstream"></a><a name="basic_ostringstream__basic_ostringstream"></a>  basic_ostringstream::basic_ostringstream  
+##  <a name="basic_ostringstream__basic_ostringstream"></a>  basic_ostringstream::basic_ostringstream  
  Constrói um objeto do tipo basic_ostringstream.  
   
 ```  
@@ -109,7 +109,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
  `_Mode`  
  Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
   
- ` str`  
+ `str`  
  Um objeto do tipo `basic_string`.  
   
 ### <a name="remarks"></a>Comentários  
@@ -117,7 +117,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
   
  O segundo construtor inicializa a classe base chamando basic_ostream( **sb**). Também inicializa **sb** chamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode` &#124; `ios_base::out`).  
   
-##  <a name="a-namebasicostringstreamrdbufa--basicostringstreamrdbuf"></a><a name="basic_ostringstream__rdbuf"></a>  basic_ostringstream::rdbuf  
+##  <a name="basic_ostringstream__rdbuf"></a>  basic_ostringstream::rdbuf  
  Retorna o endereço do buffer de fluxo armazenado do tipo **pointer** para [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
 ```  
@@ -133,7 +133,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ### <a name="example"></a>Exemplo  
   Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close) para ver um exemplo que usa `rdbuf`.  
   
-##  <a name="a-namebasicostringstreamstra--basicostringstreamstr"></a><a name="basic_ostringstream__str"></a>  basic_ostringstream::str  
+##  <a name="basic_ostringstream__str"></a>  basic_ostringstream::str  
  Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.  
   
 ```  

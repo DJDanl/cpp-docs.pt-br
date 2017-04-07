@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetIconSize
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetParams
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawBorder
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawLabel
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnFillBackground
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetFixedWidth
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetHotRibbonButton
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetLocation
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetParams
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +163,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxtooltipctrl.h  
   
-##  <a name="a-namecmfctooltipctrla--cmfctooltipctrlcmfctooltipctrl"></a><a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -161,7 +175,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegeticonsizea--cmfctooltipctrlgeticonsize"></a><a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
  Retorna o tamanho de um ícone em uma dica de ferramenta.  
   
 ```  
@@ -171,7 +185,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho do ícone, em pixels.  
   
-##  <a name="a-namegetparamsa--cmfctooltipctrlgetparams"></a><a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
  Retorna as configurações de exibição de uma dica de ferramenta.  
   
 ```  
@@ -181,7 +195,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Valor de retorno  
  As configurações de exibição de dica de ferramenta atual, que são armazenadas em uma [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
   
-##  <a name="a-nameondrawbordera--cmfctooltipctrlondrawborder"></a><a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
  Desenha a borda de uma dica de ferramenta.  
   
 ```  
@@ -204,7 +218,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Comentários  
  Substitua esse método em uma classe derivada para personalizar a aparência da borda da dica de ferramenta.  
   
-##  <a name="a-nameondrawdescriptiona--cmfctooltipctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -223,7 +237,7 @@ virtual CSize OnDrawDescription(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameondrawicona--cmfctooltipctrlondrawicon"></a><a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
  Exibe um ícone em uma dica de ferramenta.  
   
 ```  
@@ -245,7 +259,7 @@ virtual BOOL OnDrawIcon(
 ### <a name="remarks"></a>Comentários  
  Substitua esse método em uma classe derivada para exibir um ícone personalizado. Você também deve substituir [CMFCToolTipCtrl::GetIconSize](#geticonsize) para habilitar a dica de ferramenta calcular corretamente o layout de texto e descrição.  
   
-##  <a name="a-nameondrawlabela--cmfctooltipctrlondrawlabel"></a><a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
  Desenha o rótulo de uma dica de ferramenta ou calcula o tamanho do rótulo.  
   
 ```  
@@ -271,7 +285,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Comentários  
  Substitua esse método em uma classe derivada se você quiser personalizar a aparência do rótulo de dica de ferramenta.  
   
-##  <a name="a-nameondrawseparatora--cmfctooltipctrlondrawseparator"></a><a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
  Desenha o separador entre o rótulo e a descrição em uma dica de ferramenta.  
   
 ```  
@@ -300,7 +314,7 @@ virtual void OnDrawSeparator(
   
  Substitua esse método em uma classe derivada para personalizar a aparência do separador.  
   
-##  <a name="a-nameonfillbackgrounda--cmfctooltipctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
  Preenche o plano de fundo da dica de ferramenta.  
   
 ```  
@@ -329,7 +343,7 @@ virtual void OnFillBackground(
   
  Substitua esse método em uma classe derivada se você quiser personalizar a aparência da dica de ferramenta.  
   
-##  <a name="a-namesetdescriptiona--cmfctooltipctrlsetdescription"></a><a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
  Define a descrição a ser exibida com a dica de ferramenta.  
   
 ```  
@@ -343,7 +357,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Comentários  
  O texto de descrição é exibido na dica de ferramenta sob o separador.  
   
-##  <a name="a-namesetfixedwidtha--cmfctooltipctrlsetfixedwidth"></a><a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -358,7 +372,7 @@ void SetFixedWidth(
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesethotribbonbuttona--cmfctooltipctrlsethotribbonbutton"></a><a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -370,7 +384,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesetlocationa--cmfctooltipctrlsetlocation"></a><a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -382,7 +396,7 @@ void SetLocation(CPoint pt);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesetparamsa--cmfctooltipctrlsetparams"></a><a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
  Especifica a aparência visual de uma dica de ferramenta usando um [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objeto.  
   
 ```  

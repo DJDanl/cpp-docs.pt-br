@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  Cria um objeto `CMFCDropDownFrame`.  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  O `CMFCDropDownFrame` classe cria uma cópia do fornecidas `CMFCDropDownToolBar` parâmetro. Esse método copia as imagens de botão e os estados do botão do `pWndOriginToolbar` parâmetro para o `m_pWndOriginToolbar` membro de dados.  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  Recupera a barra de menus do pai do quadro de lista suspensa.  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Comentários  
  Esse método recupera a barra de menus do pai do botão pai. Esse método retorna `NULL` se o quadro suspensa não tem nenhum botão pai ou no botão pai nenhuma barra de menu pai.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  Recupera o menu pop-up do pai do quadro de lista suspensa.  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Comentários  
  Esse método recupera menu pai do botão pai. Esse método retorna `NULL` se o quadro suspensa não tem nenhum botão pai ou no botão pai nenhum menu pai.  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  Reposiciona o quadro de lista suspensa.  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método quando o quadro de lista suspensa é criado ou a janela pai é redimensionada. Esse método calcula a posição e o tamanho do quadro suspensa usando a posição e o tamanho da janela pai.  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  Define se a janela de ferramentas de lista suspensa filho é destruída automaticamente.  
   
 ```  

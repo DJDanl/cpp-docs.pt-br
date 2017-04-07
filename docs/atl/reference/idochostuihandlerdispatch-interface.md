@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
+- atlbase/ATL::IDocHostUIHandlerDispatch
 dev_langs:
 - C++
 helpviewer_keywords:

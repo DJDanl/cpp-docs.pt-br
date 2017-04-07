@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funções de namespace Concurrency::Graphics::Direct3D
 ||||  
 |-|-|-|  
-|[Função get_sampler](#get_sampler)|[Função get_texture](#get_texture)|[Função make_sampler](#make_sampler)|  
-|[Função make_texture](#make_texture)|[Função msad4](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>Função get_sampler  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  Obter a interface de estado de amostra D3D no Acelerador de determinado exibir que representa o objeto de amostra especificado.  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Valor de retorno  
  O ponteiro de interface IUnknown correspondente para o estado de amostra D3D que representa o classificador de determinado.  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>Função get_texture  
+##  <a name="get_texture"></a>get_texture  
  Obtém a interface de textura Direct3D subjacente especificado [textura](texture-class.md) objeto.  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Valor de retorno  
  O ponteiro de interface IUnknown correspondente para a textura do Direct3D subjacente a textura.  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>Função make_sampler  
+##  <a name="make_sampler"></a>make_sampler  
  Crie uma amostra de um ponteiro de interface D3D estado de amostra.  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Valor de retorno  
  Uma amostra representa o estado de amostra do D3D fornecido.  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>Função make_texture  
+##  <a name="make_texture"></a>make_texture  
  Cria um [textura](texture-class.md) objeto usando os parâmetros especificados.  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Valor de retorno  
  Uma textura usando a textura D3D fornecida.  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>Função msad4  
+##  <a name="msad4"></a>msad4  
  Compara um valor de referência de 4 bytes e um valor de origem de 8 bytes e um vetor de 4 somas é acumulado. Cada soma corresponde à soma das diferenças absolutas de alinhamentos diferentes de bytes entre o valor de referência e o valor de origem mascarada.  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um vetor de 4 somas. Cada soma corresponde à soma das diferenças absolutas de alinhamentos diferentes de bytes entre o valor de referência e o valor de origem mascarada.  
+
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)
+ [Namespace Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)
 

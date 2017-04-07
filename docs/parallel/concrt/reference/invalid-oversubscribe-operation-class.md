@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_oversubscribe_operation
+- invalid_oversubscribe_operation
+- CONCRT/concurrency::invalid_oversubscribe_operation
+- CONCRT/concurrency::invalid_oversubscribe_operation::invalid_oversubscribe_operation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: becb02cfd6a052a019ee73e182804c63a286403e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 9263fd2bf7d4cfa3b1b8542b8a0bf8d2a3969326
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidoversubscribeoperation-class"></a>Classe invalid_oversubscribe_operation
@@ -54,7 +56,7 @@ class invalid_oversubscribe_operation : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor invalid_oversubscribe_operation](#ctor)|Sobrecarregado. Constrói uma `invalid_oversubscribe_operation` objeto.|  
+|[invalid_oversubscribe_operation](#ctor)|Sobrecarregado. Constrói uma `invalid_oversubscribe_operation` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_oversubscribe_operation : public std::exception;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namectora-invalidoversubscribeoperation"></a><a name="ctor"></a>invalid_oversubscribe_operation 
+##  <a name="ctor"></a>invalid_oversubscribe_operation 
 
  Constrói uma `invalid_oversubscribe_operation` objeto.  
   

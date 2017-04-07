@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::m_Cache
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +100,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxctl.h  
   
-##  <a name="a-nameccacheddatapathpropertya--ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
  Constrói um objeto `CCachedDataPathProperty`.  
   
 ```  
@@ -119,7 +122,7 @@ CCachedDataPathProperty(
 ### <a name="remarks"></a>Comentários  
  O `COleControl` objeto apontado por `pControl` é usado pelo [abrir](../../mfc/reference/cdatapathproperty-class.md#open) e recuperada por classes derivadas. Se `pControl` é **nulo**, o controle usado com **abrir** deve ser definida com [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Se `lpszPath` é **nulo**, você pode passar no caminho por meio de **abrir** ou defini-lo com [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="a-namemcachea--ccacheddatapathpropertymcache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
  Contém o nome da classe do arquivo de memória em que dados são armazenados em cache.  
   
 ```  

@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
@@ -68,11 +74,11 @@ class network_link_registry;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[o método Add](#add)|Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.|  
-|[Método Begin](#begin)|Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.|  
-|[Método Contains](#contains)|Quando substituído em uma classe derivada, pesquisa a `network_link_registry` objeto para um bloco especificado.|  
-|[Método Count](#count)|Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.|  
-|[Método Remove](#remove)|Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.|  
+|[add](#add)|Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.|  
+|[begin](#begin)|Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.|  
+|[contém](#contains)|Quando substituído em uma classe derivada, pesquisa a `network_link_registry` objeto para um bloco especificado.|  
+|[count](#count)|Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.|  
+|[remove](#remove)|Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
  O `network link registry` não é seguro para acesso simultâneo.  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>Adicionar 
+##  <a name="add"></a>Adicionar 
 
  Quando substituído em uma classe derivada, adiciona um link para o `network_link_registry` objeto.  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Um ponteiro para um bloco a ser adicionado.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>começar 
+##  <a name="begin"></a>começar 
 
  Quando substituído em uma classe derivada, retorna um iterador para o primeiro elemento no `network_link_registry` objeto.  
   
@@ -111,7 +117,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Comentários  
  O estado final do iterador é indicado por um `NULL` link.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>contém 
+##  <a name="contains"></a>contém 
 
  Quando substituído em uma classe derivada, pesquisa a `network_link_registry` objeto para um bloco especificado.  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se o bloco for encontrado, `false` caso contrário.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>Contagem 
+##  <a name="count"></a>Contagem 
 
  Quando substituído em uma classe derivada, retorna o número de itens de `network_link_registry` objeto.  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de itens no objeto `network_link_registry`.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>Remover 
+##  <a name="remove"></a>Remover 
 
  Quando substituído em uma classe derivada, remove um bloco especificado a partir de `network_link_registry` objeto.  
   

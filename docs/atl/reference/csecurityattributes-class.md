@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSecurityAttributes
-- ATL::CSecurityAttributes
 - CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +81,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity. h  
   
-##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
  O construtor.  
   
 ```
@@ -95,7 +96,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Especifica se o identificador retornado é herdado quando um novo processo é criado. Se esse membro for true, o novo processo herda o identificador.  
   
-##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>CSecurityAttributes::Set  
  Chame esse método para definir os atributos do `CSecurityAttributes` objeto.  
   
 ```

@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoRevertImpersonation
 - CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Attach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Detach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::GetAccessToken
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +80,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity. h  
   
-##  <a name="a-nameattacha--cautorevertimpersonationattach"></a><a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
  Automatiza reverter a representação de um token de acesso.  
   
 ```
@@ -90,7 +94,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Comentários  
  Este método só deve ser usado se o [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) objeto foi criado com um valor nulo `CAccessToken` ponteiro, ou se [desanexar](#detach) foi chamado anteriormente. Para casos simples, não é necessário usar esse método.  
   
-##  <a name="a-namecautorevertimpersonationa--cautorevertimpersonationcautorevertimpersonation"></a><a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
  Constrói um objeto `CAutoRevertImpersonation`.  
   
 ```
@@ -104,7 +108,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Comentários  
  A representação real do token de acesso deve ser executada separadamente do e, preferencialmente, antes da criação de uma `CAutoRevertImpersonation` objeto. Essa representação será revertida automaticamente quando o `CAutoRevertImpersonation` objeto sai do escopo.  
   
-##  <a name="a-namedtora--cautorevertimpersonationcautorevertimpersonation"></a><a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  Destrói o objeto e reverte a representação de token de acesso.  
   
 ```
@@ -114,7 +118,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Comentários  
  Reverterá qualquer representação em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto fornecido na construção ou por meio de [Attach](#attach) método. Se nenhum `CAccessToken` está associado, o destruidor não tem nenhum efeito.  
   
-##  <a name="a-namedetacha--cautorevertimpersonationdetach"></a><a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
  Cancela a reverter a representação automática.  
   
 ```
@@ -127,7 +131,7 @@ const CAccessToken* Detach() throw();
 ### <a name="remarks"></a>Comentários  
  Chamando **desanexar** impede o `CAutoRevertImpersonation` objeto reverter qualquer representação em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto associado a esse objeto. `CAutoRevertImpersonation`pode ser destruída com nenhum efeito ou reassociar o mesmo ou a outro `CAccessToken` objeto usando [Attach](#attach).  
   
-##  <a name="a-namegetaccesstokena--cautorevertimpersonationgetaccesstoken"></a><a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
  Recupera o atual token de acesso associado ao objeto.  
   
 ```

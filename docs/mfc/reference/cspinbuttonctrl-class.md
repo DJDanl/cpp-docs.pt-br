@@ -1,5 +1,5 @@
 ---
-title: Classe CSpinButtonCtrl | Documentos do Microsoft
+title: Classe CSpinButtonCtrl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::Create
+- AFXCMN/CSpinButtonCtrl::CreateEx
+- AFXCMN/CSpinButtonCtrl::GetAccel
+- AFXCMN/CSpinButtonCtrl::GetBase
+- AFXCMN/CSpinButtonCtrl::GetBuddy
+- AFXCMN/CSpinButtonCtrl::GetPos
+- AFXCMN/CSpinButtonCtrl::GetRange
+- AFXCMN/CSpinButtonCtrl::SetAccel
+- AFXCMN/CSpinButtonCtrl::SetBase
+- AFXCMN/CSpinButtonCtrl::SetBuddy
+- AFXCMN/CSpinButtonCtrl::SetPos
+- AFXCMN/CSpinButtonCtrl::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,13 +52,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 486a0842ed04f0e760bbb332986a97a35ce9851f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
-Fornece a funcionalidade do controle de botão de rotação comuns do Windows.  
+Fornece a funcionalidade de controle de botão de rotação comuns do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,31 +78,31 @@ class CSpinButtonCtrl : public CWnd
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|Cria um controle de botão de rotação e a anexa a um `CSpinButtonCtrl` objeto.|  
-|[CSpinButtonCtrl::CreateEx](#createex)|Cria um controle de botão de rotação com os estilos estendidos do Windows especificados e a anexa a um `CSpinButtonCtrl` objeto.|  
+|[CSpinButtonCtrl::Create](#create)|Cria um controle de botão de rotação e anexa-o para um `CSpinButtonCtrl` objeto.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Cria um controle de botão de rotação com os estilos estendidos do Windows especificados e anexa-o para um `CSpinButtonCtrl` objeto.|  
 |[CSpinButtonCtrl::GetAccel](#getaccel)|Recupera informações de aceleração para um controle de botão de rotação.|  
 |[CSpinButtonCtrl::GetBase](#getbase)|Recupera a base atual para um controle de botão de rotação.|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Recupera um ponteiro para a janela atual do amigo.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Recupera um ponteiro para a janela buddy atual.|  
 |[CSpinButtonCtrl::GetPos](#getpos)|Recupera a posição atual de um controle de botão de rotação.|  
 |[CSpinButtonCtrl::GetRange](#getrange)|Recupera os limites superiores e inferiores (intervalo) para um controle de botão de rotação.|  
 |[CSpinButtonCtrl::SetAccel](#setaccel)|Define a aceleração de um controle de botão de rotação.|  
 |[CSpinButtonCtrl::SetBase](#setbase)|Define a base para um controle de botão de rotação.|  
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Define a janela de amigo para um controle de botão de rotação.|  
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Define a janela buddy para um controle de botão de rotação.|  
 |[CSpinButtonCtrl::SetPos](#setpos)|Define a posição atual do controle.|  
 |[CSpinButtonCtrl::SetRange](#setrange)|Define os limites superiores e inferiores (intervalo) para um controle de botão de rotação.|  
   
 ## <a name="remarks"></a>Comentários  
- Um "botão controle de rotação" (também conhecido como um controle de cima para baixo) é um par de botões de seta para que o usuário pode clicar para incrementar ou decrementar um valor, como uma posição de rolagem ou um número exibido em um controle complementar. O valor associado a um controle de botão de rotação é chamado de sua posição atual. Um controle de botão de rotação é geralmente usado com um controle complementar, chamado de "janela buddy".  
+ Um "botão controle de rotação" (também conhecido como um controle acima-abaixo) é um par de botões de seta para que o usuário pode clicar para incrementar ou decrementar um valor, como uma posição de rolagem ou um número exibido em um controle complementar. O valor associado com um controle de botão de rotação é chamado de sua posição atual. Um controle de botão de rotação geralmente é usado com um controle complementar, chamado "janela buddy".  
   
- Esse controle (e, portanto, a `CSpinButtonCtrl` classe) está disponível apenas para programas em execução na versão do Windows 95/98 e Windows NT 3.51 e posterior.  
+ Esse controle (e, portanto, o `CSpinButtonCtrl` classe) está disponível apenas para programas em execução na versão do Windows 95/98 e Windows NT 3.51 e posterior.  
   
- Para o usuário, um controle de botão de rotação e sua janela buddy muitas vezes parecer um único controle. Você pode especificar que um controle de botão de rotação automaticamente se posiciona ao lado de sua janela de amigo e que ele definido automaticamente a legenda da janela buddy na posição atual. Você pode usar um controle de botão de rotação com um controle de edição para avisar o usuário para a entrada numérica.  
+ Para o usuário, um controle de botão de rotação e sua janela buddy geralmente se parecer com um único controle. Você pode especificar que um controle de botão de rotação automaticamente se posiciona ao lado da janela buddy e que ele definida automaticamente a legenda da janela buddy como sua posição atual. Você pode usar um controle de botão de rotação com um controle de edição para solicitar ao usuário para entrada numérica.  
   
- Clicando na seta para cima move a posição atual para o máximo e clicar na seta para baixo move a posição atual para o mínimo. Por padrão, o mínimo é de 100 e o máximo é de 0. Sempre que a configuração mínima é maior que o máximo de configuração (por exemplo, quando são usadas as configurações padrão), clicando no diminui seta para cima o valor da posição e clicando na seta para baixo aumenta.  
+ Clique na seta para cima move a posição atual para o máximo e clicando na seta para baixo move a posição atual para o mínimo. Por padrão, o mínimo é de 100 e o máximo é de 0. Sempre que a configuração mínima é maior que o máximo de configuração (por exemplo, quando as configurações padrão são usadas), clicando no diminui de seta para cima o valor da posição e clicando na seta para baixo aumenta a ele.  
   
- Um controle de botão de rotação sem uma janela buddy funciona como uma espécie de barra de rolagem simplificada. Por exemplo, um controle de guia, às vezes, exibe um controle de botão de rotação para permitir que o usuário rolar guias adicionais no modo de exibição.  
+ Um controle de botão de rotação sem uma janela buddy funciona como um tipo de barra de rolagem simplificado. Por exemplo, um controle guia, às vezes, exibe um controle de botão de rotação para permitir que o usuário rolar guias adicionais no modo de exibição.  
   
- Para obter mais informações sobre como usar o `CSpinButtonCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [CSpinButtonCtrl usando](../../mfc/using-cspinbuttonctrl.md).  
+ Para obter mais informações sobre como usar `CSpinButtonCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [usando CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -102,8 +116,8 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxcmn.h  
   
-##  <a name="a-namecreatea--cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Create  
- Cria um controle de botão de rotação e a anexa a um `CSpinButtonCtrl` objeto...  
+##  <a name="create"></a>CSpinButtonCtrl::Create  
+ Cria um controle de botão de rotação e anexa-o para um `CSpinButtonCtrl` objeto.  
   
 ```  
 virtual BOOL Create(
@@ -115,7 +129,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  `dwStyle`  
- Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos na [estilos de controle acima-abaixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
  Especifica o tamanho e a posição do controle de botão de rotação. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura  
@@ -127,14 +141,14 @@ virtual BOOL Create(
  Especifica a ID. do controle de botão de rotação  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a inicialização foi bem sucedida; Caso contrário, 0.  
+ Diferente de zero se a inicialização foi bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Você construir um `CSpinButtonCtrl` objeto em duas etapas, primeiro, chame o construtor e, em seguida, chame **criar**, que cria o controle de botão de rotação e anexa-o para o `CSpinButtonCtrl` objeto.  
+ Você pode criar um `CSpinButtonCtrl` objeto em duas etapas, primeiro, chame o construtor e, em seguida, chamar **criar**, que cria o controle de botão de rotação e anexa-o para o `CSpinButtonCtrl` objeto.  
   
  Para criar um controle de botão de rotação com estilos de janela estendidos, chame [CSpinButtonCtrl::CreateEx](#createex) em vez de **criar**.  
   
-##  <a name="a-namecreateexa--cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  Cria um controle (uma janela filho) e o associa a `CSpinButtonCtrl` objeto.  
   
 ```  
@@ -148,10 +162,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista de estilos estendida do windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos em [estilos de controle para cima para baixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Especifica o estilo do controle de botão de rotação. Aplica qualquer combinação de estilos de controle de botão de rotação para o controle. Esses estilos são descritos na [estilos de controle acima-abaixo](http://msdn.microsoft.com/library/windows/desktop/bb759885) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
  Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
@@ -160,22 +174,22 @@ virtual BOOL CreateEx(
  Um ponteiro para a janela que é o pai do controle.  
   
  `nID`  
- ID da janela filho. do controle  
+ ID de janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido Windows **WS_EX_**.  
+ Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
-##  <a name="a-namecspinbuttonctrla--cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  Constrói um objeto `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
  Recupera informações de aceleração para um controle de botão de rotação.  
   
 ```  
@@ -194,7 +208,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Valor de retorno  
  Número de estruturas de acelerador recuperados.  
   
-##  <a name="a-namegetbasea--cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
  Recupera a base atual para um controle de botão de rotação.  
   
 ```  
@@ -204,155 +218,161 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Valor de retorno  
  O valor base atual.  
   
-##  <a name="a-namegetbuddya--cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- Recupera um ponteiro para a janela atual do amigo.  
+##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+ Recupera um ponteiro para a janela buddy atual.  
   
 ```  
 CWnd* GetBuddy() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a janela atual do amigo.  
+ Um ponteiro para a janela buddy atual.  
   
-##  <a name="a-namegetposa--cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
  Recupera a posição atual de um controle de botão de rotação.  
   
 ```  
-int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  ```  
+int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
+```  
   
-### Parameters  
+### <a name="parameters"></a>Parâmetros  
  *lpbError*  
- A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
+ Um ponteiro para um valor booliano que é definido como zero se o valor é recuperado com êxito ou zero se ocorrer um erro. Se esse parâmetro for definido como **nulo**, não são relatados erros.  
   
-### Return Value  
- The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
+### <a name="return-value"></a>Valor de retorno  
+ A primeira versão retorna a posição atual de 16-bit na palavra de ordem inferior. A palavra de ordem alta é diferente de zero se ocorreu um erro.  
   
- The second version returns the 32-bit position.  
+ A segunda versão retorna a posição de 32 bits.  
   
-### Remarks  
- When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
+### <a name="remarks"></a>Comentários  
+ Ao processar o valor retornado, o controle atualiza sua posição atual com base na legenda da janela buddy. O controle retorna um erro se não houver nenhuma janela buddy ou se a legenda Especifica um valor inválido ou fora do intervalo.  
   
-##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
- Retrieves the upper and lower limits (range) for a spin button control.  
+##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+ Recupera os limites superiores e inferiores (intervalo) para um controle de botão de rotação.  
   
 ```  
 DWORD GetRange() const;  
   
-void GetRange (int < / inferior,  
-    int < / superior) const;  
+void GetRange(
+    int& lower,  
+    int& upper) const;  
   
-void GetRange32 (int < / inferior,  
-    int < / superior) const;  
+void GetRange32(
+    int& lower,  
+    int &upper) const;  
 ```  
   
-### Parameters  
- *lower*  
- Reference to an integer that receives the lower limit for the control.  
+### <a name="parameters"></a>Parâmetros  
+ *inferior*  
+ Referência a um número inteiro que recebe o limite inferior do controle.  
   
- *upper*  
- Reference to an integer that receives the upper limit for the control.  
+ *superior*  
+ Referência a um número inteiro que recebe o limite superior para o controle.  
   
-### Return Value  
- The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
+### <a name="return-value"></a>Valor de retorno  
+ A primeira versão retorna um valor de 32 bits que contém os limites superiores e inferior. A palavra de ordem inferior é o limite superior para o controle e a palavra de ordem superior é o limite inferior.  
   
-### Remarks  
- The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
+### <a name="remarks"></a>Comentários  
+ A função de membro `GetRange32` recupera o intervalo do controle de botão de rotação como um inteiro de 32 bits.  
   
-##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
- Sets the acceleration for a spin button control.  
+##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+ Define a aceleração de um controle de botão de rotação.  
   
 ```  
-BOOL SetAccel (int nAccel,  
+BOOL SetAccel(
+    int nAccel,  
     UDACCEL* pAccel);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parâmetros  
  `nAccel`  
- Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
+ Número de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estruturas especificadas pelo `pAccel`.  
   
  `pAccel`  
- Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
+ Ponteiro para uma matriz de `UDACCEL` estruturas que contêm informações de aceleração. Elementos devem ser classificados em ordem crescente com base no **nSec** membro.  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor de retorno  
+ Diferente de zero se for bem-sucedida; Caso contrário, 0.  
   
-##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
- Sets the base for a spin button control.  
+##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+ Define a base para um controle de botão de rotação.  
   
 ```  
-int SetBase (int nBase);
+int SetBase(int nBase);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parâmetros  
  `nBase`  
- New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
+ Novo valor de base para o controle. Ele pode ser 10 para decimal ou 16 para hexadecimal.  
   
-### Return Value  
- The previous base value if successful, or zero if an invalid base is given.  
+### <a name="return-value"></a>Valor de retorno  
+ O valor base anterior, se for bem-sucedido, ou zero se receber uma base inválida.  
   
-### Remarks  
- The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
+### <a name="remarks"></a>Comentários  
+ O valor base determina se a janela buddy exibe os números em dígitos decimais ou hexadecimais. Números hexadecimais são sempre não assinados; números decimais são assinados.  
   
-##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
- Sets the buddy window for a spin button control.  
+##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+ Define a janela buddy para um controle de botão de rotação.  
   
 ```  
-CWnd* SetBuddy (CWnd* pWndBuddy);
+CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parâmetros  
  `pWndBuddy`  
- Pointer to the new buddy window.  
+ Ponteiro para a nova janela buddy.  
   
-### Return Value  
- A pointer to the previous buddy window.  
+### <a name="return-value"></a>Valor de retorno  
+ Um ponteiro para a janela buddy anterior.  
   
-### Remarks  
- A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
+### <a name="remarks"></a>Comentários  
+ Um controle de rotação é quase sempre associado a outra janela, como um controle de edição, que exibe o conteúdo. Essa outra janela é chamada de "amigos" do controle de rotação.  
   
-##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
- Sets the current position for a spin button control.  
+##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+ Define a posição atual de um controle de botão de rotação.  
   
 ```  
-int SetPos (int nPos);  
+int SetPos(int nPos);  
 int SetPos32(int nPos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parâmetros  
  `nPos`  
- New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
+ Nova posição do controle. Esse valor deve estar no intervalo especificado pelos limites superiores e inferiores do controle.  
   
-### Return Value  
- The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
+### <a name="return-value"></a>Valor de retorno  
+ A posição anterior (16 bits de precisão para `SetPos`, 32 bits precisão para `SetPos32`).  
   
-### Remarks  
- `SetPos32` sets the 32-bit position.  
+### <a name="remarks"></a>Comentários  
+ `SetPos32`Define a posição de 32 bits.  
   
-##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
- Sets the upper and lower limits (range) for a spin button control.  
+##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
+ Define os limites superiores e inferiores (intervalo) para um controle de botão de rotação.  
   
 ```  
-SetRange void (nLower curto,  
-    nUpper curto);
+void SetRange(
+    short nLower,  
+    short nUpper);
 
  
-void SetRange32 (int nLower,  
+void SetRange32(
+    int nLower,  
     int nUpper);
 ```  
   
-### Parameters  
- `nLower`and `nUpper`  
- Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
+### <a name="parameters"></a>Parâmetros  
+ `nLower`e`nUpper`  
+ Limites superior e inferior do controle. Para `SetRange`, nenhum limite pode ser maior que **UD_MAXVAL** ou menor que **UD_MINVAL**; Além disso, a diferença entre os dois limites não pode exceder **UD_MAXVAL**. `SetRange32`não coloca nenhuma restrição sobre os limites; Use qualquer inteiros.  
   
-### Remarks  
- The member function `SetRange32` sets the 32-bit range for the spin button control.  
+### <a name="remarks"></a>Comentários  
+ A função de membro `SetRange32` define o intervalo de 32 bits para o controle de botão de rotação.  
   
 > [!NOTE]
->  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
+>  O intervalo padrão para o botão de rotação tem o máximo definido como zero (0) e o mínimo definido como 100. Como o valor máximo é menor que o valor mínimo, clicando na seta para cima diminuirá a posição e clicando na seta para baixo aumenta-lo. Use `CSpinButtonCtrl::SetRange` para ajustar esses valores.  
   
-## See Also  
- [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>Consulte também  
+ [CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)   
+ [Classe CWnd](../../mfc/reference/cwnd-class.md)   
+ [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Classe CSliderCtrl](../../mfc/reference/csliderctrl-class.md)
 

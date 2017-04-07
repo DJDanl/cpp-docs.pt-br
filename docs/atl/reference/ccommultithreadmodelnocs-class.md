@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComMultiThreadModelNoCS
 - CComMultiThreadModelNoCS
-- ATL.CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::AutoCriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::CriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::ThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Decrement
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CComMultiThreadModelNoCS
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase. h  
   
-##  <a name="a-nameautocriticalsectiona--ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
  Ao usar `CComMultiThreadModelNoCS`, o `typedef` nome `AutoCriticalSection` faz referência a classe [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -105,7 +109,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>Exemplo  
  Consulte [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="a-namecriticalsectiona--ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
  Ao usar `CComMultiThreadModelNoCS`, o `typedef` nome `CriticalSection` faz referência a classe [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -128,7 +132,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>Exemplo  
  Consulte [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="a-namedecrementa--ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
  A função estática chama a função Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que diminui o valor da variável apontado por `p`.  
   
 ```
@@ -145,7 +149,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>Comentários  
  **InterlockedDecrement** impede que mais de um segmento simultaneamente usando essa variável.  
   
-##  <a name="a-nameincrementa--ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
  A função estática chama a função Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), que incrementa o valor da variável apontada por `p`.  
   
 ```
@@ -162,7 +166,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>Comentários  
  **InterlockedIncrement** impede que mais de um segmento simultaneamente usando essa variável.  
   
-##  <a name="a-namethreadmodelnocsa--ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
  Ao usar `CComMultiThreadModelNoCS`, o `typedef` nome `ThreadModelNoCS` simplesmente referencia `CComMultiThreadModelNoCS`.  
   
 ```

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency
+- AMP/Concurrency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a62955c94771320a64027f4f820434dd5e7984a1
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 38c3154244b163202bcb8e271f96b393231247ca
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-c-amp"></a>Namespace Concurrency (C++ AMP)
@@ -54,19 +54,19 @@ namespace Concurrency;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Namespace Concurrency:: Direct3D](concurrency-direct3d-namespace.md)|Fornece funções que têm suporte D3D interoperabilidade. Permite o uso direto de D3D recursos de computação no código AMP e o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Você pode usar C++ AMP incrementalmente acelerar as seções de computação intensiva de seus aplicativos DirectX e usar a API D3D dados produzidos de computações AMP.|  
-|[Namespace Concurrency:: fast_math](concurrency-fast-math-namespace.md)|Funções no `fast_math` namespace não são compatíveis com C99. São fornecidas somente versões de precisão única de cada função. Essas funções usam as funções intrínsecas DirectX, que são mais rápidas que as funções correspondentes no `precise_math` namespace e não requerem suporte estendido de precisão dupla do Accelerator, mas eles são menos precisos. Há duas versões de cada função de compatibilidade de nível de origem com o código de C99; ambas as versões levarem e retornam valores de precisão única.|  
-|[Namespace Concurrency:: Graphics](concurrency-graphics-namespace.md)|Fornece tipos e funções que são projetadas para programação de gráficos.|  
-|[Namespace Concurrency:: precise_math](concurrency-precise-math-namespace.md)|Funções no `precise_math` namespace são compatíveis com C99. Versões de precisão única e de precisão dupla de cada função estão incluídas. Essas funções — isso inclui as funções de precisão simples — exigem suporte estendido de precisão dupla do Accelerator.|  
+|[Namespace Concurrency::direct3d](concurrency-direct3d-namespace.md)|Fornece funções que têm suporte D3D interoperabilidade. Permite o uso direto de D3D recursos de computação no código AMP e o uso de recursos criados em AMP D3D código, sem criar cópias redundantes de intermediárias. Você pode usar C++ AMP incrementalmente acelerar as seções de computação intensiva de seus aplicativos DirectX e usar a API D3D dados produzidos de computações AMP.|  
+|[Namespace Concurrency::fast_math](concurrency-fast-math-namespace.md)|Funções no `fast_math` namespace não são compatíveis com C99. São fornecidas somente versões de precisão única de cada função. Essas funções usam as funções intrínsecas DirectX, que são mais rápidas que as funções correspondentes no `precise_math` namespace e não requerem suporte estendido de precisão dupla do Accelerator, mas eles são menos precisos. Há duas versões de cada função de compatibilidade de nível de origem com o código de C99; ambas as versões levarem e retornam valores de precisão única.|  
+|[Namespace Concurrency::graphics](concurrency-graphics-namespace.md)|Fornece tipos e funções que são projetadas para programação de gráficos.|  
+|[Namespace Concurrency::precise_math](concurrency-precise-math-namespace.md)|Funções no `precise_math` namespace são compatíveis com C99. Versões de precisão única e de precisão dupla de cada função estão incluídas. Essas funções — isso inclui as funções de precisão simples — exigem suporte estendido de precisão dupla do Accelerator.|  
   
 ### <a name="classes"></a>Classes  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Classe Accelerator](accelerator-class.md)|Representa uma abstração de um nó de computação física otimizado DP.|  
+|[Classe accelerator](accelerator-class.md)|Representa uma abstração de um nó de computação física otimizado DP.|  
 |[Classe accelerator_view](accelerator-view-class.md)|Representa uma abstração de dispositivo virtual em um acelerador do C++ AMP paralela de dados.|  
 |[Classe accelerator_view_removed](accelerator-view-removed-class.md)|A exceção que é lançada quando uma chamada subjacente do DirectX falhar porque o mecanismo de tempo limite detecção e recuperação do Windows.|  
-|[Classe Array](array-class.md)|Uma agregação de dados um `accelerator_view` no domínio de grade. É uma coleção de variáveis para cada elemento em um domínio de grade. Cada variável contém um valor que corresponde a algum tipo de C++.|  
+|[Classe array](array-class.md)|Uma agregação de dados um `accelerator_view` no domínio de grade. É uma coleção de variáveis para cada elemento em um domínio de grade. Cada variável contém um valor que corresponde a algum tipo de C++.|  
 |[Classe array_view](array-view-class.md)|Representa uma exibição dos dados em uma matriz\<T, N >.|  
 |[Classe completion_future](completion-future-class.md)|Representa um futuro que corresponde a uma operação assíncrona de C++ AMP.|  
 |[Classe extent](extent-class.md)|Representa um vetor de valores inteiros N que especificam os limites de um espaço N-dimensional que tem uma origem de 0. Os valores do vetor coordenadas serão ordenados da mais significativo para o menos significativo. Por exemplo, no espaço de 3-dimensional cartesiano, o vetor de extensão (7,5,3) representa um espaço no qual a coordenada z varia de 0 a 7, os intervalos de coordenada y de 0 a 5, e a coordenada x varia de 0 a 3.|  
@@ -103,27 +103,27 @@ namespace Concurrency;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Função all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória foram concluídos.|  
-|[Função amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|O tempo de execução C++ AMP cancela a inicialização.|  
-|[Função atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Sobrecarregado. Se o valor armazenado no local especificado compara igual ao valor especificado primeiro, o segundo valor especificado é armazenado no mesmo local como uma operação atômica.|  
-|[Função atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Sobrecarregado. Define o valor armazenado no local especificado para o valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Sobrecarregado. Define o valor armazenado no local especificado para a soma do valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `and` de valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Sobrecarregado. Diminui o valor armazenado no local especificado e armazena o resultado no mesmo local como uma operação atômica.|  
-|[Função atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Sobrecarregado. Incrementa o valor armazenado no local especificado e armazena o resultado no mesmo local como uma operação atômica.|  
-|[Função atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Sobrecarregado. Define o valor armazenado no local especificado para o maior valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Sobrecarregado. Define o valor armazenado no local especificado para o menor valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `or` de valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecarregado. Define o valor armazenado no local especificado para a diferença de valor e um valor especificado como uma operação atômica.|  
-|[Função atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `xor` de valor e um valor especificado como uma operação atômica.|  
-|[Função Copy](concurrency-namespace-functions-amp.md#copy)|Copia um objeto C++ AMP. Todos os requisitos de transferência de dados síncrona são atendidos. Não não possível copiar dados quando o código será executado o código em um acelerador. A forma geral dessa função é `copy(src, dest)`.|  
-|[Função copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia um objeto C++ AMP e retorna [completion_future](completion-future-class.md) que pode ser aguardado. Dados não podem ser copiados quando o código está sendo executado em um acelerador. A forma geral dessa função é `copy(src, dest)`.|  
-|[Função direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula a execução de uma função que tem o `restrict(amp)` cláusula de restrição.|  
-|[Função direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela e gera um [runtime_exception](runtime-exception-class.md) exceção que possui a mesma formatação de cadeia de caracteres.|  
-|[Função direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela. Ele é chamado de uma função que tem o `restrict(amp)` cláusula de restrição.|  
-|[Função global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que toda a memória global acessa foram concluídas.|  
+|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória foram concluídos.|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|O tempo de execução C++ AMP cancela a inicialização.|  
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Sobrecarregado. Se o valor armazenado no local especificado compara igual ao valor especificado primeiro, o segundo valor especificado é armazenado no mesmo local como uma operação atômica.|  
+|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Sobrecarregado. Define o valor armazenado no local especificado para o valor especificado como uma operação atômica.|  
+|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Sobrecarregado. Define o valor armazenado no local especificado para a soma do valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `and` de valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Sobrecarregado. Diminui o valor armazenado no local especificado e armazena o resultado no mesmo local como uma operação atômica.|  
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Sobrecarregado. Incrementa o valor armazenado no local especificado e armazena o resultado no mesmo local como uma operação atômica.|  
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Sobrecarregado. Define o valor armazenado no local especificado para o maior valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|Sobrecarregado. Define o valor armazenado no local especificado para o menor valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `or` de valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecarregado. Define o valor armazenado no local especificado para a diferença de valor e um valor especificado como uma operação atômica.|  
+|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecarregado. Define o valor armazenado no local especificado para o bit a bit `xor` de valor e um valor especificado como uma operação atômica.|  
+|[copy](concurrency-namespace-functions-amp.md#copy)|Copia um objeto C++ AMP. Todos os requisitos de transferência de dados síncrona são atendidos. Não não possível copiar dados quando o código será executado o código em um acelerador. A forma geral dessa função é `copy(src, dest)`.|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia um objeto C++ AMP e retorna [completion_future](completion-future-class.md) que pode ser aguardado. Dados não podem ser copiados quando o código está sendo executado em um acelerador. A forma geral dessa função é `copy(src, dest)`.|  
+|[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula a execução de uma função que tem o `restrict(amp)` cláusula de restrição.|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela e gera um [runtime_exception](runtime-exception-class.md) exceção que possui a mesma formatação de cadeia de caracteres.|  
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime uma cadeia de caracteres formatada para o Visual Studio **saída** janela. Ele é chamado de uma função que tem o `restrict(amp)` cláusula de restrição.|  
+|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que toda a memória global acessa foram concluídas.|  
 |[Função parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Executa uma função em todo o domínio de computação.|  
-|[Função tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Bloqueia a execução de todos os threads em um bloco até `tile_static` acessos de memória foram concluídos.|  
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Bloqueia a execução de todos os threads em um bloco até `tile_static` acessos de memória foram concluídos.|  
   
 ## <a name="constants"></a>Constantes  
   

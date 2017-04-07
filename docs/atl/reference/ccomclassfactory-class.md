@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactory
 - CComClassFactory
-- ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory::CreateInstance
+- ATLCOM/ATL::CComClassFactory::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CComClassFactory
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  Cria um objeto do CLSID especificado e recupera um ponteiro de interface para esse objeto.  
   
 ```
@@ -101,7 +102,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>CComClassFactory::LockServer  
  Incrementa e decrementa o bloqueio de módulo contar chamando **_Module::Lock** e **_Module::Unlock**, respectivamente.  
   
 ```

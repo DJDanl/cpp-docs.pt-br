@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDefaultCompareTraits<T>
-- ATL::CDefaultCompareTraits
-- ATL.CDefaultCompareTraits
-- ATL::CDefaultCompareTraits<T>
 - CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +73,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
  Chame essa função para comparar dois elementos de igualdade.  
   
 ```
@@ -94,7 +93,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>Comentários  
  A implementação padrão dessa função é a igualdade ( `==`) operador. Para objetos diferentes tipos de dados simples, essa função pode precisa ser substituído.  
   
-##  <a name="a-namecompareelementsordereda--cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  Chame essa função para determinar o elemento maior e menor.  
   
 ```

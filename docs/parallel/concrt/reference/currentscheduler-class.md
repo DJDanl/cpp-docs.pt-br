@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::CurrentScheduler
+- CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler::Create
+- CONCRT/concurrency::CurrentScheduler::CreateScheduleGroup
+- CONCRT/concurrency::CurrentScheduler::Detach
+- CONCRT/concurrency::CurrentScheduler::Get
+- CONCRT/concurrency::CurrentScheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::CurrentScheduler::GetPolicy
+- CONCRT/concurrency::CurrentScheduler::Id
+- CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
+- CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
+- CONCRT/concurrency::CurrentScheduler::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 514f0abb6e317a7b133203a2f089d492a46ae4c4
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 9536dd28eeb375f3b9e018539cefb338812e340b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
@@ -54,16 +65,16 @@ class CurrentScheduler;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Create](#create)|Cria um novo Agendador cujo comportamento é descrito pelo `_Policy` parâmetro e anexa-o ao contexto de chamada. O Agendador recém-criado se tornará o Agendador atual para o contexto de chamada.|  
-|[Método CreateScheduleGroup](#createschedulegroup)|Sobrecarregado. Cria um novo grupo de agenda no agendador associado ao contexto de chamada. A versão que aceita o parâmetro `_Placement` faz com que tarefas dentro do grupo de agenda recém-criada para ser mais adequado para a execução no local especificado pelo parâmetro.|  
-|[Método Detach](#detach)|Desanexa o Agendador do contexto de chamada atual e restaura o Agendador anexado anteriormente como o Agendador atual, se houver. Depois que este método retorna, o contexto de chamada é gerenciado pelo Agendador que anteriormente foi anexado ao contexto usando o `CurrentScheduler::Create` ou `Scheduler::Attach` método.|  
-|[Método Get](#get)|Retorna um ponteiro para o Agendador associado ao contexto de chamada, também conhecido como o Agendador atual.|  
-|[Método GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retorna o número atual de processadores virtuais para o Agendador associado ao contexto de chamada.|  
-|[Método GetPolicy](#getpolicy)|Retorna uma cópia da política criada com o Agendador atual.|  
-|[Método ID](#id)|Retorna um identificador exclusivo para o Agendador atual.|  
-|[Método IsAvailableLocation](#isavailablelocation)|Determina se um determinado local está disponível no Agendador atual.|  
-|[Método RegisterShutdownEvent](#registershutdownevent)|Faz com que o manipulador de eventos do Windows passado a `_ShutdownEvent` parâmetro deve ser sinalizado quando o Agendador associado ao contexto atual é desligado e destrói em si. Quando que o evento é sinalizado, todo o trabalho que teve foi agendado para o Agendador está concluído. Vários eventos de desligamento podem ser registrados por meio desse método.|  
-|[Método ScheduleTask](#scheduletask)|Sobrecarregado. Agenda uma tarefa leve dentro do agendador associado com o contexto de chamada. A tarefa leve será colocada em um grupo de agendamento determinado pelo tempo de execução. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado.|  
+|[Criar](#create)|Cria um novo Agendador cujo comportamento é descrito pelo `_Policy` parâmetro e anexa-o ao contexto de chamada. O Agendador recém-criado se tornará o Agendador atual para o contexto de chamada.|  
+|[CreateScheduleGroup](#createschedulegroup)|Sobrecarregado. Cria um novo grupo de agenda no agendador associado ao contexto de chamada. A versão que aceita o parâmetro `_Placement` faz com que tarefas dentro do grupo de agenda recém-criada para ser mais adequado para a execução no local especificado pelo parâmetro.|  
+|[Desanexar](#detach)|Desanexa o Agendador do contexto de chamada atual e restaura o Agendador anexado anteriormente como o Agendador atual, se houver. Depois que este método retorna, o contexto de chamada é gerenciado pelo Agendador que anteriormente foi anexado ao contexto usando o `CurrentScheduler::Create` ou `Scheduler::Attach` método.|  
+|[Obter](#get)|Retorna um ponteiro para o Agendador associado ao contexto de chamada, também conhecido como o Agendador atual.|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retorna o número atual de processadores virtuais para o Agendador associado ao contexto de chamada.|  
+|[GetPolicy](#getpolicy)|Retorna uma cópia da política criada com o Agendador atual.|  
+|[ID](#id)|Retorna um identificador exclusivo para o Agendador atual.|  
+|[IsAvailableLocation](#isavailablelocation)|Determina se um determinado local está disponível no Agendador atual.|  
+|[RegisterShutdownEvent](#registershutdownevent)|Faz com que o manipulador de eventos do Windows passado a `_ShutdownEvent` parâmetro deve ser sinalizado quando o Agendador associado ao contexto atual é desligado e destrói em si. Quando que o evento é sinalizado, todo o trabalho que teve foi agendado para o Agendador está concluído. Vários eventos de desligamento podem ser registrados por meio desse método.|  
+|[ScheduleTask](#scheduletask)|Sobrecarregado. Agenda uma tarefa leve dentro do agendador associado com o contexto de chamada. A tarefa leve será colocada em um grupo de agendamento determinado pelo tempo de execução. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado.|  
   
 ## <a name="remarks"></a>Comentários  
  Se não houver nenhum Agendador (consulte [Agendador](scheduler-class.md)) associado ao contexto de chamada, muitos métodos dentro de `CurrentScheduler` classe resultará em anexo do Agendador de padrão do processo. Isso também pode indicar que o agendador padrão o processo é criado durante essa chamada.  
@@ -76,7 +87,7 @@ class CurrentScheduler;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>Criar 
+##  <a name="create"></a>Criar 
 
  Cria um novo Agendador cujo comportamento é descrito pelo `_Policy` parâmetro e anexa-o ao contexto de chamada. O Agendador recém-criado se tornará o Agendador atual para o contexto de chamada.  
   
@@ -97,7 +108,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  Esse método pode acionar uma variedade de exceções, incluindo [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) e [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  Cria um novo grupo de agenda no agendador associado ao contexto de chamada. A versão que aceita o parâmetro `_Placement` faz com que tarefas dentro do grupo de agenda recém-criada para ser mais adequado para a execução no local especificado pelo parâmetro.  
   
@@ -121,7 +132,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Observe que, se você criou explicitamente este Agendador, você deve liberar todas as referências para agendar grupos dentro dele, antes de liberar sua referência no Agendador, desanexando o contexto atual dele.  
   
-##  <a name="a-namedetacha-detach"></a><a name="detach"></a>Desanexar 
+##  <a name="detach"></a>Desanexar 
 
  Desanexa o Agendador do contexto de chamada atual e restaura o Agendador anexado anteriormente como o Agendador atual, se houver. Depois que este método retorna, o contexto de chamada é gerenciado pelo Agendador que anteriormente foi anexado ao contexto usando o `CurrentScheduler::Create` ou `Scheduler::Attach` método.  
   
@@ -136,7 +147,7 @@ static void __cdecl Detach();
   
  Chamar esse método em um contexto que é interno e gerenciados por um agendador ou um contexto que foi anexado com um método diferente do [Scheduler](scheduler-class.md#attach) ou [Currentscheduler](#create) métodos, resultará em uma [improper_scheduler_detach](improper-scheduler-detach-class.md) exceção sendo lançada.  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Obter 
+##  <a name="get"></a>Obter 
 
  Retorna um ponteiro para o Agendador associado ao contexto de chamada, também conhecido como o Agendador atual.  
   
@@ -150,7 +161,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Comentários  
  Este método resultará no Agendador de padrão do processo que está sendo criado e/ou anexados ao contexto de chamada se não houver nenhum Agendador atualmente associado ao contexto de chamada. Nenhuma referência adicional é colocada sobre o `Scheduler` objeto retornado por esse método.  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  Retorna o número atual de processadores virtuais para o Agendador associado ao contexto de chamada.  
   
@@ -166,7 +177,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  O valor de retorno desse método é uma amostragem instantânea do número de processadores virtuais para o Agendador associado ao contexto de chamada. Esse valor pode ser atualizado no momento em que ele é retornado.  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  Retorna uma cópia da política criada com o Agendador atual.  
   
@@ -180,7 +191,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Comentários  
  Este método resultará no Agendador de padrão do processo que está sendo criado e/ou anexados ao contexto de chamada se não houver nenhum Agendador atualmente associado ao contexto de chamada.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>ID 
+##  <a name="id"></a>ID 
 
  Retorna um identificador exclusivo para o Agendador atual.  
   
@@ -194,7 +205,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>Comentários  
  Esse método não resultará em anexo do Agendador se o contexto de chamada já não estiver associado um agendador.  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  Determina se um determinado local está disponível no Agendador atual.  
   
@@ -214,7 +225,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  Observe que o valor de retorno é uma amostragem de instantânea se o local especificado está disponível. Na presença de vários agendadores, gerenciamento dinâmico de recursos pode adicionar ou tirar recursos de agendadores a qualquer momento. Isso acontecer, o local determinado pode alterar a disponibilidade.  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Faz com que o manipulador de eventos do Windows passado a `_ShutdownEvent` parâmetro deve ser sinalizado quando o Agendador associado ao contexto atual é desligado e destrói em si. Quando que o evento é sinalizado, todo o trabalho que teve foi agendado para o Agendador está concluído. Vários eventos de desligamento podem ser registrados por meio desse método.  
   
@@ -229,7 +240,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Comentários  
  Se não houver nenhum Agendador anexada ao contexto de chamada, chamar este método resulta em uma [scheduler_not_attached](scheduler-not-attached-class.md) exceção sendo lançada.  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Agenda uma tarefa leve dentro do agendador associado com o contexto de chamada. A tarefa leve será colocada em um grupo de agendamento determinado pelo tempo de execução. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado.  
   
@@ -260,7 +271,7 @@ static void __cdecl ScheduleTask(
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
  [Classe de Agendador](scheduler-class.md)   
- [Enumeração PolicyElementKey](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Agendador de tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

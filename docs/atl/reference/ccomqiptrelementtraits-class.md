@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComQIPtrElementTraits
 - CComQIPtrElementTraits
-- ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits::INARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class CComQIPtrElementTraits :
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
  O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.  
   
 ```

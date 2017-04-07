@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- HPEN
 - CPen
+- AFXWIN/CPen
+- AFXWIN/CPen::CPen
+- AFXWIN/CPen::CreatePen
+- AFXWIN/CPen::CreatePenIndirect
+- AFXWIN/CPen::FromHandle
+- AFXWIN/CPen::GetExtLogPen
+- AFXWIN/CPen::GetLogPen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin. h  
   
-##  <a name="a-namecpena--cpencpen"></a><a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>CPen::CPen  
  Constrói um objeto `CPen`.  
   
 ```  
@@ -182,7 +188,7 @@ CPen(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView&#99;](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="a-namecreatepena--cpencreatepen"></a><a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>CPen::CreatePen  
  Cria uma caneta superficial ou geométrica lógica com o estilo especificado, largura e atributos de pincel e anexa-o para o `CPen` objeto.  
   
 ```  
@@ -246,7 +252,7 @@ BOOL CreatePen(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView&#100;](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="a-namecreatepenindirecta--cpencreatepenindirect"></a><a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
  Inicializa uma caneta que tem o estilo, largura e cor fornecido na estrutura apontada por `lpLogPen`.  
   
 ```  
@@ -268,7 +274,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView&#101;](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="a-namefromhandlea--cpenfromhandle"></a><a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>CPen::FromHandle  
  Retorna um ponteiro para um `CPen` objeto recebe um identificador para um objeto de caneta GDI do Windows.  
   
 ```  
@@ -288,7 +294,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView&#105;](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="a-namegetextlogpena--cpengetextlogpen"></a><a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
  Obtém um **EXTLOGPEN** estrutura subjacente.  
   
 ```  
@@ -320,7 +326,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView&#102;](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="a-namegetlogpena--cpengetlogpen"></a><a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>CPen::GetLogPen  
  Obtém um `LOGPEN` estrutura subjacente.  
   
 ```  
@@ -350,7 +356,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView&#103;](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="a-nameoperatorhpena--cpenoperator-hpen"></a><a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>CPen::operator HPEN  
  Obtém o identificador Windows GDI anexado do `CPen` objeto.  
   
 ```  

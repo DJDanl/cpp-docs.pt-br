@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task
+- task
+- PPLTASKS/concurrency::task
+- PPLTASKS/concurrency::task::task
+- PPLTASKS/concurrency::task::get
+- PPLTASKS/concurrency::task::is_apartment_aware
+- PPLTASKS/concurrency::task::is_done
+- PPLTASKS/concurrency::task::scheduler
+- PPLTASKS/concurrency::task::then
+- PPLTASKS/concurrency::task::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7bbe0445c59279423665cd7df4eb5972f23ecf78
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (Tempo de Execução de Simultaneidade)
@@ -73,26 +81,26 @@ class task;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor de tarefa](#ctor)|Sobrecarregado. Constrói um objeto `task`.|  
+|[tarefa](#ctor)|Sobrecarregado. Constrói um objeto `task`.|  
   
 ### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Get](#get)|Sobrecarregado. Retorna o resultado produzido por essa tarefa. Se a tarefa não estiver em um estado terminal, uma chamada para `get` irá aguardar a conclusão da tarefa. Este método não retorna um valor quando chamado em uma tarefa com um `result_type` de `void`.|  
-|[Método is_apartment_aware](#is_apartment_aware)|Determina se a tarefa desvincula uma interface de Tempo de execução do Windows `IAsyncInfo` ou se é descendente de tal tarefa.|  
-|[Método is_done](#is_done)|Determina se a tarefa foi concluída.|  
-|[Método do Agendador](#scheduler)|Retorna o agendador para essa tarefa|  
-|[em seguida, o método](#then)|Sobrecarregado. Adiciona uma tarefa de continuação para essa tarefa.|  
-|[Método Wait](#wait)|Aguarda que essa tarefa alcance um estado terminal. É possível para `wait` executar a tarefa em linha, se todas as dependências de tarefas forem atendidas, e ela ainda não tiver sido escolhida para execução por um trabalho em segundo plano.|  
+|[get](#get)|Sobrecarregado. Retorna o resultado produzido por essa tarefa. Se a tarefa não estiver em um estado terminal, uma chamada para `get` irá aguardar a conclusão da tarefa. Este método não retorna um valor quando chamado em uma tarefa com um `result_type` de `void`.|  
+|[is_apartment_aware](#is_apartment_aware)|Determina se a tarefa desvincula uma interface de Tempo de execução do Windows `IAsyncInfo` ou se é descendente de tal tarefa.|  
+|[is_done](#is_done)|Determina se a tarefa foi concluída.|  
+|[Agendador](#scheduler)|Retorna o agendador para essa tarefa|  
+|[em seguida](#then)|Sobrecarregado. Adiciona uma tarefa de continuação para essa tarefa.|  
+|[Aguarde](#wait)|Aguarda que essa tarefa alcance um estado terminal. É possível para `wait` executar a tarefa em linha, se todas as dependências de tarefas forem atendidas, e ela ainda não tiver sido escolhida para execução por um trabalho em segundo plano.|  
   
 ### <a name="public-operators"></a>Operadores Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador! = operador](#operator_neq)|Sobrecarregado. Determina se dois objetos `task` representam tarefas internas diferentes.|  
-|[operador Operator =](#operator_eq)|Sobrecarregado. Substitui o conteúdo de um objeto `task` por outro.|  
-|[operador Operator = =](#operator_eq_eq)|Sobrecarregado. Determina se dois objetos `task` representam a mesma tarefa interna.|  
+|[operator!=](#operator_neq)|Sobrecarregado. Determina se dois objetos `task` representam tarefas internas diferentes.|  
+|[operator=](#operator_eq)|Sobrecarregado. Substitui o conteúdo de um objeto `task` por outro.|  
+|[operator==](#operator_eq_eq)|Sobrecarregado. Determina se dois objetos `task` representam a mesma tarefa interna.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -105,7 +113,7 @@ class task;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Obter 
+##  <a name="get"></a>Obter 
 
  Retorna o resultado produzido por essa tarefa. Se a tarefa não estiver em um estado terminal, uma chamada para `get` irá aguardar a conclusão da tarefa. Este método não retorna um valor quando chamado em uma tarefa com um `result_type` de `void`.  
   
@@ -124,7 +132,7 @@ void get() const;
 > [!IMPORTANT]
 >  Em um [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] aplicativo, não chame [concurrency::task::wait](#wait) ou `get` ( `wait` chamadas `get`) no código que é executado sobre o STA. Caso contrário, o tempo de execução lança [concurrency::invalid_operation](invalid-operation-class.md) porque esses métodos bloquear o thread atual e pode fazer com que o aplicativo pare de responder. No entanto, você pode chamar o `get` método para receber o resultado da tarefa antecedente em uma continuação baseado em tarefa, porque o resultado fica imediatamente disponível.  
   
-##  <a name="a-nameisapartmentawarea-isapartmentaware"></a><a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
  Determina se a tarefa desvincula uma interface de Tempo de execução do Windows `IAsyncInfo` ou se é descendente de tal tarefa.  
   
@@ -135,7 +143,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se a tarefa desvincula uma `IAsyncInfo` interface ou descendentes de tarefa, `false` caso contrário.  
   
-##  <a name="a-nameisdonea--taskisdone-method-concurrency-runtime"></a><a name="is_done"></a>Task:: is_done (tempo de execução de simultaneidade) do método  
+##  <a name="is_done"></a>Task:: is_done (tempo de execução de simultaneidade) do método  
  Determina se a tarefa foi concluída.  
   
 ```
@@ -148,7 +156,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Comentários  
  A função retornará true se a tarefa é concluída ou cancelada (com ou sem exceção do usuário).  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>operador! = 
+##  <a name="operator_neq"></a>operador! = 
 
  Determina se dois objetos `task` representam tarefas internas diferentes.  
   
@@ -164,7 +172,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se os objetos se referem a diferentes tarefas subjacentes, e `false` caso contrário.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Substitui o conteúdo de um objeto `task` por outro.  
   
@@ -183,7 +191,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Comentários  
  Como `task` comporta-se como um ponteiro inteligente, depois de uma atribuição de cópia, isso `task` objetos representa a mesma tarefa real como `_Other` does.  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>operador = = 
+##  <a name="operator_eq_eq"></a>operador = = 
 
  Determina se dois objetos `task` representam a mesma tarefa interna.  
   
@@ -199,7 +207,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se os objetos se referir à mesma tarefa subjacente, e `false` caso contrário.  
   
-##  <a name="a-nameschedulera--taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>Task:: Scheduler (tempo de execução de simultaneidade) do método  
+##  <a name="scheduler"></a>Task:: Scheduler (tempo de execução de simultaneidade) do método  
  Retorna o agendador para essa tarefa  
   
 ```
@@ -209,7 +217,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o Agendador  
   
-##  <a name="a-namectora-task"></a><a name="ctor"></a>tarefa 
+##  <a name="ctor"></a>tarefa 
 
  Constrói um objeto `task`.  
   
@@ -259,7 +267,7 @@ task(
   
  Para obter mais informações, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namethena-then"></a><a name="then"></a>em seguida 
+##  <a name="then"></a>em seguida 
 
  Adiciona uma tarefa de continuação para essa tarefa.  
   
@@ -320,7 +328,7 @@ __declspec(
   
  Para obter mais informações sobre como usar as continuações de tarefa para compor o trabalho assíncrono, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+##  <a name="wait"></a>Aguarde 
 
  Aguarda que essa tarefa alcance um estado terminal. É possível para `wait` executar a tarefa em linha, se todas as dependências de tarefas forem atendidas, e ela ainda não tiver sido escolhida para execução por um trabalho em segundo plano.  
   

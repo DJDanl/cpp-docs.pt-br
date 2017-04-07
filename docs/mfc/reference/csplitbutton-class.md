@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  Requisitos adicionais para esta classe são descritos em [criar requisitos para Windows Vista controles comuns](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  Cria um controle de botão de divisão com estilos especificados e o anexa à atual `CSplitButton` objeto.  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se esse método for bem-sucedida; Caso contrário, `false`.  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  Constrói um objeto `CSplitButton`. Os parâmetros do construtor especificar um submenu é exibido quando um usuário clica na seta suspensa do controle de botão de divisão.  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Comentários  
  Use o [CSplitButton::Create](#create) método para criar um controle de botão de divisão e anexá-lo a `CSplitButton` objeto.  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  Manipula o `BCN_DROPDOWN` notificação de que o sistema envia quando um usuário clica na seta suspensa do controle de botão de divisão atual.  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  Define o menu suspenso que é exibido quando um usuário clica na seta suspensa do controle de botão de divisão atual.  
   
 ```  

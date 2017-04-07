@@ -1,5 +1,5 @@
 ---
-title: "Compilador (nível 3) aviso C4996 | Documentos do Microsoft"
+title: "Compilador (nível 3) do aviso C4996 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,41 +35,43 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: bf7b4ccd6309f08098416f4bdb6777b8eafd2e7f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
+ms.lasthandoff: 03/29/2017
 
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Compilador (nível 3) aviso C4996
+# <a name="compiler-warning-level-3-c4996"></a>Compilador C4996 de aviso (nível 3)
 O compilador encontrou uma declaração preterida.  
   
  Esse aviso ou erro tem vários significados possíveis.  
   
- `C4996`ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md). Várias funções, funções de membro, funções de modelo e variáveis globais nas bibliotecas no Visual Studio são marcados como substituídos. Essas funções podem ter um nome diferente de preferência, pode não ser segura ou tem uma variante mais segura, ou pode estar obsoleto. A mensagem de erro pode incluir uma substituição sugerida para a função preterida ou variável global. Você pode desativar esse aviso com a [aviso](../../preprocessor/warning.md) pragma ou **/wd4996** opção de linha de comando. Você também pode usar macros de pré-processador para desativar determinadas classes de avisos de depreciação.  
+ `C4996`ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md). Várias funções, funções de membro, funções de modelo e variáveis globais nas bibliotecas no Visual Studio são marcadas como preteridos. Essas funções podem ter um nome diferente de preferência, pode não ser seguros ou ter uma variação mais segura, ou pode estar obsoleto. A mensagem de erro pode incluir uma substituição sugerida para a função preterida ou a variável global. Você pode desativar esse aviso com a [aviso](../../preprocessor/warning.md) pragma ou **/wd4996** opção de linha de comando. Você também pode usar macros de pré-processador desativar determinadas classes de avisos de depreciação. 
+
+Esse aviso também é emitido quando você tenta acessar uma função, membro de classe ou um typedef com C++ 14 `[[deprecated]]` atributo. Para obter mais informações, consulte [atributos padrão do C++](../../cpp/attributes2.md). 
   
- **O nome POSIX para este item foi preterido. Em vez disso, use o nome em conformidade com ISO C e C++:** novo_nome**. Consulte a ajuda online para obter detalhes.**  
+ **O nome POSIX para este item está obsoleto. Em vez disso, use o nome em conformidade com ISO C e C++:** novo_nome**. Consulte a ajuda online para obter detalhes.**  
   
- Algumas funções POSIX no CRT foram renomeadas para estar de acordo com C99 e C + +&03; regras para nomes de função global definido pela implementação. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade padrão. O compilador emite um aviso de substituição para os nomes de função original e sugere o nome preferido. Somente os nomes originais são substituídos, não as próprias funções. Para desativar avisos de depreciação para essas funções, defina a macro do pré-processador **_CRT_NONSTDC_NO_WARNINGS**. Você pode definir isso na linha de comando, incluindo a opção `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir essa macro no Visual Studio, abra o **páginas de propriedade** caixa de diálogo para seu projeto. Expanda **propriedades de configuração**, **C/C++**, **pré-processador**. Em **definições de pré-processador**, adicionar `_CRT_NONSTDC_NO_WARNINGS`. Escolha **Okey** para salvar e, em seguida, recrie seu projeto. Para definir essa macro apenas nos arquivos de origem específico, adicione a linha `#define _CRT_NONSTDC_NO_WARNINGS` antes de qualquer linha que inclui um arquivo de cabeçalho.  
+ Algumas funções POSIX no CRT foram renomeadas para estar de acordo com C99 e C + + 03 as regras para nomes de função global definido pela implementação. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade padrão. O compilador emite um aviso de substituição para os nomes de função original e sugere o nome preferido. Somente os nomes originais são preteridos, não as próprias funções. Para desativar os avisos de depreciação para essas funções, defina a macro de pré-processador **_CRT_NONSTDC_NO_WARNINGS**. Você pode definir isso na linha de comando, incluindo a opção `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir esta macro no Visual Studio, abra o **páginas de propriedade** caixa de diálogo para seu projeto. Expanda **propriedades de configuração**, **C/C++**, **pré-processador**. Em **definições de pré-processador**, adicionar `_CRT_NONSTDC_NO_WARNINGS`. Escolha **Okey** para salvar e, em seguida, recrie seu projeto. Para definir esta macro somente nos arquivos de origem específico, adicione a linha `#define _CRT_NONSTDC_NO_WARNINGS` antes de qualquer linha que inclui um arquivo de cabeçalho.  
   
- **Essa função ou variável pode não ser seguro. Considere o uso de** safe_version **em vez disso. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS.  Consulte a ajuda online para obter detalhes.**  
+ **Esta função ou variável pode não ser seguro. Considere o uso de** safe_version **em vez disso. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS.  Consulte a ajuda online para obter detalhes.**  
   
- Algumas funções de CRT e C++ Standard Library e globais foram preteridas e funções novas e mais seguras. O compilador emite um aviso de substituição para essas funções e sugere a função preferencial. Para desativar avisos de depreciação para essas funções no CRT, definir **_CRT_SECURE_NO_WARNINGS**. Para desativar avisos sobre variáveis globais preteridos, definir **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obter mais informações sobre essas funções preteridas e globais, consulte [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md) e [bibliotecas seguras: biblioteca padrão C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
+ Algumas funções de CRT e biblioteca padrão C++ e globais foram preteridos em favor de funções novas e mais seguras. O compilador emite um aviso de substituição para essas funções e sugere a função preferencial. Para desativar os avisos de depreciação para essas funções no CRT, definir **_CRT_SECURE_NO_WARNINGS**. Para desativar avisos sobre preteridos variáveis globais, definir **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obter mais informações sobre essas funções preteridas e globais, consulte [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md) e [bibliotecas seguras: biblioteca padrão C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
- **Chamada de função com parâmetros que podem ser seguros – essa chamada depende do chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'**  
+ **Chamada de função com parâmetros que pode não ser seguro - esta chamada depende do chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'**  
   
- Determinadas funções de modelo da biblioteca padrão C++ não verificam os parâmetros estão corretos. Esse aviso ajuda a identificar o uso dessas funções. Para desativar avisos para essas funções, definir **_SCL_SECURE_NO_WARNINGS**. Para obter mais informações, consulte [Iteradores verificados](../../standard-library/checked-iterators.md).  
+ Determinadas funções de modelo de biblioteca padrão C++ não verificam os parâmetros estão corretos. Esse aviso ajuda a identificar o uso dessas funções. Para desativar os avisos para essas funções, definir **_SCL_SECURE_NO_WARNINGS**. Para obter mais informações, consulte [Iteradores verificados](../../standard-library/checked-iterators.md).  
   
- **Essa função ou variável foi substituído pela funcionalidade de biblioteca ou sistema operacional mais recente. Considere o uso de** new_item **em vez disso. Consulte a ajuda online para obter detalhes.**  
+ **Esta função ou variável foi substituído por funcionalidade de biblioteca ou o sistema operacional mais recente. Considere o uso de** new_item **em vez disso. Consulte a ajuda online para obter detalhes.**  
   
- Algumas funções de biblioteca e variáveis globais são preteridos como obsoleto. Essas funções e variáveis podem ser removidas em uma versão futura da biblioteca. O compilador emite um aviso de substituição para esses itens e sugere a alternativa preferida. Para desativar avisos de depreciação para esses itens, definir **_CRT_OBSOLETE_NO_WARNINGS**. Para obter mais informações, consulte a documentação para a função preterida ou variável.  
+ Algumas funções de biblioteca e as variáveis globais são preteridas como obsoleto. Essas funções e variáveis podem ser removidos em uma versão futura da biblioteca. O compilador emite um aviso de substituição para esses itens e sugere a opção preferencial. Para desativar os avisos de depreciação para esses itens, definir **_CRT_OBSOLETE_NO_WARNINGS**. Para obter mais informações, consulte a documentação para a função preterida ou variável.  
   
- **Várias mensagens no código do MFC ou ATL**  
+ **Várias mensagens no código do MFC ou do ATL**  
   
  O `C4996` também poderá ocorrer se você usar funções MFC ou ATL preteridas por razões de segurança. Para suprimir esses avisos, consulte [_AFX_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b) e [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
   
- **Empacotamento de erros no código do CLR**  
+ **O empacotamento de erros no código do CLR**  
   
- O `C4996` também pode ocorrer quando você usa a biblioteca de marshaling. Nesse caso, C4996 é um erro, não um aviso. Este erro ocorre quando você usa [marshal_as](../../dotnet/marshal-as.md) para converter entre dois tipos de dados que exigem um [classe marshal_context](../../dotnet/marshal-context-class.md). Você também receberá esse erro quando a biblioteca de marshaling não oferecer suporte a uma conversão. Para obter mais informações sobre a biblioteca de marshaling, consulte [visão geral de Marshaling no C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+ O `C4996` também pode ocorrer quando você usa a biblioteca de marshaling. Nesse caso, C4996 é um erro, não um aviso. Este erro ocorre quando você usa [marshal_as](../../dotnet/marshal-as.md) para converter entre os dois tipos de dados que exigem um [classe marshal_context](../../dotnet/marshal-context-class.md). Você também receberá esse erro quando a biblioteca de marshaling não oferecer suporte a uma conversão. Para obter mais informações sobre a biblioteca de marshaling, consulte [visão geral de Marshaling no C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
   
  **Exemplos que geram C4996**  
   
@@ -102,7 +104,7 @@ int main() {
 ## <a name="example"></a>Exemplo  
  O C4996 também pode ocorrer se você não usar um iterador verificado durante a compilação com `_ITERATOR_DEBUG_LEVEL` definido (definido como 1 por padrão para compilações em modo de depuração).  Consulte [Iteradores Verificados](../../standard-library/checked-iterators.md) para obter mais informações.  
   
- O seguinte exemplo de código de biblioteca padrão C++ gera C4996.  
+ O seguinte exemplo de código da biblioteca padrão C++ gera C4996.  
   
 ```cpp  
 // C4996_b.cpp  
@@ -127,7 +129,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código de biblioteca padrão C++ gera C4996 como um aviso. Os comentários são embutidos.  
+ O seguinte exemplo de código da biblioteca padrão C++ gera C4996 como um aviso. Os comentários são embutidos.  
   
 ```cpp  
 #include <algorithm>  

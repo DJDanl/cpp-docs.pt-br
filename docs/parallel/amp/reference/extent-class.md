@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::extent
+- extent
+- AMP/extent
+- AMP/Concurrency::extent::extent
+- AMP/Concurrency::extent::contains
+- AMP/Concurrency::extent::size
+- AMP/Concurrency::extent::tile
+- AMP/Concurrency::extent::rank Constant
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8aa89b882ed075a8cdf0166d43fde1a5bfe7683d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c90118eeb83df75f19b49f47ac884bff111b8f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
@@ -70,25 +76,25 @@ class extent;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Contains](#contains)|Verifica se o especificado `extent` objeto tem a classificação especificada.|  
-|[tamanho do método](#size)|Retorna o tamanho total linear da extensão (em unidades de elementos).|  
-|[Método lado a lado](#tile)|Produz um `tiled_extent` especificado de objeto com as extensões do lado a lado fornecida por dimensões.|  
+|[contém](#contains)|Verifica se o especificado `extent` objeto tem a classificação especificada.|  
+|[size](#size)|Retorna o tamanho total linear da extensão (em unidades de elementos).|  
+|[lado a lado](#tile)|Produz um `tiled_extent` especificado de objeto com as extensões do lado a lado fornecida por dimensões.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador Operator-](#operator_min)|Retorna um novo `extent` objeto criado subtraindo o `index` elementos correspondentes `extent` elementos.|  
-|[operador-operador](#operator_min_min)|Decrementa cada elemento de `extent` objeto.|  
-|[operador % operador =](#operator_mod_eq)|Calcula o módulo (restante) de cada elemento de `extent` do objeto quando esse elemento é dividido por um número.|  
-|[operador * = operador](#operator_star_eq)|Multiplica cada elemento de `extent` objeto por um número.|  
-|[Operador de operador / =](#operator_min_eq)|Divide cada elemento de `extent` objeto por um número.|  
+|[operator-](#operator_min)|Retorna um novo `extent` objeto criado subtraindo o `index` elementos correspondentes `extent` elementos.|  
+|[operator--](#operator_min_min)|Decrementa cada elemento de `extent` objeto.|  
+|[operator%=](#operator_mod_eq)|Calcula o módulo (restante) de cada elemento de `extent` do objeto quando esse elemento é dividido por um número.|  
+|[operator*=](#operator_star_eq)|Multiplica cada elemento de `extent` objeto por um número.|  
+|[operator/=](#operator_min_eq)|Divide cada elemento de `extent` objeto por um número.|  
 |[Extent:: Operator\[\]](#operator_at)|Retorna o elemento no índice especificado.|  
-|[operador Operator +](#operator_add)|Retorna um novo `extent` objeto é criado adicionando correspondente `index` e `extent` elementos.|  
-|[operador de operador + +](#operator_add_add)|Incrementa a cada elemento do `extent` objeto.|  
-|[operador + = operador](#operator_add_eq)|Adiciona o número especificado para cada elemento do `extent` objeto.|  
-|[operador Operator =](#operator_eq)|Copia o conteúdo de outro `extent` deste objeto.|  
-|[operador-= operador](#operator_min_eq)|Subtrai o número especificado de cada elemento do `extent` objeto.|  
+|[operator+](#operator_add)|Retorna um novo `extent` objeto é criado adicionando correspondente `index` e `extent` elementos.|  
+|[operator++](#operator_add_add)|Incrementa a cada elemento do `extent` objeto.|  
+|[operator+=](#operator_add_eq)|Adiciona o número especificado para cada elemento do `extent` objeto.|  
+|[operator=](#operator_eq)|Copia o conteúdo de outro `extent` deste objeto.|  
+|[operator-=](#operator_min_eq)|Subtrai o número especificado de cada elemento do `extent` objeto.|  
 
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -101,7 +107,7 @@ class extent;
  `extent`  
 
 
-## <a name="a-namecontainsa-contains"></a><a name="contains"></a>contém 
+## <a name="contains"></a>contém 
 
 Indica se o especificado [índice](index-class.md) valor está contido no objeto 'extensão'.  
   
@@ -118,7 +124,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se especificado `index` valor está contido no `extent` objeto; caso contrário, `false`.  
   
-##  <a name="a-namectora-extent"></a><a name="ctor"></a>extensão 
+##  <a name="ctor"></a>extensão 
 
 Inicializa uma nova instância da classe 'extensão'.  
   
@@ -157,7 +163,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  Se uma matriz é usada para construir um `extent` do objeto, o comprimento da matriz deve coincidir com a classificação do `extent` objeto.  
   
-##  <a name="a-nameoperatormodeqa-operator"></a><a name="operator_mod_eq"></a>operador % = 
+##  <a name="operator_mod_eq"></a>operador % = 
 
 Calcula o módulo (restante) de cada elemento da extensão quando esse elemento é dividido por um número.  
   
@@ -174,7 +180,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `extent`.  
   
-##  <a name="a-nameoperatorstareqa-operator"></a><a name="operator_star_eq"></a>operador * = 
+##  <a name="operator_star_eq"></a>operador * = 
 
 Multiplica cada elemento no objeto 'extensão' pelo número especificado.  
   
@@ -191,7 +197,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `extent`.  
   
-## <a name="a-nameoperatoradda-operator"></a><a name="operator_add"></a>operador + 
+## <a name="operator_add"></a>operador + 
 
 Retorna um novo `extent` objeto criado adicionando correspondente `index` e `extent` elementos.  
   
@@ -208,7 +214,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O novo objeto `extent`.  
   
-##  <a name="a-nameoperatoraddadda-operator"></a><a name="operator_add_add"></a>operador + + 
+##  <a name="operator_add_add"></a>operador + + 
 
 Incrementa a cada elemento do objeto 'extensão'.  
   
@@ -222,7 +228,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  Para o operador de prefixo, o `extent` objeto (`*this`). Para o operador de sufixo, um novo `extent` objeto.  
   
-##  <a name="a-nameoperatoraddeqa-operator"></a><a name="operator_add_eq"></a>operador + = 
+##  <a name="operator_add_eq"></a>operador + = 
 
 Adiciona o número especificado para cada elemento do objeto 'extensão'.  
   
@@ -241,7 +247,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O tipo do objeto `extent` resultante.  
   
-##  <a name="a-nameoperatormina-operator-"></a><a name="operator_min"></a>operador- 
+##  <a name="operator_min"></a>operador- 
 
 Cria um novo `extent` objeto subtraindo cada elemento especificado na `index` objeto do elemento correspondente no `extent` objeto.  
   
@@ -258,7 +264,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O novo objeto `extent`.  
   
-##  <a name="a-nameoperatorminmina-operator--"></a><a name="operator_min_min"></a>operador- 
+##  <a name="operator_min_min"></a>operador- 
 
 Decrementa cada elemento no objeto 'extensão'.  
   
@@ -272,7 +278,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  Para o operador de prefixo, o `extent` objeto (`*this`). Para o operador de sufixo, um novo `extent` objeto.  
   
-##  <a name="a-nameoperatordiveqa-operator"></a><a name="operator_div_eq"></a>operador / = 
+##  <a name="operator_div_eq"></a>operador / = 
 
 Divide cada elemento no objeto 'extensão' pelo número especificado.  
   
@@ -289,7 +295,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `extent`.  
   
-##  <a name="a-nameoperatormineqa-operator-"></a><a name="operator_min_eq"></a>operador = 
+##  <a name="operator_min_eq"></a>operador = 
 
 Subtrai o número especificado de cada elemento do objeto 'extensão'.  
   
@@ -308,7 +314,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O tipo do objeto `extent` resultante.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
 Copia o conteúdo de outro objeto 'extensão' a este.  
   
@@ -325,7 +331,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a esta `extent` objeto.  
   
-##  <a name="a-nameoperatorata-extentoperator-"></a><a name="operator_at"></a>Extent:: Operator\[\] 
+##  <a name="operator_at"></a>Extent:: Operator\[\] 
 Retorna o elemento no índice especificado.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -342,7 +348,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor de retorno  
  O elemento no índice especificado.  
   
-##  <a name="a-namerankconstanta-rank"></a><a name="rank_constant"></a>classificação 
+##  <a name="rank_constant"></a>classificação 
 
 Armazena a posição do objeto 'extensão'.  
   
@@ -352,7 +358,7 @@ Armazena a posição do objeto 'extensão'.
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>tamanho 
+##  <a name="size"></a>tamanho 
 
 Retorna o tamanho total linear do `extent` objeto (em unidades de elementos).  
   
@@ -362,7 +368,7 @@ Retorna o tamanho total linear do `extent` objeto (em unidades de elementos).
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="a-nametilea-tile"></a><a name="tile"></a>lado a lado 
+## <a name="tile"></a>lado a lado 
 
 Produz um objeto tiled_extent com as dimensões de bloco especificado.
 

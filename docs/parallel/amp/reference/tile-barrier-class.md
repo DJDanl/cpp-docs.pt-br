@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tile_barrier
+- tile_barrier
+- AMP/tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::wait
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ace6bb366881f9e5a9678b3a005f3079542c9cd
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
@@ -60,10 +66,10 @@ class tile_barrier;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Wait](#wait)|Instrui a todos os threads no grupo de thread (bloco) para interromper a execução até que todos os threads no bloco concluiu a espera.|  
-|[Método wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória foram concluídos e todos os threads no bloco atingiu essa chamada.|  
-|[Método wait_with_global_memory_fence](#wait_with_global_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória global foram concluídos e todos os threads no bloco atingir essa chamada.|  
-|[Método wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os `tile_static` acessos de memória foram concluídos e todos os threads no bloco atingir essa chamada.|  
+|[Aguarde](#wait)|Instrui a todos os threads no grupo de thread (bloco) para interromper a execução até que todos os threads no bloco concluiu a espera.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória foram concluídos e todos os threads no bloco atingiu essa chamada.|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os acessos de memória global foram concluídos e todos os threads no bloco atingir essa chamada.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Bloqueia a execução de todos os threads em um bloco até que todos os `tile_static` acessos de memória foram concluídos e todos os threads no bloco atingir essa chamada.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `tile_barrier`  
@@ -73,7 +79,7 @@ class tile_barrier;
   
  **Namespace:** Simultaneidade  
 
-## <a name="a-nametilebarrierctora--tilebarrier-constructor"></a><a name="tile_barrier__ctor"></a>Construtor tile_barrier  
+## <a name="tile_barrier__ctor"></a>Construtor tile_barrier  
  Inicializa uma nova instância da classe copiando um existente.  
   
 ### <a name="syntax"></a>Sintaxe 
@@ -87,7 +93,7 @@ tile_barrier(
  `_Other`  
  O `tile_barrier` objeto a ser copiado.  
 
-## <a name="a-namewaita--wait"></a><a name="wait"></a>Aguarde 
+## <a name="wait"></a>Aguarde 
 Instrui a todos os threads no grupo de thread (bloco) para interromper a execução até que todos os threads no bloco concluiu a espera.  
   
 ### <a name="syntax"></a>Sintaxe 
@@ -96,7 +102,7 @@ Instrui a todos os threads no grupo de thread (bloco) para interromper a execuç
 void wait() const restrict(amp);  
 ```    
 
-## <a name="a-namewaitwithallmemoryfencea--waitwithallmemoryfence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
+## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
 Bloqueia a execução de todos os threads em um bloco até que todos os threads em um bloco atingiu essa chamada. Isso garante que todos os acessos de memória são visíveis a outros threads no bloco de thread e foram executados na ordem do programa.  
   
 ### <a name="syntax"></a>Sintaxe 
@@ -106,7 +112,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="a-namewaitwithglobalmemoryfencea--waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
 Bloqueia a execução de todos os threads em um bloco até que todos os threads em um bloco atingiu essa chamada. Isso garante que todos os acessos de memória global são visíveis a outros threads no bloco de thread e foram executados na ordem do programa.  
   
 ### <a name="syntax"></a>Sintaxe 
@@ -115,7 +121,7 @@ Bloqueia a execução de todos os threads em um bloco até que todos os threads 
 void wait_with_global_memory_fence() const  restrict(amp);  
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfencea--waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
+## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
 Bloqueia a execução de todos os threads em um bloco até que todos os threads em um bloco atingiu essa chamada. Isso garante que `tile_static`memória acessos são visíveis a outros threads no bloco de thread e foram executados na ordem do programa.  
   
 ### <a name="syntax"></a>Sintaxe 

@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObject<Base>
-- ATL::CComObject
-- ATL::CComObject<Base>
-- ATL.CComObject
 - CComObject
+- ATLCOM/ATL::CComObject
+- ATLCOM/ATL::CComObject::CComObject
+- ATLCOM/ATL::CComObject::AddRef
+- ATLCOM/ATL::CComObject::CreateInstance
+- ATLCOM/ATL::CComObject::QueryInterface
+- ATLCOM/ATL::CComObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectaddref"></a><a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>CComObject::AddRef  
  Incrementa a contagem de referência no objeto.  
   
 ```
@@ -98,7 +100,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor de retorno  
  Esta função retorna a nova contagem de referência incrementado no objeto. Esse valor pode ser útil para teste ou de diagnóstico.  
   
-##  <a name="a-nameccomobjecta--ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>CComObject::CComObject  
  O construtor incrementa a contagem de bloqueio do módulo.  
   
 ```
@@ -114,7 +116,7 @@ CComObject(void* = NULL);
   
  Se um `CComObject`-objeto derivado é criada com êxito usando o **novo** operador, a contagem de referência inicial é 0. Para definir a contagem de referência para o valor adequado (1), fazer uma chamada para o [AddRef](#addref) função.  
   
-##  <a name="a-namedtora--ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>CComObject:: ~ CComObject  
  O destruidor.  
   
 ```
@@ -125,7 +127,7 @@ CComObject();
  Libera todos os recursos alocados, chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease), e diminui o bloqueio de módulo contar.  
 
   
-##  <a name="a-namecreateinstancea--ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>CComObject::CreateInstance  
  A função estática permite que você crie um novo **CComObject** `Base` ** > ** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -149,7 +151,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM&#39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="a-namequeryinterfacea--ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada.  
   
 ```
@@ -171,7 +173,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-##  <a name="a-namereleasea--ccomobjectrelease"></a><a name="release"></a>CComObject::Release  
+##  <a name="release"></a>CComObject::Release  
  Diminui a contagem de referência no objeto.  
   
 ```

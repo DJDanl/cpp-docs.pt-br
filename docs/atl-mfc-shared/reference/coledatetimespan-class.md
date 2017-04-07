@@ -9,9 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.COleDateTimeSpan
 - COleDateTimeSpan
-- ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::Format
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_span
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +123,7 @@ class COleDateTimeSpan
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ATLComTime.h  
   
-##  <a name="a-namecoledatetimespanrelationaloperatorsa--coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>Operadores relacionais COleDateTimeSpan  
+##  <a name="coledatetimespan_relational_operators"></a>Operadores relacionais COleDateTimeSpan  
  Operadores de comparação.  
   
 ```
@@ -138,7 +152,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities&#26;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
-##  <a name="a-namecoledatetimespana--coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
+##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
  Constrói um objeto `COleDateTimeSpan`.  
   
 ```
@@ -170,7 +184,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#14;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
-##  <a name="a-nameformata--coledatetimespanformat"></a><a name="format"></a>COleDateTimeSpan::Format  
+##  <a name="format"></a>COleDateTimeSpan::Format  
  Gera uma representação de cadeia de caracteres formatada de um `COleDateTimeSpan` objeto.  
   
 ```
@@ -214,7 +228,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#15;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
-##  <a name="a-namegetdaysa--coledatetimespangetdays"></a><a name="getdays"></a>COleDateTimeSpan::GetDays  
+##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
  Recupera a parte desse valor de data-período/dia.  
   
 ```
@@ -246,7 +260,7 @@ LONG GetDays() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities n º&16;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
-##  <a name="a-namegethoursa--coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan::GetHours  
+##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
  Recupera a parte de hora desse valor de data/hora-período.  
   
 ```
@@ -278,7 +292,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[17 NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
-##  <a name="a-namegetminutesa--coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
  Recupera a parte desse valor de data/hora-intervalo de minutos.  
   
 ```
@@ -310,7 +324,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities n º&18;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
-##  <a name="a-namegetsecondsa--coledatetimespangetseconds"></a><a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
  Recupera a segunda parte deste valor de data/hora-período.  
   
 ```
@@ -342,7 +356,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[19 NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
-##  <a name="a-namegetstatusa--coledatetimespangetstatus"></a><a name="getstatus"></a>COleDateTimeSpan::GetStatus  
+##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
  Obtém o status (validade) deste `COleDateTimeSpan` objeto.  
   
 ```
@@ -385,7 +399,7 @@ DateTimeSpanStatus GetStatus() const throw();
   
  Para obter mais informações sobre os limites de `COleDateTimeSpan` valores, consulte o artigo [data e hora: suporte de automação de](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-namegettotaldaysa--coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
+##  <a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
  Recupera o valor de data-período/expressado em dias.  
   
 ```
@@ -417,7 +431,7 @@ double GetTotalDays() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[20 NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
-##  <a name="a-namegettotalhoursa--coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
  Recupera o valor de data-período/expressado em horas.  
   
 ```
@@ -449,7 +463,7 @@ double GetTotalHours() const throw();
 ### <a name="example"></a>Exemplo  
  Veja o exemplo de [GetTotalDays](#gettotaldays).  
   
-##  <a name="a-namegettotalminutesa--coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
  Recupera o valor de data-período/expressado em minutos.  
   
 ```
@@ -481,7 +495,7 @@ double GetTotalMinutes() const throw();
 ### <a name="example"></a>Exemplo  
  Veja o exemplo de [GetTotalDays](#gettotaldays).  
   
-##  <a name="a-namegettotalsecondsa--coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
  Recupera o valor de data-período/expressado em segundos.  
   
 ```
@@ -513,7 +527,7 @@ double GetTotalSeconds() const throw();
 ### <a name="example"></a>Exemplo  
  Veja o exemplo de [GetTotalDays](#gettotaldays).  
   
-##  <a name="a-namemspana--coledatetimespanmspan"></a><a name="m_span"></a>COleDateTimeSpan::m_span  
+##  <a name="m_span"></a>COleDateTimeSpan::m_span  
  Subjacente **duplo** valor `COleDateTime` objeto.  
   
 ```
@@ -526,7 +540,7 @@ double m_span;
 > [!CAUTION]
 >  Alterando o valor de **duplo** membro de dados irá alterar o valor dessa `COleDateTimeSpan` objeto. Ele não altera o status deste `COleDateTimeSpan` objeto.  
   
-##  <a name="a-namemstatusa--coledatetimespanmstatus"></a><a name="m_status"></a>COleDateTimeSpan::m_status  
+##  <a name="m_status"></a>COleDateTimeSpan::m_status  
  O tipo para este membro de dados é o tipo enumerado **DateTimeSpanStatus**, que é definido dentro de `COleDateTimeSpan` classe.  
   
 ```
@@ -567,7 +581,7 @@ DateTimeSpanStatus m_status;
   
  Para obter mais informações sobre os limites de `COleDateTimeSpan` valores, consulte o artigo [data e hora: suporte de automação de](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
-##  <a name="a-nameoperatoreqa--coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDateTimeSpan::operator =  
+##  <a name="operator_eq"></a>COleDateTimeSpan::operator =  
  Copia uma `COleDateTimeSpan` valor.  
   
 ```
@@ -577,7 +591,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ### <a name="remarks"></a>Comentários  
  Esse operador de atribuição sobrecarregados copia o valor de data/hora-intervalo de origem para este `COleDateTimeSpan` objeto.  
   
-##  <a name="a-nameoperatoradd-a--coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan::operator +, -  
+##  <a name="operator_add_-"></a>COleDateTimeSpan::operator +, -  
  Adicionar, subtrair e alterar o sinal para `COleDateTimeSpan` valores.  
   
 ```
@@ -598,7 +612,7 @@ COleDateTimeSpan operator-() const throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#23;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>+ = COleDateTimeSpan::operator-=  
+##  <a name="operator_add_eq_-_eq"></a>+ = COleDateTimeSpan::operator-=  
  Adicionar e subtrair um `COleDateTimeSpan` valor desse `COleDateTimeSpan` valor.  
   
 ```
@@ -616,7 +630,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#24;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
-##  <a name="a-nameoperatordoublea--coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDateTimeSpan::operator dupla  
+##  <a name="operator_double"></a>COleDateTimeSpan::operator dupla  
  Converte isso `COleDateTimeSpan` valor para um **duplo**.  
   
 ```
@@ -626,7 +640,7 @@ operator double() const throw();
 ### <a name="remarks"></a>Comentários  
  Esse operador retorna o valor desse `COleDateTimeSpan` valor como um número de ponto flutuante de dias.  
   
-##  <a name="a-namesetdatetimespana--coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
+##  <a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
  Define o valor desse valor de data/hora-período.  
   
 ```
@@ -659,7 +673,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#21;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
-##  <a name="a-namesetstatusa--coledatetimespansetstatus"></a><a name="setstatus"></a>COleDateTimeSpan::SetStatus  
+##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
  Define o status (validade) deste `COleDateTimeSpan` objeto.  
   
 ```

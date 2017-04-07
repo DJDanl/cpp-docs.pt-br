@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
-- ATL::IThreadPoolConfig
-- ATL.IThreadPoolConfig
+- ATLUTIL/ATL::IThreadPoolConfig
+- ATLUTIL/ATL::GetSize
+- ATLUTIL/ATL::GetTimeout
+- ATLUTIL/ATL::SetSize
+- ATLUTIL/ATL::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ __interface
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlutil.h  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  Chame esse método para obter o número de threads no pool.  
   
 ```
@@ -88,7 +91,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Utilities&#134;](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  Chame esse método para obter o tempo máximo em milissegundos que o pool de threads irá aguardar por um segmento para desligar.  
   
 ```
@@ -105,7 +108,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Exemplo  
  Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  Chame esse método para definir o número de threads no pool.  
   
 ```
@@ -126,7 +129,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Exemplo  
  Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  Chame esse método para definir o tempo máximo em milissegundos que o pool de threads irá aguardar por um segmento para desligar.  
   
 ```

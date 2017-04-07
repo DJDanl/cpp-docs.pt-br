@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddDynamicElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddSeparator
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::Create
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::CreateEx
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindByID
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExtendedArea
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetSpace
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsBottomFrame
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsInformationMode
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RecalcLayout
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveAll
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::SetInformation
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::OnDrawInformation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +136,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxribbonstatusbar. h  
   
-##  <a name="a-nameadddynamicelementa--cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
  Adiciona um elemento dinâmico à barra de status da faixa de opções.  
   
 ```  
@@ -127,7 +150,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>Comentários  
  Ao contrário dos elementos regulares, elementos dinâmicos não são personalizáveis e personalizar menu da barra de status não exibi-los.  
   
-##  <a name="a-nameaddelementa--cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
  Adiciona um novo elemento de faixa de opções para a barra de status da faixa de opções.  
   
 ```  
@@ -147,7 +170,7 @@ void AddElement(
  [in] `bIsVisible`  
  `TRUE`Se você deseja adicionar o elemento como visível, `FALSE` se você deseja adicionar o elemento como oculto.  
   
-##  <a name="a-nameaddextendedelementa--cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
  Adiciona um elemento de faixa de opções para a área estendida da barra de status da faixa de opções.  
   
 ```  
@@ -170,7 +193,7 @@ void AddExtendedElement(
 ### <a name="remarks"></a>Comentários  
  A área estendida está do lado direito do controle da barra de status.  
   
-##  <a name="a-nameaddseparatora--cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
  Adiciona um separador à barra de status da faixa de opções.  
   
 ```  
@@ -180,7 +203,7 @@ void AddSeparator();
 ### <a name="remarks"></a>Comentários  
  O framework adiciona um separador após o método [CMFCRibbonStatusBar::AddElement](#addelement). Insere o último elemento.  
   
-##  <a name="a-namecreatea--cmfcribbonstatusbarcreate"></a><a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>CMFCRibbonStatusBar::Create  
  Cria uma barra de status da faixa de opções.  
   
 ```  
@@ -203,7 +226,7 @@ BOOL Create(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE`Se a barra de status é criada com êxito, `FALSE` caso contrário.  
   
-##  <a name="a-namecreateexa--cmfcribbonstatusbarcreateex"></a><a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
  Cria uma barra de status da faixa de opções que tem um estilo estendido.  
   
 ```  
@@ -230,7 +253,7 @@ BOOL CreateEx(
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE`Se a barra de status é criada com êxito, `FALSE` caso contrário.  
   
-##  <a name="a-namefindbyida--cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -245,7 +268,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namefindelementa--cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
  Retorna um ponteiro para o elemento que tem a ID do comando especificado.  
   
 ```  
@@ -259,7 +282,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o elemento que tem a ID do comando especificado. `NULL`Se não houver nenhum tal elemento.  
   
-##  <a name="a-namegetcounta--cmfcribbonstatusbargetcount"></a><a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
  Retorna o número de elementos que estão localizados na área principal da barra de status da faixa de opções.  
   
 ```  
@@ -269,7 +292,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de elementos que estão localizados na área principal da barra de status da faixa de opções.  
   
-##  <a name="a-namegetelementa--cmfcribbonstatusbargetelement"></a><a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
  Retorna um ponteiro para o elemento que está localizado em um índice especificado.  
   
 ```  
@@ -285,7 +308,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegetexcounta--cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
  Retorna o número de elementos que estão localizados na área estendida da barra de status da faixa de opções.  
   
 ```  
@@ -295,7 +318,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de elementos que estão localizados na área estendida da barra de status da faixa de opções.  
   
-##  <a name="a-namegetexelementa--cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
  Retorna um ponteiro para o elemento que está localizado em um índice especificado na área estendida da barra de status da faixa de opções. A área estendida está do lado direito do controle da barra de status.  
   
 ```  
@@ -311,7 +334,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegetextendedareaa--cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -325,7 +348,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namegetspacea--cmfcribbonstatusbargetspace"></a><a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -336,7 +359,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameisbottomframea--cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -347,7 +370,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameisextendedelementa--cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -361,7 +384,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameisinformationmodea--cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
  Determina se o modo de informações está habilitado para a barra de status da faixa de opções.  
   
 ```  
@@ -374,7 +397,7 @@ BOOL IsInformationMode() const;
 ### <a name="remarks"></a>Comentários  
  No modo de informações, a barra de status oculta todos os painéis regulares e exibe uma cadeia de caracteres de mensagem.  
   
-##  <a name="a-nameondrawinformationa--cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
  Exibe a cadeia de caracteres que aparece sobre o status da faixa de opções da barra quando o modo de informações está habilitado.  
   
 ```  
@@ -397,7 +420,7 @@ virtual void OnDrawInformation(
 ### <a name="remarks"></a>Comentários  
  Substitua esse método em uma classe derivada se você quiser personalizar a aparência da cadeia de caracteres de informações na barra de status. Use o [CMFCRibbonStatusBar::SetInformation](#setinformation) método para colocar a barra de status no modo de informações. Nesse modo, a barra de status oculta todos os painéis e exibe a cadeia de caracteres de informações especificada por `strInfo`.  
   
-##  <a name="a-namerecalclayouta--cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -406,14 +429,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameremovealla--cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
  Remove todos os elementos da barra de status da faixa de opções.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="a-nameremoveelementa--cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
  Remove o elemento que tem uma ID de comando especificado na barra de status da faixa de opções.  
   
 ```  
@@ -427,7 +450,7 @@ BOOL RemoveElement(UINT uiID);
 ### <a name="return-value"></a>Valor de retorno  
  `TRUE`Se um elemento com a especificada `uiID` é removido. `FALSE`Caso contrário.  
   
-##  <a name="a-namesetinformationa--cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
  Habilita ou desabilita o modo de informações para a barra de status da faixa de opções.  
   
 ```  

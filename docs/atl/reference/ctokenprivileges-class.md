@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenPrivileges
 - CTokenPrivileges
-- ATL.CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::Add
+- ATLSECURITY/ATL::CTokenPrivileges::Delete
+- ATLSECURITY/ATL::CTokenPrivileges::DeleteAll
+- ATLSECURITY/ATL::CTokenPrivileges::GetCount
+- ATLSECURITY/ATL::CTokenPrivileges::GetDisplayNames
+- ATLSECURITY/ATL::CTokenPrivileges::GetLength
+- ATLSECURITY/ATL::CTokenPrivileges::GetLuidsAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
+- ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlsecurity. h  
   
-##  <a name="a-nameadda--ctokenprivilegesadd"></a><a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>CTokenPrivileges::Add  
  Adiciona um ou mais privilégios para o `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -117,7 +127,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  O primeiro formulário desse método retorna true se os privilégios são adicionadas com êxito, false caso contrário.  
   
-##  <a name="a-namectokenprivilegesa--ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
  O construtor.  
   
 ```
@@ -136,7 +146,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Comentários  
  O `CTokenPrivileges` objeto opcionalmente pode ser criado usando um **TOKEN_PRIVILEGES** estrutura ou definido anteriormente `CTokenPrivileges` objeto.  
   
-##  <a name="a-namedtora--ctokenprivilegesctokenprivileges"></a><a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
  O destruidor.  
   
 ```
@@ -146,7 +156,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>Comentários  
  O destruidor libera todos os recursos alocados.  
   
-##  <a name="a-namedeletea--ctokenprivilegesdelete"></a><a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>CTokenPrivileges::Delete  
  Exclui um privilégio do `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -163,7 +173,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="remarks"></a>Comentários  
  Esse método é útil como uma ferramenta para criar tokens restritos no Windows 2000.  
   
-##  <a name="a-namedeletealla--ctokenprivilegesdeleteall"></a><a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  Exclui todos os privilégios do `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -173,7 +183,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>Comentários  
  Exclui todos os privilégios contidos a `CTokenPrivileges` objeto de token de acesso.  
   
-##  <a name="a-namegetdisplaynamesa--ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
  Recupera exibe nomes para os privilégios contidos a `CTokenPrivileges` objeto de token de acesso.  
   
 ```
@@ -189,7 +199,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  Esse método recupera um nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome de exibição é "Forçar o desligamento de um sistema remoto." Para obter o nome do sistema, use [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
-##  <a name="a-namegetcounta--ctokenprivilegesgetcount"></a><a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>CTokenPrivileges::GetCount  
  Retorna o número de entradas de privilégio no `CTokenPrivileges` objeto.  
   
 ```
@@ -199,7 +209,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de privilégios contidas a `CTokenPrivileges` objeto.  
   
-##  <a name="a-namegetlengtha--ctokenprivilegesgetlength"></a><a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>CTokenPrivileges::GetLength  
  Retorna o comprimento do `CTokenPrivileges` objeto.  
   
 ```
@@ -209,7 +219,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o número de bytes necessários para armazenar uma **TOKEN_PRIVILEGES** estrutura representada pelo `CTokenPrivileges` objeto, incluindo todas as entradas de privilégio que ele contém.  
   
-##  <a name="a-namegetluidsandattributesa--ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
  Recupera os identificadores locais exclusivos (LUIDs) e sinalizadores de atributo do `CTokenPrivileges` objeto.  
   
 ```
@@ -228,7 +238,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>Comentários  
  Este método irá enumerar todos os privilégios contidos a `CTokenPrivileges` objeto de token de acesso e colocar os LUIDs individuais e (opcionalmente) os sinalizadores de atributo em objetos de matriz.  
   
-##  <a name="a-namegetnamesandattributesa--ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
  Recupera os nome e atributo sinalizadores do `CTokenPrivileges` objeto.  
   
 ```
@@ -249,7 +259,7 @@ void GetNamesAndAttributes(
   
  Esse método recupera o nome do atributo, em vez do nome de exibição: por exemplo, se o nome do atributo é SE_REMOTE_SHUTDOWN_NAME, o nome do sistema é "SeRemoteShutdownPrivilege." Para obter o nome de exibição, use o método [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
-##  <a name="a-namegetptokenprivilegesa--ctokenprivilegesgetptokenprivileges"></a><a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  Retorna um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
   
 ```
@@ -259,7 +269,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um ponteiro para o [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) estrutura.  
   
-##  <a name="a-namelookupprivilegea--ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
  Recupera o atributo associado com um nome de privilégio.  
   
 ```
@@ -278,7 +288,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se o atributo for recuperada com sucesso, FALSO caso contrário.  
   
-##  <a name="a-nameoperatoreqa--ctokenprivilegesoperator-"></a><a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
  Operador de atribuição.  
   
 ```
@@ -296,7 +306,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Valor de retorno  
  Retorna a atualização `CTokenPrivileges` objeto.  
   
-##  <a name="a-nameoperatorconsttokenprivilegesstara--ctokenprivilegesoperator-const-tokenprivileges-"></a><a name="operator_const_token_privileges__star"></a>TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
+##  <a name="operator_const_token_privileges__star"></a>TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
  Converte um valor para um ponteiro para o **TOKEN_PRIVILEGES** estrutura.  
   
 ```  

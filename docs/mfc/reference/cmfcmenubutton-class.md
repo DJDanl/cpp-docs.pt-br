@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  Constrói um novo [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) objeto.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  Uma variável de membro booleano que indica qual menu pop-up a estrutura exibe.  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Comentários  
  Se `m_bOSMenu` é `TRUE`, o framework chama o herdadas `TrackPopupMenu` método desse objeto. Caso contrário, o framework chama [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  Uma variável de membro booleano que indica o local do menu pop-up.  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Comentários  
  Quando o usuário pressiona o botão de menu, o aplicativo mostra um menu pop-up. O framework exibirá o menu pop-up do botão ou à direita do botão. O botão também tem uma pequena seta que indica onde o menu pop-up será exibida. Se `m_bRightArrow` é `TRUE`, o framework exibe o menu pop-up à direita do botão. Caso contrário, ele exibe o menu pop-up do botão.  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  Uma variável de membro booleano que indica se o botão de menu aparece pressionado enquanto o usuário faz uma seleção no menu pop-up.  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  Se o `m_bStayPressed` membro é `TRUE`, o botão de menu torna-se pressionada quando o usuário clica no botão. Ela permanece pressionada até depois que o usuário fecha o menu pop-up, fazendo uma seleção ou Cancelar.  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  O identificador para o menu anexado.  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Comentários  
  O framework exibe o menu indicado por essa variável de membro quando o usuário clica no botão de menu.  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  Um inteiro que indica qual item o usuário seleciona o menu pop-up.  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Comentários  
  O valor dessa variável de membro é zero se o usuário cancelar o menu sem fazer uma seleção ou se ocorrer um erro.  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  Chamado pela estrutura para converter as mensagens de janela antes de serem distribuídos.  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  Altera o tamanho do botão de acordo com seu tamanho de texto e o tamanho da imagem.  
   
 ```  

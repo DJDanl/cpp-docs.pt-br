@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::completion_future
+- completion_future
+- AMPRT/completion_future
+- AMPRT/Concurrency::completion_future::completion_future
+- AMPRT/Concurrency::completion_future::get
+- AMPRT/Concurrency::completion_future::then
+- AMPRT/Concurrency::completion_future::to_task
+- AMPRT/Concurrency::completion_future::valid
+- AMPRT/Concurrency::completion_future::wait
+- AMPRT/Concurrency::completion_future::wait_for
+- AMPRT/Concurrency::completion_future::wait_until
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
@@ -32,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9a77c3cf3c183021b70789b0e17a6b8ad8d786c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c6d8e880fbdb784b22b1e9c879473efa7bc9802
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="completionfuture-class"></a>Classe completion_future
@@ -59,20 +68,20 @@ class completion_future;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Get](#get)|Aguarda até que a operação assíncrona associada seja concluída.|  
-|[em seguida, o método](#then)|Cadeias de um objeto de função de retorno de chamada para o `completion_future` objeto a ser executado quando a operação assíncrona associada finaliza a execução.|  
-|[Método to_task](#to_task)|Retorna um `task` objeto correspondente para a operação assíncrona associada.|  
-|[Método válido](#valid)|Obtém um valor booliano que indica se o objeto está associado uma operação assíncrona.|  
-|[Método Wait](#wait)|Bloqueia até que a operação assíncrona associada é concluída.|  
-|[Método wait_for](#wait_for)|Bloqueia até que a operação assíncrona associada seja concluída ou o tempo especificado por `_Rel_time` tiver decorrido.|  
-|[Método wait_until](#wait_until)|Bloqueia até que a operação assíncrona associada seja concluída ou até que a hora atual excede o valor especificado pelo `_Abs_time`.|  
+|[get](#get)|Aguarda até que a operação assíncrona associada seja concluída.|  
+|[em seguida](#then)|Cadeias de um objeto de função de retorno de chamada para o `completion_future` objeto a ser executado quando a operação assíncrona associada finaliza a execução.|  
+|[to_task](#to_task)|Retorna um `task` objeto correspondente para a operação assíncrona associada.|  
+|[válido](#valid)|Obtém um valor booliano que indica se o objeto está associado uma operação assíncrona.|  
+|[Aguarde](#wait)|Bloqueia até que a operação assíncrona associada é concluída.|  
+|[wait_for](#wait_for)|Bloqueia até que a operação assíncrona associada seja concluída ou o tempo especificado por `_Rel_time` tiver decorrido.|  
+|[wait_until](#wait_until)|Bloqueia até que a operação assíncrona associada seja concluída ou até que a hora atual excede o valor especificado pelo `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operador std::shared_future\<void > operador](#operator_shared_future)|Converte implicitamente o `completion_future` o objeto para um `std::shared_future` objeto.|  
-|[operador Operator =](#operator_eq)|Copia o conteúdo especificado `completion_future` deste objeto.|  
+|[operador std::shared_future\<void >](#operator_shared_future)|Converte implicitamente o `completion_future` o objeto para um `std::shared_future` objeto.|  
+|[operator=](#operator_eq)|Copia o conteúdo especificado `completion_future` deste objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `completion_future`  
@@ -83,7 +92,7 @@ class completion_future;
  **Namespace:** simultaneidade  
 
 
-## <a name="a-namectora-completionfuture"></a><a name="ctor"></a>completion_future 
+## <a name="ctor"></a>completion_future 
 
 Inicializa uma nova instância da classe `completion_future`.  
   
@@ -111,7 +120,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Inicializa uma nova instância de `completion_future` classe copiando um construtor.|  
 |`completion_future(completion_future&& _Other);`|Inicializa uma nova instância de `completion_future` classe movendo um construtor.|  
   
-## <a name="a-namegeta-get"></a><a name="get"></a>Obter 
+## <a name="get"></a>Obter 
 
 Aguarda até que a operação assíncrona associada seja concluída. Lança a exceção armazenada se um foi encontrado durante a operação assíncrona.  
   
@@ -121,7 +130,7 @@ Aguarda até que a operação assíncrona associada seja concluída. Lança a ex
 void get() const;  
 ```  
   
-## <a name="a-nameoperatorsharedfuturea-operator-stdsharedfuturevoid"></a><a name="operator_shared_future"></a>operador std::shared_future<void> 
+## <a name="operator_shared_future"></a>operador std::shared_future<void> 
 
 Converte implicitamente o `completion_future` o objeto para um `std::shared_future` objeto.  
   
@@ -134,7 +143,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um objeto `std::shared_future`.  
   
-## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+## <a name="operator_eq"></a>operador = 
 
 Copia o conteúdo especificado `completion_future` deste objeto.  
   
@@ -159,7 +168,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copia o conteúdo especificado `completion_future` objeto a este, usando uma cópia em profundidade.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copia o conteúdo especificado `completion_future` objeto a este, usando uma atribuição de movimentação.|  
   
-## <a name="a-namethena-then"></a><a name="then"></a>em seguida 
+## <a name="then"></a>em seguida 
 
 Cadeias de um objeto de função de retorno de chamada para o `completion_future` objeto a ser executado quando a operação assíncrona associada finaliza a execução.  
   
@@ -177,7 +186,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  O objeto de função de retorno de chamada.  
   
-## <a name="a-nametotaska-totask"></a><a name="to_task"></a>to_task 
+## <a name="to_task"></a>to_task 
 
 Retorna um `task` objeto correspondente para a operação assíncrona associada.  
   
@@ -190,7 +199,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Valor de retorno  
  Um `task` objeto correspondente para a operação assíncrona associada.  
   
-## <a name="a-namevalida-valid"></a><a name="valid"></a>válido 
+## <a name="valid"></a>válido 
 
 Obtém um valor booliano que indica se o objeto está associado uma operação assíncrona.  
   
@@ -203,7 +212,7 @@ bool valid() const;
 ### <a name="return-value"></a>Valor de retorno  
  `true`Se o objeto está associado uma operação assíncrona; Caso contrário, `false`.  
   
-## <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+## <a name="wait"></a>Aguarde 
 
 Bloqueia até que a operação assíncrona associada é concluída.  
   
@@ -213,7 +222,7 @@ Bloqueia até que a operação assíncrona associada é concluída.
 void wait() const;  
 ```  
   
-## <a name="a-namewaitfora-waitfor"></a><a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a>wait_for 
 
 Bloqueia até que a operação assíncrona associada seja concluída ou o tempo especificado pelo `_Rel_time` tiver decorrido.  
   
@@ -247,7 +256,7 @@ std::future_status::future_status wait_for(
   
 -   `std::future_status::timeout`Se o período de tempo tiver decorrido.  
   
-## <a name="a-namewaituntila-waituntil"></a><a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a>wait_until 
 
 Bloqueia até que a operação assíncrona associada seja concluída ou até que a hora atual excede o valor especificado pelo `_Abs_time`.  
   
@@ -281,7 +290,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout`Se o período de tempo especificado tiver decorrido.  
   
-## <a name="a-namedtora-completionfuture"></a><a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a>~ completion_future 
 
 Destrói o `completion_future` objeto.  
   

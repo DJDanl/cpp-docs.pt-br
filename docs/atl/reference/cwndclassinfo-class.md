@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
+- ATLWIN/ATL::CWndClassInfo
+- ATLWIN/ATL::Register
+- ATLWIN/ATL::m_atom
+- ATLWIN/ATL::m_bSystemCursor
+- ATLWIN/ATL::m_lpszCursorID
+- ATLWIN/ATL::m_lpszOrigName
+- ATLWIN/ATL::m_szAutoName
+- ATLWIN/ATL::m_wc
+- ATLWIN/ATL::pWndProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="a-namematoma--cwndclassinfomatom"></a><a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  Contém o identificador exclusivo para a classe de janela registrado.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="a-namembsystemcursora--cwndclassinfombsystemcursor"></a><a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
  Se **TRUE**, o recurso de cursor do sistema será carregado quando a classe de janela é registrada.  
   
 ```
@@ -112,7 +121,7 @@ BOOL m_bSystemCursor;
   
  `CWndClassInfo`usa `m_bSystemCursor` somente quando o [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) macro for especificada. Nesse caso, `m_bSystemCursor` é inicializada com **TRUE**. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.  
   
-##  <a name="a-namemlpszcursorida--cwndclassinfomlpszcursorid"></a><a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
  Especifica o nome do recurso de cursor ou o identificador de recurso na palavra de ordem inferior e zero a palavra de ordem superior.  
   
 ```
@@ -124,7 +133,7 @@ LPCTSTR m_lpszCursorID;
   
  `CWndClassInfo`usa `m_lpszCursorID` somente quando o [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (o padrão em [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou o [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) macro for especificada. Nesse caso, `m_lpszCursorID` é inicializada com **IDC_ARROW**. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.  
   
-##  <a name="a-namemlpszorignamea--cwndclassinfomlpszorigname"></a><a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
  Contém o nome de uma classe de janela existente.  
   
 ```
@@ -134,7 +143,7 @@ LPCTSTR m_lpszOrigName;
 ### <a name="remarks"></a>Comentários  
  `CWndClassInfo`usa `m_lpszOrigName` somente quando você inclui o [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro na definição de classe. Nesse caso, `CWndClassInfo` registra uma classe de janela com base na classe nomeada pelo `m_lpszOrigName`. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.  
   
-##  <a name="a-namemszautonamea--cwndclassinfomszautoname"></a><a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
  Contém o nome da classe de janela.  
   
 ```
@@ -144,7 +153,7 @@ TCHAR m_szAutoName[13];
 ### <a name="remarks"></a>Comentários  
  `CWndClassInfo`usa `m_szAutoName` somente se **nulo** é passado o `WndClassName` parâmetro [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971), o [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) ou [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd). ATL criará um nome quando a classe de janela é registrada.  
   
-##  <a name="a-namemwca--cwndclassinfomwc"></a><a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  Mantém as informações de classe de janela em uma [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) estrutura.  
   
 ```
@@ -156,7 +165,7 @@ WNDCLASSEX m_wc;
   
  Se você tiver especificado o [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro `m_wc` contém informações sobre uma superclasse — uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. [m_lpszOrigName](#m_lpszorigname) e [pWndProc](#pwndproc) salvar o nome da classe de janela existente e o procedimento de janela, respectivamente.  
   
-##  <a name="a-namepwndproca--cwndclassinfopwndproc"></a><a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
  Aponta para o procedimento de janela de uma classe de janela existente.  
   
 ```
@@ -166,7 +175,7 @@ WNDPROC pWndProc;
 ### <a name="remarks"></a>Comentários  
  `CWndClassInfo`usa `pWndProc` somente quando você inclui o [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro na definição de classe. Nesse caso, `CWndClassInfo` registra uma classe de janela que se baseia em uma classe existente, mas usa um procedimento de janela diferentes. O procedimento de janela da classe de janela existente é salvo em `pWndProc`. Para obter mais informações, consulte o [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) visão geral.  
   
-##  <a name="a-nameregistera--cwndclassinforegister"></a><a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>CWndClassInfo::Register  
  Chamado por [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) para registrar a classe de janela, se ele ainda não foi registrado.  
   
 ```

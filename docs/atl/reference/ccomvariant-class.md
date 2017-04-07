@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComVariant
-- ATL::CComVariant
 - CComVariant
+- ATLCOMCLI/ATL::CComVariant
+- ATLCOMCLI/ATL::CComVariant::CComVariant
+- ATLCOMCLI/ATL::CComVariant::Attach
+- ATLCOMCLI/ATL::CComVariant::ChangeType
+- ATLCOMCLI/ATL::CComVariant::Clear
+- ATLCOMCLI/ATL::CComVariant::Copy
+- ATLCOMCLI/ATL::CComVariant::CopyTo
+- ATLCOMCLI/ATL::CComVariant::Detach
+- ATLCOMCLI/ATL::CComVariant::GetSize
+- ATLCOMCLI/ATL::CComVariant::ReadFromStream
+- ATLCOMCLI/ATL::CComVariant::SetByRef
+- ATLCOMCLI/ATL::CComVariant::WriteToStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CComVariant : public tagVARIANT
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcomcli. h  
   
-##  <a name="a-nameattacha--ccomvariantattach"></a><a name="attach"></a>CComVariant::Attach  
+##  <a name="attach"></a>CComVariant::Attach  
  Apaga com segurança o conteúdo atual do `CComVariant` de objeto, copia o conteúdo de `pSrc` para esse objeto, em seguida, define o tipo de variante de `pSrc` para `VT_EMPTY`.  
   
 ```
@@ -117,7 +127,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="remarks"></a>Comentários  
  Propriedade dos dados mantidos por `pSrc` é transferido para o `CComVariant` objeto.  
   
-##  <a name="a-nameccomvarianta--ccomvariantccomvariant"></a><a name="ccomvariant"></a>CComVariant::CComVariant  
+##  <a name="ccomvariant"></a>CComVariant::CComVariant  
  Cada construtor trata a inicialização segura do `CComVariant` objeto chamando o `VariantInit` função do Win32 ou definindo o valor do objeto e o tipo de acordo com os parâmetros passados.  
   
 ```
@@ -185,7 +195,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>Comentários  
  O destruidor gerencia limpeza chamando [CComVariant::Clear](#clear).  
   
-##  <a name="a-namedtora--ccomvariantccomvariant"></a><a name="dtor"></a>CComVariant:: ~ CComVariant  
+##  <a name="dtor"></a>CComVariant:: ~ CComVariant  
  O destruidor.  
   
 ```
@@ -195,7 +205,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>Comentários  
  Este método gerencia limpeza chamando [CComVariant::Clear](#clear).  
   
-##  <a name="a-namechangetypea--ccomvariantchangetype"></a><a name="changetype"></a>CComVariant::ChangeType  
+##  <a name="changetype"></a>CComVariant::ChangeType  
  Converte o `CComVariant` um novo tipo de objeto.  
   
 ```
@@ -215,7 +225,7 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ### <a name="remarks"></a>Comentários  
  Se você passar um valor `pSrc`, `ChangeType` usará **VARIANT** como a origem para a conversão. Caso contrário, o `CComVariant` objeto será a origem.  
   
-##  <a name="a-namecleara--ccomvariantclear"></a><a name="clear"></a>CComVariant::Clear  
+##  <a name="clear"></a>CComVariant::Clear  
  Limpa o `CComVariant` objeto chamando o `VariantClear` função do Win32.  
   
 ```
@@ -228,7 +238,7 @@ HRESULT Clear();
 ### <a name="remarks"></a>Comentários  
  O destruidor automaticamente chama **limpar**.  
   
-##  <a name="a-namecopya--ccomvariantcopy"></a><a name="copy"></a>CComVariant::Copy  
+##  <a name="copy"></a>CComVariant::Copy  
  Libera o `CComVariant` de objeto e, em seguida, atribui uma cópia especificada **VARIANT**.  
   
 ```
@@ -242,7 +252,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
-##  <a name="a-namecopytoa--ccomvariantcopyto"></a><a name="copyto"></a>CComVariant::CopyTo  
+##  <a name="copyto"></a>CComVariant::CopyTo  
  Copia o conteúdo da `CComVariant` objeto.  
   
 ```
@@ -259,7 +269,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 ### <a name="remarks"></a>Comentários  
  O **CComVariant** objeto deve ser do tipo `VT_BSTR`.  
   
-##  <a name="a-namedetacha--ccomvariantdetach"></a><a name="detach"></a>CComVariant::Detach  
+##  <a name="detach"></a>CComVariant::Detach  
  Desanexa subjacente **VARIANT** do `CComVariant` do objeto e define o tipo de objeto para `VT_EMPTY`.  
   
 ```
@@ -276,7 +286,7 @@ HRESULT Detach(VARIANT* pDest);
 ### <a name="remarks"></a>Comentários  
  Observe que o conteúdo da `VARIANT` referenciado pelo `pDest` serão apagadas automaticamente antes de ser atribuído o valor e o tipo de chamada **CComVariant** objeto.  
   
-##  <a name="a-namegetsizea--ccomvariantgetsize"></a><a name="getsize"></a>CComVariant::GetSize  
+##  <a name="getsize"></a>CComVariant::GetSize  
  Tamanho fixo simples `VARIANT`s, esse método retorna o `sizeof` o tipo de dados mais `sizeof(VARTYPE)`.  
   
 ```
@@ -293,7 +303,7 @@ ULONG GetSize() const;
   
  O tamanho retornado por esse método corresponde ao número de bytes usado por [CComVariant::WriteToStream](#writetostream) sob condições bem-sucedida.  
   
-##  <a name="a-nameoperatoreqa--ccomvariantoperator-"></a><a name="operator_eq"></a>CComVariant::operator =  
+##  <a name="operator_eq"></a>CComVariant::operator =  
  Atribui um valor e um tipo correspondente para o `CComVariant` objeto.  
   
 ```
@@ -354,7 +364,7 @@ CComVariant& operator=(char cSrc) throw();
  `cSrc`  
  [in] O caractere a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será **VT_I1**.  
   
-##  <a name="a-nameoperatoreqeqa--ccomvariantoperator-"></a><a name="operator_eq_eq"></a>CComVariant::operator = =  
+##  <a name="operator_eq_eq"></a>CComVariant::operator = =  
  Indica se o `CComVariant` objeto é igual a especificado **VARIANT**.  
   
 ```
@@ -366,7 +376,7 @@ bool operator==(const VARIANT& varSrc) const throw();
   
  O operador compara somente o valor dos tipos variantes. Ele compara cadeias de caracteres, inteiros e pontos flutuantes, mas não matrizes ou registros.  
   
-##  <a name="a-nameoperatorneqa--ccomvariantoperator-"></a><a name="operator_neq"></a>CComVariant::operator! =  
+##  <a name="operator_neq"></a>CComVariant::operator! =  
  Indica se o `CComVariant` objeto não é igual a especificado **VARIANT**.  
   
 ```
@@ -378,7 +388,7 @@ bool operator!=(const VARIANT& varSrc) const throw();
   
  O operador compara somente o valor dos tipos variantes. Ele compara cadeias de caracteres, inteiros e pontos flutuantes, mas não matrizes ou registros.  
   
-##  <a name="a-nameoperatorlta--ccomvariantoperator-lt"></a><a name="operator_lt"></a>CComVariant::operator&lt;  
+##  <a name="operator_lt"></a>CComVariant::operator&lt;  
  Indica se o `CComVariant` objeto é menor que o especificado **VARIANT**.  
   
 ```
@@ -388,7 +398,7 @@ bool operator<(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>Comentários  
  Retorna **true** se o valor de `CComVariant` objeto é menor que o valor de *varSrc*. Caso contrário, **false**. O operador usa a localidade padrão do usuário para executar a comparação.  
   
-##  <a name="a-nameoperatorgta--ccomvariantoperator-gt"></a><a name="operator_gt"></a>CComVariant::operator&gt;  
+##  <a name="operator_gt"></a>CComVariant::operator&gt;  
  Indica se o `CComVariant` objeto é maior que o especificado **VARIANT**.  
   
 ```
@@ -398,7 +408,7 @@ bool operator>(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>Comentários  
  Retorna **true** se o valor de `CComVariant` objeto é maior que o valor de *varSrc*. Caso contrário, **false**. O operador usa a localidade padrão do usuário para executar a comparação.  
   
-##  <a name="a-namereadfromstreama--ccomvariantreadfromstream"></a><a name="readfromstream"></a>CComVariant::ReadFromStream  
+##  <a name="readfromstream"></a>CComVariant::ReadFromStream  
  Define a base **VARIANT** para o **VARIANT** contidos em um fluxo especificado.  
   
 ```
@@ -415,7 +425,7 @@ HRESULT ReadFromStream(IStream* pStream);
 ### <a name="remarks"></a>Comentários  
  **ReadToStream** requer uma chamada anterior a [WriteToStream](#writetostream).  
   
-##  <a name="a-namesetbyrefa--ccomvariantsetbyref"></a><a name="setbyref"></a>CComVariant::SetByRef  
+##  <a name="setbyref"></a>CComVariant::SetByRef  
  Inicializa o `CComVariant` objeto e define o **vt** membro **VT_BYREF**.  
   
 ```
@@ -435,7 +445,7 @@ void SetByRef(T* pT) throw();
   
  [!code-cpp[NVC_ATL_Utilities&#76;](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]  
   
-##  <a name="a-namewritetostreama--ccomvariantwritetostream"></a><a name="writetostream"></a>CComVariant::WriteToStream  
+##  <a name="writetostream"></a>CComVariant::WriteToStream  
  Salva subjacente **VARIANT** em um fluxo.  
   
 ```

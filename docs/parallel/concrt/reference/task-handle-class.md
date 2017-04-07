@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor task_handle](#ctor)|Constrói um novo `task_handle` objeto. O trabalho da tarefa é executado, chamando a função especificada como um parâmetro para o construtor.|  
+|[task_handle](#ctor)|Constrói um novo `task_handle` objeto. O trabalho da tarefa é executado, chamando a função especificada como um parâmetro para o construtor.|  
 |[~ task_handle destruidor](#dtor)|Destrói o `task_handle` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Operador Operator)](#task_handle__operator_call)|O operador de chamada de função que o tempo de execução invoca para realizar o trabalho do identificador de tarefa.|  
+|[Operator)](#task_handle__operator_call)|O operador de chamada de função que o tempo de execução invoca para realizar o trabalho do identificador de tarefa.|  
   
 ## <a name="remarks"></a>Comentários  
  `task_handle`objetos podem ser usados em conjunto com um `structured_task_group` ou um mais geral `task_group` objeto, decompor o trabalho em tarefas paralelas. Para obter mais informações, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>Operator) 
+##  <a name="task_handle__operator_call"></a>Operator) 
 
  O operador de chamada de função que o tempo de execução invoca para realizar o trabalho do identificador de tarefa.  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  Constrói um novo `task_handle` objeto. O trabalho da tarefa é executado, chamando a função especificada como um parâmetro para o construtor.  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Comentários  
  O tempo de execução cria uma cópia da função de trabalho que você passa ao construtor. Portanto, qualquer alteração de estado que ocorrem em uma função de objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia desse objeto de função.  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  Destrói o `task_handle` objeto.  
   

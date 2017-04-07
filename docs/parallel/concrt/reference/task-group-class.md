@@ -12,18 +12,18 @@ class task_group;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor task_group](#ctor)|Sobrecarregado. Constrói um novo `task_group` objeto.|  
+|[task_group](#ctor)|Sobrecarregado. Constrói um novo `task_group` objeto.|  
 |[~ task_group destruidor](#dtor)|Destrói um objeto `task_group`. Você deve chamar o o `wait` ou `run_and_wait` método no objeto antes do destruidor está sendo executado, a menos que o destruidor está sendo executado como resultado de desenrolamento devido a uma exceção da pilha.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método Cancel](#cancel)|Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.|  
-|[Método is_canceling](#is_canceling)|Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `task_group` objeto, `true` também será retornado.|  
-|[o método Run](#run)|Sobrecarregado. Agenda uma tarefa no `task_group` objeto. Se um `task_handle` objeto é passado como um parâmetro para `run`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A versão do método que usa uma referência a um objeto de função como um parâmetro envolve a alocação de heap dentro do runtime que pode ser executar menos bem que usar a versão que pega uma referência para um `task_handle` objeto. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.|  
-|[Método run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `task_group` objeto para suporte ao cancelamento completa. A função, em seguida, aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto.|  
-|[Método Wait](#wait)|Aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado.|  
+|[Cancelar](#cancel)|Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.|  
+|[is_canceling](#is_canceling)|Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `task_group` objeto, `true` também será retornado.|  
+|[run](#run)|Sobrecarregado. Agenda uma tarefa no `task_group` objeto. Se um `task_handle` objeto é passado como um parâmetro para `run`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A versão do método que usa uma referência a um objeto de função como um parâmetro envolve a alocação de heap dentro do runtime que pode ser executar menos bem que usar a versão que pega uma referência para um `task_handle` objeto. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.|  
+|[run_and_wait](#run_and_wait)|Sobrecarregado. Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `task_group` objeto para suporte ao cancelamento completa. A função, em seguida, aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto.|  
+|[Aguarde](#wait)|Aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado.|  
   
 ## <a name="remarks"></a>Comentários  
  Ao contrário de altamente restrita `structured_task_group` classe, a `task_group` classe é construir muito mais geral. Ele não tem qualquer as restrições descritas por [structured_task_group](structured-task-group-class.md). `task_group`objetos com segurança podem ser usados em threads e utilizados de formas de forma livre. A desvantagem de `task_group` construção é que ele pode não executar, bem como a `structured_task_group` construir para tarefas que executam pequenas quantidades de trabalho.  
@@ -38,7 +38,7 @@ class task_group;
   
  **Namespace:** simultaneidade  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Cancelar 
+##  <a name="cancel"></a>Cancelar 
 
  Se esforça tentar cancelar a subárvore enraizada nesse grupo de tarefas de trabalho. Cada tarefa agendada no grupo de tarefas serão obter cancelada transitivamente se possível.  
   
@@ -49,7 +49,7 @@ void cancel();
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [cancelamento](../cancellation-in-the-ppl.md).  
   
-##  <a name="a-nameiscancelinga-iscanceling"></a><a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a>is_canceling 
 
  Informa o chamador se o grupo de tarefas está no meio de um cancelamento. Isso não indica necessariamente que o `cancel` método foi chamado no `task_group` objeto (embora, certamente qualifica este método para retornar `true`). Ele pode ser o caso que a `task_group` objeto está em execução em linha e um grupo de tarefas para cima na árvore de trabalho foi cancelado. Em casos como esses onde o tempo de execução pode determinar antecipadamente que cancelamento fluirá através de `task_group` objeto, `true` também será retornado.  
   
@@ -63,7 +63,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [cancelamento](../cancellation-in-the-ppl.md).  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>executar 
+##  <a name="run"></a>executar 
 
  Agenda uma tarefa no `task_group` objeto. Se um `task_handle` objeto é passado como um parâmetro para `run`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto. A versão do método que usa uma referência a um objeto de função como um parâmetro envolve a alocação de heap dentro do runtime que pode ser executar menos bem que usar a versão que pega uma referência para um `task_handle` objeto. A versão que aceita o parâmetro `_Placement` faz com que a tarefa a ser mais adequado para a execução no local especificado pelo parâmetro.  
   
@@ -119,7 +119,7 @@ void run(
   
  O método lança um [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exceção se a tarefa manipular determinado pelo `_Task_handle` parâmetro já foi agendado para um objeto de grupo de tarefa por meio o `run` método e não houve nenhuma chamada intermediária para o `wait` ou `run_and_wait` método nesse grupo de tarefas.  
   
-##  <a name="a-namerunandwaita-runandwait"></a><a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a>run_and_wait 
 
  Agenda uma tarefa para ser executada embutido no contexto de chamada com o auxílio do `task_group` objeto para suporte ao cancelamento completa. A função, em seguida, aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado. Se um `task_handle` objeto é passado como um parâmetro para `run_and_wait`, o chamador é responsável por gerenciar a vida útil do `task_handle` objeto.  
   
@@ -162,7 +162,7 @@ task_group_status run_and_wait(
   
  O caminho não excepcional de execução, você tem uma exigência para chamar esse método qualquer ou o `wait` método antes do destruidor do `task_group` executa.  
   
-##  <a name="a-namectora-taskgroup"></a><a name="ctor"></a>task_group 
+##  <a name="ctor"></a>task_group 
 
  Constrói um novo `task_group` objeto.  
   
@@ -181,7 +181,7 @@ task_group(
 ### <a name="remarks"></a>Comentários  
  O construtor que usa um token de cancelamento cria um `task_group` que serão canceladas quando o código-fonte associado ao token é cancelada. Também fornecer um token de cancelamento explícita isola a esse grupo de tarefa da participação em um cancelamento implícito de um grupo pai com um token diferente ou não.  
   
-##  <a name="a-namedtora-taskgroup"></a><a name="dtor"></a>~ task_group 
+##  <a name="dtor"></a>~ task_group 
 
  Destrói um objeto `task_group`. Você deve chamar o o `wait` ou `run_and_wait` método no objeto antes do destruidor está sendo executado, a menos que o destruidor está sendo executado como resultado de desenrolamento devido a uma exceção da pilha.  
   
@@ -192,7 +192,7 @@ task_group(
 ### <a name="remarks"></a>Comentários  
  Se o destruidor é executado como resultado da execução normal (por exemplo, não desenrolamento da pilha devido a uma exceção) e não o `wait` nem `run_and_wait` métodos têm sido chamados, o destruidor pode lançar uma [missing_wait](missing-wait-class.md) exceção.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Aguarde 
+##  <a name="wait"></a>Aguarde 
 
  Aguarda até que todo o trabalho no `task_group` objeto foi concluída ou cancelado.  
   
