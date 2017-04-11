@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4357 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4357 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1337d3861e6cb73bd4a7c44b77dbe2ef1e539d91
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: dd055c5798b71fb68eec23d00b23a5682230b988
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-warning-level-3-c4357"></a>Compilador C4357 de aviso (nível 3)
-argumento de matriz de parâmetro na lista de argumentos formais para delegar 'del' ignorado ao gerar 'function'  
+argumento de matriz de parâmetro na lista de argumentos formais para delegate 'del' ignorada ao gerar 'function'  
   
- O `ParamArray` atributo foi ignorado, e `function`não pode ser chamado com argumentos de variável.  
+ O `ParamArray` atributo foi ignorado, e `function` não pode ser chamado com argumentos de variável.  
   
  O exemplo a seguir gera C4357:  
   

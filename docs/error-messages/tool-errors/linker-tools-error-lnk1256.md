@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1256 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1256 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,15 +35,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 02231366d7b20be51e7b918fe7932fc80a38b169
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e29e6100b57531c7a29f84e7c0feac53f20cec9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk1256"></a>Erro das Ferramentas de Vinculador LNK1256
 Falha na operação do ALINK: motivo  
   
- Um motivo comum para LNK1256 é um número de versão incorreto para um assembly. O valor 65535 não é permitido para nenhuma parte do número de versão do assembly. O intervalo válido para versões do assembly é de 0 – 65534.  
+ Um motivo comum para LNK1256 é um número de versão incorreto para um assembly. O valor 65535 não é permitido para nenhuma parte do número de versão do assembly. O intervalo válido para versões de assembly é 0 - 65534.  
   
  LNK1256 também pode ser causado se ALINK não puder localizar o contêiner de chave denominado. Excluir o contêiner de chave e adicioná-lo novamente para o CSP de nome forte usando [Sn.exe (ferramenta de nome forte)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).  
   

@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** Falha na Conexão à fonte de dados. É passado um **nulo** `CDatabase` ponteiro para o construtor de conjunto de registros e a tentativa subsequente para criar uma conexão com base em `GetDefaultConnect` falhou.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** solicitada mais dados que você forneceu o armazenamento. Para obter informações sobre como aumentar o armazenamento de dados fornecida para `CString` ou `CByteArray` tipos de dados, consulte o `nMaxLength` argumento [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) e [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) em "Macros e globais".  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** solicitada mais dados que você forneceu o armazenamento. Para obter informações sobre como aumentar o armazenamento de dados fornecida para `CString` ou `CByteArray` tipos de dados, consulte o `nMaxLength` argumento [RFX_Text](record-field-exchange-functions.md#rfx_text) e [RFX_Binary](record-field-exchange-functions.md#rfx_binary) em "Macros e globais".  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** uma chamada para `CRecordset::Open` solicitar um dynaset falha. Não há suporte para dynasets pelo driver.  
   

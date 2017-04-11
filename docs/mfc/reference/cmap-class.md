@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>Classe CMap
@@ -117,7 +117,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[[CMap::operator]](#operator_at)|Insere um elemento de substituição de operador do mapa \u2012 para `SetAt`.|  
+|[[CMap::operator]](#operator_at)|Insere um elemento no mapa — substituição de operador para `SetAt`.|  
   
 ## <a name="remarks"></a>Comentários  
  Depois que você inseriu um par chave-valor (elemento a) para o mapa, você pode recuperar com eficiência ou excluir o par usando a chave para acessá-lo. Você também pode iterar por todos os elementos no mapa.  
@@ -214,7 +214,7 @@ void GetNextAssoc(
   
 ### <a name="parameters"></a>Parâmetros  
  `rNextPosition`  
- Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextAssoc` ou `GetStartPosition` chamada.  
+ Especifica uma referência a um **posição** valor retornado pelo anterior `GetNextAssoc` ou `GetStartPosition` chamar.  
   
  *CHAVE*  
  Parâmetro de modelo especificando o tipo de chave do mapa.  

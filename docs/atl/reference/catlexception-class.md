@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlException | Documentos do Microsoft
+title: Classe CAtlException | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 30c9235f16581c86ab5612522909dc366b1ce17e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlexception-class"></a>Classe CAtlException
-Essa classe define uma exceção ATL.  
+Essa classe define uma exceção de ATL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -69,10 +69,10 @@ class CAtlException
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|A variável do tipo HRESULT criados pelo objeto e usado para armazenar a condição de erro.|  
+|[CAtlException::m_hr](#m_hr)|A variável de tipo de HRESULT criados pelo objeto usado para armazenar a condição de erro.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `CAtlException` objeto representa uma condição de exceção relacionada a uma operação de ATL. O `CAtlException` classe inclui um membro de dados pública que armazena o código de status indicando o motivo da exceção e um operador de conversão que permite que você trate a exceção como se fosse um HRESULT.  
+ Um `CAtlException` objeto representa uma condição de exceção relacionada a uma operação de ATL. O `CAtlException` classe inclui um membro de dados pública que armazena o código de status indicando o motivo para a exceção e um operador de conversão que permite que você trate a exceção, como se fosse um HRESULT.  
   
  Em geral, você chamará `AtlThrow` em vez de criar um `CAtlException` diretamente do objeto.  
   
@@ -109,6 +109,6 @@ HRESULT m_hr;
  O membro de dados que armazena a condição de erro. O valor HRESULT é definido pelo construtor, [CAtlException::CAtlException](#catlexception).  
   
 ## <a name="see-also"></a>Consulte também  
- [AtlThrow](http://msdn.microsoft.com/library/2bd111da-8170-488d-914a-c9bf6b6765f7)   
+ [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonFontComboBox | Documentos do Microsoft
+title: Classe CMFCRibbonFontComboBox | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 851ef15013ca62012931fd92baf277d5db96033d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9bf968571f9a1bcdbce57c3559b3d70e7692ebe0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
@@ -75,18 +75,18 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Preenche a caixa de combinação da fonte da faixa de opções com as fontes do tipo de fonte especificada, o conjunto de caracteres e densidade e família.|  
-|`CMFCRibbonFontComboBox::CreateObject`|Usado pelo framework para criar uma instância desse tipo de classe dinâmica.|  
+|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Preenche a caixa de combinação de fonte de faixa de opções com as fontes do tipo de fonte especificada, o conjunto de caracteres e densidade e família.|  
+|`CMFCRibbonFontComboBox::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
 |[CMFCRibbonFontComboBox::GetCharSet](#getcharset)|Retorna o conjunto de caracteres especificado.|  
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
-|[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Retorna os tipos de fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou qualquer combinação bit a bit dele.|  
-|[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Retorna a distância e a família de fontes que são exibidos na caixa de combinação.|  
+|[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Retorna os tipos de fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou uma combinação bit a bit disso.|  
+|[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Retorna o tom e a família de fontes que são exibidos na caixa de combinação.|  
 |`CMFCRibbonFontComboBox::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
-|[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Preenche a caixa de combinação da fonte da faixa de opções com as fontes do tipo de fonte especificado anteriormente, conjunto de caracteres e densidade e família.|  
+|[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Preenche a caixa de combinação de fonte de faixa de opções com as fontes do tipo de fonte especificado anteriormente, o conjunto de caracteres e densidade e família.|  
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|Seleciona a fonte especificada na caixa de combinação.|  
   
 ## <a name="remarks"></a>Comentários  
- Depois de criar um `CMFCRibbonFontComboBox` de objeto, adicioná-lo a um painel de faixa de opções chamando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Depois de criar um `CMFCRibbonFontComboBox` de objeto, adicione-a um painel de faixa de opções chamando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,7 +125,7 @@ void BuildFonts(
  Especifica a densidade e a família de fontes para adicionar.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
- Constrói e inicializa um [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objeto.  
+ Cria e inicializa um [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objeto.  
   
 ```  
 CMFCRibbonFontComboBox(
@@ -141,7 +141,7 @@ CMFCRibbonFontComboBox(
  A ID de comando do comando que é executado quando o usuário seleciona um item da caixa de combinação.  
   
  [in] `nFontType`  
- Especifica qual fonte tipos a serem exibidos na caixa de combinação. As opções válidas são **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, e **TRUETYPE_FONTTYPE**, ou uma combinação bit a bit disso.  
+ Especifica os tipos de fonte que exibir na caixa de combinação. As opções válidas são **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, e **TRUETYPE_FONTTYPE**, ou uma combinação bit a bit disso.  
   
  [in] `nCharSet`  
  Filtra as fontes na caixa de combinação para aqueles que pertencem ao conjunto de caracteres especificado.  
@@ -155,7 +155,7 @@ CMFCRibbonFontComboBox(
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre possíveis `nFontType` valores de parâmetro, consulte [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) na documentação do SDK do Windows.  
   
- Para obter mais informações sobre conjuntos de caracteres válidos que podem ser atribuídos a `nCharSet,` e valores válidos que podem ser atribuídos a `nPitchAndFamily`, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) na documentação do SDK do Windows.  
+ Para obter mais informações sobre conjuntos de caracteres válida que podem ser atribuídos a `nCharSet`e os valores válidos que podem ser atribuídos a `nPitchAndFamily`, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) na documentação do SDK do Windows.  
   
 ##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -172,14 +172,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
- Preenche a caixa de combinação na faixa de opções com as fontes de um tipo de fonte especificado anteriormente, o conjunto de caracteres e a densidade e a família.  
+ Preenche a caixa de combinação na faixa de opções com as fontes de um tipo de fonte especificado anteriormente, o conjunto de caracteres e o tom e a família.  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Você pode especificar o tipo de fonte, o conjunto de caracteres, e densidade e família de fontes para incluir na caixa de combinação de fonte da faixa de opções caixa a [construtor](#cmfcribbonfontcombobox) para essa classe, ou chamando [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
+ Você pode especificar o tipo de fonte, o conjunto de caracteres, e a densidade e a família de fontes para incluir na caixa de combinação de fonte da faixa de opções caixa o [construtor](#cmfcribbonfontcombobox) para esta classe, ou chamando [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
 ##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  Seleciona a fonte especificada na caixa de combinação.  
@@ -219,7 +219,7 @@ BYTE GetCharSet() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
- Retorna os tipos de fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou qualquer combinação bit a bit dele.  
+ Retorna os tipos de fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou uma combinação bit a bit disso.  
   
 ```  
 int GetFontType() const;  
@@ -231,14 +231,14 @@ int GetFontType() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
- Retorna a distância e a família de fontes que são exibidos na caixa de combinação.  
+ Retorna o tom e a família de fontes que são exibidos na caixa de combinação.  
   
 ```  
 BYTE GetPitchAndFamily() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Pitch e a família de produtos (consulte LOGFONT na documentação do SDK do Windows).  
+ Tom e a família de produtos (consulte LOGFONT na documentação do SDK do Windows).  
   
 ### <a name="remarks"></a>Comentários  
   

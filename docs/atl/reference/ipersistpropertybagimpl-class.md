@@ -1,5 +1,5 @@
 ---
-title: Classe IPersistPropertyBagImpl | Documentos do Microsoft
+title: Classe IPersistPropertyBagImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,16 +39,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe IPersistPropertyBagImpl
 Essa classe implementa **IUnknown** e permite que um objeto salvar suas propriedades em um recipiente de propriedades fornecido pelo cliente.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
 #### <a name="parameters"></a>Parâmetros  
  `T`  
- Sua classe derivada de `IPersistPropertyBagImpl`.  
+ A classe derivada de `IPersistPropertyBagImpl`.  
   
 ## <a name="members"></a>Membros  
   
@@ -73,11 +73,11 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |[IPersistPropertyBagImpl::Save](#save)|Salva as propriedades do objeto em um recipiente de propriedades fornecido pelo cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- O [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permite que um objeto salvar suas propriedades em um recipiente de propriedades fornecido pelo cliente. Classe `IPersistPropertyBagImpl` fornece uma implementação padrão dessa interface e implementa **IUnknown** enviando informações para o despejo de compilações de dispositivo no modo de depuração.  
+ O [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permite que um objeto salvar suas propriedades em um recipiente de propriedades fornecido pelo cliente. Classe `IPersistPropertyBagImpl` fornece uma implementação padrão dessa interface e implementa **IUnknown** enviando informações para o despejo compilações dispositivo na depuração.  
   
- **IPersistPropertyBag** funciona em conjunto com [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) e [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Essas duas interfaces a última opção devem ser implementadas pelo cliente. Por meio de `IPropertyBag`, o cliente salva e carrega as propriedades do objeto individual. Por meio de **IErrorLog**, o objeto e o cliente podem relatar os erros encontrados.  
+ **IPersistPropertyBag** funciona em conjunto com [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) e [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Essas duas interfaces último devem ser implementados pelo cliente. Por meio de `IPropertyBag`, o cliente salva e carrega as propriedades do objeto individual. Por meio de **IErrorLog**, o objeto e o cliente podem relatar os erros encontrados.  
   
- **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto do ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IPersistPropertyBag`  
@@ -95,7 +95,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [ipersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Inicializa um objeto recém-criado.  
@@ -138,6 +138,6 @@ STDMETHOD(Save)(
  Consulte [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
- [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
+ [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
 

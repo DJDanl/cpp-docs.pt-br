@@ -1,5 +1,5 @@
 ---
-title: C3741 de erro do compilador | Documentos do Microsoft
+title: C3741 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f29b627f83cce207fee010ab558dffcd6f0d2190
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e7744a62cce2fddf27026ea453643063da9d9757
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-error-c3741"></a>C3741 de erro do compilador
-'class': deve ser um coclass quando o parâmetro 'layout_dependent' event_receiver = true  
+'class': deve ser uma coclass quando o parâmetro ' layout_dependent ' de event_receiver = true  
   
- Quando `layout_dependent=true`para um [event_receiver](../../windows/event-receiver.md) classe e, em seguida, a classe também deve ter o [coclass](../../windows/coclass.md) atributo.  
+ Quando `layout_dependent=true` para um [event_receiver](../../windows/event-receiver.md) classe e, em seguida, a classe também deve ter o [coclass](../../windows/coclass.md) atributo.  
   
  O exemplo a seguir gera C3741  
   

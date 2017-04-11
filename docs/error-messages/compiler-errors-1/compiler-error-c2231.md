@@ -1,5 +1,5 @@
 ---
-title: C2231 de erro do compilador | Documentos do Microsoft
+title: C2231 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b6afdcd1ad563f3bc258c68d61254c3621077ea1
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 223af570c50bd4918e9b136c30e9e97971739752
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2231"></a>C2231 de erro do compilador
-'.': usar pontos de operando da esquerda para 'class-key', '->'  
+'.': operando da esquerda aponta para 'chave class', use '->'  
   
  O operando à esquerda da operação de seleção de membro (.) é um ponteiro em vez de uma classe, estrutura ou união.  
   

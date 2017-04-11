@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ab0f6998aa2f4f6ba5066cbc1d4c6813dcbaab0b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ad3844e5d57081b1a9638e197231479b7a03a337
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="error-handling-crt"></a>Tratamento de erros (CRT)
@@ -47,17 +47,17 @@ Use estas rotinas para tratar erros de programa.
   
 ### <a name="error-handling-routines"></a>Rotinas de tratamento de erros  
   
-|Rotina|Uso|Equivalente ao .NET Framework|  
-|-------------|---------|-------------------------------|  
-|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro|Teste para a programação de erros de lógica; disponível em ambas as versões de lançamento e de depuração da biblioteca em tempo de execução|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|macros [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Similar a `assert`; disponível apenas em versões de depuração das bibliotecas em tempo de execução|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[clearerr](../c-runtime-library/reference/clearerr.md)|Redefina o indicador de erro. Chamando `rewind` ou fechar um fluxo também redefine o indicador de erro.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_eof](../c-runtime-library/reference/eof.md)|Seleção para o final do arquivo em e/s de nível inferior|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[feof](../c-runtime-library/reference/feof.md)|Teste para o final do arquivo. Final do arquivo também é indicado quando `_read` retorna 0.|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[ferror](../c-runtime-library/reference/ferror.md)|Testar se há erros de e/s de fluxo|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|Macros [_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Gera um relatório similar a `printf`; disponível apenas em versões de depuração das bibliotecas em tempo de execução|Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modifica `__error_mode` para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que finalizará possivelmente o programa.||  
-|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Define o manipulador para uma chamada de função virtual pura.||  
+|Rotina|Uso|  
+|-------------|---------|  
+|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro|Teste para erros de lógica de programação; disponível nas versões de lançamento e de depuração da biblioteca em tempo de execução.|  
+|Macros [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Similar a `assert`, mas disponível apenas nas versões de depuração da biblioteca em tempo de execução.|  
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Redefina o indicador de erro. Chamando `rewind` ou fechar um fluxo também redefine o indicador de erro.|  
+|[_eof](../c-runtime-library/reference/eof.md)|Verifique o fim do arquivo em E/S de baixo nível.|  
+|[feof](../c-runtime-library/reference/feof.md)|Teste para o final do arquivo. Final do arquivo também é indicado quando `_read` retorna 0.|  
+|[ferror](../c-runtime-library/reference/ferror.md)|Teste se há erros de E/S de fluxo.|  
+|Macros [_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Gera um relatório similar a `printf`, mas disponível apenas nas versões de depuração da biblioteca em tempo de execução.|  
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modifica `__error_mode` para determinar um local não padrão em que o tempo de execução C grava uma mensagem de erro para um erro que finalizará possivelmente o programa.|  
+|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Define o manipulador para uma chamada de função virtual pura.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)

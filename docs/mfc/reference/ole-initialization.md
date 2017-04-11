@@ -1,5 +1,5 @@
 ---
-title: "Inicialização OLE | Documentos do Microsoft"
+title: "Inicialização OLE | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,22 +34,39 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 5c2d8a1552b8cd546b7e22683fe9f73bbc54df5c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: c598a2c78e92725e656de82397418f1635d4f92d
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ole-initialization"></a>Inicialização OLE
-Antes de um aplicativo pode usar os serviços do sistema OLE, ele deve inicializar as DLLs do sistema OLE e verifique se as DLLs são a versão correta. O **AfxOleInit** função inicializa as DLLs do sistema OLE.  
+Antes de um aplicativo pode usar os serviços do sistema OLE, ele deve inicializar as DLLs do sistema OLE e verifique se as DLLs são da versão correta. O **AfxOleInit** função inicializa a DLLs do sistema OLE.  
   
 ### <a name="ole-initialization"></a>Inicialização OLE  
   
 |||  
 |-|-|  
-|[AfxOleInit](#afxoleinit)|Inicializa as bibliotecas OLE.|  
+|[AfxOleInit](#afxoleinit)|Inicializa as bibliotecas OLE.| 
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Chamar essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte para contenção de controles OLE.| 
+
+
+## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
+Chamar essa função em seu objeto de aplicativo `InitInstance` função para habilitar o suporte para contenção de controles OLE.  
+   
+### <a name="syntax"></a>Sintaxe    
+```
+void AfxEnableControlContainer( );  
+```  
+   
+### <a name="remarks"></a>Comentários  
+ Para obter mais informações sobre controles OLE (agora chamado de controles ActiveX), consulte [tópicos de controle ActiveX](../mfc-activex-controls.md).  
+   
+### <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxdisp.h  
+
   
-##  <a name="a-nameafxoleinita--afxoleinit"></a><a name="afxoleinit"></a>AfxOleInit  
- Inicializa o suporte OLE para o aplicativo.  
+##  <a name="afxoleinit"></a>AfxOleInit  
+ Inicializa o suporte do OLE para o aplicativo.  
   
 ``` 
 BOOL AFXAPI AfxOleInit(); 
@@ -59,17 +76,17 @@ BOOL AFXAPI AfxOleInit();
  Diferente de zero se for bem-sucedida; 0 se a inicialização falhar, possivelmente porque versões incorretas das DLLs do sistema OLE estão instaladas.  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função para inicializar o suporte OLE para um aplicativo MFC. Quando essa função é chamada, ocorrem as seguintes ações:  
+ Chame essa função para inicializar o suporte OLE para um aplicativo do MFC. Quando esta função é chamada, ocorrem as seguintes ações:  
   
--   Inicializa a biblioteca COM no apartment atual do aplicativo de chamada. Para obter mais informações, consulte [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
+-   Inicializa a biblioteca de data/hora de apartment atual do aplicativo de chamada. Para obter mais informações, consulte [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
   
--   Cria um objeto de filtro de mensagem, Implementando o [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interface. Esse filtro de mensagem pode ser acessado com uma chamada para [AfxOleGetMessageFilter](http://msdn.microsoft.com/library/36cca011-4775-4086-b471-5557a87b266c).  
-  
-> [!NOTE]
->  Se **AfxOleInit** é chamado de uma DLL do MFC, a chamada falhará. A falha ocorre porque a função assumirá que, se ele é chamado de uma DLL, o sistema OLE anteriormente foi inicializado pelo aplicativo de chamada.  
+-   Cria um objeto de filtro de mensagem, Implementando a [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interface. Esse filtro de mensagem pode ser acessado com uma chamada para [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
->  Aplicativos MFC devem ser inicializados como compartimento de único thread (STA). Se você chamar [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) em seu `InitInstance` substituir, especifique `COINIT_APARTMENTTHREADED` (em vez de `COINIT_MULTITHREADED`). Para obter mais informações, consulte PRB: aplicativo MFC para de responder quando você inicializar o aplicativo como um Multithreaded Apartment (828643) em [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Se **AfxOleInit** é chamado de uma DLL MFC, a chamada falhará. A falha ocorre porque a função pressupõe que, se ele é chamado de uma DLL, o sistema OLE era inicializado anteriormente pelo aplicativo de chamada.  
+  
+> [!NOTE]
+>  Aplicativos MFC devem ser inicializados como apartment threaded único (STA). Se você chamar [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) no seu `InitInstance` substituir, especifique `COINIT_APARTMENTTHREADED` (em vez de `COINIT_MULTITHREADED`). Para obter mais informações, consulte PRB: aplicativos MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h

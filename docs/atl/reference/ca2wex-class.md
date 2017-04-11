@@ -1,5 +1,5 @@
 ---
-title: Classe CA2WEX | Documentos do Microsoft
+title: Classe CA2WEX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,16 +39,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7c1029d0d9cb1abb1980f97c9541e2c1ce40b539
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
-Essa classe é usada, as macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.  
+Essa classe é usada pelas macros de conversão de cadeia de caracteres `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e o typedef **CA2W**.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,13 +86,13 @@ class CA2WEX
 ## <a name="remarks"></a>Comentários  
  A menos que a funcionalidade adicional for necessária, use `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, ou **CA2W** em seu código.  
   
- Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é seguro usar em loops e que ele não estouram a pilha.  
+ Essa classe contém um buffer de tamanho fixo estático que é usado para armazenar o resultado da conversão. Se o resultado for muito grande para caber no buffer estático, a classe aloca memória usando `malloc`, liberando a memória quando o objeto sair do escopo. Isso garante que, diferentemente do texto macros de conversão disponíveis em versões anteriores do ATL, essa classe é segura usar em loops e que ele não estouro de pilha.  
   
  Se a classe tenta alocar memória no heap e falhar, ele chamará `AtlThrow` com um argumento de **E_OUTOFMEMORY**.  
   
- Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor da classe.  
+ Por padrão, as classes de conversão de ATL e macros usam página de código ANSI do thread atual para a conversão. Se você quiser substituir esse comportamento para uma conversão específica, especifique a página de código como o segundo parâmetro para o construtor da classe.  
   
- As macros a seguir baseiam-se em sua classe:  
+ As seguintes macros baseiam-se esta classe:  
   
 - `CA2TEX`  
   
@@ -102,17 +102,17 @@ class CA2WEX
   
 - `CT2CWEX`  
   
- Typedef a seguir baseia-se em sua classe:  
+ Typedef seguir baseia-se essa classe:  
   
 - **CA2W**  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Atlconv. h  
+ **Cabeçalho:** atlconv.h  
   
 ##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
  O construtor.  

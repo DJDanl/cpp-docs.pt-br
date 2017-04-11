@@ -1,5 +1,5 @@
 ---
-title: Classe CComClassFactoryAutoThread | Documentos do Microsoft
+title: Classe CComClassFactoryAutoThread | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: fcc5671fc136b061bf3e8109999ac91d302d3d3b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 88728e6fccc4aea6e8a1f0bbb2811ed299dd4ad9
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Classe CComClassFactoryAutoThread
-Essa classe implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface e permite que os objetos a serem criados em vários apartments.  
+Essa classe implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de interface e permite que os objetos a serem criados em vários apartments.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,14 +63,14 @@ class CComClassFactoryAutoThread
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Cria um objeto do CLSID especificado.|  
-|[CComClassFactoryAutoThread::LockServer](#lockserver)|Bloqueia a fábrica de classes na memória.|  
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|Bloqueia a fábrica de classe na memória.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComClassFactoryAutoThread`é semelhante ao [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mas permite que os objetos a serem criados em vários apartments. Para aproveitar esse suporte, derivar seu módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread`é semelhante a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mas permite que os objetos a serem criados em vários apartments. Para aproveitar esse suporte, derivam o seu módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Objetos ATL normalmente adquirem uma fábrica de classes, derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classes padrão. Usar `CComClassFactoryAutoThread`, especifique o [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro na definição de classe do objeto. Por exemplo:  
+ Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classe padrão. Para usar `CComClassFactoryAutoThread`, especifique o [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro na definição de classe do objeto. Por exemplo:  
   
- [!code-cpp[NVC_ATL_COM N º&9;](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM 9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CComObjectRootBase`  
@@ -85,7 +85,7 @@ class CComClassFactoryAutoThread
  **Cabeçalho:** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
- Cria um objeto do CLSID especificado e recupera um ponteiro de interface para esse objeto.  
+ Cria um objeto com o CLSID especificado e recupera um ponteiro de interface para este objeto.  
   
 ```
 STDMETHODIMP CreateInstance(
@@ -96,22 +96,22 @@ STDMETHODIMP CreateInstance(
   
 ### <a name="parameters"></a>Parâmetros  
  `pUnkOuter`  
- [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser o externo desconhecido. Caso contrário, `pUnkOuter` deve ser **nulo**.  
+ [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser externo desconhecido. Caso contrário, `pUnkOuter` devem ser **nulo**.  
   
  `riid`  
- [in] O IID da interface solicitada. Se `pUnkOuter` não **nulo**, `riid` deve ser **IID_IUnknown**.  
+ [in] O IID da interface solicitada. Se `pUnkOuter` é não - **nulo**, `riid` devem ser **IID_IUnknown**.  
   
  `ppvObj`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface identificado por `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Se o módulo é derivado de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` primeiro seleciona um thread para criar o objeto no apartment associado.  
+ Se seu módulo deriva [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` primeiro seleciona um thread para criar o objeto no apartment associado.  
   
 ##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
- Incrementa e decrementa o bloqueio de módulo contar chamando **_Module::Lock** e **_Module::Unlock**, respectivamente.  
+ Incrementa e diminui o bloqueio de módulo contagem chamando **_Module::Lock** e **_Module::Unlock**, respectivamente.  
   
 ```
 STDMETHODIMP LockServer(BOOL fLock);

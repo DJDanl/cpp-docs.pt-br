@@ -1,5 +1,5 @@
 ---
-title: Classe CDynamicChain | Documentos do Microsoft
+title: Classe CDynamicChain | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,16 +41,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4da97d0b3d72400d7e285fde187e6860759900af
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 Essa classe fornece métodos que suporte o encadeamento dinâmico de mapas de mensagem.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,30 +73,30 @@ class CDynamicChain
 |----------|-----------------|  
 |[CDynamicChain::CallChain](#callchain)|Direciona uma mensagem do Windows ao mapa de mensagem de outro objeto.|  
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Remove uma entrada de mapa de mensagem da coleção.|  
-|[CDynamicChain::SetChainEntry](#setchainentry)|Adiciona uma entrada de mapa da mensagem à coleção ou modifica uma entrada existente.|  
+|[CDynamicChain::SetChainEntry](#setchainentry)|Adiciona uma entrada de mapa de mensagem para a coleção ou modifica uma entrada existente.|  
   
 ## <a name="remarks"></a>Comentários  
- `CDynamicChain`gerencia uma coleção de mapas de mensagem, permitindo que uma mensagem do Windows ser direcionado, em tempo de execução ao mapa de mensagem de outro objeto.  
+ `CDynamicChain`gerencia uma coleção de mapas de mensagem, permitindo que uma mensagem do Windows ser direcionado em tempo de execução ao mapa de mensagem de outro objeto.  
   
- Para adicionar suporte a encadeamento dinâmico de mapas de mensagem, faça o seguinte:  
+ Para adicionar suporte para dinâmico encadeamento de mapas de mensagem, faça o seguinte:  
   
--   Derive a classe de `CDynamicChain`. No mapa de mensagem, especifique o [CHAIN_MSG_MAP_DYNAMIC](http://msdn.microsoft.com/library/7e5c72b7-cb31-4f3b-8a1b-6293804af220) macro cadeia ao mapa de mensagem padrão do outro objeto.  
+-   Derive a classe de `CDynamicChain`. No mapa de mensagem, especifique o [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro cadeia ao mapa de mensagem padrão do outro objeto.  
   
--   Derivar todas as classes que você deseja encadear a partir de [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`permite que um objeto expor seus mapas de mensagem a outros objetos.  
+-   Obter todas as classes que você deseja para de cadeia de [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`permite que um objeto para expor seus mapas de mensagem a outros objetos.  
   
--   Chamar `CDynamicChain::SetChainEntry` para identificar qual objeto e qual mensagem do mapa que você deseja vincular a.  
+-   Chamar `CDynamicChain::SetChainEntry` para identificar o objeto e qual mensagem mapear você desejam cadeia.  
   
- Por exemplo, suponha que sua classe é definida da seguinte maneira:  
+ Por exemplo, suponha que a classe é definida da seguinte maneira:  
   
  [!code-cpp[88 NVC_ATL_Windowing](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
- O cliente então chama `CMyWindow::SetChainEntry`:  
+ O cliente, em seguida, chama `CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing&#89;](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing #89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
- onde `chainedObj` é o objeto encadeado e é uma instância de uma classe derivada de `CMessageMap`. Agora, se `myCtl` recebe uma mensagem que não é tratada por `OnPaint` ou `OnSetFocus`, o procedimento de janela direciona a mensagem `chainedObj`do mapa da mensagem padrão.  
+ onde `chainedObj` é o objeto encadeado e é uma instância de uma classe derivada de `CMessageMap`. Agora, se `myCtl` recebe uma mensagem que não é tratada por `OnPaint` ou `OnSetFocus`, o procedimento de janela direciona a mensagem a ser `chainedObj`do mapa da mensagem padrão.  
   
- Para obter mais informações sobre o encadeamento de mapa de mensagem, consulte [mapas de mensagem](../../atl/message-maps-atl.md) no artigo "Classes de janela ATL".  
+ Para obter mais informações sobre encadeamento de mapa de mensagem, consulte [mapas de mensagem](../../atl/message-maps-atl.md) no artigo "Classes de janela ATL".  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
@@ -137,7 +137,7 @@ BOOL CallChain(
  **TRUE** se a mensagem for totalmente processada; caso contrário, **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- O procedimento de janela invocar `CallChain`, você deve especificar o [CHAIN_MSG_MAP_DYNAMIC](http://msdn.microsoft.com/library/7e5c72b7-cb31-4f3b-8a1b-6293804af220) macro em seu mapa de mensagem. Para obter um exemplo, consulte o [CDynamicChain](../../atl/reference/cdynamicchain-class.md) visão geral.  
+ O procedimento de janela invocar `CallChain`, você deve especificar o [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro em seu mapa de mensagem. Para obter um exemplo, consulte o [CDynamicChain](../../atl/reference/cdynamicchain-class.md) visão geral.  
   
  `CallChain`requer uma chamada anterior a [SetChainEntry](#setchainentry) para associar o `dwChainID` valor com um objeto e seu mapa de mensagem.  
   
@@ -159,7 +159,7 @@ CDynamicChain();
  Libera todos os recursos alocados.  
   
 ##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
- Remove o mapa da mensagem especificado da coleção.  
+ Remove o mapa de mensagem especificado da coleção.  
   
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
@@ -173,7 +173,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
  **TRUE** se o mapa da mensagem for removido com êxito da coleção. Caso contrário, **FALSE**.  
   
 ##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
- Adiciona o mapa da mensagem especificado à coleção.  
+ Adiciona o mapa de mensagem especificada à coleção.  
   
 ```
 BOOL SetChainEntry(  
@@ -190,13 +190,13 @@ BOOL SetChainEntry(
  [in] Um ponteiro para o objeto encadeado declarando o mapa da mensagem. Este objeto deve derivar de [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
  `dwMsgMapID`  
- [in] O identificador do mapa de mensagens no objeto encadeado. O valor padrão é 0, que identifica o mapa da mensagem padrão declarado com [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554). Para especificar um mapa de mensagens alternativos declarados com [ALT_MSG_MAP(msgMapID)](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8), passar `msgMapID`.  
+ [in] O identificador do mapa de mensagem no objeto encadeado. O valor padrão é 0, que identifica o mapa da mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para especificar um mapa de mensagem alternativo declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passar `msgMapID`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- **TRUE** se o mapa da mensagem é adicionado com êxito à coleção. Caso contrário, **FALSE**.  
+ **TRUE** se o mapa de mensagens foi adicionado com êxito à coleção. Caso contrário, **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- Se o `dwChainID` valor já existe na coleção, o objeto associado e o mapa da mensagem são substituídos por `pObject` e `dwMsgMapID`, respectivamente. Caso contrário, uma nova entrada é adicionada.  
+ Se o `dwChainID` valor já existe na coleção, seu objeto associado e um mapa de mensagem são substituídas por `pObject` e `dwMsgMapID`, respectivamente. Caso contrário, uma nova entrada será adicionada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   

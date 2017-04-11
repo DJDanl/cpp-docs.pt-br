@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 3) C4280 | Documentos do Microsoft"
+title: "Compilador aviso (nível 3) C4280 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6dd8574d40ea139aad45193d41f6ee90e606bb12
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 086b9dfeaa2ae9ee8f48ad984505582efb32220d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-3-c4280"></a>Compilador C4280 de aviso (nível 3)
-' operador – >' foi self recursivas por meio do tipo 'type'  
+'operator->' foi auto recursivo através do tipo 'type'  
   
- Seu código permite incorretamente **operador – >** chame a mesmo.  
+ Seu código permite incorretamente **operador->** para chamar a mesmo.  
   
  O exemplo a seguir gera C4280:  
   

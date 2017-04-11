@@ -49,8 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4123126544007e95cc211c2d003a76f7607d9601
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7580d75e24f9291a3cb6943785b387a5ae67254f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
@@ -80,7 +81,7 @@ _startupinfo * _StartInfo);
  Um inteiro que contém o número de argumentos que se seguem em `argv`. O parâmetro `argc` é sempre maior ou igual a 1.  
   
  `_Argv`  
- Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv[0]` é o comando com o qual o programa é invocado, argv[1] é o primeiro argumento de linha de comando e assim por diante, até argv[argc], que sempre é NULL. O primeiro argumento de linha de comando sempre é `argv[1]` e o último é `argv[argc – 1]`.  
+ Uma matriz de cadeias de caracteres terminadas em nulo que representam argumentos de linha de comando inseridos pelo usuário do programa. Por convenção, `argv[0]` é o comando com o qual o programa é invocado, argv[1] é o primeiro argumento de linha de comando e assim por diante, até argv[argc], que sempre é NULL. O primeiro argumento de linha de comando sempre é `argv[1]` e o último é `argv[argc - 1]`.  
   
  `_Env`  
  Uma matriz de cadeias de caracteres que representam as variáveis definidas no ambiente do usuário. Essa matriz é encerrada por uma entrada NULL.  
@@ -103,8 +104,3 @@ _startupinfo * _StartInfo);
 |-------------|---------------------|  
 |__getmainargs|internal.h|  
 |__wgetmainargs|internal.h|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

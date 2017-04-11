@@ -1,5 +1,5 @@
 ---
-title: Classe IDispEventImpl | Documentos do Microsoft
+title: Classe IDispEventImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,16 +41,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 235955f8573ae7e430be3de2a96efdd7496d15de
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="idispeventimpl-class"></a>Classe IDispEventImpl
 Essa classe fornece implementações do `IDispatch` métodos.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,16 +66,16 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
 #### <a name="parameters"></a>Parâmetros  
  `nID`  
- Um identificador exclusivo para o objeto de origem. Quando `IDispEventImpl` é a classe base para um controle composto, use a ID de recurso do controle independente desejado para esse parâmetro. Em outros casos, use um inteiro positivo arbitrário.  
+ Um identificador exclusivo para o objeto de origem. Quando `IDispEventImpl` é a classe base para um controle composto, use a ID de recurso do controle independente desejado para este parâmetro. Em outros casos, use um inteiro positivo arbitrário.  
   
  `T`  
  Classe do usuário, que é derivado de `IDispEventImpl`.  
   
  `pdiid`  
- O ponteiro para o IID da dispinterface de eventos implementada por esta classe. Essa interface deve ser definida na biblioteca do tipo indicada por `plibid`, `wMajor`, e `wMinor`.  
+ O ponteiro para o IID da dispinterface de eventos que implementada por esta classe. Esta interface deve ser definida na biblioteca de tipos indicada por `plibid`, `wMajor`, e `wMinor`.  
   
  `plibid`  
- Um ponteiro para a biblioteca de tipos que define a interface de expedição apontada por `pdiid`. Se **< / GUID_NULL**, a biblioteca de tipos do objeto de fonte de eventos será carregada.  
+ Um ponteiro para a biblioteca de tipos que define a interface de Despache apontada pelo `pdiid`. Se **& GUID_NULL**, a biblioteca de tipos do objeto de origem de eventos será carregada.  
   
  `wMajor`  
  A versão principal da biblioteca de tipos. O valor padrão é 0.  
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  A versão secundária da biblioteca de tipos. O valor padrão é 0.  
   
  `tihclass`  
- A classe usada para gerenciar as informações de tipo de `T`. O valor padrão é uma classe do tipo `CComTypeInfoHolder`; no entanto, você pode substituir esse parâmetro do modelo, fornecendo uma classe de um tipo diferente de `CComTypeInfoHolder`.  
+ A classe usada para gerenciar as informações de tipo de `T`. O valor padrão é uma classe de tipo `CComTypeInfoHolder`; no entanto, você pode substituir esse parâmetro do modelo fornecendo uma classe de um tipo diferente de `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Membros  
   
@@ -105,28 +105,28 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 |Nome|Descrição|  
 |----------|-----------------|  
 |[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Localiza o índice de função para o identificador de distribuição especificado.|  
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Mapeia um único membro e um conjunto opcional de nomes de argumentos para um conjunto correspondente de DISPIDs inteiro.|  
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Mapeia um único membro e um conjunto opcional de nomes de argumento para um conjunto correspondente de inteiro DISPIDs.|  
 |[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Recupera as informações de tipo para um objeto.|  
 |[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Recupera o número de interfaces de informações de tipo.|  
 |[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Recupera o tipo básico de um tipo definido pelo usuário.|  
   
 ## <a name="remarks"></a>Comentários  
- `IDispEventImpl`Fornece uma maneira de implementar um dispinterface de eventos sem exigir que você forneça o código de implementação para cada método/evento nessa interface. `IDispEventImpl`fornece implementações do `IDispatch` métodos. Você só precisará fornecer implementações para que você está interessado na manipulação de eventos.  
+ `IDispEventImpl`Fornece uma maneira de implementar um dispinterface de eventos sem a necessidade de fornecer código de implementação para cada método/evento na interface. `IDispEventImpl`fornece implementações do `IDispatch` métodos. Você só precisa fornecer implementações para os eventos que você está interessado na manipulação.  
   
- `IDispEventImpl`funciona em conjunto com o [mapa coletor de evento](http://msdn.microsoft.com/library/32542b3d-ac43-4139-8ac4-41c48481744f) em sua classe para eventos de rota para a função de manipulador apropriado. Para usar essa classe:  
+ `IDispEventImpl`funciona em conjunto com o mapa de coletor de eventos em sua classe para eventos de rota para a função de manipulador adequado. Para usar essa classe:  
   
 
- Adicionar uma [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5) ou [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac) macro para o mapa de coletor de evento para cada evento em cada objeto que você deseja manipular. Ao usar `IDispEventImpl` como uma classe base de um controle composto, você pode chamar [AtlAdviseSinkMap](http://msdn.microsoft.com/library/0757a6af-3de3-4179-8b4f-ccd137d919b4) para estabelecer e quebrar a conexão com fontes de eventos para todas as entradas de coletor de eventos de mapa. Em outros casos, ou para obter maior controle, chame [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) para estabelecer a conexão entre o objeto de origem e a classe base. Chamar [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) para quebrar a conexão.  
+ Adicionar um [SINK_ENTRY](composite-control-macros.md#sink_entry) ou [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro para o mapa de coletor de evento para cada evento em cada objeto que você deseja manipular. Ao usar `IDispEventImpl` como uma classe base de um controle composto, você pode chamar [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) para estabelecer e interromper a conexão com as fontes de evento para todas as entradas do coletor de eventos de mapa. Em outros casos, ou para um controle maior, chame [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) para estabelecer a conexão entre o objeto de origem e a classe base. Chamar [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) para interromper a conexão.  
 
   
- Você deve derivar de `IDispEventImpl` (usando um valor exclusivo para `nID`) para cada objeto para o qual você precisa manipular eventos. Você pode reutilizar a classe base por unadvising no objeto de uma fonte, em seguida, avisando em relação a um objeto de fonte diferente, mas o número máximo de objetos de fonte que pode ser tratado por um único objeto de uma só vez é limitado pelo número de `IDispEventImpl` classes base.  
+ Você deve derivar de `IDispEventImpl` (usando um valor exclusivo para `nID`) para cada objeto para o qual você precisa tratar eventos. Você pode reutilizar a classe base por unadvising no objeto de uma fonte prestar consultoria para um objeto de fonte diferente, mas o número máximo de objetos de fonte que pode ser tratado por um único objeto de uma só vez é limitado pelo número de `IDispEventImpl` classes base.  
   
- `IDispEventImpl`fornece a mesma funcionalidade que [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), exceto que ele obtém informações sobre a interface de tipo de uma biblioteca de tipos em vez de ter que ela fornecida como um ponteiro para um [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) estrutura. Use `IDispEventSimpleImpl` quando você não tiver uma biblioteca de tipos que descreve a interface de eventos ou para evitar a sobrecarga associada usando a biblioteca de tipos.  
+ `IDispEventImpl`fornece a mesma funcionalidade que [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), exceto que ele obtém informações sobre a interface do tipo de uma biblioteca de tipos em vez de ter que ele fornecida como um ponteiro para um [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) estrutura. Use `IDispEventSimpleImpl` quando você não tiver uma biblioteca de tipos que descreve a interface de eventos ou para evitar a sobrecarga associada usando a biblioteca de tipos.  
   
 > [!NOTE]
-> `IDispEventImpl`e `IDispEventSimpleImpl` fornecer sua própria implementação de **IUnknown:: QueryInterface** habilitando cada `IDispEventImpl` e `IDispEventSimpleImpl` classe para agir como uma identidade separada do COM e ainda permitir acesso direto a membros de classe no objeto principal COM base.  
+> `IDispEventImpl`e `IDispEventSimpleImpl` fornecer sua própria implementação de **IUnknown:: QueryInterface** habilitar cada `IDispEventImpl` e `IDispEventSimpleImpl` classe para atuar como uma identidade COM separada, enquanto ainda permite que o acesso direto a membros de classe em seu objeto principal do COM base.  
   
- Implementação de CE ATL do ActiveX evento coletores somente oferece suporte a valores de retorno do tipo HRESULT ou void de seus métodos de manipulador de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
+ Implementação de CE ATL de ActiveX evento coletores somente dá suporte a valores de retorno do tipo HRESULT ou void de métodos de manipuladores de eventos; Não há suporte para qualquer outro valor de retorno e seu comportamento é indefinido.  
   
  Para obter mais informações, consulte [IDispEventImpl suporte](../../atl/supporting-idispeventimpl.md).  
   
@@ -170,7 +170,7 @@ HRESULT GetFuncInfoFromId(
  Um padrão `HRESULT` valor.  
   
 ##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
- Mapeia um único membro e um conjunto opcional de nomes de argumentos para um conjunto correspondente de inteiro DISPIDs, que pode ser usado em chamadas subsequentes para [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Um único membro e um conjunto opcional de nomes de argumento é mapeado para um conjunto correspondente de inteiro DISPIDs, que pode ser usado em chamadas subsequentes para [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -182,7 +182,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consulte [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.  
@@ -249,7 +249,7 @@ typedef tihclass _tihclass;
  [Estrutura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   
  [Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
  [Classe IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
- [SINK_ENTRY](http://msdn.microsoft.com/library/33a5fff6-5248-47c0-8cf4-8bdf760e86e5)   
- [SINK_ENTRY_EX](http://msdn.microsoft.com/library/e1d14342-838f-4791-ac2f-5dae2801c1ac)   
- [SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7)   
+ [SINK_ENTRY](composite-control-macros.md#sink_entry)   
+ [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
+ [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

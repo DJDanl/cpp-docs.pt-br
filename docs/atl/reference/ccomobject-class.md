@@ -1,5 +1,5 @@
 ---
-title: Classe CComObject | Documentos do Microsoft
+title: Classe CComObject | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f752b96d4a722fbddfcc9e5be3a82b8b12a86a1
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
@@ -57,7 +57,7 @@ class CComObject : public Base
   
 #### <a name="parameters"></a>Parâmetros  
  `Base`  
- Sua classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de outras interfaces que você deseja dar suporte no objeto.  
+ A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -80,7 +80,7 @@ class CComObject : public Base
 ## <a name="remarks"></a>Comentários  
  `CComObject`implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado. No entanto, chamadas para `QueryInterface`, `AddRef`, e **versão** são delegadas a `CComObjectRootEx`.  
   
- Para obter mais informações sobre como usar o `CComObject`, consulte o artigo [conceitos básicos de ATL COM objetos](../../atl/fundamentals-of-atl-com-objects.md).  
+ Para obter mais informações sobre como usar `CComObject`, consulte o artigo [Fundamentals de ATL COM objetos](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `Base`  
@@ -101,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
  Esta função retorna a nova contagem de referência incrementado no objeto. Esse valor pode ser útil para teste ou de diagnóstico.  
   
 ##  <a name="ccomobject"></a>CComObject::CComObject  
- O construtor incrementa a contagem de bloqueio do módulo.  
+ O construtor incrementa a contagem de bloqueios do módulo.  
   
 ```
 CComObject(void* = NULL);
@@ -109,7 +109,7 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parâmetros  
  **void\***  
- [in] Esse parâmetro sem nome não é usado. Ele existe para obter simetria com outros **CCom***XXX*`Object`*XXX* construtores.  
+ [in] Esse parâmetro sem nome não é usado. Ela existe para simetria com outros **CCom***XXX*`Object`*XXX* construtores.  
   
 ### <a name="remarks"></a>Comentários  
  Decrementa o destruidor-lo.  
@@ -124,11 +124,11 @@ CComObject();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Libera todos os recursos alocados, chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease), e diminui o bloqueio de módulo contar.  
+ Libera todos os recursos alocados, chamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease), e diminui a módulo contagem de bloqueio.  
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- A função estática permite que você crie um novo **CComObject** `Base` ** > ** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Função estática permite que você crie um novo **CComObject** `Base` **>** objeto, sem a sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -136,20 +136,20 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Parâmetros  
  `pp`  
- [out] Um ponteiro para um **CComObject** `Base` ** > ** ponteiro. Se `CreateInstance` não for bem-sucedida, `pp` é definido como **nulo**.  
+ [out] Um ponteiro para um **CComObject** `Base` **>** ponteiro. Se `CreateInstance` for bem-sucedido, `pp` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- O objeto retornado tem uma contagem de referência igual a zero, então, chamar `AddRef` imediatamente, em seguida, use **versão** para liberar a referência para o ponteiro de objeto quando terminar.  
+ O objeto retornado tem uma contagem de referência igual a zero, portanto, chame `AddRef` imediatamente, em seguida, use **versão** para liberar a referência no ponteiro de objeto quando estiver pronto.  
   
  Se você não precisa de acesso direto ao objeto, mas ainda deseja criar um novo objeto sem a sobrecarga de `CoCreateInstance`, use [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) em vez disso.  
   
 ### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_COM&38;](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM 38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM&#39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Recupera um ponteiro para a interface solicitada.  
@@ -165,7 +165,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
  [in] O identificador da interface que está sendo solicitado.  
   
  `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo `iid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface identificado por `iid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
   
  `pp`  
  [out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não oferece suporte a essa interface, `pp` é definido como **nulo**.  
@@ -181,12 +181,12 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Esta função retorna a nova contagem de referência diminuído no objeto. Em compilações de depuração, o valor de retorno pode ser útil para o diagnóstico e teste. Em compilações de depuração não **versão** sempre retorna 0.  
+ Esta função retorna a nova contagem de referência do diminuída no objeto. Em compilações de depuração, o valor de retorno pode ser útil para um diagnóstico ou teste. Em compilações de depuração não **versão** sempre retorna 0.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
  [Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
- [DECLARE_AGGREGATABLE](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)   
- [DECLARE_NOT_AGGREGATABLE](http://msdn.microsoft.com/library/2a116c7c-bab8-4f2a-a9ad-03d7aba0f762)   
+ [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
+ [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CComClassFactory2 | Documentos do Microsoft
+title: Classe CComClassFactory2 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 3787214d5479e1cd57295c9c25335e87651a16bb
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactory2-class"></a>Classe CComClassFactory2
@@ -61,9 +61,9 @@ class CComClassFactory2 : public IClassFactory2,
  *licença*  
  Uma classe que implementa as seguintes funções estáticas:  
   
-- **estático VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
+- **VerifyLicenseKey de BOOL estático (BSTR** `bstr` **);**  
   
-- **estático GetLicenseKey BOOL (DWORD** `dwReserved` **, BSTR\* ** `pBstr` **);**  
+- **GetLicenseKey de BOOL estático (DWORD** `dwReserved` **, BSTR\*** `pBstr` **);**  
   
 - **estático (de IsLicenseValid BOOL);**  
   
@@ -74,23 +74,23 @@ class CComClassFactory2 : public IClassFactory2,
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|Cria um objeto do CLSID especificado.|  
-|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Dada uma chave de licença, cria um objeto do CLSID especificado.|  
-|[CComClassFactory2::GetLicInfo](#getlicinfo)|Recupera informações que descrevem os recursos de licenciamento da fábrica de classe.|  
-|[CComClassFactory2::LockServer](#lockserver)|Bloqueia a fábrica de classes na memória.|  
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Fornecido uma chave de licença, cria um objeto do CLSID especificado.|  
+|[CComClassFactory2::GetLicInfo](#getlicinfo)|Recupera as informações que descrevem os recursos de licenciamento da fábrica de classe.|  
+|[CComClassFactory2::LockServer](#lockserver)|Bloqueia a fábrica de classe na memória.|  
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Cria e retorna uma chave de licença.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComClassFactory2`implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, que é uma extensão de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles por meio de uma licença a criação do objeto. Uma classe factory executando em uma máquina licenciada pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo instanciar objetos quando uma licença completa do computador não existe.  
+ `CComClassFactory2`implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, que é uma extensão de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles criação por meio de uma licença do objeto. Uma execução de fábrica de classe em uma máquina licenciada pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo de instanciar objetos quando não existe uma licença completa do computador.  
   
- Objetos ATL normalmente adquirem uma fábrica de classes, derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classes padrão. Usar `CComClassFactory2`, especifique o [DECLARE_CLASSFACTORY2](http://msdn.microsoft.com/library/38a6c969-7297-4bb1-9ba6-1fe2d355b285) macro na definição de classe do objeto. Por exemplo:  
+ Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como a fábrica de classe padrão. Para usar `CComClassFactory2`, especifique o [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro na definição de classe do objeto. Por exemplo:  
   
- [!code-cpp[NVC_ATL_COM N º&2;](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM N º 2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
- **CMyLicense**, o parâmetro de modelo `CComClassFactory2`, deve implementar as funções estáticas `VerifyLicenseKey`, `GetLicenseKey`, e `IsLicenseValid`. Este é um exemplo de uma classe simples de licença:  
+ **CMyLicense**, o parâmetro de modelo para `CComClassFactory2`, deve implementar as funções estáticas `VerifyLicenseKey`, `GetLicenseKey`, e `IsLicenseValid`. Este é um exemplo de uma classe simples de licença:  
   
- [!code-cpp[NVC_ATL_COM N º&3;](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM N º 3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`deriva de ambos **CComClassFactory2Base** e *licença*. **CComClassFactory2Base**, por sua vez, deriva de **IClassFactory2** e **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2`deriva de ambos **CComClassFactory2Base** e *licença*. **CComClassFactory2Base**, por sua vez, deriva **IClassFactory2** e **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CComObjectRootBase`  
@@ -107,7 +107,7 @@ class CComClassFactory2 : public IClassFactory2,
  **Cabeçalho:** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
- Cria um objeto do CLSID especificado e recupera um ponteiro de interface para esse objeto.  
+ Cria um objeto com o CLSID especificado e recupera um ponteiro de interface para este objeto.  
   
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -115,19 +115,19 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
   
 ### <a name="parameters"></a>Parâmetros  
  `pUnkOuter`  
- [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser o externo desconhecido. Caso contrário, `pUnkOuter` deve ser **nulo**.  
+ [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser externo desconhecido. Caso contrário, `pUnkOuter` devem ser **nulo**.  
   
  `riid`  
- [in] O IID da interface solicitada. Se `pUnkOuter` não **nulo**, `riid` deve ser **IID_IUnknown**.  
+ [in] O IID da interface solicitada. Se `pUnkOuter` é não - **nulo**, `riid` devem ser **IID_IUnknown**.  
   
  `ppvObj`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface identificado por `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Requer que a máquina seja totalmente licenciado. Se não existir uma licença completa de máquina, chame [CreateInstanceLic](#createinstancelic).  
+ Requer que o computador seja totalmente licenciado. Se não existir uma licença completa de máquina, chame [CreateInstanceLic](#createinstancelic).  
   
 ##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  Semelhante ao [CreateInstance](#createinstance), exceto que `CreateInstanceLic` requer uma chave de licença.  
@@ -144,28 +144,28 @@ STDMETHOD(CreateInstanceLic)(
   
 ### <a name="parameters"></a>Parâmetros  
  `pUnkOuter`  
- [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser o externo desconhecido. Caso contrário, `pUnkOuter` deve ser **nulo**.  
+ [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser externo desconhecido. Caso contrário, `pUnkOuter` devem ser **nulo**.  
   
  *pUnkReserved*  
  [in] Não usado. Deve ser **nulo**.  
   
  `riid`  
- [in] O IID da interface solicitada. Se `pUnkOuter` não **nulo**, `riid` deve ser **IID_IUnknown**.  
+ [in] O IID da interface solicitada. Se `pUnkOuter` é não - **nulo**, `riid` devem ser **IID_IUnknown**.  
   
  `bstrKey`  
  [in] A chave de licença de tempo de execução obtido anteriormente de uma chamada para `RequestLicKey`. Essa chave é necessária para criar o objeto.  
   
  `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface especificado por `riid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface especificado pelo `riid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode obter uma chave de licença usando [RequestLicKey](#requestlickey). Para criar um objeto em uma máquina sem licença, você deve chamar `CreateInstanceLic`.  
+ Você pode obter uma chave de licença usando [RequestLicKey](#requestlickey). Para criar um objeto em uma máquina não licenciada, você deve chamar `CreateInstanceLic`.  
   
 ##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
- Preenche um [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) recursos de licença da estrutura com informações que descrevem a fábrica de classes.  
+ Preenche uma [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) recursos de licença da estrutura com informações que descrevem a fábrica de classes.  
   
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -173,16 +173,16 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
   
 ### <a name="parameters"></a>Parâmetros  
  *pLicInfo*  
- [out] Ponteiro para uma **LICINFO** estrutura.  
+ [out] Ponteiro para um **LICINFO** estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- O `fRuntimeKeyAvail` membro dessa estrutura indica se, dada uma chave de licença, a fábrica de classes permite que objetos a serem criados em uma máquina sem licença. O *fLicVerified* membro indica se existe uma licença completa do computador.  
+ O `fRuntimeKeyAvail` membro dessa estrutura indica se, devido a uma chave de licença, a fábrica de classe permite que os objetos a ser criado em uma máquina não licenciada. O *fLicVerified* membro indica se existe uma licença completa do computador.  
   
 ##  <a name="lockserver"></a>CComClassFactory2::LockServer  
- Incrementa e decrementa o bloqueio de módulo contar chamando **_Module::Lock** e **_Module::Unlock**, respectivamente.  
+ Incrementa e diminui o bloqueio de módulo contagem chamando **_Module::Lock** e **_Module::Unlock**, respectivamente.  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -201,7 +201,7 @@ STDMETHOD(LockServer)(BOOL fLock);
  Chamando `LockServer` permite que um cliente mantenha uma fábrica de classes para que vários objetos podem ser criados rapidamente.  
   
 ##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
- Cria e retorna uma chave de licença, desde que o `fRuntimeKeyAvail` membro do [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) estrutura é **TRUE**.  
+ Cria e retorna uma chave de licença, desde que o `fRuntimeKeyAvail` membro o [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) estrutura é **TRUE**.  
   
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
@@ -218,7 +218,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Uma chave de licença é necessária para chamar [CreateInstanceLic](#createinstancelic) para criar um objeto em uma máquina sem licença. Se `fRuntimeKeyAvail` é **FALSE**, e objetos só podem ser criados em uma máquina totalmente licenciada.  
+ Uma chave de licença é necessária para chamar [CreateInstanceLic](#createinstancelic) para criar um objeto em uma máquina não licenciada. Se `fRuntimeKeyAvail` é **FALSE**, em seguida, objetos só podem ser criados em uma máquina totalmente licenciada.  
   
  Chamar [GetLicInfo](#getlicinfo) para recuperar o valor de `fRuntimeKeyAvail`.  
   

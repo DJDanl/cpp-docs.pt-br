@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
@@ -341,7 +341,7 @@ int SetPos32(int nPos);
  Nova posição do controle. Esse valor deve estar no intervalo especificado pelos limites superiores e inferiores do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A posição anterior (16 bits de precisão para `SetPos`, 32 bits precisão para `SetPos32`).  
+ A posição anterior (16 bits de precisão para `SetPos`32 bits precisão para `SetPos32`).  
   
 ### <a name="remarks"></a>Comentários  
  `SetPos32`Define a posição de 32 bits.  
@@ -361,7 +361,7 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nLower`e`nUpper`  
+ `nLower` e `nUpper`  
  Limites superior e inferior do controle. Para `SetRange`, nenhum limite pode ser maior que **UD_MAXVAL** ou menor que **UD_MINVAL**; Além disso, a diferença entre os dois limites não pode exceder **UD_MAXVAL**. `SetRange32`não coloca nenhuma restrição sobre os limites; Use qualquer inteiros.  
   
 ### <a name="remarks"></a>Comentários  

@@ -1,5 +1,5 @@
 ---
-title: C2232 de erro do compilador | Documentos do Microsoft
+title: C2232 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7ece4b1367724624339f892b5bf41db506e2177e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 570d543c5dfa81fda3d520d2614c708e97c4bc2e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2232"></a>C2232 de erro do compilador
-' – >': operando esquerdo tiver 'class-key' type,'.' use  
+'->': operando esquerdo possui 'chave de classe ' tipo,'.' use  
   
  O operando à esquerda do `->` operador não é um ponteiro. Use o operador ponto (.) para uma classe, estrutura ou união.  
   

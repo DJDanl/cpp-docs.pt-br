@@ -1,5 +1,5 @@
 ---
-title: NMAKE Erro Fatal U1078 | Documentos do Microsoft
+title: NMAKE Erro Fatal U1078 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,16 +34,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 76cd62fdcbdc8bdc052f37f2bb13642d613402c2
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0c60aeabc7e3a486514bb9c54e75ae94aa733011
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="nmake-fatal-error-u1078"></a>Erro fatal U1078 (NMAKE)
-estouro constante em 'expression'  
+estouro de constante em 'expression'  
   
- A expressão especificada continha uma constante que excederam o intervalo de – 2.147.483.648 a 2.147.483.647. A constante apareceu em uma das seguintes situações:  
+ A expressão fornecida continha uma constante que excederam o intervalo de-2.147.483.648 a 2.147.483.647. A constante é exibido em uma das seguintes situações:  
   
 -   Uma expressão especificada com uma diretiva de pré-processamento  
   
--   Nível de erro especificado com um traço (**-**) modificador de comando
+-   Um nível de erro especificado com um traço (**-**) modificador de comando

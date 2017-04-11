@@ -33,15 +33,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6d69fc9edeb38affd73f924107266487d46cc96e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e3e4eeb1c71752c7e682bc500afacb730162abca
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="signed-bitwise-operations"></a>Operações bit a bit com sinal
 **ANSI 3.3** Os resultados de operações bit a bit em inteiros com sinal  
   
- As operações bit a bit em inteiros com sinal funcionam da mesma forma que as operações bit a bit em inteiros sem sinal. Por exemplo, `–16 & 99` pode ser expresso em binário como  
+ As operações bit a bit em inteiros com sinal funcionam da mesma forma que as operações bit a bit em inteiros sem sinal. Por exemplo, `-16 & 99` pode ser expresso em binário como  
   
 ```  
   11111111 11110000  

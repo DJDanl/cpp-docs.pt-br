@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
@@ -211,7 +211,7 @@ class CWinApp : public CWinThread
 |[CWinApp::SaveAllModified](#saveallmodified)|Solicita ao usuário para salvar os documentos modificados tudo.|  
 |[CWinApp::SelectPrinter](#selectprinter)|Seleciona uma impressora indicada por um usuário por meio de uma caixa de diálogo de impressão.|  
 |[CWinApp::SetHelpMode](#sethelpmode)|Define e inicializa o tipo de ajuda usadas pelo aplicativo.|  
-|[CWinApp::SupportsApplicationRecovery](#supportsapplicationrecovery)|Determina se o Gerenciador de reinicialização recuperado de um aplicativo que foi encerrado inesperadamente.|  
+|[CWinApp::SupportsApplicationRecovery](#supportsapplicationrecovery)|Determina se o Gerenciador de reinicialização recupera um aplicativo que foi encerrado inesperadamente.|  
 |[CWinApp::SupportsAutosaveAtInterval](#supportsautosaveatinterval)|Determina se o salve do Gerenciador de reinicialização abre documentos em intervalos regulares.|  
 |[CWinApp::SupportsAutosaveAtRestart](#supportsautosaveatrestart)|Determina se o salve do Gerenciador de reinicialização qualquer abra documentos quando o aplicativo for reiniciado.|  
 |[CWinApp::SupportsRestartManager](#supportsrestartmanager)|Determina se o aplicativo dá suporte ao Gerenciador de reinicialização.|  
@@ -292,7 +292,7 @@ class CWinApp : public CWinThread
   
 - `CWinApp`da chave sobre substituíveis.  
   
- O **m_hPrevInstance** membro de dados não existe mais. Para obter informações sobre como detectar uma instância anterior do `CWinApp`, consulte o artigo da Base de dados de Conhecimento "Como para identificar um anterior de um aplicativo de instância" (KB106385) em [http://support.microsoft.com/default.aspxscid=kb;en-us;106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
+ O **m_hPrevInstance** membro de dados não existe mais. Para obter informações sobre como detectar uma instância anterior do `CWinApp`, consulte o artigo da Base de dados de Conhecimento "Como para identificar uma instância de um aplicativo anterior" (KB106385) em [http://support.microsoft.com/default.aspxscid=kb;en-us;106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -478,7 +478,7 @@ virtual void DoWaitCursor(int nCode);
   
 ### <a name="parameters"></a>Parâmetros  
  `nCode`  
- Se esse parâmetro for 1, será exibido um cursor de espera. Se for 0, o cursor de espera é restaurado sem incrementar a contagem de referência. Se – 1, o cursor de espera será encerrada.  
+ Se esse parâmetro for 1, será exibido um cursor de espera. Se for 0, o cursor de espera é restaurado sem incrementar a contagem de referência. Se-1, o cursor de espera será encerrada.  
   
 ### <a name="remarks"></a>Comentários  
  O padrão implementa um cursor ampulheta. `DoWaitCursor`mantém uma contagem de referência. Quando for positivo, o cursor de ampulheta é exibido.  
@@ -782,7 +782,7 @@ UINT GetProfileInt(
  Especifica o valor padrão para retornar se a estrutura não é possível localizar a entrada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O valor de inteiro da cadeia de caracteres que segue a entrada especificada se a função for bem-sucedida. O valor de retorno é o valor da `nDefault` se a função não localizar a entrada de parâmetro. O valor de retorno será 0 se o valor que corresponde à entrada especificada não é um inteiro.  
+ O valor de inteiro da cadeia de caracteres que segue a entrada especificada se a função for bem-sucedida. O valor de retorno é o valor da `nDefault` parâmetro se a função não localizar a entrada. O valor de retorno será 0 se o valor que corresponde à entrada especificada não é um inteiro.  
   
  Essa função de membro oferece suporte a notação hexadecimal para o valor da. Arquivo INI. Quando você recupera um inteiro com sinal, você deve converter o valor em um `int`.  
   
@@ -872,7 +872,7 @@ virtual void HtmlHelp(
  Especifica os dados adicionais. O valor usado depende do valor da `nCmd` parâmetro.  
   
  `nCmd`  
- Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam o `dwData` parâmetro, consulte o `uCommand` parâmetro descrito no sobre o Help função de API no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam o `dwData` parâmetro, consulte o `uCommand` parâmetro descrito em sobre o Help função de API no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="remarks"></a>Comentários  
  A estrutura também chama essa função para chamar o aplicativo Help.  
@@ -953,7 +953,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
  Número de identificação do recurso de ícone.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para um ícone se bem-sucedido; Caso contrário, **nulo**.  
+ Um identificador para um ícone, se for bem-sucedido; Caso contrário, **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
  `LoadIcon`carrega o ícone somente se ele não tenha sido previamente carregado; Caso contrário, ele recupera um identificador de recurso existente.  
@@ -997,7 +997,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
  Um **OIC_** manifesto constante identificador que especifica um ícone do Windows predefinido. Você deve ter **#define OEMRESOURCE** antes de **#include \<afxwin.h >** para acessar o **OIC_** constantes no WINDOWS. H.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para um ícone se bem-sucedido; Caso contrário, **nulo**.  
+ Um identificador para um ícone, se for bem-sucedido; Caso contrário, **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
  Use o `LoadOEMIcon` ou [LoadStandardIcon](#loadstandardicon) a função de membro para acessar os ícones do Windows predefinidos.  
@@ -1058,7 +1058,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
  Um manifesto identificador constante que especifica um ícone do Windows predefinido. Esses identificadores são definidos no WINDOWS. H. Para obter uma lista dos possíveis valores predefinidos e suas descrições, consulte o *lpIconName* parâmetro em [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para um ícone se bem-sucedido; Caso contrário, **nulo**.  
+ Um identificador para um ícone, se for bem-sucedido; Caso contrário, **nulo**.  
   
 ### <a name="remarks"></a>Comentários  
  Use o `LoadStandardIcon` ou [LoadOEMIcon](#loadoemicon) a função de membro para acessar os ícones do Windows predefinidos.  
@@ -1078,7 +1078,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
  Se `nMaxMRU` for 0, nenhuma lista MRU será mantida.  
   
 ##  <a name="m_bhelpmode"></a>CWinApp::m_bHelpMode  
- **TRUE** se o aplicativo está em modo de contexto de Ajuda (convencionalmente chamado com SHIFT + F1); caso contrário, **FALSE**.  
+ **TRUE** se o aplicativo estiver no modo de contexto de Ajuda (convencionalmente chamado com SHIFT + F1); caso contrário, **FALSE**.  
   
 ```  
 BOOL m_bHelpMode;  
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>Comentários  
  O **AFX_HELP_TYPE** enumeração é definida da seguinte maneira:  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   Para definir a Ajuda do aplicativo para Ajuda em HTML, chame [SetHelpMode](#sethelpmode) e especifique **afxHTMLHelp**.  
   
@@ -1440,7 +1437,7 @@ virtual BOOL OnIdle(LONG lCount);
   
  `OnIdle`deve retornar 0 para indicar que nenhum tempo de processamento ocioso é necessário. O `lCount` parâmetro é incrementado toda vez que `OnIdle` é chamado quando a fila de mensagens está vazia e redefine como 0, sempre que uma nova mensagem é processada. Você pode chamar suas rotinas ociosas diferentes com base nessa contagem.  
   
- O exemplo a seguir resume o processamento de loop ocioso:  
+ A seguir resume o processamento de loop ocioso:  
   
 1.  Se o loop de mensagem na biblioteca Microsoft Foundation Class verifica a fila de mensagens e não localiza as mensagens pendentes, ele chama `OnIdle` para o objeto de aplicativo e fornece 0 como o `lCount` argumento.  
   
@@ -1448,7 +1445,7 @@ virtual BOOL OnIdle(LONG lCount);
   
 3.  O loop de mensagens verifica a fila de mensagens novamente. Se nenhuma mensagem estiver pendente, ele chama `OnIdle` novamente, incrementando o `lCount` argumento.  
   
-4.  Por fim, `OnIdle` termina de processar todas as tarefas de ociosidade e retornará 0. Isso informa o loop de mensagem para interromper a chamar `OnIdle` até que a próxima mensagem é recebida da fila de mensagens, no ponto em que o ciclo ocioso é reiniciado com o argumento definido como 0.  
+4.  Por fim, `OnIdle` termina de processar todas as tarefas de ociosidade e retornará 0. Isso informa o loop de mensagem para interromper a chamada `OnIdle` até que a próxima mensagem é recebida da fila de mensagens, no ponto em que o ciclo ocioso é reiniciado com o argumento definido como 0.  
   
  Não execute tarefas demoradas durante `OnIdle` porque o aplicativo não pode processar a entrada do usuário até `OnIdle` retorna.  
   
@@ -1566,7 +1563,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
  Diferente de zero se o comando do shell é processado com êxito. Se for 0, retornar **FALSE** de [InitInstance](#initinstance).  
   
 ### <a name="remarks"></a>Comentários  
- Quando você inicia um novo projeto MFC usando o Assistente de aplicativo, o Assistente de aplicativo criará uma instância local do `CCommandLineInfo`e, em seguida, chamar `ProcessShellCommand` e [ParseCommandLine](#parsecommandline) no `InitInstance` função de membro. Uma linha de comando a seguir, a rota descrita abaixo:  
+ Quando você inicia um novo projeto MFC usando o Assistente de aplicativo, o Assistente de aplicativo criará uma instância local do `CCommandLineInfo`e, em seguida, chame `ProcessShellCommand` e [ParseCommandLine](#parsecommandline) no `InitInstance` função de membro. Uma linha de comando a seguir, a rota descrita abaixo:  
   
 1.  Após ter sido criado em `InitInstance`, o `CCommandLineInfo` objeto é passado para `ParseCommandLine`.  
   
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  Os membros de dados de `CCommandLineInfo` objeto, identificado por [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), são do tipo enumerado seguinte, que é definido dentro de `CCommandLineInfo` classe.  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  Para obter uma descrição breve de cada um desses valores, consulte `CCommandLineInfo::m_nShellCommand`.  
   
@@ -1855,7 +1848,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
  Esta função define *m_pszRegistryKey*, que é usado pelo `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, e `WriteProfileString` funções membro de `CWinApp`. Se essa função foi chamada, a lista de arquivos usados mais recentemente (MRU) também é armazenada no registro. A chave do registro geralmente é o nome de uma empresa. Ela é armazenada em uma chave da seguinte forma: HKEY_CURRENT_USER\\Software\\<company></company>\>\\<application></application>\>\\<section></section>\>\\<value></value>\>.  
   
 ##  <a name="supportsapplicationrecovery"></a>CWinApp::SupportsApplicationRecovery  
- Determina se o Gerenciador de reinicialização recuperado de um aplicativo que foi encerrado inesperadamente.  
+ Determina se o Gerenciador de reinicialização recupera um aplicativo que foi encerrado inesperadamente.  
   
 ```  
 virtual BOOL SupportsApplicationRecovery() const;  

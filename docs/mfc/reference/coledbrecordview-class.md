@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>Classe COleDBRecordView
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  Se você estiver trabalhando com as classes de objetos de acesso de dados (DAO) em vez das OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: programação do banco de dados](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`Controla de posição do usuário no conjunto de linhas para que a exibição de registro possa atualizar a interface do usuário. Quando o usuário é movido para o final do conjunto de linhas, a exibição de registro desabilita usuário interface objetos \u2012 como itens de menu ou barra de ferramentas botões \u2012 para mover mais na mesma direção.  
+ `COleDBRecordView`Controla de posição do usuário no conjunto de linhas para que a exibição de registro possa atualizar a interface do usuário. Quando o usuário move para o fim do conjunto de linhas, o modo de exibição de registro desabilita os objetos de interface do usuário — como itens de menu ou botões da barra de ferramentas — para mover adicional na mesma direção.  
   
  Para obter mais informações sobre classes de conjunto de linhas, consulte o [usando OLE DB modelos de consumidor](../../data/oledb/ole-db-consumer-templates-cpp.md) artigo.  
   
@@ -131,7 +131,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Um padrão `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador do conjunto de linhas armazenado na exibição do registro, se houver. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu **abrir** membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
+ Você deve substituir esta função de membro para criar ou obter um objeto de conjunto de linhas e retornar um identificador a ele. Se você declarar a classe de exibição de registro com ClassWizard, o assistente grava uma substituição padrão para você. Implementação do padrão do ClassWizard retorna o identificador do conjunto de linhas armazenado na exibição de registro se houver um. Se não, ele constrói um objeto de conjunto de linhas do tipo especificado com ClassWizard e chama seu **abrir** membro de função para abrir a tabela ou executar a consulta e, em seguida, retorna um identificador para o objeto.  
   
 > [!NOTE]
 >  Antes do MFC 7.0, `OnGetRowset` retornou um ponteiro para `CRowset`. Se você tiver um código que chama `OnGetRowset`, você precisa alterar o tipo de retorno para a classe de modelo **CRowset<>**.  
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Um dos seguintes valores de ID de comando padrão:  
   
-- `ID_RECORD_FIRST`\u2012 mover para o primeiro registro no conjunto de registros.  
+- `ID_RECORD_FIRST`– Mover para o primeiro registro no conjunto de registros.  
   
-- `ID_RECORD_LAST`\u2012 mover para o último registro no conjunto de registros.  
+- `ID_RECORD_LAST`– Mova para o último no conjunto de registros registro.  
   
-- `ID_RECORD_NEXT`\u2012 mover para o próximo registro no conjunto de registros.  
+- `ID_RECORD_NEXT`– Mover para o próximo registro no conjunto de registros.  
   
-- `ID_RECORD_PREV`\u2012 mover para o registro anterior no conjunto de registros.  
+- `ID_RECORD_PREV`– Mover para o registro anterior no conjunto de registros.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a movimentação foi bem-sucedida; Caso contrário, 0 se a solicitação de movimentação foi negada.  

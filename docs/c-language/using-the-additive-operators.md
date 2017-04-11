@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a3d02cb2beafd1f6b8f430f95fdc7d07d2307f8a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04e23f9694193a05d48b7fcdff717d06e448e877
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="using-the-additive-operators"></a>Usando os operadores Additive
@@ -60,7 +60,7 @@ px = &x[4] + i;
 j = &x[i] - &x[i-2];  
 ```  
   
- Nesse exemplo, o endereço do terceiro elemento de `x` (determinado por `x[i–2]`) é subtraído do endereço do quinto elemento de `x` (determinado por `x[i]`). A diferença é dividida pelo comprimento de um **float**; o resultado é o valor inteiro 2.  
+ Nesse exemplo, o endereço do terceiro elemento de `x` (determinado por `x[i-2]`) é subtraído do endereço do quinto elemento de `x` (determinado por `x[i]`). A diferença é dividida pelo comprimento de um **float**; o resultado é o valor inteiro 2.  
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores aditivos C](../c-language/c-additive-operators.md)

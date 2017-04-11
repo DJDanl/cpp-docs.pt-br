@@ -1,5 +1,5 @@
 ---
-title: Mensagens do vetorizador e Paralelizador | Documentos do Microsoft
+title: Mensagens do vetorizador e Paralelizador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,13 +36,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 25ea9a33aa055bda564557bc93bc54114b6180b4
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensagens do vetorizador e do paralelizador
-Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) para gerar códigos de motivo e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.  
+Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para definir o [paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md) códigos de motivo de saída e mensagens informativas sobre sua atividade. Este artigo explica os códigos de motivo e as mensagens.  
   
 -   [Mensagens informativas](#BKMK_InformationalMessages)  
   
@@ -60,7 +60,7 @@ Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="a-namebkmkinformationalmessagesa-informational-messages"></a><a name="BKMK_InformationalMessages"></a>Mensagens informativas  
+##  <a name="BKMK_InformationalMessages"></a>Mensagens informativas  
  Dependendo do nível de relatório especificado, uma das mensagens informativas a seguir é exibida para cada loop.  
   
  Para obter informações sobre códigos de motivos, consulte a próxima parte deste artigo.  
@@ -76,8 +76,8 @@ Você pode usar as opções do compilador Visual C++ [/Qpar-report](../../build/
 ## <a name="reason-codes"></a>Códigos de motivos  
  As seções a seguir listam os códigos de motivos possíveis para o autoparalelizador e o autovetorizador.  
   
-###  <a name="a-namebkmkreasoncode50xa-5xx"></a><a name="BKMK_ReasonCode50x"></a>5xx  
- Os 5*xx* códigos de motivo se aplicam ao autoparalelizador e o autovetorizador.  
+###  <a name="BKMK_ReasonCode50x"></a>5xx  
+ Os 5*xx* códigos de motivo aplicam o paralelizador automático e o vetorizador automático.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
@@ -239,8 +239,8 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="a-namebkmkreasoncode100xa-10xx"></a><a name="BKMK_ReasonCode100x"></a>10xx  
- Os 10*xx* códigos de motivo se aplicam ao autoparalelizador.  
+###  <a name="BKMK_ReasonCode100x"></a>10xx  
+ O 10*xx* aplicam códigos de motivo para o paralelizador automático.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
@@ -250,7 +250,7 @@ void code_504(int *A) {
 |1003|O corpo do loop contém uma chamada intrínseca que pode ler ou gravar na memória.|  
 |1004|Há uma redução escalar no corpo do loop. A redução escalar pode ocorrer se o loop foi vetorizado.|  
 |1005|O **no_parallel** pragma foi especificado.|  
-|1006|Essa função contém **openmp**. Resolva isso removendo qualquer **openmp** nessa função.|  
+|1006|Essa função contém **openmp**. Resolver o problema removendo qualquer **openmp** nesta função.|  
 |1007|A variável de indução do loop ou os limites do loop não são números de 32 bits sem sinal (`int` ou `long`). Resolva isso alterando o tipo da variável de indução.|  
 |1008|O compilador detectou que esse loop não é suficiente para garantir o funcionamento da autoparalelização.|  
 |1009|O compilador detectou uma tentativa de paralelizar um loop “do-while”. O autoparalelizador visa somente loops `for`.|  
@@ -448,8 +448,8 @@ void code_1010()
   
 ```  
   
-###  <a name="a-namebkmkreasoncode110xa-11xx"></a><a name="BKMK_ReasonCode110x"></a>11xx  
- 11*xx* códigos de motivo se aplicam ao autovetorizador.  
+###  <a name="BKMK_ReasonCode110x"></a>11xx  
+ O 11*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
@@ -596,8 +596,8 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="a-namebkmkreasoncode120xa-12xx"></a><a name="BKMK_ReasonCode120x"></a>12xx  
- Os 12*xx* códigos de motivo se aplicam ao autovetorizador.  
+###  <a name="BKMK_ReasonCode120x"></a>12xx  
+ Os 12*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
@@ -671,14 +671,14 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="a-namebkmkreasoncode130xa-13xx"></a><a name="BKMK_ReasonCode130x"></a>13xx  
- A 13*xx* códigos de motivo se aplicam ao autovetorizador.  
+###  <a name="BKMK_ReasonCode130x"></a>13xx  
+ O 13*xx* aplicam códigos de motivo para o vetorizador automático.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
 |1300|O corpo do loop não contém – ou contém pouquíssima – computação.|  
 |1301|O passo do loop não é +1.|  
-|1302|O loop é “do-while”.|  
+|1302|Loop é um "siga-enquanto".|  
 |1303|Pouquíssimas iterações do loop para a vetorização para fornecer o valor.|  
 |1304|O loop inclui as atribuições que são de tamanhos diferentes.|  
 |1305|Informações de tipo insuficientes.|  
@@ -803,15 +803,15 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="a-namebkmkreasoncode140xa-14xx"></a><a name="BKMK_ReasonCode140x"></a>14xx  
- Os 14*xx* motivo códigos ocorrem quando alguma opção que é incompatível com a autovetorização é especificada.  
+###  <a name="BKMK_ReasonCode140x"></a>14xx  
+ 14*xx* motivo códigos ocorrerem quando alguma opção que é incompatível com vetorização automática é especificada.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
 |1400|**#pragma loop(no_vector)** for especificado.|  
-|1401|**/kernel** opção é especificada quando o alvo x86 ou ARM.|  
-|1402|**/arch:SSE2** ou superior chave não for especificada ao direcionar x86.|  
-|1403|**/arch:Atom** opção é especificada e o loop inclui operações em doubles.|  
+|1401|**/kernel** switch é especificada ao direcionar x86 ou ARM.|  
+|1402|**/arch: SSE2** ou superior chave não for especificada ao direcionar x86.|  
+|1403|**/arch:Atom** opção é especificada e o loop inclui operações em duplicatas.|  
 |1404|**/O1** ou **/Os** opção é especificada.|  
 |1405|A vetorização é desabilitada para ajudar na otimização de inicializador dinâmico em inicializador estático.|  
   
@@ -875,8 +875,8 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="a-namebkmkreasoncode150xa-15xx"></a><a name="BKMK_ReasonCode150x"></a>15xx  
- O bloco de 15*xx* códigos de motivo se aplica ao alias. O alias ocorre quando um local na memória pode ser acessado por dois nomes diferentes.  
+###  <a name="BKMK_ReasonCode150x"></a>15xx  
+ O bloco de 15*xx* códigos de motivo se aplicam ao alias. O alias ocorre quando um local na memória pode ser acessado por dois nomes diferentes.  
   
 |Código de motivo|Explicação|  
 |-----------------|-----------------|  
@@ -1006,7 +1006,7 @@ void code_1505(int *A, int *B)
 ## <a name="see-also"></a>Consulte também  
  [Paralelização automática e vetorização automática](../../parallel/auto-parallelization-and-auto-vectorization.md)   
  [Programação paralela em código nativo](http://go.microsoft.com/fwlink/?LinkId=263662)   
- [#pragma loop)](../../preprocessor/loop.md)   
+ [#pragma loop()](../../preprocessor/loop.md)   
  [/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)   
- [/Qpar-Report (nível de Autoparalelizador relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/Qvec-Report (nível de Autovetorizador relatórios)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [/Qpar-Report (nível de Paralelizador automático relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+ [/Qvec-Report (nível de Vetorizador automático relatórios)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

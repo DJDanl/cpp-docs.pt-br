@@ -1,5 +1,5 @@
 ---
-title: C3490 de erro do compilador | Documentos do Microsoft
+title: C3490 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,22 +35,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6051c278a14421a997834ee5f47db5a961b66e4b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-error-c3490"></a>C3490 de erro do compilador
-'var' não pode ser modificada porque ela está sendo acessada por meio de um objeto const  
+'var' não pode ser modificado porque está sendo acessado por meio de um objeto const  
   
- Uma expressão lambda que é declarada em um `const` método não pode modificar dados de membro não mutável.  
+ Uma expressão lambda que é declarada em um `const` método não é possível modificar os dados de membro não mutável.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remover o `const` modificador de sua declaração de método.  
+-   Remover o `const` modificador da sua declaração de método.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3490 porque ele modifica a variável de membro`_i` em um `const` método:  
+ O exemplo a seguir gera C3490 porque ela modifica a variável membro `_i` em um `const` método:  
   
 ```  
 // C3490a.cpp  
@@ -68,7 +68,7 @@ class C
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3490 removendo o `const` modificador da declaração de método:  
+ O exemplo a seguir elimina C3490 removendo o `const` modificador da declaração de método:  
   
 ```  
 // C3490b.cpp  

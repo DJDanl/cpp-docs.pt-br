@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
@@ -154,7 +154,7 @@ class CRichEditCtrl : public CWnd
 |[CRichEditCtrl::GetDefaultCharFormat](#getdefaultcharformat)|Recupera o caractere padrão atual formatação atributos neste `CRichEditCtrl` objeto.|  
 |[CRichEditCtrl::GetEventMask](#geteventmask)|Recupera a máscara de evento para esse `CRichEditCtrl` objeto.|  
 |[CRichEditCtrl::GetFirstVisibleLine](#getfirstvisibleline)|Determina a linha superior visível neste `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|Recupera um ponteiro para o `IRichEditOle` da interface para controle de edição neste avançado.|  
+|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|Recupera um ponteiro para o `IRichEditOle` interface para controle de edição neste avançado.|  
 |[CRichEditCtrl::GetLimitText](#getlimittext)|Obtém o limite na quantidade de texto que um usuário pode inserir a esta `CRichEditCtrl` objeto.|  
 |[CRichEditCtrl::GetLine](#getline)|Recupera uma linha de texto deste `CRichEditCtrl` objeto.|  
 |[CRichEditCtrl::GetLineCount](#getlinecount)|Recupera o número de linhas nesta `CRichEditCtrl` objeto.|  
@@ -869,7 +869,7 @@ void GetSel(
   
 - **GetSel (** `nStartChar` **,** `nEndChar` **)** este formulário retorna os limites nos parâmetros `nStartChar` e `nEndChar`.  
   
- A seleção inclui tudo o que, se o início ( **cpMin** ou `nStartChar`) é 0 e o término ( **cpMax** ou `nEndChar`) é-1.  
+ A seleção inclui tudo o que, se o início ( **cpMin** ou `nStartChar`) é 0 e o término ( **cpMax** ou `nEndChar`) é - 1.  
   
  Para obter mais informações, consulte [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) mensagem e [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parâmetros  
  `nLine`  
- Especifica o índice de um caractere na linha cujo comprimento é a ser recuperado. Se esse parâmetro for igual a -1, o comprimento da linha atual (a linha que contém o cursor) é retornado, não incluindo o comprimento de qualquer texto na linha selecionado. Quando `LineLength` é chamado para um controle de edição de linha única, esse parâmetro é ignorado.  
+ Especifica o índice de um caractere na linha cujo comprimento é a ser recuperado. Se esse parâmetro for -1, o comprimento da linha atual (a linha que contém o cursor) é retornado, não incluindo o comprimento de qualquer texto na linha selecionado. Quando `LineLength` é chamado para um controle de edição de linha única, esse parâmetro é ignorado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Quando `LineLength` é chamado para um controle de edição de várias linhas, o valor de retorno é o comprimento (em bytes) da linha especificada por `nLine`. Quando `LineLength` é chamado para um controle de edição de linha única, o valor de retorno é o comprimento (em bytes) do texto no controle de edição.  
@@ -1595,7 +1595,7 @@ void SetSel(CHARRANGE& cr);
  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estrutura que contém os limites da seleção atual.  
   
 ### <a name="remarks"></a>Comentários  
- As duas formas desta função fornecem modos alternativos para definir os limites da seleção. Execute as breves descrições destas formas:  
+ As duas formas dessa função fornecem modos alternativos para definir os limites da seleção. Execute as breves descrições destas formas:  
   
 - **SetSel (** `cr` **)** este formulário usa o **CHARRANGE** estrutura com seu **cpMin** e **cpMax** membros para definir os limites.  
   
@@ -1603,7 +1603,7 @@ void SetSel(CHARRANGE& cr);
   
  O cursor é colocado no final da seleção indicada pelo maior do início ( **cpMin** ou `nStartChar`) e de término ( **cpMax** ou `nEndChar`) índices. Essa função rola o conteúdo do `CRichEditCtrl` para que o cursor está visível.  
   
- Para selecionar todo o texto na `CRichEditCtrl` de objeto, chame `SetSel` com um índice inicial de 0 e um índice do fim de – 1.  
+ Para selecionar todo o texto na `CRichEditCtrl` de objeto, chame `SetSel` com um índice inicial de 0 e um índice do fim de - 1.  
   
  Para obter mais informações, consulte [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) mensagem e [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -1790,7 +1790,7 @@ long StreamIn(
   
  No **EDITSTREAM** parâmetro `es`, especifique uma função de retorno de chamada que preenche um buffer com o texto. Essa função de retorno de chamada é chamada repetidamente até que o fluxo de entrada é esgotado.  
   
- Para obter mais informações, consulte [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) mensagem e [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estruturar no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obter mais informações, consulte [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) mensagem e [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CRichEditCtrl #34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  

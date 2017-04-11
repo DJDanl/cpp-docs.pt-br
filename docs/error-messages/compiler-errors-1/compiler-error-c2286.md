@@ -1,5 +1,5 @@
 ---
-title: C2286 de erro do compilador | Documentos do Microsoft
+title: C2286 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 099938992a3a47070c2eb9792221cade33e79dd7
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c745afd370bd444614fc216ab42fda0f584295e7
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2286"></a>C2286 de erro do compilador
-ponteiros para membros de representação 'identifier' já está definido como 'herança' – declaração ignorada  
+ponteiros para membros de representação 'Identificador' já está definida como 'herança' - declaração ignorada  
   
- Existem duas representações diferentes de membros do ponteiro para a classe.  
+ Existem duas representações diferentes de ponteiro para membros para a classe.  
   
- Para obter mais informações, consulte [herança palavras-chave](../../cpp/inheritance-keywords.md).  
+ Para obter mais informações, consulte [palavras-chave de herança](../../cpp/inheritance-keywords.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2286:  

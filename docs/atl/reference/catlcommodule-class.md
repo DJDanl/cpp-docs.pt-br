@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlComModule | Documentos do Microsoft
+title: Classe CAtlComModule | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,13 +40,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 6b933b5388fccc2dc0e31d035aa7eb56de3b1866
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
-Essa classe implementa um módulo de servidor COM.  
+Essa classe implementa um módulo COM de servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,15 +67,15 @@ class CAtlComModule : public _ATL_COM_MODULE
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CAtlComModule::RegisterServer](#registerserver)|Chame esse método para atualizar o registro do sistema para cada objeto no mapa de objetos.|  
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Chame esse método para registrar uma biblioteca de tipos.|  
-|[CAtlComModule::UnregisterServer](#unregisterserver)|Chame esse método para cancelar o registro de cada objeto no mapa de objetos.|  
+|[CAtlComModule::RegisterServer](#registerserver)|Chame este método para atualizar o registro do sistema para cada objeto no mapa do objeto.|  
+|[CAtlComModule::RegisterTypeLib](#registertypelib)|Chame este método para registrar uma biblioteca de tipos.|  
+|[CAtlComModule::UnregisterServer](#unregisterserver)|Chame esse método para cancelar o registro de cada objeto no mapa do objeto.|  
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Chame esse método para cancelar o registro de uma biblioteca de tipos.|  
   
 ## <a name="remarks"></a>Comentários  
- `CAtlComModule`implementa um módulo de servidor COM, permitindo que um cliente acessar componentes do módulo.  
+ `CAtlComModule`implementa um módulo COM de servidor, permitindo que um cliente acessar os componentes do módulo.  
   
- Esta classe substitui o obsoleto [CComModule](../../atl/reference/ccommodule-class.md) classe usada em versões anteriores do ATL. Consulte [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  
+ Esta classe substitui o obsoleto [CComModule](../../atl/reference/ccommodule-class.md) classe usada em versões anteriores do ATL Consulte [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
@@ -83,7 +83,7 @@ class CAtlComModule : public _ATL_COM_MODULE
  `CAtlComModule`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
  O construtor.  
@@ -106,7 +106,7 @@ CAtlComModule() throw();
  Libera todas as fábricas de classe.  
   
 ##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
- Chame esse método para atualizar o registro do sistema para cada objeto no mapa de objetos.  
+ Chame este método para atualizar o registro do sistema para cada objeto no mapa do objeto.  
   
 ```
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
@@ -117,16 +117,16 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
  TRUE se a biblioteca de tipos a ser registrado. O valor padrão é FALSE.  
   
  `pCLSID`  
- Aponta para o CLSID do objeto a ser registrado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será registrado.  
+ Aponta para o CLSID do objeto a ser registrado. Se NULL (o valor padrão), todos os objetos no mapa de objeto será registrado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chama a função global [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b).  
+ Chama a função global [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
 ##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
- Chame esse método para registrar uma biblioteca de tipos.  
+ Chame este método para registrar uma biblioteca de tipos.  
   
 ```
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
@@ -135,16 +135,16 @@ HRESULT RegisterTypeLib();
   
 ### <a name="parameters"></a>Parâmetros  
  `lpszIndex`  
- Cadeia de caracteres no formato "\\\N", onde N é o índice de recurso TYPELIB inteiro.  
+ Cadeia de caracteres no formato "\\\N", onde N é o índice inteiro do recurso TYPELIB.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
  Adiciona informações sobre uma biblioteca de tipos para o registro do sistema. Se a instância do módulo contém várias bibliotecas de tipo, use a primeira versão desse método para especificar qual biblioteca de tipo deve ser usada.  
   
 ##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
- Chame esse método para cancelar o registro de cada objeto no mapa de objetos.  
+ Chame esse método para cancelar o registro de cada objeto no mapa do objeto.  
   
 ```
 HRESULT UnregisterServer(
@@ -154,16 +154,16 @@ HRESULT UnregisterServer(
   
 ### <a name="parameters"></a>Parâmetros  
  `bRegTypeLib`  
- TRUE se a biblioteca de tipos deve ser cancelado. O valor padrão é FALSE.  
+ TRUE se a biblioteca de tipos é possível cancelar o registro. O valor padrão é FALSE.  
   
  `pCLSID`  
- Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será cancelado.  
+ Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objeto será cancelado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Chama a função global [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5).  
+ Chama a função global [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
 ##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  Chame esse método para cancelar o registro de uma biblioteca de tipos.  
@@ -175,13 +175,13 @@ HRESULT UnRegisterTypeLib();
   
 ### <a name="parameters"></a>Parâmetros  
  `lpszIndex`  
- Cadeia de caracteres no formato "\\\N", onde N é o índice de recurso TYPELIB inteiro.  
+ Cadeia de caracteres no formato "\\\N", onde N é o índice inteiro do recurso TYPELIB.  
   
 ### <a name="remarks"></a>Comentários  
  Remove informações sobre uma biblioteca de tipos de registro do sistema. Se a instância do módulo contém várias bibliotecas de tipo, use a primeira versão desse método para especificar qual biblioteca de tipo deve ser usada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna S_OK com êxito, ou um erro HRESULT em caso de falha.  
+ Retorna S_OK em caso de sucesso, ou um erro HRESULT em caso de falha.  
   
 ## <a name="see-also"></a>Consulte também  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   

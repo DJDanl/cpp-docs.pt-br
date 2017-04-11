@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>Mensagens AFX
@@ -108,7 +108,7 @@ Essas mensagens são usadas em MFC.
 |-|-|-|-|-|  
 |Mensagem|Descrição|[in] `wParam`|`lParam`(Todos os parâmetros são [in], a menos que indicado o contrário).|Valor de retorno|  
 |AFX_WM_ACCGETOBJECT|Não usado.|Não usado.|Não aplicável.|Não aplicável.|  
-|AFX_WM_ACCGETSTATE|Usado para suporte de acessibilidade. Enviar esta mensagem para `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` para recuperar o estado do elemento atual.|Índice de elemento, que pode ser um botão de menu ou separador.|Não usado.|O estado do elemento. É -1 se o índice é inválido, 0 se o botão de menu não tem nenhum atributo especial. Caso contrário, é uma combinação dos sinalizadores a seguir:<br /><br /> TBBS_DISABLED \u2012 item está desabilitado<br /><br /> TBBS_CHECKED \u2012 item é verificado<br /><br /> TBBS_BUTTON \u2012 o item é um botão de ação padrão<br /><br /> TBBS_PRESSED \u2012 botão é pressionado<br /><br /> Estado do TBBS_INDETERMINATE \u2012 indefinido<br /><br /> TBBS_SEPARATOR - em vez de um botão de menu, essa forma de elemento uma separação entre outros itens de menu|  
+|AFX_WM_ACCGETSTATE|Usado para suporte de acessibilidade. Enviar esta mensagem para `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` para recuperar o estado do elemento atual.|Índice de elemento, que pode ser um botão de menu ou separador.|Não usado.|O estado do elemento. É -1 se o índice é inválido, 0 se o botão de menu não tem nenhum atributo especial. Caso contrário, é uma combinação dos sinalizadores a seguir:<br /><br /> TBBS_DISABLED — o item está desabilitado<br /><br /> TBBS_CHECKED — o item é verificado<br /><br /> TBBS_BUTTON — o item é um botão de ação padrão<br /><br /> TBBS_PRESSED – botão é pressionado<br /><br /> TBBS_INDETERMINATE — estado indefinido<br /><br /> TBBS_SEPARATOR - em vez de um botão de menu, essa forma de elemento uma separação entre outros itens de menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|A estrutura envia essa mensagem para o controle de barra de controle redimensionável. Processar esta mensagem para receber notificações de `CMFCTabCtrl` objetos quando um usuário altera a guia ativa.|O índice de uma guia.|Não usado.|Diferente de zero.|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|A estrutura envia essa mensagem para o pai do `CMFCShellListCtrl` quando o usuário alterou a pasta atual.|Não usado.|Não usado.|Não usado.|  
 |AFX_WM_CHANGEVISUALMANAGER|A estrutura envia essa mensagem para todas as janelas de quadro quando o usuário altera o gerente de Visual atual. Em resposta a essa mensagem, uma janela do quadro recalcula sua região e ajusta os outros parâmetros conforme necessário. Você pode processar a mensagem AFX_WM_CHANGEVISUALMANAGER em seu aplicativo, se você precisar ser notificado sobre esse evento. Você deve chamar o manipulador da classe base (`OnChangeVisualManager`) para garantir que interno a estrutura do processamento desse evento ocorre.|Não usado.|Não usado.|Não usado.|  
@@ -146,7 +146,7 @@ Essas mensagens são usadas em MFC.
 |AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`objeto envia essa mensagem para seu proprietário, quando o usuário clica em um botão de menu comum. Processar esta mensagem sempre que você usar `CMFCToolbarMenuButton` para exibir um menu pop-up quando o usuário clica em um botão.|A ID de comando de um botão que envia a mensagem.|Coordenadas da tela do cursor. A palavra de ordem inferior Especifica a coordenada x. A palavra de ordem superior Especifica a coordenada y.|Não usado.|  
 |AFX_WM_TOOLBARMENU|Enviado para a janela do quadro principal quando o usuário libera o botão direito do mouse enquanto o ponteiro do mouse está no cliente ou na área não cliente de um painel.|Não usado.|Coordenadas da tela do ponteiro do mouse. A palavra de ordem inferior Especifica a coordenada x. A palavra de ordem superior Especifica a coordenada y.|Zero se o aplicativo processa esta mensagem; Caso contrário, diferente de zero.|  
 |AFX_WM_UPDATETOOLTIPS|Enviada a todos os proprietários de dica de ferramenta para indicar que os seus controles de dica de ferramenta devem ser recriadas.|O tipo de controle deve processar essa mensagem. Consulte a tabela neste tópico para obter uma lista de valores possíveis.|Não usado.|Não usado.|  
-|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`envia essa mensagem para o quadro pai quando o usuário clica o **ajuda** botão ou entra no modo de Ajuda clicando o **ajuda** botão legenda ou a tecla F1.|Não usado.|Um ponteiro para a instância do `CMFCWindowsManagerDialog`.|Não usado.|  
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`envia essa mensagem para o quadro pai quando o usuário clica o **ajudar** botão ou entra no modo de Ajuda clicando o **ajudar** botão legenda ou a tecla F1.|Não usado.|Um ponteiro para a instância do `CMFCWindowsManagerDialog`.|Não usado.|  
   
  A tabela a seguir mostra os valores para a palavra baixa do `lParam` parâmetro do método AFX_WM_HSCROLL:  
   

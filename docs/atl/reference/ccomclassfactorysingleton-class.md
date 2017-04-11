@@ -1,5 +1,5 @@
 ---
-title: Classe CComClassFactorySingleton | Documentos do Microsoft
+title: Classe CComClassFactorySingleton | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 7ff6f3a9d00c0f579077d9502aefad5cbea35f17
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 55d8fb96dfce1b278763cc348c605f8e76b5f56f
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Classe CComClassFactorySingleton
-Essa classe deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto.  
+Essa classe é derivada de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,7 +59,7 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  Sua classe.  
   
- `CComClassFactorySingleton`deriva de [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto. Cada chamada para o `CreateInstance` método simplesmente consulta esse objeto para um ponteiro de interface.  
+ `CComClassFactorySingleton`deriva [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto. Cada chamada para o `CreateInstance` método simplesmente consulta este objeto para um ponteiro de interface.  
   
 ## <a name="members"></a>Membros  
   
@@ -76,9 +76,9 @@ class CComClassFactorySingleton : public CComClassFactory
 |[CComClassFactorySingleton::m_spObj](#m_spobj)|O [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) objeto construído por `CComClassFactorySingleton`.|  
   
 ## <a name="remarks"></a>Comentários  
- Objetos ATL normalmente adquirem uma fábrica de classes, derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), que declara `CComClassFactory` como a fábrica de classes padrão. Usar `CComClassFactorySingleton`, especifique o [DECLARE_CLASSFACTORY_SINGLETON](http://msdn.microsoft.com/library/0e4a3964-c03d-463e-884c-fe3b416db478) macro na definição de classe do objeto. Por exemplo:  
+ Objetos ATL normalmente adquirem uma fábrica de classes derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara `CComClassFactory` como a fábrica de classe padrão. Para usar `CComClassFactorySingleton`, especifique o [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) macro na definição de classe do objeto. Por exemplo:  
   
- [!code-cpp[NVC_ATL_COM N º&10;](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM #10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `CComObjectRootBase`  
@@ -103,13 +103,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
   
 ### <a name="parameters"></a>Parâmetros  
  `pUnkOuter`  
- [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser o externo desconhecido. Caso contrário, `pUnkOuter` deve ser **nulo**.  
+ [in] Se o objeto está sendo criado como parte de uma agregação, em seguida, `pUnkOuter` deve ser externo desconhecido. Caso contrário, `pUnkOuter` devem ser **nulo**.  
   
  `riid`  
- [in] O IID da interface solicitada. Se `pUnkOuter` não **nulo**, `riid` deve ser **IID_IUnknown**.  
+ [in] O IID da interface solicitada. Se `pUnkOuter` é não - **nulo**, `riid` devem ser **IID_IUnknown**.  
   
  `ppvObj`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface identificado por `riid`. Se o objeto não oferece suporte a essa interface, `ppvObj` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
@@ -122,9 +122,9 @@ CComPtr<IUnknown> m_spObj;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Cada chamada para o [CreateInstance](#createinstance) método simplesmente consulta esse objeto para um ponteiro de interface.  
+ Cada chamada para o [CreateInstance](#createinstance) método simplesmente consulta este objeto para um ponteiro de interface.  
   
- Observe que o formulário atual de `m_spObj` apresenta uma alteração significativa desde a maneira que `CComClassFactorySingleton` trabalhou nas versões anteriores do ATL. Nas versões anteriores do `CComClassFactorySingleton` objeto foi criado no mesmo momento que a fábrica de classes, durante a inicialização do servidor. No Visual C++ .NET 2003, o objeto é criado lentamente, na primeira solicitação. Essa alteração pode causar erros em programas que dependem de inicialização antecipada.  
+ Observe que o formulário atual de `m_spObj` apresenta uma alteração significativa desde a maneira que `CComClassFactorySingleton` trabalhado em versões anteriores do ATL Em versões anteriores a `CComClassFactorySingleton` objeto foi criado no mesmo momento que a fábrica de classes, durante a inicialização do servidor. No Visual C++ .NET 2003, o objeto é criado lentamente, na primeira solicitação. Essa alteração pode causar erros em programas que dependem de inicialização antecipada.  
   
 ## <a name="see-also"></a>Consulte também  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   

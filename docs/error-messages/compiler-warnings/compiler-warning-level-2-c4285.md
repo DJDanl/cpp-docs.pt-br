@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 2) C4285 | Documentos do Microsoft"
+title: "Compilador (nível 2) do aviso C4285 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2de96d76b28d1e1798591beca70e7f6247710386
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ab81b59a711aa5ed623e2976c3d5eabfea58a5e3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-2-c4285"></a>Compilador C4285 de aviso (nível 2)
-tipo de retorno para ' identifier::operator – >' é recursiva se aplicadas usando a notação de infixo  
+tipo de retorno para 'identifier::operator->' é recursivo se aplicado usando notação de infixo  
   
- Especificado **operator–>()** função não pode retornar o tipo para o qual ela está definida ou uma referência para o tipo para o qual ela está definida.  
+ Especificado **operator->()** função não pode retornar o tipo para o qual ele está definido ou uma referência para o tipo para o qual ela está definida.  
   
  O exemplo a seguir gera C4285:  
   

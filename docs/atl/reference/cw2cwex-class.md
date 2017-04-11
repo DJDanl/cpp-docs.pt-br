@@ -1,5 +1,5 @@
 ---
-title: Classe CW2CWEX | Documentos do Microsoft
+title: Classe CW2CWEX | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a85b67a58553dada36f4472ea0683e18bc775493
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 5dca6b31cdd99582e727b634093c3548eef2ecc1
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2cwex-class"></a>Classe CW2CWEX
-Essa classe é usada, as macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef `CW2W`.  
+Essa classe é usada pelas macros de conversão de cadeia de caracteres `CW2CTEX` e `CT2CWEX`e o typedef `CW2W`.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,25 +83,25 @@ class CW2CWEX
 ## <a name="remarks"></a>Comentários  
  A menos que a funcionalidade adicional for necessária, use `CW2CTEX`, `CT2CWEX`, ou `CW2W` em seu código.  
   
- Essa classe é seguro usar em loops e não estouram a pilha. Por padrão, as macros e classes de conversão ATL usam página de código ANSI do thread atual para a conversão.  
+ Esta classe é seguro usar em loops e não de estouro de pilha. Por padrão, as classes de conversão de ATL e macros usam página de código ANSI do thread atual para a conversão.  
   
- As macros a seguir baseiam-se em sua classe:  
+ As seguintes macros baseiam-se esta classe:  
   
 - `CW2CTEX`  
   
 - `CT2CWEX`  
   
- Typedef a seguir baseia-se em sua classe:  
+ Typedef seguir baseia-se essa classe:  
   
 - `CW2W`  
   
- Para uma discussão sobre essas macros de conversão de texto, consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para uma discussão sobre essas macros de conversão de texto, consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [Macros de conversão de cadeia de caracteres MFC e ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
+ Consulte [ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md) para obter um exemplo de como usar essas macros de conversão de cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Atlconv. h  
+ **Cabeçalho:** atlconv.h  
   
 ##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
  O construtor.  

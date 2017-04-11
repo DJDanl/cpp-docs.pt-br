@@ -1,5 +1,5 @@
 ---
-title: C3718 de erro do compilador | Documentos do Microsoft
+title: C3718 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 845f135cc27bcf58f1ead94cc68d07eba3c6fc28
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6c93b63c910478c3459948038d74ddc1e8c78877
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="compiler-error-c3718"></a>C3718 de erro do compilador
-somente é possível chamar 'event' no contexto de uma função de membro da classe receptora  
+somente é possível chamar 'event' no contexto de uma função de membro da classe recebedora  
   
- O `event`só pode ser chamado da classe do receptor.  
+ O `event` só pode ser chamado da classe de recebimento.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3718:  

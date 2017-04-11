@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleDialog | Documentos do Microsoft
+title: Classe CSimpleDialog | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a4c17a1da8d1be00ebff171af09bc6c8eb81ed44
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csimpledialog-class"></a>Classe CSimpleDialog
@@ -57,7 +57,7 @@ class CSimpleDialog : public CDialogImplBase
 #### <a name="parameters"></a>Parâmetros  
  *t_wDlgTemplateID*  
   
- A ID de recurso do recurso de modelo da caixa de diálogo.  
+ A ID de recurso do recurso de modelo de caixa de diálogo.  
   
  *t_bCenter*  
  **TRUE** se o objeto de caixa de diálogo é centralizado na janela do proprietário; caso contrário **FALSE**.  
@@ -71,9 +71,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Cria uma caixa de diálogo modal.|  
   
 ## <a name="remarks"></a>Comentários  
- Implementa uma caixa de diálogo modal com funcionalidade básica. `CSimpleDialog`fornece suporte para controles comuns do Windows somente. Para criar e exibir uma caixa de diálogo modal, crie uma instância dessa classe, fornecendo o nome de um modelo de recurso existente na caixa de diálogo. O objeto de caixa de diálogo é fechada quando o usuário clica em qualquer controle com um valor predefinido (como IDOK ou IDCANCEL).  
+ Implementa uma caixa de diálogo modal com a funcionalidade básica. `CSimpleDialog`fornece suporte para controles comuns do Windows somente. Para criar e exibir uma caixa de diálogo modal, crie uma instância dessa classe, fornecendo o nome de um modelo de recurso existente para a caixa de diálogo. O objeto de caixa de diálogo é fechada quando o usuário clica em qualquer controle com um valor predefinido (por exemplo, IDOK ou IDCANCEL).  
   
- `CSimpleDialog`permite que você crie somente as caixas de diálogo modais. `CSimpleDialog`fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar mensagens para manipuladores adequados.  
+ `CSimpleDialog`permite que você crie somente caixas de diálogo modal. `CSimpleDialog`fornece o procedimento de caixa de diálogo, que usa o mapa da mensagem padrão para direcionar as mensagens para os manipuladores apropriados.  
   
  Consulte [implementando uma caixa de diálogo](../../atl/implementing-a-dialog-box.md) para obter mais informações.  
   
@@ -94,15 +94,15 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
 ### <a name="parameters"></a>Parâmetros  
  `hWndParent`  
- Um identificador para o pai da caixa de diálogo. Se nenhum valor for fornecido, o pai será definido para a janela ativa atual.  
+ Um identificador para o pai da caixa de diálogo. Se nenhum valor for fornecido, o pai é definido para a janela ativa atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, o valor de retorno é a ID de recurso do controle que descartado a caixa de diálogo.  
+ Se for bem-sucedido, o valor de retorno é a ID de recurso do controle que será descartada a caixa de diálogo.  
   
- Se a função falhar, o valor de retorno será –&1;. Para obter outras informações sobre o erro, chame `GetLastError`.  
+ Se a função falhar, o valor de retorno é -1. Para obter outras informações sobre o erro, chame `GetLastError`.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método manipula toda a interação com o usuário enquanto a caixa de diálogo está ativa. Isso faz com que a caixa de diálogo modal; ou seja, o usuário não pode interagir com outras janelas até que a caixa de diálogo é fechada.  
+ Este método trata todas as interações com o usuário enquanto a caixa de diálogo está ativa. Isso faz com que a caixa de diálogo modal; ou seja, o usuário não pode interagir com outras janelas até que a caixa de diálogo é fechada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

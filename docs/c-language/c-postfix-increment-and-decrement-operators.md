@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 97388480780ef6e5115641de9c7e4e065a4ac067
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a67e01fe0555a628c8b2178cc580bcaa8f84cd83
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operadores de incremento e de decremento pós-fixados C
@@ -46,7 +46,7 @@ Os operandos dos operadores de incremento e decremento pós-fixados são tipos e
  *postfix-expression*:  
  *postfix-expression*  **++**  
   
- *postfix-expression*  **––**  
+ *postfix-expression*  **--**  
   
  O resultado da operação de incremento ou decremento pós-fixada é o valor do operando. Depois que o resultado é obtido, o valor do operando é incrementado (ou decrementado). O código a seguir ilustra o operador de incremento pós-fixado.  
   
