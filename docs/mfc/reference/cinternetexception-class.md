@@ -1,5 +1,5 @@
 ---
-title: Classe CInternetException | Documentos do Microsoft
+title: Classe CInternetException | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a128095cfc443f0ea8de4cb4028b903929a83f47
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1831f868b7388cbc6382e26fca92280c3b880276
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetexception-class"></a>Classe CInternetException
@@ -70,9 +70,9 @@ class CInternetException : public CException
 |[CInternetException::m_dwError](#m_dwerror)|O erro que causou a exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- O `CInternetException` classe inclui dois membros de dados pública: um mantém o código de erro associado à exceção, e a outra contém o identificador de contexto do aplicativo da Internet associado ao erro.  
+ O `CInternetException` classe inclui dois membros de dados públicos: um contém o código de erro associado à exceção e a outra contém o identificador de contexto do aplicativo de Internet associado ao erro.  
   
- Para obter mais informações sobre identificadores de contexto para aplicativos da Internet, consulte o artigo [Internet Programando com WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Para obter mais informações sobre os identificadores de contexto de aplicativos da Internet, consulte o artigo [Internet Programando com WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,7 +85,7 @@ class CInternetException : public CException
  **Cabeçalho:** afxinet.h  
   
 ##  <a name="cinternetexception"></a>CInternetException::CInternetException  
- Essa função de membro é chamada quando uma `CInternetException` objeto é criado.  
+ Essa função de membro é chamada quando um `CInternetException` objeto é criado.  
   
 ```  
 CInternetException(DWORD dwError);
@@ -96,7 +96,7 @@ CInternetException(DWORD dwError);
  O erro que causou a exceção.  
   
 ### <a name="remarks"></a>Comentários  
- Para lançar um CInternetException, chame a função global MFC [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Para gerar um CInternetException, chame a função global MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
  O valor de contexto associado com a operação de Internet relacionada.  
@@ -106,7 +106,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O identificador de contexto especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um `dwContext` parâmetro um valor de sua escolha. `dwContext`está associado a qualquer operação do objeto especificado. `dwContext`identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ O identificador de contexto é especificado originalmente no [CInternetSession](../../mfc/reference/cinternetsession-class.md) e passado pelo MFC para [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- e [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes derivadas. Você pode substituir esse padrão e atribuir um `dwContext` parâmetro um valor de sua escolha. `dwContext`está associado a qualquer operação do objeto especificado. `dwContext`identifica as informações de status da operação retornadas por [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  O erro que causou a exceção.  
@@ -116,9 +116,9 @@ DWORD m_dwError;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Este valor de erro pode ser um sistema de código de erro encontrado no WINERROR. H ou um valor de erro do WININET. H.  
+ Este valor de erro pode ser um sistema de código de erro, encontrado no WINERROR. H ou um valor de erro do WININET. H.  
   
- Para obter uma lista dos códigos de erro do Win32, consulte [códigos de erro](http://msdn.microsoft.com/library/windows/desktop/ms681381). Para obter uma lista das mensagens de erro específicas da Internet, consulte. Ambos os tópicos estão o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obter uma lista dos códigos de erro do Win32, consulte [códigos de erro](http://msdn.microsoft.com/library/windows/desktop/ms681381). Para obter uma lista das mensagens de erro específicas da Internet, consulte. Os dois tópicos estão o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CException](../../mfc/reference/cexception-class.md)   

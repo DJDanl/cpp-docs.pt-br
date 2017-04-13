@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4342 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4342 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,25 +34,25 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4755edcc99a9b8fca00972611bbd633a68eb8ec7
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Compilador C4342 de aviso (nível 1)
-alteração de comportamento: 'function' chamado, mas um operador de membro foi chamado em versões anteriores  
+alteração de comportamento: '*função*' chamado, mas um operador membro foi chamado em versões anteriores  
   
- Nas versões anteriores do Visual C++, um membro foi chamado, mas esse comportamento foi alterado e o compilador irá encontrar a melhor correspondência no escopo de namespace.  
+ Nas versões do Visual C++ antes do Visual Studio 2002, um membro foi chamado, mas esse comportamento foi alterado e o compilador agora localiza a melhor correspondência no escopo de namespace.  
   
- Se um operador de membro for encontrado, o compilador anteriormente não consideram qualquer namespace operadores de escopo. Se houver uma correspondência melhor no escopo de namespace, o compilador atual corretamente chamará, enquanto os compiladores anteriores não considerá-la.  
+ Se um operador de membro for encontrado, o compilador anteriormente não consideram qualquer namespace operadores de escopo. Se houver uma correspondência melhor no escopo do namespace, o compilador atual corretamente chamá-lo, enquanto que os compiladores anteriores não considerá-la.  
   
- Esse aviso deve ser desabilitado após você com êxito porta seu código para a versão atual.  O compilador pode resultar em falsos positivos, gerando esse aviso de código onde não há nenhuma alteração de comportamento.  
+ Esse aviso deve ser desabilitado depois que a porta com êxito seu código para a versão atual.  O compilador pode resultar em falsos positivos, gerar esse aviso de código onde não há nenhuma alteração de comportamento.  
   
  Esse aviso é desativada por padrão. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
  O exemplo a seguir gera C4342:  
   
-```  
+```cpp  
 // C4342.cpp  
 // compile with: /EHsc /W1  
 #include <fstream>  

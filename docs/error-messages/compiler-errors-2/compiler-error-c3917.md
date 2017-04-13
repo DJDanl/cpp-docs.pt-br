@@ -1,5 +1,5 @@
 ---
-title: C3917 de erro do compilador | Documentos do Microsoft
+title: C3917 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>C3917 de erro do compilador
-'property': obsoletos estilo de declaração de construção  
+'*propriedade*': estilo de declaração de construção obsoleta  
   
-Uma definição de propriedade ou evento utilizou a sintaxe de uma versão anterior.  
+Uma definição de propriedade ou evento usado a sintaxe de uma versão anterior do Visual Studio 2005.  
   
 Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  

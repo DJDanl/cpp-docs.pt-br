@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>Funções de utilitário de HTTP do ATL
@@ -101,7 +101,7 @@ inline BOOL AtlCombineUrl(
  Ponteiro para uma variável que contém o comprimento em caracteres de `szBuffer`. Se a função tiver êxito, a variável recebe o número de caracteres gravados para o buffer não incluindo o caractere null de terminação. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer incluindo espaço para o caractere null de terminação.  
   
  `dwFlags`  
- Sinalizadores de controlar o comportamento dessa função. Consulte [ATL_URL sinalizadores](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Sinalizadores de controlar o comportamento dessa função. Consulte [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna **TRUE** em caso de sucesso, **FALSE** em caso de falha.  

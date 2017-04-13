@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 Essas macros fornecem recursos de conversão de cadeia de caracteres.  
   
-|||  
-|-|-|  
-|[ATL e MFC Macros de conversão de cadeia de caracteres](string-conversion-macros.md)|Conjunto de macros de conversão entre tipos de cadeia de caracteres.|  
-|[DEVMODE e TEXTMETRIC Macros de conversão de cadeia de caracteres](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Conjunto de macros que converter as cadeias de caracteres dentro de `DEVMODE` e `TEXTMETRIC` estruturas.|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL e MFC Macros de conversão de cadeia de caracteres  
  As macros de conversão de cadeia de caracteres discutidas neste documento são válidas para ATL e MFC. Para obter mais informações sobre conversão de cadeia de caracteres do MFC, consulte [TN059: usando Macros de conversão de MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [Macros e globais MFC](../../mfc/reference/mfc-macros-and-globals.md).  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**Unicode** e **OLE2ANSI**|**W**|**A**|  
   
  A seguinte tabela lista o `DEVMODE` e `TEXTMETRIC` macros de conversão de cadeia de caracteres.  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE e TEXTMETRIC Macros de conversão de cadeia de caracteres  
   
 |||  
 |-|-|  

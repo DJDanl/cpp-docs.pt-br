@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>Mapas de evento DHTML
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>Comentários  
  Adicionar um mapa de evento DHTML à sua classe para fornecer informações para **CDHtmlDialog** que pode ser usado para rotear os eventos disparados por elementos HTML ou controles ActiveX em uma página da web para funções de manipulador em sua classe.  
   
- Coloque o `BEGIN_DHTML_EVENT_MAP` seguido de macro no arquivo de definição (. h) da classe `DHTML_EVENT` macros para os eventos, a classe é manipular (por exemplo, `DHTML_EVENT_ONMOUSEOVER` para eventos de mouse). Use o [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) macro para marcar o fim do mapa de evento. Essas macros implementam a função a seguir:  
+ Coloque o `BEGIN_DHTML_EVENT_MAP` seguido de macro no arquivo de definição (. h) da classe `DHTML_EVENT` macros para os eventos, a classe é manipular (por exemplo, `DHTML_EVENT_ONMOUSEOVER` para eventos de mouse). Use o [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) macro para marcar o fim do mapa de evento. Essas macros implementam a função a seguir:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   

@@ -1,5 +1,5 @@
 ---
-title: C4867 de aviso do compilador | Documentos do Microsoft
+title: C4867 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 86437fca7bfeef662bef9fe8311fb746a661264d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>C4867 de aviso do compilador
-'function': a chamada de função ausente da lista de argumentos; Use 'ligação' para criar um ponteiro para membro  
+'function': chamada de função faltando lista de argumentos; Use 'chamar' para criar um ponteiro para membro  
   
  Um ponteiro para função de membro foi inicializado incorretamente.  
   
- Esse aviso pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito no Visual C++ 2005: conformidade aprimorada do ponteiro para membro.  Código compilado antes do Visual C++ 2005 agora irá gerar C4867.  
+ Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: conformidade aprimorada de ponteiro-para-membro.  Código compilado antes do Visual C++ 2005 agora irá gerar C4867.  
   
- Esse aviso é emitido sempre que um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](http://msdn.microsoft.com/Library/00b9ff5c-9834-4c40-911e-ee88d512c4af).  
+ Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4867.  

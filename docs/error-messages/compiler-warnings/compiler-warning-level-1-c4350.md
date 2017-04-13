@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4350 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4350 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,27 +35,27 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c3a5411475d898562b8cba62ddeffcaf1dfec095
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 141f5552c4b86e170587f42ebabf5e2e597b4e96
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-level-1-c4350"></a>Compilador C4350 de aviso (nível 1)
 alteração de comportamento: 'member1' chamado no lugar de 'member2'  
   
- Um rvalue não pode ser associado a uma referência não const. Nas versões anteriores do Visual C++, era possível ligar um rvalue para uma referência não const em uma inicialização direta. Esse código agora fornece um aviso.  
+ Um rvalue não pode ser associado a uma referência não const. Nas versões do Visual C++ antes do Visual Studio 2003, era possível associar um rvalue a uma referência não const em uma inicialização direta. Esse código agora fornece um aviso.  
   
- Para compatibilidade com versões anteriores, ainda é possível vincular rvalues referências não const, mas conversões padrão são preferenciais sempre que possível.  
+ Para compatibilidade com versões anteriores, ainda é possível associar rvalues a não const referências, mas conversões padrão são preferencial sempre que possível.  
   
- Esse aviso representa uma alteração de comportamento do compilador do Visual C++ .NET 2002. Se habilitada, este aviso possivelmente foi fornecido para o código correto. Por exemplo, ele poderia receber ao usar o **std::auto_ptr** modelo de classe.  
+ Esse aviso representa uma alteração de comportamento do compilador do Visual C++ .NET 2002. Se habilitado, este aviso possivelmente pode ser fornecido para código correto. Por exemplo, ele pode receber ao usar o **std::auto_ptr** modelo de classe.  
   
- Se você receber esse aviso, examine seu código para ver se ele depende da associação rvalues referências não const. Adicionando uma constante para a referência ou fornecer uma sobrecarga adicional de referência const pode resolver o problema.  
+ Se você receber esse aviso, examine seu código para ver se ele depende rvalues de associação não-const referências. Adicionando uma constante para a referência ou fornecendo uma sobrecarga adicional de referência const pode resolver o problema.  
   
  Esse aviso é desativada por padrão. Para obter mais informações, consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
  O exemplo a seguir gera C4350:  
   
-```  
+```cpp  
 // C4350.cpp  
 // compile with: /W1  
 #pragma warning (default : 4350)  
@@ -65,7 +65,7 @@ class B
 {  
 public:  
    B(B&){}  
-   // try the following instead  
+   // try the following instead:  
    // B(const B&){}  
   
    B(A){}  
