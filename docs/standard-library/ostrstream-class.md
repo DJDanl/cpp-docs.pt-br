@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.oststream
-- oststream
-- std::oststream
+- std.ostrstream
+- ostrstream
+- std::ostrstream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +76,7 @@ class ostrstream : public ostream
   
  **Namespace:** std  
   
-##  <a name="a-nameostrstreamfreezea--ostrstreamfreeze"></a><a name="ostrstream__freeze"></a>  ostrstream::freeze  
+##  <a name="ostrstream__freeze"></a>  ostrstream::freeze  
  Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.  
   
 ```
@@ -93,7 +93,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="example"></a>Exemplo  
   Consulte [strstream::freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) para ver um exemplo que usa **freeze**.  
   
-##  <a name="a-nameostrstreamostrstreama--ostrstreamostrstream"></a><a name="ostrstream__ostrstream"></a>  ostrstream::ostrstream  
+##  <a name="ostrstream__ostrstream"></a>  ostrstream::ostrstream  
  Constrói um objeto do tipo `ostrstream`.  
   
 ```
@@ -121,7 +121,7 @@ ostrstream(char* ptr,
   
 -   Caso contrário, `ptr` deve designar o primeiro elemento de uma matriz de elementos de contagem que contém uma cadeia de caracteres C cujo primeiro elemento é designado por `ptr` e o construtor chama `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
   
-##  <a name="a-nameostrstreampcounta--ostrstreampcount"></a><a name="ostrstream__pcount"></a>  ostrstream::pcount  
+##  <a name="ostrstream__pcount"></a>  ostrstream::pcount  
  Retorna uma contagem do número de elementos gravados na sequência controlada.  
   
 ```
@@ -137,7 +137,7 @@ streamsize pcount() const;
 ### <a name="example"></a>Exemplo  
   Consulte [strstream::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa `pcount`.  
   
-##  <a name="a-nameostrstreamrdbufa--ostrstreamrdbuf"></a><a name="ostrstream__rdbuf"></a>  ostrstream::rdbuf  
+##  <a name="ostrstream__rdbuf"></a>  ostrstream::rdbuf  
  Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.  
   
 ```
@@ -153,7 +153,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa `rdbuf`.  
   
-##  <a name="a-nameostrstreamstra--ostrstreamstr"></a><a name="ostrstream__str"></a>  ostrstream::str  
+##  <a name="ostrstream__str"></a>  ostrstream::str  
  Chama [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) e retorna um ponteiro para o início da sequência controlada.  
   
 ```
