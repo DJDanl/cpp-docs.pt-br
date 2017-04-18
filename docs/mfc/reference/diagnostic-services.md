@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986) para obter uma descrição de **rastreamento**. **RASTREAMENTO** e `ATLTRACE2` têm o mesmo comportamento.  
+ Consulte [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) para obter uma descrição de **rastreamento**. **RASTREAMENTO** e `ATLTRACE2` têm o mesmo comportamento.  
   
  Na versão de depuração MFC, esta macro envia a cadeia de caracteres especificada para o depurador do aplicativo atual. Em uma versão de compilação, essa macro é compilado em nada (nenhum código for gerado em todos os).  
   

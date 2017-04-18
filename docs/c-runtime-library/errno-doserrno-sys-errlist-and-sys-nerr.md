@@ -67,8 +67,7 @@ Macros globais que mantêm códigos de erro definidos durante a execução do pr
 ```  
   
 ## <a name="remarks"></a>Comentários  
- 
-          `errno` e `_doserrno` são definidos como 0 no tempo de execução durante a inicialização do programa. `errno` é definido em um erro em uma chamada do sistema. Como `errno` contém o valor da última chamada que o define, esse valor pode ser alterado pelas chamadas subsequentes. As chamadas da biblioteca em tempo de execução que definem `errno` em um erro não limpam `errno` com êxito. Sempre desmarque `errno` chamando `_set_errno(0)` pouco antes de uma chamada que pode defini-lo e marque-o imediatamente depois da chamada.  
+ `errno` e `_doserrno` são definidos como 0 no tempo de execução durante a inicialização do programa. `errno` é definido em um erro em uma chamada do sistema. Como `errno` contém o valor da última chamada que o define, esse valor pode ser alterado pelas chamadas subsequentes. As chamadas da biblioteca em tempo de execução que definem `errno` em um erro não limpam `errno` com êxito. Sempre desmarque `errno` chamando `_set_errno(0)` pouco antes de uma chamada que pode defini-lo e marque-o imediatamente depois da chamada.  
   
  Em um erro, `errno` não é necessariamente definido com o mesmo valor que o código de erro retornado por uma chamada do sistema. No caso de operações de E/S, `_doserrno` armazena os equivalentes de código de erro do sistema operacional dos códigos `errno`. No caso da maioria das operações de E/S, o valor de `_doserrno` não é definido.  
   

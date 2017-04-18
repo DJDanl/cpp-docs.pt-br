@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>C2440 de erro do compilador
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/29/2017
 O compilador não pode converter de `type1` para `type2`.  
   
 ## <a name="example"></a>Exemplo  
-C2440 pode ocorrer se você tentar inicializar a não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de uma literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
+C2440 pode ser causado se você tentar inicializar a não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de uma literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -102,7 +102,7 @@ Base * func(Derived * d) {
 ## <a name="example"></a>Exemplo  
  Os erros de C2440 nas linhas 15 e 16 do próximo exemplo são qualificados com o `Incompatible calling conventions for UDT return value` mensagem. Um *UDT* é um tipo definido pelo usuário, como uma classe, struct ou união. Esses tipos de erros de incompatibilidade são causados quando a convenção de chamada de um UDT especificado no tipo de retorno de uma declaração de encaminhamento está em conflito com a convenção de chamada real do UDT e um ponteiro de função está envolvido.  
   
- No exemplo, primeiro há declarações de encaminhamento para um struct e para uma função que retorna a estrutura; o compilador assumirá que o struct usa a convenção de chamada de C++. Em seguida é a definição de struct, que, por padrão, usa o C convenção de chamada. Porque o compilador não sabe a convenção de chamada da estrutura até terminar de ler a estrutura inteira, a convenção de chamada para a estrutura do tipo de retorno de `get_c2` devem também para ser C++.  
+ No exemplo, primeiro há declarações de encaminhamento para um struct e para uma função que retorna a estrutura; o compilador assumirá que o struct usa a convenção de chamada de C++. Em seguida é a definição de struct, que, por padrão, usa o C convenção de chamada. Porque o compilador não sabe a convenção de chamada do struct até terminar de ler a estrutura inteira, a convenção de chamada para a estrutura do tipo de retorno de `get_c2` também é considerado como C++.  
   
  A estrutura é seguida por outra declaração de função que retorna a estrutura, mas nesse ponto, o compilador sabe que há convenção de chamada de struct C++. Da mesma forma, o ponteiro de função, que retorna a estrutura, é definido após a definição de estrutura para que o compilador sabe que a estrutura usa a convenção de chamada de C++.  
   
@@ -213,7 +213,7 @@ int main() {
 ## <a name="example"></a>Exemplo  
  O compilador do Visual C++ não permite que o [operador const_cast](../../cpp/const-cast-operator.md) converter para baixo ao código-fonte que usa **/clr** programação é compilada.  
   
- Para resolver este C2440, use o operador cast correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).  
+ Para resolver essa C2440, use o operador cast correto. Para obter mais informações, consulte [operadores de conversão](../../cpp/casting-operators.md).  
   
  Este exemplo gera C2440:  
   
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>Exemplo  
 ### <a name="copy-list-initialization"></a>Inicialização de lista de cópia
 
-Visual Studio posterior e 2017 corretamente geram erros de compilador relacionados à criação de objetos usando listas de inicializadores não foram detectadas no Visual Studio 2015 e podem causar falhas ou comportamento de tempo de execução indefinido. De acordo com a N4594 13.3.1.7p1, na inicialização de lista de cópia, o compilador deverá considerar um construtor explícito para resolução de sobrecarga, mas deverá gerar um erro se essa sobrecarga for realmente escolhida.
-Os dois exemplos a seguir são compilados no Visual Studio 2015, mas não no Visual Studio 2017.
+Visual Studio 2017 e posterior corretamente geram erros de compilador relacionados à criação de objetos usando listas de inicializadores não foram detectadas no Visual Studio 2015 e podem causar falhas ou comportamento de tempo de execução indefinido. No C++ 17 copy-list-initialization, o compilador é necessário considerar um construtor explícito para a resolução de sobrecarga, mas deve gerar um erro se essa sobrecarga é na verdade escolhida.
 
-```
+O exemplo a seguir é compilado no Visual Studio 2015, mas não no Visual Studio de 2017.
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+Para corrigir o erro, use a inicialização direta:  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-Para corrigir o erro, use a inicialização direta:
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>Exemplo
 ### <a name="cv-qualifiers-in-class-construction"></a>Qualificadores CV na construção de classe
 
 No Visual Studio 2015, às vezes, o compilador ignora incorretamente o qualificador CV ao gerar um objeto de classe por meio de uma chamada do construtor. Eventualmente, isso pode gerar uma falha ou comportamento inesperado do tempo de execução. O exemplo a seguir é compilado no Visual Studio 2015, mas gera um erro do compilador no Visual Studio de 2017 e posterior:
 
-```
+```cpp
 struct S 
 {
     S(int);

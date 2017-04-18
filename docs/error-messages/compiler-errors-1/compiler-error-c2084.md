@@ -1,5 +1,5 @@
 ---
-title: C2084 de erro do compilador | Documentos do Microsoft
+title: C2084 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,33 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0ecd2db7dc5ac207d8257b725be83cdce983d5c8
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 653dc7a4a5d330efc89942fbe4ddd07bff81f770
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2084"></a>C2084 de erro do compilador
-função 'função' já tem um corpo  
+função '*função*' já tem um corpo  
   
  A função já foi definida.  
   
- Nas versões anteriores do Visual C++  
+ Em versões do Visual C++, Visual Studio 2002, antes de  
   
--   O compilador aceite vários especializações de modelo que é resolvido para o mesmo tipo real, embora as definições adicionais nunca estarão disponíveis. O compilador agora irá detectar essas várias definições  
+-   O compilador aceite vários especializações de modelo que é resolvido para o mesmo tipo real, embora as definições adicionais nunca estarão disponíveis. Agora, o compilador detecta essas várias definições.  
   
--   Int32 e int foram tratados como tipos separados. O compilador trata agora \__int32 como um sinônimo para int. Isso significa que o compilador detectará várias definições se uma função estiver sobrecarregada em ambos \__int32 e int e apresentar um erro.  
+-   `__int32`e `int` são tratadas como tipos separados. O compilador agora trata `__int32` como um sinônimo para `int`. Isso significa que o compilador detecta várias definições se uma função está sobrecarregada no `__int32` e `int` e retorna um erro.  
   
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2084:  
   
-```  
+```cpp  
 // C2084.cpp  
 void Func(int);  
 void Func(int) {}   // define function  
 void Func(int) {}   // C2084 second definition  
 ```  
   
- Resolução possível:  
+Para corrigir esse erro, remova a definição de duplicados:  
   
 ```  
 // C2084b.cpp  

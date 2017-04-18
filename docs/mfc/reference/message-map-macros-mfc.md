@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
@@ -55,6 +55,7 @@ Para dar suporte a mapas de mensagem, MFC fornece as seguintes macros:
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Declara que um mapa de mensagem será usado em uma classe para mapear as mensagens para funções (deve ser usado na declaração da classe).|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Começa a definição de um mapa de mensagem (deve ser usado na implementação de classe).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Começa a definição de um mapa de mensagem em um tipo de classe que contém um argumento de modelo único. |
 |[END_MESSAGE_MAP](#end_message_map)|Finaliza a definição de um mapa de mensagem (deve ser usado na implementação de classe).|  
   
 ### <a name="message-mapping-macros"></a>Macros de mapeamento de mensagem  
@@ -81,34 +82,6 @@ Para dar suporte a mapas de mensagem, MFC fornece as seguintes macros:
   
  Para obter mais informações sobre mapas de mensagem, a declaração de mapa de mensagem e demarcação macros e as macros de mapeamento de mensagem, consulte [mapas de mensagem](../../mfc/reference/message-maps-mfc.md) e [tópicos de mapeamento e manipulação de mensagens](../../mfc/message-handling-and-mapping.md). Para obter mais informações sobre intervalos de mapas de mensagem, consulte [manipuladores para intervalos de mapas de mensagem](../../mfc/handlers-for-message-map-ranges.md).  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Declara a classe define um mapa de mensagem. Cada `CCmdTarget`-classe derivada em seu programa deve fornecer um mapa de mensagem para lidar com mensagens.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>Comentários  
- Use o `DECLARE_MESSAGE_MAP` macro no final da sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro para a classe, use o `BEGIN_MESSAGE_MAP` macro, entradas de macro para cada uma de suas funções de manipulador de mensagens e o `END_MESSAGE_MAP` macro.  
-  
-> [!NOTE]
->  Se você declarar qualquer membro após `DECLARE_MESSAGE_MAP`, você deve especificar um novo tipo de acesso (**pública**, `private`, ou `protected`) para eles.  
-  
- Para obter mais informações sobre a mensagem e o `DECLARE_MESSAGE_MAP` macro, consulte [manipulação de mensagens e mapeamento de tópicos](../../mfc/message-handling-and-mapping.md).  
-  
-### <a name="example"></a>Exemplo  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 Começa a definição de seu mapa de mensagem.  
@@ -140,6 +113,61 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+Começa a definição de um mapa de mensagem em um tipo de classe que contém um argumento de modelo único.  
+   
+### <a name="syntax"></a>Sintaxe  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>Parâmetros  
+ `theClass`  
+ Especifica o nome da classe cuja mensagem mapeá-la.    
+ `type_name`  
+ O nome do parâmetro do modelo especificado para a classe.    
+ `baseClass`  
+ Especifica o nome da classe base do `theClass`.  
+   
+### <a name="remarks"></a>Comentários  
+ Essa macro é semelhante do [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro; no entanto, essa macro destina-se para classes que contêm um argumento de modelo único.  
+  
+ Na seção de implementação de método de sua classe, inicie o mapa de mensagem com o **BEGIN_TEMPLATE_MESSAGE_MAP** macro; em seguida, adicione entradas de macro para cada um dos seus métodos do manipulador de mensagens, como faria para um mapa de mensagem padrão. Assim como acontece com o **BEGIN_MESSAGE_MAP** macro, conclua o mapa de mensagem do modelo com o [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.  
+  
+ Para obter mais informações sobre a implementação de mapas de mensagem para classes de modelo, consulte [como: criar um mapa de mensagem para uma classe de modelo](../how-to-create-a-message-map-for-a-template-class.md).  
+   
+### <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ Declara a classe define um mapa de mensagem. Cada `CCmdTarget`-classe derivada em seu programa deve fornecer um mapa de mensagem para lidar com mensagens.  
+  
+### <a name="syntax"></a>Sintaxe  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>Comentários  
+ Use o `DECLARE_MESSAGE_MAP` macro no final da sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro para a classe, use o `BEGIN_MESSAGE_MAP` macro, entradas de macro para cada uma de suas funções de manipulador de mensagens e o `END_MESSAGE_MAP` macro.  
+  
+> [!NOTE]
+>  Se você declarar qualquer membro após `DECLARE_MESSAGE_MAP`, você deve especificar um novo tipo de acesso (**pública**, `private`, ou `protected`) para eles.  
+  
+ Para obter mais informações sobre a mensagem e o `DECLARE_MESSAGE_MAP` macro, consulte [manipulação de mensagens e mapeamento de tópicos](../../mfc/message-handling-and-mapping.md).  
+  
+### <a name="example"></a>Exemplo  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** afxwin.h  
+
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 Finaliza a definição de seu mapa de mensagem.  
@@ -315,7 +343,7 @@ END_MESSAGE_MAP()
  **Cabeçalho:** afxmsg_.h  
 
 ## <a name="on_olecmd"></a>ON_OLECMD    
-Encaminha comandos por meio da interface de expedição de comando `IOleCommandTarget`.  
+Rotas de comandos por meio da interface de expedição de comando `IOleCommandTarget`.  
   
 ### <a name="syntax"></a>Sintaxe  
   

@@ -1,5 +1,5 @@
 ---
-title: Estrutura AFX_EXTENSION_MODULE | Documentos do Microsoft
+title: Estrutura AFX_EXTENSION_MODULE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: f2699316266e9cc061fa898c4176e36ae8323b33
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4bc0dafbc4d09f5c53ff502876da2e250d537882
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="afxextensionmodule-structure"></a>Estrutura AFX_EXTENSION_MODULE
-O `AFX_EXTENSION_MODULE` é usado durante a inicialização de DLLs de extensão do MFC para manter o estado do módulo da DLL de extensão.  
+O `AFX_EXTENSION_MODULE` é usado durante a inicialização de DLLs de extensão do MFC para manter o estado do módulo DLL de extensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,41 +57,41 @@ struct AFX_EXTENSION_MODULE
   
 #### <a name="parameters"></a>Parâmetros  
  *bInitialized*  
- **TRUE** se o módulo DLL tiver sido inicializado com `AfxInitExtensionModule`.  
+ **TRUE** se o módulo DLL foi inicializado com `AfxInitExtensionModule`.  
   
  `hModule`  
- Especifica o identificador do módulo de DLL.  
+ Especifica o identificador do módulo DLL.  
   
  *hResource*  
- Especifica o identificador do módulo DLL recursos personalizados.  
+ Especifica o identificador do módulo de recurso personalizado de DLL.  
   
  *pFirstSharedClass*  
  Um ponteiro para informações (o `CRuntimeClass` estrutura) sobre a primeira classe de tempo de execução do módulo DLL. Usado para fornecer o início da lista de classe de tempo de execução.  
   
  *pFirstSharedFactory*  
- Um ponteiro para a fábrica do módulo da DLL primeiro (uma `COleObjectFactory` objeto). Usado para fornecer o início da lista de fábrica de classes.  
+ Um ponteiro para a fábrica do módulo DLL primeiro (um `COleObjectFactory` objeto). Usado para fornecer o início da lista de fábrica de classe.  
   
 ## <a name="remarks"></a>Comentários  
- Extensão de MFC DLLs precisa fazer duas coisas em seus `DllMain` função:  
+ Extensão do MFC DLLs precisam fazer duas coisas em seus `DllMain` função:  
   
--   Chamar [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1) e verifique se o valor de retorno.  
+-   Chamar [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) e verifique se o valor de retorno.  
   
 -   Criar um **CDynLinkLibrary** objeto se a DLL estiver exportando [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objetos ou tem seus próprios recursos personalizados.  
   
- O `AFX_EXTENSION_MODULE` estrutura é usada para manter uma cópia da extensão do estado do módulo DLL, incluindo uma cópia dos objetos de classe em tempo de execução que foram inicializados pela extensão DLL como parte da construção de objeto estático normal executada antes de `DllMain` é inserido. Por exemplo:  
+ O `AFX_EXTENSION_MODULE` estrutura é usada para manter uma cópia da extensão de estado do módulo DLL, incluindo uma cópia dos objetos de classe de tempo de execução que foram inicializados pela extensão DLL como parte da construção de objeto estático normal executada antes do `DllMain` é inserido. Por exemplo:  
   
- [!code-cpp[NVC_MFC_DLL N º&2;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_DLL N º 2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
  As informações de módulo armazenadas no `AFX_EXTENSION_MODULE` estrutura pode ser copiada para o **CDynLinkLibrary** objeto. Por exemplo:  
   
- [!code-cpp[NVC_MFC_DLL N º&5;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_DLL N º 5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** AFX. h  
+ **Cabeçalho:** AFX  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1)   
- [AfxTermExtensionModule](http://msdn.microsoft.com/library/b64de402-f1e3-4c26-9823-08c07876aaaa)
+ [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)   
+ [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
 
 

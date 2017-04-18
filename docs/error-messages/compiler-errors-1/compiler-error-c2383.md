@@ -1,5 +1,5 @@
 ---
-title: C2383 de erro do compilador | Documentos do Microsoft
+title: C2383 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,21 +34,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4eaca29e4d07cb31067f5dd664420c851450e1dc
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: faa2aa2c29ea34009f0812a3796d450a6877ca48
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2383"></a>C2383 de erro do compilador
-'symbol': argumentos padrão não são permitidos nesse símbolo  
+'*símbolo*': argumentos padrão não são permitidos neste símbolo  
   
- O compilador C++ não permite argumentos padrão em ponteiros para funções.  
+ O compilador do C++ não permitem argumentos padrão em ponteiros para funções.  
   
- Esse código foi aceita pelo compilador da versão anterior, mas agora retorna um erro. Para o código que funciona em todas as versões do Visual C++, não atribua um valor padrão para um argumento de ponteiro de função.  
+ Este código foi aceita pelo compilador do Visual C++ em versões anteriores do Visual Studio 2005, mas agora oferece um erro. Para o código que funciona em todas as versões do Visual C++, não atribua um valor padrão para um argumento de ponteiro de função.  
   
- A linha a seguir gera C2383:  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir gera C2383 e mostra uma possível solução:  
   
-```  
+```cpp  
 // C2383.cpp  
 // compile with: /c   
 void (*pf)(int = 0);   // C2383  
