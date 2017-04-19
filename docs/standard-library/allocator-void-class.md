@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - memory/std::allocator<void>
-- std::allocator<void>
-- std.allocator<void>
 - allocator<void>
 dev_langs:
 - C++

@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - subtract_with_carry_engine
-- std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
 - random/std::subtract_with_carry_engine::discard

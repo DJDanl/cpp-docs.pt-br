@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istrstream
-- std::istrstream
-- std.istrstream
+- strstream/std::istrstream::rdbuf
+- strstream/std::istrstream::str
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +74,7 @@ class istrstream : public istream
   
  **Namespace:** std  
   
-##  <a name="a-nameistrstreamistrstreama--istrstreamistrstream"></a><a name="istrstream__istrstream"></a>  istrstream::istrstream  
+##  <a name="istrstream__istrstream"></a>  istrstream::istrstream  
  Constrói um objeto do tipo `istrstream`.  
   
 ```
@@ -103,7 +103,7 @@ istrstream(
 ### <a name="remarks"></a>Comentários  
  Todos os construtores inicializam a classe base chamando [istream](../standard-library/istream-typedefs.md#istream)( **sb**), em que **sb** é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). Os primeiros dois construtores também inicializam **sb** chamando `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). Os dois construtores restantes chamam `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
   
-##  <a name="a-nameistrstreamrdbufa--istrstreamrdbuf"></a><a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
+##  <a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
  Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.  
   
 ```
@@ -119,7 +119,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa `rdbuf`.  
   
-##  <a name="a-nameistrstreamstra--istrstreamstr"></a><a name="istrstream__str"></a>  istrstream::str  
+##  <a name="istrstream__str"></a>  istrstream::str  
  Chama [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) e retorna um ponteiro para o início da sequência controlada.  
   
 ```

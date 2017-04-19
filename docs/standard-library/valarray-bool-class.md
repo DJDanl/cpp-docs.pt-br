@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - valarray<bool>
 - valarray/std::valarray<bool>
-- std::valarray<bool>
-- std.valarray<bool>
 dev_langs:
 - C++
 helpviewer_keywords:

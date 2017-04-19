@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
-- stdext.cache_chunklist
 - stdext::cache_chunklist
 - cache_chunklist
+- allocators/stdext::cache_chunklist::allocate
+- allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:

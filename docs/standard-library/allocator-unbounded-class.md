@@ -14,8 +14,6 @@ f1_keywords:
 - allocators/stdext::allocator_unbounded
 - allocators::allocator_unbounded
 - allocators/stdext::allocators::allocator_unbounded
-- allocators.allocator_unbounded
-- stdext.allocators.allocator_unbounded
 dev_langs:
 - C++
 helpviewer_keywords:

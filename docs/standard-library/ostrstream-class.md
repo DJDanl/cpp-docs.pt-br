@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.ostrstream
 - ostrstream
-- std::ostrstream
+- strstream/std::ostrstream::freeze
+- strstream/std::ostrstream::pcount
+- strstream/std::ostrstream::rdbuf
+- strstream/std::ostrstream::str
 dev_langs:
 - C++
 helpviewer_keywords:

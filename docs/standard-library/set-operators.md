@@ -1,14 +1,20 @@
 ---
-title: "Operadores &lt;set&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operadores &lt;set&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: []
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
 caps.latest.revision: 8
-manager: "ghogen"
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8a527297ac01359a19f4d5951bb25fcff2dceb5d
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="ltsetgt-operators"></a>Operadores &lt;set&gt;
 ||||  
@@ -18,7 +24,7 @@ manager: "ghogen"
 |[operator!= (multiset)](#operator_neq_multiset)|[operator&gt; (multiset)](#operator_gt_multiset)|[operator&gt;= (multiset)](#operator_gt__eq_multiset)|  
 |[operator&lt; (multiset)](#operator_lt_multiset)|[operator&lt;= (multiset)](#operator_lt__eq_multiset)|[operator== (multiset)](#operator_eq_eq_multiset)|  
   
-##  <a name="a-nameoperatorneqa--operator-set"></a><a name="operator_neq"></a>  operator!= (set)  
+##  <a name="operator_neq"></a>  operator!= (set)  
  Testa se o objeto set à esquerda do operador é diferente do objeto set à direita.  
   
 ```
@@ -75,7 +81,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt-set"></a><a name="operator_lt_"></a>  operator&lt; (set)  
+##  <a name="operator_lt_"></a>  operator&lt; (set)  
  Testa se o objeto set à esquerda do operador é menor do que o objeto set à direita.  
   
 ```
@@ -132,7 +138,7 @@ The set s1 is not less than the set s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt-set"></a><a name="operator_lt__eq"></a>  operator&lt;= (set)  
+##  <a name="operator_lt__eq"></a>  operator&lt;= (set)  
  Testa se o objeto set à esquerda do operador é menor ou igual ao objeto set à direita.  
   
 ```
@@ -196,7 +202,7 @@ Set s1 is less than or equal to the set s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator-set"></a><a name="operator_eq_eq"></a>  operator== (set)  
+##  <a name="operator_eq_eq"></a>  operator== (set)  
  Testa se o objeto set à esquerda do operador é igual ao objeto set à direita.  
   
 ```
@@ -253,7 +259,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt-set"></a><a name="operator_gt_"></a>  operator&gt; (set)  
+##  <a name="operator_gt_"></a>  operator&gt; (set)  
  Testa se o objeto set à esquerda do operador é maior que o objeto set à direita.  
   
 ```
@@ -310,7 +316,7 @@ The set s1 is greater than the set s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt-set"></a><a name="operator_gt__eq"></a>  operator&gt;= (set)  
+##  <a name="operator_gt__eq"></a>  operator&gt;= (set)  
  Testa se o objeto set à esquerda do operador é maior ou igual ao objeto set à direita.  
   
 ```
@@ -374,7 +380,7 @@ Set s1 is greater than or equal to set s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatorneqmultiseta--operator-multiset"></a><a name="operator_neq_multiset"></a>  operator!= (multiset)  
+##  <a name="operator_neq_multiset"></a>  operator!= (multiset)  
  Testa se o objeto multiset à esquerda do operador é diferente do objeto multiset à direita.  
   
 ```
@@ -431,7 +437,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorltmultiseta--operatorlt-multiset"></a><a name="operator_lt_multiset"></a>  operator&lt; (multiset)  
+##  <a name="operator_lt_multiset"></a>  operator&lt; (multiset)  
  Testa se o objeto multiset à esquerda do operador é menor que o objeto multiset à direita.  
   
 ```
@@ -492,7 +498,7 @@ The multiset s1 is not less than the multiset s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqmultiseta--operatorlt-multiset"></a><a name="operator_lt__eq_multiset"></a>  operator&lt;= (multiset)  
+##  <a name="operator_lt__eq_multiset"></a>  operator&lt;= (multiset)  
  Testa se o objeto multiset à esquerda do operador é menor ou igual ao objeto multiset à direita.  
   
 ```
@@ -562,7 +568,7 @@ The multiset s1 is less than or equal to the multiset s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqmultiseta--operator-multiset"></a><a name="operator_eq_eq_multiset"></a>  operator== (multiset)  
+##  <a name="operator_eq_eq_multiset"></a>  operator== (multiset)  
  Testa se o objeto multiset à esquerda do operador é igual ao objeto multiset à direita.  
   
 ```
@@ -619,7 +625,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgtmultiseta--operatorgt-multiset"></a><a name="operator_gt_multiset"></a>  operator&gt; (multiset)  
+##  <a name="operator_gt_multiset"></a>  operator&gt; (multiset)  
  Testa se o objeto multiset à esquerda do operador é maior que o objeto multiset à direita.  
   
 ```
@@ -680,7 +686,7 @@ The multiset s1 is greater than the multiset s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqmultiseta--operatorgt-multiset"></a><a name="operator_gt__eq_multiset"></a>  operator&gt;= (multiset)  
+##  <a name="operator_gt__eq_multiset"></a>  operator&gt;= (multiset)  
  Testa se o objeto multiset à esquerda do operador é maior ou igual ao objeto multiset à direita.  
   
 ```
@@ -752,6 +758,7 @@ The multiset s1 is greater than or equal to the multiset s4.
   
 ## <a name="see-also"></a>Consulte também  
  [\<set>](../standard-library/set.md)
+
 
 
 

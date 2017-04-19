@@ -11,8 +11,9 @@ ms.topic: article
 f1_keywords:
 - stdext::freelist
 - freelist
-- stdext.freelist
 - allocators/stdext::freelist
+- allocators/stdext::freelist::pop
+- allocators/stdext::freelist::push
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class freelist
   
  **Namespace:** stdext  
   
-##  <a name="a-namefreelistfreelista--freelistfreelist"></a><a name="freelist__freelist"></a>  freelist::freelist  
+##  <a name="freelist__freelist"></a>  freelist::freelist  
  Constrói um objeto do tipo `freelist`.  
   
 ```
@@ -90,7 +91,7 @@ freelist();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namefreelistpopa--freelistpop"></a><a name="freelist__pop"></a>  freelist::pop  
+##  <a name="freelist__pop"></a>  freelist::pop  
  Remove o primeiro bloco de memória da lista livre.  
   
 ```
@@ -103,7 +104,7 @@ void *pop();
 ### <a name="remarks"></a>Comentários  
  A função membro retorna `NULL` se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.  
   
-##  <a name="a-namefreelistpusha--freelistpush"></a><a name="freelist__push"></a>  freelist::push  
+##  <a name="freelist__push"></a>  freelist::push  
  Adiciona um bloco de memória à lista.  
   
 ```

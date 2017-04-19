@@ -1,41 +1,45 @@
 ---
-title: "Classe is_member_function_pointer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_member_function_pointer"
-  - "std::is_member_function_pointer"
-  - "type_traits/std::is_member_function_pointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_member_function_pointer class"
-  - "is_member_function_pointer"
+title: Classe is_member_function_pointer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_member_function_pointer
+- type_traits/std::is_member_function_pointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_member_function_pointer class
+- is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 69b84eea79b1019e1be16c1c57977e95e00f58b5
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="ismemberfunctionpointer-class"></a>Classe is_member_function_pointer
 Testa se o tipo é uma função de ponteiro para membro.  
@@ -106,3 +110,4 @@ is_member_function_pointer<int (functional::*)()> == true
 ## <a name="see-also"></a>Consulte também  
  [<type_traits>](../standard-library/type-traits.md)   
  [Classe is_member_pointer](../standard-library/is-member-pointer-class.md)
+

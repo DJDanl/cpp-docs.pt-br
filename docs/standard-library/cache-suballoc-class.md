@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.cache_suballoc
 - allocators/stdext::cache_suballoc
 - stdext::cache_suballoc
 - cache_suballoc
+- allocators/stdext::cache_suballoc::allocate
+- allocators/stdext::cache_suballoc::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class cache_suballoc
   
  **Namespace:** stdext  
   
-##  <a name="a-namecachesuballocallocatea--cachesuballocallocate"></a><a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+##  <a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -99,7 +100,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachesuballoccachesuballoca--cachesuballoccachesuballoc"></a><a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  Constrói um objeto do tipo `cache_suballoc`.  
   
 ```
@@ -108,7 +109,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachesuballocdeallocatea--cachesuballocdeallocate"></a><a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+##  <a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```

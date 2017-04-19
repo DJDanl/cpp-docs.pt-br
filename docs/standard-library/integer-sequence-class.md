@@ -15,8 +15,6 @@ f1_keywords:
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
 - integer_sequence
-- std.integer_sequence
-- std::integer_sequence
 dev_langs:
 - C++
 helpviewer_keywords:

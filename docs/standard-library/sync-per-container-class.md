@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.sync_per_container
 - sync_per_container
 - stdext::sync_per_container
 - allocators/stdext::sync_per_container
+- allocators/stdext::sync_per_container::equals
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +70,7 @@ class sync_per_container
   
  **Namespace:** stdext  
   
-##  <a name="a-namesyncpercontainerequalsa--syncpercontainerequals"></a><a name="sync_per_container__equals"></a>  sync_per_container::equals  
+##  <a name="sync_per_container__equals"></a>  sync_per_container::equals  
  Compara a igualdade de dois caches.  
   
 ```

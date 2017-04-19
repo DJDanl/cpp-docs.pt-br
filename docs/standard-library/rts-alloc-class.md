@@ -12,7 +12,9 @@ f1_keywords:
 - stdext::rts_alloc
 - allocators/stdext::rts_alloc
 - rts_alloc
-- stdext.rts_alloc
+- allocators/stdext::rts_alloc::allocate
+- allocators/stdext::rts_alloc::deallocate
+- allocators/stdext::rts_alloc::equals
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +76,7 @@ class rts_alloc
   
  **Namespace:** stdext  
   
-##  <a name="a-namertsallocallocatea--rtsallocallocate"></a><a name="rts_alloc__allocate"></a>  rts_alloc::allocate  
+##  <a name="rts_alloc__allocate"></a>  rts_alloc::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -93,7 +95,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro retorna `caches[_IDX].allocate(count)`, em que o índice `_IDX` é determinado pelo tamanho do bloco solicitado `count` ou, se `count` for muito grande, retornará `operator new(count)`. `cache`, que representa o objeto do cache.  
   
-##  <a name="a-namertsallocdeallocatea--rtsallocdeallocate"></a><a name="rts_alloc__deallocate"></a>  rts_alloc::deallocate  
+##  <a name="rts_alloc__deallocate"></a>  rts_alloc::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -110,7 +112,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro chama `caches[_IDX].deallocate(ptr, count)`, em que o índice `_IDX` é determinado pelo tamanho do bloco solicitado `count` ou, se `count` for muito grande, retornará `operator delete(ptr)`.  
   
-##  <a name="a-namertsallocequalsa--rtsallocequals"></a><a name="rts_alloc__equals"></a>  rts_alloc::equals  
+##  <a name="rts_alloc__equals"></a>  rts_alloc::equals  
  Compara a igualdade de dois caches.  
   
 ```

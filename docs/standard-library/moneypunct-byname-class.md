@@ -1,41 +1,44 @@
 ---
-title: "Classe moneypunct_byname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.moneypunct_byname"
-  - "std::moneypunct_byname"
-  - "xlocmon/std::moneypunct_byname"
-  - "moneypunct_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "moneypunct_byname class"
+title: Classe moneypunct_byname | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocmon/std::moneypunct_byname
+- moneypunct_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a84af15b181aff3f412800ef8b9682b3be01aefa
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="moneypunctbyname-class"></a>Classe moneypunct_byname
 Uma classe de modelo derivada que descreve um objeto que pode funcionar como uma faceta `moneypunct` de uma determinada localidade, permitindo a formatação do campo de entrada monetário ou campos de saída monetários.  
@@ -71,6 +74,7 @@ protected:
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

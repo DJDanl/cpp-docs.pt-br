@@ -12,7 +12,9 @@ f1_keywords:
 - stdext::sync_per_thread
 - sync_per_thread
 - allocators/stdext::sync_per_thread
-- stdext.sync_per_thread
+- allocators/stdext::sync_per_thread::allocate
+- allocators/stdext::sync_per_thread::deallocate
+- allocators/stdext::sync_per_thread::equals
 dev_langs:
 - C++
 helpviewer_keywords:

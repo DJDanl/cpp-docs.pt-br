@@ -1,14 +1,25 @@
 ---
-title: "Macros &lt;allocators&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Macros &lt;allocators&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocators/std::ALLOCATOR_DECL
+- allocators/std::CACHE_CHUNKLIST
+- allocators/std::CACHE_FREELIST
+- allocators/std::CACHE_SUBALLOC
+- allocators/std::SYNC_DEFAULT
 ms.assetid: 9cb5ee07-1ff9-4594-ae32-3c8c6efb511a
 caps.latest.revision: 12
-manager: "ghogen"
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: da17f9af1f14df13eb3871ef9ccf785356e02de4
+ms.openlocfilehash: abc1dd29ba68540a6669f7aff1bbd3dffdab616a
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="ltallocatorsgt-macros"></a>Macros &lt;allocators&gt;
 ||||  
@@ -16,7 +27,7 @@ manager: "ghogen"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|  
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|  
   
-##  <a name="a-nameallocatordecla--allocatordecl"></a><a name="allocator_decl"></a>  ALLOCATOR_DECL  
+##  <a name="allocator_decl"></a>  ALLOCATOR_DECL  
  Produz uma classe de modelo allocator.  
   
 ```
@@ -52,7 +63,7 @@ public:
 };
 ```  
   
-##  <a name="a-namecachechunklista--cachechunklist"></a><a name="cache_chunklist"></a>  CACHE_CHUNKLIST  
+##  <a name="cache_chunklist"></a>  CACHE_CHUNKLIST  
  Produz `stdext::allocators::cache_chunklist<sizeof(Type)>`.  
   
 ```
@@ -61,7 +72,7 @@ public:
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachefreelista--cachefreelist"></a><a name="cache_freelist"></a>  CACHE_FREELIST  
+##  <a name="cache_freelist"></a>  CACHE_FREELIST  
  Produz `stdext::allocators::cache_freelist<sizeof(Type), max>`.  
   
 ```
@@ -70,7 +81,7 @@ public:
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachesuballoca--cachesuballoc"></a><a name="cache_suballoc"></a>  CACHE_SUBALLOC  
+##  <a name="cache_suballoc"></a>  CACHE_SUBALLOC  
  Produz `stdext::allocators::cache_suballoc<sizeof(Type)>`.  
   
 ```
@@ -79,7 +90,7 @@ public:
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namesyncdefaulta--syncdefault"></a><a name="sync_default"></a>  SYNC_DEFAULT  
+##  <a name="sync_default"></a>  SYNC_DEFAULT  
  Produz um filtro de sincronização.  
   
 ```
@@ -91,6 +102,7 @@ public:
   
 ## <a name="see-also"></a>Consulte também  
  [\<allocators>](../standard-library/allocators-header.md)
+
 
 
 

@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.cache_freelist
 - allocators/stdext::cache_freelist
 - stdext::cache_freelist
 - cache_freelist
+- allocators/stdext::cache_freelist::allocate
+- allocators/stdext::cache_freelist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +83,7 @@ class cache_freelist
   
  **Namespace:** stdext  
   
-##  <a name="a-namecachefreelistallocatea--cachefreelistallocate"></a><a name="cache_freelist__allocate"></a>  cache_freelist::allocate  
+##  <a name="cache_freelist__allocate"></a>  cache_freelist::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachefreelistcachefreelista--cachefreelistcachefreelist"></a><a name="cache_freelist__cache_freelist"></a>  cache_freelist::cache_freelist  
+##  <a name="cache_freelist__cache_freelist"></a>  cache_freelist::cache_freelist  
  Constrói um objeto do tipo `cache_freelist`.  
   
 ```
@@ -109,7 +110,7 @@ cache_freelist();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namecachefreelistdeallocatea--cachefreelistdeallocate"></a><a name="cache_freelist__deallocate"></a>  cache_freelist::deallocate  
+##  <a name="cache_freelist__deallocate"></a>  cache_freelist::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```

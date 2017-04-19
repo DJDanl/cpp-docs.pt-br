@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::operator!=
 - functional/std::operator!=
-- std::operator==
 - functional/std::operator==
 dev_langs:
 - C++

@@ -1,14 +1,30 @@
 ---
 title: "Funções &lt;type_traits&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
-manager: "ghogen"
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f13f6ffe70bf2f9abe640eb0c990f690b08b1f59
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="lttypetraitsgt-functions"></a>Funções &lt;type_traits&gt;
 ||||  
@@ -18,7 +34,7 @@ manager: "ghogen"
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a> is_assignable  
+##  <a name="is_assignable"></a> is_assignable  
  Testa se um valor do tipo `From` pode ser atribuído a um tipo `To`.  
   
 ```  
@@ -36,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>Comentários  
  A expressão não avaliada `declval<To>() = declval<From>()` deve ser bem formada. `From` e `To` devem ser tipos completos, `void` ou matrizes de limite desconhecido.  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a> is_copy_assignable  
+##  <a name="is_copy_assignable"></a> is_copy_assignable  
  Teste se o tipo pode ser copiado na atribuição.  
   
 ```  
@@ -51,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>Comentários  
  Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe com um operador de atribuição de cópia; caso contrário, será falsa. Equivalente a is_assignable\<Ty&, const Ty&>.  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a> is_copy_constructible  
+##  <a name="is_copy_constructible"></a> is_copy_constructible  
  Testa se o tipo tem um construtor de cópia.  
   
 ```  
@@ -101,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a> is_default_constructible  
+##  <a name="is_default_constructible"></a> is_default_constructible  
  Testa se o tipo tem um construtor padrão.  
   
 ```  
@@ -151,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a> is_move_assignable  
+##  <a name="is_move_assignable"></a> is_move_assignable  
  Testa se o tipo pode ser atribuído a uma movimentação.  
   
 ```  
@@ -166,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>Comentários  
  Um tipo poderá ser atribuído a uma movimentação se uma referência rvalue ao tipo puder ser atribuída a uma referência ao tipo. O predicado de tipo é equivalente a `is_assignable<T&, T&&>`. Tipos atribuíveis a movimentação incluem tipos escalares referenciáveis e tipos de classe que tenham operadores de atribuição de movimentação definidos pelo usuário ou gerados pelo compilador.  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a> is_move_constructible  
+##  <a name="is_move_constructible"></a> is_move_constructible  
  Testa se o tipo tem um construtor de movimentação.  
   
 ```  
@@ -181,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>Comentários  
  Um predicado de tipo será avaliado como verdadeiro se o tipo `T` puder ser construído usando uma operação de movimentação. Esse predicado é equivalente a `is_constructible<T, T&&>`.  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable  
  Testa se o tipo tem um operador de atribuição de movimentação **nothrow**.  
   
 ```  
@@ -196,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>Comentários  
  Uma instância do predicado de tipo será verdadeira se o tipo `Ty` tiver um operador atribuição de movimento nothrow; caso contrário, será falsa.  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable  
  Testa se o tipo tem uma cópia trivial do operador de atribuição.  
   
 ```  
@@ -213,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  Um construtor de atribuição para uma classe `T` será trivial se for implicitamente fornecido, a classe `T` não tiver funções virtuais, a classe `T` não tiver bases virtuais, as classes de todos os membros de dados não estáticos de tipo de classe tiverem operadores de atribuição triviais e as classes de todos os membros de dados não estáticos de matriz de tipo de classe tiverem operadores de atribuição trivial.  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a> is_trivially_move_assignable  
  Testa se o tipo tem um operador de atribuição de movimentação trivial.  
   
 ```  
@@ -240,7 +256,7 @@ struct is_trivially_move_assignable;
   
  as classes de todos os membros de dados não estáticos da matriz de tipo da classe tiverem operadores de atribuição de movimentação trivial  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a> is_trivially_move_constructible  
  Testa se o tipo tem construtor de movimentação trivial.  
   
 ```  
@@ -275,4 +291,5 @@ struct is_trivially_move_constructible;
   
 ## <a name="see-also"></a>Consulte também  
  [<type_traits>](../standard-library/type-traits.md)
+
 

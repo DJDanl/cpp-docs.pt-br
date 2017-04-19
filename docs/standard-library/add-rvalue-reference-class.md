@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - type_traits/std::add_rvalue_reference
-- std::add_rvalue_reference
 - add_rvalue_reference
-- std.add_rvalue_reference
 dev_langs:
 - C++
 helpviewer_keywords:
