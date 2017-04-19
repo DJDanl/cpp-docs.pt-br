@@ -1,41 +1,46 @@
 ---
-title: "unary_function Struct | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.unary_function"
-  - "unary_function"
-  - "functional/std::unary_function"
-  - "std::unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_function class"
+title: unary_function Struct | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.unary
+- unary
+- functional/std::unary
+- std::unary
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="unaryfunction-struct"></a>Struct unary_function
 Um struct vazio de base que define os tipos que podem ser herdados por classes derivadas que fornece um objeto de função unária.  
@@ -111,6 +116,7 @@ The number of elements in v1 greater than 10 is: 3.
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
 
 
 
