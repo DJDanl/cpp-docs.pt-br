@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c33233bb7a45a1180f50c7a3d109fd2cd70e8318
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d456c0eb3add4fbcb7c968d3309625157922051
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="postfix-operators"></a>Operadores pós-fixados
@@ -51,11 +51,11 @@ Os operadores pós-fixados tem a precedência mais alta (a associação mais est
   
  *postfix-expression*  **.**  *identifier*  
   
- *postfix-expression*  **–>**  *identifier*  
+ *postfix-expression*  **->**  *identifier*  
   
  *postfix-expression*  **++**  
   
- *postfix-expression*  **––**  
+ *postfix-expression*  **--**  
   
  Os operadores nesse nível de precedência são: subscritos de matriz, chamadas de função, membros de estrutura e união, e operadores de incremento e decremento pós-fixados.  
   

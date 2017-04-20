@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2f9c5aa9561b58124ab8762f3a0824b917e8b91a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 708651f59ceff638482264e3fc57228e8a1822b2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="countryregion-strings"></a>Cadeias de caracteres de país/região
-Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter listas de nomes de país/região que tem suporte por várias versões do sistema operacional Windows, consulte as [referência API de suporte ao idioma nacional (NLS)](http://msdn.microsoft.com/goglobal/bb896001.aspx). Nas listas, a cadeia de caracteres de país/região pode ser qualquer um dos valores de país na coluna **localidade – país/região do idioma** ou qualquer uma das abreviações na coluna **abreviação do nome do país ou região**.  
+Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter listas de nomes de país/região que tem suporte por várias versões do sistema operacional Windows, consulte as [referência API de Suporte ao Idioma Nacional (NLS)](http://msdn.microsoft.com/goglobal/bb896001.aspx). Nas listas, a cadeia de caracteres de país/região pode ser qualquer um dos valores de país na coluna **Localidade – País/Região do idioma** ou qualquer uma das abreviações na coluna **abreviação do nome do País ou Região**.  
   
  A implementação de biblioteca em tempo de execução C também dá suporte às seguintes cadeias de caracteres adicionais de país/região e abreviações:  
   

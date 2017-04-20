@@ -37,8 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e289b439f53b987f57face51952d54dc16002edd
-ms.openlocfilehash: f378805dc00885c10816c989da22f13357b8f894
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 46dd7f80b9a81148d529afe4b537fbf203e20173
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="floating-point-support"></a>Suporte de ponto flutuante
@@ -102,7 +103,7 @@ A Biblioteca de Tempo de Execução de C (CRT) da Microsoft fornece muitas funç
   
  [erf, erff, erfl, erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
   
- [exp, expf](../c-runtime-library/reference/exp-expf.md)  
+ [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)  
   
  [exp2, exp2f, exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)  
   
@@ -272,8 +273,3 @@ A Biblioteca de Tempo de Execução de C (CRT) da Microsoft fornece muitas funç
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -46,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b3bb460f5c777643a73f766833bfb2cfd569bd59
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="filename-search-functions"></a>Funções de pesquisa de nome de arquivo
@@ -63,16 +63,16 @@ Essas funções procuram por e fecham pesquisas de nomes de arquivo especificado
 ## <a name="remarks"></a>Comentários  
  A função `_findfirst` fornece informações sobre a primeira instância de um nome de arquivo que corresponde ao arquivo especificado no argumento `filespec`. Você pode usar `filespec` em qualquer combinação de caracteres curinga que tenha suporte do sistema operacional do host.  
   
- As funções retornam informações sobre o arquivo em uma estrutura _`finddata_t`, que é definida em ES.h. Várias funções na família usam muitas variações da estrutura `_finddata_t`. A estrutura `_finddata_t` básica inclui os seguintes elementos:  
+ As funções retornam informações sobre o arquivo em uma estrutura `_finddata_t`, que é definida em ES.h. Várias funções na família usam muitas variações da estrutura `_finddata_t`. A estrutura `_finddata_t` básica inclui os seguintes elementos:  
   
  `unsigned attrib`  
  Atributo do arquivo.  
   
  `time_t time_create`  
- Hora de criação do arquivo (–1L para sistemas de arquivos FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use [localtime_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
+ Hora de criação do arquivo (-1L para sistemas de arquivos FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use [localtime_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
   
  `time_t time_access`  
- Hora do último acesso do arquivo (–1L para sistemas de arquivo FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use `localtime_s`.  
+ Hora do último acesso do arquivo (-1L para sistemas de arquivo FAT). Essa hora é armazenada no formato UTC. Para converter para a hora local, use `localtime_s`.  
   
  `time_t time_write`  
  Hora da última gravação no arquivo. Essa hora é armazenada no formato UTC. Para converter para a hora local, use `localtime_s`.  
@@ -83,7 +83,7 @@ Essas funções procuram por e fecham pesquisas de nomes de arquivo especificado
  `char name`[ `_MAX_PATH`]  
  Nome com terminação nula do arquivo ou diretório correspondente, sem o caminho.  
   
- Em sistemas de arquivos que não dão suporte aos horários de criação e de último acessos de um arquivo, como o sistema FAT, os campos `time_create` e `time_access` são sempre –1L.  
+ Em sistemas de arquivos que não dão suporte aos horários de criação e de último acesso de um arquivo, como o sistema FAT, os campos `time_create` e `time_access` são sempre -1L.  
   
  `_MAX_PATH` é definidos em Stdlib.h como 260 bytes.  
   

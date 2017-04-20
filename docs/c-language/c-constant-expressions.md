@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ef54749c450dd85c71fe61588c0375195b1c7bea
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0e3323c85ce7668adfe5b4a297ac8bab930c3ae6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-constant-expressions"></a>Expressões de constante C
@@ -62,7 +62,7 @@ Uma expressão constante é avaliada em tempo de compilação, não o tempo de e
  *unary-expression assignment-operator assignment-expression*  
   
  *assignment-operator*: one of  
- **= \*= /= %= += –= <\<= >>= &= ^= &#124;=**  
+ **= \*= /= %= += -= <\<= >>= &= ^= &#124;=**  
   
  Os não terminais para struct declarator, enumerator, direct declarator, direct-abstract declarator, and labeled statement contêm não terminais *constant-expression*.  
   

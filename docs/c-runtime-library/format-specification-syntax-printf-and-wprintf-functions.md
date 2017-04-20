@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 985fde9eacbdb8e0953aa576c45dfa0a9e173d95
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c57231375c662134fb1f9bd0252fd3b70f051ba2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxe de especificação de formato: funções printf e wprintf
@@ -96,14 +96,14 @@ Tipos de inteiro como `short`, `int`, `long`, `long long` e suas variações `un
 |**u**|Inteiro|Inteiro decimal sem sinal.|  
 |**x**|Inteiro|Inteiro hexadecimal não assinado; usa "abcdef".|  
 |**X**|Inteiro|Inteiro hexadecimal não assinado; usa "ABCDEF".|  
-|**e**|Ponto flutuante|O valor assinado que tem a forma [–]*d.dddd*__e±__*dd*[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis, por padrão, e *dd*[*d*] é dois ou três dígitos decimais dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|  
+|**e**|Ponto flutuante|O valor assinado que tem a forma [-]*d.dddd*__e±__*dd*[*d*], em que *d* é um dígito decimal, *dddd* é um ou mais dígitos decimais dependendo da precisão especificada ou seis, por padrão e *dd*[*d*] é dois ou três dígitos decimais dependendo do [formato de saída](../c-runtime-library/set-output-format.md) e do tamanho do expoente.|  
 |**E**|Ponto flutuante|Idêntico ao formato **e**, exceto pelo fato de que **E** em vez de **e** apresenta o expoente.|  
-|**f**|Ponto flutuante|Valor assinado que tem a forma [–]*dddd*__.__*dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|  
+|**f**|Ponto flutuante|Valor assinado que tem a forma [-]*dddd*__.__*dddd*, em que *dddd* é um ou mais dígitos decimais. O número de dígitos antes do ponto decimal depende da magnitude do número e o número de dígitos após o ponto decimal depende da precisão solicitada ou é seis, por padrão.|  
 |**F**|Ponto flutuante|Idêntico ao formato **f**, exceto pelo fato de que a saída de infinito e de nan está em maiúsculas.|  
-|**g**|Ponto flutuante|Valores assinados são exibidos no formato **f** ou **e**, dependendo do que é mais compacto para o valor e a precisão especificados. O formato **e** será usado somente quando o expoente do valor for menor do que –4 ou maior ou igual ao argumento de *precisão*. Zeros à esquerda são truncados, e o ponto decimal é exibido somente se um ou mais dígitos vierem na sequência.|  
+|**g**|Ponto flutuante|Valores assinados são exibidos no formato **f** ou **e**, dependendo do que é mais compacto para o valor e a precisão especificados. O formato **e** será usado somente quando o expoente do valor for menor do que -4 ou maior ou igual ao argumento de *precisão*. Zeros à esquerda são truncados, e o ponto decimal é exibido somente se um ou mais dígitos vierem na sequência.|  
 |**G**|Ponto flutuante|Idêntico ao formato **g**, com a exceção de que **E** em vez de **e** apresenta o expoente (quando apropriado).|  
-|**a**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [−]0x*h.hhhh*__p±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras minúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|  
-|**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [−]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|  
+|**a**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0x*h.hhhh*__p±__*dd*, no qual *h.hhhh* são os dígitos hexadecimais (usando letras minúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|  
+|**A**|Ponto flutuante|Valor hexadecimal de ponto flutuante de precisão dupla e assinado que tem o formato [-]0X*h.hhhh*__P±__*dd*, em que *h.hhhh* são os dígitos hexadecimais (usando letras maiúsculas) da mantissa e *dd* são um ou mais dígitos para o expoente. A precisão especifica o número de dígitos após a vírgula.|  
 |**n**|Ponteiro para o inteiro|Número de caracteres gravados com êxito até o momento no fluxo ou no buffer. Esse valor é armazenado no inteiro cujo endereço é fornecido como o argumento. O tamanho do número inteiro apontado pode ser controlado por um prefixo de especificação de tamanho de argumento. O especificador **n** é desabilitado por padrão; para obter mais informações, consulte a observação de segurança importante.|  
 |**p**|Tipo ponteiro|Exibe o argumento como um endereço usando dígitos hexadecimais.|  
 |**s**|Cadeia de caracteres|Quando usado com funções `printf`, especifica uma cadeia de caracteres de byte único ou uma cadeia de caracteres de bytes múltiplos; quando usado com funções `wprintf`, especifica uma cadeia de caracteres largos. Os caracteres são exibidos até o primeiro caractere nulo ou até que o valor de *precisão* seja atingido.|  
@@ -126,7 +126,7 @@ Antes do Visual Studio 2015, o CRT usava um formato diferente não padrão para 
 |Valor|Saída|  
 |-----------|------------|  
 |+ infinity|`1.#INF` *random-digits*|  
-|– infinity|`–1.#INF` *random-digits*|  
+|- infinity|`-1.#INF` *random-digits*|  
 |Indefinite (mesmo que NaN silencioso)|*dígito* `.#IND` *random-digits*|  
 |NaN|*dígito* `.#NAN` *random-digits*|  
   
@@ -149,7 +149,7 @@ O primeiro campo opcional em uma especificação de conversão contém *diretiva
 |Sinalizador|Significado|Padrão|  
 |----------|-------------|-------------|  
 |**-**|Alinhar à esquerda o resultado dentro da largura de campo determinada.|Alinhar à direita.|  
-|**+**|Use um sinal (+ ou -) como prefixo o valor de saída se for de um tipo assinado.|O sinal será exibido somente para valores de sinal negativos (-).|  
+|**+**|Use um sinal (+ ou -) como prefixo no valor de saída se for de um tipo com sinal.|O sinal será exibido somente para valores assinados negativos (-).|  
 |**0**|Se a *largura* tiver **0** como prefixo, zeros à esquerda serão adicionados até que a largura mínima seja atingida. Se **0** e **-** aparecerem, o **0** será ignorado. Se **0** for especificado como um formato inteiro (**i**, **u**, **x**, **X**, **o**, **d**) e uma especificação de precisão também estiver presente (por exemplo, `%04.d`), o **0** será ignorado. Se **0** for especificado para o formato de ponto flutuante **a** ou **A**, zeros à esquerda serão pré-anexados à mantissa, após o prefixo `0x` ou `0X`.|Nenhum preenchimento.|  
 |**blank** (' ')|Use um espaço em branco como prefixo do valor de saída se tiver um sinal e for positivo. O espaço em branco será ignorado se o espaço em branco e os sinalizadores + forem exibidos.|Nenhum espaço em branco é exibido.|  
 |**#**|Quando ele for usado com o formato **o**, **x** ou **X**, o sinalizador **#** usará 0, 0x ou 0X, respectivamente, para o prefixo de qualquer valor de saída diferente de zero.|Nenhum espaço em branco é exibido.|  

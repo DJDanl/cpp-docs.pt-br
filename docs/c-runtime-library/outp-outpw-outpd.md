@@ -62,8 +62,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0bece17df9233570753cd318d28a88254eaaf74f
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3411f2f902a3a7d4dc47a0d9fb00b5e970a1a876
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
@@ -124,8 +125,3 @@ unsigned long dataword
 ## <a name="see-also"></a>Consulte também  
  [E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)   
  [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

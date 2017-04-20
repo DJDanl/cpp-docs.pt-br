@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 07c51d14985f5f1ef9365f704987e90291117919
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dc4480e79931f1ad3c1dc81b9687e82fcb2697a7
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="code-pages"></a>Páginas de código

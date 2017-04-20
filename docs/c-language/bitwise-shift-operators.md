@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7bed4fd7a0d77f2759e7ce4aa2de253dfb3542fb
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 54cd2dad24563082c820999ff53e17b4d04380f7
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="bitwise-shift-operators"></a>Operadores shift bit a bit
@@ -80,7 +80,7 @@ z = ( x << 8 ) + ( y >> 8 );
   
  Neste exemplo, `x` é deslocado para a esquerda oito posições e `y` é deslocado para a direita oito posições. Os valores deslocados são adicionados, resultando em 0xAA55 e atribuídos a `z`.  
   
- O deslocamento de um valor negativo para a direita gera a metade do valor original, arredondado para baixo. Por exemplo, – 253 (binário 11111111 00000011) com o deslocamento para a direita de um de bit produz – 127 (11111111 10000001). Um deslocamento positivo de 253 para a direita gera +126.  
+ O deslocamento de um valor negativo para a direita gera a metade do valor original, arredondado para baixo. Por exemplo, -253 (binário 11111111 00000011) com o deslocamento para a direita de um de bit produz -127 (11111111 10000001). Um deslocamento positivo de 253 para a direita gera +126.  
   
  Os deslocamentos para a direita preservam o bit de sinal. Quando um inteiro assinado é deslocado para a direita, o bit mais significativo permanece definido. Quando um inteiro não assinado é deslocado para a direita, o bit mais significativo é limpo.  
   

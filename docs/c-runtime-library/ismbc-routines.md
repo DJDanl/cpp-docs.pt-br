@@ -44,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: eb525071ad4ee0666da62fc8d8edbcb3ec180f8a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4af1bd32f4c1050428fa91d1379412d805ad0516
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbc-routines"></a>Rotinas _ismbc
@@ -90,7 +90,7 @@ Cada teste de rotina **_ismbc** testa um caractere multibyte `c` para uma condi�
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS nível 1: 0x889F<=`c`<=0x9872.|  
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS nível 2: 0x989F<=`c`<=0xEA9E.|  
   
- `_ismbcl0`, `_ismbcl1` e `_ismbcl2` verificam se o valor especificado `c` corresponde às condições de teste descritas na tabela acima, mas não verificam se `c` é um caractere multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornam um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte está definido.  
+ `_ismbcl0`, `_ismbcl1` e `_ismbcl2` verificam se o valor especificado `c` corresponde às condições de teste descritas na tabela acima, mas não verificam se `c` é um caractere multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornarão um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte está definido.  
   
  **FIM do específico da página de código 932**  
   

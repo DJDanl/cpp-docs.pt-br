@@ -1,5 +1,5 @@
 ---
-title: Formatos de data/hora do Windows de&32; bits | Microsoft Docs
+title: Formatos de data/hora do Windows de 32 bits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,12 +34,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bd034287c435968eeca70674e56946c86137f4aa
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: bd00adddbf728aae66120fede63e0b6a0c5439a7
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="32-bit-windows-timedate-formats"></a>Formatos de data/hora do Windows de&32; bits
+# <a name="32-bit-windows-timedate-formats"></a>Formatos de data/hora do Windows de 32 bits
 A data e a hora do arquivo são armazenadas individualmente, usando inteiros sem sinal como campos de bits. A data e a hora do arquivo são incluídas como segue:  
   
 ### <a name="time"></a>Hora  
@@ -47,8 +47,8 @@ A data e a hora do arquivo são armazenadas individualmente, usando inteiros sem
 |Posição de bit:|0   1   2   3   4|5   6   7   8   9   A|B   C   D   E   F|  
 |-------------------|-----------------------|---------------------------|-----------------------|  
 |Comprimento:|5|6|5|  
-|Conteúdo:|horas|minutos|incrementos de&2; segundos|  
-|Alcance de valores:|0–23|0–59|0 – 29 em intervalos de 2 segundos|  
+|Conteúdo:|horas|minutos|incrementos de 2 segundos|  
+|Alcance de valores:|0-23|0-59|0-29 em intervalos de 2 segundos|  
   
 ### <a name="date"></a>Date  
   
@@ -56,7 +56,7 @@ A data e a hora do arquivo são armazenadas individualmente, usando inteiros sem
 |-------------------|-------------------------------|-------------------|-----------------------|  
 |Comprimento:|7|4|5|  
 |Conteúdo:|ano|mês|dia|  
-|Alcance de valores:|0–119|1–12|1–31|  
+|Alcance de valores:|0-119|1-12|1-31|  
 ||(relativo a 1980)|||  
   
 ## <a name="see-also"></a>Consulte também  

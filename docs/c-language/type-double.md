@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d9a52d8ea3593d670d6358042f2b5de652cd2639
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: daf8c0652183faf5e247fb74663be279b655d327
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="type-double"></a>Tipo duplo

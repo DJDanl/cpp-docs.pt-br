@@ -54,8 +54,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 702036cfaebb899ee4cee61877d37e2de2211617
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 57e2d4bf3c84c44917ccfea8ca6584f1c94f5200
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
@@ -96,7 +97,7 @@ wchar_t *_cgetws(
 ## <a name="remarks"></a>Comentários  
  Essas funções leem uma cadeia de caracteres do console e armazenam a cadeia de caracteres e seu comprimento no local apontado por `buffer`. O parâmetro `buffer` deve ser um ponteiro para uma matriz de caracteres. O primeiro elemento da matriz, `buffer[0]`, deve conter o tamanho máximo (em caracteres) da cadeia de caracteres a ser lida. A matriz deve conter elementos suficientes para conter a cadeia de caracteres, um caractere nulo de terminação ('\0') e 2 bytes adicionais. A função lê caracteres até uma combinação de CR-LF (retorno de carro – alimentação de linha) ou o número especificado de caracteres ser lido. A cadeia de caracteres é armazenada começando em `buffer[2]`. Se a função ler CR-LF, ela armazenará o caractere nulo ('\0'). A função então armazena o tamanho real da cadeia de caracteres no segundo elemento de matriz, `buffer[1]`.  
   
- Uma vez que todas as chaves de edição estão ativas quando `_cgets` ou `_cgetws` é chamado enquanto em uma janela do console, pressionar a tecla F3 repete a última entrada digitada.  
+ Uma vez que todas as chaves de edição estão ativas quando `_cgets` ou `_cgetws` é chamado enquanto estiver em uma janela do console, pressionar a tecla F3 repete a última entrada digitada.  
   
  No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../c-runtime-library/secure-template-overloads.md).  
   
@@ -162,8 +163,3 @@ Text = A line of input.
 ## <a name="see-also"></a>Consulte também  
  [E/S de porta e console](../c-runtime-library/console-and-port-i-o.md)   
  [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

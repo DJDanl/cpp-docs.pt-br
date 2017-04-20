@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7b43f4125e403c0ba318b96e717faba350cd487
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 34499221267c3a8cf384353ab45be8ad55b52fb8
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="summary-of-expressions"></a>Resumo de expressões
@@ -72,11 +72,11 @@ ms.lasthandoff: 02/25/2017
   
  *postfix-expression*  **.**  *identifier*  
   
- *postfix-expression*  **–>**  *identifier*  
+ *postfix-expression*  **->**  *identifier*  
   
  *postfix-expression*  **++**  
   
- *postfix-expression*  **––**  
+ *postfix-expression*  **--**  
   
  *argument-expression-list*:  
  *assignment-expression*  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/25/2017
   
  **++**  *unary-expression*  
   
- **––**  *unary-expression*  
+ **--**  *unary-expression*  
   
  *unary-operator*  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/25/2017
  **sizeof (**  *type-name*  **)**  
   
  *unary-operator*: one of  
- **& \* + – ~ !**  
+ **& \* + - ~ !**  
   
  *cast-expression*:  
  *unary-expression*  
@@ -120,7 +120,7 @@ ms.lasthandoff: 02/25/2017
   
  *additive-expression*  **+**  *multiplicative-expression*  
   
- *additive-expression*  **–**  *multiplicative-expression*  
+ *additive-expression*  **-**  *multiplicative-expression*  
   
  *shift-expression*:  
  *additive-expression*  

@@ -44,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fe6453e3b6cf7292b8c938266f1652a79f3d7a10
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d4f4902c29b64be4c2e032571face5f583c62734
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="is-isw-routines"></a>Rotinas is, isw
@@ -64,12 +64,12 @@ ms.lasthandoff: 02/25/2017
 ## <a name="remarks"></a>Comentários  
  Essas rotinas testam caracteres com relação a condições especificadas.  
   
- As rotinas **is** produzem resultados significativos para qualquer argumento inteiro de –1 (`EOF`) a **UCHAR_MAX** (0xFF), inclusive. O tipo de argumento esperado é `int`.  
+ As rotinas **is** produzem resultados significativos para qualquer argumento inteiro de -1 (`EOF`) a **UCHAR_MAX** (0xFF), inclusivo. O tipo de argumento esperado é `int`.  
   
 > [!CAUTION]
 >  Para as rotinas **is**, passar um argumento do tipo `char` pode produzir resultados imprevisíveis. Um caractere de byte único SBCS ou MBCS do tipo `char` com um valor maior do que 0x7F é negativo. Se `char` for passado, o compilador poderá converter o valor em um `int` assinado ou em um **longo** assinado. Esse valor pode ter sua assinatura estendida pelo compilador, com resultados inesperados.  
   
- As rotinas **isw** produzem resultados significativos para qualquer valor inteiro de –1 (**WEOF**) a 0xFFFF, inclusive. O tipo de dados **wint_t** é definido em WCHAR.H como um **curto não assinado**; ele pode conter qualquer caractere largo ou o valor de caractere largo de final de arquivo (**WEOF**).  
+ As rotinas **isw** produzem resultados significativos para qualquer valor inteiro de - 1 (**WEOF**) a 0xFFFF, inclusivo. O tipo de dados **wint_t** é definido em WCHAR.H como um **curto não assinado**; ele pode conter qualquer caractere largo ou o valor de caractere largo de final de arquivo (**WEOF**).  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar.  
   

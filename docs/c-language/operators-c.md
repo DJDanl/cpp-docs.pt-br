@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8f6a33dbd857446aeb187b8c2332540fc5f8b818
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f77c276849d68c7649b2599a07851d8d4109dcad
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="operators-c"></a>Operadores (C)
 `operator`: um de  
- **[ ]   ( )   .   –>++   ––    &   \*   +   –   ~   !   sizeof/   %   <\<   >>   <>   \<=   >=   ==   !=   ^   &#124;   &&   !!?   :=   \*=   /=   %=   +=   –=   <\<=   >>=   &=   ^=   &#124;=,   #   ##**  
+ **[ ]   ( )   .   ->++   --    &   \*   +   -   ~   !   sizeof/   %   <\<   >>   <>   \<=   >=   ==   !=   ^   &#124;   &&   !!?   :=   \*=   /=   %=   +=   -=   <\<=   >>=   &=   ^=   &#124;=,   #   ##**  
   
  *assignment-operator*: one of  
- **=   \*=   /=   %=   +=   –=   <\<=   >>= &=   ^=   &#124;=**  
+ **=   \*=   /=   %=   +=   -=   <\<=   >>= &=   ^=   &#124;=**  
   
 ## <a name="see-also"></a>Consulte também  
  [Gramática lexical](../c-language/lexical-grammar.md)

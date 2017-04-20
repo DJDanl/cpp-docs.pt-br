@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5f44c4583a68edae4a424d236db3b78c649111c6
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c7d9a62c2b6dc69f9fcd86c8f498e42ce31cae84
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Conjuntos de caracteres de byte único e multibyte

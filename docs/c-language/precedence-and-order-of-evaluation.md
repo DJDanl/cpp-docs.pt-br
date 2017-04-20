@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c26cf1233a1c5fb21b9b97856565f1fb4ee0c1c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: b6b455077861557bcdba03d0b9bd714d475961f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
@@ -49,11 +49,11 @@ A precedência e a associatividade dos operadores C afetam o agrupamento e a ava
   
 |Symbol1|Tipo de operação|Associatividade|  
 |-------------|-----------------------|-------------------|  
-|**[ ] ( ) . –>** sufixo `++` e sufixo **––**|Expressão|Da esquerda para a direita|  
-|prefixo `++` e prefixo **–– sizeof &   \*   + – ~ !**|Unário|Da direita para a esquerda|  
+|**[ ] ( ) . ->** sufixo `++` e sufixo **--**|Expressão|Da esquerda para a direita|  
+|prefixo `++` e prefixo **-- sizeof &   \*   + - ~ !**|Unário|Da direita para a esquerda|  
 |*typecasts*|Unário|Da direita para a esquerda|  
 |**\* / %**|Multiplicativo|Da esquerda para a direita|  
-|**+ –**|Aditivo|Da esquerda para a direita|  
+|**+ -**|Aditivo|Da esquerda para a direita|  
 |**<\< >>**|Deslocamento bit a bit|Da esquerda para a direita|  
 |**\< > \<= >=**|Relacional|Da esquerda para a direita|  
 |**== !=**|Igualdade|Da esquerda para a direita|  
@@ -63,7 +63,7 @@ A precedência e a associatividade dos operadores C afetam o agrupamento e a ava
 |**&&**|Logical-AND|Da esquerda para a direita|  
 |`&#124;&#124;`|Logical-OR|Da esquerda para a direita|  
 |**? :**|Expressão condicional|Da direita para a esquerda|  
-|**= \*= /= %=**<br /><br /> **+= –= <\<= >>=&=**<br /><br /> **^= &#124;=**|Atribuição simples e composta2|Da direita para a esquerda|  
+|**= \*= /= %=**<br /><br /> **+= -= <\<= >>=&=**<br /><br /> **^= &#124;=**|Atribuição simples e composta2|Da direita para a esquerda|  
 |**,**|Avaliação sequencial|Da esquerda para a direita|  
   
  1. Os operadores são listados em ordem decrescente de precedência. Quando vários operadores aparecem na mesma linha ou em um grupo, eles têm a mesma precedência.  
@@ -90,13 +90,13 @@ x && y++
 |----------------|-----------------------|  
 |`a & b &#124;&#124; c`|`(a & b) &#124;&#124; c`|  
 |`a = b &#124;&#124; c`|`a = (b &#124;&#124; c)`|  
-|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s––`|  
+|`q && r &#124;&#124; s--`|`(q && r) &#124;&#124; s--`|  
   
  Na primeira expressão, o operador AND bit a bit (`&`) tem uma maior precedência que o operador OR lógico (`||`), então `a & b` forma o primeiro operando da operação OR lógica.  
   
  Na segunda expressão, o operador OR lógico (`||`) tem maior precedência que o operador de atribuição simples (`=`), então `b || c` é agrupado como o operando à direita na atribuição. Observe que o valor atribuído a `a` é 0 ou 1.  
   
- A terceira expressão mostra uma expressão corretamente formada que pode gerar um resultado inesperado. O operador AND lógico (`&&`) tem maior precedência que o operador OR lógico (`||`), então `q && r` é agrupado como um operando. Como os operadores lógicos asseguram a avaliação dos operandos da esquerda para a direita, `q && r` é avaliado antes de `s––`. No entanto, se `q && r` for avaliado como um valor diferente de zero, `s––` não será avaliado e `s` não será diminuído. Se não diminuir `s` for causar um problema em seu programa, `s––` deverá aparecer como o primeiro operando da expressão ou `s` deverá ser diminuído em uma operação separada.  
+ A terceira expressão mostra uma expressão corretamente formada que pode gerar um resultado inesperado. O operador AND lógico (`&&`) tem maior precedência que o operador OR lógico (`||`), então `q && r` é agrupado como um operando. Como os operadores lógicos asseguram a avaliação dos operandos da esquerda para a direita, `q && r` é avaliado antes de `s--`. No entanto, se `q && r` for avaliado como um valor diferente de zero, `s--` não será avaliado e `s` não será diminuído. Se não diminuir `s` for causar um problema em seu programa, `s--` deverá aparecer como o primeiro operando da expressão ou `s` deverá ser diminuído em uma operação separada.  
   
  A expressão a seguir é ilegal e gera uma mensagem de diagnóstico no tempo de compilação:  
   

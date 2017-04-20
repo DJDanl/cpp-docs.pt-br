@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bb1a329fd9a5977628dfe86b2ad5ec34621fa8c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3ff740fe76a52c94ed084c6f9f975c950502424e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="switch-statement-c"></a>Instrução switch (C)
@@ -131,7 +131,7 @@ switch( i )
 }  
 ```  
   
- Neste exemplo, uma instrução **break** segue cada instrução do corpo de `switch`. A instrução **break** força uma saída do corpo da instrução depois que uma instrução é executada. Se `i` for igual a –1, apenas `n` é incrementado. A instrução **break** que segue a instrução `n++;` faz com que o controle de execução seja passado para fora do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução de **break** final não é estritamente necessária, pois o controle passa para fora do corpo no final da instrução composta, mas é incluído para manter a consistência.  
+ Neste exemplo, uma instrução **break** segue cada instrução do corpo de `switch`. A instrução **break** força uma saída do corpo da instrução depois que uma instrução é executada. Se `i` for igual a -1, apenas `n` será incrementado. A instrução **break** que segue a instrução `n++;` faz com que o controle de execução seja passado para fora do corpo da instrução, ignorando as instruções restantes. Da mesma forma, se `i` é igual a 0, somente `z` será incrementado; se `i` é igual a 1, somente `p` será incrementado. A instrução de **break** final não é estritamente necessária, pois o controle passa para fora do corpo no final da instrução composta, mas é incluído para manter a consistência.  
   
  Uma única instrução pode portar vários rótulos de **case**, conforme mostrado no exemplo a seguir:  
   

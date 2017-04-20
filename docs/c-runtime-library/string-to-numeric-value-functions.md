@@ -44,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0a47714ba9bce843c325ad947b091ac327b1ad38
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f3e38062baccecbe3b3cf5bbc9e059c1f1acae56
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="string-to-numeric-value-functions"></a>Funções de valor da cadeia de caracteres para numérico
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/25/2017
 |`_strtoi64`|Converter a cadeia de caracteres para inteiro `__int64` de 64 bits|  
 |`_strtoui64`|Converter cadeia de caracteres em inteiro `__int64` de 64 bits|  
   
- `wcstod`, `wcstol`, `wcstoul` e `_wcstoi64` são versões de caractere largo de `strtod`, `strtol`, `strtoul` e `_strtoi64`, respectivamente. O argumento de cadeia de caracteres para cada uma dessas funções de caractere largo é uma cadeia de caracteres largos; cada função comporta-se identicamente para sua equivalente de único caractere de byte – caso contrário.  
+ `wcstod`, `wcstol`, `wcstoul` e `_wcstoi64` são versões de caractere largo de `strtod`, `strtol`, `strtoul` e `_strtoi64`, respectivamente. O argumento de cadeia de caracteres para cada uma dessas funções de caractere largo é uma cadeia de caracteres largos. Cada função comporta-se identicamente para sua equivalente de único caractere de byte, caso contrário.  
   
  O `strtod` função leva dois argumentos: o primeiro é a cadeia de caracteres de entrada e o segundo um ponteiro para o caractere que termina o processo de conversão. `strtol`, `strtoul`, **strtoi64** e **strtoui64** usam um terceiro argumento como o número base a ser usado no processo de conversão.  
   
@@ -83,13 +83,13 @@ ms.lasthandoff: 02/25/2017
   
  [*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]  
   
- Um *espaço em branco* pode consistir em caracteres de espaço ou de tabulação, que são ignorados; *sign* é um mais (**+**) ou um menos (**–**) e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.  
+ Um *espaço em branco* pode consistir em caracteres de espaço ou de tabulação, que são ignorados; *sign* é um mais (**+**) ou um menos (**-**); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.  
   
  As funções `strtol`, `strtoul`, `_strtoi64` e `_strtoui64` esperam uma cadeia de caracteres com o seguinte formato:  
   
- [*whitespace*] [{**+** &#124; **–**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
+ [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
   
- Se o argumento base estiver entre 2 e 36, ele será usado como a base do número. Se for 0, os caracteres iniciais referenciados pelo ponteiro final de conversão são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal; Caso contrário, ele será interpretado como um número decimal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. `strtoul` e `_strtoui64` permitem um prefixo com sinal de mais (**+**) ou de menos (**–**); um sinal de subtração à esquerda indica que o valor retornado é negado.  
+ Se o argumento base estiver entre 2 e 36, ele será usado como a base do número. Se for 0, os caracteres iniciais referenciados pelo ponteiro final de conversão são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal; Caso contrário, ele será interpretado como um número decimal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. `strtoul` e `_strtoui64` permitem um prefixo com sinal de mais (**+**) ou de menos (**-**). Um sinal de subtração à esquerda indica que o valor retornado é negado.  
   
  O valor de saída é afetado pela configuração da categoria `LC_NUMERIC` da localidade; consulte [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar.  
   

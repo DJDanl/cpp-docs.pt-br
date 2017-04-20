@@ -43,8 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92a05e22265ff5cda0974055a7bff01b88768e52
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4c70ea331902ac16e99fcfa214af512f780829d8
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL, _HUGE
@@ -57,12 +58,7 @@ ms.openlocfilehash: 92a05e22265ff5cda0974055a7bff01b88768e52
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `HUGE_VAL` é o maior valor duplo representável. Esse valor é retornado por muitas funções matemáticas do tempo de execução quando ocorre um erro. Para algumas funções, é retornado –`HUGE_VAL`. `HUGE_VAL` é definido como `_HUGE`, mas as funções matemáticas do tempo de execução retornam `HUGE_VAL`. Você também deve usar `HUGE_VAL` em seu código para manter a consistência.  
+ `HUGE_VAL` é o maior valor duplo representável. Esse valor é retornado por muitas funções matemáticas do tempo de execução quando ocorre um erro. Para algumas funções, é retornado -`HUGE_VAL`. `HUGE_VAL` é definido como `_HUGE`, mas as funções matemáticas do tempo de execução retornam `HUGE_VAL`. Você também deve usar `HUGE_VAL` em seu código para manter a consistência.  
   
 ## <a name="see-also"></a>Consulte também  
  [Constantes globais](../c-runtime-library/global-constants.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

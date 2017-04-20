@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0b4b9ddc48ebe4f2e329477e86c4a911f568a21b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a6c8ae256b6c73e36bfc33f8496cf6e899d1c27e
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="c-keywords"></a>Palavras-chave C
@@ -44,14 +44,14 @@ ms.lasthandoff: 02/25/2017
   
 |||||  
 |-|-|-|-|  
-|**auto**|**double**|`int`|`struct`|  
-|**break**|**else**|**long**|`switch`|  
-|**case**|`enum`|**register**|`typedef`|  
-|`char`|`extern`|`return`|**union**|  
-|**const**|**float**|**short**|`unsigned`|  
-|**continue**|**for**|**signed**|`void`|  
-|**default**|`goto`|`sizeof`|`volatile`|  
-|**do**|**if**|**static**|`while`|  
+|**auto**|**double**|**int**|**struct**|  
+|**break**|**else**|**long**|**switch**|  
+|**case**|**enum**|**register**|**typedef**|  
+|**char**|**extern**|**return**|**union**|  
+|**const**|**float**|**short**|**unsigned**|  
+|**continue**|**for**|**signed**|**void**|  
+|**default**|**goto**|**sizeof**|**volatile**|  
+|**do**|**if**|**static**|**while**|  
   
  Você não pode redefinir palavras-chave. No entanto, você pode especificar o texto a ser substituído por palavras-chave antes da compilação usando [diretivas de pré-processador](../preprocessor/preprocessor-directives.md) C.  
   
@@ -63,19 +63,19 @@ ms.lasthandoff: 02/25/2017
   
 |||||  
 |-|-|-|-|  
-|`__asm`|**dllimport**2|`__int8`|`naked`2|  
-|`__based`1|`__except`|`__int16`|`__stdcall`|  
-|`__cdecl`|`__fastcall`|`__int32`|**thread**2|  
-|`__declspec`|`__finally`|`__int64`|`__try`|  
-|`dllexport`2|`__inline`|`__leave`||  
+|**__asm**|**dllimport**2|**__int8**|**naked**2|  
+|**__based**1|**__except**|**__int16**|**__stdcall**|  
+|**__cdecl**|**__fastcall**|**__int32**|**thread**2|  
+|**__declspec**|**__finally**|**__int64**|**__try**|  
+|**dllexport**2|**__inline**|**__leave**||  
   
- 1. A palavra-chave `__based` tem usos limitados para compilações de destino de 32 bits e 64 bits.  
+ 1. A palavra-chave **__based** tem usos limitados para compilações de destino de 32 e 64 bits.  
   
- 2. Esses são identificadores especiais quando usados com `__declspec`; seu uso em outros contextos não é restrito.  
+ 2. Esses são identificadores especiais quando usados com **__declspec**; seu uso em outros contextos não é restrito.  
   
  As extensões da Microsoft são ativadas por padrão. Para garantir que seus programas sejam totalmente portáteis, você poderá desabilitar as extensões da Microsoft especificando a opção /Za (compilar para compatibilidade ANSI) durante a compilação. Ao fazer isso, as palavras-chave específicas da Microsoft são desabilitadas.  
   
- Quando as extensões do Microsoft são habilitadas, você pode usar as palavras-chave listadas acima em seus programas. Para estar em conformidade com o ANSI, a maioria dessas palavras-chave são precedidas por um sublinhado duplo. As quatro exceções, `dllexport`, **dllimport**, `naked` e **thread**, são usadas apenas com `__declspec` e, portanto, não exigem um sublinhado duplo à esquerda. Para compatibilidade com versões anteriores, há suporte para as versões de sublinhado único do restante das palavras-chave.  
+ Quando as extensões do Microsoft são habilitadas, você pode usar as palavras-chave listadas acima em seus programas. Para estar em conformidade com o ANSI, a maioria dessas palavras-chave são precedidas por um sublinhado duplo. As quatro exceções, **dllexport**, **dllimport**, **naked** e **thread**, são usadas apenas com **__declspec** e, portanto, não exigem um sublinhado duplo à esquerda. Para compatibilidade com versões anteriores, há suporte para as versões de sublinhado único do restante das palavras-chave.  
   
  **Fim da seção específica da Microsoft**  
   

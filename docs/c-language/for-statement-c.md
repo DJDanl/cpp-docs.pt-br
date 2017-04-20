@@ -33,39 +33,40 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff272a4634d42f09386f39aa6631f15520fb8731
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20afe269d057d8ce856be1e1cccb32e6ca451c0f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="for-statement-c"></a>Instrução for (C)
-A instrução `for` permite repetir uma instrução ou uma instrução composta por um número especificado de vezes. O corpo de uma instrução `for` é executado zero ou mais vezes até que uma condição opcional se torne falsa. Você pode usar expressões opcionais na instrução `for` para inicializar e alterar valores durante a execução da instrução `for`.  
+A instrução **for** permite repetir uma instrução ou uma instrução composta por um número especificado de vezes. O corpo de uma instrução **for** é executado zero ou mais vezes até que uma condição opcional se torne falsa. Você pode usar expressões opcionais na instrução **for** para inicializar e alterar valores durante a execução da instrução **for**.  
   
 ## <a name="syntax"></a>Sintaxe  
  *iteration-statement*:  
- `for` ( `init-expression`opt ; `cond-expression`opt ; `loop-expression`opt )`statement`  
+ &nbsp;&nbsp;**for** **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *loop-expression*<sub>opt</sub> **)** *statement*  
   
- A execução de uma instrução `for` ocorre da seguinte maneira:  
+ A execução de uma instrução **for** ocorre da seguinte maneira:  
   
-1.  O parâmetro `init-expression`, se houver, é avaliado. Isso especifica a inicialização do loop. Não há nenhuma restrição quanto ao tipo de `init-expression`.  
+1.  A *init-expression*, se houver, é avaliada. Isso especifica a inicialização do loop. Não há nenhuma restrição quanto ao tipo da *init-expression*.  
   
-2.  O parâmetro `cond-expression`, se houver, é avaliado. Essa expressão deve ter tipo aritmético ou ponteiro. Ela é avaliada antes de cada iteração. Três resultados são possíveis:  
+2.  A *cond-expression*, se houver, é avaliada. Essa expressão deve ter tipo aritmético ou ponteiro. Ela é avaliada antes de cada iteração. Três resultados são possíveis:  
   
-    -   Se `cond-expression` é true (diferente de zero), `statement` é executado; depois, `loop-expression`, se houver, é avaliado. O parâmetro `loop-expression` é avaliado após cada iteração. Não há nenhuma restrição quanto ao tipo dele. Os efeitos colaterais serão executados na ordem. Em seguida, o processo é iniciado novamente com a avaliação de `cond-expression`.  
+    -   Se *cond-expression* é **true** (diferente de zero), *statement* é executada; em seguida, *loop-expression*, se houver, é avaliada. A *loop-expression* é avaliada após cada iteração. Não há nenhuma restrição quanto ao tipo dele. Os efeitos colaterais serão executados na ordem. Em seguida, o processo é iniciado novamente com a avaliação de *cond-expression*.  
   
-    -   Se `cond-expression` está omitido, `cond-expression` é considerado true e a execução continua exatamente conforme descrito no parágrafo anterior. Uma instrução `for` sem um argumento `cond-expression` só termina quando uma instrução `break` ou `return` dentro do corpo da instrução é executada, ou quando um `goto` (para uma instrução rotulada fora do corpo da instrução `for`) é executado.  
+    -   Se *cond-expression* está omitida, *cond-expression* é considerada true e a execução continua exatamente conforme descrita no parágrafo anterior. Uma instrução **for** sem um argumento *cond-expression* só termina quando uma instrução **break** ou **return** dentro do corpo da instrução é executada ou quando um **goto** (para uma instrução rotulada fora do corpo da instrução **for**) é executado.  
   
-    -   Se `cond-expression` é `false` (0), a execução da instrução `for` termina e o controle passa para a próxima instrução no programa.  
+    -   Se a *cond-expression* for **false** (0), a execução da instrução **for** será finalizada e o controle será passado para a próxima instrução no programa.  
   
- Uma instrução `for` também termina quando uma instrução `break`, `goto` ou `return` dentro do corpo da instrução é executada. Uma instrução `continue` em um loop `for` faz com que `loop-expression` seja avaliado. Quando uma instrução `break` é executada em um loop `for`, `loop-expression` não é avaliado nem executado. Esta instrução  
+ A instrução **for** também pode terminar quando uma instrução **break**, **goto** ou **return** for executada no corpo da instrução. A instrução **continue** em um loop **for** possibilita que a *loop-expression* seja avaliada. Quando uma instrução **break** é executada em um loop **for**, *loop-expression* não é avaliado nem executado. Esta instrução  
   
 ```  
 for( ;; )  
 ```  
   
- é a maneira habitual de gerar um loop infinito que só pode ser encerrado com uma instrução `break`, `goto` ou `return`.  
+ é a maneira habitual de gerar um loop infinito que só pode ser encerrado com uma instrução **break**, **goto** ou **return**.  
   
 ## <a name="code"></a>Código  
- Este exemplo ilustra a instrução `for`:  
+ Este exemplo ilustra a instrução **for**:  
   
 ```  
 // c_for.c  
@@ -103,8 +104,3 @@ Number of tabs: 2
   
 ## <a name="see-also"></a>Consulte também  
  [Instruções](../c-language/statements-c.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

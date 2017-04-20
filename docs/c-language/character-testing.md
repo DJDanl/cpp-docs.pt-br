@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8c25730a6cde3b1bec18090ec0120dac27e04421
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ca3c90169a3dab061a1e50e838b3432deec77b0c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="character-testing"></a>Testes de caractere
@@ -42,10 +42,10 @@ ms.lasthandoff: 02/25/2017
   
 |Função|Testes para|  
 |--------------|---------------|  
-|`isalnum`|Caracteres 0 – 9, A–Z, a–z ASCII 48–57, 65–90, 97–122|  
+|`isalnum`|Caracteres 0 – 9, A–Z, a–z ASCII 48– 57, 65– 90, 97– 122|  
 |`isalpha`|Caracteres A–Z, a–z ASCII 65–90, 97–122|  
-|`iscntrl`|ASCII 0 –31, 127|  
-|`islower`|Caracteres a–z ASCII 97–122|  
+|`iscntrl`|ASCII 0 – 31, 127|  
+|`islower`|Caracteres A–Z ASCII 97–122|  
 |`isprint`|Caracteres A–Z, a–z, 0 – 9, pontuação, espaço ASCII 32–126|  
 |`isupper`|Caracteres A–Z ASCII 65–90|  
   

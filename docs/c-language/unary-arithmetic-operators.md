@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8b9e541b34adf81bfdcc4212972749f6e2052360
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 875fd5c87583f93a647cf51907d897603f923e7e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="unary-arithmetic-operators"></a>Operadores aritméticos unários
@@ -52,7 +52,7 @@ Vários operadores do C – unário de adição, de negação aritmética, de co
 |Operador|Descrição|  
 |--------------|-----------------|  
 |**+**|O operador unário de adição que precede uma expressão entre parênteses força o agrupamento das operações incluídas. É usado com expressões que envolvem mais de um operador binário associativo ou comutativo. O operando deve ser do tipo aritmético. O resultado é o valor do operando. Um operando de integral passa por uma promoção de integral. O tipo do resultado é o tipo do operando promovido.|  
-|**–**|O operador de negação aritmética produz o negativo (complemento de dois) do respectivo operando. O operando deve ser um valor de integral ou flutuante. Este operador executa as conversões aritméticas comuns.|  
+|**-**|O operador de negação aritmética produz o negativo (complemento de dois) do respectivo operando. O operando deve ser um valor de integral ou flutuante. Este operador executa as conversões aritméticas comuns.|  
 |`~`|O operador de complemento bit a bit (ou NOT bit a bit) produz o complemento bit a bit do respectivo operando. O operando deve ser do tipo integral. Este operador executa as conversões aritméticas comuns; o resultado tem o tipo do operando após a conversão.|  
 |**!**|O operador de negação lógica (NOT lógico) produz o valor 0 se o operando é verdadeiro (diferente de zero) e o valor 1 se o operando é falso (0). O resultado tem o tipo `int`. O operando deve ser um valor de ponteiro, integral ou flutuante.|  
   
@@ -66,7 +66,7 @@ short x = 987;
     x = -x;  
 ```  
   
- No exemplo acima, o novo valor de `x` é o negativo de 987, ou seja, –987.  
+ No exemplo acima, o novo valor de `x` é o negativo de 987, ou seja, -987.  
   
 ```  
 unsigned short y = 0xAAAA;  

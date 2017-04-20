@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e8bc31699773cee0a0694a9ef58c274c016b1136
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ac6e1783714c0aef62acecad24d345225a65e67e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="range-of-integer-values"></a>Intervalo de valores inteiros
@@ -43,9 +43,9 @@ ms.lasthandoff: 02/25/2017
 |Tipo|Mínimo e máximo|  
 |----------|-------------------------|  
 |**unsigned short**|0 a 65535|  
-|`signed short`|–32768 a 32767|  
+|`signed short`|-32768 a 32767|  
 |`unsigned long`|0 a 4294967295|  
-|**signed long**|–2147483648 a 2147483647|  
+|**signed long**|-2147483648 a 2147483647|  
   
 ## <a name="see-also"></a>Consulte também  
  [Inteiros](../c-language/integers.md)

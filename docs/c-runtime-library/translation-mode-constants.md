@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3197f9493797ce3b7d22f5450b0c02b075a2dbac
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2522ccf3c35a52141d3164bd2a35535a4068893e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="translation-mode-constants"></a>Constantes do modo de translação
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/25/2017
  Os valores permitidos são:  
   
  `_O_TEXT`  
- Abre um arquivo no modo de texto (movido). Combinações CR-LF (Retorno de carro –alimentação de linha) são movidas para um único caractere de alimentação de linha (LF) na entrada. Os caracteres de alimentação de linha são movidos para combinações CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura e leitura/gravação, `fopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar as funções `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z poderá fazer o `fseek` se comportar incorretamente perto do fim do arquivo.  
+ Abre um arquivo no modo de texto (movido). Combinações CR-LF (Retorno de carro –alimentação de linha) são convertidas em uma única alimentação de linha (LF) na entrada. Os caracteres de alimentação de linha são movidos para combinações CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura e leitura/gravação, `fopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar as funções `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z poderá fazer o `fseek` se comportar incorretamente perto do fim do arquivo.  
   
  `_O_BINARY`  
  Abre um arquivo no modo binário (não convertido). As translações acima são suprimidas.  

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b56219562c70b1c463c8650a378360a31eefff4f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5ec7377a694d12c23ba902d5bd606cabcba69aa5
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores e declarações variáveis
@@ -68,32 +68,26 @@ __declspec(thread) char *var;
  Você usa declaradores para declarar matrizes de valores, ponteiros para valores e funções que retornam valores de um tipo especificado. Os declaradores aparecem nas declarações de matrizes e de ponteiros descritas posteriormente nesta seção.  
   
 ## <a name="syntax"></a>Sintaxe  
- `declarator`:  
- *pointer* opt*direct-declarator*  
+ *declarator*:  
+ &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
   
  *direct-declarator*:  
- *identifier*  
+ &nbsp;&nbsp;*identifier*  
+ &nbsp;&nbsp;**(**  *declarator*  **)**  
+ &nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**  
+ &nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  
+ &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
- **(**  *declarator*  **)**  
-  
- *direct-declarator*  **[**  *constant-expression* opt**]**  
-  
- *direct-declarator*  **(**  *parameter-type-list*  **)**  
-  
- *direct-declarator*  **(**  *identifier-list* opt**)**  
-  
- `pointer`:  
- **\*** *type-qualifier-list* opt  
-  
- **\*** *type-qualifier-list* opt`pointer`  
+ *pointer*:  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list*:  
- *type-qualifier*  
-  
- *type-qualifier-list type-qualifier*  
+ &nbsp;&nbsp;*type-qualifier*  
+ &nbsp;&nbsp;*type-qualifier-list type-qualifier*  
   
 > [!NOTE]
->  Consulte a sintaxe de `declaration` na [Visão geral de declarações](../c-language/overview-of-declarations.md) ou em [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md) correspondente à sintaxe que faz referência a `declarator`.  
+>  Consulte a sintaxe de *declaration* na [Visão Geral de Declarações](../c-language/overview-of-declarations.md) ou em [Resumo da Sintaxe da Linguagem C](../c-language/c-language-syntax-summary.md) para a sintaxe que se refere a *declarator*.  
   
  Quando um declarador consiste em um identificador não modificado, o item que está sendo declarado tem um tipo de base. Se um asterisco (**\***) aparecer à esquerda de um identificador, o tipo será modificado para um tipo de ponteiro. Se o identificador for seguido por colchetes (**[ ]**), o tipo será modificado para um tipo de matriz. Se o identificador for seguido por parênteses, o tipo será modificado para um tipo de função. Para obter mais informações sobre como interpretar a precedência em declarações, consulte [Interpretação de declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md).  
   

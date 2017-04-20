@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f63ba3b4a292bb2cc483c6bacc735d5469e4c204
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 468b88ccb64c06e64e9b234188295b3fcc148b1f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="demotion-of-integers"></a>Rebaixamentos de inteiros
@@ -56,7 +56,7 @@ char y = (char)0x1234;
   
  atribui o valor 0x34 a `y`.  
   
- Quando variáveis com sinal são convertidas em sem sinal e vice-versa, os padrões de bits permanecem os mesmos. Por exemplo, converter –2 (0xFE) em um valor sem sinal gera 254 (também 0xFE).  
+ Quando variáveis com sinal são convertidas em sem sinal e vice-versa, os padrões de bits permanecem os mesmos. Por exemplo, converter -2 (0xFE) em um valor sem sinal gera 254 (também 0xFE).  
   
 ## <a name="see-also"></a>Consulte também  
  [Inteiros](../c-language/integers.md)

@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 66e609d4977d77601c78694dba3f23b421890f88
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7eeef72be28f9500c7dad02d39a6ecc5c4a7e445
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scope-of-this-manual"></a>Escopo deste manual
