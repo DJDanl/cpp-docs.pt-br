@@ -35,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fbddf9811933f2fbb39f9a07ba415a77343b7ddb
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2008eeb968e63929404cda6deaedc23042b86c5e
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versões aprimoradas de segurança de funções CRT
@@ -73,7 +73,7 @@ Estão disponíveis versões mais seguras de rotinas de biblioteca de tempo de e
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converter a hora do tipo `time_t` em `struct``tm` ou do tipo `__time64_t` em `struct tm`|  
 |[_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)|[_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)|Converter um inteiro em uma cadeia de caracteres|  
 |[_lfind](../c-runtime-library/reference/lfind.md)|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Executar uma pesquisa linear para a chave especificada|  
-|[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)|[localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converter a hora do tipo `time_t` em `struct tm` ou do tipo `__time64_t` em `struct tm`com correção local|  
+|[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)|[localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converter a hora do tipo `time_t` em `struct tm` ou do tipo `__time64_t` em `struct tm` com correção local|  
 |[_lsearch](../c-runtime-library/reference/lsearch.md)|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Executar uma pesquisa linear para um valor e o adicionará ao final da lista se ele não for encontrado|  
 |[_ltoa, _ltow](../c-runtime-library/reference/ltoa-ltow.md)|[_ltoa_s, _ltow_s](../c-runtime-library/reference/ltoa-s-ltow-s.md)|Converter um inteiro longo em uma cadeia de caracteres|  
 |[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md)|[_makepath_s, _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Criar um nome de caminho desde componentes|  

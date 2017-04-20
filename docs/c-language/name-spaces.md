@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8c15b71c7982908e3247e37faa91fbf76f2ac6d0
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6b567d74b27e04c05f48f174f52f7f221cb4f154
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="name-spaces"></a>Namespaces
@@ -58,7 +58,7 @@ O compilador configura os “name spaces” para distinguir entre os identificad
  Essas marcas fazem parte de especificadores do tipo estrutura, união e enumeração e, se estiverem presentes, ocorrem sempre imediatamente após as palavras reservadas `struct`, **union** ou `enum`. Os nomes de marcas devem ser diferentes de todas as outras marcas de estrutura, enumeração e união com a mesma visibilidade.  
   
  Membros de estruturas ou uniões  
- Os nomes de membros são alocados em name spaces associados a cada tipo de estrutura e união. Ou seja, o mesmo identificador pode ser um nome de componente em várias estruturas ou uniões ao mesmo tempo. As definições de nomes de componente sempre ocorrem dentro dos especificadores do tipo estrutura ou união. O uso de nomes de componente sempre ocorre imediatamente após os operadores de seleção de membros (**–>** e **.**). O nome de um membro deve ser exclusivo dentro da estrutura ou da união, mas não precisa ser diferente de outros nomes no programa, inclusive os nomes dos membros de estruturas e uniões diferentes ou o nome da própria estrutura.  
+ Os nomes de membros são alocados em name spaces associados a cada tipo de estrutura e união. Ou seja, o mesmo identificador pode ser um nome de componente em várias estruturas ou uniões ao mesmo tempo. As definições de nomes de componente sempre ocorrem dentro dos especificadores do tipo estrutura ou união. O uso de nomes de componente sempre ocorre imediatamente após os operadores de seleção de membros (**->** e **.**). O nome de um membro deve ser exclusivo dentro da estrutura ou da união, mas não precisa ser diferente de outros nomes no programa, inclusive os nomes dos membros de estruturas e uniões diferentes ou o nome da própria estrutura.  
   
  Identificadores comuns  
  Todos os outros nomes ficam em um name space que inclui variáveis, funções (incluindo parâmetros formais e variáveis locais) e constantes de enumeração. Os nomes de identificadores têm visibilidade aninhada, para que você possa redefini-los nos blocos.  
@@ -76,7 +76,7 @@ struct student {
    } student;  
 ```  
   
- Quando `student` aparece após a palavra-chave de `struct`, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**–>** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.  
+ Quando `student` aparece após a palavra-chave de `struct`, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**->** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Estrutura do Programa](../c-language/program-structure.md)
