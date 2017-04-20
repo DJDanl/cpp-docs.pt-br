@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Visão geral de possíveis problemas de atualização (Visual C++)
@@ -47,7 +48,7 @@ Ao longo dos anos, o compilador do Visual C++ passou por muitas alterações, ju
   
 2.  Se você não puder (ou não quiser) recompilar a biblioteca estática, poderá tentar vincular com legacy_stdio_definitions.lib. Se ela atender às dependências de tempo de vinculação da biblioteca estática, você desejará testar completamente a biblioteca estática como ela é usada no binário para garantir que ela não será prejudicada por nenhuma das [alterações comportamentais que foram feitas no CRT Universal](visual-cpp-change-history-2003-2015.md#BK_CRT).  
   
-3.  Se as dependências da biblioteca estática não forem atendidas pela legacy_stdio_definitions.lib ou se a biblioteca não funcionar com o CRT Universal devido às alterações comportamentais mencionadas anteriormente, recomendamos encapsular a biblioteca estática em uma DLL que pode ser vinculada à versão correta do Tempo de Execução de C da Microsoft. Por exemplo, se a biblioteca estática foi compilada usando o Visual C++ 2013, convém compilar essa DLL utilizando o Visual C++ 2013 e bibliotecas do Visual C++ 2013. Ao compilar a biblioteca em uma DLL, você encapsula os detalhes de implementação que é sua dependência em uma versão específica do Tempo de Execução de C da Microsoft. (Observe que você deve ter cuidado para que a interface da DLL não “vaze” detalhes de qual Tempo de Execução de C ela usa, por exemplo, retornando um ARQUIVO* pelo limite da DLL ou retornando um ponteiro alocado por malloc e esperando que o chamador o libere.)  
+3.  Se as dependências da biblioteca estática não forem atendidas pela legacy_stdio_definitions.lib ou se a biblioteca não funcionar com o CRT Universal devido às alterações comportamentais mencionadas anteriormente, recomendamos encapsular a biblioteca estática em uma DLL que pode ser vinculada à versão correta do Tempo de Execução de C da Microsoft. Por exemplo, se a biblioteca estática foi compilada usando o Visual C++ 2013, convém compilar essa DLL utilizando o Visual C++ 2013 e bibliotecas do Visual C++ 2013. Ao compilar a biblioteca em uma DLL, você encapsula os detalhes de implementação que é sua dependência em uma versão específica do Tempo de Execução de C da Microsoft. (Observe que você deve ter cuidado para que a interface da DLL não vaze detalhes de qual Tempo de Execução de C ela usa, por exemplo, retornando um ARQUIVO* pelo limite da DLL ou retornando um ponteiro alocado por malloc e esperando que o chamador o libere.)  
   
  O uso de vários CRTs em um único processo não é problemático em si (na verdade, a maioria dos processos acabará carregando várias DLLs de CRT, por exemplo, componentes do sistema operacional Windows dependerão de msvcrt.dll e o CLR dependerá de seu próprio CRT privado). Os problemas surgem quando você mistura o estado de diferentes CRTs. Por exemplo, você não deve alocar memória usando msvcr110.dll!malloc e tentar desalocar essa memória usando msvcr120.dll!free e você não deve tentar abrir um ARQUIVO usando msvcr110!fopen e tentar ler esse ARQUIVO usando msvcr120!fread. Desde que você não misture o estado de CRTs diferentes, você pode ter com segurança vários CRTs carregados em um único processo.  
   
@@ -66,13 +67,13 @@ Ao longo dos anos, o compilador do Visual C++ passou por muitas alterações, ju
 ### <a name="lnk2019-unresolved-external"></a>LNK2019: externo não resolvido  
  Para os símbolos não resolvidos, você precisará corrigir as configurações do projeto.  
   
--   • Se o arquivo de origem estiver em um local não padrão, você adicionou o caminho para os diretórios de inclusão do projeto?  
+-   Se o arquivo de origem estiver em um local não padrão, você adicionou o caminho para os diretórios de inclusão do projeto?  
   
--   • Se o externo estiver definido em um arquivo .lib, você especificou o caminho do lib nas propriedades do projeto e a versão correta do arquivo .lib realmente está localizada lá?  
+-   Se o externo estiver definido em um arquivo .lib, você especificou o caminho do lib nas propriedades do projeto e a versão correta do arquivo .lib realmente está localizada lá?  
   
--   • Você está tentando vincular a um arquivo .lib que foi compilado com uma versão diferente do Visual Studio? Nesse caso, consulte a seção anterior sobre dependências de biblioteca e o conjunto de ferramentas.  
+-   Você está tentando vincular a um arquivo .lib que foi compilado com uma versão diferente do Visual Studio? Nesse caso, consulte a seção anterior sobre dependências de biblioteca e o conjunto de ferramentas.  
   
--   • Os tipos dos argumentos no site de chamada realmente coincidem com uma sobrecarga existente da função? Verifique se os tipos subjacentes de quaisquer typedefs na assinatura da função e no código que chama a função o que você espera que sejam.  
+-   Os tipos dos argumentos no site de chamada realmente coincidem com uma sobrecarga existente da função? Verifique se os tipos subjacentes de quaisquer typedefs na assinatura da função e no código que chama a função o que você espera que sejam.  
   
  Para solucionar problemas de erros de símbolo não resolvido, você pode tentar usar o dumpbin.exe para examinar os símbolos definidos em um binário. Experimente a seguinte linha de comando para exibir os símbolos definidos em uma biblioteca:  
   
@@ -107,16 +108,16 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  Um exemplo de um erro do compilador comum que você pode ver ao atualizar é quando um argumento não const é passado para um parâmetro const. As versões mais antigas do Visual C++ nem sempre sinalizavam isso como um erro. Para obter mais informações, consulte [The compiler's more strict conversions](porting-guide-spy-increment.md#stricter_conversions) (As conversões mais restritas do compilador).  
   
- Para obter mais informações sobre aprimoramentos de compatibilidade específicos, consulte [Visual C++ change history 2003 – 2015](visual-cpp-change-history-2003-2015.md) (Histórico de alterações do Visual C++ de 2013 – 2015) e [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Aprimoramentos de conformidade do C++ no Visual Studio 2017).  
+ Para obter mais informações sobre aprimoramentos de compatibilidade específicos, consulte [Histórico de alterações do Visual C++ de 2003 – 2015](visual-cpp-change-history-2003-2015.md) e [Aprimoramentos de conformidade do C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
 ## <a name="errors-involving-stdinth-integral-types"></a>Erros envolvendo os tipos integrais \<stdint.h>  
  O cabeçalho \<stdint.h> define typedefs e macros que, diferente dos tipos integrais internos, têm a garantia de ter um comprimento específico em todas as plataformas. Alguns exemplos são uint32_t e int64_t. O Visual C++ adicionou o \<stdint.h> no Visual Studio 2010. O código escrito antes de 2010 pode ter fornecido definições privadas para esses tipos e essas definições nem sempre são consistentes com as definições do \<stdint.h>.  
   
  Se o erro for C2371 e um tipo de stdint estiver envolvido, isso provavelmente significará que o tipo é definido em um cabeçalho em seu código ou em um arquivo de biblioteca de terceiros.  Ao atualizar, você deve eliminar quaisquer definições personalizadas dos tipos \<stdint.h>, mas primeiro compare as definições personalizadas às definições padrão atuais para garantir que você não está introduzindo novos problemas.  
   
- Você pode pressionar F12 "Ir para Definição" para ver onde o tipo em questão é definido.  
+ Você pode pressionar F12 **Ir para Definição** para ver onde o tipo em questão é definido.  
   
- A opção do compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) pode ser útil aqui. Na caixa de diálogo Páginas de Propriedades do projeto, abra o **C/C++**, página **Avançado** e defina **Mostrar Inclusões** como “Sim”. Em seguida, recompile o projeto e veja a lista de #includes na janela de saída.  Cada cabeçalho é recuado sob o cabeçalho que o inclui.  
+ A opção do compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) pode ser útil aqui. Na caixa de diálogo Páginas de Propriedades do projeto, abra o **C/C++**, página **Avançada** e defina **Mostrar Inclusões** como **Sim**. Em seguida, recompile o projeto e veja a lista de #includes na janela de saída.  Cada cabeçalho é recuado sob o cabeçalho que o inclui.  
   
 ## <a name="errors-involving-crt-functions"></a>Erros envolvendo funções CRT  
  Foram feitas várias alterações no tempo de execução de C ao longo dos anos. Muitas versões seguras de funções foram adicionadas e algumas foram removidas. Além disso, conforme descrito anteriormente neste artigo, a implementação da Microsoft do CRT foi refatorada no Visual Studio 2015 em novos binários e arquivos .lib associados.  
@@ -149,7 +150,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Para obter mais informações, consulte [Updating the Target Windows Version](porting-guide-spy-increment.md#updating_winver) (Atualizando a versão de destino do Windows) e [More outdated header files](porting-guide-spy-increment.md#outdated_header_files) (Mais arquivos de cabeçalho desatualizados).  
   
 ## <a name="atl--mfc"></a>ATL / MFC  
- A ATL e o MFC são APIs relativamente estáveis, mas as alterações são feitas ocasionalmente. Consulte o [Visual C++ change history 2003 – 2015](visual-cpp-change-history-2003-2015.md) (Histórico de alterações do Visual C++ de 2013 – 2015) para obter mais informações e [What's New for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Novidades para o Visual C++ no Visual Studio 2017) e [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Aprimoramentos de conformidade do C++ no Visual Studio 2017).  
+ A ATL e o MFC são APIs relativamente estáveis, mas as alterações são feitas ocasionalmente. Consulte o [Histórico de alterações do Visual C++ de 2003 – 2015](visual-cpp-change-history-2003-2015.md) para obter mais informações e [Novidades para o Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Aprimoramentos de conformidade do C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>2005 LNK _DllMain@12 já definido no MSVCRTD.lib  
  Esse erro pode ocorrer em aplicativos MFC. Ele indica um problema de ordenação entre a biblioteca CRT e a biblioteca MFC. O MFC deve ser vinculado primeiro para que ele forneça os operadores new e delete. Para corrigir o erro, use a opção /NODEFAULTLIB para ignorar essas bibliotecas padrão: MSVCRTD.lib e mfcs140d.lib. Em seguida, adicione essas mesmas bibliotecas como dependências adicionais.  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>Consulte também  
  [Upgrading Projects from Earlier Versions of Visual C++ (Atualizando projetos de versões anteriores do Visual C++)](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [C++ conformance improvements in Visual Studio 2017 (Aprimoramentos de conformidade do C++ no Visual Studio 2017)](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

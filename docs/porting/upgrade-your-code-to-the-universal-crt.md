@@ -12,9 +12,9 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: 258c7a941239d686ed0fddf18b8139996327f262
-ms.openlocfilehash: ede29a7fb28ef9ecb9bfecafed21ff3bbc87736e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 65776206add29c817f78573379bed959a008f6e6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Atualize seu código para o CRT Universal
@@ -42,7 +42,7 @@ Como o UCRT agora é um componente de sistema operacional do Microsoft Windows, 
   
 É possível usar o UCRT em qualquer versão do Windows com suporte no Visual Studio 2015 ou no Visual Studio 2017. É possível redistribuí-lo usando um pacote vcredist para versões com suporte do Windows que não sejam o Windows 10. Os pacotes vcredist incluem os componentes UCRT e os instala automaticamente nos sistemas operacionais Windows em que eles não estão instalados por padrão. Para obter mais informações, consulte [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
-Há suporte para a implantação local de aplicativos, embora isso não seja recomendado por motivos de desempenho e de segurança. As DLLS para implantação local de aplicativos são incluídas como parte do SDK do Windows, no subdiretório “redist”. As DLLs necessárias incluem ucrtbase.dll e um conjunto de DLLs "encaminhador APISet" denominado api-ms-win-_subset_.dll. O conjunto de DLLs necessário em cada sistema operacional varia. Portanto, recomendamos que você inclua todas as DLLs ao usar a implantação local de aplicativos. Para obter mais detalhes e advertências sobre a implantação local de aplicativos, consulte [Implantação no Visual C++](../ide/deployment-in-visual-cpp.md).  
+Há suporte para a implantação local de aplicativos, embora isso não seja recomendado por motivos de desempenho e de segurança. As DLLS para implantação local de aplicativos são incluídas como parte do SDK do Windows, no subdiretório **redist**. As DLLs necessárias incluem ucrtbase.dll e um conjunto de DLLs **encaminhador APISet** denominado api-ms-win-_subset_.dll. O conjunto de DLLs necessário em cada sistema operacional varia. Portanto, recomendamos que você inclua todas as DLLs ao usar a implantação local de aplicativos. Para obter mais detalhes e advertências sobre a implantação local de aplicativos, consulte [Implantação no Visual C++](../ide/deployment-in-visual-cpp.md).  
   
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Alterações nas funções e nas macros do CRT Universal  
 Muitas funções foram adicionadas ou atualizadas no UCRT para melhorar a conformidade com a ISO C99 e para solucionar problemas de segurança e de qualidade do código. Em alguns casos, isso exigiria alterações significativas na biblioteca. Se seu código tiver sido compilado corretamente ao usar uma versão mais antiga do CRT, mas for corrompido quando tiver sido compilado suando o UCRT, será necessário alterá-lo para poder usufruir essas atualizações e recursos. Para obter uma lista detalhada das alterações e atualizações significativas no CRT encontrado no CRT Universal, consulte a seção [C Runtime Library (CRT) (CRT – Biblioteca em tempo de execução do C)](visual-cpp-change-history-2003-2015.md#BK_CRT) do histórico de alterações do Visual C++. Inclui uma lista de funções e cabeçalhos afetados que podem ser usados para identificar as alterações necessárias em seu código.  
