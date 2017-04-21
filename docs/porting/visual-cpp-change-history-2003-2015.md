@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
+Este artigo descreve todas as alterações significativas, partindo do Visual Studio 2015 e voltando até o Visual Studio 2003 e os termos "novo comportamento" ou "agora" neste artigo referem-se ao Visual Studio 2015 e às versões posteriores. Os termos "comportamento antigo" e "antes" referem-se ao Visual Studio 2013 e versões anteriores. 
+ 
+ Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
+ > [!NOTE]
+ > Não há alterações significativas binárias entre o Visual Studio 2015 e Visual Studio 2017.
+
 Ao fazer a atualização para uma nova versão do compilador do Visual C++, você pode encontrar erros de compilação e/ou de tempo de execução no código que foi compilado anteriormente e executado corretamente. As alterações na nova versão que causam tais problemas são conhecidas como *alterações significativas* e, normalmente, são exigidas pelas modificações no padrão da linguagem C++, nas assinaturas de função ou no layout de objetos na memória.  
   
  Para evitar os erros de tempo de execução que são difíceis de detectar e diagnosticar, é recomendável nunca vincular estaticamente a binários que foram compilados usando diferentes versões do compilador. Além disso, ao fazer atualização de um projeto EXE ou DLL, assegure-se de atualizar as bibliotecas às quais ele se vincula. Se estiver usando tipos CRT (Tempo de execução de C) ou de Biblioteca Padrão do C++, não os passe entre binários (incluindo DLLs) que foram compilados usando diferentes versões do compilador. Para obter mais informações, consulte [Erros potenciais ao passar objetos CRT entre limites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
@@ -47,9 +53,6 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
  Além disso, aprimoramentos contínuos para a conformidade do compilador podem alterar como o compilador compreende seu código-fonte existente. Quando isso acontecer, você poderá encontrar erros novos ou diferentes durante o build ou até diferenças de comportamento no código que foi compilado anteriormente e parecia executar corretamente. Embora essas não são alterações significativas, como aquelas discutidas neste documento, pode ser necessário fazer alterações de código-fonte para resolver esses problemas.  
   
- Este artigo descreve todas as alterações significativas, partindo do Visual Studio 2015 e voltando até o Visual Studio 2003 e os termos "novo comportamento" ou "agora" neste artigo referem-se ao Visual Studio 2015 e às versões posteriores. Os termos "comportamento antigo" e "antes" referem-se ao Visual Studio 2013 e versões anteriores. 
- 
- Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md).
   
 1.  [Alterações significativas na Biblioteca CRT (Tempo de execução de C)](#BK_CRT)  
   
@@ -949,7 +952,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
      Além disso, embora o compilador não forneça um diagnóstico específico, o operador new embutido é considerado mal formado.  
   
--   **Chamar 'operator*type*()' (conversão definida pelo usuário) em tipos de não classe**  
+-   **Chamar 'operator *type*()' (conversão definida pelo usuário) em tipos de não classe**  
   
      As versões anteriores do compilador permitiam que o 'operator *type*()' fosse chamado em tipos de não classe ignorando-o silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.  
   
