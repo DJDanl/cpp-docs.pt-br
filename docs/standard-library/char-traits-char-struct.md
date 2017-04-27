@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - string/std::char_traits<char>
-- std::char_traits<char >
 - char_traits<char >
-- std.char_traits<char >
 dev_langs:
 - C++
 helpviewer_keywords:

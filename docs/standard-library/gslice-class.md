@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::gslice
-- std.gslice
 - gslice
 - valarray/std::gslice
+- valarray/std::gslice::size
+- valarray/std::gslice::start
+- valarray/std::gslice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +80,7 @@ Uma classe de utilitário para valarray que é usada para definir subconjuntos m
   
  **Namespace:** std  
   
-##  <a name="a-namegslicegslicea--gslicegslice"></a><a name="gslice__gslice"></a>  gslice::gslice  
+##  <a name="gslice__gslice"></a>  gslice::gslice  
  Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.  
   
 ```  
@@ -154,7 +155,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)  
 ```  
   
-##  <a name="a-namegslicesizea--gslicesize"></a><a name="gslice__size"></a>  gslice::size  
+##  <a name="gslice__size"></a>  gslice::size  
  Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um valarray.  
   
 ```  
@@ -229,7 +230,7 @@ The size of vaResult is:
  vaGSlice.size ( ) = ( 4 4 ).  
 ```  
   
-##  <a name="a-namegslicestarta--gslicestart"></a><a name="gslice__start"></a>  gslice::start  
+##  <a name="gslice__start"></a>  gslice::start  
  Localiza o índice inicial de uma fatia geral de um valarray.  
   
 ```  
@@ -290,7 +291,7 @@ The valarray for vaGSlice is vaResult:
 The index of the first element of vaResult is: 0.  
 ```  
   
-##  <a name="a-namegslicestridea--gslicestride"></a><a name="gslice__stride"></a>  gslice::stride  
+##  <a name="gslice__stride"></a>  gslice::stride  
  Encontra a distância entre os elementos em uma fatia geral de um valarray.  
   
 ```  

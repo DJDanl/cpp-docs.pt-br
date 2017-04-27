@@ -38,8 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 21d2a64b515d387698166f948dcd084431b79e58
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6a4658396f5045df17fbf75daac5bbf8263ed60c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de fluxo Unicode em modos de texto e binários
@@ -54,8 +55,3 @@ Quando a rotina E/S de fluxo Unicode (como `fwprintf`, `fwscanf`, `fgetwc`, `fpu
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)   
  [Entrada e saída](../c-runtime-library/input-and-output.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -58,9 +58,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 91ff23afdd198a3687524f7abd1cf3b4f6e1d9d9
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0e65a64dffc4a9c03f2075bcd9eee87b18ad2e77
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-assignment-operators"></a>Operadores de atribuição C
@@ -74,7 +74,7 @@ Uma operação de atribuição atribui o valor do operando à direita para o loc
  *unary-expression assignment-operator assignment-expression*  
   
  *assignment-operator*: one of  
- **= \*=** `/=` `%=` `+=` **–= <\<= >>= &=** `^=` `|=`  
+ **= \*=** `/=` `%=` `+=` **-= <\<= >>= &=** `^=` `|=`  
   
  Os operadores de atribuição em C podem transformar e atribuir valores em uma única operação. O C fornece os seguintes operadores de atribuição:  
   
@@ -85,7 +85,7 @@ Uma operação de atribuição atribui o valor do operando à direita para o loc
 |`/=`|Atribuição de divisão|  
 |`%=`|Atribuição restante|  
 |`+=`|Atribuição de adição|  
-|**–=**|Atribuição de subtração|  
+|**-=**|Atribuição de subtração|  
 |**<\<=**|Atribuição de shift esquerda|  
 |**>>=**|Atribuição de shift direita|  
 |**&=**|Atribuição AND bit a bit|  

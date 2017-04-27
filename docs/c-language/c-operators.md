@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1e4b047307bb1153c136b0485b0d141086907525
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6eab29bde1fe9b08e0883960ed7a160101d56d1a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-operators"></a>Operadores C
@@ -51,18 +51,18 @@ Os operadores C são um subconjunto de [operadores embutidos de C++](../cpp/cpp-
   
 |Símbolo|Nome|  
 |------------|----------|  
-|**– ~ !**|Operadores de negação e de complemento|  
+|**- ~ !**|Operadores de negação e de complemento|  
 |**\* &**|Operadores de indireção e address-of|  
 |`sizeof`|Operador de tamanho|  
 |**+**|Operador unário de adição|  
-|**++ ––**|Operadores unários de incremento e de decremento|  
+|**++ --**|Operadores unários de incremento e de decremento|  
   
  Operadores binários associados da esquerda para a direita. O C fornece os seguintes operadores binários:  
   
 |Símbolo|Nome|  
 |------------|----------|  
 |**\* / %**|Operadores de multiplicação|  
-|**+ –**|Operadores aditivos|  
+|**+ -**|Operadores aditivos|  
 |**<\< >>**|Operadores shift|  
 |**\<   >   \<=   >=   ==   !=**|Operadores relacionais|  
 |**&   &#124; ^**|Operadores bit a bit|  
@@ -73,7 +73,7 @@ Os operadores C são um subconjunto de [operadores embutidos de C++](../cpp/cpp-
   
  O operador de expressão condicional tem uma precedência mais baixa do que as expressões binárias e difere delas por ser associado à direita.  
   
- As expressões com operadores também incluem as expressões de atribuição, que usam operadores de atribuição unários ou binários. Os operadores de atribuição unários são operadores de incremento (`++`) e de decremento (**––**); os operadores de atribuição binários são o operador de atribuição simples (**=**) e os operadores de atribuição compostos. Cada operador de atribuição composta é uma combinação de outro operador binário com o operador de atribuição simples.  
+ As expressões com operadores também incluem as expressões de atribuição, que usam operadores de atribuição unários ou binários. Os operadores de atribuição unários são operadores de incremento (`++`) e de decremento (**--**); os operadores de atribuição binários são o operador de atribuição simples (**=**) e os operadores de atribuição compostos. Cada operador de atribuição composta é uma combinação de outro operador binário com o operador de atribuição simples.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões e atribuições](../c-language/expressions-and-assignments.md)

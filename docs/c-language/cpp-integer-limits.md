@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8a99d2e6a846fe575c64eed4fba2366280bb0112
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c1d45ba449173c5cc2bf3fbed663a7d987c22e1c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-integer-limits"></a>Limites de inteiro C++
@@ -49,19 +49,19 @@ ms.lasthandoff: 02/25/2017
 |**Constante**|Significado|Valor|  
 |------------------|-------------|-----------|  
 |**CHAR_BIT**|Número de bits na menor variável que não é um campo de bit.|8|  
-|**SCHAR_MIN**|Valor mínimo para uma variável do tipo **signed char**.|–128|  
+|**SCHAR_MIN**|Valor mínimo para uma variável do tipo **signed char**.|-128|  
 |**SCHAR_MAX**|Valor máximo para uma variável do tipo **signed char**.|127|  
 |**UCHAR_MAX**|Valor máximo para uma variável do tipo `unsigned char`.|255 (0xff)|  
-|**CHAR_MIN**|Valor mínimo para uma variável do tipo `char`.|–128; 0 se a opção /J for usada|  
+|**CHAR_MIN**|Valor mínimo para uma variável do tipo `char`.|-128; 0 se a opção /J for usada|  
 |**CHAR_MAX**|Valor máximo para uma variável do tipo `char`.|127; 255 se a opção /J for usada|  
 |**MB_LEN_MAX**|Número máximo de bytes em uma constante de vários caracteres.|5|  
-|**SHRT_MIN**|Valor mínimo para uma variável do tipo **short**.|–32768|  
+|**SHRT_MIN**|Valor mínimo para uma variável do tipo **short**.|-32768|  
 |**SHRT_MAX**|Valor máximo para uma variável do tipo **short**.|32767|  
 |**USHRT_MAX**|Valor máximo para uma variável do tipo **unsigned short**.|65535 (0xffff)|  
-|**INT_MIN**|Valor mínimo para uma variável do tipo `int`.|–2147483647 – 1|  
+|**INT_MIN**|Valor mínimo para uma variável do tipo `int`.|-2147483647 - 1|  
 |**INT_MAX**|Valor máximo para uma variável do tipo `int`.|2147483647|  
 |**UINT_MAX**|Valor máximo para uma variável do tipo `unsigned int`.|4294967295 (0xffffffff)|  
-|**LONG_MIN**|Valor mínimo para uma variável do tipo **long**.|–2147483647 – 1|  
+|**LONG_MIN**|Valor mínimo para uma variável do tipo **long**.|-2147483647 - 1|  
 |**LONG_MAX**|Valor máximo para uma variável do tipo **long**.|2147483647|  
 |**ULONG_MAX**|Valor máximo para uma variável do tipo `unsigned long`.|4294967295 (0xffffffff)|  
   

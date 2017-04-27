@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
+f1_keywords:
+- initializer_list/std::initializer_list::initializer_list
+- initializer_list/std::initializer_list::begin
+- initializer_list/std::initializer_list::end
+- initializer_list/std::initializer_list::size
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
 caps.latest.revision: 17
 author: corob-msft
@@ -91,7 +96,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
  **Namespace:** std  
   
-##  <a name="a-nameinitializerlistbegina--initializerlistbegin"></a><a name="initializer_list__begin"></a>  initializer_list::begin  
+##  <a name="initializer_list__begin"></a>  initializer_list::begin  
  Retorna um ponteiro para o primeiro elemento em um `initializer_list`.  
   
 ```  
@@ -103,7 +108,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-nameinitializerlistenda--initializerlistend"></a><a name="initializer_list__end"></a>  initializer_list::end  
+##  <a name="initializer_list__end"></a>  initializer_list::end  
  Retorna um ponteiro para depois do último elemento em um `initializer list`.  
   
 ```  
@@ -113,7 +118,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para depois do último elemento na lista. Se a lista estiver vazia, este será o mesmo que o ponteiro para o primeiro elemento na lista.  
   
-##  <a name="a-nameinitializerlistinitializerlista--initializerlistinitializerlist"></a><a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
+##  <a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
  Constrói um objeto do tipo `initializer_list`.  
   
 ```  
@@ -194,7 +199,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="a-nameinitializerlistsizea--initializerlistsize"></a><a name="initializer_list__size"></a>  initializer_list::size  
+##  <a name="initializer_list__size"></a>  initializer_list::size  
  Retorna o número de elementos na lista.  
   
 ```  

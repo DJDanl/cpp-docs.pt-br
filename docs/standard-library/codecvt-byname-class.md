@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.codecvt_byname
 - codecvt_byname
-- std::codecvt_byname
 - xlocale/std::codecvt_byname
 dev_langs:
 - C++

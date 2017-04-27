@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7a9d13924a14b51ed78256825dee6d9a59475c51
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf

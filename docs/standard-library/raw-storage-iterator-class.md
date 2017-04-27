@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::raw_storage_iterator
 - raw_storage_iterator
-- std.raw_storage_iterator
 - memory/std::raw_storage_iterator
+- memory/std::raw_storage_iterator::element_type
+- memory/std::raw_storage_iterator::iter_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +92,7 @@ class raw_storage_iterator
   
  **Namespace:** std  
   
-##  <a name="a-namerawstorageiteratorelementtypea--rawstorageiteratorelementtype"></a><a name="raw_storage_iterator__element_type"></a>  raw_storage_iterator::element_type  
+##  <a name="raw_storage_iterator__element_type"></a>  raw_storage_iterator::element_type  
  Fornece um tipo que descreve um elemento a ser armazenado em um iterador de armazenamento bruto.  
   
 ```
@@ -102,7 +102,7 @@ typedef Type element_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo de classe raw_storage_iterator **Type**.  
   
-##  <a name="a-namerawstorageiteratoritertypea--rawstorageiteratoritertype"></a><a name="raw_storage_iterator__iter_type"></a>  raw_storage_iterator::iter_type  
+##  <a name="raw_storage_iterator__iter_type"></a>  raw_storage_iterator::iter_type  
  Fornece um tipo que descreve um iterador que dá suporte a um iterador de armazenamento bruto.  
   
 ```
@@ -112,7 +112,7 @@ typedef ForwardIterator iter_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo **ForwardIterator**.  
   
-##  <a name="a-namerawstorageiteratoroperatorstara--rawstorageiteratoroperator"></a><a name="raw_storage_iterator__operator_star"></a>  raw_storage_iterator::operator*  
+##  <a name="raw_storage_iterator__operator_star"></a>  raw_storage_iterator::operator*  
  Um operador de desreferenciamento usado para implementar a expressão do iterador de armazenamento bruto \* *ii* = *x*.  
   
 ```
@@ -176,7 +176,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="a-namerawstorageiteratoroperatoreqa--rawstorageiteratoroperator"></a><a name="raw_storage_iterator__operator_eq"></a>  raw_storage_iterator::operator=  
+##  <a name="raw_storage_iterator__operator_eq"></a>  raw_storage_iterator::operator=  
  Um operador de atribuição usado para implementar a expressão do iterador de armazenamento bruto \* *i* = *x* para armazenamento na memória.  
   
 ```
@@ -245,7 +245,7 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="a-namerawstorageiteratoroperatoraddadda--rawstorageiteratoroperator"></a><a name="raw_storage_iterator__operator_add_add"></a>  raw_storage_iterator::operator++  
+##  <a name="raw_storage_iterator__operator_add_add"></a>  raw_storage_iterator::operator++  
  Operadores pré e pós-incremento para iteradores de armazenamento brutos.  
   
 ```
@@ -298,7 +298,7 @@ array 4 = 8
 *\  
 ```  
   
-##  <a name="a-namerawstorageiteratorrawstorageiteratora--rawstorageiteratorrawstorageiterator"></a><a name="raw_storage_iterator__raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
+##  <a name="raw_storage_iterator__raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
  Constrói um iterador de armazenamento bruto com um iterador de saída subjacente especificado.  
   
 ```

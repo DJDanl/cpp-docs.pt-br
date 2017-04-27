@@ -42,13 +42,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e1a4c8c7b81b52520e9cbd7861e14b508b8377f
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0f18df0dba0895699213fbb69ec02559e3d7f35b
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="type-float"></a>Tipo float
-Os números de ponto flutuante usam o formato IEEE (Instituto de Engenheiros Eletricistas e Eletrônicos). Os valores de precisão simples com tipo float têm 4 bytes, que consistem em um bit de sinal, um expoente binário de 8 bits no formato de 127 em excesso e uma mantissa de 23 bits. A mantissa representa um número entre 1,0 e 2,0. Como o bit de ordem superior da mantissa é sempre 1, ele não é armazenado no número. Essa representação fornece um intervalo de aproximadamente 3,4E–38 a 3,4E+38 para o tipo float.  
+Os números de ponto flutuante usam o formato IEEE (Instituto de Engenheiros Eletricistas e Eletrônicos). Os valores de precisão simples com tipo float têm 4 bytes, que consistem em um bit de sinal, um expoente binário de 8 bits no formato de 127 em excesso e uma mantissa de 23 bits. A mantissa representa um número entre 1,0 e 2,0. Como o bit de ordem superior da mantissa é sempre 1, ele não é armazenado no número. Essa representação fornece um intervalo de aproximadamente 3,4E-38 a 3,4E+38 para o tipo float.  
   
  Você pode declarar variáveis como float ou double, dependendo das necessidades de seu aplicativo. As principais diferenças entre os dois tipos são a significação que podem representar, o armazenamento que exigem e o intervalo que ocupam. A tabela a seguir mostra a relação entre a significação e os requisitos de armazenamento.  
   
@@ -56,8 +56,8 @@ Os números de ponto flutuante usam o formato IEEE (Instituto de Engenheiros Ele
   
 |Tipo|Dígitos significativos|Número de bytes|  
 |----------|------------------------|---------------------|  
-|float|6 – 7|4|  
-|double|15 – 16|8|  
+|float|6 - 7|4|  
+|double|15 - 16|8|  
   
  As variáveis de ponto flutuante são representadas por uma mantissa, que contém o valor do número, e um expoente, que contém a ordem de grandeza do número.  
   
@@ -82,8 +82,8 @@ Os números de ponto flutuante usam o formato IEEE (Instituto de Engenheiros Ele
   
 |Tipo|Valor mínimo|Valor máximo|  
 |----------|-------------------|-------------------|  
-|float|1,175494351 E – 38|3,402823466 E + 38|  
-|double|2,2250738585072014 E – 308|1,7976931348623158 E + 308|  
+|float|1.175494351 E - 38|3,402823466 E + 38|  
+|double|2.2250738585072014 E - 308|1,7976931348623158 E + 308|  
   
  Se a precisão preocupa menos que o armazenamento, considere usar o tipo float para as variáveis de ponto flutuante. Ao contrário, se a precisão é o critério mais importante, use o tipo double.  
   

@@ -12,7 +12,11 @@ f1_keywords:
 - allocators/stdext::max_fixed_size
 - max_fixed_size
 - stdext::max_fixed_size
-- stdext.max_fixed_size
+- allocators/stdext::max_fixed_size::allocated
+- allocators/stdext::max_fixed_size::deallocated
+- allocators/stdext::max_fixed_size::full
+- allocators/stdext::max_fixed_size::released
+- allocators/stdext::max_fixed_size::saved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +83,7 @@ class max_fixed_size
   
  **Namespace:** stdext  
   
-##  <a name="a-namemaxfixedsizeallocateda--maxfixedsizeallocated"></a><a name="max_fixed_size__allocated"></a>  max_fixed_size::allocated  
+##  <a name="max_fixed_size__allocated"></a>  max_fixed_size::allocated  
  Aumenta a contagem de blocos de memória alocada.  
   
 ```
@@ -95,7 +99,7 @@ void allocated(std::size_t _Nx = 1);
 ### <a name="remarks"></a>Comentários  
  A função membro não faz nada. Essa função membro é chamada após cada chamada bem-sucedida por `cache_freelist::allocate` ao operador `new`. O argumento `_Nx` é o número de blocos de memória na parte alocada pelo operador `new`.  
   
-##  <a name="a-namemaxfixedsizedeallocateda--maxfixedsizedeallocated"></a><a name="max_fixed_size__deallocated"></a>  max_fixed_size::deallocated  
+##  <a name="max_fixed_size__deallocated"></a>  max_fixed_size::deallocated  
  Diminui a contagem de blocos de memória alocada.  
   
 ```
@@ -111,7 +115,7 @@ void deallocated(std::size_t _Nx = 1);
 ### <a name="remarks"></a>Comentários  
  A função membro não faz nada. Essa função membro é chamada após cada chamada por `cache_freelist::deallocate` ao operador `delete`. O argumento `_Nx` é o número de blocos de memória na parte desalocada pelo operador `delete`.  
   
-##  <a name="a-namemaxfixedsizefulla--maxfixedsizefull"></a><a name="max_fixed_size__full"></a>  max_fixed_size::full  
+##  <a name="max_fixed_size__full"></a>  max_fixed_size::full  
  Retorna um valor que especifica se mais blocos de memória devem ser adicionados à lista livre.  
   
 ```
@@ -124,7 +128,7 @@ bool full();
 ### <a name="remarks"></a>Comentários  
  Essa função membro é chamada por `cache_freelist::deallocate`. Se a chamada retornar `true`, `deallocate` colocará o bloco de memória na lista livre, se ele retornar false, `deallocate` chamará o operador `delete` para desalocar o bloco.  
   
-##  <a name="a-namemaxfixedsizemaxfixedsizea--maxfixedsizemaxfixedsize"></a><a name="max_fixed_size__max_fixed_size"></a>  max_fixed_size::max_fixed_size  
+##  <a name="max_fixed_size__max_fixed_size"></a>  max_fixed_size::max_fixed_size  
  Constrói um objeto do tipo `max_fixed_size`.  
   
 ```
@@ -134,7 +138,7 @@ max_fixed_size();
 ### <a name="remarks"></a>Comentários  
  Este construtor inicializa o valor armazenado `_Nblocks` como zero.  
   
-##  <a name="a-namemaxfixedsizereleaseda--maxfixedsizereleased"></a><a name="max_fixed_size__released"></a>  max_fixed_size::released  
+##  <a name="max_fixed_size__released"></a>  max_fixed_size::released  
  Diminui a contagem de blocos de memória na lista livre.  
   
 ```
@@ -144,7 +148,7 @@ void released();
 ### <a name="remarks"></a>Comentários  
  Diminui o valor armazenado `_Nblocks`. A função membro `released` da [classe max](../standard-library/allocators-header.md) é chamada por `cache_freelist::allocate` sempre que ele remove um bloco de memória da lista livre.  
   
-##  <a name="a-namemaxfixedsizesaveda--maxfixedsizesaved"></a><a name="max_fixed_size__saved"></a>  max_fixed_size::saved  
+##  <a name="max_fixed_size__saved"></a>  max_fixed_size::saved  
  Aumenta a contagem de blocos de memória na lista livre.  
   
 ```

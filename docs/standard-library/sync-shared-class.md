@@ -11,8 +11,10 @@ ms.topic: article
 f1_keywords:
 - sync_shared
 - allocators/stdext::sync_shared
-- stdext.sync_shared
 - stdext::sync_shared
+- allocators/stdext::sync_shared::allocate
+- allocators/stdext::sync_shared::deallocate
+- allocators/stdext::sync_shared::equals
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +73,7 @@ class sync_shared
   
  **Namespace:** stdext  
   
-##  <a name="a-namesyncsharedallocatea--syncsharedallocate"></a><a name="sync_shared__allocate"></a>  sync_shared::allocate  
+##  <a name="sync_shared__allocate"></a>  sync_shared::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -90,7 +92,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro bloqueia o mutex, chama `cache.allocate(count)`, desbloqueia o mutex e retorna o resultado da chamada anterior a `cache.allocate(count)`. `cache` representa o objeto de cache atual.  
   
-##  <a name="a-namesyncshareddeallocatea--syncshareddeallocate"></a><a name="sync_shared__deallocate"></a>  sync_shared::deallocate  
+##  <a name="sync_shared__deallocate"></a>  sync_shared::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -107,7 +109,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  Essa função membro bloqueia o mutex, chama `cache.deallocate(ptr, count)`, em que `cache` representa o objeto de cache e, em seguida, desbloqueia o mutex.  
   
-##  <a name="a-namesyncsharedequalsa--syncsharedequals"></a><a name="sync_shared__equals"></a>  sync_shared::equals  
+##  <a name="sync_shared__equals"></a>  sync_shared::equals  
  Compara a igualdade de dois caches.  
   
 ```

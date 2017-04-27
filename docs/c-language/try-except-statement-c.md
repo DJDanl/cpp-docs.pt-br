@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 77b9be5615c16eb754e7873b5b7535e33a314f9d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 78ba2330b577aae19110589f99162b4bb9549bb0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="try-except-statement-c"></a>Instrução try-except (C)

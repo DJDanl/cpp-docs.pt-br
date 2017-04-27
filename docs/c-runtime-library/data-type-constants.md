@@ -114,9 +114,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e98ce72da64b1236bea65207d8333f9ceaf37917
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a33c5071549695c11ba4820679d5d7059b7f5a5c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de dados
@@ -128,20 +128,20 @@ Constantes de tipo de dados são dependentes de implementação intervalos de va
 |Constante|Valor|Significado|  
 |--------------|-----------|-------------|  
 |**SCHAR_MAX**|127|Valor máximo `char` assinado|  
-|**SCHAR_MIN**|–128|Valor mínimo `char` assinado|  
+|**SCHAR_MIN**|-128|Valor mínimo `char` assinado|  
 |**UCHAR_MAX**|255 (0xff)|Valor `unsigned char` Máximo|  
 |**CHAR_BIT**|8|O número de bits em um `char`|  
 |**USHRT_MAX**|65535 (0xffff)|Valor **curto máximo não assinado**|  
 |**SHRT_MAX**|32767|Valor **curto máximo** assinado|  
-|**SHRT_MIN**|–32768|Valor **curto mínimo** assinado|  
+|**SHRT_MIN**|-32768|Valor **curto mínimo** assinado|  
 |**UINT_MAX**|4294967295 (0xffffffff)|Valor `unsigned int` Máximo|  
 |**ULONG_MAX**|4294967295 (0xffffffff)|Valor `unsigned long` Máximo|  
 |**INT_MAX**|2147483647|Valor máximo `int` (assinado)|  
-|**INT_MIN**|–2147483647–1|Valor mínimo `int` (assinado)|  
+|**INT_MIN**|-2147483647-1|Valor mínimo `int` (assinado)|  
 |**LONG_MAX**|2147483647|Valor longo **máximo** (assinado)|  
-|**LONG_MIN**|–2147483647–1|Valor longo **mínimo** (assinado)|  
+|**LONG_MIN**|-2147483647-1|Valor longo **mínimo** (assinado)|  
 |**CHAR_MAX**|127 (255 se opção /J for usada)|Valor `char` Máximo|  
-|**CHAR_MIN**|–128 (0 se a opção /J for usada)|Valor `char` Mínimo|  
+|**CHAR_MIN**|-128 (0 se a opção /J for usada)|Valor `char` Mínimo|  
 |**MB_LEN_MAX**|2|O número máximo de bytes em um multibyte `char`|  
 |**_I64_MAX**|9223372036854775807|Valor _**int64** máximo (assinado)|  
 |**_I64_MIN**|-9223372036854775807-1|Valor _**int64** mínimo (assinado)|  
@@ -159,7 +159,7 @@ Constantes de tipo de dados são dependentes de implementação intervalos de va
 |**DBL_MAX_EXP**|1024|Expoente binário máximo|  
 |**DBL_MIN**|2.2250738585072014e-308|Valor positivo mínimo|  
 |**DBL_MIN_10_EXP**|(-307)|Expoente decimal mínimo|  
-|**DBL_MIN_EXP**|(–1021)|Expoente binário mínimo|  
+|**DBL_MIN_EXP**|(-1021)|Expoente binário mínimo|  
 |**_DBL_RADIX**|2|Expoente base|  
 |**_DBL_ROUNDS**|1|Adição de arredondamento: próximo|  
 |**FLT_DIG**|6|Número de dígitos decimais de precisão|  
@@ -169,8 +169,8 @@ Constantes de tipo de dados são dependentes de implementação intervalos de va
 |**FLT_MAX_10_EXP**|38|Expoente decimal máximo|  
 |**FLT_MAX_EXP**|128|Expoente binário máximo|  
 |**FLT_MIN**|1.175494351e-38F|Valor positivo mínimo|  
-|**FLT_MIN_10_EXP**|(–37)|Expoente decimal mínimo|  
-|**FLT_MIN_EXP**|(–125)|Expoente binário mínimo|  
+|**FLT_MIN_10_EXP**|(-37)|Expoente decimal mínimo|  
+|**FLT_MIN_EXP**|(-125)|Expoente binário mínimo|  
 |**FLT_RADIX**|2|Expoente base|  
 |**FLT_ROUNDS**|1|Adição de arredondamento: próximo|  
   

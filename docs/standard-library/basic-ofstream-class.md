@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::basic_ofstream
 - basic_ofstream
-- std.basic_ofstream
 - fstream/std::basic_ofstream
+- fstream/std::basic_ofstream::close
+- fstream/std::basic_ofstream::is_open
+- fstream/std::basic_ofstream::open
+- fstream/std::basic_ofstream::rdbuf
+- fstream/std::basic_ofstream::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +115,7 @@ int main(int argc, char **argv)
   
  **Namespace:** std  
   
-##  <a name="a-namebasicofstreambasicofstreama--basicofstreambasicofstream"></a><a name="basic_ofstream__basic_ofstream"></a>  basic_ofstream::basic_ofstream  
+##  <a name="basic_ofstream__basic_ofstream"></a>  basic_ofstream::basic_ofstream  
  Cria um objeto do tipo `basic_ofstream`.  
   
 ```
@@ -173,7 +176,7 @@ int main(int argc, char **argv)
 }  
 ```  
   
-##  <a name="a-namebasicofstreamclosea--basicofstreamclose"></a><a name="basic_ofstream__close"></a>  basic_ofstream::close  
+##  <a name="basic_ofstream__close"></a>  basic_ofstream::close  
  Fecha um arquivo.  
   
 ```
@@ -186,7 +189,7 @@ void close();
 ### <a name="example"></a>Exemplo  
   Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close) para ver um exemplo que usa **fechar**.  
   
-##  <a name="a-namebasicofstreamisopena--basicofstreamisopen"></a><a name="basic_ofstream__is_open"></a>  basic_ofstream::is_open  
+##  <a name="basic_ofstream__is_open"></a>  basic_ofstream::is_open  
  Indica se um arquivo está aberto.  
   
 ```
@@ -221,7 +224,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebasicofstreamopena--basicofstreamopen"></a><a name="basic_ofstream__open"></a>  basic_ofstream::open  
+##  <a name="basic_ofstream__open"></a>  basic_ofstream::open  
  Abre um arquivo.  
   
 ```
@@ -260,7 +263,7 @@ void open(
 ### <a name="example"></a>Exemplo  
   Consulte [basic_filebuf::open](../standard-library/basic-filebuf-class.md#basic_filebuf__open) para ver um exemplo que usa **abrir**.  
   
-##  <a name="a-namebasicofstreamoperatoreqa--basicofstreamoperator"></a><a name="basic_ofstream__operator_eq"></a>  basic_ofstream::operator=  
+##  <a name="basic_ofstream__operator_eq"></a>  basic_ofstream::operator=  
  Atribui o conteúdo desse objeto de fluxo. Essa é uma atribuição de movimentação que envolve um `rvalue reference` que não deixa uma cópia.  
   
 ```
@@ -277,7 +280,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 ### <a name="remarks"></a>Comentários  
  O operador membro substitui o conteúdo do objeto usando o conteúdo de `right`, tratado como uma referência rvalue.  
   
-##  <a name="a-namebasicofstreamrdbufa--basicofstreamrdbuf"></a><a name="basic_ofstream__rdbuf"></a>  basic_ofstream::rdbuf  
+##  <a name="basic_ofstream__rdbuf"></a>  basic_ofstream::rdbuf  
  Retorna o endereço do buffer de fluxo armazenado.  
   
 ```
@@ -290,7 +293,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 ### <a name="example"></a>Exemplo  
   Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close) para ver um exemplo que usa `rdbuf`.  
   
-##  <a name="a-namebasicofstreamswapa--basicofstreamswap"></a><a name="basic_ofstream__swap"></a>  basic_ofstream::swap  
+##  <a name="basic_ofstream__swap"></a>  basic_ofstream::swap  
  Troca o conteúdo de dois `basic_ofstream` objetos.  
   
 ```

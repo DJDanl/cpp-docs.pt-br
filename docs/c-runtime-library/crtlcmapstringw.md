@@ -46,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8383b6749d65bcc2ed23d62b08befb1a2276501b
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 115e77a6451bc29eaaa7bed45105825b990d68cf
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
@@ -79,7 +79,7 @@ int __crtLCMapStringW(
  `cchSrc`  
  Tamanho, em caracteres, da cadeia de caracteres apontada pelo parâmetro `lpSrcStr`. Essa contagem pode incluir ou não o terminador NULO.  
   
- Um valor `cchSrc` de –&1; especifica que a cadeia de caracteres apontada por `lpSrcStr` é terminada em nulo. Se esse for o caso, e essa função estiver sendo usada no modo de mapeamento de cadeia de caracteres, a função calcula o comprimento da cadeia de caracteres e termina em nulo a cadeia de caracteres mapeada armazenada em `*lpDestStr`.  
+ Um valor `cchSrc` de -1 especifica que a cadeia de caracteres apontada por `lpSrcStr` é terminada em nulo. Se esse for o caso, e essa função estiver sendo usada no modo de mapeamento de cadeia de caracteres, a função calcula o comprimento da cadeia de caracteres e termina em nulo a cadeia de caracteres mapeada armazenada em `*lpDestStr`.  
   
  `lpDestStr`  
  Ponteiro longo para um buffer em que a função armazena a cadeia de caracteres ou chave de classificação mapeada.  

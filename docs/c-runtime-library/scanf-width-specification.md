@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f11032807e33fa3b7bd38896d0da6545bb10e126
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 922405b111404e5a11052fd1aba8d2729e254714
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scanf-width-specification"></a>Especificação de largura scanf Width

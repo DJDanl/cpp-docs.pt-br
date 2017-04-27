@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
 caps.latest.revision: 7
 manager: ghogen
@@ -23,7 +24,7 @@ ms.lasthandoff: 02/25/2017
 |[operator!= (multimap)](#operator_neq_multimap)|[operator&gt;](#operator_gt_multimap)|[operator&gt;=](#operator_gt__eq_multimap)|  
 |[operator&lt;](#operator_lt_multimap)|[operator&lt;=](#operator_lt__eq_multimap)|[operator==](#operator_eq_eq_multimap)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Testa se o objeto de mapa à esquerda do operador é diferente do objeto de mapa à direita.  
   
 ```
@@ -83,7 +84,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Testa se o objeto de mapa à esquerda do operador é menor que o objeto de mapa à direita.  
   
 ```
@@ -143,7 +144,7 @@ The map m1 is not less than the map m3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Testa se o objeto de mapa à esquerda do operador é menor ou igual ao objeto de mapa à direita.  
   
 ```
@@ -207,7 +208,7 @@ The map m1 is less than or equal to the map m4.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Testa se o objeto de mapa à esquerda do operador é igual ao objeto de mapa à direita.  
   
 ```
@@ -267,7 +268,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Testa se o objeto de mapa à esquerda do operador é maior do que o objeto de mapa à direita.  
   
 ```
@@ -327,7 +328,7 @@ The map m1 is greater than the map m3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Testa se o objeto de mapa à esquerda do operador é maior ou igual ao objeto de mapa à direita.  
   
 ```
@@ -391,7 +392,7 @@ Map m1 is greater than or equal to map m4.
 *\  
 ```  
   
-##  <a name="a-nameoperatorneqmultimapa--operator-multimap"></a><a name="operator_neq_multimap"></a>  operator!= (multimap)  
+##  <a name="operator_neq_multimap"></a>  operator!= (multimap)  
  Testa se o objeto multimapa à esquerda do operador é diferente do objeto multimapa à direita.  
   
 ```
@@ -451,7 +452,7 @@ The multimaps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorltmultimapa--operatorlt"></a><a name="operator_lt_multimap"></a>  operator&lt;  
+##  <a name="operator_lt_multimap"></a>  operator&lt;  
  Testa se o objeto multimapa à esquerda do operador é menor que o objeto multimapa à direita.  
   
 ```
@@ -511,7 +512,7 @@ The multimap m1 is not less than the multimap m3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqmultimapa--operatorlt"></a><a name="operator_lt__eq_multimap"></a>  operator&lt;=  
+##  <a name="operator_lt__eq_multimap"></a>  operator&lt;=  
  Testa se o objeto multimapa à esquerda do operador é menor ou igual ao objeto multimapa à direita.  
   
 ```
@@ -575,7 +576,7 @@ m1 is less than or equal to m4
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqmultimapa--operator"></a><a name="operator_eq_eq_multimap"></a>  operator==  
+##  <a name="operator_eq_eq_multimap"></a>  operator==  
  Testa se o objeto multimapa à esquerda do operador é igual ao objeto multimapa à direita.  
   
 ```
@@ -635,7 +636,7 @@ m1 and m3 are equal
 *\  
 ```  
   
-##  <a name="a-nameoperatorgtmultimapa--operatorgt"></a><a name="operator_gt_multimap"></a>  operator&gt;  
+##  <a name="operator_gt_multimap"></a>  operator&gt;  
  Testa se o objeto multimapa à esquerda do operador é maior que o objeto multimapa à direita.  
   
 ```
@@ -695,7 +696,7 @@ The multimap m1 is greater than the multimap m3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqmultimapa--operatorgt"></a><a name="operator_gt__eq_multimap"></a>  operator&gt;=  
+##  <a name="operator_gt__eq_multimap"></a>  operator&gt;=  
  Testa se o objeto multimapa à esquerda do operador é maior ou igual ao objeto multimapa à direita.  
   
 ```

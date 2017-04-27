@@ -1,40 +1,47 @@
 ---
-title: "Classe strstream | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::strstream"
-  - "strstream"
-  - "std.strstream"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strstream class"
+title: Classe strstream | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strstream
+- strstream/std::strstream::freeze
+- strstream/std::strstream::pcount
+- strstream/std::strstream::rdbuf
+- strstream/std::strstream::str
+dev_langs:
+- C++
+helpviewer_keywords:
+- strstream class
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 769ce67069b2b75161764d4180cfefc4df55fac5
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="strstream-class"></a>Classe strstream
 Descreve um objeto que controla a inserção e extração de elementos e objetos codificados usando um buffer de fluxo da classe [strstreambuf](../standard-library/strstreambuf-class.md).  
@@ -71,7 +78,7 @@ class strstream : public iostream
   
  **Namespace:** std  
   
-##  <a name="a-namestrstreamfreezea--strstreamfreeze"></a><a name="strstream__freeze"></a>  strstream::freeze  
+##  <a name="strstream__freeze"></a>  strstream::freeze  
  Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.  
   
 ```
@@ -88,7 +95,7 @@ void freeze(bool _Freezeit = true);
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) para ver um exemplo que usa **freeze**.  
   
-##  <a name="a-namestrstreampcounta--strstreampcount"></a><a name="strstream__pcount"></a>  strstream::pcount  
+##  <a name="strstream__pcount"></a>  strstream::pcount  
  Retorna uma contagem do número de elementos gravados na sequência controlada.  
   
 ```
@@ -104,7 +111,7 @@ streamsize pcount() const;
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa pcount.  
   
-##  <a name="a-namestrstreamrdbufa--strstreamrdbuf"></a><a name="strstream__rdbuf"></a>  strstream::rdbuf  
+##  <a name="strstream__rdbuf"></a>  strstream::rdbuf  
  Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.  
   
 ```
@@ -120,7 +127,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa `rdbuf`.  
   
-##  <a name="a-namestrstreamstra--strstreamstr"></a><a name="strstream__str"></a>  strstream::str  
+##  <a name="strstream__str"></a>  strstream::str  
  Chama [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) e retorna um ponteiro para o início da sequência controlada.  
   
 ```
@@ -136,7 +143,7 @@ char *str();
 ### <a name="example"></a>Exemplo  
   Consulte [strstreambuf::str](../standard-library/strstreambuf-class.md#strstreambuf__str) para ver uma amostra que usa **str**.  
   
-##  <a name="a-namestrstreamstrstreama--strstreamstrstream"></a><a name="strstream__strstream"></a>  strstream::strstream  
+##  <a name="strstream__strstream"></a>  strstream::strstream  
  Constrói um objeto do tipo `strstream`.  
   
 ```
@@ -169,6 +176,7 @@ strstream(char* ptr,
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Programação de iostream](../standard-library/iostream-programming.md)   
  [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+
 
 
 

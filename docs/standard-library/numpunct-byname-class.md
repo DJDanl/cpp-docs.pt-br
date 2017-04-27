@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.numpunct_byname
 - numpunct_byname
 - xlocnum/std::numpunct_byname
-- std::numpunct_byname
 dev_langs:
 - C++
 helpviewer_keywords:

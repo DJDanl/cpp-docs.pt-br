@@ -30,13 +30,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: be2c2f555ab004cbb48310d5ad4a6897bd15d408
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0892c38d6448ed28a309c8c9864d78dc9aeb4a28
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="reading-ranges"></a>Intervalos de leitura
-**ANSI 4.9.6.2** A interpretação de um caractere de sublinhado (–) que não é o primeiro nem o último caractere da scanlist para % [conversão na função `fscanf`   
+**ANSI 4.9.6.2** A interpretação de um caractere de sublinhado (–) que não é o primeiro nem o último caractere da scanlist para % [conversão na função `fscanf`  
   
  A linha a seguir  
   

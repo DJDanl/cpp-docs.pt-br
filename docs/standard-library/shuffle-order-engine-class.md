@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shuffle_order_engine
-- std::shuffle_order_engine
 - random/std::shuffle_order_engine
 - random/std::shuffle_order_engine::base
 - random/std::shuffle_order_engine::discard

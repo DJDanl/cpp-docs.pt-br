@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.mask_array
 - mask_array
-- std::mask_array
 - valarray/std::mask_array
 dev_langs:
 - C++

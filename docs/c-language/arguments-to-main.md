@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 05853cdf4541de9299a114be91faf4c8f2afd877
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 338aa70c280b7638369443b66714c82b7a149d51
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="arguments-to-main"></a>Argumentos para main

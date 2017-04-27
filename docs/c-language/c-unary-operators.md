@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a8e25deae6667f3e3894745f864c3415efe29a40
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e25c23145a3096f1786a6f08a6ab51ff6950eac7
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-unary-operators"></a>Operadores unários C
@@ -56,7 +56,7 @@ Os operadores unários aparecem antes do respectivo operando e são associados d
  **sizeof (**  *type-name*  **)**  
   
  *unary-operator*: one of  
- **& \* + –** `~` **!**  
+ **& \* + -** `~` **!**  
   
 ## <a name="see-also"></a>Consulte também  
  [Operadores C](../c-language/c-operators.md)

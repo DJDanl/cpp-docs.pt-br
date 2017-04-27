@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - codecvt_base
 - xlocale/std::codecvt_base
-- std.codecvt_base
-- std::codecvt_base
 dev_langs:
 - C++
 helpviewer_keywords:

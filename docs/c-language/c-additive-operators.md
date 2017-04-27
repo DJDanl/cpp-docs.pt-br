@@ -36,13 +36,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 84982ec6364a47182a54752ae50bad12bb84232a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 885967baa9a7e3651dde02bb5cfb1d6b9783f42b
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-additive-operators"></a>Operadores aditivos C
-Os operadores aditivos executam adição (**+**) e subtração (**–**).  
+Os operadores aditivos executam adição (**+**) e subtração (**-**).  
   
 ## <a name="syntax"></a>Sintaxe  
  *additive-expression*:  
@@ -50,7 +50,7 @@ Os operadores aditivos executam adição (**+**) e subtração (**–**).
   
  *additive-expression*  **+**  *multiplicative-expression*  
   
- *additive-expression*  **–**  *multiplicative-expression*  
+ *additive-expression*  **-**  *multiplicative-expression*  
   
 > [!NOTE]
 >  Embora a sintaxe de *additive-expression* inclua *multiplicative-expression*, isso não significa que expressões que usam multiplicação sejam necessárias. Consulte a sintaxe em [Resumo de sintaxe da linguagem C](../c-language/c-language-syntax-summary.md), para *multiplicative-expression*, *cast-expression* e *unary-expression*.  

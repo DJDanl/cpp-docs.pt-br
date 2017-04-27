@@ -11,11 +11,9 @@ ms.topic: article
 f1_keywords:
 - allocators::allocator_newdel
 - allocators/stdext::allocators::allocator_newdel
-- stdext.allocators.allocator_newdel
 - allocators/stdext::allocator_newdel
 - allocator_newdel
 - stdext::allocators::allocator_newdel
-- allocators.allocator_newdel
 dev_langs:
 - C++
 helpviewer_keywords:

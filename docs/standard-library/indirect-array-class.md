@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.indirect_array
 - valarray/std::indirect_array
-- std::indirect_array
 - indirect_array
 dev_langs:
 - C++

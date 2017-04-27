@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_error
-- std::regex_error
 - regex/std::regex_error
-- std::regex_error::code
 - regex/std::regex_error::code
 dev_langs:
 - C++
@@ -68,7 +66,7 @@ public:
   
  **Namespace:** std  
   
-##  <a name="a-nameregexerrorcodea--regexerrorcode"></a><a name="regex_error__code"></a>  regex_error::code  
+##  <a name="regex_error__code"></a>  regex_error::code  
  Retorna o código de erro.  
   
 ```  
@@ -115,7 +113,7 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-##  <a name="a-nameregexerrorregexerrora--regexerrorregexerror"></a><a name="regex_error__regex_error"></a>  regex_error::regex_error  
+##  <a name="regex_error__regex_error"></a>  regex_error::regex_error  
  Constrói o objeto.  
   
 ```  

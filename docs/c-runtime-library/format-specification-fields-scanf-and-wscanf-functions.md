@@ -50,8 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7bfdce500ad9a268947a90f34ce7c48dca23faea
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 77ef83eccc158cb9fff1a9161b5694a4caf62777
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campos de especificação de formato: funções scanf e wscanf
@@ -88,8 +89,3 @@ As informações aqui se aplicam a toda a família de funções `scanf`, incluin
  [Caracteres de campo de tipo scanf](../c-runtime-library/scanf-type-field-characters.md)   
  [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

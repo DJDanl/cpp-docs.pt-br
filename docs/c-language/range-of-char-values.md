@@ -30,15 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 25be8582e3c187828f8158343d7831f8fc329c56
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fd9fb6e12af29bf32b4ed8ad20252bf21e2e9e3e
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="range-of-char-values"></a>Intervalo de valores char
 **ANSI 3.2.1.1** Se um **char** “comum” tem o mesmo intervalo de valores que um **signed char** ou um `unsigned char`  
   
- Todos os valores de caracteres com sinal variam de –128 a 127. Todos os valores de caracteres sem sinal variam de 0 a 255.  
+ Todos os valores de caracteres com sinal variam de -128 a 127. Todos os valores de caracteres sem sinal variam de 0 a 255.  
   
  A opção do compilador /J altera o padrão de **signed** para `unsigned`.  
   

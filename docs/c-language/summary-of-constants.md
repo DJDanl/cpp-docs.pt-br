@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 787e3b590db9078b9dc1bfc67c2c3fedc62c4eff
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8ba95629fc2cd8796e9c1e0016f08426a49164a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="summary-of-constants"></a>Resumo de constantes
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/25/2017
  **E**  *sign* opt*digit-sequence*  
   
  *sign*: one of  
- **+ –**  
+ **+ -**  
   
  *digit-sequence*:  
  *digit*  

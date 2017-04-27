@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar multiplataforma nativa no Visual Studio para compilar projetos antigos  
@@ -54,7 +54,7 @@ Também é possível definir como destino projetos do Visual Studio 2008, mas el
   
 As versões mais recentes do Visual Studio dão suporte à multiplataforma nativa e ao ciclo completo de projetos. A multiplataforma nativa é a capacidade que o IDE mais recente tem de compilar usando conjuntos de ferramentas instalados por versões anteriores do Visual Studio. O ciclo completo é a capacidade que o IDE mais recente tem de carregar projetos criados por uma versão anterior do IDE sem fazer alterações no projeto. Se você instalar a versão mais recente do Visual Studio juntamente com sua versão existente, é possível usar a nova versão do IDE com o compilador e as ferramentas da versão existente para compilar seus projetos. Outros membros da sua equipe podem continuar usando os projetos na versão mais antiga do Visual Studio.  
   
-Ao usar um conjunto de ferramentas mais antigo, é possível aproveitar muitos dos recursos mais recentes do IDE, mas não os avanços mais recentes no compilador, nas bibliotecas e nas ferramentas de build C++. Por exemplo, não será possível usar as novas melhorias de conformidade de linguagem, os novos recursos de depuração e de análise de código nem obter a taxa de transferência de build mais rápida do mais recente conjunto de ferramentas. Também há alguns recursos do IDE incompatíveis com conjuntos de ferramentas mais recentes. Por exemplo, as informações de tipo podem estar ausentes no Criador de Perfil de Memória, e a operação de refatoração "Converter em literais de cadeia de caracteres brutos" gera código em conformidade com C++11 que não será compilado ao usar o Visual Studio 2012 ou conjuntos de ferramentas mais antigos.
+Ao usar um conjunto de ferramentas mais antigo, é possível aproveitar muitos dos recursos mais recentes do IDE, mas não os avanços mais recentes no compilador, nas bibliotecas e nas ferramentas de build C++. Por exemplo, não será possível usar as novas melhorias de conformidade de linguagem, os novos recursos de depuração e de análise de código nem obter a taxa de transferência de build mais rápida do mais recente conjunto de ferramentas. Também há alguns recursos do IDE incompatíveis com conjuntos de ferramentas mais recentes. Por exemplo, as informações de tipo podem estar ausentes no Criador de Perfil de Memória e a operação de refatoração **Converter em literais de cadeia de caracteres brutos** gera código em conformidade com C++11 que não será compilado ao usar o Visual Studio 2012 ou conjuntos de ferramentas mais antigos.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Como usar a multiplataforma nativa no Visual Studio
 Depois de instalar o Visual Studio juntamente com sua versão mais antiga, abra seu projeto existente na nova versão do Visual Studio. Quando o projeto é carregado, o Visual Studio pergunta se você deseja atualizá-lo para usar o compilador e as bibliotecas mais recentes do C++. Como você deseja que o projeto mantenha a biblioteca e o compilador mais antigos, escolha o botão **Cancelar**.  

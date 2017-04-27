@@ -9,10 +9,40 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::numeric_limits
-- std.numeric_limits
 - numeric_limits
 - limits/std::numeric_limits
+- limits/std::numeric_limits::denorm_min
+- limits/std::numeric_limits::digits
+- limits/std::numeric_limits::digits10
+- limits/std::numeric_limits::epsilon
+- limits/std::numeric_limits::has_denorm
+- limits/std::numeric_limits::has_denorm_loss
+- limits/std::numeric_limits::has_infinity
+- limits/std::numeric_limits::has_quiet_NaN
+- limits/std::numeric_limits::has_signaling_NaN
+- limits/std::numeric_limits::infinity
+- limits/std::numeric_limits::is_bounded
+- limits/std::numeric_limits::is_exact
+- limits/std::numeric_limits::is_iec559
+- limits/std::numeric_limits::is_integer
+- limits/std::numeric_limits::is_modulo
+- limits/std::numeric_limits::is_signed
+- limits/std::numeric_limits::is_specialized
+- limits/std::numeric_limits::lowest
+- limits/std::numeric_limits::max
+- limits/std::numeric_limits::max_digits10
+- limits/std::numeric_limits::max_exponent
+- limits/std::numeric_limits::max_exponent10
+- limits/std::numeric_limits::min
+- limits/std::numeric_limits::min_exponent
+- limits/std::numeric_limits::min_exponent10
+- limits/std::numeric_limits::quiet_NaN
+- limits/std::numeric_limits::radix
+- limits/std::numeric_limits::round_error
+- limits/std::numeric_limits::round_style
+- limits/std::numeric_limits::signaling_NaN
+- limits/std::numeric_limits::tinyness_before
+- limits/std::numeric_limits::traps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +133,7 @@ class numeric_limits
   
  **Namespace:** std  
   
-##  <a name="a-namenumericlimitsdenormmina--numericlimitsdenormmin"></a><a name="numeric_limits__denorm_min"></a>  numeric_limits::denorm_min  
+##  <a name="numeric_limits__denorm_min"></a>  numeric_limits::denorm_min  
  Retorna o menor valor desnormalizado diferente de zero.  
   
 ```  
@@ -159,7 +189,7 @@ The smallest nonzero denormalized value
 0  
 ```  
   
-##  <a name="a-namenumericlimitsdigitsa--numericlimitsdigits"></a><a name="numeric_limits__digits"></a>  numeric_limits::digits  
+##  <a name="numeric_limits__digits"></a>  numeric_limits::digits  
  Retorna o número de dígitos de base que o tipo pode representar sem perda de precisão.  
   
 ```  
@@ -200,7 +230,7 @@ int main( )
 63  
 ```  
   
-##  <a name="a-namenumericlimitsdigits10a--numericlimitsdigits10"></a><a name="numeric_limits__digits10"></a>  numeric_limits::digits10  
+##  <a name="numeric_limits__digits10"></a>  numeric_limits::digits10  
  Retorna o número de dígitos decimais que o tipo pode representar sem perda de precisão.  
   
 ```  
@@ -242,7 +272,7 @@ int main( )
 The float is; 100000000  
 ```  
   
-##  <a name="a-namenumericlimitsepsilona--numericlimitsepsilon"></a><a name="numeric_limits__epsilon"></a>  numeric_limits::epsilon  
+##  <a name="numeric_limits__epsilon"></a>  numeric_limits::epsilon  
  A função retorna a diferença entre 1 e o menor valor maior que 1 que é representável para o tipo de dados.  
   
 ```  
@@ -291,7 +321,7 @@ The difference between 1 and the smallest value greater than 1
  for long double objects is: 2.22045e-016  
 ```  
   
-##  <a name="a-namenumericlimitshasdenorma--numericlimitshasdenorm"></a><a name="numeric_limits__has_denorm"></a>  numeric_limits::has_denorm  
+##  <a name="numeric_limits__has_denorm"></a>  numeric_limits::has_denorm  
  Testa se um tipo permite valores desnormalizados.  
   
 ```  
@@ -334,7 +364,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasdenormlossa--numericlimitshasdenormloss"></a><a name="numeric_limits__has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
+##  <a name="numeric_limits__has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
  Testa se a perda de precisão é detectada como uma perda de desnormalização em vez de um resultado inexato.  
   
 ```  
@@ -377,7 +407,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasinfinitya--numericlimitshasinfinity"></a><a name="numeric_limits__has_infinity"></a>  numeric_limits::has_infinity  
+##  <a name="numeric_limits__has_infinity"></a>  numeric_limits::has_infinity  
  Testa se um tipo tem uma representação de infinito positivo.  
   
 ```  
@@ -420,7 +450,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasquietnana--numericlimitshasquietnan"></a><a name="numeric_limits__has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
+##  <a name="numeric_limits__has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
  Testa se um tipo tem uma representação de um silencioso NAN (não é um número), que é sem sinal.  
   
 ```  
@@ -463,7 +493,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0  
 ```  
   
-##  <a name="a-namenumericlimitshassignalingnana--numericlimitshassignalingnan"></a><a name="numeric_limits__has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
+##  <a name="numeric_limits__has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
  Testa se um tipo tem uma representação para não sinalizar um número (NAN).  
   
 ```  
@@ -506,7 +536,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0  
 ```  
   
-##  <a name="a-namenumericlimitsinfinitya--numericlimitsinfinity"></a><a name="numeric_limits__infinity"></a>  numeric_limits::infinity  
+##  <a name="numeric_limits__infinity"></a>  numeric_limits::infinity  
  A representação de infinito positivo para um tipo, se disponível.  
   
 ```  
@@ -557,7 +587,7 @@ The representation of infinity for type double is: 1.#INF
 The representation of infinity for type long double is: 1.#INF  
 ```  
   
-##  <a name="a-namenumericlimitsisboundeda--numericlimitsisbounded"></a><a name="numeric_limits__is_bounded"></a>  numeric_limits::is_bounded  
+##  <a name="numeric_limits__is_bounded"></a>  numeric_limits::is_bounded  
  Testa se o conjunto de valores que um tipo pode representar é finito.  
   
 ```  
@@ -608,7 +638,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1  
 ```  
   
-##  <a name="a-namenumericlimitsisexacta--numericlimitsisexact"></a><a name="numeric_limits__is_exact"></a>  numeric_limits::is_exact  
+##  <a name="numeric_limits__is_exact"></a>  numeric_limits::is_exact  
  Testa se os cálculos feitos em um tipo estão livres de erros de arredondamento.  
   
 ```  
@@ -659,7 +689,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1  
 ```  
   
-##  <a name="a-namenumericlimitsisiec559a--numericlimitsisiec559"></a><a name="numeric_limits__is_iec559"></a>  numeric_limits::is_iec559  
+##  <a name="numeric_limits__is_iec559"></a>  numeric_limits::is_iec559  
  Testa se um tipo está em conformidade com os padrões IEC 559.  
   
 ```  
@@ -706,7 +736,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0  
 ```  
   
-##  <a name="a-namenumericlimitsisintegera--numericlimitsisinteger"></a><a name="numeric_limits__is_integer"></a>  numeric_limits::is_integer  
+##  <a name="numeric_limits__is_integer"></a>  numeric_limits::is_integer  
  Testa se um tipo tem uma representação de inteiro.  
   
 ```  
@@ -753,7 +783,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1  
 ```  
   
-##  <a name="a-namenumericlimitsismoduloa--numericlimitsismodulo"></a><a name="numeric_limits__is_modulo"></a>  numeric_limits::is_modulo  
+##  <a name="numeric_limits__is_modulo"></a>  numeric_limits::is_modulo  
  Testa se um **tipo** tem uma representação de módulo.  
   
 ```  
@@ -800,7 +830,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1  
 ```  
   
-##  <a name="a-namenumericlimitsissigneda--numericlimitsissigned"></a><a name="numeric_limits__is_signed"></a>  numeric_limits::is_signed  
+##  <a name="numeric_limits__is_signed"></a>  numeric_limits::is_signed  
  Testa se um tipo tem uma representação com sinal.  
   
 ```  
@@ -847,7 +877,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0  
 ```  
   
-##  <a name="a-namenumericlimitsisspecializeda--numericlimitsisspecialized"></a><a name="numeric_limits__is_specialized"></a>  numeric_limits::is_specialized  
+##  <a name="numeric_limits__is_specialized"></a>  numeric_limits::is_specialized  
  Testa se um tipo tem uma especialização explícita definida na classe de modelo `numeric_limits`.  
   
 ```  
@@ -898,7 +928,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0  
 ```  
   
-##  <a name="a-namenumericlimitslowesta--numericlimitslowest"></a><a name="numeric_limits__lowest"></a>  numeric_limits::lowest  
+##  <a name="numeric_limits__lowest"></a>  numeric_limits::lowest  
  Retorna o valor finito mais negativo.  
   
 ```  
@@ -911,7 +941,7 @@ static Type lowest() throw();
 ### <a name="remarks"></a>Comentários  
  Retorna o valor finito mais negativo para o tipo (que geralmente é `min` `()` para tipos de inteiro e `-``max` `()` para tipos de ponto flutuante). O valor de retorno será significativo se `is_bounded` for `true`.  
   
-##  <a name="a-namenumericlimitsmaxa--numericlimitsmax"></a><a name="numeric_limits__max"></a>  numeric_limits::max  
+##  <a name="numeric_limits__max"></a>  numeric_limits::max  
  Retorna o valor máximo finito para um tipo.  
   
 ```  
@@ -950,7 +980,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenumericlimitsmaxdigits10a--numericlimitsmaxdigits10"></a><a name="numeric_limits__max_digits10"></a>  numeric_limits::max_digits10  
+##  <a name="numeric_limits__max_digits10"></a>  numeric_limits::max_digits10  
  Retorna o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.  
   
 ```  
@@ -963,7 +993,7 @@ static int max_digits10 = 0;
 ### <a name="remarks"></a>Comentários  
  O membro armazena o número de dígitos decimais necessários para garantir que dois valores distintos do tipo tenham diferentes representações decimais.  
   
-##  <a name="a-namenumericlimitsmaxexponenta--numericlimitsmaxexponent"></a><a name="numeric_limits__max_exponent"></a>  numeric_limits::max_exponent  
+##  <a name="numeric_limits__max_exponent"></a>  numeric_limits::max_exponent  
  Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de base é elevada a essa potência.  
   
 ```  
@@ -1006,7 +1036,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024  
 ```  
   
-##  <a name="a-namenumericlimitsmaxexponent10a--numericlimitsmaxexponent10"></a><a name="numeric_limits__max_exponent10"></a>  numeric_limits::max_exponent10  
+##  <a name="numeric_limits__max_exponent10"></a>  numeric_limits::max_exponent10  
  Retorna o expoente integral positivo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de dez é elevada a essa potência.  
   
 ```  
@@ -1049,7 +1079,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308  
 ```  
   
-##  <a name="a-namenumericlimitsmina--numericlimitsmin"></a><a name="numeric_limits__min"></a>  numeric_limits::min  
+##  <a name="numeric_limits__min"></a>  numeric_limits::min  
  Retorna o valor normalizado mínimo para um tipo.  
   
 ```  
@@ -1096,7 +1126,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768  
 ```  
   
-##  <a name="a-namenumericlimitsminexponenta--numericlimitsminexponent"></a><a name="numeric_limits__min_exponent"></a>  numeric_limits::min_exponent  
+##  <a name="numeric_limits__min_exponent"></a>  numeric_limits::min_exponent  
  Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de base é elevada a essa potência.  
   
 ```  
@@ -1139,7 +1169,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021  
 ```  
   
-##  <a name="a-namenumericlimitsminexponent10a--numericlimitsminexponent10"></a><a name="numeric_limits__min_exponent10"></a>  numeric_limits::min_exponent10  
+##  <a name="numeric_limits__min_exponent10"></a>  numeric_limits::min_exponent10  
  Retorna o expoente integral negativo máximo que o tipo de ponto flutuante pode representar como um valor finito quando uma base de dez é elevada a essa potência.  
   
 ```  
@@ -1182,7 +1212,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307  
 ```  
   
-##  <a name="a-namenumericlimitsquietnana--numericlimitsquietnan"></a><a name="numeric_limits__quiet_nan"></a>  numeric_limits::quiet_NaN  
+##  <a name="numeric_limits__quiet_nan"></a>  numeric_limits::quiet_NaN  
  Retorna a representação de um NAN (não é um número) silencioso para o tipo.  
   
 ```  
@@ -1225,7 +1255,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN  
 ```  
   
-##  <a name="a-namenumericlimitsradixa--numericlimitsradix"></a><a name="numeric_limits__radix"></a>  numeric_limits::radix  
+##  <a name="numeric_limits__radix"></a>  numeric_limits::radix  
  Retorna a base integral, conhecida como base, usada para a representação de um tipo.  
   
 ```  
@@ -1268,7 +1298,7 @@ The base for type int is:  2
 The base for type long double is:  2  
 ```  
   
-##  <a name="a-namenumericlimitsrounderrora--numericlimitsrounderror"></a><a name="numeric_limits__round_error"></a>  numeric_limits::round_error  
+##  <a name="numeric_limits__round_error"></a>  numeric_limits::round_error  
  Retorna o erro de arredondamento máximo para o tipo.  
   
 ```  
@@ -1308,7 +1338,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5  
 ```  
   
-##  <a name="a-namenumericlimitsroundstylea--numericlimitsroundstyle"></a><a name="numeric_limits__round_style"></a>  numeric_limits::round_style  
+##  <a name="numeric_limits__round_style"></a>  numeric_limits::round_style  
  Retorna um valor que descreve os vários métodos que uma implementação pode escolher para o arredondamento de um valor de ponto flutuante para um valor inteiro.  
   
 ```  
@@ -1352,7 +1382,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0  
 ```  
   
-##  <a name="a-namenumericlimitssignalingnana--numericlimitssignalingnan"></a><a name="numeric_limits__signaling_nan"></a>  numeric_limits::signaling_NaN  
+##  <a name="numeric_limits__signaling_nan"></a>  numeric_limits::signaling_NaN  
  Retorna a representação de um sinal NAN (não é um número) para o tipo.  
   
 ```  
@@ -1389,7 +1419,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namenumericlimitstinynessbeforea--numericlimitstinynessbefore"></a><a name="numeric_limits__tinyness_before"></a>  numeric_limits::tinyness_before  
+##  <a name="numeric_limits__tinyness_before"></a>  numeric_limits::tinyness_before  
  Testa se um tipo pode determinar que um valor é muito pequeno para representar como um valor normalizado antes de arredondá-lo.  
   
 ```  
@@ -1436,7 +1466,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0  
 ```  
   
-##  <a name="a-namenumericlimitstrapsa--numericlimitstraps"></a><a name="numeric_limits__traps"></a>  numeric_limits::traps  
+##  <a name="numeric_limits__traps"></a>  numeric_limits::traps  
  Testa se o trapping que relata exceções aritméticas é implementada para um tipo.  
   
 ```  

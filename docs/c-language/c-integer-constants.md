@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: abe56015bada3914accabca877b3ba0d155de154
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dab1cb72b5914901808dc51f3a173a62a8924cfb
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-integer-constants"></a>Constantes de inteiro C
@@ -92,7 +92,7 @@ Uma "constante de inteiro" é um número decimal (base 10), octal (base 8) ou he
  *64-bit integer-suffix*:  
  **i64**  
   
- As constantes de inteiro são positivas a menos que sejam precedidas por um sinal de subtração (**–**). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)  
+ As constantes de inteiro são positivas a menos que sejam precedidas por um sinal de subtração (**-**). O sinal de subtração é interpretado como o operador aritmético unário de negação. (Consulte [Operadores aritméticos unários](../c-language/unary-arithmetic-operators.md) para obter informações sobre este operador.)  
   
  Se uma constante inteira começar com **0x** ou **0X**, ela é hexadecimal. Se ela começar com o dígito **0**, é octal. Caso contrário, pressupõe-se que é decimal.  
   

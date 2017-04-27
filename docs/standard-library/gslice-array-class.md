@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::gslice_array
 - gslice_array
 - valarray/std::gslice_array
-- std.gslice_array
 dev_langs:
 - C++
 helpviewer_keywords:

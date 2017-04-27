@@ -30,15 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b9d657649257bbd1111e330709c14b5326e7ba7e
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 93d15ea0193999acea5866e085434cb5c8dd17d4
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="right-shifts"></a>Deslocamentos para a direita
 O resultado de um deslocamento à direita de um valor negativo tipo integral com sinal  
   
- O deslocamento de um valor negativo para a direita gera metade do valor absoluto, arredondado para baixo. Por exemplo, um valor `short` de – 253 com sinal (hexadecimal 0xFF03, binário 11111111 00000011) deslocado à direita de um bit produz – 127 (hexadecimal 0xFF81, binário 11111111 10000001). Um 253 positivo deslocado à direita gera + 126.  
+ O deslocamento de um valor negativo para a direita gera metade do valor absoluto, arredondado para baixo. Por exemplo, um valor `short` de -253 com sinal (hexadecimal 0xFF03, binário 11111111 00000011) deslocado à direita de um bit produz -127 (hexadecimal 0xFF81, binário 11111111 10000001). Um 253 positivo deslocado à direita gera + 126.  
   
  Deslocamentos para a direita preservam o bit de sinal de tipos integrais com sinal. Quando um inteiro assinado é deslocado para a direita, o bit mais significativo permanece definido. Por exemplo, se 0xF0000000 for um `int` com sinal, um deslocamento à direita produz 0xF8000000. Deslocar um `int` negativo para a direita 32 vezes produz 0xFFFFFFFF.  
   

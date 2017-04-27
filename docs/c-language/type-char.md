@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f97f3ef79a7b6af7f7fae49bdec6969a5cae7c71
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7bdb4b1632f3f3d2b8b0537992efe5c0aaf28e8d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="type-char"></a>Tipo char
@@ -44,7 +44,7 @@ O tipo `char` é usado para armazenar o valor inteiro de um membro do conjunto d
   
  **Seção específica da Microsoft**  
   
- Os valores de caracteres do tipo `unsigned char` têm um intervalo de 0 a 0xFF hexadecimal. Um **signed char** tem o intervalo de 0x80 a 0x7F. Esses intervalos podem ser traduzidos em de 0 a 255 decimal, e –128 a +127 decimal, respectivamente. A opção do compilador /J altera o padrão de **signed** para `unsigned`.  
+ Os valores de caracteres do tipo `unsigned char` têm um intervalo de 0 a 0xFF hexadecimal. Um **signed char** tem o intervalo de 0x80 a 0x7F. Esses intervalos podem ser traduzidos em de 0 a 255 decimal e -128 a +127 decimal, respectivamente. A opção do compilador /J altera o padrão de **signed** para `unsigned`.  
   
  **Fim da seção específica da Microsoft**  
   
