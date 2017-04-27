@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erros fatais do compilador C999 até C1999
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
+  
+> [!NOTE]
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
 |Erro|Mensagem|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro fatal C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|sinalizador não reconhecido '*cadeia de caracteres*'in'*opção*'|  
 |[Erro fatal C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|nenhum arquivo de entrada especificado|  
 |[Erro fatal C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite do compilador: macros com aninhamento muito profundo|  
-|[Erro fatal C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fim de arquivo inesperado durante a procura de cabeçalho pré-compilado. Você esqueceu de adicionar ' #include *arquivo*>' à sua fonte?|  
+|[Erro fatal C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fim de arquivo inesperado durante a procura de cabeçalho pré-compilado. Você esqueceu de adicionar ' #include <*arquivo*>' para sua fonte?|  
 |Erro fatal C1012|parênteses: faltando '*caracteres*"|  
 |Erro fatal C1013|limite do compilador: muitos parênteses abertos|  
 |Erro fatal C1014|incluem muitos arquivos: profundidade = *número*|  
@@ -141,13 +226,13 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1020|#endif inesperado|  
 |Erro fatal C1021|comando de pré-processador inválido '*cadeia de caracteres*'|  
 |Erro fatal C1022|#endif esperado|  
-|Erro fatal C1023|'*arquivos*': erro inesperado com pch, tente recompilá-lo|  
+|Erro fatal C1023|'*arquivo*': erro inesperado com pch, tente recompilá-lo|  
 |[Erro fatal C1026](../../error-messages/compiler-errors-1/fatal-error-c1026.md)|estouro na pilha do analisador, programa muito complexo|  
 |[Erro fatal C1033](../../error-messages/compiler-errors-1/fatal-error-c1033.md)|não é possível abrir o banco de dados do programa '*arquivo*'|  
 |Erro fatal C1034|*arquivo*: nenhum caminho de include definido|  
 |Erro fatal C1035|expressão muito complexa; simplifique-a|  
 |Erro fatal C1036|não é possível substituir o formato de banco de dados do programa anterior, exclua '*arquivo*' e recompile|  
-|Erro fatal C1037|não é possível abrir o arquivo de objeto '*arquivos*'|  
+|Erro fatal C1037|não é possível abrir o arquivo de objeto '*arquivo*'|  
 |Erro fatal C1038|limite do compilador: '*função*': controlar o estado de fluxo muito complexo; Simplifique a função|  
 |Erro fatal C1041|não é possível abrir o banco de dados do programa '*arquivo*'; se vários CL. EXE de gravação para o mesmo. PDB do arquivo, use /FS|  
 |Erro fatal C1045|limite do compilador: especificações de vinculação com aninhamento muito profundo|  
@@ -166,7 +251,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro fatal C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limite do compilador: o token estourou o buffer interno|  
 |[Erro fatal C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limite do compilador: sem marcas|  
 |[Erro fatal C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite do compilador: o limite de 64K de tamanho de um registro de tipo foi excedido|  
-|Erro fatal C1068|não é possível abrir o arquivo '*arquivos*'|  
+|Erro fatal C1068|não é possível abrir o arquivo '*arquivo*'|  
 |Erro fatal C1069|não é possível ler a linha de comando do compilador|  
 |Erro fatal C1070|incompatível #if / #endif emparelhar no arquivo '*arquivo*'|  
 |[Erro fatal C1071](../../error-messages/compiler-errors-1/fatal-error-c1071.md)|fim de arquivo inesperado encontrado no comentário|  
@@ -179,7 +264,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro fatal C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite do compilador: limite excedido para a opção de linha de comando de *número* caracteres|  
 |[Erro fatal C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*arquivo*': nome de arquivo muito longo|  
 |Erro fatal C1082|não é possível fechar *tipo* arquivo: '*arquivo*': *mensagem*|  
-|[Erro fatal C1083](../../error-messages/compiler-errors-1/fatal-error-c1083.md)|não é possível abrir *tipo* arquivos: '*arquivos*': *mensagem*|  
+|[Erro fatal C1083](../../error-messages/compiler-errors-1/fatal-error-c1083.md)|não é possível abrir *tipo* arquivo: '*arquivo*': *mensagem*|  
 |[Erro fatal C1084](../../error-messages/compiler-errors-1/fatal-error-c1084.md)|não é possível ler *tipo* arquivo: '*arquivo*': *mensagem*|  
 |[Erro fatal C1085](../../error-messages/compiler-errors-1/fatal-error-c1085.md)|não é possível gravar *tipo* arquivo: '*arquivo*': *mensagem*|  
 |Erro fatal C1086|não é possível buscar *tipo* arquivo: '*arquivo*': *mensagem*|  
@@ -200,13 +285,13 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1104|Erro fatal ao importar libid: '*mensagem*'|  
 |Erro fatal C1105|*mensagem*: *erro*|  
 |[Erro fatal C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|não foi possível encontrar o assembly '*assembly*': especifique o caminho de pesquisa de assembly usando /AI ou definindo a variável de ambiente LIBPATH|  
-|Erro fatal C1108|não é possível localizar a DLL: '*arquivos*'|  
+|Erro fatal C1108|não é possível localizar a DLL: '*arquivo*'|  
 |Erro fatal C1109|não é possível localizar '*símbolo*'na DLL'*arquivo*'|  
 |Erro fatal C1110|muitas definições de modelo/generic aninhada|  
 |Erro fatal C1111|número excessivo de parâmetros de modelo/generic|  
 |Erro fatal C1112|limite do compilador: `'number`' muitos argumentos de macro, apenas *número* permitido|  
-|[Erro fatal C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#usando falhou em '*arquivos*'|  
-|Erro fatal C1114|'*arquivos*': WinRT não oferece suporte a #using de um assembly gerenciado|  
+|[Erro fatal C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#usando falhou em '*arquivo*'|  
+|Erro fatal C1114|'*arquivo*': WinRT não oferece suporte a #using de um assembly gerenciado|  
 |[Erro fatal C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chamada a GetProcAddress falhou para '*função*'|  
 |[Erro fatal C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|falha na chamada a CryptoAPI|  
 |[Erro fatal C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|alocação automática excede *tamanho*|  
@@ -214,8 +299,8 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro fatal C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Erro: *mensagem*|  
 |Erro fatal C1190|código gerenciado direcionado requer uma opção '/clr'|  
 |[Erro fatal C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*arquivo*' só podem ser importados no escopo global|  
-|[Erro fatal C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#usando falhou em '*arquivos*'|  
-|Erro fatal C1193|Erro esperado em *arquivos*(*linha*) não atingido|  
+|[Erro fatal C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#usando falhou em '*arquivo*'|  
+|Erro fatal C1193|Erro esperado em *arquivo*(*linha*) não atingido|  
 |Erro fatal C1195|uso de /Yu e /Yc na mesma linha de comando é incompatível com a opção /clr|  
 |Erro fatal C1196|'*identificador*': identificador encontrado na biblioteca de tipos '*typelib*' não é um identificador válido do C++|  
 |[Erro fatal C1197](../../error-messages/compiler-errors-1/fatal-error-c1197.md)|não é possível referenciar '*arquivo*'como o programa já referenciou'*arquivo*'|  
@@ -228,11 +313,11 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1209|Friend assemblies não suportados pela versão de tempo de execução instalada|  
 |Erro fatal C1210|/clr:pure e /clr:safe não são suportados pela versão de tempo de execução instalada|  
 |Erro fatal C1211|O Atributo Personalizado TypeForwardedTo não é suportado pela versão de tempo de execução instalada|  
-|Erro fatal C1300|Erro ao acessar o banco de dados do programa *arquivos* (*mensagem*)|  
+|Erro fatal C1300|Erro ao acessar o banco de dados do programa *arquivo* (*mensagem*)|  
 |Erro fatal C1301|Erro ao acessar o banco de dados do programa *arquivo*inválido, Formatar, exclua e recompile|  
 |Erro fatal C1302|Nenhum dado de perfil para módulo '*módulo*'no banco de dados de perfil'*arquivo*'|  
 |[Erro fatal C1305](../../error-messages/compiler-errors-1/fatal-error-c1305.md)|banco de dados de perfil '*arquivo*' para uma arquitetura diferente|  
-|Erro fatal C1306|última alteração na base de dados de perfil '*arquivos*' não era análise de otimização; decisões de otimização podem estar desatualizadas|  
+|Erro fatal C1306|última alteração na base de dados de perfil '*arquivo*' não era análise de otimização; decisões de otimização podem estar desatualizadas|  
 |[Erro fatal C1307](../../error-messages/compiler-errors-1/fatal-error-c1307.md)|programa foi editado após os dados de perfil serem coletados|  
 |[Erro fatal C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*arquivo*: não há suporte para vinculação assemblies|  
 |[Erro fatal C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|Versões incompatíveis do C2. DLL e pgodb*ver*. DLL|  
@@ -246,7 +331,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1353|falha na operação de metadados: tempo de execução não instalado ou versão incompatível|  
 |[Erro fatal C1382](../../error-messages/compiler-errors-1/fatal-error-c1382.md)|o arquivo PCH '*arquivo*'foi recompilado desde'*obj*' foi gerado. Recompile este objeto|  
 |Erro fatal C1383|opção de compilador /GL é incompatível com a versão instalada de common language runtime|  
-|Erro fatal C1384|Configuração incorreta para PGO_PATH_TRANSLATION ao vincular '*arquivos*'|  
+|Erro fatal C1384|Configuração incorreta para PGO_PATH_TRANSLATION ao vincular '*arquivo*'|  
 |Erro fatal C1451|Falha ao gerar informações de depuração ao compilar o gráfico de chamada para o Concurrency:: parallel_for_each em: '*callsite*'|  
 |Erro fatal C1505|erro irrecuperável de look-ahead do analisador|  
 |[Erro fatal C1506](../../error-messages/compiler-errors-1/fatal-error-c1506.md)|erro irrecuperável de escopo de blocos|  
@@ -263,5 +348,5 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1901|Erro de gerenciamento de memória interna|  
 |[Erro fatal C1902](../../error-messages/compiler-errors-1/fatal-error-c1902.md)|Incompatibilidade do gerenciador de banco de dados do programa; verifique sua instalação|  
 |Erro fatal C1903|Não é possível recuperar de erro(s) anterior(es); interrompendo compilação|  
-|Erro fatal C1904|a interação do provedor inválido: '*arquivos*'|  
+|Erro fatal C1904|a interação do provedor inválido: '*arquivo*'|  
 |[Erro fatal C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front-end e back-end incompatíveis (devem ter como alvo o mesmo processador).|

@@ -1,5 +1,5 @@
 ---
-title: C2492 de erro do compilador | Documentos do Microsoft
+title: C2492 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4824ec9e7683f35a1caa3122f937ff1a7646c2c9
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 54a650e967acb2ee0b6864780823111b4db9414c
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-error-c2492"></a>C2492 de erro do compilador
-'variável': dados de 'thread' talvez não tenha interface de dll  
+'*variável*': dados com duração de armazenamento de thread não podem possuir dll interface    
   
- A variável é declarada com o [thread](../../cpp/thread.md) atributo e com a DLL de interface. O endereço do `thread` variável não é conhecida até o tempo de execução, portanto ele não pode ser vinculado a uma DLL de importação ou exportação.  
+ A variável é declarada com o [thread](../../cpp/thread.md) atributo e com a DLL de interface. O endereço do `thread` variável não é conhecida até o tempo de execução, para que ele não pode ser vinculado a uma DLL de importação ou exportação.  
   
  O exemplo a seguir gera C2492:  
   

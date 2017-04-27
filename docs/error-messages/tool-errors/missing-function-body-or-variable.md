@@ -1,5 +1,5 @@
 ---
-title: "Corpo da função ou variável ausente | Documentos do Microsoft"
+title: "Corpo da função ou variável ausente | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,16 +33,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a50f119b35ccd5e84ea50b28377df02cb5ac9c6
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: c80a5626e7f674ddca7d44e94aa8ab64c735c81e
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="missing-function-body-or-variable"></a>Corpo de função ou variável ausente
 Com apenas um protótipo de função, o compilador pode continuar sem erro, mas o vinculador não pode resolver uma chamada para um endereço porque não há nenhum código de função ou variável espaço reservado. Você não verá esse erro até que você crie uma chamada para a função que o vinculador deve resolver.  
   
 ## <a name="example"></a>Exemplo  
- A chamada de função em main causará LNK2019 porque o protótipo permite que o compilador acha que a função existe.  O vinculador localiza que não.  
+ A chamada de função no principal causará LNK2019 porque o protótipo permite que o compilador que a função existe.  O vinculador localiza que não.  
   
 ```  
 // LNK2019_MFBV.cpp  
@@ -54,7 +54,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- No C++, certifique-se de incluir a implementação de uma função específica de uma classe e não apenas um protótipo na definição de classe. Se você estiver definindo a classe fora do arquivo de cabeçalho, certifique-se de incluir o nome da classe antes da função (`Classname``::``memberfunction`).  
+ No C++, certifique-se de incluir a implementação de uma função específica para uma classe e não apenas um protótipo na definição de classe. Se você estiver definindo a classe fora do arquivo de cabeçalho, certifique-se de incluir o nome da classe antes da função (`Classname::memberfunction`).  
   
 ```  
 // LNK2019_MFBV_2.cpp  

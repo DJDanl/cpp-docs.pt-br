@@ -1,5 +1,5 @@
 ---
-title: Erros e avisos das ferramentas de vinculador | Documentos do Microsoft
+title: Erros e avisos das ferramentas de vinculador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,20 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6263466c1857164ccca2037f4728e8a1de9b7e05
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Erros e avisos das ferramentas de vinculador
-LINK, LIB, DUMPBIN e EDITBIN geram esses erros e avisos. Para obter ajuda sobre uma mensagem de erro específica, ou clique com o mouse em um número de erro na janela de saída e pressione F1, digite o número do erro no **procure** caixa no índice, ou clique no link abaixo.  
+LINK, LIB, DUMPBIN e EDITBIN geram esses erros e avisos. Para obter ajuda sobre uma mensagem de erro específica, ou clique com o mouse sobre um número de erro na janela de saída e pressiona F1, digite o número do erro no **procure** caixa no índice, ou clique no link abaixo.  
+  
+> [!NOTE]
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro ou aviso é documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
+  
+## <a name="in-this-section"></a>Nesta seção
   
  [Erro das ferramentas de vinculador LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   
@@ -182,94 +189,94 @@ LINK, LIB, DUMPBIN e EDITBIN geram esses erros e avisos. Para obter ajuda sobre 
   
  [Erro das ferramentas de vinculador LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)  
   
- [Aviso LNK4001 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)  
+ [Aviso das ferramentas de vinculador LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)  
   
- [Aviso LNK4002 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)  
+ [Aviso das ferramentas de vinculador LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)  
   
- [Aviso LNK4006 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md)  
+ [Aviso das ferramentas de vinculador LNK4006](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md)  
   
- [Aviso LNK4010 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)  
+ [Aviso das ferramentas de vinculador LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)  
   
- [Aviso LNK4014 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)  
+ [Aviso das ferramentas de vinculador LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)  
   
- [Aviso LNK4022 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)  
+ [Aviso das ferramentas de vinculador LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)  
   
- [Aviso LNK4039 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md)  
+ [Aviso das ferramentas de vinculador LNK4039](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md)  
   
- [Aviso LNK4044 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)  
+ [Aviso das ferramentas de vinculador LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)  
   
- [Aviso LNK4049 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md)  
+ [Aviso das ferramentas de vinculador LNK4049](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md)  
   
- [Aviso LNK4065 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md)  
+ [Aviso das ferramentas de vinculador LNK4065](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md)  
   
- [Aviso LNK4070 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md)  
+ [Aviso das ferramentas de vinculador LNK4070](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md)  
   
- [Aviso LNK4071 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md)  
+ [Aviso das ferramentas de vinculador LNK4071](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md)  
   
- [Aviso LNK4073 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md)  
+ [Aviso das ferramentas de vinculador LNK4073](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md)  
   
- [Aviso LNK4075 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)  
+ [Aviso das ferramentas de vinculador LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)  
   
- [Aviso LNK4076 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md)  
+ [Aviso das ferramentas de vinculador LNK4076](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md)  
   
- [Aviso LNK4078 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md)  
+ [Aviso das ferramentas de vinculador LNK4078](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md)  
   
- [Aviso LNK4086 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)  
+ [Aviso das ferramentas de vinculador LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md)  
   
- [Aviso LNK4092 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md)  
+ [Aviso das ferramentas de vinculador LNK4092](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md)  
   
- [Aviso LNK4096 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md)  
+ [Aviso das ferramentas de vinculador LNK4096](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md)  
   
- [Aviso LNK4098 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md)  
+ [Aviso das ferramentas de vinculador LNK4098](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md)  
   
- [Aviso LNK4099 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md)  
+ [Aviso das ferramentas de vinculador LNK4099](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md)  
   
- [Aviso LNK4102 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md)  
+ [Aviso das ferramentas de vinculador LNK4102](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md)  
   
- [Aviso LNK4104 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md)  
+ [Aviso das ferramentas de vinculador LNK4104](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md)  
   
- [Aviso LNK4105 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)  
+ [Aviso das ferramentas de vinculador LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md)  
   
- [Aviso LNK4194 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md)  
+ [Aviso das ferramentas de vinculador LNK4194](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md)  
   
- [Aviso LNK4197 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md)  
+ [Aviso das ferramentas de vinculador LNK4197](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md)  
   
- [Aviso LNK4199 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md)  
+ [Aviso das ferramentas de vinculador LNK4199](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md)  
   
- [Aviso LNK4200 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md)  
+ [Aviso das ferramentas de vinculador LNK4200](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md)  
   
- [Aviso LNK4204 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)  
+ [Aviso das ferramentas de vinculador LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md)  
   
- [Aviso LNK4205 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)  
+ [Aviso das ferramentas de vinculador LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md)  
   
- [Aviso LNK4206 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)  
+ [Aviso das ferramentas de vinculador LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md)  
   
- [Aviso LNK4210 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md)  
+ [Aviso das ferramentas de vinculador LNK4210](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md)  
   
- [Aviso LNK4216 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md)  
+ [Aviso das ferramentas de vinculador LNK4216](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md)  
   
- [Aviso LNK4217 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)  
+ [Aviso das ferramentas de vinculador LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)  
   
- [Aviso LNK4219 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md)  
+ [Aviso das ferramentas de vinculador LNK4219](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md)  
   
- [Aviso LNK4220 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md)  
+ [Aviso das ferramentas de vinculador LNK4220](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md)  
   
- [Aviso LNK4221 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md)  
+ [Aviso das ferramentas de vinculador LNK4221](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md)  
   
- [Aviso LNK4222 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md)  
+ [Aviso das ferramentas de vinculador LNK4222](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md)  
   
- [Aviso LNK4224 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)  
+ [Aviso das ferramentas de vinculador LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md)  
   
- [Aviso LNK4227 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md)  
+ [Aviso das ferramentas de vinculador LNK4227](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md)  
   
- [Aviso LNK4229 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)  
+ [Aviso das ferramentas de vinculador LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)  
   
- [Aviso LNK4237 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md)  
+ [Aviso das ferramentas de vinculador LNK4237](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md)  
   
- [Aviso LNK4247 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md)  
+ [Aviso das ferramentas de vinculador LNK4247](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md)  
   
- [Aviso LNK4248 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md)  
+ [Aviso das ferramentas de vinculador LNK4248](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md)  
   
- [Aviso LNK4253 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)  
+ [Aviso das ferramentas de vinculador LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)  
   
- [Aviso LNK4254 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
+ [Aviso das ferramentas de vinculador LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
