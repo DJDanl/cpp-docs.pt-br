@@ -1,5 +1,5 @@
 ---
-title: C2753 de erro do compilador | Documentos do Microsoft
+title: C2753 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,20 +34,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 420fb65e0ce8147c182b850e1503622be69b751a
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7d77c7fa0c8035f8bb3a9ef732880bce4253c25b
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-error-c2753"></a>C2753 de erro do compilador
-'class': classe de modelo já foi definido  
+'*modelo*': especialização parcial não pode coincidir com a lista de argumentos para template primário  
   
- Se a lista de argumentos de modelo corresponde à lista de parâmetro, o compilador trata como o mesmo modelo. Não é permitido definir o mesmo modelo duas vezes.  
+ Se a lista de argumentos de modelo corresponde à lista de parâmetro, o compilador tratará como o mesmo modelo. Não é permitido definir duas vezes o mesmo modelo.  
   
- O exemplo a seguir gera C2753:  
+## <a name="example"></a>Exemplo
+ O exemplo a seguir gera C2753 e mostra uma maneira de corrigir isso:  
   
-```  
+```cpp  
 // C2753.cpp  
+// compile with: cl /c C2753.cpp
 template<class T>  
 struct A {};  
   

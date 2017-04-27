@@ -1,5 +1,5 @@
 ---
-title: Erros C2100 a C2199 | Documentos do Microsoft
+title: Erros C2100 a C2199 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,30 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C2119
+- C2123
+- C2125
+- C2126
+- C2127
+- C2131
+- C2136
+- C2176
+- C2178
+- C2187
+- C2189
+helpviewer_keywords:
+- C2119
+- C2123
+- C2125
+- C2126
+- C2127
+- C2131
+- C2136
+- C2176
+- C2178
+- C2187
+- C2189
 dev_langs:
 - C++
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
@@ -30,110 +54,118 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7b73481bead9b323c042a3f0524071f452a9d064
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erros C2100 a C2199 (compilador)
-Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e pressione a tecla F1.  
+Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
- [C2100 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2100.md)  
+> [!NOTE]
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- [C2104 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2104.md)  
+ Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
- [C2105 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2105.md)  
-  
- [C2106 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2106.md)  
-  
- [C2107 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2107.md)  
-  
- [C2108 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2108.md)  
-  
- [C2109 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2109.md)  
-  
- [C2112 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2112.md)  
-  
- [C2117 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2117.md)  
-  
- [C2118 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2118.md)  
-  
- [C2120 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2120.md)  
-  
- [C2121 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2121.md)  
-  
- [C2122 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2122.md)  
-  
- [C2128 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2128.md)  
-  
- [C2129 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2129.md)  
-  
- [C2133 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2133.md)  
-  
- [C2134 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2134.md)  
-  
- [C2138 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2138.md)  
-  
- [C2139 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2139.md)  
-  
- [C2140 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2140.md)  
-  
- [C2141 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2141.md)  
-  
- [C2142 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2142.md)  
-  
- [C2143 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2143.md)  
-  
- [C2144 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2144.md)  
-  
- [C2146 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2146.md)  
-  
- [C2147 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2147.md)  
-  
- [C2148 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2148.md)  
-  
- [C2151 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2151.md)  
-  
- [C2152 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2152.md)  
-  
- [C2153 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2153.md)  
-  
- [C2154 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2154.md)  
-  
- [C2155 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2155.md)  
-  
- [C2162 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2162.md)  
-  
- [C2163 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2163.md)  
-  
- [C2164 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2164.md)  
-  
- [C2169 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2169.md)  
-  
- [C2170 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2170.md)  
-  
- [C2174 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2174.md)  
-  
- [C2175 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2175.md)  
-  
- [C2179 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2179.md)  
-  
- [C2180 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2180.md)  
-  
- [C2183 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2183.md)  
-  
- [C2185 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2185.md)  
-  
- [C2190 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2190.md)  
-  
- [C2191 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2191.md)  
-  
- [C2192 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2192.md)  
-  
- [C2193 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2193.md)  
-  
- [C2194 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2194.md)  
-  
- [C2195 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2195.md)  
-  
- [C2199 de erro do compilador](../../error-messages/compiler-errors-1/compiler-error-c2199.md)
+|Erro|Mensagem|  
+|-----------|-------------|  
+|[Erro do compilador C2100](compiler-error-c2100.md)|indireção inválida|  
+|[Erro do compilador C2101](compiler-error-c2101.md)|' &' na constante|  
+|[Erro do compilador C2102](compiler-error-c2102.md)|' &' requer valor l|  
+|[Erro do compilador C2103](compiler-error-c2103.md)|' &' registrar na variável|  
+|[Erro do compilador C2104](compiler-error-c2104.md)|' &' no campo de bits ignorado|  
+|[Erro do compilador C2105](compiler-error-c2105.md)|'*operador*' precisa de valor de l|  
+|[Erro do compilador C2106](compiler-error-c2106.md)|'*operador*': operando da esquerda deve ser o valor de l|  
+|[Erro do compilador C2107](compiler-error-c2107.md)|índice inválido, indireção não permitida|  
+|[Erro do compilador C2108](compiler-error-c2108.md)|subscrito não é de tipo integral|  
+|[Erro do compilador C2109](compiler-error-c2109.md)|subscrito requer tipo de matriz ou ponteiro|  
+|[Erro do compilador C2110](compiler-error-c2110.md)|'+': não é possível adicionar dois ponteiros|  
+|[Erro do compilador C2111](compiler-error-c2111.md)|'+': ponteiro requer operando integral|  
+|[Erro do compilador C2112](compiler-error-c2112.md)|'-': subtração de ponteiros requer operando integral ou ponteiro|  
+|[Erro do compilador C2113](compiler-error-c2113.md)|'-': ponteiro só pode ser subtraído de outro ponteiro|  
+|[Erro do compilador C2114](compiler-error-c2114.md)|'*operador*': ponteiro esquerda; necessidades valor integral à direita|  
+|[Erro do compilador C2115](compiler-error-c2115.md)|'*operador*': tipos incompatíveis|  
+|[Erro do compilador C2116](compiler-error-c2116.md)|listas de parâmetros de função diferiram|  
+|[Erro do compilador C2117](compiler-error-c2117.md)|'*identificador*': estouro nos limites da matriz|  
+|[Erro do compilador C2118](compiler-error-c2118.md)|subscrito negativo|  
+|C2119 de erro do compilador|'*identificador*': o tipo para '*tipo*' não pode ser deduzido por meio de um inicializador vazio|  
+|[Erro do compilador C2120](compiler-error-c2120.md)|'void' inválido com todos os tipos|  
+|[Erro do compilador C2121](compiler-error-c2121.md)|'#': caractere inválido: possivelmente o resultado de uma expansão de macro|  
+|[Erro do compilador C2122](compiler-error-c2122.md)|'*identificador*': parâmetro de protótipo na lista de nomes inválido|  
+|C2123 de erro do compilador|'*identificador*': modelos de alias não podem ser explicitamente ou parcialmente especializados|  
+|[Erro do compilador C2124](compiler-error-c2124.md)|divisão ou mod por zero|  
+|C2125 de erro do compilador|'constexpr' não é compatível com '*token*'|  
+|C2126 de erro do compilador|'*identificador*' não pode ser declarado com o especificador 'constexpr'|  
+|C2127 de erro do compilador|'*identificador*': inicialização ilegal da entidade 'constexpr' com uma expressão não constante|  
+|[Erro do compilador C2128](compiler-error-c2128.md)|'*função*': alloc_text/same_seg aplicável apenas a funções com vínculo a C|  
+|[Erro do compilador C2129](compiler-error-c2129.md)|função static '*identificador*' declarada mas não definido|  
+|[Erro do compilador C2130](compiler-error-c2130.md)|#linha esperada uma cadeia de caracteres que contém o nome do arquivo, encontrado '*token*'|  
+|C2131 de erro do compilador|a expressão não foi avaliada como uma constante|  
+|[Erro do compilador C2132](compiler-error-c2132.md)|erro de sintaxe: identificador inesperado|  
+|[Erro do compilador C2133](compiler-error-c2133.md)|'*identificador*': tamanho desconhecido|  
+|[Erro do compilador C2134](compiler-error-c2134.md)|'*função*': chamada não resulta em uma expressão constante|  
+|[Erro do compilador C2135](compiler-error-c2135.md)|'*operador*': operação de campo de bits inválida|  
+|C2136 de erro do compilador|contrato de API de criação não permitido|  
+|[Erro do compilador C2137](compiler-error-c2137.md)|constante de caractere vazio|  
+|[Erro do compilador C2138](compiler-error-c2138.md)|é inválido definir uma enumeração sem nenhum membro|  
+|[Erro do compilador C2139](compiler-error-c2139.md)|'*classe*': uma classe indefinida não é permitida como um argumento para a característica de tipo intrínseco do compilador '*característica*'|  
+|[Erro do compilador C2140](compiler-error-c2140.md)|'*tipo*': um tipo que é dependente de um parâmetro de tipo genérico não é permitido como um argumento para a característica de tipo intrínseco do compilador '*característica*'|  
+|[Erro do compilador C2141](compiler-error-c2141.md)|estouro na dimensão da matriz|  
+|[Erro do compilador C2142](compiler-error-c2142.md)|declarações da função diferem, parâmetros variáveis especificados em apenas uma delas|  
+|[Erro do compilador C2143](compiler-error-c2143.md)|Erro de sintaxe: faltando '*token1*'before'*token2*'|  
+|[Erro do compilador C2144](compiler-error-c2144.md)|Erro de sintaxe: '*tipo*'deve ser precedido por'*token2*'|  
+|[Erro do compilador C2145](compiler-error-c2145.md)|Erro de sintaxe: faltando '*token*' antes do identificador|  
+|[Erro do compilador C2146](compiler-error-c2146.md)|Erro de sintaxe: faltando '*token*'antes do identificador'*identificador*'|  
+|[Erro do compilador C2147](compiler-error-c2147.md)|Erro de sintaxe: '*token*' é uma palavra-chave new|  
+|[Erro do compilador C2148](compiler-error-c2148.md)|tamanho total da matriz não deve exceder 0x*valor* bytes|  
+|[Erro do compilador C2149](compiler-error-c2149.md)|'*identificador*': campo de bits nomeado não pode ter largura zero|  
+|[Erro do compilador C2150](compiler-error-c2150.md)|'*identificador*': campo de bits deve possuir tipo 'int', 'signed int' ou 'unsigned int'|  
+|[Erro do compilador C2151](compiler-error-c2151.md)|mais de um atributo de linguagem|  
+|[Erro do compilador C2152](compiler-error-c2152.md)|'*identificador*': ponteiros para funções com atributos diferentes|  
+|[Erro do compilador C2153](compiler-error-c2153.md)|os literais de inteiros devem ter pelo menos um dígito|  
+|[Erro do compilador C2154](compiler-error-c2154.md)|'*tipo*': somente tipo de enumeração é permitido como um argumento para a característica de tipo intrínseco do compilador '*característica*'|  
+|[Erro do compilador C2155](compiler-error-c2155.md)|'?': operando esquerdo inválido, esperado tipo aritmético ou de ponteiro|  
+|[Erro do compilador C2156](compiler-error-c2156.md)|pragma deve estar fora da função|  
+|[Erro do compilador C2157](compiler-error-c2157.md)|'*identificador*': deve ser declarado antes do uso em lista de pragma|  
+|[Erro do compilador C2158](compiler-error-c2158.md)|'*tipo*': #pragma make_public diretiva atualmente há suporte para tipos não template nativos somente|  
+|[Erro do compilador C2159](compiler-error-c2159.md)|mais de uma classe de armazenamento especificada|  
+|[Erro do compilador C2160](compiler-error-c2160.md)|'##' não pode ocorrer no início de uma definição de macro|  
+|[Erro do compilador C2161](compiler-error-c2161.md)|'##' não pode ocorrer no fim de uma definição de macro|  
+|[Erro do compilador C2162](compiler-error-c2162.md)|esperado parâmetro formal de macro|  
+|[Erro do compilador C2163](compiler-error-c2163.md)|'*função*': não disponível como uma função intrínseca|  
+|[Erro do compilador C2164](compiler-error-c2164.md)|'*função*': função intrínseca não declarada|  
+|[Erro do compilador C2165](compiler-error-c2165.md)|'*modificador*': não é possível modificar ponteiros para dados|  
+|[Erro do compilador C2166](compiler-error-c2166.md)|l-value especifica objeto const|  
+|[Erro do compilador C2167](compiler-error-c2167.md)|'*função*': muitos parâmetros reais para função intrínseca|  
+|[Erro do compilador C2168](compiler-error-c2168.md)|'*função*': poucos parâmetros reais para função intrínseca|  
+|[Erro do compilador C2169](compiler-error-c2169.md)|'*função*': função intrínseca, não pode ser definido|  
+|[Erro do compilador C2170](compiler-error-c2170.md)|'*identificador*': não é declarada como uma função, não pode ser intrínseco|  
+|[Erro do compilador C2171](compiler-error-c2171.md)|'*operador*': inválido em operandos do tipo '*tipo*'|  
+|[Erro do compilador C2172](compiler-error-c2172.md)|'*função*': parâmetro real não é um ponteiro: parâmetro *número*|  
+|[Erro do compilador C2173](compiler-error-c2173.md)|'*função*': parâmetro real não é um ponteiro: parâmetro *número*, lista de parâmetros *número*|  
+|[Erro do compilador C2174](compiler-error-c2174.md)|'*função*': parâmetro real possui tipo 'void': parâmetro *número*, lista de parâmetros *número*|  
+|[Erro do compilador C2175](compiler-error-c2175.md)|'*localidade*': localidade inválida|  
+|C2176 de erro do compilador|uma instrução de retorno não pode aparecer no manipulador de uma função de bloco try associada a um construtor|  
+|[Erro do compilador C2177](compiler-error-c2177.md)|constante muito grande|  
+|C2178 de erro do compilador|'*identificador*'não pode ser declarado com'*especificador*' especificador|  
+|[Erro do compilador C2179](compiler-error-c2179.md)|'*tipo*': um argumento de atributo não é possível usar parâmetros de tipo|  
+|[Erro do compilador C2180](compiler-error-c2180.md)|expressão de controle tem o tipo '*tipo*'|  
+|[Erro do compilador C2181](compiler-error-c2181.md)|else inválido sem if correspondente|  
+|[Erro do compilador C2182](compiler-error-c2182.md)|'*identificador*': uso inválido do tipo 'void'|  
+|[Erro do compilador C2183](compiler-error-c2183.md)|erro de sintaxe: unidade de tradução está vazia|  
+|[Erro do compilador C2184](compiler-error-c2184.md)|'*tipo*': tipo inválido para expressão except|  
+|[Erro do compilador C2185](compiler-error-c2185.md)|'*identificador*': alocação based inválida|  
+|[Erro do compilador C2186](compiler-error-c2186.md)|'*operador*': operando inválido do tipo 'void'|  
+|C2187 de erro do compilador|Erro de sintaxe: '*token*' era esperado aqui|  
+|[Erro do compilador C2188](compiler-error-c2188.md)|'*número*': muito grande para caractere largo|  
+|C2189 de erro do compilador|o atributo 'alignas' não pode ser aplicado a um campo de bits, um parâmetro de função, uma declaração de exceção ou uma variável declarada com 'Registrar' classe de armazenamento|  
+|[Erro do compilador C2190](compiler-error-c2190.md)|primeira lista de parâmetros mais longa que a segunda|  
+|[Erro do compilador C2191](compiler-error-c2191.md)|segunda lista de parâmetros mais longa que a primeira|  
+|[Erro do compilador C2192](compiler-error-c2192.md)|parâmetro '*número*' diferente de declaração|  
+|[Erro do compilador C2193](compiler-error-c2193.md)|'*identificador*': já está em um segmento|  
+|[Erro do compilador C2194](compiler-error-c2194.md)|'*identificador*': é um segmento de texto|  
+|[Erro do compilador C2195](compiler-error-c2195.md)|'*identificador*': é um segmento de dados|  
+|[Erro do compilador C2196](compiler-error-c2196.md)|Caso o valor '*valor*' já foi usado|  
+|[Erro do compilador C2197](compiler-error-c2197.md)|'*função*': muitos argumentos para chamada|  
+|[Erro do compilador C2198](compiler-error-c2198.md)|'*função*': poucos argumentos para chamada|  
+|[Erro do compilador C2199](compiler-error-c2199.md)|Erro de sintaxe: encontrado '*identificador* (' no escopo global (uma declaração estava planejada?)|  

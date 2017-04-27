@@ -1,5 +1,5 @@
 ---
-title: Erro do compilador C2797 | Documentos do Microsoft
+title: Erro do compilador C2797 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9db6a5e203ff4cdbf41e99174944ce1af79c0d60
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 5eea0aae37627015f8723835e4e3e1cb0c6d2e94
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-error-c2797"></a>Erro do Compilador C2797
-A inicialização de lista dentro da lista do inicializador de membro ou do inicializador de membro de dados não estáticos não está implementada.  
+(Obsoleto) Lista de inicializações dentro da lista de inicializador de membro ou inicializador de membro de dados não estático não está implementada.  
   
- O compilador C++ no Visual Studio não implementa a inicialização de lista dentro de uma lista de inicializador de membro ou de um inicializador de membro de dados não estáticos. Antes da Atualização 3 do Visual Studio 2013, ele era silenciosamente convertido em uma chamada de função, que pode levar a geração de código incorreto. A Atualização 3 do Visual Studio 2013 relata isso como um erro.  
+ Esse aviso é obsoleto no Visual Studio 2015. No Visual Studio 2013 e versões anteriores, o compilador do Visual C++ não implementa a inicialização da lista de dentro de uma lista de inicializador de membro ou um inicializador de membro de dados não estáticos. Antes da Atualização 3 do Visual Studio 2013, ele era silenciosamente convertido em uma chamada de função, que pode levar a geração de código incorreto. A Atualização 3 do Visual Studio 2013 relata isso como um erro.  
   
  Esse exemplo gera C2797:  
   

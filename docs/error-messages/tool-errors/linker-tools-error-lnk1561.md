@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1561 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1561 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,23 +34,27 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 405cfce0a89c9c39cffb1e85e19b95fda24f7452
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: fbc63a58cd4e276aa2a3f77baeea07d1912eda98
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="linker-tools-error-lnk1561"></a>Erro das Ferramentas de Vinculador LNK1561
 pontos de entrada devem ser definidos  
   
- O vinculador não encontrou um ponto de entrada. Você pode ter pretendido vincular como uma DLL, nesse caso, você deve vincular com a [/DLL](../../build/reference/dll-build-a-dll.md) opção. Você pode ter esquecido também especificar o nome do ponto de entrada; Vincular com a [/ENTRY](../../build/reference/entry-entry-point-symbol.md) opção.  
+O vinculador não foi possível encontrar um ponto de entrada. Esse erro pode ter várias causas:  
+-   Você pode não ter incluído o arquivo que define o ponto de entrada na lista de arquivos para vincular. Verifique se que o arquivo que contém a função de ponto de entrada está vinculado ao seu aplicativo.  
+-   Você definiu o ponto de entrada usando a assinatura de função incorreto; Por exemplo, você pode ter digitado incorretamente usado caso errado para o nome de função ou especificado o tipo de retorno ou tipos de parâmetro incorretamente. Por padrão, o vinculador procura um `main` ou `wmain` função para um aplicativo de console, um `WinMain` ou `wWinMain` função para um aplicativo do Windows, ou `DllMain` para uma DLL que requer inicialização.  
+-   Talvez você não tenha especificado o [/DLL](../../build/reference/dll-build-a-dll.md) opção ao criar uma DLL.  
+-   Talvez você tenha especificado o nome da função de ponto de entrada incorretamente quando você usou o [/ENTRY](../../build/reference/entry-entry-point-symbol.md) opção de vinculador.  
+-   Se você estiver usando o [LIB](../../build/reference/lib-reference.md) ferramenta para criar uma DLL, você pode ter especificado um arquivo. def. Nesse caso, remova o arquivo. def da compilação.    
   
- Caso contrário, você deve incluir um principal, WMA, WinMain ou função wMain em seu código.  
+Ao criar um aplicativo, o vinculador procura um *ponto de entrada*, a função de chamada para iniciar seu código. Essa é a função que é chamada depois que o aplicativo é carregado e o tempo de execução é inicializado. Você deve fornecer uma função de ponto de entrada para um aplicativo ou o aplicativo não pode ser executado. Um ponto de entrada é opcional para uma DLL. Por padrão, o vinculador procura uma função de ponto de entrada que tenha um dos vários nomes específicos e assinaturas, como `int main(int, char**)`. Você pode especificar outro nome de função como a entrada, usando a opção de vinculador /ENTRY.  
   
- Se você estiver usando [LIB](../../build/reference/lib-reference.md) e pretende criar um arquivo. dll, um motivo para esse erro é que você forneceu um arquivo. def. Nesse caso, remova o arquivo. def da compilação.  
-  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir gera LNK1561:  
   
-```  
+```cpp  
 // LNK1561.cpp  
 // LNK1561 expected  
 int i;  
