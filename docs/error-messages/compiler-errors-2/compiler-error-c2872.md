@@ -1,5 +1,5 @@
 ---
-title: C2872 de erro do compilador | Documentos do Microsoft
+title: C2872 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,25 +34,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: d53dbd9429ba3c1a525b85a3ef9f2e70152ddfa2
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2872"></a>C2872 de erro do compilador
-'symbol': símbolo ambíguo  
+'*símbolo*': símbolo ambíguo  
   
-O compilador não pode determinar o símbolo que você está se referindo.  
+O compilador não pode determinar o símbolo que você está referenciando. Mais de um símbolo com o nome especificado está no escopo. Consulte as notas de mensagem de erro para os locais de arquivo e as declarações a seguir o compilador encontrado para o símbolo ambíguo. Para corrigir esse problema, você pode qualificar totalmente o símbolo ambíguo usando seu namespace, por exemplo, `std::byte` ou `::byte`. Você também pode usar um [alias de namespace](../../cpp/namespaces-cpp.md#namespace_aliases) para dar um nome curto conveniente para uso de um namespace incluído quando desambiguação símbolos no seu código-fonte.  
   
-C2872 pode ocorrer se um arquivo de cabeçalho inclui um [usando a diretiva](../../cpp/namespaces-cpp.md#using_directives)e um arquivo de cabeçalho subsequentes está incluído e contém um tipo que esteja também no namespace especificado na `using` diretiva. Especifique um `using` diretiva somente depois de todos os arquivos de cabeçalho são especificados com `#include`.  
+C2872 pode ocorrer se um arquivo de cabeçalho inclui um [usando diretiva](../../cpp/namespaces-cpp.md#using_directives), e um arquivo de cabeçalho subsequente é incluído que contém um tipo que é também o namespace especificado no `using` diretiva. Especifique um `using` diretiva somente depois de todos os arquivos de cabeçalho são especificados com `#include`.  
   
- Para obter mais informações sobre C2872, consulte os artigos da Base de Conhecimento [PRB: compilador erros quando você usar #import com XML no Visual C++ .NET](http://support.microsoft.com/kb/316317) e ["Erro C2872: 'Plataforma': símbolo ambíguo" mensagem de erro quando você usa o namespace Windows::Foundation::Metadata no Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
+ Para obter mais informações sobre C2872, consulte os artigos da Base de dados de Conhecimento [PRB: compilador erros quando você usar #import com XML no Visual C++ .NET](http://support.microsoft.com/kb/316317) e ["C2872 de erro: 'Platform': símbolo ambíguo" mensagem de erro quando você usa o namespace Windows::Foundation::Metadata no Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2872:  
+ O exemplo a seguir gera C2872, como uma referência ambígua é feita a uma variável chamada `i`; duas variáveis com o mesmo nome estão no escopo:  
   
 ```cpp  
 // C2872.cpp  
+// compile with: cl /EHsc C2872.cpp  
 namespace A {  
    int i;  
 }  
@@ -60,8 +61,10 @@ namespace A {
 using namespace A;  
 int i;  
 int main() {  
-   ::i++;   // ok  
-   A::i++;   // ok  
-   i++;   // C2872 ::i or A::i?  
+   ::i++;   // ok, uses i from global namespace  
+   A::i++;   // ok, uses i from namespace A  
+   i++;   // C2872 ambiguous: ::i or A::i? 
+   // To fix this issue, use the fully qualified name
+   // for the intended variable. 
 }  
 ```

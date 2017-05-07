@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>C2200 de erros do compilador por meio de C2299
@@ -93,7 +91,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 > [!NOTE]
 >  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
+ Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre os erros e avisos em [estouro de pilha](http://stackoverflow.com/).  
   
 |Erro|Mensagem|  
 |-----------|-------------|  
@@ -150,7 +148,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2250](compiler-error-c2250.md)|'*identificador*': herança ambígua de *classe*::*membro*'|  
 |[Erro do compilador C2251](compiler-error-c2251.md)|namespace '*namespace*'não tem um membro'*identificador*'-você quis dizer '*membro*'?|  
 |[Erro do compilador C2252](compiler-error-c2252.md)|uma instanciação explícita de um template só pode ocorrer em escopo de namespace|  
-|[Erro do compilador C2253](compiler-error-c2253.md)|'*função*': especificador puro ou abstract permitido apenas em função virtual de especificador de substituição|  
+|[Erro do compilador C2253](compiler-error-c2253.md)|'*função*': especificador puro ou abstrato só é permitido em função virtual de especificador de substituição|  
 |[Erro do compilador C2254](compiler-error-c2254.md)|'*função*': especificador puro ou abstrato especificador de substituição não permitido em função friend|  
 |[Erro do compilador C2255](compiler-error-c2255.md)|'*elemento*': não é permitida fora de uma definição de classe|  
 |[Erro do compilador C2256](compiler-error-c2256.md)|Uso inválido de especificador friend em '*função*'|  
@@ -177,7 +175,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2277](compiler-error-c2277.md)|'*função*': não é possível obter o endereço desta função de membro|  
 |C2278 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C2279](compiler-error-c2279.md)|especificação de exceção não pode aparecer em uma declaração de typedef|  
-|C2280 de erro do compilador|'*classe*::*função*': tentativa de fazer referência a uma função excluída|  
+|[C2280 de erro do compilador](compiler-error-c2280.md)|'*classe*::*função*': tentativa de fazer referência a uma função excluída|  
 |C2281 de erro do compilador|'*classe*::*função*': uma função só pode ser excluída na primeira declaração|  
 |C2282 de erro do compilador|'*function1*'não pode substituir'*function2*'|  
 |[Erro do compilador C2283](compiler-error-c2283.md)|'*identificador*': especificador puro ou abstrata não permitido em sem nome de classe/struct de especificador de substituição|  
