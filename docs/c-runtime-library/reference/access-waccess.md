@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c3a56925af2115b1b53760f931a06e55cf8d6af
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d0968ec14a43cfbbf1169f34ac929435787bc349
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="access-waccess"></a>_access, _waccess
@@ -88,7 +89,7 @@ int _waccess(
  Atributo de leitura/gravação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará –1 se o arquivo nomeado não existir ou não tiver o modo determinado. Nesse caso, `errno` será definido como é mostrado na tabela a seguir.  
+ Cada função retorna 0 se o arquivo tem o modo determinado. A função retornará -1 se o arquivo não existe ou não tem o modo determinado; Nesse caso, `errno` é definido como mostrado na tabela a seguir.  
   
  `EACCES`  
  Acesso negado: a configuração de permissão do arquivo não permite o acesso especificado.  
@@ -162,9 +163,6 @@ int main( void )
 File crt_ACCESS.C exists.  
 File crt_ACCESS.C does not have write permission.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.IO.FileAccess?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

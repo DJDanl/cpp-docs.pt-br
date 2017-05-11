@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b41e9b019477fe86645a212ee9f345e0fe8685f7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b7a7b0cfe5614cb87d82634e6d17643f5509ae13
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
@@ -102,7 +103,7 @@ public:
   
  **Namespace:** std  
   
-##  <a name="regex_traits__char_class_type"></a>  regex_traits::char_class_type  
+##  <a name="char_class_type"></a>  regex_traits::char_class_type  
  O tipo dos designadores da classe de caractere.  
   
 ```  
@@ -183,7 +184,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__char_type"></a>  regex_traits::char_type  
+##  <a name="char_type"></a>  regex_traits::char_type  
  O tipo de um elemento.  
   
 ```  
@@ -264,7 +265,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__getloc"></a>  regex_traits::getloc  
+##  <a name="getloc"></a>  regex_traits::getloc  
  Retorna o objeto de localidade armazenado.  
   
 ```  
@@ -345,7 +346,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__imbue"></a>  regex_traits::imbue  
+##  <a name="imbue"></a>  regex_traits::imbue  
  Altera o objeto de localidade armazenado.  
   
 ```  
@@ -430,7 +431,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__isctype"></a>  regex_traits::isctype  
+##  <a name="isctype"></a>  regex_traits::isctype  
  Testa a associação da classe.  
   
 ```  
@@ -518,7 +519,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__length"></a>  regex_traits::length  
+##  <a name="length"></a>  regex_traits::length  
  Retorna o tamanho de uma sequência terminada em nulo.  
   
 ```  
@@ -603,7 +604,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__locale_type"></a>  regex_traits::locale_type  
+##  <a name="locale_type"></a>  regex_traits::locale_type  
  O tipo do objeto de localidade armazenado.  
   
 ```  
@@ -684,7 +685,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_classname"></a>  regex_traits::lookup_classname  
+##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
  Mapeia a sequência para uma classe de caractere.  
   
 ```  
@@ -777,7 +778,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_collatename"></a>  regex_traits::lookup_collatename  
+##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
  Mapeia uma sequência para um elemento de agrupamento.  
   
 ```  
@@ -866,7 +867,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__regex_traits"></a>  regex_traits::regex_traits  
+##  <a name="regex_traits"></a>  regex_traits::regex_traits  
  Constrói o objeto.  
   
 ```  
@@ -947,7 +948,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__size_type"></a>  regex_traits::size_type  
+##  <a name="size_type"></a>  regex_traits::size_type  
  O tipo de um tamanho de sequência.  
   
 ```  
@@ -1030,7 +1031,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__string_type"></a>  regex_traits::string_type  
+##  <a name="string_type"></a>  regex_traits::string_type  
  O tipo de uma cadeia de caracteres de elementos.  
   
 ```  
@@ -1111,7 +1112,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform"></a>  regex_traits::transform  
+##  <a name="transform"></a>  regex_traits::transform  
  É convertido na sequência ordenada equivalente.  
   
 ```  
@@ -1200,7 +1201,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform_primary"></a>  regex_traits::transform_primary  
+##  <a name="transform_primary"></a>  regex_traits::transform_primary  
  É convertido na sequência ordenada sem distinção de maiúsculas e minúsculas.  
   
 ```  
@@ -1289,7 +1290,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate"></a>  regex_traits::translate  
+##  <a name="translate"></a>  regex_traits::translate  
  É convertido no elemento correspondente equivalente.  
   
 ```  
@@ -1374,7 +1375,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate_nocase"></a>  regex_traits::translate_nocase  
+##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
  É convertido no elemento correspondente equivalente sem distinção de maiúsculas e minúsculas.  
   
 ```  
@@ -1459,7 +1460,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__value"></a>  regex_traits::value  
+##  <a name="value"></a>  regex_traits::value  
  Converte um elemento em um valor de dígito.  
   
 ```  

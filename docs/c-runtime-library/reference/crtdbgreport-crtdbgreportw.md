@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Argumentos de substituição opcionais usados por `format`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Para todos os destinos do relatório, `_CrtDbgReport` e `_CrtDbgReportW` retornam -1 em caso de erro e 0 caso nenhum erro seja encontrado. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica no botão **Tentar novamente**, essas funções retornam 1. Se o usuário clicar no botão **Anular** na janela Mensagem de Depuração, essas funções serão anuladas imediatamente e não retornarão um valor.  
+ Para todos os destinos de relatório, `_CrtDbgReport` e `_CrtDbgReportW` retornar -1 se ocorrer um erro e 0 se nenhum erro for encontrado. No entanto, quando o destino do relatório é uma janela de mensagem de depuração e o usuário clica no botão **Tentar novamente**, essas funções retornam 1. Se o usuário clicar no botão **Anular** na janela Mensagem de Depuração, essas funções serão anuladas imediatamente e não retornarão um valor.  
   
- As macros de depuração [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) chamam `_CrtDbgReport` para gerar seus relatórios de depuração. As versões de caractere largo dessas macros, bem como [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` e `_RPTFW``n`, usam `_CrtDbgReportW` para gerar seus relatórios de depuração. Quando `_CrtDbgReport` ou `_CrtDbgReportW` retorna o valor 1, essas macros iniciam o depurador se a depuração JIT (just-in-time) estiver habilitada.  
+ As macros de depuração [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) chamam `_CrtDbgReport` para gerar seus relatórios de depuração. As versões de caractere largo dessas macros, bem como [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` e `_RPTFW n`, usam `_CrtDbgReportW` para gerar seus relatórios de depuração. Quando `_CrtDbgReport` ou `_CrtDbgReportW` retorna o valor 1, essas macros iniciam o depurador se a depuração JIT (just-in-time) estiver habilitada.  
   
 ## <a name="remarks"></a>Comentários  
  `_CrtDbgReport` e `_CrtDbgReportW` podem enviar o relatório de depuração para três destinos diferentes: um arquivo de relatório de depuração, um monitor de depuração (o depurador [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) ou uma janela de mensagem de depuração. Duas funções de configuração, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), são usadas para especificar os destinos de cada tipo de relatório. Essas funções permitem o controle independente do destino de cada tipo de relatório. Por exemplo, é possível especificar que um `reportType` de `_CRT_WARN` seja enviado somente ao monitor de depuração, enquanto um `reportType` de `_CRT_ASSERT` é enviado a uma janela de mensagem de depuração e a um arquivo de relatório definido pelo usuário.  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Consulte [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) para obter um exemplo de como alterar a função de relatório.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   

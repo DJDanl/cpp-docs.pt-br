@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dbb97bd9b9518f1b6ab81cffeef29c7c8f5f5585
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f4da11dcce5dfccb6002ef3c3d78c8ae958ad6a0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
@@ -119,7 +120,7 @@ int _cwprintf_s_l(
  O número de caracteres impressos.  
   
 ## <a name="remarks"></a>Comentários  
- Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função `_putch` (`_putwch` para `_cwprintf_s`) para gerar caracteres. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato tem a mesma forma e função que o parâmetro `format` da função [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário das funções `fprintf_s`, `printf_s` e `sprintf_s`, `_cprintf_s` nem `_cwprintf_s` movem caracteres de alimentação de linha em combinações CR-LF (retorno de carro-alimentação de linha) durante a geração.  
+ Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função `_putch` (`_putwch` para `_cwprintf_s`) para gerar caracteres. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato tem a mesma forma e função que o parâmetro `format` da função [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário de `fprintf_s`, `printf_s`, e `sprintf_s` funções, nem `_cprintf_s` nem `_cwprintf_s` converte caracteres de alimentação de linha em carro (CR LF) de alimentação de linha de retorno de combinações durante a impressão.  
   
  Uma distinção importante é que `_cwprintf_s` exibe caracteres Unicode quando usado no Windows NT. Ao contrário de `_cprintf_s`, `_cwprintf_s` usa a localidade do console atual  
   

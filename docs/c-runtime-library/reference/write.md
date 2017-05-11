@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  Quantidade de bytes.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Em caso de êxito, `_write` retorna a quantidade de bytes gravados. Se o espaço restantes em disco for menor que o tamanho do buffer que a função está tentando gravar no disco, `_write` falha e não libera o conteúdo do buffer para o disco. Um valor retornado de -1 indica que há um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retorna -1 e `errno` é definido como um de três valores: `EBADF`, que significa que o descritor de arquivo é inválido ou que o arquivo não está aberto para gravação; `ENOSPC`, que significa que não há espaço suficiente no dispositivo para a operação; ou `EINVAL`, que significa que `buffer` era um ponteiro nulo ou que uma quantidade `count` ímpar de bytes foi apresentada para edição de um arquivo no modo Unicode.  
+ Em caso de êxito, `_write` retorna a quantidade de bytes gravados. Se o espaço restantes em disco for menor que o tamanho do buffer que a função está tentando gravar no disco, `_write` falha e não libera o conteúdo do buffer para o disco. Um valor de retorno de -1 indica um erro. Se parâmetros inválidos forem passados, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retorna -1 e `errno` é definido como um de três valores: `EBADF`, que significa que o descritor de arquivo é inválido ou que o arquivo não está aberto para gravação; `ENOSPC`, que significa que não há espaço suficiente no dispositivo para a operação; ou `EINVAL`, que significa que `buffer` era um ponteiro nulo ou que uma quantidade `count` ímpar de bytes foi apresentada para edição de um arquivo no modo Unicode.  
   
  Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Se o arquivo for aberto no modo de texto, cada caractere de avanço de linha será substituído por um par carro de retorno na saída. Essa substituição não afeta o valor retornado.  
+ Se o arquivo é aberto no modo de texto, cada caractere de avanço de linha será substituída por um retorno de carro - par de avanço de linha na saída. Essa substituição não afeta o valor retornado.  
   
  Quando o arquivo é aberto no modo de translação Unicode (por exemplo, se `fd` for aberto usando `_open` ou `_sopen` e um parâmetro de modo que inclua `_O_WTEXT`, `_O_U16TEXT` ou `_O_U8TEXT` ou se for aberto usando `fopen` e um parâmetro de modo que inclua `ccs=UNICODE`, `ccs=UTF-16LE` ou `ccs=UTF-8` ou se o modo for alterado para um modo de translação Unicode usando `_setmode`), `buffer` é interpretado como um ponteiro para uma matriz de `wchar_t` que contém dados **UTF-16**. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.  
   

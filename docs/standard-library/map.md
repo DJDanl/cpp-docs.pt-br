@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: fad398e9f18c2f45de7e071be464e3eff2e9243e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c9a97acb8bf6154bfba764049f1082fc0cca8055
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
@@ -57,18 +58,18 @@ Define o mapa e o multimapa das classes de modelo do contêiner e seus modelos d
   
 |Versão do mapa|Versão do multimapa|Descrição|  
 |-----------------|----------------------|-----------------|  
-|[operator!= (map)](../standard-library/map-operators.md#operator_neq)|[operator!= (multimap)](../standard-library/map-operators.md#operator_neq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é diferente do objeto do mapa ou multimapa à direita.|  
-|[operator< (mapa)](../standard-library/map-operators.md#operator_eq_eq)|[operator< (multimapa)](../standard-library/map-operators.md#operator_eq_eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor que o objeto de mapa ou multimapa à direita.|  
-|[operator<= (mapa)](../standard-library/map-operators.md#operator_lt_)|[operator\<= (multimapa)](../standard-library/map-operators.md#operator_lt_)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor ou igual ao objeto do mapa ou multimapa à direita.|  
-|[operator== (mapa)](../standard-library/map-operators.md#operator_lt__eq)|[operator== (multimapa)](../standard-library/map-operators.md#operator_lt__eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é igual ao objeto do mapa ou multimapa à direita.|  
-|[operator> (mapa)](../standard-library/map-operators.md#operator_gt_)|[operator> (multimapa)](../standard-library/map-operators.md#operator_gt_)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior que o objeto do mapa ou multimapa à direita.|  
-|[operator>= (mapa)](../standard-library/map-operators.md#operator_gt__eq)|[operator>= (multimapa)](../standard-library/map-operators.md#operator_gt__eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior ou igual ao objeto do mapa ou multimapa à direita.|  
+|[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é diferente do objeto do mapa ou multimapa à direita.|  
+|[operator< (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimapa)](../standard-library/map-operators.md#op_eq_eq)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor que o objeto de mapa ou multimapa à direita.|  
+|[operator<= (mapa)](../standard-library/map-operators.md#op_lt)|[operator\<= (multimapa)](../standard-library/map-operators.md#op_lt)|Testa se o objeto do mapa ou multimapa à esquerda do operador é menor ou igual ao objeto do mapa ou multimapa à direita.|  
+|[operator== (mapa)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimapa)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é igual ao objeto do mapa ou multimapa à direita.|  
+|[operator> (mapa)](../standard-library/map-operators.md#op_gt)|[operator> (multimapa)](../standard-library/map-operators.md#op_gt_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior que o objeto do mapa ou multimapa à direita.|  
+|[operator>= (mapa)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimapa)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testa se o objeto do mapa ou multimapa à esquerda do operador é maior ou igual ao objeto do mapa ou multimapa à direita.|  
   
 ### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas  
   
 |Versão do mapa|Versão do multimapa|Descrição|  
 |-----------------|----------------------|-----------------|  
-|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap)|Troca os elementos de dois mapas ou multimapas.|  
+|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Troca os elementos de dois mapas ou multimapas.|  
   
 ### <a name="classes"></a>Classes  
   

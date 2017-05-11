@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6bec1fd515c95765fe987c3ac8ba06ac5f364e1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e8e40f4995f17314d70990a84c23c676d31a45d5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
@@ -92,7 +93,7 @@ __int64 _lseeki64(
  Posição inicial.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_lseek` retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. `_lseeki64` retorna o deslocamento em um inteiro de 64 bits. A função retorna –&1;L para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EBADF` e retornarão -1L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.  
+ `_lseek` retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. `_lseeki64` retorna o deslocamento em um inteiro de 64 bits. A função retorna L-1 para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções definirão `errno` como `EBADF` e retornarão -1L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.  
   
  Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

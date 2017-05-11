@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - lognormal_distribution
-- std::lognormal_distribution
 - random/std::lognormal_distribution
-- std::lognormal_distribution::reset
 - random/std::lognormal_distribution::reset
-- std::lognormal_distribution::m
 - random/std::lognormal_distribution::m
-- std::lognormal_distribution::s
 - random/std::lognormal_distribution::s
-- std::lognormal_distribution::param
 - random/std::lognormal_distribution::param
-- std::lognormal_distribution::min
 - random/std::lognormal_distribution::min
-- std::lognormal_distribution::max
 - random/std::lognormal_distribution::max
-- std::lognormal_distribution::operator()
 - random/std::lognormal_distribution::operator()
-- std::lognormal_distribution::param_type
 - random/std::lognormal_distribution::param_type
-- std::lognormal_distribution::param_type::m
 - random/std::lognormal_distribution::param_type::m
-- std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::s
-- std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator==
-- std::lognormal_distribution::param_type::operator!=
 - random/std::lognormal_distribution::param_type::operator!=
+- random/std::lognormal_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 9e3e74b396e0f5026cc69c6cf4e2ca7cf5215ad5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3c5d969e7250987471f88579d30e36d7838a9ed1
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
@@ -104,8 +93,8 @@ A classe do modelo descreve uma distribuição que produz valores de um tipo int
   
 ||||  
 |-|-|-|  
-|[lognormal_distribution::lognormal_distribution](#lognormal_distribution__lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal_distribution::param_type](#lognormal_distribution__param_type)|  
+|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|  
   
 As funções de propriedade `m()` e `s()` retornam os valores para os parâmetros de distribuição armazenados *m* e *s*, respectivamente.  
   
@@ -210,7 +199,7 @@ Distribution for 10 samples:
   
  **Namespace:** std  
   
-##  <a name="a-namelognormaldistributionlognormaldistributiona--lognormaldistributionlognormaldistribution"></a><a name="lognormal_distribution__lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
+##  <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
  Constrói a distribuição.  
   
 ```  
@@ -235,7 +224,7 @@ O primeiro construtor constrói um objeto cujo valor `m` armazenado contém o va
   
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
   
-##  <a name="a-namelognormaldistributionparamtypea--lognormaldistributionparamtype"></a><a name="lognormal_distribution__param_type"></a>  lognormal_distribution::param_type  
+##  <a name="param_type"></a>  lognormal_distribution::param_type  
 Armazena os parâmetros da distribuição.  
   
 ```  

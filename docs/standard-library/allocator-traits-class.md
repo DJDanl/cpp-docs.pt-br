@@ -1,47 +1,59 @@
 ---
-title: "Classe allocator_traits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "memory/std::allocator_traits"
-  - "memory/std::allocator_traits::propagate_on_container_move_assignment"
-  - "memory/std::allocator_traits::const_pointer"
-  - "memory/std::allocator_traits::propagate_on_container_swap"
-  - "memory/std::allocator_traits::propagate_on_container_copy_assignment"
-  - "memory/std::allocator_traits::difference_type"
-  - "memory/std::allocator_traits::allocator_type"
-  - "memory/std::allocator_traits::value_type"
-  - "memory/std::allocator_traits::pointer"
-  - "memory/std::allocator_traits::size_type"
-  - "memory/std::allocator_traits::const_void_pointer"
-  - "memory/std::allocator_traits::void_pointer"
-dev_langs: 
-  - "C++"
+title: Classe allocator_traits | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- memory/std::allocator_traits
+- memory/std::allocator_traits::propagate_on_container_move_assignment
+- memory/std::allocator_traits::const_pointer
+- memory/std::allocator_traits::propagate_on_container_swap
+- memory/std::allocator_traits::propagate_on_container_copy_assignment
+- memory/std::allocator_traits::difference_type
+- memory/std::allocator_traits::allocator_type
+- memory/std::allocator_traits::value_type
+- memory/std::allocator_traits::pointer
+- memory/std::allocator_traits::size_type
+- memory/std::allocator_traits::const_void_pointer
+- memory/std::allocator_traits::void_pointer
+- memory/std::allocator_traits::allocate
+- memory/std::allocator_traits::construct
+- memory/std::allocator_traits::deallocate
+- memory/std::allocator_traits::destroy
+- memory/std::allocator_traits::max_size
+- memory/std::allocator_traits::select_on_container_copy_construction
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d4fdcb8af6fa8b33ee6153563770b9bf00f02942
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
+
 ---
 # <a name="allocatortraits-class"></a>Classe allocator_traits
 A classe de modelo descreve um objeto que complementa um *tipo de alocador*. Um tipo de alocador é qualquer tipo que descreve um objeto alocador que é usado para gerenciar o armazenamento alocado. Especificamente, para qualquer tipo de alocador `Alloc`, você pode usar `allocator_traits<Alloc>` para determinar todas as informações necessárias para um contêiner habilitado para alocador. Para obter mais informações, consulte a [Classe allocator](../standard-library/allocator-class.md) padrão.  
@@ -74,19 +86,19 @@ class allocator_traits;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método allocator_traits::allocate](#allocator_traits__allocate_method)|Método estático que aloca memória usando o parâmetro alocador determinado.|  
-|[Método allocator_traits::construct](#allocator_traits__construct_method)|Método estático que usa um alocador especificado para construir um objeto.|  
-|[Método allocator_traits::deallocate](#allocator_traits__deallocate_method)|Método estático que usa um alocador especificado para desalocar um número especificado de objetos.|  
-|[Método allocator_traits::destroy](#allocator_traits__destroy_method)|Método estático que usa um alocador especificado para chamar o destruidor em um objeto sem desalocar sua memória.|  
-|[Método allocator_traits::max_size](#allocator_traits__max_size_method)|Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.|  
-|[Método allocator_traits::select_on_container_copy_construction](#allocator_traits__select_on_container_copy_construction_method)|Método estático que chama `select_on_container_copy_construction` no alocador especificado.|  
+|[allocate](#allocate)|Método estático que aloca memória usando o parâmetro alocador determinado.|  
+|[construct](#construct)|Método estático que usa um alocador especificado para construir um objeto.|  
+|[deallocate](#deallocate)|Método estático que usa um alocador especificado para desalocar um número especificado de objetos.|  
+|[destroy](#destroy)|Método estático que usa um alocador especificado para chamar o destruidor em um objeto sem desalocar sua memória.|  
+|[max_size](#max_size)|Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Método estático que chama `select_on_container_copy_construction` no alocador especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="a-nameallocatortraitsallocatemethoda--allocatortraitsallocate-method"></a><a name="allocator_traits__allocate_method"></a>  Método allocator_traits::allocate  
+##  <a name="allocate"></a>allocator_traits:: allocate
  Método estático que aloca memória usando o parâmetro alocador determinado.  
   
 ```cpp  
@@ -113,7 +125,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  O segundo método retornará `al.allocate(count, hint)`, se essa expressão for bem formada, caso contrário, retornará `al.allocate(count)`.  
   
-##  <a name="a-nameallocatortraitsconstructmethoda--allocatortraitsconstruct-method"></a><a name="allocator_traits__construct_method"></a>  Método allocator_traits::construct  
+##  <a name="construct"></a>allocator_traits:: Construct
  Método estático que usa um alocador especificado para construir um objeto.  
   
 ```cpp  
@@ -134,7 +146,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>Comentários  
  A função de membro estática chamará `al.construct(ptr, args...)`, se essa expressão for bem formada, caso contrário, será avaliada como `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="a-nameallocatortraitsdeallocatemethoda--allocatortraitsdeallocate-method"></a><a name="allocator_traits__deallocate_method"></a>  Método allocator_traits::deallocate  
+##  <a name="deallocate"></a>allocator_traits:: Deallocate
  Método estático que usa um alocador especificado para desalocar um número especificado de objetos.  
   
 ```cpp  
@@ -158,7 +170,7 @@ static void deallocate(Alloc al,
   
  Esse método não gera nada.  
   
-##  <a name="a-nameallocatortraitsdestroymethoda--allocatortraitsdestroy-method"></a><a name="allocator_traits__destroy_method"></a>  Método allocator_traits::destroy  
+##  <a name="destroy"></a>allocator_traits:: Destroy
  Método estático que usa um alocador especificado para chamar o destruidor em um objeto sem desalocar sua memória.  
   
 ```cpp  
@@ -176,7 +188,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>Comentários  
  Esse método chamará `al.destroy(ptr)`, se essa expressão for bem formada, caso contrário, será avaliado como `ptr->~Uty()`.  
   
-##  <a name="a-nameallocatortraitsmaxsizemethoda--allocatortraitsmaxsize-method"></a><a name="allocator_traits__max_size_method"></a>  Método allocator_traits::max_size  
+##  <a name="max_size"></a>allocator_traits:: max_size
  Método estático que usa um alocador especificado para determinar o número máximo de objetos que podem ser alocados.  
   
 ```cpp  
@@ -190,7 +202,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>Comentários  
  Esse método retornará `al.max_size()`, se essa expressão for bem formada, caso contrário, retornará `numeric_limits<size_type>::max()`.  
   
-##  <a name="a-nameallocatortraitsselectoncontainercopyconstructionmethoda--allocatortraitsselectoncontainercopyconstruction-method"></a><a name="allocator_traits__select_on_container_copy_construction_method"></a>  Método allocator_traits::select_on_container_copy_construction  
+##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
  Método estático que chama `select_on_container_copy_construction` no alocador especificado.  
   
 ```cpp  
@@ -211,3 +223,4 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
  [\<memory>](../standard-library/memory.md)   
  [Struct pointer_traits](../standard-library/pointer-traits-struct.md)   
  [Classe scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)
+

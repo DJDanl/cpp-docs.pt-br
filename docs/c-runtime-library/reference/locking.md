@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 896845aa89f2d14683e21978ad2bca73dbbcf1f1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="locking"></a>_locking
@@ -83,7 +84,7 @@ Bloqueia ou desbloqueia os bytes de um arquivo.
  O número de bytes a serem bloqueados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_locking` retorna 0 se for bem-sucedido. Um valor retornado de –1 indica falha; nesse caso, [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) será definido como um dos valores a seguir.  
+ `_locking` retorna 0 se for bem-sucedido. Um valor de retorno de -1 indica falha, caso em que [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.  
   
  `EACCES`  
  Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado).  
@@ -196,9 +197,6 @@ No one can change these bytes while I'm reading them
 30 bytes read: The first thirty bytes of this  
 Now I'm done. Do what you will with them  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

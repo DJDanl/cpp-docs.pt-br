@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, `_mbctombb` e `_mbctombb_l` retornará o caractere de byte único que corresponde a `c`, caso contrário, ele retornará `c`.  
+ Se for bem-sucedido, `_mbctombb` e `_mbctombb_l` retorna o caractere de byte único que corresponde à `c`; caso contrário, ele retorna `c`.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_mbctombb` e `_mbctombb_l` convertem um determinado caractere multibyte em um caractere multibyte de um byte correspondente. Os caracteres devem corresponder aos caracteres de byte único dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF a ser convertido.  
+ O `_mbctombb` e `_mbctombb_l` funções convertem um determinado caractere multibyte em um caractere de multibyte correspondente do byte único. Caracteres devem corresponder aos caracteres de byte único dentro do intervalo 0x20-0x7E ou 0xA1 - 0xDF a ser convertido.  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo `_l` usa a localidade atual desse comportamento dependente da localidade. A versão com o sufixo `_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- Nas versões anteriores, `_mbctombb` era chamado `zentohan`. Use _`mbctombb` em seu lugar.  
+ Nas versões anteriores, `_mbctombb` era chamado `zentohan`. Use `_mbctombb` em seu lugar.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7b0107b94853080f1c6adfa114a7a207dde7b36f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f1fb949ba33299a8d18c41341b5fd76a776ee387
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
@@ -117,7 +118,7 @@ long double coshl(
  Ângulo em radianos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O cosseno ou o cosseno hiperbólico de `x`. Se `x` for maior ou igual a 263 ou menor ou igual a -263, ocorrerá uma perda de significância no resultado de uma chamada a `cos`, `cosf` ou `cosl`.  
+ O cosseno ou o cosseno hiperbólico de `x`. Se `x` é maior que ou igual a 263, ou menor ou igual a -263, perda de significância no resultado de uma chamada para `cos`, `cosf`, ou `cosl` ocorre.  
   
  Por padrão, se o resultado for muito grande em uma chamada a `cosh`, `coshf` ou `coshl`, a função retornará `HUGE_VAL` e definirá `errno` como `ERANGE`.  
   
@@ -140,12 +141,6 @@ long double coshl(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo em [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)  
-  
--   [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

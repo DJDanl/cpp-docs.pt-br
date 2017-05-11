@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 21a3487088b12024b712e02886995ddaa98bf02c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 40d0fdf7d64dca941c952921d1c3107baa910a74
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="commit"></a>_commit
@@ -75,7 +76,7 @@ int _commit(
  Descritor de arquivo que se refere ao arquivo aberto.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_commit` retorna 0 se o arquivo tiver sido liberado com sucesso no disco. Um valor retornado de -1 indica que há um erro.  
+ `_commit` retorna 0 se o arquivo tiver sido liberado com sucesso no disco. Um valor de retorno de -1 indica um erro.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_commit` força o sistema operacional a gravar o arquivo associado a `fd` no disco. Essa chamada garante que o arquivo especificado seja liberado imediatamente, não a critério do sistema operacional.  

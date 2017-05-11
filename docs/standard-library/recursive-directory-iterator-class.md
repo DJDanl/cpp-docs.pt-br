@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 99e43055e5cb3e391aa3f3a71ea62532d971d139
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0d4325fbe8d4f336f4ca1ac6afe4ba5a96a7172d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="recursivedirectoryiterator-class"></a>Classe recursive_directory_iterator
@@ -194,7 +195,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
  A função tenta avançar para o próximo nome de arquivo na sequência aninhada. Se tiver êxito, ela armazenará esse nome de arquivo em myentry; caso contrário, produzirá um iterador de fim de sequência.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** filesystem  
+ **Cabeçalho:** \<filesystem >  
   
  **Namespace:** std::tr2::sys  
   

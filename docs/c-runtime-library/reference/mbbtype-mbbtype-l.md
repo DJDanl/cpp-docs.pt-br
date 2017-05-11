@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3bec4667f094b49a6420391c90c6362f01ac74b9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b9c7aed7205e6cac428a0f627525f9484afc5a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
@@ -96,11 +97,11 @@ int _mbbtype_l(
   
 |Valor de `type`|O `_mbbtype` testa para|Valor retornado|`c`|  
 |---------------------|--------------------------|------------------|---------|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_SINGLE` (0)|Byte único (0x20 – 0x7E, 0xA1 – 0xDF)|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_LEAD` (1)|Byte inicial do caractere multibyte (0x81 – 0x9F, 0xE0 – 0xFC)|  
-|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_ILLEGAL`<br /><br /> ( –1)|Caractere inválido (qualquer valor exceto 0x20 – 0x7E, 0xA1 – 0xDF, 0x81 – 0x9F, 0xE0 – 0xFC|  
-|1|Byte final válido|`_MBC_TRAIL` (2)|Byte à direita do caractere multibyte (0x40 – 0x7E, 0x80 – 0xFC)|  
-|1|Byte final válido|`_MBC_ILLEGAL`<br /><br /> ( –1)|Caractere inválido (qualquer valor exceto 0x20 – 0x7E, 0xA1 – 0xDF, 0x81 – 0x9F, 0xE0 – 0xFC|  
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_SINGLE` (0)|Byte único (0x20 - 0x7E, 0xA1 - 0xDF)|  
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_LEAD` (1)|Levar bytes de caracteres multibyte (0x81 - 0x9F, 0xE0 - 0xFC)|  
+|Qualquer valor exceto 1|Byte único ou byte inicial válido|`_MBC_ILLEGAL`<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
+|1|Byte final válido|`_MBC_TRAIL` (2)|À direita de bytes de caracteres multibyte (0x40 - 0x7E, 0x80 - 0xFC)|  
+|1|Byte final válido|`_MBC_ILLEGAL`<br /><br /> ( -1)|Caractere inválido (qualquer valor exceto 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|  
   
 ## <a name="remarks"></a>Comentários  
  A função `_mbbtype` determina o tipo de um byte em um caractere multibyte. Se o valor de `type` for qualquer valor exceto 1, `_mbbtype` testará para um byte único ou byte inicial de um caractere multibyte. Se o valor de `type` for 1, `_mbbtype` testará para um byte final válido de um caractere multibyte.  
@@ -119,9 +120,6 @@ int _mbbtype_l(
  \* Para obter definições de constantes de manifesto que são usadas como valores retornados.  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável, mas consulte [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)

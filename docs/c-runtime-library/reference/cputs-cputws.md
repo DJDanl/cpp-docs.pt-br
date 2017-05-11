@@ -58,10 +58,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ebce560074526dad2181363b4998a3ad3455736f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: b773a7b9ae2ad6a7af7aa178fa277be2362c2c11
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
@@ -73,12 +74,11 @@ Coloca uma cadeia de caracteres no console.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      int _cputs(   
-const char *str   
+int _cputs(   
+   const char *str   
 );  
 int _cputws(  
-const wchar_t *str   
+   const wchar_t *str   
 );  
 ```  
   
@@ -114,9 +114,8 @@ const wchar_t *str
   
 ## <a name="example"></a>Exemplo  
   
-```  
-  
-      // crt_cputs.c  
+```C  
+// crt_cputs.c  
 // compile with: /c  
 // This program first displays a string to the console.  
   
@@ -165,9 +164,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Saída  
-  
-```  
+```Output  
 Hello world (courtesy of _cputs)!  
 Hello world (courtesy of _cputws)!  
 ```  

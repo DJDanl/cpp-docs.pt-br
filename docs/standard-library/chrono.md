@@ -37,16 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c4f886df3ac9af6745f5379741c3d8c82933abe1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c91a494644e2d8d12259c3ee6cd23333eb9bae9e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Inclua o cabeçalho padrão \<chrono> para definir classes e funções que representam e manipulam durações de tempo e instantes de tempo.  
   
- **(Visual Studio 2015:)** A implementação de `steady_clock` mudou para atender aos requisitos do Padrão C++ de estabilidade e monotonicidade. `steady_clock` agora é baseado em QueryPerformanceCounter() e `high_resolution_clock` agora é uma typedef para `steady_clock`. Como resultado, no Visual C++ `steady_clock::time_point` agora é uma typedef para `chrono::time_point<steady_clock>`; no entanto, esse não é necessariamente o caso para outras implementações.  
+ A partir do Visual Studio 2015, a implementação de `steady_clock` foi alterado para cumprir os requisitos de C++ padrão para steadiness e monotonicidade. `steady_clock` agora é baseado em QueryPerformanceCounter() e `high_resolution_clock` agora é uma typedef para `steady_clock`. Como resultado, no Visual C++ `steady_clock::time_point` agora é uma typedef para `chrono::time_point<steady_clock>`; no entanto, esse não é necessariamente o caso para outras implementações.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,24 +76,24 @@ Inclua o cabeçalho padrão \<chrono> para definir classes e funções que repre
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Função duration_cast](../standard-library/chrono-functions.md#duration_cast_function)|Converte um objeto `duration` em um tipo especificado.|  
-|[Função time_point_cast](../standard-library/chrono-functions.md#time_point_cast_function)|Converte um objeto `time_point` em um tipo especificado.|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Converte um objeto `duration` em um tipo especificado.|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Converte um objeto `time_point` em um tipo especificado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[operator-](../standard-library/chrono-operators.md#operator-)|Operador de subtração ou negação de objetos `duration` e `time_point`.|  
-|[operator!=](../standard-library/chrono-operators.md#operator_neq)|Operador de desigualdade usado com objetos `duration` ou `time_point`.|  
-|[módulo do operador](../standard-library/chrono-operators.md#operator_modulo)|Operador para operações de módulo em objetos `duration`.|  
-|[operator*](../standard-library/chrono-operators.md#operator_star)|Operador de multiplicação para objetos `duration`.|  
-|[operator/](../standard-library/chrono-operators.md#operator_)|Operador de divisão para objetos `duration`.|  
-|[operator+](../standard-library/chrono-operators.md#operator_add)|Adiciona objetos `duration` e `time_point`.|  
-|[operator&lt;](../standard-library/chrono-operators.md#operator_lt_)|Determina se um objeto `duration` ou `time_point` é menor que outro objeto `duration` ou `time_point`.|  
-|[operator&lt;=](../standard-library/chrono-operators.md#operator_lt__eq)|Determina se um objeto `duration` ou `time_point` é menor ou igual a outro objeto `duration` ou `time_point`.|  
-|[operator==](../standard-library/chrono-operators.md#operator_eq_eq)|Determina se dois objetos `duration` representam intervalos de tempo que têm o mesmo tamanho ou se dois objetos `time_point` representam o mesmo ponto no tempo.|  
-|[operator&gt;](../standard-library/chrono-operators.md#operator_gt_)|Determina se um objeto `duration` ou `time_point` é maior que outro objeto `duration` ou `time_point`.|  
-|[operator&gt;=](../standard-library/chrono-operators.md#operator_gt__eq)|Determina se um objeto `duration` ou `time_point` é maior ou igual a outro objeto `duration` ou `time_point`.|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|Operador de desigualdade usado com objetos `duration` ou `time_point`.|  
+|[módulo do operador](../standard-library/chrono-operators.md#op_modulo)|Operador para operações de módulo em objetos `duration`.|  
+|[operator*](../standard-library/chrono-operators.md#op_star)|Operador de multiplicação para objetos `duration`.|  
+|[operator/](../standard-library/chrono-operators.md#op_div)|Operador de divisão para objetos `duration`.|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|Adiciona objetos `duration` e `time_point`.|  
+|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Determina se um objeto `duration` ou `time_point` é menor que outro objeto `duration` ou `time_point`.|  
+|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Determina se um objeto `duration` ou `time_point` é menor ou igual a outro objeto `duration` ou `time_point`.|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Determina se dois objetos `duration` representam intervalos de tempo que têm o mesmo tamanho ou se dois objetos `time_point` representam o mesmo ponto no tempo.|  
+|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Determina se um objeto `duration` ou `time_point` é maior que outro objeto `duration` ou `time_point`.|  
+|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Determina se um objeto `duration` ou `time_point` é maior ou igual a outro objeto `duration` ou `time_point`.|  
   
 ### <a name="predefined-duration-types"></a>Tipos predefinidos de duração  
  Para obter mais informações sobre tipos de índice usados nas seguintes typedefs, consulte [\<índice>](../standard-library/ratio.md).  
@@ -107,14 +108,14 @@ Inclua o cabeçalho padrão \<chrono> para definir classes e funções que repre
 |`typedef duration<int, ratio<3600> > hours;`|O sinônimo de um tipo `duration` que tem um período de escala de uma hora.|  
   
 ### <a name="literals"></a>Literais  
- **(C++11) **O cabeçalho \<chrono> define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que você pode usar para maior conveniência, segurança de tipos e facilidade de manutenção do seu código. Esses literais são definidos no namespace embutido `literals::chrono_literals` e estão no escopo quando std::chrono está no escopo.  
+ **(C++11)** O cabeçalho \<chrono> define os seguintes [literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md) que você pode usar para maior conveniência, segurança de tipos e facilidade de manutenção do seu código. Esses literais são definidos no namespace embutido `literals::chrono_literals` e estão no escopo quando std::chrono está no escopo.  
   
 |Literal|Descrição|  
 |-------------|-----------------|  
 |chrono::hours operator "" h(unsigned long long Val)|Especifica horas como um valor integral.|  
-|chrono::duration<double, ratio\<3600> > operator "" h(long double Val)|Especifica horas como um valor de ponto flutuante.|  
+|chrono::Duration\<dupla, taxa\<3600 >> operador "" h (Val long double)|Especifica horas como um valor de ponto flutuante.|  
 |chrono::minutes (operator "" min)(unsigned long long Val)|Especifica minutos como um valor integral.|  
-|chrono::duration<double, ratio\<60> > (operator "" min)( long double Val)|Especifica minutos como um valor de ponto flutuante.|  
+|chrono::Duration\<dupla, taxa\<60 >> (operador "" min) (Val duplo longo)|Especifica minutos como um valor de ponto flutuante.|  
 |chrono::seconds operator "" s(unsigned long long Val)|Especifica minutos como um valor integral.|  
 |chrono::duration\<double> operator "" s(long double Val)|Especifica segundos como um valor de ponto flutuante.|  
 |chrono::milliseconds operator "" ms(unsigned long long Val)|Especifica milissegundos como um valor integral.|  

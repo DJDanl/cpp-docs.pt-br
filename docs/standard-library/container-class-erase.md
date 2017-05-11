@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0a28e1ff0def707926a67e1fea77f40e9927c0c4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aeb81554bdc50db44e9e8d4ee66369149eceb875
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="container-classerase"></a>Classe de Contêiner::erase
@@ -56,7 +57,7 @@ iterator erase(
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A primeira função de membro remove o elemento da sequência controlada apontada por _*Where***.** A segunda função de membro remove os elementos da sequência controlada no intervalo [` first`, ` last`). As duas retornarão um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou [end](../standard-library/container-class-end.md) se esse elemento não existir.  
+ A primeira função de membro remove o elemento de sequência controlada apontada pelo *_Where*. A segunda função de membro remove os elementos da sequência controlada no intervalo [`first`, `last`). As duas retornarão um iterador que designa o primeiro elemento restante além de todos os elementos removidos ou [end](../standard-library/container-class-end.md) se esse elemento não existir.  
   
  As funções de membro gerarão uma exceção apenas se uma operação de cópia gerar uma exceção.  
   

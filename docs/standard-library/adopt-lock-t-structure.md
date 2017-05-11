@@ -32,14 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 692e3d1aff2a2d4149f95c34a4c7e13763d6dd82
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0e334066f459600508b79896b57577e873db4053
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="adoptlockt-structure"></a>Estrutura adopt_lock_t
-Representa um tipo que é usado para definir um [adopt_lock](../standard-library/mutex-functions.md#adopt_lock_variable).  
+Representa um tipo que é usado para definir um [adopt_lock](../standard-library/mutex-functions.md#adopt_lock).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +49,7 @@ struct adopt_lock_t;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** mutex  
+ **Cabeçalho:** \<mutex >  
   
  **Namespace:** std  
   

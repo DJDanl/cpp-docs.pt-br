@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0a348a54f517a6910ff8f4e8accc4b86df699c9e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6dcb9a6f0d7187722a769a28cfb624e4621c181f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
@@ -102,28 +103,28 @@ struct tm *_localtime64(
  Os campos do tipo de estrutura [tm](../../c-runtime-library/standard-types.md) armazenam valores a seguir, cada um dos quais é um `int`:  
   
  `tm_sec`  
- Segundos após o minuto (0 – 59).  
+ Segundos após minuto (0 - 59).  
   
  `tm_min`  
- Minutos após a hora (0 – 59).  
+ Minutos após a hora (0 - 59).  
   
  `tm_hour`  
- Horas após a meia-noite (0 – 23).  
+ Horas após a meia-noite (0 - 23).  
   
  `tm_mday`  
- Dia do mês (1 – 31).  
+ Dia do mês (1-31).  
   
  `tm_mon`  
- Mês (0 – 11; janeiro = 0).  
+ Mês (0 - 11; Janeiro = 0).  
   
  `tm_year`  
  Ano (ano atual menos 1900).  
   
  `tm_wday`  
- Dia da semana (0 – 6; domingo = 0).  
+ Dia da semana (0 - 6; Domingo = 0).  
   
  `tm_yday`  
- Dia do ano (0 – 365; 1º de janeiro = 0).  
+ Dia do ano (0 - 365; 1 de janeiro = 0).  
   
  `tm_isdst`  
  O valor será positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status do horário de verão for desconhecido. Se a variável de ambiente `TZ` estiver definida, a biblioteca em tempo de execução C presume que as regras dos Estados Unidos serão usadas para implementar o cálculo do DST (horário de verão).  
@@ -193,9 +194,6 @@ int main( void )
 ```Output  
 Tue Feb 12 10:05:58 AM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

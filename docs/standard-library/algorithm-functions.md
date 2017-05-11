@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
@@ -306,7 +230,7 @@ ms.lasthandoff: 02/25/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
@@ -460,7 +384,7 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>Comentários  
  A função de modelo somente retornará `true` se, para alguns `N` no intervalo  
   
- `[0,`  `last`  `-`   `first``)`, o predicado `comp``(*(` `first` `+ N))` for true.  
+ `[0, last - first)`, o predicado `comp(*(first + N))` é verdadeiro.  
   
 ##  <a name="binary_search"></a>  binary_search  
  Testa se há um elemento em um intervalo classificado que seja igual a um valor especificado ou equivalente a ele de modo especificado por um predicado binário.  
@@ -492,7 +416,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
  O valor que deve ser correspondido pelo valor do elemento ou que deve atender à condição com o valor do elemento especificado pelo predicado binário.  
   
  `comp`  
- Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna `true` quando é atendido e `false` quando não é.  
+ Objeto de função de predicado definido pelo usuário que define o sentido em que um elemento é menor que outro. Um predicado binário usa dois argumentos e retorna `true` quando é atendido e `false` quando não é atendido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` se for encontrado no intervalo um elemento igual ou equivalente ao valor especificado, caso contrário, `false`.  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  Os tipos de valor dos iteradores de avanço precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes  
   
- A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e, caso contrário, linear com o número de etapas proporcional a (`last` – `first`).  
+ A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e linear, caso contrário, com o número de etapas proporcionais ao ( `last`  -  `first`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -612,7 +536,7 @@ template<class InputIterator, class OutputIterator>
  Um iterador de saída que trata da posição do primeiro elemento no intervalo de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador de saída que trata da posição que está logo após o elemento final no intervalo de destino, ou seja, o iterador trata de `result` + (`last` – `first`).  
+ Um iterador de saída endereçamento de posição é após o elemento final no intervalo de destino, ou seja, os endereços de iterador `result` + ( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Comentários  
  O intervalo de origem deve ser válido e deve haver espaço suficiente no destino para conter todos os elementos que estão sendo copiados.  
@@ -701,7 +625,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Um iterador bidirecional que trata da posição que está logo atrás do elemento final no intervalo de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador de saída que trata da posição que está logo após o elemento final no intervalo de destino, ou seja, o iterador trata de `destEnd` – (`last` – `first`).  
+ Um iterador de saída endereçamento de posição é após o elemento final no intervalo de destino, ou seja, os endereços de iterador `destEnd` -( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Comentários  
  O intervalo de origem deve ser válido e deve haver espaço suficiente no destino para conter todos os elementos que estão sendo copiados.  
@@ -825,7 +749,7 @@ template<class InputIterator, class Size, class OutputIterator>
  Retorna um iterador de saída onde elementos foram copiados. É o mesmo que o valor retornado do terceiro parâmetro, `dest`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo avalia `*(dest + N) = *(first + N))` uma única vez para cada `N` no intervalo `[0,` `count``)`, para aumentar estritamente os valores de `N`, começando com o valor mais baixo. Ela então retorna `dest` `+ N`. Se `dest` e `first` designarem regiões de armazenamento, `dest` não deverá estar no intervalo `[``first``,` `Last``)`.  
+ Avalia a função de modelo `*(dest + N) = *(first + N))` uma vez para cada `N` no intervalo `[0, count)`, para aumentar a valores de estritamente `N` começando com o valor mais baixo. Em seguida, ele retorna `dest + N`. Se `dest` e `first` designar regiões de armazenamento, `dest` não deve estar no intervalo `[first, last)`.  
   
 ##  <a name="count"></a>  count  
  Retorna o número de elementos em um intervalo cujos valores correspondem a um valor especificado.  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  Os elementos no subintervalo possivelmente vazio definidos pelo par de iteradores retornados por `equal_range` serão equivalentes a `val` no sentido definido pelo predicado usado.  
   
- A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e, caso contrário, linear com o número de etapas proporcional a (`last` – `first`).  
+ A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e linear, caso contrário, com o número de etapas proporcionais ao ( `last`  -  `first`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1847,7 +1771,7 @@ Function for_each(
   
  O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação.  
   
- A complexidade é linear com comparações de “no máximo” (`last` – `first`).  
+ A complexidade é linear no máximo ( `last`  -   `first`) comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -1988,7 +1912,7 @@ void generate(
   
  O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação.  
   
- A complexidade é linear, com chamadas (`last` – `first`) exatamente para o gerador que está sendo solicitado.  
+ A complexidade é linear, com exatamente ( `last`  -   `first`) chamadas para o gerador de sendo solicitados.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2155,7 +2079,7 @@ bool includes(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Mais precisamente, o algoritmo testa se todos os elementos no primeiro intervalo classificado em um predicado binário especificado têm ordenação equivalente aos que estão no segundo intervalo classificado.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” 2 \* ( ( *last1 – first1*) – ( * last2 – first2*) ) – 1 para intervalos de origem não vazios.  
+ A complexidade do algoritmo é linear no máximo 2 \* (( *last1 - first1*)-(* last2 - first2 *)) - 1 comparações para intervalos de origem não vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  Cada intervalo consecutivo classificado deve ser organizado como uma pré-condição para a aplicação do algoritmo `inplace_merge`, de acordo com a mesma ordenação que deve ser usada pelo algoritmo para classificar os intervalos combinados. A operação é estável, pois a ordem relativa dos elementos em cada intervalo é preservada. Quando há elementos equivalentes nos dois intervalos de origem, o elemento no primeiro intervalo precede o elemento do segundo no intervalo combinado.  
   
- A complexidade depende da memória disponível, pois o algoritmo aloca memória para um buffer temporário. Se houver memória suficiente disponível, o melhor caso será linear com comparações (* last – first*) – 1, se não houver nenhuma memória auxiliar disponível, o pior caso será *N* log *(N)*, em que *N* = (* last – first*).  
+ A complexidade depende da memória disponível, pois o algoritmo aloca memória para um buffer temporário. Se houver memória suficiente disponível, o melhor caso é linear com (* último - primeiro*) - 1 comparações; se nenhuma memória auxiliar está disponível, o pior caso é *N* log *(N)*, onde *N* = (* último - primeiro*).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  Os tipos de valor dos iteradores de avanço precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes  
   
- A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e, caso contrário, linear com o número de etapas proporcional a (`last – first`).  
+ A complexidade do algoritmo é logarítmica para iteradores de acesso aleatório e, caso contrário, linear com o número de etapas proporcional a (`last - first`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -3207,7 +3131,7 @@ void make_heap(
   
  Os heaps são a maneira ideal de implementar filas de prioridade e são usados na implementação da [Classe priority_queue](../standard-library/priority-queue-class.md) do adaptador de contêiner da Biblioteca Padrão do C++.  
   
- A complexidade é linear, exigindo comparações 3 \* (* last – first*).  
+ A complexidade é linear, exigindo 3 \* (* último - primeiro *) comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro de cada sequência, a última posição deve ser acessível a partir da primeira por incrementação.  
   
- A complexidade é linear: as comparações (`last` – `first`) – 1 são necessárias para um intervalo não vazio.  
+ A complexidade é linear: ( `last`  -   `first`) - 1 as comparações são necessárias para um intervalo vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” (* last1 – first1*) – ( * last2 – first2*) – 1.  
+ A complexidade do algoritmo é linear no máximo (* last1 - first1*)-(* last2 - first2*) - 1 comparações.  
   
  A [classe list](../standard-library/list-class.md) fornece uma função de membro "merge" para mesclar os elementos de duas listas.  
   
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro de cada sequência, a última posição deve ser acessível a partir da primeira por incrementação.  
   
- A complexidade é linear: as comparações (`last` – `first`) – 1 são necessárias para um intervalo não vazio.  
+ A complexidade é linear: ( `last`  -  `first`) - 1 as comparações são necessárias para um intervalo vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -4395,7 +4319,7 @@ template<class InputIterator, class OutputIterator>
  O iterador de saída que deve conter os elementos movidos.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo avalia `*(``dest` `+ N) =` move `(*(` `first` `+ N)))` uma vez para cada `N` no intervalo `[0,` `last` `-` `first``)`, para aumentar estritamente os valores de `N`, começando com o valor mais baixo. Ela então retorna `dest` `+ N`. Se `dest` e `first` designarem regiões de armazenamento, `dest` não deverá estar no intervalo `[` `first``,` `last``)`.  
+ Avalia a função de modelo `*(dest + N) = move(*(first + N))` uma vez para cada `N` no intervalo `[0, last - first)`, para aumentar a valores de estritamente `N` começando com o valor mais baixo. Em seguida, ele retorna `dest + N`. Se `dest` e `first` designar regiões de armazenamento, `dest` não deve estar no intervalo `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
  Move os elementos de um iterador para outro. O movimento inicia com o último elemento em um intervalo especificado e termina com o primeiro elemento desse intervalo.  
@@ -4420,7 +4344,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Um iterador bidirecional que trata da posição que está logo atrás do elemento final no intervalo de destino.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo avalia `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))` uma vez para cada `N` no intervalo `[0,` `last` `-` `first``)`, para aumentar estritamente os valores de `N`, começando com o valor mais baixo. Em seguida, retorna `destEnd` `- (``last` `-` `first``)`. Se `destEnd` e `first` designarem regiões de armazenamento, `destEnd` não deverá estar no intervalo `[` `first``,` `last``)`.  
+ Avalia a função de modelo `*(destEnd - N - 1) = move(*(last - N - 1))` uma vez para cada `N` no intervalo `[0, last - first)`, para aumentar a valores de estritamente `N` começando com o valor mais baixo. Em seguida, ele retorna `destEnd - (last - first)`. Se `destEnd` e `first` designar regiões de armazenamento, `destEnd` não deve estar no intervalo `[first, last)`.  
   
  `move` e `move_backward` são funcionalmente equivalentes ao uso de `copy` e `copy_backward` com um iterador de movimentação.  
   
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  O predicado binário padrão é “menor que” e os elementos no intervalo devem ser comparáveis como “menores que” para garantir que a próxima permutação seja bem definida.  
   
- A complexidade é linear com trocas de “no máximo” (* last – first*)/2.  
+ A complexidade é linear no máximo (* último - primeiro *) / 2 troca.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  Os elementos são equivalentes, mas não necessariamente iguais, quando nenhum é menor que o outro.  
   
- A média de uma complexidade de classificação é linear em relação a * last – first*.  
+ A média de uma complexidade de classificação é linear com relação ao * último - primeiro *.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -4717,7 +4641,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
  Retornará `true` se a condição não for detectada pelo menos uma vez no intervalo indicado e `false` se a condição for detectada.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo somente retornará `true` se, para alguns `N` no intervalo `[0,` `last` `-` `first``)`, o predicado `comp``(*(` `first` `+ N))` sempre for `false`.  
+ Retorna a função de modelo `true` somente se, para alguns `N` no intervalo `[0, last - first)`, o predicado `comp(*(first + N))` é sempre `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
  Organiza um número especificado de elementos menores em um intervalo em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  Os elementos *a* e *b* são equivalentes, mas não necessariamente iguais quando *Pr* (*a*, *b*) é false e *Pr* (*b*, *a*) também é false, em que *Pr* é o predicado especificado pelo parâmetro. O algoritmo **partition** não é estável e não assegura que a ordenação relativa dos elementos equivalentes será preservada. O algoritmo **stable_ partição** preserva essa ordem original.  
   
- A complexidade é linear: há aplicações de (`last` – `first`) de `comp` e trocas de “no máximo” (`last` – `first`)/2.  
+ A complexidade é linear: há ( `last`  -   `first`) aplicativos de `comp` e no máximo ( `last`  -   `first`) / 2 troca.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5055,7 +4979,7 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  A condição a ser testada. Ela é fornecida por um objeto de função de predicado definido pelo usuário que define a condição a ser testada. Um predicado usa um único argumento e retorna `true` ou `false`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo copiará cada elemento `X` em `[` `first``,` `last``)` para `*``dest1``++` se `_Pred``(X)` for true ou para `*``dest2``++ if not`. Ela retorna `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)`.  
+ A função de modelo copia cada elemento `X` na `[first,last)` para `*dest1++` se `_Pred(X)` for true, ou `*dest2++` se não for. Ele retorna `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
  Retorna o primeiro elemento no intervalo fornecido que não atende à condição. Os elementos são armazenados para que aqueles que atendem à condição venham antes daqueles que não atendem.  
@@ -5083,7 +5007,7 @@ template<class ForwardIterator, class Predicate>
  Retorna um `ForwardIterator` que se refere ao primeiro elemento que não atende à condição testada por `comp` ou retorna `last` caso nenhum seja encontrado.  
   
 ### <a name="remarks"></a>Comentários  
- O modelo de função localiza o primeiro iterador `it` em `[` `first``,``last``)` para o qual `comp(*it)` é `false`. A sequência deve ser ordenada por `comp`.  
+ A função de modelo localiza o iterador primeiro `it` na `[first, last)` para o qual `comp(*it)` é `false`. A sequência deve ser ordenada por `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
  Remove o maior elemento da frente de um heap para a penúltima posição no intervalo e, em seguida, forma um novo heap com os elementos restantes.  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  O intervalo que exclui o elemento recém-adicionado ao final deve ser um heap.  
   
- A complexidade é logarítmica, exigindo comparações de “no máximo” log (* last – first*).  
+ A complexidade é logarítmica, no máximo exigir log (* último - primeiro *) comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  O predicado binário padrão é “menor que” e os elementos no intervalo devem ser comparáveis como “menores que” para garantir que a permutação anterior seja bem definida.  
   
- A complexidade é linear, com trocas de “no máximo” (`last` – `first`)/2.  
+ A complexidade é linear, no máximo ( `last`  -   `first`) / 2 troca.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  O intervalo que exclui o elemento recém-adicionado ao final deve ser um heap.  
   
- A complexidade é logarítmica, exigindo comparações de “no máximo” log (*last – first*).  
+ A complexidade é logarítmica, no máximo exigir log ( *último - primeiro*) comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5464,7 +5388,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- A função std::random_shuffle() foi preterida e substituída por [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle). Para obter um exemplo de código e mais informações, consulte [ \<random>](../standard-library/random.md) e a postagem do Stackoverflow [Why are std::random_shuffle methods being deprecated in C++14? (Por que os métodos std::random_shuffle estão sendo preteridos no C++14?)](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ A função std::random_shuffle() foi preterida, substituído por [std:: embaralhar](../standard-library/algorithm-functions.md#shuffle). Para obter um exemplo de código e obter mais informações, consulte [ \<aleatória >](../standard-library/random.md) e o lançamento de Stackoverflow [por std::random_shuffle métodos estão sendo substituídos em C++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
  Elimina um valor especificado de um determinado intervalo sem afetar a ordem dos elementos restantes e retornando ao fim de um novo intervalo livre do valor especificado.  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear. Há comparações (`last` – `first`) quanto à igualdade.  
+ A complexidade é linear; Há ( `last`  -   `first`) comparações de igualdade.  
   
  A [classe list](../standard-library/list-class.md) tem uma versão da função de membro **remove** mais eficiente, que também vincula os ponteiros novamente.  
   
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear. Há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`).  
+ A complexidade é linear; Há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear: há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`).  
+ A complexidade é linear: há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições.  
   
  Para obter informações de como essas funções se comportam, consulte [Iteradores verificados](../standard-library/checked-iterators.md).  
   
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear: há comparações (`last` – `first`) quanto à igualdade.  
+ A complexidade é linear: há ( `last`  -   `first`) comparações de igualdade.  
   
  A lista tem uma versão mais eficiente da função de membro de remover, que vincula os ponteiros novamente.  
   
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear. Há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`) de novos valores.  
+ A complexidade é linear; Há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições de novos valores.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -5903,7 +5827,7 @@ int main( ) {
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear: há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`) de novos valores.  
+ A complexidade é linear: há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições de novos valores.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear. Há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`) de novos valores.  
+ A complexidade é linear; Há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições de novos valores.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  O `operator==` usado para determinar a equalidade entre os elementos deve impor uma relação de equivalência entre seus operandos.  
   
- A complexidade é linear: há comparações (`last` – `first`) quanto à igualdade e atribuições de “no máximo” (`last` – `first`) de novos valores.  
+ A complexidade é linear: há ( `last`  -   `first`) comparações de igualdade e no máximo ( `last`  -   `first`) atribuições de novos valores.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível a partir da primeira por incrementação.  
   
- A complexidade é linear com trocas de “no máximo” (`last` – `first`).  
+ A complexidade é linear no máximo ( `last`  -   `first`) troca.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível a partir da primeira por incrementação.  
   
- A complexidade é linear com trocas de “no máximo” (`last` – `first`).  
+ A complexidade é linear no máximo ( `last`  -   `first`) troca.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino. Se os intervalos de origem contiverem duplicatas de um elemento de modo que haja mais no primeiro intervalo de origem do que no segundo, o intervalo de destino conterá o número em que as ocorrências desses elementos no primeiro intervalo de origem excederem as ocorrências desses elementos no segundo intervalo de origem.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 de intervalos de origem não vazios.  
+ A complexidade do algoritmo é linear no máximo 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparações para intervalos de origem não vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino. Se os intervalos de origem contiverem duplicatas de um elemento, o intervalo de destino conterá o número máximo dos elementos que ocorrem em ambos os intervalos de origem.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1 de intervalos de origem não vazios.  
+ A complexidade do algoritmo é linear no máximo 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparações para intervalos de origem não vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino. Se os intervalos de origem contiverem duplicatas de um elemento, o intervalo de destino conterá o valor absoluto do número em que as ocorrências dos elementos em um dos intervalos de origem excedem as ocorrências desses elementos no segundo intervalo de origem.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 de intervalos de origem não vazios.  
+ A complexidade do algoritmo é linear no máximo 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparações para intervalos de origem não vazio.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino. Se os intervalos de origem contiverem duplicatas de um elemento, o intervalo de destino conterá o número máximo dos elementos que ocorrem em ambos os intervalos de origem.  
   
- A complexidade do algoritmo é linear com comparações de “no máximo” 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1.  
+ A complexidade do algoritmo é linear no máximo 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="std__shuffle"></a>  std::shuffle  
+##  <a name="shuffle"></a>  std::shuffle  
  Embaralha (reorganiza) elementos para um determinado intervalo usando um gerador de número aleatório.  
   
 ```  
@@ -7497,7 +7421,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Os elementos são equivalentes, mas não necessariamente iguais, quando nenhum é menor que o outro. O algoritmo `sort` não é estável e, portanto, não assegura que a ordenação relativa dos elementos equivalentes será preservada. O algoritmo `stable_sort` preserva essa ordenação original.  
   
- A média de uma complexidade de classificação é *O*(*N* log  *N*), em que *N* =  *last – first*.  
+ A média de uma complexidade de classificação é *O*( *N* log *N*), onde *N* =  *último - primeiro*.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7608,7 +7532,7 @@ template<class RandomAccessIterator, class Predicate>
   
  O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação.  
   
- A complexidade é no máximo *N* log *N*, em que *N* = (*last – first*).  
+ A complexidade é no máximo *N* log *N*, onde *N* = ( *último - primeiro*).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7765,7 +7689,7 @@ void stable_sort(
   
  Os elementos são equivalentes, mas não necessariamente iguais, quando nenhum é menor que o outro. O algoritmo **sort** é estável e garante que a ordenação relativa dos elementos equivalentes será preservada.  
   
- A complexidade de tempo de execução de `stable_sort` depende da quantidade de memória disponível, mas o melhor caso (com memória suficiente) é *O*(*N* log *N*) e o pior caso é *O*(*N* (log *N*)2), em que *N* =  *last – First.* Normalmente, o algoritmo **sort** é significativamente mais rápido que `stable_sort`.  
+ A complexidade de tempo de execução de `stable_sort` depende da quantidade de memória disponível, mas é melhor das hipóteses (fornecida memória suficiente) *O*( *N* log *N*) e o pior caso é *O*( *N* (log *N* ) 2), onde *N* =  *último - primeiro.* Normalmente, o algoritmo **sort** é significativamente mais rápido que `stable_sort`.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -7943,7 +7867,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro de cada sequência, a última posição deve ser acessível a partir da primeira por incrementação. O segundo intervalo precisa ser tão grande quanto o primeiro intervalo.  
   
- A complexidade é linear com trocas `last1` – `first1` executadas. Se elementos de contêineres do mesmo tipo forem trocados, a função de membro `swap` desse contêiner deverá ser usada, porque a função de membro normalmente tem uma complexidade constante.  
+ A complexidade é linear com `last1`  -   `first1` trocas executadas. Se elementos de contêineres do mesmo tipo forem trocados, a função de membro `swap` desse contêiner deverá ser usada, porque a função de membro normalmente tem uma complexidade constante.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -8049,9 +7973,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>Comentários  
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro de cada sequência, a última posição deve ser acessível a partir da primeira por incrementação. O intervalo de destino deve ser grande o suficiente para conter o intervalo de origem transformado.  
   
- Se `result` for definido igual a `first1` na primeira versão do algoritmo *,*, os intervalos de origem e de destino serão iguais e a sequência será modificada no lugar. Mas o `result` pode não tratar de uma posição dentro do intervalo [`first1` +&1;, `last1`).  
+ Se `result` é definido igual ao `first1` na primeira versão do algoritmo, em seguida, os intervalos de origem e de destino será o mesmo e a sequência será modificada no local. Mas o `result` não pode resolver uma posição dentro do intervalo [`first1` + 1, `last1`).  
   
- A complexidade é linear com comparações de “no máximo” (`last1` – `first1`).  
+ A complexidade é linear no máximo (`last1` -  `first1`) comparações.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -8177,7 +8101,7 @@ template<class ForwardIterator, class Predicate>
   
  O intervalo referenciado deve ser válido; todos os ponteiros devem ser desreferenciáveis e, dentro da sequência, a última posição deve ser acessível desde a primeira por incrementação. O número de elementos na sequência não é alterado pelo algoritmo **unique** e os elementos além do fim da sequência modificada são desreferenciáveis, mas não especificados.  
   
- A complexidade é linear, exigindo comparações (`last` – `first`) – 1.  
+ A complexidade é linear, exigindo ( `last`  -   `first`) - 1 comparações.  
   
  A lista fornece uma função de membro "unique" mais eficiente, que poderá ter um desempenho melhor.  
   
@@ -8310,7 +8234,7 @@ OutputIterator unique_copy( InputIterator first,
   
  Os intervalos referenciados devem ser válidos, todos os ponteiros devem ser desreferenciáveis e, dentro de uma sequência, a última posição deve ser acessível a partir da primeira por incrementação.  
   
- A complexidade é linear, exigindo comparações (`last` – `first`).  
+ A complexidade é linear, exigindo ( `last`  -   `first`) comparações.  
   
 ### <a name="example"></a>Exemplo  
   

@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 065e46b8d18a0b702f3f30924c68acf1726443bd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1c2e10f5836dc27475f76d4b94cf32e17f52e1a5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
@@ -125,7 +126,7 @@ long double scalblnl(
  Expoente inteiro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções `scalbn` retornam o valor de `x` * `FLT_RADIX`<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de `x`), `scalbn` retorna +/– `HUGE_VAL`; o valor `errno` é definido para `ERANGE`.  
+ As funções `scalbn` retornam o valor de `x` * `FLT_RADIX`<sup>exp</sup> quando bem-sucedidas. No estouro (dependendo do sinal de `x`), `scalbn` retorna + /- `HUGE_VAL`; o `errno` valor é definido como `ERANGE`.  
   
  Para obter mais informações sobre `errno` e possíveis valores retornados de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -165,9 +166,6 @@ int main( void )
 ```  
 6.4 times FLT_RADIX to the power of 3 is 51.2  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
