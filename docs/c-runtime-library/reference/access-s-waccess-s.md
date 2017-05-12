@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1a0917b3544b13a5315e90f280c033e72627cb2c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 051c2e6a6b0315e2ca4ab3192f28a370d969ec5b
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
@@ -171,9 +172,6 @@ int main( void )
 File crt_access_s.c exists.  
 File crt_access_s.c does not have write permission.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.IO.FileAccess?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

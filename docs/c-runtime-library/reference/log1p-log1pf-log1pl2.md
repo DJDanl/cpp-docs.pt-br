@@ -56,10 +56,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e928ac048b65fde5422a8a937779029f94a9e9a1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
@@ -95,7 +96,7 @@ long double log1pl(
  O argumento de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará o log natural (base e) de (`x`+&1;).  
+ Se for bem-sucedido, retornará o log natural (base e) de (`x`+ 1).  
   
  Caso contrário, pode retornar um dos seguintes valores:  
   
@@ -110,7 +111,7 @@ long double log1pl(
 |±SNaN|Igual à entrada|INVALID||  
 |±QNaN, indefinido|Igual à entrada|||  
   
- O `errno` valor será definido como ERANGE se `x` = -1. O `errno` valor será definido como EDOM se `x` < −1.  
+ O `errno` valor será definido como ERANGE se `x` = -1. O `errno` valor é definido como EDOM se `x` < -1.  
   
 ## <a name="remarks"></a>Comentários  
  As funções `log1p` podem ser mais precisas do que o uso de log(`x`+1) quando x está próximo de 0.  

@@ -1,5 +1,5 @@
 ---
-title: C2830 de erro do compilador | Documentos do Microsoft
+title: C2830 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: c7547d0df457e9f96676b99fdf4f7808945e206c
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2830"></a>C2830 de erro do compilador
 apenas parâmetros de posicionamento para 'operator new' podem possuir valores padrão  
   
-Os parâmetros padrão formais para [operador new](../../standard-library/new-operators.md#operator_new) não podem ter valores padrão. Somente os parâmetros de posicionamento definidos pelo usuário podem especificar os padrões.
+Os parâmetros formais padrão [operador novo](../../standard-library/new-operators.md#op_new) não podem ter valores padrão. Apenas parâmetros de posicionamento definido pelo usuário podem especificar os padrões.
 

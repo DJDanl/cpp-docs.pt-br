@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - condition_variable/std::condition_variable_any
+- condition_variable/std::condition_variable_any::condition_variable_any
+- condition_variable/std::condition_variable_any::notify_all
+- condition_variable/std::condition_variable_any::notify_one
+- condition_variable/std::condition_variable_any::wait
+- condition_variable/std::condition_variable_any::wait_for
+- condition_variable/std::condition_variable_any::wait_until
 dev_langs:
 - C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
@@ -52,24 +59,24 @@ class condition_variable_any;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor condition_variable_any::condition_variable_any](#condition_variable_any__condition_variable_any_constructor)|Constrói um objeto `condition_variable_any`.|  
+|[condition_variable_any](#condition_variable_any)|Constrói um objeto `condition_variable_any`.|  
   
 ### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|Desbloqueia todos os threads que estão aguardando o objeto `condition_variable_any`.|  
-|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|Desbloqueia um dos threads que estão aguardando o objeto `condition_variable_any`.|  
-|[condition_variable_any::wait](#condition_variable_any__wait_method)|Bloqueia um thread.|  
-|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|  
-|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|  
+|[notify_all](#notify_all)|Desbloqueia todos os threads que estão aguardando o objeto `condition_variable_any`.|  
+|[notify_one](#notify_one)|Desbloqueia um dos threads que estão aguardando o objeto `condition_variable_any`.|  
+|[Aguarde](#wait)|Bloqueia um thread.|  
+|[wait_for](#wait_for)|Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.|  
+|[wait_until](#wait_until)|Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** condition_variable  
+ **Cabeçalho:** \<condition_variable >  
   
  **Namespace:** std  
   
-##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a> Construtor  condition_variable_any::condition_variable_any  
+##  <a name="condition_variable_any"></a> Construtor  condition_variable_any::condition_variable_any  
  Constrói um objeto `condition_variable_any`.  
   
 ```
@@ -79,21 +86,21 @@ condition_variable_any();
 ### <a name="remarks"></a>Comentários  
  Se não tiver memória suficiente disponível, o construtor gerará um objeto [system_error](../standard-library/system-error-class.md) que tem um código de erro `not_enough_memory`. Se o objeto não puder ser criado porque algum outro recurso não está disponível, o construtor gerará um objeto `system_error` que tem um código de erro `resource_unavailable_try_again`.  
   
-##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  Desbloqueia todos os threads que estão aguardando o objeto `condition_variable_any`.  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  Desbloqueia um dos threads que estão aguardando o objeto `condition_variable_any`.  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  Bloqueia um thread.  
   
 ```
@@ -112,7 +119,7 @@ void wait(Lock& Lck, Predicate Pred);
  Qualquer expressão que retorna `true` ou `false`.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro método bloqueia até que o objeto `condition_variable_any` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) ou [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method). Ela também pode ser ativada falsamente.  
+ O primeiro método bloqueia até que o objeto `condition_variable_any` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all). Ela também pode ser ativada falsamente.  
   
  O segundo método, na verdade, executa o código a seguir.  
   
@@ -121,7 +128,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  Bloqueia um thread e define um intervalo de tempo após o qual o thread será desbloqueado.  
   
 ```
@@ -148,7 +155,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
  O segundo método retorna o valor de `Pred`.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro método bloqueia até que o objeto `condition_variable_any` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) ou [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) ou até que o intervalo de tempo `Rel_time` tenha decorrido. Ela também pode ser ativada falsamente.  
+ O primeiro método bloqueia até que o objeto `condition_variable_any` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all) ou até que o intervalo de tempo `Rel_time` tenha decorrido. Ela também pode ser ativada falsamente.  
   
  O segundo método, na verdade, executa o código a seguir.  
   
@@ -160,7 +167,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  Bloqueia um thread e define um ponto máximo no tempo no qual o thread será desbloqueado.  
   
 ```
@@ -199,7 +206,7 @@ void wait_until(
  Os métodos que retornam um `bool` retornarão o valor de `Pred`.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro método bloqueia até que o objeto `condition_variable` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) ou [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) ou até `Abs_time`. Ela também pode ser ativada falsamente.  
+ O primeiro método bloqueia até que o objeto `condition_variable` seja sinalizado por uma chamada para [notify_one](../standard-library/condition-variable-class.md#notify_one) ou [notify_all](../standard-library/condition-variable-class.md#notify_all) ou até `Abs_time`. Ela também pode ser ativada falsamente.  
   
  O segundo método, na verdade, executa o código a seguir.  
   

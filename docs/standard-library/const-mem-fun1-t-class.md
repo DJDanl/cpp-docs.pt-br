@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.const_mem_fun1_t
 - xfunctional/std::const_mem_fun1_t
-- std::const_mem_fun1_t
 - const_mem_fun1_t
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 3a2664541cd1f1a44988f81e227e553b75b4faa6
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2a4fbafae9c5b446c818f2bbf151b69510b1bb9c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
@@ -74,7 +73,7 @@ class const_mem_fun1_t
  A classe de modelo armazena uma cópia de `_Pm`, que deve ser um ponteiro para uma função membro da classe **Type**, em um objeto de membro privado. Ela define sua função de membro `operator()` como de retorno ( **_Pleft**->\* *Pm)(***Right**) **const**.  
   
 ## <a name="example"></a>Exemplo  
- Normalmente, o construtor de `const_mem_fun1_t` não é usado diretamente; a função auxiliar `mem_fun` é usada para adaptar funções membro. Consulte [mem_fun](../standard-library/functional-functions.md#mem_fun_function) para obter um exemplo de como usar adaptadores de função membro.  
+ Normalmente, o construtor de `const_mem_fun1_t` não é usado diretamente; a função auxiliar `mem_fun` é usada para adaptar funções membro. Consulte [mem_fun](../standard-library/functional-functions.md#mem_fun) para obter um exemplo de como usar adaptadores de função membro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<functional>  

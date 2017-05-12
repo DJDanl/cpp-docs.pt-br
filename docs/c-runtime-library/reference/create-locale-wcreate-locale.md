@@ -1,60 +1,66 @@
 ---
-title: "_create_locale, _wcreate_locale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_create_locale"
-  - "__create_locale"
-  - "_wcreate_locale"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-locale-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "create_locale"
-  - "_create_locale"
-  - "__create_locale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "locales, creating"
-  - "_create_locale function"
-  - "create_locale function"
-  - "__create_locale function"
+title: _create_locale, _wcreate_locale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _create_locale
+- __create_locale
+- _wcreate_locale
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- create_locale
+- _create_locale
+- __create_locale
+dev_langs:
+- C++
+helpviewer_keywords:
+- locales, creating
+- _create_locale function
+- create_locale function
+- __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 5068d509e335fd99246d5dff5fd51f2b0b1493b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/28/2017
+
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 Cria um objeto de localidade.  
@@ -128,9 +134,8 @@ _locale_t _wcreate_locale(
   
 ## <a name="example"></a>Exemplo  
   
-```  
-  
-      // crt_create_locale.c  
+```C  
+// crt_create_locale.c  
 // Sets the current locale to "de-CH" using the  
 // setlocale function and demonstrates its effect on the strftime  
 // function.  
@@ -141,53 +146,53 @@ _locale_t _wcreate_locale(
   
 int main(void)  
 {  
-       time_t ltime;  
-       struct tm thetime;  
-       unsigned char str[100];  
-       _locale_t locale;  
+    time_t ltime;  
+    struct tm thetime;  
+    unsigned char str[100];  
+    _locale_t locale;  
   
-       // Create a locale object representing the German (Switzerland) locale  
-       locale = _create_locale(LC_ALL, "de-CH");  
-       time (&ltime);  
-       _gmtime64_s(&thetime, &ltime);  
+    // Create a locale object representing the German (Switzerland) locale  
+    locale = _create_locale(LC_ALL, "de-CH");  
+    time (&ltime);  
+    _gmtime64_s(&thetime, &ltime);  
   
-       // %#x is the long date representation, appropriate to  
-       // the current locale  
-       //  
-       if (!_strftime_l((char *)str, 100, "%#x",   
+    // %#x is the long date representation, appropriate to  
+    // the current locale  
+    if (!_strftime_l((char *)str, 100, "%#x",   
                      (const struct tm *)&thetime, locale))  
-               printf("_strftime_l failed!\n");  
-       else  
-               printf("In de-CH locale, _strftime_l returns '%s'\n",   
-                      str);  
+    {
+        printf("_strftime_l failed!\n");  
+    }
+    else  
+    {
+        printf("In de-CH locale, _strftime_l returns '%s'\n", str);  
+    }
   
-       _free_locale(locale);  
+    _free_locale(locale);  
   
-       // Create a locale object representing the default C locale  
-       locale = _create_locale(LC_ALL, "C");  
-       time (&ltime);  
-       _gmtime64_s(&thetime, &ltime);  
+    // Create a locale object representing the default C locale  
+    locale = _create_locale(LC_ALL, "C");  
+    time(&ltime);  
+    _gmtime64_s(&thetime, &ltime);  
   
-       if (!_strftime_l((char *)str, 100, "%#x",   
+    if (!_strftime_l((char *)str, 100, "%#x",   
                      (const struct tm *)&thetime, locale))  
-               printf("_strftime_l failed!\n");  
-       else  
-               printf("In 'C' locale, _strftime_l returns '%s'\n",   
-                      str);  
+    {
+        printf("_strftime_l failed!\n");  
+    }
+    else  
+    {
+        printf("In 'C' locale, _strftime_l returns '%s'\n", str);  
+    }
   
-       _free_locale(locale);  
+    _free_locale(locale);  
 }  
 ```  
   
-## <a name="sample-output"></a>Saída de Exemplo  
-  
-```  
+```Output  
 In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'  
 In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [Classe System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Nomes de localidade, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   

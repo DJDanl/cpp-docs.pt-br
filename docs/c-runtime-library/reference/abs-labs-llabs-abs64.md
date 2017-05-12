@@ -63,10 +63,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ce617ade4b6cffee07704aa9eaace1957901b387
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 804ed3ac260097c4eb088058580bf801b3bee9f1
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
@@ -185,9 +186,6 @@ Microsoft implementation-specific results:
  _abs64(_I64_MIN) returns 0x8000000000000000  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Abs](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

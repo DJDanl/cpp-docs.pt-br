@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8bb87ee8ef67f84596afaee5bf4060de7e9d97f5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6209795c87430de802309c199bc2902ed296287e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
@@ -121,7 +122,7 @@ int _cwprintf_p_l(
 ## <a name="remarks"></a>Comentários  
  Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando as funções `_putch` e `_putwch` para gerar caracteres. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato tem a mesma forma e função que o parâmetro `format` da função [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferença entre `_cprintf_p` e `cprintf_s` é que `_cprintf_p` dá suporte a parâmetros posicionais, o que permite especificar a ordem em que os argumentos são usados na cadeia de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- Ao contrário das funções `fprintf_p`, `printf_p` e `sprintf_p`, `_cprintf_p` nem `_cwprintf_p` movem caracteres de alimentação de linha em combinações CR-LF (retorno de carro-alimentação de linha) durante a geração. Uma distinção importante é que `_cwprintf_p` exibe caracteres Unicode quando usado no Windows NT. Ao contrário de `_cprintf_p`, `_cwprintf_p` usa as configurações de localidade do console atual.  
+ Ao contrário de `fprintf_p`, `printf_p`, e `sprintf_p` funções, nem `_cprintf_p` nem `_cwprintf_p` converte caracteres de alimentação de linha em carro (CR LF) de alimentação de linha de retorno de combinações durante a impressão. Uma distinção importante é que `_cwprintf_p` exibe caracteres Unicode quando usado no Windows NT. Ao contrário de `_cprintf_p`, `_cwprintf_p` usa as configurações de localidade do console atual.  
   
  As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de que usam o parâmetro de localidade passado em vez da localidade atual.  
   

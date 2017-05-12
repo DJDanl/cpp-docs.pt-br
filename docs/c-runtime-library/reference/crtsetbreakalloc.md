@@ -1,54 +1,60 @@
 ---
-title: "_CrtSetBreakAlloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetBreakAlloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtSetBreakAlloc"
-  - "_CrtSetBreakAlloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtSetBreakAlloc function"
-  - "_CrtSetBreakAlloc function"
+title: _CrtSetBreakAlloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetBreakAlloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtSetBreakAlloc
+- _CrtSetBreakAlloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetBreakAlloc function
+- _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b33d7b6125d9b399f5d36635a3dd80de3bbea4c5
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
+
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 Estabelece um ponto de interrupção em um número de ordem de alocação de objeto especificado (somente versão de depuração).  
@@ -132,9 +138,6 @@ int main( )
         free(my_pointer);  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)

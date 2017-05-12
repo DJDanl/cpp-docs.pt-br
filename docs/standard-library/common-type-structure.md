@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d0728ffa46f416cc2a8e8e270bcd1ae56066832b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d54c14d3b16f2667f0acfe29960d90cba704ca66
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="commontype-structure"></a>Estrutura common_type
@@ -57,7 +58,7 @@ chrono::time_point<Clock, Duration2>>;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std  
   

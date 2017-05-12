@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: adbf8bc0860e6d5eb414a00a831f33e53447f496
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: af647340f579d6dfba8bcc1a67a4e90b40753a4e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
@@ -123,12 +124,12 @@ int _cwscanf_s_l(
 ## <a name="return-value"></a>Valor de retorno  
  O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor retornado é `EOF` para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.  
   
- Essas funções validam seus parâmetros. Se `format` for um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão `EOF` e `errno` será definido como `EINVAL`.  
+ Essas funções validam seus parâmetros. Se `format` for um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam `EOF` e `errno` é definido como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_cscanf_s` lê os dados diretamente no console nos locais fornecidos por `argument`. A função [_getche](../../c-runtime-library/reference/getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo em `format`. O formato controla a interpretação dos campos de entrada e tem a mesma forma e função do parâmetro `format` da função [scanf_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md). Embora `_cscanf_s` normalmente retorne um caractere de entrada, ele não fará isso se a última chamada tiver sido para `_ungetch`.  
   
- Assim como outras versões seguras de funções na família `scanf`, `_cscanf_s` e `_cswscanf_s` exigem argumentos de tamanho para os caracteres de campo de tipo `c`, `C`, `s`, `S` e `[`. Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).  
+ Outras versões seguras das funções, como o `scanf` família, `_cscanf_s` e `_cswscanf_s` exigem argumentos de tamanho para os caracteres de campo do tipo `c`, `C`, `s`, `S`, e `[`. Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).  
   
 > [!NOTE]
 >  O parâmetro de tamanho é do tipo `unsigned`, não `size_t`.  

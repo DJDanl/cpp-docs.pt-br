@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8ad971fb572c56a5e2b3d3e8d3c9e9134e9cf9e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a89b6d426d20d9af3f93bec1ec004ab5d7c70fe0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbrlen"></a>mbrlen
@@ -116,8 +117,8 @@ size_t mbrlen(
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como a interpretação de caracteres multibyte depende da página de código atual e demonstra a capacidade de retomada do `mbrlen`.  
   
-```  
- // crt_mbrlen.c  
+```C  
+// crt_mbrlen.c  
 // Compile by using: cl crt_mbrlen.c  
 #include <stdlib.h>  
 #include <stdio.h>  
@@ -174,9 +175,6 @@ Code page: 932
 Character count: 25  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

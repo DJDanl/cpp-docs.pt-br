@@ -60,10 +60,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 15d1f6a9e933949898eb0516f91ee161dbcf1bbd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
@@ -90,7 +91,7 @@ int _wcreat(
  Configuração de permissão.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Essas funções, se tiverem êxito, retornarão um descritor de arquivo para o arquivo criado. Caso contrário, as funções retornarão -1 e definirão `errno` conforme mostrado na tabela a seguir.  
+ Essas funções, se tiverem êxito, retornarão um descritor de arquivo para o arquivo criado. Caso contrário, as funções de retornam -1 e defina `errno` conforme mostrado na tabela a seguir.  
   
 |Configuração de `errno`|Descrição|  
 |---------------------|-----------------|  
@@ -119,7 +120,7 @@ int _wcreat(
 |`_S_IREAD`|Leitura permitida.|  
 |`_S_IREAD &#124; _S_IWRITE`|Leitura e gravação permitidas.|  
   
- Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Todos os arquivos são sempre legíveis; é impossível conceder permissão somente gravação. Os modos `_S_IWRITE` e `_S_IREAD``| _S_IWRITE` são então equivalentes. Os arquivos abertos com o uso de `_creat` sempre são abertos no modo de compatibilidade (consulte [_sopen](../../c-runtime-library/reference/sopen-wsopen.md)) com `_SH_DENYNO`.  
+ Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Todos os arquivos são sempre legíveis; é impossível conceder permissão somente gravação. Os modos `_S_IWRITE` e `_S_IREAD | _S_IWRITE` são então equivalentes. Os arquivos abertos com o uso de `_creat` sempre são abertos no modo de compatibilidade (consulte [_sopen](../../c-runtime-library/reference/sopen-wsopen.md)) com `_SH_DENYNO`.  
   
  `_creat` aplica a máscara de permissão de arquivo atual a `pmode` antes que as permissões sejam configuradas (consulte [_umask](../../c-runtime-library/reference/umask.md)). `_creat` é fornecido principalmente para compatibilidade com bibliotecas anteriores. Uma chamada a `_open` com `_O_CREAT` e `_O_TRUNC` no parâmetro `oflag` é equivalente a `_creat` e é preferível para o novo código.  
   

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da665c7e4829cd8bde8bc749e1dc8c1bf28b4e33
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5aeb9d9ceac7eabac061f211f48835d07f2ec38e
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="rename-wrename"></a>rename, _wrename
@@ -159,9 +160,6 @@ int main( void )
 ```  
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::File::Move](https://msdn.microsoft.com/en-us/library/system.io.file.move.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)

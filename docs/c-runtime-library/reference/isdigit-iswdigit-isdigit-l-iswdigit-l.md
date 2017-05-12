@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 708fa6ba33fc7b8011f6d9f9960b38db7e3f9afd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 86afddd96c0d20e6c6f29cf64668a8fa26613da7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
@@ -102,7 +103,7 @@ int _iswdigit_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de dígito decimal. `isdigit` retornará um valor diferente de zero se `c` for um dígito decimal (0 – 9). `iswdigit` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de dígito decimal. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de dígito decimal. `isdigit`Retorna um valor diferente de zero se `c` é um dígito decimal (0 - 9). `iswdigit` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de dígito decimal. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam a localidade passada em vez da localidade atual para seu comportamento que depende da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -125,9 +126,6 @@ int _iswdigit_l(
 |`_iswdigit_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsDigit](https://msdn.microsoft.com/en-us/library/system.char.isdigit.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

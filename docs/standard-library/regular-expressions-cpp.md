@@ -33,17 +33,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 8159bf4e5ebde026fe0d92b7d9d3c73ce1a7b7b9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
-Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular.  
+Biblioteca padrão C++ dá suporte a vários gramáticas de expressão regular. Este tópico discute as variações de gramática disponíveis ao usar expressões regulares.  
   
-##  <a name="a-nameregexgrammara-regular-expression-grammar"></a><a name="regexgrammar"></a> Gramática da expressão regular  
+##  <a name="regexgrammar"></a> Gramática da expressão regular  
+A gramática de expressão regular a ser usado é por especificado pelo uso de uma da `std::regex_constants::syntax_option_type` valores de enumeração. Esses gramáticas de expressão regular são definidas em std::regex_constants:
+
+-   `ECMAScript`: Esse é o mais próximo a gramática usado por JavaScript e linguagens .NET.
+-   `basic`: A expressões regulares básico do POSIX ou BRE.
+-   `extended`: O POSIX estendidos expressões regulares ou ERE.
+-   `awk`: Esse é o `extended`, mas ele tem adicionais escapes de caracteres não imprimíveis.
+-   `grep`: Esse é o `basic`, mas ele também permite a nova linha caracteres ('\n') separar alternations.
+-   `egrep`: Esse é o `extended`, mas também permite que os caracteres de nova linha separar alternatios.
+
+Por padrão, se nenhuma gramática for especificada, `ECMAScript` será assumido. Pode ser especificada somente uma gramática.  
   
+A gramática, além de vários sinalizadores podem ser aplicados:  
+-   `icase`: Ignore maiusculas e minúsculas durante a correspondência.  
+-   `nosubs`: Ignorar marcadas correspondências (ou seja, expressões entre parênteses); Não há substituições são armazenadas.  
+-   `optimize`: Verifique a correspondência mais rapidamente, possivelmente às custas de maior tempo de construção.  
+-   `collate`: Use sequências de agrupamento com diferenciação de localidade (por exemplo, os intervalos no formato "[a-z]").  
+  
+Zero ou mais sinalizadores podem ser combinadas com a gramática para especificar o comportamento do mecanismo de expressão regular. Se apenas os sinalizadores forem especificados, `ECMAScript` é assumida como a gramática.
+
 ### <a name="element"></a>Elemento  
  Um elemento pode ser um dos seguintes itens:  
   
@@ -67,7 +86,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   Uma *âncora*. A âncora '^' corresponde ao início da sequência de destino; a âncora '$' corresponde ao fim da sequência de destino.  
   
- Um *grupo de captura* no formato "( *subexpressão* )" ou "\\( *subexpressão* \\)" em `BRE` e `grep`, que corresponde à sequência de caracteres na sequência de destino que é correspondida pelo padrão entre os delimitadores.  
+ Um *grupo de captura* no formato "( *subexpressão* )" ou "\\( *subexpressão* \\)" em `basic` e `grep`, que corresponde à sequência de caracteres na sequência de destino que é correspondida pelo padrão entre os delimitadores.  
   
 -   Um *caractere de escape de identidade* no formato "\\`k`", que corresponde ao caractere `k` na sequência de destino.  
   
@@ -83,7 +102,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   "(a)" corresponde à sequência de destino "a" e associa o grupo de captura 1 à subsequência "a", mas não corresponde às sequências de destino "B", "b" ou "c".  
   
- Em `ECMAScript`, `BRE` e `grep`, um elemento também pode ser uma *referência inversa* no formato "\\`dd`", em que `dd` representa um valor decimal N que corresponde a uma sequência de caracteres na sequência de destino que é igual à sequência de caracteres que é correspondida pelo enésimo *grupo de captura*. Por exemplo, "(a)\1" corresponde à sequência de destino "aa" porque o primeiro (e único) grupo de captura corresponde à sequência inicial "a" e \1 corresponde à sequência final "a".  
+ Em `ECMAScript`, `basic` e `grep`, um elemento também pode ser uma *referência inversa* no formato "\\`dd`", em que `dd` representa um valor decimal N que corresponde a uma sequência de caracteres na sequência de destino que é igual à sequência de caracteres que é correspondida pelo enésimo *grupo de captura*. Por exemplo, "(a)\1" corresponde à sequência de destino "aa" porque o primeiro (e único) grupo de captura corresponde à sequência inicial "a" e \1 corresponde à sequência final "a".  
   
  Em `ECMAScript`, um elemento também pode ser um dos seguintes itens:  
   
@@ -126,13 +145,13 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
 -   Uma *sequência de escape octal* no formato "\\`ooo`". Corresponde a um caractere na sequência de destino cuja representação é o valor representado por um, dois ou três dígitos octais `ooo`.  
   
 ### <a name="repetition"></a>Repetição  
- Qualquer elemento diferente de uma *asserção positiva*, uma *asserção negativa* ou uma *âncora* pode ser seguido por uma contagem de repetição. O tipo mais genérico da contagem de repetição usa o formato "{`min`,`max`}" ou "\\{`min`,`max`\\}" em `BRE` e `grep`. Um elemento que é seguido por essa forma de contagem de repetição corresponde a pelo menos `min` ocorrências sucessivas e a não mais do que `max` ocorrências sucessivas de uma sequência que corresponde ao elemento. Por exemplo, "a{2,3}" corresponde à sequência de destino "aa" e à sequência de destino "aaa", mas não à sequência de destino "a" ou à sequência de destino "aaaa".  
+ Qualquer elemento diferente de uma *asserção positiva*, uma *asserção negativa* ou uma *âncora* pode ser seguido por uma contagem de repetição. O tipo mais genérico da contagem de repetição usa o formato "{`min`,`max`}" ou "\\{`min`,`max`\\}" em `basic` e `grep`. Um elemento que é seguido por essa forma de contagem de repetição corresponde a pelo menos `min` ocorrências sucessivas e a não mais do que `max` ocorrências sucessivas de uma sequência que corresponde ao elemento. Por exemplo, "a{2,3}" corresponde à sequência de destino "aa" e à sequência de destino "aaa", mas não à sequência de destino "a" ou à sequência de destino "aaaa".  
   
  Uma contagem de repetição também pode usar uma das seguintes formas:  
   
--   "{`min`}" ou "\\{`min`\\}" em `BRE` e `grep`. Equivalente a "{`min`,`min`}".  
+-   "{`min`}" ou "\\{`min`\\}" em `basic` e `grep`. Equivalente a "{`min`,`min`}".  
   
--   "{`min`,}" ou "\\{`min`,\\}" em `BRE` e `grep`. Equivalente a "{`min`,unbounded}".  
+-   "{`min`,}" ou "\\{`min`,\\}" em `basic` e `grep`. Equivalente a "{`min`,unbounded}".  
   
 -   "*". Equivalente a "{0,unbounded}".  
   
@@ -144,7 +163,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   "a*" corresponde à sequência de destino "", à sequência de destino "a", à sequência de destino "aa", e assim por diante.  
   
- Para todas as gramáticas, exceto `BRE` e `grep`, uma contagem de repetição também pode usar uma das seguintes formas:  
+ Para todas as gramáticas, exceto `basic` e `grep`, uma contagem de repetição também pode usar uma das seguintes formas:  
   
 -   "". Equivalente a "{0,1}".  
   
@@ -162,19 +181,19 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
  Os elementos de expressão regular, com ou sem *contagens de repetição*, podem ser concatenados para formar expressões regulares mais longas. A expressão resultante corresponde a uma sequência de destino que é uma concatenação das sequências que são correspondidas pelos elementos individuais. Por exemplo, "a{2,3}b" corresponde à sequência de destino "aab" e à sequência de destino "aaab", mas não à sequência de destino "ab" ou à sequência de destino "aaaab".  
   
 ### <a name="alternation"></a>Alternação  
- Em todas as gramáticas de expressão regular, exceto `BRE` e `grep`, uma expressão regular concatenada pode ser seguida pelo caractere '&#124;' e outra expressão regular concatenada. Qualquer número de expressões regulares concatenadas pode ser combinado dessa forma. A expressão resultante corresponde a qualquer sequência de destino que corresponda a uma ou mais das expressões regulares concatenadas.  
+ Em todas as gramáticas de expressão regular, exceto `basic` e `grep`, uma expressão regular concatenada pode ser seguida pelo caractere '&#124;' e outra expressão regular concatenada. Qualquer número de expressões regulares concatenadas pode ser combinado dessa forma. A expressão resultante corresponde a qualquer sequência de destino que corresponda a uma ou mais das expressões regulares concatenadas.  
   
  Quando mais de uma expressão regular concatenada corresponde à sequência de destino, `ECMAScript` escolhe a primeira das expressões regulares concatenadas que corresponde à sequência como a correspondência (*primeira correspondência*); as outras gramáticas da expressão regular escolhem aquela que alcança a *correspondência mais longa*. Por exemplo, "ab&#124;cd" corresponde à sequência de destino "ab" e à sequência de destino "cd", mas não à sequência de destino "abd" ou à sequência de destino "acd".  
   
  Em `grep` e `egrep`, um caractere de nova linha ('\n') pode ser usado para separar alternações.  
   
 ### <a name="subexpression"></a>Subexpressão  
- Em `BRE` e `grep`, uma subexpressão é uma concatenação. Em outras gramáticas de expressão regular, uma subexpressão é uma alternância.  
+ Em `basic` e `grep`, uma subexpressão é uma concatenação. Em outras gramáticas de expressão regular, uma subexpressão é uma alternância.  
   
-##  <a name="a-namegrammarsummarya-grammar-summary"></a><a name="grammarsummary"></a> Resumo de gramática  
+##  <a name="grammarsummary"></a> Resumo de gramática  
  A tabela a seguir resume os recursos que estão disponíveis nas várias gramáticas de expressão regular:  
   
-|Elemento|BRE|ERE|ECMA|grep|egrep|awk|  
+|Elemento|básico|estendido|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |alternância usando '&#124;'||+|+||+|+|  
 |alternância usando '\n'||||+|+||  
@@ -203,13 +222,13 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
 |caractere curinga|+|+|+|+|+|+|  
 |declaração de limite de palavra|||+||||  
   
-##  <a name="a-namesemanticdetailsa-semantic-details"></a><a name="semanticdetails"></a> Detalhes da semântica  
+##  <a name="semanticdetails"></a> Detalhes da semântica  
   
 ### <a name="anchor"></a>Âncora  
  Uma âncora corresponde a uma posição na cadeia de caracteres de destino, e não a um caractere. Uma âncora '^' corresponde ao início da cadeia de caracteres de destino e uma âncora '$' corresponde ao fim da cadeia de caracteres de destino.  
   
 ### <a name="back-reference"></a>Referência inversa  
- Uma referência inversa é uma barra invertida seguida por um valor N decimal. Ele corresponde ao conteúdo do enésimo *grupo de captura*. O valor de N não deve ser maior que o número de grupos de captura que precede a referência inversa. Em `BRE` e `grep`, o valor de N é determinado pelo dígito decimal que segue a barra invertida. Em `ECMAScript`, o valor de N é determinado por todos os dígitos decimais que seguem imediatamente a barra invertida. Portanto, em `BRE` e `grep`, o valor de N nunca é superior a 9, mesmo que a expressão regular tenha mais de nove grupos de captura. Em `ECMAScript`, o valor de N é unbounded.  
+ Uma referência inversa é uma barra invertida seguida por um valor N decimal. Ele corresponde ao conteúdo do enésimo *grupo de captura*. O valor de N não deve ser maior que o número de grupos de captura que precede a referência inversa. Em `basic` e `grep`, o valor de N é determinado pelo dígito decimal que segue a barra invertida. Em `ECMAScript`, o valor de N é determinado por todos os dígitos decimais que seguem imediatamente a barra invertida. Portanto, em `basic` e `grep`, o valor de N nunca é superior a 9, mesmo que a expressão regular tenha mais de nove grupos de captura. Em `ECMAScript`, o valor de N é unbounded.  
   
  Exemplos:  
   
@@ -217,7 +236,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   "(a)\2" não é válido.  
   
--   "(b(((((((((a))))))))))\10" tem diferentes significados em `BRE` e em `ECMAScript`. Em `BRE` a referência inversa é "\1". A referência inversa corresponde ao conteúdo do primeiro grupo de captura (isto é, aquele que começa com "(b" e termina com ")" e vem antes da referência inversa), e o final '0' corresponde ao caractere comum '0'. Em `ECMAScript`, a referência inversa é "\10". Corresponde ao décimo grupo de captura, isto é, o mais interno.  
+-   "(b(((((((((a))))))))))\10" tem diferentes significados em `basic` e em `ECMAScript`. Em `basic` a referência inversa é "\1". A referência inversa corresponde ao conteúdo do primeiro grupo de captura (isto é, aquele que começa com "(b" e termina com ")" e vem antes da referência inversa), e o final '0' corresponde ao caractere comum '0'. Em `ECMAScript`, a referência inversa é "\10". Corresponde ao décimo grupo de captura, isto é, o mais interno.  
   
 ### <a name="bracket-expression"></a>Expressão entre colchetes  
  Uma expressão entre colchetes define um conjunto de caracteres e os *elementos de agrupamento*. Quando a expressão entre colchetes começar com o caractere '^', a correspondência será bem-sucedida se nenhum elemento no conjunto corresponder ao caractere atual na sequência de destino. Caso contrário, a correspondência será bem-sucedida se algum dos elementos no conjunto corresponder ao caractere atual na sequência de destino.  
@@ -318,9 +337,9 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 |Gramática|Caracteres de escape de identidade permitidos|  
 |-------------|----------------------------------------|  
-|`BRE`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`ERE`, `egre`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
-|`awk`|`ERE` mais { '"', '/' }|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`awk`|`extended` mais { '"', '/' }|  
 |`ECMAScript`|Todos os caracteres, exceto aqueles que podem fazer parte de um identificador. Geralmente, isso inclui letras, dígitos, '$', '_' e sequências de escape unicode. Para obter mais informações, consulte a especificação de linguagem ECMAScript.|  
   
 ### <a name="individual-character"></a>Caractere individual  
@@ -374,11 +393,11 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
   
- Em `BRE` e `grep`, os seguintes caracteres têm significados especiais:  
+ Em `basic` e `grep`, os seguintes caracteres têm significados especiais:  
   
 -   .   [   \  
   
- Além disso, em `BRE` e `grep`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto:  
+ Além disso, em `basic` e `grep`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto:  
   
 -   '*' tem um significado especial em todos os casos, exceto quando ele for o primeiro caractere em uma expressão regular ou o primeiro caractere que segue um '^' inicial em uma expressão regular, ou quando ele for o primeiro caractere de um grupo de captura ou o primeiro caractere que segue um '^' inicial em um grupo de captura.  
   
@@ -386,11 +405,11 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
 -   '$' tem um significado especial quando ele é o último caractere de uma expressão regular.  
   
- Em `ERE`, `egrep` e `awk`, os seguintes caracteres têm significados especiais:  
+ Em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais:  
   
 -   .   [   \   (   *   +      {   &#124;  
   
- Além disso, em `ERE`, `egrep` e `awk`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto.  
+ Além disso, em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto.  
   
 -   ')' tem um significado especial quando corresponde a um '(' precedente.  
   
@@ -431,7 +450,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
 ### <a name="word-boundary-assert"></a>Declaração de limite de palavra  
  Uma asserção do limite de palavra corresponderá quando a posição atual na cadeia de caracteres de destino vier logo após um *limite de palavra*.  
   
-##  <a name="a-namematchingandsearchinga-matching-and-searching"></a><a name="matchingandsearching"></a> Correspondência e pesquisa  
+##  <a name="matchingandsearching"></a> Correspondência e pesquisa  
  Para que uma expressão regular corresponda a uma sequência de destino, a expressão regular inteira deverá corresponder à sequência de destino inteira. Por exemplo, a expressão regular "bcd" corresponde à sequência de destino "bcd", mas não corresponde à sequência de destino "abcd", nem à sequência de destino "bcde".  
   
  Para que uma pesquisa de expressão regular seja bem-sucedida, deve haver uma subsequência em algum lugar na sequência de destino que corresponda à expressão regular. Geralmente, a pesquisa encontra a subsequência correspondente à extrema esquerda.  
@@ -446,7 +465,7 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
   
  Uma correspondência parcial será bem-sucedida se a correspondência atingir o fim da sequência de destino sem falhar, mesmo que ela não tenha atingido o fim da expressão regular. Dessa forma, depois do êxito de uma correspondência parcial, acrescentar caracteres à sequência de destino pode causar uma falha em uma correspondência parcial posterior. No entanto, após a falha de uma correspondência parcial, acrescentar caracteres à sequência de destino não fará com uma correspondência parcial posterior seja bem-sucedida. Por exemplo, com uma correspondência parcial, "ab" corresponde à sequência de destino "a", mas não à "ac".  
   
-##  <a name="a-nameformatflagsa-format-flags"></a><a name="formatflags"></a> Sinalizadores de formato  
+##  <a name="formatflags"></a> Sinalizadores de formato  
   
 |Regras de formato de ECMAScript|Regras de formato sed|Texto de substituição|  
 |-----------------------------|----------------------|----------------------|  
@@ -455,9 +474,9 @@ Este tópico aborda as gramáticas dos diversos mecanismos de expressão regular
 ||"\\&"|"&"|  
 |"$`" (o cifrão de dólar seguido pelo acento grave)||A sequência de caracteres que precede a subsequência que corresponde à expressão regular (`[match.prefix().first, match.prefix().second)`)|  
 |"$'" (cifrão de dólar seguido por aspas simples)||A sequência de caracteres que segue a subsequência que corresponde à expressão regular (`[match.suffix().first, match.suffix().second)`)|  
-|"$n"|"\n"|A sequência de caracteres que corresponde ao grupo de captura na posição `n`, em que `n` é um número entre 0 e 9 (`[match[n].first, match[n].second)`|  
+|"$n"|"\n"|A sequência de caracteres que corresponde ao grupo de captura na posição `n`, onde `n` é um número entre 0 e 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
-|"$nn"||A sequência de caracteres que corresponde ao grupo de captura na posição `nn`, em que `nn` é um número entre 10 e 99 (`[match[nn].first, match[nn].second)`|  
+|"$nn"||A sequência de caracteres que corresponde ao grupo de captura na posição `nn`, onde `nn` é um número entre 10 e 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)

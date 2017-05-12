@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde424088fad3661105e92b0a7aa035137bed249
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="chsize"></a>_chsize
@@ -78,7 +79,7 @@ int _chsize(
  Novo tamanho do arquivo em bytes.  
   
 ## <a name="return-value"></a>Valor retornado  
- `_chsize` retornará o valor 0 se o tamanho do arquivo for alterado com sucesso. Um valor retornado de -1 indica um erro: `errno` será definido como `EACCES` se o arquivo especificado estiver protegido contra acesso; `EBADF` se o arquivo especificado for somente leitura ou o descritor for inválido; `ENOSPC` se não restar espaço no dispositivo; ou `EINVAL` se `size` for menor que zero.  
+ `_chsize` retornará o valor 0 se o tamanho do arquivo for alterado com sucesso. Um valor de retorno de -1 indica um erro: `errno` é definido como `EACCES` se o arquivo especificado está bloqueado contra o acesso, para `EBADF` se o arquivo especificado é somente leitura ou o descritor é inválido, `ENOSPC` se nenhum espaço é deixado no dispositivo, ou `EINVAL` se `size` é menor que zero.  
   
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.  
   
@@ -134,12 +135,6 @@ File length before: 0
 Size successfully changed  
 File length after:  329678  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

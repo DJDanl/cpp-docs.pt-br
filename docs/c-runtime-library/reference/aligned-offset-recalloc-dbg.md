@@ -1,54 +1,60 @@
 ---
-title: "_aligned_offset_recalloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_recalloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "aligned_offset_recalloc_dbg"
-  - "_aligned_offset_recalloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_offset_recalloc_dbg function"
-  - "_aligned_offset_recalloc_dbg function"
+title: _aligned_offset_recalloc_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_recalloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- aligned_offset_recalloc_dbg
+- _aligned_offset_recalloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_offset_recalloc_dbg function
+- _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7c65c73075c282f3a1b0dac83692c0adfe527c58
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 Altera o tamanho de um bloco de memória que foi alocado com [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) e inicializa a memória como 0 (somente versão de depuração).  
@@ -93,7 +99,7 @@ void * _aligned_offset_recalloc_dbg(
  `_aligned_offset_recalloc_dbg` retorna um ponteiro nulo para o bloco de memória realocado (e possivelmente migrado). O valor retornado é `NULL` se o tamanho for zero e o argumento do buffer não for `NULL`, ou se não houver memória suficiente para expandir o bloco para o tamanho determinado. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.  
   
 ## <a name="remarks"></a>Comentários  
- `_aligned_offset_realloc_dbg` é uma versão de depuração da função [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) não estiver definido, cada chamada para `_aligned_offset_recalloc_dbg` será reduzida a uma chamada para _`aligned_offset_recalloc`. \_`aligned_offset_recalloc` e `_aligned_offset_recalloc_dbg` realocam um bloco de memória no heap de base, mas `_aligned_offset_recalloc_dbg` acomoda diversos recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e informações de `filename`/`linenumber` para determinar a origem das solicitações de alocação.  
+ `_aligned_offset_realloc_dbg` é uma versão de depuração da função [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md). Quando [_DEBUG](../../c-runtime-library/debug.md) não está definido, cada chamada para `_aligned_offset_recalloc_dbg` é reduzida a uma chamada para `_aligned_offset_recalloc`. `_aligned_offset_recalloc` e `_aligned_offset_recalloc_dbg` realocam um bloco de memória no heap de base, mas `_aligned_offset_recalloc_dbg` acomoda diversos recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e informações de `filename`/`linenumber` para determinar a origem das solicitações de alocação.  
   
  `_aligned_offset_realloc_dbg` realoca o bloco de memória especificado com um pouco mais de espaço que o `newSize` solicitado. `newSize` pode ser maior ou menor que o espaço do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.  
   
@@ -106,9 +112,6 @@ void * _aligned_offset_recalloc_dbg(
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |`_aligned_offset_recalloc_dbg`|\<malloc.h>|  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Alinhamento de dados](../../c-runtime-library/data-alignment.md)

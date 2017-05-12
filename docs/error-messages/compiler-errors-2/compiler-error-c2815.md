@@ -1,5 +1,5 @@
 ---
-title: C2815 de erro do compilador | Documentos do Microsoft
+title: C2815 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 129ad6a0359fbee402b39c5e7ff498602e97479d
-ms.lasthandoff: 02/25/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2815"></a>C2815 de erro do compilador
-'operador delete': o primeiro parâmetro formal deve ser ' void *', mas 'param' foi usada  
+'operator delete': primeiro parâmetro formal deve ser ' void *', mas 'param' foi usada  
   
- Qualquer definidos pelo usuário [operador delete](../../standard-library/new-operators.md#operator_delete) função deve levar um primeiro parâmetro formal do tipo `void *`.  
+ Qualquer definidos pelo usuário [operador delete](../../standard-library/new-operators.md#op_delete) função deve utilizar um primeiro parâmetro formal do tipo `void *`.  
   
  O exemplo a seguir gera C2815:  
   

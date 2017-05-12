@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7c7659bb52594678538ea2701174c070ace41d70
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4d7a7b05896bac9e1b3f4ac29ee24a6ad7d61a82
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
@@ -129,9 +130,6 @@ Status: 0000 - clear
 Status: 0003 - inexact, underflow  
 Status: 80000 - denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

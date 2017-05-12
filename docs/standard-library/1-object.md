@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>Objeto _1
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os objetos `_1, _2, ... _M` são espaços reservados para designar o primeiro, o segundo, até o milésimo argumento, respectivamente, em uma chamada de função para um objeto retornado pela [Função bind](../standard-library/functional-functions.md#bind_function). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.  
+ Os objetos `_1, _2, ... _M` são espaços reservados para designar o primeiro, segundo,..., argumento de mês, respectivamente, em uma chamada de função para um objeto retornado por [associar](../standard-library/functional-functions.md#bind). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.  
   
  Nesta implementação, o valor de `M` é 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Namespace:** std  
   
 ## <a name="see-also"></a>Consulte também  
- [Função bind](../standard-library/functional-functions.md#bind_function)   
+ [ligação](../standard-library/functional-functions.md#bind)   
  [Classe is_placeholder](../standard-library/is-placeholder-class.md)
 

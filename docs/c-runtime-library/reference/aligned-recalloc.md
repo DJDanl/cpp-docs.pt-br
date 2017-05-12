@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3f750db538a74cd19571ea8cd107ceb707d33207
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9fbaae148ea373287991ebccbf53a5a859475d0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
@@ -99,9 +100,6 @@ void * _aligned_recalloc(
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |`_aligned_recalloc`|\<malloc.h>|  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Alinhamento de dados](../../c-runtime-library/data-alignment.md)   

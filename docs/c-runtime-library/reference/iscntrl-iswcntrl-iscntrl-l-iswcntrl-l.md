@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 657006caf00ba0ef5ccd404d0b83a97bf01f8b28
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: def32829b1be9e5b4076905cd80a475cf589a646
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
@@ -98,7 +99,7 @@ int _iswcntrl_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de controle. `iscntrl` retornará um valor diferente de zero se `c` for um caractere de controle (0x00 a 0x1F ou 0x7F). `iswcntrl` retornará um valor diferente de zero se `c` for um caractere largo de controle. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de controle. `iscntrl`Retorna um valor diferente de zero se `c` é um caractere de controle (0x00-0x1F ou 0x7F). `iswcntrl` retornará um valor diferente de zero se `c` for um caractere largo de controle. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -121,9 +122,6 @@ int _iswcntrl_l(
 |`_iswcntrl_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsControl](https://msdn.microsoft.com/en-us/library/system.char.iscontrol.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

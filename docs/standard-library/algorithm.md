@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ Define as funções de modelo do contêiner da Biblioteca Padrão do C++ que exe
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Une todos os elementos que pertencem a um (mas não a ambos) dos intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Une todos os elementos que pertencem a pelo menos um dos dois intervalos de origem classificados em um único intervalo de destino classificado, em que o critério de ordenação pode ser especificado por um predicado binário.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|Organiza os elementos de um intervalo especificado em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|Mistura (reorganiza) elementos para um determinado intervalo usando um gerador de números aleatório.|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Mistura (reorganiza) elementos para um determinado intervalo usando um gerador de números aleatório.|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Converte um heap em um intervalo classificado.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Classifica os elementos de um intervalo em dois conjuntos separados, com esses elementos atendendo a um predicado unário que precede aqueles que não o atendem, preservando a ordem relativa dos elementos equivalentes.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Organiza os elementos de um intervalo especificado em ordem não decrescente ou de acordo com um critério de ordenação especificado por um predicado binário e preserva a ordenação relativa de elementos equivalentes.|  

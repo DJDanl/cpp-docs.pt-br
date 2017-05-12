@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 00e878414b2aaa71a8cbfc78997e934225f4e6fc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
@@ -98,7 +99,7 @@ lineNumber);
  Para obter mais informações sobre como `_CrtSetAllocHook` pode ser usado com outras funções de gerenciamento de memória ou como escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
-> Não há suporte para  `_CrtSetAllocHook` em `/clr:pure`. O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
+> Não há suporte para  `_CrtSetAllocHook` em `/clr:pure`. As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -113,9 +114,6 @@ lineNumber);
   
 ## <a name="example"></a>Exemplo  
  Para obter uma amostra de como usar `_CrtSetAllocHook`, consulte [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   

@@ -62,10 +62,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0efd243b9c3bc420a060b1af5269ca69dcee5103
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 22c41d6b2712954f05249192c3a5e386b8102554
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="log-logf-log10-log10f"></a>log, logf, log10, log10f
@@ -106,7 +107,7 @@ float log10f (
  Valor cujo logaritmos deve ser localizado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções **log** retornarão o logaritmo natural (base e) de *x* se forem bem-sucedidas. As funções log10 retornam o logaritmo de base&10;. Se *x* for negativo, essas funções retornarão um indefinido, por padrão. Se *x* for 0, elas retornarão INF (infinito).  
+ As funções **log** retornarão o logaritmo natural (base e) de *x* se forem bem-sucedidas. As funções log10 retornam o logaritmo de base 10. Se *x* for negativo, essas funções retornarão um indefinido, por padrão. Se *x* for 0, elas retornarão INF (infinito).  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
 |-----------|-------------------|-----------------------|  
@@ -189,15 +190,9 @@ int main()
 Log base 2 of 65536.000000 is 16.000000  
 ```  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Math::Log](https://msdn.microsoft.com/en-us/library/system.math.log.aspx)  
-  
--   [System::Math::Log10](https://msdn.microsoft.com/en-us/library/system.math.log10.aspx)  
-  
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, expf, SOL](../../c-runtime-library/reference/exp-expf.md)   
  [_matherr](../../c-runtime-library/reference/matherr.md)   
  [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   
  [_CIlog](../../c-runtime-library/cilog.md)   

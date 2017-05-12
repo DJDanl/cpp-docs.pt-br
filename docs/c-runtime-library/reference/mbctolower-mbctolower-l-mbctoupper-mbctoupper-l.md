@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 12d7759f556c6f9035c1fe00637b930b070d7c6f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: fc9beaa854b639e893cd8abfd9ce009f7b24cdad
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
@@ -120,7 +121,7 @@ unsigned int _mbctoupper_l(
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o sufixo `_l` usa a localidade atual desse comportamento dependente da localidade. A versão com o sufixo `_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
- Nas versões anteriores, `_mbctolower` era chamado `jtolower` e `_mbctoupper` era chamado `jtoupper`. Para código novo, use os novos nomes.  
+ Nas versões anteriores, `_mbctolower` foi chamado `jtolower`, e `_mbctoupper` foi chamado `jtoupper`. Para código novo, use os novos nomes.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   

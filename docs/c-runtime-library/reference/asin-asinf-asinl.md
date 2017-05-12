@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 12ad074eab499a8eb5d800d13f2334b0b6e87c17
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c0bdcd8c1372f49c03e3ada06e98fcfd36815196
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
@@ -90,9 +91,9 @@ long double asinl(
  Valor cujo arco seno é calculado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A função `asin` retorna o arco seno (a função de seno inverso) de `x` no intervalo – π/2 a π/2 radianos.  
+ O `asin` função retorna o arco seno (a função de seno inverso) de `x` no intervalo - π/2 a π/2 radianos.  
   
- Por padrão, se `x` for menor que -1 ou maior que 1, `asin` retornará um indefinido.  
+ Por padrão, se `x` é menor que -1 ou maior que 1, `asin` retorna um indefinido.  
   
 |Entrada|Exceção SEH|Exceção Matherr|  
 |-----------|-------------------|-----------------------|  
@@ -111,9 +112,6 @@ long double asinl(
   
 ## <a name="example"></a>Exemplo  
  Para obter mais informações, consulte [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Asin](https://msdn.microsoft.com/en-us/library/system.math.asin.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

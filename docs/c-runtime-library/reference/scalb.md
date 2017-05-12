@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ade761d8fa3e37d4e190a05db5b93cd9e5f63cca
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a8f70dd525a798bd2492270ef95e5e75c5aa36b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scalb"></a>_scalb
@@ -77,7 +78,7 @@ double _scalb(
  Expoente inteiro longo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de `x`), `_scalb` retorna +/– `HUGE_VAL`; a variável `errno` é definida como `ERANGE`.  
+ Retornará um valor exponencial se for bem-sucedido. No estouro (dependendo do sinal de `x`), `_scalb` retorna + /- `HUGE_VAL`; o `errno` variável é definida como `ERANGE`.  
   
  Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -91,9 +92,6 @@ double _scalb(
 |`_scalb`|\<float.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

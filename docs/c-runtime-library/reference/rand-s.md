@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 44aae25d87d501416d470fb3c33faba00f3fb9e7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5087948c5737f105e9bc694da1e866be659ff18f
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="rands"></a>rand_s
@@ -168,9 +169,6 @@ int main( void )
 80.9192  
 65.0712  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [Classe System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c355c76db22cd581bc0458d48c93563f4bbe7712
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 11e6300d0d625f419e47d5f60f1db175419e3420
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
@@ -80,39 +81,39 @@ class allocator_base
   
 |||  
 |-|-|  
-|[allocator_base](#allocator_base__allocator_base)|Constrói um objeto do tipo `allocator_base`.|  
+|[allocator_base](#allocator_base)|Constrói um objeto do tipo `allocator_base`.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[const_pointer](#allocator_base__const_pointer)|Um tipo que fornece um ponteiro constante para o tipo de objeto gerenciado pelo alocador.|  
-|[const_reference](#allocator_base__const_reference)|Um tipo que fornece uma referência constante ao tipo de objeto gerenciado pelo alocador.|  
-|[difference_type](#allocator_base__difference_type)|Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.|  
-|[pointer](#allocator_base__pointer)|Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.|  
-|[reference](#allocator_base__reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|  
-|[size_type](#allocator_base__size_type)|Um tipo integral sem sinal que pode representar o comprimento de qualquer sequência que um objeto da classe de modelo `allocator_base` possa alocar.|  
-|[value_type](#allocator_base__value_type)|Um tipo que é gerenciado pelo alocador.|  
+|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro constante para o tipo de objeto gerenciado pelo alocador.|  
+|[const_reference](#const_reference)|Um tipo que fornece uma referência constante ao tipo de objeto gerenciado pelo alocador.|  
+|[difference_type](#difference_type)|Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.|  
+|[pointer](#pointer)|Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.|  
+|[reference](#reference)|Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.|  
+|[size_type](#size_type)|Um tipo integral sem sinal que pode representar o comprimento de qualquer sequência que um objeto da classe de modelo `allocator_base` possa alocar.|  
+|[value_type](#value_type)|Um tipo que é gerenciado pelo alocador.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[_Charalloc](#allocator_base___charalloc)|Aloca armazenamento para uma matriz do tipos `char`.|  
-|[_Chardealloc](#allocator_base___chardealloc)|Libera armazenamento para a matriz que contém os elementos do tipo `char`.|  
-|[address](#allocator_base__address)|Localiza o endereço de um objeto cujo valor é especificado.|  
-|[allocate](#allocator_base__allocate)|Aloca um bloco de memória grande o suficiente para armazenar pelo menos um número especificado de elementos.|  
-|[construct](#allocator_base__construct)|Constrói um tipo específico de objeto em um endereço especificado que é inicializado com um valor especificado.|  
-|[deallocate](#allocator_base__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
-|[destroy](#allocator_base__destroy)|Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi armazenado.|  
-|[max_size](#allocator_base__max_size)|Retorna o número de elementos do tipo `Type` que podem ser alocados por um objeto da classe allocator antes que a memória livre seja totalmente usada.|  
+|[_Charalloc](#charalloc)|Aloca armazenamento para uma matriz do tipos `char`.|  
+|[_Chardealloc](#chardealloc)|Libera armazenamento para a matriz que contém os elementos do tipo `char`.|  
+|[address](#address)|Localiza o endereço de um objeto cujo valor é especificado.|  
+|[allocate](#allocate)|Aloca um bloco de memória grande o suficiente para armazenar pelo menos um número especificado de elementos.|  
+|[construct](#construct)|Constrói um tipo específico de objeto em um endereço especificado que é inicializado com um valor especificado.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[destroy](#destroy)|Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi armazenado.|  
+|[max_size](#max_size)|Retorna o número de elementos do tipo `Type` que podem ser alocados por um objeto da classe allocator antes que a memória livre seja totalmente usada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="allocator_base___charalloc"></a>  allocator_base::_Charalloc  
+##  <a name="charalloc"></a>  allocator_base::_Charalloc  
  Aloca armazenamento para uma matriz do tipos `char`.  
   
 ```
@@ -131,7 +132,7 @@ char *_Charalloc(size_type count);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é usada pelos contêineres quando são compilados com um compilador que não pode compilar reassociação. Ela implementa `_Charalloc` para o alocador definido pelo usuário, retornando o resultado de uma chamada para a função `allocate` do filtro de sincronização.  
   
-##  <a name="allocator_base___chardealloc"></a>  allocator_base::_Chardealloc  
+##  <a name="chardealloc"></a>  allocator_base::_Chardealloc  
  Libera armazenamento para a matriz que contém os elementos do tipo `char`.  
   
 ```
@@ -148,7 +149,7 @@ void _Chardealloc(void* ptr, size_type count);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é usada pelos contêineres quando são compilados com um compilador que não pode compilar reassociação. Ela implementa `_Chardealloc` para o alocador definido pelo usuário ao chamar a função `deallocate` do filtro de sincronização. O ponteiro PTR deve ter sido retornado anteriormente por uma chamada para `_Charalloc` de um objeto alocador que compara como igual a `*this`, alocando um objeto de matriz dos mesmos tipo e tamanho. `_Chardealloc` nunca gera uma exceção.  
   
-##  <a name="allocator_base__address"></a>  allocator_base::address  
+##  <a name="address"></a>  allocator_base::address  
  Localiza o endereço de um objeto cujo valor é especificado.  
   
 ```
@@ -167,7 +168,7 @@ const_pointer address(const_reference val);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é implementada para o alocador definido pelo usuário, retornando `&val`.  
   
-##  <a name="allocator_base__allocate"></a>  allocator_base::allocate  
+##  <a name="allocate"></a>  allocator_base::allocate  
  Aloca um bloco de memória grande o suficiente para armazenar pelo menos um número especificado de elementos.  
   
 ```
@@ -190,7 +191,7 @@ pointer allocate(size_type _Nx);
 ### <a name="remarks"></a>Comentários  
  A função de membro implementa a alocação de memória para o alocador definido pelo usuário, retornando o resultado de uma chamada para a função `allocate` do filtro de sincronização do tipo Type `*` se `_Nx == 1`, caso contrário, retornando o resultado de uma chamada para `operator new(_Nx * sizeof(Type))` transmitido para o tipo Type `*`.  
   
-##  <a name="allocator_base__allocator_base"></a>  allocator_base::allocator_base  
+##  <a name="allocator_base"></a>  allocator_base::allocator_base  
  Constrói um objeto do tipo `allocator_base`.  
   
 ```
@@ -209,21 +210,21 @@ allocator_base(const allocator_base<Other, Sync>& right);
 ### <a name="remarks"></a>Comentários  
  O primeiro construtor constrói uma instância de [allocator_base](../standard-library/allocator-base-class.md). O segundo construtor constrói uma instância `allocator_base` de modo que, para qualquer instância de `allocator_base<Type, _Sync>` `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
   
-##  <a name="allocator_base__const_pointer"></a>  allocator_base::const_pointer  
+##  <a name="const_pointer"></a>  allocator_base::const_pointer  
  Um tipo que fornece um ponteiro constante para o tipo de objeto gerenciado pelo alocador.  
   
 ```
 typedef const Type *const_pointer;
 ```  
   
-##  <a name="allocator_base__const_reference"></a>  allocator_base::const_reference  
+##  <a name="const_reference"></a>  allocator_base::const_reference  
  Um tipo que fornece uma referência constante ao tipo de objeto gerenciado pelo alocador.  
   
 ```
 typedef const Type& const_reference;
 ```  
   
-##  <a name="allocator_base__construct"></a>  allocator_base::construct  
+##  <a name="construct"></a>  allocator_base::construct  
  Constrói um tipo específico de objeto em um endereço especificado que é inicializado com um valor especificado.  
   
 ```
@@ -240,7 +241,7 @@ void construct(pointer ptr, const Type& val);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é implementada para o alocador definido pelo usuário ao chamar `new((void*)ptr Type(val)`.  
   
-##  <a name="allocator_base__deallocate"></a>  allocator_base::deallocate  
+##  <a name="deallocate"></a>  allocator_base::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -257,7 +258,7 @@ void deallocate(pointer ptr, size_type _Nx);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é implementada para o alocador definido pelo usuário chamando `deallocate(ptr)` no filtro de sincronização `Sync` se `_Nx == 1`, caso contrário, chamando `operator delete(_Nx * ptr)`.  
   
-##  <a name="allocator_base__destroy"></a>  allocator_base::destroy  
+##  <a name="destroy"></a>  allocator_base::destroy  
  Chama um destruidor de objetos sem desalocar a memória na qual o objeto foi armazenado.  
   
 ```
@@ -273,14 +274,14 @@ void destroy(pointer ptr);
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é implementada para o alocador definido pelo usuário ao chamar `ptr->~Type()`.  
   
-##  <a name="allocator_base__difference_type"></a>  allocator_base::difference_type  
+##  <a name="difference_type"></a>  allocator_base::difference_type  
  Um tipo integral com sinal que pode representar a diferença entre os valores de ponteiros para o tipo de objeto gerenciado pelo alocador.  
   
 ```
 typedef std::ptrdiff_t difference_type;
 ```  
   
-##  <a name="allocator_base__max_size"></a>  allocator_base::max_size  
+##  <a name="max_size"></a>  allocator_base::max_size  
  Retorna o número de elementos do tipo `Type` que podem ser alocados por um objeto da classe allocator antes que a memória livre seja totalmente usada.  
   
 ```
@@ -293,28 +294,28 @@ size_type max_size() const;
 ### <a name="remarks"></a>Comentários  
  Essa função de membro é implementada para o alocador definido pelo usuário, retornando `(size_t)-1 / sizeof(Type)` se `0 < (size_t)-1 / sizeof(Type)`, caso contrário, `1`.  
   
-##  <a name="allocator_base__pointer"></a>  allocator_base::pointer  
+##  <a name="pointer"></a>  allocator_base::pointer  
  Um tipo que fornece um ponteiro para o tipo de objeto gerenciado pelo alocador.  
   
 ```
 typedef Type *pointer;
 ```  
   
-##  <a name="allocator_base__reference"></a>  allocator_base::reference  
+##  <a name="reference"></a>  allocator_base::reference  
  Um tipo que fornece uma referência ao tipo de objeto gerenciado pelo alocador.  
   
 ```
 typedef Type& reference;
 ```  
   
-##  <a name="allocator_base__size_type"></a>  allocator_base::size_type  
+##  <a name="size_type"></a>  allocator_base::size_type  
  Um tipo integral sem sinal que pode representar o comprimento de qualquer sequência que um objeto da classe de modelo `allocator_base` possa alocar.  
   
 ```
 typedef std::size_t size_type;
 ```  
   
-##  <a name="allocator_base__value_type"></a>  allocator_base::value_type  
+##  <a name="value_type"></a>  allocator_base::value_type  
  Um tipo que é gerenciado pelo alocador.  
   
 ```

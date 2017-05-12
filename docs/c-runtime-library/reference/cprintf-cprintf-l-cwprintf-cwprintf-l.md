@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ Formata e imprime no console. Versões mais seguras estão disponíveis; consult
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Cadeia de caracteres de controle de formato.  
   
- `argument`  
- Parâmetros opcionais.  
+ `argument_list`  
+ Parâmetros opcionais para a cadeia de caracteres de formato.  
   
  `locale`  
  A localidade a ser usada.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  O número de caracteres impressos.  
   
 ## <a name="remarks"></a>Comentários  
- Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função `_putch` (`_putwch` para `_cwprintf`) para gerar caracteres. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato tem a mesma forma e função que o parâmetro `format` da função [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário das funções `fprintf`, `printf` e `sprintf`, `_cprintf` nem `_cwprintf` movem caracteres de alimentação de linha em combinações CR-LF (retorno de carro-alimentação de linha) durante a geração.  
+ Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando a função `_putch` (`_putwch` para `_cwprintf`) para gerar caracteres. Cada argumento `argument_list` (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em `format`. O `format` argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário de `fprintf`, `printf`, e `sprintf` funções, nem `_cprintf` nem `_cwprintf` converte caracteres de alimentação de linha em carro (CR LF) de alimentação de linha de retorno de combinações durante a impressão.  
   
- Uma distinção importante é que `_cwprintf` exibe caracteres Unicode quando usado no Windows NT. Ao contrário de `_cprintf`, `_cwprintf` usa as configurações de localidade do console atual.  
+ Uma diferença importante é que `_cwprintf` exibe caracteres Unicode quando usados no Windows. Ao contrário de `_cprintf`, `_cwprintf` usa as configurações de localidade do console atual.  
   
  As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de que usam o parâmetro de localidade passado em vez da localidade atual.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)   
