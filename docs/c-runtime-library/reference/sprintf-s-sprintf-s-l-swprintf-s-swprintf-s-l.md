@@ -67,10 +67,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 59ad5845bfc665dd22ed22d14d498fd9b72cf110
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
@@ -138,7 +139,7 @@ int swprintf_s(
  Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- O número de caracteres gravados ou -1 se ocorreu um erro. Se `buffer` ou `format` é um ponteiro nulo, `sprintf_s` e `swprintf_s` retornam -1 e definem `errno` para `EINVAL`.  
+ O número de caracteres gravados, ou -1 se ocorreu um erro. Se `buffer` ou `format` é um ponteiro nulo, `sprintf_s` e `swprintf_s` retornam -1 e definem `errno` para `EINVAL`.  
   
  `sprintf_s` retorna o número de bytes armazenados em `buffer`, sem contar o caractere nulo de terminação. `swprintf_s` retorna o número de caracteres largos armazenados em `buffer`, sem contar o caractere largo nulo de terminação.  
   
@@ -230,9 +231,6 @@ int main( void )
 wrote 11 characters  
 wrote -1 characters  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

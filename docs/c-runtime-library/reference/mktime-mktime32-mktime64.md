@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1f738584d525da5b7787b2ba134e7c95ddc57683
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ced40f391f4a4085531d624acc45094e06e1f0a8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
@@ -86,9 +87,9 @@ __time64_t _mktime64(
  Ponteiro para a estrutura de hora, consulte [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_mktime32` retorna o horário do calendário especificado decodificado como valor do tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* fizer referência a uma data anterior à meia-noite de 1º de janeiro de 1970 ou se o horário do calendário não puder ser representado, `_mktime32` retornará -1 convertido para o tipo `time_t`. Ao usar `_mktime32` e se *timeptr* fizer referência a uma data posterior a 23:59:59 de 18 de janeiro de 2038, UTC (Tempo Universal Coordenado), ele retornará –1 convertido para o tipo `time_t`.  
+ `_mktime32` retorna o horário do calendário especificado decodificado como valor do tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* faz referência a uma data anterior a meia-noite de 1º de janeiro de 1970, ou se o tempo de calendário não pode ser representado, `_mktime32` retorna -1 convertido no tipo `time_t`. Ao usar `_mktime32` e se *timeptr* faz referência a uma data posterior a 23:59:59 18 de janeiro de 2038, Tempo Universal Coordenado (UTC), ele retornará -1 convertido no tipo `time_t`.  
   
- `_mktime64` retornará –1 convertido para o tipo `__time64_t` se *timeptr* fizer referência a uma data posterior a 23:59:59 de 31 de dezembro de 3000, UTC.  
+ `_mktime64`retornará -1 convertido no tipo `__time64_t` se *timeptr* faz referência a uma data posterior a 23:59:59, 31 de dezembro de 3000 a UTC.  
   
 ## <a name="remarks"></a>Comentários  
  As funções `mktime`, `_mktime32` e `_mktime64` convertem a estrutura de horário fornecida (possivelmente incompleta) apontada por *timeptr* em uma estrutura completamente definida com valores normalizados e a converte para um valor temporal de calendário `time_t`. O horário convertido tem a mesma codificação dos valores retornados pela função [time](../../c-runtime-library/reference/time-time32-time64.md). Os valores originais dos componentes `tm_wday` e `tm_yday` da estrutura *timeptr* são ignorados e os valores originais dos outros componentes não são restritos aos seus intervalos normais.  
@@ -164,9 +165,6 @@ Current time is Fri Apr 25 13:34:07 2003
   
 In 20 days the time will be Thu May 15 13:34:07 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.DateTimeOffset.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

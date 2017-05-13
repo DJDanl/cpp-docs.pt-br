@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7ab75505669403c32cbe9954afe688ce0f14a67d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
@@ -72,7 +73,7 @@ Define a classe de modelo [basic_ostream](../standard-library/basic-ostream-clas
   
 |||  
 |-|-|  
-|[operator<<](../standard-library/ostream-operators.md#operator_lt__lt_)|Grava vários tipos no fluxo.|  
+|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Grava vários tipos no fluxo.|  
   
 ### <a name="classes"></a>Classes  
   

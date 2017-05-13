@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9c22c290b97e8306961198870083bbf18cf770dd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1a08c836ed0048e27957662371d352b3316e6975
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
@@ -108,7 +109,7 @@ float wcstof_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `strtof` retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro — nesse caso, a função retorna + / –`HUGE_VALF`. O sinal de `HUGE_VALF` coincide com o sinal do valor que não pode ser representado. `strtof` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.  
+ `strtof`Retorna o valor do número de ponto flutuante, exceto quando a representação causaria um estouro, nesse caso, a função retorna + /-`HUGE_VALF`. O sinal de `HUGE_VALF` coincide com o sinal do valor que não pode ser representado. `strtof` retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.  
   
  `wcstof` retorna valores de maneira semelhante a `strtof`. Para ambas as funções, `errno` é definido como `ERANGE` se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
   
@@ -132,7 +133,7 @@ float wcstof_l(
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E`}[`sign`]`digits`]  
   
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (`+`) ou menos (`–`); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (`e` ou `E`) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.  
+ Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (`+`) ou menos (`-`); e `digits` é composto por um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (`e` ou `E`) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.  
  
  As versões UCRT dessas funções não dão suporte para a conversão do estilo Fortran (`d` ou `D`) letras de expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
   

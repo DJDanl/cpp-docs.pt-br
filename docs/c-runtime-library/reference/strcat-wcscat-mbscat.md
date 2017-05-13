@@ -1,71 +1,77 @@
 ---
-title: "strcat, wcscat, _mbscat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbscat"
-  - "wcscat"
-  - "strcat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbscat"
-  - "_ftcscat"
-  - "_tcscat"
-  - "strcat"
-  - "wcscat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "concatenating strings"
-  - "mbscat function"
-  - "_ftcscat function"
-  - "_tcscat function"
-  - "ftcscat function"
-  - "strcat function"
-  - "strings [C++], appending"
-  - "_mbscat function"
-  - "tcscat function"
-  - "strings [C++], concatenating"
-  - "appending strings"
-  - "wcscat function"
+title: strcat, wcscat, _mbscat | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbscat
+- wcscat
+- strcat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbscat
+- _ftcscat
+- _tcscat
+- strcat
+- wcscat
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- mbscat function
+- _ftcscat function
+- _tcscat function
+- ftcscat function
+- strcat function
+- strings [C++], appending
+- _mbscat function
+- tcscat function
+- strings [C++], concatenating
+- appending strings
+- wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 92bed9443eba34dc0298d28c53d34543ee52d935
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
+
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 Acrescenta uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
@@ -143,9 +149,6 @@ unsigned char *_mbscat(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 55f866e25e95779e2e1f890913fc9476cebdaa9c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 008ecd864959078951a3671a318abfa6e593bd49
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
@@ -115,7 +116,7 @@ int _wprintf_s_l(
   
  Para obter informações sobre `errno` e códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `printf_s` e`fprintf_s` têm comportamento idêntico, exceto que `printf_s` grava a saída para `stdout` em vez de um destino do tipo `FILE`. Para obter mais informações, consulte [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s`e `fprintf_s` tenham comportamento idêntico, exceto que `printf_s` grava a saída `stdout` em vez de um destino do tipo `FILE`. Para obter mais informações, consulte [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
  `wprintf_s` é uma versão de caractere largo de `printf_s`; `format` é uma cadeia de caracteres largos. `wprintf_s` e `printf_s` terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `printf_s` não dá suporte para a saída em um fluxo UNICODE.  
   
@@ -232,12 +233,6 @@ Real numbers:
 Address as:   0012FF78  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
--   [System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

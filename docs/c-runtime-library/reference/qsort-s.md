@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad52dc8be6bc9e975316892b2aad65e34a85a682
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="qsorts"></a>qsort_s
@@ -116,7 +117,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |qualquer|qualquer|qualquer|qualquer|<= 0|`EINVAL`|  
 |qualquer|qualquer|`NULL`|qualquer|qualquer|`EINVAL`|  
   
- `qsort_s` tem o mesmo comportamento que `qsort`, mas tem o parâmetro `context` e define `errno`. Ao passar um parâmetro `context`, as funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade do objeto ou outras informações não acessíveis por meio de um ponteiro de elemento. A adição do parâmetro `context` torna `qsort_s` mais seguro, pois `context` pode ser usado para evitar bugs de reentrância introduzidos ao usar variáveis estáticas para disponibilizar informações compartilhadas para a função `compare`.  
+ `qsort_s` tem o mesmo comportamento que `qsort`, mas tem o parâmetro `context` e define `errno`. Ao passar um parâmetro `context`, as funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade do objeto ou outras informações não acessíveis por meio de um ponteiro de elemento. A adição do `context` parâmetro torna `qsort_s` mais segura porque `context` pode ser usada para evitar erros de reentrância introduzidos com o uso de variáveis estáticas para disponibilizar informações compartilhadas para o `compare` função.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -129,7 +130,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
  **Bibliotecas:** todas as versões dos [Recursos da Biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o parâmetro `context` na função `qsort_s`. O parâmetro `context` facilita a execução de classificações thread-safe. Em vez de usar variáveis estáticas que devem ser sincronizadas para garantir o acesso thread-safe, passe um parâmetro `context` diferente em cada classificação. Neste exemplo, um objeto de localidade é usado como o parâmetro `context`.  
+ O exemplo a seguir demonstra como usar o `context` parâmetro o `qsort_s` função. O parâmetro `context` facilita a execução de classificações thread-safe. Em vez de usar variáveis estáticas que devem ser sincronizadas para garantir o acesso thread-safe, passe um parâmetro `context` diferente em cada classificação. Neste exemplo, um objeto de localidade é usado como o parâmetro `context`.  
   
 ```  
 // crt_qsort_s.cpp  
@@ -282,9 +283,6 @@ annehmen weiß weis weit weizen Zeit
 España Español espantado   
 table tablet tableux  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.Collections.ArrayList.Sort%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)   

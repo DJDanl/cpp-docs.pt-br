@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0945829735b9996bca32780bb34385d3e19ffa57
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6387edb05977f90fe9fb2419a1eccb47ac0b7b43
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="read"></a>_read
@@ -84,7 +85,7 @@ Lê dados de um arquivo.
  O número máximo de bytes.  
   
 ## <a name="return-value"></a>Valor de retorno  
- _**read** retorna o número de bytes lidos, que poderá ser menor que *count* se houver menos bytes de *count* restantes no arquivo ou se o arquivo foi aberto no modo de texto, quando então o par CR-LF (retorno de carro‑alimentação de linha) será substituído por um caractere único de avanço de linha. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.  
+ _**ler** retorna o número de bytes lidos, que pode ser menor que *contagem* se houver menos de *contagem* bytes restantes no arquivo ou se o arquivo foi aberto no modo de texto, caso em que cada linha de retorno de carro feed par (CR LF) é substituído por um caractere de avanço de linha única. Apenas o caractere de avanço de linha único é contado no valor retornado. A substituição não afeta o ponteiro do arquivo.  
   
  Se a função tentar ler o final do arquivo, ela retornará 0. Se `fd` for inválido, arquivo não será aberto para leitura ou o arquivo será bloqueado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará um valor -1 e definirá `errno` como `EBADF`.  
   
@@ -93,7 +94,7 @@ Lê dados de um arquivo.
  Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
- A função `_read` lê um máximo de *count * bytes no *buffer* do arquivo associado a `fd`. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.  
+ A função `_read` lê um máximo de *count*  bytes no *buffer* do arquivo associado a `fd`. A operação de leitura começa na posição atual do ponteiro de arquivo associado ao arquivo em questão. Após a operação de leitura, o ponteiro do arquivo aponta para o próximo caractere não lido.  
   
  Se o arquivo foi aberto no modo de texto, a leitura termina quando `_read` encontrar um caractere CTRL+Z, que é tratado como um indicador de fim de arquivo. Use [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) para limpar o indicador de fim do arquivo.  
   

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 93065406bd41889338f79ee4df5e8b57ef479c25
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f35701cf1ef644b140cae01ef2d8707cfb387a68
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
@@ -113,7 +114,7 @@ errno_t _ultow_s(
  Zero se a função for bem-sucedida ou um código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_ultoa_s` converte os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. O argumento `radix` especifica a base do `value`, que deve estar no intervalo de 2 a 36. `_ultow_s` é uma versão de caractere largo de `_ultoa_s`; o segundo argumento de `_ultow_s` é uma cadeia de caracteres largos.  
+ A função `_ultoa_s` converte os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. O `radix` argumento especifica a base do `value`, que deve estar no intervalo de 2 a 36. `_ultow_s` é uma versão de caractere largo de `_ultoa_s`; o segundo argumento de `_ultow_s` é uma cadeia de caracteres largos.  
   
  Se `str` for um `NULL` ponteiro ou se `sizeOfstr` for menor que ou igual a zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL` ou se `value` ou `str` estiverem fora do intervalo de um inteiro longo, essas funções retornarão -1 e definirão `errno` como `ERANGE`.  
   
@@ -133,9 +134,6 @@ errno_t _ultow_s(
 |`_ultow_s`|\<stdlib.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

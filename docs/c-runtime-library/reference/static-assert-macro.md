@@ -45,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 334cff75a340ab47f3ed894c6758656387da7f08
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 265796cdebbed1c0a067c44bbe6b71077be44a2b
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="staticassert-macro"></a>Macro _STATIC_ASSERT
@@ -95,9 +96,6 @@ int main()
 |Macro|Cabeçalho necessário|  
 |-----------|---------------------|  
 |`_STATIC_ASSERT`|\<crtdbg.h>|  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

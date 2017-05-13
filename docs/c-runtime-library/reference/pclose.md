@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  Valor retornado da chamada anterior para `_popen`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o status de saída do processador de comando de término ou -1 se ocorrer um erro. O formato do valor retornado é o mesmo que para `_cwait`, exceto que os bytes inferiores e superiores são trocados. Se o fluxo for **Nulo**, `_pclose` define `errno` para `EINVAL` e retorna -1.  
+ Retorna o status de saída do processador de comando de encerramento ou -1 se ocorrer um erro. O formato do valor retornado é o mesmo que para `_cwait`, exceto que os bytes inferiores e superiores são trocados. Se o fluxo for **Nulo**, `_pclose` define `errno` para `EINVAL` e retorna -1.  
   
  Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>Libraries  
  Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

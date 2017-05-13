@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13fd6d727d93aad16e2798758c51e68f69b1524f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e782f6168d48ecc1d24b90f2030909de32c9ee26
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
@@ -144,9 +145,6 @@ int _towupper_l(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo em [Funções to](../../c-runtime-library/to-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::ToUpper](https://msdn.microsoft.com/en-us/library/system.char.toupper.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas is, isw](../../c-runtime-library/is-isw-routines.md)   

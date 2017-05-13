@@ -1,77 +1,83 @@
 ---
-title: "strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsncpy_s_l"
-  - "wcsncpy_s"
-  - "_strncpy_s_l"
-  - "strncpy_s"
-  - "_mbsncpy_s"
-  - "_wcsncpy_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsncpy_s"
-  - "_wcsncpy_s_l"
-  - "strncpy_s"
-  - "_strncpy_s_l"
-  - "wcsncpy_s"
-  - "_tcsncpy_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wcsncpy_s_l function"
-  - "_mbsnbcpy_s function"
-  - "_tcsncpy_s_l function"
-  - "mbsncpy_s function"
-  - "strncpy_s_l function"
-  - "_strncpy_s_l function"
-  - "strncpy_s function"
-  - "mbsncpy_s_l function"
-  - "wcsncpy_s function"
-  - "copying strings"
-  - "strings [C++], copying"
-  - "_mbsnbcpy_s_l function"
-  - "_tcsncpy_s function"
-  - "wcsncpy_s_l function"
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsncpy_s_l
+- wcsncpy_s
+- _strncpy_s_l
+- strncpy_s
+- _mbsncpy_s
+- _wcsncpy_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsncpy_s
+- _wcsncpy_s_l
+- strncpy_s
+- _strncpy_s_l
+- wcsncpy_s
+- _tcsncpy_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsncpy_s_l function
+- _mbsnbcpy_s function
+- _tcsncpy_s_l function
+- mbsncpy_s function
+- strncpy_s_l function
+- _strncpy_s_l function
+- strncpy_s function
+- mbsncpy_s_l function
+- wcsncpy_s function
+- copying strings
+- strings [C++], copying
+- _mbsnbcpy_s_l function
+- _tcsncpy_s function
+- wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
 caps.latest.revision: 47
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 Copia caracteres de uma cadeia de caracteres para outra.  Essas versões do [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -203,7 +209,7 @@ errno_t _mbsncpy_s_l(
   
  significa que, pedimos para `strncpy_s` copiar cinco caracteres em um buffer com cinco bytes de comprimento; isso não deixaria nenhum espaço para o terminador nulo, portanto, `strncpy_s` zera a cadeia de caracteres e chama o manipulador de parâmetro inválido.  
   
- Se for necessário o comportamento de truncamento, use `_TRUNCATE` ou (`size` – 1):  
+ Se for necessário o comportamento de truncamento, use `_TRUNCATE` ou (`size` - 1):  
   
  `strncpy_s(dst, 5, "a long string", _TRUNCATE);`  
   
@@ -215,7 +221,7 @@ errno_t _mbsncpy_s_l(
   
  Se `strDest` ou `strSource` for `NULL` ou `numberOfElements` é 0, o manipulador de parâmetro inválido é invocado. Se a execução puder continuar, a função retornará `EINVAL` e definirá `errno` como `EINVAL`.  
   
- `wcsncpy_s` e `_mbsncpy_s` são versões de caracteres largos e de caracteres multibyte de `strncpy_s`. Os argumentos e o valor retornado de `wcsncpy_s` e `mbsncpy_s` variam de acordo. Essas seis funções se comportam de forma idêntica.  
+ `wcsncpy_s` e `_mbsncpy_s` são versões de caracteres largos e de caracteres multibyte de `strncpy_s`. O valor de retorno e argumentos `wcsncpy_s` e `mbsncpy_s` variam de acordo. Essas seis funções se comportam de forma idêntica.  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -413,9 +419,6 @@ After strncpy into middle of string:
 After strncpy_s (with null-termination):  
    'mice'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

@@ -6,13 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sstream/std::istringstream
+- sstream/std::ostringstream
+- sstream/std::stringbuf
+- sstream/std::stringstream
+- sstream/std::wistringstream
+- sstream/std::wostringstream
+- sstream/std::wstringbuf
+- sstream/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 caps.latest.revision: 9
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 19af112017c3f6e9700a87f1d482fc4f319fb235
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 62a679bc28854c9f8744f206a938115ca6e7c1d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltsstreamgt-typedefs"></a>Typedefs &lt;sstream&gt;
@@ -30,7 +40,7 @@ typedef basic_istringstream<char> istringstream;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_istringstream](../standard-library/basic-istringstream-class.md), especializado para elementos do tipo `char`*.*  
+ O tipo é um sinônimo da classe de modelo [basic_istringstream](../standard-library/basic-istringstream-class.md), especializado para elementos do tipo `char`.  
   
 ##  <a name="ostringstream"></a>  ostringstream  
  Cria um tipo `basic_ostringstream` especializadas em um parâmetro do modelo `char`.  
@@ -40,7 +50,7 @@ typedef basic_ostringstream<char> ostringstream;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializado para elementos do tipo `char`*.*  
+ O tipo é um sinônimo da classe de modelo [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializado para elementos do tipo `char`.  
   
 ##  <a name="stringbuf"></a>  stringbuf  
  Cria um tipo `basic_stringbuf` especializadas em um parâmetro do modelo `char`.  
@@ -50,7 +60,7 @@ typedef basic_stringbuf<char> stringbuf;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializado para elementos do tipo `char`*.*  
+ O tipo é um sinônimo da classe de modelo [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializado para elementos do tipo `char`.  
   
 ##  <a name="stringstream"></a>  stringstream  
  Cria um tipo `basic_stringstream` especializadas em um parâmetro do modelo `char`.  
@@ -60,7 +70,7 @@ typedef basic_stringstream<char> stringstream;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_stringstream](../standard-library/basic-stringstream-class.md), especializado para elementos do tipo `char`*.*  
+ O tipo é um sinônimo da classe de modelo [basic_stringstream](../standard-library/basic-stringstream-class.md), especializado para elementos do tipo `char`.  
   
 ##  <a name="wistringstream"></a>  wistringstream  
  Cria um tipo `basic_istringstream` especializadas em um parâmetro do modelo `wchar_t`.  

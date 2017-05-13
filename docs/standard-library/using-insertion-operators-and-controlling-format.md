@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usando operadores de inserção e controlando o formato
@@ -50,7 +51,7 @@ Este tópico mostra como controlar o formato e a criação de operadores de inse
   
 - [Base](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a> Largura da Saída  
+##  <a name="vclrfoutputwidthanchor3"></a> Largura da Saída  
  Para alinhar a saída, especifique a largura da saída para cada item colocando o manipulador `setw` no fluxo ou chamando a função membro **largura**. Este exemplo alinha à direita os valores em uma coluna com pelo menor 10 caracteres de largura:  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  Nem `setw` nem **largura** trunca os valores. Se a saída formatada exceder a largura, o valor inteiro será impresso, sujeito a configuração de precisão do fluxo. `setw` e **largura** afetam somente o campo a seguir. A largura do campo será revertida para seu comportamento padrão (a largura necessária) após a impressão de um campo. No entanto, as outras opções de formato de fluxo permanecerão em vigor até serem alteradas.  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a> Alinhamento  
+##  <a name="vclrfalignmentanchor4"></a> Alinhamento  
  Fluxos de saída padrão para o texto alinhado à direita. Para alinhar os nomes do exemplo anterior à esquerda e os números à direita, substitua o loop **for** da seguinte maneira:  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  O sinalizador de alinhamento à esquerda é definido usando o manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) com o enumerador `left`. Esse enumerador é definido na classe [ios](../standard-library/basic-ios-class.md), então, sua referência deve incluir o prefixo **ios::**. O manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desativa o sinalizador de alinhamento à esquerda. Ao contrário de **largura** e `setw`, o efeito de `setiosflags` e `resetiosflags` é permanente.  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a> Precisão  
+##  <a name="vclrfprecisionanchor5"></a> Precisão  
  O valor padrão para a precisão de ponto flutuante é seis. Por exemplo, o número 3466.9768 será impresso como 3466.98. Para alterar a maneira pela qual esse valor é impresso, use o manipulador [setprecision](../standard-library/iomanip-functions.md#setprecision). O manipulador tem dois sinalizadores: [fixo](../standard-library/ios-functions.md#fixed) e [científico](../standard-library/ios-functions.md#scientific). Se for definido como [fixo](../standard-library/ios-functions.md#fixed), o número será impresso como 3466.976800. Se for definido como **científico**, o número será impresso como 3.4669773+003.  
   
  Para exibir os números de ponto flutuante mostrados em [Alinhamento](#vclrfalignmentanchor4) com um dígito significativo, substitua o loop **for** da seguinte maneira:  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  Novamente, o programa imprimirá um dígito após a vírgula decimal. Se **ios::fixed** ou **ios::scientific** estiver definido, o valor de precisão determinará o número de dígitos após a vírgula decimal. Se nenhum sinalizador for definido, o valor de precisão determinará o número total de dígitos significativos. O manipulador `resetiosflags` limpará esses sinalizadores.  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a> Base  
+##  <a name="vclrfradixanchor6"></a> Base  
  Os manipuladores **dec**, **oct** e **hex** definem a base padrão para entrada e saída. Por exemplo, se o manipulador **hex** for inserido no fluxo de saída, o objeto moverá corretamente a representação de inteiros de dados internos para um formato de saída hexadecimal. Os números serão exibidos com dígitos de a-f, em minúsculas se o sinalizador [maiúsculas](../standard-library/ios-functions.md#uppercase) estiver limpo (padrão); caso contrário, eles serão exibidos em maiúsculas. A base padrão é **dec** (decimal).  
   
 ## <a name="quoted-strings-c14"></a>Cadeias de caracteres entre aspas (C++14)  
@@ -229,7 +230,7 @@ std::cout <<extracted;   //   This
   
  Esse comportamento pode ser corrigido manualmente, mas para tornar o ciclo completo de cadeia de caracteres mais conveniente, C++14 adiciona o manipulador de fluxo `std::quoted` a `<iomanip>`. Após a inserção, `quoted()` envolve a cadeia de caracteres com um delimitador (aspas duplas ' " ', por padrão) e, após a extração, manipula o fluxo para extrair todos os caracteres até encontrar o delimitador final. Quaisquer aspas inseridas serão ignoradas com um caractere de escape ('\\\\' por padrão).  
   
- Os delimitadores estão presentes apenas no objeto de fluxo; eles não estão presentes na cadeia de caracteres extraída, mas estão presentes na cadeia de caracteres retornada por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)().  
+ Os delimitadores estão presentes apenas no objeto de fluxo; eles não estão presentes na cadeia de caracteres extraída, mas estão presentes na cadeia de caracteres retornada por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
   
  O comportamento de espaço em branco das operações de inserção e extração é independe de como uma cadeia de caracteres é representada no código, assim, o operador entre aspas será útil mesmo se a cadeia de caracteres de entrada for uma cadeia de caracteres bruta, literal ou regular. A cadeia de caracteres de entrada, seja qual for seu formato, pode ter aspas incorporadas, quebras de linha, guias e assim por diante e todos esses serão preservados pelo manipulador quoted().  
   

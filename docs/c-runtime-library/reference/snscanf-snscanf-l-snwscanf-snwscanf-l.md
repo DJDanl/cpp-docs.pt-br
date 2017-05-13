@@ -1,80 +1,86 @@
 ---
-title: "_snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snwscanf"
-  - "_snscanf_l"
-  - "_snscanf"
-  - "_snwscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snscanf"
-  - "_snscanf_l"
-  - "_snwscanf"
-  - "snscanf_l"
-  - "snscanf"
-  - "_sntscanf_l"
-  - "_sntscanf"
-  - "_snwscanf_l"
-  - "sntscanf_l"
-  - "sntscanf"
-  - "snwscanf"
-  - "snwscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "snscanf_l function"
-  - "snwscanf function"
-  - "_sntscanf_l function"
-  - "sntscanf function"
-  - "_snwscanf_l function"
-  - "_sntscanf function"
-  - "_snscanf_l function"
-  - "sntscanf_l function"
-  - "strings [C++], reading data from"
-  - "snscanf function"
-  - "snwscanf_l function"
-  - "_snwscanf function"
-  - "reading data, strings"
-  - "strings [C++], reading"
-  - "_snscanf function"
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snwscanf
+- _snscanf_l
+- _snscanf
+- _snwscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snscanf
+- _snscanf_l
+- _snwscanf
+- snscanf_l
+- snscanf
+- _sntscanf_l
+- _sntscanf
+- _snwscanf_l
+- sntscanf_l
+- sntscanf
+- snwscanf
+- snwscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- snscanf_l function
+- snwscanf function
+- _sntscanf_l function
+- sntscanf function
+- _snwscanf_l function
+- _sntscanf function
+- _snscanf_l function
+- sntscanf_l function
+- strings [C++], reading data from
+- snscanf function
+- snwscanf_l function
+- _snwscanf function
+- reading data, strings
+- strings [C++], reading
+- _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a9bc5007e94aad8cd8ed65f16ba3f0aaf73faabc
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
+
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 Lê dados formatados de um comprimento especificado de uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](../../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).  
@@ -186,9 +192,6 @@ int main( )
 _snscanf converted 2 fields: 15 and 12.000000  
 _snwscanf converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md)

@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>Classe weak_ptr
@@ -89,7 +90,7 @@ public:
 ## <a name="remarks"></a>Comentários  
  A classe de modelo descreve um objeto que aponta para um recurso gerenciado por um ou mais objetos da [Classe shared_ptr](../standard-library/shared-ptr-class.md). Os objetos `weak_ptr` que apontam para um recurso não afetam a contagem de referência do recurso. Dessa forma, quando o último objeto `shared_ptr` que gerencia esse recurso for destruído, os recursos serão liberados, mesmo se houver objetos `weak_ptr` apontando para esse recurso. Isso é essencial para evitar ciclos em estruturas de dados.  
   
- O objeto `weak_ptr` aponta para um recurso se ele foi construído com base em um objeto `shared_ptr` que tem esse recurso, se ele foi construído com base em um objeto `weak_ptr` que aponta para esse recurso ou se esse recurso foi atribuído a ele com [operator=](#weak_ptr__operator_eq). Um objeto `weak_ptr` não fornece acesso direto ao recurso para o qual ele aponta. O código que precisa usar o recurso faz isso por meio de um objeto `shared_ptr` que tem esse recurso, criado chamando a função membro [lock](#weak_ptr__lock). Um objeto `weak_ptr` expirou quando o recurso para o qual ele aponta foi liberado porque todos os objetos `shared_ptr` que têm o recurso foram destruídos. Chamar `lock` em um objeto `weak_ptr` que expirou cria um objeto shared_ptr vazio.  
+ O objeto `weak_ptr` aponta para um recurso se ele foi construído com base em um objeto `shared_ptr` que tem esse recurso, se ele foi construído com base em um objeto `weak_ptr` que aponta para esse recurso ou se esse recurso foi atribuído a ele com [operator=](#op_eq). Um objeto `weak_ptr` não fornece acesso direto ao recurso para o qual ele aponta. O código que precisa usar o recurso faz isso por meio de um objeto `shared_ptr` que tem esse recurso, criado chamando a função membro [lock](#lock). Um objeto `weak_ptr` expirou quando o recurso para o qual ele aponta foi liberado porque todos os objetos `shared_ptr` que têm o recurso foram destruídos. Chamar `lock` em um objeto `weak_ptr` que expirou cria um objeto shared_ptr vazio.  
   
  Um objeto weak_ptr vazio não aponta para nenhum recurso e não tem nenhum bloco de controle. Sua função membro `lock` retorna um objeto shared_ptr vazio.  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|Constrói um `weak_ptr`.|  
+|[weak_ptr](#weak_ptr)|Constrói um `weak_ptr`.|  
   
 ### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|O tipo do elemento.|  
-|[expired](#weak_ptr__expired)|Testa se a propriedade expirou.|  
-|[lock](#weak_ptr__lock)|Obtém a propriedade exclusiva de um recurso.|  
-|[owner_before](#weak_ptr__owner_before)|Retorna `true` se esse `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.|  
-|[reset](#weak_ptr__reset)|Libera o recurso possuído.|  
-|[swap](#weak_ptr__swap)|Troca dois objetos `weak_ptr`.|  
-|[use_count](#weak_ptr__use_count)|Conta o número de objetos `shared_ptr` designados.|  
+|[element_type](#element_type)|O tipo do elemento.|  
+|[expired](#expired)|Testa se a propriedade expirou.|  
+|[lock](#lock)|Obtém a propriedade exclusiva de um recurso.|  
+|[owner_before](#owner_before)|Retorna `true` se esse `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.|  
+|[reset](#reset)|Libera o recurso possuído.|  
+|[swap](#swap)|Troca dois objetos `weak_ptr`.|  
+|[use_count](#use_count)|Conta o número de objetos `shared_ptr` designados.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator=](#weak_ptr__operator_eq)|Substitui o recurso possuído.|  
+|[operator=](#op_eq)|Substitui o recurso possuído.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  O tipo do elemento.  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a> expired  
+##  <a name="expired"></a> expired  
  Testa se a propriedade expirou.  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a>  lock  
+##  <a name="lock"></a>  lock  
  Obtém a propriedade exclusiva de um recurso.  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a>  operator=  
+##  <a name="op_eq"></a>  operator=  
  Substitui o recurso possuído.  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a> owner_before  
+##  <a name="owner_before"></a> owner_before  
  Retorna `true` se esse `weak_ptr` é ordenado antes (ou menor que) o ponteiro fornecido.  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Comentários  
  A função membro de modelo retornará `true` se `*this` for `ordered before``ptr`.  
   
-##  <a name="weak_ptr__reset"></a> reset  
+##  <a name="reset"></a> reset  
  Libera o recurso possuído.  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Troca dois objetos `weak_ptr`.  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a> use_count  
+##  <a name="use_count"></a> use_count  
  Conta o número de objetos `shared_ptr` designados.  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a> weak_ptr  
+##  <a name="weak_ptr"></a> weak_ptr  
  Constrói um `weak_ptr`.  
   
 ```  

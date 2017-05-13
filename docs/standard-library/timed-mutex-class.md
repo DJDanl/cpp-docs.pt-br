@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::timed_mutex
+- mutex/std::timed_mutex::timed_mutex
+- mutex/std::timed_mutex::lock
+- mutex/std::timed_mutex::try_lock
+- mutex/std::timed_mutex::try_lock_for
+- mutex/std::timed_mutex::try_lock_until
+- mutex/std::timed_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72861fe588cf038743d5c44f22a420e690f63993
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 40622e83235c4df32ec9afd25905ffdde2b97be7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
@@ -52,25 +59,25 @@ class timed_mutex;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor timed_mutex::timed_mutex](#timed_mutex__timed_mutex_constructor)|Constrói um objeto `timed_mutex` que não está bloqueado.|  
-|[Destruidor timed_mutex::~timed_mutex](#timed_mutex___dtortimed_mutex_destructor)|Libera todos os recursos usados pelo objeto `timed_mutex`.|  
+|[timed_mutex](#timed_mutex)|Constrói um objeto `timed_mutex` que não está bloqueado.|  
+|[Destruidor timed_mutex::~timed_mutex](#dtortimed_mutex_destructor)|Libera todos os recursos usados pelo objeto `timed_mutex`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método timed_mutex::lock](#timed_mutex__lock_method)|Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.|  
-|[Método timed_mutex::try_lock](#timed_mutex__try_lock_method)|Tenta obter a propriedade do `mutex` sem o bloqueio.|  
-|[Método timed_mutex::try_lock_for](#timed_mutex__try_lock_for_method)|Tenta obter a propriedade do `mutex` por um intervalo de tempo especificado.|  
-|[Método timed_mutex::try_lock_until](#timed_mutex__try_lock_until_method)|Tenta obter a propriedade do `mutex` até um tempo especificado.|  
-|[Método timed_mutex::unlock](#timed_mutex__unlock_method)|Libera a propriedade do `mutex`.|  
+|[lock](#lock)|Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.|  
+|[try_lock](#try_lock)|Tenta obter a propriedade do `mutex` sem o bloqueio.|  
+|[try_lock_for](#try_lock_for)|Tenta obter a propriedade do `mutex` por um intervalo de tempo especificado.|  
+|[try_lock_until](#try_lock_until)|Tenta obter a propriedade do `mutex` até um tempo especificado.|  
+|[unlock](#unlock)|Libera a propriedade do `mutex`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** mutex  
+ **Cabeçalho:** \<mutex >  
   
  **Namespace:** std  
   
-##  <a name="timed_mutex__lock_method"></a>  Método timed_mutex::lock  
+##  <a name="lock"></a>timed_mutex:: Lock
  Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.  
   
 ```cpp  
@@ -80,14 +87,14 @@ void lock();
 ### <a name="remarks"></a>Comentários  
  Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
   
-##  <a name="timed_mutex__timed_mutex_constructor"></a>  Construtor timed_mutex::timed_mutex  
+##  <a name="timed_mutex"></a>  Construtor timed_mutex::timed_mutex  
  Constrói um objeto `timed_mutex` que não está bloqueado.  
   
 ```cpp  
 timed_mutex();
 ```  
   
-##  <a name="timed_mutex___dtortimed_mutex_destructor"></a>  Destruidor timed_mutex::~timed_mutex  
+##  <a name="dtortimed_mutex_destructor"></a>  Destruidor timed_mutex::~timed_mutex  
  Libera todos os recursos usados pelo objeto `mutex`.  
   
 ```cpp  
@@ -97,7 +104,7 @@ timed_mutex();
 ### <a name="remarks"></a>Comentários  
  Se o objeto estiver bloqueado quando o destruidor for executado, o comportamento será indefinido.  
   
-##  <a name="timed_mutex__try_lock_method"></a>  Método timed_mutex::try_lock  
+##  <a name="try_lock"></a>timed_mutex:: try_lock
  Tenta obter a propriedade do `mutex` sem o bloqueio.  
   
 ```cpp  
@@ -110,7 +117,7 @@ bool try_lock();
 ### <a name="remarks"></a>Comentários  
  Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
   
-##  <a name="timed_mutex__try_lock_for_method"></a>  Método timed_mutex::try_lock_for  
+##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
  Tenta obter a propriedade do `mutex` sem o bloqueio.  
   
 ```cpp  
@@ -128,7 +135,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>Comentários  
  Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
   
-##  <a name="timed_mutex__try_lock_until_method"></a>  Método timed_mutex::try_lock_until  
+##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
  Tenta obter a propriedade do `mutex` sem o bloqueio.  
   
 ```cpp  
@@ -148,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>Comentários  
  Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
   
-##  <a name="timed_mutex__unlock_method"></a>  Método timed_mutex::unlock  
+##  <a name="unlock"></a>timed_mutex:: Unlock
  Libera a propriedade do `mutex`.  
   
 ```cpp  

@@ -55,14 +55,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
-Converta um caractere largo caractere multibyte correspondente. Estão disponíveis versões mais seguras dessas funções; consulte [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
+Converta um caractere largo em caractere multibyte correspondente. Estão disponíveis versões mais seguras dessas funções; consulte [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +87,7 @@ int _wctomb_l(
  Um caractere largo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `wctomb` converter o caractere largo em um caractere multibyte, ele retornará o número de bytes (que nunca será maior que `MB_CUR_MAX`) no caractere largo. Se `wchar` for o caractere nulo de caractere largo (L'\0'), `wctomb` retornará 1. Se o ponteiro de destino `mbchar` for NULL, `wctomb` retornará 0. Se a conversão não for possível na localidade atual, `wctomb` retornará –1 e `errno` será definido como `EILSEQ`.  
+ Se `wctomb` converter o caractere largo em um caractere multibyte, ele retornará o número de bytes (que nunca será maior que `MB_CUR_MAX`) no caractere largo. Se `wchar` for o caractere nulo de caractere largo (L'\0'), `wctomb` retornará 1. Se o ponteiro de destino `mbchar` for NULL, `wctomb` retornará 0. Se a conversão não for possível na localidade atual, `wctomb` retorna -1 e `errno` é definido como `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `wctomb` converte seu argumento `wchar` no caractere multibyte correspondente e armazena o resultado em `mbchar`. Você pode chamar a função de qualquer ponto, em qualquer programa. `wctomb` usa a localidade atual de qualquer comportamento dependente da localidade; `_wctomb_l` é idêntico a `wctomb`, exceto que, em vez disso, ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
@@ -129,9 +130,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ac1ae540c5ff87555b549d6526a0df6b1d22406
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 71d2dd481c2c14303c71ec461ddcb5c041859531
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="syncperthread-class"></a>Classe sync_per_thread
@@ -67,16 +68,16 @@ class sync_per_thread
   
 |||  
 |-|-|  
-|[allocate](#sync_per_thread__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#sync_per_thread__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
-|[equals](#sync_per_thread__equals)|Compara a igualdade de dois caches.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[equals](#equals)|Compara a igualdade de dois caches.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="sync_per_thread__allocate"></a>  sync_per_thread::allocate  
+##  <a name="allocate"></a>  sync_per_thread::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -92,7 +93,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro retorna o resultado de uma chamada a `cache::allocate(count)` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.  
   
-##  <a name="sync_per_thread__deallocate"></a>  sync_per_thread::deallocate  
+##  <a name="deallocate"></a>  sync_per_thread::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -109,7 +110,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro chama `deallocate` no objeto de cache que pertence ao thread atual. Se nenhum objeto de cache tiver sido alocado para o thread atual, ele primeiro alocará um.  
   
-##  <a name="sync_per_thread__equals"></a>  sync_per_thread::equals  
+##  <a name="equals"></a>  sync_per_thread::equals  
  Compara a igualdade de dois caches.  
   
 ```

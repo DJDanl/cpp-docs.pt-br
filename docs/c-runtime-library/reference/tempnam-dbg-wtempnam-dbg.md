@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
@@ -108,7 +109,7 @@ wchar_t *_wtempnam_dbg(
 >  `free` (ou `free_dbg`) não precisa ser chamado para ponteiros alocados por `_tempnam_dbg` e `_wtempnam_dbg`.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_tempnam_dbg` e `_wtempnam_dbg` são idênticas a `_tempnam` e `_wtempnam`, com exceção de que, quando `_DEBUG` for definido, essas funções usarão a versão de depuração de `malloc` e `_malloc_dbg` para alocar memória se `NULL` for passado como o primeiro parâmetro. Para obter mais informações, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ O `_tempnam_dbg` e `_wtempnam_dbg` funções são idênticas aos `_tempnam` e `_wtempnam` exceto que, quando `_DEBUG` é definida, essas funções usam a versão de depuração `malloc` e `_malloc_dbg`para alocar memória se `NULL` é passado como o primeiro parâmetro. Para obter mais informações, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, defina o sinalizador `_CRTDBG_MAP_ALLOC`. Quando `_CRTDBG_MAP_ALLOC` é definido, as chamadas a `_tempnam` e `_wtempnam` são remapeadas para `_tempnam_dbg` e `_wtempnam_dbg`, respectivamente, com o `blockType` definido como `_NORMAL_BLOCK`. Assim, não é necessário chamar essas funções explicitamente, a menos que você queira marcar os blocos de heap como `_CLIENT_BLOCK`. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -125,9 +126,6 @@ wchar_t *_wtempnam_dbg(
 |`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   

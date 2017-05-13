@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3572e73b569abfff0a32fe2cd7ea0f4f5c265582
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="timeputbyname-class"></a>Classe time_put_byname
@@ -72,7 +73,7 @@ protected:
  Uma contagem de referência inicial.  
   
 ## <a name="remarks"></a>Comentários  
- Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#locale__name) `_Locname`. Cada construtor inicializa seu objeto base com [time_put](../standard-library/time-put-class.md#time_put__time_put)\<CharType, OutputIterator>( `_Refs`).  
+ Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#name) `_Locname`. Cada construtor inicializa seu objeto base com [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  

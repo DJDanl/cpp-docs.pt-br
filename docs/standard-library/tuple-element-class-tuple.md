@@ -1,40 +1,46 @@
 ---
-title: "Classe tuple_element | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tuple_element"
-  - "std::tuple_element"
-  - "utility/std::tuple_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tuple_element Class"
+title: Classe tuple_element | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple_element
+- std::tuple_element
+- utility/std::tuple_element
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple_element Class
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/07/2017
+
 ---
 # <a name="tupleelement-class"></a>Classe tuple_element
 Encapsula um elemento `tuple`. Elementos `array` e `pair` de encapsulamento de especializações.  
@@ -103,7 +109,7 @@ A especialização de classe de modelo para matrizes fornece uma interface para 
   
 As especializações de modelo para os tipos `pair` fornecem um único membro typedef, `type`, que é um sinônimo para o tipo de elemento na posição especificada no par, com qualquer qualificações constantes e/ou voláteis preservadas. O typedef `tuple_element_t` é um alias conveniente para `tuple_element<N, pair<T1, T2>>::type`.  
   
-Use a função get [&lt;utilitário&gt;](../standard-library/utility-functions.md#get) para retornar o elemento a uma posição especificada ou (no C++14/Visual Studio 2015) de um tipo especificado. 
+Use o [obter função &lt;utilitário&gt; ](../standard-library/utility-functions.md#get) para retornar o elemento em uma posição especificada, ou de um tipo especificado. 
   
 ## <a name="example"></a>Exemplo  
   
@@ -197,3 +203,4 @@ int main() {
   
 ## <a name="see-also"></a>Consulte também  
 [tuple ](../standard-library/tuple-class.md)
+

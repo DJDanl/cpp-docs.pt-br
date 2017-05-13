@@ -1,65 +1,71 @@
 ---
-title: "strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strftime"
-  - "_wcsftime_l"
-  - "_strftime_l"
-  - "wcsftime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsftime"
-  - "strftime"
-  - "wcsftime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strftime_l function"
-  - "strftime function"
-  - "tcsftime function"
-  - "_wcsftime_l function"
-  - "wcsftime function"
-  - "_tcsftime function"
-  - "time strings"
+title: strftime, wcsftime, _strftime_l, _wcsftime_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strftime
+- _wcsftime_l
+- _strftime_l
+- wcsftime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsftime
+- strftime
+- wcsftime
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strftime_l function
+- strftime function
+- tcsftime function
+- _wcsftime_l function
+- wcsftime function
+- _tcsftime function
+- time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Formate uma cadeia de caracteres de hora.  
@@ -119,12 +125,12 @@ estrutura de dados  `tm`.
  O número de caracteres em `strDest` é igual ao número de caracteres literais em `format`, bem como quaisquer caracteres que possam ser adicionados ao `format` por meio de códigos de formatação. A terminação nula de uma cadeia de caracteres não será contada no valor retornado.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `strftime` e `wcsftime` formatam o valor temporal `tm` em `timeptr`, de acordo com argumento `format` fornecido e armazenam o resultado no buffer `strDest` *.* No máximo, caracteres `maxsize` são colocados na cadeia de caracteres. Para obter uma descrição dos campos na estrutura `timeptr`, consulte [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` é o equivalente de caractere largo de `strftime`; seu argumento de cadeia de caracteres aponta para uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
+ O `strftime` e `wcsftime` formato de funções de `tm` tempo valor em `timeptr` conforme fornecido `format` argumento e o resultado no buffer de armazenamento `strDest`. No máximo, caracteres `maxsize` são colocados na cadeia de caracteres. Para obter uma descrição dos campos na estrutura `timeptr`, consulte [asctime](../../c-runtime-library/reference/asctime-wasctime.md). `wcsftime` é o equivalente de caractere largo de `strftime`; seu argumento de cadeia de caracteres aponta para uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
   
 > [!NOTE]
->  Nas versões anteriores do Visual C++ 2005, a documentação descrevia o parâmetro `format` de `wcsftime` como tendo o tipo de dados `const wchar_t *`, mas a implementação real do tipo de dados de `format` foi de `const char *`. A implementação do tipo de dados `format` foi atualizada para refletir a documentação atual e anterior, ou seja, `const wchar_t *`.  
+>  Nas versões anteriores do Visual C++ 2005, a documentação descrevia o parâmetro `format` de `wcsftime` como tendo o tipo de dados `const wchar_t *`, mas a implementação real do tipo de dados de `format` foi de `const char *`. A implementação de `format` tipo de dados foi atualizado para refletir a documentação atual e anterior, ou seja, `const wchar_t *`.  
   
- Essa função valida seus parâmetros. Se `strDest`, `format` ou`timeptr` é um ponteiro nulo ou se a estrutura de dados `tm` tratada por `timeptr` é inválida (por exemplo, se contém valores fora do intervalo para a hora ou data) ou se a cadeia de caracteres `format` contém um código de formatação inválido, o manipulador de parâmetro inválido é invocado, conforme descrito na [Validação do Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará 0 e definirá `errno` como `EINVAL`.  
+ Essa função valida seus parâmetros. Se `strDest`, `format`, ou `timeptr` é um ponteiro nulo, ou se o `tm` estrutura de dados endereçados por `timeptr` é inválido (por exemplo, se ele contém valores fora do intervalo para a hora ou data), ou se o `format` cadeia de caracteres contém um código de formatação inválido, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará 0 e definirá `errno` como `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -132,7 +138,7 @@ estrutura de dados  `tm`.
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- O `format` argumento consiste de um ou mais códigos, como em `printf`, os códigos de formatação são precedidos por um sinal de porcentagem (`%`). Caracteres que não começam com `%` são copiados inalterado para `strDest` *.* A categoria `LC_TIME` da localidade atual afeta a formatação de saída de `strftime`. (Para obter mais informações sobre `LC_TIME`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) As funções sem o sufixo `_l` usam a localidade definida atualmente. As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam a localidade como parâmetro e a usam em vez da localidade definida atualmente. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ O `format` argumento consiste de um ou mais códigos, como em `printf`, os códigos de formatação são precedidos por um sinal de porcentagem (`%`). Caracteres que não começam com `%` são copiados inalterada para `strDest`. A categoria `LC_TIME` da localidade atual afeta a formatação de saída de `strftime`. (Para obter mais informações sobre `LC_TIME`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).) As funções sem o sufixo `_l` usam a localidade definida atualmente. As versões dessas funções com o sufixo `_l` são idênticas, exceto que usam a localidade como parâmetro e a usam em vez da localidade definida atualmente. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  Os códigos de formatação do `strftime` estão listados abaixo:  
   
@@ -155,10 +161,10 @@ estrutura de dados  `tm`.
  Dia do mês como um número decimal (01-31)  
   
  `%H`  
- Hora em formato de 24 horas (00-23)  
+ Hora no formato de 24 horas (00 - 23)  
   
  `%I`  
- Hora em formato de 12 horas (01-12)  
+ Hora no formato de 12 horas (01-12)  
   
  `%j`  
  Dia do ano como um número decimal (001-366)  
@@ -167,22 +173,22 @@ estrutura de dados  `tm`.
  Mês como um número decimal (01-12)  
   
  `%M`  
- Minuto como um número decimal (00-59)  
+ Minuto como um número decimal (00 - 59)  
   
  `%p`  
  AM/PM da localidade atual. Indicador para relógio de 12 horas  
   
  `%S`  
- Segundo como um número decimal (00-59)  
+ Segundo como um número decimal (00 - 59)  
   
  `%U`  
- Semana do ano como um número decimal, considerando o domingo como o primeiro dia da semana (00 – 53)  
+ Semana do ano como um número decimal, considerando o domingo como o primeiro dia da semana (00 - 53)  
   
  `%w`  
- Dia da semana como um número decimal (0 – 6; Domingo é 0)  
+ Dia da semana como um número decimal (0 - 6; Domingo é 0)  
   
  `%W`  
- Semana do ano como um número decimal, considerando a segunda-feira como o primeiro dia da semana (00 – 53)  
+ Semana do ano como um número decimal, considerando o domingo como o primeiro dia da semana (00 - 53)  
   
  `%x`  
  Representação de data para a localidade atual  
@@ -191,7 +197,7 @@ estrutura de dados  `tm`.
  Representação de hora para a localidade atual  
   
  `%y`  
- Ano sem século, como o número decimal (00-99)  
+ Ano sem século, como número decimal (00 - 99)  
   
  `%Y`  
  Ano com século, como o número decimal  
@@ -224,18 +230,6 @@ estrutura de dados  `tm`.
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [time](../../c-runtime-library/reference/time-time32-time64.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Localidade](../../c-runtime-library/locale.md)   

@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e9822578db6388595e30a5a7f5579d074eeaa92e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 289043b95095fbff3e25deaf464e9eca23c23457
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="memccpy"></a>_memccpy
@@ -135,12 +136,6 @@ Source: The quick brown dog jumps over the lazy fox
 Result: The quick brown dog jumps  
 Length: 25 characters  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
-  
--   [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)   

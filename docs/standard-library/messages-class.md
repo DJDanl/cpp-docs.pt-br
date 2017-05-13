@@ -1,41 +1,53 @@
 ---
-title: "Classe messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "messages"
-  - "xlocmes/std::messages"
-  - "std.messages"
-  - "std::messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "messages class"
+title: Classe messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- messages
+- xlocmes/std::messages
+- locale/std::messages::char_type
+- locale/std::messages::string_type
+- locale/std::messages::close
+- locale/std::messages::do_close
+- locale/std::messages::do_get
+- locale/std::messages::do_open
+- locale/std::messages::get
+- locale/std::messages::open
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages class
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8a3c647c9c64f2783bf2bc6d2eee86d7107af8d2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
+
 ---
 # <a name="messages-class"></a>Classe messages
 A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para recuperar mensagens localizadas em um catálogo de mensagens internacionalizadas de uma determinada localidade.  
@@ -62,32 +74,32 @@ class messages : public messages_base;
   
 |||  
 |-|-|  
-|[messages](#messages__messages)|A função de construtor de faceta de mensagem.|  
+|[messages](#messages)|A função de construtor de faceta de mensagem.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#messages__char_type)|Um tipo de caractere usado para exibir mensagens.|  
-|[string_type](#messages__string_type)|Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.|  
+|[char_type](#char_type)|Um tipo de caractere usado para exibir mensagens.|  
+|[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo `CharType`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[close](#messages__close)|Fecha o catálogo de mensagens.|  
-|[do_close](#messages__do_close)|Uma função virtual chamada para perder o catálogo de mensagens.|  
-|[do_get](#messages__do_get)|Uma função virtual chamada para recuperar o catálogo de mensagens.|  
-|[do_open](#messages__do_open)|Uma função virtual chamada para abrir o catálogo de mensagens.|  
-|[get](#messages__get)|Recupera o catálogo de mensagens.|  
-|[open](#messages__open)|Abre o catálogo de mensagens.|  
+|[close](#close)|Fecha o catálogo de mensagens.|  
+|[do_close](#do_close)|Uma função virtual chamada para perder o catálogo de mensagens.|  
+|[do_get](#do_get)|Uma função virtual chamada para recuperar o catálogo de mensagens.|  
+|[do_open](#do_open)|Uma função virtual chamada para abrir o catálogo de mensagens.|  
+|[get](#get)|Recupera o catálogo de mensagens.|  
+|[open](#open)|Abre o catálogo de mensagens.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namemessageschartypea--messageschartype"></a><a name="messages__char_type"></a>  messages::char_type  
+##  <a name="char_type"></a>  messages::char_type  
  Um tipo de caractere usado para exibir mensagens.  
   
 ```
@@ -97,7 +109,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo **CharType**.  
   
-##  <a name="a-namemessagesclosea--messagesclose"></a><a name="messages__close"></a>  messages::close  
+##  <a name="close"></a>  messages::close  
  Fecha o catálogo de mensagens.  
   
 ```
@@ -109,9 +121,9 @@ void close(catalog _Catval) const;
  O catálogo a ser fechado.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro chama [do_close](#messages__do_close)(_ *Catval*).  
+ A função membro chama [do_close](#do_close)(_ *Catval*).  
   
-##  <a name="a-namemessagesdoclosea--messagesdoclose"></a><a name="messages__do_close"></a>  messages::do_close  
+##  <a name="do_close"></a>  messages::do_close  
  Uma função virtual chamada para perder o catálogo de mensagens.  
   
 ```
@@ -123,14 +135,14 @@ virtual void do_close(catalog _Catval) const;
  O catálogo a ser fechado.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro protegido fecha o catálogo de mensagens `_Catval`, que deve ter sido aberto por uma chamada anterior para [do_open](#messages__do_open).  
+ A função membro protegido fecha o catálogo de mensagens `_Catval`, que deve ter sido aberto por uma chamada anterior para [do_open](#do_open).  
   
  *_Catval* deve ser obtido de um catálogo aberto anteriormente que não está fechado.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [close](#messages__close), que chama `do_close`.  
+  Consulte o exemplo de [close](#close), que chama `do_close`.  
   
-##  <a name="a-namemessagesdogeta--messagesdoget"></a><a name="messages__do_get"></a>  messages::do_get  
+##  <a name="do_get"></a>  messages::do_get  
  Uma função virtual chamada para recuperar o catálogo de mensagens.  
   
 ```
@@ -161,9 +173,9 @@ virtual string_type do_get(
  A função membro protegida tenta obter uma sequência de mensagens do catálogo de mensagens `_Catval`. Ela pode fazer uso de `_Set`, `_Message` e `_Dfault` dessa forma.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [get](#messages__get), que chama `do_get`.  
+  Consulte o exemplo de [get](#get), que chama `do_get`.  
   
-##  <a name="a-namemessagesdoopena--messagesdoopen"></a><a name="messages__do_open"></a>  messages::do_open  
+##  <a name="do_open"></a>  messages::do_open  
  Uma função virtual chamada para abrir o catálogo de mensagens.  
   
 ```
@@ -180,17 +192,17 @@ virtual catalog do_open(
  A localidade que está sendo pesquisada no catálogo.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#messages__get).  
+ Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#get).  
   
 ### <a name="remarks"></a>Comentários  
  A função membro protegida tenta abrir um catálogo de mensagens cujo nome é `_Catname`. Ela pode fazer uso da localidade `_Loc` dessa forma  
   
- O valor retornado deve ser usado como o argumento em uma chamada posterior para [close](#messages__close).  
+ O valor retornado deve ser usado como o argumento em uma chamada posterior para [close](#close).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [open](#messages__open), que chama `do_open`.  
+  Consulte o exemplo de [open](#open), que chama `do_open`.  
   
-##  <a name="a-namemessagesgeta--messagesget"></a><a name="messages__get"></a>  messages::get  
+##  <a name="get"></a>  messages::get  
  Recupera o catálogo de mensagens.  
   
 ```
@@ -218,9 +230,9 @@ string_type get(
  Ele retorna uma cópia do `_Dfault` em caso de falha. Caso contrário, ela retorna uma cópia da sequência de mensagem especificada.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_get](#messages__do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
+ A função membro retorna [do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`).  
   
-##  <a name="a-namemessagesmessagesa--messagesmessages"></a><a name="messages__messages"></a>  messages::messages  
+##  <a name="messages"></a>  messages::messages  
  A função de construtor de faceta de mensagem.  
   
 ```
@@ -246,13 +258,13 @@ protected: messages(
   
 -   1: o tempo de vida do objeto deve ser gerenciado manualmente.  
   
--   \> 0: esses valores não estão definidos.  
+-   \>1: esses valores não são definidos.  
   
  Nenhum exemplo direto é possível, pois o destruidor está protegido.  
   
  O construtor inicializa seu objeto base com **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="a-namemessagesopena--messagesopen"></a><a name="messages__open"></a>  messages::open  
+##  <a name="open"></a>  messages::open  
  Abre o catálogo de mensagens.  
   
 ```
@@ -269,12 +281,12 @@ catalog open(
  A localidade que está sendo pesquisada no catálogo.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#messages__get).  
+ Ele retorna um valor que compara menor que zero na falha. Caso contrário, o valor retornado pode ser usado como o primeiro argumento em uma chamada posterior para [get](#get).  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_open](#messages__do_open)( `_Catname`, `_Loc`).  
+ A função membro retorna [do_open](#do_open)( `_Catname`, `_Loc`).  
   
-##  <a name="a-namemessagesstringtypea--messagesstringtype"></a><a name="messages__string_type"></a>  messages::string_type  
+##  <a name="string_type"></a>  messages::string_type  
  Um tipo que descreve uma cadeia de caracteres do tipo `basic_string` que contém caracteres do tipo **CharType**.  
   
 ```
@@ -288,6 +300,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
  [\<locale>](../standard-library/locale.md)   
  [Classe messages_base](../standard-library/messages-base-class.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

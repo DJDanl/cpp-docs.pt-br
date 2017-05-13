@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9b6081c6e9c5cb6f21ac3fd7e51446bb45b00283
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a201fa08f48198069df26c5c61944c99db73edf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
@@ -79,7 +80,7 @@ Associa um descritor de arquivo de tempo de execução C a um identificador de a
  Tipos de operações permitidas.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, `_open_osfhandle` retornará um descritor de arquivo de tempo de execução C. Caso contrário, retornará –1.  
+ Se for bem-sucedido, `_open_osfhandle` retornará um descritor de arquivo de tempo de execução C. Caso contrário, retornará -1.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_open_osfhandle` aloca um descritor de arquivo de tempo de execução C e o associa ao identificador de arquivo do sistema operacional especificado pelo `osfhandle`. O argumento `flags` é uma expressão inteira formada por uma ou mais constantes de manifesto definidas em Fcntl.h. Quando duas ou mais constantes de manifesto são usadas para formar o argumento `flags`, as constantes são combinadas ao operador OR bit a bit ( **&#124;** ).  
@@ -110,9 +111,6 @@ Associa um descritor de arquivo de tempo de execução C a um identificador de a
   
 ## <a name="libraries"></a>Libraries  
  Todas as versões das [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)

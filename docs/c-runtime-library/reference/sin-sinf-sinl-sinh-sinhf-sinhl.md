@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7314b3411981c1b4a2cd18921afd87cd020ad89e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8f33398820df9df9de21e7d24cc35f76f131bd43
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
@@ -117,7 +118,7 @@ long double sinhl(
  Ângulo em radianos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções `sin` retornam o seno de `x`. Se `x` for maior ou igual a 263 ou menor ou igual a -263, ocorrerá uma perda de significância no resultado.  
+ As funções `sin` retornam o seno de `x`. Se `x` é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.  
   
  As funções `sinh` retornam o seno hiperbólico de `x`. Por padrão, se o resultado for muito grande, `sinh` definirá `errno` para `ERANGE` e retornará ±`HUGE_VAL`.  
   
@@ -174,12 +175,6 @@ sinh( 1.570796 ) = 2.301299
 cos( 1.570796 ) = 0.000000  
 cosh( 1.570796 ) = 2.509178  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Math::Sin](https://msdn.microsoft.com/en-us/library/system.math.sin.aspx)  
-  
--   [System::Math::Sinh](https://msdn.microsoft.com/en-us/library/system.math.sinh.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
