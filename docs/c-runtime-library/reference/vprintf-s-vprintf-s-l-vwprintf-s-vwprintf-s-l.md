@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1ecac4cfe834c6f6bf2efb32bfa70e529329ddb8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 51c8be555df33252cb35465fc11fe13e06d17485
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="vprintfs-vprintfsl-vwprintfs-vwprintfsl"></a>vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l
@@ -140,9 +141,6 @@ int _vwprintf_s_l(
  \* Necessário para compatibilidade com UNIX V.  
   
  Não há suporte para o console em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Os identificadores de fluxo padrão associados ao console – `stdin`, `stdout` e `stderr` – devem ser redirecionados antes que as funções em tempo de execução C possam usá-los em aplicativos [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   
