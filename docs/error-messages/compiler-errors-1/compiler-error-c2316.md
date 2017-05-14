@@ -1,5 +1,5 @@
 ---
-title: C2316 de erro do compilador | Documentos do Microsoft
+title: C2316 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 45b8e3e4423d38562636de50424561dac7b87a31
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>C2316 de erro do compilador
-'exceção': não pode ser detectada como o destruidor e/ou o construtor de cópia é inacessível  
+
+> '*exceção*': não pode ser capturado porque o destruidor e/ou o construtor de cópia é inacessível  
   
- Houve uma exceção por valor ou por referência, mas o construtor de cópia e/ou o operador de atribuição foram inacessível.  
+Uma exceção foi capturada por valor ou por referência, mas o construtor de cópia e/ou o operador de atribuição foram inacessível.  
   
- Esse código foi aceita pelo compilador da versão anterior, mas agora retorna um erro.  
+Esse código foi aceita por versões do Visual C++ antes do Visual Studio 2003, mas agora oferece um erro.  
+  
+Alterações de conformidade no Visual Studio 2015 feitas a esse erro se aplicam a instruções catch incorreta de exceções de MFC derivadas de `CException`. Porque `CException` tem um construtor de cópia privada herdada, a classe e seus derivados são não copiado e não podem ser passados por valor, que também significa que eles não podem ser capturados por valor. Obter declarações que detectada exceções do MFC pelo valor levado anteriormente às exceções em tempo de execução, mas agora o compilador identifica corretamente essa situação e relatórios de erro C2316. Para corrigir esse problema, é recomendável que você use as macros MFC TRY/CATCH em vez de escrever seus próprios manipuladores de exceção, mas se não for apropriado para seu código, capturar exceções MFC por referência em vez disso.   
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2316:  

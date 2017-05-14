@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  Ponteiro para a estrutura `FILE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se tiver sucesso, cada uma dessas funções retornará o argumento do caractere `c`*.* Se `c` não pode ser enviado de volta ou se nenhum caractere for lido, o fluxo de entrada não é alterado e `_ungetc_nolock` retorna `EOF`; `_ungetwc_nolock` retorna `WEOF`. Se `stream` é `NULL`, `EOF` ou `WEOF` é retornado e `errno` é definido como `EINVAL`.  
+ Se for bem-sucedida, cada uma dessas funções retornará o argumento de caractere `c`. Se `c` não pode ser enviado de volta ou se nenhum caractere for lido, o fluxo de entrada não é alterado e `_ungetc_nolock` retorna `EOF`; `_ungetwc_nolock` retorna `WEOF`. Se `stream` é `NULL`, `EOF` ou `WEOF` é retornado e `errno` é definido como `EINVAL`.  
   
  Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -110,9 +111,6 @@ wint_t _ungetwc_nolock(
 |`_ungetwc_nolock`|\<stdio.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

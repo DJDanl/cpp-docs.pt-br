@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - thread/std::thread
+- thread/std::thread::id Class
+- thread/std::thread::thread
+- thread/std::thread::detach
+- thread/std::thread::get_id
+- thread/std::thread::hardware_concurrency
+- thread/std::thread::join
+- thread/std::thread::joinable
+- thread/std::thread::native_handle
+- thread/std::thread::swap
 dev_langs:
 - C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
@@ -31,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 848a51faa24498dd1505483894aa47ce959240a7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b1c5282d284a70917c6c14511bacda305180d778
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="thread-class"></a>Classe thread
@@ -57,38 +67,38 @@ class thread;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Classe thread::id](#thread__id_class)|Identifica exclusivamente o thread associado.|  
+|[Classe thread::id](#id_class)|Identifica exclusivamente o thread associado.|  
   
 ### <a name="public-constructors"></a>Construtores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor thread::thread](#thread__thread_constructor)|Constrói um objeto `thread`.|  
+|[thread](#thread)|Constrói um objeto `thread`.|  
   
 ### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método thread::detach](#thread__detach_method)|Desanexa o thread associado do objeto `thread`.|  
-|[Método thread::get_id](#thread__get_id_method)|Retorna o identificador exclusivo do thread associado.|  
-|[Método thread::hardware_concurrency](#thread__hardware_concurrency_method)|Estático. Retorna uma estimativa do número de contextos de thread de hardware.|  
-|[Método thread::join](#thread__join_method)|Bloqueia até que o thread associado seja concluído.|  
-|[Método thread::joinable](#thread__joinable_method)|Especifica se o thread associado permite junções.|  
-|[Método thread::native_handle](#thread__native_handle_method)|Retorna o tipo específico à implementação que representa o identificador de thread.|  
-|[Método thread::swap](#thread__swap_method)|Troca o estado do objeto por um objeto `thread` especificado.|  
+|[Desanexar](#detach)|Desanexa o thread associado do objeto `thread`.|  
+|[get_id](#get_id)|Retorna o identificador exclusivo do thread associado.|  
+|[hardware_concurrency](#hardware_concurrency)|Estático. Retorna uma estimativa do número de contextos de thread de hardware.|  
+|[join](#join)|Bloqueia até que o thread associado seja concluído.|  
+|[junções](#joinable)|Especifica se o thread associado permite junções.|  
+|[native_handle](#native_handle)|Retorna o tipo específico à implementação que representa o identificador de thread.|  
+|[swap](#swap)|Troca o estado do objeto por um objeto `thread` especificado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[thread::operator=](#thread__operator_eq)|Associa um thread ao objeto `thread` atual.|  
+|[thread::operator=](#op_eq)|Associa um thread ao objeto `thread` atual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** thread  
+ **Cabeçalho:** \<thread >  
   
  **Namespace:** std  
   
-##  <a name="a-namethreaddetachmethoda--threaddetach-method"></a><a name="thread__detach_method"></a>  Método thread::detach  
+##  <a name="detach"></a>thread:: Detach
  Desanexa o thread associado. O sistema operacional fica responsável por liberar recursos de thread após o encerramento.  
   
 ```
@@ -96,13 +106,13 @@ void detach();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Após uma chamada a `detach`, chamadas posteriores a [get_id](#thread__get_id_method) retornam [id](#thread__id_class).  
+ Após uma chamada a `detach`, chamadas posteriores a [get_id](#get_id) retornam [id](#id_class).  
   
  Se o thread associado ao objeto de chamada não estiver disponível, a função gerará um [system_error](../standard-library/system-error-class.md) que tem um código de erro `invalid_argument`.  
   
  Se o thread associado ao objeto de chamada for inválido, a função gerará um `system_error` que tem um código de erro `no_such_process`.  
   
-##  <a name="a-namethreadgetidmethoda--threadgetid-method"></a><a name="thread__get_id_method"></a>  Método thread::get_id  
+##  <a name="get_id"></a>thread:: get_id
  Retorna um identificador exclusivo para o thread associado.  
   
 ```
@@ -110,9 +120,9 @@ id get_id() const noexcept;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um objeto [thread::id](#thread__id_class) que identifica exclusivamente o thread associado ou `thread::id()` se nenhum thread estiver associado ao objeto.  
+ Um objeto [thread::id](#id_class) que identifica exclusivamente o thread associado ou `thread::id()` se nenhum thread estiver associado ao objeto.  
   
-##  <a name="a-namethreadhardwareconcurrencymethoda--threadhardwareconcurrency-method"></a><a name="thread__hardware_concurrency_method"></a>  Método thread::hardware_concurrency  
+##  <a name="hardware_concurrency"></a>thread:: hardware_concurrency
  Método estático que retorna uma estimativa do número de contextos de thread de hardware.  
   
 ```
@@ -122,7 +132,7 @@ static unsigned int hardware_concurrency() noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  Uma estimativa do número de contextos de thread de hardware. Se o valor não puder ser calculado ou não estiver bem definido, esse método retornará 0.  
   
-##  <a name="a-namethreadidclassa--threadid-class"></a><a name="thread__id_class"></a>  Classe thread::id  
+##  <a name="id_class"></a>  Classe thread::id  
  Fornece um identificador exclusivo para cada thread de execução no processo.  
   
 ```
@@ -136,7 +146,7 @@ class thread::id {
   
  Todos os objetos `thread::id` construídos por padrão são comparados como iguais.  
   
-##  <a name="a-namethreadjoinmethoda--threadjoin-method"></a><a name="thread__join_method"></a>  Método thread::join  
+##  <a name="join"></a>thread:: JOIN
  Bloqueia até que o thread de execução associado ao objeto de chamada seja concluído.  
   
 ```
@@ -144,9 +154,9 @@ void join();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se a chamada tiver êxito, as chamadas posteriores a [get_id](#thread__get_id_method) do objeto de chamada retornarão um [thread::id](#thread__id_class) padrão que não é comparado como igual ao `thread::id` de qualquer thread existente; se a chamada não tiver êxito, o valor retornado por `get_id` ficará inalterado.  
+ Se a chamada tiver êxito, as chamadas posteriores a [get_id](#get_id) do objeto de chamada retornarão um [thread::id](#id_class) padrão que não é comparado como igual ao `thread::id` de qualquer thread existente; se a chamada não tiver êxito, o valor retornado por `get_id` ficará inalterado.  
   
-##  <a name="a-namethreadjoinablemethoda--threadjoinable-method"></a><a name="thread__joinable_method"></a>  Método thread::joinable  
+##  <a name="joinable"></a>thread:: joinable
  Especifica se o thread associado *permite junções*.  
   
 ```
@@ -159,7 +169,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>Comentários  
  Um objeto de thread *permitirá junções* se `get_id() != id()`.  
   
-##  <a name="a-namethreadnativehandlemethoda--threadnativehandle-method"></a><a name="thread__native_handle_method"></a>  Método thread::native_handle  
+##  <a name="native_handle"></a>thread:: native_handle
  Retorna o tipo específico à implementação que representa o identificador de thread. O identificador de thread pode ser usado de maneiras específicas à implementação.  
   
 ```
@@ -169,7 +179,7 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>Valor de retorno  
  `native_handle_type` é definido como `HANDLE` Win32, que é convertido como `void *`.  
   
-##  <a name="a-namethreadoperatoreqa--threadoperator"></a><a name="thread__operator_eq"></a>  thread::operator=  
+##  <a name="op_eq"></a>  thread::operator=  
  Associa o thread de um objeto especificado ao objeto atual.  
   
 ```
@@ -188,7 +198,7 @@ thread& operator=(thread&& Other) noexcept;
   
  Depois que a associação é feita, `Other` é definido com um estado construído por padrão.  
   
-##  <a name="a-namethreadswapmethoda--threadswap-method"></a><a name="thread__swap_method"></a>  Método thread::swap  
+##  <a name="swap"></a>thread:: swap
  Troca o estado do objeto pelo estado de um objeto `thread` especificado.  
   
 ```
@@ -199,7 +209,7 @@ void swap(thread& Other) noexcept;
  `Other`  
  Um objeto `thread`.  
   
-##  <a name="a-namethreadthreadconstructora--threadthread-constructor"></a><a name="thread__thread_constructor"></a>  Construtor thread::thread  
+##  <a name="thread"></a>  Construtor thread::thread  
  Constrói um objeto `thread`.  
   
 ```

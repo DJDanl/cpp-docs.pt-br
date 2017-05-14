@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>Classe CDialog
@@ -269,7 +270,7 @@ virtual BOOL CreateIndirect(
   
  Use o `CWnd::DestroyWindow` função destruir uma caixa de diálogo criada pelo `CreateIndirect` função.  
   
- Caixas de diálogo que contêm os controles ActiveX requerem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis na documentação do MSDN Library Visual Studio ou em [http://support.microsoft.com](http://support.microsoft.com/).  
+ Caixas de diálogo que contêm os controles ActiveX requerem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis em [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  Chame essa função de membro para invocar a caixa de diálogo modal e retornar o resultado da caixa de diálogo quando terminar.  
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>Comentários  
  Para criar uma caixa de diálogo modal indiretamente, alocar um bloco global de memória e preenchê-lo com o modelo de caixa de diálogo. Em seguida, chamar vazio `CDialog` construtor para construir o objeto de caixa de diálogo. Em seguida, chame `InitModalIndirect` para armazenar o identificador para o modelo de caixa de diálogo na memória. A caixa de diálogo do Windows é criada e exibida mais tarde, quando o [DoModal](#domodal) é chamada de função de membro.  
   
- Caixas de diálogo que contêm os controles ActiveX requerem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis na documentação do MSDN Library Visual Studio ou em [http://support.microsoft.com](http://support.microsoft.com/).  
+ Caixas de diálogo que contêm os controles ActiveX requerem informações adicionais fornecidas em um **DLGINIT** recursos. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis em [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  Chamada para converter as unidades de caixa de diálogo de um retângulo em unidades de tela.  

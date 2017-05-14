@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 002af355f940991380b552ff280b391481928e7a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4ae4dc9b57da5ee7d38f32066b8b4b204c50f065
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setmbcp"></a>_setmbcp
@@ -73,7 +74,7 @@ int _setmbcp(
  Nova configuração de página de código para rotinas multibyte independentes da localidade.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido é fornecido para `codepage`, retorna -1 e a configuração de página de código é não alterada. Define `errno` para `EINVAL` se ocorre uma falha de alocação de memória.  
+ Retorna 0 se a página de código é definida com êxito. Se um valor de página de código inválido é fornecido para `codepage`, retorna -1 e a configuração de página de código é alterada. Define `errno` para `EINVAL` se ocorre uma falha de alocação de memória.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_setmbcp` especifica uma nova página de código multibyte. Por padrão, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema. A configuração de página de código multibyte afeta todas as rotinas multibyte que não são dependentes da localidade. No entanto, é possível instruir o `_setmbcp` para usar a página de código definida para a localidade atual (consulte a lista de constantes de manifesto e resultados de comportamento associados a seguir). Para obter uma lista das rotinas de multibyte que dependem da página de código de localidade em vez da página de código multibyte, consulte [Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).  

@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 549c9c6c698e21e2eb666886ac36e221bdbc8ca7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca9796f61ad5a3d65d0f421c27133cc2b458f588
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
@@ -103,7 +104,7 @@ errno_t wmemmove_s(
 |qualquer|< `count`|qualquer|`ERANGE`|não modificado|  
   
 ## <a name="remarks"></a>Comentários  
- Copia `count` bytes de caracteres de `src` para `dest`*.* Se algumas regiões da área de origem e do destino se sobrepõem, `memmove_s` garante que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.  
+ Cópias `count` bytes de caracteres de `src` para `dest`. Se algumas regiões da área de origem e do destino se sobrepõem, `memmove_s` garante que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.  
   
  Se `dest` ou `src` for um ponteiro nulo ou se a cadeia de caracteres de destino for pequena demais, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EINVAL` e definirão `errno` para `EINVAL`.  
   
@@ -151,9 +152,6 @@ int main()
 Before: 0123456789  
  After: 0012345789  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)   

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
@@ -106,7 +107,7 @@ int _wputenv(
   
  Não altere uma entrada de ambiente diretamente. Em vez disso, use `_putenv` ou `_wputenv` para alterá-la. Em especial, liberar elementos da matriz global `_environ[]` diretamente pode fazer com que a memória inválida seja resolvida.  
   
- `getenv` e `_putenv` usam a variável global `_environ` para acessar a tabela de ambiente; `_wgetenv` e `_wputenv` usam `_wenviron`. `_putenv` e `_wputenv` podem alterar o valor de `_environ` e `_wenviron`, invalidando, portanto, o argumento `_envp` para `main` e o argumento _`wenvp` para `wmain`. Portanto, é mais seguro usar `_environ` ou `_wenviron` para acessar as informações de ambiente. Para obter mais informações sobre a relação de `_putenv` e `_wputenv` com as variáveis globais, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` e `_putenv` usam a variável global `_environ` para acessar a tabela de ambiente; `_wgetenv` e `_wputenv` usam `_wenviron`. `_putenv`e `_wputenv` pode alterar o valor de `_environ` e `_wenviron`, invalidação, portanto, o `_envp` argumento `main` e o `_wenvp` argumento `wmain`. Portanto, é mais seguro usar `_environ` ou `_wenviron` para acessar as informações de ambiente. Para obter mais informações sobre a relação de `_putenv` e `_wputenv` com as variáveis globais, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  As famílias de funções `_putenv` e `_getenv` não são thread-safe. `_getenv` poderia retornar um ponteiro de cadeia de caracteres enquanto `_putenv` está modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>Exemplo  
  Para ver uma amostra de como usar `_putenv`, consulte [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de avisos do compilador por meio de C4599
@@ -215,14 +214,14 @@ Você pode obter assistência adicional para erros e avisos nos fóruns público
 |Aviso do compilador (nível 1) C4453|'*tipo*': um tipo de '[WebHostHidden]' não deve ser usado na superfície publicada de um tipo público que não seja '[WebHostHidden]'|  
 |Aviso do compilador (nível 1) C4454|'*função*' sobrecarregado por mais do que o número de parâmetros de entrada sem ter [DefaultOverload] especificado. Escolhendo '*declaração*' como a sobrecarga padrão|  
 |Aviso do compilador (nível 1) C4455|' operador *operador*': identificadores de sufixos literais que não começam com um sublinhado são reservados|  
-|Aviso do compilador (nível 3) C4456|declaração de '*identificador*' oculta uma declaração local anterior|  
-|Aviso do compilador (nível 3) C4457|declaração de '*identificador*' oculta um parâmetro de função|  
-|Aviso do compilador (nível 3) C4458|declaração de '*identificador*' oculta o membro da classe|  
-|Aviso do compilador (nível 3) C4459|declaração de '*identificador*' oculta uma declaração global|  
+|[Aviso do compilador (nível 4) C4456](compiler-warning-level-4-c4456.md)|declaração de '*identificador*' oculta uma declaração local anterior|  
+|[Aviso do compilador (nível 4) C4457](compiler-warning-level-4-c4457.md)|declaração de '*identificador*' oculta um parâmetro de função|  
+|[Aviso do compilador (nível 4) C4458](compiler-warning-level-4-c4458.md)|declaração de '*identificador*' oculta o membro da classe|  
+|[Aviso do compilador (nível 4) C4459](compiler-warning-level-4-c4459.md)|declaração de '*identificador*' oculta uma declaração global|  
 |[Aviso do compilador (nível 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; gerenciado ' operador '*operador*', tem o parâmetro passado por referência. ' WinRT &#124; gerenciado ' operador '*operador*'tem semânticas diferentes do operador de C++'*cpp_operator*', você pretendia passar por valor?|  
 |[Aviso do compilador (nível 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': esta classe possui um finalizador '! *finalizador*', mas nenhum destruidor ' ~*dtor*'|  
 |[Aviso do compilador (nível 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': não é possível determinar o GUID do tipo. O programa poderá falhar no tempo de execução.|  
-|C4463 de aviso do compilador|estouro; atribuindo '*valor*'para o campo de bits que pode conter apenas valores de'*min_value*'para'*max_value*'|  
+|[Aviso do compilador (nível 4) C4463](compiler-warning-level-4-c4463.md)|estouro; atribuindo '*valor*'para o campo de bits que pode conter apenas valores de'*min_value*'para'*max_value*'|  
 |C4464 de aviso do compilador|caminho de inclusão relativo contém '... '|  
 |[Aviso do compilador (nível 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de controle de ponto flutuante ignorados sob /clr|  
 |[Aviso do compilador (nível 4) C4471](compiler-warning-level-4-c4471.md)|'*enumeração*': declaração de encaminhamento de uma enumeração sem escopo deve ter um tipo subjacente (int assumido)|  

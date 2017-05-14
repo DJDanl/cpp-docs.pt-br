@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>Classe de pilha
@@ -66,7 +67,7 @@ class stack
  O tipo do contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque`*\<Type>*.  
   
 ## <a name="remarks"></a>Comentários  
- Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto stack são sinônimo de [value_type](#stack__value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.  
+ Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto stack são sinônimo de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.  
   
  Classes de contêiner subjacente adequadas para a stack incluem as classes [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) e [vector](../standard-library/vector-class.md) ou qualquer outro contêiner de sequência que dê suporte às operações de **back**, `push_back` e `pop_back`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|Constrói um `stack` que é vazio ou que é uma cópia de um objeto de contêiner base.|  
+|[stack](#stack)|Constrói um `stack` que é vazio ou que é uma cópia de um objeto de contêiner base.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|Um tipo que fornece o contêiner base para ser adaptado por um `stack`.|  
-|[size_type](#stack__size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `stack`.|  
-|[value_type](#stack__value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `stack`.|  
+|[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado por um `stack`.|  
+|[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `stack`.|  
+|[value_type](#value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `stack`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|Testa se `stack` está vazio.|  
-|[pop](#stack__pop)|Remove o elemento da parte superior do `stack`.|  
-|[push](#stack__push)|Adiciona um elemento ao topo do `stack`.|  
-|[size](#stack__size)|Retorna o número de elementos no `stack`.|  
-|[top](#stack__top)|Retorna uma referência a um elemento na parte superior do `stack`.|  
+|[empty](#empty)|Testa se `stack` está vazio.|  
+|[pop](#pop)|Remove o elemento da parte superior do `stack`.|  
+|[push](#push)|Adiciona um elemento ao topo do `stack`.|  
+|[size](#size)|Retorna o número de elementos no `stack`.|  
+|[top](#top)|Retorna uma referência a um elemento na parte superior do `stack`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<stack>  
   
  **Namespace:** std  
   
-##  <a name="stack__container_type"></a>  stack::container_type  
+##  <a name="container_type"></a>  stack::container_type  
  Um tipo que fornece o contêiner base a ser adaptado.  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  Para obter mais informações sobre `Container`, consulte a seção Comentários do tópico [Classe stack](../standard-library/stack-class.md).  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [stack::stack](#stack__stack) para obter um exemplo de como declarar e usar `container_type`.  
+  Veja o exemplo de [stack::stack](#stack) para obter um exemplo de como declarar e usar `container_type`.  
   
-##  <a name="stack__empty"></a>  stack::empty  
+##  <a name="empty"></a>  stack::empty  
  Testa se uma stack está vazia.  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a>  stack::pop  
+##  <a name="pop"></a>  stack::pop  
  Remove o elemento da parte superior da stack.  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a>  stack::push  
+##  <a name="push"></a>  stack::push  
  Adiciona um elemento à terminação superior da stack.  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a>  stack::size  
+##  <a name="size"></a>  stack::size  
  Retorna o número de elementos na stack.  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a>  stack::size_type  
+##  <a name="size_type"></a>  stack::size_type  
  Um tipo de inteiro sem sinal que pode representar o número de elementos em uma stack.  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  O tipo é um sinônimo de `size_type` do contêiner base adaptado pela stack.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [size](#stack__size) que demonstra como declarar e usar `size_type`.  
+  Veja o exemplo de [size](#size) que demonstra como declarar e usar `size_type`.  
   
-##  <a name="stack__stack"></a>  stack::stack  
+##  <a name="stack"></a>  stack::stack  
  Constrói uma stack que é vazia ou que é uma cópia de uma classe de contêiner base.  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a>  stack::top  
+##  <a name="top"></a>  stack::top  
  Retorna uma referência a um elemento na parte superior da stack.  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a>  stack::value_type  
+##  <a name="value_type"></a>  stack::value_type  
  Um tipo que representa o tipo de objeto armazenado como um elemento em uma stack.  
   
 ```  

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informa a coleta de lixo que o endereço indicado é para armazenamento alocado e é alcançável.|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Exclui objetos alocados com `operator new`. Adequado para uso com `unique_ptr`.|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Conversão dinâmica para `shared_ptr`.|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|Obtenha o deletor de `shared_ptr`.|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|Obtenha o deletor de `shared_ptr`.|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Retorna o tipo de segurança do ponteiro pressuposto por qualquer coletor de lixo.|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Atribui o armazenamento temporário para uma sequência de elementos que não excede um número especificado de elementos.|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Cria e retorna um `shared_ptr` que aponta para o objeto alocado construído do zero ou mais argumentos usando o alocador padrão.|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Cria e retorna um [unique_ptr](../standard-library/unique-ptr-class.md) que aponta para o objeto alocado construído de zero ou mais argumentos.|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permite comparações mistas baseadas em propriedade de ponteiros compartilhados e fracos.|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|Uma enumeração de todos os possíveis valores de retorno para `get_pointer_safety`.|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Uma enumeração de todos os possíveis valores de retorno para `get_pointer_safety`.|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Desaloca a memória temporária que foi alocada usando a função de modelo `get_temporary_buffer`.|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Conversão estática para `shared_ptr`.|  
 |[swap](../standard-library/memory-functions.md#swap)|Troca dois objetos `shared_ptr` ou `weak_ptr`.|  
@@ -87,13 +88,13 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#operator_neq)|Testa a desigualdade entre objetos do alocador de uma classe especificada.|  
-|[operator==](../standard-library/memory-operators.md#operator_eq_eq)|Testa a igualdade entre objetos do alocador de uma classe especificada.|  
-|[operator>=](../standard-library/memory-operators.md#operator_gt__eq)|Testa um objeto do alocador que é maior ou igual a um segundo objeto do alocador de uma classe especificada.|  
-|[operator<](../standard-library/memory-operators.md#operator_lt_)|Testa um objeto que é menor que um segundo objeto de uma classe especificada.|  
-|[operator\<=](../standard-library/memory-operators.md#operator_lt__eq)|Testa um objeto que é menor ou igual a um segundo objeto de uma classe especificada.|  
-|[operator>](../standard-library/memory-operators.md#operator_gt_)|Testa um objeto que é maior que um segundo objeto de uma classe especificada.|  
-|[operator<<](../standard-library/memory-operators.md#operator_lt__lt_)|Inserção de `shared_ptr`.|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|Testa a desigualdade entre objetos do alocador de uma classe especificada.|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|Testa a igualdade entre objetos do alocador de uma classe especificada.|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Testa um objeto do alocador que é maior ou igual a um segundo objeto do alocador de uma classe especificada.|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|Testa um objeto que é menor que um segundo objeto de uma classe especificada.|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Testa um objeto que é menor ou igual a um segundo objeto de uma classe especificada.|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|Testa um objeto que é maior que um segundo objeto de uma classe especificada.|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|Inserção de `shared_ptr`.|  
   
 ### <a name="classes"></a>Classes  
   

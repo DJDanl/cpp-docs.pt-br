@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 277adddab2c9aa318315f44e203624bc22eb5131
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04b563468b9bc79ccd92d608dfeb4e7a3b85120a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
@@ -86,7 +87,7 @@ int _wrmdir(
  O caminho do diretório a ser removido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retornará 0 se o diretório for excluído com êxito. Um valor retornado de -1 indica que há um erro e `errno` é definido com um dos valores a seguir:  
+ Cada uma dessas funções retornará 0 se o diretório for excluído com êxito. Um valor de retorno de -1 indica um erro e `errno` é definido como um dos seguintes valores:  
   
  **ENOTEMPTY**  
  O caminho especificado não é um diretório, o diretório não está vazio ou o diretório é o diretório de trabalho atual ou o diretório raiz.  
@@ -124,9 +125,6 @@ int _wrmdir(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo de [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::Directory::Delete](https://msdn.microsoft.com/en-us/library/system.io.directory.delete.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

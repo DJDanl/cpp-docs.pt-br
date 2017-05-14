@@ -1,72 +1,78 @@
 ---
-title: "strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsspn_l"
-  - "wcsspn"
-  - "strspn"
-  - "_mbsspn"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftcsspn"
-  - "wcsspn"
-  - "_mbsspn"
-  - "_tcsspn"
-  - "strspn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wcsspn function"
-  - "strings [C++], searching"
-  - "mbsspn function"
-  - "tcsspn function"
-  - "strspn function"
-  - "substrings, finding"
-  - "_mbsspn_l function"
-  - "ftcsspn function"
-  - "_mbsspn function"
-  - "_ftcsspn function"
-  - "mbsspn_l function"
-  - "_tcsspn function"
+title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsspn_l
+- wcsspn
+- strspn
+- _mbsspn
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftcsspn
+- wcsspn
+- _mbsspn
+- _tcsspn
+- strspn
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsspn function
+- strings [C++], searching
+- mbsspn function
+- tcsspn function
+- strspn function
+- substrings, finding
+- _mbsspn_l function
+- ftcsspn function
+- _mbsspn function
+- _ftcsspn function
+- mbsspn_l function
+- _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 Retorna o índice do primeiro caractere, em uma cadeia de caracteres, que não pertence a um conjunto de caracteres.  
@@ -107,12 +113,12 @@ size_t _mbsspn_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna um valor inteiro especificando o comprimento da subcadeia de caracteres em `str` que consiste inteiramente de caracteres em `strCharSet`*.* Se `str` começa com um caractere não em `strCharSet`*,* a função retorna 0.  
+ Retorna um valor inteiro especificando o comprimento da subcadeia de caracteres em `str` que consiste inteiramente em caracteres `strCharSet`. Se `str` começa com um caractere não está em `strCharSet`, a função retornará 0.  
   
 ## <a name="remarks"></a>Comentários  
  A função `strspn` retorna o índice do primeiro caractere em `str` que não pertence a um conjunto de caracteres em `strCharSet`. A pesquisa não inclui os caracteres nulo de terminação.  
   
- `wcsspn` e `_mbsspn` são versões de caracteres largos e de caracteres multibyte de `strspn`**.** Os argumentos de `wcsspn` são cadeias de caracteres largos; aqueles de `_mbsspn` são cadeias de caracteres multibyte. `_mbsspn` valida seus parâmetros. Se `str` ou `strCharSet` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `_mbspn` definirá `errno` para `EINVAL` e retornará 0. `strspn` e `wcsspn` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.  
+ `wcsspn` e `_mbsspn` são versões de caracteres largos e de caracteres multibyte de `strspn`. Os argumentos de `wcsspn` são cadeias de caracteres largos; aqueles de `_mbsspn` são cadeias de caracteres multibyte. `_mbsspn` valida seus parâmetros. Se `str` ou `strCharSet` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `_mbspn` definirá `errno` para `EINVAL` e retornará 0. `strspn` e `wcsspn` não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -159,9 +165,6 @@ int main( void )
 ```Output  
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Substring](https://msdn.microsoft.com/en-us/library/system.string.substring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

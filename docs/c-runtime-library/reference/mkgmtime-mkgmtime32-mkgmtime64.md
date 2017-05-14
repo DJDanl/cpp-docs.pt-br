@@ -63,10 +63,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 49e385ab87e84dd286ee0916da83691775ddd92a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
@@ -92,7 +93,7 @@ __time64_t _mkgmtime64(
  Um ponteiro para a hora UTC como um `struct``tm` a ser convertido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma quantidade de tipo `__time32_t` ou `__time64_t` que representa o número de segundos passados desde a meia-noite de 1º de janeiro de 1970, em UTC (Tempo Universal Coordenado). Se a data estiver fora do intervalo (consulte a seção Comentários) ou a entrada não puder ser interpretada como uma hora válida, o valor retornado será –&1;.  
+ Uma quantidade de tipo `__time32_t` ou `__time64_t` que representa o número de segundos passados desde a meia-noite de 1º de janeiro de 1970, em UTC (Tempo Universal Coordenado). Se a data está fora do intervalo (consulte a seção comentários) ou a entrada não pode ser interpretada como uma hora válida, o valor de retorno é -1.  
   
 ## <a name="remarks"></a>Comentários  
  As funções `_mkgmtime32` e `_mkgmtime64` convertem uma hora UTC em um tipo `__time32_t` ou `__time64_t` que representa a hora em UTC. Para converter uma hora local em hora UTC, use `mktime`, `_mktime32` e `_mktime64` em vez disso.  
@@ -109,7 +110,7 @@ __time64_t _mkgmtime64(
   
  A biblioteca em tempo de execução C usa a variável de ambiente TZ para determinar o horário de verão correto. Se TZ não for definido, o sistema operacional será consultado para obter o comportamento de horário de verão regional correto. `tm_isdst` é um campo obrigatório. Se não definido, seu valor será indefinido e o valor retornado de `mktime` será imprevisível.  
   
- O intervalo da função `_mkgmtime32` é de meia-noite de 1º de janeiro de 1970, UTC, até 23:59:59 de 18 de janeiro de 2038, UTC. O intervalo de `_mkgmtime64` é de meia-noite de 1º de janeiro de 1970, UTC, até 23:59:59 de 31 de dezembro de 3000, UTC. Uma data fora do intervalo resulta em um valor retornado de -1. O intervalo de `_mkgmtime` depende se `_USE_32BIT_TIME_T` está definido. Se não estiver definido (o padrão) o intervalo será de `_mkgmtime64`, caso contrário, o intervalo será limitado ao intervalo de 32 bits de `_mkgmtime32`.  
+ O intervalo da função `_mkgmtime32` é de meia-noite de 1º de janeiro de 1970, UTC, até 23:59:59 de 18 de janeiro de 2038, UTC. O intervalo de `_mkgmtime64` é de meia-noite de 1º de janeiro de 1970, UTC, até 23:59:59 de 31 de dezembro de 3000, UTC. Uma data fora do intervalo resulta em um valor de retorno de -1. O intervalo de `_mkgmtime` depende se `_USE_32BIT_TIME_T` está definido. Se não estiver definido (o padrão) o intervalo será de `_mkgmtime64`, caso contrário, o intervalo será limitado ao intervalo de 32 bits de `_mkgmtime32`.  
   
  Observe que `gmtime` e `localtime` usam um único buffer alocado estaticamente para a conversão. Se esse buffer for fornecido a `mkgmtime`, os conteúdos anteriores serão destruídos.  
   

@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `mbstowcs` converter com êxito a cadeia de caracteres de origem, ela retornará o número de caracteres multibyte convertidos. Se o argumento `wcstr` for `NULL`, a função retornará o tamanho necessário (em caracteres largos) da cadeia de caracteres de destino. Se `mbstowcs` encontrar um caractere multibyte inválido, ele retornará -1. Se o valor retornado for `count`, a cadeia de caracteres largos não será terminada em nulo.  
+ Se `mbstowcs` converter com êxito a cadeia de caracteres de origem, ela retornará o número de caracteres multibyte convertidos. Se o argumento `wcstr` for `NULL`, a função retornará o tamanho necessário (em caracteres largos) da cadeia de caracteres de destino. Se `mbstowcs` encontra um caractere multibyte inválido, retornará -1. Se o valor retornado for `count`, a cadeia de caracteres largos não será terminada em nulo.  
   
 > [!IMPORTANT]
 >  Verifique se `wcstr` e `mbstr` não se sobrepõem e se `count` reflete corretamente o número de caracteres multibyte a ser convertido.  
   
 ## <a name="remarks"></a>Comentários  
- A função `mbstowcs` converte até um número máximo de `count` caracteres multibyte apontados por `mbstr` em uma cadeia de caracteres largos correspondentes que são determinados pela localidade atual. Ele armazena a cadeia de caracteres largos resultante no endereço representado por `wcstr`*.* O resultado é semelhante a uma série de chamadas para `mbtowc`. Se `mbstowcs` encontrar o caractere nulo de byte único ('\0') antes ou quando `count` ocorrer, ele converterá o caractere nulo em um caractere nulo de caractere largo (L '\0') e parará. Dessa forma, a cadeia de caracteres largos em `wcstr` será terminada em nulo somente se um caractere nulo for encontrado durante a conversão. Se as sequências apontadas por `wcstr` e por `mbstr` se sobrepuserem, o comportamento será indefinido.  
+ A função `mbstowcs` converte até um número máximo de `count` caracteres multibyte apontados por `mbstr` em uma cadeia de caracteres largos correspondentes que são determinados pela localidade atual. Ele armazena a cadeia de caracteres largos resultante no endereço representado por `wcstr`. O resultado é semelhante a uma série de chamadas para `mbtowc`. Se `mbstowcs` encontrar o caractere nulo de byte único ('\0') antes ou quando `count` ocorrer, ele converterá o caractere nulo em um caractere nulo de caractere largo (L '\0') e parará. Dessa forma, a cadeia de caracteres largos em `wcstr` será terminada em nulo somente se um caractere nulo for encontrado durante a conversão. Se as sequências apontadas por `wcstr` e por `mbstr` se sobrepuserem, o comportamento será indefinido.  
   
  Se o argumento `wcstr` for `NULL`, `mbstowcs` retornará o número de caracteres largos que resultariam da conversão, não incluindo um terminador nulo. A cadeia de caracteres de origem deve ser terminada em nulo para o valor correto ser retornado. Se você precisar que a cadeia de caracteres largos seja terminada em nulo, adicione um ao valor retornado.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

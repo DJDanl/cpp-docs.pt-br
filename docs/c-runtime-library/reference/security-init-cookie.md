@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 53b9632990e6514c68be256c88c27034a699b673
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6c1bf74e3b597026af02e2fdd4dc6cec327793dd
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
@@ -83,9 +84,6 @@ void __security_init_cookie(void);
 |`__security_init_cookie`|\<process.h>|  
   
  `__security_init_cookie` é uma extensão da Microsoft à biblioteca padrão de tempo de execução do C. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Essa função só deve ser chamada a partir do código nativo, não do código gerenciado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Análise aprofundada das verificações de segurança do compilador](http://go.microsoft.com/fwlink/?linkid=7260)

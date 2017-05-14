@@ -66,10 +66,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6d7253994d7f9920a4fcca3844766dce38f5c5d8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 12bd51696ca0b25ac353d02da8a356951c14a2c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
@@ -116,7 +117,7 @@ unsigned __int64 _wcstoui64(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_strtoui64` retorna o valor representado na cadeia de caracteres `nptr`, exceto quando a representação causaria um estouro, caso em que ele retorna `_UI64_MAX`. _`strtoui64` retornará 0, se nenhuma conversão pode ser realizada.  
+ `_strtoui64` retorna o valor representado na cadeia de caracteres `nptr`, exceto quando a representação causaria um estouro, caso em que ele retorna `_UI64_MAX`. `_strtoui64` retorna 0 se nenhuma conversão pode ser realizada.  
   
  `_UI64_MAX` é definido em LIMITS.H.  
   
@@ -125,7 +126,7 @@ unsigned __int64 _wcstoui64(
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_strtoui64` converte `nptr` para um `unsigned` `__int64`. `_wcstoui64` é uma versão de caractere largo de `_strtoui64`; seu argumento `nptr` é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
+ O `_strtoui64` função converte `nptr` para um `unsigned` `__int64`. `_wcstoui64` é uma versão de caractere largo de `_strtoui64`; seu argumento `nptr` é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
   
  Ambas as funções param de ler a cadeia de caracteres `nptr` no primeiro caractere que não reconhecem como parte de um número. Isso pode ser o caractere nulo de terminação ou pode ser o primeiro caractere numérico maior ou igual a `base`.  
   
@@ -136,13 +137,13 @@ unsigned __int64 _wcstoui64(
 |`_tcstoui64`|`_strtoui64`|`_strtoui64`|`_wstrtoui64`|  
 |`_tcstoui64_l`|`_strtoui64_l`|`_strtoui64_l`|`_wstrtoui64_l`|  
   
- A configuração da categoria `LC_NUMERIC` da localidade atual determina o reconhecimento do caractere fracionário em `nptr`; para mais informações, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As funções sem o sufixo _| usam a localidade atual; `_strtoui64_l` e `_wcstoui64_l` são idênticas as funções correspondentes sem o sufixo `_l`, exceto por usarem o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ A configuração da categoria `LC_NUMERIC` da localidade atual determina o reconhecimento do caractere fracionário em `nptr`; para mais informações, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As funções sem o sufixo _l usam a localidade atual; `_strtoui64_l` e `_wcstoui64_l` são idênticas às funções correspondentes sem o `_l` sufixo exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  Se `endptr` não é `NULL`, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela `endptr`. Se nenhuma conversão pode ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de `nptr` é armazenado no local apontado pela `endptr`.  
   
  `_strtoui64` espera que `nptr` aponte para uma cadeia de caracteres do seguinte formato:  
   
- [`whitespace`] [{`+` &#124; `–`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
+ [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
  Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `digits` é composto por um ou mais dígitos decimais. O primeiro caractere que não é adequado a esse formato interrompe o exame. Se `base` estiver entre 2 e 36, ele será usado como a base do número. Se `base` é 0, os caracteres inicias da cadeia de caracteres apontada por `nptr` são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que `base`. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se `base` é 0 e o primeiro caractere verificado é '0', é considerado um inteiro octal e um caractere '8' ou '9' interromperá a verificação.  
   

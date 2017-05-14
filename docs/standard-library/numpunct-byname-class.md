@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: eea856d76ee0fcf12c1cdb4bf1bf0dd0f3125d5f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1821793921924a5f0bb75703f581705f7f1d8115
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="numpunctbyname-class"></a>Classe numpunct_byname
@@ -64,7 +65,7 @@ protected:
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#locale__name) `_Locname`. O construtor inicializa seu objeto base com [numpunct](../standard-library/numpunct-class.md#numpunct__numpunct)\<CharType>( `_Refs`).  
+ Seu comportamento é determinado pela localidade [nomeada](../standard-library/locale-class.md#name) `_Locname`. O construtor inicializa seu objeto base com [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ Define vários tipos e funções que controlam a alocação e a liberação de a
   
 |||  
 |-|-|  
-|[operador delete](../standard-library/new-operators.md#operator_delete)|A função que é chamada por uma expressão delete para desalocar o armazenamento de objetos individuais.|  
-|[operador delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|A função que é chamada por uma expressão delete para desalocar o armazenamento para uma matriz de objetos.|  
-|[operador new](../standard-library/new-operators.md#operator_new)|A função que é chamada por uma expressão new para alocar o armazenamento de objetos individuais.|  
-|[operador new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|A função que é chamada por uma expressão new para alocar o armazenamento de uma matriz de objetos.|  
+|[operador delete](../standard-library/new-operators.md#op_delete)|A função que é chamada por uma expressão delete para desalocar o armazenamento de objetos individuais.|  
+|[operador delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|A função que é chamada por uma expressão delete para desalocar o armazenamento para uma matriz de objetos.|  
+|[operador new](../standard-library/new-operators.md#op_new)|A função que é chamada por uma expressão new para alocar o armazenamento de objetos individuais.|  
+|[operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|A função que é chamada por uma expressão new para alocar o armazenamento de uma matriz de objetos.|  
   
 ### <a name="classes"></a>Classes  
   

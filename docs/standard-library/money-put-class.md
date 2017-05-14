@@ -1,41 +1,50 @@
 ---
-title: "Classe money_put | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::money_put"
-  - "xlocmon/std::money_put"
-  - "money_put"
-  - "std.money_put"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "money_put class"
+title: Classe money_put | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocmon/std::money_put
+- money_put
+- locale/std::money_put::char_type
+- locale/std::money_put::iter_type
+- locale/std::money_put::string_type
+- locale/std::money_put::do_put
+- locale/std::money_put::put
+dev_langs:
+- C++
+helpviewer_keywords:
+- money_put class
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 825edc66a7b4b565222133ebb47a789efbdba52b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
+
 ---
 # <a name="moneyput-class"></a>Classe money_put
 A classe de modelo descreve um objeto que pode servir como uma faceta de localidade para controlar conversões de valores monetários em sequências do tipo `CharType`.  
@@ -62,29 +71,29 @@ class money_put : public locale::facet;
   
 |||  
 |-|-|  
-|[money_put](#money_put__money_put)|O construtor para objetos do tipo `money_put`.|  
+|[money_put](#money_put)|O construtor para objetos do tipo `money_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#money_put__char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|  
-|[iter_type](#money_put__iter_type)|Um tipo que descreve um iterador de saída.|  
-|[string_type](#money_put__string_type)|Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo `CharType`.|  
+|[char_type](#char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|  
+|[iter_type](#iter_type)|Um tipo que descreve um iterador de saída.|  
+|[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo `CharType`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[do_put](#money_put__do_put)|Uma função virtual chamada para converter o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.|  
-|[put](#money_put__put)|Converte o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.|  
+|[do_put](#do_put)|Uma função virtual chamada para converter o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.|  
+|[put](#put)|Converte o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namemoneyputchartypea--moneyputchartype"></a><a name="money_put__char_type"></a>  money_put::char_type  
+##  <a name="char_type"></a>  money_put::char_type  
  Um tipo que é usado para descrever um caractere usado por uma localidade.  
   
 ```  
@@ -94,7 +103,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo **CharType**.  
   
-##  <a name="a-namemoneyputdoputa--moneyputdoput"></a><a name="money_put__do_put"></a>  money_put::do_put  
+##  <a name="do_put"></a>  money_put::do_put  
  Uma função virtual chamada para converter o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.  
   
 ```  
@@ -115,7 +124,7 @@ virtual iter_type do_put(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` next`  
+ `next`  
  Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.  
   
  `_Intl`  
@@ -127,42 +136,42 @@ virtual iter_type do_put(
  `_Fill`  
  Um caractere que é usado para espaçamento.  
   
- ` val`  
+ `val`  
  Um objeto de cadeia de caracteres a ser convertido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador de saída que aborda uma posição além do último elemento produzido.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função membro protegida virtual gera elementos sequenciais começando em ` next` para produzir um campo de saída monetário do objeto [string_type](#money_put__string_type) ` val`. A sequência controlada por ` val` deve começar com um ou mais dígitos decimais, opcionalmente precedidos por um sinal de subtração (–), que representa a quantidade. A função retorna um iterador que designa o primeiro elemento além do campo de saída monetário gerado.  
+ A primeira função membro protegida virtual gera elementos sequenciais começando em `next` para produzir um campo de saída monetário do objeto [string_type](#string_type) `val`. A sequência controlada pelo `val` devem começar com um ou mais dígitos decimais, opcionalmente, precedidos por um sinal de menos (-), que representa a quantidade. A função retorna um iterador que designa o primeiro elemento além do campo de saída monetário gerado.  
   
- A segunda função membro protegida virtual se comporta da mesma maneira que a primeira, exceto que ela efetivamente primeiro converte ` val` em uma sequência de dígitos decimais, opcionalmente precedida por um sinal de subtração e converte essa sequência como acima.  
+ A segunda função membro protegida virtual se comporta da mesma maneira que a primeira, exceto que ela efetivamente primeiro converte `val` em uma sequência de dígitos decimais, opcionalmente precedida por um sinal de subtração e converte essa sequência como acima.  
   
- O formato de um campo de saída monetário é determinado pelo [locale facet](../standard-library/locale-class.md#facet_class) fac retornado pela chamada (efetiva) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#ios_base__getloc)).  
+ O formato de um campo de saída monetário é determinado pelo [locale facet](../standard-library/locale-class.md#facet_class) fac retornado pela chamada (efetiva) [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
   
  Especificamente:  
   
-- **fac**. [pos_format](../standard-library/moneypunct-class.md#moneypunct__pos_format) determina a ordem na qual os componentes do campo são gerados para um valor não negativo.  
+- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) determina a ordem na qual os componentes do campo são gerados para um valor não negativo.  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#moneypunct__neg_format) determina a ordem na qual os componentes do campo são gerados para um valor negativo.  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determina a ordem na qual os componentes do campo são gerados para um valor negativo.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#moneypunct__curr_symbol) determina a sequência de elementos a ser gerada para um símbolo de moeda.  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determina a sequência de elementos a ser gerada para um símbolo de moeda.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#moneypunct__positive_sign) determina a sequência de elementos a ser gerada para um sinal positivo.  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determina a sequência de elementos a ser gerada para um sinal positivo.  
   
-- **fac**. [negative_sign](../standard-library/moneypunct-class.md#moneypunct__negative_sign) determina a sequência de elementos a ser gerada para um sinal negativo.  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determina a sequência de elementos a ser gerada para um sinal negativo.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#moneypunct__grouping) determina como os dígitos são agrupados à esquerda da vírgula decimal.  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determina como os dígitos são agrupados à esquerda da vírgula decimal.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#moneypunct__thousands_sep) determina o elemento que separa grupos de dígitos à esquerda da vírgula decimal.  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determina o elemento que separa grupos de dígitos à esquerda da vírgula decimal.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#moneypunct__decimal_point) determina a sequência que separa os dígitos de inteiros de qualquer dígito de fração.  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determina a sequência que separa os dígitos de inteiros de qualquer dígito de fração.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#moneypunct__frac_digits) determina o número de dígitos de fração significativa à direita de qualquer vírgula decimal.  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determina o número de dígitos de fração significativa à direita de qualquer vírgula decimal.  
   
  Se a cadeia de caracteres de sinal (**fac**. `negative_sign` ou **fac**. `positive_sign`) tiver mais de um elemento, apenas o primeiro elemento gerado quando o elemento for igual a **money_base::sign** aparecerá no padrão do formato (**fac**. `neg_format` ou **fac**. `pos_format`). Todos os elementos restantes são gerados ao final do campo de saída monetário.  
   
- Se **iosbase**. [flags](../standard-library/ios-base-class.md#ios_base__flags) & [showbase](../standard-library/ios-functions.md#showbase) for diferente de zero, a cadeia de caracteres **fac**. `curr_symbol` será gerada quando o elemento igual a **money_base::symbol** aparece no padrão do formato. Caso contrário, nenhum símbolo de moeda será gerado.  
+ Se **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) for diferente de zero, a cadeia de caracteres **fac**. `curr_symbol` será gerada quando o elemento igual a **money_base::symbol** aparece no padrão do formato. Caso contrário, nenhum símbolo de moeda será gerado.  
   
  Se nenhuma restrição de agrupamento for imposta por **fac**. **grouping** (o primeiro elemento tem o valor CHAR_MAX), então não há instâncias de **fac**. `thousands_sep` são gerados na parte de valor do campo de saída monetário (em que o elemento igual a **money_base::value** aparece no padrão de formato). Se **fac**. `frac_digits` for zero, nenhuma instância de **fac**. `decimal_point` será gerada após os dígitos decimais. Caso contrário, o campo de saída monetário resultante colocará os dígitos decimais **fac**. `frac_digits` de ordem baixa à direita da vírgula decimal.  
   
@@ -171,9 +180,9 @@ virtual iter_type do_put(
  A função chama **iosbase**. **width**(0) para redefinir a largura do campo como zero.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [put](#money_put__put), em que a função membro virtual é chamada por **put**.  
+  Veja o exemplo de [put](#put), em que a função membro virtual é chamada por **put**.  
   
-##  <a name="a-namemoneyputitertypea--moneyputitertype"></a><a name="money_put__iter_type"></a>  money_put::iter_type  
+##  <a name="iter_type"></a>  money_put::iter_type  
  Um tipo que descreve um iterador de saída.  
   
 ```  
@@ -183,7 +192,7 @@ typedef OutputIterator iter_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo **OutputIterator.**  
   
-##  <a name="a-namemoneyputmoneyputa--moneyputmoneyput"></a><a name="money_put__money_put"></a>  money_put::money_put  
+##  <a name="money_put"></a>  money_put::money_put  
  O construtor para objetos do tipo `money_put`.  
   
 ```  
@@ -201,13 +210,13 @@ explicit money_put(size_t _Refs = 0);
   
 -   1: o tempo de vida do objeto deve ser gerenciado manualmente.  
   
--   \> 0: esses valores não estão definidos.  
+-   \>1: esses valores não são definidos.  
   
  Nenhum exemplo direto é possível, pois o destruidor está protegido.  
   
  O construtor inicializa seu objeto base com **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="a-namemoneyputputa--moneyputput"></a><a name="money_put__put"></a>  money_put::put  
+##  <a name="put"></a>  money_put::put  
  Converte o número ou uma cadeia de caracteres em uma sequência de caracteres que representa um valor monetário.  
   
 ```  
@@ -228,7 +237,7 @@ iter_type put(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` next`  
+ `next`  
  Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.  
   
  `_Intl`  
@@ -240,14 +249,14 @@ iter_type put(
  `_Fill`  
  Um caractere que é usado para espaçamento.  
   
- ` val`  
+ `val`  
  Um objeto de cadeia de caracteres a ser convertido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um iterador de saída que aborda uma posição além do último elemento produzido.  
   
 ### <a name="remarks"></a>Comentários  
- Ambas as funções membro retornam [do_put](#money_put__do_put)( ` next`, `_Intl`, `_Iosbase`, `_Fill`, ` val`).  
+ Ambas as funções membro retornam [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -281,7 +290,7 @@ int main( )
 money_put( ) = "CAD1,000.12"  
 ```  
   
-##  <a name="a-namemoneyputstringtypea--moneyputstringtype"></a><a name="money_put__string_type"></a>  money_put::string_type  
+##  <a name="string_type"></a>  money_put::string_type  
  Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo **CharType**.  
   
 ```  
@@ -295,4 +304,5 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
  [\<locale>](../standard-library/locale.md)   
  [Classe facet](../standard-library/locale-class.md#facet_class)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

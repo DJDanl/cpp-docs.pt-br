@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  Ponteiro que conterá o nome gerado e será idêntico ao nome retornado pela função. Essa é uma maneira conveniente de salvar o nome gerado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retorna um ponteiro para o nome gerado ou `NULL` no caso de uma falha. Poderá ocorrer uma falha se você tentar mais de `TMP_MAX` chamadas (consulte STDIO.H) com `tmpnam` ou se você usar `_tempnam` e houver um nome de diretório inválido especificado na variável de ambiente TMP e no parâmetro `dir`.  
+ Cada uma dessas funções retorna um ponteiro para o nome gerado ou `NULL` no caso de uma falha. Falha pode ocorrer se você tentar mais de `TMP_MAX` (consulte STDIO. H) chamadas com `tmpnam` ou se você usar `_tempnam` e há um nome de diretório inválido especificado na variável de ambiente TMP e no `dir` parâmetro.  
   
 > [!NOTE]
 >  Os ponteiros retornados por `tmpnam` e `_wtmpnam` apontam para buffers estáticos internos. [free](../../c-runtime-library/reference/free.md) não deve ser chamado para desalocar esses ponteiros. `free` precisa ser chamado para ponteiros alocados por `_tempnam` e `_wtempnam`.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

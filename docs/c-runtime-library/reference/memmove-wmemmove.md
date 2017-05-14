@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 109cb7e76139d5f2159d7179063404a91f43083b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2f8c6199d65c5865110774dcd0d2e5623d515467
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
@@ -86,10 +87,10 @@ wchar_t *wmemmove(
  O número de bytes (`memmove`) ou caracteres (`wmemmove`) a serem copiados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O valor de `dest`*.*  
+ O valor de `dest`.  
   
 ## <a name="remarks"></a>Comentários  
- Copia `count` bytes (`memmove`) ou caracteres (`wmemmove`) de `src` para `dest`*.* Se algumas regiões da área de origem e do destino se sobrepõem, as duas funções garantem que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.  
+ Cópias `count` bytes (`memmove`) ou caracteres (`wmemmove`) de `src` para `dest`. Se algumas regiões da área de origem e do destino se sobrepõem, as duas funções garantem que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.  
   
  **Observação de segurança** Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).  
   
@@ -147,9 +148,6 @@ New string: aaaabb
 The string: aabbcc  
 New string: aaaabb  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)   

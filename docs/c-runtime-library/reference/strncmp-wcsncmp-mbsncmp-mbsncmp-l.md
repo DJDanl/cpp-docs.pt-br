@@ -1,80 +1,86 @@
 ---
-title: "strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strncmp"
-  - "_mbsncmp"
-  - "wcsncmp"
-  - "_mbsncmp_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftcsnccmp"
-  - "_ftcsncmp"
-  - "_tcsncmp"
-  - "_tcsnccmp"
-  - "strncmp"
-  - "_mbsncmp"
-  - "wcsncmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tcsnccmp function"
-  - "ftcsncmp function"
-  - "wcsncmp function"
-  - "_ftcsncmp function"
-  - "_mbsncmp function"
-  - "tcsncmp function"
-  - "mbsncmp function"
-  - "_mbsncmp_l function"
-  - "mbsncmp_l function"
-  - "strncmp function"
-  - "strings [C++], comparing characters of"
-  - "string comparison [C++], strncmp function"
-  - "_tcsncmp function"
-  - "tcsnccmp function"
-  - "ftcsnccmp function"
-  - "characters [C++], comparing"
-  - "_ftcsnccmp function"
+title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strncmp
+- _mbsncmp
+- wcsncmp
+- _mbsncmp_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftcsnccmp
+- _ftcsncmp
+- _tcsncmp
+- _tcsnccmp
+- strncmp
+- _mbsncmp
+- wcsncmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tcsnccmp function
+- ftcsncmp function
+- wcsncmp function
+- _ftcsncmp function
+- _mbsncmp function
+- tcsncmp function
+- mbsncmp function
+- _mbsncmp_l function
+- mbsncmp_l function
+- strncmp function
+- strings [C++], comparing characters of
+- string comparison [C++], strncmp function
+- _tcsncmp function
+- tcsnccmp function
+- ftcsnccmp function
+- characters [C++], comparing
+- _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4a66ac6c57b2e4ae25c7496152b4e113f3bbf751
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
+
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 Compara até a contagem especificada de caracteres de duas cadeias de caracteres.  
@@ -209,9 +215,6 @@ Result:      String 1 is greater than string 2
 Function:   strnicmp _strnicmp (first 10 characters only)  
 Result:      String 1 is equal to string 2  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

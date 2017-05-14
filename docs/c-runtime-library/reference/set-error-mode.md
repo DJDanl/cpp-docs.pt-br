@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e228e7eec61c209a10aeeac9e1c56960009b7d64
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 205a6bed342ce1489664a5e9e37880612492b04d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="seterrormode"></a>_set_error_mode
@@ -89,7 +90,7 @@ int _set_error_mode(
 |`_OUT_TO_MSGBOX`|O coletor de erros é uma caixa de mensagem.|  
 |`_REPORT_ERRMODE`|Relate o valor de `__error_mode` atual.|  
   
- Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_set_error_mode` definirá `errno` para `EINVAL` e retornará -1.  
+ Se um valor diferente dos listados for passado, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_set_error_mode` define `errno` para `EINVAL` e retorna -1.  
   
  Quando ele é usado com um [assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md), `_set_error_mode` exibe a instrução com falha na caixa de diálogo e lhe dá a opção de escolher o botão `Ignore` para que você possa continuar a executar o programa.  
   

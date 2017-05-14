@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retorna o valor inteiro do próximo caractere na `str`*.*  
+ Cada uma dessas funções retorna o valor inteiro do próximo caractere `str`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_mbsnextc` retorna o valor inteiro do próximo caractere multibyte em `str`, sem avançar o ponteiro da cadeia de caracteres. `_mbsnextc` reconhece sequências de caracteres multibyte de acordo com a [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` e `_wcsnextc` são versões de cadeia de caracteres de byte único e de caractere largo de `_mbsnextc`. `_wcsnextc` retorna o valor inteiro do próximo caractere largo em `string`; `_strnextc` retorna o valor inteiro do próximo caractere de byte único em `string`. `_strnextc` e `_wcsnextc` só são fornecidos para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).  
+ `_strnextc`e `_wcsnextc` são cadeia de caracteres de byte único e versões de cadeia de caracteres largos do `_mbsnextc`. `_wcsnextc` retorna o valor inteiro do próximo caractere largo em `string`; `_strnextc` retorna o valor inteiro do próximo caractere de byte único em `string`. `_strnextc` e `_wcsnextc` só são fornecidos para esse mapeamento e não devem ser usados de outra forma. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsnextc_l` é idêntico, exceto que ele usa o parâmetro de localidade passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -139,9 +140,6 @@ unsigned int _mbsnextc_l(
 |`_wcsnextc`|\<tchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 89d52c77bfbe86268a6363ab2fe8217dab4cfe0c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 37cb584538c51844cbd23eb0853ef48f548600ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
@@ -135,7 +136,7 @@ errno_t _mbscat_s(
 char buf[16];  
 strcpy_s(buf, 16, "Start");  
 strcat_s(buf, 16, " End");               // Correct  
-strcat_s(buf, 16 – strlen(buf), " End"); // Incorrect  
+strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect  
 ```  
   
  `wcscat_s` e `_mbscat_s` são versões de caracteres largos e de caracteres multibyte de `strcat_s`. Os argumentos e o valor retornado de `wcscat_s` são cadeias de caracteres largos; aqueles de `_mbscat_s` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
@@ -164,9 +165,6 @@ strcat_s(buf, 16 – strlen(buf), " End"); // Incorrect
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo de código em [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

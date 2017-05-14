@@ -32,14 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b76a484545b9e2c25e3b1ebecc5ba46353f7d18e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: f9b576e6d69cc499aa05cbd857b3cd35f99a8adc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="iserrorcodeenum-structure"></a>Estrutura is_error_code_enum
-Especialização que indica que [future_errc](../standard-library/future-enums.md#future_errc_enumeration) é adequado para armazenar um [error_code](../standard-library/error-code-class.md).  
+Especialização que indica que [future_errc](../standard-library/future-enums.md#future_errc) é adequado para armazenar um [error_code](../standard-library/error-code-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +50,7 @@ struct is_error_code_enum<Future_errc> : public true_type;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** future  
+ **Cabeçalho:** \<futuro >  
   
  **Namespace:** std  
   

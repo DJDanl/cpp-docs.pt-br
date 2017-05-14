@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b7553152e92a2db61330dfa5267ade05a42a807d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9bdf8a39791fc03505d79446bbe0d46436006deb
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
@@ -104,7 +105,7 @@ int _iswlower_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere minúsculo. `islower` retornará um valor diferente de zero se `c` for um caractere minúsculo (a – z). `iswlower` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra minúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere minúsculo. `islower`Retorna um valor diferente de zero se `c` é um caractere minúsculo (a - z). `iswlower` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra minúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam a localidade passada em vez da localidade atual para seu comportamento que depende da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -127,9 +128,6 @@ int _iswlower_l(
 |`_swlower_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsLower](https://msdn.microsoft.com/en-us/library/system.char.islower.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

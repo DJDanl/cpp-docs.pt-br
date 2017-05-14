@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b095eaad1e2d143f4837eb60fafe228e6a482e75
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fe127f896fa902f4a8cdb44454cf6e4c5f449e79
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="rtsalloc-class"></a>Classe rts_alloc
@@ -67,16 +68,16 @@ class rts_alloc
   
 |||  
 |-|-|  
-|[allocate](#rts_alloc__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#rts_alloc__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
-|[equals](#rts_alloc__equals)|Compara a igualdade de dois caches.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[equals](#equals)|Compara a igualdade de dois caches.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="rts_alloc__allocate"></a>  rts_alloc::allocate  
+##  <a name="allocate"></a>  rts_alloc::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -95,7 +96,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro retorna `caches[_IDX].allocate(count)`, em que o índice `_IDX` é determinado pelo tamanho do bloco solicitado `count` ou, se `count` for muito grande, retornará `operator new(count)`. `cache`, que representa o objeto do cache.  
   
-##  <a name="rts_alloc__deallocate"></a>  rts_alloc::deallocate  
+##  <a name="deallocate"></a>  rts_alloc::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -112,7 +113,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro chama `caches[_IDX].deallocate(ptr, count)`, em que o índice `_IDX` é determinado pelo tamanho do bloco solicitado `count` ou, se `count` for muito grande, retornará `operator delete(ptr)`.  
   
-##  <a name="rts_alloc__equals"></a>  rts_alloc::equals  
+##  <a name="equals"></a>  rts_alloc::equals  
  Compara a igualdade de dois caches.  
   
 ```

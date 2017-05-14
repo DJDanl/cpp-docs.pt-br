@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Funções de Membro de Fluxo de Arquivo de Saída
@@ -43,7 +45,7 @@ Funções de membro de fluxo de saída têm três tipos: aqueles que são equiva
 ## <a name="the-open-function-for-output-streams"></a>A função open para fluxos de saída  
  Para usar um fluxo de arquivo de saída ([ofstream](../standard-library/basic-ofstream-class.md)), você deve associar esse fluxo a um arquivo de disco específico no construtor ou na função **open**. Se você usar a função **open**, poderá reutilizar o mesmo objeto de fluxo com uma série de arquivos. Em ambos os casos, os argumentos que descrevem o arquivo são os mesmos.  
   
- Ao abrir o arquivo associado a um fluxo de saída, geralmente você especifica um sinalizador **open_mode**. Você pode combinar esses sinalizadores, que são definidos como enumeradores na classe `ios`, com o operador OR bit a bit ( &#124; ). Consulte [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) para obter uma lista dos enumeradores.  
+ Ao abrir o arquivo associado a um fluxo de saída, geralmente você especifica um sinalizador **open_mode**. Você pode combinar esses sinalizadores, que são definidos como enumeradores na classe `ios`, com o operador OR bit a bit ( &#124; ). Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter uma lista dos enumeradores.  
   
  Três situações de fluxo de saída comuns envolvem as opções de modo:  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>A função put  
+## <a name="the-put"></a>O put
  A função **put** grava um caractere no fluxo de saída. As duas instruções a seguir são as mesmas por padrão, mas a segunda é afetada pelos argumentos de formatação do fluxo:  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>A função write  
+## <a name="the-write"></a>A gravação
  A função **write** grava um bloco de memória para um fluxo de arquivo de saída. O argumento de tamanho especifica o número de bytes gravados. Este exemplo cria um fluxo de arquivo de saída e grava o valor binário da estrutura `Date` nele:  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  O destruidor de fluxo de saída fecha automaticamente um arquivo do fluxo somente se o construtor ou a função de membro **open** abriram o arquivo. Se você passar para o construtor um descritor de arquivo para um arquivo já aberto ou usar a função membro **attach**, será necessário fechá-lo explicitamente.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Erro ao processar funções  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Erro ao processar funções  
  Use essas funções membro para testar se há erros ao gravar em um fluxo:  
   
 |Função|Valor retornado|  

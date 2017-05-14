@@ -10,9 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - moneypunct
-- std.moneypunct
 - xlocmon/std::moneypunct
-- std::moneypunct
+- locale/std::moneypunct::char_type
+- locale/std::moneypunct::string_type
+- locale/std::moneypunct::curr_symbol
+- locale/std::moneypunct::decimal_point
+- locale/std::moneypunct::do_curr_symbol
+- locale/std::moneypunct::do_decimal_point
+- locale/std::moneypunct::do_frac_digits
+- locale/std::moneypunct::do_grouping
+- locale/std::moneypunct::do_neg_format
+- locale/std::moneypunct::do_negative_sign
+- locale/std::moneypunct::do_pos_format
+- locale/std::moneypunct::do_positive_sign
+- locale/std::moneypunct::do_thousands_sep
+- locale/std::moneypunct::frac_digits
+- locale/std::moneypunct::grouping
+- locale/std::moneypunct::neg_format
+- locale/std::moneypunct::negative_sign
+- locale/std::moneypunct::pos_format
+- locale/std::moneypunct::positive_sign
+- locale/std::moneypunct::thousands_sep
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5bf4f8f69073e6c445f416a24b00e19b4a20adc4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9567db1b823f373a5ea26e6d113cc9176901453d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
@@ -68,44 +87,44 @@ class moneypunct;
   
 |||  
 |-|-|  
-|[moneypunct](#moneypunct__moneypunct)|Construtor de objetos do tipo `moneypunct`.|  
+|[moneypunct](#moneypunct)|Construtor de objetos do tipo `moneypunct`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#moneypunct__char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|  
-|[string_type](#moneypunct__string_type)|Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo `CharType`.|  
+|[char_type](#char_type)|Um tipo que é usado para descrever um caractere usado por uma localidade.|  
+|[string_type](#string_type)|Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo `CharType`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[curr_symbol](#moneypunct__curr_symbol)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.|  
-|[decimal_point](#moneypunct__decimal_point)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.|  
-|[do_curr_symbol](#moneypunct__do_curr_symbol)|Uma função membro virtual protegida que retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.|  
-|[do_decimal_point](#moneypunct__do_decimal_point)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.|  
-|[do_frac_digits](#moneypunct__do_frac_digits)|A função membro virtual protegida retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.|  
-|[do_grouping](#moneypunct__do_grouping)|A função membro virtual protegida retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|  
-|[do_neg_format](#moneypunct__do_neg_format)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores negativos.|  
-|[do_negative_sign](#moneypunct__do_negative_sign)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.|  
-|[do_pos_format](#moneypunct__do_pos_format)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores positivos.|  
-|[do_positive_sign](#moneypunct__do_positive_sign)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.|  
-|[do_thousands_sep](#moneypunct__do_thousands_sep)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.|  
-|[frac_digits](#moneypunct__frac_digits)|Retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.|  
-|[grouping](#moneypunct__grouping)|Retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|  
-|[neg_format](#moneypunct__neg_format)|Retorna uma regra específica de localidade para formatação de saídas com valores negativos.|  
-|[negative_sign](#moneypunct__negative_sign)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.|  
-|[pos_format](#moneypunct__pos_format)|Retorna uma regra específica de localidade para formatação de saídas com valores positivos.|  
-|[positive_sign](#moneypunct__positive_sign)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.|  
-|[thousands_sep](#moneypunct__thousands_sep)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.|  
+|[curr_symbol](#curr_symbol)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.|  
+|[decimal_point](#decimal_point)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.|  
+|[do_curr_symbol](#do_curr_symbol)|Uma função membro virtual protegida que retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.|  
+|[do_decimal_point](#do_decimal_point)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.|  
+|[do_frac_digits](#do_frac_digits)|A função membro virtual protegida retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.|  
+|[do_grouping](#do_grouping)|A função membro virtual protegida retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|  
+|[do_neg_format](#do_neg_format)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores negativos.|  
+|[do_negative_sign](#do_negative_sign)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.|  
+|[do_pos_format](#do_pos_format)|Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores positivos.|  
+|[do_positive_sign](#do_positive_sign)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.|  
+|[do_thousands_sep](#do_thousands_sep)|Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.|  
+|[frac_digits](#frac_digits)|Retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.|  
+|[grouping](#grouping)|Retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.|  
+|[neg_format](#neg_format)|Retorna uma regra específica de localidade para formatação de saídas com valores negativos.|  
+|[negative_sign](#negative_sign)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.|  
+|[pos_format](#pos_format)|Retorna uma regra específica de localidade para formatação de saídas com valores positivos.|  
+|[positive_sign](#positive_sign)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.|  
+|[thousands_sep](#thousands_sep)|Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namemoneypunctchartypea--moneypunctchartype"></a><a name="moneypunct__char_type"></a>  moneypunct::char_type  
+##  <a name="char_type"></a>  moneypunct::char_type  
  Um tipo que é usado para descrever um caractere usado por uma localidade.  
   
 ```  
@@ -115,7 +134,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Comentários  
  O tipo é um sinônimo do parâmetro de modelo **CharType**.  
   
-##  <a name="a-namemoneypunctcurrsymbola--moneypunctcurrsymbol"></a><a name="moneypunct__curr_symbol"></a>  moneypunct::curr_symbol  
+##  <a name="curr_symbol"></a>  moneypunct::curr_symbol  
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.  
   
 ```  
@@ -126,7 +145,7 @@ string_type curr_symbol() const;
  Uma cadeia de caracteres que contém o símbolo de moeda.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_curr_symbol](#moneypunct__do_curr_symbol).  
+ A função membro retorna [do_curr_symbol](#do_curr_symbol).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -149,7 +168,7 @@ int main( )
 };  
 ```  
   
-##  <a name="a-namemoneypunctdecimalpointa--moneypunctdecimalpoint"></a><a name="moneypunct__decimal_point"></a>  moneypunct::decimal_point  
+##  <a name="decimal_point"></a>  moneypunct::decimal_point  
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.  
   
 ```  
@@ -160,7 +179,7 @@ CharType decimal_point() const;
  Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_decimal_point](#moneypunct__do_decimal_point).  
+ A função membro retorna [do_decimal_point](#do_decimal_point).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -192,7 +211,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,  
 ```  
   
-##  <a name="a-namemoneypunctdocurrsymbola--moneypunctdocurrsymbol"></a><a name="moneypunct__do_curr_symbol"></a>  moneypunct::do_curr_symbol  
+##  <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol  
  Uma função membro virtual protegida que retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de moeda.  
   
 ```  
@@ -203,9 +222,9 @@ virtual string_type do_curr_symbol() const;
  Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [curr_symbol](#moneypunct__curr_symbol), em que a função membro virtual é chamada por `curr_symbol`.  
+  Veja o exemplo de [curr_symbol](#curr_symbol), em que a função membro virtual é chamada por `curr_symbol`.  
   
-##  <a name="a-namemoneypunctdodecimalpointa--moneypunctdodecimalpoint"></a><a name="moneypunct__do_decimal_point"></a>  moneypunct::do_decimal_point  
+##  <a name="do_decimal_point"></a>  moneypunct::do_decimal_point  
  Uma função membro virtual protegida que retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.  
   
 ```  
@@ -216,9 +235,9 @@ virtual CharType do_decimal_point() const;
  Uma sequência de elementos específica de localidade a ser usada como um símbolo de vírgula decimal.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [decimal_point](#moneypunct__decimal_point), em que a função membro virtual é chamada por `decimal_point`.  
+  Veja o exemplo de [decimal_point](#decimal_point), em que a função membro virtual é chamada por `decimal_point`.  
   
-##  <a name="a-namemoneypunctdofracdigitsa--moneypunctdofracdigits"></a><a name="moneypunct__do_frac_digits"></a>  moneypunct::do_frac_digits  
+##  <a name="do_frac_digits"></a>  moneypunct::do_frac_digits  
  Uma função membro virtual protegida retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.  
   
 ```  
@@ -229,9 +248,9 @@ virtual int do_frac_digits() const;
  Uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [frac_digits](#moneypunct__frac_digits), em que a função membro virtual é chamada por `frac_digits`.  
+  Veja o exemplo de [frac_digits](#frac_digits), em que a função membro virtual é chamada por `frac_digits`.  
   
-##  <a name="a-namemoneypunctdogroupinga--moneypunctdogrouping"></a><a name="moneypunct__do_grouping"></a>  moneypunct::do_grouping  
+##  <a name="do_grouping"></a>  moneypunct::do_grouping  
  Uma função membro virtual protegida que retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.  
   
 ```  
@@ -242,9 +261,9 @@ virtual string do_grouping() const;
  Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [grouping](#moneypunct__grouping), em que a função membro virtual é chamada por **grouping**.  
+  Veja o exemplo de [grouping](#grouping), em que a função membro virtual é chamada por **grouping**.  
   
-##  <a name="a-namemoneypunctdonegformata--moneypunctdonegformat"></a><a name="moneypunct__do_neg_format"></a>  moneypunct::do_neg_format  
+##  <a name="do_neg_format"></a>  moneypunct::do_neg_format  
  Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores negativos.  
   
 ```  
@@ -269,9 +288,9 @@ virtual pattern do_neg_format() const;
  A versão de modelo `moneypunct`\< **CharType**, **Intl**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [net_format](#moneypunct__neg_format), em que a função membro virtual é chamada por `neg_format`.  
+  Veja o exemplo de [net_format](#neg_format), em que a função membro virtual é chamada por `neg_format`.  
   
-##  <a name="a-namemoneypunctdonegativesigna--moneypunctdonegativesign"></a><a name="moneypunct__do_negative_sign"></a>  moneypunct::do_negative_sign  
+##  <a name="do_negative_sign"></a>  moneypunct::do_negative_sign  
  Uma função membro virtual protegida que é chamada para retornar uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.  
   
 ```  
@@ -282,9 +301,9 @@ virtual string_type do_negative_sign() const;
  Uma sequência de elementos específica de localidade a ser usada como um sinal negativo.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [negative_sign](#moneypunct__negative_sign), em que a função membro virtual é chamada por `negative_sign`.  
+  Veja o exemplo de [negative_sign](#negative_sign), em que a função membro virtual é chamada por `negative_sign`.  
   
-##  <a name="a-namemoneypunctdoposformata--moneypunctdoposformat"></a><a name="moneypunct__do_pos_format"></a>  moneypunct::do_pos_format  
+##  <a name="do_pos_format"></a>  moneypunct::do_pos_format  
  Uma função membro virtual protegida que é chamada para retornar uma regra específica de localidade para formatação de saídas com valores positivos.  
   
 ```  
@@ -292,14 +311,14 @@ virtual pattern do_pos_format() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ela também determina como corresponder os componentes de um campo de entrada monetário.) A codificação é a mesma usada para [do_neg_format](#moneypunct__do_neg_format).  
+ A função membro virtual protegida retorna uma regra específica de localidade para determinar como gerar o campo de saída monetário para um valor positivo. (Ela também determina como corresponder os componentes de um campo de entrada monetário.) A codificação é a mesma usada para [do_neg_format](#do_neg_format).  
   
  A versão do modelo de moneypunct\< **CharType**, **Inputlterator**> retorna `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [pos_format](#moneypunct__pos_format), em que a função membro virtual é chamada por `pos_format`.  
+  Veja o exemplo de [pos_format](#pos_format), em que a função membro virtual é chamada por `pos_format`.  
   
-##  <a name="a-namemoneypunctdopositivesigna--moneypunctdopositivesign"></a><a name="moneypunct__do_positive_sign"></a>  moneypunct::do_positive_sign  
+##  <a name="do_positive_sign"></a>  moneypunct::do_positive_sign  
  Uma função membro virtual protegida que retorna uma sequência de elementos específica de localidade a ser usada como um sinal positivo.  
   
 ```  
@@ -310,9 +329,9 @@ virtual string_type do_positive_sign() const;
  Uma sequência de elementos específica de localidade a ser usada como um sinal positivo.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [positive_sign](#moneypunct__positive_sign), em que a função membro virtual é chamada por `positive_sign`.  
+  Veja o exemplo de [positive_sign](#positive_sign), em que a função membro virtual é chamada por `positive_sign`.  
   
-##  <a name="a-namemoneypunctdothousandssepa--moneypunctdothousandssep"></a><a name="moneypunct__do_thousands_sep"></a>  moneypunct::do_thousands_sep  
+##  <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep  
  Uma função membro virtual protegida que retorna um elemento específico de localidade para ser usado como separador de grupo à esquerda da vírgula decimal.  
   
 ```  
@@ -323,9 +342,9 @@ virtual CharType do_thousands_sep() const;
  Um elemento específico de localidade a ser usado como um separador de grupo à esquerda de qualquer vírgula decimal.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [thousands_sep](#moneypunct__thousands_sep), em que a função membro virtual é chamada por `thousands_sep`.  
+  Veja o exemplo de [thousands_sep](#thousands_sep), em que a função membro virtual é chamada por `thousands_sep`.  
   
-##  <a name="a-namemoneypunctfracdigitsa--moneypunctfracdigits"></a><a name="moneypunct__frac_digits"></a>  moneypunct::frac_digits  
+##  <a name="frac_digits"></a>  moneypunct::frac_digits  
  Retorna uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.  
   
 ```  
@@ -336,7 +355,7 @@ int frac_digits() const;
  Uma contagem do número de dígitos específica de localidade a ser exibida à direita de qualquer vírgula decimal.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_frac_digits](#moneypunct__do_frac_digits).  
+ A função membro retorna [do_frac_digits](#do_frac_digits).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -391,7 +410,7 @@ German_Germany.1252 domestic frac_digits
  to the right of the radix character: 2  
 ```  
   
-##  <a name="a-namemoneypunctgroupinga--moneypunctgrouping"></a><a name="moneypunct__grouping"></a>  moneypunct::grouping  
+##  <a name="grouping"></a>  moneypunct::grouping  
  Retorna uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.  
   
 ```  
@@ -402,7 +421,7 @@ string grouping() const;
  Uma regra específica de localidade para determinar como os dígitos são agrupados à esquerda de qualquer vírgula decimal.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_grouping](#moneypunct__do_grouping).  
+ A função membro retorna [do_grouping](#do_grouping).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -457,7 +476,7 @@ German_Germany.1252 domestic frac_digits
  to the right of the radix character: 2  
 ```  
   
-##  <a name="a-namemoneypunctmoneypuncta--moneypunctmoneypunct"></a><a name="moneypunct__moneypunct"></a>  moneypunct::moneypunct  
+##  <a name="moneypunct"></a>  moneypunct::moneypunct  
  Construtor de objetos do tipo `moneypunct`.  
   
 ```  
@@ -475,13 +494,13 @@ explicit moneypunct(size_t _Refs = 0);
   
 -   1: o tempo de vida do objeto deve ser gerenciado manualmente.  
   
--   \> 0: esses valores não estão definidos.  
+-   \>1: esses valores não são definidos.  
   
  Nenhum exemplo direto é possível, pois o destruidor está protegido.  
   
  O construtor inicializa seu objeto base com [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
-##  <a name="a-namemoneypunctnegformata--moneypunctnegformat"></a><a name="moneypunct__neg_format"></a>  moneypunct::neg_format  
+##  <a name="neg_format"></a>  moneypunct::neg_format  
  Retorna uma regra específica de localidade para formatação de saídas com valores negativos.  
   
 ```  
@@ -492,7 +511,7 @@ pattern neg_format() const;
  Uma regra específica de localidade para formatação de saídas com valores negativos.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_neg_format](#moneypunct__do_neg_format).  
+ A função membro retorna [do_neg_format](#do_neg_format).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -526,7 +545,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namemoneypunctnegativesigna--moneypunctnegativesign"></a><a name="moneypunct__negative_sign"></a>  moneypunct::negative_sign  
+##  <a name="negative_sign"></a>  moneypunct::negative_sign  
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.  
   
 ```  
@@ -537,7 +556,7 @@ string_type negative_sign() const;
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal negativo.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_negative_sign](#moneypunct__do_negative_sign).  
+ A função membro retorna [do_negative_sign](#do_negative_sign).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -585,7 +604,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -  
 ```  
   
-##  <a name="a-namemoneypunctposformata--moneypunctposformat"></a><a name="moneypunct__pos_format"></a>  moneypunct::pos_format  
+##  <a name="pos_format"></a>  moneypunct::pos_format  
  Retorna uma regra específica de localidade para formatação de saídas com valores positivos.  
   
 ```  
@@ -596,7 +615,7 @@ pattern pos_format() const;
  Uma regra específica de localidade para formatação de saídas com valores positivos.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_pos_format](#moneypunct__do_pos_format).  
+ A função membro retorna [do_pos_format](#do_pos_format).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -630,7 +649,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemoneypunctpositivesigna--moneypunctpositivesign"></a><a name="moneypunct__positive_sign"></a>  moneypunct::positive_sign  
+##  <a name="positive_sign"></a>  moneypunct::positive_sign  
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.  
   
 ```  
@@ -641,7 +660,7 @@ string_type positive_sign() const;
  Uma sequência de elementos específica de localidade a ser usada como um símbolo de sinal positivo.  
   
 ### <a name="remarks"></a>Comentários  
- -A função membro retorna [do_positive_sign](#moneypunct__do_positive_sign).  
+ -A função membro retorna [do_positive_sign](#do_positive_sign).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -689,7 +708,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:  
 ```  
   
-##  <a name="a-namemoneypunctstringtypea--moneypunctstringtype"></a><a name="moneypunct__string_type"></a>  moneypunct::string_type  
+##  <a name="string_type"></a>  moneypunct::string_type  
  Um tipo que descreve uma cadeia de caracteres que contém caracteres do tipo **CharType**.  
   
 ```  
@@ -699,7 +718,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ### <a name="remarks"></a>Comentários  
  O tipo descreve uma especialização da classe de modelo [basic_string](../standard-library/basic-string-class.md) cujos objetos podem armazenar cópias das sequências de pontuação.  
   
-##  <a name="a-namemoneypunctthousandssepa--moneypunctthousandssep"></a><a name="moneypunct__thousands_sep"></a>  moneypunct::thousands_sep  
+##  <a name="thousands_sep"></a>  moneypunct::thousands_sep  
  Retorna uma sequência de elementos específica de localidade a ser usada como um símbolo de separador de milhares.  
   
 ```  
@@ -710,7 +729,7 @@ CharType thousands_sep() const;
  Uma sequência de elementos específica de localidade a ser usada como separador de milhares  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [do_thousands_sep](#moneypunct__do_thousands_sep).  
+ A função membro retorna [do_thousands_sep](#do_thousands_sep).  
   
 ### <a name="example"></a>Exemplo  
   
