@@ -1,54 +1,60 @@
 ---
-title: "fsetpos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fsetpos"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fsetpos"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "streams, setting position indicators"
-  - "fsetpos function"
+title: fsetpos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fsetpos
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fsetpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, setting position indicators
+- fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1facc7aec41e7ab1c8b420f6792d76cce0d2b029
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="fsetpos"></a>fsetpos
 Define o indicador de posição do fluxo.  
@@ -75,7 +81,7 @@ int fsetpos(
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.  
   
 ## <a name="remarks"></a>Comentários  
- A função `fsetpos` define o indicador de posição do arquivo para `stream` como o valor de `pos`*,* que é obtido em uma chamada anterior a `fgetpos` para `stream` *.* A função limpa o indicador de fim do arquivo e desfaz os efeitos de [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) em `stream`*.* Depois de chamar `fsetpos`, a operação seguinte em `stream` pode ser de entrada ou saída.  
+ O `fsetpos` função define o indicador de posição do arquivo de `stream` para o valor de `pos`, que é obtido em uma chamada anterior para `fgetpos` contra `stream`. A função limpa o indicador de fim de arquivo e desfazer os efeitos da [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) em `stream`. Depois de chamar `fsetpos`, a operação seguinte em `stream` pode ser de entrada ou saída.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -87,9 +93,6 @@ int fsetpos(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [fgetpos](../../c-runtime-library/reference/fgetpos.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

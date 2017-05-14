@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - discrete_distribution
-- std::discrete_distribution
 - random/std::discrete_distribution
-- std::discrete_distribution::reset
 - random/std::discrete_distribution::reset
-- std::discrete_distribution::probabilities
 - random/std::discrete_distribution::probabilities
-- std::discrete_distribution::param
 - random/std::discrete_distribution::param
-- std::discrete_distribution::min
 - random/std::discrete_distribution::min
-- std::discrete_distribution::max
 - random/std::discrete_distribution::max
-- std::discrete_distribution::operator()
 - random/std::discrete_distribution::operator()
-- std::discrete_distribution::param_type
 - random/std::discrete_distribution::param_type
-- std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::probabilities
-- std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator==
-- std::discrete_distribution::param_type::operator!=
 - random/std::discrete_distribution::param_type::operator!=
+- random/std::discrete_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f29f4e98cf23f30383327713973f861b56ae0ce0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="discretedistribution-class"></a>Classe discrete_distribution
@@ -110,8 +101,8 @@ public:
   
 |||  
 |-|-|  
-|[discrete_distribution::discrete_distribution](#discrete_distribution__discrete_distribution)|`discrete_distribution::param`|  
-|`discrete_distribution::operator()`|[discrete_distribution::param_type](#discrete_distribution__param_type)|  
+|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
+|`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  A função de propriedade `vector<double> probabilities()` mostra as probabilidades de cada inteiro gerado.  
   
@@ -201,7 +192,7 @@ Distribution for 100 samples:
   
  **Namespace:** std  
   
-##  <a name="a-namediscretedistributiondiscretedistributiona--discretedistributiondiscretedistribution"></a><a name="discrete_distribution__discrete_distribution"></a>  discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  Constrói a distribuição.  
   
 ```  
@@ -257,11 +248,11 @@ O construtor de lista do inicializador que tem um parâmetro *weightlist* constr
   
 O construtor que tem os parâmetros *count*, *low*, *high* e *weightfunc* constrói um objeto de distribuição inicializado com base nessas regras:  
 -  Se *count* < 1, **n** = 1 e, como tal, equivale ao construtor padrão, sempre gerando zero.  
--  Se *count* > 0, **n** = *count*. Desde que **d** = (*high* - *low*) / **n** seja maior que zero, usando os subintervalos **d** uniformes, cada peso será atribuído como: `weight[k] = weightfunc(x)`, em que **x** = *low* + **k** * **d** + **d** / 2, para **k** = 0, ..., **n** – 1.  
+-  Se *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
 O construtor que tem um parâmetro `param_type` *parm* constrói um objeto de distribuição usando *parm* como a estrutura de parâmetro armazenada.  
   
-##  <a name="a-namediscretedistributionparamtypea--discretedistributionparamtype"></a><a name="discrete_distribution__param_type"></a>  discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  Armazena todos os parâmetros da distribuição.  
   
 ```  

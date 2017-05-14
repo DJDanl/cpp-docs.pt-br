@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - exponential_distribution
-- std::exponential_distribution
 - random/std::exponential_distribution
-- std::exponential_distribution::reset
 - random/std::exponential_distribution::reset
-- std::exponential_distribution::lambda
 - random/std::exponential_distribution::lambda
-- std::exponential_distribution::param
 - random/std::exponential_distribution::param
-- std::exponential_distribution::min
 - random/std::exponential_distribution::min
-- std::exponential_distribution::max
 - random/std::exponential_distribution::max
-- std::exponential_distribution::operator()
 - random/std::exponential_distribution::operator()
-- std::exponential_distribution::param_type
 - random/std::exponential_distribution::param_type
-- std::exponential_distribution::param_type::lambda
 - random/std::exponential_distribution::param_type::lambda
-- std::exponential_distribution::param_type::operator==
 - random/std::exponential_distribution::param_type::operator==
-- std::exponential_distribution::param_type::operator!=
 - random/std::exponential_distribution::param_type::operator!=
+- random/std::exponential_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 6681447dd9e5dda7515d04b4bdedfd9de9c62983
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: eaf28ef7a02d358422d7e655688f5f4bf7cccc7d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
@@ -106,8 +97,8 @@ O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os
   
 ||||  
 |-|-|-|  
-|[exponential_distribution::exponential_distribution](#exponential_distribution__exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
-|`exponential_distribution::operator()`||[exponential_distribution::param_type](#exponential_distribution__param_type)|  
+|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
+|`exponential_distribution::operator()`||[param_type](#param_type)|  
   
 A função membro de propriedade `lambda()` retorna o valor para o parâmetro de distribuição armazenado `lambda`.  
   
@@ -198,7 +189,7 @@ Distribution for 10 samples:
   
  **Namespace:** std  
   
-##  <a name="a-nameexponentialdistributionexponentialdistributiona--exponentialdistributionexponentialdistribution"></a><a name="exponential_distribution__exponential_distribution"></a>  exponential_distribution::exponential_distribution  
+##  <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution  
  Constrói a distribuição.  
   
 ```  
@@ -220,7 +211,7 @@ O primeiro construtor constrói um objeto cujo valor `lambda` armazenado contém
   
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
   
-##  <a name="a-nameexponentialdistributionparamtypea--exponentialdistributionparamtype"></a><a name="exponential_distribution__param_type"></a>  exponential_distribution::param_type  
+##  <a name="param_type"></a>  exponential_distribution::param_type  
 Armazena os parâmetros da distribuição.  
   
 ```

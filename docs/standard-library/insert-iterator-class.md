@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="insertiterator-class"></a>Classe insert_iterator
@@ -64,29 +65,29 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator](#insert_iterator__insert_iterator)|Constrói um `insert_iterator` que insere um elemento em uma posição especificada em um contêiner.|  
+|[insert_iterator](#insert_iterator)|Constrói um `insert_iterator` que insere um elemento em uma posição especificada em um contêiner.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#insert_iterator__container_type)|Um tipo que representa o contêiner no qual uma inserção geral deve ser feita.|  
-|[reference](#insert_iterator__reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|  
+|[container_type](#container_type)|Um tipo que representa o contêiner no qual uma inserção geral deve ser feita.|  
+|[reference](#reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator*](#insert_iterator__operator_star)|Operador de desreferenciamento usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção geral.|  
-|[operator++](#insert_iterator__operator_add_add)|Incrementa o `insert_iterator` para o próximo local no qual um valor pode ser armazenado.|  
-|[operator=](#insert_iterator__operator_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção geral.|  
+|[operator*](#op_star)|Operador de desreferenciamento usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção geral.|  
+|[operator++](#op_add_add)|Incrementa o `insert_iterator` para o próximo local no qual um valor pode ser armazenado.|  
+|[operator=](#op_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção geral.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+##  <a name="container_type"></a>  insert_iterator::container_type  
  Um tipo que representa o contêiner no qual uma inserção geral deve ser feita.  
   
 ```
@@ -126,7 +127,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
  Constrói um `insert_iterator` que insere um elemento em uma posição especificada em um contêiner.  
   
 ```
@@ -189,7 +190,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+##  <a name="op_star"></a>  insert_iterator::operator*  
  Cancela a referência do iterador de inserção, retornando o elemento que é seu alvo.  
   
 ```
@@ -246,7 +247,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+##  <a name="op_add_add"></a>  insert_iterator::operator++  
  Incrementa o **insert_iterator** para o próximo local no qual um valor pode ser armazenado.  
   
 ```
@@ -307,7 +308,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+##  <a name="op_eq"></a>  insert_iterator::operator=  
  Insere um valor no contêiner e retorna o iterador atualizado para apontar para o novo elemento.  
   
 ```
@@ -386,7 +387,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__reference"></a>  insert_iterator::reference  
+##  <a name="reference"></a>  insert_iterator::reference  
  Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.  
   
 ```

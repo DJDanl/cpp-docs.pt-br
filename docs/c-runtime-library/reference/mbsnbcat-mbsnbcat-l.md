@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat` retorna um ponteiro para a cadeia de caracteres de destino. Nenhum valor retornado é reservado para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_mbsnbcat` acrescenta, no máximo, os primeiros `count` bytes de `src` para `dest`. Se o byte imediatamente antes do caractere nulo em `dest` for um byte inicial, o byte inicial de `src` substituirá esse byte inicial. Caso contrário, o byte inicial de `src` substitui o caractere nulo de terminação de `dest`. Se aparecer um byte nulo no `src` antes de `count` bytes serem acrescentados, _`mbsnbcat` acrescentará todos os bytes de `src`, até o caractere nulo. Se `count` for maior que o comprimento de `src`, o comprimento de `src` será usado no lugar de `count`. A cadeia de caracteres resultante é terminada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
+ A função `_mbsnbcat` acrescenta, no máximo, os primeiros `count` bytes de `src` para `dest`. Se o byte imediatamente antes do caractere nulo em `dest` for um byte inicial, o byte inicial de `src` substituirá esse byte inicial. Caso contrário, o byte inicial de `src` substitui o caractere nulo de terminação de `dest`. Se aparecer um byte nulo no `src` antes de `count` bytes serem acrescentados, `_mbsnbcat` acrescentará todos os bytes de `src`, até o caractere nulo. Se `count` for maior que o comprimento de `src`, o comprimento de `src` será usado no lugar de `count`. A cadeia de caracteres resultante é terminada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. A versão `_mbsnbcat` da função usa a localidade atual desse comportamento dependente da localidade. A versão `_mbsnbcat_l` é idêntica, exceto por usar o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

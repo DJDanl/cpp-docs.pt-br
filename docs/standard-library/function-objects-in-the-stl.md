@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Objetos de função na Biblioteca Padrão C++
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for `true`, o elemento será removido do contêiner que está sendo acessado pelos iteradores ` first` e ` last`. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento ` pred` ou pode criar seus próprios objetos.  
+ O último argumento para `remove_if` é um objeto de função que retorna um valor booliano (um *predicado*). Se o resultado do objeto de função for `true`, o elemento será removido do contêiner que está sendo acessado pelos iteradores `first` e `last`. Você pode usar qualquer um dos objetos de função declarados no cabeçalho [\<functional>](../standard-library/functional.md) para o argumento `pred` ou pode criar seus próprios objetos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)

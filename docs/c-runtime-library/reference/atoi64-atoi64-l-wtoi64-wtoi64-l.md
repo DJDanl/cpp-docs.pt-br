@@ -74,10 +74,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 96da65331d39e7553eba790d0279be9df6770d18
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 749ce35fdb4ed530bf301539b13ba3cb0471b996
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
@@ -127,7 +128,7 @@ __int64 _wtoi64_l(
 [whitespace] [sign] [digits]]  
 ```  
   
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (+) ou menos (-); e `digits` são um ou mais dígitos.  
+ Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de adição (+) ou menos (-); e `digits` são um ou mais dígitos.  
   
  `_wtoi64` é idêntico a `_atoi64`, exceto que assume uma cadeia de caracteres largos como um parâmetro.  
   
@@ -194,12 +195,6 @@ Function: _atoi64( "314127.64" ) = 314127
 Function: _atoi64( "3336402735171707160320" ) = -1  
 Overflow condition occurred.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Convert::ToInt64](https://msdn.microsoft.com/en-us/library/system.convert.toint64.aspx)  
-  
--   [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint64.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - cauchy_distribution
-- std::cauchy_distribution
 - random/std::cauchy_distribution
-- std::cauchy_distribution::reset
 - random/std::cauchy_distribution::reset
-- std::cauchy_distribution::a
 - random/std::cauchy_distribution::a
-- std::cauchy_distribution::b
 - random/std::cauchy_distribution::b
-- std::cauchy_distribution::param
 - random/std::cauchy_distribution::param
-- std::cauchy_distribution::min
 - random/std::cauchy_distribution::min
-- std::cauchy_distribution::max
 - random/std::cauchy_distribution::max
-- std::cauchy_distribution::operator()
 - random/std::cauchy_distribution::operator()
-- std::cauchy_distribution::param_type
 - random/std::cauchy_distribution::param_type
-- std::cauchy_distribution::param_type::a
 - random/std::cauchy_distribution::param_type::a
-- std::cauchy_distribution::param_type::b
 - random/std::cauchy_distribution::param_type::b
-- std::cauchy_distribution::param_type::operator==
 - random/std::cauchy_distribution::param_type::operator==
-- std::cauchy_distribution::param_type::operator!=
 - random/std::cauchy_distribution::param_type::operator!=
+- random/std::cauchy_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: 6cbe218a9bcac3b35952e6993cc496689e0290aa
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2af8fbb5fb6bfee6bc0a996fffe2e62f1d78cde0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cauchydistribution-class"></a>Classe cauchy_distribution
@@ -110,8 +99,8 @@ A classe de modelo descreve uma distribuição que produz valores de um tipo de 
   
 ||||  
 |-|-|-|  
-|[cauchy_distribution::cauchy_distribution](#cauchy_distribution__cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[cauchy_distribution::param_type](#cauchy_distribution__param_type)|  
+|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
+|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|  
   
 As funções de propriedade `a()` e `b()` retornam os respectivos valores para os parâmetros de distribuição armazenados `a` e `b`.  
   
@@ -267,7 +256,7 @@ Distribution for 10 samples:
   
 **Namespace:** std  
   
-##  <a name="a-namecauchydistributioncauchydistributiona--cauchydistributioncauchydistribution"></a><a name="cauchy_distribution__cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
+##  <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
 Constrói a distribuição.  
   
 ```  
@@ -292,7 +281,7 @@ O primeiro construtor constrói um objeto cujo valor `a` armazenado contém o va
   
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
   
-##  <a name="a-namecauchydistributionparamtypea--cauchydistributionparamtype"></a><a name="cauchy_distribution__param_type"></a>  cauchy_distribution::param_type  
+##  <a name="param_type"></a>  cauchy_distribution::param_type  
 Armazena todos os parâmetros da distribuição.  
   
 ```cpp    

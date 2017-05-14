@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-Termina um thread; a `_endthread` termina um thread criado pela função`_beginthread` e a `_endthreadex` termina um thread criado pela função `_beginthreadex`.  
+Encerra um thread; `_endthread` encerra um thread que é criado por `_beginthread` e `_endthreadex` encerra um thread que é criado pela `_beginthreadex`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -106,9 +107,6 @@ void _endthreadex(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

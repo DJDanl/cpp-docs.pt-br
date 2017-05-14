@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2f60a63af85bed19a1393798cb03f03004ae5828
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6e8a0fce6ad16a34a8c6e51d1810fd7116a79e17
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
@@ -101,7 +102,7 @@ int _iswalpha_l(
  A localidade a ser usada em vez da localidade atual.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere alfabético. `isalpha` retornará um valor diferente de zero se `c` estiver dentro dos intervalos A – Z ou a – z. `iswalpha` retorna um valor diferente de zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero; ou seja, para qualquer caractere largo que for parte de um conjunto definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere alfabético. `isalpha`Retorna um valor diferente de zero se `c` está dentro dos intervalos de A - Z ou a - z. `iswalpha` retorna um valor diferente de zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero; ou seja, para qualquer caractere largo que for parte de um conjunto definido pela implementação para o qual nenhum `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -124,9 +125,6 @@ int _iswalpha_l(
 |`_iswalpha_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsLetter](https://msdn.microsoft.com/en-us/library/system.char.isletter.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

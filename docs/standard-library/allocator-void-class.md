@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5d21bcb7ca33578fbda5fe6e4c961bc23592bef8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef8af7f3ea22529eed77e2259add8fcde21fbd57
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="allocatorltvoidgt-class"></a>Classe allocator&lt;void&gt;
@@ -67,13 +68,13 @@ class allocator<void> {
 ## <a name="remarks"></a>Comentários  
  A classe explicitamente especializa a classe de modelo [allocator](../standard-library/allocator-class.md) para tipo *void.* Seus construtores e o operador de atribuição comportam-se da mesma maneira que a classe de modelo, mas define somente os seguintes tipos:  
   
-- [const_pointer](../standard-library/allocator-class.md#allocator__const_pointer).  
+- [const_pointer](../standard-library/allocator-class.md#const_pointer).  
   
-- [pointer](../standard-library/allocator-class.md#allocator__pointer).  
+- [pointer](../standard-library/allocator-class.md#pointer).  
   
-- [value_type](../standard-library/allocator-class.md#allocator__value_type).  
+- [value_type](../standard-library/allocator-class.md#value_type).  
   
-- [rebind](../standard-library/allocator-class.md#allocator__rebind), um modelo de classe aninhada.  
+- [rebind](../standard-library/allocator-class.md#rebind), um modelo de classe aninhada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<memory>  

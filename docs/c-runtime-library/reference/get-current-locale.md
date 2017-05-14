@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9c03528f5c85e7ac0ce70202486c8ee92ffadad0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e2f14ad541750967d63a50c13ec82a9ed57fce05
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
@@ -72,7 +73,7 @@ _locale_t _get_current_locale(void);
  Um objeto de localidade que representa a localidade atual.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_get_current_locale` obtém a localidade definida atualmente para o thread e retorna um objeto de localidade que representa essa localidade.  
+ O `_get_current_locale` função obtém atualmente definida localidade do thread e retorna um objeto de localidade que representa essa localidade.  
   
  O nome anterior dessa função, `__get_current_locale` (com dois sublinhados à esquerda), foi preterido.  
   
@@ -83,9 +84,6 @@ _locale_t _get_current_locale(void);
 |`_get_current_locale`|\<locale.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não há equivalência.  
   
 ## <a name="see-also"></a>Consulte também  
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

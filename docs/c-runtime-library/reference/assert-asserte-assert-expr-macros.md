@@ -53,10 +53,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 99698cf158118a876a3bb78edaaa52f2b9177d0a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a0d8c456f20fc048bab91ec5bc9e1639b93adb6d
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>Macros _ASSERT, _ASSERTE, _ASSERT_EXPR
@@ -188,9 +189,6 @@ crt_ASSERT_macro.c(58) :
 crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2  
 'I am p1' != 'I am p2'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de depuração](../../c-runtime-library/debug-routines.md)   

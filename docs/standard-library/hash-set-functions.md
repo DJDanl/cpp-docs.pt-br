@@ -12,16 +12,17 @@ f1_keywords:
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1238f4a4e75f13ccd660554de8c49646549bc2cc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2743e67d8077cdf75b51a3dce914ced0894a3392
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lthashsetgt-functions"></a>Funções &lt;hash_set&gt;
 |||  
 |-|-|  
-|[swap](#swap)|[swap (hash_multiset)](#swap__hash_multiset_)|  
+|[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
   
 ##  <a name="swap"></a>  swap  
   
@@ -44,7 +45,7 @@ void swap(
  O hash_set cujos elementos serão trocados por aqueles do hash_set `right`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_set para executar a função membro `left``.`[swap](../standard-library/hash-set-class.md#hash_set__swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo  
+ A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_set para executar a função membro `left``.`[swap](../standard-library/hash-set-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo  
   
  **modelo \<classe T> void swap(T&, T&),**  
   
@@ -53,9 +54,9 @@ void swap(
  No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de código da função de membro [hash_multiset::swap](../standard-library/hash-set-class.md#hash_set__swap) para obter um exemplo que usa a versão de modelo do `swap`.  
+  Veja o exemplo de código da função de membro [hash_multiset::swap](../standard-library/hash-set-class.md#swap) para obter um exemplo que usa a versão de modelo do `swap`.  
   
-##  <a name="swap__hash_multiset_"></a>  swap (hash_multiset)  
+##  <a name="swap_hash_multiset"></a>  swap (hash_multiset)  
   
 > [!NOTE]
 >  Esta API está obsoleta. A alternativa é a [Classe unordered_set](../standard-library/unordered-set-class.md).  
@@ -74,7 +75,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
  O hash_multiset cujos elementos serão trocados por aqueles do hash_multiset `right`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_multiset para executar a função membro `left``.`[swap](../standard-library/hash-multiset-class.md#hash_multiset__swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo  
+ A função de modelo `swap` é um algoritmo especializado na classe de contêiner hash_multiset para executar a função membro `left``.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). Trata-se de uma instância da ordenação parcial de modelos de função pelo compilador. Quando as funções de modelo são sobrecarregadas de forma que a correspondência do modelo com a chamada de função não é exclusiva, o compilador seleciona a versão mais especializada do modelo de função. A versão geral da função de modelo  
   
  **modelo \<classe T> void swap(T&, T&),**  
   
@@ -83,7 +84,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
  No Visual C++ .NET 2003, membros dos arquivos de cabeçalho [<hash_map>](../standard-library/hash-map.md) e [<hash_set>](../standard-library/hash-set.md) não estão mais no namespace std e foram movidos para o namespace stdext. Consulte [Namespace stdext](../standard-library/stdext-namespace.md) para obter mais informações.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de código da classe de membro [hash_multiset::swap](../standard-library/hash-multiset-class.md#hash_multiset__swap) para obter um exemplo que usa a versão de modelo do `swap`.  
+  Veja o exemplo de código da classe de membro [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) para obter um exemplo que usa a versão de modelo do `swap`.  
   
 ## <a name="see-also"></a>Consulte também  
  [<hash_set>](../standard-library/hash-set.md)

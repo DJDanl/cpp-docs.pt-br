@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
@@ -90,7 +91,7 @@ unsigned int _mbbtombc_l(
  Se `_mbbtombc` converter `c` com êxito, ele retornará um caractere multibyte, caso contrário, retornará `c`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_mbbtombc` converte um determinado caractere multibyte de um byte em um caractere multibyte de dois bytes correspondente. Os caracteres devem estar dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF para serem convertidos.  
+ A função `_mbbtombc` converte um determinado caractere multibyte de um byte em um caractere multibyte de dois bytes correspondente. Caracteres devem estar dentro do intervalo 0x20-0x7E ou 0xA1 - 0xDF a ser convertido.  
   
  O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da localidade. Consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões desta função são idênticas, exceto pelo fato de `_mbbtombc` usa a localidade atual para esse comportamento dependente de localidade e `_mbbtombc_l`, em vez disso, usa o parâmetro de localidade passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

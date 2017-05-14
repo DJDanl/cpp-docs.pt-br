@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - fisher_f_distribution
-- std::fisher_f_distribution
 - random/std::fisher_f_distribution
-- std::fisher_f_distribution::reset
 - random/std::fisher_f_distribution::reset
-- std::fisher_f_distribution::m
 - random/std::fisher_f_distribution::m
-- std::fisher_f_distribution::n
 - random/std::fisher_f_distribution::n
-- std::fisher_f_distribution::param
 - random/std::fisher_f_distribution::param
-- std::fisher_f_distribution::min
 - random/std::fisher_f_distribution::min
-- std::fisher_f_distribution::max
 - random/std::fisher_f_distribution::max
-- std::fisher_f_distribution::operator()
 - random/std::fisher_f_distribution::operator()
-- std::fisher_f_distribution::param_type
 - random/std::fisher_f_distribution::param_type
-- std::fisher_f_distribution::param_type::m
 - random/std::fisher_f_distribution::param_type::m
-- std::fisher_f_distribution::param_type::n
 - random/std::fisher_f_distribution::param_type::n
-- std::fisher_f_distribution::param_type::operator==
 - random/std::fisher_f_distribution::param_type::operator==
-- std::fisher_f_distribution::param_type::operator!=
 - random/std::fisher_f_distribution::param_type::operator!=
+- random/std::fisher_f_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 3a0fc233334909249f75978ba095cb3f31af90dc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 98a51009b6aaccf9e7799fa4bb124ec001ccca0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="fisherfdistribution-class"></a>Classe fisher_f_distribution
@@ -107,8 +96,8 @@ O tipo de resultado de ponto flutuante assume `double` como padrão. Para ver os
   
 ||||  
 |-|-|-|  
-|[fisher_f_distribution::fisher_f_distribution](#fisher_f_distribution__fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher_f_distribution::param_type](#fisher_f_distribution__param_type)|  
+|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
  As funções de propriedade `m()` e `n()` retornam os valores para os parâmetros de distribuição armazenados `m` e `n`, respectivamente.  
   
@@ -262,7 +251,7 @@ Distribution for 10 samples:
   
  **Namespace:** std  
   
-##  <a name="a-namefisherfdistributionfisherfdistributiona--fisherfdistributionfisherfdistribution"></a><a name="fisher_f_distribution__fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
+##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
  Constrói a distribuição.  
   
 ```  
@@ -287,7 +276,7 @@ explicit fisher_f_distribution(const param_type& parm);
   
  O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
   
-##  <a name="a-namefisherfdistributionparamtypea--fisherfdistributionparamtype"></a><a name="fisher_f_distribution__param_type"></a>  fisher_f_distribution::param_type  
+##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  Armazena os parâmetros da distribuição.  
   
 ```cpp  

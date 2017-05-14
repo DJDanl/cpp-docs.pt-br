@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
@@ -91,7 +92,7 @@ int _ismbblead_l(
  Retornará um valor diferente de zero se o inteiro `c` for o primeiro byte de um caractere multibyte.  
   
 ## <a name="remarks"></a>Comentários  
- Caracteres multibyte consistem em um byte inicial seguido de um byte à direita. Bytes iniciais são diferenciados por estarem em um intervalo específico de um determinado conjunto de caracteres. Por exemplo, somente na página de código 932, os bytes iniciais vão de 0x81 a 0x9F e de 0xE0 a 0xFC.  
+ Caracteres multibyte consistem em um byte inicial seguido de um byte à direita. Bytes iniciais são diferenciados por estarem em um intervalo específico de um determinado conjunto de caracteres. Por exemplo, em bytes de avanço, somente de código 932 da página variam de 0x81-0x9F e 0xE0 - 0xFC.  
   
  `_ismbblead` usa a localidade atual para comportamentos que dependem da localidade. `_ismbblead_l` é idêntico, exceto pelo fato de usar a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -111,9 +112,6 @@ int _ismbblead_l(
  \* Para constantes de manifesto para as condições de teste.  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)   

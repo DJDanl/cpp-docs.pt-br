@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 401d52ba5d52addb8192aabe5824c57fa9075e33
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4d0e042dc3d8bb7a5b956aeb834e51887e1b0138
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
@@ -84,7 +85,7 @@ __int64 _ftelli64_nolock(
  O mesmo que `ftell` e `_ftelli64`. Para obter mais informações, consulte [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)**.**  
   
 ## <a name="remarks"></a>Comentários  
- Essas funções são versões sem bloqueio de `ftell` e `_ftelli64`, respectivamente. Elas são idênticas a `ftell` e `_ftelli64`, exceto pelo fato de não serem protegidas contra interferência de outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
+ Essas funções são versões sem bloqueio de `ftell` e `_ftelli64`, respectivamente. Eles são idênticos a `ftell` e `_ftelli64` exceto que eles não são protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -94,9 +95,6 @@ __int64 _ftelli64_nolock(
 |`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

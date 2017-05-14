@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d7c61e8d7b201b2ff5cc0c23378e545e41642445
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5f99375d93ab5ae54a34d72f23cd86672a79c318
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fwrite"></a>fwrite
@@ -86,7 +87,7 @@ size_t fwrite(
  `fwrite` retorna quantos itens são gravados, o que pode ser menor que `count` em caso de erro. Além disso, em caso de erro, não será possível determinar o indicador de posição do arquivo. Se `stream` ou `buffer` for um ponteiro nulo ou se for especificado um número ímpar de bytes a serem gravados no modo Unicode, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função define `errno` como `EINVAL` e retorna 0.  
   
 ## <a name="remarks"></a>Comentários  
- A função `fwrite` grava até `count` itens, com `size` de comprimento cada um, de `buffer` até o`stream` de saída. O ponteiro do arquivo associado a `stream` (se houver) é incrementado pela quantidade de bytes gravados. Se `stream` for aberto no modo de texto, cada avanço de linha será substituído por um par carro de retorno de avanço de linha. A substituição não interfere no valor retornado.  
+ A função `fwrite` grava até `count` itens, com `size` de comprimento cada um, de `buffer` até o`stream` de saída. O ponteiro do arquivo associado a `stream` (se houver) é incrementado pela quantidade de bytes gravados. Se `stream` é aberto no modo de texto, cada avanço de linha é substituído por um retorno de carro - alimentação de linha par. A substituição não interfere no valor retornado.  
   
  Quando `stream` é aberto no modo de conversão Unicode (por exemplo, se `stream` for aberto com a chamada de `fopen` e o uso de um parâmetro de modo que inclua `ccs=UNICODE`, `ccs=UTF-16LE` ou `ccs=UTF-8`, ou se o modo for alterado para um modo de conversão de Unicode com o uso de `_setmode` e um parâmetro de modo que inclua `_O_WTEXT`, `_O_U16TEXT` ou `_O_U8TEXT`)`buffer` é interpretado como ponteiro para uma matriz de `wchar_t` que contém dados UTF-16. Tentar gravar uma quantidade ímpar de bytes nesse modo gera um erro de validação de parâmetro.  
   
@@ -102,9 +103,6 @@ size_t fwrite(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [thread](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Write](https://msdn.microsoft.com/en-us/library/system.io.filestream.write.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

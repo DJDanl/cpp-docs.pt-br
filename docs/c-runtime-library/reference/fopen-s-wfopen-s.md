@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1def8ed4a365aa82f1d22dcab512ef0f68fbb4d5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 168d1cd797f9f7d6080f2da7aefeb8859c7f2232
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
@@ -119,9 +120,9 @@ errno_t _wfopen_s(
 ## <a name="unicode-support"></a>Suporte para Unicode  
  O `fopen_s` oferece suporte a fluxos de arquivo Unicode. Para abrir um arquivo Unicode novo ou existente, passe um sinalizador `ccs` que especifique a codificação desejada para `fopen_s`:  
   
- `fopen_s(&fp, "newfile.txt", "rw,`   `ccs=`  `encoding` `");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*codificação*`");`  
   
- Os valores possíveis de `encoding` são `UNICODE`, `UTF-8` e `UTF-16LE`. Se não existir um valor especificado para `encoding`, `fopen_s` usará a codificação ANSI.  
+ Permite valores de *codificação* são `UNICODE`, `UTF-8`, e `UTF-16LE`. Se há nenhum valor for especificado para *codificação*, `fopen_s` usa a codificação de ANSI.  
   
  Se o arquivo já existir e for aberto para ler ou anexar, a BOM (Marca de ordem de byte), se presente no arquivo, determinará a codificação. A codificação da BOM tem precedência sobre a codificação especificada pelo sinalizador `ccs`. A codificação `ccs` é usada apenas quando nenhuma BOM estiver presente ou se o arquivo for um novo arquivo.  
   
@@ -140,7 +141,7 @@ errno_t _wfopen_s(
   
  Arquivos abertos para gravação no modo Unicode têm uma BOM gravada neles automaticamente.  
   
- Se `mode` for "`a, ccs=<encoding>`", `fopen_s` tentará primeiro abrir o arquivo com acesso de leitura e gravação. Se isso for bem-sucedido, a função lê a BOM para determinar a codificação para o arquivo; se não for bem-sucedido, a função usa a codificação padrão para o arquivo. Em todo caso, `fopen_s` reabrirá o arquivo com acesso somente gravação. (Isso se aplica ao modo `a` apenas, não a `a+`.)  
+ Se `mode` é ", ccs =*codificação*", `fopen_s` primeiro tenta abrir o arquivo com acesso de leitura e acesso de gravação. Se isso for bem-sucedido, a função lê a BOM para determinar a codificação para o arquivo; se não for bem-sucedido, a função usa a codificação padrão para o arquivo. Em todo caso, `fopen_s` reabrirá o arquivo com acesso somente gravação. (Isso se aplica ao modo `a` apenas, não a `a+`.)  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -172,14 +173,14 @@ errno_t _wfopen_s(
   
  O modo `"a"` não remove o marcador de EOF antes de ser acrescentado ao arquivo. Após o acréscimo ter ocorrido, o comando MS-DOS TYPE mostra dados somente até o marcador de EOF original e não qualquer dado acrescentado ao arquivo. O modo `"a+"` remove o marcador de EOF antes de ser acrescentado ao arquivo. Depois de anexar, o comando MS-DOS TYPE mostra todos os dados no arquivo. O modo `"a+"` é exigido para o acréscimo a um arquivo de fluxo terminado com o marcador de EOF CTRL+Z.  
   
- Quando o tipo de acesso `"r+",``"w+",` ou `"a+"` é especificado, são permitidas leitura e gravação. (Diz-se que o arquivo está aberto para "atualização".) Porém, ao trocar de leitura para gravação, a operação de entrada deve encontrar um marcador de EOF. Se não houver EOF, você deverá usar uma chamada intermediária para uma função de posicionamento de arquivo. As funções do posicionamento de arquivo são `fsetpos`, `fseek` e `rewind`. Ao trocar de gravação para leitura, você precisa usar uma chamada intermediária para `fflush` ou uma função de posicionamento de arquivo.  
+ Quando o `"r+"`, `"w+",` ou `"a+"` tipo de acesso for especificado, leitura e gravação são permitidas. (Diz-se que o arquivo está aberto para "atualização".) Porém, ao trocar de leitura para gravação, a operação de entrada deve encontrar um marcador de EOF. Se não houver EOF, você deverá usar uma chamada intermediária para uma função de posicionamento de arquivo. As funções do posicionamento de arquivo são `fsetpos`, `fseek` e `rewind`. Ao trocar de gravação para leitura, você precisa usar uma chamada intermediária para `fflush` ou uma função de posicionamento de arquivo.  
   
  Além dos valores anteriores, os seguintes caracteres podem ser incluídos em `mode` para especificar o modo de conversão dos caracteres newline:  
   
  `t`  
  Abra no modo de texto (convertido). Neste modo, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação com `"a+"`, `fopen_s` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo.  
   
- Além disso, no modo de texto, combinações de retorno de carro – avanço de linha são convertidas em avanços de linha simples na entrada e caracteres de avanço de linha são convertidos em combinações de retorno de carro – avanço de linha na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
+ Além disso, no modo de texto, combinações de avanço de linha de retorno de carro são convertidas em alimentações de linha únicas na entrada e caracteres de alimentação de linha são convertidos para combinações de avanço de linha de retorno de carro na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
   
  `b`  
  Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas.  
@@ -216,11 +217,11 @@ errno_t _wfopen_s(
   
 |Caracteres na cadeia de caracteres de modo|Valor de `oflag` equivalente a `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(geralmente `_O_WRONLY &#124; _O_CREAT &#124;``_O_APPEND`)|  
+|`a`|`_O_WRONLY &#124; _O_APPEND`(geralmente `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
 |`a+`|`_O_RDWR &#124; _O_APPEND` (geralmente `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT`)|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(geralmente `_O_WRONLY &#124;``_O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY`(geralmente `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`w+`|`_O_RDWR`(geralmente `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
@@ -252,9 +253,8 @@ errno_t _wfopen_s(
   
 ## <a name="example"></a>Exemplo  
   
-```  
-  
-      // crt_fopen_s.c  
+```C  
+// crt_fopen_s.c  
 // This program opens two files. It uses  
 // fclose to close the first file and  
 // _fcloseall to close all remaining files.  
@@ -314,12 +314,6 @@ The file 'crt_fopen_s.c' was opened
 The file 'data2' was opened  
 Number of files closed by _fcloseall: 1  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

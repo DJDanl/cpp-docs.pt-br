@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6652eb49a1e8a246ae47e2d95ff1a58d7fd60a0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4c3e31359c096dddfc7d71dcd7887c405b9aa0af
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
-Calcula 2 elevado ao valor especificado (ou seja, 2ˣ).  
+Calcula 2 gerado para o valor especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -89,7 +90,6 @@ float exp2f(
 long double exp2l(  
    long double x  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -97,7 +97,7 @@ long double exp2l(
  O valor do expoente.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, retornará o expoente de base&2; de `x` (2ˣ). Caso contrário, pode retornar um dos seguintes valores:  
+ Se for bem-sucedido, retorna o expoente de base 2 de `x`, ou seja, 2<sup>x</sup>. Caso contrário, ele retorna um dos seguintes valores:  
   
 |Problema|Valor de|  
 |-----------|------------|  
@@ -106,22 +106,22 @@ long double exp2l(
 |`x` = +INFINITY|+INFINITY|  
 |`x` = NaN|NaN|  
 |Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|  
-|Erro de intervalo de estouro negativo|resultado correto, após o arredondamento|  
+|Erro de intervalo de estouro negativo|Resultado correto, depois de arredondamento|  
   
  Os erros são relatados conforme especificado em [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Comentários  
- Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `exp2` que utilizam e retornam tipos duplos flutuantes e longos. Em um programa C, `exp2` sempre usa e retorna um duplo.  
+ Como o C++ permite sobrecarga, você pode chamar sobrecargas de `exp2` que levar e retornar **float** e **long double** tipos. Em um programa C, `exp2` sempre usa e retorna um **duplo**.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Rotina|Cabeçalho C|Cabeçalho C++|  
 |-------------|--------------|------------------|  
-|`exp`,                `expf`, `expl`|\<math.h>|\<cmath>|  
+|`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, expf, SOL](../../c-runtime-library/reference/exp-expf.md)   
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)

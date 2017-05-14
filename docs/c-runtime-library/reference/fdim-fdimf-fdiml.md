@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: debfeaf19648f73ecca9643b1b740f014e4f3251
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f13291a00b97c319ebe69bce6939a95e6c022fd8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
@@ -125,13 +126,13 @@ long double fdiml(
 ## <a name="remarks"></a>Comentários  
  Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `fdim` que utilizam e retornam tipos duplos flutuantes e longos. Em um programa C, `fdim` sempre usa e retorna um duplo.  
   
- Exceto para o tratamento de NaN, essa função é equivalente a [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)(`x`-`y,` 0).  
+ Exceto para a manipulação de NaN, essa função é equivalente a `fmax(x - y, 0)`.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Função|Cabeçalho C|Cabeçalho C++|  
 |--------------|--------------|------------------|  
-|`fdim`,                `fdimf`,  `fdiml`|\<math.h>|\<cmath>|  
+|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   

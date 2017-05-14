@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerações de &lt;filesystem&gt;
@@ -50,7 +51,7 @@ Este tópico documenta as enumerações no cabeçalho filesystem.
   
  **Namespace:** std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 Uma enumeração de valores de bitmask que é usada com as funções [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar o comportamento.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|Faz links físicos em vez de copiar arquivos.|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 Especifica se links simbólicos para diretórios devem ser seguidos ou ignorados.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|Comportamento padrão: ignorar links simbólicos para diretórios. A permissão negada é um erro.|  
 |`follow_directory_symlink`|Tratar links simbólicos para diretórios como diretórios reais.|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 Uma enumeração de tipos de arquivo. Os valores com suporte são regular, directory, not_found e unknown.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|Representa um soquete em sistemas baseados em UNIX. (Sem suporte.)|  
 |`unknown`|8|Representa um arquivo cujo status não pode ser determinado.|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 Sinalizadores de permissões de arquivo. Os valores com suporte são, essencialmente, "readonly". Para um arquivo somente leitura, nenhum dos bits *_write é definido. Caso contrário, o bit `all` (0x0777) é definido.  
   
 ### <a name="syntax"></a>Sintaxe  

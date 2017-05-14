@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findclose"></a>_findclose
@@ -72,7 +73,7 @@ int _findclose(
  Identificador de pesquisa retornado por uma chamada anterior a `_findfirst`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se tiver êxito, `_findclose` retornará 0. Caso contrário, retornará –&1; e definirá `errno` como `ENOENT`, indicando que não foi possível encontrar mais arquivos correspondentes.  
+ Se tiver êxito, `_findclose` retornará 0. Caso contrário, retornará -1 e define `errno` para `ENOENT`, que indica se a correspondência não mais arquivos pôde ser encontrado.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,9 +82,6 @@ int _findclose(
 |`_findclose`|\<io.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Chamadas do sistema](../../c-runtime-library/system-calls.md)   

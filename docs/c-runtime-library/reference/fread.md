@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a2f4f8e4dd5f7731bb8193a1ffac138115c71e0b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1075fc8aad54dfdcada7fe2f4dd8e99706de7d99
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fread"></a>fread
@@ -85,12 +86,12 @@ size_t fread(
  Ponteiro para a estrutura `FILE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `fread` retorna o número de itens completos realmente lidos, que poderá ser menor que `count` se ocorrer um erro ou se o final do arquivo for atingido antes de chegar a `count`*.* Use a função `feof` ou `ferror` para diferenciar um erro de leitura de uma condição de fim de arquivo. Se `size` ou `count` for 0, `fread` retornará 0 e o conteúdo do buffer permanecerá inalterado. Se `stream` ou `buffer` for um ponteiro nulo, `fread` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função define `errno` como `EINVAL` e retorna 0.  
+ `fread`Retorna o número de itens completos, na verdade, leitura, que pode ser menor que `count` se ocorrer um erro ou se o final do arquivo é encontrado antes de alcançar `count`. Use a função `feof` ou `ferror` para diferenciar um erro de leitura de uma condição de fim de arquivo. Se `size` ou `count` for 0, `fread` retornará 0 e o conteúdo do buffer permanecerá inalterado. Se `stream` ou `buffer` for um ponteiro nulo, `fread` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essa função define `errno` como `EINVAL` e retorna 0.  
   
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `fread` lê até `count` itens de `size` bytes do `stream` de entrada e os armazena em `buffer`*.* O ponteiro do arquivo associado a `stream` (se houver) é aumentado de acordo com a quantidade de bytes lidos. Se o fluxo em questão for aberto no modo de texto, pares de alimentação de linha de retorno de carro serão substituídos por caracteres de alimentação de linha únicos. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.  
+ A função `fread` lê até `count` itens de `size` bytes do `stream` de entrada e os armazena em `buffer`. O ponteiro do arquivo associado a `stream` (se houver) é aumentado de acordo com a quantidade de bytes lidos. Se o fluxo fornecido é aberto no modo de texto, pares de avanço de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.  
   
  Essa função bloqueia outros threads. Se precisar de uma versão sem bloqueio, use `_fread_nolock`.  
   
@@ -151,9 +152,6 @@ Wrote 25 items
 Number of items read = 25  
 Contents of buffer = zyxwvutsrqponmlkjihgfedcb  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

@@ -1,80 +1,86 @@
 ---
-title: "&lt;atomic&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<atomic>"
-  - "atomic/std::atomic_int_least32_t"
-  - "atomic/std::atomic_ullong"
-  - "atomic/std::atomic_ptrdiff_t"
-  - "atomic/std::atomic_char16_t"
-  - "atomic/std::atomic_schar"
-  - "atomic/std::atomic_ulong"
-  - "atomic/std::atomic_uint_fast32_t"
-  - "atomic/std::atomic_uint8_t"
-  - "atomic/std::atomic_int32_t"
-  - "atomic/std::atomic_uint_fast64_t"
-  - "atomic/std::atomic_uint32_t"
-  - "atomic/std::atomic_int16_t"
-  - "atomic/std::atomic_uintmax_t"
-  - "atomic/std::atomic_intmax_t"
-  - "atomic/std::atomic_long"
-  - "atomic/std::atomic_int"
-  - "atomic/std::atomic_uint_least8_t"
-  - "atomic/std::atomic_size_t"
-  - "atomic/std::atomic_uint_fast16_t"
-  - "atomic/std::atomic_wchar_t"
-  - "atomic/std::atomic_int_fast64_t"
-  - "atomic/std::atomic_uint_fast8_t"
-  - "atomic/std::atomic_int_fast8_t"
-  - "atomic/std::atomic_intptr_t"
-  - "atomic/std::atomic_uint"
-  - "atomic/std::atomic_uint16_t"
-  - "atomic/std::atomic_char32_t"
-  - "atomic/std::atomic_uint64_t"
-  - "atomic/std::atomic_ushort"
-  - "atomic/std::atomic_int_least16_t"
-  - "atomic/std::atomic_char"
-  - "atomic/std::atomic_uint_least32_t"
-  - "atomic/std::atomic_uintptr_t"
-  - "atomic/std::atomic_short"
-  - "atomic/std::atomic_llong"
-  - "atomic/std::atomic_uint_least16_t"
-  - "atomic/std::atomic_int_fast16_t"
-  - "atomic/std::atomic_int_least8_t"
-  - "atomic/std::atomic_int_least64_t"
-  - "atomic/std::atomic_int_fast32_t"
-  - "atomic/std::atomic_uchar"
-  - "atomic/std::atomic_int8_t"
-  - "atomic/std::atomic_int64_t"
-  - "atomic/std::atomic_uint_least64_t"
-dev_langs: 
-  - "C++"
+title: '&lt;atomic&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <atomic>
+- atomic/std::atomic_int_least32_t
+- atomic/std::atomic_ullong
+- atomic/std::atomic_ptrdiff_t
+- atomic/std::atomic_char16_t
+- atomic/std::atomic_schar
+- atomic/std::atomic_ulong
+- atomic/std::atomic_uint_fast32_t
+- atomic/std::atomic_uint8_t
+- atomic/std::atomic_int32_t
+- atomic/std::atomic_uint_fast64_t
+- atomic/std::atomic_uint32_t
+- atomic/std::atomic_int16_t
+- atomic/std::atomic_uintmax_t
+- atomic/std::atomic_intmax_t
+- atomic/std::atomic_long
+- atomic/std::atomic_int
+- atomic/std::atomic_uint_least8_t
+- atomic/std::atomic_size_t
+- atomic/std::atomic_uint_fast16_t
+- atomic/std::atomic_wchar_t
+- atomic/std::atomic_int_fast64_t
+- atomic/std::atomic_uint_fast8_t
+- atomic/std::atomic_int_fast8_t
+- atomic/std::atomic_intptr_t
+- atomic/std::atomic_uint
+- atomic/std::atomic_uint16_t
+- atomic/std::atomic_char32_t
+- atomic/std::atomic_uint64_t
+- atomic/std::atomic_ushort
+- atomic/std::atomic_int_least16_t
+- atomic/std::atomic_char
+- atomic/std::atomic_uint_least32_t
+- atomic/std::atomic_uintptr_t
+- atomic/std::atomic_short
+- atomic/std::atomic_llong
+- atomic/std::atomic_uint_least16_t
+- atomic/std::atomic_int_fast16_t
+- atomic/std::atomic_int_least8_t
+- atomic/std::atomic_int_least64_t
+- atomic/std::atomic_int_fast32_t
+- atomic/std::atomic_uchar
+- atomic/std::atomic_int8_t
+- atomic/std::atomic_int64_t
+- atomic/std::atomic_uint_least64_t
+dev_langs:
+- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
+
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 Define classes e classes de modelo para usar para criar tipos que dão suporte a operações atômicas.  
@@ -186,39 +192,40 @@ Define classes e classes de modelo para usar para criar tipos que dão suporte a
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Função atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|Executa uma operação de *comparação e troca atômica*.|  
-|[Função atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|Executa uma operação de *comparação e troca atômica*.|  
-|[Função atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|Executa uma operação de *comparação e troca atômica fraca*.|  
-|[Função atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|Executa uma operação de *comparação e troca atômica fraca*.|  
-|[Função atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange_function)|Substitui um valor armazenado.|  
-|[Função atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|Substitui um valor armazenado.|  
-|[Função atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add_function)|Adiciona um valor especificado a um valor armazenado existente.|  
-|[Função atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|Adiciona um valor especificado a um valor armazenado existente.|  
-|[Função atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and_function)|Executa um `and` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|Executa um `and` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or_function)|Executa um `or` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|Executa um `or` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|Subtrai um valor especificado de um valor armazenado existente.|  
-|[Função atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|Subtrai um valor especificado de um valor armazenado existente.|  
-|[Função atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|  
-|[Função atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear_function)|Define o sinalizador em um objeto `atomic_flag` como `false`.|  
-|[Função atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|Define o sinalizador em um objeto `atomic_flag` como `false`.|  
-|[Função atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|Define o sinalizador em um objeto `atomic_flag` como `true`.|  
-|[Função atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|Define o sinalizador em um objeto `atomic_flag` como `true`.|  
-|[Função atomic_init](../standard-library/atomic-functions.md#atomic_init_function)|Define o valor armazenado em um objeto `atomic`.|  
-|[Função atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|Especifica se operações atômicas em um objeto especificado estão livres de bloqueio.|  
-|[Função atomic_load](../standard-library/atomic-functions.md#atomic_load_function)|Recupera um valor atomicamente.|  
-|[Função atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit_function)|Recupera um valor atomicamente.|  
-|[Função atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence_function)|Atua como um *limite* que estabelece os requisitos de ordenação de memória entre limites em um thread de chamada que tem manipuladores de sinal executados no mesmo thread.|  
-|[Função atomic_store](../standard-library/atomic-functions.md#atomic_store_function)|Armazena um valor atomicamente.|  
-|[Função atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit_function)|Armazena um valor atomicamente.|  
-|[Função atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence_function)|Atua como um *limite* que estabelece os requisitos de ordenação de memória em relação a outros limites.|  
-|[Função kill_dependency](../standard-library/atomic-functions.md#kill_dependency_function)|Divide uma cadeia de dependências possível.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Executa uma operação de *comparação e troca atômica*.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Executa uma operação de *comparação e troca atômica*.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Executa uma operação de *comparação e troca atômica fraca*.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Executa uma operação de *comparação e troca atômica fraca*.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Substitui um valor armazenado.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Substitui um valor armazenado.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Adiciona um valor especificado a um valor armazenado existente.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Adiciona um valor especificado a um valor armazenado existente.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Executa um `and` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Executa um `and` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Executa um `or` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Executa um `or` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Subtrai um valor especificado de um valor armazenado existente.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtrai um valor especificado de um valor armazenado existente.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Executa um `exclusive or` bit a bit em um valor especificado e um valor armazenado existente.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Define o sinalizador em um objeto `atomic_flag` como `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Define o sinalizador em um objeto `atomic_flag` como `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Define o sinalizador em um objeto `atomic_flag` como `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Define o sinalizador em um objeto `atomic_flag` como `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Define o valor armazenado em um objeto `atomic`.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Especifica se operações atômicas em um objeto especificado estão livres de bloqueio.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera um valor atomicamente.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Recupera um valor atomicamente.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Atua como um *limite* que estabelece os requisitos de ordenação de memória entre limites em um thread de chamada que tem manipuladores de sinal executados no mesmo thread.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Armazena um valor atomicamente.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Armazena um valor atomicamente.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Atua como um *limite* que estabelece os requisitos de ordenação de memória em relação a outros limites.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Divide uma cadeia de dependências possível.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
  [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+
 
 
 

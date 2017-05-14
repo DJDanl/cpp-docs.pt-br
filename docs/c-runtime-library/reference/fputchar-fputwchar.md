@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 321520b3638fb062f10d114a03ec9e4525b44173
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4222a9cbce6094ca69120d819906e59d0fbd094c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
@@ -85,12 +86,12 @@ wint_t _fputwchar(
  O caractere a ser gravado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retorna o caractere gravado. Para `_fputchar`, um valor retornado de `EOF` indica que há um erro. Para `_fputwchar`, um valor retornado de `WEOF` indica que há um erro. Se c for `NULL`, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, elas retornarão `EOF` (ou`WEOF`) e definirão `errno` como `EINVAL`.  
+ Cada uma dessas funções retorna o caractere gravado. Para `_fputchar`, um valor retornado de `EOF` indica que há um erro. Para `_fputwchar`, um valor retornado de `WEOF` indica que há um erro. Se c for `NULL`, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retorne `EOF` (ou `WEOF`) e defina `errno` para `EINVAL`.  
   
  Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
- Essas duas funções gravam o `c` de caractere único em `stdout` e avançam o indicador conforme apropriado. `_fputchar` equivale a `fputc(``stdout )`. Também é equivalente a `putchar`, mas implementado somente como uma função, em vez de uma função e uma macro. Diferente de `fputc` e `putchar`, essas funções não são compatíveis com o padrão ANSI.  
+ Essas duas funções gravam o `c` de caractere único em `stdout` e avançam o indicador conforme apropriado. `_fputchar` equivale a `fputc( stdout )`. Também é equivalente a `putchar`, mas implementado somente como uma função, em vez de uma função e uma macro. Diferente de `fputc` e `putchar`, essas funções não são compatíveis com o padrão ANSI.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -131,12 +132,6 @@ int main( void )
 ```Output  
 This is a test of _fputchar!!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

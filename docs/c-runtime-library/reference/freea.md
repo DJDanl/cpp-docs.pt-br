@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>Comentários  
  A função `_freea` desaloca um bloco de memória (`memblock`) que foi alocado anteriormente por uma chamada a [malloca](../../c-runtime-library/reference/malloca.md). `_freea` verifica se a memória foi alocada no heap ou na pilha. Se ela tiver sido alocada na pilha, `_freea` não fará nada. Se tiver sido alocada no heap, o número de bytes liberados será equivalente ao número de bytes solicitados quando o bloco foi alocado. Se `memblock` for `NULL`, o ponteiro será ignorado e `_freea` será retornado imediatamente. Tentar liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por `_malloca`) pode afetar solicitações posteriores de alocação e causar erros.  
   
- _`freea` chama `free` internamente se concluir que a memória está alocada no heap. Um marcador colocado na memória, no endereço imediatamente anterior à memória alocada, determina se a memória está no heap ou na pilha.  
+ `_freea`chamadas `free` internamente se detectar que a memória é alocada no heap. Um marcador colocado na memória, no endereço imediatamente anterior à memória alocada, determina se a memória está no heap ou na pilha.  
   
  Se ocorrer um erro ao liberar a memória, o `errno` é definido com informações do sistema operacional sobre a natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo para [_malloca](../../c-runtime-library/reference/malloca.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   

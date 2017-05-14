@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -70,12 +71,12 @@ int _heapmin( void );
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, `_heapmin` retornará 0; caso contrário, a função retornará – 1 e definirá `errno` como `ENOSYS`.  
+ Se for bem-sucedido, `_heapmin` retornará 0. Caso contrário, a função retornará -1 e definirá `errno` como `ENOSYS`.  
   
  Para obter mais informações sobre este e outros códigos retornados, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
- A função `_heapmin` minimiza o heap, liberando memória de heap não utilizada para o sistema operacional. Se o sistema operacional não der suporte a `_heapmin` (por exemplo, Windows 98), a função retornará – 1 e definirá `errno` como `ENOSYS`.  
+ A função `_heapmin` minimiza o heap, liberando memória de heap não utilizada para o sistema operacional. Se o sistema operacional não suporta `_heapmin`(por exemplo, Windows 98), a função retornará -1 e define `errno` para `ENOSYS`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -84,9 +85,6 @@ int _heapmin( void );
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   

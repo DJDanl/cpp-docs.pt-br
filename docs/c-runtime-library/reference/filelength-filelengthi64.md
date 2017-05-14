@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 163556e59e958aaedcd59af539f0c68aba6f080d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a09dca7637c950988dbf9a0cda12f7e14b8cecee
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
@@ -81,7 +82,7 @@ __int64 _filelengthi64(
  Direciona o descritor do arquivo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_filelength` e `_filelengthi64` retornam o tamanho do arquivo, em bytes, do arquivo de destino associado a `fd`. Se `fd` for um descritor de arquivo inválido, essa função invocará o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, ambas as funções retornarão –1L para indicar um erro e definirão `errno` como `EBADF`.  
+ `_filelength` e `_filelengthi64` retornam o tamanho do arquivo, em bytes, do arquivo de destino associado a `fd`. Se `fd` for um descritor de arquivo inválido, essa função invocará o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as duas funções retornam L-1 para indicar um erro e definir `errno` para `EBADF`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -94,12 +95,6 @@ __int64 _filelengthi64(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo de [_chsize](../../c-runtime-library/reference/chsize.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

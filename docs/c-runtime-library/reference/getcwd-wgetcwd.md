@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92d0e1e0d5f7c315d7a7f067467f40d9b0681c0a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad70ffac5cbe6cc7c56dbad0930bc87b969a1857
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
@@ -95,7 +96,7 @@ wchar_t *_wgetcwd(
  Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
- A função `_getcwd` obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena em `buffer`. O argumento inteiro `maxlen` especifica o tamanho máximo para o caminho. Ocorre um erro se o tamanho do caminho (incluindo o caractere nulo de terminação) ultrapassar `maxlen`*.* O argumento `buffer` pode ser `NULL`; um buffer com tamanho de pelo menos `maxlen` (mais somente se for necessário) será alocado automaticamente, usando `malloc`, para armazenar o caminho. Esse buffer pode, posteriormente, ser liberado chamando `free` e passando o valor retornado `_getcwd` (um ponteiro para o buffer alocado).  
+ A função `_getcwd` obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena em `buffer`. O argumento inteiro `maxlen` especifica o tamanho máximo para o caminho. Ocorrerá um erro se excede o comprimento do caminho (incluindo o caractere null de terminação) `maxlen`. O argumento `buffer` pode ser `NULL`; um buffer com tamanho de pelo menos `maxlen` (mais somente se for necessário) será alocado automaticamente, usando `malloc`, para armazenar o caminho. Esse buffer pode, posteriormente, ser liberado chamando `free` e passando o valor retornado `_getcwd` (um ponteiro para o buffer alocado).  
   
  `_getcwd` retorna uma cadeia de caracteres que representa o caminho para o diretório de trabalho atual. Se o diretório de trabalho atual for raiz, a cadeia de caracteres terminará com uma barra invertida (`\`). Se o diretório de trabalho atual for um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.  
   
@@ -150,9 +151,6 @@ int main( void )
 ```Output  
 C:\Code  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

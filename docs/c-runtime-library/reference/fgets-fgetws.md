@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aa22dcbef013a022f96a452a1d7abf36eaec9807
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4012de79c3de0a27837813ddddf8b7e1aec4fac7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
@@ -96,7 +97,7 @@ wchar_t *fgetws(
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `fgets` lê uma cadeia de caracteres do argumento `stream` de entrada e o armazena em `str`. `fgets` lê os caracteres da posição atual do fluxo, incluindo o primeiro caractere de nova linha, ao final do fluxo ou até que o número de caracteres lido seja igual a `n` – 1, o que ocorrer primeiro. O resultado armazenado em `str` é acrescentado com um caractere nulo. O caractere de nova linha, se lido, é incluído na cadeia de caracteres.  
+ A função `fgets` lê uma cadeia de caracteres do argumento `stream` de entrada e o armazena em `str`. `fgets`lê caracteres da posição atual do fluxo e incluindo o primeiro caractere de nova linha ao final do fluxo ou até que o número de caracteres lidos é igual a `n` - 1, o que ocorrer primeiro. O resultado armazenado em `str` é acrescentado com um caractere nulo. O caractere de nova linha, se lido, é incluído na cadeia de caracteres.  
   
  `fgetws` é uma versão de caractere largo de `fgets`.  
   
@@ -155,12 +156,6 @@ Line two.
 ```  
 Line one.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx)  
-  
--   [System::IO::TextReader::ReadBlock](https://msdn.microsoft.com/en-us/library/system.io.textreader.readblock.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d888b6d16e0a71168e0615d89bbd1d03c51afad8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e834b5be6b7d31d1f1516799462d57330bf4ceb2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="effects-of-buffering"></a>Efeitos do buffer
@@ -65,7 +66,7 @@ int main( )
 cout <<"Please wait..." <<flush;  
 ```  
   
- Esta etapa libera o buffer, garantindo que a mensagem seja impressa antes da espera. Você também pode usar o manipulador `endl`, que libera o buffer e gera um retorno de carro–avanço de linha ou você pode usar o objeto `cin`. Esse objeto (com os objetos `cerr` ou `clog`) geralmente é vinculado ao objeto `cout`. Assim, qualquer uso de `cin` (ou dos objetos `cerr` ou `clog`) libera o objeto `cout`.  
+ Esta etapa libera o buffer, garantindo que a mensagem seja impressa antes da espera. Você também pode usar o `endl` manipulator, que libera o buffer e gera um retorno de carro e avanço de linha, ou você pode usar o `cin` objeto. Esse objeto (com os objetos `cerr` ou `clog`) geralmente é vinculado ao objeto `cout`. Assim, qualquer uso de `cin` (ou dos objetos `cerr` ou `clog`) libera o objeto `cout`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Fluxos de saída](../standard-library/output-streams.md)

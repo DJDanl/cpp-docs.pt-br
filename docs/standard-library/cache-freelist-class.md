@@ -37,10 +37,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e7c58f5b9a0db5cac84522044633623f22d07153
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7d15c40a0116e8d6de2346a7da74045c2a7ee795
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachefreelist-class"></a>Classe cache_freelist
@@ -69,21 +70,21 @@ class cache_freelist
   
 |||  
 |-|-|  
-|[cache_freelist](#cache_freelist__cache_freelist)|Constrói um objeto do tipo `cache_freelist`.|  
+|[cache_freelist](#cache_freelist)|Constrói um objeto do tipo `cache_freelist`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[allocate](#cache_freelist__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#cache_freelist__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="cache_freelist__allocate"></a>  cache_freelist::allocate  
+##  <a name="allocate"></a>  cache_freelist::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -101,7 +102,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_freelist__cache_freelist"></a>  cache_freelist::cache_freelist  
+##  <a name="cache_freelist"></a>  cache_freelist::cache_freelist  
  Constrói um objeto do tipo `cache_freelist`.  
   
 ```
@@ -110,7 +111,7 @@ cache_freelist();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_freelist__deallocate"></a>  cache_freelist::deallocate  
+##  <a name="deallocate"></a>  cache_freelist::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```

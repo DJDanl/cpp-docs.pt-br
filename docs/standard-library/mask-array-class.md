@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9bdc40f476e3e4e5b284eaf77fa1310d686c5197
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="maskarray-class"></a>Classe mask_array
@@ -51,7 +52,7 @@ Uma classe de modelo interno e auxiliar, que dá suporte para objetos que são s
 ## <a name="remarks"></a>Comentários  
  A classe descreve um objeto que armazena uma referência a um objeto **va** da classe [valarray](../standard-library/valarray-class.md)**\<Type>**, bem como um objeto **ba** da classe [valarray\<bool>](../standard-library/valarray-bool-class.md), que descreve a sequência de elementos a serem selecionados do objeto **valarray\<Type>**.  
   
- Você cria um objeto **mask_array\<Type>** apenas escrevendo uma expressão no formato [va&#91;ba&#93;](../standard-library/valarray-class.md#valarray__operator_at). As funções de membro da classe mask_array, então, se comportam como as assinaturas de função correspondentes definidas para **valarray\<Type>**, exceto pelo fato de somente a sequência de elementos selecionados ser afetada.  
+ Você cria um objeto **mask_array\<Type>** apenas escrevendo uma expressão no formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). As funções de membro da classe mask_array, então, se comportam como as assinaturas de função correspondentes definidas para **valarray\<Type>**, exceto pelo fato de somente a sequência de elementos selecionados ser afetada.  
   
  A sequência consiste, em sua maioria, de elementos **ba.size**. Um elemento *J* será incluído somente se **ba**[ *J*] for true. Portanto, há tantos elementos na sequência quanto há elementos true em **ba**. Se `I` for o índice do menor elemento true em **ba**, então **va**[ `I`] será o elemento zero na sequência selecionada.  
   

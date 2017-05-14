@@ -78,10 +78,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2542c5fc009a30e407dbea6bd14ae4f79164c99f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
@@ -144,7 +145,7 @@ errno_t _wctime64_s(
   
 #### <a name="parameters"></a>Parâmetros  
  [out] `buffer`  
- Deve ser grande o suficiente para conter 26 caracteres. Um ponteiro para o resultado da cadeia de caracteres ou `NULL` se:  
+ Deve ser grande o suficiente para conter 26 caracteres. Um ponteiro para o resultado de cadeia de caracteres, ou `NULL` se:  
   
 -   `time` representar uma data anterior à meia-noite de 1º de janeiro de 1970, UTC.  
   
@@ -157,7 +158,7 @@ errno_t _wctime64_s(
  [in] `numberOfElements`  
  O tamanho do buffer.  
   
- [in] t`ime`  
+ [in] `time`  
  Ponteiro para a hora armazenada.  
   
 ## <a name="return-value"></a>Valor de retorno  
@@ -202,8 +203,8 @@ Wed Jan 02 02:03:55 1980\n\0
   
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
-|`ctime_s,`<br /><br /> `_ctime32_s,`<br /><br /> `_ctime64_s`|\<time.h>|  
-|`_wctime_s,`<br /><br /> `_wctime32_s,`<br /><br /> `_wctime64_s`|\<time.h> ou \<wchar.h>|  
+|`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
+|`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
   
@@ -246,16 +247,6 @@ int main( void )
 ```  
 The time is Fri Apr 25 13:03:39 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::GetDateTimeFormats](https://msdn.microsoft.com/en-us/library/system.datetime.getdatetimeformats.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

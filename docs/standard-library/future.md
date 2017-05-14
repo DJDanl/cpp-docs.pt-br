@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -91,19 +92,19 @@ Inclua o cabeçalho padrão \<future> para definir classes de modelos e modelos 
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Função async](../standard-library/future-functions.md#async_function)|Representa um provedor assíncrono.|  
-|[Função future_category](../standard-library/future-functions.md#future_category_function)|Retorna uma referência ao objeto `error_category` que caracteriza erros associados a objetos `future`.|  
-|[Função make_error_code](../standard-library/future-functions.md#make_error_code_function)|Cria um `error_code` que tem o objeto `error_category` que caracteriza erros `future`.|  
-|[Função make_error_condition](../standard-library/future-functions.md#make_error_condition_function)|Cria um `error_condition` que tem o objeto `error_category` que caracteriza erros `future`.|  
-|[Função swap](../standard-library/future-functions.md#swap_function)|Troca o estado assíncrono associado de um objeto `promise` pelo de outro objeto.|  
+|[async](../standard-library/future-functions.md#async)|Representa um provedor assíncrono.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Retorna uma referência ao objeto `error_category` que caracteriza erros associados a objetos `future`.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Cria um `error_code` que tem o objeto `error_category` que caracteriza erros `future`.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Cria um `error_condition` que tem o objeto `error_category` que caracteriza erros `future`.|  
+|[swap](../standard-library/future-functions.md#swap)|Troca o estado assíncrono associado de um objeto `promise` pelo de outro objeto.|  
   
 ### <a name="enumerations"></a>Enumerações  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Enumeração future_errc](../standard-library/future-enums.md#future_errc_enumeration)|Fornece nomes simbólicos para os erros relatados pela classe `future_error`.|  
-|[Enumeração future_status](../standard-library/future-enums.md#future_status_enumeration)|Fornece nomes simbólicos para os motivos que uma função de espera temporizada pode retornar.|  
-|[Enumeração launch](../standard-library/future-enums.md#launch_enumeration)|Representa um tipo de bitmask que descreve os modos possíveis para a função de modelo `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Fornece nomes simbólicos para os erros relatados pela classe `future_error`.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Fornece nomes simbólicos para os motivos que uma função de espera temporizada pode retornar.|  
+|[Iniciar](../standard-library/future-enums.md#launch)|Representa um tipo de bitmask que descreve os modos possíveis para a função de modelo `async`.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

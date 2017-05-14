@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 07710f9741066a1e7741bc6046e9d5108e74cdbd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f4239a5d0834938d80ae2054396e485eef127e4b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
@@ -92,7 +93,7 @@ long double cargl(
  Um número complexo.  
   
 ## <a name="return-value"></a>Valor retornado  
- O argumento (também conhecido como a fase) de `z`. O resultado está no intervalo [−π, +π].  
+ O argumento (também conhecido como a fase) de `z`. O resultado está no intervalo [-π, + π].  
   
 ## <a name="remarks"></a>Comentários  
  Como o C++ permite sobrecargas, é possível chamar sobrecargas de `carg` e que usam valores `_Fcomplex` ou `_Lcomplex` e retornam valores `float` ou `long double`. Em um programa do C, `carg` sempre usa um valor `_Dcomplex` e retorna um valor `double`.  

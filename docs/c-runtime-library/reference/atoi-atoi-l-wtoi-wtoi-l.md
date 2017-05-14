@@ -1,73 +1,79 @@
 ---
-title: "atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoi"
-  - "_wtoi_l"
-  - "atoi"
-  - "_atoi_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoi"
-  - "_wtoi"
-  - "_ttoi"
-  - "atoi"
-  - "_atoi_l"
-  - "_wtoi_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoi_l function"
-  - "ttoi function"
-  - "atoi_l function"
-  - "string conversion, to integers"
-  - "_wtoi function"
-  - "wtoi_l function"
-  - "tstoi function"
-  - "_ttoi function"
-  - "_tstoi function"
-  - "_wtoi_l function"
-  - "atoi function"
-  - "wtoi function"
+title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoi
+- _wtoi_l
+- atoi
+- _atoi_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoi
+- _wtoi
+- _ttoi
+- atoi
+- _atoi_l
+- _wtoi_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _atoi_l function
+- ttoi function
+- atoi_l function
+- string conversion, to integers
+- _wtoi function
+- wtoi_l function
+- tstoi function
+- _ttoi function
+- _tstoi function
+- _wtoi_l function
+- atoi function
+- wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 Converta uma cadeia de caracteres em inteiro.  
@@ -110,7 +116,7 @@ int _wtoi_l(
   
  [`whitespace`] [`sign`] [`digits`]]  
   
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (+) ou menos (-); e `digits` são um ou mais dígitos.  
+ Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de adição (+) ou menos (-); e `digits` são um ou mais dígitos.  
   
  As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de que usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -174,12 +180,6 @@ Function: atoi( "31412764" ) = 31412764
 Function: atoi( "3336402735171707160320" ) = 2147483647  
 Overflow condition occurred.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

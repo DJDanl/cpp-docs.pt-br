@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::equal_to
 - equal_to
 - xfunctional/std::equal_to
-- std.equal_to
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 16ad908ab9f4fb4f8b55efbec255dfd55e515a05
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="equalto-struct"></a>Struct equal_to
@@ -67,14 +66,14 @@ struct equal_to<void>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Qualquer tipo que dê suporte a um `operator==` que usa operandos dos tipos especificados ou inferidos.  
   
  `Left`  
- O operando esquerdo da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido ` T`.  
+ O operando esquerdo da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.  
   
  `Right`  
- O operando direito da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido ` U`.  
+ O operando direito da operação de igualdade. O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O resultado de `Left``==``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator==`.  

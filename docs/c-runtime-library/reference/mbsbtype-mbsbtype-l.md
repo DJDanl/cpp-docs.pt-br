@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9c76458b2ae964d352ff735ec0ff67b1ddab7e2f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 81223356f5dac86fcc161e1c7fd1bc5eb80dcfbf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
@@ -92,14 +93,14 @@ int _mbsbtype_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_mbsbtype` e `_mbsbtype_l` retornam um valor inteiro indicando o resultado do teste no byte especificado. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.  
+ `_mbsbtype`e `_mbsbtype_l` retorna um valor inteiro que indica o resultado do teste no byte especificado. As constantes de manifesto na tabela a seguir são definidas em Mbctype.h.  
   
 |Valor retornado|Tipo de byte|  
 |------------------|---------------|  
-|`_MBC_SINGLE` (0)|Caractere de um byte. Por exemplo, na página de código 932, `_mbsbtype` retornará 0 se o byte especificado estiver dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF.|  
-|`_MBC_LEAD` (1)|Byte inicial do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retornará 1 se o byte especificado estiver dentro do intervalo 0x81 – 0x9F ou 0xE0 – 0xFC.|  
-|`_MBC_TRAIL` (2)|Byte à direita do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retornará 2 se o byte especificado estiver dentro do intervalo 0x40 – 0x7E ou 0x80 – 0xFC.|  
-|`_MBC_ILLEGAL` (–1)|Cadeia de caracteres `NULL`, caractere inválido ou byte `NULL` encontrado antes do byte no deslocamento `count` em `mbstr`.|  
+|`_MBC_SINGLE` (0)|Caractere de um byte. Por exemplo, na página de código 932, `_mbsbtype` retornará 0 se o byte especificado está dentro do intervalo 0x20-0x7E ou 0xA1 - 0xDF.|  
+|`_MBC_LEAD` (1)|Byte inicial do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retornará 1 se o byte especificado está dentro do intervalo 0x81-0x9F ou 0xE0 - 0xFC.|  
+|`_MBC_TRAIL` (2)|Byte à direita do caractere multibyte. Por exemplo, na página de código 932, `_mbsbtype` retorna 2 se o byte especificado está dentro do intervalo 0x40-0x7E ou 0x80 - 0xFC.|  
+|`_MBC_ILLEGAL` (-1)|Cadeia de caracteres `NULL`, caractere inválido ou byte `NULL` encontrado antes do byte no deslocamento `count` em `mbstr`.|  
   
 ## <a name="remarks"></a>Comentários  
  A função `_mbsbtype` determina o tipo de um byte em uma cadeia de caracteres multibyte. A função examina somente os bytes no deslocamento `count` no `mbstr`, ignorando os caracteres inválidos antes do byte especificado.  
@@ -118,9 +119,6 @@ int _mbsbtype_l(
  \* Para constantes de manifesto usadas como valores retornados.  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável, mas consulte [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)

@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 440cf44dda47253141247fe9a82925e13c84b48f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
@@ -141,9 +142,6 @@ errno_t mbsrtowcs_s(
   
 ## <a name="exceptions"></a>Exceções  
  A função `mbsrtowcs_s` será multithread-safe se nenhuma função no thread atual chamar `setlocale` enquanto essa função estiver em execução e o argumento `mbstate` não for um ponteiro nulo.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="requirements"></a>Requisitos  
   

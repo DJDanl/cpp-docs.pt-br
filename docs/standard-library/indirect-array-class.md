@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e14830a700a6b543fa0baa65a4e628d9e10bddab
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="indirectarray-class"></a>Classe indirect_array
@@ -52,7 +53,7 @@ Uma classe de modelo auxiliar interna, que dá suporte a objetos que são subcon
   
  Você constrói um objeto **indirect_array\<Type>** apenas escrevendo uma expressão no formato **va[xa]**. As funções membro da classe indirect_array, então, se comportam como as assinaturas de função correspondentes definidas para **valarray\<Type>**, exceto pelo fato de somente a sequência de elementos selecionados ser afetada.  
   
- A sequência consiste em elementos **xa.**[size](../standard-library/valarray-class.md#valarray__size), em que o elemento `I` torna-se o índice **xa**[ `I`] dentro de **va**.  
+ A sequência consiste em elementos **xa.**[size](../standard-library/valarray-class.md#size), em que o elemento `I` torna-se o índice **xa**[ `I`] dentro de **va**.  
   
 ## <a name="example"></a>Exemplo:  
   

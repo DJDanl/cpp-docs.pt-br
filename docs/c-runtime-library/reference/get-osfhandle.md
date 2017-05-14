@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e96f911e6784744eb539f6ce2b1961102d9869d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 314f57a38cdabb4257624550f6686075a5b61697
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
@@ -75,7 +76,7 @@ intptr_t _get_osfhandle(
  Um descritor de arquivo existente.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um identificador de arquivo do sistema operacional se `fd` for válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará `INVALID_HANDLE_VALUE` (–&1;) e definirá `errno` como `EBADF`, indicando um identificador de arquivo inválido.  
+ Um identificador de arquivo do sistema operacional se `fd` for válido. Caso contrário, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna `INVALID_HANDLE_VALUE` (-1) e define `errno` para `EBADF`, que indica o identificador de arquivo inválido.  
   
 ## <a name="remarks"></a>Comentários  
  Para fechar um arquivo aberto com `_get_osfhandle`, chame `_close`. O identificador subjacente também é fechado por uma chamada para `_close`, portanto, não é necessário chamar a função `CloseHandle` do Win32 no identificador original.  
@@ -87,9 +88,6 @@ intptr_t _get_osfhandle(
 |`_get_osfhandle`|\<io.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

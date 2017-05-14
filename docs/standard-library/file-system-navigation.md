@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>Navegação no sistema de arquivos
-O cabeçalho \<filesystem > implementa a Especificação técnica para o Sistema de arquivos C++ ISO/IEC TS 18822:2015 (rascunho final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e tem tipos e funções que permitem escrever código independente da plataforma para navegar no sistema de arquivos. Por ser de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, isso significa que `is_fifo(const path&)` sempre retorna `false` no Windows. O cabeçalho é baseado em um rascunho da Especificação técnica que não foi incorporado ao padrão do C++17 a partir do Visual Studio 2015 RTM. Seus membros são encontrados no namespace `std::experimental::filesystem`, embutido de `std::experimental::filesystem::v1`.  
+O cabeçalho \<filesystem > implementa a Especificação técnica para o Sistema de arquivos C++ ISO/IEC TS 18822:2015 (rascunho final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e tem tipos e funções que permitem escrever código independente da plataforma para navegar no sistema de arquivos. Por ser de plataforma cruzada, ele contém APIs que não são relevantes para sistemas Windows. Por exemplo, isso significa que `is_fifo(const path&)` sempre retorna `false` no Windows.   
   
 ## <a name="overview"></a>Visão Geral  
 Use as APIs \<filesystem> para as seguintes tarefas:  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 Para executar esse código, cole-o no exemplo completo acima, antes de `main` e remova a marca de comentário da linha que o chama no principal.  
   
 ### <a name="converting-between-path-and-string-types"></a>Convertendo entre tipos de cadeia de caracteres e caminho  
-Um objeto `path` é conversível implicitamente para `std::wstring` ou `std::string`. Isso significa que você pode passar um caminho para funções como [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open), conforme mostrado neste exemplo:  
+Um objeto `path` é conversível implicitamente para `std::wstring` ou `std::string`. Isso significa que você pode passar um caminho para funções como [wofstream::open](../standard-library/basic-ofstream-class.md#open), conforme mostrado neste exemplo:  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

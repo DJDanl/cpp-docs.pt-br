@@ -62,10 +62,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d6ff95a0d31d14de0941e5f8c3a3535fe0e5ee9c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20611bb1f40ae900ad2653395da6a0d8279252db
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
@@ -87,13 +88,13 @@ errno_t _ftime64_s(
   
 #### <a name="parameters"></a>Parâmetros  
  `timeptr`  
- Ponteiro para a estrutura `_timeb,``__timeb32` ou `__timeb64`.  
+ Ponteiro para um `_timeb`, `__timeb32`, ou `__timeb64` estrutura.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Zero se for bem-sucedido ou um código de erro em caso de falha. Se `timeptr` for `NULL`, o valor retornado será `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_ftime_s` obtém a hora local atual e a armazena na estrutura apontada por `timeptr`*.* As estruturas `_timeb,``__timeb32` e `__timeb64` são definidas em SYS\Timeb.h. Elas contêm quatro campos, que são listados na tabela a seguir.  
+ O `_ftime_s` função obtém a hora local atual e a armazena na estrutura apontada pelo `timeptr`. O `_timeb`, `__timeb32`, e `__timeb64` estruturas são definidas em SYS\Timeb.h. Elas contêm quatro campos, que são listados na tabela a seguir.  
   
  `dstflag`  
  Diferente de zero se o horário de verão estiver em vigor no fuso horário local. (Consulte [_tzset](../../c-runtime-library/reference/tzset.md) para obter uma explicação de como o horário de verão é determinado.)  
@@ -109,7 +110,7 @@ errno_t _ftime64_s(
   
  `_ftime64_s`, que usa a estrutura `__timeb64`, permite que as datas de criação de arquivos sejam expressas até 23:59:59 de 31 de dezembro de 3000, no UTC, enquanto `_ftime32_s` representa apenas datas até 23:59:59 de 18 de janeiro de 2038, no UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.  
   
- `_ftime_s` é equivalente a `_ftime64_s` e `_timeb` contém uma hora de 64 bits. Isso é verdadeiro a menos que _`USE_32BIT_TIME_T` seja definido; nesse caso, o comportamento antigo está em vigor. \_`ftime_s` usa uma hora de 32 bits e `_timeb` contém uma hora de 32 bits.  
+ `_ftime_s` é equivalente a `_ftime64_s` e `_timeb` contém uma hora de 64 bits. Isso é verdadeiro a menos que `_USE_32BIT_TIME_T` seja definido; nesse caso, o comportamento antigo está em vigor. `_ftime_s` usa uma hora de 32 bits e `_timeb` contém uma hora de 32 bits.  
   
  `_ftime_s` valida seus parâmetros. Se um ponteiro nulo for passado como `timeptr`, a função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL`.  
   
@@ -178,9 +179,6 @@ Minutes between UTC and local time: 480
 Daylight savings time flag (1 means Daylight time is in effect): 1  
 The time is Mon Apr 28 11:08:54.230 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

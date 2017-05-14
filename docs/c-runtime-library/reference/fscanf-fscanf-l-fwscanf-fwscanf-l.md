@@ -1,72 +1,78 @@
 ---
-title: "fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fscanf"
-  - "_fwscanf_l"
-  - "_fscanf_l"
-  - "fwscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fscanf"
-  - "fwscanf"
-  - "_ftscanf_l"
-  - "_fwscanf_l"
-  - "_ftscanf"
-  - "_fscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fscanf function"
-  - "fwscanf function"
-  - "formatted data [C++], reading from streams"
-  - "ftscanf_l function"
-  - "_ftscanf_l function"
-  - "_fwscanf_l function"
-  - "data [CRT], reading from streams"
-  - "_fscanf_l function"
-  - "ftscanf function"
-  - "fscanf_l function"
-  - "streams [C++], reading formatted data from"
-  - "_ftscanf function"
-  - "fwscanf_l function"
+title: fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fscanf
+- _fwscanf_l
+- _fscanf_l
+- fwscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fscanf
+- fwscanf
+- _ftscanf_l
+- _fwscanf_l
+- _ftscanf
+- _fscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- fscanf function
+- fwscanf function
+- formatted data [C++], reading from streams
+- ftscanf_l function
+- _ftscanf_l function
+- _fwscanf_l function
+- data [CRT], reading from streams
+- _fscanf_l function
+- ftscanf function
+- fscanf_l function
+- streams [C++], reading formatted data from
+- _ftscanf function
+- fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0b81c79261c138c7714de5163e98f1037dc23fa0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 Leia dados formatados de um fluxo. Versões mais seguras dessas funções estão disponíveis; consulte [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
@@ -117,7 +123,7 @@ int _fwscanf_l(
  Essas funções validam seus parâmetros. Se `stream` ou `format` for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EOF` e definirão `errno` para `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `fscanf` lê dados da posição atual de `stream` nos locais fornecidos por `argument` (se houver). Cada `argument` deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em `format`. `format` controla a interpretação dos campos de entrada e tem o mesmo formato e função que o argumento `format` para `scanf`. Consulte [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) para ver uma descrição de `format`*.*  
+ A função `fscanf` lê dados da posição atual de `stream` nos locais fornecidos por `argument` (se houver). Cada `argument` deve ser um ponteiro para uma variável de um tipo que corresponde a um especificador de tipo em `format`. `format` controla a interpretação dos campos de entrada e tem o mesmo formato e função que o argumento `format` para `scanf`. Consulte [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) para ver uma descrição de `format`.  
   
  `fwscanf` é uma versão de caractere largo de `fscanf`; o argumento de formato para `fwscanf` é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `fscanf` não dá suporte à entrada de um fluxo UNICODE.  
   
@@ -130,7 +136,7 @@ int _fwscanf_l(
 |`_ftscanf`|`fscanf`|`fscanf`|`fwscanf`|  
 |`_ftscanf_l`|`_fscanf_l`|`_fscanf_l`|`_fwscanf_l`|  
   
- Para obter mais informações, consulte [Campos de especificação de formato – funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Para obter mais informações, consulte [campos de especificação de formato - as funções scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -199,9 +205,6 @@ a-string
 3.141590  
 x  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Consulte também métodos `Parse`, como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

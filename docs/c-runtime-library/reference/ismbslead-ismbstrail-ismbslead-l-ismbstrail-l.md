@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c74c39a90896f9c04bfc945b420238795b11b74
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
@@ -113,7 +114,7 @@ int _ismbstrail_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_ismbslead` retorna -1 se o caractere for um byte inicial e `_ismbstrail` retorna -1 se o caractere for um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se um dos argumentos for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão `errno` para `EINVAL`.  
+ `_ismbslead`retornará -1 se o caractere é um byte e `_ismbstrail` retornará -1 se o caractere é um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se um dos argumentos for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `NULL` e definirão `errno` para `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
  `_ismbslead` e `_ismbstrail` são mais lentos que as versões `_ismbblead` e `_ismbbtrail`, porque consideram o contexto da cadeia de caracteres.  
@@ -132,9 +133,6 @@ int _ismbstrail_l(
  \* Para constantes de manifesto para as condições de teste.  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

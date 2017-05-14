@@ -1,62 +1,68 @@
 ---
-title: "asctime_s, wasctime_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wasctime_s"
-  - "asctime_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "asctime_s"
-  - "_wasctime_s"
-  - "_tasctime_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tasctime_s function"
-  - "_tasctime_s function"
-  - "time structure conversion"
-  - "wasctime_s function"
-  - "time, converting"
-  - "_wasctime_s function"
-  - "asctime_s function"
+title: asctime_s, wasctime_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wasctime_s
+- asctime_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- asctime_s
+- _wasctime_s
+- _tasctime_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- tasctime_s function
+- _tasctime_s function
+- time structure conversion
+- wasctime_s function
+- time, converting
+- _wasctime_s function
+- asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 caps.latest.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4d4b2bf3c4fb4180b6da1d39ca26bfe819971f31
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 Converter uma estrutura de hora `tm` para uma cadeia de caracteres. Essas funções são versões de [asctime, wasctime](../../c-runtime-library/reference/asctime-wasctime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -94,7 +100,7 @@ errno_t _wasctime_s(
  [in] O tamanho do buffer usado para armazenar o resultado.  
   
  `_tm`  
- [in] Estrutura de hora/data. Essa função assume um ponteiro para um objeto `struct``tm` válido.  
+ [in] Estrutura de hora/data. Essa função assume um ponteiro para um objeto `struct tm` válido.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, o valor retornado será um código de erro. Códigos de erro são definidos em ERRNO.H. Para obter mais informações, consulte [Constantes errno](../../c-runtime-library/errno-constants.md). Os códigos de erro reais retornados para cada condição de erro são mostrados na tabela a seguir.  
@@ -104,7 +110,7 @@ errno_t _wasctime_s(
 |`buffer`|`numberOfElements`|`tm`|Valor de|Valor em `buffer`|  
 |--------------|------------------------|----------|------------|-----------------------|  
 |`NULL`|Qualquer|Qualquer|`EINVAL`|Não modificado|  
-|Não `NULL` (aponta para a memória válida)|0|Qualquer|`EINVAL`|Não modificado|  
+|Não é `NULL` (aponta para a memória válida)|0|Qualquer|`EINVAL`|Não modificado|  
 |Não é `NULL`|0< tamanho < 26|Qualquer|`EINVAL`|Cadeia de caracteres vazia|  
 |Não é `NULL`|>= 26|`NULL`|`EINVAL`|Cadeia de caracteres vazia|  
 |Não é `NULL`|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|`EINVAL`|Cadeia de caracteres vazia|  
@@ -117,14 +123,14 @@ errno_t _wasctime_s(
   
 |membro timeptr|Valor|  
 |--------------------|-----------|  
-|`tm_hour`|Horas desde a meia-noite (0 –&23;)|  
+|`tm_hour`|Horas desde a meia-noite (0-23)|  
 |`tm_isdst`|Positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status de horário de verão for desconhecido. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).|  
-|`tm_mday`|Dia do mês (1 –&31;)|  
-|`tm_min`|Minutos após a hora (0 –&59;)|  
-|`tm_mon`|Mês (0 – 11; janeiro = 0)|  
+|`tm_mday`|Dia do mês (1-31)|  
+|`tm_min`|Minutos após a hora (0-59)|  
+|`tm_mon`|Mês (0-11; Janeiro = 0)|  
 |`tm_sec`|Segundos após o minuto (0-59)|  
-|`tm_wday`|Dia da semana (0 – 6; domingo = 0)|  
-|`tm_yday`|Dia do ano (0 – 365; 1º de janeiro = 0)|  
+|`tm_wday`|Dia da semana (0 a 6; Domingo = 0)|  
+|`tm_yday`|Dia do ano (365 0; 1 de janeiro = 0)|  
 |`tm_year`|Ano (ano atual menos 1900)|  
   
  A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md), [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](../../c-runtime-library/reference/tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.  
@@ -187,18 +193,6 @@ int main( void )
 ```Output  
 Current date and time: Wed May 14 15:30:17 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   <xref:System.DateTime.ToLongDateString%2A?displayProperty=fullName>  
-  
--   <xref:System.DateTime.ToLongTimeString%2A?displayProperty=fullName>  
-  
--   <xref:System.DateTime.ToShortDateString%2A?displayProperty=fullName>  
-  
--   <xref:System.DateTime.ToShortTimeString%2A?displayProperty=fullName>  
-  
--   <xref:System.DateTime.ToString%2A?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

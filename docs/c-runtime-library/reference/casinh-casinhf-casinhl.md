@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 89d0d8b05ee9b785701ae3990c70f51a893b0dc5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1620eb200723fe4b2cd6553e7ba50405b026d53c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
-Recupera o seno hiperbólico inverso de um número complexo, com cortes de ramificação fora do intervalo [−i, + i] ao longo do eixo imaginário.  
+Recupera o seno hiperbólico inverso de um número complexo, com cortes de ramificação fora do intervalo [-i, + i] ao longo do eixo imaginário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +93,7 @@ _Lcomplex casinhl(
  Um número complexo que representa um ângulo, em radianos.  
   
 ## <a name="return-value"></a>Valor retornado  
- O seno hiperbólico inverso de `z`, em radianos. O resultado é ilimitado ao longo do eixo real e no intervalo [−iπ/2, +iπ/2] ao longo do eixo imaginário.  
+ O seno hiperbólico inverso de `z`, em radianos. O resultado é desassociado ao longo do eixo real e no intervalo [-iπ/2 + 2/iπ] ao longo do eixo imaginário.  
   
 ## <a name="remarks"></a>Comentários  
  Como C++ permite sobrecargas, é possível chamar sobrecargas de `casinh` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `casinh` sempre usa e retorna um valor `_Dcomplex`.  

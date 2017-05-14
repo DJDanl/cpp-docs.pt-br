@@ -14,10 +14,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aa35f177bcb986e141d0e46e48dc007a96f94498
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fe398e0424ff6fc24eff9b084759aa10c46e98a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltistreamgt-functions"></a>Função &lt;istream&gt;
@@ -62,12 +63,12 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
  O fluxo.  
   
 ### <a name="remarks"></a>Comentários  
- O manipulador extrai e descarta quaisquer elementos `ch` para os quais [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#ios_base__getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) for verdadeiro.  
+ O manipulador extrai e descarta quaisquer elementos `ch` para os quais [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) for verdadeiro.  
   
- A função chamará [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)( **eofbit**) se encontrar o fim do arquivo enquanto extrai os elementos. Ele retorna `_Istr`.  
+ A função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se encontrar o fim do arquivo enquanto extrai os elementos. Ele retorna `_Istr`.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [operator>>](../standard-library/istream-operators.md#operator_gt__gt_) para ver um exemplo de como usar `ws`.  
+  Consulte [operator>>](../standard-library/istream-operators.md#op_gt_gt) para ver um exemplo de como usar `ws`.  
   
 ## <a name="see-also"></a>Consulte também  
  [\<istream>](../standard-library/istream.md)

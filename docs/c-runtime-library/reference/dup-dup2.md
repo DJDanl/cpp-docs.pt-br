@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bbdaaf91266699c3b3a223692cb46953a69f09c4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
@@ -84,7 +85,7 @@ int _dup2(
  Qualquer descritor de arquivo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_dup` retorna um novo descritor de arquivo. `_dup2` retorna 0 para indicar êxito. Se ocorrer um erro, cada função retorna –1 e define `errno` como `EBADF` se o descritor de arquivo for inválido ou como `EMFILE` se não houver mais descritores de arquivo disponíveis. No caso de um descritor de arquivo inválido, a função também invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
+ `_dup` retorna um novo descritor de arquivo. `_dup2` retorna 0 para indicar êxito. Se ocorrer um erro, cada função retorna -1 e conjuntos de `errno` para `EBADF` se o descritor de arquivo é inválido ou a `EMFILE` se não há mais descritores de arquivo estão disponíveis. No caso de um descritor de arquivo inválido, a função também invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).  
   
  Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

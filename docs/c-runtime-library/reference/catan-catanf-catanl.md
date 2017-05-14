@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cb516702a6fdb59eb2fbef2179fce76db8a32081
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 840e4fd2231d9eca61dc508b15a11ed75822bb6b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
-Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [−1; +1] ao longo do eixo imaginário.  
+Recupera o arco tangente de um número complexo com cortes de ramificação fora do intervalo [-1; + 1] no eixo imaginário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +93,7 @@ _Lcomplex catanl(
  Um número complexo que representa um ângulo, em radianos.  
   
 ## <a name="return-value"></a>Valor retornado  
- O arco tangente de `z`, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [−π/2; +π/2] ao longo do eixo real.  
+ O arco tangente de `z`, em radianos. O resultado é não vinculado ao longo do eixo imaginário e no intervalo [-π/2; + π/2] ao longo do eixo real.  
   
 ## <a name="remarks"></a>Comentários  
  Como C++ permite sobrecargas, é possível chamar sobrecargas de `catan` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `catan` sempre usa e retorna um valor `_Dcomplex`.  

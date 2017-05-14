@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 79296a683ab359f8cb43d8b01efcce61fa1b95c3
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c70314e30419f6315fc1c3afe84e8e9fc104d728
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
-Recupera a tangente hiperbólica inversa de um número complexo, com cortes de ramificação fora do intervalo [−1; +1] ao longo do eixo real.  
+Recupera a tangente hiperbólica inversa de um número complexo, com cortes de ramificação fora do intervalo [-1; + 1] no eixo real.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +93,7 @@ _Lcomplex catanhl(
  Um número complexo que representa um ângulo, em radianos.  
   
 ## <a name="return-value"></a>Valor retornado  
- A tangente hiperbólica inversa de `z`, em radianos. O resultado é ilimitado ao longo do eixo real e no intervalo [−iπ/2; +iπ/2] ao longo do eixo imaginário. Ocorrerá um erro de domínio se `z` estiver fora do intervalo [-1, +&1;]. Ocorrerá um erro de polo se `z` for -1 ou +&1;.  
+ A tangente hiperbólica inversa de `z`, em radianos. O resultado é não vinculado ao longo do eixo real e no intervalo [-iπ/2; + 2/iπ] ao longo do eixo imaginário. Ocorrerá um erro de domínio se `z` estiver fora do intervalo [-1, + 1]. Ocorrerá um erro de polo se `z` for -1 ou + 1.  
   
 ## <a name="remarks"></a>Comentários  
  Como C++ permite sobrecargas, é possível chamar sobrecargas de `catanh` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `catanh` sempre usa e retorna um valor `_Dcomplex`.  

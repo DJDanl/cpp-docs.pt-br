@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 82106262e5760dee21f6fe8557fcb8134bf668f1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
@@ -92,7 +93,7 @@ int _fseeki64(
  Em caso de sucesso, `fseek` e `_fseeki64` retornarão 0. Caso contrário, retornará um valor diferente de zero. Em dispositivos sem capacidade de busca, o valor retornado será indefinido. Se `stream` for um ponteiro nulo ou `origin` não for um dos valores permitidos descritos abaixo, `fseek` e `_fseeki64` invocarão um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão -1.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `fseek` e `_fseeki64` movem o ponteiro do arquivo (se houver) associado a `stream` para um novo local a `offset` bytes de `origin`*.* A operação seguinte no fluxo ocorre no novo local. Em um fluxo aberto para atualização, a operação seguinte pode ser uma leitura ou uma gravação. A origem do argumento deve ser uma das constantes a seguir, definidas em STDIO.H:  
+ O `fseek` e `_fseeki64` move o ponteiro do arquivo (se houver) associado com as funções `stream` para um novo local é `offset` bytes do `origin`. A operação seguinte no fluxo ocorre no novo local. Em um fluxo aberto para atualização, a operação seguinte pode ser uma leitura ou uma gravação. A origem do argumento deve ser uma das constantes a seguir, definidas em STDIO.H:  
   
  `SEEK_CUR`  
  Posição atual do ponteiro de arquivo.  
@@ -103,15 +104,15 @@ int _fseeki64(
  `SEEK_SET`  
  Início do arquivo.  
   
- Você pode usar `fseek` e `_fseeki64` para reposicionar o ponteiro em qualquer lugar de um arquivo. O ponteiro também pode ser posicionado após o final do arquivo. `fseek` e `_fseeki64` limpam o indicador de final de arquivo e anulam o efeito do qualquer chamada de `ungetc` anterior para `stream`.  
+ Você pode usar `fseek` e `_fseeki64` para reposicionar o ponteiro em qualquer lugar de um arquivo. O ponteiro também pode ser posicionado após o final do arquivo. `fseek`e `_fseeki64` limpa o indicador de fim de arquivo e nega o efeito de qualquer antes `ungetc` chamadas `stream`.  
   
  Quando um arquivo é aberto para acrescentar dados, a posição do arquivo atual é determinada pela última operação de E/S e não por onde a gravação seguinte ocorreria. Se nenhuma operação de E/S tiver ocorrido em um arquivo aberto para acréscimo, a posição do arquivo será o início do arquivo.  
   
- Para fluxos abertos no modo de texto, `fseek` e `_fseeki64` têm uso limitado, pois as conversões de retorno de carro – avanço de linha podem fazer com que `fseek` e `_fseeki64` produzam resultados inesperados. As únicas operações de `fseek` e `_fseeki64` com garantia de funcionar em fluxos abertos no modo de texto são:  
+ Para fluxos abertos no modo de texto, `fseek` e `_fseeki64` limitaram uso, como conversões de avanço de linha de retorno de carro podem causar `fseek` e `_fseeki64` para produzir resultados inesperados. A única `fseek` e `_fseeki64` operações garantidas em fluxos abertos no modo de texto são:  
   
 -   buscar com um deslocamento de 0 em relação a qualquer um dos valores de origem.  
   
--   buscar desde o início do arquivo com um valor de deslocamento retornado de uma chamada para `ftell` ao usar `fseek` ou `_ftelli64`ao usar`_fseeki64`.  
+-   Busca do início do arquivo com um valor de deslocamento retornado de uma chamada para `ftell` ao usar `fseek` ou `_ftelli64` ao usar `_fseeki64`.  
   
  Também no modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação, `fopen` e todas as rotinas relacionadas verificam se há um CTRL+Z no fim do arquivo e o removem, se possível. Isso é feito porque usar a combinação de `fseek` e `ftell` ou de `_fseeki64` e `_ftelli64` para movimentação dentro de um arquivo que termina com CTRL+Z pode fazer com que `fseek` ou `_fseeki64` se comporte incorretamente perto do fim do arquivo.  
   
@@ -167,12 +168,6 @@ int main( void )
 File pointer is set to middle of first line.  
 This is the file 'fseek.out'.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
--   [System::IO::FileStream::Seek](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

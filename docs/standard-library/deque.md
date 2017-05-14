@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 399ee327dffdd3c223718e9fb2d36bbff0a74f81
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
@@ -55,12 +56,12 @@ Define o deque de classes de modelo do contêiner e diversos modelos de suporte.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#operator_neq)|Testa se o objeto do deque do lado esquerdo do operador não é igual ao objeto do deque do lado direito.|  
-|[operator<](../standard-library/deque-operators.md#operator_lt_)|Testa se o objeto do deque do lado esquerdo do operador é menor que o objeto do deque do lado direito.|  
-|[operator\<=](../standard-library/deque-operators.md#operator_lt__eq)|Testa se o objeto do deque do lado esquerdo do operador é menor ou igual ao objeto do deque do lado direito.|  
-|[operator==](../standard-library/deque-operators.md#operator_eq_eq)|Testa se o objeto do deque do lado esquerdo do operador é igual ao objeto do deque do lado direito.|  
-|[operator>](../standard-library/deque-operators.md#operator_gt_)|Testa se o objeto do deque do lado esquerdo do operador é maior que o objeto do deque do lado direito.|  
-|[operator>=](../standard-library/deque-operators.md#operator_gt__eq)|Testa se o objeto do deque do lado esquerdo do operador é maior ou igual ao objeto do deque do lado direito.|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Testa se o objeto do deque do lado esquerdo do operador não é igual ao objeto do deque do lado direito.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Testa se o objeto do deque do lado esquerdo do operador é menor que o objeto do deque do lado direito.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Testa se o objeto do deque do lado esquerdo do operador é menor ou igual ao objeto do deque do lado direito.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testa se o objeto do deque do lado esquerdo do operador é igual ao objeto do deque do lado direito.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Testa se o objeto do deque do lado esquerdo do operador é maior que o objeto do deque do lado direito.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testa se o objeto do deque do lado esquerdo do operador é maior ou igual ao objeto do deque do lado direito.|  
   
 ### <a name="functions"></a>Funções  
   

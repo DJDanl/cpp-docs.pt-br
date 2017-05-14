@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: eb4516bc75ee88225f51f87d863439892d6fdb30
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c3582f51b4a66f33cf0926b12cbeccfc1f621c48
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="freelocale"></a>_free_locale
@@ -86,9 +87,6 @@ void _free_locale(
 |`_free_locale`|\<locale.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não há equivalência.  
   
 ## <a name="see-also"></a>Consulte também  
  [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)   

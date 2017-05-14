@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9478bce81c89d642fbcad296ffc53e1312a177c2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
@@ -119,7 +120,7 @@ long double atan2l(
  Quaisquer números.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `atan` retorna o arco tangente de `x` no intervalo de -π/2 a π/2 radianos. `atan2` retorna o arco tangente de `y/x` no intervalo de -π a π radianos. Se `x` for 0, `atan` retornará 0. Se ambos os parâmetros de `atan2` forem 0, a função retornará 0. Todos os resultados estão em radianos.  
+ `atan`Retorna o arco tangente de `x` no intervalo - π/2 a π/2 radianos. `atan2`Retorna o arco tangente de `y/x` no intervalo - π, em radianos π. Se `x` for 0, `atan` retornará 0. Se ambos os parâmetros de `atan2` forem 0, a função retornará 0. Todos os resultados estão em radianos.  
   
  `atan2` usa os sinais de ambos os parâmetros para determinar o quadrante do valor retornado.  
   
@@ -170,12 +171,6 @@ int main( int ac, char* av[] )
 Arctangent of 5.000000: 1.373401  
 Arctangent of 0.500000 / 5.000000: 0.099669  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

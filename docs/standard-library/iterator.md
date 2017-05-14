@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -92,13 +93,13 @@ Define primitivos de iterador, iteradores predefinidos e iteradores de fluxo, be
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#operator_neq)|Testa se o objeto de iterador à esquerda do operador não é igual ao objeto de iterador à direita.|  
-|[operator==](../standard-library/iterator-operators.md#operator_eq_eq)|Testa se o objeto de iterador à esquerda do operador é igual ao objeto de iterador à direita.|  
-|[operator<](../standard-library/iterator-operators.md#operator_lt_)|Testa se o objeto de iterador à esquerda do operador é menor que o objeto de iterador à direita.|  
-|[operator\<=](../standard-library/iterator-operators.md#operator_lt__eq)|Testa se o objeto de iterador à esquerda do operador é menor ou igual ao objeto de iterador à direita.|  
-|[operator>](../standard-library/iterator-operators.md#operator_gt_)|Testa se o objeto de iterador à esquerda do operador é maior que o objeto de iterador à direita.|  
-|[operator>=](../standard-library/iterator-operators.md#operator_gt__eq)|Testa se o objeto de iterador à esquerda do operador é maior ou igual ao objeto de iterador à direita.|  
-|[operator+](../standard-library/iterator-operators.md#operator_add)|Adiciona um deslocamento a um iterador e retorna o novo `reverse_iterator` que trata o elemento inserido na nova posição de deslocamento.|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|Testa se o objeto de iterador à esquerda do operador não é igual ao objeto de iterador à direita.|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Testa se o objeto de iterador à esquerda do operador é igual ao objeto de iterador à direita.|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|Testa se o objeto de iterador à esquerda do operador é menor que o objeto de iterador à direita.|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Testa se o objeto de iterador à esquerda do operador é menor ou igual ao objeto de iterador à direita.|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|Testa se o objeto de iterador à esquerda do operador é maior que o objeto de iterador à direita.|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|Testa se o objeto de iterador à esquerda do operador é maior ou igual ao objeto de iterador à direita.|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|Adiciona um deslocamento a um iterador e retorna o novo `reverse_iterator` que trata o elemento inserido na nova posição de deslocamento.|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|Subtrai um iterador de outro e retorna a diferença.|  
   
 ### <a name="classes"></a>Classes  

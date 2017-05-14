@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::binary_negate
-- std::binary_negate
 - binary_negate
-- std.binary_negate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f71f13f00a458a375d4be98e9229b305ba9b751c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: ae604ad5fcac5bfe827e335330097a902457723d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binarynegate-class"></a>Classe binary_negate
@@ -76,7 +75,7 @@ public:
 ## <a name="remarks"></a>Comentários  
  A classe de modelo armazena uma cópia de um objeto de função binária _ *Func*. Define sua função membro `operator()` como **!**\_ de retorno *Func(left, right).*  
   
- O construtor de `binary_negate` raramente é usado diretamente. A função auxiliar [not2](../standard-library/functional-functions.md#not2_function) geralmente é a preferencial para declarar e usar o predicado do adaptador **binary_negator**.  
+ O construtor de `binary_negate` raramente é usado diretamente. A função auxiliar [not2](../standard-library/functional-functions.md#not2) geralmente é a preferencial para declarar e usar o predicado do adaptador **binary_negator**.  
   
 ## <a name="example"></a>Exemplo  
   

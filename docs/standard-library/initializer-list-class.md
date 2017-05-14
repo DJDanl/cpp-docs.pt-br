@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2ac3e7fa456e5d3ff04bc5d974c87a9cbb055fea
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 542a13de6e8b97f736ea2cfcdf8956c2f261c1e4
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
@@ -70,7 +71,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[initializer_list](../standard-library/forward-list-class.md#forward_list__forward_list)|Constrói um objeto do tipo `initializer_list`.|  
+|[initializer_list](../standard-library/forward-list-class.md#forward_list)|Constrói um objeto do tipo `initializer_list`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -87,16 +88,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[begin](#initializer_list__begin)|Retorna um ponteiro para o primeiro elemento em um `initializer_list`.|  
-|[end](#initializer_list__end)|Retorna um ponteiro para depois do último elemento em um `initializer_list`.|  
-|[size](#initializer_list__size)|Retorna o número de elementos no `initializer_list`.|  
+|[begin](#begin)|Retorna um ponteiro para o primeiro elemento em um `initializer_list`.|  
+|[end](#end)|Retorna um ponteiro para depois do último elemento em um `initializer_list`.|  
+|[size](#size)|Retorna o número de elementos no `initializer_list`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<initializer_list>  
   
  **Namespace:** std  
   
-##  <a name="initializer_list__begin"></a>  initializer_list::begin  
+##  <a name="begin"></a>  initializer_list::begin  
  Retorna um ponteiro para o primeiro elemento em um `initializer_list`.  
   
 ```  
@@ -108,7 +109,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="initializer_list__end"></a>  initializer_list::end  
+##  <a name="end"></a>  initializer_list::end  
  Retorna um ponteiro para depois do último elemento em um `initializer list`.  
   
 ```  
@@ -118,7 +119,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para depois do último elemento na lista. Se a lista estiver vazia, este será o mesmo que o ponteiro para o primeiro elemento na lista.  
   
-##  <a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
+##  <a name="initializer_list"></a>  initializer_list::initializer_list  
  Constrói um objeto do tipo `initializer_list`.  
   
 ```  
@@ -199,7 +200,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="initializer_list__size"></a>  initializer_list::size  
+##  <a name="size"></a>  initializer_list::size  
  Retorna o número de elementos na lista.  
   
 ```  

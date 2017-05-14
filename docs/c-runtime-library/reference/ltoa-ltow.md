@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ac9a6808371183a234f5cd61312f641e6ea9e49f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e67ca683ac8946f88389e9ca2323f1255da6695
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
@@ -107,7 +108,7 @@ wchar_t *_ltow(
  Cada uma dessas funções retorna um ponteiro para `str`. Nenhum erro é retornado.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_ltoa` converte os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. O argumento `radix` especifica a base do `value`, que deve estar no intervalo de 2 a 36. Se `radix` for igual a 10 e `value` for negativo, o primeiro caractere da cadeia de caracteres armazenada será o sinal de subtração (–). `_ltow` é uma versão de caractere largo de `_ltoa`; o segundo argumento e o valor retornado de `_ltow` são cadeias de caracteres largos. Cada uma dessas funções é específica da Microsoft.  
+ A função `_ltoa` converte os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. O `radix` argumento especifica a base do `value`, que deve estar no intervalo de 2 a 36. Se `radix` é igual a 10 e `value` é negativo, o primeiro caractere da cadeia de caracteres armazenado é o sinal de subtração (-). `_ltow` é uma versão de caractere largo de `_ltoa`; o segundo argumento e o valor retornado de `_ltow` são cadeias de caracteres largos. Cada uma dessas funções é específica da Microsoft.  
   
 > [!IMPORTANT]
 >  Para evitar estouros de buffer, verifique se o buffer `str` é grande o suficiente para manter os dígitos convertidos, além do caractere nulo à direita e de um caractere de sinal.  
@@ -131,9 +132,6 @@ wchar_t *_ltow(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo de [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   
