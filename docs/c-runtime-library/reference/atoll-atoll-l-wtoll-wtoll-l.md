@@ -1,65 +1,71 @@
 ---
-title: "atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoll"
-  - "_atoll_l"
-  - "_wtoll_l"
-  - "atoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoll_l"
-  - "_wtoll"
-  - "_atoll_l"
-  - "_ttoll"
-  - "_tstoll"
-  - "_wtoll_l"
-  - "atoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atoll function"
-  - "_wtoll_l function"
-  - "_wtoll function"
-  - "_atoll_l function"
+title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoll
+- _atoll_l
+- _wtoll_l
+- atoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoll_l
+- _wtoll
+- _atoll_l
+- _ttoll
+- _tstoll
+- _wtoll_l
+- atoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- atoll function
+- _wtoll_l function
+- _wtoll function
+- _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e707c06f06015a684e968367f61e7e763ff87a6d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
+
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 Converte uma cadeia de caracteres em um inteiro `long long`.  
@@ -108,7 +114,7 @@ long long _wtoll_l(
 [whitespace] [sign] [digits]  
 ```  
   
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (+) ou menos (-); e `digits` são um ou mais dígitos.  
+ Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de adição (+) ou menos (-); e `digits` são um ou mais dígitos.  
   
  `_wtoll` é idêntico a `atoll`, exceto que assume uma cadeia de caracteres largos como um parâmetro.  
   
@@ -178,12 +184,6 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Convert::ToInt64](https://msdn.microsoft.com/en-us/library/system.convert.toint64.aspx)  
-  
--   [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint64.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

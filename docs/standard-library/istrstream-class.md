@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a156bcbefa4d3636a2a4b1978378a815a8d0fed9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 528634e98da7f57ee915124d38f20277495efcdb
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istrstream-class"></a>Classe istrstream
@@ -60,21 +61,21 @@ class istrstream : public istream
   
 |||  
 |-|-|  
-|[istrstream](#istrstream__istrstream)|Constrói um objeto do tipo `istrstream`.|  
+|[istrstream](#istrstream)|Constrói um objeto do tipo `istrstream`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[rdbuf](#istrstream__rdbuf)|Retorna um ponteiro para o objeto `strstreambuf` associado do fluxo.|  
-|[str](#istrstream__str)|Chama [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) e retorna um ponteiro para o início da sequência controlada.|  
+|[rdbuf](#rdbuf)|Retorna um ponteiro para o objeto `strstreambuf` associado do fluxo.|  
+|[str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<strstream>  
   
  **Namespace:** std  
   
-##  <a name="istrstream__istrstream"></a>  istrstream::istrstream  
+##  <a name="istrstream"></a>  istrstream::istrstream  
  Constrói um objeto do tipo `istrstream`.  
   
 ```
@@ -103,7 +104,7 @@ istrstream(
 ### <a name="remarks"></a>Comentários  
  Todos os construtores inicializam a classe base chamando [istream](../standard-library/istream-typedefs.md#istream)( **sb**), em que **sb** é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). Os primeiros dois construtores também inicializam **sb** chamando `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). Os dois construtores restantes chamam `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
   
-##  <a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
+##  <a name="rdbuf"></a>  istrstream::rdbuf  
  Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.  
   
 ```
@@ -117,10 +118,10 @@ strstreambuf *rdbuf() const
  A função membro retorna o endereço do buffer de fluxo armazenado do tipo pointer para [strstreambuf](../standard-library/strstreambuf-class.md).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount) para ver uma amostra que usa `rdbuf`.  
+  Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) para ver uma amostra que usa `rdbuf`.  
   
-##  <a name="istrstream__str"></a>  istrstream::str  
- Chama [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze) e retorna um ponteiro para o início da sequência controlada.  
+##  <a name="str"></a>  istrstream::str  
+ Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.  
   
 ```
 char *str();
@@ -130,10 +131,10 @@ char *str();
  Um ponteiro para o início da sequência controlada.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro retorna [rdbuf](#istrstream__rdbuf) -> [str](../standard-library/strstreambuf-class.md#strstreambuf__str).  
+ A função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [strstream::str](../standard-library/strstreambuf-class.md#strstreambuf__str) para ver uma amostra que usa **str**.  
+  Consulte [strstream::str](../standard-library/strstreambuf-class.md#str) para ver uma amostra que usa **str**.  
   
 ## <a name="see-also"></a>Consulte também  
  [istream](../standard-library/istream-typedefs.md#istream)   

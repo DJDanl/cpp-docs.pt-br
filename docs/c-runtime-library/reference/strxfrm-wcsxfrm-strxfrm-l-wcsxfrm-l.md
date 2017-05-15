@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92144dbdc043d68d9280d2721a0aaeac3a9e3f1a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
@@ -106,7 +107,7 @@ size_t wcsxfrm_l(
  Cadeia de caracteres de origem.  
   
  `count`  
- O número máximo de caracteres a serem colocados em `strDest`*.*  
+ Número máximo de caracteres para colocar em `strDest`.  
   
  `locale`  
  A localidade a ser usada.  
@@ -159,9 +160,6 @@ return( strlen( _string1 ) );
 |`_wcsxfrm_l`|\<string.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

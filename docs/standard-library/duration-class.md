@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::duration
+- chrono/std::chrono::duration::duration
+- chrono/std::chrono::duration::count
+- chrono/std::chrono::duration::max
+- chrono/std::chrono::duration::min
+- chrono/std::chrono::duration::zero
 dev_langs:
 - C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 843e4954b3a5b20d504dd5c8bf582dc56d4cbcbd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="duration-class"></a>Classe duration
@@ -67,37 +73,37 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor duration::duration](#duration__duration_constructor)|Constrói um objeto `duration`.|  
+|[duração](#duration)|Constrói um objeto `duration`.|  
   
 ### <a name="public-methods"></a>Métodos Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[duration::count](#duration__count_method)|Retorna o número de tiques do relógio no intervalo de tempo.|  
-|[duration::max](#duration__max_method)|Estático. Retorna o valor máximo permitido do parâmetro de modelo `Ref`.|  
-|[duration::min](#duration__min_method)|Estático. Retorna o menor valor permitido do parâmetro de modelo `Ref`.|  
-|[duration::zero](#duration__zero_method)|Estático. Na verdade, retorna `Rep`(0).|  
+|[count](#count)|Retorna o número de tiques do relógio no intervalo de tempo.|  
+|[max](#max)|Estático. Retorna o valor máximo permitido do parâmetro de modelo `Ref`.|  
+|[min](#min)|Estático. Retorna o menor valor permitido do parâmetro de modelo `Ref`.|  
+|[zero](#zero)|Estático. Na verdade, retorna `Rep`(0).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[duration::operator-](#duration__operator-)|Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.|  
-|[duration::operator--](#duration__operator--)|Diminui a contagem de tiques armazenados.|  
-|[duration::operator=](#duration__operator_eq)|Reduz o módulo de contagem de tiques armazenados de um valor especificado.|  
-|[duration::operator*=](#duration__operator_star_eq)|Multiplica de contagem de tiques armazenados por um valor especificado.|  
-|[duration::operator/=](#duration__operator__eq)|Divide a contagem de tiques armazenados pela contagem de tiques de um objeto `duration` especificado.|  
-|[duration::operator+](#duration__operator_add)|Retorna `*this`.|  
-|[duration::operator++](#duration__operator_add_add)|Aumenta a contagem de tiques armazenados.|  
-|[duration::operator+=](#duration__operator_add_eq)|Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.|  
-|[duration::operator-=](#duration__operator-_eq)|Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.|  
+|[duration::operator-](#operator-)|Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.|  
+|[duration::operator--](#operator--)|Diminui a contagem de tiques armazenados.|  
+|[duration::operator=](#op_eq)|Reduz o módulo de contagem de tiques armazenados de um valor especificado.|  
+|[duration::operator*=](#op_star_eq)|Multiplica de contagem de tiques armazenados por um valor especificado.|  
+|[duration::operator/=](#op_div_eq)|Divide a contagem de tiques armazenados pela contagem de tiques de um objeto `duration` especificado.|  
+|[duration::operator+](#op_add)|Retorna `*this`.|  
+|[duration::operator++](#op_add_add)|Aumenta a contagem de tiques armazenados.|  
+|[duration::operator+=](#op_add_eq)|Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.|  
+|[duration::operator-=](#operator-_eq)|Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std::chrono  
   
-##  <a name="a-namedurationcountmethoda--durationcount"></a><a name="duration__count_method"></a>  duration::count  
+##  <a name="count"></a>  duration::count  
  Recupera o número de tiques do relógio no intervalo de tempo.  
   
 ```  
@@ -107,7 +113,7 @@ constexpr Rep count() const;
 ### <a name="return-value"></a>Valor de retorno  
  O número de tiques do relógio no intervalo de tempo.  
   
-##  <a name="a-namedurationdurationconstructora--durationduration-constructor"></a><a name="duration__duration_constructor"></a>  Construtor duration::duration  
+##  <a name="duration"></a>  Construtor duration::duration  
  Constrói um objeto `duration`.  
   
 ```  
@@ -147,7 +153,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
   
  A menos que nenhum estouro seja induzido na conversão e for `treat_as_floating_point<rep>`*verdadeiro* ou `ratio_divide<Period2, period>::den` for igual a 1 e `treat_as_floating_point<Rep2>`*falso*, o terceiro construtor não participará da resolução de sobrecarga. Para obter mais informações, consulte [<type_traits>](../standard-library/type-traits.md).  
   
-##  <a name="a-namedurationmaxmethoda--durationmax"></a><a name="duration__max_method"></a>  duration::max  
+##  <a name="max"></a>  duration::max  
  O método estático que retorna o limite superior para valores de tipo de parâmetro de modelo `Ref`.  
   
 ```  
@@ -157,7 +163,7 @@ static constexpr duration max();
 ### <a name="return-value"></a>Valor de retorno  
  Na verdade, retorna `duration(duration_values<rep>::max())`.  
   
-##  <a name="a-namedurationminmethoda--durationmin"></a><a name="duration__min_method"></a>  duration::min  
+##  <a name="min"></a>  duration::min  
  O método estático que retorna o limite inferior para valores de tipo de parâmetro de modelo `Ref`.  
   
 ```  
@@ -167,14 +173,14 @@ static constexpr duration min();
 ### <a name="return-value"></a>Valor de retorno  
  Na verdade, retorna `duration(duration_values<rep>::min())`.  
   
-##  <a name="a-namedurationoperator-a--durationoperator-"></a><a name="duration__operator-"></a>  duration::operator-  
+##  <a name="duration__operator-"></a>  duration::operator-  
  Retorna uma cópia do objeto `duration` junto com uma contagem de tiques negados.  
   
 ```  
 constexpr duration operator-() const;
 ```  
   
-##  <a name="a-namedurationoperator--a--durationoperator--"></a><a name="duration__operator--"></a>  duration::operator--  
+##  <a name="duration__operator--"></a>  duration::operator--  
  Diminui a contagem de tiques armazenados.  
   
 ```  
@@ -188,7 +194,7 @@ duration operator--(int);
   
  O segundo método retorna uma cópia de `*this` que é feita antes do decremento.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator_eq"></a>  duration::operator=  
+##  <a name="op_eq"></a>  duration::operator=  
  Reduz o módulo de contagem de tiques armazenados de um valor especificado.  
   
 ```  
@@ -204,7 +210,7 @@ duration& operator%=(const duration& Div);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `duration` após a operação do módulo é executado.  
   
-##  <a name="a-namedurationoperatorstareqa--durationoperator"></a><a name="duration__operator_star_eq"></a>  duration::operator*=  
+##  <a name="op_star_eq"></a>  duration::operator*=  
  Multiplica de contagem de tiques armazenados por um valor especificado.  
   
 ```  
@@ -218,7 +224,7 @@ duration& operator*=(const rep& Mult);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `duration` após a multiplicação é executado.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator__eq"></a>  duration::operator/=  
+##  <a name="op_div_eq"></a>  duration::operator/=  
  Divide a contagem de tiques armazenados por um valor especificado.  
   
 ```  
@@ -232,14 +238,14 @@ duration& operator/=(const rep& Div);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `duration` após a divisão é executado.  
   
-##  <a name="a-namedurationoperatoradda--durationoperator"></a><a name="duration__operator_add"></a>  duration::operator+  
+##  <a name="op_add"></a>  duration::operator+  
  Retorna `*this`.  
   
 ```  
 constexpr duration operator+() const;
 ```  
   
-##  <a name="a-namedurationoperatoraddadda--durationoperator"></a><a name="duration__operator_add_add"></a>  duration::operator++  
+##  <a name="op_add_add"></a>  duration::operator++  
  Aumenta a contagem de tiques armazenados.  
   
 ```  
@@ -253,7 +259,7 @@ duration operator++(int);
   
  O segundo método retorna uma cópia de `*this` que é feita antes do incremento.  
   
-##  <a name="a-namedurationoperatoraddeqa--durationoperator"></a><a name="duration__operator_add_eq"></a>  duration::operator+=  
+##  <a name="op_add_eq"></a>  duration::operator+=  
  Adiciona a contagem de tiques de um objeto `duration` especificado para a contagem de tiques armazenados.  
   
 ```  
@@ -267,7 +273,7 @@ duration& operator+=(const duration& Dur);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `duration` depois que a adição é executada.  
   
-##  <a name="a-namedurationoperator-eqa--durationoperator-"></a><a name="duration__operator-_eq"></a>  duration::operator-=  
+##  <a name="duration__operator-_eq"></a>  duration::operator-=  
  Subtrai a contagem de tiques de um objeto `duration` especificado da contagem de tiques armazenados.  
   
 ```  
@@ -281,14 +287,14 @@ duration& operator-=(const duration& Dur);
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `duration` depois que a subtração é executada.  
   
-##  <a name="a-namedurationzeromethoda--durationzero"></a><a name="duration__zero_method"></a>  duration::zero  
+##  <a name="zero"></a>  duration::zero  
  Retorna `duration(duration_values<rep>::zero())`.  
   
 ```  
 static constexpr duration zero();
 ```  
   
-##  <a name="a-namedurationoperatormodeqa--durationoperator-mod"></a><a name="duration__operator_mod_eq"></a>  duration::operator mod=  
+##  <a name="op_mod_eq"></a>  duration::operator mod=  
  Reduz o módulo de contagem de tiques armazenados Div ou Div.count().  
   
 ```  

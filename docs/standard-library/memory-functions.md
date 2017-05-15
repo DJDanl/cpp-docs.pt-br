@@ -7,61 +7,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::addressof
 - memory/std::addressof
-- std::align
 - memory/std::align
-- std::allocate_shared
 - memory/std::allocate_shared
-- std::const_pointer_cast
 - memory/std::const_pointer_cast
-- std::declare_no_pointers
 - memory/std::declare_no_pointers
-- std::declare_reachable
 - memory/std::declare_reachable
-- std::default_delete
 - memory/std::default_delete
-- std::dynamic_pointer_cast
 - memory/std::dynamic_pointer_cast
-- std::get_deleter_function
-- memory/std::get_deleter_function
-- std::get_pointer_safety
+- memory/std::get_deleter
 - memory/std::get_pointer_safety
-- std::get_temporary_buffer
 - memory/std::get_temporary_buffer
-- std::make_shared
 - memory/std::make_shared
-- std::make_unique
 - memory/std::make_unique
-- std::owner_less
 - memory/std::owner_less
-- std::return_temporary_buffer
 - memory/std::return_temporary_buffer
-- std::static_pointer_cast
 - memory/std::static_pointer_cast
-- std::swap
 - memory/std::swap
-- std::undeclare_no_pointers
 - memory/std::undeclare_no_pointers
-- std::undeclare_reachable
 - memory/std::undeclare_reachable
-- std::uninitialized_copy
 - memory/std::uninitialized_copy
-- std::uninitialized_copy_n
 - memory/std::uninitialized_copy_n
-- std::uninitialized_fill
 - memory/std::uninitialized_fill
-- std::uninitialized_fill_n
 - memory/std::uninitialized_fill_n
+- memory/std::addressof
+- memory/std::align
+- memory/std::allocate_shared
+- memory/std::const_pointer_cast
+- memory/std::declare_no_pointers
+- memory/std::declare_reachable
+- memory/std::default_delete
+- memory/std::dynamic_pointer_cast
+- memory/std::get_deleter
+- memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
+- memory/std::make_shared
+- memory/std::make_unique
+- memory/std::owner_less
+- memory/std::return_temporary_buffer
+- memory/std::static_pointer_cast
+- memory/std::undeclare_no_pointers
+- memory/std::undeclare_reachable
+- memory/std::uninitialized_copy
+- memory/std::uninitialized_copy_n
+- memory/std::uninitialized_fill
+- memory/std::uninitialized_fill_n
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bab363d16555ca66ce0b57aad4ac8f3d9aaad21b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4d6d010f7f910a89565ef8cd7c07ddbb2f054759
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>Funções &lt;memory&gt;
@@ -69,14 +71,14 @@ ms.lasthandoff: 02/25/2017
 |-|-|-|  
 |[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[Função get_deleter](#get_deleter_function)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap (Biblioteca Padrão C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="a-nameaddressofa--addressof"></a><a name="addressof"></a>  addressof  
+##  <a name="addressof"></a>  addressof  
  Obtém o endereço verdadeiro de um objeto.  
   
 ```  
@@ -93,7 +95,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="a-namealigna--align"></a><a name="align"></a>  align  
+##  <a name="align"></a>  align  
  Ajusta o armazenamento do tamanho fornecido (alinhado pela especificação de alinhamento fornecido) no primeiro endereço possível do armazenamento fornecido.  
   
 ```  
@@ -150,7 +152,7 @@ while (alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="a-nameallocateshareda--allocateshared"></a><a name="allocate_shared"></a>  allocate_shared  
+##  <a name="allocate_shared"></a>  allocate_shared  
  Cria um `shared_ptr` para objetos alocados e construídos para um determinado tipo usando um alocador especificado. Retorna o `shared_ptr`.  
   
 ```  
@@ -169,7 +171,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>Comentários  
  A função cria o objeto `shared_ptr``<Type>`, um ponteiro para `Type(``Args``...)` conforme alocado e construído por `Alloc`.  
   
-##  <a name="a-nameconstpointercasta--constpointercast"></a><a name="const_pointer_cast"></a>  const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  Conversão constante para shared_ptr.  
   
 ```  
@@ -217,7 +219,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="a-namedeclarenopointersa--declarenopointers"></a><a name="declare_no_pointers"></a> declare_no_pointers  
+##  <a name="declare_no_pointers"></a> declare_no_pointers  
  Informa um coletor de lixo que os caracteres no bloco de memória definido por um ponteiro de endereço básico e o tamanho de bloco não contêm ponteiros rastreáveis.  
   
 ```  
@@ -230,13 +232,13 @@ void declare_no_pointers(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|` ptr`|O endereço do primeiro caractere que não contém mais ponteiros rastreáveis.|  
-|`_Size`|O tamanho de bloco que começa em ` ptr` que não contém ponteiros rastreáveis.|  
+|`ptr`|O endereço do primeiro caractere que não contém mais ponteiros rastreáveis.|  
+|`_Size`|O tamanho de bloco que começa em `ptr` que não contém ponteiros rastreáveis.|  
   
 ### <a name="remarks"></a>Comentários  
- A função informa qualquer `garbage collector` que o intervalo de endereços `[`` ptr``,` ` ptr` `+` `_Size``)` não contêm mais ponteiros rastreáveis. (Todos os ponteiros para o armazenamento alocado não devem ser desreferenciados a menos que deixados `reachable`.)  
+ A função informa qualquer `garbage collector` que o intervalo de endereços `[ ptr, ptr + _Size)` não contêm ponteiros rastreados. (Todos os ponteiros para o armazenamento alocado não devem ser desreferenciados a menos que deixados `reachable`.)  
   
-##  <a name="a-namedeclarereachablea--declarereachable"></a><a name="declare_reachable"></a>  declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  Informa a coleta de lixo que o endereço indicado é para armazenamento alocado e é alcançável.  
   
 ```  
@@ -244,13 +246,13 @@ void declare_reachable(void* ptr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` ptr`  
+ `ptr`  
  Um ponteiro para uma área de armazenamento acessível, alocada e válida.  
   
 ### <a name="remarks"></a>Comentários  
- Se ` ptr` não for nulo, a função informará a qualquer coletor de lixo que ` ptr` estará acessível daqui em diante (apontará para um armazenamento alocado válido).  
+ Se `ptr` não for nulo, a função informará a qualquer coletor de lixo que `ptr` estará acessível daqui em diante (apontará para um armazenamento alocado válido).  
   
-##  <a name="a-namedefaultdeletea--defaultdelete"></a><a name="default_delete"></a>  default_delete  
+##  <a name="default_delete"></a>  default_delete  
  Exclui objetos alocados com `operator new`. Adequado para uso com `unique_ptr`.  
 ```  
 struct default_delete {
@@ -269,7 +271,7 @@ struct default_delete {
 ### <a name="remarks"></a>Comentários  
  A classe de modelo descreve uma `deleter` que exclui objetos escalares alocados com `operator new`, adequada para uso com a classe de modelo `unique_ptr`. Ela também tem a especialização explícita `default_delete<Type[]>`.  
   
-##  <a name="a-namedynamicpointercasta--dynamicpointercast"></a><a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  Conversão dinâmica para shared_ptr.  
   
 ```  
@@ -331,7 +333,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-namegetdeleterfunctiona--getdeleter-function"></a><a name="get_deleter_function"></a> Função get_deleter  
+##  <a name="get_deleter"></a>get_deleter
  Obtenha o agente de exclusão de shared_ptr.  
   
 ```  
@@ -397,7 +399,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="a-namegetpointersafetya--getpointersafety"></a><a name="get_pointer_safety"></a>  get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  Retorna o tipo de segurança do ponteiro pressuposto por qualquer coletor de lixo.  
   
 ```  
@@ -407,7 +409,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>Comentários  
  A função retorna o tipo de segurança do ponteiro pressuposto por qualquer `garbage collector` automático.  
   
-##  <a name="a-namegettemporarybuffera--gettemporarybuffer"></a><a name="get_temporary_buffer"></a>  get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  Atribui o armazenamento temporário para uma sequência de elementos que não excede um número especificado de elementos.  
   
 ```  
@@ -416,7 +418,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` count`  
+ `count`  
  O número máximo de elementos solicitados para o qual a memória deve ser alocada.  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -460,7 +462,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="a-namemakeshareda--makeshared"></a><a name="make_shared"></a>  make_shared  
+##  <a name="make_shared"></a>  make_shared  
  Cria e retorna um `shared_ptr` que aponta para os objetos alocados construídos de zero ou mais argumentos usando o alocador padrão. Aloca e constrói um objeto do tipo especificado e um `shared_ptr` para gerenciar a propriedade compartilhada do objeto e retorna o `shared_ptr`.  
   
 ```  
@@ -554,7 +556,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="a-namemakeuniquea--makeunique"></a><a name="make_unique"></a>  make_unique  
+##  <a name="make_unique"></a>  make_unique  
  Cria e retorna um [unique_ptr](../standard-library/unique-ptr-class.md) para um objeto do tipo especificado, que é construído usando os argumentos especificados.  
   
 ```scr  
@@ -608,7 +610,7 @@ typename enable_if<extent<T>::value != 0,
   
   Quando você vir o erro C2280 em conexão com um `unique_ptr`, provavelmente é porque você está tentando invocar o construtor de cópia, o que é uma função excluída.  
   
-##  <a name="a-nameownerlessa--ownerless"></a><a name="owner_less"></a>  owner_less  
+##  <a name="owner_less"></a>  owner_less  
  Permite comparações mistas baseadas em propriedade de ponteiros compartilhados e fracos. Retornará `true` se o parâmetro esquerdo for ordenado antes do parâmetro direito pela função membro `owner_before`.  
   
 ```  
@@ -652,13 +654,13 @@ struct owner_less<weak_ptr<Type>>
  `_left`  
  Um ponteiro compartilhado ou fraco.  
   
- ` right`  
+ `right`  
  Um ponteiro compartilhado ou fraco.  
   
 ### <a name="remarks"></a>Comentários  
- As classes de modelo definem todos os operadores membro como ` left``.owner_before(`` right``)` de retorno.  
+ As classes de modelo definem todos os operadores membro como `left``.owner_before(``right``)` de retorno.  
   
-##  <a name="a-namereturntemporarybuffera--returntemporarybuffer"></a><a name="return_temporary_buffer"></a>  return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  Desaloca a memória temporária que foi alocada usando a função de modelo `get_temporary_buffer`.  
   
 ```  
@@ -711,7 +713,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="a-namestaticpointercasta--staticpointercast"></a><a name="static_pointer_cast"></a>  static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  Conversão estática para shared_ptr.  
   
 ```  
@@ -769,7 +771,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-nameswapa--swap-c-standard-library"></a><a name="swap"></a> swap (Biblioteca Padrão C++)  
+##  <a name="swap"></a> swap (Biblioteca Padrão C++)  
  Troque dois objetos shared_ptr ou weak_ptr.  
   
 ```  
@@ -850,7 +852,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameundeclarenopointersa--undeclarenopointers"></a><a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  Informa um coletor de lixo que os caracteres no bloco de memória definido por um ponteiro de endereço básico e o tamanho de bloco agora podem conter ponteiros rastreáveis.  
   
 ```  
@@ -860,9 +862,9 @@ void undeclare_no_pointers(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- A função informa qualquer `garbage collector` que o intervalo de endereços `[`` ptr``,` ` ptr` `+` `_Size``)` agora pode conter `traceable pointers`.  
+ A função informa qualquer `garbage collector` que o intervalo de endereços `[ptr, ptr + _Size)` agora pode conter `traceable pointers`.  
   
-##  <a name="a-nameundeclarereachablea--undeclarereachable"></a><a name="undeclare_reachable"></a>  undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  Informa um `garbage_collector` que um local de memória especificado não é alcançável.  
   
 ```  
@@ -874,12 +876,12 @@ Type *undeclare_reachable(Type* ptr);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|` ptr`|Um ponteiro para o endereço de memória a ser declarado como inacessível.|  
+|`ptr`|Um ponteiro para o endereço de memória a ser declarado como inacessível.|  
   
 ### <a name="remarks"></a>Comentários  
- Se ` ptr` não for `null`, a função informará qualquer `garbage collector` que ` ptr` daqui em diante não será `reachable`. Ele retorna um ponteiro `safely derived` que é comparado igual a ` ptr`.  
+ Se `ptr` não for `null`, a função informará qualquer `garbage collector` que `ptr` daqui em diante não será `reachable`. Ele retorna um ponteiro `safely derived` que é comparado igual a `ptr`.  
   
-##  <a name="a-nameuninitializedcopya--uninitializedcopy"></a><a name="uninitialized_copy"></a>  uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  Copia objetos de um intervalo de origem especificado em um intervalo de destino não inicializado.  
   
 ```  
@@ -888,17 +890,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` first`  
+ `first`  
  Um iterador de entrada que trata o primeiro elemento no intervalo de origem.  
   
- ` last`  
+ `last`  
  Um iterador de entrada que trata o último elemento no intervalo de origem.  
   
- ` dest`  
+ `dest`  
  Um iterador de avanço que trata o primeiro elemento no intervalo de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador de avanço que trata a primeira posição além do intervalo de destino, a menos que o intervalo de origem esteja vazio e o iterador trate * first.*  
+ Um iterador forward endereçamento a primeira posição fora do intervalo de destino, a menos que o intervalo de origem estava vazio e endereços de iterador * first.*  
   
 ### <a name="remarks"></a>Comentários  
  Esse algoritmo permite dissociar a alocação da memória da construção do objeto.  
@@ -980,7 +982,7 @@ int main()
 }
 ```  
   
-##  <a name="a-nameuninitializedcopyna--uninitializedcopyn"></a><a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  Cria uma cópia de um número especificado de elementos de um iterador de entrada. As cópias são colocadas em um iterador de avanço.  
   
 ```  
@@ -992,32 +994,30 @@ ForwardIterator uninitialized_copy_n(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` first`  
+ `first`  
  Um iterador de entrada que faz referência ao objeto a ser copiado.  
   
- ` count`  
+ `count`  
  Um tipo de inteiro com sinal e sem sinal que especifica o número de vezes que o objeto deve ser copiado.  
   
- ` dest`  
+ `dest`  
  Um iterador de avanço que faz referência ao local das novas cópias.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um iterador de avanço que atende à primeira posição além do destino. Se o intervalo de origem estiver vazio, o iterador abordará ` first`*.*  
+ Um iterador de avanço que atende à primeira posição além do destino. Se o intervalo de origem estava vazio, o iterador endereços `first`.  
   
 ### <a name="remarks"></a>Comentários  
  A função de modelo executa eficazmente o seguinte:  
   
- `for (; 0 < count; -- count)`  
-  
- `new ((void *)&*` ` dest` `++)`  
-  
- `iterator_traits<InputIterator>::value_type(*` ` first` `++);`  
-  
- `return dest;`  
+```cpp  
+    for (; 0 < count; --count)  
+        new ((void *)&* dest++) iterator_traits<InputIterator>::value_type(*first++);  
+    return dest;  
+```  
   
  a menos que o código lance uma exceção. Nesse caso, todos os objetos construídos são destruídos e a exceção é relançada.  
   
-##  <a name="a-nameuninitializedfilla--uninitializedfill"></a><a name="uninitialized_fill"></a>  uninitialized_fill  
+##  <a name="uninitialized_fill"></a>  uninitialized_fill  
  Copia objetos de um valor especificado em um intervalo de destino não inicializado.  
   
 ```  
@@ -1026,13 +1026,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` first`  
+ `first`  
  Um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.  
   
- ` last`  
+ `last`  
  Um iterador de avanço que trata o último elemento no intervalo de destino a ser iniciado.  
   
- ` val`  
+ `val`  
  O valor a ser usado para inicializar o intervalo de destino.  
   
 ### <a name="remarks"></a>Comentários  
@@ -1086,7 +1086,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="a-nameuninitializedfillna--uninitializedfilln"></a><a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  Copia objetos de um valor especificado em um número especificado de elementos em um intervalo de destino não inicializado.  
   
 ```  
@@ -1095,13 +1095,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` first`  
+ `first`  
  Um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.  
   
- ` count`  
+ `count`  
  O número de elementos a ser inicializado.  
   
- ` val`  
+ `val`  
  O valor a ser usado para inicializar o intervalo de destino.  
   
 ### <a name="remarks"></a>Comentários  

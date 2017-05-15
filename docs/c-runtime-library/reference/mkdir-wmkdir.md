@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ffed1c851bba2187c3c9b6afbbfc615911210249
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8352612a254b0abec8f632151246f5a32f39121a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
@@ -86,7 +87,7 @@ int _wmkdir(
  Caminho para um novo diretório.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retorna –&1; e define `errno` da seguinte maneira.  
+ Cada uma dessas funções retorna o valor 0 se o novo diretório foi criado. Em um erro, a função retornará -1 e conjuntos de `errno` da seguinte maneira.  
   
  `EEXIST`  
  O diretório não foi criado porque `dirname` é o nome de um dispositivo, diretório ou arquivo existente.  
@@ -159,12 +160,6 @@ Directory '\testtmp' was successfully created
                2 Dir(s)  15,498,690,560 bytes free  
 Directory '\testtmp' was successfully removed  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::Directory::CreateDirectory](https://msdn.microsoft.com/en-us/library/system.io.directory.createdirectory.aspx)  
-  
--   [System::IO::DirectoryInfo::CreateSubdirectory](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.createsubdirectory.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

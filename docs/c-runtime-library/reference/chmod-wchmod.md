@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 48d359b47a2372182900bf3bbfac0742de02cd5c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c0db1569ea6a90892b7eb3d0d8f08f3c9fcf7115
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
@@ -87,10 +88,10 @@ int _wchmod(
  Configuração de permissão para o arquivo.  
   
 ## <a name="return-value"></a>Valor retornado  
- Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor retornado de -1 indica uma falha. Se não for possível localizar o arquivo especificado, `errno` será definido como `ENOENT`; se um parâmetro for inválido, `errno` será definido como `EINVAL`.  
+ Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de -1 indica falha. Se não for possível localizar o arquivo especificado, `errno` será definido como `ENOENT`; se um parâmetro for inválido, `errno` será definido como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_chmod` altera a configuração de permissão do arquivo especificado por `filename`*.* A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat.h.  
+ O `_chmod` função altera a configuração de permissão do arquivo especificado por `filename`. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\Stat.h.  
   
  `_S_IWRITE`  
  Gravação permitida.  
@@ -198,12 +199,6 @@ A line of text.
 Access is denied.  
 Mode set to read/write  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
-  
--   [System::Security::Permissions::FileIOPermission](https://msdn.microsoft.com/en-us/library/system.security.permissions.fileiopermission.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

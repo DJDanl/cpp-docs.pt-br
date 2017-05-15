@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1902d372ce167d4466f63a61b8d498fcd3a583a8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c53bdd4bdd5d6707e6da15def20b6375dcf6e0dd
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
@@ -121,7 +122,7 @@ FILE *_wfsopen(
   
 |Termo|Definição|  
 |----------|----------------|  
-|`t`|Abre um arquivo no modo de texto (convertido). Neste modo, combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em LFs (avanços de linha) simples na entrada e caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou leitura/gravação, `_fsopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo.|  
+|`t`|Abre um arquivo no modo de texto (convertido). Nesse modo, combinações de carro linha de retorno de feed (CR LF) são transformadas em feeds de única linha (LF) na entrada e LF caracteres são convertidos para combinações de CR LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou leitura/gravação, `_fsopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo que termina com CTRL+Z pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo.|  
 |`b`|Abre um arquivo no modo binário (não convertido); as conversões acima são suprimidas.|  
 |`S`|Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso.|  
 |`R`|Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso.|  
@@ -184,12 +185,6 @@ int main( void )
 ```Output  
 No one else in the network can write to this file until we are done.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

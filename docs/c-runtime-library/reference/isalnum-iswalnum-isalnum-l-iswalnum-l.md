@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 065af7d72f7a2bfdecc945002d8eb869b47765a6
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 14e5ecd35a6f844dd7d304f10167e690f7df970e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
@@ -99,7 +100,7 @@ int _iswalnum_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retorna um valor diferente de zero se `c` for uma representação específica de um caractere alfanumérico. `isalnum` retorna um valor diferente de zero se `isalpha` ou `isdigit` for diferente de zero para `c`, ou seja, se `c` estiver nos intervalos A – Z, a – z ou 0 – 9. `iswalnum` retorna um valor diferente de zero se `iswalpha` ou `iswdigit` for diferente de zero para `c`. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retorna um valor diferente de zero se `c` for uma representação específica de um caractere alfanumérico. `isalnum`Retorna um valor diferente de zero se `isalpha` ou `isdigit` é diferente de zero para `c`, ou seja, se `c` está dentro dos intervalos de A - Z, a - z ou 0 - 9. `iswalnum` retorna um valor diferente de zero se `iswalpha` ou `iswdigit` for diferente de zero para `c`. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -122,9 +123,6 @@ int _iswalnum_l(
 |`_iswalnum_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsLetterOrDigit](https://msdn.microsoft.com/en-us/library/system.char.isletterordigit.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

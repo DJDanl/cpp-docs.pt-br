@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f72361dec79e82a5e4f531ad686978010f01450e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="messagesbyname-class"></a>Classe messages_byname
@@ -71,7 +72,7 @@ protected:
  Uma contagem de referência inicial.  
   
 ## <a name="remarks"></a>Comentários  
- Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [messages](../standard-library/messages-class.md#messages__messages)\<CharType>( `_Refs`).  
+ Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  

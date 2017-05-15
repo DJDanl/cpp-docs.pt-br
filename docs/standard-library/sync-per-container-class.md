@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0da4ce3b82517119b9b6ecc08129378b886fea40
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 80e119d2d7ee913b691bffe6f9943a28599dc1e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="syncpercontainer-class"></a>Classe sync_per_container
@@ -63,14 +64,14 @@ class sync_per_container
   
 |||  
 |-|-|  
-|[equals](#sync_per_container__equals)|Compara a igualdade de dois caches.|  
+|[equals](#equals)|Compara a igualdade de dois caches.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="sync_per_container__equals"></a>  sync_per_container::equals  
+##  <a name="equals"></a>  sync_per_container::equals  
  Compara a igualdade de dois caches.  
   
 ```

@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f119e7680f53f37a75b5e2e54263094e1b48a402
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bb04c82492a241c8a1089e2414358a11b54fff70
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
@@ -77,7 +78,7 @@ errno_t _get_pgmptr(
  Retorna zero se tiver êxito; um código de erro em caso de falha. Se `pValue` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá `errno` para `EINVAL` e retornará `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
- A variável global `_pgmptr` contém o caminho completo para o executável associado ao processo. Para obter mais informações, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+ O `_pgmptr` variável global contém o caminho completo para o executável associado ao processo. Para obter mais informações, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -86,9 +87,6 @@ errno_t _get_pgmptr(
 |`_get_pgmptr`|\<stdlib.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

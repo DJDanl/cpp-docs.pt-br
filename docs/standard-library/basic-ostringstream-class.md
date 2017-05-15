@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 984cda31490286dd2063bed115e22c7a0e11ca05
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96a5b0b6620810a336240e1adf06529c87bcb1b3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicostringstream-class"></a>Classe basic_ostringstream
@@ -70,34 +71,34 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_ostringstream](#basic_ostringstream__basic_ostringstream)|Constrói um objeto do tipo `basic_ostringstream`.|  
+|[basic_ostringstream](#basic_ostringstream)|Constrói um objeto do tipo `basic_ostringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#basic_ostringstream__allocator_type)|O tipo é um sinônimo do parâmetro de modelo `Alloc`.|  
+|[allocator_type](#allocator_type)|O tipo é um sinônimo do parâmetro de modelo `Alloc`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[rdbuf](#basic_ostringstream__rdbuf)|Retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
-|[str](#basic_ostringstream__str)|Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.|  
+|[rdbuf](#rdbuf)|Retorna o endereço do buffer de fluxo armazenado do tipo `pointer` para [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
+|[str](#str)|Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<sstream>  
   
  **Namespace:** std  
   
-##  <a name="basic_ostringstream__allocator_type"></a>  basic_ostringstream::allocator_type  
+##  <a name="allocator_type"></a>  basic_ostringstream::allocator_type  
  O tipo é um sinônimo do parâmetro de modelo `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="basic_ostringstream__basic_ostringstream"></a>  basic_ostringstream::basic_ostringstream  
+##  <a name="basic_ostringstream"></a>  basic_ostringstream::basic_ostringstream  
  Constrói um objeto do tipo basic_ostringstream.  
   
 ```  
@@ -108,7 +109,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
   
 ### <a name="parameters"></a>Parâmetros  
  `_Mode`  
- Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
+ Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `str`  
  Um objeto do tipo `basic_string`.  
@@ -118,7 +119,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
   
  O segundo construtor inicializa a classe base chamando basic_ostream( **sb**). Também inicializa **sb** chamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode` &#124; `ios_base::out`).  
   
-##  <a name="basic_ostringstream__rdbuf"></a>  basic_ostringstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_ostringstream::rdbuf  
  Retorna o endereço do buffer de fluxo armazenado do tipo **pointer** para [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
 ```  
@@ -132,9 +133,9 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
  A função membro retorna o endereço do buffer de fluxo armazenado do tipo **pointer** para basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close) para ver um exemplo que usa `rdbuf`.  
+  Consulte [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para ver um exemplo que usa `rdbuf`.  
   
-##  <a name="basic_ostringstream__str"></a>  basic_ostringstream::str  
+##  <a name="str"></a>  basic_ostringstream::str  
  Define ou obtém o texto em um buffer de cadeia de caracteres sem alterar a posição de gravação.  
   
 ```  
@@ -153,10 +154,10 @@ void str(
  Retorna um objeto da classe [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, cuja sequência controlada é uma cópia da sequência controlada por **\*this**.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função membro retorna [rdbuf](#basic_ostringstream__rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#basic_stringbuf__str). As segunda função membro chama `rdbuf` -> **str**( `_Newstr`).  
+ A primeira função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). As segunda função membro chama `rdbuf` -> **str**( `_Newstr`).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#basic_stringbuf__str) para obter um exemplo que usa **str**.  
+  Consulte [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) para obter um exemplo que usa **str**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

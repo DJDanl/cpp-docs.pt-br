@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 37f7a0c68af83541150b6bfd074d371663dfa246
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 47b45dd9e2ad07032529652021172ea64b84d652
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
@@ -98,7 +99,7 @@ FILE *_wfreopen(
 ## <a name="remarks"></a>Comentários  
  Existem versões mais seguras dessas funções; consulte [freopen_s, _wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
   
- A função `freopen` fecha o arquivo atualmente associado a `stream` e reatribui `stream` ao arquivo especificado por `path`*.* `_wfreopen` é uma versão de caractere largo de `_freopen`; os argumentos `path` e `mode` para `_wfreopen` são cadeias de caracteres largos. Caso contrário, `_wfreopen` e `_freopen` se comportam de forma idêntica.  
+ O `freopen` função fecha o arquivo associado no momento `stream` e reatribui `stream` para o arquivo especificado por `path`. `_wfreopen` é uma versão de caractere largo de `_freopen`; os argumentos `path` e `mode` para `_wfreopen` são cadeias de caracteres largos. Caso contrário, `_wfreopen` e `_freopen` se comportam de forma idêntica.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -106,7 +107,7 @@ FILE *_wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen`|`freopen`|`freopen`|`_wfreopen`|  
   
- `freopen` normalmente é usado para redirecionar os arquivos abertos previamente `stdin`, `stdout` e `stderr` para arquivos especificados pelo usuário. O novo arquivo associado a `stream` é aberto com `mode` *, *, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:  
+ `freopen` normalmente é usado para redirecionar os arquivos abertos previamente `stdin`, `stdout` e `stderr` para arquivos especificados pelo usuário. O novo arquivo associado `stream` é aberto com `mode`, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:  
   
  `"r"`  
  Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada `freopen` falha.  
@@ -135,7 +136,7 @@ FILE *_wfreopen(
  Quando o tipo de acesso `"r+"`, `"w+"` ou `"a+"` é especificado, são permitidas leitura e gravação (diz-se que o arquivo está aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma operação [fsetpos](../../c-runtime-library/reference/fsetpos.md), [fseek](../../c-runtime-library/reference/fseek-fseeki64.md) ou [rewind](../../c-runtime-library/reference/rewind.md) intermediária. A posição atual pode ser especificada para a operação `fsetpos` ou `fseek`, se desejado. Além dos valores acima, um dos caracteres seguintes pode ser incluído na cadeia de caracteres `mode` para especificar o modo de conversão para novas linhas.  
   
  `t`  
- Abrir no modo de texto (convertido); combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em caracteres de LF (avanço de linha) simples na entrada, caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou para leitura e gravação com `"a+"`, a biblioteca em tempo de execução verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo. A opção `t` é uma extensão da Microsoft que não deve ser usada quando se desejar portabilidade ANSI.  
+ Abrir em texto (convertido) modo; combinações de retorno-alimentação de linha (CR LF) carro são convertidas em caracteres de avanço de linha (LF) único na entrada. LF caracteres são convertidos para combinações de CR LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou para leitura e gravação com `"a+"`, a biblioteca em tempo de execução verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo. A opção `t` é uma extensão da Microsoft que não deve ser usada quando se desejar portabilidade ANSI.  
   
  `b`  
  Abrir no modo binário (não convertido); as conversões acima são suprimidas.  
@@ -187,12 +188,6 @@ int main( void )
 successfully reassigned  
 This will go to the file 'freopen.out'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   <xref:System.IO.File.Open%2A>  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

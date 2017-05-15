@@ -81,10 +81,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9493cefa8bb57f088eb13294c0cdc045a0d6417b
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 22226de878058c7c35307e47b76973eaaebcd552
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
@@ -169,13 +170,13 @@ wchar_t * _ui64tow(
  Resultado de cadeia de caracteres.  
   
  `radix`  
- Base de `value`, que deve estar no intervalo de 2 a 36.  
+ Base do `value`; que deve estar no intervalo de 2 a 36.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Cada uma dessas funções retorna um ponteiro para `str`. Nenhum erro é retornado.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_itoa`, `_i64toa` e `_ui64toa` convertem os dígitos do argumento `value` determinado em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 caracteres para `_itoa` e 65 para `_i64toa` e `_ui64toa`) em `str`. Se `radix` for igual a 10 e `value` for negativo, o primeiro caractere da cadeia de caracteres armazenada será o sinal de subtração (`–`). `_itow`, `_i64tow` e `_ui64tow` são versões de caractere largo de `_itoa`, `_i64toa` e `_ui64toa`, respectivamente.  
+ As funções `_itoa`, `_i64toa` e `_ui64toa` convertem os dígitos do argumento `value` determinado em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 caracteres para `_itoa` e 65 para `_i64toa` e `_ui64toa`) em `str`. Se `radix` for igual a 10 e `value` for negativo, o primeiro caractere da cadeia de caracteres armazenada será o sinal de subtração (`-`). `_itow`, `_i64tow` e `_ui64tow` são versões de caractere largo de `_itoa`, `_i64toa` e `_ui64toa`, respectivamente.  
   
 > [!IMPORTANT]
 >  Para evitar estouros de buffer, verifique se o buffer `str` é grande o suficiente para manter os dígitos convertidos, além do caractere nulo à direita e de um caractere de sinal.  
@@ -272,9 +273,6 @@ base 4: 33333333333333333333333333333333 (32 chars)
 base 3: 11112220022122120101211020120210210211220 (41 chars)  
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff62b8c0dada607e8fd3c573027ee200f2703459
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 332008ed313eeae7f04f39165424a9280c2aed8c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
@@ -68,7 +69,7 @@ struct steady_clock;
 |`system_clock::is_steady`|Contém `true`. Um `steady_clock` é *steady*.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std::chrono  
   

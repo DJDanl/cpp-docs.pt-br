@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75896dcec6e73b153473dd52c17b4dc95e425535
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 14d6eb678a20d3f3fb0a6250e13005d904aed4b1
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
@@ -84,7 +85,7 @@ int _wchdir(
  Caminho do novo diretório de trabalho.  
   
 ## <a name="return-value"></a>Valor retornado  
- Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor retornado de -1 indica uma falha. Se não for possível localizar o caminho especificado, `errno` será definido como `ENOENT`. Se `dirname` for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EINVAL` e a função retornará -1.  
+ Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de -1 indica falha. Se não for possível localizar o caminho especificado, `errno` será definido como `ENOENT`. Se `dirname` for NULL, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EINVAL` e a função retornará -1.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_chdir` muda o diretório de trabalho atual para o diretório especificado por `dirname`. O parâmetro `dirname` deve se referir a um diretório existente. Essa função pode mudar o diretório de trabalho atual em qualquer unidade. Se uma nova letra da unidade for especificada em `dirname`, a letra da unidade padrão mudará também. Por exemplo, se A for a letra da unidade padrão e \BIN for o diretório de trabalho atual, a chamada a seguir alterará o diretório de trabalho atual para a unidade C e estabelecerá C como a nova unidade padrão:  
@@ -170,9 +171,6 @@ Volume in drive C has no label.
               13 File(s)      2,249,184 bytes  
                0 Dir(s)  67,326,029,824 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

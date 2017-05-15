@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6e25dd5424ad471bade7289db4ea0684fab1f689
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachechunklist-class"></a>Classe cache_chunklist
@@ -68,21 +69,21 @@ class cache_chunklist
   
 |||  
 |-|-|  
-|[cache_chunklist](#cache_chunklist__cache_chunklist)|Constrói um objeto do tipo `cache_chunklist`.|  
+|[cache_chunklist](#cache_chunklist)|Constrói um objeto do tipo `cache_chunklist`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[allocate](#cache_chunklist__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#cache_chunklist__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
+##  <a name="allocate"></a>  cache_chunklist::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
  Constrói um objeto do tipo `cache_chunklist`.  
   
 ```
@@ -109,7 +110,7 @@ cache_chunklist();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
+##  <a name="deallocate"></a>  cache_chunklist::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```

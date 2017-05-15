@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f81b616b0bb81501a6cd1273f47293853336caeb
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fc5a0df49b31f77874e6a75ff39ed9650386c58f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
@@ -93,7 +94,7 @@ intptr_t _wexecvpe(
  Matriz de ponteiros para as configurações de ambiente.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor retornado de –1 indica um erro e, nesse caso, a variável global `errno` é definida.  
+ Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o `errno` variável global está definido.  
   
 |Valor `errno`|Descrição|  
 |-------------------|-----------------|  
@@ -122,12 +123,6 @@ intptr_t _wexecvpe(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo nas [ funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

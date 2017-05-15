@@ -58,14 +58,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 415cb64f167da8ca710fb63b21a45ad4700dd0e9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e61472ce3ae0fa35a772f5b628b468e398c25722
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
-Recupera o arco cosseno de um número complexo, com cortes de ramificação fora do intervalo [−1, +1] no eixo real.  
+Recupera o arco cosseno de um número complexo, com cortes de ramificação fora do intervalo [-1, + 1] no eixo real.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -92,7 +93,7 @@ _Lcomplex cacosl(
  Um número complexo que representa um ângulo, em radianos.  
   
 ## <a name="return-value"></a>Valor retornado  
- O arco cosseno de `z`, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [0, π] ao longo do eixo real. Ocorrerá um erro de domínio se `z` estiver fora do intervalo [-1, +&1;].  
+ O arco cosseno de `z`, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [0, π] ao longo do eixo real. Ocorrerá um erro de domínio se `z` estiver fora do intervalo [-1, + 1].  
   
 ## <a name="remarks"></a>Comentários  
  Como C++ permite sobrecargas, é possível chamar sobrecargas de `cacos` que tomam e retornam valores de `_Fcomplex` e `_Lcomplex`. Em um programa do C, `cacos` sempre usa e retorna um valor `_Dcomplex`.  

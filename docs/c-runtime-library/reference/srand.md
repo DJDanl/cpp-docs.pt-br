@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4b66807016325bd363627fc1104bedb7b980cc83
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e86ea8aa561af584a6825d4225820aca7baeced2
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="srand"></a>srand
@@ -90,9 +91,6 @@ void srand(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [rand](../../c-runtime-library/reference/rand.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [Classe System::Random](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

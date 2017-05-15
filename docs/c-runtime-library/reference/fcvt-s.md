@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6b0c6de598b810d80debc280bd60e354b17a8c47
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fcvts"></a>_fcvt_s
@@ -126,7 +127,7 @@ errno_t _fcvt_s(
   
  Um buffer de tamanho `_CVTBUFSIZE` é suficiente para qualquer valor de ponto flutuante.  
   
- A diferença entre `_ecvt_s` e `_fcvt_s` está na interpretação do parâmetro `count`. `_ecvt_s` interpreta `count` como o número total de dígitos na cadeia de saída, enquanto `_fcvt_s` interpreta c`ount` como o número de dígitos após o ponto decimal.  
+ A diferença entre `_ecvt_s` e `_fcvt_s` está na interpretação do parâmetro `count`. `_ecvt_s`interpreta `count` como o número total de dígitos na cadeia de saída, e `_fcvt_s` interpreta `count` como o número de dígitos após o ponto decimal.  
   
  No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sobrecarga pode inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -174,9 +175,6 @@ int main()
 ```Output  
 Converted value: 120000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.Convert.ToString%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

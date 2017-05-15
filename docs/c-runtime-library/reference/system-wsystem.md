@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cd2561ab3630c03d4d4a2072b78a2e22afd5d598
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3ce182dd28fa5af0fef9c2c51c14fc54aa5af972
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="system-wsystem"></a>system, _wsystem
@@ -84,7 +85,7 @@ int _wsystem(
  O comando a ser executado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `command` for `NULL` e o interpretador de comandos for encontrado, retornará um valor diferente de zero. Se o interpretador de comandos não for encontrado, retornará 0 e definirá `errno` como `ENOENT`. Se `command` não for `NULL`, `system` retornará o valor retornado pelo interpretador de comandos. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor retornado -1 indica um erro e `errno` é definido com um dos seguintes valores:  
+ Se `command` for `NULL` e o interpretador de comandos for encontrado, retornará um valor diferente de zero. Se o interpretador de comandos não for encontrado, retornará 0 e definirá `errno` como `ENOENT`. Se `command` não for `NULL`, `system` retornará o valor retornado pelo interpretador de comandos. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor de retorno - 1 indica um erro, e `errno` é definido como um dos seguintes valores:  
   
  `E2BIG`  
  A lista de argumentos (que é dependente do sistema) é muito grande.  
@@ -149,12 +150,6 @@ Line two.
 Line one.  
 Line two.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
-  
--   [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

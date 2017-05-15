@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>Parâmetros  
  `start`  
- Ponteiro para qualquer caractere (ou para `_mbsdec` e _`mbsdec_l`, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; `start` deve preceder `current` na cadeia de caracteres de origem.  
+ Ponteiro para qualquer caractere (ou para `_mbsdec` e `_mbsdec_l`, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; `start` devem preceder `current` na cadeia de caracteres de origem.  
   
  `current`  
- Ponteiro para qualquer caractere (ou para `_mbsdec` e _`mbsdec_l`, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; `current` deve vir após `start` na cadeia de caracteres de origem.  
+ Ponteiro para qualquer caractere (ou para `_mbsdec` e `_mbsdec_l`, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; `current` devem seguir `start` na cadeia de caracteres de origem.  
   
  `locale`  
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_mbsdec`, _`mbsdec_l`, `_strdec` e `_wcsdec` retornam um ponteiro para o caractere que precede `current`; `_mbsdec` retorna `NULL` se o valor de `start` é maior ou igual ao de `current`. `_tcsdec` mapeia para uma dessas funções e seu valor retornado depende do mapeamento.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, e `_wcsdec` retornam um ponteiro para o caractere que precede `current`; `_mbsdec` retorna `NULL` se o valor de `start` é maior que ou igual do `current`. `_tcsdec` mapeia para uma dessas funções e seu valor retornado depende do mapeamento.  
   
 ## <a name="remarks"></a>Comentários  
  As funções `_mbsdec` e `_mbsdec_l` retornam um ponteiro para o primeiro byte do caractere multibyte imediatamente anterior a `current` na cadeia de caracteres que contém `start`.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="frontinsertiterator-class"></a>Classe front_insert_iterator
@@ -63,29 +64,29 @@ class front_insert_iterator;
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator__front_insert_iterator)|Cria um iterador que pode inserir elementos na frente de um objeto de contêiner especificado.|  
+|[front_insert_iterator](#front_insert_iterator)|Cria um iterador que pode inserir elementos na frente de um objeto de contêiner especificado.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#front_insert_iterator__container_type)|Um tipo que representa o contêiner no qual uma inserção anterior deve ser feita.|  
-|[reference](#front_insert_iterator__reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|  
+|[container_type](#container_type)|Um tipo que representa o contêiner no qual uma inserção anterior deve ser feita.|  
+|[reference](#reference)|Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator*](#front_insert_iterator__operator_star)|Operador de cancelamento de referência usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção anterior.|  
-|[operator++](#front_insert_iterator__operator_add_add)|Incrementa o `front_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|  
-|[operator=](#front_insert_iterator__operator_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção anterior.|  
+|[operator*](#op_star)|Operador de cancelamento de referência usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção anterior.|  
+|[operator++](#op_add_add)|Incrementa o `front_insert_iterator` para o próximo local no qual um valor pode ser armazenado.|  
+|[operator=](#op_eq)|Operador de atribuição usado para implementar a expressão do iterador de saída * `i` = `x` para uma inserção anterior.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="container_type"></a>  front_insert_iterator::container_type  
  Um tipo que representa o contêiner no qual uma inserção anterior deve ser feita.  
   
 ```  
@@ -125,7 +126,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  Cria um iterador que pode inserir elementos na frente de um objeto de contêiner especificado.  
   
 ```  
@@ -185,7 +186,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="op_star"></a>  front_insert_iterator::operator*  
  Cancela a referência do iterador de inserção, retornando o elemento que é seu alvo.  
   
 ```  
@@ -243,7 +244,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  front_insert_iterator::operator++  
  Incrementa o `back_insert_iterator` para o próximo local no qual um valor pode ser armazenado.  
   
 ```  
@@ -291,7 +292,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="op_eq"></a>  front_insert_iterator::operator=  
  Acrescenta (envia por push) um valor à frente do contêiner.  
   
 ```  
@@ -349,7 +350,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="reference"></a>  front_insert_iterator::reference  
  Um tipo que fornece uma referência a um elemento em uma sequência controlada pelo contêiner associado.  
   
 ```  

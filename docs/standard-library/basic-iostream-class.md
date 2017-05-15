@@ -10,9 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istream/std::basic_iostream
-- std.basic_iostream
 - basic_iostream
-- std::basic_iostream
+- istream/std::basic_iostream::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a7980efd6709c5004c88b22916865d78511aa017
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3a71df6cc23c0c8f4e6faeb39474c363ed1bd412
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basiciostream-class"></a>Classe basic_iostream
@@ -67,26 +67,26 @@ public:
   
 |||  
 |-|-|  
-|[basic_iostream](#basic_iostream__basic_iostream)|Crie um objeto `basic_iostream`.|  
+|[basic_iostream](#basic_iostream)|Crie um objeto `basic_iostream`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[swap](#basic_iostream__swap)|Troca o conteúdo do objeto `basic_iostream` fornecido pelo conteúdo deste objeto.|  
+|[swap](#swap)|Troca o conteúdo do objeto `basic_iostream` fornecido pelo conteúdo deste objeto.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator=](#basic_iostream__operator_eq)|Atribui o valor de um objeto `basic_iostream` especificado a esse objeto. Essa é uma atribuição de movimentação que envolve um `rvalue` que não deixa uma cópia.|  
+|[operator=](#op_eq)|Atribui o valor de um objeto `basic_iostream` especificado a esse objeto. Essa é uma atribuição de movimentação que envolve um `rvalue` que não deixa uma cópia.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<istream>  
   
  **Namespace:** std  
   
-##  <a name="a-namebasiciostreambasiciostreama--basiciostreambasiciostream"></a><a name="basic_iostream__basic_iostream"></a>  basic_iostream::basic_iostream  
+##  <a name="basic_iostream"></a>  basic_iostream::basic_iostream  
  Crie um objeto `basic_iostream`.  
   
 ```  
@@ -98,32 +98,32 @@ basic_iostream();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` strbuf`  
+ `strbuf`  
  Um objeto `basic_streambuf` existente.  
   
- ` right`  
+ `right`  
  Um objeto `basic_iostream` Existente usado para construir um novo `basic_iostream`.  
   
 ### <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa os objetos base por meio de `basic_istream(`` strbuf``)` e `basic_ostream(`` strbuf``)`.  
+ O primeiro construtor inicializa os objetos base por meio de `basic_istream(strbuf)` e `basic_ostream(strbuf)`.  
   
- O segundo construtor inicializa os objetos base chamando mover `(`` right``)`.  
+ O segundo construtor inicializa os objetos base chamando `move(right)`.  
   
-##  <a name="a-namebasiciostreamoperatoreqa--basiciostreamoperator"></a><a name="basic_iostream__operator_eq"></a>  basic_iostream::operator=  
- Atribua o valor do objeto `basic_iostream` especificado a esse objeto. Essa é uma atribuição de movimentação que envolve um `rvalue` que não deixa uma cópia.  
+##  <a name="op_eq"></a>  basic_iostream::operator=  
+ Atribua o valor do objeto `basic_iostream` especificado a esse objeto. Essa é uma atribuição de movimentação que envolve um rvalue que não deixa uma cópia.  
   
 ```  
 basic_iostream& operator=(basic_iostream&& right);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` right`  
+ `right`  
  Uma referência `rvalue` a um objeto `basic_iostream` do qual atribuir.  
   
 ### <a name="remarks"></a>Comentários  
- O operador do membro chama `(`` right``)` de troca.  
+ As chamadas de operador de membro `swap(right)`.  
   
-##  <a name="a-namebasiciostreamswapa--basiciostreamswap"></a><a name="basic_iostream__swap"></a>  basic_iostream::swap  
+##  <a name="swap"></a>  basic_iostream::swap  
  Troca o conteúdo do objeto `basic_iostream` fornecido pelo conteúdo deste objeto.  
   
 ```  
@@ -131,11 +131,11 @@ void swap(basic_iostream& right);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` right`  
+ `right`  
  O objeto `basic_iostream` a trocar.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro chama trocar `(`` right``)`  
+ As chamadas de função de membro `swap(right)`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

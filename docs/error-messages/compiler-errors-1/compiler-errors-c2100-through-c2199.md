@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erros C2100 a C2199 (compilador)
@@ -99,7 +98,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2127 de erro do compilador|'*identificador*': inicialização ilegal da entidade 'constexpr' com uma expressão não constante|  
 |[Erro do compilador C2128](compiler-error-c2128.md)|'*função*': alloc_text/same_seg aplicável apenas a funções com vínculo a C|  
 |[Erro do compilador C2129](compiler-error-c2129.md)|função static '*identificador*' declarada mas não definido|  
-|[Erro do compilador C2130](compiler-error-c2130.md)|#linha esperada uma cadeia de caracteres que contém o nome do arquivo, encontrado '*token*'|  
+|[Erro do compilador C2130](compiler-error-c2130.md)|#line esperada uma cadeia de caracteres que contém o nome do arquivo, encontrado '*token*'|  
 |C2131 de erro do compilador|a expressão não foi avaliada como uma constante|  
 |[Erro do compilador C2132](compiler-error-c2132.md)|erro de sintaxe: identificador inesperado|  
 |[Erro do compilador C2133](compiler-error-c2133.md)|'*identificador*': tamanho desconhecido|  
@@ -147,7 +146,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2175](compiler-error-c2175.md)|'*localidade*': localidade inválida|  
 |C2176 de erro do compilador|uma instrução de retorno não pode aparecer no manipulador de uma função de bloco try associada a um construtor|  
 |[Erro do compilador C2177](compiler-error-c2177.md)|constante muito grande|  
-|C2178 de erro do compilador|'*identificador*'não pode ser declarado com'*especificador*' especificador|  
+|[C2178 de erro do compilador](compiler-error-c2178.md)|'*identificador*'não pode ser declarado com'*especificador*' especificador|  
 |[Erro do compilador C2179](compiler-error-c2179.md)|'*tipo*': um argumento de atributo não é possível usar parâmetros de tipo|  
 |[Erro do compilador C2180](compiler-error-c2180.md)|expressão de controle tem o tipo '*tipo*'|  
 |[Erro do compilador C2181](compiler-error-c2181.md)|else inválido sem if correspondente|  

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f50296336afdeb245df5532a023bcefa0d4abe18
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 38d046526f391a85687d608ec64740fcac8e7658
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
@@ -97,7 +98,7 @@ int _iswxdigit_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um dígito hexadecimal. `isxdigit` retornará um valor diferente de zero se `c` for um dígito hexadecimal (A – F, a – f ou 0 – 9). `iswxdigit` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de dígito hexadecimal. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada uma dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um dígito hexadecimal. `isxdigit`Retorna um valor diferente de zero se `c` é um dígito hexadecimal (A - F, a - f ou 0 - 9). `iswxdigit` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de dígito hexadecimal. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  Para a localidade "C", a função `iswxdigit` não dá suporte a caracteres hexadecimais de largura total Unicode.  
   
@@ -121,9 +122,6 @@ int _iswxdigit_l(
 |`_iswxdigit_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsNumber](https://msdn.microsoft.com/en-us/library/system.char.isnumber.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

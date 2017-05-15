@@ -25,10 +25,11 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ca6c94270b97f8b6e48871699628415e2133778
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlocalegt-functions"></a>Funções &lt;locale&gt;
@@ -162,7 +163,7 @@ bool isalpha(CharType Ch, const locale& Loc)
  **true** se o elemento testado for alfabético; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **alpha**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **alpha**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -223,7 +224,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere de controle; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **cntrl**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **cntrl**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -284,7 +285,7 @@ bool isdigit(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere numérico; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **digit**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **digit**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -345,7 +346,7 @@ bool isgraph(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere alfanumérico ou de pontuação; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **graph**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **graph**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -406,7 +407,7 @@ bool islower(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere em minúsculas; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **lower**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **lower**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -467,7 +468,7 @@ bool isprint(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um imprimível; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **print**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **print**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -527,7 +528,7 @@ bool ispunct(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere de pontuação; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **punct**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **punct**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -588,7 +589,7 @@ bool isspace(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere de espaço em branco; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **space**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **space**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -649,7 +650,7 @@ bool isupper(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere em maiúsculas; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **upper**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **upper**, `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -710,7 +711,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
  **true** se o elemento testado for um caractere usado para representar um número hexadecimal; **false** se não.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#ctype__is) (**ctype**\< **CharType**>:: **xdigit**, `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [é](../standard-library/ctype-class.md#is) (**ctype**\< **CharType**>:: **xdigit**, `Ch`).  
   
  Dígitos hexadecimais usam base 16 para representar números, usando os números de 0 a 9 e letras de A a F, sem diferenciar maiúsculas e minúsculas, para representar os números decimais de 0 a 15.  
   
@@ -773,7 +774,7 @@ CharType tolower(CharType Ch, const locale& Loc)
  O caractere convertido em letras minúsculas.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#ctype__tolower)( `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   
@@ -818,7 +819,7 @@ CharType toupper(CharType Ch, const locale& Loc)
  O caractere convertido em maiúsculas.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#ctype__toupper)( `Ch`).  
+ A função de modelo retorna [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).  
   
 ### <a name="example"></a>Exemplo  
   

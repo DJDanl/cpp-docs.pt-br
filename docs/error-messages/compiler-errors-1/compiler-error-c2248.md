@@ -1,5 +1,5 @@
 ---
-title: C2248 de erro do compilador | Documentos do Microsoft
+title: C2248 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,92 +33,95 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aab4e400abd09e426c3b9a4139c80041601e3ab
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 24977f831d326dab4882a21c70d8dce6da8b1ae9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2248"></a>C2248 de erro do compilador
-'member': não é membro de 'acessar' acesso declarado na classe 'class'  
+'*membro*': não é possível acessar '*access_level*'membro declarado na classe'*classe*'  
   
- Os membros de uma classe derivada não podem acessar `private` membros de uma classe base. Não é possível acessar `private` ou `protected` membros de instâncias de classe.  
+Membros de uma classe derivada não podem acessar `private` membros de uma classe base. Você não pode acessar `private` ou `protected` membros de instâncias de classe.  
   
- Consulte o artigo da Base de dados de Conhecimento KB243351 para obter mais informações sobre C2248.  
+## <a name="example"></a>Exemplo  
   
- O exemplo a seguir gera C2248:  
+O exemplo a seguir gera C2248 quando particular ou protegidos membros de uma classe são acessados de fora da classe. Para corrigir esse problema, não acesse esses membros diretamente fora da classe. Use dados de membro público e funções de membro para interagir com a classe.  
   
-```  
-// C2248.cpp  
+```cpp  
+// C2248_access.cpp 
+// compile with: cl /EHsc /W4 C2248_access.cpp 
 #include <stdio.h>  
+
 class X {  
 public:  
-   int  m_pubMemb;  
-   void setPrivMemb( int i ) {  
-      m_privMemb = i;  
-      printf_s("\n%d", m_privMemb);  
-   }  
+    int  m_publicMember;  
+    void setPrivateMember( int i ) {  
+        m_privateMember = i;  
+        printf_s("\n%d", m_privateMember);  
+    }  
 protected:  
-   int  m_protMemb;  
+    int  m_protectedMember;  
   
 private:  
-   int  m_privMemb;  
+    int  m_privateMember;  
 } x;  
   
 int main() {  
-   x.m_pubMemb = 4;  
-   printf_s("\n%d", x.m_pubMemb);  
-   x.m_protMemb = 2;   // C2248 m_protMemb is protected  
-   x.m_privMemb = 3;   // C2248  m_privMemb is private  
-   x.setPrivMemb(0);   // OK uses public access function  
+    x.m_publicMember = 4;  
+    printf_s("\n%d", x.m_publicMember);  
+    x.m_protectedMember = 2; // C2248 m_protectedMember is protected  
+    x.m_privateMember = 3;   // C2248  m_privMemb is private  
+    x.setPrivateMember(0);   // OK uses public access function  
 }  
 ```  
   
- Outro problema de conformidade que expõe C2248 é o uso de amigos de modelo e especialização. Para obter mais informações, consulte [erro das ferramentas de vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md).  
+Outro problema de conformidade que expõe C2248 é o uso de especialização e amigos de modelo. Para corrigir esse problema, declare friend funções de modelo usando um <> de lista de parâmetro de modelo vazio ou parâmetros de modelo específico.  
   
-```  
-// C2248_b.cpp  
+```cpp  
+// C2248_template.cpp 
+// compile with: cl /EHsc /W4 C2248_template.cpp 
 template<class T>  
 void f(T t) {  
-   t.i;   // C2248  
+    t.i;   // C2248  
 }  
   
 struct S {  
 private:  
-   int i;  
+    int i;  
   
 public:  
-   S() {}  
-   // Delete the following line to resolve.  
-   friend void f(S);   // refer to the non-template function void f(S)  
-  
-   // Uncomment the following line to resolve.  
-   // friend void f<S>(S);  
+    S() {}  
+    friend void f(S);   // refer to the non-template function void f(S)  
+    // To fix, comment out the previous line and
+    // uncomment the following line.  
+    // friend void f<S>(S);  
 };  
   
 int main() {  
-   S s;  
-   f<S>(s);  
+    S s;  
+    f<S>(s);  
 }  
 ```  
   
- Outro problema de conformidade que expõe C2248 é quando você tentar declarar um amigo de uma classe e a classe não é visível para a declaração friend no escopo da classe. Nesse caso, conceda amizade à classe delimitadora para resolver o erro.  
+Outro problema de conformidade que expõe C2248 é quando você tentar declarar um friend de uma classe e a classe não é visível para a declaração friend no escopo da classe. Para corrigir esse problema, conceda amizade à classe de delimitador.  
   
-```  
-// C2248_c.cpp  
-// compile with: /c  
+```cpp  
+// C2248_enclose.cpp  
+// compile with: cl /W4 /c C2248_enclose.cpp  
 class T {  
-   class S {  
-      class E {};  
-   };  
-   friend class S::E;   // C2248  
+    class S {  
+        class E {};  
+    };  
+    friend class S::E;   // C2248  
 };  
   
 class A {  
-   class S {  
-      class E {};  
-      friend class A;   // grant friendship to enclosing class  
-   };  
-   friend class S::E;   // OK  
+    class S {  
+        class E {};  
+        friend class A;  // grant friendship to enclosing class  
+    };  
+    friend class S::E;   // OK  
 };  
 ```

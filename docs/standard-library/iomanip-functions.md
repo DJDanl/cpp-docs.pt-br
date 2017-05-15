@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>Funções &lt;iomanip&gt;
@@ -115,7 +116,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
  O manipulador retorna um objeto que, quando inserido no fluxo `str`, se comporta como `formatted output function`. A função de saída chama a função membro `put` para a faceta de localidade `time_put` associada a `str`. A função de saída usa `_Tptr` para indicar a estrutura de tempo e `_Fmt` para indicar o início de uma cadeia de caracteres de formato terminada em NUL. Se for bem-sucedida, a chamada insere texto literal da cadeia de caracteres de formato e valores convertidos da estrutura de hora. O manipulador, então, retorna `str`.  
   
 ##  <a name="quoted"></a>  quoted  
- **(Novo no C++14) ** Um manipulador de iostream que permite o ciclo conveniente de cadeias de caracteres, entrando e saindo de fluxos, usando os operadores >> e <<.  
+ **(Novo no C++14)**  Um manipulador de iostream que permite o ciclo conveniente de cadeias de caracteres, entrando e saindo de fluxos, usando os operadores >> e <<.  
   
 ```  
 quoted(std::string str) // or wstring  
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  Os sinalizadores a limpar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*) e retorna **str**.  
+ O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*) e retorna **str**.  
   
 ### <a name="example"></a>Exemplo  
   Consulte [setw](../standard-library/iomanip-functions.md#setw) para ver um exemplo de como usar `resetiosflags`.  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  A base numérica.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags)) e retorna **str**. Aqui, **mask** é determinado da seguinte forma:  
+ O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)) e retorna **str**. Aqui, **mask** é determinado da seguinte forma:  
   
 -   Se _ *Base* for 8, então **mask** será `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   Se _ *Base* for 16, então **mask** será `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   Se _ *Base* for qualquer outro valor, então mask será `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0).  
+-   Se _ *Base* for qualquer outro valor, então mask será `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
 ### <a name="example"></a>Exemplo  
   Consulte [setw](../standard-library/iomanip-functions.md#setw) para ver um exemplo de como usar `setbase`.  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  O caractere que será usado para preencher espaços em uma exibição justificada à direita.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador do modelo retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`) e retorna **str**. O tipo **Elem** deve ser o mesmo que o tipo de elemento do fluxo **str**.  
+ O manipulador do modelo retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`) e retorna **str**. O tipo **Elem** deve ser o mesmo que o tipo de elemento do fluxo **str**.  
   
 ### <a name="example"></a>Exemplo  
   Consulte [setw](../standard-library/iomanip-functions.md#setw) para ver um exemplo de como usar `setfill`.  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  Os sinalizadores a serem definidos.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*) e retorna **str**.  
+ O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*) e retorna **str**.  
   
 ### <a name="example"></a>Exemplo  
   Consulte [setw](../standard-library/iomanip-functions.md#setw) para ver um exemplo de como usar `setiosflags`.  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  A precisão dos valores de ponto flutuante.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`) e retorna **str**.  
+ O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`) e retorna **str**.  
   
 ### <a name="example"></a>Exemplo  
   Consulte [setw](../standard-library/iomanip-functions.md#setw) para ver um exemplo de como usar `setprecision`.  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  A largura do campo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*) e retorna **str**.  
+ O manipulador retorna um objeto que, quando extraído ou inserido no fluxo **str**, chama **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*) e retorna **str**.  
   
 ### <a name="remarks"></a>Comentários  
  setw define a largura somente para o elemento seguinte no fluxo e deve ser inserido antes de cada elemento cuja largura você deseja especificar.  

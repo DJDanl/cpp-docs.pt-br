@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c4f63690395398698624fd75d1450ef4bcb7287
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
@@ -95,10 +96,10 @@ wchar_t *_wgetdcwd_dbg(
  Local de armazenamento para o caminho.  
   
  `maxlen`  
- Tamanho máximo do caminho em caracteres: `char` para `_getdcwd_dbg` e `wchar_t` para `_wgetdcwd_dbg`.  
+ Comprimento máximo do caminho em caracteres: `char` para `_getdcwd_dbg` e `wchar_t` para `_wgetdcwd_dbg`.  
   
  `blockType`  
- Tipo solicitado do bloco de memória: `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
+ Tipo de bloco de memória solicitado: `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
   
  `filename`  
  Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou `NULL`.  
@@ -128,9 +129,6 @@ wchar_t *_wgetdcwd_dbg(
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.Environment.CurrentDirectory%2A?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Consulte também  
  [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

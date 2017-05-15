@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4a6025f8f50cf0955b773583cfbe9cfc9bf74f06
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e253a90b195ccd5aaf60942a243d8ebc50993b94
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
@@ -114,7 +115,7 @@ errno_t _wstrtime_s(
  Passar um valor `numberOfElements` que seja maior que o tamanho real do buffer resultará em estouro de buffer.  
   
 ## <a name="remarks"></a>Comentários  
- Estas funções fornecem versões mais seguras de `_strtime` e `_wstrtime`. A função `_strtime_s` copia a hora local atual para o buffer apontado por `timestr`*.* A hora é formatada como `hh:mm:ss` em que `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora e `ss` são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos após 6 horas da noite. O buffer deve ter, pelo menos, 9 bytes; o tamanho real é especificado pelo segundo parâmetro.  
+ Estas funções fornecem versões mais seguras de `_strtime` e `_wstrtime`. O `_strtime_s` função copia a hora local atual para o buffer apontado pelo `timestr`. A hora é formatada como `hh:mm:ss` em que `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora e `ss` são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos após 6 horas da noite. O buffer deve ter, pelo menos, 9 bytes; o tamanho real é especificado pelo segundo parâmetro.  
   
  `_wstrtime` é uma versão de caractere largo de `_strtime`; o argumento e o valor retornado de `_wstrtime` são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.  
   
@@ -177,18 +178,6 @@ int main()
 OS time:            14:37:49  
 OS date:            04/25/03  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

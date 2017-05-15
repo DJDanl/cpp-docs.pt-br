@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ Salva o ambiente atual de ponto flutuante no objeto especificado, limpa os sinal
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
@@ -73,10 +73,10 @@ int feholdexcept(
  Ponteiro para um objeto `fenv_t` para conter uma cópia do ambiente de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna zero se, e somente se, a função for capaz de ativar o tratamento de exceções de ponto flutuante contínuas com êxito.  
+ Retorna zero se e somente se a função é capaz de ativar o tratamento de exceções de ponto flutuante contínuas com êxito.  
   
 ## <a name="remarks"></a>Comentários  
- A função `feholdexcept` é usada para armazenar o estado do ambiente de ponto flutuante atual no objeto `fenv_t` apontado por `penv` e para definir o ambiente para não interromper a execução em exceções de ponto flutuante. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente seja restaurado usando [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) ou [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
+ A função `feholdexcept` é usada para armazenar o estado do ambiente de ponto flutuante atual no objeto `fenv_t` apontado por `penv` e para definir o ambiente para não interromper a execução em exceções de ponto flutuante. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente seja restaurado usando [fesetenv](fesetenv1.md) ou [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
   
  Você pode usar essa função no início de uma sub-rotina que precisa ocultar uma ou mais exceções de ponto flutuante do chamador. Para relatar uma exceção, basta limpar as exceções indesejadas usando [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md) e encerrar o modo contínuo com uma chamada para `feupdateenv`.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

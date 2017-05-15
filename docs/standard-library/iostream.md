@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d0dfbf4aabab9e06ba1d04dbdd77eaba96e32635
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 55f88be1849809e7e569160aa3848d59120c7082
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
@@ -62,7 +63,7 @@ Declara objetos que controlam a leitura e a gravação nos fluxos padrão. Frequ
   
  Todos os objetos declarados nesse cabeçalho compartilham uma propriedade peculiar — você pode presumir que eles foram construídos antes de qualquer objeto estático que você definir, em uma unidade de conversão que inclui \<iostream>. Da mesma forma, você pode presumir que esses objetos não são destruídos antes dos destruidores de qualquer um desses objetos estáticos que você definir. (Os fluxos de saída são, no entanto, liberados durante o encerramento do programa.) Portanto, você pode, com segurança, ler ou gravar em fluxos padrão antes da inicialização do programa e após o encerramento do programa.  
   
- No entanto, essa garantia não é universal. Um construtor estático pode chamar uma função em outra unidade de conversão. A função chamada não pode presumir que os objetos declarados nesse cabeçalho foram construídos, dada a ordem incerta na qual as unidades de conversão participam da construção estática. Para usar esses objetos em tal contexto, primeiro você precisa criar um objeto da classe [ios_base::Init](../standard-library/ios-base-class.md#ios_base__init).  
+ No entanto, essa garantia não é universal. Um construtor estático pode chamar uma função em outra unidade de conversão. A função chamada não pode presumir que os objetos declarados nesse cabeçalho foram construídos, dada a ordem incerta na qual as unidades de conversão participam da construção estática. Para usar esses objetos em tal contexto, primeiro você precisa criar um objeto da classe [ios_base::Init](../standard-library/ios-base-class.md#init).  
   
 ### <a name="global-stream-objects"></a>Objetos de fluxo global  
   
@@ -77,7 +78,7 @@ Declara objetos que controlam a leitura e a gravação nos fluxos padrão. Frequ
 |[wclog](#wclog)|Especifica o fluxo global `wclog`.|  
 |[wcout](#wcout)|Especifica o fluxo global `wcout`.|  
   
-###  <a name="a-namecerra--cerr"></a><a name="cerr"></a>  cerr  
+###  <a name="cerr"></a>  cerr  
  O objeto `cerr` controla a saída para um buffer de fluxo associado ao objeto `stderr`, declarado em \<cstdio>.  
   
 ```  
@@ -88,7 +89,7 @@ extern ostream cerr;
  Um objeto [ostream](../standard-library/ostream-typedefs.md#ostream).  
   
 #### <a name="remarks"></a>Comentários  
- O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo de bytes. Após o objeto ser construído, a expressão `cerr.`[flags](../standard-library/ios-base-class.md#ios_base__flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero e `cerr.tie() == &cout`.  
+ O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo de bytes. Após o objeto ser construído, a expressão `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero e `cerr.tie() == &cout`.  
   
 #### <a name="example"></a>Exemplo  
   
@@ -120,7 +121,7 @@ int main( )
 }  
 ```  
   
-###  <a name="a-namecina--cin"></a><a name="cin"></a>  cin  
+###  <a name="cin"></a>  cin  
  Especifica o fluxo global `cin`.  
   
 ```  
@@ -131,7 +132,7 @@ extern istream cin;
  Um objeto [istream](../standard-library/istream-typedefs.md#istream).  
   
 #### <a name="remarks"></a>Comentários  
- O objeto controla extrações da entrada padrão como um fluxo de bytes. Após o objeto ser criado, a chamada `cin.`[tie](../standard-library/basic-ios-class.md#basic_ios__tie) retorna `&`[cout](#cout).  
+ O objeto controla extrações da entrada padrão como um fluxo de bytes. Após o objeto ser criado, a chamada `cin.`[tie](../standard-library/basic-ios-class.md#tie) retorna `&`[cout](#cout).  
   
 #### <a name="example"></a>Exemplo  
   Neste exemplo, `cin` define o bit de falha no fluxo quando encontra caracteres não numéricos. O programa limpa o bit de falha e retira o caractere inválido do fluxo para continuar.  
@@ -169,7 +170,7 @@ int main()
   
 ```  
   
-###  <a name="a-namecloga--clog"></a><a name="clog"></a>  clog  
+###  <a name="clog"></a>  clog  
  Especifica o fluxo global `clog`.  
   
 ```  
@@ -185,7 +186,7 @@ extern ostream clog;
 #### <a name="example"></a>Exemplo  
   Consulte [cerr](#cerr) para ver um exemplo de como usar `clog`.  
   
-###  <a name="a-namecouta--cout"></a><a name="cout"></a>  cout  
+###  <a name="cout"></a>  cout  
  Especifica o fluxo global `cout`.  
   
 ```  
@@ -201,7 +202,7 @@ extern ostream cout;
 #### <a name="example"></a>Exemplo  
   Consulte [cerr](#cerr) para ver um exemplo de como usar `cout`.  
   
-###  <a name="a-namewcerra--wcerr"></a><a name="wcerr"></a>  wcerr  
+###  <a name="wcerr"></a>  wcerr  
  Especifica o fluxo global `wcerr`.  
   
 ```  
@@ -212,12 +213,12 @@ extern wostream wcerr;
  Um objeto [wostream](../standard-library/ostream-typedefs.md#wostream).  
   
 #### <a name="remarks"></a>Comentários  
- O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo largo. Após o objeto ser construído, a expressão `wcerr.`[flags](../standard-library/ios-base-class.md#ios_base__flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero.  
+ O objeto controla inserções não armazenadas em buffer na saída de erro padrão como um fluxo largo. Após o objeto ser construído, a expressão `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) é diferente de zero.  
   
 #### <a name="example"></a>Exemplo  
   Consulte [cerr](#cerr) para ver um exemplo de como usar `wcerr`.  
   
-###  <a name="a-namewcina--wcin"></a><a name="wcin"></a>  wcin  
+###  <a name="wcin"></a>  wcin  
  Especifica o fluxo global `wcin`.  
   
 ```  
@@ -228,12 +229,12 @@ extern wistream wcin;
  Um objeto [wistream](../standard-library/istream-typedefs.md#wistream).  
   
 #### <a name="remarks"></a>Comentários  
- O objeto controla extrações da entrada padrão como um fluxo largo. Após o objeto ser criado, a chamada `wcin.`[tie](../standard-library/basic-ios-class.md#basic_ios__tie) retorna `&`[wcout](#wcout).  
+ O objeto controla extrações da entrada padrão como um fluxo largo. Após o objeto ser criado, a chamada `wcin.`[tie](../standard-library/basic-ios-class.md#tie) retorna `&`[wcout](#wcout).  
   
 #### <a name="example"></a>Exemplo  
   Consulte [cerr](#cerr) para ver um exemplo de como usar `wcin`.  
   
-###  <a name="a-namewcloga--wclog"></a><a name="wclog"></a>  wclog  
+###  <a name="wclog"></a>  wclog  
  Especifica o fluxo global `wclog`.  
   
 ```  
@@ -249,7 +250,7 @@ extern wostream wclog;
 #### <a name="example"></a>Exemplo  
   Consulte [cerr](#cerr) para ver um exemplo de como usar `wclog`.  
   
-###  <a name="a-namewcouta--wcout"></a><a name="wcout"></a>  wcout  
+###  <a name="wcout"></a>  wcout  
  Especifica o fluxo global `wcout`.  
   
 ```  

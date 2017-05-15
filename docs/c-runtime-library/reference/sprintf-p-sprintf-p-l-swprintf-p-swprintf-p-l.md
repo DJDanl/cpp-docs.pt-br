@@ -70,10 +70,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28f93d4e8d7a707c6a8ffdc2b930bb7747aad779
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 35501213c0d9e0ee60472e4082bc03eabe8440e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
@@ -86,27 +87,27 @@ int _sprintf_p(
    char *buffer,  
    size_t sizeOfBuffer,  
    const char *format [,  
-   argument] ...   
+   argument_list]  
 );  
 int _sprintf_p_l(  
    char *buffer,  
    size_t sizeOfBuffer,  
    const char *format,  
    locale_t locale [,  
-   argument] ...   
+   argument_list]  
 );  
 int _swprintf_p(  
    wchar_t *buffer,  
    size_t sizeOfBuffer,  
    const wchar_t *format [,  
-   argument]...  
+   argument_list]  
 );  
 int _swprintf_p_l(  
    wchar_t *buffer,  
    size_t sizeOfBuffer,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument] …   
+   argument_list]   
 );  
 ```  
   
@@ -118,10 +119,10 @@ int _swprintf_p_l(
  O número máximo de caracteres a ser armazenado.  
   
  `format`  
- Cadeia de caracteres de controle de formato  
+ Cadeia de caracteres de controle de formato.  
   
- `argument`  
- Argumentos opcionais  
+ `argument_list`  
+ Argumentos opcionais para a cadeia de caracteres de formato.  
   
  `locale`  
  A localidade a ser usada.  
@@ -129,14 +130,14 @@ int _swprintf_p_l(
  Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- O número de caracteres gravados ou -1 se ocorreu um erro.  
+ O número de caracteres gravados, ou -1 se ocorreu um erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_sprintf_p` formata e armazena uma série de caracteres e valores em `buffer`. Cada `argument` (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em `format`. O formato consiste em caracteres comuns e tem o mesmo formato e função que o argumento `format` para `printf_p`. Um caractere `NULL` é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre `_sprintf_p` e `sprintf_s` é que `_sprintf_p` dá suporte a parâmetros posicionais, o que permite especificar a ordem em que os argumentos são usados na cadeia de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ A função `_sprintf_p` formata e armazena uma série de caracteres e valores em `buffer`. Cada argumento o `argument_list` (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em `format`. O `format` argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere `NULL` é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre `_sprintf_p` e `sprintf_s` é que `_sprintf_p` dá suporte a parâmetros posicionais, o que permite especificar a ordem em que os argumentos são usados na cadeia de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  `_swprintf_p` é uma versão de caractere largo de `_sprintf_p`; os argumentos de ponteiro para `_swprintf_p` são cadeias de caracteres largos. A detecção de erros de codificação em `_swprintf_p` pode ser diferente da detecção em `_sprintf_p`. `_swprintf_p` e `fwprintf_p` comportam-se de modo idêntico, exceto pelo fato de que `_swprintf_p` grava a saída em uma cadeia de caracteres em vez de um destino do tipo `FILE`, além de que `_swprintf_p` requer que o parâmetro `count` especifique o número máximo de caracteres a serem gravados. As versões dessas funções com o sufixo `_l` são idênticas, com a exceção de usarem o parâmetro de localidade passado, em vez da localidade do thread atual.  
   
- `_sprintf_p` retorna o número de bytes armazenados em `buffer`, sem contar o caractere `NULL` de terminação. `_swprintf_p` retorna o número de caracteres largos armazenados em `buffer`, sem contar o caractere largo `NULL` de terminação. Se `buffer` ou `format` for um ponteiro nulo, se a contagem for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
+ `_sprintf_p` retorna o número de bytes armazenados em `buffer`, sem contar o caractere `NULL` de terminação. `_swprintf_p`Retorna o número de caracteres largos armazenados em `buffer`, sem considerar o encerramento do `NULL` caracteres largos. Se `buffer` ou `format` for um ponteiro nulo, se a contagem for zero ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetros](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e definirão `errno` como `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -156,7 +157,7 @@ int _swprintf_p_l(
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // crt_sprintf_p.c  
 // This program uses _sprintf_p to format various  
 // data and place them in the string named buffer.  
@@ -199,7 +200,7 @@ character count = 79
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // crt_swprintf_p.c  
 // This is the wide character example which  
 // also demonstrates _swprintf_p returning  
@@ -228,9 +229,6 @@ int main( void )
 Wrote 24 characters  
 Wrote -1 characters  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

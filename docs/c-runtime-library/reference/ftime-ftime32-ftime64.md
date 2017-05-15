@@ -1,68 +1,74 @@
 ---
-title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime64"
-  - "_ftime"
-  - "_ftime32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime32"
-  - "_ftime"
-  - "_ftime64"
-  - "ftime64"
-  - "ftime"
-  - "ftime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ftime64 function"
-  - "_ftime64 function"
-  - "current time"
-  - "_ftime function"
-  - "ftime function"
-  - "_ftime32 function"
-  - "ftime32 function"
-  - "time, getting current"
+title: _ftime, _ftime32, _ftime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime64
+- _ftime
+- _ftime32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime32
+- _ftime
+- _ftime64
+- ftime64
+- ftime
+- ftime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime64 function
+- _ftime64 function
+- current time
+- _ftime function
+- ftime function
+- _ftime32 function
+- ftime32 function
+- time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "ru-ru"
-  - "zh-cn"
-  - "zh-tw"
-translation.priority.mt: 
-  - "cs-cz"
-  - "pl-pl"
-  - "pt-br"
-  - "tr-tr"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ed69cd73a42889e56dc258ce66e56db3210dfc95
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 Obtenha a hora atual. Versões mais seguras dessas funções estão disponíveis; consulte [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
@@ -86,7 +92,7 @@ void _ftime64(
  Ponteiro para a estrutura `_timeb`, `__timeb32` ou `__timeb64`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_ftime` obtém a hora local atual e a armazena na estrutura apontada por `timeptr`*.* As estruturas `_timeb`, `__timeb32` e `__timeb64` são definidas em SYS\Timeb.h. Elas contêm quatro campos, que são listados na tabela a seguir.  
+ O `_ftime` função obtém a hora local atual e a armazena na estrutura apontada pelo `timeptr`. O `_timeb`, `__timeb32`, e `__timeb64` estruturas são definidas em SYS\Timeb.h. Elas contêm quatro campos, que são listados na tabela a seguir.  
   
  `dstflag`  
  Diferente de zero se o horário de verão estiver em vigor no fuso horário local. (Consulte [_tzset](../../c-runtime-library/reference/tzset.md) para obter uma explicação de como o horário de verão é determinado.)  
@@ -170,9 +176,6 @@ Minutes between UTC and local time: 480
 Daylight savings time flag (1 means Daylight time is in effect): 1  
 The time is Mon Apr 28 11:08:54.230 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 969ca4a5e450fb53a78b6a21698788084ed5ebfb
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 73078df22931a5533ffe912174d11b384c8de417
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
@@ -86,7 +87,7 @@ int _isleadbyte_l(
  `isleadbyte` retornará um valor diferente de zero se o argumento satisfizer a condição de teste, ou 0 se não satisfizer. Na localidade "C" e em localidades de SBCS (conjunto de caracteres de um byte), `isleadbyte` sempre retorna 0.  
   
 ## <a name="remarks"></a>Comentários  
- A macro `isleadbyte` retornará um valor diferente de zero se o argumento for o primeiro byte de um caractere multibyte. `isleadbyte` produz um resultado significativo para qualquer argumento inteiro de –1 (`EOF`) a `UCHAR_MAX` (0xFF), inclusive.  
+ A macro `isleadbyte` retornará um valor diferente de zero se o argumento for o primeiro byte de um caractere multibyte. `isleadbyte`produz um resultado significativo de qualquer argumento de número inteiro entre -1 (`EOF`) para `UCHAR_MAX` (0xFF), inclusive.  
   
  O tipo de argumento esperado de `isleadbyte` é `int`; se um caractere com sinal for passado, o compilador poderá convertê-lo em um inteiro pela extensão de sinal, gerando resultados imprevisíveis.  
   
@@ -106,9 +107,6 @@ int _isleadbyte_l(
 |`_isleadbyte_l`|\<ctype.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável, mas consulte [System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de byte](../../c-runtime-library/byte-classification.md)   

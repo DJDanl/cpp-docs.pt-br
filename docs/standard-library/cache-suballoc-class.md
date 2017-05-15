@@ -37,10 +37,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 537930868e47fd1e947a99ff808d870532c38c58
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa98856bc7e55ca78effb64c806a95cab60a68a5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachesuballoc-class"></a>Classe cache_suballoc
@@ -68,21 +69,21 @@ class cache_suballoc
   
 |||  
 |-|-|  
-|[cache_suballoc](#cache_suballoc__cache_suballoc)|Constrói um objeto do tipo `cache_suballoc`.|  
+|[cache_suballoc](#cache_suballoc)|Constrói um objeto do tipo `cache_suballoc`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[allocate](#cache_suballoc__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#cache_suballoc__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+##  <a name="allocate"></a>  cache_suballoc::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  Constrói um objeto do tipo `cache_suballoc`.  
   
 ```
@@ -109,7 +110,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```

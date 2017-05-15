@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2cff811e456e3cb47929080bef8203a8b89d02f9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0e08b6f737616cf764f797681c5492840a9b044a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="freelist-class"></a>Classe freelist
@@ -68,21 +69,21 @@ class freelist
   
 |||  
 |-|-|  
-|[freelist](#freelist__freelist)|Constrói um objeto do tipo `freelist`.|  
+|[freelist](#freelist)|Constrói um objeto do tipo `freelist`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[pop](#freelist__pop)|Remove o primeiro bloco de memória da lista livre.|  
-|[push](#freelist__push)|Adiciona um bloco de memória à lista.|  
+|[pop](#pop)|Remove o primeiro bloco de memória da lista livre.|  
+|[push](#push)|Adiciona um bloco de memória à lista.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="freelist__freelist"></a>  freelist::freelist  
+##  <a name="freelist"></a>  freelist::freelist  
  Constrói um objeto do tipo `freelist`.  
   
 ```
@@ -91,7 +92,7 @@ freelist();
   
 ### <a name="remarks"></a>Comentários  
   
-##  <a name="freelist__pop"></a>  freelist::pop  
+##  <a name="pop"></a>  freelist::pop  
  Remove o primeiro bloco de memória da lista livre.  
   
 ```
@@ -104,7 +105,7 @@ void *pop();
 ### <a name="remarks"></a>Comentários  
  A função membro retorna `NULL` se a lista estiver vazia. Caso contrário, remove o primeiro bloco de memória da lista.  
   
-##  <a name="freelist__push"></a>  freelist::push  
+##  <a name="push"></a>  freelist::push  
  Adiciona um bloco de memória à lista.  
   
 ```

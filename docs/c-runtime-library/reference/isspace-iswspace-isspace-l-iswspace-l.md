@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a1bef175320b678119f54f4460e0ae49720331be
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 650f20fff143676530022a915f782b0234128122
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
@@ -96,7 +97,7 @@ int _iswspace_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de espaço. `isspace` retornará um valor diferente de zero se `c` for um caractere de espaço em branco (0x09 – 0x0D ou 0x20). O resultado da condição de teste para a função `isspace` depende da configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo `_l` usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o sufixo `_l` são idênticas, exceto por usarem a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de um caractere de espaço. `isspace`Retorna um valor diferente de zero se `c` é um caractere de espaço em branco (0x09-0x0D ou 0x20). O resultado da condição de teste para a função `isspace` depende da configuração da categoria `LC_CTYPE` da localidade; consulte [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o sufixo `_l` usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o sufixo `_l` são idênticas, exceto por usarem a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  `iswspace` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a um caractere de espaço em branco padrão.  
   
@@ -118,9 +119,6 @@ int _iswspace_l(
 |`_iswspace_l`|\<ctype.h> ou \<wchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

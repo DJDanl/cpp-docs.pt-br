@@ -58,10 +58,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c35b860471772da42e9b377f5dfae8e713afb781
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 50070672e990333073f5ad7f7ba604110c3a3cfa
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
@@ -151,9 +152,6 @@ int fn4()
 This is executed first.  
 This is executed next.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

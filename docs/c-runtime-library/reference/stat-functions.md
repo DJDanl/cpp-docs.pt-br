@@ -133,10 +133,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c39bfecf65281e7fae024aca6b5f291ec8528502
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
@@ -203,7 +204,7 @@ int _wstat64i32(
  Ponteiro para estrutura que armazena os resultados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retornará 0 se as informações de status do arquivo forem obtidas. Um valor retornado de -1 indica um erro, caso em que `errno` é definido como `ENOENT`, indicando que o nome do arquivo ou caminho não pôde ser encontrado. Um valor retornado `EINVAL` indica um parâmetro inválido; `errno` também é definido como `EINVAL` nesse caso.  
+ Cada uma dessas funções retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de -1 indica um erro, caso em que `errno` é definido como `ENOENT`, indicando que o caminho ou nome de arquivo não pôde ser encontrado. Um valor retornado `EINVAL` indica um parâmetro inválido; `errno` também é definido como `EINVAL` nesse caso.  
   
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.  
   
@@ -354,16 +355,6 @@ File size     : 732
 Drive         : C:  
 Time modified : Thu Feb 07 14:39:36 2002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::GetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.getattributes.aspx)  
-  
--   [System::IO::File::GetCreationTime](https://msdn.microsoft.com/en-us/library/system.io.file.getcreationtime.aspx)  
-  
--   [System::IO::File::GetLastAccessTime](https://msdn.microsoft.com/en-us/library/system.io.file.getlastaccesstime.aspx)  
-  
--   [System::IO::File::GetLastWriteTime](https://msdn.microsoft.com/en-us/library/system.io.file.getlastwritetime.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

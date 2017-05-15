@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a70fac9b948663985d71a16ec44e7bbae19f89d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9831f7056ef91f64bba54740fbf7a372beb8f335
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
@@ -107,7 +108,7 @@ intptr_t _wspawnlpe(
  Matriz de ponteiros para as configurações de ambiente.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O valor retornado de uma `_spawnlpe` ou `_wspawnlpe` síncrona (`_P_WAIT` especificado para `mode`) é o status de saída do novo processo. O valor retornado de uma `_spawnlpe` ou `_wspawnlpe` assíncrona (`_P_NOWAIT` ou `_P_NOWAITO` especificado para `mode`) é o identificador do processo. O status de saída é 0 se o processo foi encerrado normalmente. Você poderá definir o status de saída para um valor diferente de zero se o processo gerado usar especificamente um argumento diferente de zero para chamar a rotina `exit`. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal causada por uma anulação ou uma interrupção. Um valor retornado de -1 indica um erro (o novo processo não é iniciado). Nesse caso, o parâmetro `errno` é definido com um dos valores a seguir.  
+ O valor retornado de uma `_spawnlpe` ou `_wspawnlpe` síncrona (`_P_WAIT` especificado para `mode`) é o status de saída do novo processo. O valor retornado de uma `_spawnlpe` ou `_wspawnlpe` assíncrona (`_P_NOWAIT` ou `_P_NOWAITO` especificado para `mode`) é o identificador do processo. O status de saída é 0 se o processo foi encerrado normalmente. Você poderá definir o status de saída para um valor diferente de zero se o processo gerado usar especificamente um argumento diferente de zero para chamar a rotina `exit`. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal causada por uma anulação ou uma interrupção. Um valor de retorno de -1 indica um erro (o novo processo não é iniciado). Nesse caso, o parâmetro `errno` é definido com um dos valores a seguir.  
   
  `E2BIG`  
  A lista de argumentos ultrapassa 1.024 bytes.  
@@ -142,12 +143,6 @@ O argumento  `mode` é inválido.
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo em [Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [Classe System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [Classe System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

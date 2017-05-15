@@ -48,10 +48,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4fef714d3ee3f361fad22e9fc74a7fa495f6a6f9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6fa9d496bdb5f5d7b4dd4a772778a0f62a484fd8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="freads"></a>fread_s
@@ -91,7 +92,7 @@ size_t fread_s(
  Para obter mais informações sobre códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
- A função `fread_s` lê até `count` itens de `elementSize` bytes do `stream` de entrada e os armazena em `buffer`.  O ponteiro do arquivo associado a `stream` (se houver) é aumentado de acordo com a quantidade de bytes lidos. Se o fluxo em questão for aberto no modo de texto, pares de alimentação de linha de retorno de carro serão substituídos por caracteres de alimentação de linha únicos. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.  
+ A função `fread_s` lê até `count` itens de `elementSize` bytes do `stream` de entrada e os armazena em `buffer`.  O ponteiro do arquivo associado a `stream` (se houver) é aumentado de acordo com a quantidade de bytes lidos. Se o fluxo fornecido é aberto no modo de texto, pares de avanço de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.  
   
  Essa função bloqueia outros threads. Se for requerida uma versão sem bloqueio, use `_fread_nolock`.  
   

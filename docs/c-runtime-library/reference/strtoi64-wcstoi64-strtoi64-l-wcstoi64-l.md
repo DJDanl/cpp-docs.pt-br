@@ -66,10 +66,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 46afc159c4025b07daf20b29bbca50667fff7fd2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d6a3924d92cd13e8c70485d9bd288836d66aab05
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
@@ -134,13 +135,13 @@ __int64 _wcstoi64_l(
 |`_tcstoi64`|`_strtoi64`|`_strtoi64`|`_wcstoi64`|  
 |`_tcstoi64_l`|`_strtoi64_l`|`_strtoi64_l`|`_wcstoi64_l`|  
   
- A configuração da categoria `LC_NUMERIC` da localidade determina o reconhecimento do caractere fracionário em `nptr`*;* para mais informações, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As funções sem o sufixo _| usam a localidade atual; `_strtoi64_l` e `_wcstoi64_l` são idênticas as funções correspondentes sem o sufixo `_l`, exceto por usarem o parâmetro de localidade informado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ A configuração da categoria `LC_NUMERIC` da localidade determina o reconhecimento do caractere fracionário em `nptr`*;* para mais informações, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As funções sem o sufixo _l usam a localidade atual; `_strtoi64_l` e `_wcstoi64_l` são idênticos para a função correspondente sem o `_l` sufixo exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  Se `endptr` não é `NULL`, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela `endptr`. Se nenhuma conversão pode ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de `nptr` é armazenado no local apontado pela `endptr`.  
   
  `_strtoi64` espera que `nptr` aponte para uma cadeia de caracteres do seguinte formato:  
   
- [`whitespace`] [{`+` &#124; `–`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
+ [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
  Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `digits` é composto por um ou mais dígitos decimais. O primeiro caractere que não é adequado a esse formato interrompe o exame. Se `base` estiver entre 2 e 36, ele será usado como a base do número. Se `base` é 0, os caracteres inicias da cadeia de caracteres apontada por `nptr` são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que `base`. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se `base` é 0 e o primeiro caractere verificado é '0', é considerado um inteiro octal e um caractere '8' ou '9' interromperá a verificação.  
   

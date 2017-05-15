@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7f32ee8a40da16ac919f0c3d8be05573f7b78c3a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bfe398bf4829d6ef86543890bea28a351bcb4a3d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="enablesharedfromthis-class"></a>Classe enable_shared_from_this
@@ -67,14 +68,14 @@ protected:
   
  Os construtores, o destruidor e o operador de atribuição são protegidos para evitar o uso indevido acidental. O tipo de argumento de modelo `Ty` deve ser do tipo da classe derivada.  
   
- Para obter um exemplo de uso, consulte [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this).  
+ Para obter um exemplo de uso, consulte [enable_shared_from_this::shared_from_this](#shared_from_this).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
+##  <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this  
  Gera um `shared_ptr` que compartilha a propriedade da instância com proprietários `shared_ptr` existentes.  
   
 ```  
@@ -120,5 +121,5 @@ sp2->val == 3
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this)   
+ [enable_shared_from_this::shared_from_this](#shared_from_this)   
  [Classe shared_ptr](../standard-library/shared-ptr-class.md)

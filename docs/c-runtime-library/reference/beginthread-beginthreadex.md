@@ -56,10 +56,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0a19bb0f4a0ac2052795309122557931c295b9ab
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
@@ -337,9 +338,6 @@ Creating second thread...
 In second thread...  
 Counter should be 1000000; it is-> 1000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Threading::Thread::Start](https://msdn.microsoft.com/en-us/library/system.threading.thread.start.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)   

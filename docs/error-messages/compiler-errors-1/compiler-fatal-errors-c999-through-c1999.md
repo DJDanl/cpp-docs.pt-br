@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erros fatais do compilador C999 até C1999
@@ -219,7 +220,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1012|parênteses: faltando '*caracteres*"|  
 |Erro fatal C1013|limite do compilador: muitos parênteses abertos|  
 |Erro fatal C1014|incluem muitos arquivos: profundidade = *número*|  
-|Erro fatal C1016|#um identificador é esperado ifdef / #ifndef|  
+|Erro fatal C1016|#ifdef / #ifndef esperava um identificador|  
 |[Erro fatal C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|expressão de constante inteira inválida|  
 |Erro fatal C1018|#elif inesperado|  
 |Erro fatal C1019|#else inesperado|  
@@ -241,6 +242,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1048|opção desconhecida '*cadeia de caracteres*'in'*opção*'|  
 |Erro fatal C1049|argumento numérico inválido '*valor*'|  
 |[Erro fatal C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|arquivo de banco de dados do programa, '*arquivo*', tem um formato obsoleto, exclua-o e recompile|  
+|[Erro fatal C1052](fatal-error-c1052.md)|arquivo de banco de dados do programa, '*filename*', foi gerado pelo vinculador com /debug: fastlink; compilador não pode atualizar esses arquivos PDB; exclua-o ou use /Fd para especificar um nome de arquivo PDB diferente|  
 |Erro fatal C1053|'*função*': função muito grande|  
 |[Erro fatal C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite do compilador: inicializadores com aninhamento muito profundo|  
 |[Erro fatal C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite do compilador: sem chaves|  
@@ -290,16 +292,16 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |Erro fatal C1110|muitas definições de modelo/generic aninhada|  
 |Erro fatal C1111|número excessivo de parâmetros de modelo/generic|  
 |Erro fatal C1112|limite do compilador: `'number`' muitos argumentos de macro, apenas *número* permitido|  
-|[Erro fatal C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#usando falhou em '*arquivo*'|  
+|[Erro fatal C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using falhou em '*arquivo*'|  
 |Erro fatal C1114|'*arquivo*': WinRT não oferece suporte a #using de um assembly gerenciado|  
 |[Erro fatal C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chamada a GetProcAddress falhou para '*função*'|  
 |[Erro fatal C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|falha na chamada a CryptoAPI|  
 |[Erro fatal C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|alocação automática excede *tamanho*|  
 |[Erro fatal C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|o número de seções excedeu o limite de formato de arquivo do objeto: compile com /bigobj|  
-|[Erro fatal C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Erro: *mensagem*|  
+|[Erro fatal C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *mensagem*|  
 |Erro fatal C1190|código gerenciado direcionado requer uma opção '/clr'|  
 |[Erro fatal C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*arquivo*' só podem ser importados no escopo global|  
-|[Erro fatal C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#usando falhou em '*arquivo*'|  
+|[Erro fatal C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using falhou em '*arquivo*'|  
 |Erro fatal C1193|Erro esperado em *arquivo*(*linha*) não atingido|  
 |Erro fatal C1195|uso de /Yu e /Yc na mesma linha de comando é incompatível com a opção /clr|  
 |Erro fatal C1196|'*identificador*': identificador encontrado na biblioteca de tipos '*typelib*' não é um identificador válido do C++|  

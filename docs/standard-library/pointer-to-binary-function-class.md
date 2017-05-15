@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::pointer_to_binary_function
-- xfunctional/std::pointer_to_binary_function
-- pointer_to_binary_function
-- std.pointer_to_binary_function
+- xfunctional/std::pointer_to_binary
+- pointer_to_binary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9a806934810286e22fdea70c2af982de10f48ee5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a510056f33bce7720896e56c7ea7798729dd831a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
@@ -77,7 +76,7 @@ public:
  Um ponteiro de função binária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função binária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como ao associar um valor a ele ou usá-lo com um negador, ele deve receber os tipos aninhados **first_argument_type**, **second_argument_type** e **result_type** que possibilitam essa adaptação. A conversão por `pointer_to_binary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.  
   
 ## <a name="example"></a>Exemplo  
- O construtor de `pointer_to_binary_function` raramente é usado diretamente. Consulte a função auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) para ver um exemplo de como declarar e usar o predicado do adaptador `pointer_to_binary_function`.  
+ O construtor de `pointer_to_binary_function` raramente é usado diretamente. Consulte a função auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para ver um exemplo de como declarar e usar o predicado do adaptador `pointer_to_binary_function`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<functional>  

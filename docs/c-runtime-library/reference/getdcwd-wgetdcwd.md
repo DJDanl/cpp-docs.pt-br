@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ec470d2e573624045cd31773918f628660a30f08
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 03791f920619b98beec3c1bbbd33b45b550eaf7a
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
@@ -133,9 +134,6 @@ wchar_t *_wgetdcwd(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo em [_getdrive](../../c-runtime-library/reference/getdrive.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

@@ -32,14 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5f9efb15e4d50d87439b3e696b3b9e52f4656f3e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a39919d3c1608d53edc6a75ecc3dd2e0ff504b1c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="onceflag-structure"></a>Estrutura once_flag
-Representa um `struct` que é usado com a função de modelo [call_once](../standard-library/mutex-functions.md#call_once_function) para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.  
+Representa um `struct` que é usado com a função de modelo [call_once](../standard-library/mutex-functions.md#call_once) para garantir que o código de inicialização seja chamado apenas uma vez, mesmo na presença de vários threads de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +52,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
  Objetos do tipo `once_flag` podem ser criados, mas não podem ser copiados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** mutex  
+ **Cabeçalho:** \<mutex >  
   
  **Namespace:** std  
   

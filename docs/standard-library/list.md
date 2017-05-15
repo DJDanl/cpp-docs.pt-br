@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 6c8b7cc67cc2c35b7a02cea7d60c812cf2d9bb92
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ce9fb66784027d81acaac6e98ad0f6a6121da956
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
@@ -54,12 +55,12 @@ Define a lista de classes de modelo do contêiner e diversos modelos de suporte.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/list-operators.md#operator_neq)|Testa se o objeto da lista à esquerda do operador é diferente do objeto da lista à direita.|  
-|[operator<](../standard-library/list-operators.md#operator_lt_)|Testa se o objeto da lista à esquerda do operador é menor que o objeto da lista à direita.|  
-|[operator\<=](../standard-library/list-operators.md#operator_lt__eq)|Testa se o objeto da lista à esquerda do operador é menor que ou igual ao objeto da lista à direita.|  
-|[operator==](../standard-library/list-operators.md#operator_eq_eq)|Testa se o objeto da lista à esquerda do operador é igual ao objeto da lista à direita.|  
-|[operator>](../standard-library/list-operators.md#operator_gt_)|Testa se o objeto da lista à esquerda do operador é maior que o objeto da lista à direita.|  
-|[operator>=](../standard-library/list-operators.md#operator_gt__eq)|Testa se o objeto da lista à esquerda do operador é maior que ou igual ao objeto da lista à direita.|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|Testa se o objeto da lista à esquerda do operador é diferente do objeto da lista à direita.|  
+|[operator<](../standard-library/list-operators.md#op_lt)|Testa se o objeto da lista à esquerda do operador é menor que o objeto da lista à direita.|  
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Testa se o objeto da lista à esquerda do operador é menor que ou igual ao objeto da lista à direita.|  
+|[operator==](../standard-library/list-operators.md#op_eq_eq)|Testa se o objeto da lista à esquerda do operador é igual ao objeto da lista à direita.|  
+|[operator>](../standard-library/list-operators.md#op_gt)|Testa se o objeto da lista à esquerda do operador é maior que o objeto da lista à direita.|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|Testa se o objeto da lista à esquerda do operador é maior que ou igual ao objeto da lista à direita.|  
   
 ### <a name="classes"></a>Classes  
   

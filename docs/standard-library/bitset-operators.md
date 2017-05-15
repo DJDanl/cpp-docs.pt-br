@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a>  operator&amp;  
  Executa um `AND` bit a bit entre dois bitsets.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `AND` bit a bit.  
   
- ` right`  
+ `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `AND` bit a bit.  
   
 ### <a name="return-value"></a>Valor retornado  
- Um bitset cujos elementos são o resultado da execução da operação `AND` nos elementos correspondentes de ` left` e ` right`.  
+ Um bitset cujos elementos são o resultado da execução da operação `AND` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Insere uma representação de texto da sequência de bits no fluxo de saída.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` right`  
+ `right`  
  Um objeto do tipo **bitset\<N>** que deve ser inserido no fluxo de saída como uma cadeia de caracteres.  
   
 ### <a name="return-value"></a>Valor retornado  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  Lê uma cadeia de caracteres de bit em um bitset.  
   
 ```  
@@ -144,14 +145,14 @@ _Istr,
  `_Istr`  
  A cadeia de caracteres que é inserida no fluxo de entrada a ser inserido no bitset.  
   
- ` right`  
+ `right`  
  O bitset que está recebendo os bits do fluxo de entrada.  
   
 ### <a name="return-value"></a>Valor retornado  
  A função de modelo retorna a cadeia de caracteres `_Istr`.  
   
 ### <a name="remarks"></a>Comentários  
- A função de modelo sobrecarrega **operator>>** para armazenar no bitset_ *Right* o valor bitset( `str`), em que `str` é um objeto do tipo [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator** \< **CharType**> > **& ** extraídos de `_Istr`.  
+ A função de modelo sobrecarrega **operator>>** para armazenar no bitset_ *Right* o valor bitset( `str`), em que `str` é um objeto do tipo [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator** \< **CharType**> > **&**  extraídos de `_Istr`.  
   
  A função de modelo extrai elementos de `_Istr` e insere-os em um bitset até:  
   
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a> operator^  
  Executa um `EXCLUSIVE-OR` bit a bit entre dois bitsets.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.  
   
- ` right`  
+ `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `EXCLUSIVE-OR` bit a bit.  
   
 ### <a name="return-value"></a>Valor retornado  
- Um bitset cujos elementos são o resultado da execução da operação `EXCLUSIVE-OR` nos elementos correspondentes de ` left` e ` right`.  
+ Um bitset cujos elementos são o resultado da execução da operação `EXCLUSIVE-OR` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>operador |  
  Executa um `OR` bit a bit entre dois bitsets.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  O primeiro dos dois bitsets cujos respectivos elementos devem ser combinados com o `OR` bit a bit.  
   
- ` right`  
+ `right`  
  A segunda das duas valarrays cujos respectivos elementos devem ser combinados com o `OR` bit a bit.  
   
 ### <a name="return-value"></a>Valor retornado  
- Um bitset cujos elementos são o resultado da execução da operação `OR` nos elementos correspondentes de ` left` e ` right`.  
+ Um bitset cujos elementos são o resultado da execução da operação `OR` nos elementos correspondentes de `left` e `right`.  
   
 ### <a name="example"></a>Exemplo  
   

@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,7 +73,7 @@ int wctob(
  A valor a ser movido.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `wctob` converter com êxito um caractere largo, ele retornará sua representação de caracteres multibyte somente se o tamanho do caractere multibyte for exatamente um byte. Se `wctob` encontrar um caractere largo que não seja possível converter em um caractere multibyte ou se o tamanho do caractere multibyte não for exatamente um byte, ele retornará –1.  
+ Se `wctob` converter com êxito um caractere largo, ele retornará sua representação de caracteres multibyte somente se o tamanho do caractere multibyte for exatamente um byte. Se `wctob` encontra um caractere largo não pode converter um caractere multibyte ou os caracteres multibyte não é exatamente um byte longo, ele retorna -1.  
   
 ## <a name="remarks"></a>Comentários  
  A função `wctob` converterá um caractere largo contido em `wchar` no caractere multibyte correspondente passado pelo valor retornado `int` se o tamanho do caractere multibyte for exatamente um byte.  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 67792e92a4a8336c025249a5d1322d00360a62c5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a65dea30745ce3afa680c0851fe33cc9f386404
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
@@ -76,12 +77,12 @@ Define os tipos, funções e operadores da Biblioteca Padrão C++ que ajudam a c
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/utility-operators.md#operator_neq)|Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.|  
-|[operator==](../standard-library/utility-operators.md#operator_eq_eq)|Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.|  
-|[operator<](../standard-library/utility-operators.md#operator_lt_)|Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.|  
-|[operator\<=](../standard-library/utility-operators.md#operator_lt__eq)|Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.|  
-|[operator>](../standard-library/utility-operators.md#operator_gt_)|Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.|  
-|[operator>=](../standard-library/utility-operators.md#operator_gt__eq)|Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.|  
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Testa se o objeto pair à esquerda do operador é diferente do objeto pair à direita.|  
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Testa se o objeto pair à esquerda do operador é igual ao objeto pair à direita.|  
+|[operator<](../standard-library/utility-operators.md#op_lt)|Testa se o objeto pair à esquerda do operador é menor que o objeto pair à direita.|  
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Testa se o objeto pair à esquerda do operador é menor que ou igual ao objeto pair à direita.|  
+|[operator>](../standard-library/utility-operators.md#op_gt)|Testa se o objeto pair à esquerda do operador é maior que o objeto pair à direita.|  
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Testa se o objeto pair à esquerda do operador é maior que ou igual ao objeto pair à direita.|  
   
 ### <a name="structs"></a>Structs  
   

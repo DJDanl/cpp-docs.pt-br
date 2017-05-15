@@ -12,19 +12,20 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: c74b76d842878bb2811a5ff9714cb6d2cfa436b3
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 52633103180338b6db7b96f2d76391f58e1f4c35
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-operators"></a>Operadores &lt;new&gt;
 ||||  
 |-|-|-|  
-|[operador delete](#operator_delete)|[operador delete[]](#operator_delete_arr)|[operador new](#operator_new)|  
-|[operador new[]](#operator_new_arr)|  
+|[operador delete](#op_delete)|[operador delete[]](#op_delete_arr)|[operador new](#op_new)|  
+|[operador new[]](#op_new_arr)|  
   
-##  <a name="operator_delete"></a>  operador delete  
+##  <a name="op_delete"></a>  operador delete  
  A função que é chamada por uma expressão delete para desalocar o armazenamento de objetos individuais.  
   
 ```
@@ -42,7 +43,7 @@ void operator delete(void* ptr,
  O ponteiro cujo valor será renderizado como inválido pela exclusão.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função é chamada por uma expressão delete para renderizar o valor de `ptr` inválido. O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para o [operador new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ A primeira função é chamada por uma expressão delete para renderizar o valor de `ptr` inválido. O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para o [operador new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
  O comportamento padrão para um valor nulo de `ptr` é fazer nada. Qualquer outro valor de `ptr` deve ser um valor retornado anteriormente por uma chamada descrita anteriormente. O comportamento padrão para um valor não nulo de `ptr` é recuperar o armazenamento alocado pela chamada anterior. Não é especificado em quais condições parte ou todo esse armazenamento recuperado será alocado por uma chamada subsequente para `operator new`( **size_t**) ou para qualquer um de `calloc`( **size_t**), `malloc`( **size_t**) ou `realloc`( **void\***, **size_t**).  
   
@@ -51,9 +52,9 @@ void operator delete(void* ptr,
  A terceira função é chamada por uma expressão delete de posicionamento correspondente a uma nova expressão do formulário **new**( **std::size_t**, **conststd::nothrow_t&**). O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para `operator new`( **size_t**). O comportamento padrão é avaliar **delete**( `ptr`).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o [operador new](../standard-library/new-operators.md#operator_new) para obter um exemplo que use `operator delete`.  
+  Consulte o [operador new](../standard-library/new-operators.md#op_new) para obter um exemplo que use `operator delete`.  
   
-##  <a name="operator_delete_arr"></a>  operador delete[]  
+##  <a name="op_delete_arr"></a>  operador delete[]  
  A função que é chamada por uma expressão delete para desalocar o armazenamento para uma matriz de objetos.  
   
 ```
@@ -71,16 +72,16 @@ void operator delete[](void* ptr,
  O ponteiro cujo valor será renderizado como inválido pela exclusão.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função é chamada por uma expressão `delete[]` para renderizar o valor de `ptr` inválido. O programa pode ser substituído porque pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para o [operador new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)( **size_t**). O comportamento padrão para um valor nulo de `ptr` é fazer nada. Qualquer outro valor de `ptr` deve ser um valor retornado anteriormente por uma chamada descrita anteriormente. O comportamento padrão para um valor não nulo de `ptr` é recuperar o armazenamento alocado pela chamada anterior. Não é especificado em quais condições parte ou todo esse armazenamento recuperado será alocado por uma chamada subsequente para o [operador new](../standard-library/new-operators.md#operator_new)( **size_t**) ou qualquer um de `calloc`( **size_t**), `malloc`( **size_t**) ou `realloc`( **void\***, **size_t**).  
+ A primeira função é chamada por uma expressão `delete[]` para renderizar o valor de `ptr` inválido. O programa pode ser substituído porque pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para o [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**). O comportamento padrão para um valor nulo de `ptr` é fazer nada. Qualquer outro valor de `ptr` deve ser um valor retornado anteriormente por uma chamada descrita anteriormente. O comportamento padrão para um valor não nulo de `ptr` é recuperar o armazenamento alocado pela chamada anterior. Não é especificado em quais condições parte ou todo esse armazenamento recuperado será alocado por uma chamada subsequente para o [operador new](../standard-library/new-operators.md#op_new)( **size_t**) ou qualquer um de `calloc`( **size_t**), `malloc`( **size_t**) ou `realloc`( **void\***, **size_t**).  
   
  A segunda função será chamada por uma expressão `delete[]` de posicionamento correspondente a uma expressão `new[]` do formulário `new[]`( **std::size_t**). Ela não faz nada.  
   
  A terceira função é chamada por uma expressão delete de posicionamento correspondente a uma expressão `new[]` do formulário `new[]`( **std::size_t**, **const std::nothrow_t&**). O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é aceitar um valor de `ptr` que é nulo ou que foi retornado por uma chamada anterior para o operador `new[]`( **size_t**). O comportamento padrão é avaliar `delete[]`( `ptr`).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [operador new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) para obter exemplos do uso de `operator delete[]`.  
+  Consulte [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obter exemplos do uso de `operator delete[]`.  
   
-##  <a name="operator_new"></a>  operador new  
+##  <a name="op_new"></a>  operador new  
  A função que é chamada por uma expressão new para alocar o armazenamento de objetos individuais.  
   
 ```
@@ -128,7 +129,7 @@ void* operator new(std::size_t count,
   
  A terceira função é chamada por uma expressão **new** de posicionamento do formulário **new** ( *args*) T. Aqui, *args* consiste em um ponteiro de objeto único. Isso pode ser útil para criar um objeto em um endereço conhecido. A função retorna *ptr*.  
   
- Para liberar o armazenamento alocado por `operator new`, chame o [operador delete](../standard-library/new-operators.md#operator_delete).  
+ Para liberar o armazenamento alocado por `operator new`, chame o [operador delete](../standard-library/new-operators.md#op_delete).  
   
  Para obter informações sobre o comportamento de lançamento ou não lançamento de new, consulte [Operadores new e delete](../cpp/new-and-delete-operators.md).  
   
@@ -175,7 +176,7 @@ int main( )
 }  
 ```  
   
-##  <a name="operator_new_arr"></a>  operador new[]  
+##  <a name="op_new_arr"></a>  operador new[]  
  A função de alocação que é chamada por uma expressão new para alocar o armazenamento para uma matriz de objetos.  
   
 ```
@@ -199,13 +200,13 @@ void* operator new[](std::size_t count,
  Um ponteiro para o endereço de byte mais baixo do armazenamento alocado recentemente. Ou `ptr.`  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função é chamada por uma expressão `new[]` para alocar `count` bytes de armazenamento adequadamente alinhados para representar qualquer objeto de matriz desse tamanho ou menor. O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é o mesmo usado para o [operador new](../standard-library/new-operators.md#operator_new)( **size_t**). O comportamento padrão é retornar `operator new`( `count`).  
+ A primeira função é chamada por uma expressão `new[]` para alocar `count` bytes de armazenamento adequadamente alinhados para representar qualquer objeto de matriz desse tamanho ou menor. O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento necessário é o mesmo usado para o [operador new](../standard-library/new-operators.md#op_new)( **size_t**). O comportamento padrão é retornar `operator new`( `count`).  
   
  A segunda função é chamada por uma expressão `new[]` de substituição para alocar `count` bytes de armazenamento adequadamente alinhados para representar qualquer objeto de matriz desse tamanho. O programa pode definir uma função com essa assinatura de função que substitui a versão padrão definida pela biblioteca padrão C++. O comportamento padrão será retornar **operatornew**( `count`) se a função for bem-sucedida. Caso contrário, ele retornará um ponteiro nulo.  
   
  A terceira função é chamada por uma expressão `new[]` de posicionamento do formulário **new** ( *args*) **T**[ **N**]. Aqui, *args* consiste em um ponteiro de objeto único. A função retorna `ptr`.  
   
- Para liberar o armazenamento alocado por `operator new[]`, chame o [operador delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr).  
+ Para liberar o armazenamento alocado por `operator new[]`, chame o [operador delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
  Para obter informações sobre o comportamento de lançamento ou não lançamento de new, consulte [Operadores new e delete](../cpp/new-and-delete-operators.md).  
   

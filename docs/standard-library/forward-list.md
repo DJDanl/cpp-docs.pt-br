@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ff6071a2b7b46f5edd890e5586dcc888486cd2c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
@@ -54,18 +55,18 @@ Define a classe de modelo de contêiner forward_list, bem como diversos modelos 
   
 |||  
 |-|-|  
-|[operator== (<forward_list>)](../standard-library/forward-list-operators.md#operator_eq_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.|  
-|[operator!= (<forward_list>)](../standard-library/forward-list-operators.md#operator_neq)|Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.|  
-|[operator< (<forward_list>)](../standard-library/forward-list-operators.md#operator_lt_)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor que o objeto da lista de encaminhamento à direita.|  
-|[operator<= (<forward_list>)](../standard-library/forward-list-operators.md#operator_lt__eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.|  
-|[operator> (<forward_list>)](../standard-library/forward-list-operators.md#operator_gt_)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior que o objeto da lista de encaminhamento à direita.|  
-|[operator>= (<forward_list>)](../standard-library/forward-list-operators.md#operator_gt__eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor que o objeto da lista de encaminhamento à direita.|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior que o objeto da lista de encaminhamento à direita.|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.|  
   
 ### <a name="functions"></a>Funções  
   
 |||  
 |-|-|  
-|[swap (<forward_list>)](../standard-library/forward-list-functions.md#swap)|Troca os elementos de duas listas de encaminhamento.|  
+|[swap](../standard-library/forward-list-functions.md#swap)|Troca os elementos de duas listas de encaminhamento.|  
   
 ### <a name="classes"></a>Classes  
   

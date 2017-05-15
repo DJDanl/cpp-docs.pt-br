@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ea2fe8c416681e6076673236702deef3497638ac
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 59238cf511be936b0d882c2f00320ee7422904e0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
@@ -113,7 +114,7 @@ long double fmal(
  O valor a ser adicionado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna (`x` ×    `y`) + `z`. O valor retornado é arredondado usando o formato de arredondamento atual.  
+ Retorna `(x * y) + z`. O valor retornado é arredondado usando o formato de arredondamento atual.  
   
  Caso contrário, pode retornar um dos seguintes valores:  
   
@@ -129,7 +130,7 @@ long double fmal(
  Os erros são relatados conforme especificado em [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Comentários  
- Uma vez que C++ permite sobrecargas, é possível chamar sobrecargas de `fma` que utilizam e retornam tipos duplos flutuantes e longos. Em um programa C, `fma` sempre usa e retorna um duplo.  
+ Como o C++ permite sobrecarga, você pode chamar sobrecargas de `fma` que levar e retornar **float** e **long double** tipos. Em um programa C, `fma` sempre usa e retorna um **duplo**.  
   
  Esta função calcula o valor como se ele tivesse precisão infinita e arredonda o resultado final.  
   
@@ -137,7 +138,7 @@ long double fmal(
   
 |Função|Cabeçalho C|Cabeçalho C++|  
 |--------------|--------------|------------------|  
-|`fma`,                `fmaf`,  `fmal`|\<math.h>|\<cmath>|  
+|`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
  Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
   

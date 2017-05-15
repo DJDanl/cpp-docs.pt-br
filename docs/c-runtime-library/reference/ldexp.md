@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b218ace0abfb46663a33642bb6742d328dbf76df
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 567098b286ba81f2bdd091706518f812f9d2e128
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ldexp"></a>ldexp
@@ -96,7 +97,7 @@ long double ldexpl(
  Expoente inteiro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- A função `ldexp` retorna o valor de `x` * 2<sup>exp</sup> em caso de êxito. No estouro (dependendo do sinal de `x`), `ldexp`, retorna +/– `HUGE_VAL`. O valor `errno` é definido para `ERANGE`.  
+ A função `ldexp` retorna o valor de `x` * 2<sup>exp</sup> em caso de êxito. No estouro e, dependendo do sinal de `x`, `ldexp` retorna + /- `HUGE_VAL`; o `errno` valor é definido como `ERANGE`.  
   
  Para obter mais informações sobre `errno` e possíveis valores retornados de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -134,9 +135,6 @@ int main( void )
 ```  
 4.0 times two to the power of 3 is 32.0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

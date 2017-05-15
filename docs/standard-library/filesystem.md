@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -141,10 +142,10 @@ using namespace std::experimental::filesystem::v1;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Enumeração copy_options](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|Uma enumeração que é usada com [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e determina o comportamento se um arquivo de destino já existir.|  
-|[Enumeração directory_options](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|Uma enumeração que especifica opções para iteradores de diretório.|  
-|[Enumeração file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type)|Uma enumeração de tipos de arquivo.|  
-|[Enumeração perms](../standard-library/filesystem-enumerations.md#filesystem__perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Uma enumeração que é usada com [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e determina o comportamento se um arquivo de destino já existir.|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Uma enumeração que especifica opções para iteradores de diretório.|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|Uma enumeração de tipos de arquivo.|  
+|[permissões](../standard-library/filesystem-enumerations.md#perms)|Um tipo de bitmask usado para transmitir permissões e opções de permissões|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)

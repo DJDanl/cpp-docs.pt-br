@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5f2d015ecc2f027712bc81f1ea538f88e130662
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d54444dcd6f0b22527dc2362cfdee5f2b1c33b60
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
@@ -79,7 +80,7 @@ wint_t _getwch( void );
  Retorna o caractere lido. Nenhum erro é retornado.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_getch` e `_getwch` leem um caractere único no console sem que haja eco do caractere. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.  
+ O `_getch` e `_getwch` funções leem um único caractere no console sem repetir o caractere. Nenhuma dessas funções pode ser usada para ler CTRL+C. Ao ler uma tecla de função ou uma tecla de direção, cada função deve ser chamada duas vezes; a primeira chamada retorna 0 ou 0xE0 e a segunda chamada retorna o código da tecla de fato.  
   
  Essas funções bloqueiam o thread de chamada e, portanto, são thread-safe. Para versões sem bloqueio, consulte [_getch_nolock, _getwch_nolock](../../c-runtime-library/reference/getch-nolock-getwch-nolock.md).  
   
@@ -100,7 +101,7 @@ wint_t _getwch( void );
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // crt_getch.c  
 // compile with: /c  
 // This program reads characters from  
@@ -126,13 +127,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de porta e console](../../c-runtime-library/console-and-port-i-o.md)   

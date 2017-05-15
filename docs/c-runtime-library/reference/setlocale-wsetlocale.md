@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 326580ea97aa42612ebf39b1e6c22dea6d56c1ea
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5a83ef5640a72dcd2ff8f7f35c587789dff35d61
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
@@ -324,9 +325,6 @@ The time in en-US locale is: 'Wednesday, May 12, 2004'
 The thread locale is now set to de-DE.  
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [Classe System::Globalization::CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Nomes de localidade, idiomas e cadeias de caracteres de país/região](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   

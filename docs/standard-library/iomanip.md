@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 71c6a6f3d9c8c256628f609c6a3e65f6b72df952
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 753e2a5bab18a3643456504bda2ab84df530754e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
@@ -53,7 +54,7 @@ Inclua o cabeçalho padrão `<iomanip>` de `iostreams` para definir vários mani
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Cada um desses manipuladores retorna um tipo não especificado, chamado de **T1** a **T10**, que sobrecarrega `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#operator_gt__gt_) e `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#operator_lt__lt_).  
+ Cada um desses manipuladores retorna um tipo não especificado, chamado de **T1** a **T10**, que sobrecarrega `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) e `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
   
 ### <a name="manipulators"></a>Manipuladores  
   

@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 770e27da602c5f28a82b0effbe7f2576c2c668c9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
@@ -143,9 +144,6 @@ The floor of -2.8 is -3.000000
 The ceil of 2.8 is 3.000000  
 The ceil of -2.8 is -2.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Floor](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

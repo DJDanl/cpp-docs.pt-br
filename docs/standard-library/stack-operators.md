@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 9c1fc282-2f61-4727-9e80-84ea5d4934a2
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ca18c8221a545857ec32beb5c785bc3732a5b7ad
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0f71a4dbef2f1128f9c29a2cc3993f78a06c4318
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt-operators"></a>Operadores &lt;stack&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto stack do lado direito.  
   
 ```  
@@ -83,7 +84,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack do lado direito.  
   
 ```  
@@ -163,7 +164,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).  
 ```  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Testa se o objeto stack do lado esquerdo do operador é menor ou igual ao objeto stack do lado direito.  
   
 ```  
@@ -226,7 +227,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.  
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Testa se o objeto stack do lado esquerdo do operador é igual ao objeto stack do lado direito.  
   
 ```  
@@ -287,7 +288,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack do lado direito.  
   
 ```  
@@ -352,7 +353,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.  
 ```  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto stack do lado direito.  
   
 ```  

@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e30d7ca25c2b121de0c042f3c78398db2268d59c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d442d5d1d32fe7ab1a6dfe4e16e64b3dd994b73e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
@@ -96,7 +97,7 @@ wchar_t *_wstrtime(
  Retorna um ponteiro para a cadeia de caracteres resultante `timestr`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_strtime` copia a hora local atual para o buffer apontado por `timestr`*.* A hora é formatada como `hh:mm:ss` em que `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora e `ss` são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos após 6 horas da noite. O tamanho do buffer deve ser de, ao menos, 9 bytes.  
+ O `_strtime` função copia a hora local atual para o buffer apontado pelo `timestr`. A hora é formatada como `hh:mm:ss` em que `hh` são dois dígitos que representam a hora na notação de 24 horas, `mm` são dois dígitos que representam os minutos depois da hora e `ss` são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres `18:23:44` representa 23 minutos e 44 segundos após 6 horas da noite. O tamanho do buffer deve ser de, ao menos, 9 bytes.  
   
  `_wstrtime` é uma versão de caractere largo de `_strtime`; o argumento e o valor retornado de `_wstrtime` são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica. Se `timestr` é `NULL` ponteiro ou se `timestr` está formatado incorretamente, o manipulador de parâmetro inválido é chamado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a exceção tiver permissão para continuar, essas funções retornam um valor nulo e define `errno` para `EINVAL` se `timestr` era NULO ou define `errno` para `ERANGE` se `timestr` está formatado incorretamente.  
   
@@ -138,18 +139,6 @@ int main( void )
 ```Output  
 The current time is 14:21:44  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

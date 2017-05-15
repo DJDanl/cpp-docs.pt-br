@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 160f9411532bae1bedae207e65b56009504542d5
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4e10582050f922e880577dc5a19d99a1ac03128e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="messagesbase-class"></a>Classe messages_base
@@ -53,7 +54,7 @@ struct messages_base : locale::facet {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O catálogo de tipo é um sinônimo do tipo `int` que descreve os possíveis valores de retorno de messages:: [do_open](../standard-library/messages-class.md#messages__do_open).  
+ O catálogo de tipo é um sinônimo do tipo `int` que descreve os possíveis valores de retorno de messages:: [do_open](../standard-library/messages-class.md#do_open).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  

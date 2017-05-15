@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 0db56597dd5d5ce8b68a45a5b53ce1af370134ee
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="queue-class"></a>Classe queue
@@ -66,7 +67,7 @@ class queue
  O tipo do contêiner subjacente usado para implementar a fila.  
   
 ## <a name="remarks"></a>Comentários  
- Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimo de [value_type](#queue__value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.  
+ Os elementos da classe **Type** estipulados no primeiro parâmetro de modelo de um objeto de fila são sinônimo de [value_type](#value_type) e devem corresponder ao tipo de elemento na classe de contêiner subjacente **Container** estipulada pelo segundo parâmetro de modelo. O **Type** deve ser atribuível, para que seja possível copiar objetos desse tipo e atribuir valores a variáveis desse tipo.  
   
  Classes de contêiner subjacente adequadas para a fila incluem [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md) ou qualquer outro contêiner de sequência com suporte às operações de `front`, **back**, `push_back` e `pop_front`. A classe de contêiner subjacente é encapsulada dentro do adaptador do contêiner, que expõe apenas o conjunto limitado de funções membro de contêiner de sequência como uma interface pública.  
   
@@ -84,33 +85,33 @@ class queue
   
 |||  
 |-|-|  
-|[queue](#queue__queue)|Constrói um `queue` que é vazio ou que é uma cópia de um objeto de contêiner base.|  
+|[queue](#queue)|Constrói um `queue` que é vazio ou que é uma cópia de um objeto de contêiner base.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#queue__container_type)|Um tipo que fornece o contêiner base para ser adaptado pelo `queue`.|  
-|[size_type](#queue__size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `queue`.|  
-|[value_type](#queue__value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `queue`.|  
+|[container_type](#container_type)|Um tipo que fornece o contêiner base para ser adaptado pelo `queue`.|  
+|[size_type](#size_type)|Um tipo de inteiro sem sinal que pode representar o número de elementos em um `queue`.|  
+|[value_type](#value_type)|Um tipo que representa o tipo de objeto armazenado como um elemento em um `queue`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[back](#queue__back)|Retorna uma referência para o último e recém-adicionado elemento na parte final de `queue`.|  
-|[empty](#queue__empty)|Testa se `queue` está vazio.|  
-|[front](#queue__front)|Retorna uma referência ao primeiro elemento na parte inicial de `queue`.|  
-|[pop](#queue__pop)|Remove um elemento no início do `queue`.|  
-|[push](#queue__push)|Adiciona um elemento na parte traseira do `queue`.|  
-|[size](#queue__size)|Retorna o número de elementos no `queue`.|  
+|[back](#back)|Retorna uma referência para o último e recém-adicionado elemento na parte final de `queue`.|  
+|[empty](#empty)|Testa se `queue` está vazio.|  
+|[front](#front)|Retorna uma referência ao primeiro elemento na parte inicial de `queue`.|  
+|[pop](#pop)|Remove um elemento no início do `queue`.|  
+|[push](#push)|Adiciona um elemento na parte traseira do `queue`.|  
+|[size](#size)|Retorna o número de elementos no `queue`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<queue>  
   
  **Namespace:** std  
   
-##  <a name="queue__back"></a>  queue::back  
+##  <a name="back"></a>  queue::back  
  Retorna uma referência para o último e recém-adicionado elemento na parte final da fila.  
   
 ```  
@@ -153,7 +154,7 @@ int main( )
 }  
 ```  
   
-##  <a name="queue__container_type"></a>  queue::container_type  
+##  <a name="container_type"></a>  queue::container_type  
  Um tipo que fornece o contêiner base a ser adaptado.  
   
 ```  
@@ -166,9 +167,9 @@ typedef Container container_type;
  Para obter mais informações sobre `Container`, consulte a seção Comentários do tópico [Classe queue](../standard-library/queue-class.md).  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [queue](#queue__queue) para saber como declarar e usar `container_type`.  
+  Veja o exemplo de [queue](#queue) para saber como declarar e usar `container_type`.  
   
-##  <a name="queue__empty"></a>  queue::empty  
+##  <a name="empty"></a>  queue::empty  
  Testa se uma fila está vazia.  
   
 ```  
@@ -212,7 +213,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="queue__front"></a>  queue::front  
+##  <a name="front"></a>  queue::front  
  Retorna uma referência ao primeiro elemento na parte inicial da fila.  
   
 ```  
@@ -261,7 +262,7 @@ int main() {
 }  
 ```  
   
-##  <a name="queue__pop"></a>  queue::pop  
+##  <a name="pop"></a>  queue::pop  
  Remove um elemento no início da fila.  
   
 ```  
@@ -315,7 +316,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="queue__push"></a>  queue::push  
+##  <a name="push"></a>  queue::push  
  Adiciona um elemento na parte final da fila.  
   
 ```  
@@ -361,7 +362,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue__queue"></a>  queue::queue  
+##  <a name="queue"></a>  queue::queue  
  Constrói uma fila que é vazia ou que é uma cópia de um objeto de contêiner base.  
   
 ```  
@@ -425,7 +426,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="queue__size"></a>  queue::size  
+##  <a name="size"></a>  queue::size  
  Retorna o número de elementos na fila.  
   
 ```  
@@ -464,7 +465,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="queue__size_type"></a>  queue::size_type  
+##  <a name="size_type"></a>  queue::size_type  
  Um tipo de inteiro sem sinal que pode representar o número de elementos em uma fila.  
   
 ```  
@@ -475,9 +476,9 @@ typedef typename Container::size_type size_type;
  O tipo é um sinônimo do `size_type` do contêiner base adaptado pela fila.  
   
 ### <a name="example"></a>Exemplo  
-  Veja o exemplo de [queue::front](#queue__front) para saber como declarar e usar `size_type`.  
+  Veja o exemplo de [queue::front](#front) para saber como declarar e usar `size_type`.  
   
-##  <a name="queue__value_type"></a>  queue::value_type  
+##  <a name="value_type"></a>  queue::value_type  
  Um tipo que representa o tipo de objeto armazenado como um elemento em uma fila.  
   
 ```  

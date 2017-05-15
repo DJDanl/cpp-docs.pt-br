@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a84af15b181aff3f412800ef8b9682b3be01aefa
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7b058afa50bd7f830befe064117e4f3f2b28ba58
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="moneypunctbyname-class"></a>Classe moneypunct_byname
@@ -65,7 +66,7 @@ protected:
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [moneypunct](../standard-library/moneypunct-class.md#moneypunct__moneypunct)\<CharType, Intl>( `_Refs`).  
+ Seu comportamento é determinado pela localidade nomeada `_Locname`. Cada construtor inicializa seu objeto base com [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<locale>  

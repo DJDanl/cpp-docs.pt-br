@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 71e7784eefcfa69d12de2229b360845d1fd99a30
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4c36da30cfc69140a47e779025acb579bb687df2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
@@ -105,10 +106,10 @@ wint_t _ungetwch_nolock(
  O caractere a ser enviado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Ambas as funções retornarão o caractere `c`, se for bem-sucedido. Se houver um erro, `_ungetch` retornará um valor de `EOF` e `_ungetwch`retornará`WEOF`.  
+ Ambas as funções retornarão o caractere `c`, se for bem-sucedido. Se houver um erro, `_ungetch` retorna um valor de `EOF` e `_ungetwch` retorna `WEOF`.  
   
 ## <a name="remarks"></a>Comentários  
- Essas funções enviam o caractere `c` para o console, causando `c` para ser o próximo caractere lido por `_getch` ou `_getche` (ou`_getwch` ou`_getwche`). `_ungetch` e `_ungetwch` falham se são chamados mais de uma vez antes da próxima leitura. O argumento `c` pode não estar `EOF` (ou `WEOF`).  
+ Essas funções por push o caractere `c` para o console, causando `c` para ser o próximo caractere lido por `_getch` ou `_getche` (ou `_getwch` ou `_getwche`). `_ungetch` e `_ungetwch` falham se são chamados mais de uma vez antes da próxima leitura. O argumento `c` pode não estar `EOF` (ou `WEOF`).  
   
  As versões com o sufixo `_nolock` são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.  
   

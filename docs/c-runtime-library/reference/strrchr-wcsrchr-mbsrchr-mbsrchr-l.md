@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6fa7b0afa814b203bb97f4d3ad2550e4b63d1c4c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a545d1813bb03160495c331b3213f947603b20b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
@@ -179,9 +180,6 @@ const unsigned char *_mbsrchr_l(
   
 ## <a name="example"></a>Exemplo  
  Para um exemplo de como usar `strrchr` consulte [strchr](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::LastIndexOf](https://msdn.microsoft.com/en-us/library/system.string.lastindexof.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9c6e0bb0915623c36d9a0ef9f798fd4d892e16ec
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9ee9bad8fba0d08e750b231e46012b880695c1ce
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
@@ -92,9 +93,6 @@ long double nanl(
 |Função|Cabeçalho C|Cabeçalho C++|  
 |--------------|--------------|------------------|  
 |`nan`, `nanf`, `nanl`|\<math.h>|\<cmath>|  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Double::NaN](https://msdn.microsoft.com/en-us/library/system.double.nan.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

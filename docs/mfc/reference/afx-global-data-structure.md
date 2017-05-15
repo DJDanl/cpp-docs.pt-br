@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
@@ -278,13 +279,13 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  `TRUE`Para habilitar o suporte de acessibilidade; `FALSE` para desabilitar o suporte de acessibilidade. O valor padrão é `TRUE`.  
   
 ### <a name="remarks"></a>Comentários  
- Acessibilidade ativa é uma tecnologia baseada em COM que melhora os maneira como os programas e o trabalho do sistema operacional Windows junto com os produtos de tecnologia assistencial. Fornece métodos confiáveis para expor informações sobre os elementos de interface do usuário. No entanto, um modelo de acessibilidade mais recente, chamado de automação de interface do usuário da Microsoft agora está disponível. Para uma comparação entre as duas tecnologias, consulte [automação de interface do usuário e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321).  
+ Acessibilidade ativa é uma tecnologia baseada em COM que melhora os maneira como os programas e o trabalho do sistema operacional Windows junto com os produtos de tecnologia assistencial. Fornece métodos confiáveis para expor informações sobre os elementos de interface do usuário. No entanto, um modelo de acessibilidade mais recente, chamado de automação de interface do usuário da Microsoft agora está disponível. Para uma comparação entre as duas tecnologias, consulte [automação de interface do usuário e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Use o [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) método para determinar se o suporte da Microsoft Active Accessibility está habilitado.  
   
  
 ### <a name="see-also"></a>Consulte também  
- [Automação de interface do usuário e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [Automação de interface do usuário e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>Consulte também  
- [Automação de interface do usuário e Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [Automação de interface do usuário e Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Determina se o D2D foi inicializado  

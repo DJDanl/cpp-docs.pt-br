@@ -92,10 +92,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6e0a17104b8b48eaf117944543752cea35289dc9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: d1e4b6e775ad1b46c988c5c5ca3af1ceafa29135
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
@@ -192,9 +193,6 @@ int _mbsnicmp_l(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo para [strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

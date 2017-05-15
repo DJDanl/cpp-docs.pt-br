@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>Funções &lt;new&gt;
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  O objeto é usado como um argumento de função para corresponder ao tipo de parâmetro [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [operador new](../standard-library/new-operators.md#operator_new) e [operador new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) para obter exemplos de como `std::nothrow_t` é usado como um parâmetro de função.  
+  Consulte [operador new](../standard-library/new-operators.md#op_new) e [operador new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obter exemplos de como `std::nothrow_t` é usado como um parâmetro de função.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
  Instala uma função de usuário que deve ser chamada quando `operator new` falhar ao tentar alocar memória.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 na primeira chamada e o anterior `new_handler` em chamadas subsequentes.  
   
 ### <a name="remarks"></a>Comentários  
- A função armazenará `Pnew` no ponteiro [new handler](../standard-library/new-typedefs.md#new_handler) estático que ele mantém e, então, retornará o valor armazenado anteriormente no ponteiro. O novo manipulador é usado por [operator new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ A função armazenará `Pnew` no ponteiro [new handler](../standard-library/new-typedefs.md#new_handler) estático que ele mantém e, então, retornará o valor armazenado anteriormente no ponteiro. O novo manipulador é usado por [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
 ### <a name="example"></a>Exemplo  
   

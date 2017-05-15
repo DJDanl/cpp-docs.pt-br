@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 74947a6eb7c493ac019aed90aaf89e3436b4ceb1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f56f09f3c3591d0c969ea3b3e242cf39812356fb
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="syncnone-class"></a>Classe sync_none
@@ -64,16 +65,16 @@ class sync_none
   
 |||  
 |-|-|  
-|[allocate](#sync_none__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#sync_none__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
-|[equals](#sync_none__equals)|Compara a igualdade de dois caches.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[equals](#equals)|Compara a igualdade de dois caches.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="sync_none__allocate"></a>  sync_none::allocate  
+##  <a name="allocate"></a>  sync_none::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -89,7 +90,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro retorna `cache.allocate(count)`, em que `cache` é o objeto de cache.  
   
-##  <a name="sync_none__deallocate"></a>  sync_none::deallocate  
+##  <a name="deallocate"></a>  sync_none::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -106,7 +107,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro chama `cache.deallocate(ptr, count)`, em que `cache` representa o objeto de cache.  
   
-##  <a name="sync_none__equals"></a>  sync_none::equals  
+##  <a name="equals"></a>  sync_none::equals  
  Compara a igualdade de dois caches.  
   
 ```

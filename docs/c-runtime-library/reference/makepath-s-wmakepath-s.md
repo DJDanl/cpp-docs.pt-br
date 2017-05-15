@@ -57,10 +57,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 60ec32f25fb39189c73b80dd9e83107dd90df3dc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d3ac02a0ac8dfa7f681c8585be7e1b6f41f0f82
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
@@ -135,7 +136,7 @@ errno_t _wmakepath_s(
 |`NULL`|qualquer|`EINVAL`|não modificado|  
 |qualquer|<= 0|`EINVAL`|não modificado|  
   
- Se qualquer uma das condições de erro acima ocorrer, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e as funções retornarão `EINVAL`**.** `NULL` tem permissão para os parâmetros `drive`, `fname` e `ext`. Para obter informações sobre o comportamento quando esses parâmetros são ponteiros nulos ou cadeias de caracteres vazias, consulte a seção de Comentários.  
+ Se qualquer uma das condições de erro acima ocorrer, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e as funções retornarão `EINVAL`. `NULL` tem permissão para os parâmetros `drive`, `fname` e `ext`. Para obter informações sobre o comportamento quando esses parâmetros são ponteiros nulos ou cadeias de caracteres vazias, consulte a seção de Comentários.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_makepath_s` cria uma cadeia de caracteres de caminho de composição com base em componentes individuais e armazena o resultado em `path`. O `path` pode incluir uma letra da unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. `_wmakepath_s` é uma versão de caractere largo de `_makepath_s`; os argumentos para `_wmakepath_s` são cadeias de caracteres largas. Caso contrário, `_wmakepath_s` e `_makepath_s` se comportam de forma idêntica.  
@@ -214,9 +215,6 @@ Path extracted with _splitpath_s:
   Filename: crt_makepath_s  
   Ext: .c  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

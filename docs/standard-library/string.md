@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ Define a classe de modelo do contêiner `basic_string` e diversos modelos de sup
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|Concatena dois objetos de cadeia de caracteres.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que ou igual ao objeto da cadeia de caracteres à direita.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|Uma função de modelo que insere uma cadeia de caracteres no fluxo de saída.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que ou igual ao objeto da cadeia de caracteres à direita.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|Uma função de modelo que extrai uma cadeia de caracteres do fluxo de entrada.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatena dois objetos de cadeia de caracteres.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é diferente do objeto da cadeia de caracteres à direita.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é igual ao objeto da cadeia de caracteres à direita.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que o objeto da cadeia de caracteres à direita.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é menor que ou igual ao objeto da cadeia de caracteres à direita.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Uma função de modelo que insere uma cadeia de caracteres no fluxo de saída.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que o objeto da cadeia de caracteres à direita.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testa se o objeto da cadeia de caracteres à esquerda do operador é maior que ou igual ao objeto da cadeia de caracteres à direita.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Uma função de modelo que extrai uma cadeia de caracteres do fluxo de entrada.|  
   
 ### <a name="specialized-template-functions"></a>Funções de Modelo Especializadas  
   
@@ -102,7 +103,7 @@ Define a classe de modelo do contêiner `basic_string` e diversos modelos de sup
   
 |||  
 |-|-|  
-|[getline Função de Modelo](../standard-library/string-functions.md#getline)|Extrai cadeias de caracteres do fluxo de entrada linha por linha.|  
+|[getline modelo](../standard-library/string-functions.md#getline)|Extrai cadeias de caracteres do fluxo de entrada linha por linha.|  
   
 ### <a name="classes"></a>Classes  
   

@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::lock_guard
+- mutex/std::lock_guard::lock_guard
 dev_langs:
 - C++
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
@@ -32,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a280edb8c2b2cadccd6767046904723888ee67fa
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lockguard-class"></a>Classe lock_guard
@@ -63,15 +65,15 @@ class lock_guard;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor lock_guard::lock_guard](#lock_guard__lock_guard_constructor)|Constrói um objeto `lock_guard`.|  
-|[Destruidor lock_guard::~lock_guard](#lock_guard___dtorlock_guard_destructor)|Desbloqueia o `mutex` que foi passado ao construtor.|  
+|[lock_guard](#lock_guard)|Constrói um objeto `lock_guard`.|  
+|[Destruidor lock_guard::~lock_guard](#dtorlock_guard_destructor)|Desbloqueia o `mutex` que foi passado ao construtor.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** mutex  
+ **Cabeçalho:** \<mutex >  
   
  **Namespace:** std  
   
-##  <a name="a-namelockguardlockguardconstructora--lockguardlockguard-constructor"></a><a name="lock_guard__lock_guard_constructor"></a>  Construtor lock_guard::lock_guard  
+##  <a name="lock_guard"></a>  Construtor lock_guard::lock_guard  
  Constrói um objeto `lock_guard`.  
   
 ```cpp  
@@ -89,7 +91,7 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
   
  O segundo construtor não bloqueia `Mtx`. `Mtx` deve ser bloqueado quando esse construtor for chamado. O construtor não lança exceções.  
   
-##  <a name="a-namelockguarddtorlockguarddestructora--lockguardlockguard-destructor"></a><a name="lock_guard___dtorlock_guard_destructor"></a>  Destruidor lock_guard::~lock_guard  
+##  <a name="dtorlock_guard_destructor"></a>  Destruidor lock_guard::~lock_guard  
  Desbloqueia o `mutex` que foi passado ao construtor.  
   
 ```

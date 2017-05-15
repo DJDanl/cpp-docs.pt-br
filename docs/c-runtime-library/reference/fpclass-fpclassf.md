@@ -57,10 +57,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aa501a22124ef1c48d5db8972fd8d261786de9b2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9f061841ea6f4050945caeb2cacb9acfdce77c44
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
@@ -92,7 +93,7 @@ int _fpclassf(
 |`_FPCLASS_NINF`|Infinito negativo (-INF)|  
 |`_FPCLASS_NN`|Negativo normalizado diferente de zero|  
 |`_FPCLASS_ND`|Negativo desnormalizado|  
-|`_FPCLASS_NZ`|Zero negativo (-0)|  
+|`_FPCLASS_NZ`|Zero negativo (- 0)|  
 |`_FPCLASS_PZ`|0 positivo (+0)|  
 |`_FPCLASS_PD`|Positivo desnormalizado|  
 |`_FPCLASS_PN`|Positivo normalizado diferente de zero|  

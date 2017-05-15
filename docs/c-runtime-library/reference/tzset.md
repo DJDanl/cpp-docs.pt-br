@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tzset"></a>_tzset
@@ -71,7 +72,7 @@ void _tzset( void );
 ## <a name="remarks"></a>Comentários  
  A função `_tzset` usa a configuração atual da variável de ambiente `TZ` para atribuir valores a três variáveis globais: `_daylight`, `_timezone` e `_tzname`. Essas variáveis são usadas pelas funções [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) para fazer correções de UTC (Tempo Universal Coordenado) para a hora local e pela função `time` para calcular o UTC de horário do sistema. Use a sintaxe a seguir para definir a variável de ambiente `TZ`:  
   
- `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  Nome de fuso horário de três letras, como PST. Você deve especificar o deslocamento correto da hora local em UTC.  
@@ -99,7 +100,7 @@ set TZ=GST-1GDT
   
  Esse comando usa o GST para indicar o horário padrão alemão, pressupõe que o UTC está uma hora atrás da Alemanha (ou, em outras palavras, que a Alemanha está uma hora à frente do UTC) e assume que a Alemanha observa o horário de verão.  
   
- Se o valor de `TZ` não for definido, _`tzset` tenta usar as informações de fuso horário especificadas pelo sistema operacional. No sistema operacional Windows, essas informações são especificadas no aplicativo de Data/Hora no Painel de controle. Se `_tzset` não puder obter essas informações, usará PST8PDT por padrão, o que significa que o fuso horário do Pacífico.  
+ Se o `TZ` valor não for definido, `_tzset` tenta usar as informações de fuso horário especificadas pelo sistema operacional. No sistema operacional Windows, essas informações são especificadas no aplicativo de Data/Hora no Painel de controle. Se `_tzset` não puder obter essas informações, usará PST8PDT por padrão, o que significa que o fuso horário do Pacífico.  
   
  Com base no valor da variável de ambiente `TZ`, os seguintes valores são atribuídos a variáveis globais `_daylight`, `_timezone` e `_tzname` quando `_tzset` é chamada:  
   
@@ -154,9 +155,6 @@ _daylight = 1
 _timezone = 28800  
 _tzname[0] = Pacific Standard Time  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

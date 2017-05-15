@@ -38,10 +38,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b510fbe0b93f97222a093007300a3b3d054d1505
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d3cfcde97a0f6c89b1f18c4026c6ab49db66fd96
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
@@ -64,16 +65,16 @@ class sync_shared
   
 |||  
 |-|-|  
-|[allocate](#sync_shared__allocate)|Aloca um bloco de memória.|  
-|[deallocate](#sync_shared__deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
-|[equals](#sync_shared__equals)|Compara a igualdade de dois caches.|  
+|[allocate](#allocate)|Aloca um bloco de memória.|  
+|[deallocate](#deallocate)|Libera um número especificado de objetos do armazenamento começando em uma posição especificada.|  
+|[equals](#equals)|Compara a igualdade de dois caches.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="sync_shared__allocate"></a>  sync_shared::allocate  
+##  <a name="allocate"></a>  sync_shared::allocate  
  Aloca um bloco de memória.  
   
 ```
@@ -92,7 +93,7 @@ void *allocate(std::size_t count);
 ### <a name="remarks"></a>Comentários  
  A função membro bloqueia o mutex, chama `cache.allocate(count)`, desbloqueia o mutex e retorna o resultado da chamada anterior a `cache.allocate(count)`. `cache` representa o objeto de cache atual.  
   
-##  <a name="sync_shared__deallocate"></a>  sync_shared::deallocate  
+##  <a name="deallocate"></a>  sync_shared::deallocate  
  Libera um número especificado de objetos do armazenamento começando em uma posição especificada.  
   
 ```
@@ -109,7 +110,7 @@ void deallocate(void* ptr, std::size_t count);
 ### <a name="remarks"></a>Comentários  
  Essa função membro bloqueia o mutex, chama `cache.deallocate(ptr, count)`, em que `cache` representa o objeto de cache e, em seguida, desbloqueia o mutex.  
   
-##  <a name="sync_shared__equals"></a>  sync_shared::equals  
+##  <a name="equals"></a>  sync_shared::equals  
  Compara a igualdade de dois caches.  
   
 ```

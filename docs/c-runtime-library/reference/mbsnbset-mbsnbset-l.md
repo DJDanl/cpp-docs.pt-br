@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` retorna um ponteiro para a cadeia de caracteres alterada.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_mbsnbset` e `_mbsnbset_l` definem, no máximo, os primeiros `count` bytes de `str` para `c`. Se `count` for maior que o comprimento de `str`, o comprimento de `str` será usado ao invés de `count`. Se `c` é um caractere multibyte e não pode ser definido inteiramente para o último byte especificado por `count`, o último byte é preenchido com um caractere em branco. `_mbsnbset` e `_mbsnbset_l` não colocam um nulo de terminação no final de `str`.  
+ As funções `_mbsnbset` e `_mbsnbset_l` definem, no máximo, os primeiros `count` bytes de `str` para `c`. Se `count` for maior que o comprimento de `str`, o comprimento de `str` será usado ao invés de `count`. Se `c` é um caractere multibyte e não pode ser definido inteiramente para o último byte especificado por `count`, o último byte é preenchido com um caractere em branco. `_mbsnbset`e `_mbsnbset_l` não coloca uma terminação nula no final da `str`.  
   
- `_mbsnbset` e `_mbsnbset_l` são semelhantes a `_mbsnset`, exceto que ele define `count` bytes em vez de `count` caracteres de `c`.  
+ `_mbsnbset`e `_mbsnbset_l` é semelhante a `_mbsnset`, exceto que ele define `count` bytes em vez de `count` caracteres de `c`.  
   
  Se `str` for `NULL` ou se `count` for zero, essa função gerará uma exceção de parâmetro inválido, como descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, `errno` será definido como `EINVAL` e a função retornará `NULL`. Além disso, se `c` não for um caractere multibyte válido, `errno` será definido como `EINVAL` e um espaço será usado em vez disso.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

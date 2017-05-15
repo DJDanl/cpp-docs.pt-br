@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9e8d54fe2d944f448aa8045a80fd513b10101c2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 91f0ffd5b02f9e8bc34604683c6274ec0f2c28b3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
@@ -91,14 +92,14 @@ wchar_t *_wasctime(
   
 |membro timeptr|Valor|  
 |--------------------|-----------|  
-|`tm_hour`|Horas desde a meia-noite (0 –&23;)|  
+|`tm_hour`|Horas desde a meia-noite (0-23)|  
 |`tm_isdst`|Positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status de horário de verão for desconhecido. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).|  
-|`tm_mday`|Dia do mês (1 –&31;)|  
-|`tm_min`|Minutos após a hora (0 –&59;)|  
-|`tm_mon`|Mês (0 – 11; janeiro = 0)|  
+|`tm_mday`|Dia do mês (1-31)|  
+|`tm_min`|Minutos após a hora (0-59)|  
+|`tm_mon`|Mês (0-11; Janeiro = 0)|  
 |`tm_sec`|Segundos após o minuto (0-59)|  
-|`tm_wday`|Dia da semana (0 – 6; domingo = 0)|  
-|`tm_yday`|Dia do ano (0 – 365; 1º de janeiro = 0)|  
+|`tm_wday`|Dia da semana (0 a 6; Domingo = 0)|  
+|`tm_yday`|Dia do ano (365 0; 1 de janeiro = 0)|  
 |`tm_year`|Ano (ano atual menos 1900)|  
   
  A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Para obter mais informações sobre a configuração da hora local, consulte as funções [time](../../c-runtime-library/reference/time-time32-time64.md), [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) e a função [_tzset](../../c-runtime-library/reference/tzset.md) para saber como definir variáveis globais e de ambiente de fuso horário.  
@@ -152,18 +153,6 @@ int main( void )
 ```Output  
 Current date and time: Sun Feb 03 11:38:58 2002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

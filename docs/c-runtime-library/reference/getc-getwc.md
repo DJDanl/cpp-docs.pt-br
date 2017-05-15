@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8a34b6db76d104c59c26939ad395bc73d3556388
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c49c803ade49a5434599690902856fd1f76d742
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getc-getwc"></a>getc, getwc
@@ -84,7 +85,7 @@ wint_t getwc(
  Fluxo de entrada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, `getc` retorna `EOF` e `getwc` retorna `WEOF`. Para `getc`, use `ferror` ou `feof` para verificar se há um erro ou se o final do arquivo foi atingido. Se `stream` for `NULL`, `getc` e `getwc` invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão `EOF` (ou `WEOF` para `getwc`) e definirão `errno` como `EINVAL`.  
+ Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, `getc` retorna `EOF` e `getwc` retorna `WEOF`. Para `getc`, use `ferror` ou `feof` para verificar se há um erro ou se o final do arquivo foi atingido. Se `stream` for `NULL`, `getc` e `getwc` invocarão o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam `EOF` (ou `WEOF` para `getwc`) e defina `errno` para `EINVAL`.  
   
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
@@ -164,12 +165,6 @@ Line two.
 ```  
 Input was: Line one.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

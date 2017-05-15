@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - poisson_distribution
-- std::poisson_distribution
 - random/std::poisson_distribution
-- std::poisson_distribution::reset
 - random/std::poisson_distribution::reset
-- std::poisson_distribution::mean
 - random/std::poisson_distribution::mean
-- std::poisson_distribution::param
 - random/std::poisson_distribution::param
-- std::poisson_distribution::min
 - random/std::poisson_distribution::min
-- std::poisson_distribution::max
 - random/std::poisson_distribution::max
-- std::poisson_distribution::operator()
 - random/std::poisson_distribution::operator()
-- std::poisson_distribution::param_type
 - random/std::poisson_distribution::param_type
-- std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::mean
-- std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator==
-- std::poisson_distribution::param_type::operator!=
 - random/std::poisson_distribution::param_type::operator!=
+- random/std::poisson_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 021eaec1ec55add912234f78bac0b9762b4a3444
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a8a87f4101cca4a709d594ac2ad19726eb505c00
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
@@ -104,8 +95,8 @@ A classe de modelo descreve uma distribuição que produz valores de um tipo int
   
 ||||  
 |-|-|-|  
-|[poisson_distribution::poisson_distribution](#poisson_distribution__poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
-|`poisson_distribution::operator()`||[poisson_distribution::param_type](#poisson_distribution__param_type)|  
+|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
+|`poisson_distribution::operator()`||[param_type](#param_type)|  
   
 A função de propriedade `mean()` retorna o valor do parâmetro de distribuição armazenado *mean*.  
   
@@ -224,7 +215,7 @@ Distribution for 100 samples:
   
  **Namespace:** std  
   
-##  <a name="a-namepoissondistributionpoissondistributiona--poissondistributionpoissondistribution"></a><a name="poisson_distribution__poisson_distribution"></a>  poisson_distribution::poisson_distribution  
+##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
 Constrói a distribuição.  
   
 ```  
@@ -246,7 +237,7 @@ O primeiro construtor cria um objeto cujo valor `mean` armazenado contém o valo
   
 O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
   
-##  <a name="a-namepoissondistributionparamtypea--poissondistributionparamtype"></a><a name="poisson_distribution__param_type"></a>  poisson_distribution::param_type  
+##  <a name="param_type"></a>  poisson_distribution::param_type  
 Armazena os parâmetros da distribuição.  
   
 ```    
@@ -261,7 +252,7 @@ struct param_type {
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
-Consulte os parâmetros do construtor para [poisson_distribution](#poisson_distribution__poisson_distribution).  
+Consulte os parâmetros do construtor para [poisson_distribution](#poisson_distribution).  
   
 ### <a name="remarks"></a>Comentários  
  **Pré-condição:** `0.0 < mean`  

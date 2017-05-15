@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b59c3409c473af61613168e85f3980233420ba8d
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: bd4d0e1dbc7b350cd0683fdd5e6ad3fc1dc1f781
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltlimitsgt"></a>&lt;limites&gt;
@@ -59,8 +60,8 @@ Define a classe de modelo `numeric_limits` e duas enumerações relacionadas a r
   
 |||  
 |-|-|  
-|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style_enumeration)|A enumeração descreve os vários métodos que uma implementação pode escolher para representar um valor de ponto flutuante desnormalizado — um pequeno demais para ser representado como um valor normalizado:|  
-|[float_round_style](../standard-library/limits-enums.md#float_round_style_enumeration)|A enumeração descreve os vários métodos que uma implementação pode escolher para fazer o arredondamento de um valor de ponto flutuante para um valor inteiro.|  
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|A enumeração descreve os vários métodos que uma implementação pode escolher para representar um valor de ponto flutuante desnormalizado — um pequeno demais para ser representado como um valor normalizado:|  
+|[float_round_style](../standard-library/limits-enums.md#float_round_style)|A enumeração descreve os vários métodos que uma implementação pode escolher para fazer o arredondamento de um valor de ponto flutuante para um valor inteiro.|  
   
 ### <a name="classes"></a>Classes  
   

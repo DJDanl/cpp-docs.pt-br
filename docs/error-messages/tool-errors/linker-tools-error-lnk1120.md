@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1120 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK1120 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 91931be0b2f7d47533a3dca2c28183232ffe2d41
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 1809ed4e5950165d6a187fd3c62871c25124663f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="linker-tools-error-lnk1120"></a>Erro das Ferramentas de Vinculador LNK1120
-número externos não resolvidos  
+*número* não resolvido externos  
   
- Erro LNK1120 fornece uma contagem (`number`) de itens externos não resolvidos para esta operação de link. As condições que causam externos não resolvidos são descritas com erro [LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md), que precede a mensagem de erro, uma vez para cada externo não resolvido.  
+Erro LNK1120 reporta a contagem (*número*) de erros de símbolo externo não resolvido para esta operação de link. A maioria não resolvidos são relatados erros de símbolo externo individualmente por [Linker Tools Error LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) e [LNK2019 de erro de ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), que precedem essa mensagem de erro, uma vez para cada não resolvidos de erro de símbolo externo.  
   
- Para resolver esse erro, corrija todos os erros LNK2001 que precedem-lo na saída da compilação. Para obter mais informações, consulte [erro das ferramentas de vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md).
+Para corrigir esse erro, corrija todos os outros erros externos não resolvidos ou outros erros de vinculador que precedem na saída da compilação. Esse erro não é relatado quando permanecem sem erros externos não resolvidos.  
+

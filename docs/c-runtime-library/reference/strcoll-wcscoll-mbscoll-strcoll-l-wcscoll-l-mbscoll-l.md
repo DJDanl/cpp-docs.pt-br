@@ -71,10 +71,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ec34d9e69c5f17622cb49d986602f556940117f7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 43953fbd9473f491d628fd7389c4b9a62294e2b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
@@ -123,7 +124,7 @@ int _mbscoll_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada uma dessas funções retorna um valor que indica a relação de `string1` para `string2`*,* conforme demonstrado a seguir.  
+ Cada uma dessas funções retorna um valor que indica a relação de `string1` para `string2`, da seguinte maneira.  
   
 |Valor retornado|Relação da string1 com a string2|  
 |------------------|----------------------------------------|  
@@ -157,9 +158,6 @@ int _mbscoll_l(
 |`_wcscoll_l`|\<wchar.h>, \<string.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Localidade](../../c-runtime-library/locale.md)   

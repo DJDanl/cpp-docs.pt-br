@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f45a13d9911e82b2b624689fa6b9e5eb4b20d97
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -70,7 +71,7 @@ int _get_printf_count_output();
  Diferente de zero se `%n` tiver suporte, 0 se `%n` não tiver suporte.  
   
 ## <a name="remarks"></a>Comentários  
- Se `%n` não tiver suporte (padrão), encontrar `%n` na cadeia de caracteres de formato de qualquer uma das funções `printf` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se o suporte de `%n` estiver habilitado (consulte [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)), `%n` se comportará conforme descrito em [Caracteres de campo de tipo printf](../../c-runtime-library/printf-type-field-characters.md).  
+ Se `%n` não tiver suporte (padrão), encontrar `%n` na cadeia de caracteres de formato de qualquer uma das funções `printf` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se `%n` suporte está habilitado (consulte [set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)), em seguida, `%n` irão se comportar conforme descrito em [sintaxe de especificação de formato: funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -83,5 +84,6 @@ int _get_printf_count_output();
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md).  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).
+## <a name="see-also"></a>Consulte também  
+[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+

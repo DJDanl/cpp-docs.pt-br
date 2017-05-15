@@ -61,10 +61,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e5801db508017855499824f3918c40da02580387
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5b1701f41b2f66ccbc2601763c09a4db0523c2ed
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
@@ -140,9 +141,6 @@ errno_t _wstrdate_s(
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [time](../../c-runtime-library/reference/time-time32-time64.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::DateTime::Parse](https://msdn.microsoft.com/en-us/library/system.datetime.parse.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

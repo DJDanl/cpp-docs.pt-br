@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8671b14d88848dff6961366d4ca059b3f1cf7c98
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c79a2502fd9e52ff5e05e600c4d1a1e8e3761c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
@@ -142,9 +143,6 @@ if (( _access( "datafile",2 )) == -1 )
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [perror](../../c-runtime-library/reference/perror-wperror.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Exception::Message](https://msdn.microsoft.com/en-us/library/system.exception.message.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

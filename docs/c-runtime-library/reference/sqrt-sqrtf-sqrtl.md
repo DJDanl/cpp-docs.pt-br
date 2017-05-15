@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 93639a3c69e135301179079035a8fd52cf3a2318
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3f4f06e9b88b1c429046e97376e7609d681da473
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
@@ -112,7 +113,7 @@ long double sqrtl(
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // crt_sqrt.c  
 // This program calculates a square root.  
   
@@ -135,12 +136,9 @@ int main( void )
 The square root of 45.35 is 6.73  
 ```  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Sqrt](https://msdn.microsoft.com/en-us/library/system.math.sqrt.aspx)  
-  
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, expf, SOL](../../c-runtime-library/reference/exp-expf.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   
  [_CIsqrt](../../c-runtime-library/cisqrt.md)

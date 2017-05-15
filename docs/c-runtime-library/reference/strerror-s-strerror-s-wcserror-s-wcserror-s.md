@@ -1,71 +1,77 @@
 ---
-title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wcserror_s"
-  - "_strerror_s"
-  - "_wcserror_s"
-  - "strerror_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcserror_s"
-  - "__wcserror_s"
-  - "_tcserror_s"
-  - "_wcserror_s"
-  - "tcserror_s"
-  - "strerror_s"
-  - "_strerror_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wcserror_s function"
-  - "error messages, printing"
-  - "tcserror_s function"
-  - "printing error messages"
-  - "strerror_s function"
-  - "_wcserror_s function"
-  - "_tcserror_s function"
-  - "_strerror_s function"
-  - "wcserror_s function"
-  - "error messages, getting"
+title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wcserror_s
+- _strerror_s
+- _wcserror_s
+- strerror_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcserror_s
+- __wcserror_s
+- _tcserror_s
+- _wcserror_s
+- tcserror_s
+- strerror_s
+- _strerror_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- __wcserror_s function
+- error messages, printing
+- tcserror_s function
+- printing error messages
+- strerror_s function
+- _wcserror_s function
+- _tcserror_s function
+- _strerror_s function
+- wcserror_s function
+- error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 70875568a8f77f9e4039e69dadbe9daf3c1c5e01
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Receba uma mensagem de erro do sistema (`strerror_s`, `_wcserror_s`) ou imprima uma mensagem de erro fornecida pelo usuário (`_strerror_s`, `__wcserror_s`). Estas são versões de [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -155,11 +161,11 @@ if (( _access( "datafile",2 )) == -1 )
   
  O número do erro real para `_strerror_s` é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. `_strerror_s` acessa a mensagem de erro apropriada usando o valor `errno` como um índice para a variável `_sys_errlist`. O valor da variável [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na matriz `_sys_errlist`. Para produzir resultados precisos, chame `_strerror_s` imediatamente após uma rotina da biblioteca retornar um erro. Caso contrário, chamadas subsequentes para `strerror_s` ou `_strerror_s` podem substituir o valor `errno`.  
   
- `_wcserror_s` e `__wcserror_s` são versões de caractere largo de `strerror_s` e `_strerror_s`, respectivamente.  
+ `_wcserror_s` e `__wcserror_s` são as versões de caractere largo de `strerror_s` e `_strerror_s`, respectivamente.  
   
  Essas funções validam seus parâmetros. Se o buffer for `NULL` ou se o parâmetro de tamanho for 0, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornarão `EINVAL` e definirão `errno` como `EINVAL`.  
   
- `_strerror_s, _wcserror_s,` e `__wcserror_s` não fazem parte da definição ANSI mas, em vez disso, são extensões da Microsoft para ela. Não use-as quando desejar portabilidade; para obter compatibilidade com ANSI, use `strerror_s` em seu lugar.  
+ `_strerror_s`, `_wcserror_s`, e `__wcserror_s` não fazem parte da definição de ANSI, mas em vez disso, são extensões da Microsoft para ele. Não use-as quando desejar portabilidade; para obter compatibilidade com ANSI, use `strerror_s` em seu lugar.  
   
  No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -182,9 +188,6 @@ if (( _access( "datafile",2 )) == -1 )
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [perror](../../c-runtime-library/reference/perror-wperror.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Exception::Message](https://msdn.microsoft.com/en-us/library/system.exception.message.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

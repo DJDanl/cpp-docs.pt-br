@@ -1,33 +1,41 @@
 ---
-title: "Operadores &lt;memory&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "memory/std::operator!="
-  - "memory/std::operator>"
-  - "memory/std::operator>="
-  - "memory/std::operator<"
-  - "memory/std::operator<="
-  - "memory/std::operator<<"
-  - "memory/std::operator=="
+title: Operadores &lt;memory&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- memory/std::operator!=
+- memory/std::operator>
+- memory/std::operator>=
+- memory/std::operator<
+- memory/std::operator<=
+- memory/std::operator<<
+- memory/std::operator==
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
+
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Testa a desigualdade entre objetos.  
   
 ```  
@@ -48,10 +56,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser testado quanto à desigualdade.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser testado quanto à desigualdade.  
   
  `Ty1`  
@@ -66,7 +74,7 @@ bool operator!=(
 ### <a name="remarks"></a>Comentários  
  O primeiro operador de modelo retorna false. (Todos os alocadores padrão são iguais.)  
   
- O segundo e o terceiro operadores de modelo retornam `!(`` left` `==` ` right``)`.  
+ O segundo e o terceiro operadores de modelo retornam `!(left == right)`.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -125,7 +133,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Testa a igualdade entre objetos.  
   
 ```  
@@ -146,10 +154,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser testado quanto à igualdade.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser testado quanto à igualdade.  
   
  `Ty1`  
@@ -234,7 +242,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Testa um objeto que é maior que ou igual a um segundo objeto.  
   
 ```  
@@ -250,10 +258,10 @@ bool operator>=(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser comparado.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser comparado.  
   
  `Ty1`  
@@ -263,9 +271,9 @@ bool operator>=(
  O tipo controlado pelo ponteiro compartilhado direito.  
   
 ### <a name="remarks"></a>Comentários  
- O operador de modelo retorna ` left``.get() >=` ` right``.get()`.  
+ Os operadores de modelo retornam `left.get() >= right.get()`.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Testa um objeto que é menor que um segundo objeto.  
   
 ```  
@@ -281,10 +289,10 @@ bool operator<(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser comparado.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser comparado.  
   
  `Ty1`  
@@ -293,7 +301,7 @@ bool operator<(
  `Ty2`  
  O tipo controlado pelo ponteiro direito.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Testa um objeto que é maior ou igual a um segundo objeto de uma classe especificada.  
   
 ```  
@@ -309,10 +317,10 @@ bool operator<=(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser comparado.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser comparado.  
   
  `Ty1`  
@@ -322,9 +330,9 @@ bool operator<=(
  O tipo controlado pelo ponteiro compartilhado direito.  
   
 ### <a name="remarks"></a>Comentários  
- O operador de modelo retorna ` left``.get() <=` ` right``.get()`  
+ Retornam os operadores de modelo`left.get() <= right.get()`  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Testa um objeto que é maior que um segundo objeto.  
   
 ```  
@@ -340,10 +348,10 @@ bool operator>(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` left`  
+ `left`  
  Um dos objetos a ser comparado.  
   
- ` right`  
+ `right`  
  Um dos objetos a ser comparado.  
   
  `Ty1`  
@@ -352,7 +360,7 @@ bool operator>(
  `Ty2`  
  O tipo controlado pelo ponteiro compartilhado direito.  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
 Grava o ponteiro compartilhado no fluxo.  
   
 ```  
@@ -405,4 +413,5 @@ sp0 == 3f3040 (varies)
   
 ## <a name="see-also"></a>Consulte também  
  [\<memory>](../standard-library/memory.md)
+
 

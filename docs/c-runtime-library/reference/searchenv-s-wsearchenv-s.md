@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c70908d3c884eed962560e0a5284c66c3c234a7e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
@@ -115,7 +116,7 @@ errno_t _wsearchenv_s(
  O buffer para armazenar o caminho completo.  
   
  [in] `numberOfElements`  
- O tamanho do buffer `pathname`.  
+ Tamanho do `pathname` buffer.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Zero se for bem-sucedido; um código de erro em caso de falha.  
@@ -193,9 +194,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle de diretório](../../c-runtime-library/directory-control.md)   

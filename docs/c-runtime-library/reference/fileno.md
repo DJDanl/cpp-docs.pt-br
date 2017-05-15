@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9de730aa3e9fe367a729b2f0d95283a6aae33b31
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e5a2f9c68eef3698886afd2ed48690d8b4fffd53
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fileno"></a>_fileno
@@ -74,7 +75,7 @@ int _fileno(
  Ponteiro para a estrutura `FILE`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `_fileno` retorna o descritor do arquivo. Nenhum erro é retornado. O resultado é indefinido se `stream` não especificar um arquivo aberto. Se o fluxo for `NULL`, _`fileno` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor –1 e definirá `errno` como `EINVAL`.  
+ `_fileno` retorna o descritor do arquivo. Nenhum erro é retornado. O resultado é indefinido se `stream` não especificar um arquivo aberto. Se o fluxo for `NULL`, `_fileno` invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará um valor –1 e definirá `errno` como `EINVAL`.  
   
  Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -115,9 +116,6 @@ The file descriptor for stdin is 0
 The file descriptor for stdout is 1  
 The file descriptor for stderr is 2  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

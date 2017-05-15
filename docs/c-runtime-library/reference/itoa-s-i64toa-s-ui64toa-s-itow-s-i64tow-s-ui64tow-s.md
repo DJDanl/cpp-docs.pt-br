@@ -85,10 +85,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 39dc6385f73595925a8480aee82b6c1057d38667
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
@@ -158,7 +159,7 @@ errno_t _itow_s(
  O tamanho do buffer em caracteres de byte único ou caracteres largos.  
   
  [in] `radix`  
- Base de `value`, que deve estar no intervalo de 2 a 36.  
+ Base do `value`; que deve estar no intervalo de 2 a 36.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Zero se for bem-sucedido; um código de erro em caso de falha. Se qualquer uma das condições a seguir se aplicar, a função invocará um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md).  
@@ -268,9 +269,6 @@ base 4: 33333333333333333333333333333333 (32 chars)
 base 3: 11112220022122120101211020120210210211220 (41 chars)  
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

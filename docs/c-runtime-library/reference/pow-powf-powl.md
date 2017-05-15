@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5dfcf2a0231bf961b0ca4ebebdec9871b7252fc7
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4400582a792644b928c02db346bc7eae1087dc85
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
@@ -165,12 +166,9 @@ int main( void )
 2.0 to the power of 3.0 is 8.0  
 ```  
   
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
-  
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, expf, SOL](../../c-runtime-library/reference/exp-expf.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [sqrt, sqrtf, sqrtl](../../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)   
  [_CIpow](../../c-runtime-library/cipow.md)

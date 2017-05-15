@@ -32,14 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 977d6d18381a4088e1c786ef8277118a9d2c0cb0
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 02fa074ac96c37d22ce29666b76766a71012b314
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="deferlockt-structure"></a>Estrutura defer_lock_t
-Representa um tipo que define um objeto [defer_lock](../standard-library/mutex-functions.md#defer_lock_variable) que é usado para selecionar um dos construtores sobrecarregados de [unique_lock](../standard-library/unique-lock-class.md).  
+Representa um tipo que define um objeto [defer_lock](../standard-library/mutex-functions.md#defer_lock) que é usado para selecionar um dos construtores sobrecarregados de [unique_lock](../standard-library/unique-lock-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +49,7 @@ struct defer_lock_t;
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** mutex  
+ **Cabeçalho:** \<mutex >  
   
  **Namespace:** std  
   

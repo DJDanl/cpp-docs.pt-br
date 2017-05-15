@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28210b879c227b2200a4d6f9811c1cf53fce2330
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e9500d86661334d59d29496031e8160fbdc99b2d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
@@ -109,7 +110,7 @@ errno_t _wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen_s`|`freopen_s`|`freopen_s`|`_wfreopen_s`|  
   
- `freopen_s` normalmente é usado para redirecionar os arquivos abertos previamente `stdin`, `stdout` e `stderr` para arquivos especificados pelo usuário. O novo arquivo associado a `stream` é aberto com `mode` *, *, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:  
+ `freopen_s` normalmente é usado para redirecionar os arquivos abertos previamente `stdin`, `stdout` e `stderr` para arquivos especificados pelo usuário. O novo arquivo associado `stream` é aberto com `mode`, que é uma cadeia de caracteres que especifica o tipo de acesso solicitado para o arquivo, da seguinte maneira:  
   
  `"r"`  
  Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada `freopen_s` falha.  
@@ -135,10 +136,10 @@ errno_t _wfreopen(
   
  O modo `"a"` não remove o marcador de EOF antes de ser acrescentado ao arquivo. Depois de a conexão ter ocorrido, o comando MS-DOS TYPE só mostra dados até o marcador de EOF original, e não qualquer dado anexado ao arquivo. O modo `"a+"` remove o marcador de EOF antes de ser acrescentado ao arquivo. Depois de anexar, o comando MS-DOS TYPE mostra todos os dados no arquivo. O modo `"a+"` é exigido para conexão com um arquivo de fluxo terminado com o marcador de EOF CTRL+Z.  
   
- Quando o tipo de acesso `"r+",``"w+",` ou `"a+"` é especificado, são permitidas leitura e gravação (diz-se que o arquivo está aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma operação [fsetpos](../../c-runtime-library/reference/fsetpos.md), [fseek](../../c-runtime-library/reference/fseek-fseeki64.md) ou [rewind](../../c-runtime-library/reference/rewind.md) intermediária. A posição atual pode ser especificada para a operação `fsetpos` ou `fseek`, se desejado. Além dos valores acima, um dos caracteres seguintes pode ser incluído na cadeia de caracteres `mode` para especificar o modo de conversão para novas linhas.  
+ Quando o `"r+"`, `"w+",` ou `"a+"` tipo de acesso for especificado, leitura e gravação são permitidas (o arquivo deve estar aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma operação [fsetpos](../../c-runtime-library/reference/fsetpos.md), [fseek](../../c-runtime-library/reference/fseek-fseeki64.md) ou [rewind](../../c-runtime-library/reference/rewind.md) intermediária. A posição atual pode ser especificada para a operação `fsetpos` ou `fseek`, se desejado. Além dos valores acima, um dos caracteres seguintes pode ser incluído na cadeia de caracteres `mode` para especificar o modo de conversão para novas linhas.  
   
  `t`  
- Abrir no modo de texto (convertido); combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em caracteres de LF (avanço de linha) simples na entrada, caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou para leitura e gravação com `"a+"`, a biblioteca em tempo de execução verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo. A opção `t` é uma extensão da Microsoft que não deve ser usada quando se desejar portabilidade ANSI.  
+ Abrir em texto (convertido) modo; combinações de retorno-alimentação de linha (CR LF) carro são convertidas em caracteres de avanço de linha (LF) único na entrada. LF caracteres são convertidos para combinações de CR LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou para leitura e gravação com `"a+"`, a biblioteca em tempo de execução verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo. A opção `t` é uma extensão da Microsoft que não deve ser usada quando se desejar portabilidade ANSI.  
   
  `b`  
  Abrir no modo binário (não convertido); as conversões acima são suprimidas.  
@@ -190,12 +191,6 @@ int main( void )
 successfully reassigned  
 This will go to the file 'freopen.out'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

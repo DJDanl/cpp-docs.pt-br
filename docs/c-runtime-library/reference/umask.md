@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 34209bdb0c1797b8220bbb54459de7594776107a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f2ad9c75caa5f3816ab4791dc4e67cb7937bfad4
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="umask"></a>_umask
@@ -78,7 +79,7 @@ int _umask(
  `_umask` retorna o valor anterior de `pmode`. Nenhum erro é retornado.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_umask` define a máscara de permissão de arquivo do processo atual para o modo especificado por `pmode` *.* A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por `_creat`, `_open` ou `_sopen`. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.  
+ O `_umask` função define a máscara de permissão de arquivo do processo atual para o modo especificado por `pmode`. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por `_creat`, `_open` ou `_sopen`. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.  
   
  A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\STAT.H:  
   
@@ -134,9 +135,6 @@ int main( void )
 ```Output  
 Oldmask = 0x0000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

@@ -37,17 +37,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 102682f0a48da8f0d9493bbacb3f690ea8dc8c2c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa02312073af18591d25e31d465b268153b56784
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="gslice-class"></a>Classe gslice
 Uma classe de utilitário para valarray que é usada para definir subconjuntos multidimensionais de um valarray. Se um valarray for considerado uma matriz multidimensional com todos os elementos em uma matriz, a fatia extrairá um vetor da matriz multidimensional.  
   
 ## <a name="remarks"></a>Comentários  
- A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_array](../standard-library/gslice-array-class.md). O subconjunto de um valarray é construído indiretamente quando um objeto da classe gslice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#valarray__operator_at)**\<Tipo>**. Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:  
+ A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_array](../standard-library/gslice-array-class.md). O subconjunto de um valarray é construído indiretamente quando um objeto da classe gslice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at)**\<Tipo>**. Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:  
   
 -   Um índice inicial.  
   
@@ -65,22 +66,22 @@ Uma classe de utilitário para valarray que é usada para definir subconjuntos m
   
 |||  
 |-|-|  
-|[gslice](#gslice__gslice)|Define um subconjunto de um `valarray` que consiste em várias fatias do `valarray` que são iniciados todos em um elemento especificado.|  
+|[gslice](#gslice)|Define um subconjunto de um `valarray` que consiste em várias fatias do `valarray` que são iniciados todos em um elemento especificado.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[size](#gslice__size)|Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um `valarray`.|  
-|[start](#gslice__start)|Localiza o índice inicial de uma fatia geral de um `valarray`.|  
-|[stride](#gslice__stride)|Encontra a distância entre os elementos em uma fatia geral de um `valarray`.|  
+|[size](#size)|Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um `valarray`.|  
+|[start](#start)|Localiza o índice inicial de uma fatia geral de um `valarray`.|  
+|[stride](#stride)|Encontra a distância entre os elementos em uma fatia geral de um `valarray`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<valarray>  
   
  **Namespace:** std  
   
-##  <a name="gslice__gslice"></a>  gslice::gslice  
+##  <a name="gslice"></a>  gslice::gslice  
  Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.  
   
 ```  
@@ -106,7 +107,7 @@ gslice(
  O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo construtor armazena `_StartIndex` para o índice inicial, `_LenArray` para a matriz de tamanho e `_IncArray` para a matriz de distância.  
   
 ### <a name="remarks"></a>Comentários  
- **gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice__slice). A primeira fatia tem um primeiro elemento com um índice de `_StartIndex`, um número de elementos especificado pelo primeiro elemento de `_LenArray` e uma distância fornecida pelo primeiro elemento de `_IncArray`. O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento de `_LenArray` especifica o número de elementos. A distância é fornecida pelo segundo elemento de `_IncArray`. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma  
+ **gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de `_StartIndex`, um número de elementos especificado pelo primeiro elemento de `_LenArray` e uma distância fornecida pelo primeiro elemento de `_IncArray`. O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento de `_LenArray` especifica o número de elementos. A distância é fornecida pelo segundo elemento de `_IncArray`. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma  
   
 ### <a name="example"></a>Exemplo  
   
@@ -155,7 +156,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)  
 ```  
   
-##  <a name="gslice__size"></a>  gslice::size  
+##  <a name="size"></a>  gslice::size  
  Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um valarray.  
   
 ```  
@@ -230,7 +231,7 @@ The size of vaResult is:
  vaGSlice.size ( ) = ( 4 4 ).  
 ```  
   
-##  <a name="gslice__start"></a>  gslice::start  
+##  <a name="start"></a>  gslice::start  
  Localiza o índice inicial de uma fatia geral de um valarray.  
   
 ```  
@@ -291,7 +292,7 @@ The valarray for vaGSlice is vaResult:
 The index of the first element of vaResult is: 0.  
 ```  
   
-##  <a name="gslice__stride"></a>  gslice::stride  
+##  <a name="stride"></a>  gslice::stride  
  Encontra a distância entre os elementos em uma fatia geral de um valarray.  
   
 ```  

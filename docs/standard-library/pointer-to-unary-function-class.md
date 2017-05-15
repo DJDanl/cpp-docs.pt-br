@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- xfunctional/std::pointer_to_unary_function
-- pointer_to_unary_function
-- std.pointer_to_unary_function
-- std::pointer_to_unary_function
+- xfunctional/std::pointer_to_unary
+- pointer_to_unary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f9e9b21833eb3d8c46d9bdf817a29350a77c22d4
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2089886ff915ce9176c883c9dc552f2a45b5c576
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
@@ -64,7 +63,7 @@ public:
  A função binária a ser convertida.  
   
  `left`  
- O objeto no qual o * \*pfunc* é chamado.  
+ O objeto no qual o  *\*pfunc* é chamado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  A classe de modelo armazena uma cópia de **pfunc**. Ela define sua função membro `operator()` como de retorno (\* **pfunc**)(_ *Left*).  
@@ -73,7 +72,7 @@ public:
  Um ponteiro de função unária é um objeto de função e pode ser passado para qualquer algoritmo da Biblioteca Padrão C++ que esperar uma função unária como parâmetro, mas não é adaptável. Para usá-lo com um adaptador, como ao associar um valor a ele ou usá-lo com um negador, ele deve receber os tipos aninhados **argument_type** e **result_type** que possibilitam essa adaptação. A conversão por `pointer_to_unary_function` permite que os adaptadores de função funcionem com ponteiros de função binária.  
   
 ## <a name="example"></a>Exemplo  
- O construtor de `pointer_to_unary_function` raramente é usado diretamente. Consulte a função auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) para ver um exemplo de como declarar e usar o predicado do adaptador `pointer_to_unary_function`.  
+ O construtor de `pointer_to_unary_function` raramente é usado diretamente. Consulte a função auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para ver um exemplo de como declarar e usar o predicado do adaptador `pointer_to_unary_function`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<functional>  

@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 20bf7b2bb40298bc624af279b093eadec85ab83a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 824e40d4c5879251fc029ad940b5fd6038fe4544
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
@@ -104,13 +105,13 @@ wchar_t *_ultow(
  Resultado de cadeia de caracteres.  
   
  `radix`  
- Base de `value`*.*  
+ Base de `value`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Cada uma dessas funções retorna um ponteiro para `str`. Nenhum erro é retornado.  
   
 ## <a name="remarks"></a>Comentários  
- As funções `_ultoa` convertem os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. Nenhuma verificação de estouro é executada. `radix` especifica a base de `value`; `radix` deve estar no intervalo 2 a 36. `_ultow` é uma versão de caractere largo de `_ultoa`.  
+ As funções `_ultoa` convertem os dígitos de `value` em uma cadeia de caracteres terminada em nulo e armazena o resultado (até 33 bytes) em `str`. Nenhuma verificação de estouro é executada. `radix`Especifica a base do `value`; `radix` deve estar no intervalo de 2 a 36. `_ultow` é uma versão de caractere largo de `_ultoa`.  
   
 > [!IMPORTANT]
 >  Para evitar estouros de buffer, verifique se o buffer `str` é grande o suficiente para manter os dígitos convertidos, além do caractere nulo à direita.  
@@ -134,9 +135,6 @@ wchar_t *_ultow(
   
 ## <a name="example"></a>Exemplo  
  Consulte o exemplo de [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

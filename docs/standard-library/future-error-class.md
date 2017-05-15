@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff8afe311b87ce7246306f23819190e0cd9e0c8f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 07d01d2efc3aadf1d8b5a585b7f4c7b8b76d87cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="futureerror-class"></a>Classe future_error
@@ -56,7 +57,7 @@ const char *what() const throw();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** future  
+ **Cabeçalho:** \<futuro >  
   
  **Namespace:** std  
   

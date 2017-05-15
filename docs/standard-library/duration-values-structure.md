@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::duration_values
+- chrono/std::chrono::duration_values::max
+- chrono/std::chrono::duration_values::min
+- chrono/std::chrono::duration_values::zero
 dev_langs:
 - C++
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
@@ -31,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8b0c02d4edc3a460f166cb65b312ef78337d403f
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b170debfdb4759b41963bc0faca13b3db11ad39a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="durationvalues-structure"></a>Estrutura duration_values
@@ -53,16 +57,16 @@ struct duration_values;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[duration_values::max](#duration_values__max_method)|Estático. Especifica o limite superior para um valor de tipo `Rep`.|  
-|[duration_values::min](#duration_values__min_method)|Estático. Especifica o limite inferior para um valor de tipo `Rep`.|  
-|[duration_values::zero](#duration_values__zero_method)|Estático. Retorna `Rep(0)`.|  
+|[max](#max)|Estático. Especifica o limite superior para um valor de tipo `Rep`.|  
+|[min](#min)|Estático. Especifica o limite inferior para um valor de tipo `Rep`.|  
+|[zero](#zero)|Estático. Retorna `Rep(0)`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std::chrono  
   
-##  <a name="a-namedurationvaluesmaxmethoda--durationvaluesmax"></a><a name="duration_values__max_method"></a>  duration_values::max  
+##  <a name="max"></a>  duration_values::max  
  Método estático que retorna o limite superior para valores do tipo `Ref`.  
   
 ```  
@@ -73,9 +77,9 @@ static constexpr Rep max();
  Na verdade, retorna `numeric_limits<Rep>::max()`.  
   
 ### <a name="remarks"></a>Comentários  
- Quando `Rep` é um tipo definido pelo usuário, o valor retornado deve ser maior que [duration_values::zero](#duration_values__zero_method).  
+ Quando `Rep` é um tipo definido pelo usuário, o valor retornado deve ser maior que [duration_values::zero](#zero).  
   
-##  <a name="a-namedurationvaluesminmethoda--durationvaluesmin"></a><a name="duration_values__min_method"></a>  duration_values::min  
+##  <a name="min"></a>  duration_values::min  
  Método estático que retorna o limite inferior para valores do tipo `Ref`.  
   
 ```  
@@ -86,9 +90,9 @@ static constexpr Rep min();
  Na verdade, retorna `numeric_limits<Rep>::lowest()`.  
   
 ### <a name="remarks"></a>Comentários  
- Quando `Rep` é um tipo definido pelo usuário, o valor retornado deve ser menor ou igual a [duration_values::zero](#duration_values__zero_method).  
+ Quando `Rep` é um tipo definido pelo usuário, o valor retornado deve ser menor ou igual a [duration_values::zero](#zero).  
   
-##  <a name="a-namedurationvalueszeromethoda--durationvalueszero"></a><a name="duration_values__zero_method"></a>  duration_values::zero  
+##  <a name="zero"></a>  duration_values::zero  
  Retorna `Rep(0)`.  
   
 ```  

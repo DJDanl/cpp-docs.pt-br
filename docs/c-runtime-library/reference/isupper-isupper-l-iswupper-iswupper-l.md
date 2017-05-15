@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7dd0f651bde3b990b45a96ce3256de2e04af4ebf
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ded3f62cc54e769e9b7ba17bd106a64daf14e63f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
@@ -96,7 +97,7 @@ int _iwsupper_l(
  Localidade a usar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de uma letra maiúscula. `isupper` retornará um valor diferente de zero se `c` for um caractere maiúsculo (A – Z). `iswupper` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra maiúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum de `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
+ Cada um dessas rotinas retornará um valor diferente de zero se `c` for uma representação específica de uma letra maiúscula. `isupper`Retorna um valor diferente de zero se `c` é um caractere maiusculo (A - Z). `iswupper` retornará um valor diferente de zero se `c` for um caractere largo que corresponde a uma letra maiúscula ou se `c` for um conjunto de caracteres largos definido pela implementação para o qual nenhum de `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` são diferentes de zero. Cada uma dessas rotinas retornará 0 se `c` não satisfizer a condição de teste.  
   
  As versões dessas funções que têm o sufixo `_l` usam a localidade passada em vez da localidade atual para seu comportamento que depende da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -119,9 +120,6 @@ int _iwsupper_l(
 |`_iswupper_l`|\<ctype.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Char::IsUpper](https://msdn.microsoft.com/en-us/library/system.char.isupper.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Classificação de caracteres](../../c-runtime-library/character-classification.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 4) C4295 | Documentos do Microsoft"
+title: "Compilador (nível 4) de aviso C4295 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,21 +33,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8afa9526c2a16c6a4062fd17480bd1d04bf51911
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: b831b8e7b838ef25679d49a132c66d4b378fdcd7
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Compilador C4295 de aviso (nível 4)
-**'**   
- ***matriz* ': matriz é muito pequena para incluir um caractere nulo de terminação**  
   
- Uma matriz foi inicializada, mas o último caractere na matriz não é nulo; acessando a matriz pode produzir resultados inesperados.  
+> '*matriz*': matriz é muito pequena para incluir um caractere null de terminação  
   
- O exemplo a seguir gera C4295:  
+ Uma matriz foi inicializada, mas o último caractere na matriz não é um valor nulo; acessar a matriz pode produzir resultados inesperados.  
   
-```  
+## <a name="example"></a>Exemplo  
+  
+ O exemplo a seguir gera C4295. Para corrigir esse problema, você pode declarar o tamanho da matriz maior, para manter uma terminação nula do inicializador.  
+  
+```C  
 // C4295.c  
 // compile with: /W4  
   

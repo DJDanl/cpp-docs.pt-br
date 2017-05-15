@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a0b5e3ee0d244466a4f40a9b0557da715b736a8
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9d9e6b0b281fb97475b0c23acb4bf7d0fc391a52
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="treatasfloatingpoint-structure"></a>Estrutura treat_as_floating_point
@@ -48,10 +49,10 @@ struct treat_as_floating_point : is_floating_point<Rep>;
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `Rep` pode ser tratado como um tipo de ponto flutuante somente quando a especialização `treat_as_floating_point<Rep>` é derivada de [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). A classe de modelo pode ser especializada para um tipo definido pelo usuário.  
+ `Rep` pode ser tratado como um tipo de ponto flutuante somente quando a especialização `treat_as_floating_point<Rep>` é derivada de [true_type](../standard-library/type-traits-typedefs.md#true_type). A classe de modelo pode ser especializada para um tipo definido pelo usuário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std::chrono  
   

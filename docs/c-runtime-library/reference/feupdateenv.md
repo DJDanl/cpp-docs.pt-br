@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feupdateenv"></a>feupdateenv
@@ -66,12 +67,12 @@ int feupdateenv(
 );  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parâmetros  
  `penv`  
- Ponteiro para um objeto `fenv_t` que contém um ambiente de ponto flutuante conforme definido por uma chamada a [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) ou [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9). Você também pode especificar o ambiente de ponto flutuante de inicialização padrão usando a macro FE_DFL_ENV.  
+ Ponteiro para um objeto `fenv_t` que contém um ambiente de ponto flutuante conforme definido por uma chamada a [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Você também pode especificar o ambiente de ponto flutuante de inicialização padrão usando a macro FE_DFL_ENV.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna 0 se todas as ações forem concluídas com êxito.        Caso contrário, retornará um valor diferente de zero.  
+ Retorna 0 se todas as ações forem concluídas com êxito. Caso contrário, retornará um valor diferente de zero.  
   
 ## <a name="remarks"></a>Comentários  
  A função `feupdateenv` executa várias ações. Primeiro, ela armazena os sinalizadores atuais de status de exceção de ponto flutuante gerados no armazenamento automático. Então, define o ambiente atual de ponto flutuante dos valores armazenados no objeto `fenv_t` apontado por `penv`. Se `penv` não for FE_DFL_ENV ou não apontar para um objeto `fenv_t` válido, o comportamento subsequente será indefinido. Por fim, `feupdateenv` gera as exceções de ponto flutuante armazenadas localmente.  

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f4d60d84abb9b7069a7cbdfabe9157cdcc235652
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 82b12ebfbff06c19a863bec7d8be2e6677c0148e
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="open-wopen"></a>_open, _wopen
@@ -261,12 +262,6 @@ int main( void )
 Open succeeded on input file  
 Open succeeded on output file  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de nível inferior](../../c-runtime-library/low-level-i-o.md)   

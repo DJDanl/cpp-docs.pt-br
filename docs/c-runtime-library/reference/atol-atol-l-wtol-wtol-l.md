@@ -71,10 +71,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 10b5ef0a2517ab532539f48d88abc93324bf84ca
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f97508221ae8056a2a997033c458f0250a678e2b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
@@ -120,7 +121,7 @@ long _wtol_l(
   
  [`whitespace`] [`sign`] [`digits`]]  
   
- Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de mais (+) ou menos (-); e `digits` são um ou mais dígitos.  
+ Um `whitespace` consiste em caracteres de espaço ou tabulação, que são ignorados; `sign` é um sinal de adição (+) ou menos (-); e `digits` são um ou mais dígitos.  
   
  `_wtol` é idêntico a `atol`, exceto que assume uma cadeia de caracteres largos.  
   
@@ -187,12 +188,6 @@ Function: atol( "314127.64" ) = 314127
 Function: atol( "3336402735171707160320" ) = 2147483647  
 Overflow condition occurred.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

@@ -62,10 +62,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cf27b397130bbcb29fe93dac871a4b11d34e54ea
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e130b125651c29a4ba2607b47b02b95c81468869
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
@@ -117,28 +118,28 @@ errno_t _gmtime64_s(
  Cada um dos campos da estrutura é do tipo `int`, conforme mostrado na tabela a seguir.  
   
  `tm_sec`  
- Segundos após o minuto (0 – 59).  
+ Segundos após minuto (0 - 59).  
   
  `tm_min`  
- Minutos após a hora (0 – 59).  
+ Minutos após a hora (0 - 59).  
   
  `tm_hour`  
- Horas desde a meia-noite (0 – 23).  
+ Horas desde a meia-noite (0 - 23).  
   
  `tm_mday`  
- Dia do mês (1 – 31).  
+ Dia do mês (1-31).  
   
  `tm_mon`  
- Mês (0 – 11; janeiro = 0).  
+ Mês (0 - 11; Janeiro = 0).  
   
  `tm_year`  
  Ano (ano atual menos 1900).  
   
  `tm_wday`  
- Dia da semana (0 – 6; domingo = 0).  
+ Dia da semana (0 - 6; Domingo = 0).  
   
  `tm_yday`  
- Dia do ano (0 – 365; 1º de janeiro = 0).  
+ Dia do ano (0 - 365; 1 de janeiro = 0).  
   
  `tm_isdst`  
  Sempre 0 para `gmtime`.  
@@ -200,12 +201,6 @@ int main( void )
 ```Output  
 Coordinated universal time is Fri Apr 25 20:12:33 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::DateTime::UtcNow](https://msdn.microsoft.com/en-us/library/system.datetime.utcnow.aspx)  
-  
--   [System::DateTime::ToUniversalTime](https://msdn.microsoft.com/en-us/library/system.datetime.touniversaltime.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciamento de Tempo](../../c-runtime-library/time-management.md)   

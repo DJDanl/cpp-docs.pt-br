@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cc4d393a6a6b679db98a7bc45aa689ca7f5be738
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7eb1bb55bd153f4ef5387b616b72f611e3a50a9f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
@@ -90,7 +91,7 @@ wint_t fputwc(
  Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Cada uma dessas funções grava o caractere único `c` em um arquivo na posição indicada pelo indicador de posição do arquivo associado (se definido) e avança o indicador conforme apropriado. No caso de `fputc` e `fputwc`, o arquivo está associado a `stream`*.* Se o arquivo não puder dar suporte a solicitações de posicionamento ou tiver sido aberto no modo de acréscimo, o caractere será acrescentado ao final do fluxo.  
+ Cada uma dessas funções grava o caractere único `c` em um arquivo na posição indicada pelo indicador de posição do arquivo associado (se definido) e avança o indicador conforme apropriado. No caso de `fputc` e `fputwc`, o arquivo está associado com `stream`. Se o arquivo não puder dar suporte a solicitações de posicionamento ou tiver sido aberto no modo de acréscimo, o caractere será acrescentado ao final do fluxo.  
   
  As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. Atualmente, `fputc` não dá suporte à saída em um fluxo UNICODE.  
   
@@ -142,12 +143,6 @@ int main( void )
 ```Output  
 This is a test of fputc!!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

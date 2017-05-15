@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK2001 erro | Documentos do Microsoft
+title: Ferramentas de vinculador LNK2001 erro | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,132 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: 3629075e5659cb89ab751b011f3ce2cbf89397cc
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c7a2d48507c5c6f5f6c469f0a524e6e392bdd166
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erro das Ferramentas de Vinculador LNK2001
-símbolo externo não resolvido "símbolo"  
+símbolo externo não resolvido "*símbolo*"  
   
- Código fizer referência a algo (como uma função, variável ou rótulo) que não é possível localizar o vinculador em bibliotecas e arquivos de objeto.  
+O código compilado faz uma referência ou uma chamada para *símbolo*, mas esse símbolo não está definido em qualquer uma das bibliotecas ou arquivos de objeto especificados para o vinculador.  
   
- Essa mensagem de erro é seguida por um erro fatal [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md).  
+Essa mensagem de erro é seguida por erro fatal [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Você deve corrigir todos os LNK2001 e LNK2019 erros para corrigir o erro LNK1120.  
   
- **Possíveis causas**  
+## <a name="possible-causes"></a>Causas possíveis  
   
--   Ao atualizar uma biblioteca gerenciada ou um projeto de serviço web do Visual C++ 2003, o **/Zl** opção de compilador é adicionada para o **linha de comando** página de propriedades. Isso fará com que LNK2001.  
+Há muitas maneiras de obter esse erro, mas todos eles envolvem uma referência a uma função ou variável que não é possível o vinculador *resolver*, ou localizar uma definição para. O compilador pode identificar quando um símbolo não é *declarado*, mas não quando ele não está *definido*, porque a definição pode estar em um arquivo de origem diferente ou na biblioteca. Se um símbolo é chamado, mas nunca é definido, o vinculador gerará um erro.  
   
-     Para resolver esse erro, adicione Msvcrt e msvcmrt.lib a propriedade de dependências adicionais do vinculador. Ou, remover **/Zl** do **linha de comando** página de propriedades. Para obter mais informações, consulte [/Zl (omitir a nome de biblioteca padrão)](../../build/reference/zl-omit-default-library-name.md) e [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+### <a name="coding-issues"></a>Problemas de codificação  
   
--   O que o código solicita não existe (o símbolo é escrito incorretamente ou usa o caso errado, por exemplo).  
+Esse erro pode ser causado por caso não correspondente no seu código-fonte ou a definição de módulo (. def) arquivos. Por exemplo, se você nomear uma variável `var1` em C++ de um arquivo de origem e tentar acessá-lo como `VAR1` em outro, esse erro é gerado. Para corrigir esse problema, use consistentemente escrito e nomes de maiusculas e minúsculas.  
   
--   O código solicita algo errado (você está usando diferentes versões das bibliotecas, alguns a partir de uma versão do produto, outras pessoas de outra versão).  
+Esse erro pode ocorrer em um projeto que usa [inlining de função](../../error-messages/tool-errors/function-inlining-problems.md) se você definir as funções em um arquivo de origem em vez de um arquivo de cabeçalho. Funções embutidas não podem ser vistas fora do arquivo de origem que defini-los. Para corrigir esse problema, defina as funções embutidas em cabeçalhos de onde eles são declarados.  
   
- **Causas específicas**  
+Esse erro pode ocorrer se você chamar uma função de C a partir de um programa C++ sem usar um `extern "C"` declaração da função de C. O compilador usa convenções de nomenclatura de símbolo internos diferentes para código C e C++, e é o nome do símbolo interno que o vinculador procura durante a resolução de símbolos. Para corrigir esse problema, use um `extern "C"` wrapper em torno de todas as declarações de funções de C usadas no seu código C++, o que faz com que o compilador para usar a convenção de nomenclatura interna C para os símbolos. Opções do compilador [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) e [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) fazer com que o compilador compilar arquivos como C++ ou C, respectivamente, independentemente da extensão de nome de arquivo. Essas opções podem causar nomes de função interna diferentes da esperada.  
   
- **Problemas de codificação**  
+Esse erro pode ser causado por uma tentativa de fazer referência a funções ou dados que não tem ligação externa. No C++, funções embutidas e `const` dados tem vinculação interna, a menos que explicitamente especificado como `extern`. Para corrigir esse problema, use explícita `extern` declarações em símbolos chamado fora do arquivo de origem de definição.  
   
--   Se o texto de diagnóstico LNK2001 relata que `__check_commonlanguageruntime_version` é um símbolo externo não resolvido, consulte [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) para obter informações sobre como resolver.  
+Esse erro pode ser causado por um [corpo da função ou variável ausente](../../error-messages/tool-errors/missing-function-body-or-variable.md) definição. Esse erro é comum quando você declarar, mas não define, variáveis, funções ou classes no seu código. O compilador só precisa de um protótipo de função ou `extern` declaração de variável para gerar um arquivo de objeto sem erro, mas o vinculador não pode resolver uma chamada para a função ou uma referência à variável porque não há nenhum código de função ou variável espaço reservado. Para corrigir esse problema, certifique-se de que cada função referenciada e a variável está totalmente definida em uma biblioteca incluída em seu link ou o arquivo de origem.  
   
--   A definição de modelo de membro está fora da classe. Visual C++ tem uma limitação na qual os modelos de membro devem ser totalmente definidos dentro da classe delimitadora. Consulte o artigo Q239436 para obter mais informações sobre modelos LNK2001 e membro.  
+Esse erro pode ser causado por uma chamada de função que usa tipos de retorno e parâmetro ou convenções de chamada que não coincide com a definição da função. Nos arquivos de objeto C++, [decoração de nome](../../error-messages/tool-errors/name-decoration.md) incorpora a convenção de chamada, escopo de classe ou namespace e tipos de retorno e parâmetro de uma função o nome de função decorados final, que é usado como o símbolo para corresponder ao chamadas para a função de outros arquivos de objeto são resolvidas. Para corrigir esse problema, verifique se a declaração, definição e chamadas para a função todos usam os mesmos escopos, tipos e convenções de chamada.  
   
--   Incompatível caso em seu código ou a definição de módulo (. def) o arquivo pode causar LNK2001. Por exemplo, se você nomeou uma variável `var1` em um C++ arquivo de origem e tentou acessá-lo como `VAR1` em outro.  
+Esse erro pode ser causado no código C++, quando você incluir um protótipo de função em uma definição de classe, mas não conseguir [incluem a implementação](../../error-messages/tool-errors/missing-function-body-or-variable.md) da função e, em seguida, chamá-lo. Para corrigir esse problema, certifique-se de fornecer uma definição para todas as chamadas declarado como membros de uma classe.  
   
--   Um projeto que usa [inlining de função](../../error-messages/tool-errors/function-inlining-problems.md) ainda define as funções em um arquivo. cpp, em vez de no cabeçalho do arquivo pode causar LNK2001.  
+Esse erro pode ser causado por uma tentativa de chamar uma função virtual pura de uma classe base abstrata. Uma função virtual pura não tem nenhuma implementação de classe base. Para corrigir esse problema, verifique se todas as chamadas de funções virtuais são implementadas.  
   
--   Chamar uma função de C a partir de um programa C++ sem usar `extern` "C" (que faz com que o compilador para usar a convenção de nomenclatura de C) pode causar LNK2001. Opções do compilador [/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) e [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) fazer com que o compilador compilar arquivos como C++ ou C, respectivamente, independentemente da extensão de nome de arquivo. Essas opções podem causar nomes de função diferentes do esperado.  
+Esse erro pode ser causado pela tentativa de usar uma variável declarada dentro de uma função ([uma variável local](../../error-messages/tool-errors/automatic-function-scope-variables.md)) fora do escopo dessa função. Para corrigir esse problema, remova a referência à variável que não está no escopo ou mover a variável para um escopo mais alto.  
   
--   Tentativa de fazer referência a funções ou dados que não têm vinculação externa pode causar LNK2001. No C++, funções embutidas e `const` dados tem vinculação interna, a menos que explicitamente especificada como `extern`.  
+Esse erro pode ocorrer quando você criar uma versão de lançamento de um projeto de ATL produzir uma mensagem de que o código de inicialização do CRT é necessário. Para corrigir esse problema, faça o seguinte  
   
--   A [corpo da função ou variável ausente](../../error-messages/tool-errors/missing-function-body-or-variable.md) pode causar LNK2001. Com apenas um protótipo de função ou `extern` declaração o compilador pode continuar sem erro, mas o vinculador não pode resolver uma chamada para um endereço ou uma referência a uma variável porque não há nenhum código de função ou variável espaço reservado.  
+-   Remover `_ATL_MIN_CRT` da lista de pré-processador define para permitir que o código de inicialização do CRT ser incluído. Consulte [página de propriedade geral (projeto)](../../ide/general-property-page-project.md) para obter mais informações.  
   
--   Chamar uma função com os tipos de parâmetro que não corresponderem na declaração de função pode causar LNK2001. [Decoração de nome](../../error-messages/tool-errors/name-decoration.md) incorpora os parâmetros de uma função o nome decorado de função final.  
+-   Se possível, remova as chamadas a funções de CRT que exigem o código de inicialização do CRT. Em vez disso, use seus equivalentes do Win32. Por exemplo, use `lstrcmp` em vez de `strcmp`. Funções conhecidas que exigem o código de inicialização do CRT são algumas das funções de ponto flutuante e cadeia de caracteres.  
   
--   Incorretamente protótipos incluídos, o que fazer com que o compilador espera um corpo da função que não é fornecido podem causar LNK2001. Se você tiver uma classe e a classe não implementação de uma função `F`, lembre-se das regras de resolução de escopo do C++.  
+### <a name="compilation-and-link-issues"></a>Problemas de compilação e link  
   
--   Ao usar o C++, incluindo um protótipo de função em uma definição de classe e deixar de [incluem a implementação](../../error-messages/tool-errors/missing-function-body-or-variable.md) da função para essa classe pode causar LNK2001.  
+Esse erro pode ocorrer quando o projeto está faltando uma referência a uma biblioteca (. LIB) ou o objeto (. Arquivo OBJ). Para corrigir esse problema, adicione uma referência para o arquivo de objeto ou uma biblioteca necessária ao seu projeto. Para obter mais informações, consulte [arquivos. lib como entrada de vinculador](../../build/reference/dot-lib-files-as-linker-input.md).  
   
--   Tentar chamar uma função virtual pura de construtor ou destruidor de uma classe base abstrata pode causar LNK2001. Uma função virtual pura não tem nenhuma implementação da classe base.  
+Esse erro pode ocorrer se você usar o [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) ou [/Zl](../../build/reference/zl-omit-default-library-name.md) opções. Quando você especificar essas opções, bibliotecas que contenham código necessário não estão vinculadas para o projeto, a menos que você os ter incluído explicitamente. Para corrigir esse problema, inclua explicitamente todas as bibliotecas que você usa na linha de comando de link. Se você vir muitos nomes de funções CRT ou biblioteca padrão ausentes quando você usar essas opções, inclua explicitamente os arquivos CRT e DLLs de biblioteca padrão ou biblioteca no link.  
+
+Se você compilar usando o **/clr** opção, pode haver faltando uma referência a cctor. Para corrigir esse problema, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md) para obter mais informações.  
   
--   Tentativa de usar uma variável declarada dentro de uma função ([uma variável local](../../error-messages/tool-errors/automatic-function-scope-variables.md)) fora do escopo dessa função pode causar LNK2001.  
+Esse erro pode ocorrer se você vincular as bibliotecas de modo de versão ao criar uma versão de depuração de um aplicativo. Da mesma forma, se você usar opções **/MTd** ou **/MDd** ou definir `_DEBUG` e, em seguida, um link para as bibliotecas de versão, você deve esperar que muitos externos não resolvidos potenciais, entre outros problemas. Vincular um build de modo de versão com as bibliotecas de depuração também causa problemas semelhantes. Para corrigir esse problema, verifique se você usar as bibliotecas de depuração em compilações de depuração e bibliotecas de varejo no seu varejo cria.  
   
--   Ao criar uma versão de um projeto ATL, indica que o código de inicialização do CRT é necessário. Para corrigir, faça o seguinte  
+Esse erro pode ocorrer se o código se refere a um símbolo de uma versão de uma biblioteca, mas você fornecer uma versão diferente da biblioteca para o vinculador. Em geral, você não pode misturar arquivos de objeto ou bibliotecas que são criadas para diferentes versões do compilador. As bibliotecas que são enviados em uma nova versão podem conter símbolos que não podem ser encontrados nas bibliotecas do incluídos com versões anteriores e vice-versa. Para corrigir esse problema, crie todos os arquivos de objeto e bibliotecas com a mesma versão do compilador antes de vinculá-los juntos.  
   
-    -   Remover `_ATL_MIN_CRT` da lista de pré-processador define para permitir que o código de inicialização CRT ser incluído. Consulte [página de propriedade de configurações de configuração geral](../../ide/general-property-page-project.md) para obter mais informações.  
+-  As ferramentas de &#124; Opções &#124; Projetos &#124; Caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa de biblioteca. A pasta de vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que podem estar desatualizados.  
   
-    -   Se possível, remova chamadas a funções de CRT que exigem o código de inicialização do CRT. Em vez disso, use o seus equivalentes no Win32. Por exemplo, use `lstrcmp` em vez de `strcmp`. Funções conhecidas que exigem o código de inicialização CRT são algumas das funções de ponto flutuante e cadeia de caracteres.  
+-  Esse problema pode aparecer quando um novo SDK está instalado (talvez em um local diferente), e a ordem de pesquisa não é atualizada para apontar para o novo local. Normalmente, você deve colocar o caminho para o novo SDK incluem e lib diretórios na frente do local do Visual C++ padrão. Além disso, um projeto que contém os caminhos inseridos ainda pode apontar para antigos caminhos que são válidos, mas atualizadas para a nova funcionalidade adicionada pela nova versão que está instalada em um local diferente.  
   
- **Compilando e vinculando problemas**  
+-   Se você compilar na linha de comando e criar suas próprias variáveis de ambiente, verifique se os caminhos para arquivos de cabeçalho, bibliotecas e ferramentas Ir para uma versão consistente. Para obter mais informações, consulte [Configurar o caminho e variáveis de ambiente para Builds de linha de comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
   
--   O projeto não tem uma referência a uma biblioteca (. LIB) ou objeto (. Arquivos OBJ). Consulte [arquivos. lib como entrada de vinculador](../../build/reference/dot-lib-files-as-linker-input.md) para obter mais informações.  
+Atualmente, há um padrão para [C++ nomenclatura](../../error-messages/tool-errors/name-decoration.md) entre os fornecedores de compilador ou até mesmo entre versões diferentes de um compilador. Portanto, vincular arquivos de objeto compilados com outros compiladores pode não produzir o mesmo esquema de nomenclatura e, portanto, causar erro LNK2001.  
   
--   Se você usar [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) ou [/Zl](../../build/reference/zl-omit-default-library-name.md), bibliotecas que contém o código necessário não serão vinculadas ao projeto, a menos que você os tenha incluído explicitamente. (Ao compilar com **/clr** ou **/clr: puro**, você verá uma referência ao cctor; consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md) para obter mais informações.)  
+[Opções de compilação de mixagem embutido e não embutido](../../error-messages/tool-errors/function-inlining-problems.md) em módulos diferentes pode causar LNK2001. Se uma biblioteca C++ é criada com a função inlining ativada (**/Ob1** ou **/Ob2**), mas o arquivo de cabeçalho que descrevem as funções tem inlining desativado (nenhum `inline` palavra-chave), esse erro ocorre. Para corrigir esse problema, defina as funções `inline` no arquivo de cabeçalho incluem em outros arquivos de origem.  
   
--   Se você estiver usando Unicode e MFC, você obterá um externo não resolvido em `_WinMain@16` se você não criar um ponto de entrada para `wWinMainCRTStartup`; use o [/ENTRY](../../build/reference/entry-entry-point-symbol.md). Consulte [resumo de programação Unicode](../../text/unicode-programming-summary.md).  
+Se você usar o `#pragma inline_depth` compilador diretiva, não se esqueça de você ter um [valor 2 ou maior conjunto](../../error-messages/tool-errors/function-inlining-problems.md)e verifique se você usar também o [/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md) opção de compilador.  
   
-     Consulte os seguintes artigos da Base de dados de Conhecimento, localizados na biblioteca do MSDN para obter mais informações. Na biblioteca do MSDN, clique o **pesquisa** guia, cole o número ou o título do artigo na caixa de texto e, em seguida, clique em **Listar tópicos**. Se você procurar o número do artigo, verifique se o **pesquisar somente títulos** opção é clara.  
+Esse erro pode ocorrer se você omitir o LINK opção /NOENTRY quando você criar uma DLL somente de recursos. Para corrigir esse problema, adicione a opção /NOENTRY para o comando de link.  
   
-    -   Q125750 "PRB: Error LNK2001: '_WinMain@16': não resolvidos símbolo externo"  
+Esse erro pode ocorrer se você usar configurações de /ENTRY ou /SUBSYSTEM incorreta em seu projeto. Por exemplo, se você escreve um aplicativo de console e especificar /Subsystem: Windows, um erro externo não resolvido é gerado para `WinMain`. Para corrigir esse problema, certifique-se de que corresponde às opções para o tipo de projeto. Para obter mais informações sobre essas opções e os pontos de entrada, consulte o [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [/ENTRY](../../build/reference/entry-entry-point-symbol.md) opções do vinculador.  
   
-    -   Q131204 "PRB: seleção do projeto incorreto causa LNK2001 em _WinMain@16"  
+### <a name="exported-symbol-issues"></a>Problemas de símbolo exportado  
   
-    -   Q100639 "suporte Unicode no Microsoft Foundation Class Library"  
+Esse erro ocorre quando uma exportação listada em um arquivo. def não foi encontrada. Isso pode ser porque não existe, está escrito incorretamente ou usa nomes decorados do C++. Um arquivo. def não tem nomes decorados. Para corrigir esse problema, remova exportações desnecessárias e usar `extern "C"` declarações para símbolos exportados.  
   
-    -   Q291952 "PRB: Link Error LNK2001: Main símbolo externo não resolvido"  
+## <a name="what-is-an-unresolved-external-symbol"></a>O que é um símbolo externo não resolvido?  
   
--   Vinculação de código compilado com /MT com a biblioteca de libc. lib causa LNK2001 em `_beginthread`, `_beginthreadex`, `_endthread`, e `_endthreadex`.  
+Um *símbolo* é o nome de uma função ou variável global usado internamente por um arquivo de objeto compilado ou biblioteca. É um símbolo *definido* no arquivo de objeto em que o armazenamento é alocado para uma variável global, ou uma função, onde o código compilado para o corpo da função é colocado. Um *símbolo externo* é um símbolo que *referenciado*, ou seja, usado ou chamado no arquivo de um objeto, mas definidos em um arquivo de biblioteca ou objeto diferente. Um *exportado símbolo* é aquele que é disponibilizado publicamente, o arquivo de objeto ou a biblioteca que o define. O vinculador deve *resolver*, ou localizar a definição correspondente para cada símbolo externo referenciado por um arquivo de objeto quando ele está vinculado em um aplicativo ou DLL. O vinculador gerará um erro quando ele não é possível resolver um símbolo externo ao localizar um correspondência símbolo exportado em qualquer um dos arquivos vinculados.    
   
--   Vinculação de código que exigem as bibliotecas multithread (qualquer código MFC ou código compilado com [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)) faz com que o LNK2001 em [beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md), `_beginthreadex`, [endthread](../../c-runtime-library/reference/endthread-endthreadex.md), e `_endthreadex`. Consulte o seguinte artigo da Base de dados de conhecimento para obter mais informações:  
+## <a name="use-the-decorated-name-to-find-the-error"></a>Use o nome decorado para localizar o erro
   
-    -   Q126646 "PRB: mensagem de erro: LNK2001 em __beginthreadex e \_endthreadex"  
+O uso de compilador e vinculador C++ [decoração do nome](../../error-messages/tool-errors/name-decoration.md), também conhecido como *desconfiguração nome*para codificar informações extras sobre o tipo de uma variável ou o tipo de retorno, tipos de parâmetro, escopo e convenção de chamada de uma função no nome do símbolo. Esse nome decorado é o nome do símbolo procura o vinculador para resolver os símbolos externos.  
   
-    -   Q128641 "INFO: /Mx opções do compilador e o LIBC, LIBCMT, as bibliotecas do MSVCRT"  
+Como as informações extras se torna parte do nome do símbolo, um erro de link pode acontecer se a declaração de uma função ou variável corresponder exatamente a definição da função ou variável. Isso pode ocorrer mesmo que o mesmo arquivo de cabeçalho é usado no código de chamada e o código de definição, se os sinalizadores de compilador diferentes são usados ao compilar os arquivos de origem. Por exemplo, você pode obter esse erro se a compilação do código para usar o `__vectorcall` convenção de chamada, mas você vincular a uma biblioteca que espera que os clientes chamá-la usando o padrão `__cdecl` ou `__fastcall` convenção de chamada. Nesse caso, os símbolos não coincidem porque as convenções de chamada são diferentes   
   
-    -   Q166504 "PRB: MFC e CRT devem corresponder em debug/release e estáticas e dinâmicas"  
+Para ajudá-lo a encontrar a causa desse tipo de erro, a mensagem de erro do vinculador mostra ambos o "nome amigável," o nome usado no código-fonte e o nome decorado (entre parênteses) para o símbolo externo não resolvido. Você não precisa saber como converter o nome decorado para poder compará-lo com outros nomes decorados. Você pode usar ferramentas de linha de comando que estão incluídas com o compilador para comparar o nome do símbolo esperado e o nome do símbolo real:  
+
+-   O [/EXPORTA](../../build/reference/dash-exports.md) e [/símbolos](../../build/reference/symbols.md) opções da ferramenta de linha de comando DUMPBIN podem ajudá-lo a descobrir quais símbolos são definidos nos arquivos. dll e o objeto ou a biblioteca. Você pode usar isso para verificar se o exportado decorado correspondência de nomes que de decorado nomeia o vinculador procura.  
   
--   Ao compilar com **/MD**, uma referência ao "func" em sua fonte se torna uma referência "`__imp__func`" no objeto desde que todo o tempo de execução agora é mantido em uma DLL. Se você tentar vincular com as bibliotecas estáticas libc. lib ou libcmt, você obterá LNK2001 em `__imp__func`. Se você tentar vincular com MSVCxx.lib ao compilar sem /MD sempre não obterá LNK2001, mas você provavelmente terá problemas.  
+Em alguns casos, o vinculador só pode relatar o nome decorado para um símbolo. Você pode usar a ferramenta de linha de comando UNDNAME para obter o formulário não decorado de nome decorado.  
   
--   Vinculação com as bibliotecas de modo de versão ao criar uma versão de depuração de um aplicativo pode causar LNK2001. Da mesma forma, usando um **/Mxd** opção (**/MTd**, ou **/MDd**) e/ou definindo `_DEBUG` e, em seguida, vincular com as bibliotecas de versão dê potenciais externos não resolvidos (entre outros). Vincular uma compilação de modo de versão com as bibliotecas de depuração também causará problemas semelhantes.  
+## <a name="additional-resources"></a>Recursos adicionais  
   
--   Mistura de versões de bibliotecas da Microsoft e produtos de compilador pode ser problemático. Bibliotecas de uma versão do compilador novo podem conter novos símbolos que não podem ser encontrados nas bibliotecas incluídas com versões anteriores. Você talvez queira alterar a ordem dos diretórios no caminho de pesquisa ou alterá-los para apontar para a versão atual.  
-  
-     As ferramentas | Opções | Projetos | Caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa. A pasta do vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que podem estar desatualizados.  
-  
-     Este problema pode ocorrer quando um novo SDK está instalado (talvez em outro local) e a ordem de pesquisa não é atualizada para apontar para o novo local. Normalmente, você deve colocar o caminho para os novos SDKs incluem e lib diretórios na frente o local padrão do Visual C++. Além disso, um projeto que contém os caminhos inseridos ainda pode apontar para caminhos antigos válido, mas é atualizado para a nova funcionalidade adicionada pela nova versão que está instalado em um local diferente.  
-  
--   Atualmente, há um padrão para [C++ nomenclatura](../../error-messages/tool-errors/name-decoration.md) entre fornecedores de compilador ou até mesmo entre versões diferentes de um compilador. Portanto, vincular arquivos de objeto compilados com outros compiladores pode não produzir o mesmo esquema de nomenclatura e, portanto, causar erro LNK2001.  
-  
--   [Opções de compilação de mixagem embutido e não embutida](../../error-messages/tool-errors/function-inlining-problems.md) nos diferentes módulos podem causar LNK2001. Se uma biblioteca C++ é criada pela função inlining ativada (**/Ob1** ou **/Ob2**), mas o arquivo de cabeçalho correspondente que descreve as funções tem inlining desativado (nenhum `inline` palavra-chave), você receberá esse erro. Para evitar esse problema, as funções embutidas definiu com `inline` no arquivo de cabeçalho que você pretende incluir em outros arquivos.  
-  
--   Se você estiver usando o `#pragma inline_depth` compilador diretiva, verifique se você tem uma [valor de conjunto 2 ou posterior](../../error-messages/tool-errors/function-inlining-problems.md)e verifique se você estiver usando o [/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md) opção de compilador.  
-  
--   Omitindo a opção LINK /NOENTRY durante a criação de uma DLL somente recurso fará com que LNK2001.  
-  
--   O uso de configurações incorretas de /SUBSYSTEM ou /ENTRY pode causar LNK2001. Por exemplo, se você escreve um aplicativo baseado em caracteres (um aplicativo de console) e especificar /SUBSYSTEM:WINDOWS, obterá um externo não resolvido para `WinMain`. Para obter mais informações sobre essas opções e os pontos de entrada, consulte o [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [/ENTRY](../../build/reference/entry-entry-point-symbol.md) opções do vinculador.  
-  
- **Problemas de exportação**  
-  
--   Quando você estiver portando um aplicativo de 16 a 32 ou 64 bits, LNK2001 podem ocorrer. A sintaxe do arquivo de definição de módulo (. def) atual requer que `__cdecl`, `__stdcall`, e `__fastcall` funções listado na seção EXPORTS sem sublinhados (não decorados). Isso difere da sintaxe de 16 bits, onde eles devem ser listados com sublinhados (decorados). Para obter mais informações, consulte a descrição do [exportações](../../build/reference/exports.md) seção dos arquivos de definição de módulo.  
-  
--   LNK2001 fará com que qualquer exportação listados no arquivo. def e não encontrado. Isso pode ser porque ele não existe, está escrito incorretamente ou usa nomes decorado C++ (arquivos. def não têm nomes decorados)  
-  
- **Interpretando a saída**  
-  
- Quando um símbolo é não resolvido, você pode obter informações sobre a função as seguintes diretrizes:  
-  
- Em x86 plataformas, a decoração de convenção de chamada para nomes compilado em C, ou para extern "C" nomes em C++, é:  
-  
- `__cdecl`  
- Função tem um prefixo de sublinhado (_).  
-  
- `__stdcall`  
- Função tem um prefixo de sublinhado (_) e um @ sufixo seguido dword alinhado tamanho dos parâmetros na pilha.  
-  
- `__fastcall`  
- Função tem um prefixo @ e um @ sufixo seguido dword alinhado tamanho dos parâmetros na pilha.  
-  
- Use undname.exe para obter o formato não decorado de um nome decorado.  
-  
- Para obter mais informações sobre algumas das causas listadas acima, consulte [decoração de nome](../../error-messages/tool-errors/name-decoration.md).
+Para obter mais informações sobre possíveis causas e soluções LNK2001, consulte a pergunta de estouro de pilha [o que é um erro de símbolo externo indefinido referência/não resolvidos e como corrigi-lo?](http://stackoverflow.com/q/12573816/2002113).  
+
+

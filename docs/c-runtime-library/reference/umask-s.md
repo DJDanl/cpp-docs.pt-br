@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5e0653dd1321481edcae475bbaf3a6fe29fc4815
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5c8efcdf5d3f44a6cd3bbcc39f2a98e3659c95ab
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="umasks"></a>_umask_s
@@ -92,7 +93,7 @@ errno_t _umask_s(
  Se uma das condições de erro acima ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `_umask_s` retornará `EINVAL` e definirá `errno` como `EINVAL`.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_umask_s` define a máscara de permissão de arquivo do processo atual para o modo especificado por `mode` *.* A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por `_creat`, `_open` ou `_sopen`. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.  
+ O `_umask_s` função define a máscara de permissão de arquivo do processo atual para o modo especificado por `mode`. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por `_creat`, `_open` ou `_sopen`. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.  
   
  A expressão de inteiro `pmode` contém uma ou ambas as seguintes constantes de manifesto, definidas em SYS\STAT.H:  
   
@@ -150,9 +151,6 @@ int main( void )
 ```Output  
 Oldmask = 0x0000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

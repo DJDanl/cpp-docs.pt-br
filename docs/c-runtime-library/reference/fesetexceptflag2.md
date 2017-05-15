@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,12 +67,11 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
  `pstatus`  
- Ponteiro para um objeto `fexcept_t` que contém os valores para definição dos sinalizadores de status de exceção. O objeto pode ser definido por uma chamada anterior a [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654).  
+ Ponteiro para um objeto `fexcept_t` que contém os valores para definição dos sinalizadores de status de exceção. O objeto pode ser definido por uma chamada anterior a [fegetexceptflag](fegetexceptflag2.md).  
   
  `excepts`  
  Os sinalizadores do status de exceção de ponto flutuante que serão definidos.  

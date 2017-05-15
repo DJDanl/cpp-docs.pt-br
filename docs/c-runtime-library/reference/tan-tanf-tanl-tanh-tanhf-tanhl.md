@@ -72,10 +72,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94ad2866dc8b2284d674ccfa284646aac9a68efa
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f52084801f695fe6c435e9c46520a6b2b3c9e754
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
@@ -121,7 +122,7 @@ long double tanhl(
  Ângulo em radianos.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções `tan` retornam a tangente de `x`. Se `x` for maior ou igual a 263 ou menor ou igual a -263, ocorrerá uma perda de significância no resultado.  
+ As funções `tan` retornam a tangente de `x`. Se `x` é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.  
   
  As funções `tanh` retornam a tangente hiperbólica de `x`. Nenhum erro é retornado.  
   
@@ -168,12 +169,6 @@ int main( void )
 tan( 0.785398 ) = 1.000000  
 tanh( 1.000000 ) = 0.761594  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx)  
-  
--   [System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

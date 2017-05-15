@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  A localidade a ser usada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se `wcstombs` converter com êxito a cadeia de caracteres multibyte, será retornado o número de bytes gravados na cadeia de caracteres multibyte de saída, excluindo a terminação `NULL` (se houver). Se o argumento `mbstr` for `NULL`, `wcstombs` retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se `wcstombs` encontrar um caractere largo que não seja possível converter em um caractere multibyte, ele retornará –1 convertido no tipo `size_t` e definirá `errno` como `EILSEQ`.  
+ Se `wcstombs` converter com êxito a cadeia de caracteres multibyte, será retornado o número de bytes gravados na cadeia de caracteres multibyte de saída, excluindo a terminação `NULL` (se houver). Se o argumento `mbstr` for `NULL`, `wcstombs` retornará o tamanho necessário em bytes da cadeia de caracteres de destino. Se `wcstombs` encontra um caractere largo não é possível converter um caractere multibyte, retornará -1 convertido no tipo `size_t` e define `errno` para `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `wcstombs` converte a cadeia de caracteres largos apontada por `wcstr` nos caracteres multibyte correspondentes e armazena os resultados na matriz `mbstr`. O parâmetro `count` indica o número máximo de bytes que pode ser armazenado na cadeia de caracteres multibyte de saída (ou seja, o tamanho de `mbstr`). Em geral, a quantidade de bytes necessária ao converter uma cadeia de caracteres largos não é conhecida. Alguns caracteres largos exigem apenas um byte na cadeia de caracteres saída; outros exigem dois. Se houver dois bytes na cadeia de caracteres multibyte de saída para cada caractere largo na cadeia de caracteres de entrada (incluindo o caractere largo `NULL`), o resultado terá um ajuste garantido.  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  Se o argumento `mbstr` for `NULL`, `wcstombs` retornará o tamanho necessário em bytes da cadeia de caracteres de destino.  
   
- `wcstombs` valida seus parâmetros. Se `wcstr` for `NULL` ou se `count` for maior que `INT_MAX`, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.  
+ `wcstombs` valida seus parâmetros. Se `wcstr` é `NULL`, ou se `count` é maior do que `INT_MAX`, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função definirá `errno` como `EINVAL` e retornará –1.  
   
  `wcstombs` usa a localidade atual de qualquer comportamento dependente da localidade; `_wcstombs_l` é idêntico, exceto pelo fato de que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversão de Dados](../../c-runtime-library/data-conversion.md)   

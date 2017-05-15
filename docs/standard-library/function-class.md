@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>Classe function
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.|  
+|[function](#function)|Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|O tipo retornado do objeto que pode ser chamado armazenado.|  
+|[tipo_resultado](#result_type)|O tipo retornado do objeto que pode ser chamado armazenado.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|Atribui um objeto que pode ser chamado a esse objeto de função.|  
-|[function::swap](#function__swap)|Troca dois objetos resgatáveis.|  
-|[function::target](#function__target)|Testa se o objeto pode ser chamado conforme especificado.|  
-|[function::target_type](#function__target_type)|Obtém informações de tipo sobre o objeto que pode ser chamado.|  
+|[assign](#assign)|Atribui um objeto que pode ser chamado a esse objeto de função.|  
+|[swap](#swap)|Troca dois objetos resgatáveis.|  
+|[destino](#target)|Testa se o objeto pode ser chamado conforme especificado.|  
+|[target_type](#target_type)|Obtém informações de tipo sobre o objeto que pode ser chamado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|Testa se o objeto que pode ser chamado armazenado existe.|  
-|[function::operator()](#function__operator__)|Chama um objeto que pode ser chamado.|  
-|[function::operator=](#function__operator_eq)|Substitui o objeto que pode ser chamado armazenado.|  
+|[function::operator unspecified](#op_unspecified)|Testa se o objeto que pode ser chamado armazenado existe.|  
+|[function::operator()](#op_call)|Chama um objeto que pode ser chamado.|  
+|[function::operator=](#op_eq)|Substitui o objeto que pode ser chamado armazenado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<functional>  
   
  **Namespace:** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  Atribui um objeto que pode ser chamado a esse objeto de função.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Comentários  
  As funções membro substituem o `callable object` mantido por `*this` pelo objeto que pode ser chamado passado como o `operand`. Ambas alocam o armazenamento com o objeto de alocador `Ax`.  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  Constrói um wrapper que é vazio ou armazena um objeto que pode ser chamado, de tipo arbitrário com uma assinatura fixa.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="op_unspecified"></a>  function::operator unspecified  
  Testa se o objeto que pode ser chamado armazenado existe.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  Chama um objeto que pode ser chamado.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  Substitui o objeto que pode ser chamado armazenado.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  O tipo retornado do objeto que pode ser chamado armazenado.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  Troca dois objetos resgatáveis.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  Testa se o objeto pode ser chamado conforme especificado.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  Obtém informações de tipo sobre o objeto que pode ser chamado.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [mem_fn Function](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [Classe reference_wrapper](../standard-library/reference-wrapper-class.md)
 

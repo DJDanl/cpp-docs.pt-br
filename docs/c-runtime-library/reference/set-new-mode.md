@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  Novo modo do manipulador para `malloc`; o valor válido é 0 ou 1.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o modo do manipulador anterior definido para `malloc`. Um valor retornado de 1 indica que, em caso de falha ao alocar memória, `malloc` chamou anteriormente a nova rotina de manipulador; um valor retornado de 0 indica que não chamou. Se o argumento `newhandlermode` não é igual a 0 ou 1, retorna – 1.  
+ Retorna o modo do manipulador anterior definido para `malloc`. Um valor retornado de 1 indica que, em caso de falha ao alocar memória, `malloc` chamou anteriormente a nova rotina de manipulador; um valor retornado de 0 indica que não chamou. Se o `newhandlermode` argumento não é igual a 0 ou 1, retornará -1.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_set_new_mode` C++ define o novo modo do manipulador para [malloc](../../c-runtime-library/reference/malloc.md). O novo modo do manipulador indica se, em caso de falha, `malloc` deverá chamar a nova rotina do manipulador conforme definido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Por padrão, `malloc` não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando `malloc` falhar ao alocar memória, `malloc` chame a nova rotina do manipulador da mesma forma que o operador `new` fará quando ele falhar pelo mesmo motivo. Para obter mais informações, consulte os operadores [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da Linguagem C++*. Para substituir o padrão, chame:  
@@ -93,9 +94,6 @@ _set_new_mode(1)
 |`_set_new_mode`|\<new.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md) na Introdução.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Alocação de Memória](../../c-runtime-library/memory-allocation.md)   

@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  Há situações em que **_resetstkoflw** pode falhar, mesmo se usado em um local correto, como em um bloco **__except**. Se, mesmo depois do desenrolamento da pilha, ainda não houver espaço de pilha suficiente para executar **_resetstkoflw** sem gravar na última página da pilha, **_resetstkoflw** não conseguirá redefinir a última página da pilha como a página de proteção e retornará 0, indicando falha. Portanto, o uso seguro desta função deve incluir a verificação do valor retornado em vez de supor que é seguro usar a pilha.  
   
- Tratamento estruturado de exceções não vai capturar uma `STATUS_STACK_OVERFLOW` uma exceção quando o aplicativo é compilado com `/clr` (consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)).  
+ Tratamento estruturado de exceções não irá capturar um `STATUS_STACK_OVERFLOW` exceção quando o aplicativo é compilado com `/clr` (consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [_alloca](../../c-runtime-library/reference/alloca.md)

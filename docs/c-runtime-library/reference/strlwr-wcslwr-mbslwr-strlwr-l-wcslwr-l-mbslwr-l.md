@@ -1,87 +1,93 @@
 ---
-title: "_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_l"
-  - "_strlwr"
-  - "_wcslwr_l"
-  - "_mbslwr_l"
-  - "_wcslwr"
-  - "_mbslwr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr"
-  - "wcslwr_l"
-  - "_ftcslwr"
-  - "mbslwr_l"
-  - "_mbslwr"
-  - "_wcslwr"
-  - "strlwr_l"
-  - "_tcslwr"
-  - "mbslwr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tcslwr function"
-  - "_strlwr function"
-  - "converting case"
-  - "string conversion [C++], case"
-  - "mbslwr function"
-  - "_strlwr_l function"
-  - "strlwr_l function"
-  - "_wcslwr function"
-  - "ftcslwr function"
-  - "strings [C++], case"
-  - "_tcslwr_l function"
-  - "_wcslwr_l function"
-  - "wcslwr_l function"
-  - "mbslwr_l function"
-  - "tcslwr_l function"
-  - "_tcslwr function"
-  - "converting case, CRT functions"
-  - "_ftcslwr function"
-  - "_mbslwr function"
-  - "case, converting"
-  - "strings [C++], converting case"
-  - "_mbslwr_l function"
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_l
+- _strlwr
+- _wcslwr_l
+- _mbslwr_l
+- _wcslwr
+- _mbslwr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr
+- wcslwr_l
+- _ftcslwr
+- mbslwr_l
+- _mbslwr
+- _wcslwr
+- strlwr_l
+- _tcslwr
+- mbslwr
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcslwr function
+- _strlwr function
+- converting case
+- string conversion [C++], case
+- mbslwr function
+- _strlwr_l function
+- strlwr_l function
+- _wcslwr function
+- ftcslwr function
+- strings [C++], case
+- _tcslwr_l function
+- _wcslwr_l function
+- wcslwr_l function
+- mbslwr_l function
+- tcslwr_l function
+- _tcslwr function
+- converting case, CRT functions
+- _ftcslwr function
+- _mbslwr function
+- case, converting
+- strings [C++], converting case
+- _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
 caps.latest.revision: 36
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4955b5741413458b4a24a1b359343174ad484f2a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 Converte uma cadeia de caracteres em minúsculas. Versões mais seguras dessas funções estão disponíveis; consulte [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
@@ -153,7 +159,7 @@ unsigned char *_mbslwr_l(
  Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres convertida. Como a modificação é feita in-loco, o ponteiro retornado é o mesmo que o ponteiro passado como o argumento de entrada. Nenhum valor retornado é reservado para indicar um erro.  
   
 ## <a name="remarks"></a>Comentários  
- A função `_strlwr` converte todas as letras maiúsculas no `str` em minúsculas conforme determinado pela `LC_CTYPE` configuração de categoria da localidade. Outros caracteres não são afetados. Para obter mais informações sobre `LC_CTYPE`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As versões dessas funções sem o sufixo `_l` usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo `_l` são idênticas, exceto por usarem a localidade passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
+ A função `_strlwr` converte todas as letras maiúsculas no `str` em minúsculas conforme determinado pela `LC_CTYPE` configuração de categoria da localidade. Outros caracteres não são afetados. Para obter mais informações sobre `LC_CTYPE`, consulte [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). As versões dessas funções sem o `_l` o uso de sufixo a localidade atual para o comportamento dependente de localidade; as versões com o `_l` sufixo são idênticas, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).  
   
  As funções `_wcslwr` e `_mbslwr` são versões de caractere largo e de caracteres multibyte de `_strlwr`. O argumento e o valor retornado de `_wcslwr` são cadeias de caracteres largos; aqueles de `_mbslwr` são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.  
   
@@ -213,9 +219,6 @@ Mixed: The String to End All Strings!
 Lower: the string to end all strings!  
 Upper: THE STRING TO END ALL STRINGS!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

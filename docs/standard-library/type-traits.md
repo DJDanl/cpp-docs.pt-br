@@ -1,39 +1,45 @@
 ---
-title: "&lt;type_traits&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<type_traits>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typetrait header"
-  - "type_traits"
+title: '&lt;type_traits&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <type_traits>
+dev_langs:
+- C++
+helpviewer_keywords:
+- typetrait header
+- type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
 caps.latest.revision: 35
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.mt: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
+
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 Define modelos que fornecem constantes de tempo de compilação e informações sobre as propriedades dos argumentos de tipo ou produzem tipos transformados.  
@@ -47,7 +53,7 @@ Define modelos que fornecem constantes de tempo de compilação e informações 
 ## <a name="remarks"></a>Comentários  
  As classes e os modelos no `<type_traits>` são usados para dar suporte a inferência, classificação e transformação de tipos em tempo de compilação, para detectar erros de tipo e para ajudá-lo a otimizar o código genérico. Essas classes e modelos incluem características de tipo unário que descrevem uma propriedade de um tipo, características de tipo binário que descrevem uma relação entre tipos e características de transformação que modificam uma propriedade de um tipo.  
   
- Para dar suporte a características de tipo, uma classe auxiliar, `integral_constant`, é definida. Ela tem especializações de modelo `true_type` e `false_type` que formam as classes de base para predicados de tipo. Um *predicado de tipo* é um modelo que usa um ou mais argumentos de tipo. Quando um predicado de tipo *mantém verdadeiro*, ele é derivado publicamente, direta ou indiretamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Quando um predicado de tipo *mantém falso*, ele é derivado publicamente, direta ou indiretamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+ Para dar suporte a características de tipo, uma classe auxiliar, `integral_constant`, é definida. Ela tem especializações de modelo `true_type` e `false_type` que formam as classes de base para predicados de tipo. Um *predicado de tipo* é um modelo que usa um ou mais argumentos de tipo. Quando um predicado de tipo *mantém verdadeiro*, ele é derivado publicamente, direta ou indiretamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando um predicado de tipo *mantém falso*, ele é derivado publicamente, direta ou indiretamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
  Um *modificador de tipo* ou uma *característica da transformação* é um modelo que usa um ou mais argumentos de modelo e tem um membro, `type`, que é sinônimo do tipo modificado.  
   
@@ -74,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Cria uma constante integral de um tipo e valor.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Mantém uma constante integral com valor verdadeiro.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Mantém uma constante integral com valor falso.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Mantém uma constante integral com valor verdadeiro.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Mantém uma constante integral com valor falso.|  
   
  Categorias de tipo principal  
   
@@ -222,6 +228,7 @@ using add_const_t = typename add_const<T>::type;
   
 ## <a name="see-also"></a>Consulte também  
  [\<functional>](../standard-library/functional.md)
+
 
 
 

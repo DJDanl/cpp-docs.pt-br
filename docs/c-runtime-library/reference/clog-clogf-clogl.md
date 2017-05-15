@@ -58,10 +58,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f702dfcf43ebd92e400394b34420c2177812c391
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2778a27aa2859d7abb5f247e71397af6aa8b0da6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
@@ -92,7 +93,7 @@ _Lcomplex clogl(
  A base do logaritmo.  
   
 ## <a name="return-value"></a>Valor retornado  
- O logaritmo natural de `z`. O resultado é ilimitado ao longo do eixo real e no intervalo [−iπ; +iπ] ao longo do eixo imaginário.  
+ O logaritmo natural de `z`. O resultado é não vinculado ao longo do eixo real e no intervalo [-iπ, + iπ] ao longo do eixo imaginário.  
   
  Os valores de retorno possíveis são:  
   

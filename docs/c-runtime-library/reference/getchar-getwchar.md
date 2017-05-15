@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2b1f07444f30bbd14db6a2124f44bbadef781456
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d35a089e4b18475b556479ccadd68813440f51a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
@@ -71,7 +72,7 @@ wint_t getwchar();
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, `getchar``returns EOF` e `getwchar` retorna `WEOF`. Para `getchar`, use `ferror` ou `feof` para verificar se há um erro ou se o final do arquivo foi atingido.  
+ Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, `getchar` retorna `EOF` e `getwchar` retorna `WEOF`. Para `getchar`, use `ferror` ou `feof` para verificar se há um erro ou se o final do arquivo foi atingido.  
   
 ## <a name="remarks"></a>Comentários  
  Cada rotina lê um único caractere de `stdin` e incrementa o ponteiro de arquivo associado para apontar para o caractere seguinte. `getchar` é o mesmo que [_fgetchar](../../c-runtime-library/reference/fgetc-fgetwc.md), mas é implementado como uma função e como uma macro.  
@@ -122,12 +123,6 @@ int main()
   
 This textInput was: This text  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

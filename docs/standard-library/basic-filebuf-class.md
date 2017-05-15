@@ -1,41 +1,62 @@
 ---
-title: "Classe basic_filebuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.basic_filebuf"
-  - "fstream/std::basic_filebuf"
-  - "std::basic_filebuf"
-  - "basic_filebuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "basic_filebuf class"
+title: Classe basic_filebuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- fstream/std::basic_filebuf
+- basic_filebuf
+- fstream/std::basic_filebuf::char_type
+- fstream/std::basic_filebuf::int_type
+- fstream/std::basic_filebuf::off_type
+- fstream/std::basic_filebuf::pos_type
+- fstream/std::basic_filebuf::traits_type
+- fstream/std::basic_filebuf::close
+- fstream/std::basic_filebuf::is_open
+- fstream/std::basic_filebuf::open
+- fstream/std::basic_filebuf::overflow
+- fstream/std::basic_filebuf::pbackfail
+- fstream/std::basic_filebuf::seekoff
+- fstream/std::basic_filebuf::seekpos
+- fstream/std::basic_filebuf::setbuf
+- fstream/std::basic_filebuf::Swap
+- fstream/std::basic_filebuf::sync
+- fstream/std::basic_filebuf::uflow
+- fstream/std::basic_filebuf::underflow
+dev_langs:
+- C++
+helpviewer_keywords:
+- basic_filebuf class
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 87fb5398d931436e4e08c1e62d6bf9b1e8d2aa7b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
+
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 Descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características dos caracteres são determinadas pela classe `Tr`, para e de uma sequência de elementos armazenados em um arquivo externo.  
@@ -58,9 +79,9 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
  A classe de modelo descreve um buffer de fluxo que controla a transmissão de elementos do tipo `Elem`, cujas características dos caracteres são determinadas pela classe `Tr`, para e de uma sequência de elementos armazenados em um arquivo externo.  
   
 > [!NOTE]
->  Objetos do tipo `basic_filebuf` são criados com um buffer interno do tipo `char *` independentemente do `char_type` especificado pelo parâmetro de tipo `Elem`. Isso significa que uma cadeia de caracteres Unicode (contendo `wchar_t` caracteres) será convertida em uma cadeia de caracteres ANSI (contendo `char` caracteres) antes de ser gravada no buffer interno. Para armazenar cadeias de caracteres Unicode no buffer, crie um novo buffer do tipo `wchar_t` e defina-o usando o método [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#basic_streambuf__pubsetbuf)`()`. Para ver um exemplo que demonstra esse comportamento, consulte abaixo.  
+>  Objetos do tipo `basic_filebuf` são criados com um buffer interno do tipo `char *` independentemente do `char_type` especificado pelo parâmetro de tipo `Elem`. Isso significa que uma cadeia de caracteres Unicode (contendo `wchar_t` caracteres) será convertida em uma cadeia de caracteres ANSI (contendo `char` caracteres) antes de ser gravada no buffer interno. Para armazenar cadeias de caracteres Unicode no buffer, crie um novo buffer do tipo `wchar_t` e defina-o usando o método [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()`. Para ver um exemplo que demonstra esse comportamento, consulte abaixo.  
   
- Um objeto da classe `basic_filebuf`< `Elem`, `Tr`> armazena um ponteiro de arquivo, que designa o objeto `FILE` que controla o fluxo associado a um arquivo aberto. Ele também armazena ponteiros para duas facetas de conversão de arquivo para uso pelas funções membro protegidas [estouro](#basic_filebuf__overflow) e [estouro negativo](#basic_filebuf__underflow). Para obter mais informações, consulte [basic_filebuf::open](#basic_filebuf__open).  
+ Um objeto da classe `basic_filebuf`< `Elem`, `Tr`> armazena um ponteiro de arquivo, que designa o objeto `FILE` que controla o fluxo associado a um arquivo aberto. Ele também armazena ponteiros para duas facetas de conversão de arquivo para uso pelas funções membro protegidas [estouro](#overflow) e [estouro negativo](#underflow). Para obter mais informações, consulte [basic_filebuf::open](#open).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como forçar um objeto do tipo `basic_filebuf<wchar_t>` a armazenar caracteres Unicode em seu buffer interno chamando o método `pubsetbuf()`.  
@@ -184,41 +205,41 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
   
 |||  
 |-|-|  
-|[basic_filebuf](#basic_filebuf__basic_filebuf)|Constrói um objeto do tipo `basic_filebuf`.|  
+|[basic_filebuf](#basic_filebuf)|Constrói um objeto do tipo `basic_filebuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#basic_filebuf__char_type)|Associa um nome de tipo ao parâmetro de modelo `Elem`.|  
-|[int_type](#basic_filebuf__int_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
-|[off_type](#basic_filebuf__off_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
-|[pos_type](#basic_filebuf__pos_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
-|[traits_type](#basic_filebuf__traits_type)|Associa um nome de tipo ao parâmetro de modelo `Tr`.|  
+|[char_type](#char_type)|Associa um nome de tipo ao parâmetro de modelo `Elem`.|  
+|[int_type](#int_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
+|[off_type](#off_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
+|[pos_type](#pos_type)|Faz com que esse tipo no escopo de `basic_filebuf` seja equivalente ao tipo com o mesmo nome no escopo de `Tr`.|  
+|[traits_type](#traits_type)|Associa um nome de tipo ao parâmetro de modelo `Tr`.|  
   
 ### <a name="member-functions"></a>Funções membro  
   
 |||  
 |-|-|  
-|[close](#basic_filebuf__close)|Fecha um arquivo.|  
-|[is_open](#basic_filebuf__is_open)|Indica se um arquivo está aberto.|  
-|[open](#basic_filebuf__open)|Abre um arquivo.|  
-|[overflow](#basic_filebuf__overflow)|Uma função virtual protegida que pode ser chamada quando um novo caractere é inserido em um buffer cheio.|  
-|[pbackfail](#basic_filebuf__pbackfail)|Uma função membro virtual protegida que tenta colocar um elemento de volta no fluxo de entrada, então torná-lo elemento atual (apontando para o ponteiro seguinte).|  
-|[seekoff](#basic_filebuf__seekoff)|A função membro virtual protegida tenta alterar as posições atuais para os fluxos controlados.|  
-|[seekpos](#basic_filebuf__seekpos)|A função membro virtual protegida tenta alterar as posições atuais para os fluxos controlados.|  
-|[setbuf](#basic_filebuf__setbuf)|A função membro virtual protegida executa uma operação que específica para cada buffer de fluxo derivado.|  
-|[Swap](#basic_filebuf__swap)|Troca o conteúdo deste `basic_filebuf` pelo o conteúdo do parâmetro `basic_filebuf` fornecido.|  
-|[sync](#basic_filebuf__sync)|A função virtual protegida tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.|  
-|[uflow](../standard-library/basic-streambuf-class.md#basic_streambuf__uflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|  
-|[underflow](#basic_filebuf__underflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|  
+|[close](#close)|Fecha um arquivo.|  
+|[is_open](#is_open)|Indica se um arquivo está aberto.|  
+|[open](#open)|Abre um arquivo.|  
+|[overflow](#overflow)|Uma função virtual protegida que pode ser chamada quando um novo caractere é inserido em um buffer cheio.|  
+|[pbackfail](#pbackfail)|Uma função membro virtual protegida que tenta colocar um elemento de volta no fluxo de entrada, então torná-lo elemento atual (apontando para o ponteiro seguinte).|  
+|[seekoff](#seekoff)|A função membro virtual protegida tenta alterar as posições atuais para os fluxos controlados.|  
+|[seekpos](#seekpos)|A função membro virtual protegida tenta alterar as posições atuais para os fluxos controlados.|  
+|[setbuf](#setbuf)|A função membro virtual protegida executa uma operação que específica para cada buffer de fluxo derivado.|  
+|[Swap](#swap)|Troca o conteúdo deste `basic_filebuf` pelo o conteúdo do parâmetro `basic_filebuf` fornecido.|  
+|[sync](#sync)|A função virtual protegida tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.|  
+|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|  
+|[underflow](#underflow)|Função virtual protegida para extrair o elemento atual do fluxo de entrada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** \<fstream>  
   
  **Namespace:** std  
   
-##  <a name="a-namebasicfilebufbasicfilebufa--basicfilebufbasicfilebuf"></a><a name="basic_filebuf__basic_filebuf"></a>  basic_filebuf::basic_filebuf  
+##  <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf  
  Constrói um objeto do tipo `basic_filebuf`.  
   
 ```  
@@ -232,14 +253,14 @@ basic_filebuf(basic_filebuf&& right);
   
  O segundo construtor inicializa o objeto com o conteúdo de `right`, tratado como uma referência rvalue.  
   
-##  <a name="a-namebasicfilebufchartypea--basicfilebufchartype"></a><a name="basic_filebuf__char_type"></a>  basic_filebuf::char_type  
+##  <a name="char_type"></a>  basic_filebuf::char_type  
  Associa um nome de tipo ao parâmetro do modelo **Elem**.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-##  <a name="a-namebasicfilebufclosea--basicfilebufclose"></a><a name="basic_filebuf__close"></a>  basic_filebuf::close  
+##  <a name="close"></a>  basic_filebuf::close  
  Fecha um arquivo.  
   
 ```  
@@ -252,7 +273,7 @@ basic_filebuf<Elem, Tr> *close();
 ### <a name="remarks"></a>Comentários  
  **close** chama `fclose`( **fp**). Se essa função retornar um valor diferente de zero, a função retornará um ponteiro nulo. Caso contrário, retornará **this** para indicar que o arquivo foi fechado com êxito.  
   
- Para um fluxo amplo, se qualquer inserções tiverem ocorrido desde que o fluxo foi aberto ou desde a última chamada a `streampos`, as chamadas de função [estourarão](#basic_filebuf__overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial usando a faceta de conversão de arquivo **fac** para chamar **fac.unshift** conforme necessário. Cada **byte** de elemento do tipo `char` produzido assim é gravado no fluxo associado designado pelo ponteiro de arquivo **fp** como se fosse por chamadas sucessivas do formulário `fputc`( **byte**, **fp**). Se a chamada para **fac.unshift** ou qualquer gravação falhar, a função não terá êxito.  
+ Para um fluxo amplo, se qualquer inserções tiverem ocorrido desde que o fluxo foi aberto ou desde a última chamada a `streampos`, as chamadas de função [estourarão](#overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial usando a faceta de conversão de arquivo **fac** para chamar **fac.unshift** conforme necessário. Cada **byte** de elemento do tipo `char` produzido assim é gravado no fluxo associado designado pelo ponteiro de arquivo **fp** como se fosse por chamadas sucessivas do formulário `fputc`( **byte**, **fp**). Se a chamada para **fac.unshift** ou qualquer gravação falhar, a função não terá êxito.  
   
 ### <a name="example"></a>Exemplo  
   A amostra a seguir assume dois arquivos no diretório atual: basic_filebuf_close.txt (o conteúdo é "teste") e iotest.txt (o conteúdo é "ssss").  
@@ -302,14 +323,14 @@ s
 1  
 ```  
   
-##  <a name="a-namebasicfilebufinttypea--basicfilebufinttype"></a><a name="basic_filebuf__int_type"></a>  basic_filebuf::int_type  
+##  <a name="int_type"></a>  basic_filebuf::int_type  
  Torna esse tipo no escopo de basic_filebuf equivalente ao tipo de mesmo nome no escopo de **Tr**.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="a-namebasicfilebufisopena--basicfilebufisopen"></a><a name="basic_filebuf__is_open"></a>  basic_filebuf::is_open  
+##  <a name="is_open"></a>  basic_filebuf::is_open  
  Indica se um arquivo está aberto.  
   
 ```  
@@ -343,14 +364,14 @@ false
 true  
 ```  
   
-##  <a name="a-namebasicfilebufofftypea--basicfilebufofftype"></a><a name="basic_filebuf__off_type"></a>  basic_filebuf::off_type  
+##  <a name="off_type"></a>  basic_filebuf::off_type  
  Torna esse tipo no escopo de basic_filebuf equivalente ao tipo de mesmo nome no escopo de **Tr**.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="a-namebasicfilebufopena--basicfilebufopen"></a><a name="basic_filebuf__open"></a>  basic_filebuf::open  
+##  <a name="open"></a>  basic_filebuf::open  
  Abre um arquivo.  
   
 ```  
@@ -378,7 +399,7 @@ basic_filebuf<Elem, Tr> *open(
  O nome do arquivo a ser aberto.  
   
  `_Mode`  
- Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode).  
+ Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
  A proteção de abertura de arquivo padrão, equivalente ao parâmetro `shflag` em [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
@@ -387,11 +408,11 @@ basic_filebuf<Elem, Tr> *open(
  Se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro abre o arquivo com o nome do arquivo *filename*, chamando [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** é determinado de **mode &**~( [ate](../standard-library/ios-base-class.md#ios_base__openmode) & &#124; [binary](../standard-library/ios-base-class.md#ios_base__openmode)):  
+ A função membro abre o arquivo com o nome do arquivo *filename*, chamando [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** é determinado de **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):  
   
 - **ios_base::in** torna-se **"r"** (abrir arquivo existente para leitura).  
   
-- [ios_base::out](../standard-library/ios-base-class.md#ios_base__fmtflags) ou **ios_base::out &#124; ios_base::trunc** se torna **"w"** (truncar o arquivo existente ou criar para gravação).  
+- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) ou **ios_base::out &#124; ios_base::trunc** se torna **"w"** (truncar o arquivo existente ou criar para gravação).  
   
 - **ios_base::out &#124; app** torna-se **"a"** (abrir arquivo existente para acrescentar todas as gravações).  
   
@@ -401,16 +422,16 @@ basic_filebuf<Elem, Tr> *open(
   
 - **ios_base::in &#124; ios_base::out &#124; ios_base::app** se torna **"+"** (abrir arquivo existente para leitura e para acrescentar todas as gravações).  
   
- Se **mode & ios_base::binary** for diferente de zero, a função acrescentará **b** a **strmode** para abrir um fluxo binário, em vez de um fluxo de texto. Em seguida, armazena o valor retornado por `fopen` no ponteiro do arquivo **fp**. Se **mode & ios_base::ate** for diferente de zero e o ponteiro do arquivo não for um ponteiro nulo, a função chamará `fseek`( **fp**, 0, `SEEK_END`) para posicionar o fluxo no final do arquivo. Se essa operação posicionamento falhar, a função chamará [close](#basic_filebuf__close)( **fp**) e armazenará um ponteiro nulo no ponteiro do arquivo.  
+ Se **mode & ios_base::binary** for diferente de zero, a função acrescentará **b** a **strmode** para abrir um fluxo binário, em vez de um fluxo de texto. Em seguida, armazena o valor retornado por `fopen` no ponteiro do arquivo **fp**. Se **mode & ios_base::ate** for diferente de zero e o ponteiro do arquivo não for um ponteiro nulo, a função chamará `fseek`( **fp**, 0, `SEEK_END`) para posicionar o fluxo no final do arquivo. Se essa operação posicionamento falhar, a função chamará [close](#close)( **fp**) e armazenará um ponteiro nulo no ponteiro do arquivo.  
   
- Se o ponteiro do arquivo não for um ponteiro nulo, a função determinará a faceta de conversão de arquivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#char_traits__state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#basic_streambuf__getloc)), para uso por [underflow](#basic_filebuf__underflow) e [overflow](#basic_filebuf__overflow).  
+ Se o ponteiro do arquivo não for um ponteiro nulo, a função determinará a faceta de conversão de arquivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), para uso por [underflow](#underflow) e [overflow](#overflow).  
   
  Se o ponteiro do arquivo for um ponteiro nulo, a função retornará um ponteiro nulo. Caso contrário, retornará **this**.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte [basic_filebuf::close](#basic_filebuf__close) para ver um exemplo que usa **open**.  
+  Consulte [basic_filebuf::close](#close) para ver um exemplo que usa **open**.  
   
-##  <a name="a-namebasicfilebufoperatoreqa--basicfilebufoperator"></a><a name="basic_filebuf__operator_eq"></a>  basic_filebuf::operator=  
+##  <a name="op_eq"></a>  basic_filebuf::operator=  
  Atribua o conteúdo deste objeto de buffer de fluxo. Essa é uma atribuição de movimentação que envolve um rvalue que não deixa uma cópia.  
   
 ```  
@@ -418,16 +439,16 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` right`  
+ `right`  
  Uma referência rvalue para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna *this.  
   
 ### <a name="remarks"></a>Comentários  
- O operador membro substitui o conteúdo do objeto usando o conteúdo de ` right`, tratado como uma referência rvalue. Para obter mais informações, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ O operador membro substitui o conteúdo do objeto usando o conteúdo de `right`, tratado como uma referência rvalue. Para obter mais informações, consulte [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-##  <a name="a-namebasicfilebufoverflowa--basicfilebufoverflow"></a><a name="basic_filebuf__overflow"></a>  basic_filebuf::overflow  
+##  <a name="overflow"></a>  basic_filebuf::overflow  
  Chamado quando um novo caractere é inserido em um buffer cheio.  
   
 ```  
@@ -439,10 +460,10 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  O caractere a inserir no buffer ou **traits_type::eof**.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a função não conseguir obter êxito, ela retornará **traits_type::eof**. Caso contrário, retornará **traits_type::**[not_eof](../standard-library/char-traits-struct.md#char_traits__not_eof)(_ *Meta*).  
+ Se a função não conseguir obter êxito, ela retornará **traits_type::eof**. Caso contrário, retornará **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Comentários  
- Se _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#char_traits__eof), a função membro virtual protegida buscará inserir o elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#char_traits__to_char_type)(\_ *Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:  
+ Se _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), a função membro virtual protegida buscará inserir o elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:  
   
 -   Se houver uma posição de gravação disponível, ela poderá armazenar o elemento na posição de gravação e incrementar o próximo ponteiro para o buffer de saída.  
   
@@ -450,7 +471,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
   
 -   Pode converter qualquer saída pendente no buffer de saída, seguido por **ch**, usando a faceta de conversão de arquivo **fac** para chamar **fac.out** conforme necessário. Cada elemento `ch` do tipo *char* produzido assim é gravado no fluxo associado designado pelo ponteiro de arquivo **fp** como se fosse por chamadas sucessivas da forma `fputc`( **ch**, **fp**). Se qualquer conversão ou gravação falhar, a função não será bem-sucedida.  
   
-##  <a name="a-namebasicfilebufpbackfaila--basicfilebufpbackfail"></a><a name="basic_filebuf__pbackfail"></a>  basic_filebuf::pbackfail  
+##  <a name="pbackfail"></a>  basic_filebuf::pbackfail  
  Tenta colocar um elemento de volta no fluxo de entrada e torná-lo o elemento atual (apontado pelo ponteiro seguinte).  
   
 ```  
@@ -462,25 +483,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
  O caractere a ser inserido no buffer, ou **traits_type::eof**.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a função não conseguir obter êxito, ela retornará **traits_type::eof**. Caso contrário, retornará **traits_type::**[not_eof](../standard-library/char-traits-struct.md#char_traits__not_eof)(_ *Meta*).  
+ Se a função não conseguir obter êxito, ela retornará **traits_type::eof**. Caso contrário, retornará **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Comentários  
- A função membro virtual protegida coloca um elemento de volta no buffer de entrada, então o torna o elemento atual (apontando para o ponteiro seguinte). Se _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#char_traits__eof), o elemento a ser recuado será efetivamente aquele que já estava no fluxo antes do elemento atual. Caso contrário, esse elemento será substituído por **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#char_traits__to_char_type)(\_ *Meta*). A função pode colocar um elemento de volta de várias maneiras:  
+ A função membro virtual protegida coloca um elemento de volta no buffer de entrada, então o torna o elemento atual (apontando para o ponteiro seguinte). Se _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), o elemento a ser recuado será efetivamente aquele que já estava no fluxo antes do elemento atual. Caso contrário, esse elemento será substituído por **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). A função pode colocar um elemento de volta de várias maneiras:  
   
 -   Se uma posição putback estiver disponível e o elemento armazenado lá for comparável a **ch**, ele pode diminuir o próximo ponteiro para o buffer de entrada.  
   
 -   Se a função puder disponibilizar uma posição `putback`, ela poderá fazer isso; defina o ponteiro seguinte para apontar para aquela posição e armazene **ch** naquela posição.  
   
--   Se a função puder recuar um elemento para o fluxo de entrada, ela poderá pode fazer isso, como chamando `ungetc` para um elemento do tipo `char`*.*  
+-   Se a função pode enviar novamente um elemento para o fluxo de entrada, ele pode fazer isso, como ao chamar `ungetc` para um elemento do tipo `char`.  
   
-##  <a name="a-namebasicfilebufpostypea--basicfilebufpostype"></a><a name="basic_filebuf__pos_type"></a>  basic_filebuf::pos_type  
+##  <a name="pos_type"></a>  basic_filebuf::pos_type  
  Torna esse tipo no escopo de basic_filebuf equivalente ao tipo de mesmo nome no escopo de **Tr**.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="a-namebasicfilebufseekoffa--basicfilebufseekoff"></a><a name="basic_filebuf__seekoff"></a>  basic_filebuf::seekoff  
+##  <a name="seekoff"></a>  basic_filebuf::seekoff  
  Tenta alterar as posições atuais para os fluxos controlados.  
   
 ```  
@@ -494,7 +515,7 @@ virtual pos_type seekoff(off_type _Off,
  A posição pela qual buscar com relação a `_Way`.  
   
  `_Way`  
- O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#ios_base__seekdir) para valores possíveis.  
+ O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.  
   
  `_Which`  
  Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.  
@@ -503,13 +524,13 @@ virtual pos_type seekoff(off_type _Off,
  Retorna a nova posição ou uma posição de fluxo inválida.  
   
 ### <a name="remarks"></a>Comentários  
- A função de membro virtual protegida busca alterar as posições atuais para os fluxos controlados. Para um objeto da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, uma posição de fluxo pode ser representada por um objeto do tipo `fpos_t`, que armazena um deslocamento e quaisquer informações de estado necessárias analisar um fluxo grande. Deslocamento zero designa o primeiro elemento do fluxo. (Um objeto do tipo [pos_type](../standard-library/basic-streambuf-class.md#basic_streambuf__pos_type) armazena a pelo menos um objeto `fpos_t`.)  
+ A função de membro virtual protegida busca alterar as posições atuais para os fluxos controlados. Para um objeto da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, uma posição de fluxo pode ser representada por um objeto do tipo `fpos_t`, que armazena um deslocamento e quaisquer informações de estado necessárias analisar um fluxo grande. Deslocamento zero designa o primeiro elemento do fluxo. (Um objeto do tipo [pos_type](../standard-library/basic-streambuf-class.md#pos_type) armazena a pelo menos um objeto `fpos_t`.)  
   
- Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída são posicionados em tandem. Para mudar entre a inserção e extração, chame [pubseekoff](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekpos). Chamadas para `pubseekoff` (e, portanto, para `seekoff`) têm várias limitações para [fluxos de texto](../c-runtime-library/text-and-binary-streams.md), [fluxos binários](../c-runtime-library/text-and-binary-streams.md) e [fluxos largos](../c-runtime-library/byte-and-wide-streams.md).  
+ Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída são posicionados em tandem. Para mudar entre a inserção e extração, chame [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Chamadas para `pubseekoff` (e, portanto, para `seekoff`) têm várias limitações para [fluxos de texto](../c-runtime-library/text-and-binary-streams.md), [fluxos binários](../c-runtime-library/text-and-binary-streams.md) e [fluxos largos](../c-runtime-library/byte-and-wide-streams.md).  
   
  Se o ponteiro do arquivo **fp** for um ponteiro nulo, a função falhará. Caso contrário, ele busca alterar a posição do fluxo chamando `fseek`( **fp**, `_Off`, `_Way`). Se essa função for bem-sucedida e a posição resultante **fposn** puder ser determinada chamando `fgetpos`( **fp**, **&fposn**), a função será bem-sucedida. Se a função for bem-sucedida, ela retornará um valor do tipo **pos_type** contendo **fposn**. Caso contrário, retorna uma posição de fluxo inválida.  
   
-##  <a name="a-namebasicfilebufseekposa--basicfilebufseekpos"></a><a name="basic_filebuf__seekpos"></a>  basic_filebuf::seekpos  
+##  <a name="seekpos"></a>  basic_filebuf::seekpos  
  Tenta alterar as posições atuais para os fluxos controlados.  
   
 ```  
@@ -529,11 +550,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="remarks"></a>Comentários  
  A função de membro virtual protegida busca alterar as posições atuais para os fluxos controlados. Para um objeto da classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>, uma posição de fluxo pode ser representada por um objeto do tipo `fpos_t`, que armazena um deslocamento e quaisquer informações de estado necessárias analisar um fluxo grande. Deslocamento zero designa o primeiro elemento do fluxo. (Um objeto do tipo `pos_type` armazena a pelo menos um objeto `fpos_t`.)  
   
- Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída são posicionados em tandem. Para mudar entre a inserção e extração, chame [pubseekoff](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#basic_streambuf__pubseekpos). Chamadas para `pubseekoff` (e, portanto, para `seekoff`) têm várias limitações para fluxos de texto, fluxos binários e fluxos largos.  
+ Para um arquivo aberto para leitura e gravação, os fluxos de entrada e saída são posicionados em tandem. Para mudar entre a inserção e extração, chame [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Chamadas para `pubseekoff` (e, portanto, para `seekoff`) têm várias limitações para fluxos de texto, fluxos binários e fluxos largos.  
   
- Para um fluxo amplo, se qualquer inserções tiverem ocorrido desde que o fluxo foi aberto ou desde a última chamada a `streampos`, as chamadas de função [estourarão](#basic_filebuf__overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial usando a faceta de conversão de arquivo **fac** para chamar **fac**`.``unshift` conforme necessário. Cada **byte** de elemento do tipo `char` produzido assim é gravado no fluxo associado designado pelo ponteiro de arquivo **fp** como se fosse por chamadas sucessivas do formulário `fputc`( **byte**, **fp**). Se a chamada para **fac.unshift** ou qualquer gravação falhar, a função não terá êxito.  
+ Para um fluxo amplo, se qualquer inserções tiverem ocorrido desde que o fluxo foi aberto ou desde a última chamada a `streampos`, as chamadas de função [estourarão](#overflow). Ele também insere qualquer sequência necessária para restaurar o estado de conversão inicial usando a faceta de conversão de arquivo **fac** para chamar **fac**`.``unshift` conforme necessário. Cada **byte** de elemento do tipo `char` produzido assim é gravado no fluxo associado designado pelo ponteiro de arquivo **fp** como se fosse por chamadas sucessivas do formulário `fputc`( **byte**, **fp**). Se a chamada para **fac.unshift** ou qualquer gravação falhar, a função não terá êxito.  
   
-##  <a name="a-namebasicfilebufsetbufa--basicfilebufsetbuf"></a><a name="basic_filebuf__setbuf"></a>  basic_filebuf::setbuf  
+##  <a name="setbuf"></a>  basic_filebuf::setbuf  
  Executa um operação específica para cada buffer de fluxo derivado.  
   
 ```  
@@ -546,16 +567,16 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
  `_Buffer`  
  Ponteiro para um buffer.  
   
- ` count`  
+ `count`  
  O tamanho do buffer.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A função membro protegido retornará zero se o ponteiro do arquivo `fp` for um ponteiro nulo.  
   
 ### <a name="remarks"></a>Comentários  
- `setbuf` chama `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, ` count` \* `sizeof` ( **Elem**) ) para oferecer a matriz de elementos ` count` começando no _ *Buffer* como um buffer para o fluxo. Se essa função retornar um valor diferente de zero, a função retornará um ponteiro nulo. Caso contrário, retornará **this** para indicar o sucesso.  
+ `setbuf` chama `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) para oferecer a matriz de elementos `count` começando no _ *Buffer* como um buffer para o fluxo. Se essa função retornar um valor diferente de zero, a função retornará um ponteiro nulo. Caso contrário, retornará **this** para indicar o sucesso.  
   
-##  <a name="a-namebasicfilebufswapa--basicfilebufswap"></a><a name="basic_filebuf__swap"></a>  basic_filebuf::swap  
+##  <a name="swap"></a>  basic_filebuf::swap  
  Troca o conteúdo desse `basic_filebuf` pelo conteúdo do `basic_filebuf` fornecido.  
   
 ```  
@@ -563,10 +584,10 @@ void swap(basic_filebuf& right);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- ` right`  
+ `right`  
  Um `lvalue` referência a outro `basic_filebuf`.  
   
-##  <a name="a-namebasicfilebufsynca--basicfilebufsync"></a><a name="basic_filebuf__sync"></a>  basic_filebuf::sync  
+##  <a name="sync"></a>  basic_filebuf::sync  
  Tenta sincronizar os fluxos controlados com quaisquer fluxos externos associados.  
   
 ```  
@@ -574,16 +595,16 @@ virtual int sync();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornará zero se o ponteiro do arquivo **fp** for um ponteiro nulo. Caso contrário, retornará zero somente se chamadas tanto para [overflow](#basic_filebuf__overflow) quanto para `fflush`( **fp**) obtiverem sucesso em liberar qualquer saída para o fluxo.  
+ Retornará zero se o ponteiro do arquivo **fp** for um ponteiro nulo. Caso contrário, retornará zero somente se chamadas tanto para [overflow](#overflow) quanto para `fflush`( **fp**) obtiverem sucesso em liberar qualquer saída para o fluxo.  
   
-##  <a name="a-namebasicfilebuftraitstypea--basicfilebuftraitstype"></a><a name="basic_filebuf__traits_type"></a>  basic_filebuf::traits_type  
+##  <a name="traits_type"></a>  basic_filebuf::traits_type  
  Associa um nome de tipo ao parâmetro de modelo **Tr**.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
-##  <a name="a-namebasicfilebufunderflowa--basicfilebufunderflow"></a><a name="basic_filebuf__underflow"></a>  basic_filebuf::underflow  
+##  <a name="underflow"></a>  basic_filebuf::underflow  
  Extrai o elemento atual do fluxo de entrada.  
   
 ```  
@@ -591,18 +612,19 @@ virtual int_type underflow();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se a função não conseguir obter êxito, ela retornará **traits_type::**[eof](../standard-library/char-traits-struct.md#char_traits__eof). Caso contrário, retornará **ch**, convertidos conforme descrito na seção Comentários.  
+ Se a função não conseguir obter êxito, ela retornará **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Caso contrário, retornará **ch**, convertidos conforme descrito na seção Comentários.  
   
 ### <a name="remarks"></a>Comentários  
- A função membro virtual protegida busca extrair o elemento atual **ch** do fluxo de entrada e retorna o elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#char_traits__to_int_type)( **ch**). Isso pode ser feito de várias maneiras:  
+ A função membro virtual protegida busca extrair o elemento atual **ch** do fluxo de entrada e retorna o elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Isso pode ser feito de várias maneiras:  
   
 -   Se houver uma posição de leitura estiver disponível, ela pegará **ch** como o elemento armazenado na posição leitura e avançará o próximo ponteiro para o buffer de entrada.  
   
--   Ele pode ler um ou mais elementos do tipo `char`*,* como se por chamadas sucessivas do formulário `fgetc`( **fp**) e convertê-los em um elemento **ch** do tipo **Elem** utilizando a faceta de conversão de arquivo fac para chamar **fac.in** conforme necessário. Se qualquer leitura ou conversão falhar, a função não será bem-sucedida.  
+-   Ela pode ler um ou mais elementos do tipo `char`, como se as chamadas sucessivas do formulário `fgetc`(**fp**) e convertê-los em um elemento **ch** do tipo **Elem** , usando o PAT de faceta de conversão de arquivo para chamar **fac.in** conforme necessário. Se qualquer leitura ou conversão falhar, a função não será bem-sucedida.  
   
 ## <a name="see-also"></a>Consulte também  
  [\<fstream>](../standard-library/fstream.md)   
  [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Programação de iostream](../standard-library/iostream-programming.md)   
  [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+
 

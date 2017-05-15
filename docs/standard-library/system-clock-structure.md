@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::system_clock
+- chrono/std::chrono::system_clock::from_time_t
+- chrono/std::chrono::system_clock::now
+- chrono/std::chrono::system_clock::to_time_t
+- chrono/std::chrono::system_clock::is_monotonic Constant
+- chrono/std::chrono::system_clock::is_steady Constant
 dev_langs:
 - C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 883a683e456b00b4a2a80004cb8bb5d72f03a91a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 053b2930d25bb7b1ec073764801530860511ac1b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="systemclock-structure"></a>Estrutura system_clock
@@ -70,23 +76,23 @@ struct system_clock;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Método system_clock::from_time_t](#system_clock__from_time_t_method)|Estático. Retorna um `time_point` que mais se aproxima de um tempo especificado.|  
-|[Método system_clock::now](#system_clock__now_method)|Estático. Retorna a data atual.|  
-|[Método system_clock::to_time_t](#system_clock__to_time_t_method)|Estático. Retorna um objeto `time_t` que mais se aproxima de um `time_point` especificado.|  
+|[from_time_t](#from_time_t)|Estático. Retorna um `time_point` que mais se aproxima de um tempo especificado.|  
+|[Agora](#now)|Estático. Retorna a data atual.|  
+|[to_time_t](#to_time_t)|Estático. Retorna um objeto `time_t` que mais se aproxima de um `time_point` especificado.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Constante system_clock::is_monotonic](#system_clock__is_monotonic_constant)|Especifica se o tipo de relógio é monotônico.|  
-|[Constante system_clock::is_steady](#system_clock__is_steady_constant)|Especifica se o tipo de relógio é estável.|  
+|[Constante system_clock::is_monotonic](#is_monotonic_constant)|Especifica se o tipo de relógio é monotônico.|  
+|[Constante system_clock::is_steady](#is_steady_constant)|Especifica se o tipo de relógio é estável.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** chrono  
+ **Cabeçalho:** \<chrono >  
   
  **Namespace:** std::chrono  
   
-##  <a name="a-namesystemclockfromtimetmethoda--systemclockfromtimet-method"></a><a name="system_clock__from_time_t_method"></a>  Método system_clock::from_time_t  
+##  <a name="from_time_t"></a>system_clock:: from_time_t
  Método estático que retorna um [time_point](../standard-library/time-point-class.md) que mais se aproxima do tempo representado por `Tm`.  
   
 ```  
@@ -97,7 +103,7 @@ static time_point from_time_t(time_t Tm) noexcept;
  `Tm`  
  Um objeto [time_t](../c-runtime-library/standard-types.md).  
   
-##  <a name="a-namesystemclockismonotonicconstanta--systemclockismonotonic-constant"></a><a name="system_clock__is_monotonic_constant"></a>  Constante system_clock::is_monotonic  
+##  <a name="is_monotonic_constant"></a>  Constante system_clock::is_monotonic  
  Valor estático que especifica se o tipo de relógio é monotônico.  
   
 ```  
@@ -110,7 +116,7 @@ static const bool is_monotonic = false;
 ### <a name="remarks"></a>Comentários  
  Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now()` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now()`.  
   
-##  <a name="a-namesystemclockissteadyconstanta--systemclockissteady-constant"></a><a name="system_clock__is_steady_constant"></a>  Constante system_clock::is_steady  
+##  <a name="is_steady_constant"></a>  Constante system_clock::is_steady  
  Valor estático que especifica se o tipo de relógio é *estável*.  
   
 ```  
@@ -121,9 +127,9 @@ static const bool is_steady = false;
  Nessa implementação, `system_clock::is_steady` sempre retorna `false`.  
   
 ### <a name="remarks"></a>Comentários  
- Um relógio será *estável* se ele for [monotônico](#system_clock__is_monotonic_constant) e se o tempo entre os tiques do relógio for constante.  
+ Um relógio será *estável* se ele for [monotônico](#is_monotonic_constant) e se o tempo entre os tiques do relógio for constante.  
   
-##  <a name="a-namesystemclocknowmethoda--systemclocknow-method"></a><a name="system_clock__now_method"></a>  Método system_clock::now  
+##  <a name="now"></a>system_clock:: Now
  Método estático que retorna a hora atual.  
   
 ```  
@@ -133,7 +139,7 @@ static time_point now() noexcept;
 ### <a name="return-value"></a>Valor de retorno  
  Um objeto [time_point](../standard-library/time-point-class.md) que representa a hora atual.  
   
-##  <a name="a-namesystemclocktotimetmethoda--systemclocktotimet-method"></a><a name="system_clock__to_time_t_method"></a>  Método system_clock::to_time_t  
+##  <a name="to_time_t"></a>system_clock:: to_time_t
  Método estático que retorna um [time_t](../c-runtime-library/standard-types.md) que mais se aproxima do tempo representado por `Time`.  
   
 ```  

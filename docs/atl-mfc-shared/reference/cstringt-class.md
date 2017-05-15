@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>Classe CStringT
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  Determina se a classe de cadeia de caracteres precisa de suporte à biblioteca de tempo de execução do C (CRT) e onde se encontram os recursos de cadeia de caracteres. Pode ser um dos seguintes:  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      A classe requer suporte do CRT e pesquisas para cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      A classe não requer suporte do CRT e pesquisas para cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      A classe requer suporte do CRT e procura por cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      A classe não requer suporte do CRT e procura por cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.  
   
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString`, `CStringA`, e `CStringW` são exportados a DLL do MFC (MFC90. DLL), nunca a partir de DLLs do usuário. Isso é feito para evitar `CStringT` do que está sendo definido várias vezes.  
   
 > [!NOTE]
->  Se você encontrou erros de vinculador ao exportar um `CString`-classe derivada de uma extensão MFC DLL no Visual C++ .NET 2002 e aplicou a solução alternativa conforme descrito no artigo da Base de dados de Conhecimento, "Vinculação erros quando você importar CString-Derived Classes" (Q309801), você deve remover o código de solução alternativa, porque esse problema foi corrigido no Visual C++ .NET 2003. Você pode encontrar artigos da Base de dados de conhecimento do CD-ROM do MSDN Library ou no [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+>  Se você encontrou erros de vinculador ao exportar um `CString`-classe derivada de uma extensão MFC DLL no Visual C++ .NET 2002 e aplicou a solução alternativa conforme descrito no artigo da Base de dados de Conhecimento, "Vinculação erros quando você importar CString-Derived Classes" (Q309801), você deve remover o código de solução alternativa, porque esse problema foi corrigido no Visual C++ .NET 2003. Você pode encontrar artigos da Base de dados de conhecimento em [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
  Os tipos de cadeia de caracteres a seguir estão disponíveis em aplicativos MFC:  
   
@@ -235,7 +236,7 @@ public CSimpleStringT<BaseType,
   
 -   Você pode substituir livremente `CStringT` objetos para `PCXSTR` argumentos de função.  
   
--   Gerenciamento de memória personalizados para buffers de cadeia de caracteres. Para obter mais informações, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+-   Gerenciamento de memória personalizados para buffers de cadeia de caracteres. Para obter mais informações, consulte [CStringT e gerenciamento de memória](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="cstringt-predefined-types"></a>CStringT predefinidos de tipos  
  Porque `CStringT` usa um argumento de template para definir o tipo de caractere (ou [wchar_t](../../c-runtime-library/standard-types.md) ou [char](../../c-runtime-library/standard-types.md)) com suporte, tipos de parâmetro do método podem ser complicados às vezes. Para simplificar esse problema, um conjunto de tipos predefinidos é definido e usado em todo o `CStringT` classe. A tabela a seguir lista os vários tipos:  
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  A outra cadeia de caracteres usada para comparação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Zero se as cadeias de caracteres são idênticas, < 0="" if="" this=""> `CStringT` objeto é menor que `psz`, ou > 0 se isso `CStringT` objeto é maior que `psz`.  
+ Zero se as cadeias de caracteres forem idênticas, < 0 se isso `CStringT` objeto é menor que `psz`, ou > 0 se isso `CStringT` objeto é maior que `psz`.  
   
 ### <a name="remarks"></a>Comentários  
  A função de texto genérico `_tcscoll`, que é definido em TCHAR. H, mapeia para o `strcoll`, `wcscoll`, ou `_mbscoll`, dependendo do conjunto de caracteres que é definido em tempo de compilação. Cada função executa uma comparação diferencia maiusculas de minúsculas das cadeias de caracteres de acordo com a página de código atualmente em uso. Para obter mais informações, consulte [strcoll, wcscoll, mbscoll, strcoll_l, wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  A outra cadeia de caracteres usada para comparação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Zero se as cadeias de caracteres são idênticas (ignorando maiusculas e minúsculas), < 0="" if="" this=""> `CStringT` objeto é menor que `psz` (ignorando maiusculas e minúsculas), ou > 0 se isso `CStringT` objeto é maior que `psz` (ignorando maiusculas e minúsculas).  
+ Zero se as cadeias de caracteres são idênticas (ignora maiusculas/minúsculas), < 0 se isso `CStringT` objeto é menor que `psz` (ignorando maiusculas e minúsculas), ou > 0 se isso `CStringT` objeto é maior do que `psz` (ignorando maiusculas e minúsculas).  
   
 ### <a name="remarks"></a>Comentários  
  A função de texto genérico `_tcscoll`, que é definido em TCHAR. H, mapeia para o `stricoll`, `wcsicoll`, ou `_mbsicoll`, dependendo do conjunto de caracteres que é definido em tempo de compilação. Cada função executa uma comparação de maiusculas e minúsculas de cadeias de caracteres, de acordo com a página de código em uso no momento. Para obter mais informações, consulte [strcoll, wcscoll, mbscoll, strcoll_l, wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -372,7 +373,7 @@ int Compare(PCXSTR psz) const;
  A outra cadeia de caracteres usada para comparação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Zero se as cadeias de caracteres são idênticas, < 0="" if="" this=""> `CStringT` objeto é menor que `psz`, ou > 0 se isso `CStringT` objeto é maior que `psz`.  
+ Zero se as cadeias de caracteres forem idênticas, < 0 se isso `CStringT` objeto é menor que `psz`, ou > 0 se isso `CStringT` objeto é maior que `psz`.  
   
 ### <a name="remarks"></a>Comentários  
  A função de texto genérico `_tcscmp`, que é definido em TCHAR. H, mapeia para o `strcmp`, `wcscmp`, ou `_mbscmp`, dependendo do conjunto de caracteres que é definido em tempo de compilação. Cada função executa uma comparação diferencia maiusculas de minúsculas das cadeias de caracteres e não é afetada pela localidade. Para obter mais informações, consulte [strcmp wcscmp, mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  A outra cadeia de caracteres usada para comparação.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Zero se as cadeias de caracteres são idênticas (ignorando maiusculas e minúsculas), <0 if="" this=""></0> `CStringT` objeto é menor que `psz` (ignorando maiusculas e minúsculas), ou > 0 se isso `CStringT` objeto é maior que `psz` (ignorando maiusculas e minúsculas).  
+ Zero se as cadeias de caracteres são idênticas (ignorando maiusculas e minúsculas), < 0 se isso `CStringT` objeto é menor que `psz` (ignorando maiusculas e minúsculas), ou > 0 se isso `CStringT` objeto é maior do que `psz` (ignorando maiusculas e minúsculas).  
   
 ### <a name="remarks"></a>Comentários  
  A função de texto genérico `_tcsicmp`, que é definido em TCHAR. H, mapeia para o `_stricmp`, `_wcsicmp` ou `_mbsicmp`, dependendo do conjunto de caracteres que é definido em tempo de compilação. Cada função executa uma comparação das cadeias de caracteres de maiusculas e minúsculas. A comparação depende de `LC_CTYPE` aspecto da localidade, mas não `LC_COLLATE`. Para obter mais informações, consulte [stricmp, wcsicmp, mbsicmp, stricmp_l, wcsicmp_l, mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).  
@@ -703,7 +704,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
  Ponteiro para uma lista de argumentos.  
   
 ### <a name="remarks"></a>Comentários  
- A função requer uma definição de mensagem como entrada, determinado pelo `pszFormat`. A função copia o texto da mensagem formatado e uma lista de variável de argumentos para o `CStringT` objeto, o processamento de um inserido insere sequências, se solicitado.  
+ A função requer uma definição de mensagem como entrada, determinado pelo `pszFormat`. A função copia o texto da mensagem formatado e uma lista de variável de argumentos para o `CStringT` objeto, o processamento de um inserido insere sequências se solicitado.  
   
 > [!NOTE]
 > `FormatMessageV`chamadas [CStringT::FormatMessage](#formatmessage), que tenta alocar memória do sistema para a cadeia de caracteres formatada recentemente. Se essa tentativa falhar, uma exceção de memória é gerada automaticamente.  

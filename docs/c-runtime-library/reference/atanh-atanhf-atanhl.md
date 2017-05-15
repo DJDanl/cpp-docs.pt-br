@@ -1,59 +1,65 @@
 ---
-title: "atanh, atanhf, atanhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atanhl"
-  - "atanhf"
-  - "atanh"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atanhl"
-  - "atanhf"
-  - "atanh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atanhf function"
-  - "atanhl function"
-  - "atanh funciton"
+title: atanh, atanhf, atanhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atanhl
+- atanhf
+- atanh
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- atanhl
+- atanhf
+- atanh
+dev_langs:
+- C++
+helpviewer_keywords:
+- atanhf function
+- atanhl function
+- atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
+
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 Calcula a tangente hiperbólica inversa.  
@@ -83,7 +89,7 @@ long double atanhl(
  Valor de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções `atanh` retornam a tangente hiperbólica inversa (tangente hiperbólica de arco) de `x`. Se `x` for maior que 1, ou menor que –1, `errno` é definido como `EDOM` e o resultado é um NaN silencioso. Se `x` for igual a 1 ou -1, um infinito positivo ou negativo é retornado, respectivamente, e `errno` é definido como `ERANGE`.  
+ As funções `atanh` retornam a tangente hiperbólica inversa (tangente hiperbólica de arco) de `x`. Se `x` é maior que 1, ou menor que -1, `errno` é definido como `EDOM` e o resultado é um NaN silenciosa. Se `x` for igual a 1 ou -1, um infinito positivo ou negativo é retornado, respectivamente, e `errno` é definido como `ERANGE`.  
   
 |Entrada|Exceção SEH|Exceção `Matherr`|  
 |-----------|-------------------|-------------------------|  
@@ -128,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
@@ -88,7 +89,7 @@ long double expm1l(
  O valor de exponencial do ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- As funções `expm1` retornam um valor de ponto flutuante que representa e<sup>x</sup> – 1, se houver êxito. No estouro, `expm1` retorna `HUGE_VAL`, `expm1f` retorna `HUGE_VALF`, `expm1l` retorna `HUGE_VALL` e `errno` é definido como `ERANGE`. Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ O `expm1` funções retornam um valor de ponto flutuante que representa e<sup>x</sup> - 1, se for bem-sucedido. No estouro, `expm1` retorna `HUGE_VAL`, `expm1f` retorna `HUGE_VALF`, `expm1l` retorna `HUGE_VALL` e `errno` é definido como `ERANGE`. Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentários  
  Como C++ permite sobrecargas, é possível chamar sobrecargas de `expm1` que tomam e retornam valores de `float` e `long double`. Em um programa C, `expm1` sempre toma e retorna um `double`.  
@@ -100,9 +101,6 @@ long double expm1l(
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)   

@@ -1,72 +1,78 @@
 ---
-title: "_strinc, _wcsinc, _mbsinc, _mbsinc_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsinc"
-  - "_wcsinc"
-  - "_mbsinc_l"
-  - "_strinc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsinc_l"
-  - "_strinc"
-  - "strinc"
-  - "_mbsinc"
-  - "_wcsinc"
-  - "wcsinc"
-  - "mbsinc"
-  - "_mbsinc_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsinc function"
-  - "wcsinc function"
-  - "mbsinc_l function"
-  - "_strinc function"
-  - "strinc function"
-  - "_mbsinc_l function"
-  - "mbsinc function"
-  - "_wcsinc function"
-  - "_tcsinc function"
-  - "tcsinc function"
+title: _strinc, _wcsinc, _mbsinc, _mbsinc_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsinc
+- _wcsinc
+- _mbsinc_l
+- _strinc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsinc_l
+- _strinc
+- strinc
+- _mbsinc
+- _wcsinc
+- wcsinc
+- mbsinc
+- _mbsinc_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbsinc function
+- wcsinc function
+- mbsinc_l function
+- _strinc function
+- strinc function
+- _mbsinc_l function
+- mbsinc function
+- _wcsinc function
+- _tcsinc function
+- tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3eca42c7ad0563ce573dbaa2a75dd85739c342f5
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
+
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 Avança um ponteiro de cadeia de caracteres em um caractere.  
@@ -125,9 +131,6 @@ unsigned char *_mbsinc_l(
 |`_wcsinc`|\<tchar.h>|  
   
  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de cadeias de caracteres](../../c-runtime-library/string-manipulation-crt.md)   

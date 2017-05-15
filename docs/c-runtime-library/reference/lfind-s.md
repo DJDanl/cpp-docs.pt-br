@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9413ddad5bfaa9fe3c58938e25fb45d5b14ddd4c
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="lfinds"></a>_lfind_s
@@ -201,9 +202,6 @@ int main( )
 ```Output  
 weit found  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- <xref:System.Collections.ArrayList.Contains%2A>  
   
 ## <a name="see-also"></a>Consulte também  
  [Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)   

@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  Ponteiro para a estrutura para armazenar resultados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retornará 0 se as informações de status do arquivo forem obtidas. Um valor retornado de -1 indica que há um erro. Se o descritor do arquivo for inválido ou `buffer` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EBADF`, no caso de um descritor de arquivo inválido ou como `EINVAL`, se `buffer` for `NULL`.  
+ Retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de -1 indica um erro. Se o descritor do arquivo for inválido ou `buffer` for `NULL`, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, `errno` será definido como `EBADF`, no caso de um descritor de arquivo inválido ou como `EINVAL`, se `buffer` for `NULL`.  
   
 ## <a name="remarks"></a>Comentários  
  A função `_fstat` obtém informações sobre o arquivo aberto associado ao `fd` e as armazena na estrutura apontada por `buffer`. A estrutura `_stat`, definida em SYS\Stat.h, contém os seguintes campos.  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  Variações dessas funções dão suporte a tipos de hora de 32 ou de 64 bits e a comprimentos de arquivo de 32 ou de 64 bits. O primeiro sufixo numérico (`32` ou `64`) indica o tamanho do tipo de hora usado; o segundo sufixo é `i32` ou `i64`, que indica se o tamanho do arquivo é representado como um inteiro de 32 ou de 64 bits.  
   
- `_fstat` é equivalente a `_fstat64i32` e `struct``_stat` contém uma hora de 64 bits. Isso é verdadeiro a menos que `_USE_32BIT_TIME_T` seja definido; nesse caso, o comportamento antigo está em vigor. `_fstat` usa uma hora de 32 bits e `struct``_stat` contém uma hora de 32 bits. O mesmo vale para `_fstati64`.  
+ `_fstat` é equivalente a `_fstat64i32` e `struct _stat` contém uma hora de 64 bits. Isso é verdadeiro a menos que `_USE_32BIT_TIME_T` seja definido; nesse caso, o comportamento antigo está em vigor. `_fstat` usa uma hora de 32 bits e `struct _stat` contém uma hora de 32 bits. O mesmo vale para `_fstati64`.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variações de tipo de hora e de tipo de tamanho de arquivo de _stat  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- Não aplicável. Para chamar a função C padrão, use `PInvoke`. Para obter mais informações, consulte [Exemplos de invocação de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de Arquivos](../../c-runtime-library/file-handling.md)   

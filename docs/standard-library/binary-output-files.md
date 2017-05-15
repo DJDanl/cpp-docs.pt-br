@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8968a47f9d957aa0873b5db78909a6b4ad66ea75
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="binary-output-files"></a>Arquivos de Saída Binários
-Os fluxos foram criados originalmente para texto, portanto, o modo de saída padrão é texto. No modo de texto, o caractere de nova linha (hexadecimal 10) expande-se para um avanço de linha de retorno de carro (somente 16 bits). A expansão pode causar problemas, como é mostrado aqui:  
+Os fluxos foram criados originalmente para texto, portanto, o modo de saída padrão é texto. No modo de texto, o caractere de nova linha (10 hexadecimal) se expande para um carro retorno-alimentação de linha (somente 16 bits). A expansão pode causar problemas, como é mostrado aqui:  
   
 ```  
 // binary_output_files.cpp  
@@ -55,7 +56,7 @@ int main( )
 }  
 ```  
   
- Você pode esperar que este programa produza a sequência de bytes { 99, 0, 10, 0 }, mas ele produz { 99, 0, 13, 10, 0 }, o que causa problemas para um programa que espera uma entrada binária. Se você precisar de uma saída binária verdadeira, na qual os caracteres são escritos sem conversão, especifique a saída binária usando o argumento openmode do construtor [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream):  
+ Você pode esperar que este programa produza a sequência de bytes { 99, 0, 10, 0 }, mas ele produz { 99, 0, 13, 10, 0 }, o que causa problemas para um programa que espera uma entrada binária. Se você precisar de uma saída binária verdadeira, na qual os caracteres são escritos sem conversão, especifique a saída binária usando o argumento openmode do construtor [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):  
   
 ```  
 // binary_output_files2.cpp  

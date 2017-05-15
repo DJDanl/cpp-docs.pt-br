@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 706fd4e6175ea1119d7639eefc51911d5e773232
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a305da5b415b6db38f3d5b4e155b31133e1ac980
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
@@ -162,9 +163,6 @@ int main( void )
 Before: This is a test of the wmemset function  
 After:  **** is a test of the wmemset function  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
- [System::Buffer::SetByte](https://msdn.microsoft.com/en-us/library/system.buffer.setbyte.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Manipulação de buffer](../../c-runtime-library/buffer-manipulation.md)   

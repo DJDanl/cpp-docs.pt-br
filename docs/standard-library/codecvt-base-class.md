@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d50fcc70039320b3a0ac99df279cdd79e336fa2
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d0c12f0dfb1b0ceb111f3c3313e78dd5c9197f70
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="codecvtbase-class"></a>Classe codecvt_base
@@ -63,7 +64,7 @@ protected:
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A classe descreve uma enumeração comum a todas as especializações da classe de modelo [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#codecvt__do_in) ou [do_out](../standard-library/codecvt-class.md#codecvt__do_out):  
+ A classe descreve uma enumeração comum a todas as especializações da classe de modelo [codecvt](../standard-library/codecvt-class.md). O resultado da enumeração descreve os possíveis valores de retornos de [do_in](../standard-library/codecvt-class.md#do_in) ou [do_out](../standard-library/codecvt-class.md#do_out):  
   
 - **ok** se a conversão entre codificações de caracteres internos e externos for bem-sucedida.  
   

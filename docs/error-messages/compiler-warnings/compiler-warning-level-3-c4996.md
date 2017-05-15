@@ -34,104 +34,95 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 4a82bbdd3b28ae0150ab8366d3ecbe849e7ac8a1
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9a0c25772fadec86a893b8c7c4af09072eb0476f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilador C4996 de aviso (nível 3)
 O compilador encontrou uma declaração preterida.  
   
- Esse aviso ou erro tem vários significados possíveis.  
+Esse aviso ou erro tem vários significados possíveis, dependendo do contexto.  
   
- `C4996`ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md). Várias funções, funções de membro, funções de modelo e variáveis globais nas bibliotecas no Visual Studio são marcadas como preteridos. Essas funções podem ter um nome diferente de preferência, pode não ser seguros ou ter uma variação mais segura, ou pode estar obsoleto. A mensagem de erro pode incluir uma substituição sugerida para a função preterida ou a variável global. Você pode desativar esse aviso com a [aviso](../../preprocessor/warning.md) pragma ou **/wd4996** opção de linha de comando. Você também pode usar macros de pré-processador desativar determinadas classes de avisos de depreciação. 
-
-Esse aviso também é emitido quando você tenta acessar uma função, membro de classe ou um typedef com C++ 14 `[[deprecated]]` atributo. Para obter mais informações, consulte [atributos padrão do C++](../../cpp/attributes2.md). 
+C4996 ocorre quando o compilador encontra uma função ou variável que está marcado como [preterido](../../cpp/deprecated-cpp.md) usando um `__declspec(deprecated)` modificador. Esse aviso também é emitido quando você tenta acessar uma função, membro de classe ou um typedef com C++ 14 `[[deprecated]]` atributo. Para obter mais informações, consulte [atributos padrão do C++](../../cpp/attributes2.md). Você pode usar esse atributo por conta própria em suas bibliotecas para avisar os clientes sobre funções preteridas, membros ou definições de tipo.  
   
- **O nome POSIX para este item está obsoleto. Em vez disso, use o nome em conformidade com ISO C e C++:** novo_nome**. Consulte a ajuda online para obter detalhes.**  
+Várias funções, funções de membro, funções de modelo e variáveis globais nas bibliotecas no Visual Studio são marcadas como preteridos. Essas funções podem ter um nome diferente de preferência, pode não ser seguros ou ter uma variação mais segura, ou pode estar obsoleto. Muitas mensagens de erro incluem uma substituição sugerida para a função preterida ou a variável global.  
   
- Algumas funções POSIX no CRT foram renomeadas para estar de acordo com C99 e C + + 03 as regras para nomes de função global definido pela implementação. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade padrão. O compilador emite um aviso de substituição para os nomes de função original e sugere o nome preferido. Somente os nomes originais são preteridos, não as próprias funções. Para desativar os avisos de depreciação para essas funções, defina a macro de pré-processador **_CRT_NONSTDC_NO_WARNINGS**. Você pode definir isso na linha de comando, incluindo a opção `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir esta macro no Visual Studio, abra o **páginas de propriedade** caixa de diálogo para seu projeto. Expanda **propriedades de configuração**, **C/C++**, **pré-processador**. Em **definições de pré-processador**, adicionar `_CRT_NONSTDC_NO_WARNINGS`. Escolha **Okey** para salvar e, em seguida, recrie seu projeto. Para definir esta macro somente nos arquivos de origem específico, adicione a linha `#define _CRT_NONSTDC_NO_WARNINGS` antes de qualquer linha que inclui um arquivo de cabeçalho.  
+Para corrigir esse problema, geralmente recomendamos que alterar seu código para usar as funções sugeridas de mais seguras ou atualizadas e variáveis globais, em vez disso. Se você precisar usar as funções existentes ou variáveis por motivos de portabilidade, o aviso pode ser desativado.  
   
- **Esta função ou variável pode não ser seguro. Considere o uso de** safe_version **em vez disso. Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS.  Consulte a ajuda online para obter detalhes.**  
+Você pode desativar o aviso de uma linha de código específica usando o [aviso](../../preprocessor/warning.md) pragma `#pragma warning(suppress : 4996)`. Você pode desativá-lo dentro de um arquivo usando o pragma de aviso `#pragma warning(disable : 4996)`. Você pode desativá-lo globalmente em compilações de linha de comando usando o **/wd4996** opção de linha de comando. Para desativar o aviso para um projeto no IDE do Visual Studio, abra o **páginas de propriedade** caixa de diálogo, selecione o **propriedades de configuração**, **C/C++**, **avançado** página e edite o **desativar avisos específicos** propriedade a adicionar `4996`.  Você também pode usar macros de pré-processador desativar determinadas classes específicas de avisos de depreciação usados nas bibliotecas. Essas macros são descritas abaixo.  
   
- Algumas funções de CRT e biblioteca padrão C++ e globais foram preteridos em favor de funções novas e mais seguras. O compilador emite um aviso de substituição para essas funções e sugere a função preferencial. Para desativar os avisos de depreciação para essas funções no CRT, definir **_CRT_SECURE_NO_WARNINGS**. Para desativar avisos sobre preteridos variáveis globais, definir **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obter mais informações sobre essas funções preteridas e globais, consulte [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md) e [bibliotecas seguras: biblioteca padrão C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
+Aqui estão algumas das fontes de biblioteca de C4996.  
   
- **Chamada de função com parâmetros que pode não ser seguro - esta chamada depende do chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'**  
+## <a name="posix-function-names"></a>Nomes de função POSIX  
   
- Determinadas funções de modelo de biblioteca padrão C++ não verificam os parâmetros estão corretos. Esse aviso ajuda a identificar o uso dessas funções. Para desativar os avisos para essas funções, definir **_SCL_SECURE_NO_WARNINGS**. Para obter mais informações, consulte [Iteradores verificados](../../standard-library/checked-iterators.md).  
+**O nome POSIX para este item está obsoleto. Em vez disso, use o nome em conformidade com ISO C e C++:** *novo_nome*. **Consulte a Ajuda online para obter detalhes.**  
   
- **Esta função ou variável foi substituído por funcionalidade de biblioteca ou o sistema operacional mais recente. Considere o uso de** new_item **em vez disso. Consulte a ajuda online para obter detalhes.**  
+Microsoft renomeou algumas funções POSIX no CRT para manter a conformidade com C99 e C + + 03 as regras para nomes de função global definido pela implementação. Somente os nomes POSIX originais são preteridos, não as próprias funções. Na maioria dos casos, um sublinhado à esquerda foi adicionado ao nome da função POSIX para criar um nome de conformidade padrão. O compilador emite um aviso de substituição para o nome de função original e sugere o nome preferido.  
   
- Algumas funções de biblioteca e as variáveis globais são preteridas como obsoleto. Essas funções e variáveis podem ser removidos em uma versão futura da biblioteca. O compilador emite um aviso de substituição para esses itens e sugere a opção preferencial. Para desativar os avisos de depreciação para esses itens, definir **_CRT_OBSOLETE_NO_WARNINGS**. Para obter mais informações, consulte a documentação para a função preterida ou variável.  
+Para corrigir esse problema, geralmente recomendamos que alterar seu código para usar os nomes de função sugerido em vez disso. No entanto, os nomes atualizados são específicas da Microsoft. Se você precisar usar os nomes de função existente por motivos de portabilidade, você pode desativar esses avisos. As funções POSIX ainda estão disponíveis na biblioteca em seus nomes originais.  
   
- **Várias mensagens no código do MFC ou do ATL**  
+Para desativar os avisos de depreciação para essas funções, defina a macro de pré-processador **_CRT_NONSTDC_NO_WARNINGS**. Você pode definir isso na linha de comando, incluindo a opção `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir esta macro no Visual Studio, abra o **páginas de propriedade** caixa de diálogo para seu projeto. Expanda **propriedades de configuração**, **C/C++**, **pré-processador**. Em **definições de pré-processador**, adicionar `_CRT_NONSTDC_NO_WARNINGS`. Escolha **Okey** para salvar e, em seguida, recrie seu projeto. Para definir esta macro somente nos arquivos de origem específico, adicione a linha `#define _CRT_NONSTDC_NO_WARNINGS` antes de qualquer linha que inclui um arquivo de cabeçalho.  
   
- O `C4996` também poderá ocorrer se você usar funções MFC ou ATL preteridas por razões de segurança. Para suprimir esses avisos, consulte [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings) e [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
+## <a name="unsafe-crt-library-functions"></a>Funções de biblioteca CRT inseguras  
   
- **O empacotamento de erros no código do CLR**  
+ **Esta função ou variável pode não ser seguro. Considere o uso de***safe_version* **em vez disso.   Para desabilitar a substituição, use _CRT_SECURE_NO_WARNINGS.  Consulte a ajuda online para obter detalhes.**  
   
- O `C4996` também pode ocorrer quando você usa a biblioteca de marshaling. Nesse caso, C4996 é um erro, não um aviso. Este erro ocorre quando você usa [marshal_as](../../dotnet/marshal-as.md) para converter entre os dois tipos de dados que exigem um [classe marshal_context](../../dotnet/marshal-context-class.md). Você também receberá esse erro quando a biblioteca de marshaling não oferecer suporte a uma conversão. Para obter mais informações sobre a biblioteca de marshaling, consulte [visão geral de Marshaling no C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+ Microsoft foi preterido algumas funções de CRT e biblioteca padrão C++ e globais em favor de versões mais seguras. Na maioria dos casos, as funções preteridas permitem desmarcada acesso de leitura ou gravação para buffers, que pode levar a problemas graves de segurança. O compilador emite um aviso de substituição para essas funções e sugere a função preferencial.  
   
- **Exemplos que geram C4996**  
+ Para corrigir esse problema, recomendamos que você use a função ou variável *safe_version* em vez disso. Se você tiver verificado que não é possível substituir um buffer ou overread ocorra em seu código e você não pode alterar o código por motivos de portabilidade, você pode desativar o aviso.  
+   
+ Para desativar os avisos de depreciação para essas funções no CRT, definir **_CRT_SECURE_NO_WARNINGS**. Para desativar avisos sobre preteridos variáveis globais, definir **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obter mais informações sobre essas funções preteridas e globais, consulte [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md) e [bibliotecas seguras: biblioteca padrão C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
- No primeiro exemplo, `C4996` é gerado para a linha em que a função é declarada e para a linha em que a função é usada.  
+## <a name="unsafe-standard-library-functions"></a>Funções de biblioteca padrão não seguras  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4996.  
+ **' std::** *function_name* **::\_desmarcado\_iteradores::\_Deprecate' chamar std::** *function_name* **com parâmetros que podem não ser seguros - esta chamada depende do chamador para verificar se os valores passados estão corretos. Para desabilitar esse aviso, use -D_SCL_SECURE_NO_WARNINGS. Consulte a documentação sobre como usar o Visual C++ 'Iteradores verificados'**  
+  
+Esse aviso é exibido em compilações de depuração porque determinadas funções de modelo de biblioteca padrão C++ não verificam se os parâmetros estão corretos. Na maioria dos casos, isso é porque não há informações suficientes disponíveis para a função de verificação de limites de contêiner ou iteradores podem ser usados incorretamente, com a função. Esse aviso ajuda a identificar esses usos de função, porque eles podem ser uma fonte de vulnerabilidades de segurança em seu programa. Para obter mais informações, consulte [Iteradores verificados](../../standard-library/checked-iterators.md).  
+  
+Por exemplo, esse aviso é exibido no modo de depuração se você passar um ponteiro de elemento para `std::copy` em vez de uma matriz simples. Para corrigir esse problema, use uma matriz declarada adequadamente, para a biblioteca pode verificar as extensões de matriz e fazer uma verificação de limites.  
   
 ```cpp  
-// C4996.cpp  
-// compile with: /W3  
-// C4996 warning expected  
-#include <stdio.h>  
-  
-// #pragma warning(disable : 4996)  
-void func1(void) {  
-   printf_s("\nIn func1");  
-}  
-  
-__declspec(deprecated) void func1(int) {  
-   printf_s("\nIn func2");  
-}  
-  
-int main() {  
-   func1();  
-   func1(1);  
-}  
+// C4996_copyarray.cpp
+// compile with: cl /c /W4 /D_DEBUG C4996_copyarray.cpp
+#include <algorithm>
+ 
+void example(char const * const src) { 
+    char dest[1234]; 
+    char * pdest3 = dest + 3;
+    std::copy(src, src + 42, pdest3); // C4996 
+    std::copy(src, src + 42, dest);   // OK, copy can tell that dest is 1234 elements 
+} 
 ```  
   
-## <a name="example"></a>Exemplo  
- O C4996 também pode ocorrer se você não usar um iterador verificado durante a compilação com `_ITERATOR_DEBUG_LEVEL` definido (definido como 1 por padrão para compilações em modo de depuração).  Consulte [Iteradores Verificados](../../standard-library/checked-iterators.md) para obter mais informações.  
-  
- O seguinte exemplo de código da biblioteca padrão C++ gera C4996.  
+Vários algoritmos de biblioteca padrão foram atualizados para versões de "intervalo duplo" em C++ 14. Se você usar as versões de intervalo duplo, o segundo intervalo fornece a verificação de limites necessários:  
   
 ```cpp  
-// C4996_b.cpp  
-// compile with: /EHsc /W3 /c  
-#define _ITERATOR_DEBUG_LEVEL 1  
-  
-#include <algorithm>  
-#include <iterator>  
-  
-using namespace std;  
-using namespace stdext;  
-  
-int main() {  
-    int a[] = { 1, 2, 3 };  
-    int b[] = { 10, 11, 12 };  
-    copy(a, a + 3, b + 1);   // C4996  
-    // try the following line instead  
-    //   copy(a, a + 3, b);  
-    copy(a, a + 3, checked_array_iterator<int *>(b, 3));   // OK  
-}  
-  
+// C4996_containers.cpp
+// compile with: cl /c /W4 /D_DEBUG C4996_containers.cpp
+#include <algorithm>
+ 
+bool example(
+    char const * const left, 
+    const size_t leftSize, 
+    char const * const right, 
+    const size_t rightSize) 
+{ 
+    bool result = false;
+    result = std::equal(left, left + leftSize, right); // C4996
+    // To fix, try this form instead: 
+    // result = std::equal(left, left + leftSize, right, right + rightSize); // OK 
+    return result;
+}
 ```  
   
-## <a name="example"></a>Exemplo  
- O seguinte exemplo de código da biblioteca padrão C++ gera C4996 como um aviso. Os comentários são embutidos.  
+Este exemplo demonstra várias maneiras mais a biblioteca padrão pode ser usada para verificar o uso de iterador, e ao uso desmarcado pode ser perigoso:  
   
 ```cpp  
+// C4996_standard.cpp
+// compile with: cl /EHsc /W4 /MDd C4996_standard.cpp
 #include <algorithm>  
 #include <array>  
 #include <iostream>  
@@ -159,7 +150,7 @@ int main()
     print("v: ", v);  
   
     // OK: vector::iterator is checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
+    // (i.e. an overrun triggers a debug assertion)  
     vector<int> v2(16);  
     transform(v.begin(), v.end(), v2.begin(), [](int n) { return n * 2; });  
     print("v2: ", v2);  
@@ -171,44 +162,96 @@ int main()
     print("v3: ", v3);  
   
     // OK: array::iterator is checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
+    // (i.e. an overrun triggers a debug assertion)  
     array<int, 16> a4;  
     transform(v.begin(), v.end(), a4.begin(), [](int n) { return n * 4; });  
     print("a4: ", a4);  
   
     // OK: Raw arrays are checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
-    // NOTE: This applies only when raw arrays are given to C++ Standard Library algorithms!  
+    // (i.e. an overrun triggers a debug assertion)  
+    // NOTE: This applies only when raw arrays are 
+    // given to C++ Standard Library algorithms!  
     int a5[16];  
     transform(v.begin(), v.end(), a5, [](int n) { return n * 5; });  
     print("a5: ", a5);  
   
     // WARNING C4996: Pointers cannot be checked in debug mode  
-    // (i.e. an overrun will trigger undefined behavior)  
+    // (i.e. an overrun triggers undefined behavior)  
     int a6[16];  
     int * p6 = a6;  
     transform(v.begin(), v.end(), p6, [](int n) { return n * 6; });  
     print("a6: ", a6);  
   
     // OK: stdext::checked_array_iterator is checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
+    // (i.e. an overrun triggers a debug assertion)  
     int a7[16];  
     int * p7 = a7;  
-    transform(v.begin(), v.end(), stdext::make_checked_array_iterator(p7, 16), [](int n) { return n * 7; });  
+    transform(v.begin(), v.end(), 
+        stdext::make_checked_array_iterator(p7, 16), 
+        [](int n) { return n * 7; });  
     print("a7: ", a7);  
   
-    // WARNING SILENCED: stdext::unchecked_array_iterator is marked as checked in debug mode  
-    // (i.e. it performs no checking, so an overrun will trigger undefined behavior)  
+    // WARNING SILENCED: stdext::unchecked_array_iterator 
+    // is marked as checked in debug mode, but it performs no checking, 
+    // so an overrun triggers undefined behavior  
     int a8[16];  
     int * p8 = a8;  
-    transform(v.begin(), v.end(), stdext::make_unchecked_array_iterator(p8), [](int n) { return n * 8; });  
+    transform( v.begin(), v.end(), 
+        stdext::make_unchecked_array_iterator(p8), 
+        [](int n) { return n * 8; });  
     print("a8: ", a8);  
 }  
-  
 ```  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4996 porque a biblioteca de marshaling requer um contexto para converter `System::String` em `const char *`.  
+Se você verificou que o seu código não pode ter um buffer de saturação de erro nas funções de biblioteca padrão que disparam esse aviso, convém desativar esse aviso. Para desativar os avisos para essas funções, definir **_SCL_SECURE_NO_WARNINGS**.   
+  
+## <a name="example-checked-iterators-enabled"></a>Exemplo: Habilitados de iteradores  
+  
+C4996 também poderá ocorrer se você não usar um iterador verificado durante a compilação com `_ITERATOR_DEBUG_LEVEL` definido como 1 ou 2. Ele é definido para 2 por padrão para compilações de modo de depuração e 0 para compilações para venda. Consulte [Iteradores Verificados](../../standard-library/checked-iterators.md) para obter mais informações.  
+  
+```cpp  
+// C4996_checked.cpp  
+// compile with: /EHsc /W4 /MDd C4996_checked.cpp  
+#define _ITERATOR_DEBUG_LEVEL 2  
+  
+#include <algorithm>  
+#include <iterator>  
+  
+using namespace std;  
+using namespace stdext;  
+  
+int main() {  
+    int a[] = { 1, 2, 3 };  
+    int b[] = { 10, 11, 12 };  
+    copy(a, a + 3, b + 1);   // C4996  
+    // try the following line instead:  
+    // copy(a, a + 3, checked_array_iterator<int *>(b, 3));   // OK  
+}  
+```  
+  
+## <a name="unsafe-mfc-or-atl-code"></a>Código não seguro MFC ou do ATL  
+  
+C4996 também poderá ocorrer se você usar funções MFC ou do ATL que foram substituídas por motivos de segurança.  
+  
+Para corrigir esse problema, recomendamos que você altere seu código para usar funções atualizadas em vez disso.  
+  
+Para obter informações sobre como suprimir esses avisos, consulte [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings) e [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
+  
+## <a name="obsolete-crt-functions-and-variables"></a>Variáveis e funções de CRT obsoletas  
+  
+**Esta função ou variável foi substituído por funcionalidade de biblioteca ou o sistema operacional mais recente. Considere o uso de** *new_item* **em vez disso. Consulte a ajuda online para obter detalhes.**  
+  
+Algumas funções de biblioteca e as variáveis globais são preteridas como obsoleto. Essas funções e variáveis podem ser removidos em uma versão futura da biblioteca. O compilador emite um aviso de substituição para esses itens e sugere a opção preferencial.  
+  
+Para corrigir esse problema, recomendamos que você altere seu código para usar a função sugerida ou variável.  
+  
+Para desativar os avisos de depreciação para esses itens, definir **_CRT_OBSOLETE_NO_WARNINGS**. Para obter mais informações, consulte a documentação para a função preterida ou variável.  
+  
+## <a name="example-marshalling-errors-in-clr-code"></a>Exemplo: Empacotamento erros no código do CLR  
+  
+C4996 também pode ocorrer quando você usar a biblioteca de marshaling de CLR. Nesse caso, C4996 é um erro, não um aviso. Esse erro ocorre quando você usar [marshal_as](../../dotnet/marshal-as.md) para converter entre os dois tipos de dados que exigem um [classe marshal_context](../../dotnet/marshal-context-class.md). Você também pode receber esse erro quando a biblioteca de marshaling não dá suporte a uma conversão. Para obter mais informações sobre a biblioteca de marshaling, consulte [visão geral de Marshaling no C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+  
+Este exemplo gera C4996 porque a biblioteca de marshaling requer um contexto para converter de um `System::String` para um `const char *`.  
   
 ```cpp  
 // C4996_Marshal.cpp  
@@ -228,4 +271,30 @@ int main() {
    return 0;  
 }  
 ```
+  
+## <a name="example-user-defined-deprecated-function"></a>Exemplo: Função preterida definido pelo usuário  
+  
+Você pode usar o atributo substituído em seu próprio código para avisar os chamadores quando você não recomenda o uso de determinadas funções. Neste exemplo, C4996 é gerado para a linha em que a função preterida é declarada e para a linha na qual a função é usada.  
+  
+```cpp  
+// C4996.cpp  
+// compile with: /W3  
+// C4996 warning expected  
+#include <stdio.h>  
+  
+// #pragma warning(disable : 4996)  
+void func1(void) {  
+   printf_s("\nIn func1");  
+}  
+  
+__declspec(deprecated) void func1(int) {  
+   printf_s("\nIn func2");  
+}  
+  
+int main() {  
+   func1();  
+   func1(1);    // C4996  
+}  
+```  
+  
 

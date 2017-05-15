@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 34682e11247bc0680f0d3dfce2c3d3b73fb74aea
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
@@ -165,7 +166,7 @@ FILE *_wfopen(
  `t`  
  Abra no modo de texto (convertido). Nesse modo, CTRL+Z é interpretado como um caractere de EOF na entrada. Nos arquivos que são abertos para leitura/gravação usando `"a+"`, o `fopen` verifica se há um CTRL+Z no fim do arquivo e o remove, se possível. Isso é feito porque usar `fseek` e `ftell` para movimentação dentro de um arquivo que termine com CTRL+Z pode fazer o `fseek` se comportar incorretamente perto do fim do arquivo.  
   
- No modo de texto, combinações de retorno de carro de avanço de linha são convertidas em avanços de linha simples na entrada, e caracteres de avanço de linha são convertidos em combinações de retorno de carro de avanço de linha na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
+ No modo de texto, combinações de avanço de linha de retorno de carro são convertidas em alimentações de linha únicas na entrada e caracteres de alimentação de linha são convertidos para combinações de avanço de linha de retorno de carro na saída. Quando uma função de E/S de fluxo Unicode opera no modo de texto (o padrão), presume-se que o fluxo de origem ou destino é uma sequência de caracteres multibyte. Portanto, as funções de entrada de fluxo do Unicode convertem caracteres multibyte para caracteres largos (como por uma chamada à função `mbtowc`). Pelo mesmo motivo, as funções de saída de fluxo do Unicode convertem caracteres largos para caracteres multibyte (como por uma chamada à função `wctomb`).  
   
  `b`  
  Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas.  
@@ -236,9 +237,8 @@ FILE *_wfopen(
 ## <a name="example"></a>Exemplo  
  O seguinte programa abre dois arquivos.  Ele usa `fclose` para fechar o primeiro arquivo e `_fcloseall` para fechar todos os arquivos restantes.  
   
-```  
-  
-      // crt_fopen.c  
+```C  
+// crt_fopen.c  
 // compile with: /W3  
 // This program opens two files. It uses  
 // fclose to close the first file and  
@@ -289,7 +289,7 @@ Number of files closed by _fcloseall: 1
 ## <a name="example"></a>Exemplo  
  O programa a seguir cria um arquivo (ou substitui um, se existir) no modo de texto que usa codificação Unicode.  Em seguida, ele grava duas cadeias de caracteres no arquivo e o fecha. A saída é um arquivo chamado _wfopen_test.xml, que contém os dados da seção de saída.  
   
-```  
+```C  
 // crt__wfopen.c  
 // compile with: /W3  
 // This program creates a file (or overwrites one if  
@@ -306,9 +306,9 @@ Number of files closed by _fcloseall: 1
   
 int main(int argc, char** argv)  
 {  
-wchar_t str[BUFFER_SIZE];  
-size_t  strSize;  
-FILE*   fileHandle;  
+    wchar_t str[BUFFER_SIZE];  
+    size_t  strSize;  
+    FILE*   fileHandle;  
   
     // Create an the xml file in text and Unicode encoding mode.  
     if ((fileHandle = _wfopen( L"_wfopen_test.xml",L"wt+,ccs=UNICODE")) == NULL) // C4996  
@@ -342,10 +342,6 @@ FILE*   fileHandle;
     return 0;  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../../c-runtime-library/stream-i-o.md)   

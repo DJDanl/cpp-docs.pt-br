@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
@@ -365,7 +366,7 @@ class COleControl : public CWnd
 |[COleControl::ResetVersion](#resetversion)|Inicializa o número de versão para um determinado valor.|  
 |[COleControl::ScrollWindow](#scrollwindow)|Permite que um controle sem janelas rolar uma área dentro de sua imagem ativa no local na tela.|  
 |[COleControl::SelectFontObject](#selectfontobject)|Seleciona uma propriedade de fonte personalizada em um contexto de dispositivo.|  
-|[COleControl::SelectStockFont](#selectstockfont)|Seleciona a propriedade Font estoque em um contexto de dispositivo.|  
+|[COleControl::SelectStockFont](#selectstockfont)|Seleciona a propriedade Font ações em um contexto de dispositivo.|  
 |[COleControl::SerializeExtent](#serializeextent)|Serializa ou inicializa o espaço de exibição para o controle.|  
 |[COleControl::SerializeStockProps](#serializestockprops)|Serializa ou inicializa o `COleControl` propriedades de estoque.|  
 |[COleControl::SerializeVersion](#serializeversion)|Serializa ou inicializa as informações de versão do controle.|  
@@ -404,7 +405,7 @@ class COleControl : public CWnd
   
  Controles OLE podem ser inseridos em aplicativos de contêiner OLE e se comunicar com o contêiner usando um sistema bidirecional de acionamento do evento e expõe métodos e propriedades para o contêiner. Observe que os contêineres OLE padrão só oferecem suporte a funcionalidade básica de um controle OLE. Eles são capazes de dar suporte a recursos estendidos de um controle OLE. Acionamento de evento ocorre quando eventos são enviados para o contêiner como resultado de determinadas ações que ocorrem no controle. Por sua vez, o contêiner se comunica com o controle por meio de um conjunto de métodos e propriedades análogas às funções de membro de exposto e membros de dados de uma classe do C++. Essa abordagem permite que o desenvolvedor controlar a aparência do controle e notificar o contêiner quando ocorrem determinadas ações.  
   
-## <a name="windowless-controls"></a>Controles sem janela  
+## <a name="windowless-controls"></a>Controles sem janelas  
  Controles OLE podem ser usado ativo no local sem uma janela. Controles sem janela tem vantagens significativas:  
   
 -   Controles sem janela podem ser transparente e não retangular  
@@ -498,7 +499,7 @@ LCID AmbientLocaleID();
  O valor da propriedade de identificação de localidade do contêiner, se houver. Se não há suporte para essa propriedade, essa função retornará 0.  
   
 ### <a name="remarks"></a>Comentários  
- O controle pode usar a identificação de localidade para adaptar sua interface do usuário para localidades específicas. Observe que o contêiner não é necessário para dar suporte a essa propriedade.  
+ O controle pode usar o LocaleID para adaptar sua interface do usuário para localidades específicas. Observe que o contêiner não é necessário para dar suporte a essa propriedade.  
   
 ##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
  Recupera a configuração atual de aparência para o objeto de controle.  
@@ -1022,7 +1023,7 @@ void FireKeyPress(USHORT* pnChar);
  Para acionamento automático de um evento KeyPress ocorra, o mapa de evento do controle deve ter um evento KeyPress estoque definido.  
   
 ##  <a name="firekeyup"></a>COleControl::FireKeyUp  
- Chamado pelo framework quando uma tecla é liberada enquanto o controle personalizado está ativa de interface do usuário dentro do contêiner.  
+ Chamado pelo framework quando uma tecla é liberada enquanto o controle personalizado está ativo de interface do usuário dentro do contêiner.  
   
 ```  
 void FireKeyUp(
@@ -1284,7 +1285,7 @@ BOOL GetAmbientProperty(
  Observe que funções já foram fornecidas para propriedades de ambiente comuns, como [AmbientBackColor](#ambientbackcolor) e [AmbientFont](#ambientfont).  
   
 ##  <a name="getappearance"></a>COleControl::GetAppearance  
- Implementa a função Get de propriedade estoque de aparência do controle.  
+ Implementa a função Get da propriedade de aparência das ações do controle.  
   
 ```  
 short GetAppearance ();
@@ -1547,7 +1548,7 @@ void GetFontTextMetrics(
  Referência a um [CFontHolder](../../mfc/reference/cfontholder-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentários  
- A fonte pode ser selecionada com a [COleControl::SelectFontObject](#selectfontobject) função. `GetFontTextMetrics`inicializar o `TEXTMETRIC` estrutura apontada por `lptm` com informações válidas de métricas sobre `fontHolder`da fonte, se for bem-sucedido, ou preencher a estrutura com zeros, se não for bem-sucedido. Você deve usar essa função em vez de [GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941) quando pintando seu controle porque os controles, como qualquer inserido o objeto OLE, podem ser necessário para renderizar a próprios em metarquivo.  
+ A fonte pode ser selecionada com a [COleControl::SelectFontObject](#selectfontobject) função. `GetFontTextMetrics`inicializar o `TEXTMETRIC` estrutura apontada por `lptm` com informações válidas de métricas sobre `fontHolder`da fonte, se for bem-sucedido, ou preencher a estrutura com zeros, se não for bem-sucedido. Você deve usar essa função em vez de [GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941) quando pintura seu controle porque os controles, como qualquer inserido o objeto OLE, podem ser necessário para renderizar a próprios em metarquivo.  
   
  O `TEXTMETRIC` estrutura para a fonte padrão é atualizada quando o [SelectFontObject](#selectfontobject) função é chamada. Você deve chamar `GetFontTextMetrics` somente depois de selecionar a propriedade de estoque fonte para garantir que as informações fornecidas é válido.  
   
@@ -1832,7 +1833,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
  Diferente de zero se o controle tiver sido inicializado; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação da estrutura de **IDispatch:: Invoke** chamadas **IsInvokeAllowed** para determinar se uma determinada função (identificada pelo `dispid`) pode ser chamado. O comportamento padrão para um controle OLE é permitir que os métodos de automação a ser invocado apenas se o controle foi inicializado; No entanto, **IsInvokeAllowed** é uma função virtual e pode ser substituído se necessário (por exemplo, quando o controle está sendo usado como um servidor de automação). Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q166472, "como: usar um controle OLE como um servidor de automação." Artigos da Base de dados de Conhecimento estão disponíveis na documentação do MSDN Library Visual Studio ou em [http://support.microsoft.com](http://support.microsoft.com/).  
+ A implementação da estrutura de **IDispatch:: Invoke** chamadas **IsInvokeAllowed** para determinar se uma determinada função (identificada pelo `dispid`) pode ser chamado. O comportamento padrão para um controle OLE é permitir que os métodos de automação a ser invocado apenas se o controle foi inicializado; No entanto, **IsInvokeAllowed** é uma função virtual e pode ser substituído se necessário (por exemplo, quando o controle está sendo usado como um servidor de automação). Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q166472, "como: usar um controle OLE como um servidor de automação." Artigos da Base de dados de Conhecimento estão disponíveis em [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  Determina se o estado do controle foi modificado.  
@@ -1858,7 +1859,7 @@ BOOL IsOptimizedDraw();
  **TRUE** se o contêiner suporta otimizado para a operação atual de desenho de desenho; caso contrário **FALSE**.  
   
 ### <a name="remarks"></a>Comentários  
- Se há suporte para desenho otimizado, o controle necessário não selecionar objetos antigos (canetas, pincéis, fontes, etc.) no contexto de dispositivo ao desenho for concluído.  
+ Se há suporte para desenho otimizado, o controle necessário não selecione objetos antigos (canetas, pincéis, fontes, etc.) no contexto de dispositivo quando terminar de desenho.  
   
 ##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
  Chamado pelo framework para determinar se o controle subdivide um Windows controla.  
@@ -2745,7 +2746,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Comentários  
  O formato especificado é um previamente colocadas no objeto de controle usando o [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) ou [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) funções de membro para renderização atrasada. A implementação padrão Esta função chama `OnRenderFileData` ou `OnRenderGlobalData`, respectivamente, se a mídia de armazenamento fornecido é um arquivo ou memória. Se o formato solicitado é `CF_METAFILEPICT` ou formato de definir a propriedade persistente, a implementação padrão renderiza os dados apropriados e retorna zero. Caso contrário, ele retorna 0 e não faz nada.  
   
- Se *lpStgMedium-> tymed* é **TYMED_NULL**, o **STGMEDIUM** deve ser alocada e preenchido conforme especificado pelas *lpFormatEtc-> tymed*. Se não **TYMED_NULL**, o **STGMEDIUM** devem ser preenchidos local com os dados.  
+ Se *lpStgMedium -> tymed* é **TYMED_NULL**, o **STGMEDIUM** deve ser alocada e preenchido conforme especificado pelas *lpFormatEtc -> tymed*. Se não **TYMED_NULL**, o **STGMEDIUM** devem ser preenchidos local com os dados.  
   
  Substitua essa função para fornecer seus dados no formato solicitado e média. Dependendo de seus dados, convém substituir uma das versões dessa função em vez disso. Se os dados forem pequenos e de tamanho fixo, substituir `OnRenderGlobalData`. Se os dados estão em um arquivo ou de tamanho variável, substituir `OnRenderFileData`.  
   
@@ -3200,7 +3201,7 @@ CFont* SelectFontObject(
  Um ponteiro para a fonte selecionada anteriormente. Quando o chamador concluiu todas as operações de desenho que usam *fontHolder,* devem selecionar novamente a fonte selecionada anteriormente, passando-o como um parâmetro para [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject).  
   
 ##  <a name="selectstockfont"></a>COleControl::SelectStockFont  
- Seleciona a propriedade Font estoque em um contexto de dispositivo.  
+ Seleciona a propriedade Font ações em um contexto de dispositivo.  
   
 ```  
 CFont* SelectStockFont(CDC* pDC);
