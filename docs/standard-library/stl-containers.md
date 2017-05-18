@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -45,7 +46,7 @@ A biblioteca padrão fornece vários contêineres fortemente tipados para armaze
   
  Contêineres podem ser divididos em três categorias: contêineres de sequência, contêineres associativos e adaptadores de contêiner.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Contêineres de sequência  
+##  <a name="sequence_containers"></a> Contêineres de sequência  
  Contêineres de sequência mantêm a ordem dos elementos inseridos que você especifica.  
   
  Um `vector` contêiner se comporta como uma matriz, mas pode aumentar automaticamente conforme necessário. Ele tem acesso aleatório e comprimento altamente flexível, além de ser armazenado contiguamente. Por essas razões e outras, `vector` é o contêiner de sequência preferencial para a maioria dos aplicativos. Em caso de dúvida sobre qual tipo de contêiner de sequência usar, comece usando um vector! Para obter mais informações, consulte a [Classe vector](../standard-library/vector-class.md).  

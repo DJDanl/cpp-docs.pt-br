@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,9 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: b0205a035009571ef73662f24299edc0aa16cc84
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="routine-mappings"></a>Mapeamentos de rotina
@@ -292,8 +294,3 @@ Os mapeamentos de rotina de texto genérico são definidos em TCHAR. H. `_tccpy`
  [Mapeamentos de constante e variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Um programa de texto genérico de amostra](../c-runtime-library/a-sample-generic-text-program.md)   
  [Usando mapeamentos de texto genérico](../c-runtime-library/using-generic-text-mappings.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -47,9 +47,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 9c71510aa77a9d06dc1ec80971a6055c46cb7588
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="setapptype"></a>__set_app_type
@@ -80,8 +82,3 @@ void __set_app_type (
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |__set_app_type|internal.h|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

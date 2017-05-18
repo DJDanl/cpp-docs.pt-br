@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 67499fdd5ee99f3628422ccbf2046d050738a60d
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="mbcurmax"></a>MB_CUR_MAX
@@ -63,8 +65,3 @@ ms.openlocfilehash: 67499fdd5ee99f3628422ccbf2046d050738a60d
  [wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [Constantes de tipo de dados](../c-runtime-library/data-type-constants.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

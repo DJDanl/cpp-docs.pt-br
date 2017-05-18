@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -42,9 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c2c4e7554b6a11e7396627e085d9645a4161ff15
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="trigraphs"></a>Trígrafos
@@ -89,8 +91,3 @@ printf( "What?\?!\n" );
 ## <a name="see-also"></a>Consulte também  
  [/Zc:trigraphs (substituição de trígrafos)](../build/reference/zc-trigraphs-trigraphs-substitution.md)   
  [Identificadores C](../c-language/c-identifiers.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

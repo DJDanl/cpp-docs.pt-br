@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c1714b885519d67646ef11843690c13d8468e5cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="compatibility"></a>Compatibilidade
@@ -62,8 +64,3 @@ A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte
 |[Plataformas Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Lista os sistemas operacionais aos quais o CRT dá suporte.|  
 |[Compatibilidade com versões anteriores](../c-runtime-library/backward-compatibility.md)|Descreve como mapear nomes de CRT antigos para os novos.|  
 |[Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)|Fornece uma visão geral dos arquivos de biblioteca (.lib) do CRT e as opções do compilador associado.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

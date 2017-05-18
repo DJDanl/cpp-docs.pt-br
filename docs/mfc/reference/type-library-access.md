@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -51,7 +52,7 @@ Bibliotecas de tipos expõem as interfaces de um controle OLE para outros aplica
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara um `GetTypeLib` a função de membro de um controle OLE (deve ser usado na declaração da classe).|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa uma `GetTypeLib` função de membro de um controle OLE (deve ser usado na implementação da classe).|  
   
-##  <a name="a-namedeclareoletypeliba--declareoletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
  Declara o `GetTypeLib` função membro da sua classe de controle.  
   
 ```   
@@ -68,7 +69,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="requirements"></a>Requisitos  
  **Cabeçalho:** afxdisp.h  
 
-##  <a name="a-nameimplementoletypeliba--implementoletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
  Implementa o controle `GetTypeLib` função de membro.  
   
 ```   

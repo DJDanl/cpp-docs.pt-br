@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 3341879ef75d0401eca3eb4242ddda28e1ca9f5f
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Portando e atualizando: exemplos e estudos de caso
@@ -49,8 +51,3 @@ Você pode ter uma ideia dos tipos de problemas que podem ocorrer durante uma mi
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

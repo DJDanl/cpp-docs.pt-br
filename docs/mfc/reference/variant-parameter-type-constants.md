@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -62,9 +62,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 3b09357859b8fc87252fba704de8f2a927981873
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -73,7 +74,7 @@ Este tópico lista as constantes novas que indicam os tipos de parâmetro varian
   
  A seguir está uma lista de constantes de classe:  
   
-##  <a name="a-namemfcvariantdataconstantsa-variant-data-constants"></a><a name="_mfc_variant_data_constants"></a>Constantes de dados Variant  
+##  <a name="_mfc_variant_data_constants"></a>Constantes de dados Variant  
   
 -   **VTS_COLOR** inteiro A 32 bits usado para representar um valor de cor RGB.  
   

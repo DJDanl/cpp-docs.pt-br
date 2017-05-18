@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -49,9 +49,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 2486b94fbe62f961ed80044584693a1a682e0133
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone e _tzname
@@ -92,8 +94,3 @@ extern char *_tzname[2];
  [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   
  [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
  [_get_tzname](../c-runtime-library/reference/get-tzname.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

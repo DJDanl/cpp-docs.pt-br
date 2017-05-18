@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 
@@ -59,8 +61,3 @@ Durante o build, o código do Linux é copiado para o seu computador Linux remot
 1. Clique no botão **conectar** para tentar uma conexão com o computador remoto.  Se a conexão falhar, as caixas de entrada que precisarem ser alteradas serão destacadas em vermelho.
 
    ![Erro do Gerenciador de Conexões](media/settings_connectionmanagererror.png)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

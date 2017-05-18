@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: bbd3d53160c90af6a4bf34a7c3aad3aad968c739
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="a-sample-generic-text-program"></a>Um programa de texto genérico de exemplo
@@ -206,8 +208,3 @@ int __cdecl main(int argc, char **argv, char **envp)
  [Mapeamentos de constante e variável global](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Mapeamentos de rotina](../c-runtime-library/routine-mappings.md)   
  [Usando mapeamentos de texto genérico](../c-runtime-library/using-generic-text-mappings.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
