@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: f842eb24df187bdef2ffd39031c85b0a7eb34d5c
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="generic-text-mappings"></a>Mapeamentos de texto genérico
@@ -53,8 +55,3 @@ Para simplificar a escrita de código para mercados internacionais, mapeamentos 
 ## <a name="see-also"></a>Consulte também  
  [Mapeamentos de tipo de dados](../c-runtime-library/data-type-mappings.md)   
  [Um programa de texto genérico de amostra](../c-runtime-library/a-sample-generic-text-program.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

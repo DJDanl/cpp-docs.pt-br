@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 8de91088f9fd667e768a45d0f659a2effcd91a6f
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="fmode"></a>_fmode
@@ -66,8 +68,3 @@ extern int _fmode;
  [Variáveis globais](../c-runtime-library/global-variables.md)   
  [_get_fmode](../c-runtime-library/reference/get-fmode.md)   
  [_set_fmode](../c-runtime-library/reference/set-fmode.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

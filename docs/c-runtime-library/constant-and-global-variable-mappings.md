@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,9 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 76fbe7926d0c362dfa2e0806a37127b104a3b69b
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="constant-and-global-variable-mappings"></a>Constante e mapeamentos de variável global
@@ -63,8 +65,3 @@ Esses mapeamentos constantes de texto genérico, de variável global e de tipo p
  [Mapeamentos de rotina](../c-runtime-library/routine-mappings.md)   
  [Um programa de texto genérico de amostra](../c-runtime-library/a-sample-generic-text-program.md)   
  [Usando mapeamentos de texto genérico](../c-runtime-library/using-generic-text-mappings.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

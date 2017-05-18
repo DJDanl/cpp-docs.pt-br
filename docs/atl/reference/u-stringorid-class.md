@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: bb56edcddebb3b449cab9a3a580b2ef85c028ff3
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -76,14 +77,14 @@ class _U_STRINGorID
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  
   
-##  <a name="a-nameustringoridmlpstra--ustringoridmlpstr"></a><a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
  A classe contém o valor passado para qualquer um dos seus construtores como pública `LPCTSTR` membro de dados.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
-##  <a name="a-nameustringoridustringorida--ustringoridustringorid"></a><a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
  O **UINT** construtor converte o argumento em um tipo de recurso compatível com as funções de gerenciamento de recursos do Windows usando o **MAKEINTRESOURCE** macro e o resultado é armazenado no membro de dados da classe, [m_lpstr](#_u_stringorid__m_lpstr).  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: c16b6f2f889745270a51a32a1449add86dec6ecb
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -50,7 +51,7 @@ Essas macros definem entradas e mapas de ponto de conexão.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h 
    
-##  <a name="a-namebeginconnectionpointmapa--beginconnectionpointmap"></a><a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
  Marca o início das entradas de mapa de ponto de conexão.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#101;](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="a-nameconnectionpointentrya--connectionpointentry-and-connectionpointentryp"></a><a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY e CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY e CONNECTION_POINT_ENTRY_P  
  Insere um ponto de conexão para a interface especificada para o mapa de ponto de conexão para que ele possa ser acessado.  
   
 ```
@@ -94,7 +95,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#120;](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="a-nameendconnectionpointmapa--endconnectionpointmap"></a><a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
  Marca o final das entradas de mapa de ponto de conexão.  
   
 ```

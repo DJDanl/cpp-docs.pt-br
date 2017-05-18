@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -52,7 +53,7 @@ Essas macros realizar operações de troca de dados de registro.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlplus.h  
    
-##  <a name="a-namebeginrdxmapa--beginrdxmap"></a><a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
  Marca o início do mapa de troca de dados de registro.  
   
 ```
@@ -71,14 +72,14 @@ BEGIN_RDX_MAP
   
  A função global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou a função de membro do mesmo nome criado pelo `BEGIN_RDX_MAP` e `END_RDX_MAP` macros, deve ser usado sempre que seu código precisa para trocar dados entre o registro do sistema e as variáveis especificadas no mapa RDX.  
   
-##  <a name="a-nameendrdxmapa--endrdxmap"></a><a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>END_RDX_MAP  
  Marca o fim do mapa de troca de dados de registro.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="a-namerdxbinarya--rdxbinary"></a><a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>RDX_BINARY  
  Associa a entrada do Registro especificada com uma variável de membro especificado do tipo BYTE.  
   
 ```
@@ -109,7 +110,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>Comentários  
  Essa macro é usada em conjunto com o `BEGIN_RDX_MAP` e `END_RDX_MAP` macros para associar uma variável de membro uma entrada de registro específico. A função global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou a função de membro do mesmo nome criado pelo `BEGIN_RDX_MAP` e `END_RDX_MAP` macros, deve ser usado para realizar a troca de dados entre o registro do sistema e as variáveis de membro no mapa RDX.  
   
-##  <a name="a-namerdxcstringtexta--rdxcstringtext"></a><a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
  Associa uma variável de membro especificado do tipo CString a entrada do Registro especificada.  
   
 ```
@@ -140,7 +141,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>Comentários  
  Essa macro é usada em conjunto com o `BEGIN_RDX_MAP` e `END_RDX_MAP` macros para associar uma variável de membro uma entrada de registro específico. A função global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou a função de membro do mesmo nome criado pelo `BEGIN_RDX_MAP` e `END_RDX_MAP` macros, deve ser usado para realizar a troca de dados entre o registro do sistema e as variáveis de membro no mapa RDX.  
   
-##  <a name="a-namerdxdworda--rdxdword"></a><a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>RDX_DWORD  
  Associa a entrada do Registro especificada com uma variável de membro especificado do tipo DWORD.  
   
 ```
@@ -171,7 +172,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>Comentários  
  Essa macro é usada em conjunto com o `BEGIN_RDX_MAP` e `END_RDX_MAP` macros para associar uma variável de membro uma entrada de registro específico. A função global [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou a função de membro do mesmo nome criado pelo `BEGIN_RDX_MAP` e `END_RDX_MAP` macros, deve ser usado para realizar a troca de dados entre o registro do sistema e as variáveis de membro no mapa RDX.  
   
-##  <a name="a-namerdxtexta--rdxtext"></a><a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>RDX_TEXT  
  Associa uma variável de membro especificado do tipo TCHAR a entrada do Registro especificada.  
   
 ```

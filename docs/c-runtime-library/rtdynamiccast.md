@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -45,9 +45,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: c6fe7467030df12f84161fb866763949c7f8171c
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
@@ -95,8 +97,3 @@ PVOID __RTDynamicCast (
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |__RTDynamicCast|rtti.h|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

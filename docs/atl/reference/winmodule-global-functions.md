@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: c477f4500bd4fe78f21f04c58b02d1b493f72c01
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -49,7 +50,7 @@ Essas funções fornecem suporte para `_AtlCreateWndData` operações de estrutu
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase. h  
   `            
-##  <a name="a-nameatlwinmoduleaddcreatewnddataa--atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData  
+##  <a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData  
  Essa função é usada para inicializar e adicionar uma estrutura `_AtlCreateWndData`.  
    
 ```
@@ -72,7 +73,7 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ### <a name="remarks"></a>Comentários  
  Inicializa uma `_AtlCreateWndData` estrutura, que é usada para armazenar o **isso** ponteiro usado para se referir às instâncias de classe e o adiciona à lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura. Chamado por [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
   
-##  <a name="a-nameatlwinmoduleextractcreatewnddataa--atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData  
+##  <a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData  
  Chame essa função para extrair uma estrutura `_AtlCreateWndData` existente.  
  
 ```

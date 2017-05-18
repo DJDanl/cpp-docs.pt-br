@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 57ad649c09231af3032cba6d2224126af20cfc9b
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="eof-weof"></a>EOF, WEOF
@@ -64,8 +66,3 @@ ms.openlocfilehash: 57ad649c09231af3032cba6d2224126af20cfc9b
  [_putch, _putwch](../c-runtime-library/reference/putch-putwch.md)   
  [isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)   
  [Constantes globais](../c-runtime-library/global-constants.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

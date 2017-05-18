@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,9 +46,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 222a5fb3f2685cb8fd4925621a875883d0c21fe9
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="setusermatherr"></a>__setusermatherr
@@ -75,8 +77,3 @@ void __setusermatherr(
 |Rotina|Cabeçalho necessário|  
 |-------------|---------------------|  
 |__setusermatherr|matherr.c|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

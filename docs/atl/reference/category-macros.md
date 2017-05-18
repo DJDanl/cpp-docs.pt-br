@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 26eea5cc8ce8e18af84a9ca89e5ddc94272be44c
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -48,7 +49,7 @@ Essas macros definem mapas de categoria.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
 
-##  <a name="a-namebegincategorymapa--begincategorymap"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
  Marca o início do mapa de categoria.  
   
 ```
@@ -74,7 +75,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-nameendcategorymapa--endcategorymap"></a><a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>END_CATEGORY_MAP  
  Marca o fim do mapa de categoria.  
   
 ```
@@ -84,7 +85,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>Exemplo  
  Veja o exemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
-##  <a name="a-nameimplementedcategorya--implementedcategory"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
  Adicionar uma `IMPLEMENTED_CATEGORY` macro para seu componente [mapa categoria](#begin_category_map) para especificar que ele deve ser registrado como implementar a categoria identificada pelo `catID` parâmetro.  
   
 ```
@@ -117,7 +118,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-namerequiredcategorya--requiredcategory"></a><a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>REQUIRED_CATEGORY  
  Adicionar uma `REQUIRED_CATEGORY` macro para seu componente [mapa categoria](#begin_category_map) para especificar que ele deve ser registrado como exigir que a categoria identificada pelo `catID` parâmetro.  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -55,7 +56,7 @@ Macros de conversão de tipo fornecem uma maneira de converter um determinado po
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Converte um ponteiro para um ponteiro para um objeto de classe ao verificar se a conversão é legal.|  
 |[STATIC_DOWNCAST](#static_downcast)|Converte um ponteiro para um objeto de uma classe em um ponteiro de um tipo relacionado. Em uma compilação de depuração faz com que uma **ASSERT** se o objeto não é um "tipo de" o tipo de destino.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  Fornece uma maneira útil para converter um ponteiro para um ponteiro para um objeto de classe ao verificar se a conversão é legal.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Se o objeto referenciado pelo ponteiro é um "tipo de" classe identificado, a macro retorna o ponteiro apropriado. Se não for uma conversão legal, a macro retorna **nulo**.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  Conversões *pobject* em um ponteiro para um *class_name* objeto.  
   
 ```   

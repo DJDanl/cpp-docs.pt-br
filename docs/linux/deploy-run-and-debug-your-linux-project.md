@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: db868094a8f10ad05ed6f95bf8a4c8a29a2c941e
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 
@@ -65,9 +67,4 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 * Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador**.  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Você poderá usar o comando **handle** para fazer isso.  adicionando o seguinte à entrada **Comandos adicionais do depurador**, conforme mostrado acima:
 
   ```handle SIGILL nostop noprint```
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

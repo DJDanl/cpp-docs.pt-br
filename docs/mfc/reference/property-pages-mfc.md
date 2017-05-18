@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -72,7 +73,7 @@ Páginas de propriedade exibem os valores atuais das propriedades de controle OL
 |[END_PROPPAGEIDS](#end_proppageids)|Termina a lista de IDs de página de propriedade.|  
 |[PROPPAGEID](#proppageid)|Declara uma página de propriedades da classe de controle.|  
   
-##  <a name="a-nameddpcbindexa--ddpcbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>DDP_CBIndex  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de inteiro com o índice da seleção atual em uma caixa de combinação na página de propriedades.  
   
 ```   
@@ -102,7 +103,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddpcbstringa--ddpcbstring"></a><a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>DDP_CBString  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de cadeia de caracteres com a seleção atual em uma caixa de combinação na página de propriedades.  
   
 ```  
@@ -132,7 +133,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddpcbstringexacta--ddpcbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de cadeia de caracteres que corresponda exatamente a seleção atual em uma caixa de combinação na página de propriedades.  
   
 ```  
@@ -162,7 +163,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddpchecka--ddpcheck"></a><a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>DDP_Check  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor da propriedade com o controle de caixa de seleção de página de propriedade associada.  
   
 ```   
@@ -192,7 +193,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddplbindexa--ddplbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>DDP_LBIndex  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de inteiro com o índice da seleção atual em uma caixa de listagem na página de propriedades.  
   
 ```   
@@ -222,7 +223,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddplbstringa--ddplbstring"></a><a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>DDP_LBString  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de cadeia de caracteres com a seleção atual em uma caixa de listagem na página de propriedades.  
   
 ```   
@@ -252,7 +253,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddplbstringexacta--ddplbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
  Chamar essa função em sua página de propriedades `DoDataExchange` função para sincronizar o valor de uma propriedade de cadeia de caracteres que corresponda exatamente a seleção atual em uma caixa de listagem na página de propriedades.  
   
 ```   
@@ -282,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddppostprocessinga--ddppostprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
  Chamar essa função em sua página de propriedades `DoDataExchange` função, para concluir a transferência de valores de propriedade da página de propriedade para o seu controle quando valores de propriedade são salvos.  
   
 ```   
@@ -301,7 +302,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddpradioa--ddpradio"></a><a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>DDP_Radio  
  Chame essa função em seu controle `DoPropExchange` função para sincronizar o valor da propriedade com o controle de botão de opção de página de propriedade associada.  
   
 ```   
@@ -331,7 +332,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameddptexta--ddptext"></a><a name="ddp_text"></a>DDP_Text  
+##  <a name="ddp_text"></a>DDP_Text  
  Chame essa função em seu controle `DoDataExchange` função para sincronizar o valor da propriedade com o controle de página de propriedade associada.  
   
 ```   
@@ -403,7 +404,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-namebeginproppageidsa--beginproppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
  Começa a definição de lista de controle de IDs de página de propriedade.  
   
 ```   
@@ -425,7 +426,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameendproppageidsa--endproppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
  Termina a definição de sua lista de ID de página de propriedade.  
   
 ```   
@@ -439,7 +440,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxctl.h  
   
-##  <a name="a-nameproppageida--proppageid"></a><a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>PROPPAGEID  
  Adiciona uma página de propriedades para uso de controle OLE.  
   
 ```   

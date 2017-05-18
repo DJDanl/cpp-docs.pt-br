@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -36,9 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 69de9f2c7d45608e54a78a3dcfcadba67bf7157e
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="structure-declarations"></a>Declarações de estrutura
@@ -207,8 +209,3 @@ p_s->b = 100;  /* A reference to a field in the s structure */
   
 ## <a name="see-also"></a>Consulte também  
  [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

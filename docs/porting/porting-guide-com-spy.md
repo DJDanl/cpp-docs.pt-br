@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: aec7ba33643e1efc5402ab7ce99febf3dc6d23e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="porting-guide-com-spy"></a>Guia de portabilidade: COM Spy
@@ -192,8 +194,3 @@ private void button1_Click(object sender, EventArgs e)
  [Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Próximo exemplo: Spy++](../porting/porting-guide-spy-increment.md)   
  [Exemplo anterior: Scribble do MFC](../porting/porting-guide-mfc-scribble.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

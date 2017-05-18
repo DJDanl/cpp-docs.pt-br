@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 
@@ -47,10 +49,5 @@ Para criar um novo projeto do Linux no Visual Studio, faça o seguinte:
    | **Aplicativo de console (Linux)** | Projeto direcionado a qualquer computador Linux com o código de exemplo gravado no texto de saída do console
    | **Projeto vazio (Linux)**       | Projeto direcionado a qualquer computador Linux sem nenhum código de exemplo gravado
    | **Projeto Makefile (Linux)**    | Projeto direcionado a qualquer computador Linux que será compilado usando um sistema de build do Makefile padrão
-
-
-
-
-<!--HONumber=Feb17_HO4-->
 
 

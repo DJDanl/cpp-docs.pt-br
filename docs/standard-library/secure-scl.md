@@ -1,38 +1,44 @@
 ---
-title: "_SECURE_SCL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SECURE_SCL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_SECURE_SCL"
+title: _SECURE_SCL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SECURE_SCL
+dev_langs:
+- C++
+helpviewer_keywords:
+- _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-translation.priority.ht: 
-  - "cs-cz"
-  - "de-de"
-  - "es-es"
-  - "fr-fr"
-  - "it-it"
-  - "ja-jp"
-  - "ko-kr"
-  - "pl-pl"
-  - "pt-br"
-  - "ru-ru"
-  - "tr-tr"
-  - "zh-cn"
-  - "zh-tw"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: f3712b4417c0fed972d9a20b6d82479561cce4b0
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
+
 ---
 # <a name="securescl"></a>_SECURE_SCL
   
@@ -62,4 +68,5 @@ Para obter informações sobre como desabilitar avisos sobre iteradores verifica
 [Iteradores verificados](../standard-library/checked-iterators.md)   
 [Suporte ao iterador de depuração](../standard-library/debug-iterator-support.md)   
 [Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md)
+
 

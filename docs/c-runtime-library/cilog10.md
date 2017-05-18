@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -47,9 +47,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 4a02c3aa911c30ff5eee4b49909f9aab7dfbf3df
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="cilog10"></a>_CIlog10
@@ -72,8 +74,3 @@ void __cdecl _CIlog10();
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -52,7 +53,7 @@ Essas funções fornecem suporte para pontos de conexão e mapas de coletor.
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlbase. h  
    
-##  <a name="a-nameatladvisea--atladvise"></a><a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>AtlAdvise  
  Cria uma conexão entre o ponto de conexão de um objeto e o coletor de um cliente.  
   
 > [!IMPORTANT]
@@ -88,7 +89,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunadvisea--atlunadvise"></a><a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>AtlUnadvise  
  Encerra a conexão estabelecida por meio de [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
@@ -117,7 +118,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing&#96;](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="a-nameatladvisesinkmapa--atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  Chame essa função para recomendar ou não recomendar todas as entradas no mapa de eventos do coletor do objeto.  
   
 > [!IMPORTANT]

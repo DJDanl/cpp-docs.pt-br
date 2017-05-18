@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -47,9 +47,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 732307eda2625dc5d0662e94e38b1682476cc5bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="cipow"></a>_CIpow
@@ -72,8 +74,3 @@ void __cdecl _CIpow();
 ## <a name="see-also"></a>Consulte também  
  [Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

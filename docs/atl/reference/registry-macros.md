@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 3a3abf5ad29b50c7f6708f02fd7c5aa193b3591c
+ms.contentlocale: pt-br
 ms.lasthandoff: 02/25/2017
 
 ---
@@ -54,7 +55,7 @@ Essas macros definem recursos de biblioteca e o registro do tipo útil.
  **Cabeçalho:** atlcom.h  
   
     
-##  <a name="a-nameatlstaticregistrya--atlstaticregistry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
  Um símbolo que indica que você deseja que o código de registro para o objeto no objeto para evitar uma dependência em ATL. DLL.  
   
 ```
@@ -66,7 +67,7 @@ Essas macros definem recursos de biblioteca e o registro do tipo útil.
   
  [!code-cpp[NVC_ATL_EventHandlingSample n º&5;](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="a-namedeclarelibida--declarelibid"></a><a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>DECLARE_LIBID  
  Fornece uma maneira para ATL obter o *libid* da biblioteca de tipos.  
   
 ```
@@ -83,14 +84,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>Exemplo  
  Atribuído não gerado pelo Assistente de projetos ATL terá um exemplo de como usar essa macro.  
   
-##  <a name="a-namedeclarenoregistrya--declarenoregistry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
  Use `DECLARE_NO_REGISTRY` para evitar qualquer registro ATL padrão para a classe em que essa macro é exibida.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="a-namedeclareregistrya--declareregistry"></a><a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>DECLARE_REGISTRY  
  Insere o registro de classe padrão no registro do sistema ou remove o registro do sistema.  
   
 ```
@@ -123,7 +124,7 @@ DECLARE_REGISTRY(
   
  Quando você cria um objeto ou controla usando o Assistente para Adicionar classe do ATL, o assistente implementa o suporte ao registro baseado em script e adiciona automaticamente o [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) macro em seus arquivos. Se não desejar suporte a registro baseada em script, você precisa substituir essa macro com `DECLARE_REGISTRY`. `DECLARE_REGISTRY`Insere somente as cinco chaves básicas descritas acima para o registro. Manualmente, você deve escrever código para inserir outras chaves do registro.  
   
-##  <a name="a-namedeclareregistryappidresourceida--declareregistryappidresourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
  Especifica as informações necessárias para registrar automaticamente o *appid*.  
   
 ```
@@ -145,7 +146,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>Exemplo  
  Classes adicionadas aos projetos do ATL com o Assistente de código Adicionar classe terá um exemplo de como usar essa macro.  
   
-##  <a name="a-namedeclareregistryresourcea--declareregistryresource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
  Obtém o recurso nomeado que contém o arquivo de registro e executa o script para inserir objetos no registro do sistema ou removê-los do registro do sistema.  
   
 ```
@@ -168,7 +169,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  Para obter mais informações sobre parâmetros substituíveis e scripts, consulte o artigo [o componente de registro ATL (Registrar)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="a-namedeclareregistryresourceida--declareregistryresourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
  Mesmo que [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) exceto que ele usa um gerado pelo assistente **UINT** para identificar o recurso, em vez de um nome de cadeia de caracteres.  
   
 ```
