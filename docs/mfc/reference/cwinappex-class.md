@@ -100,6 +100,7 @@ ms.lasthandoff: 03/31/2017
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 `CWinAppEx`Controla o estado do aplicativo, salva o estado para o registro, carrega o estado do registro, inicializa os administradores de aplicativos e fornece links para esses gerenciadores de aplicativo mesmo.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -321,7 +322,7 @@ BOOL EnableUserTools(
  Para obter mais informações sobre as ferramentas de usuário e como incorporá-las em seu aplicativo, consulte [ferramentas definidas pelo usuário](../../mfc/user-defined-tools.md).  
   
 ##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int ExitInstance();
@@ -373,7 +374,7 @@ CContextMenuManager* GetContextMenuManager();
  Se o objeto CContextMenuManager não foi inicializado, esta função chama [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) antes de retornar um ponteiro.  
   
 ##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetDataVersion() const;  
@@ -762,7 +763,7 @@ BOOL InitTooltipManager();
  Se seu aplicativo já tem um Gerenciador de dica de ferramenta e você chamar `InitTooltipManager`, seu aplicativo terá uma [ASSERT](diagnostic-services.md#assert) falha. Portanto, você não deve chamar `InitTooltipManager` se você criar um `CTooltipManager` diretamente do objeto. Se você não estiver usando um personalizado `CTooltipManager`, você deve usar `GetTooltipManager` para criar um `CTooltipManager` objeto.  
   
 ##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResourceSmartUpdate() const;  
@@ -936,7 +937,7 @@ virtual BOOL OnViewDoubleClick(
  Para oferecer suporte ao comportamento de mouse personalizado, você deve chamar essa função ao processar o `WM_LBUTTONDBLCLK` mensagem. Esse método executa o comando associado à ID de exibição fornecida pelo `iViewId`. Para obter mais informações sobre o comportamento do mouse personalizado, consulte [personalização de teclado e Mouse](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnWorkspaceIdle(CWnd*);

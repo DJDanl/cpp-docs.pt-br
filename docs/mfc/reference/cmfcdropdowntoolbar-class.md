@@ -51,6 +51,7 @@ ms.lasthandoff: 02/25/2017
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Uma barra de ferramentas que aparece quando o usuário pressiona e mantém um botão da barra de ferramentas de nível superior.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
@@ -119,7 +120,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
  **Cabeçalho:** afxdropdowntoolbar.h  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -170,7 +171,7 @@ virtual BOOL LoadBitmap(
  Chamar o `LoadBitmapEx` método para carregar imagens adicionais depois de criar a barra de ferramentas.  
   
 ##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadToolBar(
@@ -197,7 +198,7 @@ virtual BOOL LoadToolBar(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 afx_msg void OnLButtonUp(
@@ -212,7 +213,7 @@ afx_msg void OnLButtonUp(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 afx_msg void OnMouseMove(
@@ -227,7 +228,7 @@ afx_msg void OnMouseMove(
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -241,7 +242,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(

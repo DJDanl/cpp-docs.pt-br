@@ -79,6 +79,7 @@ ms.lasthandoff: 02/25/2017
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 Galerias de faixa de opções de estilo do Office 2007 implementa.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -330,7 +331,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
  Chame esse método para ativar ou desativar a barra lateral de estilo do Office XP no lado esquerdo do menu.  
   
 ##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -344,7 +345,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -371,7 +372,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetGroupOffset() const;  
@@ -438,7 +439,7 @@ int GetPaletteID() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -452,7 +453,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetSelectedItem() const;  
@@ -463,7 +464,7 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasMenu() const;  
@@ -498,7 +499,7 @@ BOOL IsMenuResizeEnabled() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuResizeVertical() const;  
@@ -521,7 +522,7 @@ BOOL IsMenuSideBar() const;
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -533,7 +534,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -576,7 +577,7 @@ virtual void OnDrawPaletteIcon(
  Você pode substituir esse método em uma classe derivada para personalizar a aparência de uma galeria de faixa de opções.  
   
 ##  <a name="onenable"></a>CMFCRibbonGallery::OnEnable  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnEnable(BOOL bEnable);
@@ -588,7 +589,7 @@ virtual void OnEnable(BOOL bEnable);
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -619,7 +620,7 @@ void RemoveItemToolTips();
 ### <a name="remarks"></a>Comentários  
   
 ##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SelectItem(int nItemIndex);
