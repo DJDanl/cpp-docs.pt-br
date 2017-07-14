@@ -1,26 +1,53 @@
 # [Visual C++ no Visual Studio 2017](visual-cpp-in-visual-studio.md)
+
 # [Novidades do Visual C++ no Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)
+
 # [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md)
+
 ## [Conformidade com a linguagem Visual C++](visual-cpp-language-conformance.md)
+
 # [Plataformas com suporte (Visual C++)](supported-platforms-visual-cpp.md)
+
 # [Linguagem C](c-language/c-language-reference.md)
+
 # [Linguagem C++](cpp/cpp-language-reference.md)
+
 # [Pré-processador C/C++](preprocessor/c-cpp-preprocessor-reference.md)
+
 # [Biblioteca em Tempo de Execução C](c-runtime-library/c-run-time-library-reference.md)
+
 # [Biblioteca Padrão do C++](standard-library/cpp-standard-library-reference.md)
+
 # [Desenvolvimento em Windows](windows/overview-of-windows-programming-in-cpp.md)
+
 # [Desenvolvimento em Linux](linux/download-install-and-setup-the-linux-development-workload.md)
+
 # [Desenvolvimento .NET com C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
 # [Programação da Web e em nuvem no Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
+
 # [Programação paralela](parallel/parallel-programming-in-visual-cpp.md)
+
 # [Acesso a dados](data/data-access-in-cpp.md)
+
 # [Texto e cadeias de caracteres](text/text-and-strings-in-visual-cpp.md)
+
+# [vcpkg: um Gerenciador de pacotes para C++](vcpkg.md)
+
 # [Usando o IDE do Visual Studio para C++](ide/ide-and-tools-for-visual-cpp-development.md)
+
 # [Compiladores e ferramentas de build](build/building-c-cpp-programs.md)
+
 # [Código Visual C++ de atualização e portabilidade](porting/visual-cpp-porting-and-upgrading-guide.md)
+
 # [Melhores práticas de segurança para C++](security/security-best-practices-for-cpp.md)
+
 ## [Executando como um membro do grupo de usuários](security/running-as-a-member-of-the-users-group.md)
+
 ## [Como o UAC (Controle de Conta de Usuário) afeta o aplicativo](security/how-user-account-control-uac-affects-your-application.md)
+
 # [Exemplos do Visual C++](visual-cpp-samples.md)
+
 # [Ajuda e comunidade do Visual C++](visual-cpp-help-and-community.md)
+
 # [Como relatar um problema com o Conjunto de Ferramentas do Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
