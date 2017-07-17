@@ -1,15 +1,20 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta de Código-fonte da Microsoft
+ ## Código de Conduta de Código-fonte da Microsoft
+<a id="microsoft-open-source-code-of-conduct" class="xliff"></a>
 
 Este projeto adotou o [Código de Conduta de Código-fonte da Microsoft](https://opensource.microsoft.com/codeofconduct/).
 Para obter mais informações, consulte as [Perguntas frequentes sobre o Código de Conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou contate [opencode@microsoft.com](mailto:opencode@microsoft.com) com outras perguntas ou comentários.
 
-# <a name="visual-studio-2017-documentation-for-visual-c"></a>Documentação do Visual Studio 2017 para o Visual C++
+# Documentação do Visual Studio 2017 para o Visual C++
+<a id="visual-studio-2017-documentation-for-visual-c" class="xliff"></a>
 
 Bem-vindo! Esse repositório contém arquivos de origem da documentação técnica do Visual C++, que é um trabalho em andamento. Os tópicos são publicados no [site de documentação do Visual C++](https://docs.microsoft.com/cpp).
 
-A documentação do Visual Basic e do Visual C# está localizada em um repositório separado em [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) e a documentação do Visual Studio está localizada no repositório em [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+Este repositório foi movido de Microsoft/vcppdocs para MicrosoftDocs/cpp-docs-pr em 23 de junho de 2017.
 
-## <a name="contributing-to-the-documentation"></a>Contribuindo para a documentação
+A documentação do Visual Basic e do Visual C# está localizada em um repositório separado em [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) e a documentação do Visual Studio 2017 está localizada no repositório em [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+
+## Contribuindo para a documentação
+<a id="contributing-to-the-documentation" class="xliff"></a>
 
 Para contribuir com essa documentação, consulte o [Guia de contribuição](CONTRIBUTING.md).
 Agradecemos suas contribuições para nos ajudar a melhorar a documentação do Visual C++. Todos os artigos contidos neste repositório usam o GitHub Flavored Markdown.

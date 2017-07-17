@@ -30,17 +30,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 06/01/2017
 
 ---
-# <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
+# Guia de portabilidade: Spy++
+<a id="porting-guide-spy" class="xliff"></a>
 Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de como é um projeto típico de portabilidade, dos tipos de problemas que você pode encontrar e algumas dicas gerais e truques para resolver problemas de portabilidade. Ele não foi projetado para ser um guia definitivo de portabilidade, uma vez que a experiência de portar um projeto depende muito das especificidades do código.  
   
-## <a name="spy"></a>Spy++  
- O Spy++ é uma ferramenta de diagnóstico de GUI amplamente utilizada para a Área de Trabalho do Windows, que fornece todos os tipos de informações sobre os elementos de interface do usuário na Área de Trabalho do Windows. Ele mostra a hierarquia de janelas completa e fornece acesso aos metadados sobre cada janela e controle. Este aplicativo útil é fornecido com o Visual Studio há muitos anos. Encontramos uma versão antiga dele que foi compilada pela última vez em Visual C++ 6.0 e o portamos para [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]. A experiência do Visual Studio 2017 deve ser quase idêntica.
+## Spy++
+<a id="spy" class="xliff"></a>  
+ O Spy++ é uma ferramenta de diagnóstico de GUI amplamente utilizada para a Área de Trabalho do Windows, que fornece todos os tipos de informações sobre os elementos de interface do usuário na Área de Trabalho do Windows. Ele mostra a hierarquia de janelas completa e fornece acesso aos metadados sobre cada janela e controle. Este aplicativo útil é fornecido com o Visual Studio há muitos anos. Encontramos uma versão antiga dele que foi compilada pela última vez em Visual C++ 6.0 e o portamos para Visual Studio 2015. A experiência do Visual Studio 2017 deve ser quase idêntica.
   
  Consideramos este caso como sendo típico para portabilidade de aplicativos da Área de Trabalho do Windows que usam o MFC e a API do Win32, especialmente para projetos antigos que não foram atualizados com cada versão do Visual C++ desde o Visual C++ 6.0.  
   
@@ -84,7 +86,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- A Microsoft não dá mais suporte ao Windows XP, portanto, mesmo que usá-lo como destino seja permitido em [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], você deve eliminar o suporte para ele em seus aplicativos e incentivar os usuários a adotar as novas versões do Windows.  
+ A Microsoft não dá mais suporte ao Windows XP, portanto, mesmo que seja permitido usá-lo como destino no Visual Studio 2015, você deve eliminar gradativamente o suporte para ele em seus aplicativos e incentivar os usuários a adotar as novas versões do Windows.  
   
  Para eliminar o erro, defina WINVER atualizando a configuração **Propriedades do Projeto** para a versão mais antiga do Windows que você deseja usar como destino no momento. Encontre uma tabela de valores para várias versões do Windows [aqui](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx).  
   
@@ -700,9 +702,11 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ```  
   
-## <a name="summary"></a>Resumo  
+## Resumo
+<a id="summary" class="xliff"></a>  
  Portabilidade do Spy++ do código Visual C++ 6.0 original para o compilador mais recente levou aproximadamente 20 horas de tempo de codificação ao longo de aproximadamente uma semana. Nós atualizamos diretamente por oito versões do produto, do Visual Studio 6.0 para o Visual Studio 2015. Agora, essa é a abordagem recomendada para todas as atualizações em projetos grandes e pequenos.  
   
-## <a name="see-also"></a>Consulte também  
+## Consulte também
+<a id="see-also" class="xliff"></a>  
  [Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)
