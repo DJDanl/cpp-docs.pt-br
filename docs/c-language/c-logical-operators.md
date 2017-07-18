@@ -67,7 +67,7 @@ Os operadores lógicos executam as operações AND lógica (**&&**) e OR lógica
 |Operador|Descrição|  
 |--------------|-----------------|  
 |**&&**|O operador lógico AND produz o valor 1 se os dois operandos tiverem valores diferentes de zero. Se qualquer um dos operandos for igual a 0, o resultado será 0. Se o primeiro operando de uma operação AND lógica for igual a 0, o segundo operando não será avaliado.|  
-|`&#124;&#124;`|O operador OR lógico executa uma operação OR inclusiva em seus operandos. O resultado é 0 se os dois operandos tiverem valores 0. Se qualquer um dos operando tiver um valor diferente de zero, o resultado será 1. Se o primeiro operando de uma operação OR lógica tiver um valor diferente de&0;, o segundo operando não será avaliado.|  
+|`&#124;&#124;`|O operador OR lógico executa uma operação OR inclusiva em seus operandos. O resultado é 0 se os dois operandos tiverem valores 0. Se qualquer um dos operando tiver um valor diferente de zero, o resultado será 1. Se o primeiro operando de uma operação OR lógica tiver um valor diferente de 0, o segundo operando não será avaliado.|  
   
  Os operandos de expressões AND lógica e OR lógica são avaliados da esquerda para a direita. Se o valor do primeiro operando for suficiente para determinar o resultado da operação, o segundo operando não será avaliado. Isso é chamado “avaliação pelo caminho mais curto”. Há um ponto de sequência depois do primeiro operando. Consulte [Pontos de sequência](../c-language/c-sequence-points.md) para obter mais informações.  
   

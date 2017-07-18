@@ -67,7 +67,7 @@ identifier
   
  Os dois formatos de expressões de seleção de membros têm efeitos semelhantes.  
   
- De fato, uma expressão que envolva o operador de seleção de membros (**->**) é uma versão resumida de uma expressão usando o ponto (****) se a expressão antes do período consistir no operador de indireção (**\***) aplicado a um valor do ponteiro. Portanto,  
+ De fato, uma expressão que envolva o operador de seleção de membros (**->**) é uma versão resumida de uma expressão usando o ponto (**.**) se a expressão antes do período consistir no operador de indireção (**\***) aplicado a um valor do ponteiro. Portanto,  
   
 ```  
   

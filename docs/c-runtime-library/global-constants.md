@@ -45,7 +45,7 @@ A biblioteca em tempo de execução da Microsoft contém definições para const
   
 |||  
 |-|-|  
-|[hora do Windows de&32; bits/formatos de data](../c-runtime-library/32-bit-windows-time-date-formats.md)|[BUFSIZ](../c-runtime-library/bufsiz.md)|  
+|[hora do Windows de 32 bits/formatos de data](../c-runtime-library/32-bit-windows-time-date-formats.md)|[BUFSIZ](../c-runtime-library/bufsiz.md)|  
 |[CLOCKS_PER_SEC, CLK_TCK](../c-runtime-library/clocks-per-sec-clk-tck.md)|[Constantes confirmar em disco](../c-runtime-library/commit-to-disk-constants.md)|  
 |[_CRT_DISABLE_PERFCRIT_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md)|[Constantes de tipo de dados](../c-runtime-library/data-type-constants.md)|  
 |[Constantes ambientais](../c-runtime-library/environmental-constants.md)|[EOF, WEOF](../c-runtime-library/eof-weof.md)|  

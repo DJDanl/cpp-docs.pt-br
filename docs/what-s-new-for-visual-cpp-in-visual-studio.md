@@ -26,26 +26,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/30/2017
 
 ---
 
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novidades do Visual C++ no [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# Novidades do Visual C++ no [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+<a id="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd" class="xliff"></a>
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] traz muitas atualizações e correções para o ambiente do Visual C++. Corrigimos mais de 250 bugs e problemas relatados no compilador e nas ferramentas, muitas enviadas pelos clientes através do [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect"). Obrigado por relatar bugs!  Para obter mais informações sobre todas as novidades do Visual Studio, visite [Novidades no [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
 
-## <a name="c-compiler"></a>Compilador C++
+## Compilador C++
+<a id="c-compiler" class="xliff"></a>
 
-### <a name="c-conformance-improvements"></a>Aprimoramentos de conformidade do C++
+### Aprimoramentos de conformidade do C++
+<a id="c-conformance-improvements" class="xliff"></a>
 Nesta versão, atualizamos o compilador do C++ e a biblioteca padrão com suporte aprimorado para os recursos C++11 e C++14, bem como o suporte preliminar para determinados recursos esperados no padrão C++ 17. Para obter informações detalhadas, consulte [Aprimoramentos de conformidade do C++ no Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-### <a name="new-compiler-switches"></a>Novas opções de compilador  
+### Novas opções de compilador
+<a id="new-compiler-switches" class="xliff"></a>  
 
  -**/std:c++14** and **/std:c++latest**: essas opções de compilador habilitam a opção por versões específicas da linguagem de programação de ISO C++ em um projeto. Para obter mais informações, consulte [Opções de versão de padrões no compilador](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/standards-version-switches-in-the-compiler). A maioria dos recursos padrão de rascunho estão protegidos pela opção //std:c++latest. 
 
@@ -58,7 +63,8 @@ Habilitar tempo de vinculação incremental até 30% mais rápido (em relação 
 
 O [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] permite o uso de /sdl com /await. Removemos a limitação /RTC com Co-rotinas. 
 
-### <a name="codegen-security-diagnostics-and-versioning"></a>Geração de código, segurança, diagnóstico e controle de versão
+### Geração de código, segurança, diagnóstico e controle de versão
+<a id="codegen-security-diagnostics-and-versioning" class="xliff"></a>
 Esta versão apresenta várias melhorias na otimização, na geração de código, no controle de versão do conjunto de ferramentas e nos diagnósticos. Alguns aprimoramentos importantes incluem:  
 
 - Melhor geração de código de loops: suporte para vetorização automática da divisão de inteiros constantes, melhor identificação de padrões de memset.
@@ -68,9 +74,11 @@ Esta versão apresenta várias melhorias na otimização, na geração de códig
 - Diagnósticos aprimorados: a janela de saída agora mostra a coluna em que ocorre um erro. Para obter mais informações, consulte [Aprimoramentos de diagnóstico do compilador do C++ no VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/).
 - Ao usar corrotinas, a palavra-chave experimental “yield” (disponível na opção /await) foi removida. Em vez disso, seu código deve ser atualizado para usar "co_yield". Para obter mais informações, consulte o blog da equipe do Visual C++. 
 
-## <a name="c-libraries"></a>Bibliotecas C++
+## Bibliotecas C++
+<a id="c-libraries" class="xliff"></a>
 
-### <a name="standard-library-improvements"></a>Aprimoramentos da Biblioteca Padrão:
+### Aprimoramentos da Biblioteca Padrão:
+<a id="standard-library-improvements" class="xliff"></a>
 
 * Pequenas melhorias no diagnóstico de basic_string _ITERATOR_DEBUG_LEVEL != 0. Acionar uma verificação de IDL no mecanismo de cadeia de caracteres agora relatará o comportamento específico que acionou a verificação. Por exemplo, em vez de "não é possível desreferenciar o iterador de cadeia de caracteres", você verá "não é possível desreferenciar o iterador de cadeia de caracteres porque ele está fora do intervalo (por exemplo, um iterador de fim)".
 * Melhoria de desempenho: sobrecargas de basic_string::find(char) chamam traits::find apenas uma vez. Anteriormente, isso era implementado como uma pesquisa de cadeia de caracteres geral para de uma cadeia de caracteres de comprimento 1.
@@ -93,26 +101,32 @@ Esta versão apresenta várias melhorias na otimização, na geração de códig
 * O desempenho dos construtores de movimentação do std::string/std::wstring foram aprimorados em mais de três vezes
 * Para obter uma lista completa de melhorias na STL, consulte as [Correções da STL no VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/).
 
-### <a name="open-source-library-support"></a>Suporte à biblioteca de software livre  
-Vcpkg é uma ferramenta de linha de comando de software livre que simplifica bastante o processo de aquisição e build de bibliotecas estáticas e DLLS de software livre do C++ no Visual Studio. Para obter mais informações, consulte [Atualizações de vcpkg: a vinculação estática agora está disponível](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/).
+### Suporte à biblioteca de software livre
+<a id="open-source-library-support" class="xliff"></a>  
+Vcpkg é uma ferramenta de linha de comando de software livre que simplifica bastante o processo de aquisição e build de bibliotecas estáticas e DLLS de software livre do C++ no Visual Studio. Para obter mais informações, consulte [vcpkg: um gerenciador de pacotes para C++](vcpkg.md).
 
-### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
+### CPPRest SDK 2.9.0
+<a id="cpprest-sdk-290" class="xliff"></a>  
 A CPPRestSDK, uma API da Web de plataforma cruzada para o C++, foi atualizada para a versão 2.9.0. Para obter mais informações, consulte [CppRestSDK 2.9.0 está disponível no GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/).
 
-### <a name="atl"></a>ATL
+### ATL
+<a id="atl" class="xliff"></a>
 * Ainda outro conjunto de correções de compatibilidade de pesquisa de nome
 * Construtores de movimentação e operadores de atribuição existentes são agora corretamente marcados como sem lançamento
 * Não suprimir aviso C4640 válido sobre a inicialização segura de thread de estatísticas locais no atlstr.h
 * A inicialização segura de thread de estatísticas locais foi desabilitada automaticamente no conjunto de ferramentas XP ao [usar ATL E compilar uma DLL]. Esse não é mais o caso. Você poderá adicionar /Zc:threadSafeInit- in em suas configurações de projeto se desejar que a inicialização segura de thread seja desativada. 
 
-### <a name="visual-c-runtime"></a>Tempo de execução do Visual C++
+### Tempo de execução do Visual C++
+<a id="visual-c-runtime" class="xliff"></a>
 * Novo cabeçalho "cfguard.h" para símbolos de proteção de fluxo de controle. 
 
-## <a name="c-ide"></a>C++ IDE
+## C++ IDE
+<a id="c-ide" class="xliff"></a>
 
 * Agora, o desempenho de alteração de configuração é melhor para projetos nativos C++ e muito melhor para projetos C++/CLI. Quando uma configuração de solução for ativada pela primeira vez, depois ela será mais rápida, e todas as ativações subsequentes dessa configuração de solução serão quase instantâneas.
 
-### <a name="intellisense"></a>Intellisense  
+### Intellisense
+<a id="intellisense" class="xliff"></a>  
 * O novo mecanismo de banco de dados com base em SQLite agora está sendo usado por padrão. Isso acelerará operações de banco de dados como Ir para Definição e Localizar Todas as Referências e poderá aprimorar significativamente o tempo de análise inicial da solução. A configuração foi movida para Ferramentas > Opções > Editor de texto > C/C++ > Avançado (estava anteriormente em... C/C++ > Experimental).
 
 * Melhoramos o desempenho do IntelliSense em projetos e arquivos que não estão usando cabeçalhos pré-compilados – um Cabeçalho Pré-Compilado Automático será criado para os cabeçalhos no arquivo atual.
@@ -139,15 +153,17 @@ A CPPRestSDK, uma API da Web de plataforma cruzada para o C++, foi atualizada pa
 
 Alguns desses recursos são comuns a outras linguagens e alguns são específicos do C++. Para obter mais informações sobre esses novos recursos, consulte [Anunciando o Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/). 
 
-### <a name="support-for-non-msbuild-projects-with-open-folder"></a>Suporte para projetos que não são de MSBuild com o Open Folder
+### Suporte para projetos que não são de MSBuild com o Open Folder
+<a id="support-for-non-msbuild-projects-with-open-folder" class="xliff"></a>
 O Visual Studio 2017 apresenta o recurso "Open Folder", que o habilita a escrever código, compilar e depurar em uma pasta que contém o código-fonte sem a necessidade de criar soluções ou projetos. Isso facilita muito para começar a usar o Visual Studio, mesmo que seu projeto não seja um projeto com base em MSBuild. Com o "Open Folder", você obtém acesso às funcionalidades poderosas de entendimento, edição, build e depuração de código que o Visual Studio já fornece para projetos do MSBuild. Para obter mais informações, consulte [Trazer sua base de código do C++ para o Visual Studio com o "Open Folder"](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/).
 
 * Melhorias na experiência de Abrir Pasta. Você pode personalizar sua experiência por meio desses arquivos json:
-  -    CppProperties.json para personalizar a experiência de navegação e do IntelliSense.
-  -    Tasks.json para personalizar as etapas de build. 
-  -    Launch.json para personalizar a experiência de depuração.
+  - CppProperties.json para personalizar a experiência de navegação e do IntelliSense.
+  - Tasks.json para personalizar as etapas de build. 
+  - Launch.json para personalizar a experiência de depuração.
 
-### <a name="cmake-support-via-open-folder"></a>Suporte a CMake através do Open Folder
+### Suporte a CMake através do Open Folder
+<a id="cmake-support-via-open-folder" class="xliff"></a>
 O Visual Studio 2017 apresenta suporte ao uso de projetos CMake sem a conversão para arquivos de projeto MSBuild (.vcxproj). Para obter mais informações, consulte [Suporte do CMake no Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) e [Suporte do CMake no Visual Studio 2017 – Novidades na atualização RC.2](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/). Abrir projetos CMake com “Open Folder” configurará automaticamente o ambiente para editar, compilar e depurar com o C++.
 
 * O C++ IntelliSense funciona sem a necessidade de criar um arquivo CppProperties.json na pasta raiz. Além disso, adicionamos uma nova lista suspensa para permitir aos usuários mudar facilmente entre as configurações fornecidas pelos arquivos CppProperties.json e CMake.
@@ -157,41 +173,51 @@ O Visual Studio 2017 apresenta suporte ao uso de projetos CMake sem a conversão
   ![Abrir Pasta com CMake](media/cmake_cpp.png "Abrir Pasta com CMake")
 
 
-## <a name="c-installation-workloads"></a>Cargas de trabalho de instalação em C++ 
+## Cargas de trabalho de instalação em C++
+<a id="c-installation-workloads" class="xliff"></a> 
 
-### <a name="windows-desktop-development-with-c"></a>Desenvolvimento do Windows Desktop com C++:  
+### Desenvolvimento do Windows Desktop com C++:
+<a id="windows-desktop-development-with-c" class="xliff"></a>  
 Agora, fornecemos uma experiência de instalação mais granular da carga de trabalho original do C++. Adicionamos componentes selecionáveis que permitem a instalação apenas das ferramentas das quais você precisa.  Observe que os tamanhos de instalação indicados para os componentes listados na interface de usuário do instalador não são precisos e subestimam o tamanho total.
 
 Para criar projetos Win32 com êxito na carga de trabalho de área de trabalho C++, é necessário instalar um conjunto de ferramentas e um SDK do Windows. Instalar os componentes recomendados (selecionados) “Conjunto de ferramentas do VC++ 2017 v141 (x86, x64)” e “SDK do Windows 10 (10.0.14393)” garantirá que isso funcionará. Se as ferramentas necessárias não estiverem instaladas, os projetos não serão criados com êxito e o assistente parará de responder.
 
-### <a name="linux-development-with-c"></a>Desenvolvimento de Linux com C++:  
+### Desenvolvimento de Linux com C++:
+<a id="linux-development-with-c" class="xliff"></a>  
 A extensão popular [Visual C++ para Desenvolvimento no Linux](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) agora faz parte do Visual Studio. Essa instalação fornece tudo o que você precisa para desenvolver e depurar aplicativos em C++, em execução em um ambiente Linux.  
 
-### <a name="game-development-with-c"></a>Desenvolvimento de jogos com C++:  
+### Desenvolvimento de jogos com C++:
+<a id="game-development-with-c" class="xliff"></a>  
 Use todo o poder do C++ para compilar jogos profissionais com DirectX ou Cocos2d.  
 
-### <a name="mobile-development-with-c-android-and-ios"></a>Desenvolvimento Mobile com C++ (Android e iOS):  
+### Desenvolvimento Mobile com C++ (Android e iOS):
+<a id="mobile-development-with-c-android-and-ios" class="xliff"></a>  
 Agora, você pode criar e depurar aplicativos móveis usando o Visual Studio, que pode ser destinado ao Android e iOS.  
 
-### <a name="universal-windows-apps"></a>Aplicativos universais do Windows:  
+### Aplicativos universais do Windows:
+<a id="universal-windows-apps" class="xliff"></a>  
 O C++ é fornecido como um componente opcional para a carga de trabalho do Aplicativo Universal do Windows.  Atualmente, a atualização de projetos em C++ deve ser feita manualmente. Se abrir um projeto da UWP voltado ao v140 no Visual Studio 2017, será necessário selecionar o conjunto de ferramentas de plataforma v141 nas páginas de propriedades do projeto se você não tiver instalado o Visual Studio 2015.
 
-## <a name="new-options-for-c-on-universal-windows-platform"></a>Novas opções para C++ na Plataforma Universal do Windows
+## Novas opções para C++ na Plataforma Universal do Windows
+<a id="new-options-for-c-on-universal-windows-platform" class="xliff"></a>
 Agora você tem novas opções para gravar e empacotar aplicativos do C++ para a Plataforma Universal do Windows e para a Windows Store: você pode usar o Desktop App Converter para empacotar o aplicativo da área de trabalho existente para implantação por meio da Windows Store. Para obter mais informações, consulte [Usando o tempo de execução do Visual C++ em projeto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) e [Traga seu aplicativo da área de trabalho para a UWP (Plataforma Universal do Windows) com a Ponte de Desktop](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Ao escrever código novo, você pode usar a C++/WinRT, uma projeção de linguagem C++ padrão para o Windows Runtime implementada exclusivamente em arquivos de cabeçalho. Ela permite que você crie e consuma APIs de Windows Runtime usando qualquer compilador C++ em conformidade com os padrões. A C++/WinRT foi concebida para oferecer aos desenvolvedores em C++ um acesso de primeira classe à moderna API do Windows. Para obter mais informações, consulte [C++/WinRT disponível no GitHub](https://moderncpp.com/).
 
 
-## <a name="clangc2-platform-toolset"></a>Conjunto de ferramentas de plataforma Clang/C2
+## Conjunto de ferramentas de plataforma Clang/C2
+<a id="clangc2-platform-toolset" class="xliff"></a>
 O conjunto de ferramentas Clang/C2 que acompanha o [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] agora dá suporte à opção /bigobj, que é essencial para o build de projetos grandes. Ele também inclui várias correções de bugs importantes, tanto em front-end quanto em back-end do compilador.
 
-## <a name="c-code-analysis"></a>Análise de Código C++
+## Análise de Código C++
+<a id="c-code-analysis" class="xliff"></a>
 
 Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Simplesmente habilite os verificadores na caixa de diálogo Extensões de Análise de Código nas páginas de propriedades do projeto e as extensões serão incluídas quando você executar análise de código. 
 
 ![CppCoreCheck](media/CppCoreCheck.png "Página de propriedades CppCoreCheck") 
 
-## <a name="visual-studio-graphics-diagnostics"></a>Diagnóstico de gráficos do Visual Studio
+## Diagnóstico de gráficos do Visual Studio
+<a id="visual-studio-graphics-diagnostics" class="xliff"></a>
 
 O Diagnóstico de Gráficos do Visual Studio é um conjunto de ferramentas de registro e análise de problemas de desempenho e renderização em aplicativos Direct3D. Os recursos de Diagnóstico de Gráficos podem ser usados com aplicativos em execução localmente no seu computador Windows, em um emulador de dispositivo Windows ou em um dispositivo ou computador remoto.
 
