@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,13 +36,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 431f89c26a36fdcc723588ba317979bcd39c7521
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ac4c3f7273adf9e373484f24fbb7a56ebea5903a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipos de dados SBCS e MBCS
-Qualquer rotina de biblioteca em tempo de execução `MBCS` da Microsoft que manipula apenas um caractere multibyte ou um byte de um caractere multibyte espera um argumento `unsigned``int` (em que 0x00 <= valor de caractere <= 0xFFFF e 0x00 <= valor de byte <= 0xFF ). Uma rotina `MBCS` que lida com caracteres em um contexto de cadeia de caracteres ou bytes multibyte espera que uma cadeia de caracteres multibyte seja representada como um ponteiro `unsigned``char`.  
+Qualquer rotina de biblioteca em tempo de execução `MBCS` da Microsoft que manipula apenas um caractere multibyte ou um byte de um caractere multibyte espera um argumento `unsigned int` (em que 0x00 <= valor de caractere <= 0xFFFF e 0x00 <= valor de byte <= 0xFF ). Uma rotina `MBCS` que lida com caracteres em um contexto de cadeia de caracteres ou bytes multibyte espera que uma cadeia de caracteres multibyte seja representada como um ponteiro `unsigned char`.  
   
 > [!CAUTION]
 >  Cada byte de um caractere multibyte pode ser representado em um `char` de 8 bits. No entanto, um caractere de byte único `SBCS` ou `MBCS` do tipo `char` com um valor maior que 0x7F é negativo. Quando esse caractere é convertido diretamente para um `int` ou `long`, o resultado é estendido com sinal pelo compilador e, portanto, pode gerar resultados inesperados.  
@@ -60,8 +62,3 @@ Qualquer rotina de biblioteca em tempo de execução `MBCS` da Microsoft que man
 ## <a name="see-also"></a>Consulte também  
  [Internacionalização](../c-runtime-library/internationalization.md)   
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

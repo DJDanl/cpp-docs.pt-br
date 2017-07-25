@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5520dd95196cfbcac9eb84659aa444b8fad55c36
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 17a3f4f7be76be9f23160e351466fee4f70b9272
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="using-generic-text-mappings"></a>Usando mapeamentos de texto genérico

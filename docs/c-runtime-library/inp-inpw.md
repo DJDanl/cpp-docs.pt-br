@@ -49,10 +49,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff06d92c13ee771f98f25e2ac9e08c666104bb0c
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 1f0c640b6a17450f43d772de48b544fdf3b290a5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="inp-inpw"></a>inp, inpw
@@ -62,4 +62,4 @@ Essas funções POSIX foram preteridas. Use o ISO C++ compatível com [_inp, _in
 >  Essas funções estão obsoletas. A partir do Visual Studio 2015, elas não estão disponíveis no CRT.  
   
 > [!IMPORTANT]
->  Essa API não pode ser usada em aplicativos executados no [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
+>  Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, consulte [Funções de CRT sem suporte com /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).

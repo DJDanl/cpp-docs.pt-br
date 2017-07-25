@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 98b5f305a822caf43ffbcf13e1c6679269d4048a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f8c15c7419f440626f590488a3e7bf52a2282041
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="escape-sequences"></a>Sequências de Escape
