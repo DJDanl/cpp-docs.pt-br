@@ -30,16 +30,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 001f4894e09a3b2ba9d59238ac6572739eb9f656
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: fc0ed4b45e04357fae46fb1391d55d184440f12d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicativos da Windows Store, Windows Runtime  e C Run-Time
-[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] os aplicativos são programas que são executados no [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] que executa em [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  O [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] é um ambiente confiável que controla as funções, variáveis e recursos que estão disponíveis para um [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativo. No entanto, por projeto, restrições [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] impedem o uso da maioria dos recursos de biblioteca em tempo de execução do C (CRT) nos aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  
+Os aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] são programas executados no Windows Runtime que é executado no [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  O Windows Runtime é um ambiente confiável que controla as funções, as variáveis e os recursos que estão disponíveis para um aplicativo [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. No entanto, por design, há restrições do Windows Runtime que impedem o uso da maioria dos recursos de biblioteca em tempo de execução do C (CRT) nos aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  
   
- O [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] não dá suporte aos seguintes recursos de CRT:  
+ O Windows Runtime não tem suporte para os seguintes recursos de CRT:  
   
 -   A maioria das funções de CRT que estão relacionados à funcionalidade sem suporte.  
   
