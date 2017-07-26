@@ -33,14 +33,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e5eacf311c85a8680cba221d4ef8b9c22034b48c
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: be461857f4aa1625094b20a2241ab15853d2aa81
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Funções CRT não suportadas de Windows Runtime 
-Várias APIs de tempo de execução de C (CRT) não podem ser usadas em [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] aplicativos que são executados em [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]. Esses aplicativos são criados usando o sinalizador de compilador /ZW. Para obter uma lista de funções de CRT sem suporte, consulte [funções de CRT não tem suporte pelo /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+Várias APIs de tempo de execução em C (CRT) não podem ser usadas em aplicativos [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] que são executados no Windows Runtime. Esses aplicativos são criados usando o sinalizador de compilador /ZW. Para obter uma lista de funções de CRT sem suporte, consulte [funções de CRT não tem suporte pelo /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
  Todas as APIs de CRT descritas na seção de [Referência Alfabética de Função](../c-runtime-library/reference/crt-alphabetical-function-reference.md) da documentação.  
   

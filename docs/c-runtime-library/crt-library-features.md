@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>Funcionalidades da biblioteca CRT
@@ -121,14 +121,14 @@ Este tópico aborda os vários arquivos .lib que compõem as bibliotecas em temp
 |LIBCPMTD.LIB|Multi-threaded, vínculo estático|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|Multi-threaded, vínculo dinâmico (biblioteca de importação para MSVCP\<version>D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|  
   
- Ao compilar uma versão de lançamento do projeto, uma das bibliotecas básicas em tempo de execução C (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) é vinculada por padrão, dependendo da opção do compilador escolhida (multi-threaded, DLL, /clr). Se você incluir um dos [arquivos de cabeçalho da Biblioteca Padrão C++](../standard-library/cpp-standard-library-header-files.md) no código, uma Biblioteca Padrão C++ será vinculada automaticamente por [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] em tempo de compilação. Por exemplo:  
+ Ao compilar uma versão de lançamento do projeto, uma das bibliotecas básicas em tempo de execução C (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) é vinculada por padrão, dependendo da opção do compilador escolhida (multi-threaded, DLL, /clr). Quando você inclui um dos [arquivos de cabeçalho da Biblioteca Padrão C++](../standard-library/cpp-standard-library-header-files.md) no código, uma Biblioteca Padrão C++ é vinculada automaticamente pelo Visual C++ em tempo de compilação. Por exemplo:  
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Quais problemas poderão ocorrer se um aplicativo usar mais de uma versão do CRT?  
- Se você tiver mais de uma DLL ou mais de um EXE, poderá ter mais de um CRT, independentemente se estiver usando ou não versões diferentes do [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]. Por exemplo, a vinculação estática do CRT em várias DLLs poderá apresentar o mesmo problema. Os desenvolvedores que tiveram esse problema com CRTs estáticos foram instruídos a compilar com **/MD** para usar a DLL do CRT. Se as DLLs passarem recursos do CRT além do limite da DLL, você poderá ter problemas com CRTs incompatíveis e precisará recompilar o projeto com o Visual C++.  
+ Caso tenha mais de uma DLL ou mais de um EXE, então você pode ter mais de um CRT, independentemente de estar usando ou não versões diferentes do Visual C++. Por exemplo, a vinculação estática do CRT em várias DLLs poderá apresentar o mesmo problema. Os desenvolvedores que tiveram esse problema com CRTs estáticos foram instruídos a compilar com **/MD** para usar a DLL do CRT. Se as DLLs passarem recursos do CRT além do limite da DLL, você poderá ter problemas com CRTs incompatíveis e precisará recompilar o projeto com o Visual C++.  
   
  Se o programa estiver usando mais de uma versão do CRT, será necessário ter cuidado ao passar determinados objetos do CRT (como identificadores de arquivo, localidades e variáveis de ambiente) em limites da DLL. Para obter mais informações sobre os problemas envolvidos e como resolvê-los, consulte [Erros potenciais ao passar objetos do CRT em limites da DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   

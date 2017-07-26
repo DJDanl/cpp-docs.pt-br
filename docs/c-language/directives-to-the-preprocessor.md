@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0c3e8919083d3f5f3ab6345de0a2a6817b93205e
-ms.lasthandoff: 02/25/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e5d4790cccc280a6a2d23a66c6959fd07bdefa9b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="directives-to-the-preprocessor"></a>Diretivas para o pré-processador
@@ -44,7 +45,7 @@ Uma "política" instrui o pré-processador C a realizar uma ação específica n
   
  Esta instrução determina que o compilador substitua cada ocorrência de `MAX` por `100` antes da compilação. As políticas de pré-processador do compilador C são:  
   
-|#define|#endif|#ifdef|#linha|  
+|#define|#endif|#ifdef|#line|  
 |--------------|-------------|-------------|------------|  
 |`#elif`|`#error`|**#ifndef**|**#pragma**|  
 |`#else`|`#if`|`#include`|`#undef`|  

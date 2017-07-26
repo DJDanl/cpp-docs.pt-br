@@ -15,6 +15,7 @@ apiname:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -81,6 +82,7 @@ apiname:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -224,6 +226,9 @@ apiname:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -273,7 +278,8 @@ apiname:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -287,6 +293,8 @@ apilocation:
 - api-ms-win-crt-private-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- vcruntime140_app.dll
+- msvcp140_app.dll
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -295,6 +303,7 @@ f1_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -361,6 +370,7 @@ f1_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -504,6 +514,9 @@ f1_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -553,7 +566,8 @@ f1_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -563,6 +577,7 @@ helpviewer_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -629,6 +644,7 @@ helpviewer_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -772,6 +788,9 @@ helpviewer_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -821,7 +840,8 @@ helpviewer_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 caps.latest.revision: 12
 author: corob-msft
@@ -843,17 +863,19 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b339a9eb92fcb97733b259c3c7c25e7e89784c67
+ms.sourcegitcommit: ac823b16dbcb3ef2bac984a8d0634ac51198dae4
+ms.openlocfilehash: e82838570d8c01d4ecc36fda384a102c415618ae
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 06/02/2017
 
 ---
-# <a name="internal-crt-globals-and-functions"></a>Funções e globais de CRT interno
+# <a name="internal-crt-globals-and-functions"></a>Funções e globais de CRT interno  
+  
 A CRT (biblioteca em tempo de execução C) contém funções e variáveis globais que são usadas somente para oferecer suporte à interface da biblioteca pública. Algumas delas são expostas em cabeçalhos públicos como detalhes da implementação. Embora essas funções e variáveis globais possam ser acessadas por meio de exportações públicas, elas não devem ser usadas por seu código. Recomendamos que você altere qualquer código que utilize essas funções e variáveis e, ao invés disso, utilize equivalentes da biblioteca pública. Essas funções podem variar de acordo com a versão. Elas são listadas aqui para ajudar você a identificá-las. Links são fornecidos quando existe documentação adicional, mas em geral, esses detalhes de implementação não estão documentados.  
   
 ## <a name="internal-crt-globals-and-value-macros"></a>Globais e macros internas de valor do CRT  
- Essas variáveis globais e definições de macro são usadas para implementar o CRT.  
+  
+Essas variáveis globais e definições de macro são usadas para implementar o CRT.  
   
 |Nome|  
 |----------|  
@@ -957,6 +979,7 @@ A CRT (biblioteca em tempo de execução C) contém funções e variáveis globa
 |__CxxLongjmpUnwind|  
 |__CxxQueryExceptionSize|  
 |__CxxRegisterExceptionObject|  
+|_CxxThrowException|  
 |__CxxUnregisterExceptionObject|  
 |__daylight|  
 |_dclass|  
@@ -1118,6 +1141,9 @@ A CRT (biblioteca em tempo de execução C) contém funções e variáveis globa
 |[__setusermatherr](../c-runtime-library/setusermatherr.md)|  
 |_SetWinRTOutOfMemoryExceptionCallback|  
 |_sopen_dispatch|  
+|__std_exception_copy|  
+|__std_exception_destroy|  
+|__std_type_info_destroy_list|  
 |__stdio_common_vfprintf|  
 |__stdio_common_vfprintf_p|  
 |__stdio_common_vfprintf_s|  
@@ -1168,6 +1194,8 @@ A CRT (biblioteca em tempo de execução C) contém funções e variáveis globa
 |__wcsncnt|  
 |[__wgetmainargs](../c-runtime-library/getmainargs-wgetmainargs.md)|  
 |_wsopen_dispatch|  
+|_Xbad_alloc|  
+|_Xlength_error|  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)

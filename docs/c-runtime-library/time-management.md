@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,10 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 07fcee10e916162dfd3662815171621ef653ee6a
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="time-management"></a>Gerenciamento de tempo
@@ -56,7 +57,7 @@ Use essas funções para obter a hora atual e converter, ajustar e armazená-lo 
 |[clock](../c-runtime-library/reference/clock.md)|Retorne a hora do relógio decorrida no processo.|  
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Converta a hora do tipo `time_t`, `__time32_t` ou `__time64_t` em sequência de caracteres. As versões dessas funções com o sufixo `_s` são mais seguras.|  
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcula a diferença entre duas horas.|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Armazenar a hora atual do sistema em variável do tipo `struct _timeb` ou tipo `struct``__timeb64` as versões dessas funções com o `_s` sufixo são mais seguros.|  
+|[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Armazenar a hora atual do sistema em variável do tipo `struct _timeb` ou tipo `struct __timeb64` as versões dessas funções com o `_s` sufixo são mais seguros.|  
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Definir hora da modificação em arquivo aberto|  
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converter a hora do tipo `time_t` para `struct tm` ou de tipo `__time64_t` para `struct tm`. As versões dessas funções com o `_s` sufixo são mais seguros.|  
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Converter a hora do tipo `time_t` em `struct tm` ou do tipo `__time64_t` em `struct tm` com correção local. As versões dessas funções com o sufixo `_s` são mais seguras.|  
@@ -73,7 +74,7 @@ Use essas funções para obter a hora atual e converter, ajustar e armazená-lo 
 >  Em todas as versões do Microsoft C/C++, exceto na versão 7.0 do Microsoft C/C++, e em todas as versões do Visual C++, a função time retorna a hora atual como o número de segundos passados desde a meia-noite de 1º de janeiro de 1970. Na versão 7.0 do Microsoft C/C++, `time` retornava a hora atual como o número de segundos passados desde a meia-noite de 31 de dezembro de 1899.  
   
 > [!NOTE]
->  Em versões do [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] e Microsoft C/C++ antes do Visual C++ 2005, `time_t` foi um `long int` (32 bits) e, portanto, não pode ser usado para datas anteriores 3:14:07 de 19 de janeiro de 2038, UTC. `time_t`Agora é equivalente a `__time64_t` por padrão, mas definir `_USE_32BIT_TIME_T` alterações `time_t` para `__time32_t` e força muitas funções de tempo para chamar as versões que usam 32 bits `time_t`. Para saber mais, veja [tipos padrão](../c-runtime-library/standard-types.md) e comentários na documentação para as funções de tempo individuais.  
+>  Em versões do Visual C++ e do Microsoft C/C++ anteriores ao Visual C++ 2005, `time_t` era um `long int` (32 bits) e, portanto, não pode ser usado para datas anteriores a 3:14:07 de 19 de janeiro de 2038, UTC. `time_t`Agora é equivalente a `__time64_t` por padrão, mas definir `_USE_32BIT_TIME_T` alterações `time_t` para `__time32_t` e força muitas funções de tempo para chamar as versões que usam 32 bits `time_t`. Para saber mais, veja [tipos padrão](../c-runtime-library/standard-types.md) e comentários na documentação para as funções de tempo individuais.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rotinas de tempo de execução por categoria](../c-runtime-library/run-time-routines-by-category.md)

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -113,10 +113,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: a33c5071549695c11ba4820679d5d7059b7f5a5c
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1406e086818ea6f71d32e345aaf3d0d79b91940c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de dados
@@ -151,9 +152,9 @@ Constantes de tipo de dados são dependentes de implementação intervalos de va
   
 |Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
-|**DBL_DIG**|15|# de dígitos decimais de precisão|  
+|**DBL_DIG**|15|Nº de casas decimais de precisão|  
 |**DBL_EPSILON**|2.2204460492503131e-016|Menores tais quais 1.0+**DBL_EPSILON** !=1.0|  
-|**DBL_MANT_DIG**|53|# de bits da mantissa|  
+|**DBL_MANT_DIG**|53|Nº de bits da mantissa|  
 |**DBL_MAX**|1.7976931348623158e+308|Valor máximo|  
 |**DBL_MAX_10_EXP**|308|Expoente decimal máximo|  
 |**DBL_MAX_EXP**|1024|Expoente binário máximo|  

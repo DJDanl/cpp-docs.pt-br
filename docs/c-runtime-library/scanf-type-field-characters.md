@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82ace58042dd9c7f9cceb0ef0781968532ae7b29
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf
@@ -63,7 +64,7 @@ As informações a seguir se aplicam a qualquer função da família de funçõe
 |`i`|Um inteiro. Hexadecimal se a cadeia de caracteres de entrada começa com "0x" ou "0X", octal se a cadeia de caracteres começa com "0", caso contrário, decimal.|Ponteiro para `int`.|Nº|  
 |`o`|Inteiro octal.|Ponteiro para `int`.|Nº|  
 |`p`|Um endereço de ponteiro em dígitos hexadecimais. O número máximo de dígitos de leitura depende do tamanho de um ponteiro (32 ou 64 bits), que depende da arquitetura do computador. "0x" ou "0X" são aceitos como prefixos.|Ponteiro para `void*`.|Nº|  
-|`u`|Inteiro decimal sem sinal.|Ponteiro para `unsigned``int`.|Nº|  
+|`u`|Inteiro decimal sem sinal.|Ponteiro para `unsigned int`.|Nº|  
 |`x`|Inteiro hexadecimal.|Ponteiro para `int`.|Nº|  
 |`e`, `E`, `f`, `F`, `g`, `G`|Valor de ponto flutuante consistindo de um sinal opcional (+ ou -), de uma série de um ou mais dígitos decimais que contém o ponto decimal e também de um expoente opcional ("e" ou "E"), seguido por um valor inteiro com sinal opcionalmente.|Ponteiro para `float`.|Nº|  
 |`a`, `A`|Valor de ponto flutuante que consiste em uma série de um ou mais dígitos hexadecimais com um ponto decimal opcional e um expoente ("p" ou "P") seguido de um valor decimal.|Ponteiro para `float`.|Nº|  
