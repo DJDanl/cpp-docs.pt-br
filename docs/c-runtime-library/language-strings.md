@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 93312ee12f84d5281789f6e4e3e668a905bfbfc0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Cadeias de caracteres de idioma
-As funções `setlocale` e `_create_locale` podem usar os idiomas dão suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, consulte [Referência da API National Language Support (NLS)](http://msdn.microsoft.com/goglobal/bb896001.aspx). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Abreviação do nome do idioma** da lista de idiomas com suporte. A implementação da biblioteca em tempo de execução C também dá suporte a estas cadeias de caracteres de idioma:  
+As funções `setlocale` e `_create_locale` podem usar os idiomas dão suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, consulte [Referência da API National Language Support (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Abreviação do nome do idioma** da lista de idiomas com suporte. Para obter informações adicionais de suporte de idioma por versão do sistema operacional, veja [Apêndice A: Comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.   
+  
+A implementação da biblioteca em tempo de execução C também dá suporte a estas cadeias de caracteres de idioma:  
   
 |Cadeia de caracteres de idioma|Nome da Localidade Equivalente|  
 |---------------------|----------------------------|  
