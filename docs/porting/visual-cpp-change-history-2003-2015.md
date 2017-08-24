@@ -32,15 +32,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
-# Histórico de alterações de 2003 a 2015 do Visual C++
-<a id="visual-c-change-history-2003---2015" class="xliff"></a>
+# <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 Este artigo descreve todas as alterações significativas, partindo do Visual Studio 2015 e voltando até o Visual Studio 2003 e os termos "novo comportamento" ou "agora" neste artigo referem-se ao Visual Studio 2015 e às versões posteriores. Os termos "comportamento antigo" e "antes" referem-se ao Visual Studio 2013 e versões anteriores. 
  
  Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
@@ -68,20 +67,17 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
 ###  <a name="BK_CRT"></a> Biblioteca CRT (Tempo de execução de C)  
   
-#### Alterações gerais
-<a id="general-changes" class="xliff"></a>  
+#### <a name="general-changes"></a>Alterações gerais  
   
--   **Binários refatorados** A biblioteca CRT foi refatorada em um dois binários diferentes, um CRT Universal (ucrtbase), que contém a maior parte da funcionalidade padrão e uma Biblioteca em Tempo de execução do VC (vcruntime140), que contém a funcionalidade relacionada ao compilador, como tratamento de exceção e intrínsecos. Se você estiver usando as configurações padrão de projeto, essa alteração não afetará você, pois o vinculador usará automaticamente as novas bibliotecas padrão. Se você tiver definido a propriedade **Ignorar todas as bibliotecas padrão** do **Vinculador** do projeto para **Sim** ou se estiver usando a opção de vinculador /NODEFAULTLIB na linha de comando, você deverá atualizar sua lista de bibliotecas (na propriedade **Dependências Adicionais**) para incluir as bibliotecas novas e refatoradas. Substitua as bibliotecas CRT antigas (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) pelas bibliotecas refatoradas equivalentes. Para cada uma das duas bibliotecas refatoradas, há versões estáticas (.lib) e dinâmicas (.dll) e versões release (sem sufixo) e versões de depuração (com o sufixo "d"). As versões dinâmicas têm uma biblioteca de importação com a qual você faz o vínculo. As duas bibliotecas refatoradas são CRT Universal, especificamente ucrtbase.dll ou .lib, ucrtbased.dll ou .lib e a biblioteca de tempo de execução do VC, libvcruntime.lib, libvcruntime.dll, libvcruntimed.lib e libvcruntimed.dll. Consulte [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).  
+-   **Binários refatorados** A biblioteca CRT foi refatorada em um dois binários diferentes, um CRT Universal (ucrtbase), que contém a maior parte da funcionalidade padrão e uma Biblioteca em Tempo de Execução do VC (vcruntime), que contém a funcionalidade relacionada ao compilador, como tratamento de exceção e intrínsecos. Se você estiver usando as configurações padrão de projeto, essa alteração não afetará você, pois o vinculador usará automaticamente as novas bibliotecas padrão. Se você tiver definido a propriedade **Ignorar todas as bibliotecas padrão** do **Vinculador** do projeto para **Sim** ou se estiver usando a opção de vinculador /NODEFAULTLIB na linha de comando, você deverá atualizar sua lista de bibliotecas (na propriedade **Dependências Adicionais**) para incluir as bibliotecas novas e refatoradas. Substitua as bibliotecas CRT antigas (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) pelas bibliotecas refatoradas equivalentes. Para cada uma das duas bibliotecas refatoradas, há versões estáticas (.lib) e dinâmicas (.dll) e versões release (sem sufixo) e versões de depuração (com o sufixo "d"). As versões dinâmicas têm uma biblioteca de importação com a qual você faz o vínculo. As duas bibliotecas refatoradas são CRT Universal, especificamente ucrtbase.dll ou .lib, ucrtbased.dll ou .lib e a biblioteca de tempo de execução do VC, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib e vcruntimed*version*.dll. A *versão* no Visual Studio 2015 e no Visual Studio 2017 é 140. Consulte [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
-#### \<locale.h>
-<a id="localeh" class="xliff"></a>  
+#### <a name="localeh"></a>\<locale.h>  
   
 -   **localeconv** A função [localeconv](../c-runtime-library/reference/localeconv.md) declarada em locale.h agora funciona corretamente quando [localidade por thread](../parallel/multithreading-and-locales.md) está habilitada. Nas versões anteriores da biblioteca, essa função retornaria os dados lconv para a localidade global e não para a localidade do thread.  
   
      Se você usa a localidade por thread, você deve verificar o uso de localeconv para ver se o seu código pressupõe que os dados lconv retornados são para a localidade global e modificá-lo adequadamente.  
   
-#### \<math.h>
-<a id="mathh" class="xliff"></a>  
+#### <a name="mathh"></a>\<math.h>  
   
 -   **Sobrecargas de C++ de funções de biblioteca de matemática** Nas versões anteriores, \<math.h> definia algumas (mas não todas) sobrecargas de C++ para as funções de biblioteca de matemática. A \<cmath> definia as sobrecargas restantes. Portanto, para obter todas as sobrecargas, era necessário incluir o cabeçalho \<cmath>. Isso resultava em problemas de resolução de sobrecarga de função no código que incluía somente a \<math.h>. Agora, todas as sobrecargas de C++ foram removidas de \<math.h> e estão presentes apenas na \<cmath>.  
   
@@ -109,25 +105,21 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
 -   **FLT_ROUNDS** No Visual Studio 2013, a macro FLT_ROUNDS expandia-se para uma expressão constante, o que era incorreto porque o modo de arredondamento é configurável no tempo de execução, por exemplo, pela chamada de fesetround. A macro FLT_ROUNDS agora é dinâmica e reflete corretamente o modo de arredondamento atual.  
   
-#### \<new> e \<new.h>
-<a id="new-and-newh" class="xliff"></a>  
+#### <a name="new-and-newh"></a>\<new> e \<new.h>  
   
 -   **new e delete** Nas versões anteriores da biblioteca, as funções new e delete do operador definido pela implementação foram exportadas da biblioteca de tempo de execução DLL (por exemplo, msvcr120.dll). Essas funções de operador agora estão sempre vinculadas estaticamente em seus binários, mesmo ao usar as bibliotecas de tempo de execução DLLs.  
   
      Essa não é uma alteração significativa para o código nativo ou misto (/clr), no entanto, para o código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), isso pode causar falha ao compilar seu código. Se você compilar o código como /clr:pure, talvez seja necessário adicionar #include \<new> ou #include \<new.h> para contornar os erros de build devidos a essa alteração. Observe que /clr:pure foi preterido no Visual Studio 2015 e poderá ser removido em versões futuras.  
   
-#### \<process.h>
-<a id="processh" class="xliff"></a>  
+#### <a name="processh"></a>\<process.h>  
   
 -   **_beginthread e _beginthreadex** As funções [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) e [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) agora mantém uma referência ao módulo no qual o procedimento de thread é definido para a duração do thread. Isso ajuda a garantir que os módulos não sejam descarregados até que um thread tenha executado até a conclusão.  
   
-#### \<stdarg.h>
-<a id="stdargh" class="xliff"></a>  
+#### <a name="stdargh"></a>\<stdarg.h>  
   
 -   **va_start e tipos de referência** Ao compilar código C++, o [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) agora valida em tempo de compilação que o argumento passado para ele não é de tipo de referência. Argumentos de tipo de referência são proibidos pelo Padrão C++.  
   
-#### \<stdio.h> e \<conio.h>
-<a id="stdioh-and-conioh" class="xliff"></a>  
+#### <a name="stdioh-and-conioh"></a>\<stdio.h> e \<conio.h>  
   
 -   **A família de funções printf e scanf agora são definidas embutidas.** As definições de todas as funções printf e scanf foram movidas embutidas para \<stdio.h>, \<conio.h> e outros cabeçalhos de CRT. Essa é uma alteração significativa que leva a um erro de vinculador (LNK2019, símbolo externo não resolvido) para todos os programas que declararam essas funções localmente, sem incluir os cabeçalhos de CRT apropriados. Se possível, você deve atualizar o código para incluir os cabeçalhos de CRT (ou seja, adicionar #include \<stdio.h>) e as funções embutidas, mas se você não deseja modificar o código para incluir esses arquivos de cabeçalho, uma solução alternativa seria adicionar outra biblioteca, a legacy_stdio_definitions.lib, para a entrada do vinculador.  
   
@@ -225,8 +217,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
 -   **_outp e _inp** As funções [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md) e [_inpd](../c-runtime-library/inp-inpw-inpd.md) foram removidas.  
   
-#### \<stdlib.h>, \<malloc.h> e \<sys/stat.h>
-<a id="stdlibh-malloch-and-sysstath" class="xliff"></a>  
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h> e \<sys/stat.h>  
   
 -   **strtof e wcstof** As funções strtof e wcstof falhavam ao definir errno para ERANGE quando o valor não era representável como um float. Esse problema foi corrigido. (Observe que esse erro era específico a essas duas funções; as funções strtod, wcstod, strtold e wcstold não foram afetadas). Essa é uma alteração significativa de tempo de execução.  
   
@@ -236,8 +227,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
 -   **smallheap** O opção de link smalheap foi removida. Consulte [Opções de link](../c-runtime-library/link-options.md).  
   
-#### \<string.h>
-<a id="stringh" class="xliff"></a>  
+#### <a name="stringh"></a>\<string.h>  
   
 -   **wcstok** A assinatura da função wcstok foi alterada para corresponder com o que é exigido pelo Padrão C. Nas versões anteriores da biblioteca a assinatura dessa função era:  
   
@@ -249,8 +239,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
   
      Foi adicionada uma nova função _wcstok com a assinatura antiga para facilitar a portabilidade. Ao compilar o código C++, também há uma sobrecarga embutidas de wcstok que tem a assinatura antiga. Essa sobrecarga é declarada como preterida. No código C, você pode definir _CRT_NON_CONFORMING_WCSTOK para fazer com que _wcstok seja usada no lugar de wcstok.  
   
-#### \<time.h>
-<a id="timeh" class="xliff"></a>  
+#### <a name="timeh"></a>\<time.h>  
   
 -   **clock** nas versões anteriores, a função [clock](../c-runtime-library/reference/clock.md) foi implementada usando a API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) do Windows. Com essa implementação, a função clock era sensível à hora do sistema e, portanto, não era necessariamente monotônica. A função clock foi reimplementada em termos de [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e agora é monotônica.  
   
@@ -345,8 +334,7 @@ Ao fazer a atualização para uma nova versão do compilador do Visual C++, voc�
     (concurrency::Context::Yield)();  
     ```  
   
-## Aprimoramentos de conformidade do compilador no Visual C++ 2015
-<a id="compiler-conformance-improvements-in-visual-c-2015" class="xliff"></a>  
+## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Aprimoramentos de conformidade do compilador no Visual C++ 2015  
  Ao atualizar o código de versões anteriores, você também pode encontrar erros de compilador devido aos aprimoramentos de conformidade feitos no Visual C++ 2015. Esses aprimoramentos não interrompem a compatibilidade binária de versões anteriores do Visual C++, mas podem produzir erros de compilador em locais em que nunca houve erros anteriormente. Para obter mais informações, consulte [Novidades no Visual C++ de 2003 até 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
  Algumas vezes, os aprimoramentos contínuos no Visual C++ 2015 para conformidade do compilador podem alterar a maneira pela qual o compilador compreende seu código-fonte existente. Quando isso acontecer, você poderá encontrar erros novos ou diferentes durante o build ou até diferenças de comportamento no código que foi compilado anteriormente e parecia executar corretamente.  
@@ -1435,7 +1423,7 @@ Para corrigir o erro, remova a chamada para S1() do construtor em S2 e, se for n
 
 -   **{} impede que a conversão em ponteiro**  
 
-Agora, o código a seguir produz C2439 'S::p': não foi possível inicializar o membro    
+Agora, o código a seguir produz C2439 'S::p': não foi possível inicializar o membro   
 ```cpp
 struct S {
     S() : p({ 0 }) {}
@@ -2713,11 +2701,9 @@ C c;
   
     ```  
   
-## Alterações de conformidade do Visual C++ 2013
-<a id="visual-c-2013-conformance-changes" class="xliff"></a>  
+## <a name="visual-c-2013-conformance-changes"></a>Alterações de conformidade do Visual C++ 2013  
   
-### Compilador
-<a id="compiler" class="xliff"></a>  
+### <a name="compiler"></a>Compilador  
   
 -   A palavra-chave final agora gera um erro de símbolo não resolvido no local em que ela seria compilada anteriormente:  
   
@@ -2956,8 +2942,7 @@ C c;
   
     ```  
   
-### Biblioteca Padrão
-<a id="standard-library" class="xliff"></a>  
+### <a name="standard-library"></a>Biblioteca Padrão  
  O Visual C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_DEBUG_LEVEL, que foi implementado no Visual C++ 2010, bem como incompatibilidades de RuntimeLibrary. Essas incompatibilidades ocorrem quando as opções de compilador /MT (versão estática), /MTd (depuração estática), /MD (versão dinâmica) e /MDd (depuração dinâmica) são misturadas.  
   
 -   Se seu código reconhecer os modelos de alias simulados da versão anterior, você terá que alterá-lo. Por exemplo, em vez de allocator_traits\<A>::rebind_alloc\<U>::other, agora você tem que declarar allocator_traits\<A>::rebind_alloc\<U>. Embora ratio_add\<R1, R2>::type agora não seja mais necessário e seja recomendável que você explicite ratio_add\<R1, R2>, o antigo ainda será compilado porque é obrigatório que ratio\<N, D> tenha um "tipo" typedef para um índice reduzido, que será o mesmo tipo se já tiver sido reduzido.  
@@ -2993,8 +2978,7 @@ C c;
   
     ```  
   
-### MFC e ATL
-<a id="mfc-and-atl" class="xliff"></a>  
+### <a name="mfc-and-atl"></a>MFC e ATL  
   
 -   A Biblioteca MFC MBCS não está mais incluída no Visual Studio porque o Unicode é muito popular e o uso de MBCS foi significativamente reduzido. Essa alteração também mantém o MFC alinhado de forma mais próxima ao próprio Windows SDK, uma vez que vários dos controles e mensagens novos são somente Unicode. No entanto, se for preciso continuar usando a biblioteca MFC MBCS, você pode baixá-la no Centro de Download do MSDN. O Pacote Redistribuível do Visual C++ ainda inclui esta biblioteca.  
   
@@ -3028,11 +3012,9 @@ C c;
   
 -   A ferramenta Rastreamento de ATL/MFC foi removida com a ATL DLL e o mecanismo de rastreamento foi simplificado. O construtor CTraceCategory agora usa um parâmetro (o nome da categoria) e as macros TRACE chamam as funções de relatório de depuração de CRT.  
   
-## Alterações significativas do Visual C++ 2012
-<a id="visual-c-2012-breaking-changes" class="xliff"></a>  
+## <a name="visual-c-2012-breaking-changes"></a>Alterações significativas do Visual C++ 2012  
   
-### Compilador
-<a id="compiler" class="xliff"></a>  
+### <a name="compiler"></a>Compilador  
   
 -   A opção do compilador /Yl foi alterada. Por padrão, o compilador usa essa opção, o que pode levar a erros LNK2011 em determinadas condições. Para obter mais informações, consulte [/Yl (Injetar referência de PCH para Biblioteca de Depuração)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
@@ -3068,17 +3050,14 @@ C c;
   
 -   O compilador gerenciado (Visual Basic/C#) também oferece suporte a /HIGHENTROPYVA para compilações gerenciadas.  No entanto, nesse caso, a opção /HIGHENTROPYVA está desativada por padrão.  
   
-### IDE
-<a id="ide" class="xliff"></a>  
+### <a name="ide"></a>IDE  
   
 -   Apesar de recomendarmos que você não crie Aplicativos do Windows Forms em C++/CLI, há suporte para a manutenção de aplicativos de interface do usuário de C++/CLI existentes. Se você tiver que criar um Aplicativo do Windows Forms ou qualquer outro aplicativo de interface do usuário do .NET, use o C# ou o Visual Basic. Usar o C++/CLI somente para fins de interoperabilidade.  
   
-### Biblioteca de Padrões Paralelos e Biblioteca de Tempo de Execução de Simultaneidade
-<a id="parallel-patterns-library-and-concurrency-runtime-library" class="xliff"></a>  
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteca de Padrões Paralelos e Biblioteca de Tempo de Execução de Simultaneidade  
  A enumeração SchedulerType de UmsThreadDefault foi preterida. A especificação de UmsThreadDefault produz um aviso de preterido e mapeia internamente de volta para o ThreadScheduler.  
   
-### Biblioteca Padrão
-<a id="standard-library" class="xliff"></a>  
+### <a name="standard-library"></a>Biblioteca Padrão  
   
 -   Após uma alteração significativa entre os padrões C++98/03 e C++11, o uso de argumentos de modelo explícitos para chamar make_pair() — como inmake_pair\<int, int>(x, y) — normalmente não é compilado no Visual C++ no Visual Studio 2012. A solução é sempre chamar make_pair() sem argumentos de modelo explícitos — como em make_pair(x, y). O fornecimento de argumentos de modelo explícitos anula a finalidade da função. Se você precisar de um controle preciso sobre o tipo resultante, use pair em vez de make_pair — como em pair\<short, short>(int1, int2).  
   
@@ -3096,8 +3075,7 @@ C c;
   
 -   O C++11 22.4.1.4 [locale.codecvt] especifica que codecvt::length() e codecvt::do_length() devem obter parâmetros modificáveis stateT&, mas o Visual C++ 2010 obteve const stateT&. O Visual C++ no Visual Studio 2012 usa stateT& conforme designado pelo padrão. Essa diferença é significativa para qualquer pessoa que esteja tentando substituir a função virtual do_length().  
   
-### CRT
-<a id="crt" class="xliff"></a>  
+### <a name="crt"></a>CRT  
   
 -   O heap do CRT (Tempo de execução de C), que é usado para new e malloc(), não é mais particular. O CRT agora usa o heap do processo. Isso significa que o heap não será destruído quando uma DLL for descarregada, portanto as DLLs vinculadas estaticamente à CRT devem garantir que a memória alocada pelo código da DLL seja limpa antes de serem descarregadas.  
   
@@ -3107,8 +3085,7 @@ C c;
   
 -   As funções de CRT que têm intrínsecos correspondentes como memxxx(), strxxx() foram removidas de intrin.h. Se você incluiu intrin.h apenas para essas funções, agora você deverá incluir os cabeçalhos de CRT correspondentes.  
   
-### MFC e ATL
-<a id="mfc-and-atl" class="xliff"></a>  
+### <a name="mfc-and-atl"></a>MFC e ATL  
   
 -   O suporte à Fusão (afxcomctl32.h) foi removido. Portanto, todos os métodos que foram definidos em afxcomctl32.h foram removidos. Os arquivos de cabeçalho afxcomctl32.h e afxcomctl32.inl foram excluídos.  
   
@@ -3270,11 +3247,9 @@ C c;
   
 -   CPane::GetDockSiteRow(CDockingPanesRow *) foi renomeado para CPane::SetDockSiteRow.  
   
-## Alterações significativas do Visual C++ 2010
-<a id="visual-c-2010-breaking-changes" class="xliff"></a>  
+## <a name="visual-c-2010-breaking-changes"></a>Alterações significativas do Visual C++ 2010  
   
-### Compilador
-<a id="compiler" class="xliff"></a>  
+### <a name="compiler"></a>Compilador  
   
 -   A palavra-chave auto tem um significado padrão novo. Como uso do antigo significado é raro, a maioria dos aplicativos não será afetada por essa alteração.  
   
@@ -3296,27 +3271,23 @@ C c;
   
 -   No Visual C++ 2010, RuntimeLibrary = MultiThreaded (/MD) e DebugInformationFormat = ProgramDatabase (/Zi). No Visual C++ 9.0, RuntimeLibrary = MultiThreaded (/MT) e DebugInformationFormat = Desabilitado.  
   
-### CLR
-<a id="clr" class="xliff"></a>  
+### <a name="clr"></a>CLR  
   
 -   Os compiladores Microsoft C# e Visual Basic agora podem produzir um não PIA (não assembly de interoperabilidade primário). Um assembly não PIA pode usar tipos COM sem a implantação do PIA (assembly de interoperabilidade primário) relevante. Ao consumir assemblies não PIA produzidos pelo Visual C# ou Visual Basic, você deve fazer referência ao assembly PIA no comando de compilação antes de referenciar qualquer assembly não PIA que usa a biblioteca.  
   
-### Projetos do Visual C++ e MSBuild
-<a id="visual-c-projects-and-msbuild" class="xliff"></a>  
+### <a name="visual-c-projects-and-msbuild"></a>Projetos do Visual C++ e MSBuild  
   
 -   Os projetos do Visual C++ agora são baseados na ferramenta MSBuild. Consequentemente, os arquivos de projeto usam um novo formato de arquivo XML e um sufixo de arquivo .vcxproj. O Visual C++ 2010 converte automaticamente os arquivos de projeto de versões anteriores do Visual Studio para o novo formato de arquivo. Um projeto existente será afetado se depender da ferramenta de build anterior, VCBUILD.exe ou do sufixo de arquivo de projeto .vcproj.  
   
 -   Em versões anteriores, o Visual C++ oferecia suporte para a avaliação tardia de folhas de propriedades. Por exemplo, uma folha de propriedades pai poderia importar uma folha de propriedades filho e a pai poderia usar uma variável definida na filho para definir outras variáveis. Avaliação tardia habilitava a folha pai a usar a variável de filho antes mesmo que a folha de propriedades filho fosse importada. No Visual C++ 2010, uma variável de folha de projeto não pode ser usada antes de ser definida porque o MSBuild somente oferece suporte à avaliação adiantada.  
   
-### IDE
-<a id="ide" class="xliff"></a>  
+### <a name="ide"></a>IDE  
   
 -   A caixa de diálogo de encerramento do aplicativo não termina mais um aplicativo. Em versões anteriores, quando a função abort() ou terminate() fechava o build de varejo de um aplicativo, a Biblioteca em tempo de execução de C exibia uma mensagem de encerramento do aplicativo em uma caixa de diálogo ou janela de console. A mensagem dizia, em parte, "Este aplicativo solicitou que o Tempo de execução terminasse de maneira incomum. Entre em contato com equipe de suporte do aplicativo para obter mais informações."                 A mensagem de encerramento do aplicativo era redundante, pois o Windows exibia posteriormente o manipulador de encerramento atual, que geralmente era a caixa de diálogo de Relatório de Erros do Windows (Dr. Watson) ou o depurador do Visual Studio. A partir do Visual Studio 2010, a Biblioteca em Tempo de execução de C não exibe a mensagem. Além disso, o tempo de execução impede que o aplicativo finalize antes do início de um depurador. Essa só é uma alteração significativa se você depende do comportamento anterior da mensagem de encerramento do aplicativo.  
   
 -   Especificamente para o Visual Studio 2010, o IntelliSense não funciona para código ou atributos de C++/CLI, Localizar Todas as Referências não funciona para variáveis locais e o Modelo de Código não recupera nomes de tipo de assemblies importados ou não resolve tipos para seus nomes totalmente qualificados.  
   
-### Libraries
-<a id="libraries" class="xliff"></a>  
+### <a name="libraries"></a>Libraries  
   
 -   A classe SafeInt está incluída no Visual C++ e não está mais em um download separado. Essa é uma alteração significativa somente se você desenvolveu uma classe que também é chamada de "SafeInt".  
   
@@ -3324,8 +3295,7 @@ C c;
   
 -   Nas versões anteriores do Visual Studio, era possível recompilar as bibliotecas em tempo de execução. O Visual C++ 2010 não oferece mais suporte ao build de suas próprias cópias de arquivos de biblioteca em tempo de execução de C.  
   
-### Biblioteca Padrão
-<a id="standard-library" class="xliff"></a>  
+### <a name="standard-library"></a>Biblioteca Padrão  
   
 -   O cabeçalho \<iterator> não é mais incluído automaticamente por muitos outros arquivos de cabeçalho. Em vez disso, inclua esse cabeçalho explicitamente se você precisar de suporte para os iteradores autônomos definidos no projeto existente. Um projeto existente é afetado se ele depende da ferramenta de build anterior, VCBUILD.exe ou do sufixo de arquivo de projeto, cabeçalho .vcproj.  
   
@@ -3337,8 +3307,7 @@ C c;
   
 -   As seguintes funções de membro ctype foram removidas: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. Se um aplicativo usa uma dessas funções de membro, você deve substituí-la com a versão não segura correspondente: ctype::do_narrow, ctype::do_widen, ctype::narrow, ctype::widen.  
   
-### Bibliotecas ATL, MFC e CRT
-<a id="crt-mfc-and-atl-libraries" class="xliff"></a>  
+### <a name="crt-mfc-and-atl-libraries"></a>Bibliotecas ATL, MFC e CRT  
   
 -   Foi removido o suporte para que os usuários compilem as bibliotecas CRT, MFC e ATL. Por exemplo, um arquivo nmake apropriado não é fornecido.                 No entanto, os usuários ainda terão acesso ao código-fonte dessas bibliotecas. E um documento que descreve as opções do MSBuild que a Microsoft usa para criar essas bibliotecas provavelmente será publicado em um Blog da Equipe do Visual C++.  
   
@@ -3348,21 +3317,17 @@ C c;
   
 -   Uma função virtual novo foi adicionada à classe CDocTemplate. Essa nova função virtual é a [Classe CDocTemplate](../mfc/reference/cdoctemplate-class.md). A versão anterior do OpenDocumentFile tinha dois parâmetros. A nova versão tem três parâmetros. Para dar suporte ao gerenciador de reinicialização, qualquer classe derivada de CDocTemplate deve implementar a versão que tem três parâmetros. O novo parâmetro é bAddToMRU.  
   
-### Macros e Variáveis de Ambiente
-<a id="macros-and-environment-variables" class="xliff"></a>  
+### <a name="macros-and-environment-variables"></a>Macros e Variáveis de Ambiente  
   
 -   Não há mais suporte para a variável de ambiente __MSVCRT_HEAP_SELECT. Essa variável de ambiente foi removida e não há substituta.  
   
-### Referência do Microsoft Macro Assembler
-<a id="microsoft-macro-assembler-reference" class="xliff"></a>  
+### <a name="microsoft-macro-assembler-reference"></a>Referência do Microsoft Macro Assembler  
   
 -   Várias diretivas foram removidas do compilador de referência Macro Assembler da Microsoft. As diretivas removidas são: .186, .286, .286P, .287,.8086, .8087 e .NO87.  
   
-## Alterações significativas do Visual C++ 2008
-<a id="visual-c-2008-breaking-changes" class="xliff"></a>  
+## <a name="visual-c-2008-breaking-changes"></a>Alterações significativas do Visual C++ 2008  
   
-### Compilador
-<a id="compiler" class="xliff"></a>  
+### <a name="compiler"></a>Compilador  
   
 -   Não há mais suporte para as plataformas Windows 95, Windows 98, Windows ME e Windows NT. Esses sistemas operacionais foram removidos da lista de plataformas de destino.  
   
@@ -3384,8 +3349,7 @@ C c;
   
     -   tag_name  
   
-### Projetos Visual C++
-<a id="visual-c-projects" class="xliff"></a>  
+### <a name="visual-c-projects"></a>Projetos Visual C++  
   
 -   Ao atualizar projetos de versões anteriores do Visual Studio, você talvez precise modificar as macros WINVER e _WIN32_WINNT para que elas sejam maiores ou iguais a 0x0500.  
   
@@ -3395,8 +3359,7 @@ C c;
   
 -   A biblioteca de API do Windows Rpcndr.lib foi removida. Vincule com rpcrt4.lib no lugar dela.  
   
-### CRT
-<a id="crt" class="xliff"></a>  
+### <a name="crt"></a>CRT  
   
 -   O suporte para Windows 95, Windows 98, Windows Millennium Edition e Windows NT 4.0 foi removido.  
   
@@ -3430,8 +3393,7 @@ C c;
   
 -   As Bibliotecas em tempo de execução de C que vêm com o Visual Studio não são mais dependentes da DLL de sistema msvcrt.dll.  
   
-### Biblioteca Padrão
-<a id="standard-library" class="xliff"></a>  
+### <a name="standard-library"></a>Biblioteca Padrão  
   
 -   O suporte para Windows 95, Windows 98, Windows Millennium Edition e Windows NT 4.0 foi removido.  
   
@@ -3441,8 +3403,7 @@ C c;
   
 -   O comportamento de money_get::do_get foi alterado. Antes, ao analisar um valor monetário com mais dígitos de fração do que era chamado por frac_digits, do_get costumava consumir todos eles. Agora, do_get para a análise após consumir, no máximo, os caracteres de frac_digits.  
   
-### ATL
-<a id="atl" class="xliff"></a>  
+### <a name="atl"></a>ATL  
   
 -   A ATL não pode ser compilada sem uma dependência de CRT. Em versões anteriores do Visual Studio, você poderia usar #define ATL_MIN_CRT para tornar um projeto ATL minimamente dependente de CRT. No Visual C++ 2008, todos os projetos ATL dependem minimamente de CRT, independentemente de ATL_MIN_CRT estar definido.  
   
@@ -3452,8 +3413,7 @@ C c;
   
 -   As macros PROP_ENTRY e PROP_ENTRY_EX foram preteridas e substituídas pelas macros PROP_ENTRY_TYPE e PROP_ENTRY_TYPE_EX por motivos de segurança.  
   
-### Classes compartilhadas ATL/MFC
-<a id="atlmfc-shared-classes" class="xliff"></a>  
+### <a name="atlmfc-shared-classes"></a>Classes compartilhadas ATL/MFC  
   
 -   A ATL não pode ser compilada sem uma dependência de CRT. Em versões anteriores do Visual Studio, você poderia usar #define ATL_MIN_CRT para tornar um projeto ATL minimamente dependente de CRT. No Visual C++ 2008, todos os projetos ATL dependem minimamente de CRT, independentemente de ATL_MIN_CRT estar definido.  
   
@@ -3461,8 +3421,7 @@ C c;
   
 -   Algumas funções não estão mais incluídas na DLL. Elas ainda estão localizadas na biblioteca de importação. Isso não afetará o código que usa as funções estaticamente. Isso afetará apenas o código que usa essas funções dinamicamente.  
   
-### MFC
-<a id="mfc" class="xliff"></a>  
+### <a name="mfc"></a>MFC  
   
 -   Classe CTime: agora a classe CTime aceita datas a partir de 1/1/1900 D.C. em vez de 1/1/1970 D.C.              
 -   A ordem de tabulação dos controles em caixas de diálogo do MFC: a ordem de tabulação correta de vários controles em uma caixa de diálogo do MFC será afetada se um controle ActiveX MFC for inserido na ordem de tabulação. Essa alteração corrige esse problema.  
@@ -3479,11 +3438,9 @@ C c;
   
 -   APIs ANSI preteridas: As versões ANSI de vários métodos MFC foram preteridas. Use as versões Unicode desses métodos em seus aplicativos futuros. Para obter mais informações, consulte Requisitos de build para controles comuns do Windows Vista.  
   
-## Alterações significativas do Visual C++ 2005
-<a id="visual-c-2005-breaking-changes" class="xliff"></a>  
+## <a name="visual-c-2005-breaking-changes"></a>Alterações significativas do Visual C++ 2005  
   
-### CRT
-<a id="crt" class="xliff"></a>  
+### <a name="crt"></a>CRT  
   
 -   Muitas funções foram preteridas. Consulte Funções CRT preteridas.  
   
@@ -3525,8 +3482,7 @@ C c;
   
 -   Ao vincular com Setargv.obj ou Wsetargv.obj, não é mais possível suprimir a expansão de um caractere curinga na linha de comando colocando-o entre aspas duplas. Para obter mais informações, consulte [Expandindo Argumentos de Curinga](../c-language/expanding-wildcard-arguments.md).  
   
-### Biblioteca Padrão (2005)
-<a id="standard-library-2005" class="xliff"></a>  
+### <a name="standard-library-2005"></a>Biblioteca Padrão (2005)  
   
 -   A classe de exceção (localizada no cabeçalho \<exception>) foi movida para o namespace std. Nas versões anteriores, esta classe estava no namespace global. Para resolver os erros indicando que a classe de exceção não pode ser encontrada, adicione o seguinte instrução de uso seu código: using namespace std;  
   
@@ -3534,11 +3490,9 @@ C c;
   
 -   Iteradores de depuração: aplicativos criados com uma versão de depuração da Biblioteca em tempo de execução de C e que usam iteradores de maneira incorreta, podem começar a ver declarações em tempo de execução. Para desabilitar essas declarações, você deve definir _HAS_ITERATOR_DEBUGGING (substituída por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) após o Visual Studio 2010) como 0. Para obter mais informações, consulte [Suporte a iterador de depuração](../standard-library/debug-iterator-support.md)  
   
-## Alterações significativas do Visual C++ .NET 2003
-<a id="visual-c-net-2003-breaking-changes" class="xliff"></a>  
+## <a name="visual-c-net-2003-breaking-changes"></a>Alterações significativas do Visual C++ .NET 2003  
   
-### Compilador
-<a id="compiler" class="xliff"></a>  
+### <a name="compiler"></a>Compilador  
   
 -   O parênteses de fechamento agora é necessário de acordo com a diretiva definida de pré-processador (C2004).  
   
@@ -3586,7 +3540,6 @@ C c;
   
 -   O compilador agora relata código inacessível (C4702).  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
 [Novidades do Visual C++ no Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
 

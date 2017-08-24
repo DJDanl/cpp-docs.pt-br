@@ -11,10 +11,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
+ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Visão geral de possíveis problemas de atualização (Visual C++)
@@ -166,6 +167,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Para obter mais informações, consulte [Porting from MBCS to Unicode](porting-guide-spy-increment.md#porting_to_unicode) (Portabilidade de MBCS para Unicode). Para obter informações gerais sobre MBCS vs. Unicode, consulte [Text and Strings in Visual C++](../text/text-and-strings-in-visual-cpp.md) (Texto e cadeias de caracteres no Visual C++) e [Internationalization](../c-runtime-library/internationalization.md) (Internacionalização).  
   
 ## <a name="see-also"></a>Consulte também  
- [Upgrading Projects from Earlier Versions of Visual C++ (Atualizando projetos de versões anteriores do Visual C++)](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
- [C++ conformance improvements in Visual Studio 2017 (Aprimoramentos de conformidade do C++ no Visual Studio 2017)](../cpp-conformance-improvements-2017.md)
+ [Atualização de projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Aprimoramentos de conformidade do C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md)
 
