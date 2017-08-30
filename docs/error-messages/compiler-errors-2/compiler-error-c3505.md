@@ -1,5 +1,5 @@
 ---
-title: C3505 de erro do compilador | Documentos do Microsoft
+title: Compiler Error C3505 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,24 +33,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8b728dd13c1ddc24d22b2bc7265074a843422161
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 94d9dd29d0bc4c45b04c71d58d247469e604aee3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="compiler-error-c3505"></a>C3505 de erro do compilador
-não é possível carregar a biblioteca de tipos 'guid'  
+# <a name="compiler-error-c3505"></a>Compiler Error C3505
+
+> cannot load type library '*guid*'  
   
- C3505 pode ser causado se você estiver executando a (32 bits para) compilador cruzado de 64 bits em 64 bits do computador porque o compilador está em execução no WOW64 e pode somente leitura na seção do registro de 32 bits.  
+C3505 can be caused if you are running the 32-bit, x86-hosted cross-compiler for 64-bit, x64 targets on a 64-bit machine, because the compiler is running under WOW64 and can only read from the 32-bit registry hive.  
   
- Você pode resolver essa C3505 criando versões de 32 bits e 64 bits da biblioteca de tipos que você está tentando importar e registre-os.  Ou você pode usar o compilador nativo de 64 bits, mas isso exigiria alterando seus diretórios VC + + no IDE para apontar para o compilador de 64 bits.  
+You can resolve this error by building both 32-bit and 64-bit versions of the type library you are trying to import, and then register them both.  Or you can use the native 64-bit compiler, which requires you to change your **VC++ Directories** property in the IDE to point to the 64-bit compiler.  
   
- Para obter mais informações, consulte  
+For more information, see,  
   
--   [Como: habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
+-   [How to: Enable a 64-Bit Visual C++ Toolset on the Command Line](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Como: habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
-  
--   [Como: configurar projetos do Visual C++ para plataformas de 64 bits](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+-   [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
