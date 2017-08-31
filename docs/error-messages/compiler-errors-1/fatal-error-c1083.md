@@ -1,7 +1,7 @@
 ---
-title: Erro fatal C1083 | Microsoft Docs
+title: Fatal Error C1083 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,94 +19,112 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.translationtype: MT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: 7a894bf381ad1559cd61b5d7aaefce4fe62b1b96
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 08/31/2017
 
 ---
-# <a name="fatal-error-c1083"></a>Erro fatal C1083
-Mensagem Não é possível abrir o arquivo de tipos de arquivo: 'arquivo'  
+# <a name="fatal-error-c1083"></a>Fatal Error C1083
+
+> Cannot open *filetype* file: '*file*': *message*  
   
- O compilador gera um erro C1083 quando não pode localizar um arquivo. Estes são os motivos comuns pelos quais o compilador gera esse erro.  
+The compiler generates a C1083 error when it can’t find a file it requires. There are many possible causes for this error. An incorrect include search path or missing or misnamed header files are the most common causes, but other file types and issues can also cause C1083. Here are some of the common reasons why the compiler generates this error.  
   
- **O nome de arquivo especificado está errado**  
+## <a name="the-specified-file-name-is-wrong"></a>The specified file name is wrong 
   
- O nome de um arquivo pode ter sido digitado incorretamente. Por exemplo,  
+The name of a file may be mistyped. For example,  
+
+`#include <algorithm.h>`  
   
-```cpp  
-#include <algorithms.h>  
-```  
+might not find the file you intend. Most C++ Standard Library header files do not have a .h file name extension. The \<algorithm> header would not be found by this `#include` directive. To fix this issue, verify that the correct file name is entered, as in this example:  
+
+`#include <algorithm>`
   
- pode não encontrar o arquivo desejado. Há um biblioteca padrão C++ arquivo de cabeçalho chamado algoritmos que não tem uma extensão de nome de arquivo. h. Ele não seria encontrado por essa diretiva `include`. Para corrigir esse problema, verifique se o nome de arquivo correto foi digitado.  
+Certain C Runtime Library headers are located in a subdirectory of the standard include directory. For example, to include sys/types.h, you must include the sys subdirectory name in the `#include` directive:  
   
- Certos cabeçalhos da biblioteca CRT estão localizados em um subdiretório do diretório de inclusão padrão. Por exemplo, para incluir sys\types.h, você deve incluir o nome do subdiretório sys na diretiva include:  
+`#include <sys/types.h>`  
+
+## <a name="the-file-is-not-included-in-the-include-search-path"></a>The file is not included in the include search path  
   
- `#include <sys\types.h>`  
+The compiler cannot find the file by using the search rules that are indicated by an `#include` or `#import` directive. For example, when a header file name is enclosed by quotation marks,  
   
- **O arquivo não está incluído no caminho de pesquisa de compilador**  
+`#include "myincludefile.h"`  
   
- O compilador não pode encontrar o arquivo usando as regras de pesquisa que são indicadas por uma diretiva `include` ou `import`. Por exemplo, um nome de arquivo de cabeçalho que está entre aspas  
+this tells the compiler to look for the file in the same directory that contains the source file first, and then look in other locations specified by the build environment. If the quotation marks contain an absolute path, the compiler only looks for the file at that location. If the quotation marks contain a relative path, the compiler looks for the file in the directory relative to the source directory. 
+
+If the name is enclosed by angle brackets,  
   
- `#include "myincludefile.h"`  
+`#include <stdio.h>`  
   
- diz para o compilador procurar o arquivo no mesmo diretório que contém o arquivo de origem primeiro e depois procurar outros locais especificados pelo ambiente de compilação. Se as aspas contiverem um caminho absoluto, o compilador procurará somente o arquivo nesse local. Se as aspas contiverem um caminho relativo, o compilador procurará o arquivo no diretório relativo ao diretório de origem. Se o nome estiver entre colchetes angulares  
+the compiler follows a search path that is defined by the build environment, the **/I** compiler option, the **/X** compiler option, and the **INCLUDE** environment variable. For more information, including specific details about the search order used to find a file, see [#include Directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) and [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+
+If your include files are in another directory relative to your source directory, and you use a relative path in your include directives, you must use double quotes instead of angle brackets. For example, if your header file myheader.h is in a subdirectory of your project sources named headers, then this example fails to find the file and causes C1083:
+
+`#include <headers\myheader.h>`
+
+but this example works:
+
+`#include "headers\myheader.h"`
+
+Relative paths can also be used with directories on the include search path. If you add a directory to the **INCLUDE** environment variable or to your **Include Directories** path in Visual Studio, do not also add part of the path to the include directives. For example, if your header is located at \path\example\headers\myheader.h, and you add \path\example\headers\ to your **Include Directories** path in Visual Studio, but your `#include` directive refers to the file as
   
- `#include <stdio.h>`  
+`#include <headers\myheader.h>`  
+
+then the file is not found. Use the correct path relative to the directory specified in the include search path. In this example, you could change the include search path to \path\example\, or remove the headers\ path segment from the `#include` directive.
+
+## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>The file is in your project, but not the include search path
+
+Even when header files are listed in **Solution Explorer** as part of a project, the files are only found by the compiler when they are referred to by an `#include` or `#import` directive in a source file, and are located in an include search path. Different kinds of builds might use different search paths. The **/X** compiler option can be used to exclude directories from the include search path. This enables different builds to use different include files that have the same name, but are kept in different directories. This is an alternative to conditional compilation by using preprocessor commands. For more information about the **/X** compiler option, see [/X (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- o compilador segue um caminho de pesquisa que é definido pelo ambiente de compilação, a **/i** opção de compilador, o **/X** opção de compilador e o **incluir** variável de ambiente. Para obter mais informações, incluindo detalhes específicos sobre a ordem de pesquisa usadas para localizar um arquivo, consulte [#include (C/C++) de diretiva](../../preprocessor/hash-include-directive-c-cpp.md) e [#import diretiva](../../preprocessor/hash-import-directive-cpp.md).  
+To fix this issue, correct the path that the compiler uses to search for the included or imported file. A new project uses default include search paths. You may have to modify the include search path to add a directory for your project. If you are compiling on the command line, add the path to the **INCLUDE** environment variable or the **/I** compiler option to specify the path to the file. 
+
+To set the include directory path in Visual Studio, open the project’s **Property Pages** dialog box. Select **VC++ Directories** under **Configuration Properties** in the left pane, and then edit the **Include Directories** property. For more information about the per-user and per-project directories searched by the compiler in Visual Studio, see [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). For more information about the **/I** compiler option, see [/I (Additional Include Directories)](../../build/reference/i-additional-include-directories.md).  
   
- Mesmo quando os arquivos de cabeçalho são listados em **Solution Explorer** como parte de um projeto, os arquivos são encontrados somente pelo compilador quando são chamados por um `include` ou `import` diretiva e estão localizados em um caminho de pesquisa de diretório. Tipos diferentes de compilações podem usar caminhos de pesquisa diferentes. O **/X** opção de compilador pode ser usada para excluir diretórios do caminho de pesquisa de arquivo de inclusão. Isso permite que diferentes compilações usem arquivos de inclusão diferentes de mesmo nome, mas são mantidos em diretórios diferentes. Essa é uma alternativa à compilação condicional usando comandos do pré-processador. Para obter mais informações sobre o **/X** opção de compilador, consulte [/X (ignorar caminhos de inclusão padrão)](../../build/reference/x-ignore-standard-include-paths.md).  
+## <a name="the-command-line-include-environment-is-not-set"></a>The command line INCLUDE environment is not set
+
+When the compiler is invoked on the command line, environment variables are often used to specify search paths. If the search path described by the **INCLUDE** environment variable is not set correctly, a C1083 error can be generated. We strongly recommend using a developer command prompt shortcut to set the basic environment for command line builds. For more information, see see [Build C/C++ on the Command Line](../../build/building-on-the-command-line.md). For more information about how to use environment variables, see [How to: Use Environment Variables in a Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
+
+## <a name="the-file-may-be-locked-or-in-use"></a>The file may be locked or in use
+
+If you are using another program to edit or access the file, it may have the file locked. Try closing the file in the other program. Sometimes the other program can be Visual Studio itself, if you are using parallel compilation options. If turning off the parallel build option makes the error go away, then this is the problem. Other parallel build systems can also have this issue. Be careful to set file and project dependencies so build order is correct. In some cases, consider creating an intermediate project to force build dependency order for a common file that may be built by multiple projects. Sometimes antivirus programs temporarily lock recently changed files for scanning. If possible, consider excluding your project build directories from the antivirus scanner.
+
+## <a name="the-wrong-version-of-a-file-name-is-included"></a>The wrong version of a file name is included  
   
- Quando o compilador é invocado na linha de comando, variáveis de ambiente são geralmente usadas para especificar caminhos de pesquisa. Se o caminho de pesquisa descrito pelo **incluir** variável de ambiente não está definida corretamente, será gerado um erro C1083. Para obter mais informações sobre como usar variáveis de ambiente, consulte [como: usar variáveis de ambiente em uma compilação](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
+A C1083 error can also indicate that the wrong version of a file is included. For example, a build could include the wrong version of a file that has an `#include` directive for a header file that is not intended for that build. For example, certain files may only apply to x86 builds, or to Debug builds. When the header file is not found, the compiler generates a C1083 error. The fix for this problem is to use the correct file, not to add the header file or directory to the build.  
   
- Para corrigir esse problema, corrija o caminho que o compilador usa para procurar o arquivo incluído ou importado. Um novo projeto usa caminhos de pesquisa padrão. Talvez seja preciso modificar o caminho para adicionar um diretório para seu projeto. Se você estiver compilando na linha de comando, defina o **incluir** variável de ambiente ou **/i** opção de compilador para especificar o caminho do arquivo. Para definir o caminho do diretório de inclusão no Visual Studio, abra o projeto **páginas de propriedade** caixa de diálogo caixa, expanda **propriedades de configuração** e **diretórios VC + +**e, em seguida, edite o **diretórios de inclusão** valor. Para obter mais informações sobre os diretórios por usuário e por projeto pesquisados pelo compilador do Visual Studio, consulte [página de propriedade de diretórios VC + +](../../ide/vcpp-directories-property-page.md). Para obter mais informações sobre o **/i** opção de compilador, consulte [/I (diretórios de inclusão adicionais)](../../build/reference/i-additional-include-directories.md).  
+## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>The precompiled headers are not yet precompiled  
   
- **A versão incorreta de um nome de arquivo está incluída**  
+When a project is configured to use precompiled headers, the relevant .pch files have to be created so that files that use the header contents can be compiled. For example, the stdafx.cpp file is automatically created in the project directory for new projects. Compile that file first to create the precompiled header files. In the typical build process design, this is done automatically. For more information, see [Creating Precompiled Header Files](../../build/reference/creating-precompiled-header-files.md).  
   
- Um erro C1083 também pode indicar que a versão incorreta de um arquivo foi incluída. Por exemplo, uma compilação poderia incluir a versão incorreta de um arquivo que tem uma diretiva `include` para um arquivo de cabeçalho não destinado a essa compilação. Quando o arquivo de cabeçalho não é localizado, o compilador gera um erro C1083. A correção desse problema é usar o arquivo correto, não adicionar o arquivo de cabeçalho ou diretório à compilação.  
+## <a name="additional-causes"></a>Additional causes  
   
- **Os cabeçalhos pré-compilados ainda não são pré-compilados**  
+- You have installed an SDK or third-party library, but you have not opened a new developer command prompt window after the SDK or library is installed. If the SDK or library adds files to the **INCLUDE** path, you may need to open a new developer command prompt window to pick up these environment variable changes.
+
+- The file uses managed code, but the compiler option **/clr** is not specified. For more information, see [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Quando um projeto é configurado para usar cabeçalhos pré-compilados, os arquivos .pch relevantes precisam ser criados de forma que os arquivos que usam o conteúdo do cabeçalho possam ser compilados. Por exemplo, o arquivo stdafx.cpp é criado automaticamente no diretório do projeto para novos projetos MFC. Compile esse arquivo primeiro para criar os arquivos de cabeçalho pré-compilados. (No design de processo de compilação típico, isso é feito automaticamente.) Para obter mais informações, consulte [criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md).  
+- The file is compiled by using a different **/analyze** compiler option setting than is used to precompile the headers. When the headers for a project are precompiled, all should use the same **/analyze** settings. For more information, see [/analyze (Code Analysis)](../../build/reference/analyze-code-analysis.md).  
   
- **Causas adicionais**  
+- The file, the directory, or the disk is read-only.  
   
--   O arquivo usa o código gerenciado, mas a opção de compilador **/clr** não for especificado. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
+- Visual Studio or the command line tools do not have sufficient permissions to read the file or the directory. This can happen, for example, when the project files have different ownership than the process running Visual Studio or the command line tools. Sometimes this issue can be fixed by running Visual Studio or the developer command prompt as Administrator.  
   
--   O arquivo é compilado usando outro **/ANALYZE** configuração da opção de compilador que é usado para pré-compilar os cabeçalhos. (Quando os cabeçalhos para um projeto são pré-compilados, deve usar a mesma **/ANALYZE** configurações.) Para obter mais informações, consulte [/analyze (Análise de Código)](../../build/reference/analyze-code-analysis.md).  
+- There are not enough file handles. Close some applications and then recompile. This condition is unusual under typical circumstances. However, it can occur when large projects are built on a computer that has limited physical memory.  
   
--   O arquivo, o diretório ou o disco é somente leitura.  
-  
--   As permissões de acesso para o arquivo ou diretório não foram concedidas.  
-  
--   Não há identificadores de arquivo suficientes. Feche alguns aplicativos e recompile-os. Essa condição é incomum em circunstâncias normais. No entanto, pode ocorrer quando projetos grandes são compilados em um computador com memória física limitada.  
-  
- O exemplo a seguir gera um erro C1083.  
+## <a name="example"></a>Example
+
+The following example generates a C1083 error when the header file `"test.h"` does not exist in the source directory or on the include search path.  
   
 ```  
 // C1083.cpp  
 // compile with: /c  
 #include "test.h"   // C1083 test.h does not exist  
-#include "stdio.h"   // OK  
+#include "stdio.h"  // OK  
 ```  
   
- Para obter informações sobre como criar projetos do C/C++ no IDE ou na linha de comando e informações sobre como definir variáveis de ambiente, consulte [compilando programas do C/C++](../../build/building-c-cpp-programs.md).
+For information about how to build C/C++ projects in the IDE or on the command line, and information about setting environment variables, see [Building C/C++ Programs](../../build/building-c-cpp-programs.md).
  
- ## <a name="see-also"></a>Consulte também
- [Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)
+## <a name="see-also"></a>See Also
+
+[MSBuild Properties](/visualstudio/msbuild/msbuild-properties)
