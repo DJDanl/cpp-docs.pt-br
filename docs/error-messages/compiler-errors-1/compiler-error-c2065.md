@@ -1,7 +1,7 @@
 ---
-title: C2065 de erro do compilador | Microsoft Docs
+title: Compiler Error C2065 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,23 +33,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 5a3a0d4389a958f421f23a4dc96a395eaf3e22ab
+ms.translationtype: MT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: a8ceae1f39894219296f6153e994fb545e9065ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/31/2017
 
 ---
-# <a name="compiler-error-c2065"></a>C2065 de erro do compilador
-'Identificador': identificador não declarada  
+# <a name="compiler-error-c2065"></a>Compiler Error C2065
+
+> '*identifier*' : undeclared identifier  
   
-O compilador não pode encontrar a declaração de um identificador. Se o identificador é uma variável, você deve especificar o tipo da variável em uma declaração antes de ser usada. Se o identificador é um nome de função, os parâmetros que usa a função devem ser especificados em uma declaração antes da função pode ser usada. Se o identificador é a marca de um tipo definido pelo usuário, por exemplo, um `class` ou `struct`, o tipo da marca deve ser declarado antes de ser usada. Se o identificador é um alias de tipo, o tipo deve ser declarado usando um `using` declaração ou `typedef` para o tipo possa ser usado.  
+The compiler can't find the declaration for an identifier. There are many possible causes for this error. The most common causes of C2065 are that the identifier hasn't been declared, the identifier is misspelled, the header where the identifier is declared is not included in the file, or the identifier is missing a scope qualifier, for example, `cout` instead of `std::cout`. For more information on declarations in C++, see [Declarations and Definitions (C++)](../../cpp/declarations-and-definitions-cpp.md).
   
-Há várias causas possíveis para esse erro. Aqui estão alguns dos problemas mais comuns:
+Here are some common issues and solutions in greater detail.
+
+## <a name="the-identifier-is-undeclared"></a>The identifier is undeclared
+
+If the identifier is a variable or a function name, you must declare it before it can be used. A function declaration must also include the types of its parameters before the function can be used. If the variable is declared using `auto`, the compiler must be able to infer the type from its initializer.
+
+If the identifier is a member of a class or struct, or declared in a namespace, it must be qualified by the class or struct name, or the namespace name, when used outside the struct, class, or namespace scope. Alternatively, the namespace must be brought into scope by a `using` directive such as `using namespace std;`, or the member name must be brought into scope by a `using` declaration, such as `using std::string;`. Otherwise, the unqualified name is considered to be an undeclared identifier in the current scope.
+
+If the identifier is the tag for a user-defined type, for example, a `class` or `struct`, the type of the tag must be declared before it can be used. For example, the declaration `struct SomeStruct { /*...*/ };` must exist before you can declare a variable `SomeStruct myStruct;` in your code.
+
+If the identifier is a type alias, the type must be declared by using a `using` declaration or `typedef` before it can be used. For example, you must declare `using my_flags = std::ios_base::fmtflags;` before you can use `my_flags` as a type alias for `std::ios_base::fmtflags`.
   
-## <a name="example-misspelled-identifier"></a>Exemplo: identificador incorreta  
+## <a name="example-misspelled-identifier"></a>Example: misspelled identifier  
   
-Esse erro normalmente ocorre quando o nome do identificador está incorreto ou o identificador usa as letras maiusculas e minúsculas erradas. O nome na declaração deve corresponder exatamente ao nome que você usar.  
+This error commonly occurs when the identifier name is misspelled, or the identifier uses the wrong uppercase and lowercase letters. The name in the declaration must exactly match the name you use.  
   
 ```cpp  
 // C2065_spell.cpp  
@@ -65,13 +76,35 @@ int main() {
 }  
 ```
   
-## <a name="example-missing-header-file"></a>Exemplo: faltando o arquivo de cabeçalho  
+## <a name="example-use-an-unscoped-identifier"></a>Example: use an unscoped identifier 
   
-Você não incluiu o arquivo de cabeçalho que declara o identificador. Verifique se o arquivo que contém a declaração do identificador é incluído em todos os arquivos de origem que usam.  
+This error can occur if your identifier is not properly scoped. If you see C2065 when you use `cout`, this is the cause. When C++ Standard Library functions and operators are not fully qualified by namespace, or you have not brought the `std` namespace into the current scope by using a `using` directive, the compiler can't find them. To fix this issue, you must either fully qualify the identifier names, or specify the namespace with the `using` directive.  
+  
+This example fails to compile because `cout` and `endl` are defined in the `std` namespace:  
+  
+```cpp  
+// C2065_scope.cpp  
+// compile with: cl /EHsc C2065_scope.cpp
+#include <iostream>  
+// using namespace std;   // Uncomment this line to fix  
+
+int main() {  
+    cout << "Hello" << endl;   // C2065 'cout': undeclared identifier 
+                               // C2065 'endl': undeclared identifier
+    // Or try the following line instead  
+    std::cout << "Hello" << std::endl;  
+}
+```  
+  
+Identifiers that are declared inside of `class`, `struct`, or `enum class` types must also be qualified by the name of their enclosing scope when you use them outside of that scope.
+  
+## <a name="example-missing-header-file"></a>Example: missing header file  
+  
+You have not included the header file that declares the identifier. Make sure the file that contains the declaration for the identifier is included in every source file that uses it.  
   
 ```cpp  
 // C2065_header.cpp  
-// compile with: cl /EHsc C2065_spell.cpp 
+// compile with: cl /EHsc C2065_header.cpp 
 
 //#include <stdio.h> 
 int main() { 
@@ -80,12 +113,27 @@ int main() {
     // to include the header where fpos_t is defined  
 } 
 ```  
+
+Another possible cause is if you use an initializer list without including the \<initializer_list> header.
+
+```cpp  
+// C2065_initializer.cpp  
+// compile with: cl /EHsc C2065_initializer.cpp 
+
+// #include <initializer_list> 
+int main() { 
+    for (auto strList : {"hello", "world"})
+        if (strList == "hello") // C2065: 'strList': undeclared identifier 
+            return 1; 
+    // To fix, uncomment the #include <initializer_list> line
+} 
+```  
   
-Você pode ver este erro nos arquivos de origem do aplicativo de área de trabalho do Windows, se você definir `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, ou `WIN32_EXTRA_LEAN`. Essas macros de pré-processador excluir alguns arquivos de cabeçalho do Windows. h e afxv\_w32.h para acelerar compila. Procure no Windows. h e afxv_w32.h para obter uma descrição atualizada do que foi excluído.  
+You may see this error in Windows Desktop app source files if you define `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, or `WIN32_EXTRA_LEAN`. These preprocessor macros exclude some header files from windows.h and afxv\_w32.h to speed compiles. Look in windows.h and afxv_w32.h for an up-to-date description of what's excluded.  
   
-## <a name="eample-missing-closing-quote"></a>Eample: aspas de fechamento ausente  
+## <a name="example-missing-closing-quote"></a>Example: missing closing quote  
   
-Esse erro pode ocorrer se estiver faltando aspas de fechamento após uma constante de cadeia de caracteres. Isso é uma maneira fácil confundir o compilador. 
+This error can occur if you are missing a closing quote after a string constant. This is an easy way to confuse the compiler. Note that the missing closing quote may be several lines before the reported error location. 
   
 ```cpp  
 // C2065_quote.cpp  
@@ -100,9 +148,9 @@ int main() {
 } 
 ```  
   
-## <a name="example-use-iterator-outside-for-loop-scope"></a>Exemplo: usar iterador fora de escopo de loop  
+## <a name="example-use-iterator-outside-for-loop-scope"></a>Example: use iterator outside for loop scope  
   
-Esse erro pode ocorrer se você declarar uma variável de iterador em uma `for` loop e, em seguida, tente usar essa variável de iterador fora do escopo de `for` loop. Permite que o compilador a [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opção de compilador por padrão. Consulte [suporte a iterador depurar](../../standard-library/debug-iterator-support.md) para obter mais informações.  
+This error can occur if you declare an iterator variable in a `for` loop, and then you try to use that iterator variable outside the scope of the `for` loop. The compiler enables the [/Zc:forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) compiler option by default. See [Debug Iterator Support](../../standard-library/debug-iterator-support.md) for more information.  
   
 ```cpp  
 // C2065_iter.cpp  
@@ -126,11 +174,11 @@ int main() {
 } 
 ```  
   
-## <a name="example-preprocessor-removed-declaration"></a>Exemplo: declaração removida pré-processador  
+## <a name="example-preprocessor-removed-declaration"></a>Example: preprocessor removed declaration  
   
-Esse erro pode ocorrer se você fizer referência a uma função ou variável no código condicionalmente compilado que não é compilado para a sua configuração atual. Isso também pode ocorrer se você chamar uma função em um arquivo de cabeçalho que não é suportado atualmente em seu ambiente de compilação. Se determinados variáveis ou funções estão disponíveis somente quando uma macro de pré-processador específica é definida, verifique se o código que chama as funções só pode ser compilado quando a mesma macro de pré-processador é definida. Esse problema é fácil especiais no IDE, porque a declaração da função fica acinzentada se as macros de pré-processador necessárias não estão definidas para a configuração de compilação atual.  
+This error can occur if you refer to a function or variable that is in conditionally compiled code that is not compiled for your current configuration. This can also occur if you call a function in a header file that is currently not supported in your build environment. If certain variables or functions are only available when a particular preprocessor macro is defined, make sure the code that calls those functions can only be compiled when the same preprocessor macro is defined. This issue is easy to spot in the IDE, because the declaration for the function is greyed out if the required preprocessor macros are not defined for the current build configuration.  
   
-Este é um exemplo de código que funciona quando a compilação de depuração, mas não de varejo:  
+This is an example of code that works when you build in Debug, but not Retail:  
   
 ```cpp  
 // C2065_defined.cpp
@@ -150,47 +198,26 @@ int main() {
 }
 ```
   
-## <a name="example-use-an-unscoped-identifier"></a>Exemplo: use um identificador de fora do escopo  
+## <a name="example-ccli-type-deduction-failure"></a>Example: C++/CLI type deduction failure  
   
-Esse erro pode ocorrer se o identificador de escopo não é corretamente. Por exemplo, quando operadores e funções de biblioteca padrão C++ não são totalmente qualificados por namespace, ou você não tiver colocado o `std` namespace para o escopo atual usando um `using` diretiva, o compilador não pode encontrá-los. Para corrigir esse problema, você deve totalmente qualificar os nomes de identificador, ou especifique o namespace com o `using` diretiva.  
-  
-Este exemplo não compila porque `cout` e `endl` são definidos no `std` namespace:  
-  
-```cpp  
-// C2065_scope.cpp  
-// compile with: cl /EHsc C2065_scope.cpp 
-// using namespace std;   // Uncomment this line to fix  
-#include <iostream>  
-int main() {  
-    cout << "Hello" << endl;   // C2065 'cout': undeclared identifier 
-                               // C2065 'endl': undeclared identifier
-    // Or try the following line instead  
-    std::cout << "Hello" << std::endl;  
-}
-```  
-  
-Os identificadores que são declarados dentro de `class`, `struct`, ou `enum class` tipos, também deve ser qualificado pelo nome do escopo delimitador.
-  
-## <a name="example-ccli-type-deduction-failure"></a>Exemplo: C + + Falha na dedução de tipo CLI  
-  
-Esse erro pode ocorrer ao chamar uma função genérica, se o argumento de tipo pretendida não pode ser deduzido dos parâmetros usados. Para obter mais informações, consulte [funções genéricas (C + + CLI)](../../windows/generic-functions-cpp-cli.md).  
+This error can occur when calling a generic function, if the intended type argument cannot be deduced from the parameters used. For more information, see [Generic Functions (C++/CLI)](../../windows/generic-functions-cpp-cli.md).  
   
 ```cpp  
 // C2065_b.cpp  
-// compile with: /clr  
+// compile with: cl /clr C2065_b.cpp 
 generic <typename ItemType>  
 void G(int i) {}  
   
 int main() {  
    // global generic function call  
-   G<T>(10);   // C2065  
+   G<T>(10);     // C2065  
    G<int>(10);   // OK - fix with a specific type argument  
 }  
 ```  
   
-## <a name="example-ccli-attribute-parameters"></a>Exemplo: C + + parâmetros do atributo CLI  
+## <a name="example-ccli-attribute-parameters"></a>Example: C++/CLI attribute parameters  
   
-Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: parâmetro procurando atributos do Visual C++.  
+This error can also be generated as a result of compiler conformance work that was done for Visual C++ 2005: parameter checking for Visual C++ attributes.  
   
 ```cpp  
 // C2065_attributes.cpp  

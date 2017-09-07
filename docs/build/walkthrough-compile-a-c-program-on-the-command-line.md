@@ -1,80 +1,101 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: compilando um programa em C na linha de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilação de programa C [C++]"
-  - "aplicações de linha de comando [C++], programas C"
-  - "compilando programas [C++]"
-  - "Visual C, compilando"
+title: 'Walkthrough: Compile a C program on the command line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- command-line applications [C++], C programs
+- Visual C, compiling
+- compiling programs [C++]
+- C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-caps.handback.revision: 44
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Instru&#231;&#245;es passo a passo: compilando um programa em C na linha de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 95cdbe47898fe35da2ec75a8d8e5bdf7905dfa98
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/30/2017
 
-O Visual C\+\+ inclui um compilador C que você pode usar para criar tudo de programas de console básicos até aplicativos completos de área de trabalho do Windows, aplicativos móveis e muito mais.  
+---
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Walkthrough: Compile a C program on the command line
+Visual C++ includes a C compiler that you can use to create everything from basic console programs to full Windows Desktop applications, mobile apps, and more.  
   
- Este passo a passo mostra como criar um basic, "Hello, World"\-estilo C programa usando um texto de editor e compila na linha de comando. Se você preferir trabalhar em C\+\+ na linha de comando, consulte [Instruções passo a passo: compilando um programa do C\+\+ nativo na linha de comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Se você gostaria de tentar o IDE do Visual Studio em vez de usar a linha de comando, consulte [Instruções passo a passo: trabalhando com projetos e soluções \(C\+\+\)](../Topic/Walkthrough:%20Working%20with%20Projects%20and%20Solutions%20\(C++\).md) ou [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+ This walkthrough shows how to create a basic, "Hello, World"-style C program by using a text editor, and then compile it on the command line. If you'd rather work in C++ on the command line, see [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). If you'd like to try the Visual Studio IDE instead of using the command line, see [Walkthrough: Working with Projects and Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) or [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## Pré-requisitos  
- Para concluir este passo a passo, você deve ter instalado o Visual Studio e os componentes opcionais do Visual C\+\+ ou o Microsoft Visual C\+\+ ferramentas de compilação.  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have installed either Visual Studio and the optional Visual C++ components, or the Microsoft Visual C++ Build Tools.  
   
- O Visual Studio é um ambiente de desenvolvimento integrado poderosa que oferece suporte a um editor completo e compiladores, depuradores e gerenciadores de recursos para várias linguagens e plataformas. Para obter informações sobre esses recursos e como baixar e instalar o Visual Studio, incluindo a edição gratuita do Visual Studio Community, consulte [VisualStudio.com](https://www.visualstudio.com/).  
+ Visual Studio is a powerful integrated development environment that supports a full-featured editor, resource managers, debuggers, and compilers for many languages and platforms. For information on these features and  how to download and install Visual Studio, including the free Visual Studio Community edition, see [VisualStudio.com](https://www.visualstudio.com/).  
   
- O Microsoft Visual C\+\+ ferramentas de compilação instala apenas o compilador de linha de comando, ferramentas e bibliotecas que necessárias para criar programas em C e C\+\+. Ele é perfeito para laboratórios de compilação ou em sala de aula exercícios e instala relativamente rápido. Para instalar apenas as ferramentas de linha de comando, baixe e instale o [Microsoft Visual C\+\+ Build Tools 2015](http://go.microsoft.com/fwlink/?LinkId=691126).  
+ The Visual Studio Build Tools installs only the command-line compilers, tools, and libraries you need to build C and C++ programs. It's perfect for build labs or classroom exercises and installs relatively quickly. To install only the command-line tools, download [Visual Studio Build Tools](https://go.microsoft.com/fwlink/?linkid=840931) and run the installer. For more information, see [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
- Antes de criar um programa C ou C\+\+ na linha de comando, você deve verificar que as ferramentas são instaladas e se você pode acessá\-los na linha de comando. Visual C\+\+ tem requisitos complexos para o ambiente de linha de comando para localizar as ferramentas, cabeçalhos e bibliotecas que ele usa.**Não é possível usar o Visual C\+\+ em uma janela de prompt de comando simples**. Felizmente, o Visual C\+\+ instala atalhos para iniciar um prompt de comando do desenvolvedor com o ambiente configurado para compilações de linha de comando. Infelizmente, os nomes dos atalhos do prompt de comando do desenvolvedor e onde estão localizados são diferentes em quase todas as versões do Visual C\+\+ e em versões diferentes do Windows. A primeira tarefa do passo a passo é encontrar um certo para usar.  
+ Before you can build a C or C++ program on the command line, you must verify that the tools are installed, and that you can access them from the command line. Visual C++ has complex requirements for the command-line environment in order to find the tools, headers, and libraries it uses. **You can't use Visual C++ in a plain command prompt window**. You need a *developer command prompt* window, which is a regular command prompt window that has all the required environment variables set. Fortunately, Visual C++ installs shortcuts for you to launch developer command prompts that have the environment set up for command line builds. Unfortunately, the names of the developer command prompt shortcuts and where they are located are different in almost every version of Visual C++ and on different versions of Windows. Your first walkthrough task is to find the right shortcut to use.  
   
 > [!NOTE]
->  Um atalho de prompt de comando do desenvolvedor define automaticamente os caminhos corretos para o compilador e ferramentas e para quaisquer cabeçalhos necessários e bibliotecas. Você deve definir esses valores do ambiente mesmo se você usar uma janela de Prompt de comando normal. Para obter mais informações, consulte [Definindo as variáveis de caminho e ambiente para compilações de linha de comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). É recomendável que usar um atalho de prompt de comando do desenvolvedor em vez de criar seus próprios.  
+>  A developer command prompt shortcut automatically sets the correct paths for the compiler and tools, and for any required headers and libraries. Some of these values are different for each build configuration. You must set these environment values yourself if you don't use one of the shortcuts. For more information, see [Set the Path and Environment Variables for Command-Line Builds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Because the build environment is complex, we strongly recommend you use a developer command prompt shortcut instead of building your own.  
   
-### Abra um prompt de comando do desenvolvedor  
+## <a name="open-a-developer-command-prompt"></a>Open a developer command prompt  
   
-1.  Se você tiver instalado o Visual Studio 2015 no Windows 10, abra o menu Iniciar e escolha **todos os aplicativos**. Role para baixo e abra o **Visual Studio 2015** pasta \(não o aplicativo do Visual Studio 2015\). Escolha **Prompt de comando do desenvolvedor para VS2015** para abrir a janela de prompt de comando.  
+1.  If you have installed Visual Studio 2017 on Windows 10, open the Start menu, and then scroll down and open the **Visual Studio 2017** folder (not the Visual Studio 2017 app). Choose **Developer Command Prompt for VS 2017** to open the command prompt window.  
   
-     Se você tiver instalado o Microsoft Visual C\+\+ Build Tools 2015 no Windows 10, abra o **Iniciar** menu e escolha **todos os aplicativos**. Role para baixo e abra o **Ferramentas de compilação do Visual C\+\+** pasta. Escolha **Prompt de comando de ferramentas nativas do Visual C\+\+ 2015 x86** para abrir a janela de prompt de comando.  
+     If you have installed Microsoft Visual C++ Build Tools 2015 on Windows 10, open the **Start** menu, and then scroll down and open the **Visual C++ Build Tools** folder. Choose **Visual C++ 2015 x86 Native Tools Command Prompt** to open the command prompt window.  
   
-     Se você estiver usando uma versão diferente do Visual Studio ou está executando uma versão diferente do Windows, procure no menu Iniciar ou iniciar a página para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde a sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.  
+     If you are using a different version of Visual Studio or are running a different version of Windows, look in your Start menu or Start page for a Visual Studio tools folder that contains a developer command prompt shortcut. You can also use the Windows search function to search for "developer command prompt" and choose one that matches your installed version of Visual Studio. Use the shortcut to open the command prompt window.  
   
-2.  Em seguida, verifique se o prompt de comando do desenvolvedor de Visual C\+\+ está configurado corretamente. Na janela do prompt de comando, digite `cl` e verifique se que a saída é semelhante a:  
+2.  Next, verify that the Visual C++ developer command prompt is set up correctly. In the command prompt window, enter `cl` and verify that the output looks something like this:  
   
     ```Output  
-    C:\Program arquivos (x86) \Microsoft Visual Studio 14.0 > cl Microsoft (R) C/C++ Optimizing Compiler versão 19.00.23918 para x86 Copyright (C) Microsoft Corporation.  Todos os direitos reservados. uso: nome de arquivo cl [opção...]... [/ link linkoption...]  
+    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl  
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+    
+    usage: cl [ option... ] filename... [ /link linkoption... ]  
+    
+    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>  
     ```  
   
-     Pode haver diferenças no diretório atual ou números de versão, dependendo da versão do Visual C\+\+ e qualquer atualização instalada. Se isso é semelhante ao que você vê, em seguida, você está pronto para criar programas C ou C\+\+ na linha de comando.  
+     There may be differences in the current directory or version numbers, depending on the version of Visual C++ and any updates installed. If this is similar to what you see, then you are ready to build C or C++ programs at the command line.  
   
     > [!NOTE]
-    >  Se você receber um erro, como "'cl' não é reconhecido como um comando interno ou externo, um programa operável ou arquivo em lotes," Erro C1034 ou erro LNK1104 quando você executa o **cl** de comando, em seguida, ou você não estiver usando um prompt de comando do desenvolvedor, ou algo está errado com sua instalação do Visual C\+\+. Você deve corrigir esse problema antes de continuar.  
+    >  If you get an error such as "'cl' is not recognized as an internal or external command, operable program or batch file," error C1034, or error LNK1104 when you run the **cl** command, then either you are not using a developer command prompt, or something is wrong with your installation of Visual C++. You must fix this issue before you can continue.  
   
-     Se você não encontrar o desenvolvedor de atalho do prompt de comando, ou se você receber uma mensagem de erro quando você insere `cl`, em seguida, a instalação do Visual C\+\+ pode ter um problema. Tente reinstalar o componente do Visual C\+\+ no Visual Studio ou reinstale o Microsoft Visual C\+\+ ferramentas de compilação. Não vá para a próxima seção até que isso funciona. Para obter mais informações sobre como instalar e solucionar problemas do Visual C\+\+, consulte [Instalando o Visual Studio](../Topic/Installing%20Visual%20Studio%202015.md).  
+     If you can't find the developer command prompt shortcut, or if you get an error message when you enter `cl`, then your Visual C++ installation may have a problem. Try reinstalling the Visual C++ component in Visual Studio, or reinstall the Visual Studio Build Tools. Don't go on to the next section until this works. For more information about installing and troubleshooting Visual C++, see [Install Visual Studio](/visualstudio/install/install-visual-studio).  
   
     > [!NOTE]
-    >  Dependendo da versão do Windows no computador e a configuração de segurança do sistema, talvez você precise clique para abrir o menu de atalho para o atalho do prompt de comando de desenvolvedor e, em seguida, escolha **Executar como administrador** para compilar e executar o programa que você criar seguindo este passo a passo.  
+    >  Depending on the version of Windows on the computer and the system security configuration, you might have to right-click to open the shortcut menu for the developer command prompt shortcut and then choose **Run as Administrator** to successfully build and run the program that you create by following this walkthrough.  
   
-### Criar um arquivo de código\-fonte C e compilá\-lo na linha de comando  
+## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Create a C source file and compile it on the command line  
   
-1.  Na janela de prompt de comando do desenvolvedor, digite **md c:\\simple** para criar um diretório e digite **cd c:\\simple** para alterar para aquele diretório. Este é o diretório que contém o arquivo de origem e o programa compilado.  
+1.  In the developer command prompt window, enter **cd c:\\** to change the current working directory to the root of your C: drive. Next, enter **md c:\simple** to create a directory, and then enter **cd c:\simple** to change to that directory. This is the directory that will contain your source file and the compiled program.  
   
-2.  Digite **o bloco de notas simple.c** no prompt de comando do desenvolvedor. No bloco de notas alerta diálogo pop\-up, escolha **Sim** para criar um novo arquivo de simple.c no diretório de trabalho.  
+2.  Enter **notepad simple.c** at the developer command prompt. In the Notepad alert dialog that pops up, choose **Yes** to create a new simple.c file in your working directory.  
   
-3.  No bloco de notas, digite as seguintes linhas de código:  
+3.  In Notepad, enter the following lines of code:  
   
-    ```c  
+    ```C  
     #include <stdio.h>  
   
     int main()  
@@ -84,65 +105,85 @@ O Visual C\+\+ inclui um compilador C que você pode usar para criar tudo de pro
     }   
     ```  
   
-4.  Na barra de menus do bloco de notas, escolha **arquivo**, **Salvar** salvar simple.c no diretório de trabalho.  
+4.  On the Notepad menu bar, choose **File**, **Save** to save simple.c in your working directory.  
   
-5.  Alterne para a janela de prompt de comando do desenvolvedor. Digite **dir** no prompt de comando para listar o conteúdo da pasta c:\\simple. Você deve ver o simple.c de arquivo de origem na lista de diretórios, que é semelhante a:  
+5.  Switch back to the developer command prompt window. Enter **dir** at the command prompt to list the contents of the c:\simple directory. You should see the source file simple.c in the directory listing, which looks something like this:  
   
     ```Output  
-    C:\simple > dir Volume na unidade C não tem nenhum rótulo. Número de série do volume é CC62 6545 diretório de C:\simple 02/10/2015 03:46 PM < DIR >. 02/10/2015 03:46 PM < DIR >... 02/10/2015 03:36 PM 143 simple.c 1 143 arquivos bytes 2 pasta (s) 514,900,566,016 bytes livres  
+    C:\simple>dir  
+     Volume in drive C has no label.  
+     Volume Serial Number is CC62-6545  
+  
+     Directory of C:\simple  
+  
+    10/02/2017  03:46 PM    <DIR>          .  
+    10/02/2017  03:46 PM    <DIR>          ..  
+    10/02/2017  03:36 PM               143 simple.c  
+                   1 File(s)            143 bytes  
+                   2 Dir(s)  514,900,566,016 bytes free  
+  
     ```  
   
-     As datas e outros detalhes serão diferentes em seu computador. Se você não vir seu arquivo de código fonte, simple.c, verifique se você alterar o diretório c:\\simple criado e no bloco de notas, certifique\-se de que você salvou o arquivo de origem nesse diretório. Além disso, certifique\-se de que você salvou o código\-fonte com uma extensão de nome de arquivo. c, não uma extensão. txt.  
+     The dates and other details will differ on your computer. If you don't see your source code file, simple.c, make sure you've changed to the c:\simple directory you created, and in Notepad, make sure that you saved your source file in this directory. Also make sure that you saved the source code with a .c file name extension, not a .txt extension.  
   
-6.  Para compilar o programa, digite **cl simple.c** no prompt de comando do desenvolvedor.  
+6.  To compile your program, enter **cl simple.c** at the developer command prompt.  
   
-     Você pode ver o nome do programa executável, simple.exe, nas linhas das informações de saída que o compilador exibirá:  
+     You can see the executable program name, simple.exe, in the lines of output information that the compiler displays:  
   
     ```Output  
-    c:\simple > cl simple.c Microsoft (R) C/C++ Optimizing Compiler versão 19.00.23918 para x86 Copyright (C) Microsoft Corporation.  Todos os direitos reservados. Simple.c Microsoft (R) Incremental Linker versão 14.00.23918.0 Copyright (C) Microsoft Corporation.  Todos os direitos reservados. /out:Simple.exe simple.obj  
+    c:\simple>cl simple.c  
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+  
+    simple.c  
+    Microsoft (R) Incremental Linker Version 14.10.25017.0  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+  
+    /out:simple.exe  
+    simple.obj  
     ```  
   
     > [!NOTE]
-    >  Se você receber um erro, como "'cl' não é reconhecido como um comando interno ou externo, um programa operável ou arquivo em lotes," C1034 ou erro de LNK1104, o prompt de comando do desenvolvedor não está configurado corretamente. Para obter informações sobre como corrigir esse problema, volte para o **Abra um prompt de comando do desenvolvedor** seção.  
+    >  If you get an error such as "'cl' is not recognized as an internal or external command, operable program or batch file," error C1034, or error LNK1104, your developer command prompt is not set up correctly. For information on how to fix this issue, go back to the **Open a developer command prompt** section.  
   
     > [!NOTE]
-    >  Se você receber um compilador diferente ou aviso ou erro de vinculador, revise seu código\-fonte para corrigir os erros, em seguida, salvá\-la e executar o compilador novamente. Para obter informações sobre erros específicos, use a caixa de pesquisa nesta página do MSDN para procurar o número do erro.  
+    >  If you get a different compiler or linker error or warning, review your source code to correct any errors, then save it and run the compiler again. For information about specific errors, use the search box on this MSDN page to look for the error number.  
   
-7.  Para executar o programa, digite **simples** no prompt de comando.  
+7.  To run your program, enter **simple** at the command prompt.  
   
-     O programa exibe este texto e será encerrado:  
+     The program displays this text and then exits:  
   
     ```Output  
-    Olá, mundo! Este é um programa de C nativo compilado na linha de comando.  
+    Hello, World! This is a native C program compiled on the command line.  
     ```  
   
-     Parabéns, você apenas compilado e executar um programa em C usando a linha de comando.  
+     Congratulations, you've just compiled and run a C program by using the command-line.  
   
-## Próximas etapas  
- Este exemplo "Olá, mundo" é mais simple como um programa em C pode obter. Programas do mundo real tem arquivos de cabeçalho e mais arquivos de origem, vincular em bibliotecas e fazer trabalho útil.  
+## <a name="next-steps"></a>Next steps  
+ This "Hello, World" example is about as simple as a C program can get. Real world programs have header files and more source files, link in libraries, and do useful work.  
   
- Você pode usar as etapas neste passo a passo para criar seu próprio código C em vez de digitar o código de exemplo mostrado. Você também pode criar muitos programas C de exemplo de código que você encontrar em outro lugar. Para compilar um programa com vários arquivos de código fonte, insira\-os em linha de comando, como esta:  
+ You can use the steps in this walkthrough to build your own C code instead of typing the sample code shown. You can also build many C code sample programs that you find elsewhere. To compile a program that has multiple source code files, enter them all on the command line, like this:  
   
  `cl file1.c file2.c file3.c`  
   
- O compilador gera um programa chamado file1.exe. Para alterar o nome para program1.exe, adicione um [\/out](../build/reference/out-output-file-name.md) opção de vinculador:  
+ The compiler outputs a program called file1.exe. To change the name to program1.exe, add an [/out](../build/reference/out-output-file-name.md) linker option:  
   
  `cl file1.c file2.c file3.c /link /out:program1.exe`  
   
- E para capturar erros de programação mais automaticamente, é recomendável compilar usando o [\/W3](../build/reference/compiler-option-warning-level.md) ou [\/W4](../build/reference/compiler-option-warning-level.md) opção de nível de aviso:  
+ And to catch more programming mistakes automatically, we recommend you compile by using either the [/W3](../build/reference/compiler-option-warning-level.md) or [/W4](../build/reference/compiler-option-warning-level.md) warning level option:  
   
  `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`  
   
- O compilador, cl.exe, tem muito mais opções você pode aplicar para criar, otimizar, depurar e analisar seu código. Para obter uma lista rápida, digite **cl \/?** no prompt de comando do desenvolvedor. Você também pode compilar e vincular separadamente e aplicar opções de vinculador em cenários mais complexos de compilação. Para obter mais informações sobre o compilador e as opções do vinculador e uso, consulte  [referência de compilação do C\/C\+\+](../Topic/C-C++%20Building%20Reference.md).  
+ The compiler, cl.exe, has many more options you can apply to build, optimize, debug, and analyze your code. For a quick list, enter **cl /?** at the developer command prompt. You can also compile and link separately and apply linker options in more complex build scenarios. For more information on compiler and linker options and usage, see  [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md).  
   
- Você pode usar NMAKE e makefiles ou arquivos de projeto MSBuild para configurar e criar projetos mais complexos na linha de comando. Para obter mais informações sobre como usar essas ferramentas, consulte [referência a NMAKE](../build/nmake-reference.md) e [MSBuild](../Topic/MSBuild%20\(Visual%20C++\).md).  
+ You can use NMAKE and makefiles, or MSBuild and project files to configure and build more complex projects on the command line. For more information on using these tools, see [NMAKE Reference](../build/nmake-reference.md) and [MSBuild](../build/msbuild-visual-cpp.md).  
   
- As linguagens C e C\+\+ são semelhantes, mas não é a mesma. O compilador do Visual C\+\+ usa uma regra simples para determinar qual idioma a ser usado ao compilar seu código. Por padrão, o compilador do Visual C\+\+ trata todos os arquivos que terminam em. c como código\-fonte C e todos os arquivos que terminam em. cpp como código\-fonte C\+\+. Para forçar o compilador a tratar todos os arquivos como C, independentemente da extensão de nome de arquivo, use o [\/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opção de compilador.  
+ The C and C++ languages are similar, but not the same. The Visual C++ compiler uses a simple rule to determine which language to use when it compiles your code. By default, the Visual C++ compiler treats all files that end in .c as C source code, and all files that end in .cpp as C++ source code. To force the compiler to treat all files as C regardless of file name extension, use the [/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) compiler option.  
   
- O compilador do Visual C\+\+ C é geralmente compatível com o padrão ISO C99, mas não é totalmente compatível. Na maioria dos casos, o código C portátil compilar e executado conforme o esperado. Visual C\+\+ não oferece suporte a maioria das alterações no ISO C11. Determinadas funções de biblioteca e nomes de função POSIX são substituídos pelo compilador Visual C\+\+. As funções são suportadas, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [Recursos de segurança no CRT](../Topic/Security%20Features%20in%20the%20CRT.md) e [Compilador \(nível 3\) aviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  
+ The Visual C++ C compiler is generally compatible with the ISO C99 standard, but not strictly compliant. In most cases, portable C code will compile and run as expected. Visual C++ does not support most of the changes in ISO C11. Certain library functions and POSIX function names are deprecated by the Visual C++ compiler. The functions are supported, but the preferred names have changed. For more information, see [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md) and [Compiler Warning (level 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  
   
-## Consulte também  
- [Instruções passo a passo: criando um programa de console Win32 \(C\+\+\)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
- [Referência de linguagem C](../Topic/C%20Language%20Reference.md)   
- [Compilando programas do C\/C\+\+](../build/building-c-cpp-programs.md)   
- [Compatibilidade](../c-runtime-library/compatibility.md)
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Creating a Standard C++ Program (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
+ [C Language Reference](../c-language/c-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compatibility](../c-runtime-library/compatibility.md)

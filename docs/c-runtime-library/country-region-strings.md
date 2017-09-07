@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 708651f59ceff638482264e3fc57228e8a1822b2
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="countryregion-strings"></a>Cadeias de caracteres de país/região
-Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para obter listas de nomes de país/região que tem suporte por várias versões do sistema operacional Windows, consulte as [referência API de Suporte ao Idioma Nacional (NLS)](http://msdn.microsoft.com/goglobal/bb896001.aspx). Nas listas, a cadeia de caracteres de país/região pode ser qualquer um dos valores de país na coluna **Localidade – País/Região do idioma** ou qualquer uma das abreviações na coluna **abreviação do nome do País ou Região**.  
+Cadeias de caracteres de país e região podem ser combinadas com uma cadeia de caracteres de idioma para criar uma especificação de localidade para as funções `setlocale`, `_wsetlocale`, `_create_locale` e `_wcreate_locale`. Para listas de nomes de país/região que têm suporte em várias versões do sistema operacional Windows, veja [Referência da API do suporte ao idioma nacional (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Nas listas, a cadeia de caracteres de país/região pode ser qualquer valor na coluna **País/Região de Localidade – Idioma** ou qualquer abreviação na coluna **Abreviação de nome de país ou região**. Para obter informações adicionais de suporte de idioma no sistema operacional Windows por versão, veja [Apêndice A: comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.  
   
  A implementação de biblioteca em tempo de execução C também dá suporte às seguintes cadeias de caracteres adicionais de país/região e abreviações:  
   
