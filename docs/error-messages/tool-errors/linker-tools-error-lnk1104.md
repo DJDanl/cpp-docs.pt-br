@@ -1,7 +1,7 @@
 ---
-title: Ferramentas de vinculador LNK1104 erro | Microsoft Docs
+title: Linker Tools Error LNK1104 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,55 +34,55 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c6121f598bc2913b65fe781b07bcc27e6b55375b
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: e2ed1195fcd389a1ac5a0c93e66ad44aa96faf54
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk1104"></a>Erro das Ferramentas de Vinculador LNK1104
-não é possível abrir o arquivo '*filename*'  
+# <a name="linker-tools-error-lnk1104"></a>Linker Tools Error LNK1104
+cannot open file '*filename*'  
   
-O vinculador não foi possível abrir o arquivo especificado.  
+The linker could not open the specified file.  
   
-## <a name="possible-causes-and-solutions"></a>Possíveis causas e soluções
+## <a name="possible-causes-and-solutions"></a>Possible causes and solutions
   
-Esse erro pode ocorrer quando o vinculador tenta abrir um arquivo para leitura ou gravação. As causas mais comuns desse problema são que o arquivo não existe, não pode ser encontrado em um dos diretórios de vinculador pesquisa, ou está em uso e bloqueado por outro processo. Menor frequência, você pode ter sido executado sem espaço em disco, o arquivo pode ser muito grande, o caminho para o arquivo pode ser muito longo ou talvez você não tenha permissão para acessar o arquivo.  
+This error can occur when the linker attempts to open a file for reading or for writing. The most common causes of this problem are that the file does not exist, can't be found in one of the directories the linker searches, or is in use and locked by another process. Less commonly, you may have run out of disk space, the file may be too large, the path to the file may be too long, or you may not have permission to access the file.  
 
-Verifique se há um desses problemas comuns:  
+Check for one of these common issues:  
 
--   O aplicativo já está em execução quando você tenta recriá-lo. Se o arquivo que não é possível abrir o arquivo executável ou um arquivo de depuração, como um. PDB, essa é uma causa comum. Para corrigir esse problema, pare o programa e descarregá-la a partir do depurador antes de criá-lo novamente.  
+-   Your application is already running when you try to rebuild it. If the file that can't be opened is the executable or a debugging file such as a .pdb, this is a common cause. To fix this issue, stop the program and unload it from the debugger before building it again.  
   
--   O arquivo *filename* é criada com a sua solução, mas ainda não existir quando o vinculador tenta acessá-lo. Isso pode acontecer quando um projeto depende de outro projeto para gerar esse arquivo, mas os projetos não são criados na ordem correta. Para corrigir esse problema, verifique se as referências do projeto são definidas no projeto que usa o arquivo para que o arquivo ausente é criado quando for necessário. Para obter mais informações, consulte [adicionando referências em projetos do Visual C++](../../ide/adding-references-in-visual-cpp-projects.md) e [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).  
+-   The file *filename* is built by your solution, but does not yet exist when the linker tries to access it. This can happen when one project depends on another project to produce this file, but the projects are not built in the correct order. To fix this issue, make sure your project references are set in the project that uses the file so the missing file is built before it is required. For more information, see [Adding references in Visual C++ projects](../../ide/adding-references-in-visual-cpp-projects.md) and [Managing references in a project](/visualstudio/ide/managing-references-in-a-project).  
   
--   O nome do arquivo ou o caminho especificado na linha de comando ou em uma diretiva de lib #pragma está incorreto ou o caminho tem uma especificação de unidade inválida. Verifique a ortografia e verifique se que o arquivo existe no local especificado.  
+-   The filename or path specified on the command line or in a #pragma lib directive is incorrect, or the path has an invalid drive specification. Check your spelling and verify the file exists at the specified location.  
   
--   Se você estiver usando o Visual Studio IDE para compilar um projeto que foi copiado de outro computador, os locais de instalação de bibliotecas podem ser diferentes. Verificar a propriedade de diretórios de biblioteca de [página de propriedade de diretórios VC + +](../../ide/vcpp-directories-property-page.md) e atualizá-lo se necessário. Para ver e editar os caminhos de biblioteca atual definido no IDE, escolha o controle de lista suspensa para a propriedade de diretórios de biblioteca e escolha **editar**. O **avaliada valor** seção da caixa de diálogo diretórios de biblioteca lista os caminhos atuais pesquisados em busca de arquivos de biblioteca.  
+-   If you are using the Visual Studio IDE to build a project that was copied from another computer, the installation locations for libraries may be different. Check the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) and update it if necessary. To see and edit the current library paths set in the IDE, choose the drop-down control for the Library Directories property and choose **Edit**. The **Evaluated value** section of the Library Directories dialog lists the current paths searched for library files.  
   
--   Se você estiver criando um projeto que foi criado usando uma versão anterior do Visual Studio, o conjunto de ferramentas de plataforma e bibliotecas para essa versão podem não não ser instaladas. Para corrigir esse problema, você tem duas opções: você pode atualizar o projeto para usar o conjunto de ferramentas de plataforma atual tiver instalado ou você pode instalar o conjunto de ferramentas mais antigo e compilar o projeto inalterado. Para obter mais informações, consulte [Atualizando projetos a partir de versões anteriores do Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) e [usar nativo multiplataforma no Visual Studio para criar projetos antigos](../../porting/use-native-multi-targeting.md).
+-   If you're building a project that was created using an older version of Visual Studio, the platform toolset and libraries for that version may not be not installed. To fix this issue, you have two options: you can upgrade the project to use the current platform toolset you have installed, or you can install the older toolset and build the project unchanged. For more information, see [Upgrading Projects from Earlier Versions of Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) and [Use native multi-targeting in Visual Studio to build old projects](../../porting/use-native-multi-targeting.md).
   
--   As bibliotecas para a configuração do projeto atual ou o conjunto de ferramentas da plataforma não estão instaladas. Verifique se o conjunto de ferramentas de plataforma e o SDK do Windows especificado no [página de propriedades geral](../../ide/general-property-page-project.md) para seu projeto estão instalados e verificar se as bibliotecas necessárias estão disponíveis nos diretórios de biblioteca especificados no [página de propriedade de diretórios VC + +](../../ide/vcpp-directories-property-page.md) para as configurações. Existem configurações separadas para as configurações de depuração e de varejo, portanto se uma criar funciona, mas a outra causa um erro, verifique se as configurações estão corretas e as ferramentas necessárias e bibliotecas estão instaladas para ambas as configurações.  
+-   The libraries for the current project configuration or platform toolset are not installed. Verify that the platform toolset and Windows SDK specified in the [General property page](../../ide/general-property-page-project.md) for your project are installed, and verify that the required libraries are available in the Library Directories specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) for your configuration settings. There are separate settings for Debug and Retail configurations, so if one build works but the other causes an error, make sure the settings are correct and the required tools and libraries are installed for both configurations.  
   
--   O caminho para o SDK do Windows está desatualizado. Se você instalou uma versão do SDK do Windows mais recente que a versão do Visual Studio, certifique-se de que os caminhos especificados no [página de propriedade de diretórios VC + +](../../ide/vcpp-directories-property-page.md) são atualizadas de acordo com o novo SDK. Se você usar o Prompt de comando do desenvolvedor, verifique se o arquivo em lotes que inicializa as variáveis de ambiente é atualizado para os novos caminhos SDK.  
+-   The path to the Windows SDK is out of date. If you have installed a version of the Windows SDK that is newer than your version of Visual Studio, make sure that the paths specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) are updated to match the new SDK. If you use the Developer Command Prompt, make sure that the batch file that initializes the environment variables is updated for the new SDK paths.  
   
--   Outro programa pode ter o arquivo aberto e não é possível gravar o vinculador a ele. Programas antivírus geralmente bloqueiam temporariamente o acesso a arquivos recém-criados. Para corrigir esse problema, tente excluir seus diretórios de compilação de projeto do scanner antivírus.  
+-   Another program may have the file open and the linker cannot write to it. Antivirus programs often temporarily block access to newly created files. To fix this issue, try excluding your project build directories from the antivirus scanner.  
   
--   Se você estiver usando uma opção de compilação paralela, é possível que o Visual Studio bloqueou o arquivo em outro thread. Para corrigir esse problema, verifique se que você não cria o mesmo objeto de código ou a biblioteca em vários projetos, e que você use as dependências de compilação ou referências de projeto para acompanhar binários criados em seu projeto.  
+-   If you are using a parallel build option, it's possible that Visual Studio has locked the file on another thread. To fix this issue, verify that you do not build the same code object or library in multiple projects, and that you use build dependencies or project references to pick up built binaries in your project.  
   
--   Você tem uma variável de ambiente LIB incorretova. Em compilações de linha de comando, verifique se a variável de ambiente LIB está definida e contém todos os diretórios para as bibliotecas que você usa. No IDE, a variável LIB é definida pela propriedade diretórios de biblioteca no [página de propriedade de diretórios VC + +](../../ide/vcpp-directories-property-page.md). Verifique se todos os diretórios que contêm as bibliotecas que necessárias estão listados aqui. Se você precisa fornecer um diretório de biblioteca que substitui uma pasta de biblioteca padrão, você pode usar o [/LIBPATH](../../build/reference/libpath-additional-libpath.md)) opção na linha de comando ou a propriedade de diretórios de biblioteca adicionais na página de propriedade de vinculador para seu projeto.  
+-   You have an incorrect LIB environment variable. In command line builds, verify that the LIB environment variable is set and contains all the directories for the libraries you use. In the IDE, the LIB variable is set by the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Make sure all the directories that contain the libraries you need are listed here. If you need to supply a library directory that overrides a standard library directory, you can use the [/LIBPATH](../../build/reference/libpath-additional-libpath.md)) option on the command line, or the Additional Library Directories property in the Linker property page for your project.  
   
--   Ao especificar bibliotecas individuais na caixa de diálogo páginas de propriedades do projeto, os nomes de biblioteca devem ser separados por espaços, vírgulas não.  
+-   When specifying individual libraries in a project's Property Pages dialog box, library names must be separated by spaces, not commas.  
   
--   O caminho para *filename* expande a mais do que 260 caracteres. Alterar os nomes ou reorganizar a estrutura de diretório, se necessário para encurtar caminhos para os arquivos necessários.  
+-   The path for *filename* expands to more than 260 characters. Change the names or rearrange your directory structure if needed to shorten the paths to the required files.  
   
--   O arquivo é muito grande. Objeto ou bibliotecas de arquivos mais do que um gigabyte no tamanho pode causar problemas para o vinculador de 32 bits. Possíveis para corrigir esse problema é usar o conjunto de ferramentas de 64 bits. Para obter mais informações sobre como fazer isso na linha de comando, consulte [como: habilitar um 64-Bit Visual C++ conjunto de ferramentas na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Para obter informações sobre como fazer isso no IDE, consulte [usando MSBuild com o compilador de 64 bits e ferramentas](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) e esta postagem de estouro de pilha: [como fazer com que o Visual Studio usa a cadeia de ferramentas nativas amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).  
+-   The file is too large. Libraries or object files more than a gigabyte in size may cause problems for the 32-bit linker. A possible fix for this issue is to use the 64-bit toolset. For more information on how to do this at the command line, see [How to: Enable a 64-Bit Visual C++ Toolset on the Command Line](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). For information on how to do this in the IDE, see [Using MSBuild with the 64-bit Compiler and Tools](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)  and this Stack Overflow post: [How to make Visual Studio use the native amd64 toolchain](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).  
   
--   Você tem permissões de arquivo suficientes para acessar *filename*. Isso pode acontecer se você acessar os arquivos de biblioteca em diretórios protegidos do sistema ou usa os arquivos copiados de outros usuários que têm as permissões originais definido. Para corrigir esse problema, mova o arquivo para um diretório do projeto gravável. Se o arquivo está em um diretório gravável, mas tem permissões inacessíveis, você pode usar um prompt de comando do administrador e execute o comando de takeown.exe se apropriar do arquivo.  
+-   You have insufficient file permissions to access *filename*. This can happen if you access library files in protected system directories, or use files copied from other users that have their original permissions set. To fix this issue, move the file to a writeable project directory. If the file is in a writeable directory but has inaccessible permissions, you can use an Administrator command prompt and run the takeown.exe command to take ownership of the file.  
   
--   Você não tem espaço em disco suficiente. O vinculador usa arquivos temporários em vários casos. Mesmo se você tiver espaço suficiente em disco, um link muito grande pode depauperam ou fragmento de espaço em disco disponível. Considere o uso de [/OPÇ (otimizações)](../../build/reference/opt-optimizations.md) opção; fazendo leituras de eliminação de comdat transitiva todos os arquivos de objeto várias vezes.  
+-   You don't have enough disk space. The linker uses temporary files in several cases. Even if you have sufficient disk space, a very large link can deplete or fragment the available disk space. Consider using the [/OPT (Optimizations)](../../build/reference/opt-optimizations.md) option; doing transitive comdat elimination reads all the object files multiple times.  
   
--   Se o *filename* chamado LNK*n*, que é um nome de arquivo gerado pelo vinculador para um arquivo temporário, o diretório especificado na variável de ambiente TMP pode não existir ou pode ser especificado mais de um diretório para a variável de ambiente TMP. Apenas um caminho deve ser especificado para a variável de ambiente TMP.  
+-   If the *filename* is named LNK*n*, which is a filename generated by the linker for a temporary file, the directory specified in the TMP environment variable may not exist, or more than one directory may be specified for the TMP environment variable. Only one directory path should be specified for the TMP environment variable.  
   
--   Se a mensagem de erro ocorre para um nome de biblioteca, e você recentemente movido o arquivo .mak de um sistema de desenvolvimento Microsoft Visual C++ anterior, a biblioteca pode não ser mais válida. Certifique-se de que o nome da biblioteca está correto e ainda existe no local especificado, ou atualize o caminho de biblioteca para apontar para o novo local.  
+-   If the error message occurs for a library name, and you recently ported the .mak file from a previous Microsoft Visual C++ development system, the library may no longer be valid. Ensure that the library name is correct and still exists in the specified location, or update the LIB path to point to the new location.  
 

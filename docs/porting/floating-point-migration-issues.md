@@ -1,7 +1,7 @@
 ---
-title: "Problemas de migração de ponto flutuante | Microsoft Docs"
+title: Floating-point migration issues | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -29,36 +29,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30a331ca93d704539d32d003333f4f0a2823fb
-ms.openlocfilehash: b84e3edcba95e75b877e0acf2651d3d1a9ac8816
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 597513f15331c01c796932e82e94e891df0b8fab
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante  
+# <a name="floating-point-migration-issues"></a>Floating-point migration issues  
   
-Às vezes, ao atualizar os projetos para uma versão mais nova do Visual Studio, você poderá achar que os resultados de algumas operações de ponto flutuantes foram alterados. Isso geralmente ocorre por um desses dois motivos: alterações de geração de código que aproveitam melhor o processador disponível e correções de bugs ou alterações nos algoritmos usados em funções matemáticas no CRT (biblioteca em tempo de execução C). Em geral, os novos resultados estão corretos e estão dentro dos limites especificados pelo padrão da linguagem. Continue lendo para descobrir o que mudou e se isso for importante, como obter os mesmos resultados obtidos antes pelas funções.  
+Sometimes when you upgrade your projects to a newer version of Visual Studio, you may find that the results of certain floating-point operations have changed. This generally happens for one of two reasons: Code generation changes that take better advantage of the available processor, and bug fixes or changes to the algorithms used in math functions in the C runtime library (CRT). In general, the new results are correct to within the limits specified by the language standard. Read on to find out what's changed, and if it's important, how to get the same results your functions got before.  
 
-## <a name="new-math-functions-and-universal-crt-changes"></a>Novas funções matemáticas e alterações do CRT Universal  
+## <a name="new-math-functions-and-universal-crt-changes"></a>New math functions and Universal CRT changes  
   
-A maioria das funções matemáticas do CRT está disponível no Visual Studio há vários anos, mas a partir do Visual Studio 2013, todas as funções exigidas pela ISO C99 estão incluídas. Essas funções são implementadas para equilibrar o desempenho com exatidão. Uma vez que produzir o resultado arredondado corretamente pode ter um custo proibitivo em todos os casos, essas funções foram criadas para produzir de forma eficiente um resultado próximo ao resultado arredondado corretamente. Na maioria dos casos, o resultado produzido está dentro de +/-1 unidade da precisão mínima ou *ulp*, do resultado arredondado corretamente, embora possa haver casos em que a imprecisão é maior. Se você estava usando outra biblioteca de matemática para obter essas funções antes, as diferenças de implementação podem ser responsáveis pela alteração nos resultados.   
+Most CRT math functions have been available in Visual Studio for years, but starting in Visual Studio 2013, all of the functions required by ISO C99 are included. These functions are implemented to balance performance with correctness. Because producing the correctly rounded result in every case may be prohibitively expensive, these functions are designed to efficiently produce a close approximation to the correctly rounded result. In most cases, the result produced is within +/-1 unit of least precision, or *ulp*, of the correctly rounded result, though there may be cases where there is greater inaccuracy. If you were using a different math library to get these functions before, implementation differences may be responsible for the change in your results.   
     
-Quando as funções matemáticas foram movidas para o CRT Universal no Visual Studio 2015, alguns novos algoritmos foram utilizados e vários bugs na implementação das funções que eram novas no Visual Studio 2013 foram corrigidos. Essas alterações podem levar a diferenças detectáveis nos resultados de cálculos de ponto flutuante que usam essas funções. As funções que tiveram problemas de bugs foram erf, exp2, remainder, remquo, scalbln, scalbn e suas variantes de flutuação e longo duplo.  Outras alterações no Visual Studio 2015 corrigiram problemas de preservação de palavra de status de ponto flutuante e informações de estado de exceção nas funções _clear87, _clearfp, fegetenv, fesetenv e feholdexcept.  
+When the math functions were moved to the Universal CRT in Visual Studio 2015, some new algorithms were used, and several bugs in the implementation of the functions that were new in Visual Studio 2013 were fixed. These changes can lead to detectable differences in the results of floating-point calculations that use these functions. The functions that had bug issues were erf, exp2, remainder, remquo, scalbln, and scalbn, and their float and long double variants.  Other changes in Visual Studio 2015 fixed issues in preserving floating point status word and exception state information in _clear87, _clearfp, fegetenv, fesetenv, and feholdexcept functions.  
   
-## <a name="processor-differences-and-compiler-flags"></a>Diferenças de processador e sinalizadores de compilador  
+## <a name="processor-differences-and-compiler-flags"></a>Processor differences and compiler flags  
   
-Muitas das funções da biblioteca de matemática de ponto flutuante têm implementações diferentes para diferentes arquiteturas de CPU. Por exemplo, o CRT x86 de 32 bits pode ter uma implementação diferente do CRT x64 de 64 bits. Além disso, algumas das funções podem ter várias implementações para uma determinada arquitetura de CPU. A implementação mais eficiente é selecionada dinamicamente em tempo de execução dependendo dos conjuntos de instruções com suporte da CPU. Por exemplo, no CRT x86 de 32 bits, algumas funções têm uma implementação x87 e uma implementação SSE2. Quando executado em uma CPU com suporte para SSE2, é usada a implementação SSE2 mais rápida. Quando executado em uma CPU sem suporte para SSE2, é usada a implementação x87 mais lenta. Você poderá ver isso ao migrar o código antigo, porque a opção de arquitetura x86 padrão do compilador foi alterada para [/arch:SSE2](../build/reference/arch-x86.md) no Visual Studio 2012. Uma vez que diferentes implementações das funções da biblioteca de matemática podem usar diferentes instruções de CPU e diferentes algoritmos para produzir seus resultados, as funções podem produzir resultados diferentes em plataformas diferentes. Na maioria dos casos, os resultados são dentro de +/-1 ulp do resultado arredondado corretamente, mas os resultados reais podem variar entre CPUs.  
+Many of the floating point math library functions have different implementations for different CPU architectures. For example, the 32-bit x86 CRT may have a different implementation than the 64-bit x64 CRT. In addition, some of the functions may have multiple implementations for a given CPU architecture. The most efficient implementation is selected dynamically at run-time depending on the instruction sets supported by the CPU. For example, in the 32-bit x86 CRT, some functions have both an x87 implementation and an SSE2 implementation. When running on a CPU that supports SSE2, the faster SSE2 implementation is used. When running on a CPU that does not support SSE2, the slower x87 implementation is used. You may see this when migrating old code, because the default x86 compiler architecture option changed to [/arch:SSE2](../build/reference/arch-x86.md) in Visual Studio 2012. Because different implementations of the math library functions may use different CPU instructions and different algorithms to produce their results, the functions may produce different results on different platforms. In most cases, the results are within +/-1 ulp of the correctly rounded result, but the actual results may vary across CPUs.  
   
-Melhorias de correção de geração de código em diferentes modos de ponto flutuante no Visual Studio também podem afetar os resultados de operações de ponto flutuante quando o código antigo é comparado com o novo, mesmo ao usar os mesmos sinalizadores de compilador. Por exemplo, o código gerado pelo Visual Studio 2010 quando [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (o padrão) ou **/fp:strict** tiver sido especificado pode não ter propagado valores NaN (não é um número) intermediários por meio de expressões corretamente. Portanto, algumas expressões que forneciam um resultado numérico nos compiladores antigos agora podem produzir corretamente um resultado NaN. Também é possível ver diferenças, pois as otimizações de código habilitadas para **/fp:fast** agora aproveitam mais recursos do processador. Essas otimizações podem usar menos instruções, mas podem afetar os resultados gerados, já que algumas operações intermediárias anteriormente visíveis foram removidas.  
+Code-generation correctness improvements in different floating point modes in Visual Studio can also affect the results of floating-point operations when old code is compared to new code, even when using the same compiler flags. For example, the code generated by Visual Studio 2010 when [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (the default) or **/fp:strict** was specified may not have propagated intermediate not-a-number (NaN) values through expressions correctly. Thus, some expressions that gave a numeric result in older compilers may now correctly produce a NaN result. You may also see differences because the code optimizations enabled for **/fp:fast** now take advantage of more processor features. These optimizations can use fewer instructions, but may impact the generated results because some previously visible intermediate operations have been removed.  
   
-## <a name="how-to-get-identical-results"></a>Como obter resultados idênticos  
+## <a name="how-to-get-identical-results"></a>How to get identical results  
   
-Na maioria dos casos, as alterações de ponto flutuante nas bibliotecas e nos compiladores mais novos resultam em um comportamento mais rápido ou mais correto, ou ambos. Você poderá até mesmo observar um melhor desempenho de energia do processador quando as instruções SSE2 substituem as instruções x87. No entanto, se você tiver um código que deve replicar com precisão o comportamento de ponto flutuante de um compilador mais antigo, considere o uso das funcionalidades de multiplataforma nativa do Visual Studio e compile o projeto afetado com o conjunto de ferramentas mais antigo. Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md).  
+In most cases, the floating-point changes in the newest compilers and libraries result in faster or more correct behavior, or both. You may even see better processor power performance when SSE2 instructions replace x87 instructions. However, if you have code that must precisely replicate the floating point behavior of an older compiler, consider using Visual Studio native multi-targeting capabilities, and build the affected project with the older toolset. For more information, see [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See also  
   
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)  
+[Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Overview of potential upgrade issues (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
 
