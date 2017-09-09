@@ -1,5 +1,5 @@
 ---
-title: Classe exception | Microsoft Docs
+title: exception Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6983a0e24f7422b708d7fbbfca6689bec629cb06
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9cabffec21d8dd66cbbf50e2a5acfeb96e5aaef4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="exception-class"></a>Classe exception
-A classe atua como a classe base de todas as exceções lançadas por determinadas expressões e pela biblioteca padrão C++.  
+# <a name="exception-class"></a>exception Class
+The class serves as the base class for all exceptions thrown by certain expressions and by the C++ Standard Library.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
 ```  
 class exception {
    public:
@@ -56,24 +56,24 @@ class exception {
    virtual const char *what() const;
    };  
 ``` 
-## <a name="remarks"></a>Comentários  
- Especificamente, essa classe base é a raiz das classes de exceção padrão definidas em [\<stdexcept>](../standard-library/stdexcept.md). O valor da cadeia de caracteres C retornado por `what` é deixado como não especificado pelo construtor padrão, mas pode ser definido por construtores para determinadas classes derivadas como uma cadeia de caracteres C definida pela implementação. Nenhuma das funções de membro lança exceções.  
+## <a name="remarks"></a>Remarks  
+ Specifically, this base class is the root of the standard exception classes defined in [\<stdexcept>](../standard-library/stdexcept.md). The C string value returned by `what` is left unspecified by the default constructor, but may be defined by the constructors for certain derived classes as an implementation-defined C string. None of the member functions throw any exceptions.  
   
- O parâmetro `int` permite que você especifique que a memória não deve ser alocada. O valor de `int` é ignorado.  
+ The `int` parameter allows you to specify that no memory should be allocated. The value of the `int` is ignored.  
   
 > [!NOTE]
->  Os construtores `exception(const char* const &message)` e `exception(const char* const &message, int)` são extensões da Microsoft à biblioteca padrão C++.  
+>  The constructors `exception(const char* const &message)` and `exception(const char* const &message, int)` are Microsoft extensions to the C++ Standard Library.  
   
-## <a name="example"></a>Exemplo  
- Para obter exemplos de uso das classes de exceção padrão que herdam da classe `exception`, consulte uma das classes definidas em [\<stdexcept>](../standard-library/stdexcept.md).  
+## <a name="example"></a>Example  
+ For examples of the use of the standard exception classes that inherit from the `exception` class, see any of the classes defined in [\<stdexcept>](../standard-library/stdexcept.md).  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<exception>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<exception>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -33,39 +33,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6372d4f2a553f8d7667d520617d969700931010c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 723823bc5331b647cb053123b3fa18fdb66f7ff6
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
-Define o scoped_allocator de classe de modelo do contêiner.  
+Defines the container template class scoped_allocator.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <scoped_allocator>  
 ```  
   
-### <a name="operators"></a>Operadores  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Testa se o objeto scoped_allocator à esquerda do operador é diferente do objeto da lista à direita.|  
-|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Testa se o objeto scoped_allocator à esquerda do operador é igual ao objeto da lista à direita.|  
+|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Tests if the scoped_allocator object on the left side of the operator is not equal to the list object on the right side.|  
+|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Tests if the scoped_allocator object on the left side of the operator is equal to the list object on the right side.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[Classe scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)|Uma classe de modelo que encapsula um aninhamento um ou mais alocadores de.|  
+|[scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)|A template class that encapsulates a nest of one or more allocators.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

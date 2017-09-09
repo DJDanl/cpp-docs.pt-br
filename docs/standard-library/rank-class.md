@@ -1,5 +1,5 @@
 ---
-title: Classe rank | Microsoft Docs
+title: rank Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- rank
 - type_traits/std::rank
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
-ms.openlocfilehash: d5b88cb6002d0a96ea84c92877df1083d7e2c4f5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2ba5a7f98699d5cfd6b8221926704d705fce15cb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rank-class"></a>Classe rank
-Obtém o número de dimensões da matriz.  
+# <a name="rank-class"></a>rank Class
+Gets number of array dimensions.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct rank;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- O tipo a ser consultado.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentários  
- A consulta de tipo contém o valor do número de dimensões do tipo de matriz `Ty` ou 0 se `Ty` não for um tipo de matriz.  
+## <a name="remarks"></a>Remarks  
+ The type query holds the value of the number of dimensions of the array type `Ty`, or 0 if `Ty` is not an array type.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__rank.cpp   
@@ -87,12 +86,12 @@ rank<int[5]> == 1
 rank<int[5][10]> == 2  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe extent](../standard-library/extent-class.md)
+ [extent Class](../standard-library/extent-class.md)
 

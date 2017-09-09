@@ -1,5 +1,5 @@
 ---
-title: Classe wbuffer_convert | Microsoft Docs
+title: wbuffer_convert Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::cvt::wbuffer_convert
-- wbuffer_convert
-- cvt::wbuffer_convert
 - wbuffer/stdext::cvt::wbuffer_convert
 dev_langs:
 - C++
@@ -36,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7b8c685f286a194642ea996a8b4db89ddc5ebbdc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 87c43bde8a5b8b029242aaf7b87d5d8f90bbe6ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="wbufferconvert-class"></a>Classe wbuffer_convert
-Descreve um buffer de fluxo que controla a transmissão de elementos de/para um buffer de fluxo de bytes.  
+# <a name="wbufferconvert-class"></a>wbuffer_convert Class
+Describes a stream buffer that controls the transmission of elements to and from a byte stream buffer.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Codecvt, class Elem = wchar_t, class Traits = std::char_traits<Elem>>
@@ -54,22 +51,22 @@ class wbuffer_convert
  : public std::basic_streambuf<Elem, Traits>
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Codecvt`|A faceta de [locale](../standard-library/locale-class.md) que representa o objeto de conversão.|  
-|`Elem`|O tipo de elemento de caractere largo.|  
-|`Traits`|As características associadas a *Elem*.|  
+|`Codecvt`|The [locale](../standard-library/locale-class.md) facet that represents the conversion object.|  
+|`Elem`|The wide-character element type.|  
+|`Traits`|The traits associated with *Elem*.|  
   
-## <a name="remarks"></a>Comentários  
- Essa classe de modelo descreve um buffer de fluxo que controla a transmissão de elementos do tipo `_Elem`, cujas características dos caracteres são descritas pela classe `Traits`, de/para um buffer de fluxo de bytes do tipo `std::streambuf`.  
+## <a name="remarks"></a>Remarks  
+ This template class describes a stream buffer that controls the transmission of elements of type `_Elem`, whose character traits are described by the class `Traits`, to and from a byte stream buffer of type `std::streambuf`.  
   
- A conversão entre uma sequência de valores `Elem` e as sequências multibyte é executada por um objeto da classe `Codecvt<Elem, char, std::mbstate_t>`, que atende aos requisitos da faceta de conversão de código padrão `std::codecvt<Elem, char, std::mbstate_t>`.  
+ Conversion between a sequence of `Elem` values and multibyte sequences is performed by an object of class `Codecvt<Elem, char, std::mbstate_t>`, which meets the requirements of the standard code-conversion facet `std::codecvt<Elem, char, std::mbstate_t>`.  
   
- Um objeto desta classe de modelo armazena:  
+ An object of this template class stores:  
   
--   Um ponteiro para o buffer de fluxo de bytes subjacente  
+-   A pointer to its underlying byte stream buffer  
   
--   Um ponteiro para o objeto de conversão alocado (que é liberado quando [wbuffer_convert](../standard-library/wbuffer-convert-class.md)
+-   A pointer to the allocated conversion object (which is freed when the [wbuffer_convert](../standard-library/wbuffer-convert-class.md)
 

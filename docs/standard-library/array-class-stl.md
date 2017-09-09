@@ -1,5 +1,5 @@
 ---
-title: "Classe array (Biblioteca Padrão C++)| Microsoft Docs"
+title: array Class (C++ Standard Library)| Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- array
 - array/std::array
 - array/std::array::const_iterator
 - array/std::array::const_pointer
@@ -74,7 +73,66 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- array class
+- std::array [C++]
+- std::array [C++], const_iterator
+- std::array [C++], const_pointer
+- std::array [C++], const_reference
+- std::array [C++], const_reverse_iterator
+- std::array [C++], difference_type
+- std::array [C++], iterator
+- std::array [C++], pointer
+- std::array [C++], reference
+- std::array [C++], reverse_iterator
+- std::array [C++], size_type
+- std::array [C++], value_type
+- std::array [C++], assign
+- std::array [C++], at
+- std::array [C++], back
+- std::array [C++], begin
+- std::array [C++], cbegin
+- std::array [C++], cend
+- std::array [C++], crbegin
+- std::array [C++], crend
+- std::array [C++], data
+- std::array [C++], empty
+- std::array [C++], end
+- std::array [C++], fill
+- std::array [C++], front
+- std::array [C++], max_size
+- std::array [C++], rbegin
+- std::array [C++], rend
+- std::array [C++], size
+- std::array [C++], swap
+- ', '
+- std::array [C++], const_iterator
+- std::array [C++], const_pointer
+- std::array [C++], const_reference
+- std::array [C++], const_reverse_iterator
+- std::array [C++], difference_type
+- std::array [C++], iterator
+- std::array [C++], pointer
+- std::array [C++], reference
+- std::array [C++], reverse_iterator
+- std::array [C++], size_type
+- std::array [C++], value_type
+- std::array [C++], assign
+- std::array [C++], at
+- std::array [C++], back
+- std::array [C++], begin
+- std::array [C++], cbegin
+- std::array [C++], cend
+- std::array [C++], crbegin
+- std::array [C++], crend
+- std::array [C++], data
+- std::array [C++], empty
+- std::array [C++], end
+- std::array [C++], fill
+- std::array [C++], front
+- std::array [C++], max_size
+- std::array [C++], rbegin
+- std::array [C++], rend
+- std::array [C++], size
+- std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 caps.latest.revision: 22
 author: corob-msft
@@ -94,93 +152,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9ac4c0becd32ca50e4f56fb38218b4c69cc4d0bd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f202256a16b30d606317d457778ab4eda3eea715
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
-Descreve um objeto que controla uma sequência de tamanho `N` de elementos do tipo `Ty`. A sequência é armazenada como uma matriz de `Ty`, contida no objeto `array<Ty, N>`.  
+# <a name="array-class-c-standard-library"></a>array Class (C++ Standard Library)
+Describes an object that controls a sequence of length `N` of elements of type `Ty`. The sequence is stored as an array of `Ty`, contained in the `array<Ty, N>` object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty, std::size_t N>  
 class array;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`Ty`|O tipo de um elemento.|  
-|`N`|O número de elementos.|  
+|Parameter|Description|  
+|`Ty`|The type of an element.|  
+|`N`|The number of elements.|  
   
-## <a name="members"></a>Membros  
-  
-|||  
-|-|-|  
-|Definição do tipo|Descrição|  
-|[const_iterator](#const_iterator)|O tipo de um iterador de constante para a sequência controlada.|  
-|[const_pointer](#const_pointer)|O tipo de um ponteiro de constante para um elemento.|  
-|[const_reference](#const_reference)|O tipo de uma referência de constante para um elemento.|  
-|[const_reverse_iterator](#const_reverse_iterator)|O tipo de um iterador reverso de constante para a sequência controlada.|  
-|[difference_type](#difference_type)|O tipo de uma distância com sinal entre dois elementos.|  
-|[iterator](#iterator)|O tipo de um iterador para a sequência controlada.|  
-|[pointer](#pointer)|O tipo de um ponteiro para um elemento.|  
-|[reference](#reference)|O tipo de uma referência para um elemento.|  
-|[reverse_iterator](#reverse_iterator)|O tipo de um iterador inverso para a sequência controlada.|  
-|[size_type](#size_type)|O tipo de uma distância sem sinal entre dois elementos.|  
-|[value_type](#value_type)|O tipo de um elemento.|  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Função membro|Descrição|  
-|[array](#array)|Constrói um objeto de matriz.|  
-|[assign](#assign)|Substitui todos os elementos.|  
-|[at](#at)|Acessa um elemento em uma posição especificada.|  
-|[back](#back)|Acessa o último elemento.|  
-|[begin](#begin)|Designa o início da sequência controlada.|  
-|[cbegin](#cbegin)|Retorna um iterador const de acesso aleatório para o primeiro elemento na matriz.|  
-|[cend](#cend)|Retorna um iterador const de acesso aleatório que aponta para imediatamente após o fim da matriz.|  
-|[crbegin](#crbegin)|Retorna um iterador const para o primeiro elemento em uma matriz invertida.|  
-|[crend](#crend)|Retorna um iterador const ao final de uma matriz invertido.|  
-|[data](#data)|Obtém o endereço do primeiro elemento.|  
-|[empty](#empty)|Testa se há elementos presentes.|  
-|[end](#end)|Designa o fim da sequência controlada.|  
-|[fill](#fill)|Substitui todos os elementos por um valor especificado.|  
-|[front](#front)|Acessa o primeiro elemento.|  
-|[max_size](#max_size)|Conta o número de elementos.|  
-|[rbegin](#rbegin)|Designa o início da sequência controlada invertida.|  
-|[rend](#rend)|Designa o fim da sequência controlada invertida.|  
-|[size](#size)|Conta o número de elementos.|  
-|[swap](#swap)|Alterna o conteúdo de dois contêineres.|  
+|Type Definition|Description|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[const_reverse_iterator](#const_reverse_iterator)|The type of a constant reverse iterator for the controlled sequence.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[reverse_iterator](#reverse_iterator)|The type of a reverse iterator for the controlled sequence.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|Operador|Descrição|  
-|[array::operator=](#op_eq)|Substitui a sequência controlada.|  
-|[array::operator[]](#op_at)|Acessa um elemento em uma posição especificada.|  
+|Member Function|Description|  
+|[array](#array)|Constructs an array object.|  
+|[assign](#assign)|Replaces all elements.|  
+|[at](#at)|Accesses an element at a specified position.|  
+|[back](#back)|Accesses the last element.|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[cbegin](#cbegin)|Returns a random-access const iterator to the first element in the array.|  
+|[cend](#cend)|Returns a random-access const iterator that points just beyond the end of the array.|  
+|[crbegin](#crbegin)|Returns a const iterator to the first element in a reversed array.|  
+|[crend](#crend)|Returns a const iterator to the end of a reversed array.|  
+|[data](#data)|Gets the address of the first element.|  
+|[empty](#empty)|Tests whether elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[fill](#fill)|Replaces all elements with a specified value.|  
+|[front](#front)|Accesses the first element.|  
+|[max_size](#max_size)|Counts the number of elements.|  
+|[rbegin](#rbegin)|Designates the beginning of the reversed controlled sequence.|  
+|[rend](#rend)|Designates the end of the reversed controlled sequence.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
   
-## <a name="remarks"></a>Comentários  
- O tipo tem um construtor padrão `array()` e um operador de atribuição padrão `operator=` e atende aos requisitos para um `aggregate`. Portanto, os objetos do tipo `array<Ty, N>` podem ser inicializados usando um inicializador agregado. Por exemplo,  
+|||  
+|-|-|  
+|Operator|Description|  
+|[array::operator=](#op_eq)|Replaces the controlled sequence.|  
+|[array::operator[]](#op_at)|Accesses an element at a specified position.|  
+  
+## <a name="remarks"></a>Remarks  
+ The type has a default constructor `array()` and a default assignment operator `operator=`, and satisfies the requirements for an `aggregate`. Therefore, objects of type `array<Ty, N>` can be initialized by using an aggregate initializer. For example,  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
 ```  
   
- cria o objeto `ai` que contém quatro valores inteiros, inicializa os três primeiros elementos para os valores 1, 2 e 3, respectivamente, e inicializa o quarto elemento para 0.  
+ creates the object `ai` that holds four integer values, initializes the first three elements to the values 1, 2, and 3, respectively, and initializes the fourth element to 0.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<array>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<array>  
   
  **Namespace:** std  
   
 ##  <a name="array"></a>  array::array  
- Constrói um objeto de matriz.  
+ Constructs an array object.  
   
 ```  
 array();
@@ -188,16 +246,16 @@ array();
 array(const array& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
 *right*  
- Objeto ou intervalo a inserir.  
+ Object or range to insert.  
   
-### <a name="remarks"></a>Comentários  
-O construtor padrão `array()` deixa a sequência não inicializada controlada (ou padrão inicializado). Você pode usá-lo para especificar uma sequência controlada não inicializada.  
+### <a name="remarks"></a>Remarks  
+The default constructor `array()` leaves the controlled sequence uninitialized (or default initialized). You use it to specify an uninitialized controlled sequence.  
   
-O construtor de cópia `array(const array& right)` inicializa a sequência controlada com a sequência [*direita*`.begin()`, *direita*`.end()`). Você pode usá-lo para especificar uma sequência controlada inicial que é uma cópia da sequência controlada pelo objeto de matriz *direita*.  
+The copy constructor `array(const array& right)` initializes the controlled sequence with the sequence [*right*`.begin()`, *right*`.end()`). You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the array object *right*.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_array.cpp   
@@ -235,20 +293,20 @@ int main()
 ```  
   
 ##  <a name="assign"></a>  array::assign  
-Obsoleto no C++ 11, substituído por [preenchimento](#fill). Substitui todos os elementos.  
+Obsolete in C++11, replaced by [fill](#fill). Replaces all elements.  
   
 ```  
 void assign(const Ty& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `val`  
- O valor a atribuir.  
+ The value to assign.  
   
-### <a name="remarks"></a>Comentários  
- A função membro substitui a sequência controlada por `*this` por uma repetição de elementos `N` de valor `val`.  
+### <a name="remarks"></a>Remarks  
+ The member function replaces the sequence controlled by `*this` with a repetition of `N` elements of value `val`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_assign.cpp   
@@ -287,7 +345,7 @@ int main()
 ```  
   
 ##  <a name="at"></a>  array::at  
- Acessa um elemento em uma posição especificada.  
+ Accesses an element at a specified position.  
   
 ```  
 reference at(size_type off);
@@ -295,14 +353,14 @@ reference at(size_type off);
 constexpr const_reference at(size_type off) const;
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `off`  
- Posição do elemento a acessar.  
+ Position of element to access.  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam uma referência ao elemento da sequência controlada na posição `off`. Se a posição for inválida, a função lançará um objeto da classe `out_of_range`.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the element of the controlled sequence at position `off`. If that position is invalid, the function throws an object of class `out_of_range`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_at.cpp   
@@ -332,7 +390,7 @@ int main()
 ```  
   
 ##  <a name="back"></a>  array::back  
- Acessa o último elemento.  
+ Accesses the last element.  
   
 ```  
 reference back();
@@ -340,10 +398,10 @@ reference back();
 constexpr const_reference back() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam uma referência ao último elemento da sequência controlada, que deve ser não vazio.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the last element of the controlled sequence, which must be non-empty.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_back.cpp   
@@ -377,17 +435,17 @@ int main()
 ```  
   
 ##  <a name="begin"></a>  array::begin  
- Designa o início da sequência controlada.  
+ Designates the beginning of the controlled sequence.  
   
 ```  
 iterator begin() noexcept;  
 const_iterator begin() const noexcept;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna um iterador de acesso aleatório que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia).  
+### <a name="remarks"></a>Remarks  
+ The member functions return a random-access iterator that points at the first element of the sequence (or just beyond the end of an empty sequence).  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_begin.cpp   
@@ -422,19 +480,19 @@ int main()
 ```  
   
 ##  <a name="cbegin"></a>  array::cbegin  
- Retorna um iterador `const` que trata o primeiro elemento no intervalo.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const noexcept;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso aleatório `const` que aponta o primeiro elemento do intervalo ou o local logo após o fim de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Comentários  
- Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `begin()` e `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -445,19 +503,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  array::cend  
- Retorna um iterador `const` que trata o local logo após o último elemento em um intervalo.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const noexcept;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso aleatório que aponta para além do fim do intervalo.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Comentários  
- `cend` é usado para testar se um iterador passou do fim de seu intervalo.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `end()` e `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -467,19 +525,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- O valor retornado por `cend` não deve ser desreferenciado.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="const_iterator"></a>  array::const_iterator  
- O tipo de um iterador de constante para a sequência controlada.  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um iterador de acesso aleatório constante para a sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant random-access iterator for the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_iterator.cpp  
@@ -521,16 +579,16 @@ it2: 0
 ```  
   
 ##  <a name="const_pointer"></a>  array::const_pointer  
- O tipo de um ponteiro de constante para um elemento.  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef const Ty *const_pointer;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um ponteiro de constante para elementos da sequência.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to elements of the sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_pointer.cpp   
@@ -565,16 +623,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  array::const_reference  
- O tipo de uma referência de constante para um elemento.  
+ The type of a constant reference to an element.  
   
 ```  
 typedef const Ty& const_reference;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como uma referência constante para um elemento da sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_reference.cpp   
@@ -609,16 +667,16 @@ int main()
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  array::const_reverse_iterator  
- O tipo de um iterador reverso de constante para a sequência controlada.  
+ The type of a constant reverse iterator for the controlled sequence.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um iterador inverso constante para a sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reverse iterator for the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_reverse_iterator.cpp   
@@ -653,19 +711,19 @@ int main()
 ```  
   
 ##  <a name="crbegin"></a>  array::crbegin  
- Retorna um iterador const para o primeiro elemento em uma matriz invertida.  
+ Returns a const iterator to the first element in a reversed array.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso aleatório invertido const que trata do primeiro elemento em uma matriz invertida ou que trata de qual foi o último elemento na matriz não invertida.  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator addressing the first element in a reversed array or addressing what had been the last element in the unreversed array.  
   
-### <a name="remarks"></a>Comentários  
- Com o valor retornado de `crbegin`, o objeto de matriz não pode ser modificado.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `crbegin`, the array object cannot be modified.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_crbegin.cpp  
@@ -696,25 +754,25 @@ The first element of the reversed array is 2.
 ```  
   
 ##  <a name="crend"></a>  array::crend  
- Retorna um iterador const que trata o local após o último elemento em uma matriz invertida.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed array.  
   
 ```  
 const_reverse_iterator crend() const noexcept;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso aleatório inverso const que trata o local após o último elemento em uma matriz invertida (o local que precedeu o primeiro elemento na matriz não invertida).  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator that addresses the location succeeding the last element in a reversed array (the location that had preceded the first element in the unreversed array).  
   
-### <a name="remarks"></a>Comentários  
- `crend` é usado com uma matriz invertida assim como [array::cend](#cend) é usado com uma matriz.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed array just as [array::cend](#cend) is used with a array.  
   
- Com o valor retornado de `crend` (adequadamente diminuído), o objeto de matriz não pode ser modificado.  
+ With the return value of `crend` (suitably decremented), the array object cannot be modified.  
   
- `crend` pode ser usado para testar se um iterador invertido alcançou o final de sua matriz.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its array.  
   
- O valor retornado por `crend` não deve ser desreferenciado.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_crend.cpp  
@@ -739,7 +797,7 @@ int main( )
 ```  
   
 ##  <a name="data"></a>  array::data  
- Obtém o endereço do primeiro elemento.  
+ Gets the address of the first element.  
   
 ```  
 Ty *data();
@@ -747,10 +805,10 @@ Ty *data();
 const Ty *data() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam o endereço do primeiro elemento na sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The member functions return the address of the first element in the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_data.cpp   
@@ -785,16 +843,16 @@ int main()
 ```  
   
 ##  <a name="difference_type"></a>  array::difference_type  
- O tipo de uma distância com sinal entre dois elementos.  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef std::ptrdiff_t difference_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo inteiro com sinal descreve um objeto que pode representar a diferença entre os endereços de dois elementos quaisquer na sequência controlada. É um sinônimo para o tipo `std::ptrdiff_t`.  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is a synonym for the type `std::ptrdiff_t`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_difference_type.cpp   
@@ -829,16 +887,16 @@ int main()
 ```  
   
 ##  <a name="empty"></a>  array::empty  
- Testa se nenhum elemento está presente.  
+ Tests whether no elements are present.  
   
 ```  
 constexpr bool empty() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- A função membro retornará true somente se `N == 0`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns true only if `N == 0`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_empty.cpp   
@@ -879,7 +937,7 @@ true
 ```  
   
 ##  <a name="end"></a>  array::end  
- Designa o fim da sequência controlada.  
+ Designates the end of the controlled sequence.  
   
 ```  
 reference end();
@@ -887,10 +945,10 @@ reference end();
 const_reference end() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam um iterador de acesso aleatório que aponta para logo além do fim da sequência.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a random-access iterator that points just beyond the end of the sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_end.cpp   
@@ -925,23 +983,23 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  array::fill  
- Apaga uma matriz e copia os elementos especificados para a matriz vazia.  
+ Erases a array and copies the specified elements to the empty array.  
   
 ```  
 void fill(const Type& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`val`|O valor do elemento sendo inserido na matriz.|  
+|Parameter|Description|  
+|`val`|The value of the element being inserted into the array.|  
   
-### <a name="remarks"></a>Comentários  
- `fill` substitui cada elemento da matriz pelo valor especificado.  
+### <a name="remarks"></a>Remarks  
+ `fill` replaces each element of the array with the specified value.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_fill.cpp  
@@ -969,7 +1027,7 @@ int main( )
 ```  
   
 ##  <a name="front"></a>  array::front  
- Acessa o primeiro elemento.  
+ Accesses the first element.  
   
 ```  
 reference front();
@@ -977,10 +1035,10 @@ reference front();
 constexpr const_reference front() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam uma referência ao primeiro elemento da sequência controlada, que deve ser não vazia.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the first element of the controlled sequence, which must be non-empty.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_front.cpp   
@@ -1014,16 +1072,16 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  array::iterator  
- O tipo de um iterador para a sequência controlada.  
+ The type of an iterator for the controlled sequence.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um iterador de acesso aleatório para a sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a random-access iterator for the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_iterator.cpp   
@@ -1065,16 +1123,16 @@ it2: 0
 ```  
   
 ##  <a name="max_size"></a>  array::max_size  
- Conta o número de elementos.  
+ Counts the number of elements.  
   
 ```  
 constexpr size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna `N`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `N`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_max_size.cpp   
@@ -1108,7 +1166,7 @@ int main()
 ```  
   
 ##  <a name="op_at"></a>  array::operator[]  
- Acessa um elemento em uma posição especificada.  
+ Accesses an element at a specified position.  
   
 ```  
 reference operator[](size_type off);
@@ -1116,16 +1174,16 @@ reference operator[](size_type off);
 constexpr const_reference operator[](size_type off) const;
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `off`  
- Posição do elemento a acessar.  
+ Position of element to access.  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam uma referência ao elemento da sequência controlada na posição `off`. Se a posição for inválida, o comportamento será indefinido.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the element of the controlled sequence at position `off`. If that position is invalid, the behavior is undefined.  
   
-Também há uma função [get](array-functions.md#get) não membro disponível para obter uma referência a um elemento de um `array`.  
+There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an `array`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_operator_sub.cpp   
@@ -1160,20 +1218,20 @@ int main()
 ```  
   
 ##  <a name="op_eq"></a>  array::operator=  
- Substitui a sequência controlada.  
+ Replaces the controlled sequence.  
   
 ```  
 array <Value>%  operator=(array <Value>% right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- direita  
- O contêiner a ser copiado.  
+### <a name="parameters"></a>Parameters  
+ right  
+ Container to copy.  
   
-### <a name="remarks"></a>Comentários  
- O operador membro atribui cada elemento de `right` ao elemento correspondente da sequência controlada e, em seguida, retorna `*this`. Você pode usá-lo para substituir a sequência controlada por uma cópia da sequência controlada em `right`.  
+### <a name="remarks"></a>Remarks  
+ The member operator assigns each element of `right` to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in `right`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_operator_as.cpp   
@@ -1212,16 +1270,16 @@ int main()
 ```  
   
 ##  <a name="pointer"></a>  array::pointer  
- O tipo de um ponteiro para um elemento.  
+ The type of a pointer to an element.  
   
 ```  
 typedef Ty *pointer;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um ponteiro para elementos da sequência.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to elements of the sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_pointer.cpp   
@@ -1256,17 +1314,17 @@ int main()
 ```  
   
 ##  <a name="rbegin"></a>  array::rbegin  
- Designa o início da sequência controlada invertida.  
+ Designates the beginning of the reversed controlled sequence.  
   
 ```  
 reverse_iterator rbegin()noexcept;  
 const_reverse_iterator rbegin() const noexcept;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam um iterador invertido que aponta pra logo além do fim da sequência controlada. Assim, ele designa o início da sequência invertida.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reverse iterator that points just beyond the end of the controlled sequence. Hence, it designates the beginning of the reverse sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_rbegin.cpp   
@@ -1301,16 +1359,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  array::reference  
- O tipo de uma referência para um elemento.  
+ The type of a reference to an element.  
   
 ```  
 typedef Ty& reference;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como uma referência para um elemento da sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_reference.cpp   
@@ -1345,17 +1403,17 @@ int main()
 ```  
   
 ##  <a name="rend"></a>  array::rend  
- Designa o fim da sequência controlada invertida.  
+ Designates the end of the reversed controlled sequence.  
   
 ```  
 reverse_iterator rend()noexcept;  
 const_reverse_iterator rend() const noexcept;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- As funções membro retornam um iterador invertido que aponta para o primeiro elemento da sequência (ou imediatamente após o fim de uma sequência vazia). Portanto, ele designa o fim da sequência invertida.  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reverse iterator that points at the first element of the sequence (or just beyond the end of an empty sequence)). Hence, it designates the end of the reverse sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_rend.cpp   
@@ -1390,16 +1448,16 @@ int main()
 ```  
   
 ##  <a name="reverse_iterator"></a>  array::reverse_iterator  
- O tipo de um iterador inverso para a sequência controlada.  
+ The type of a reverse iterator for the controlled sequence.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode servir como um iterador invertido para a sequência controlada.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reverse iterator for the controlled sequence.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_reverse_iterator.cpp   
@@ -1434,16 +1492,16 @@ int main()
 ```  
   
 ##  <a name="size"></a>  array::size  
- Conta o número de elementos.  
+ Counts the number of elements.  
   
 ```  
 constexpr size_type size() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna `N`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `N`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_size.cpp   
@@ -1477,16 +1535,16 @@ int main()
 ```  
   
 ##  <a name="size_type"></a>  array::size_type  
- O tipo de uma distância sem sinal entre dois elementos.  
+ The type of an unsigned distance between two element.  
   
 ```  
 typedef std::size_t size_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo inteiro sem sinal descreve um objeto que pode representar o tamanho de qualquer sequência controlada. É um sinônimo para o tipo `std::size_t`.  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is a synonym for the type `std::size_t`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_size_type.cpp   
@@ -1521,22 +1579,22 @@ int main()
 ```  
   
 ##  <a name="swap"></a>  array::swap  
-Troca o conteúdo dessa matriz com outra matriz.  
+Swaps the contents of this array with another array.  
   
 ```  
 void swap(array& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- Matriz com a qual trocar conteúdo.  
+ Array to swap contents with.  
   
-### <a name="remarks"></a>Comentários  
-A função membro troca as sequências controladas entre `*this` e `right`. Realiza uma série de atribuições de elemento e chamadas do construtor proporcionais a `N`.  
+### <a name="remarks"></a>Remarks  
+The member function swaps the controlled sequences between `*this` and `right`. It performs a number of element assignments and constructor calls proportional to `N`.  
 
-Também há uma função [swap](array-functions.md#swap) não membro disponível para trocar duas instâncias do `array`.  
+There is also a non-member [swap](array-functions.md#swap) function available to swap two `array` instances.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_swap.cpp   
@@ -1584,16 +1642,16 @@ int main()
 ```  
   
 ##  <a name="value_type"></a>  array::value_type  
- O tipo de um elemento.  
+ The type of an element.  
   
 ```  
 typedef Ty value_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo do parâmetro de modelo `Ty`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Ty`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_value_type.cpp   
@@ -1631,7 +1689,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

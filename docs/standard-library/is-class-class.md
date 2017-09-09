@@ -1,5 +1,5 @@
 ---
-title: Classe is_class | Microsoft Docs
+title: is_class Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_class
 - type_traits/std::is_class
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: af9a1513e7fac1dbcf36273f02ca26c0f9a7df6a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 354bfac206cbfc39005ef850870f0e2fac1e2f57
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isclass-class"></a>Classe is_class
-Testa se o tipo é uma classe.  
+# <a name="isclass-class"></a>is_class Class
+Tests if type is a class.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_class;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- O tipo a ser consultado.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentários  
- Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for um tipo definido como `class` ou `struct` ou uma forma `cv-qualified` de um deles; caso contrário, será falsa.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a type defined as a `class` or a `struct`, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_class.cpp   
@@ -89,13 +88,13 @@ is_class<trivial> == true
 is_class<int> == false  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe is_compound](../standard-library/is-compound-class.md)   
- [Classe is_union](../standard-library/is-union-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)   
+ [is_union Class](../standard-library/is-union-class.md)
 

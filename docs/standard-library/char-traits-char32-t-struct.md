@@ -1,5 +1,5 @@
 ---
-title: Struct char_traits&lt;char32_t&gt; | Microsoft Docs
+title: char_traits&lt;char32_t&gt; Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9931e258e1b3dd994548cf3f7c91a0c1c586d8dd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: edf2be9a3848e926f4da256d130210da74a9e935
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>Struct char_traits&lt;char32_t&gt;
-Uma struct é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `char32_t`.  
+# <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; Struct
+A struct that is a specialization of the template struct **char_traits\<CharType>** to an element of type `char32_t`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<char32_t>;
 ```  
   
-## <a name="remarks"></a>Comentários  
- A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `char32_t`.  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `char32_t`.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)   
- [Struct char_traits](../standard-library/char-traits-struct.md)
+ [char_traits Struct](../standard-library/char-traits-struct.md)
 

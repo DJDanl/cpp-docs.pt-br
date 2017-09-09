@@ -1,5 +1,5 @@
 ---
-title: Objeto _1 | Microsoft Docs
+title: _1 Object | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9001045194ca9a7b96a5ba44ab01b2e7a736be06
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="1-object"></a>Objeto _1
-Espaços reservados para argumentos substituíveis.  
+# <a name="1-object"></a>_1 Object
+Placeholders for replaceable arguments.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace placeholders {  
@@ -54,12 +54,12 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- Os objetos `_1, _2, ... _M` são espaços reservados para designar o primeiro, segundo,..., argumento de mês, respectivamente, em uma chamada de função para um objeto retornado por [associar](../standard-library/functional-functions.md#bind). Use `_N` para especificar onde o enésimo argumento deverá ser inserido quando a expressão bind for avaliada.  
+## <a name="remarks"></a>Remarks  
+ The objects `_1, _2, ... _M` are placeholders designating the first, second, ..., Mth argument, respectively in a function call to an object returned by [bind](../standard-library/functional-functions.md#bind). You use `_N` to specify where the Nth argument should be inserted when the bind expression is evaluated.  
   
- Nesta implementação, o valor de `M` é 20.  
+ In this implementation the value of `M` is 20.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -111,12 +111,12 @@ int main()
 3^2 == 9  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [ligação](../standard-library/functional-functions.md#bind)   
- [Classe is_placeholder](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>See Also  
+ [bind](../standard-library/functional-functions.md#bind)   
+ [is_placeholder Class](../standard-library/is-placeholder-class.md)
 

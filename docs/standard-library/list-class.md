@@ -1,5 +1,5 @@
 ---
-title: Classe list | Microsoft Docs
+title: list Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- list
 - list/std::list
 - list/std::list::allocator_type
 - list/std::list::const_iterator
@@ -60,7 +59,53 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- list class
+- std::list [C++]
+- std::list [C++], allocator_type
+- std::list [C++], const_iterator
+- std::list [C++], const_pointer
+- std::list [C++], const_reference
+- std::list [C++], const_reverse_iterator
+- std::list [C++], difference_type
+- std::list [C++], iterator
+- std::list [C++], pointer
+- std::list [C++], reference
+- std::list [C++], reverse_iterator
+- std::list [C++], size_type
+- std::list [C++], value_type
+- std::list [C++], assign
+- std::list [C++], back
+- std::list [C++], begin
+- std::list [C++], cbegin
+- std::list [C++], cend
+- std::list [C++], clear
+- std::list [C++], crbegin
+- std::list [C++], crend
+- std::list [C++], emplace
+- std::list [C++], emplace_back
+- std::list [C++], emplace_front
+- std::list [C++], empty
+- std::list [C++], end
+- std::list [C++], erase
+- std::list [C++], front
+- std::list [C++], get_allocator
+- std::list [C++], insert
+- std::list [C++], max_size
+- std::list [C++], merge
+- std::list [C++], pop_back
+- std::list [C++], pop_front
+- std::list [C++], push_back
+- std::list [C++], push_front
+- std::list [C++], rbegin
+- std::list [C++], remove
+- std::list [C++], remove_if
+- std::list [C++], rend
+- std::list [C++], resize
+- std::list [C++], reverse
+- std::list [C++], size
+- std::list [C++], sort
+- std::list [C++], splice
+- std::list [C++], swap
+- std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 caps.latest.revision: 20
 author: corob-msft
@@ -80,125 +125,125 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b53e8b2f708b03d1b2575beee7e93b51fbf4b398
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1d5b3f567b69282e65cdcbe140f3128b97c17b2
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="list-class"></a>Classe list
-A classe de lista da Biblioteca Padrão C++ é uma classe de modelo de contêineres de sequência que mantém seus elementos em uma organização linear e permite inserções e exclusões eficientes em qualquer local na sequência. A sequência é armazenada como uma lista vinculada bidirecional de elementos, cada um contendo um membro de algum tipo de *Type*.  
+# <a name="list-class"></a>list Class
+The C++ Standard Library list class is a template class of sequence containers that maintain their elements in a linear arrangement and allow efficient insertions and deletions at any location within the sequence. The sequence is stored as a bidirectional linked list of elements, each containing a member of some type *Type*.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Type, class Allocator= allocator<Type>>  
 class list  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *Tipo*  
- O tipo de dados do elemento a ser armazenado na lista.  
+#### <a name="parameters"></a>Parameters  
+ *Type*  
+ The element data type to be stored in the list.  
   
  `Allocator`  
- O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da lista. Esse argumento é opcional e o valor padrão é **alocador**\<*tipo*>.  
+ The type that represents the stored allocator object that encapsulates details about the list's allocation and deallocation of memory. This argument is optional, and the default value is **allocator**\<*Type*>.  
   
-## <a name="remarks"></a>Comentários  
- A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesquisa e inserção exigido pelo aplicativo. Vetores devem ser o contêiner preferencial para gerenciar uma sequência quando o acesso aleatório a qualquer elemento é alto e inserção e exclusões de elementos apenas são necessárias no final de uma sequência. O desempenho do contêiner de deque de classe é superior quando o acesso aleatório é necessário e as inserções e exclusões no início e final de uma sequência são essenciais.  
+## <a name="remarks"></a>Remarks  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Vectors should be the preferred container for managing a sequence when random access to any element is at a premium and insertions or deletions of elements are only required at the end of a sequence. The performance of the class deque container is superior when random access is needed and insertions and deletions at both the beginning and the end of a sequence are at a premium.  
   
- As funções de membro da lista [mesclar](#merge), [inverter](#reverse), [exclusiva](#unique), [remover](#remove) e [remove_if](#remove_if) foram otimizadas para funcionar com objetos da lista e oferecer uma alternativa de alto desempenho para os seus correspondentes genéricos.  
+ The list member functions [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove), and [remove_if](#remove_if) have been optimized for operation on list objects and offer a high-performance alternative to their generic counterparts.  
   
- A realocação da lista ocorre quando uma função de membro deve inserir ou apagar elementos da lista. Nesses casos, somente iteradores ou referências que apontem para partes apagadas da sequência controladas tornam-se inválidos.  
+ List reallocation occurs when a member function must insert or erase elements of the list. In all such cases, only iterators or references that point at erased portions of the controlled sequence become invalid.  
   
- Inclua o cabeçalho padrão \<list> da Biblioteca Padrão C++ para definir a lista da classe de modelo do [contêiner](../standard-library/stl-containers.md) e vários modelos de suporte.  
+ Include the C++ Standard Library standard header \<list> to define the [container](../standard-library/stl-containers.md) template class list and several supporting templates.  
   
-### <a name="constructors"></a>Construtores  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[list](#list)|Constrói uma lista de um tamanho específico, ou com elementos de um valor específico, ou com um `allocator` específico, ou como uma cópia de alguma outra lista.|  
+|[list](#list)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other list.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Um tipo que representa a classe `allocator` para um objeto de lista.|  
-|[const_iterator](#const_iterator)|Um tipo que fornece um iterador bidirecional que pode ler um elemento `const` em uma lista.|  
-|[const_pointer](#const_pointer)|Um tipo que fornece um ponteiro para um elemento `const` em uma lista.|  
-|[const_reference](#const_reference)|Um tipo que fornece uma referência para um elemento `const` armazenado em uma lista para leitura e execução de operações `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento `const` em uma lista.|  
-|[difference_type](#difference_type)|Um tipo que fornece a diferença entre dois iteradores que se referem a elementos na mesma lista.|  
-|[iterator](#iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em uma lista.|  
-|[pointer](#pointer)|Um tipo que fornece um ponteiro para um elemento em uma lista.|  
-|[reference](#reference)|Um tipo que fornece uma referência para um elemento `const` armazenado em uma lista para leitura e execução de operações `const`.|  
-|[reverse_iterator](#reverse_iterator)|Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em uma lista invertida.|  
-|[size_type](#size_type)|Um tipo que conta o número de elementos em uma lista.|  
-|[value_type](#value_type)|Um tipo que representa o tipo de dados armazenado em uma lista.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for a list object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in a list.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a list.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in a list.|  
+|[difference_type](#difference_type)|A type that provides the difference between two iterators that refer to elements within the same list.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a list.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a list.|  
+|[reference](#reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed list.|  
+|[size_type](#size_type)|A type that counts the number of elements in a list.|  
+|[value_type](#value_type)|A type that represents the data type stored in a list.|  
   
-### <a name="member-functions"></a>Funções membro  
-  
-|||  
-|-|-|  
-|[assign](#assign)|Apaga os elementos de uma lista e copia um novo conjunto de elementos na lista de destino.|  
-|[back](#back)|Retorna uma referência ao último elemento de uma lista.|  
-|[begin](#begin)|Retorna um iterador que trata o primeiro elemento em uma lista.|  
-|[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento em uma lista.|  
-|[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em uma lista.|  
-|[clear](#clear)|Apaga todos os elementos de uma lista.|  
-|[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em uma lista invertida.|  
-|[crend](#crend)|Retorna um iterador const que trata o local após o último elemento em uma lista invertida.|  
-|[emplace](#emplace)|Insere um elemento construído no local em uma lista na posição especificada.|  
-|[emplace_back](#emplace_back)|Adiciona um elemento construído no local ao final de uma lista.|  
-|[emplace_front](#emplace_front)|Adiciona um elemento construído no local ao início de uma lista.|  
-|[empty](#empty)|Testa se uma lista está vazia.|  
-|[end](#end)|Retorna um iterador que trata o local após o último elemento em uma lista.|  
-|[erase](#erase)|Remove um elemento ou um intervalo de elementos das posições especificadas.|  
-|[front](#front)|Retorna uma referência ao primeiro elemento em uma lista.|  
-|[get_allocator](#get_allocator)|Retorna uma cópia do objeto `allocator` usada para construir uma lista.|  
-|[insert](#insert)|Insere um elemento ou um número de elementos ou um intervalo de elementos em uma lista, na posição especificada.|  
-|[max_size](#max_size)|Retorna o tamanho máximo de uma lista.|  
-|[merge](#merge)|Remove os elementos da lista de argumentos, insere-os na lista de destino e organiza o conjunto novo e combinado de elementos em ordem crescente ou em alguma outra ordem especificada.|  
-|[pop_back](#pop_back)|Exclui o elemento no final de uma lista.|  
-|[pop_front](#pop_front)|Exclui o elemento no começo de uma lista.|  
-|[push_back](#push_back)|Adiciona um elemento ao fim da lista.|  
-|[push_front](#push_front)|Adiciona um elemento ao começo da lista.|  
-|[rbegin](#rbegin)|Retorna um iterador que trata o primeiro elemento em uma lista inversa.|  
-|[remove](#remove)|Apaga elementos em uma lista que correspondem a um valor especificado.|  
-|[remove_if](#remove_if)|Apaga os elementos da lista para a qual um predicado especificado foi atendido.|  
-|[rend](#rend)|Retorna um iterador que trata o local após o último elemento em uma lista invertida.|  
-|[resize](#resize)|Especifica um novo tamanho para uma lista.|  
-|[reverse](#reverse)|Reverte a ordem na qual os elementos ocorrem em uma lista.|  
-|[size](#size)|Retorna o número de elementos em uma lista.|  
-|[sort](#sort)|Organiza os elementos de uma lista em ordem crescente ou com respeito a alguma outra relação de ordem.|  
-|[splice](#splice)|Remove os elementos da lista de argumentos e os insere na lista de destino.|  
-|[swap](#swap)|Troca os elementos das duas listas.|  
-|[unique](#unique)|Remove elementos duplicados adjacentes ou elementos adjacentes que satisfazem algum predicado binário da lista.|  
-  
-### <a name="operators"></a>Operadores  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[list::operator=](#op_eq)|Substitui os elementos da lista por uma cópia de outra lista.|  
+|[assign](#assign)|Erases elements from a list and copies a new set of elements to the target list.|  
+|[back](#back)|Returns a reference to the last element of a list.|  
+|[begin](#begin)|Returns an iterator addressing the first element in a list.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in a list.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a list.|  
+|[clear](#clear)|Erases all the elements of a list.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed list.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed list.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a list at a specified position.|  
+|[emplace_back](#emplace_back)|Adds an element constructed in place to the end of a list.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the beginning of a list.|  
+|[empty](#empty)|Tests if a list is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a list.|  
+|[erase](#erase)|Removes an element or a range of elements in a list from specified positions.|  
+|[front](#front)|Returns a reference to the first element in a list.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct a list.|  
+|[insert](#insert)|Inserts an element or a number of elements or a range of elements into a list at a specified position.|  
+|[max_size](#max_size)|Returns the maximum length of a list.|  
+|[merge](#merge)|Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.|  
+|[pop_back](#pop_back)|Deletes the element at the end of a list.|  
+|[pop_front](#pop_front)|Deletes the element at the beginning of a list.|  
+|[push_back](#push_back)|Adds an element to the end of a list.|  
+|[push_front](#push_front)|Adds an element to the beginning of a list.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed list.|  
+|[remove](#remove)|Erases elements in a list that match a specified value.|  
+|[remove_if](#remove_if)|Erases elements from the list for which a specified predicate is satisfied.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed list.|  
+|[resize](#resize)|Specifies a new size for a list.|  
+|[reverse](#reverse)|Reverses the order in which the elements occur in a list.|  
+|[size](#size)|Returns the number of elements in a list.|  
+|[sort](#sort)|Arranges the elements of a list in ascending order or with respect to some other order relation.|  
+|[splice](#splice)|Removes elements from the argument list and inserts them into the target list.|  
+|[swap](#swap)|Exchanges the elements of two lists.|  
+|[unique](#unique)|Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from the list.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho**: \<list>  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[list::operator=](#op_eq)|Replaces the elements of the list with a copy of another list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<list>  
   
 ##  <a name="allocator_type"></a>  list::allocator_type  
- Um tipo que representa a classe de alocador para um objeto de lista.  
+ A type that represents the allocator class for a list object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- `allocator_type` é um sinônimo do parâmetro de modelo **Allocator.**  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter **Allocator.**  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [get_allocator](#get_allocator).  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator).  
   
 ##  <a name="assign"></a>  list::assign  
- Apaga os elementos de uma lista e copia um novo conjunto de elementos na lista de destino.  
+ Erases elements from a list and copies a new set of elements to a target list.  
   
 ```  
 void assign(
@@ -214,26 +259,26 @@ void assign(
     InputIterator Last);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `First`  
- Posição do elemento primeiro no intervalo de elementos ser copiado da lista de argumentos.  
+ Position of the first element in the range of elements to be copied from the argument list.  
   
  `Last`  
- Posição do primeiro elemento além do intervalo de elementos a ser copiado da lista de argumentos.  
+ Position of the first element just beyond the range of elements to be copied from the argument list.  
   
  `Count`  
- O número de cópias de um elemento sendo inseridos na lista.  
+ The number of copies of an element being inserted into the list.  
   
  `Val`  
- O valor do elemento sendo inserido na lista.  
+ The value of the element being inserted into the list.  
   
  `IList`  
- O initializer_list que contém os elementos a serem inseridos.  
+ The initializer_list that contains the elements to be inserted.  
   
-### <a name="remarks"></a>Comentários  
- Depois de apagar os elementos da lista de destino, atribua às inserções um intervalo especificado de elementos a partir da lista original ou de alguma outra lista na lista de destino ou insira cópias de um novo elemento de um valor especificado na lista de destino  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in the target list, assign either inserts a specified range of elements from the original list or from some other list into the target list or inserts copies of a new element of a specified value into the target list  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_assign.cpp  
@@ -284,7 +329,7 @@ c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```  
   
 ##  <a name="back"></a>  list::back  
- Retorna uma referência ao último elemento de uma lista.  
+ Returns a reference to the last element of a list.  
   
 ```  
 reference back();
@@ -292,15 +337,15 @@ reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O último elemento da lista. Se a lista estiver vazia, o valor de retorno será indefinido.  
+### <a name="return-value"></a>Return Value  
+ The last element of the list. If the list is empty, the return value is undefined.  
   
-### <a name="remarks"></a>Comentários  
- Se o valor retornado **back** for atribuído a uma `const_reference`, o objeto de lista não poderá ser modificado. Se o valor retornado **back** for atribuído a uma **referência**, o objeto de lista poderá ser modificado.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **back** is assigned to a `const_reference`, the list object cannot be modified. If the return value of **back** is assigned to a **reference**, the list object can be modified.  
   
- Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_back.cpp  
@@ -331,7 +376,7 @@ The next-to-last integer of c1 is 10
 ```  
   
 ##  <a name="begin"></a>  list::begin  
- Retorna um iterador que trata o primeiro elemento em uma lista.  
+ Returns an iterator addressing the first element in a list.  
   
 ```  
 const_iterator begin() const;
@@ -339,13 +384,13 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional que aborda o primeiro elemento na lista ou o local que substitui uma lista vazia.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the list or to the location succeeding an empty list.  
   
-### <a name="remarks"></a>Comentários  
- Se o valor retornado **begin** for atribuído a uma `const_iterator`, os elementos no objeto da lista não poderão ser modificados. Se o valor retornado **begin** for atribuído a um **iterador**, os elementos no objeto da lista poderão ser modificados.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the list object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the list object can be modified.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_begin.cpp  
@@ -381,19 +426,19 @@ The first element of c1 is now 20
 ```  
   
 ##  <a name="cbegin"></a>  list::cbegin  
- Retorna um iterador `const` que trata o primeiro elemento no intervalo.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso bidirecional `const` que aponta o primeiro elemento do intervalo ou o local logo após o fim de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Comentários  
- Com o valor de retorno `cbegin`, os elementos do intervalo não podem ser modificados.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Você pode usar essa função membro no lugar da função membro `begin()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `begin()` e `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -404,19 +449,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  list::cend  
- Retorna um iterador `const` que trata o local logo após o último elemento em um intervalo.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de acesso bidirecional `const` que aponta para além do fim do intervalo.  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Comentários  
- `cend` é usado para testar se um iterador passou do fim de seu intervalo.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Você pode usar essa função membro no lugar da função membro `end()`, de modo a garantir que o valor de retorno seja `const_iterator`. Normalmente, é usada juntamente com a palavra-chave de dedução de tipo [auto](../cpp/auto-cpp.md), conforme mostrado no exemplo a seguir. No exemplo, considere `Container` como um contêiner modificável (não `const`) de qualquer tipo, que dá suporte para `end()` e `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -426,16 +471,16 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- O valor retornado por `cend` não deve ser desreferenciado.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  list::clear  
- Apaga todos os elementos de uma lista.  
+ Erases all the elements of a list.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_clear.cpp  
@@ -463,41 +508,41 @@ The size of list after clearing is 0
 ```  
   
 ##  <a name="const_iterator"></a>  list::const_iterator  
- Um tipo que fornece um iterador bidirecional que pode ler um elemento **const** em uma lista.  
+ A type that provides a bidirectional iterator that can read a **const** element in a list.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo de `const_iterator` não pode ser usado para modificar o valor de um elemento.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [back](#back).  
+### <a name="example"></a>Example  
+  See the example for [back](#back).  
   
 ##  <a name="const_pointer"></a>  list::const_pointer  
- Fornece um ponteiro para um elemento `const` em uma lista.  
+ Provides a pointer to a `const` element in a list.  
   
 ``` 
 typedef typename Allocator::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo de `const_pointer` não pode ser usado para modificar o valor de um elemento.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto de lista.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
 ##  <a name="const_reference"></a>  list::const_reference  
- Um tipo que fornece uma referência para um elemento **const** armazenado em uma lista para leitura e execução de operações **const**.  
+ A type that provides a reference to a **const** element stored in a list for reading and performing **const** operations.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo de `const_reference` não pode ser usado para modificar o valor de um elemento.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reference` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_const_ref.cpp  
@@ -530,34 +575,34 @@ The second element is 20
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  list::const_reverse_iterator  
- Um tipo que fornece um iterador bidirecional que pode ler qualquer elemento **const** em uma lista.  
+ A type that provides a bidirectional iterator that can read any **const** element in a list.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo de `const_reverse_iterator` não pode modificar o valor de um elemento e é usado para percorrer a lista em ordem inversa.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is used to iterate through the list in reverse.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
 ##  <a name="crbegin"></a>  list::crbegin  
- Retorna um iterador const que trata o primeiro elemento em uma lista invertida.  
+ Returns a const iterator addressing the first element in a reversed list.  
   
 ```  
 const_reverse_iterator rbegin() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional constante invertido que trata o primeiro elemento em uma lista invertida (ou tratando o que foi o último elemento no `list` não invertido).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed `list`).  
   
-### <a name="remarks"></a>Comentários  
- `crbegin` é usado com uma lista invertida assim como [list::begin](#begin) é usado com uma `list`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed list just as [list::begin](#begin) is used with a `list`.  
   
- Com o valor de retorno de `crbegin`, o objeto não pode ser modificado. [list::rbegin](#rbegin) pode ser usado para iterar por meio de uma lista no sentido inverso.  
+ With the return value of `crbegin`, the list object cannot be modified. [list::rbegin](#rbegin) can be used to iterate through a list backwards.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crbegin.cpp  
@@ -584,25 +629,25 @@ The last element in the list is 30.
 ```  
   
 ##  <a name="crend"></a>  list::crend  
- Retorna um iterador const que trata o local após o último elemento em uma lista invertida.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed list.  
   
 ```  
 const_reverse_iterator rend() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional inverso const que aborda a localização que vem após o último elemento em uma [lista](../standard-library/list-class.md) invertida (o local que precedeu o primeiro elemento na `list` não invertida).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [list](../standard-library/list-class.md) (the location that had preceded the first element in the unreversed `list`).  
   
-### <a name="remarks"></a>Comentários  
- `crend` é usado com uma lista invertida, assim como [list::end](#end) é usado com uma `list`.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed list just as [list::end](#end) is used with a `list`.  
   
- Com o valor de retorno `crend`, o objeto `list` não pode ser modificado.  
+ With the return value of `crend`, the `list` object cannot be modified.  
   
- `crend` pode ser usado para testar se um iterador inverso alcançou o final de sua `list`.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `list`.  
   
- O valor retornado por `crend` não deve ser desreferenciado.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crend.cpp  
@@ -632,19 +677,18 @@ The first element in the list is: 10
 ```  
   
 ##  <a name="difference_type"></a>  list::difference_type  
- Um tipo de inteiro marcado que pode ser usado para representar o número de elementos de uma lista em um intervalo entre os elementos apontados por iteradores.  
+ A signed integer type that can be used to represent the number of elements of a list in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- 
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range [ `first`, `last`) between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte de contêineres reversíveis como conjunto, a subtração entre iteradores só terá suporte de iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como uma [classe de vetores](../standard-library/vector-class.md).  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers like set, subtraction between iterators is only supported by random-access iterators provided by a random-access container, such as [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_diff_type.cpp  
@@ -688,24 +732,24 @@ The number '30' is in c1 collection 3 times.
 ```  
   
 ##  <a name="emplace"></a>  list::emplace  
- Insere um elemento construído no local em uma lista na posição especificada.  
+ Inserts an element constructed in place into a list at a specified position.  
   
 ```  
-void emplace_back(iterator Where, Type&& val);
+void emplace(iterator Where, Type&& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`Where`|A posição na [lista](../standard-library/list-class.md) de destino em que o primeiro elemento é inserido.|  
-|`val`|O elemento adicionado ao final da `list`.|  
+|Parameter|Description|  
+|`Where`|The position in the target [list](../standard-library/list-class.md) where the first element is inserted.|  
+|`val`|The element added to the end of the `list`.|  
   
-### <a name="remarks"></a>Comentários  
- Se uma exceção for gerada, a `list` permanecerá inalterada e a exceção será emitida novamente.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace.cpp  
@@ -730,23 +774,23 @@ Moved first element: a
 ```  
   
 ##  <a name="emplace_back"></a>  list::emplace_back  
- Adiciona um elemento construído no local ao início de uma lista.  
+ Adds an element constructed in place to the end of a list.  
   
 ```  
 void emplace_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`val`|O elemento adicionado ao final da [lista](../standard-library/list-class.md).|  
+|Parameter|Description|  
+|`val`|The element added to the end of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>Comentários  
- Se uma exceção for gerada, a `list` permanecerá inalterada e a exceção será emitida novamente.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_back.cpp  
@@ -771,23 +815,23 @@ Moved first element: a
 ```  
   
 ##  <a name="emplace_front"></a>  list::emplace_front  
- Adiciona um elemento construído no local ao início de uma lista.  
+ Adds an element constructed in place to the beginning of a list.  
   
 ```  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`val`|O elemento adicionado ao início da [lista](../standard-library/list-class.md).|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>Comentários  
- Se uma exceção for gerada, a `list` permanecerá inalterada e a exceção será emitida novamente.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_front.cpp  
@@ -812,16 +856,16 @@ Moved first element: a
 ```  
   
 ##  <a name="empty"></a>  list::empty  
- Testa se uma lista está vazia.  
+ Tests if a list is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se a lista estiver vazia; **false** se a lista não estiver vazia.  
+### <a name="return-value"></a>Return Value  
+ **true** if the list is empty; **false** if the list is not empty.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_empty.cpp  
@@ -847,20 +891,20 @@ The list is not empty.
 ```  
   
 ##  <a name="end"></a>  list::end  
- Retorna um iterador que trata o local após o último elemento em uma lista.  
+ Returns an iterator that addresses the location succeeding the last element in a list.  
   
 ```  
 const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna um iterador bidirecional que trata o local após o último elemento em uma lista. Se a lista estiver vazia, então, `list::end == list::begin`.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a list. If the list is empty, then `list::end == list::begin`.  
   
-### <a name="remarks"></a>Comentários  
- **end** é usado para testar se um iterador chegou ao final de sua lista.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_end.cpp  
@@ -904,32 +948,32 @@ The list is now: 10 400 30
 ```  
   
 ##  <a name="erase"></a>  list::erase  
- Remove um elemento ou um intervalo de elementos das posições especificadas.  
+ Removes an element or a range of elements in a list from specified positions.  
   
 ```  
 iterator erase(iterator Where);
 iterator erase(iterator first, iterator last);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Posição do elemento a ser removido da lista.  
+ Position of the element to be removed from the list.  
   
  `first`  
- Posição do primeiro elemento removido da lista.  
+ Position of the first element removed from the list.  
   
  `last`  
- Posição além do último elemento removido da lista.  
+ Position just beyond the last element removed from the list.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um ponteiro para o fim da lista se não houver tal elemento.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the list if no such element exists.  
   
-### <a name="remarks"></a>Comentários  
- Nenhuma realocação ocorre, por isso, referências e iteradores tornam-se inválidos somente para os elementos apagados.  
+### <a name="remarks"></a>Remarks  
+ No reallocation occurs, so iterators and references become invalid only for the erased elements.  
   
- **erase** nunca gera uma exceção.  
+ **erase** never throws an exception.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_erase.cpp  
@@ -975,22 +1019,22 @@ After erasing all elements but the first, the list becomes:  20
 ```  
   
 ##  <a name="front"></a>  list::front  
- Retorna uma referência ao primeiro elemento em uma lista.  
+ Returns a reference to the first element in a list.  
   
 ```  
 reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Se a lista estiver vazia, o retorno será indefinido.  
+### <a name="return-value"></a>Return Value  
+ If the list is empty, the return is undefined.  
   
-### <a name="remarks"></a>Comentários  
- Se o valor de retorno de `front` for atribuído a `const_reference`, o objeto de lista não poderá ser modificado. Se o valor retornado de `front` for atribuído à **referência**, o objeto de lista poderá ser modificado.  
+### <a name="remarks"></a>Remarks  
+ If the return value of `front` is assigned to a `const_reference`, the list object cannot be modified. If the return value of `front` is assigned to a **reference**, the list object can be modified.  
   
- Quando compilado usando [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 ou 2, um erro em tempo de execução ocorrerá se você tentar acessar um elemento em uma lista vazia.  Consulte [Iteradores Verificados](../standard-library/checked-iterators.md) para obter mais informações.  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_front.cpp  
@@ -1019,19 +1063,19 @@ The first integer of c1 is 11
 ```  
   
 ##  <a name="get_allocator"></a>  list::get_allocator  
- Retorna uma cópia do objeto alocador usado para construir uma lista.  
+ Returns a copy of the allocator object used to construct a list.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O alocador usado pela lista.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the list.  
   
-### <a name="remarks"></a>Comentários  
- Alocadores para a classe de lista especificam como a classe gerencia o armazenamento. Os alocadores padrão fornecidos com as classes de contêiner da Biblioteca Padrão C++ são suficientes para a maioria das necessidades de programação. Gravando e usando sua própria classe de alocador é um tópico avançado do C++.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the list class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_get_allocator.cpp  
@@ -1056,7 +1100,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  list::insert  
- Insere um elemento ou um número de elementos ou um intervalo de elementos em uma lista, na posição especificada.  
+ Inserts an element or a number of elements or a range of elements into a list at a specified position.  
   
 ```  
 iterator insert(iterator Where, const Type& Val);
@@ -1069,21 +1113,21 @@ template <class InputIterator>
 void insert(iterator Where, InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`Where`|A posição na lista de destino em que o primeiro elemento é inserido.|  
-|`Val`|O valor do elemento sendo inserido na lista.|  
-|`Count`|O número de elementos sendo inseridos na lista.|  
-|`First`|A posição do primeiro elemento no intervalo de elementos na lista de argumentos a ser copiada.|  
-|`Last`|A posição do primeiro elemento além do intervalo de elementos na lista de argumentos a ser copiada.|  
+|Parameter|Description|  
+|`Where`|The position in the target list where the first element is inserted.|  
+|`Val`|The value of the element being inserted into the list.|  
+|`Count`|The number of elements being inserted into the list.|  
+|`First`|The position of the first element in the range of elements in the argument list to be copied.|  
+|`Last`|The position of the first element beyond the range of elements in the argument list to be copied.|  
   
-### <a name="return-value"></a>Valor de retorno  
- As duas primeiras funções de entrada retornam um iterador que aponta para a posição onde o novo elemento foi inserido na lista.  
+### <a name="return-value"></a>Return Value  
+ The first two insert functions return an iterator that points to the position where the new element was inserted into the list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_insert.cpp  
@@ -1154,20 +1198,20 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  list::iterator  
- Um tipo que fornece um iterador bidirecional que pode ler ou modificar qualquer elemento em uma lista.  
+ A type that provides a bidirectional iterator that can read or modify any element in a list.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo **iterator** pode ser usado para modificar o valor de um elemento.  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of an element.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [begin](#begin).  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin).  
   
 ##  <a name="list"></a>  list::list  
- Constrói uma lista de um tamanho específico, ou com elementos de um valor específico, ou com um alocador específico, ou como uma cópia de toda ou parte de alguma outra lista.  
+ Constructs a list of a specific size or with elements of a specific value or with a specific allocator or as a copy of all or part of some other list.  
   
 ```  
 list();
@@ -1187,41 +1231,41 @@ template <class InputIterator>
 list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`Al`|A classe de alocador a ser usada com esse objeto.|  
-|`Count`|O número de elementos na lista construída.|  
-|`Val`|O valor dos elementos na lista.|  
-|`Right`|A lista da qual a lista construída é uma cópia.|  
-|`First`|A posição do primeiro elemento no intervalo de elementos a serem copiados.|  
-|`Last`|A posição do primeiro elemento além do intervalo de elementos a serem copiados.|  
-|`IList`|O initializer_list que contém os elementos a serem copiados.|  
+|Parameter|Description|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the list constructed.|  
+|`Val`|The value of the elements in the list.|  
+|`Right`|The list of which the constructed list is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list that contains the elements to be copied.|  
   
-### <a name="remarks"></a>Comentários  
- Todos os construtores armazenam um objeto alocador (`Al`) e iniciam a lista.  
+### <a name="remarks"></a>Remarks  
+ All constructors store an allocator object ( `Al`) and initialize the list.  
   
- [get_allocator](#get_allocator) retorna uma cópia do objeto alocador usado para construir uma lista.  
+ [get_allocator](#get_allocator) returns a copy of the allocator object used to construct a list.  
   
- Os primeiros dois construtores especificam uma lista inicial vazia, o segundo especifica o tipo de alocador (`Al`) a ser usado.  
+ The first two constructors specify an empty initial list, the second specifying the allocator type ( `Al`) to be used.  
   
- O terceiro construtor especifica uma repetição de um número especificado (`Count`) de elementos do valor padrão para a classe **Tipo**.  
+ The third constructor specifies a repetition of a specified number ( `Count`) of elements of the default value for class **Type**.  
   
- O quarto e o quinto construtor especificam a repetição de (`Count`) elementos de valor `Val`.  
+ The fourth and fifth constructors specify a repetition of ( `Count`) elements of value `Val`.  
   
- O sexto construtor especifica uma cópia da lista `Right`.  
+ The sixth constructor specifies a copy of the list `Right`.  
   
- O sétimo construtor move a lista `Right`.  
+ The seventh constructor moves the list `Right`.  
   
- O oitavo construtor usa initializer_list para especificar os elementos.  
+ The eighth constructor uses an initializer_list to specify the elements.  
   
- Os dois construtores seguintes copiam o intervalo `[First, Last)` de uma lista.  
+ The next two constructors copy the range `[First, Last)` of a list.  
   
- Nenhum dos construtores executa realocações provisórias.  
+ None of the constructors perform any interim reallocations.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_list.cpp  
@@ -1313,16 +1357,16 @@ c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 =
 ```  
   
 ##  <a name="max_size"></a>  list::max_size  
- Retorna o tamanho máximo de uma lista.  
+ Returns the maximum length of a list.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O comprimento máximo possível da lista.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_max_size.cpp  
@@ -1342,7 +1386,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  list::merge  
- Remove os elementos da lista de argumentos, insere-os na lista de destino e organiza o conjunto novo e combinado de elementos em ordem crescente ou em alguma outra ordem especificada.  
+ Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.  
   
 ```  
 void merge(list<Type, Allocator>& right);
@@ -1351,19 +1395,19 @@ template <class Traits>
 void merge(list<Type, Allocator>& right, Traits comp);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- A lista de argumentos a ser mesclada com a lista de destino.  
+ The argument list to be merged with the target list.  
   
  `comp`  
- O operador de comparação usado para ordenar os elementos da lista de destino.  
+ The comparison operator used to order the elements of the target list.  
   
-### <a name="remarks"></a>Comentários  
- A lista de argumentos `right` é mesclada com a lista de destino.  
+### <a name="remarks"></a>Remarks  
+ The argument list `right` is merged with the target list.  
   
- Listas de argumento e de destino devem ser solicitadas com a mesma relação de comparação pela qual a sequência resultante deve ser organizada. A ordem padrão para a primeira função de membro é ordem crescente. A segunda função de membro impõe a operação de comparação especificada pelo usuário `comp` da classe **Características**.  
+ Both argument and target lists must be ordered with the same comparison relation by which the resulting sequence is to be ordered. The default order for the first member function is ascending order. The second member function imposes the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_merge.cpp  
@@ -1423,24 +1467,24 @@ After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 
 ```  
   
 ##  <a name="op_eq"></a>  list::operator=  
- Substitui os elementos da lista por uma cópia de outra lista.  
+ Replaces the elements of the list with a copy of another list.  
   
 ```  
 list& operator=(const list& right);
 list& operator=(list&& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`right`|A [lista](../standard-library/list-class.md) que está sendo copiada para o `list`.|  
+|Parameter|Description|  
+|`right`|The [list](../standard-library/list-class.md) being copied into the `list`.|  
   
-### <a name="remarks"></a>Comentários  
- Após apagar os elementos existentes em uma `list`, o operador copia ou move o conteúdo da `right` para a `list`.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `list`, the operator either copies or moves the contents of `right` into the `list`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_operator_as.cpp  
@@ -1482,28 +1526,28 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  list::pointer  
- Fornece um ponteiro para um elemento em uma lista.  
+ Provides a pointer to an element in a list.  
   
 ```
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo **pointer** pode ser usado para modificar o valor de um elemento.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- Na maioria dos casos, um [iterador](#iterator) deve ser usado para acessar os elementos em um objeto de lista.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
 ##  <a name="pop_back"></a>  list::pop_back  
- Exclui o elemento no final de uma lista.  
+ Deletes the element at the end of a list.  
   
 ``` 
 void pop_back();
 ```  
   
-### <a name="remarks"></a>Comentários  
- O último elemento não deve estar vazio. `pop_back` nunca gera uma exceção.  
+### <a name="remarks"></a>Remarks  
+ The last element must not be empty. `pop_back` never throws an exception.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_back.cpp  
@@ -1534,16 +1578,16 @@ After deleting the element at the end of the list, the last element is: 1
 ```  
   
 ##  <a name="pop_front"></a>  list::pop_front  
- Exclui o elemento no começo de uma lista.  
+ Deletes the element at the beginning of a list.  
   
 ``` 
 void pop_front();
 ```  
   
-### <a name="remarks"></a>Comentários  
- O primeiro elemento não deve estar vazio. `pop_front` nunca gera uma exceção.  
+### <a name="remarks"></a>Remarks  
+ The first element must not be empty. `pop_front` never throws an exception.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_front.cpp  
@@ -1574,23 +1618,23 @@ After deleting the element at the beginning of the list, the first element is: 2
 ```  
   
 ##  <a name="push_back"></a>  list::push_back  
- Adiciona um elemento ao fim da lista.  
+ Adds an element to the end of a list.  
   
 ```  
 void push_back(void push_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`val`|O elemento adicionado ao final da lista.|  
+|Parameter|Description|  
+|`val`|The element added to the end of the list.|  
   
-### <a name="remarks"></a>Comentários  
- Se uma exceção for gerada, a lista permanecerá inalterada e a exceção será gerada novamente.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_back.cpp  
@@ -1628,24 +1672,24 @@ Moved first element: a
 ```  
   
 ##  <a name="push_front"></a>  list::push_front  
- Adiciona um elemento ao começo da lista.  
+ Adds an element to the beginning of a list.  
   
 ```  
 void push_front(const Type& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Parâmetro|Descrição|  
-|`val`|O elemento adicionado ao início da lista.|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the list.|  
   
-### <a name="remarks"></a>Comentários  
- Se uma exceção for gerada, a lista permanecerá inalterada e a exceção será gerada novamente.  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_front.cpp  
@@ -1683,24 +1727,24 @@ Moved first element: a
 ```  
   
 ##  <a name="rbegin"></a>  list::rbegin  
- Retorna um iterador que aborda o primeiro elemento em uma lista invertida.  
+ Returns an iterator that addresses the first element in a reversed list.  
   
 ``` 
 const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional invertido que aborda o primeiro elemento em uma lista invertida (ou que aborda o último elemento na lista não invertida).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed list).  
   
-### <a name="remarks"></a>Comentários  
- `rbegin` é usado com uma lista invertida assim como [begin](#begin) é usado com uma lista.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed list just as [begin](#begin) is used with a list.  
   
- Se o valor de retorno de `rbegin` for atribuído a `const_reverse_iterator`, o objeto de lista não poderá ser modificado. Se o valor retornado de `rbegin` for atribuído à `reverse_iterator`, o objeto de lista poderá ser modificado.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rbegin` pode ser usado para iterar através de uma lista para trás.  
+ `rbegin` can be used to iterate through a list backwards.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rbegin.cpp  
@@ -1751,13 +1795,13 @@ The last element in the list is now 40.
 ```  
   
 ##  <a name="reference"></a>  list::reference  
- Um tipo que fornece uma referência a um elemento armazenado em uma lista.  
+ A type that provides a reference to an element stored in a list.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_ref.cpp  
@@ -1786,20 +1830,20 @@ The second element is 20
 ```  
   
 ##  <a name="remove"></a>  list::remove  
- Apaga elementos em uma lista que correspondem a um valor especificado.  
+ Erases elements in a list that match a specified value.  
   
 ``` 
 void remove(const Type& val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `val`  
- O valor que, se mantido por um elemento, resultará na remoção de tal elemento da lista.  
+ The value which, if held by an element, will result in that element's removal from the list.  
   
-### <a name="remarks"></a>Comentários  
- A ordem dos elementos restantes não é afetada.  
+### <a name="remarks"></a>Remarks  
+ The order of the elements remaining is not affected.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove.cpp  
@@ -1840,18 +1884,18 @@ After removing elements with value 5, the list becomes c2 = 100 200 300
 ```  
   
 ##  <a name="remove_if"></a>  list::remove_if  
- Apaga os elementos da lista para a qual um predicado especificado foi atendido.  
+ Erases elements from a list for which a specified predicate is satisfied.  
   
 ``` 
 template <class Predicate>  
 void remove_if(Predicate pred)  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pred`  
- O predicado unário que, se atendido por um elemento, resultará na exclusão de tal elemento da lista.  
+ The unary predicate which, if satisfied by an element, results in the deletion of that element from the list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove_if.cpp  
@@ -1903,26 +1947,26 @@ After removing the odd elements, the list becomes c2 = 4 6 8
 ```  
   
 ##  <a name="rend"></a>  list::rend  
- Retorna um iterador que aborda o local após o último elemento em uma lista invertida.  
+ Returns an iterator that addresses the location that follows the last element in a reversed list.  
   
 ``` 
 const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador bidirecional inverso que aborda a localização que vem após o último elemento em uma lista invertida (o local que precedeu o primeiro elemento na lista não invertida).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed list (the location that had preceded the first element in the unreversed list).  
   
-### <a name="remarks"></a>Comentários  
- `rend` é usado com uma lista invertida, assim como [end](#end) é usado com uma lista.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed list just as [end](#end) is used with a list.  
   
- Se o valor de retorno de `rend` for atribuído a `const_reverse_iterator`, o objeto de lista não poderá ser modificado. Se o valor retornado de `rend` for atribuído à `reverse_iterator`, o objeto de lista poderá ser modificado.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rend` pode ser usado para testar se um iterador inverso alcançou o final de sua lista.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its list.  
   
- O valor retornado por `rend` não deve ser desreferenciado.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rend.cpp  
@@ -1986,30 +2030,30 @@ The modified reversed list is: 30 20 40
 ```  
   
 ##  <a name="resize"></a>  list::resize  
- Especifica um novo tamanho para uma lista.  
+ Specifies a new size for a list.  
   
 ``` 
 void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- O novo tamanho da lista.  
+ The new size of the list.  
   
  `val`  
- O valor dos novos elementos a serem adicionados à lista, caso o novo tamanho seja maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.  
+ The value of the new elements to be added to the list if the new size is larger that the original size. If the value is omitted, the new elements are assigned the default value for the class.  
   
-### <a name="remarks"></a>Comentários  
- Se o tamanho da lista for menor que o tamanho solicitado, `_Newsize`, elementos serão adicionados ao vetor até ele atingir o tamanho solicitado.  
+### <a name="remarks"></a>Remarks  
+ If the list's size is less than the requested size, `_Newsize`, elements are added to the list until it reaches the requested size.  
   
- Se o tamanho da lista for maior que o tamanho solicitado, os elementos mais próximos do final da lista serão excluídos até a lista atingir o tamanho `_Newsize`.  
+ If the list's size is larger than the requested size, the elements closest to the end of the list are deleted until the list reaches the size `_Newsize`.  
   
- Se o tamanho atual da lista for igual ao tamanho solicitado, nenhuma ação será realizada.  
+ If the present size of the list is the same as the requested size, no action is taken.  
   
- [size](#size) reflete o tamanho atual da lista.  
+ [size](#size) reflects the current size of the list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_resize.cpp  
@@ -2050,13 +2094,13 @@ The value of the last element is now 20
 ```  
   
 ##  <a name="reverse"></a>  list::reverse  
- Reverte a ordem na qual os elementos ocorrem em uma lista.  
+ Reverses the order in which the elements occur in a list.  
   
 ``` 
 void reverse();
 ```  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_reverse.cpp  
@@ -2093,29 +2137,29 @@ Reversed c1 = 30 20 10
 ```  
   
 ##  <a name="reverse_iterator"></a>  list::reverse_iterator  
- Um tipo que fornece um iterador bidirecional que pode ler ou modificar um elemento em uma lista invertida.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed list.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Um tipo de `reverse_iterator` é usado para iterar a lista em ordem inversa.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is used to iterate through the list in reverse.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
 ##  <a name="size"></a>  list::size  
- Retorna o número de elementos em uma lista.  
+ Returns the number of elements in a list.  
   
 ``` 
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O comprimento atual da lista.  
+### <a name="return-value"></a>Return Value  
+ The current length of the list.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_size.cpp  
@@ -2145,17 +2189,17 @@ List length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  list::size_type  
- Um tipo que conta o número de elementos em uma lista.  
+ A type that counts the number of elements in a list.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [size](#size).  
+### <a name="example"></a>Example  
+  See the example for [size](#size).  
   
 ##  <a name="sort"></a>  list::sort  
- Organiza os elementos de uma lista em ordem crescente ou com respeito a alguma outra ordem especificada pelo usuário.  
+ Arranges the elements of a list in ascending order or with respect to some other user-specified order.  
   
 ``` 
 void sort();
@@ -2164,16 +2208,16 @@ template <class Traits>
 void sort(Traits comp);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `comp`  
- O operador de comparação usado para ordenar elementos sucessivos.  
+ The comparison operator used to order successive elements.  
   
-### <a name="remarks"></a>Comentários  
- A primeira função de membro coloca os elementos em ordem crescente por padrão.  
+### <a name="remarks"></a>Remarks  
+ The first member function puts the elements in ascending order by default.  
   
- A função de membro de modelo ordena os elementos de acordo com a operação de comparação `comp` especificada pelo usuário da classe **Características**.  
+ The member template function orders the elements according to the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_sort.cpp  
@@ -2217,7 +2261,7 @@ After sorting with 'greater than' operation, c1 = 30 20 10
 ```  
   
 ##  <a name="splice"></a>  list::splice  
- Remove elementos de uma lista de origem e os insere em uma lista de destino.  
+ Removes elements from a source list and inserts them into a destination list.  
   
 ```  
 // insert the entire source list  
@@ -2233,34 +2277,34 @@ void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator 
 void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Where`  
- A posição na lista de destino antes da inserção.  
+ The position in the destination list before which to insert.  
   
  `Source`  
- A lista de origem a ser inserida na lista de destino.  
+ The source list that is to be inserted into the destination list.  
   
  `Iter`  
- O elemento a ser inserido da lista de origem.  
+ The element to be inserted from the source list.  
   
  `First`  
- O primeiro elemento no intervalo a ser inserido da lista de origem.  
+ The first element in the range to be inserted from the source list.  
   
  `Last`  
- A primeira posição além do último elemento no intervalo a ser inserido da lista de origem.  
+ The first position beyond the last element in the range to be inserted from the source list.  
   
-### <a name="remarks"></a>Comentários  
- O primeiro par de funções de membro insere todos os elementos na lista de origem na lista de destino antes da posição indicada por `Where` e remove todos os elementos da lista de origem. (`&Source` não deve ser igual a `this`.)  
+### <a name="remarks"></a>Remarks  
+ The first pair of member functions inserts all elements in the source list into the destination list before the position referred to by `Where` and removes all elements from the source list. ( `&Source` must not equal `this`.)  
   
- O segundo par de funções de membro insere o elemento indicado por `Iter` antes da posição na lista de destino indicada por `Where` e remove `Iter` da lista de origem. (Se `Where == Iter || Where == ++Iter`, nenhuma alteração ocorrerá.)  
+ The second pair of member functions inserts the element referred to by `Iter` before the position in the destination list referred to by `Where` and removes `Iter` from the source list. (If `Where == Iter || Where == ++Iter`, no change occurs.)  
   
- O terceiro par de funções de membro insere o intervalo designado por [`First`, `Last`) antes do elemento na lista de destino indicada por `Where` e remove esse intervalo de elementos da lista de origem. (Se `&Source == this`, o intervalo `[First, Last)` não deve incluir o elemento apontado por `Where`.)  
+ The third pair of member functions inserts the range designated by [ `First`, `Last`) before the element in the destination list referred to by `Where` and removes that range of elements from the source list. (If `&Source == this`, the range `[First, Last)` must not include the element pointed to by `Where`.)  
   
- Se a união no intervalo inserir elementos `N` e `&Source != this`, um objeto da classe [iterator](../standard-library/forward-list-class.md#iterator) será incrementado `N` vezes.  
+ If the ranged splice inserts `N` elements, and `&Source != this`, an object of class [iterator](../standard-library/forward-list-class.md#iterator) is incremented `N` times.  
   
- Em todos os iteradores de casos, ponteiros ou referências a elementos de união permanecem válidos e são transferidos para o contêiner de destino.  
+ In all cases iterators, pointers, or references that refer to spliced elements remain valid and are transferred to the destination container.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_splice.cpp  
@@ -2338,21 +2382,21 @@ Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (2
 ```  
   
 ##  <a name="swap"></a>  list::swap  
- Troca os elementos das duas listas.  
+ Exchanges the elements of two lists.  
   
 ``` 
 void swap(list<Type, Allocator>& right);
 friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- A lista que fornece os elementos a serem trocados ou a lista cujos elementos deverão ser trocados com aqueles da lista `left`.  
+ The list providing the elements to be swapped, or the list whose elements are to be exchanged with those of the list `left`.  
   
  `left`  
- A lista cujos elementos serão trocados por aqueles da lista `right`.  
+ A list whose elements are to be exchanged with those of the list `right`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_swap.cpp  
@@ -2401,7 +2445,7 @@ After swapping with c3, list c1 is: 100
 ```  
   
 ##  <a name="unique"></a>  list::unique  
- Remove elementos duplicados adjacentes ou elementos adjacentes que satisfazem algum predicado binário da lista.  
+ Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from a list.  
   
 ```  
 void unique();
@@ -2410,18 +2454,18 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate pred);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pred`  
- O predicado binário usado para comparar elementos sucessivos.  
+ The binary predicate used to compare successive elements.  
   
-### <a name="remarks"></a>Comentários  
- Essa função pressupõe que a lista é classificada, para que todos os elementos duplicados sejam adjacentes. Duplicatas que não sejam adjacentes não serão excluídas.  
+### <a name="remarks"></a>Remarks  
+ This function assumes that the list is sorted, so that all duplicate elements are adjacent. Duplicates that are not adjacent will not be deleted.  
   
- A primeira função de membro remove todos os elementos que compara igual ao seu elemento anterior.  
+ The first member function removes every element that compares equal to its preceding element.  
   
- A segunda função de membro remove todos os elementos que atendem à função de predicado `pred` quando comparada com o elemento anterior. É possível usar qualquer um dos objetos de função binários declarados no cabeçalho `<functional>`para o argumento pred ou criar seu próprios objetos.  
+ The second member function removes every element that satisfies the predicate function `pred` when compared with its preceding element. You can use any of the binary function objects declared in the `<functional>`header for the argument  pred or you can create your own.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_unique.cpp  
@@ -2471,16 +2515,16 @@ After removing successive unequal elements, c3 = -10 -10
 ```  
   
 ##  <a name="value_type"></a>  list::value_type  
- Um tipo que representa o tipo de dados armazenado em uma lista.  
+ A type that represents the data type stored in a list.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- `value_type` é um sinônimo do parâmetro de modelo **Type**.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_value_type.cpp  
@@ -2501,9 +2545,9 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

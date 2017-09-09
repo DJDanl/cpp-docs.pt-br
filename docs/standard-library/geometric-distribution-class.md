@@ -1,5 +1,5 @@
 ---
-title: Classe geometric_distribution | Microsoft Docs
+title: geometric_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- geometric_distribution
 - random/std::geometric_distribution
 - random/std::geometric_distribution::reset
 - random/std::geometric_distribution::p
@@ -25,8 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- geometric_distribution class
-- geometric_distribution
+- std::geometric_distribution [C++]
+- std::geometric_distribution [C++], reset
+- std::geometric_distribution [C++], p
+- std::geometric_distribution [C++], param
+- std::geometric_distribution [C++], min
+- std::geometric_distribution [C++], max
+- std::geometric_distribution [C++], param_type
+- std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
 caps.latest.revision: 24
 author: corob-msft
@@ -46,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 210d7e859c3022e7f70f953fdbe2da3ad60c5f0a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b4d8a69de0ba6174bf7ed39195de622a1d2e8c6
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="geometricdistribution-class"></a>Classe geometric_distribution
-Gera uma distribuição geométrica.  
+# <a name="geometricdistribution-class"></a>geometric_distribution Class
+Generates a geometric distribution.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -85,35 +90,35 @@ public:
     result_type max() const;
 }; 
 ```  
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Comentários  
-A classe do modelo descreve uma distribuição que produz valores de um tipo de integral especificado pelo usuário com uma distribuição geométrica. A tabela a seguir contém links para artigos sobre cada um dos membros.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type with a geometric distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
 |`geometric_distribution::operator()`||[param_type](#param_type)|  
   
-A função de propriedade `p()` retorna o valor do parâmetro de distribuição armazenado `p`.  
+The property function `p()` returns the value for stored distribution parameter `p`.  
   
-O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-As funções membro `min()` e `max()` retornam o menor resultado possível e o maior resultado possível, respectivamente.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-A função membro `reset()` descarta qualquer valor armazenado em cache, de forma que o resultado da próxima chamada para `operator()` não dependerá dos valores obtidos do mecanismo antes da chamada.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a distribuição qui-quadrado, consulte o artigo da Wolfram MathWorld [Geometric Distribution](http://go.microsoft.com/fwlink/LinkId=400529) (Distribuição geométrica).  
+For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Geometric Distribution](http://go.microsoft.com/fwlink/LinkId=400529).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +171,7 @@ int main()
 }  
 ```  
   
-Primeiro teste:  
+First test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -185,7 +190,7 @@ Distribution for 100 samples:
     5 :
 ```  
   
-Segundo teste:  
+Second test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -221,35 +226,35 @@ Distribution for 100 samples:
    35 :
 ```  
   
-## <a name="requirements"></a>Requisitos  
-**Cabeçalho:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
 **Namespace:** std  
   
 ##  <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution  
-Constrói a distribuição.  
+Constructs the distribution.  
   
 ```  
 explicit geometric_distribution(double p = 0.5);
 explicit geometric_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
 *p*  
-O parâmetro de distribuição `p`.  
+The `p` distribution parameter.  
   
 *parm*  
-A estrutura do parâmetro usada para construir a distribuição.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Comentários  
-**Pré-condição:** `0.0 < p && p < 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < p && p < 1.0`  
   
-o primeiro construtor constrói um objeto cujo valor `p` armazenado contém o valor *p*.  
+The first constructor constructs an object whose stored `p` value holds the value *p*.  
   
-O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  geometric_distribution::param_type  
-Armazena os parâmetros da distribuição.  
+Stores the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -262,19 +267,19 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
 *p*  
-O parâmetro de distribuição `p`.  
+The `p` distribution parameter.  
   
 *right*  
-O instância de `param_type` a ser comparada com isto.  
+The `param_type` instance to compare this to.  
   
-### <a name="remarks"></a>Comentários  
-**Pré-condição:** `0.0 < p && p < 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < p && p < 1.0`  
   
-Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

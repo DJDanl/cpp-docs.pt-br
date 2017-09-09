@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- operator>=
-- std::>=
-- std.operator>=
-- '>='
-- std.>=
-- std::operator>=
+- operator>=", "std::>=", "std.operator>=", ">=", "std.>=", "std::operator>=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,20 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9be9674c0039eb1ba64107e2ef08859909280ec3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1337159a6a1b81f356ebbfdff2d33cba1da7fb92
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="operatorgt"></a>operator&gt;=
 > [!NOTE]
->  Este tópico faz parte da documentação do Visual C++ como um exemplo não funcional de contêineres usados na Biblioteca Padrão C++. Para obter mais informações, consulte [Contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Sobrecarregue **operator>=** para comparar dois objetos da classe de modelo [Container](../standard-library/sample-container-class.md).  
+ Overloads **operator>=** to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +57,10 @@ bool operator>=(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna `!(left < right)`.  
+## <a name="return-value"></a>Return Value  
+ Returns `!(left < right)`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 
 

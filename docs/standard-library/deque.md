@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<deque>
-- <deque>
-- std.<deque>
+- std::<deque>", "<deque>", "std.<deque>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,50 +33,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 869fb9c0ed0f975b508fdd805d9b45c5e4793aa5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
-Define o deque de classes de modelo do contêiner e diversos modelos de suporte.  
+Defines the container template class deque and several supporting templates.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <deque>  
   
 ```  
   
-### <a name="operators"></a>Operadores  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Testa se o objeto do deque do lado esquerdo do operador não é igual ao objeto do deque do lado direito.|  
-|[operator<](../standard-library/deque-operators.md#op_lt)|Testa se o objeto do deque do lado esquerdo do operador é menor que o objeto do deque do lado direito.|  
-|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Testa se o objeto do deque do lado esquerdo do operador é menor ou igual ao objeto do deque do lado direito.|  
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testa se o objeto do deque do lado esquerdo do operador é igual ao objeto do deque do lado direito.|  
-|[operator>](../standard-library/deque-operators.md#op_gt)|Testa se o objeto do deque do lado esquerdo do operador é maior que o objeto do deque do lado direito.|  
-|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testa se o objeto do deque do lado esquerdo do operador é maior ou igual ao objeto do deque do lado direito.|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Tests if the deque object on the left side of the operator is less than the deque object on the right side.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Tests if the deque object on the left side of the operator is equal to the deque object on the right side.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Tests if the deque object on the left side of the operator is greater than the deque object on the right side.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.|  
   
-### <a name="functions"></a>Funções  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[swap](../standard-library/deque-functions.md#swap)|Troca os elementos dos dois deques.|  
+|[swap](../standard-library/deque-functions.md#swap)|Exchanges the elements of two deques.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[Classe deque](../standard-library/deque-class.md)|Uma classe de modelo de contêineres de sequência que organiza os elementos de determinado tipo em uma organização linear e, assim como os vetores, permite acesso aleatório rápido a qualquer elemento e uma inserção e exclusão eficientes na parte posterior do contêiner.|  
+|[deque Class](../standard-library/deque-class.md)|A template class of sequence containers that arrange elements of a given type in a linear arrangement and, like vectors, allow fast random access to any element and efficient insertion and deletion at the back of the container.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

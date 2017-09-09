@@ -1,5 +1,5 @@
 ---
-title: Classe binomial_distribution | Microsoft Docs
+title: binomial_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- binomial_distribution
 - random/std::binomial_distribution
 - random/std::binomial_distribution::reset
 - random/std::binomial_distribution::p
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- binomial_distribution class
+- std::binomial_distribution [C++]
+- std::binomial_distribution [C++], reset
+- std::binomial_distribution [C++], p
+- std::binomial_distribution [C++], t
+- std::binomial_distribution [C++], param
+- std::binomial_distribution [C++], min
+- std::binomial_distribution [C++], max
+- std::binomial_distribution [C++], param_type
+- std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 caps.latest.revision: 22
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 38de1b8245612bca84c381c143b4a12e9f08c83e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf9727a3c8b88840b7f31f250b136398fe5ab207
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="binomialdistribution-class"></a>Classe binomial_distribution
-Gera uma distribuição Binomial.  
+# <a name="binomialdistribution-class"></a>binomial_distribution Class
+Generates a binomial distribution.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -88,35 +95,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-O tipo de resultado do inteiro assume `int` como padrão. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para ver os tipos possíveis, consulte [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
 
-## <a name="remarks"></a>Comentários  
-A classe de modelo descreve uma distribuição que gera valores de um tipo integral especificado pelo usuário ou do tipo `int` se não houver nenhuma especificação. Esses valores são distribuídos de acordo com a função de probabilidade discreta distribuição Binomial. A tabela a seguir contém links para artigos sobre cada um dos membros.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Binomial Distribution discrete probability function. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|  
   
-Os membros de propriedade `t()` e `p()` mostram os valores do parâmetro de distribuição armazenados `t` e `p`, respectivamente.  
+The property members `t()` and `p()` return the currently stored distribution parameter values `t` and `p` respectively.  
   
-O membro da propriedade `param()` define ou retorna o pacote de parâmetros de distribuição armazenado `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-As funções membro `min()` e `max()` retornam o menor resultado possível e o maior resultado possível, respectivamente.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-A função membro `reset()` descarta qualquer valor armazenado em cache, de forma que o resultado da próxima chamada para `operator()` não dependerá dos valores obtidos do mecanismo antes da chamada.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-As funções membro `operator()` retornam o próximo valor gerado com base no mecanismo URNG, do pacote de parâmetros atual ou do pacote de parâmetros especificado.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Para obter mais informações sobre as classes de distribuição e seus membros, consulte [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Para obter informações detalhadas sobre a função de probabilidade discreta da distribuição binomial, consulte o artigo da Wolfram MathWorld [Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=398469) (Distribuição Binomial).  
+For detailed information about the binomial distribution discrete probability function, see the Wolfram MathWorld article [Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=398469).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -171,7 +178,7 @@ int main()
 }  
 ```  
   
-Primeira execução:  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -195,7 +202,7 @@ Histogram for 100 samples:
     12 :  
 ```  
   
-Segunda execução:  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -219,7 +226,7 @@ Histogram for 100 samples:
     16 ::  
 ```  
   
-Terceira execução:  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -241,38 +248,38 @@ Histogram for 100 samples:
     21 :  
 ```  
   
-## <a name="requirements"></a>Requisitos  
-**Cabeçalho:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
 **Namespace:** std  
   
 ##  <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution  
-Constrói a distribuição.  
+Constructs the distribution.  
   
 ```  
 explicit binomial_distribution(result_type t = 1, double p = 0.5);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
 *t*  
-O parâmetro de distribuição `t`.  
+The `t` distribution parameter.  
   
 *p*  
-O parâmetro de distribuição `p`.  
+The `p` distribution parameter.  
   
 *parm*  
-A estrutura `param_type` usada para construir a distribuição.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Comentários  
-**Precondição:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0 ≤ t` and `0.0 ≤ p ≤ 1.0`  
   
-O primeiro construtor constrói um objeto cujo valor `p` armazenado contém o valor de *p* e cujo valor de `t` armazenado contém o valor de *t*.  
+The first constructor constructs an object whose stored `p` value holds the value *p* and whose stored `t` value holds the value *t*.  
   
-O segundo construtor cria um objeto cujos parâmetros armazenados são inicializados de *parm*. Você pode chamar a função de membro `param()` para obter e definir os parâmetros atuais de uma distribuição existente.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  binomial_distribution::param_type  
-Armazena todos os parâmetros da distribuição.  
+Stores all the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -286,22 +293,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
 *t*  
-O parâmetro de distribuição `t`.  
+The `t` distribution parameter.  
   
 *p*  
-O parâmetro de distribuição `p`.  
+The `p` distribution parameter.  
   
 *right*  
- O objeto `param_type` a ser comparado a este.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Comentários  
-**Precondição:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0 ≤ t` and `0.0 ≤ p ≤ 1.0`  
   
-Essa estrutura pode ser enviada ao construtor de classe de distribuição na instanciação, para a função de membro `param()` para definir os parâmetros armazenados de uma distribuição existente e para `operator()` a ser usado no lugar dos parâmetros armazenados.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

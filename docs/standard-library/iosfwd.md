@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<iosfwd>
-- <iosfwd>
-- std.<iosfwd>
+- std::<iosfwd>", "<iosfwd>", "std.<iosfwd>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 16d4e8326882630cd3709112afe6fd304bcc9a79
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 752d0a45ab7ae33daaade6615468fb8b85b08acc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
-Declara referências de encaminhamento para várias classes de modelo usadas em iostreams. Todas essas classes de modelo são definidas em outros cabeçalhos padrão. Inclua explicitamente esse cabeçalho somente quando precisar de uma de suas declarações, mas não de sua definição.  
+Declares forward references to several template classes used throughout iostreams. All such template classes are defined in other standard headers. You include this header explicitly only when you need one of its declarations, but not its definition.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iosfwd>  
@@ -91,7 +89,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```  
   
-## <a name="forward-declarationstemplate-classes"></a>Declarações de encaminhamento/Classes de modelo  
+## <a name="forward-declarationstemplate-classes"></a>Forward Declarations/Template Classes  
   
 ```
 template <class _Statetype>
@@ -155,11 +153,11 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programação de iostream](../standard-library/iostream-programming.md)   
- [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

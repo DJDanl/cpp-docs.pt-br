@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.cvt.<cvt/wstring>
-- <cvt/wstring>
-- stdext::cvt::<cvt/wstring>
+- stdext.cvt.<cvt/wstring>", "<cvt/wstring>", "stdext::cvt::<cvt/wstring>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,27 +33,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cef76a767b475de31ce146cdb8928baf20d0fc14
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 721aaf9facd2b37f7c27e6de39a2b70837af3ac3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
-O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definia a classe de modelo da [Classe wstring_convert](../standard-library/wstring-convert-class.md) no namespace stdext::cvt. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`  
+The header `<cvt/wstring>` in previous versions of Visual Studio defined the template class [wstring_convert Class](../standard-library/wstring-convert-class.md) in the stdext::cvt namespace. The header is maintained for backward compatibility. New code should use the version of the class that is defined in [\<locale>](../standard-library/locale.md) in the `std` namespace  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <cvt/wstring>  
   
 ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requirements  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

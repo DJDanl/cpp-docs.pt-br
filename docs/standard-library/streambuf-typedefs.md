@@ -1,5 +1,5 @@
 ---
-title: Typedefs &lt;streambuf&gt; | Microsoft Docs
+title: '&lt;streambuf&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,38 +12,39 @@ f1_keywords:
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8a11f21fc55babc7c71bb312bc582719f532347a
-ms.lasthandoff: 02/25/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ab3209afba1f0a1f51f0915a1aa25ecca0ee2c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstreambufgt-typedefs"></a>Typedefs &lt;streambuf&gt;
+# <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; typedefs
 |||  
 |-|-|  
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|  
   
 ##  <a name="streambuf"></a>  streambuf  
- Uma especialização de `basic_streambuf` que usa `char` como os parâmetros do modelo.  
+ A specialization of `basic_streambuf` that uses `char` as the template parameters.  
   
 ```
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_streambuf](../standard-library/basic-streambuf-class.md), especializado para elementos do tipo `char` com características de caractere padrão.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template class [basic_streambuf](../standard-library/basic-streambuf-class.md), specialized for elements of type `char` with default character traits.  
   
 ##  <a name="wstreambuf"></a>  wstreambuf  
- Uma especialização de `basic_streambuf` que usa `wchar_t` como os parâmetros do modelo.  
+ A specialization of `basic_streambuf` that uses `wchar_t` as the template parameters.  
   
 ```
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo da classe de modelo [basic_streambuf](../standard-library/basic-streambuf-class.md), especializado para elementos do tipo `wchar_t` com características de caractere padrão.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template class [basic_streambuf](../standard-library/basic-streambuf-class.md), specialized for elements of type `wchar_t` with default character traits.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<streambuf>](../standard-library/streambuf.md)
 
 

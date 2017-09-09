@@ -1,5 +1,5 @@
 ---
-title: Struct steady_clock | Microsoft Docs
+title: steady_clock struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,50 +31,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 332008ed313eeae7f04f39165424a9280c2aed8c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8332ccdd3349f52acb2c913f68fe5ced2805a848
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="steadyclock-struct"></a>Struct steady_clock
-Representa um relógio `steady`.  
+# <a name="steadyclock-struct"></a>steady_clock struct
+Represents a `steady` clock.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct steady_clock;  
 ```  
   
-## <a name="remarks"></a>Comentários  
- No Windows, steady_clock encapsula a função QueryPerformanceCounter.  
+## <a name="remarks"></a>Remarks  
+ On Windows, steady_clock wraps the QueryPerformanceCounter function.  
   
- Um relógio será *monotônico* se o valor retornado por uma primeira chamada a `now()` for sempre menor ou igual ao valor retornado por uma chamada posterior a `now()`.  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
- Um relógio será *estável* se ele for *monotônico* e se o tempo entre os tiques do relógio for constante.  
+ A clock is *steady* if it is *monotonic* and if the time between clock ticks is constant.  
   
- High_resolution_clock é um typdef para steady_clock.  
+ High_resolution_clock is a typdef for steady_clock.  
   
-## <a name="public-functions"></a>Funções públicas  
+## <a name="public-functions"></a>Public functions  
   
-|Função|Descrição|  
+|Function|Description|  
 |--------------|-----------------|  
-|now|Retorna a hora atual como um valor de time_point.|  
+|now|Returns the current time as a time_point value.|  
   
-## <a name="public-constants"></a>Constantes públicas  
+## <a name="public-constants"></a>Public Constants  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`system_clock::is_steady`|Contém `true`. Um `steady_clock` é *steady*.|  
+|`system_clock::is_steady`|Holds `true`. A `steady_clock` is *steady*.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
  **Namespace:** std::chrono  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
- [Estrutura system_clock](../standard-library/system-clock-structure.md)
+ [system_clock Structure](../standard-library/system-clock-structure.md)
 

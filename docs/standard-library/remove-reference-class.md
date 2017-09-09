@@ -1,5 +1,5 @@
 ---
-title: Classe remove_reference | Microsoft Docs
+title: remove_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_reference
 - type_traits/std::remove_reference
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 873efb477296b9f6765eb9a85d9ac62f63405382
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ae1dbd6447b6f9f2544f58c74c132ace200b19d5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removereference-class"></a>Classe remove_reference
-Cria tipo de não referência do tipo.  
+# <a name="removereference-class"></a>remove_reference Class
+Makes non reference type from type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_reference_t = typename remove_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- O tipo a ser modificado.  
+ The type to modify.  
   
-## <a name="remarks"></a>Comentários  
- Uma instância de `remove_reference<T>` mantém um tipo modificado que é `T1` quando `T` é da forma `T1&`, caso contrário, `T`.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_reference<T>` holds a modified-type that is `T1` when `T` is of the form `T1&`, otherwise `T`.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_reference_t<int&> == int  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)
+ [add_lvalue_reference Class](../standard-library/add-lvalue-reference-class.md)
 

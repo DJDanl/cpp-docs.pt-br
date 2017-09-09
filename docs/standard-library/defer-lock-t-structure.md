@@ -1,5 +1,5 @@
 ---
-title: Estrutura defer_lock_t | Microsoft Docs
+title: defer_lock_t Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,29 +32,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 02fa074ac96c37d22ce29666b76766a71012b314
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f8b598083a35fa9844bfbe935e4ca6978d7a9fa9
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="deferlockt-structure"></a>Estrutura defer_lock_t
-Representa um tipo que define um objeto [defer_lock](../standard-library/mutex-functions.md#defer_lock) que é usado para selecionar um dos construtores sobrecarregados de [unique_lock](../standard-library/unique-lock-class.md).  
+# <a name="deferlockt-structure"></a>defer_lock_t Structure
+Represents a type that defines a [defer_lock](../standard-library/mutex-functions.md#defer_lock) object that is used to select one of the overloaded constructors of [unique_lock](../standard-library/unique-lock-class.md).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 struct defer_lock_t;
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

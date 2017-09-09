@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 780406772c509cb1320e1b8a1124cdc535b9c852
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
-Define a classe de modelo do contêiner `array` e diversos modelos de suporte.  
+Defines the container template class `array` and several supporting templates.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <array>  
@@ -53,31 +53,31 @@ Define a classe de modelo do contêiner `array` e diversos modelos de suporte.
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|Armazena uma sequência de comprimento fixo de elementos.|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Encapsula o tipo de um elemento de matriz.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Encapsula o tamanho de um elemento de matriz.|  
+|[array](../standard-library/array-class-stl.md)|Stores a fixed-length sequence of elements.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Wraps the type of an array element.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Wraps the size of an array element.|  
   
-### <a name="operators"></a>Operadores  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|comparação de matriz, igual|  
-|[operator!=](../standard-library/array-operators.md#op_neq)|comparação de matriz, não é igual|  
-|[operator\<](../standard-library/array-operators.md#op_lt)|comparação de matriz, menor que|  
-|[operator>=](../standard-library/array-operators.md#op_gt_eq)|comparação de matriz, maior ou igual|  
-|[operator>](../standard-library/array-operators.md#op_gt)|comparação de matriz, maior que|  
-|[operator<=](../standard-library/array-operators.md#op_lt_eq)|comparação de matriz, menor ou igual|  
-  
-### <a name="functions"></a>Funções  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get)|Obtenha o elemento da matriz especificada.|  
-|[swap](../standard-library/array-functions.md#swap)|Troca o conteúdo de uma matriz pelo conteúdo de outra matriz.|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|array comparison, equal|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|array comparison, not equal|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|array comparison, less than|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|array comparison, greater than or equal|  
+|[operator>](../standard-library/array-operators.md#op_gt)|array comparison, greater than|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|array comparison, less than or equal|  
   
-## <a name="see-also"></a>Consulte também  
+### <a name="functions"></a>Functions  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get)|Get specified array element.|  
+|[swap](../standard-library/array-functions.md#swap)|Exchanges the contents of one array with the contents of another array.|  
+  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

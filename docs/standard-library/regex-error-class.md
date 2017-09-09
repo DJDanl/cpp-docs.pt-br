@@ -1,5 +1,5 @@
 ---
-title: Classe regex_error | Microsoft Docs
+title: regex_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_error
 - regex/std::regex_error
 - regex/std::regex_error::code
 dev_langs:
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: af23c0562720abd15bdaf77edac2b2728c50f617
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b62638529f90240201ae229b6ae647e8a87fdf95
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regexerror-class"></a>Classe regex_error
-Relata um objeto basic_regex incorreto.  
+# <a name="regexerror-class"></a>regex_error Class
+Reports a bad basic_regex object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class regex_error  
@@ -59,25 +58,25 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>Comentários  
- A classe descreve um objeto de exceção gerado para relatar um erro na construção ou uso de um objeto `basic_regex`.  
+## <a name="remarks"></a>Remarks  
+ The class describes an exception object thrown to report an error in the construction or use of a `basic_regex` object.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
  **Namespace:** std  
   
 ##  <a name="code"></a>  regex_error::code  
- Retorna o código de erro.  
+ Returns the error code.  
   
 ```  
 regex_constants::error_code code() const;
 ```  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna o valor que foi passado para o construtor do objeto.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the value that was passed to the object's constructor.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_error_code.cpp   
@@ -115,20 +114,20 @@ regex error: unbalanced parentheses
 ```  
   
 ##  <a name="regex_error"></a>  regex_error::regex_error  
- Constrói o objeto.  
+ Constructs the object.  
   
 ```  
 regex_error(regex_constants::error_code error);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `error`  
- O código de erro.  
+ The error code.  
   
-### <a name="remarks"></a>Comentários  
- O construtor cria um objeto que contém o valor `error`.  
+### <a name="remarks"></a>Remarks  
+ The constructor constructs an object that holds the value `error`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_error_construct.cpp   
@@ -165,13 +164,13 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[Classe regex_constants](../standard-library/regex-constants-class.md)  
-[\<Funções regex>](../standard-library/regex-functions.md)  
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)  
-[\<Operadores regex>](../standard-library/regex-operators.md)  
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Classe regex_traits](../standard-library/regex-traits-class.md)  
-[\<Typedef regex>](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

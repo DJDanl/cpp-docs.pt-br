@@ -1,5 +1,5 @@
 ---
-title: Classe ostrstream | Microsoft Docs
+title: ostrstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ostrstream
 - strstream/std::ostrstream::freeze
 - strstream/std::ostrstream::pcount
 - strstream/std::ostrstream::rdbuf
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ostrstream class
+- std::ostrstream [C++], freeze
+- std::ostrstream [C++], pcount
+- std::ostrstream [C++], rdbuf
+- std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
 caps.latest.revision: 20
 author: corob-msft
@@ -37,67 +39,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2ed85552778f3bbf7346001e4dd4c858177ce49b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0ad2a1c11d7f15d8c91f623dfafc08babab1926e
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ostrstream-class"></a>Classe ostrstream
-Descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo da classe [strstreambuf](../standard-library/strstreambuf-class.md).  
+# <a name="ostrstream-class"></a>ostrstream Class
+Describes an object that controls insertion of elements and encoded objects into a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 class ostrstream : public ostream
 ```  
   
-## <a name="remarks"></a>Comentários  
- O objeto armazena um objeto da classe `strstreambuf`.  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `strstreambuf`.  
   
 > [!NOTE]
->  Essa classe foi preterida. Considere usar [ostringstream](../standard-library/sstream-typedefs.md#ostringstream) ou [wostringstream](../standard-library/sstream-typedefs.md#wostringstream) em vez disso.  
+>  This class is deprecated. Consider using [ostringstream](../standard-library/sstream-typedefs.md#ostringstream) or [wostringstream](../standard-library/sstream-typedefs.md#wostringstream) instead.  
   
-### <a name="constructors"></a>Construtores  
-  
-|||  
-|-|-|  
-|[ostrstream](#ostrstream)|Constrói um objeto do tipo `ostrstream`.|  
-  
-### <a name="member-functions"></a>Funções membro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[freeze](#freeze)|Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.|  
-|[pcount](#pcount)|Retorna uma contagem do número de elementos gravados na sequência controlada.|  
-|[rdbuf](#rdbuf)|Retorna um ponteiro para o objeto `strstreambuf` associado do fluxo.|  
-|[str](#str)|Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.|  
+|[ostrstream](#ostrstream)|Constructs an object of type `ostrstream`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<strstream>  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[freeze](#freeze)|Causes a stream buffer to be unavailable through stream buffer operations.|  
+|[pcount](#pcount)|Returns a count of the number of elements written to the controlled sequence.|  
+|[rdbuf](#rdbuf)|Returns a pointer to the stream's associated `strstreambuf` object.|  
+|[str](#str)|Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
   
  **Namespace:** std  
   
 ##  <a name="freeze"></a>  ostrstream::freeze  
- Faz com que um buffer de fluxo esteja indisponível por meio de operações de buffer de fluxo.  
+ Causes a stream buffer to be unavailable through stream buffer operations.  
   
 ```
 void freeze(bool _Freezeit = true);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Freezeit`  
- Um `bool` que indica se você deseja que o fluxo seja congelado.  
+ A `bool` indicating whether you want the stream to be frozen.  
   
-### <a name="remarks"></a>Comentários  
- A função membro chama [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
   
-### <a name="example"></a>Exemplo  
-  Consulte [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) para ver um exemplo que usa **freeze**.  
+### <a name="example"></a>Example  
+  See [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) for an example that uses **freeze**.  
   
 ##  <a name="ostrstream"></a>  ostrstream::ostrstream  
- Constrói um objeto do tipo `ostrstream`.  
+ Constructs an object of type `ostrstream`.  
   
 ```
 ostrstream();
@@ -107,76 +109,76 @@ ostrstream(char* ptr,
     ios_base::openmode _Mode = ios_base::out);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- O buffer.  
+ The buffer.  
   
  `count`  
- O tamanho do buffer em bytes.  
+ The size of the buffer in bytes.  
   
  `_Mode`  
- O modo de entrada e saída do buffer. Consulte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obter mais informações.  
+ The input and output mode of the buffer. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for more information.  
   
-### <a name="remarks"></a>Comentários  
- Ambos os construtores inicializam a classe base chamando [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), em que **sb** é o objeto armazenado da classe [strstreambuf](../standard-library/strstreambuf-class.md). O primeiro construtor também inicializa **sb** chamando `strstreambuf`. O segundo construtor inicializa a classe base com uma de duas maneiras:  
+### <a name="remarks"></a>Remarks  
+ Both constructors initialize the base class by calling [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), where **sb** is the stored object of class [strstreambuf](../standard-library/strstreambuf-class.md). The first constructor also initializes **sb** by calling `strstreambuf`. The second constructor initializes the base class one of two ways:  
   
--   Se `_Mode` & **ios_base::app**== 0, então `ptr` deve designar o primeiro elemento de uma matriz de elementos `count` e o construtor chamará `strstreambuf`( `ptr`, `count`, `ptr`).  
+-   If `_Mode` & **ios_base::app**== 0, then `ptr` must designate the first element of an array of `count` elements, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr`).  
   
--   Caso contrário, `ptr` deve designar o primeiro elemento de uma matriz de elementos de contagem que contém uma cadeia de caracteres C cujo primeiro elemento é designado por `ptr` e o construtor chama `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
+-   Otherwise, `ptr` must designate the first element of an array of count elements that contains a C string whose first element is designated by `ptr`, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
   
 ##  <a name="pcount"></a>  ostrstream::pcount  
- Retorna uma contagem do número de elementos gravados na sequência controlada.  
+ Returns a count of the number of elements written to the controlled sequence.  
   
 ```
 streamsize pcount() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de elementos gravados na sequência controlada.  
+### <a name="return-value"></a>Return Value  
+ The number of elements written to the controlled sequence.  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
   
-### <a name="example"></a>Exemplo  
-  Consulte [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) para ver uma amostra que usa `pcount`.  
+### <a name="example"></a>Example  
+  See [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `pcount`.  
   
 ##  <a name="rdbuf"></a>  ostrstream::rdbuf  
- Retorna um ponteiro para o objeto strstreambuf associado ao fluxo.  
+ Returns a pointer to the stream's associated strstreambuf object.  
   
 ```
 strstreambuf *rdbuf() const
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o objeto strstreambuf associado ao fluxo.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream's associated strstreambuf object.  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna o endereço do buffer de fluxo armazenado do tipo **pointer** para [strstreambuf](../standard-library/strstreambuf-class.md).  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the stored stream buffer of type **pointer** to [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-### <a name="example"></a>Exemplo  
-  Consulte [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) para ver uma amostra que usa `rdbuf`.  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.  
   
 ##  <a name="str"></a>  ostrstream::str  
- Chama [freeze](../standard-library/strstreambuf-class.md#freeze) e retorna um ponteiro para o início da sequência controlada.  
+ Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```
 char *str();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o início da sequência controlada.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
-### <a name="example"></a>Exemplo  
-  Consulte [strstream::str](../standard-library/strstreambuf-class.md#str) para ver uma amostra que usa **str**.  
+### <a name="example"></a>Example  
+  See [strstream::str](../standard-library/strstreambuf-class.md#str) for a sample that uses **str**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [ostream](../standard-library/ostream-typedefs.md#ostream)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programação de iostream](../standard-library/iostream-programming.md)   
- [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

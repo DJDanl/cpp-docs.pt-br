@@ -1,5 +1,5 @@
 ---
-title: Classe make_unsigned | Microsoft Docs
+title: make_unsigned Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- make_unsigned
 - type_traits/std::make_unsigned
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 1bdebf2a3d3f03defa041d049ac98287df7aad6c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c4ddd03c3f0d36cce3700884e34847933fa99f87
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="makeunsigned-class"></a>Classe make_unsigned
-Cria o tipo ou o menor tipo sem sinal maior ou igual em tamanho ao tipo.  
+# <a name="makeunsigned-class"></a>make_unsigned Class
+Makes type or the smallest unsigned type greater than or equal in size to type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
@@ -55,21 +54,21 @@ template <class T>
 using make_unsigned_t = typename make_unsigned<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`T`|O tipo a ser modificado.|  
+|`T`|The type to modify.|  
   
-## <a name="remarks"></a>Comentários  
- Uma instância do modificador de tipo mantém um tipo modificado que será `T` se `is_unsigned<T>` manter true. Caso contrário, será o menor tipo com sinal `ST` para `sizeof (T) <= sizeof (ST)`.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `T` if `is_unsigned<T>` holds true. Otherwise it is the smallest signed type `ST` for which `sizeof (T) <= sizeof (ST)`.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

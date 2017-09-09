@@ -31,28 +31,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: d69ba43627de279a2352c50631c0623b5ec67637
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0db624d9b357a2d229937698cad26f043ca1e4e9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
-Inclui o cabeçalho \<stdint.h> da biblioteca C Padrão e adiciona os nomes associados ao namespace `std`.  
+Includes the Standard C library header \<stdint.h> and adds the associated names to the `std` namespace.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <cstdint>  
 ```  
   
-## <a name="remarks"></a>Comentários  
- A inclusão desse cabeçalho garante que os nomes declarados usando vinculação externa no cabeçalho da biblioteca C Padrão sejam declarados no namespace `std`.  
+## <a name="remarks"></a>Remarks  
+ Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
- [Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)
 
 
 

@@ -34,26 +34,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b01aa8cda27363be547a6cacafb5d610a7933bf7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: dc17cc4dc82063566ea2cf3119c6eeb54a863a4a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; Struct
-Uma struct é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `char`.  
+A struct that is a specialization of the template struct **char_traits\<CharType>** to an element of type `char`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<char>;
 ```  
   
-## <a name="remarks"></a>Comentários  
- A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `char`.  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `char`.  
   
-## <a name="example"></a>Exemplo  
- Consulte as funções de typedefs e membro da classe modelo [char_traits Class](../standard-library/char-traits-struct.md)
+## <a name="example"></a>Example  
+ See the typedefs and member functions of the template class [char_traits Class](../standard-library/char-traits-struct.md)
 

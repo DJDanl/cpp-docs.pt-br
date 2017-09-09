@@ -1,5 +1,5 @@
 ---
-title: "Funções de Membro de Fluxo de Entrada | Microsoft Docs"
+title: Input Stream Member Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,6 @@ dev_langs:
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
-f1_keywords: []
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
 author: corob-msft
@@ -33,34 +32,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 04820d66b272d284940971d1661b4c41f116aa2f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d3f69e0bfc0aadc8f0985e0ffb8130f2c18446fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="input-stream-member-functions"></a>Funções de Membro de Fluxo de Entrada
-Funções de membro de fluxo de entrada são usadas para entrada de disco. As funções de membro incluem:  
+# <a name="input-stream-member-functions"></a>Input Stream Member Functions
+Input stream member functions are used for disk input. The member functions include:  
   
-- [A função open para fluxos de entrada](#vclrftheopenfunctionforinputstreamsanchor11)  
+- [The open Function for Input Streams](#vclrftheopenfunctionforinputstreamsanchor11)  
   
-- [Get](#vclrfthegetfunctionanchor12)  
+- [The get](#vclrfthegetfunctionanchor12)  
   
-- [O getline](#vclrfthegetlinefunctionanchor13)  
+- [The getline](#vclrfthegetlinefunctionanchor13)  
   
-- [A leitura](#vclrfthereadfunctionanchor14)  
+- [The read](#vclrfthereadfunctionanchor14)  
   
-- [As funções seekg e tellg](#vclrftheseekgandtellgfunctionsanchor7)  
+- [The seekg and tellg Functions](#vclrftheseekgandtellgfunctionsanchor7)  
   
-- [A função close para fluxos de entrada](#vclrftheclosefunctionforinputstreamsanchor15)  
+- [The close Function for Input Streams](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> A função open para fluxos de entrada  
- Se estiver usando um fluxo de arquivo de entrada (ifstream), você deverá associar o fluxo a um arquivo de disco específico. É possível fazer isso no construtor ou usando a função **open**. Nos dois casos, os argumentos são os mesmos.  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> The open Function for Input Streams  
+ If you are using an input file stream (ifstream), you must associate that stream with a specific disk file. You can do this in the constructor, or you can use the **open** function. In either case, the arguments are the same.  
   
- Normalmente, você especifica um sinalizador [ios_base::openmode](../standard-library/ios-base-class.md#openmode) quando abre o arquivo associado a um fluxo de entrada (o modo padrão é **ios::in**). Para obter uma lista de **open_mode** sinalizadores, consulte [abrir](#vclrftheopenfunctionforinputstreamsanchor11). Os sinalizadores podem ser combinados com o operador bit a bit OR ( &#124; ).  
+ You generally specify an [ios_base::openmode](../standard-library/ios-base-class.md#openmode) flag when you open the file associated with an input stream (the default mode is **ios::in**). For a list of the **open_mode** flags, see [The open](#vclrftheopenfunctionforinputstreamsanchor11). The flags can be combined with the bitwise OR ( &#124; ) operator.  
   
- Para ler um arquivo, use primeiro a função de membro **fail** para determinar se ele existe:  
+ To read a file, first use the **fail** member function to determine whether it exists:  
   
 ```  
 istream ifile("FILENAME");
@@ -69,10 +68,10 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a>Get
- A função de membro **get** não formatada funciona como o operador **>>** com duas exceções. Primeiro, a função **get** inclui caracteres de espaço em branco, enquanto o extrator exclui espaços em branco quando o sinalizador **skipws** é definido (padrão). Segundo, a função **get** tem menos probabilidade de fazer com que um fluxo de saída associado (`cout`, por exemplo) seja liberado.  
+##  <a name="vclrfthegetfunctionanchor12"></a> The get
+ The unformatted **get** member function works like the **>>** operator with two exceptions. First, the **get** function includes white-space characters, whereas the extractor excludes white space when the **skipws** flag is set (the default). Second, the **get** function is less likely to cause a tied output stream (`cout`, for example) to be flushed.  
   
- Uma variação da função **get** especifica um endereço de buffer e o número máximo de caracteres a serem lidos. Isso é útil para limitar o número de caracteres enviados para uma variável específica, como este exemplo mostra:  
+ A variation of the **get** function specifies a buffer address and the maximum number of characters to read. This is useful for limiting the number of characters sent to a specific variable, as this example shows:  
   
 ```  
 // ioo_get_function.cpp  
@@ -91,22 +90,22 @@ int main()
 }  
 ```  
   
-### <a name="input"></a>Entrada  
+### <a name="input"></a>Input  
   
 ```  
 1234  
 ```  
   
-### <a name="sample-output"></a>Saída de Exemplo  
+### <a name="sample-output"></a>Sample Output  
   
 ```  
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a>O getline
- A função de membro **getline** é semelhante à função **get**. As duas funções permitem um terceiro argumento que especifica o caractere de encerramento para a entrada. O valor padrão é o caractere newline. As duas funções reservam um caractere para o caractere de encerramento necessário. No entanto, **get** deixa o caractere de encerramento no fluxo e **getline** remove o caractere de encerramento.  
+##  <a name="vclrfthegetlinefunctionanchor13"></a> The getline
+ The **getline** member function is similar to the **get** function. Both functions allow a third argument that specifies the terminating character for input. The default value is the newline character. Both functions reserve one character for the required terminating character. However, **get** leaves the terminating character in the stream and **getline** removes the terminating character.  
   
- O exemplo a seguir especifica um caractere de encerramento para o fluxo de entrada:  
+ The following example specifies a terminating character for the input stream:  
   
 ```  
 // getline_func.cpp  
@@ -123,16 +122,16 @@ int main( )
 }  
 ```  
   
-### <a name="input"></a>Entrada  
+### <a name="input"></a>Input  
   
 ```  
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a>A leitura
- A função de membro **read** lê bytes de um arquivo para uma área de memória especificada. O argumento de tamanho especifica o número de bytes lidos. Se você não incluir esse argumento, a leitura para quando o final de arquivo físico é atingido ou, no caso de um arquivo de modo de texto, quando o caractere `EOF` inserido é lido.  
+##  <a name="vclrfthereadfunctionanchor14"></a> The read
+ The **read** member function reads bytes from a file to a specified area of memory. The length argument determines the number of bytes read. If you do not include that argument, reading stops when the physical end of file is reached or, in the case of a text-mode file, when an embedded `EOF` character is read.  
   
- Este exemplo lê um registro binário de um arquivo de folha de pagamento em uma estrutura:  
+ This example reads a binary record from a payroll file into a structure:  
   
 ```  
 #include <fstream>  
@@ -158,10 +157,10 @@ int main()
 }  
 ```  
   
- O programa presume que os registros de dados estão formatados exatamente conforme especificado pela estrutura, sem nenhum caractere de avanço de linha ou de retorno de carro de encerramento.  
+ The program assumes that the data records are formatted exactly as specified by the structure with no terminating carriage-return or linefeed characters.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> As funções seekg e tellg  
- Fluxos de arquivo de entrada mantêm um ponteiro interno para a posição no arquivo em que os dados devem ser lidos em seguida. Defina esse ponteiro com a função `seekg`, conforme mostrado aqui:  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> The seekg and tellg Functions  
+ Input file streams keep an internal pointer to the position in the file where data is to be read next. You set this pointer with the `seekg` function, as shown here:  
   
 ```  
 #include <iostream>  
@@ -187,9 +186,9 @@ int main( )
 }  
 ```  
   
- Para usar `seekg` para implementar sistemas de gerenciamento de dados voltados aos registros, multiplique o tamanho do registro de tamanho fixo pelo o número do registro para obter a posição do byte em relação ao final do arquivo e, em seguida, use o objeto **get** para ler o registro.  
+ To use `seekg` to implement record-oriented data management systems, multiply the fixed-length record size by the record number to obtain the byte position relative to the end of the file, and then use the **get** object to read the record.  
   
- A função membro `tellg` retorna a posição do arquivo atual para leitura. Esse valor é do tipo `streampos`, um `typedef` definido em \<iostream>. O exemplo a seguir lê um arquivo e exibe mensagens mostrando as posições de espaços.  
+ The `tellg` member function returns the current file position for reading. This value is of type `streampos`, a `typedef` defined in \<iostream>. The following example reads a file and displays messages showing the positions of spaces.  
   
 ```  
 #include <fstream>  
@@ -214,10 +213,10 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> A função close para fluxos de entrada  
- A função de membro **close** fecha o arquivo de disco associado a um fluxo de arquivo de entrada e libera o identificador de arquivo do sistema operacional. O destruidor [ifstream](../standard-library/basic-ifstream-class.md) fecha o arquivo para você, mas você poderá usar a função **close** se precisar abrir um outro arquivo para o mesmo objeto de fluxo.  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> The close Function for Input Streams  
+ The **close** member function closes the disk file associated with an input file stream and frees the operating system file handle. The [ifstream](../standard-library/basic-ifstream-class.md) destructor closes the file for you, but you can use the **close** function if you need to open another file for the same stream object.  
   
-## <a name="see-also"></a>Consulte também  
- [Fluxos de entrada](../standard-library/input-streams.md)
+## <a name="see-also"></a>See Also  
+ [Input Streams](../standard-library/input-streams.md)
 
 

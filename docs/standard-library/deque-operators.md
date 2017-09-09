@@ -1,49 +1,64 @@
 ---
-title: Operadores &lt;deque&gt; | Microsoft Docs
+title: '&lt;deque&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- deque/std::operator!=
+- deque/std::operator&gt;
+- deque/std::operator&gt;=
+- deque/std::operator&lt;
+- deque/std::operator&lt;=
+- deque/std::operator==
+dev_langs:
+- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9d7f8ff1d198e8608cb5aa96852dc5b263277e02
+helpviewer_keywords:
+- std::operator!= (deque)
+- std::operator&gt; (deque)
+- std::operator&gt;= (deque)
+- std::operator&lt; (deque)
+- std::operator&lt;= (deque)
+- std::operator== (deque)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ab28c65e454f536e40a3a3c78d3d8dfbf4af3a2f
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltdequegt-operators"></a>Operadores &lt;deque&gt;
+# <a name="ltdequegt-operators"></a>&lt;deque&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Testa se o objeto do deque do lado esquerdo do operador não é igual ao objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.  
   
 ```
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se os objetos do deque não forem iguais; **false** se os objetos do deque forem iguais.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque objects are not equal; **false** if the deque objects are equal.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. Dois objetos do deque serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deque objects are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ne.cpp  
@@ -70,26 +85,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Testa se o objeto do deque do lado esquerdo do operador é menor que o objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is less than the deque object on the right side.  
   
 ```
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o deque do lado esquerdo do operador for menor ou não for igual ao deque do lado direito do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than and not equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos é baseada em uma comparação do primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_lt.cpp  
@@ -120,26 +135,26 @@ Deque c1 is less than deque c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Testa se o objeto do deque do lado esquerdo do operador é menor ou igual ao objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.  
   
 ```
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o deque do lado esquerdo do operador for menor ou igual ao deque do lado direito do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. A relação menor que ou igual a entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_le.cpp  
@@ -171,26 +186,26 @@ Deque c1 is less than or equal to deque c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Testa se o objeto do deque do lado esquerdo do operador é igual ao objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is equal to the deque object on the right side.  
   
 ```
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o deque do lado esquerdo do operador for igual ao deque do lado direito do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. Dois deques serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deques are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_eq.cpp  
@@ -225,26 +240,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Testa se o objeto do deque do lado esquerdo do operador é maior que o objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is greater than the deque object on the right side.  
   
 ```
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o deque do lado esquerdo do operador for maior que o deque do lado direito do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_gt.cpp  
@@ -277,26 +292,26 @@ Deque c1 is greater than deque c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Testa se o objeto do deque do lado esquerdo do operador é maior ou igual ao objeto do deque do lado direito.  
+ Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.  
   
 ```
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Um objeto do tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o deque do lado esquerdo do operador for maior ou igual ao deque do lado direito do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos de deque baseia-se em uma comparação par de seus elementos. A relação maior que ou igual entre dois objetos é baseada em uma comparação entre o primeiro par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ge.cpp  
@@ -327,7 +342,7 @@ Deque c1 is greater than or equal to deque c2.
 *\  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<deque>](../standard-library/deque.md)
 
 

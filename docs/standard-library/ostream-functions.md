@@ -1,5 +1,5 @@
 ---
-title: "Funções &lt;ostream&gt; | Microsoft Docs"
+title: '&lt;ostream&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,43 +14,48 @@ f1_keywords:
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
 caps.latest.revision: 15
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 89eebd013c08f52175e5e4038b501d4ce572e55a
+helpviewer_keywords:
+- std::swap [C++]
+- std::endl [C++]
+- std::ends [C++]
+- std::flush [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a6f796a21ec0e8448524963a4d3f62edb492840d
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltostreamgt-functions"></a>Funções &lt;ostream&gt;
+# <a name="ltostreamgt-functions"></a>&lt;ostream&gt; functions
 ||||  
 |-|-|-|  
 |[swap](#swap)|[endl](#endl)|[ends](#ends)|  
 |[flush](#flush)|  
   
 ##  <a name="endl"></a>  endl  
- Termina uma linha e libera o buffer.  
+ Terminates a line and flushes the buffer.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& endl(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- O tipo de elemento.  
+ The element type.  
   
  `Ostr`  
- Um objeto do tipo `basic_ostream`.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- Características de caractere.  
+ Character traits.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um objeto do tipo `basic_ostream`.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>Comentários  
- O manipulador chama `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**)) e, em seguida, chama `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). Ele retorna `Ostr`.  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Ostr`**.** [widen](../standard-library/basic-ios-class.md#widen)( **'\n'**)), and then calls `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). It returns `Ostr`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_endl.cpp  
@@ -69,29 +74,29 @@ testing
 ```  
   
 ##  <a name="ends"></a>  ends  
- Termina uma cadeia de caracteres.  
+ Terminates a string.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& ends(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- O tipo de elemento.  
+ The element type.  
   
  `Ostr`  
- Um objeto do tipo `basic_ostream`.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- Características de caractere.  
+ Character traits.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um objeto do tipo `basic_ostream`.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>Comentários  
- O manipulador chama `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**)). Retorna `Ostr.`  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[put](../standard-library/basic-ostream-class.md#put)( `Elem`( **'\0'**)). It returns `Ostr.`  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_ends.cpp  
@@ -112,29 +117,29 @@ ab c
 ```  
   
 ##  <a name="flush"></a>  flush  
- Libera o buffer.  
+ Flushes the buffer.  
   
 ```  
 template class<Elem, Tr> basic_ostream<Elem, Tr>& flush(basic_ostream<Elem, Tr>& Ostr);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- O tipo de elemento.  
+ The element type.  
   
  `Ostr`  
- Um objeto do tipo `basic_ostream`.  
+ An object of type `basic_ostream`.  
   
  `Tr`  
- Características de caractere.  
+ Character traits.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um objeto do tipo `basic_ostream`.  
+### <a name="return-value"></a>Return Value  
+ An object of type `basic_ostream`.  
   
-### <a name="remarks"></a>Comentários  
- O manipulador chama `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). Ele retorna `Ostr`.  
+### <a name="remarks"></a>Remarks  
+ The manipulator calls `Ostr`**.**[flush](../standard-library/basic-ostream-class.md#flush). It returns `Ostr`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostream_flush.cpp  
@@ -153,7 +158,7 @@ testing
 ```  
   
 ##  <a name="swap"></a>  swap  
- Troca os valores de dois objetos `basic_ostream`.  
+ Exchanges the values of two `basic_ostream` objects.  
   
 ```  
 template <class Elem, class Tr>  
@@ -162,17 +167,17 @@ void swap(
     basic_ostream<Elem, Tr>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Uma referência lvalue a um objeto `basic_ostream`.  
+ An lvalue reference to a `basic_ostream` object.  
   
  `right`  
- Uma referência lvalue a um objeto `basic_ostream`.  
+ An lvalue reference to a `basic_ostream` object.  
   
-### <a name="remarks"></a>Comentários  
- A função de modelo `swap` executa `left.swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function `swap` executes `left.swap(right)`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

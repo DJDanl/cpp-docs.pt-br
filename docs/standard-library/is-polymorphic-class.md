@@ -1,5 +1,5 @@
 ---
-title: Classe is_polymorphic | Microsoft Docs
+title: is_polymorphic Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_polymorphic
 - type_traits/std::is_polymorphic
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: bf02c7042b7b2a2535ab9d81116d4d97b557c21b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d159193b9c1700309c45e8d00879f9a6dd98538a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ispolymorphic-class"></a>Classe is_polymorphic
-Testa se o tipo tem uma função virtual.  
+# <a name="ispolymorphic-class"></a>is_polymorphic Class
+Tests if type has a virtual function.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_polymorphic;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- O tipo a ser consultado.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentários  
- Uma instância do predicado de tipo será verdadeira se o tipo `Ty` for uma classe que declara ou herda uma função virtual; caso contrário, será falsa.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that declares or inherits a virtual function, otherwise it holds false.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_polymorphic.cpp   
@@ -110,12 +109,12 @@ is_polymorphic<trivial> == false
 is_polymorphic<throws> == true  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe is_abstract](../standard-library/is-abstract-class.md)
+ [is_abstract Class](../standard-library/is-abstract-class.md)
 

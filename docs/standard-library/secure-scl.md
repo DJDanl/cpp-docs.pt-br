@@ -33,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
-ms.openlocfilehash: f3712b4417c0fed972d9a20b6d82479561cce4b0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b08c83eddb92ac2df89c4038cd87845a83c3159
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="securescl"></a>_SECURE_SCL
   
-Substituído por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), essa macro define se os [Iteradores verificados](../standard-library/checked-iterators.md) estão habilitados. Por padrão, a depuração de iterador está habilitada em builds de depuração e desabilitado em builds de varejo.  
+Superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), this macro defines whether [Checked Iterators](../standard-library/checked-iterators.md) are enabled. By default, checked iterators are enabled in Debug builds, and disabled in Retail builds.  
   
 > [!IMPORTANT]
-> O uso direto da macro `_SECURE_SCL` foi preterido. Em vez disso, use `_ITERATOR_DEBUG_LEVEL` para controlar configurações do iterador verificado. Para obter mais informações, consulte [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
+> Direct use of the `_SECURE_SCL` macro is deprecated. Instead, use `_ITERATOR_DEBUG_LEVEL` to control checked iterator settings. For more information, see [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
-Quando iteradores verificados estão habilitados, o uso de um iterador não seguro causa um erro em tempo de execução e o programa é encerrado. Para habilitar os iteradores verificados, defina `_ITERATOR_DEBUG_LEVEL` como 1 ou 2. Isso é equivalente a configurar `_SECURE_SCL` como 1 ou habilitado:  
+When checked iterators are enabled, unsafe iterator use causes a runtime error and the program is terminated. To enable checked iterators, set `_ITERATOR_DEBUG_LEVEL` to 1 or 2. This is equivalent to a `_SECURE_SCL` setting of 1, or enabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 1  
 ```  
   
-Para desabilitar os iteradores verificados, defina `_ITERATOR_DEBUG_LEVEL` como 0. Isso é equivalente a configurar `_SECURE_SCL` como 0 ou desabilitado:  
+To disable checked iterators, set `_ITERATOR_DEBUG_LEVEL` to 0. This is equivalent to a `_SECURE_SCL` setting of 0, or disabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 0  
 ```  
   
-Para obter informações sobre como desabilitar avisos sobre iteradores verificados, consulte [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
+For information on how to disable warnings about checked iterators, see [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)   
-[Iteradores verificados](../standard-library/checked-iterators.md)   
-[Suporte ao iterador de depuração](../standard-library/debug-iterator-support.md)   
-[Bibliotecas seguras: Biblioteca Padrão C++](../standard-library/safe-libraries-cpp-standard-library.md)
+[Checked Iterators](../standard-library/checked-iterators.md)   
+[Debug Iterator Support](../standard-library/debug-iterator-support.md)   
+[Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)
 
 

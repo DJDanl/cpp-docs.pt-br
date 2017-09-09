@@ -1,5 +1,5 @@
 ---
-title: Typedefs &lt;exception&gt; | Microsoft Docs
+title: '&lt;exception&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,63 +13,64 @@ f1_keywords:
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f55867484f781f91dfb447d384223fbdeb370592
-ms.lasthandoff: 02/25/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3f0cf891a1ff2d3c83482fad6f971d0baaae0911
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltexceptiongt-typedefs"></a>Typedefs &lt;exception&gt;
+# <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
 ||||  
 |-|-|-|  
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
 ##  <a name="exception_ptr"></a>  exception_ptr  
- Um tipo que descreve um ponteiro para uma exceção.  
+ A type that describes a pointer to an exception.  
   
 ```cpp  
 typedef unspecified exception_ptr;
 ```  
   
-### <a name="remarks"></a>Comentários  
- Uma classe interna não especificada que é usada para implementar o tipo `exception_ptr`.  
+### <a name="remarks"></a>Remarks  
+ An unspecified internal class that is used to implement the `exception_ptr` type.  
   
- Use um objeto `exception_ptr` para fazer referência à exceção atual ou a uma instância de uma exceção especificada pelo usuário. Na implementação da Microsoft, uma exceção é representada por uma estrutura [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082). Cada objeto `exception_ptr` inclui um campo de referência de exceção que aponta para uma cópia da estrutura `EXCEPTION_RECORD` que representa a exceção.  
+ Use an `exception_ptr` object to reference the current exception or an instance of a user-specified exception. In the Microsoft implementation, an exception is represented by an [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) structure. Each `exception_ptr` object includes an exception reference field that points to a copy of the `EXCEPTION_RECORD` structure that represents the exception.  
   
- Quando você declara uma variável `exception_ptr`, ela não é associada a nenhuma exceção. Isto é, o campo de referência de exceção é NULL. Esse objeto `exception_ptr` é chamado de *null exception_ptr*.  
+ When you declare an `exception_ptr` variable, the variable is not associated with any exception. That is, its exception reference field is NULL. Such an `exception_ptr` object is called a *null exception_ptr*.  
   
- Use a função `current_exception` ou `make_exception_ptr` para atribuir uma exceção a um objeto `exception_ptr`. Quando você atribui uma exceção a uma variável `exception_ptr`, o campo de referência de exceção da variável aponta para uma cópia da exceção. Se não houver memória suficiente para copiar a exceção, o campo de referência de exceção apontará para uma cópia de uma exceção [std::bad_alloc](../standard-library/bad-alloc-class.md). Se a função `current_exception` ou `make_exception_ptr` não puder copiar a exceção por qualquer outro motivo, a função chamará a função CRT **terminate** para encerrar o processo atual.  
+ Use the `current_exception` or `make_exception_ptr` function to assign an exception to an `exception_ptr` object. When you assign an exception to an `exception_ptr` variable, the variable's exception reference field points to a copy of the exception. If there is insufficient memory to copy the exception, the exception reference field points to a copy of a [std::bad_alloc](../standard-library/bad-alloc-class.md) exception. If the `current_exception` or `make_exception_ptr` function cannot copy the exception for any other reason, the function calls the **terminate** CRT function to exit the current process.  
   
- Apesar do nome, um objeto `exception_ptr` não é, em si, um ponteiro. Ele não obedece à semântica do ponteiro e não pode ser usado com o acesso do membro do ponteiro (`->`) ou operadores (*) de indireção. O objeto `exception_ptr` não tem membros de dados públicos ou funções de membro.  
+ Despite its name, an `exception_ptr` object is not itself a pointer. It does not obey pointer semantics and cannot be used with the pointer member access ( `->`) or indirection (*) operators. The `exception_ptr` object has no public data members or member functions.  
   
- **Comparações:**  
+ **Comparisons:**  
   
- Você pode usar os operadores igual (`==`) e diferente (`!=`) para comparar dois objetos `exception_ptr`. Os operadores não comparam o valor binário (padrão de bit) das estruturas `EXCEPTION_RECORD` que representam as exceções. Em vez disso, os operadores comparam os endereços no campo de referência de exceção dos objetos `exception_ptr`. Consequentemente, um `exception_ptr` nulo e o valor NULL são comparados como iguais.  
+ You can use the equal ( `==`) and not-equal ( `!=`) operators to compare two `exception_ptr` objects. The operators do not compare the binary value (bit pattern) of the `EXCEPTION_RECORD` structures that represent the exceptions. Instead, the operators compare the addresses in the exception reference field of the `exception_ptr` objects. Consequently, a null `exception_ptr` and the NULL value compare as equal.  
   
 ##  <a name="terminate_handler"></a>  terminate_handler  
- O tipo descreve um ponteiro para uma função adequada para uso como um `terminate_handler`.  
+ The type describes a pointer to a function suitable for use as a `terminate_handler`.  
   
 ```
 typedef void (*terminate_handler)();
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um ponteiro para uma função adequada para uso como um manipulador de finalização.  
+### <a name="remarks"></a>Remarks  
+ The type describes a pointer to a function suitable for use as a terminate handler.  
   
-### <a name="example"></a>Exemplo  
-  Consulte [set_terminate](../standard-library/exception-functions.md#set_terminate) para obter um exemplo do uso de `terminate_handler`.  
+### <a name="example"></a>Example  
+  See [set_terminate](../standard-library/exception-functions.md#set_terminate) for an example of the use of `terminate_handler`.  
   
 ##  <a name="unexpected_handler"></a>  unexpected_handler  
- O tipo descreve um ponteiro para uma função adequada para uso como um `unexpected_handler`.  
+ The type describes a pointer to a function suitable for use as an `unexpected_handler`.  
   
 ```
 typedef void (*unexpected_handler)();
 ```  
   
-### <a name="example"></a>Exemplo  
-  Consulte [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obter um exemplo do uso de `unexpected_handler`.  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of `unexpected_handler`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<exception>](../standard-library/exception.md)
 
 

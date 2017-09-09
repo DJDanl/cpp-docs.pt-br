@@ -1,15 +1,14 @@
 ---
-title: Struct greater | Microsoft Docs
+title: greater Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- greater
 - xfunctional/std::greater
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: bcb6c83709d8e0effc202ecfb13659e7f725b1d1
-ms.lasthandoff: 02/25/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8113c140b7ff3236fff9169563f9c93633416b95
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="greater-struct"></a>Struct greater
-Um predicado binário que executa a operação "maior que" ( `operator>`) em seus argumentos.  
+# <a name="greater-struct"></a>greater Struct
+A binary predicate that performs the greater-than operation ( `operator>`) on its arguments.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -67,23 +67,23 @@ struct greater<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Qualquer tipo que dê suporte a um `operator>` que usa operandos dos tipos especificados ou inferidos.  
+ Any type that supports an `operator>` that takes operands of the specified or inferred types.  
   
  `Left`  
- O operando esquerdo da operação "maior que". O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `T`.  
+ The left operand of the greater-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- O operando direito da operação "maior que". O modelo não especializado usa um argumento de referência lvalue do tipo `Type`. O modelo especializado realiza o encaminhamento perfeito dos argumentos de referência lvalue e rvalue do tipo inferido `U`.  
+ The right operand of the greater-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valor de retorno  
- O resultado de `Left``>``Right`. O modelo especializado realiza o encaminhamento perfeito do resultado, que tem o tipo retornado por `operator>`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left > Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator>`.  
   
-## <a name="remarks"></a>Comentários  
- O predicado binário `greater`< `Type`> fornece uma ordenação fraca estrita de um conjunto de valores de elemento do tipo `Type` em classes de equivalência, se e somente se esse tipo atender aos requisitos matemáticos padrão para ser ordenado dessa forma. As especializações de qualquer tipo de ponteiro produzem uma ordenação total dos elementos, pois todos os elementos de valores distintos são ordenados em relação uns aos outros.  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `greater`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_greater.cpp  
@@ -129,7 +129,7 @@ int main( )
 }  
 ```  
   
-## <a name="output"></a>Saída  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478 29358)
@@ -137,13 +137,13 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

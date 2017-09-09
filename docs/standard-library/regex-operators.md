@@ -1,5 +1,5 @@
 ---
-title: Operadores &lt;regex&gt; | Microsoft Docs
+title: '&lt;regex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,14 +19,14 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 507f422cf476e7d6c928c22c516ee2e242282b04
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-operators"></a>Operadores &lt;regex&gt;
+# <a name="ltregexgt-operators"></a>&lt;regex&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/29/2017
 |[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Comparação de diferença para vários objetos.  
+ Not equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -71,26 +71,26 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo retorna `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left == right)`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ne.cpp   
@@ -151,7 +151,7 @@ sub != 'a' == true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Comparação de menor que para vários objetos.  
+ Less than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -184,26 +184,26 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo converte seu argumento em um tipo de cadeia de caracteres e retorna true somente se o valor convertido do `left` for menor em comparação ao valor convertido de `right`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts its arguments to a string type and returns true only if the converted value of `left` compares less than the converted value of `right`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_lt.cpp   
@@ -259,7 +259,7 @@ sub < 'a' == false
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- Insere um sub_match em um fluxo.  
+ Inserts a sub_match in a stream.  
   
 ```  
 template <class Elem, class IOtraits, class Alloc, class BidIt>  
@@ -267,29 +267,29 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- O tipo de elemento.  
+ The element type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `os`  
- O fluxo de saída.  
+ The output stream.  
   
  `right`  
- O objeto a ser inserido.  
+ The object to insert.  
   
-### <a name="remarks"></a>Comentários  
- O operador de modelo retorna `os << right.str()`.  
+### <a name="remarks"></a>Remarks  
+ The template operator returns `os << right.str()`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ins.cpp   
@@ -317,7 +317,7 @@ whole match: caaa
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Comparação de menor ou igual para vários objetos.  
+ Less than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -350,26 +350,26 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo retorna `!(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(right < left)`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_le.cpp   
@@ -425,7 +425,7 @@ sub <= 'a' == false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Comparação de igualdade para vários objetos.  
+ Equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -462,34 +462,34 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo converte cada um de seus argumentos em um tipo de cadeia de caracteres e retorna o resultado da comparação da igualdade dos objetos convertidos.  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts each of its arguments to a string type and returns the result of comparing the converted objects for equality.  
   
- Quando um operador de modelo converte seus argumentos em um tipo de cadeia de caracteres, ele usa a primeira das seguintes transformações aplicáveis:  
+ When a template operator converts its arguments to a string type it uses the first of the following transformations that applies:  
   
- argumentos cujos tipos são uma especialização da classe de modelo `match_results` ou `sub_match` são convertidos chamando a função membro `str`;  
+ arguments whose types are a specialization of template class `match_results` or `sub_match` are converted by calling the `str` member function;  
   
- argumentos cujos tipos são uma especialização da classe modelo `basic_string` permanecem inalterados;  
+ arguments whose types are a specialization of the template class `basic_string` are unchanged;  
   
- todos os outros tipos de argumento são convertidos passando o valor do argumento para o construtor para uma especialização apropriada da classe de modelo `basic_string`.  
+ all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the template class `basic_string`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_eq.cpp   
@@ -550,7 +550,7 @@ sub == 'a' == false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Comparação de maior que para vários objetos.  
+ Greater than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -583,26 +583,26 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo retorna `right < left`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `right < left`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_gt.cpp   
@@ -658,7 +658,7 @@ sub > 'a' == true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Comparação de maior ou igual para vários objetos.  
+ Greater than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -691,26 +691,26 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- O tipo de iterador.  
+ The iterator type.  
   
  `IOtraits`  
- A classe de característica da cadeia de caracteres.  
+ The string traits class.  
   
  `Alloc`  
- A classe do alocador.  
+ The allocator class.  
   
  `left`  
- O objeto à esquerda a ser comparado.  
+ The left object to compare.  
   
  `right`  
- O objeto à direita a ser comparado.  
+ The right object to compare.  
   
-### <a name="remarks"></a>Comentários  
- Cada operador de modelo retorna `!(left < right)`.  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left < right)`.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ge.cpp   
@@ -764,15 +764,15 @@ sub >= "aab" == false
 sub >= 'a' == true  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[Classe regex_constants](../standard-library/regex-constants-class.md)  
-[Classe regex_error](../standard-library/regex-error-class.md)  
-[\<Funções regex>](../standard-library/regex-functions.md)  
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)  
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Classe regex_traits](../standard-library/regex-traits-class.md)  
-[\<Typedef regex>](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 
 

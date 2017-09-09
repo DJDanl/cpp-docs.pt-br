@@ -1,5 +1,5 @@
 ---
-title: Classe alignment_of | Microsoft Docs
+title: alignment_of Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- alignment_of
 - type_traits/std::alignment_of
 dev_langs:
 - C++
@@ -35,36 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: dee638b0260deff1d8701353c7119fc1b0082685
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 63754bd686c7d1823e01ea5a2790cbeb8771e04e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignmentof-class"></a>Classe alignment_of
-Obtém o alinhamento do tipo especificado. Este struct é implementado em termos de [alignof](../cpp/alignof-and-alignas-cpp.md). Use `alignof` diretamente quando você apenas precisar consultar um valor de alinhamento. Use alignment_of quando precisar de uma constante integral, por exemplo, ao fazer expedição de marcação.  
+# <a name="alignmentof-class"></a>alignment_of Class
+Gets alignment of the specified type. This struct is implemented in terms of [alignof](../cpp/alignof-and-alignas-cpp.md). Use `alignof` directly when you simply need to query an alignment value. Use alignment_of when you need an integral constant, for example when doing tag dispatch.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct alignment_of;
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- O tipo a ser consultado.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentários  
- A consulta de tipo contém o valor do alinhamento do tipo `Ty`.  
+## <a name="remarks"></a>Remarks  
+ The type query holds the value of the the alignment of the type `Ty`.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe aligned_storage](../standard-library/aligned-storage-class.md)
+ [aligned_storage Class](../standard-library/aligned-storage-class.md)
 
