@@ -1,30 +1,47 @@
 ---
-title: "Inicializa&#231;&#227;o uniforme e delega&#231;&#227;o de construtores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uniform Initialization and Delegating Constructors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Inicializa&#231;&#227;o uniforme e delega&#231;&#227;o de construtores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ac08f1df693edd6fe2245146b2bc1717415e1d73
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/11/2017
 
-Em C\+\+ moderno, você pode usar *a inicialização da chave* para qualquer tipo, sem o sinal de igualdade.  Além disso, você pode usar construtores de delegação para simplificar o código quando há vários construtores que executam trabalho semelhante.  
+---
+# <a name="uniform-initialization-and-delegating-constructors"></a>Uniform Initialization and Delegating Constructors
+In modern C++, you can use *brace initialization* for any type, without the equals sign. Also, you can use delegating constructors to simplify your code when you have multiple constructors that perform similar work.  
   
-## Inicialização de chave  
- Você pode usar a inicialização da chave para qualquer classe, struct, ou união.  Se um tipo um construtor padrão, declarou implícita ou explicitamente, você pode usar a inicialização padrão de chave com chaves \(vazios\).  Por exemplo, a seguinte classe pode ser inicializada usando o padrão e inicialização não padrão da chave:  
+## <a name="brace-initialization"></a>Brace Initialization  
+ You can use brace initialization for any class, struct, or union. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:  
   
 ```cpp  
 #include <string>  
@@ -54,7 +71,7 @@ int main()
   
 ```  
   
- Se uma classe tem os construtores não padrão, a ordem em que classificará os membros aparece em inicializador de chave é a ordem na qual os parâmetros correspondentes aparecem no construtor, não a ordem na qual os membros são declarados \(como com `class_a` no exemplo anterior\).  Caso contrário, se o tipo tem nenhum construtor declarado, a ordem na qual os membros são exibidos em inicializador de chave é igual à ordem em que são declarados; nesse caso, você pode inicializar o máximo como os membros públicos como desejar, mas não é possível ignorar nenhum membro.  O exemplo a seguir mostra a ordem que é usado na inicialização da chave quando não há construtor declarado:  
+ If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:  
   
 ```cpp  
 class class_d {  
@@ -76,7 +93,7 @@ int main()
 }   
 ```  
   
- Se o construtor padrão é declarado explicitamente marcado como excluído, mas a inicialização da chave da opção não pode ser usada:  
+ If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:  
   
 ```cpp  
 class class_f {  
@@ -92,7 +109,7 @@ int main()
 }  
 ```  
   
- Você pode usar a inicialização da chave em qualquer lugar que você faria normalmente inicialização\- por exemplo, como um parâmetro de função ou um valor de retorno, ou com a palavra\-chave de `new` :  
+ You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the `new` keyword:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,17 +118,17 @@ return { 4.5 };
   
 ```  
   
-## construtores de initializer\_list  
- [initializer\_list Class](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que pode ser usado em um construtor, e em outros contextos.  Você pode construir um initializer\_list usando a inicialização de chave:  
+## <a name="initializerlist-constructors"></a>initializer_list Constructors  
+ The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Para usar essa classe, você deve incluir o cabeçalho de [\<initializer\_list\>](../standard-library/initializer-list.md) .  
+>  To use this class, you must include the [<initializer_list>](../standard-library/initializer-list.md) header.  
   
- `initializer_list` pode ser copiado.  Nesse caso, os membros da nova lista são referências aos membros da lista original:  
+ An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -121,7 +138,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- As classes do contêiner da biblioteca padrão, e também `string`, `wstring`, e `regex`, têm construtores de `initializer_list` .  Os exemplos a seguir mostram como fazer a inicialização da chave com estes construtores:  
+ The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -130,8 +147,8 @@ string s{ 'a', 'b', 'c' };
 regex rgx{'x', 'y', 'z'};   
 ```  
   
-## Delegando construtores  
- Muitas classes têm vários construtores que fazem semelhante coisa\- por exemplo, para validar parâmetros:  
+## <a name="delegating-constructors"></a>Delegating Constructors  
+ Many classes have multiple constructors that do similar things—for example, validate parameters:  
   
 ```cpp  
 class class_c {  
@@ -156,7 +173,7 @@ public:
 };  
 ```  
   
- Você pode reduzir o código repetitivo adicionando uma função que faça qualquer validação, mas o código para `class_c` seria mais fácil de entender e manter se um construtor pode delegar qualquer de trabalho para outro.  Para adicionar construtores de delegação, use a sintaxe de `constructor (. . .) : constructor (. . .)` :  
+ You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:  
   
 ```cpp  
 class class_c {  
@@ -182,9 +199,9 @@ int main() {
   
 ```  
   
- Enquanto avança com o exemplo anterior, observe que as chamadas de `class_c(int, int, int)` do primeiro o construtor `class_c(int, int)`, que por sua vez `class_c(int)`.  Cada um dos construtores executa somente o trabalho que não são executadas pelos outros construtores.  
+ As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.  
   
- O primeiro construtor que é chamado inicializa o objeto de forma que todos os membros a serem inicializados nesse ponto.  Não é possível fazer a inicialização do membro em um construtor que delega a outro construtor, como mostrado a seguir:  
+ The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:  
   
 ```cpp  
 class class_a {  
@@ -205,7 +222,7 @@ public:
   
 ```  
   
- O exemplo a seguir mostra o uso de inicializadores do membro de dados que não sejam estáticos.  Observe que se houver um construtor também inicializa um membro de dados específico, o inicializador do membro será substituído:  
+ The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:  
   
 ```cpp  
 class class_a {  
@@ -223,7 +240,7 @@ int main() {
 }  
 ```  
   
- A sintaxe de delegação do construtor não impede a criação acidental de chamadas Constructor2 do construtor recursion\-Constructor1 que chama Constructor1\-and que nenhum erro é gerado até que haja um estouro de pilha.  É sua responsabilidade evitar ciclos.  
+ The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.  
   
 ```cpp  
 class class_f{  

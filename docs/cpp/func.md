@@ -1,41 +1,57 @@
 ---
-title: "__func__ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__func__"
-  - "__func___cpp"
-dev_langs: 
-  - "C++"
+title: __func__ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __func__
+- __func___cpp
+dev_langs:
+- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __func__
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 1f53837966ba451b2a246d21b8b34b5f027d7aac
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/11/2017
 
-**\(C \+ \+ 11\)** \_\_func\_\_ o identificador predefinido é definida implicitamente como uma cadeia de caracteres que contém o nome não qualificado e acrescido da função.  \_\_func\_\_ é exigido pelo padrão C\+\+ e não é uma extensão da Microsoft.  
+---
+# <a name="func"></a>__func__
+**(C++11)** The predefined identifier __func\_\_ is implicitly defined as a string that contains the unqualified and unadorned name of the enclosing function. \__func\_\_ is mandated by the C++ standard and is not a Microsoft extension.  
   
-## Sintaxe  
+## <a name="syntax"></a>Syntax  
   
-```vb  
+```cpp  
 __func__  
 ```  
   
-## Valor de Retorno  
- Matriz de char const retorna uma terminação nula de caracteres que contém o nome da função.  
+## <a name="return-value"></a>Return Value  
+ Returns a null-terminated const char array of characters that constains the function name.  
   
-## Exemplo  
+## <a name="example"></a>Example  
   
 ```  
   
@@ -61,5 +77,5 @@ int main()
   
 ```  
   
-## Requisitos  
- C\+\+11
+## <a name="requirements"></a>Requirements  
+ C++11
