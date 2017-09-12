@@ -1,40 +1,58 @@
 ---
-title: "Manipuladores de mensagens | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de comandos, manipuladores de mensagens"
-  - "manipuladores"
-  - "manipuladores, comando"
-  - "manipuladores,  (mensagem)"
-  - "manipuladores de mensagens"
-  - "lidando com erros, funções de manipulador de mensagens"
+title: Message Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- command handling [MFC], message handlers
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- handlers [MFC], command
+- handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Manipuladores de mensagens
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c645aba2c37f403121b311f12863334277e5612
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC no, uma função dedicada *do manipulador* processa cada mensagem separadamente.  As funções são retornadas a funções de membro de uma classe.  Esta documentação usa *a função de membro retornadas aos*termos, *a função retornadas a*, *o manipulador de mensagens*, e *o manipulador* alternadamente.  Alguns tipos de manipuladores de mensagem também são denominados “manipuladores de comando.”  
+---
+# <a name="message-handlers"></a>Message Handlers
+In MFC, a dedicated *handler* function processes each separate message. Message-handler functions are member functions of a class. This documentation uses the terms *message-handler member function*, *message-handler function*, *message handler*, and *handler* interchangeably. Some kinds of message handlers are also called "command handlers."  
   
- Os manipuladores de mensagem de gravação para uma grande proporção do trabalho ao escrever um aplicativo da estrutura.  Esta família do artigo descreve como o mecanismo retornadas processamento trabalha.  
+ Writing message handlers accounts for a large proportion of your work in writing a framework application. This article family describes how the message-processing mechanism works.  
   
- Que o manipulador para uma mensagem faz?  Faz o que você deseja fazer em resposta à mensagem.  Você pode criar manipuladores usando a janela Propriedades da classe, e preenche o código do manipulador usando o editor de origem.  
+ What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the Properties window of the class, and then fill in the handler's code using the source code editor.  
   
- Você pode usar todas as instalações do Microsoft Visual C\+\+ e MFC para gravar seus manipuladores.  Para obter uma lista de todas as classes, consulte [Visão geral da biblioteca de classes](../mfc/class-library-overview.md)*na referência de MFC*.  
+ You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
-## Consulte também  
- [Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

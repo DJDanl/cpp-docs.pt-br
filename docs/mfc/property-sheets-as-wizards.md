@@ -1,36 +1,54 @@
 ---
-title: "Folhas de propriedades como assistentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "folhas de propriedade, como assistentes"
+title: Property Sheets as Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Folhas de propriedades como assistentes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b590d9587fafe23e570e22fac04173d91ca1976
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Uma característica chave de uma folha de propriedade do assistente é que a navegação é fornecida com os botões de em seguida, ou de término do backup, e cancelar em vez das guias.  Você precisa chamar [CPropertySheet::SetWizardMode](../Topic/CPropertySheet::SetWizardMode.md) antes de chamar [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) no objeto de folha de propriedade para tirar proveito desse recurso.  
+---
+# <a name="property-sheets-as-wizards"></a>Property Sheets as Wizards
+A key characteristic of a wizard property sheet is that navigation is provided with Next or Finish, Back, and Cancel buttons instead of tabs. You need to call [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) before calling [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) on the property sheet object to take advantage of this feature.  
   
- O usuário receberá as mesmas [CPropertyPage::OnSetActive](../Topic/CPropertyPage::OnSetActive.md) e notificações de [CPropertyPage::OnKillActive](../Topic/CPropertyPage::OnKillActive.md) ao mover de uma página para outra página.  Os botões Próximo e de término de controles são mutuamente exclusivos; ou seja, apenas um deless será mostrado por vez.  Na primeira página, o botão seguir deve ser habilitado.  Se o usuário está na última página, o botão de conclusão deve ser habilitado.  Isto não for feito automaticamente pela estrutura.  Você precisa chamar [CPropertySheet::SetWizardButton](../Topic/CPropertySheet::SetWizardButtons.md) na última página para obter esse.  
+ The user receives the same [CPropertyPage::OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) and [CPropertyPage::OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) notifications while moving from one page to another page. Next and Finish buttons are mutually exclusive controls; that is, only one of them will be shown at a time. On the first page, the Next button should be enabled. If the user is on the last page, the Finish button should be enabled. This is not done automatically by the framework. You have to call [CPropertySheet::SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) on the last page to achieve this.  
   
- Para exibir todos os botões padrão, apresentação de mush o botão de término e mover o botão próximo.  Mover o botão voltar de forma que sua posição relativa ao botão próximo é mantida.  Para obter mais explicação, pesquise por Q143210 artigo da base de dados.  Os artigos da Base de Dados de Conhecimento estão disponíveis na Biblioteca MSDN.  
+ To display all of the default buttons, you mush show the Finish button and move the Next button. Then move the Back button so that its relative position to the Next button is maintained.  
   
-## Exemplo  
- [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/CPP/property-sheets-as-wizards_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

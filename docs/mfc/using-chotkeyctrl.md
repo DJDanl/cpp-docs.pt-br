@@ -1,45 +1,63 @@
 ---
-title: "Usando CHotKeyCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHotKeyCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CHotKeyCtrl, usando"
-  - "controles de tecla de acesso"
-  - "chaves, acesso e CHotKeyCtrl"
+title: Using CHotKeyCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHotKeyCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- keys, hot and CHotKeyCtrl
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CHotKeyCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aad1f489c15d3ff4fe0a9b7e12023247f7828a16
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um controle de tecla de acesso, representado pela classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), é uma janela que exibe uma representação de texto da combinação de teclas o usuário nela, como CTRL\+SHIFT\+Q.  Também mantém uma representação interna dessa chave na forma de um código chave virtual e um conjunto de sinalizadores que representam o estado do turno.  O controle de tecla de acesso não realmente define a tecla de acesso — fazer isso ocorre até o programa. \(Para obter uma lista de códigos chaves virtuais, consulte Winuser.h.\)  
+---
+# <a name="using-chotkeyctrl"></a>Using CHotKeyCtrl
+A hot key control, represented by class [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), is a window that displays a text representation of the key combination the user types into it, such as CTRL+SHIFT+Q. It also maintains an internal representation of this key in the form of a virtual key code and a set of flags that represent the shift state. The hot key control does not actually set the hot key — doing that is up to your program. (For a list of standard virtual key codes, see Winuser.h.)  
   
- Use um controle de tecla de acesso para obter a entrada de um usuário para o qual a tecla de acesso desejada a ser associado a uma janela ou um thread.  Os controles de tecla de acesso são usadas frequentemente nas caixas de diálogo, como você pode exibir ao solicitar que o usuário aloque uma tecla de acesso.  É responsabilidade do programa recuperar valores que descrevem a tecla de acesso do controle de tecla de acesso e chame as funções apropriadas para associar a tecla de acesso com uma janela ou um thread.  
+ Use a hot key control to get a user's input for which hot key to associate with a window or thread. Hot key controls are often used in dialog boxes, such as you might display when asking the user to assign a hot key. It is your program's responsibility to retrieve the values describing the hot key from the hot key control and to call the appropriate functions to associate the hot key with a window or thread.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Usando um controle de tecla de acesso](../Topic/Using%20a%20Hot%20Key%20Control.md)  
+-   [Using a Hot Key Control](../mfc/using-a-hot-key-control.md)  
   
--   [Definindo uma tecla de acesso](../Topic/Setting%20a%20Hot%20Key.md)  
+-   [Setting a Hot Key](../mfc/setting-a-hot-key.md)  
   
--   [Teclas de acesso globais](../Topic/Global%20Hot%20Keys.md)  
+-   [Global Hot Keys](../mfc/global-hot-keys.md)  
   
--   [Teclas de acesso específicas de threads](../Topic/Thread-Specific%20Hot%20Keys.md)  
+-   [Thread-Specific Hot Keys](../mfc/thread-specific-hot-keys.md)  
   
-## Consulte também  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

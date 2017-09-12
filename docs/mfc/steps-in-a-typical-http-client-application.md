@@ -1,46 +1,63 @@
 ---
-title: "Etapas em um aplicativo cliente HTTP t&#237;pico | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [MFC], cliente HTTP"
-  - "aplicativos cliente [C++], HTTP"
-  - "aplicativos cliente HTTP"
-  - "Aplicativos da Internet [C++], aplicativos cliente HTTP"
-  - "aplicativos cliente da Internet [C++], tabela HTTP"
-  - "Classes WinInet, HTTP"
+title: Steps in a Typical HTTP Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTTP client applications [MFC]
+- client applications [MFC], HTTP
+- Internet applications [MFC], HTTP client applications
+- applications [MFC], HTTP client
+- Internet client applications [MFC], HTTP table
+- WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Etapas em um aplicativo cliente HTTP t&#237;pico
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 472d91112d59a849aa3442bc17a9ea78367e2de7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A tabela a seguir mostra as etapas que você pode executar em um aplicativo cliente típico de HTTP:  
+---
+# <a name="steps-in-a-typical-http-client-application"></a>Steps in a Typical HTTP Client Application
+The following table shows the steps you might perform in a typical HTTP client application:  
   
-|Sua meta|Ações que você faça|Efeitos|  
-|--------------|-------------------------|-------------|  
-|Inicia uma sessão HTTP.|Crie um objeto de [CInternetSession](../Topic/CInternetSession%20Class.md) .|Inicializa WinInet e conecte\-se ao servidor.|  
-|Conectar a um servidor HTTP.|Use [CInternetSession::GetHttpConnection](../Topic/CInternetSession::GetHttpConnection.md).|Retorna um objeto de [CHttpConnection](../mfc/reference/chttpconnection-class.md) .|  
-|Abra uma solicitação HTTP.|Use [CHttpConnection::OpenRequest](../Topic/CHttpConnection::OpenRequest.md).|Retorna um objeto de [CHttpFile](../Topic/CHttpFile%20Class.md) .|  
-|Enviar uma solicitação HTTP.|Use [CHttpFile::AddRequestHeaders](../Topic/CHttpFile::AddRequestHeaders.md) e [CHttpFile::SendRequest](../Topic/CHttpFile::SendRequest.md).|Localiza o arquivo.  Retornará FALSE se o arquivo não for localizado.|  
-|Leitura do arquivo.|Use [CHttpFile](../Topic/CHttpFile%20Class.md).|Ler o número especificado de bytes usando um buffer que você fornece.|  
-|Trate exceções.|Use a classe de [CInternetException](../mfc/reference/cinternetexception-class.md) .|Controla todos os tipos de exceção comuns da Internet.|  
-|Encerra a sessão HTTP.|Disponha do objeto de [CInternetSession](../Topic/CInternetSession%20Class.md) .|Limpa automaticamente os identificadores de arquivos abertos e conexões.|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin an HTTP session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to an HTTP server.|Use [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection).|Returns a [CHttpConnection](../mfc/reference/chttpconnection-class.md) object.|  
+|Open an HTTP request.|Use [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest).|Returns a [CHttpFile](../mfc/reference/chttpfile-class.md) object.|  
+|Send an HTTP request.|Use [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders) and [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|Finds the file. Returns FALSE if the file is not found.|  
+|Read from the file.|Use [CHttpFile](../mfc/reference/chttpfile-class.md).|Reads the specified number of bytes using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the HTTP session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## Consulte também  
- [Extensões da Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Pré\-requisitos para classes clientes de Internet](../Topic/Prerequisites%20for%20Internet%20Client%20Classes.md)   
- [Escrevendo um aplicativo cliente da Internet usando classes WinInet MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

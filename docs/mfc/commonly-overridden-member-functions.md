@@ -1,54 +1,71 @@
 ---
-title: "Fun&#231;&#245;es de membro normalmente substitu&#237;das | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CDialog, membros"
-  - "classes da caixa de diálogo, funções de membro normalmente substituídas"
-  - "caixas de diálogo MFC, substituindo funções de membro"
-  - "Função OnCancel"
-  - "Função OnInitDialog"
-  - "Função OnOK"
-  - "substituição, membros de classe de caixa de diálogo"
+title: Commonly Overridden Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDialog class [MFC], members
+- OnInitDialog function
+- dialog classes [MFC], commonly overridden member functions
+- OnCancel function
+- overriding, dialog class members
+- OnOK function
+- MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#245;es de membro normalmente substitu&#237;das
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21a29ea120266909ab40473276efb317a482643f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A tabela a seguir lista as funções de membro mais provável para substituir em seu `CDialog`\- classe derivada.  
+---
+# <a name="commonly-overridden-member-functions"></a>Commonly Overridden Member Functions
+The following table lists the most likely member functions to override in your `CDialog`-derived class.  
   
-### Funções de membro geralmente substituídas da classe CDialog  
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Commonly Overridden Member Functions of Class CDialog  
   
-|Função de membro|O responde a mensagem|Finalidade de substituição|  
-|----------------------|---------------------------|--------------------------------|  
-|`OnInitDialog`|**WM\_INITDIALOG**|Inicializar os controles da caixa de diálogo.|  
-|`OnOK`|**BN\_CLICKED** para o botão **IDOK**|Responder quando o usuário clicar no botão OK.|  
-|`OnCancel`|**BN\_CLICKED** para o botão **IDCANCEL**|Responder quando o usuário clicar no botão de cancelamento.|  
+|Member function|Message it responds to|Purpose of the override|  
+|---------------------|----------------------------|-----------------------------|  
+|`OnInitDialog`|**WM_INITDIALOG**|Initialize the dialog box's controls.|  
+|`OnOK`|**BN_CLICKED** for button **IDOK**|Respond when the user clicks the OK button.|  
+|`OnCancel`|**BN_CLICKED** for button **IDCANCEL**|Respond when the user clicks the Cancel button.|  
   
- `OnInitDialog`, `OnOK`, e `OnCancel` são funções virtuais.  Substituí\-los, você declara uma função substituindo em sua classe derivada da caixa de diálogo que usa [Janela Propriedades](../Topic/Properties%20Window.md).  
+ `OnInitDialog`, `OnOK`, and `OnCancel` are virtual functions. To override them, you declare an overriding function in your derived dialog class using the [Properties window](/visualstudio/ide/reference/properties-window).  
   
- `OnInitDialog` é chamado imediatamente antes da caixa de diálogo é exibida.  Você deve chamar o manipulador padrão de `OnInitDialog` de sua substituição — geralmente como a primeira ação no manipulador.  Por padrão, `OnInitDialog` retorna **Verdadeiro** para indicar que o foco deve ser definido para o primeiro controle na caixa de diálogo.  
+ `OnInitDialog` is called just before the dialog box is displayed. You must call the default `OnInitDialog` handler from your override — usually as the first action in the handler. By default, `OnInitDialog` returns **TRUE** to indicate that the focus should be set to the first control in the dialog box.  
   
- `OnOK` é substituído normalmente para caixas de diálogo modeless mas não modais.  Se você substituir esse manipulador para uma caixa de diálogo modal, chame a versão da classe base da substituição — para garantir que `EndDialog` — ou seja chamado de chamada `EndDialog` você mesmo.  
+ `OnOK` is typically overridden for modeless but not modal dialog boxes. If you override this handler for a modal dialog box, call the base class version from your override — to ensure that `EndDialog` is called — or call `EndDialog` yourself.  
   
- `OnCancel` geralmente é substituído para caixas de diálogo modeless.  
+ `OnCancel` is usually overridden for modeless dialog boxes.  
   
- Para obter mais informações sobre essas funções de membro, consulte a classe [CDialog](../mfc/reference/cdialog-class.md)*na referência de MFC* e a discussão em [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md).  
+ For more information about these member functions, see class [CDialog](../mfc/reference/cdialog-class.md) in the *MFC Reference* and the discussion on [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md).  
   
-## Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Funções de membro normalmente adicionadas](../Topic/Commonly%20Added%20Member%20Functions.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)
+

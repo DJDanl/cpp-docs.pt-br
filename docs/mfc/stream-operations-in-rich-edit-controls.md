@@ -1,39 +1,57 @@
 ---
-title: "Opera&#231;&#245;es de fluxo em controles de edi&#231;&#227;o avan&#231;ada | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CRichEditCtrl, operações no fluxo"
-  - "Classe CRichEditCtrl, armazenamento de fluxo"
-  - "controles de edição avançada, operações no fluxo"
-  - "armazenamento, fluxo em CRichEditCtrl"
-  - "operações de fluxo em CRichEditCtrl"
-  - "armazenamento de fluxo e CRichEditCtrl"
+title: Stream Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRichEditCtrl class [MFC], stream operations
+- CRichEditCtrl class [MFC], stream storage
+- rich edit controls [MFC], stream operations
+- storage, stream in CRichEditCtrl
+- stream operations in CRichEditCtrl
+- stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Opera&#231;&#245;es de fluxo em controles de edi&#231;&#227;o avan&#231;ada
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6db5dc840d0fdd08f1f04107b53fa69a7ff4fff3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você pode usar fluxos para transferir dados dentro ou fora de um controle de edição avançado \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\).  Um fluxo é definido por uma estrutura de [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) , que especifica um buffer e uma função de retorno de chamada definida pelo aplicativo.  
+---
+# <a name="stream-operations-in-rich-edit-controls"></a>Stream Operations in Rich Edit Controls
+You can use streams to transfer data into or out of a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). A stream is defined by an [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure, which specifies a buffer and an application-defined callback function.  
   
- Para ler dados em um controle de edição avançado \(ou seja, transmitir os dados no\), use a função de membro de [StreamIn](../Topic/CRichEditCtrl::StreamIn.md) .  O controle repetidamente chama a função de retorno de chamada definida pelo aplicativo, que transfere uma parte dos dados no buffer cada vez.  
+ To read data into a rich edit control (that is, stream the data in), use the [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) member function. The control repeatedly calls the application-defined callback function, which transfers a portion of the data into the buffer each time.  
   
- Para salvar o conteúdo de um controle de edição avançado \(ou seja, transmitir os dados para fora\), você pode usar a função de membro de [StreamOut](../Topic/CRichEditCtrl::StreamOut.md) .  Grava o controle repetidamente para o buffer e chame a função de retorno de chamada definida pelo aplicativo.  Para cada chamada, a função de retorno de chamada salva o conteúdo do buffer.  
+ To save the contents of a rich edit control (that is, stream the data out), you can use the [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) member function. The control repeatedly writes to the buffer and then calls the application-defined callback function. For each call, the callback function saves the contents of the buffer.  
   
-## Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe COleDocument | Documentos do Microsoft
+title: COleDocument Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,12 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDocument class
-- OLE documents, base class
-- OLE containers, client items
-- visual editing, OLE document base class
-- OLE documents
-- documents, OLE
+- COleDocument [MFC], COleDocument
+- COleDocument [MFC], AddItem
+- COleDocument [MFC], ApplyPrintDevice
+- COleDocument [MFC], EnableCompoundFile
+- COleDocument [MFC], GetInPlaceActiveItem
+- COleDocument [MFC], GetNextClientItem
+- COleDocument [MFC], GetNextItem
+- COleDocument [MFC], GetNextServerItem
+- COleDocument [MFC], GetPrimarySelectedItem
+- COleDocument [MFC], GetStartPosition
+- COleDocument [MFC], HasBlankItems
+- COleDocument [MFC], OnShowViews
+- COleDocument [MFC], RemoveItem
+- COleDocument [MFC], UpdateModifiedFlag
+- COleDocument [MFC], OnEditChangeIcon
+- COleDocument [MFC], OnEditConvert
+- COleDocument [MFC], OnEditLinks
+- COleDocument [MFC], OnFileSendMail
+- COleDocument [MFC], OnUpdateEditChangeIcon
+- COleDocument [MFC], OnUpdateEditLinksMenu
+- COleDocument [MFC], OnUpdateObjectVerbMenu
+- COleDocument [MFC], OnUpdatePasteLinkMenu
+- COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 caps.latest.revision: 23
 author: mikeblome
@@ -62,74 +79,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 73bd1bc5c2c93e180b42a79cf23ab98360887c31
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7c999134c5362e03cd35d9dfa0215dcd3e8f23cc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledocument-class"></a>Classe COleDocument
-A classe base para documentos OLE que dão suporte à edição visual.  
+# <a name="coledocument-class"></a>COleDocument Class
+The base class for OLE documents that support visual editing.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDocument : public CDocument  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDocument::COleDocument](#coledocument)|Constrói um objeto `COleDocument`.|  
+|[COleDocument::COleDocument](#coledocument)|Constructs a `COleDocument` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDocument::AddItem](#additem)|Adiciona um item à lista de itens mantidos pelo documento.|  
-|[COleDocument::ApplyPrintDevice](#applyprintdevice)|Define o dispositivo de destino de impressão para todos os itens de cliente no documento.|  
-|[COleDocument::EnableCompoundFile](#enablecompoundfile)|Faz com que os documentos sejam armazenados usando o formato de arquivo de armazenamento estruturado OLE.|  
-|[COleDocument::GetInPlaceActiveItem](#getinplaceactiveitem)|Retorna o item OLE que está ativo no momento no local.|  
-|[COleDocument::GetNextClientItem](#getnextclientitem)|Obtém o próximo item do cliente para fazer a iteração.|  
-|[COleDocument::GetNextItem](#getnextitem)|Obtém o próximo item de documento para iteração.|  
-|[COleDocument::GetNextServerItem](#getnextserveritem)|Obtém o próximo item de servidor para fazer a iteração.|  
-|[COleDocument::GetPrimarySelectedItem](#getprimaryselecteditem)|Retorna o item OLE selecionado primário no documento.|  
-|[COleDocument::GetStartPosition](#getstartposition)|Obtém a posição inicial para começar a iteração.|  
-|[COleDocument::HasBlankItems](#hasblankitems)|Verifica se há itens em branco no documento.|  
-|[COleDocument::OnShowViews](#onshowviews)|Chamado quando o documento se torna visível ou invisível.|  
-|[COleDocument::RemoveItem](#removeitem)|Remove um item da lista de itens mantidos pelo documento.|  
-|[COleDocument::UpdateModifiedFlag](#updatemodifiedflag)|Marca o documento como modificado se qualquer um dos itens contidos OLE foram modificadas.|  
+|[COleDocument::AddItem](#additem)|Adds an item to the list of items maintained by the document.|  
+|[COleDocument::ApplyPrintDevice](#applyprintdevice)|Sets the print-target device for all client items in the document.|  
+|[COleDocument::EnableCompoundFile](#enablecompoundfile)|Causes documents to be stored using the OLE Structured Storage file format.|  
+|[COleDocument::GetInPlaceActiveItem](#getinplaceactiveitem)|Returns the OLE item that is currently in-place active.|  
+|[COleDocument::GetNextClientItem](#getnextclientitem)|Gets the next client item for iterating.|  
+|[COleDocument::GetNextItem](#getnextitem)|Gets the next document item for iterating.|  
+|[COleDocument::GetNextServerItem](#getnextserveritem)|Gets the next server item for iterating.|  
+|[COleDocument::GetPrimarySelectedItem](#getprimaryselecteditem)|Returns the primary selected OLE item in the document.|  
+|[COleDocument::GetStartPosition](#getstartposition)|Gets the initial position to begin iteration.|  
+|[COleDocument::HasBlankItems](#hasblankitems)|Checks for blank items in the document.|  
+|[COleDocument::OnShowViews](#onshowviews)|Called when the document becomes visible or invisible.|  
+|[COleDocument::RemoveItem](#removeitem)|Removes an item from the list of items maintained by the document.|  
+|[COleDocument::UpdateModifiedFlag](#updatemodifiedflag)|Marks the document as modified if any of the contained OLE items have been modified.|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Manipula eventos no comando de menu Alterar ícone.|  
-|[COleDocument::OnEditConvert](#oneditconvert)|Manipula a conversão de um objeto vinculado ou incorporado de um tipo para outro.|  
-|[COleDocument::OnEditLinks](#oneditlinks)|Manipula eventos no comando Links no menu Editar.|  
-|[COleDocument::OnFileSendMail](#onfilesendmail)|Envia uma mensagem de email com o documento anexado.|  
-|[COleDocument::OnUpdateEditChangeIcon](#onupdateeditchangeicon)|Chamado pela estrutura para atualizar a interface de comando para a opção do menu Editar/Alterar ícone.|  
-|[COleDocument::OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|Chamado pela estrutura para atualizar a interface de comando para a opção do menu Editar/Links.|  
-|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|Chamado pela estrutura para atualizar a interface de comando para editar / *ObjectName* opção de menu e o submenu de verbo acessados de edição / *ObjectName*.|  
-|[COleDocument::OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|Chamado pela estrutura para atualizar a interface de comando para a opção de menu Colar especial.|  
-|[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Chamado pela estrutura para atualizar a interface de comando para a opção de menu colar.|  
+|[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Handles events in the Change Icon menu command.|  
+|[COleDocument::OnEditConvert](#oneditconvert)|Handles the conversion of an embedded or linked object from one type to another.|  
+|[COleDocument::OnEditLinks](#oneditlinks)|Handles events in the Links command on the Edit menu.|  
+|[COleDocument::OnFileSendMail](#onfilesendmail)|Sends a mail message with the document attached.|  
+|[COleDocument::OnUpdateEditChangeIcon](#onupdateeditchangeicon)|Called by the framework to update the command UI for the Edit/Change Icon menu option.|  
+|[COleDocument::OnUpdateEditLinksMenu](#onupdateeditlinksmenu)|Called by the framework to update the command UI for the Edit/Links menu option.|  
+|[COleDocument::OnUpdateObjectVerbMenu](#onupdateobjectverbmenu)|Called by the framework to update the command UI for the Edit/ *ObjectName* menu option and the Verb submenu accessed from Edit/ *ObjectName*.|  
+|[COleDocument::OnUpdatePasteLinkMenu](#onupdatepastelinkmenu)|Called by the framework to update the command UI for the Paste Special menu option.|  
+|[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Called by the framework to update the command UI for the Paste menu option.|  
   
-## <a name="remarks"></a>Comentários  
- `COleDocument`é derivado de **CDocument**, que permite que seus aplicativos OLE usam a arquitetura de exibição de documentos fornecida pelo Microsoft Foundation Class Library.  
+## <a name="remarks"></a>Remarks  
+ `COleDocument` is derived from **CDocument**, which allows your OLE applications to use the document/view architecture provided by the Microsoft Foundation Class Library.  
   
- `COleDocument`trata de um documento como uma coleção de [CDocItem](../../mfc/reference/cdocitem-class.md) objetos para processar itens de OLE. Aplicativos de contêiner e o servidor exigirem tal arquitetura porque seus documentos devem ser capazes de conter itens OLE. O [classe derivada COleServerItem](../../mfc/reference/coleserveritem-class.md) e [COleClientItem](../../mfc/reference/coleclientitem-class.md) classes derivadas de `CDocItem`, gerenciar as interações entre os aplicativos e itens OLE.  
+ `COleDocument` treats a document as a collection of [CDocItem](../../mfc/reference/cdocitem-class.md) objects to handle OLE items. Both container and server applications require such an architecture because their documents must be able to contain OLE items. The [COleServerItem](../../mfc/reference/coleserveritem-class.md) and [COleClientItem](../../mfc/reference/coleclientitem-class.md) classes, both derived from `CDocItem`, manage the interactions between applications and OLE items.  
   
- Se você estiver escrevendo um aplicativo de contêiner simples, derive sua classe de documento da `COleDocument`. Se você estiver escrevendo um aplicativo de contêiner que dá suporte à vinculação para os itens inseridos contidos em seus documentos, derive sua classe de documento da [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Se você estiver escrevendo um servidor de aplicativo ou uma combinação de contêiner/servidor, derive sua classe de documento da [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc`e `COleServerDoc` são derivados de `COleDocument`, portanto, essas classes herdam todos os serviços disponíveis no `COleDocument` e **CDocument**.  
+ If you are writing a simple container application, derive your document class from `COleDocument`. If you are writing a container application that supports linking to the embedded items contained by its documents, derive your document class from [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). If you are writing a server application or combination container/server, derive your document class from [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` and `COleServerDoc` are derived from `COleDocument`, so these classes inherit all the services available in `COleDocument` and **CDocument**.  
   
- Para usar `COleDocument`, derivar uma classe dela e adicionar funcionalidade para gerenciar o aplicativo OLE não dados, bem como os itens inseridos ou vinculados. Se você definir `CDocItem`-derivadas de classes para armazenar os dados do aplicativo nativo, você pode usar a implementação do padrão definida pela `COleDocument` para armazenar dados não são OLE e o OLE. Você também pode criar suas próprias estruturas de dados para armazenar seus dados não são OLE separadamente dos itens de OLE. Para obter mais informações, consulte o artigo [contêineres: arquivos compostos](../../mfc/containers-compound-files.md)...  
+ To use `COleDocument`, derive a class from it and add functionality to manage the application's non-OLE data as well as embedded or linked items. If you define `CDocItem`-derived classes to store the application's native data, you can use the default implementation defined by `COleDocument` to store both your OLE and non-OLE data. You can also design your own data structures for storing your non-OLE data separately from the OLE items. For more information, see the article [Containers: Compound Files](../../mfc/containers-compound-files.md)..  
   
- **CDocument** oferece suporte ao envio de seu documento por email se houver suporte mail (MAPI). `COleDocument`atualizou [OnFileSendMail](#onfilesendmail) para manipular documentos compostos corretamente. Para obter mais informações, consulte os artigos [MAPI](../../mfc/mapi.md) e [suporte a MAPI no MFC](../../mfc/mapi-support-in-mfc.md)...  
+ **CDocument** supports sending your document via mail if mail support (MAPI) is present. `COleDocument` has updated [OnFileSendMail](#onfilesendmail) to handle compound documents correctly. For more information, see the articles [MAPI](../../mfc/mapi.md) and [MAPI Support in MFC](../../mfc/mapi-support-in-mfc.md)..  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -138,351 +155,351 @@ class COleDocument : public CDocument
   
  `COleDocument`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="additem"></a>COleDocument::AddItem  
- Chame essa função para adicionar um item ao documento.  
+##  <a name="additem"></a>  COleDocument::AddItem  
+ Call this function to add an item to the document.  
   
 ```  
 virtual void AddItem(CDocItem* pItem);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- Ponteiro para o item de documento que está sendo adicionado.  
+ Pointer to the document item being added.  
   
-### <a name="remarks"></a>Comentários  
- Você não precisa chamar essa função explicitamente quando ele é chamado pelo `COleClientItem` ou `COleServerItem` construtor que aceita um ponteiro para um documento.  
+### <a name="remarks"></a>Remarks  
+ You do not need to call this function explicitly when it is called by the `COleClientItem` or `COleServerItem` constructor that accepts a pointer to a document.  
   
-##  <a name="applyprintdevice"></a>COleDocument::ApplyPrintDevice  
- Chame essa função para alterar o dispositivo de destino de impressão para todos inseridos [COleClientItem](../../mfc/reference/coleclientitem-class.md) itens no documento do contêiner do aplicativo.  
+##  <a name="applyprintdevice"></a>  COleDocument::ApplyPrintDevice  
+ Call this function to change the print-target device for all embedded [COleClientItem](../../mfc/reference/coleclientitem-class.md) items in your application's container document.  
   
 ```  
 BOOL ApplyPrintDevice(const DVTARGETDEVICE* ptd);  
 BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `ptd`  
- Ponteiro para uma **DVTARGETDEVICE** estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser **nulo**.  
+ Pointer to a **DVTARGETDEVICE** data structure, which contains information about the new print-target device. Can be **NULL**.  
   
  `ppd`  
- Ponteiro para uma **PRINTDLG** estrutura de dados, que contém informações sobre o novo dispositivo de destino de impressão. Pode ser **nulo**.  
+ Pointer to a **PRINTDLG** data structure, which contains information about the new print-target device. Can be **NULL**.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a função foi bem-sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Essa função atualiza o dispositivo de destino de impressão para todos os itens, mas não atualiza o cache de apresentação para esses itens. Para atualizar o cache de apresentação para um item, chame [COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).  
+### <a name="remarks"></a>Remarks  
+ This function updates the print-target device for all items but does not refresh the presentation cache for those items. To update the presentation cache for an item, call [COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).  
   
- Os argumentos para essa função contêm informações que OLE usa para identificar o dispositivo de destino. O [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estrutura contém informações que o Windows usa para inicializar a caixa de diálogo de impressão comuns. Depois que o usuário fecha a caixa de diálogo, o Windows retorna informações sobre as seleções do usuário nessa estrutura. O `m_pd` membro de um [CPrintDialog](../../mfc/reference/cprintdialog-class.md) objeto é um **PRINTDLG** estrutura.  
+ The arguments to this function contain information that OLE uses to identify the target device. The [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) structure contains information that Windows uses to initialize the common Print dialog box. After the user closes the dialog box, Windows returns information about the user's selections in this structure. The `m_pd` member of a [CPrintDialog](../../mfc/reference/cprintdialog-class.md) object is a **PRINTDLG** structure.  
   
- Para obter mais informações, consulte o [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) structure in the Windows SDK.  
   
- Para obter mais informações, consulte o [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) structure in the Windows SDK.  
   
-##  <a name="coledocument"></a>COleDocument::COleDocument  
- Constrói um objeto `COleDocument`.  
+##  <a name="coledocument"></a>  COleDocument::COleDocument  
+ Constructs a `COleDocument` object.  
   
 ```  
 COleDocument();
 ```  
   
-##  <a name="enablecompoundfile"></a>COleDocument::EnableCompoundFile  
- Chame essa função se você deseja armazenar o documento usando o formato de arquivo composto.  
+##  <a name="enablecompoundfile"></a>  COleDocument::EnableCompoundFile  
+ Call this function if you want to store the document using the compound-file format.  
   
 ```  
 void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- Especifica se o suporte de arquivo composto está habilitado ou desabilitado.  
+ Specifies whether compound file support is enabled or disabled.  
   
-### <a name="remarks"></a>Comentários  
- Isso também é chamado de armazenamento estruturado. Normalmente você chama essa função do construtor de seu `COleDocument`-classe derivada. Para obter mais informações sobre documentos compostos, consulte o artigo [contêineres: arquivos compostos](../../mfc/containers-compound-files.md)...  
+### <a name="remarks"></a>Remarks  
+ This is also called structured storage. You typically call this function from the constructor of your `COleDocument`-derived class. For more information about compound documents, see the article [Containers: Compound Files](../../mfc/containers-compound-files.md)..  
   
- Se você não chamar essa função de membro, os documentos serão armazenados em um formato nonstructured ("simples").  
+ If you do not call this member function, documents will be stored in a nonstructured ("flat") file format.  
   
- Depois de suporte de arquivo composto está habilitada ou desabilitada para um documento, a configuração não deve ser alterada durante o tempo de vida do documento.  
+ After compound file support is enabled or disabled for a document, the setting should not be changed during the document's lifetime.  
   
-##  <a name="getinplaceactiveitem"></a>COleDocument::GetInPlaceActiveItem  
- Chamada para essa função para obter a OLE item que estiver ativada no local na janela do quadro que contém a exibição identificada por `pWnd`.  
+##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
+ Call this function to get the OLE item that is currently activated in place in the frame window containing the view identified by `pWnd`.  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Ponteiro para a janela que exibe o documento contêiner.  
+ Pointer to the window that displays the container document.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o único, no local OLE item ativo; **Nulo** se há nenhum item OLE atualmente no estado "ativo no local".  
+### <a name="return-value"></a>Return Value  
+ A pointer to the single, in-place active OLE item; **NULL** if there is no OLE item currently in the "in-place active" state.  
   
-##  <a name="getnextclientitem"></a>COleDocument::GetNextClientItem  
- Chame essa função repetidamente para acessar cada um dos itens de cliente no documento.  
+##  <a name="getnextclientitem"></a>  COleDocument::GetNextClientItem  
+ Call this function repeatedly to access each of the client items in your document.  
   
 ```  
 COleClientItem* GetNextClientItem(POSITION& pos) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pos`  
- Uma referência a um **posição** valor conjunto por uma chamada anterior a `GetNextClientItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.  
+ A reference to a **POSITION** value set by a previous call to `GetNextClientItem`; the initial value is returned by the `GetStartPosition` member function.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o próximo item do cliente no documento, ou **nulo** se não houver nenhum outro item do cliente.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next client item in the document, or **NULL** if there are no more client items.  
   
-### <a name="remarks"></a>Comentários  
- Após cada chamada, o valor de `pos` é definida para o próximo item no documento, que pode ou não ser um item do cliente.  
+### <a name="remarks"></a>Remarks  
+ After each call, the value of `pos` is set for the next item in the document, which might or might not be a client item.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCOleContainer n º&1;](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
   
-##  <a name="getnextitem"></a>COleDocument::GetNextItem  
- Chame essa função repetidamente para acessar cada um dos itens no seu documento.  
+##  <a name="getnextitem"></a>  COleDocument::GetNextItem  
+ Call this function repeatedly to access each of the items in your document.  
   
 ```  
 virtual CDocItem* GetNextItem(POSITION& pos) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pos`  
- Uma referência a um **posição** valor conjunto por uma chamada anterior a `GetNextItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.  
+ A reference to a **POSITION** value set by a previous call to `GetNextItem`; the initial value is returned by the `GetStartPosition` member function.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o item de documento na posição especificada.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document item at the specified position.  
   
-### <a name="remarks"></a>Comentários  
- Após cada chamada, o valor de `pos` é definido como o **posição** valor do próximo item no documento. Se o elemento recuperado é o último elemento no documento, o novo valor de `pos` é **nulo**.  
+### <a name="remarks"></a>Remarks  
+ After each call, the value of `pos` is set to the **POSITION** value of the next item in the document. If the retrieved element is the last element in the document, the new value of `pos` is **NULL**.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCOleContainer n º&2;](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
   
-##  <a name="getnextserveritem"></a>COleDocument::GetNextServerItem  
- Chame essa função repetidamente para acessar cada um dos itens de servidor em seu documento.  
+##  <a name="getnextserveritem"></a>  COleDocument::GetNextServerItem  
+ Call this function repeatedly to access each of the server items in your document.  
   
 ```  
 COleServerItem* GetNextServerItem(POSITION& pos) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pos`  
- Uma referência a um **posição** valor conjunto por uma chamada anterior a `GetNextServerItem`; o valor inicial é retornado pelo `GetStartPosition` função de membro.  
+ A reference to a **POSITION** value set by a previous call to `GetNextServerItem`; the initial value is returned by the `GetStartPosition` member function.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o próximo item de servidor no documento, ou **nulo** se não houver nenhum outro item de servidor.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next server item in the document, or **NULL** if there are no more server items.  
   
-### <a name="remarks"></a>Comentários  
- Após cada chamada, o valor de `pos` é definida para o próximo item no documento, que pode ou não ser um item de servidor.  
+### <a name="remarks"></a>Remarks  
+ After each call, the value of `pos` is set for the next item in the document, which might or might not be a server item.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCOleServer n º&2;](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
   
-##  <a name="getprimaryselecteditem"></a>COleDocument::GetPrimarySelectedItem  
- Chamado pela estrutura para recuperar o item OLE selecionado no modo de exibição especificado.  
+##  <a name="getprimaryselecteditem"></a>  COleDocument::GetPrimarySelectedItem  
+ Called by the framework to retrieve the currently selected OLE item in the specified view.  
   
 ```  
 virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pView`  
- Ponteiro para o objeto de exibição ativa exibindo o documento.  
+ Pointer to the active view object displaying the document.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o item OLE selecionado, único; **Nulo** se nenhum item OLE selecionado ou se mais de um for selecionado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the single, selected OLE item; **NULL** if no OLE items are selected or if more than one is selected.  
   
-### <a name="remarks"></a>Comentários  
- A implementação padrão de pesquisa a lista de independente OLE itens para um único item selecionado e retorna um ponteiro para ele. Se não há nenhum item selecionado ou, se houver mais de um item selecionado, a função retorna **nulo**. Você deve substituir o `CView::IsSelected` a função de membro em sua classe de exibição para essa função de trabalho. Substitua essa função se você tiver seu próprio método para armazenar os itens contidos OLE.  
+### <a name="remarks"></a>Remarks  
+ The default implementation searches the list of contained OLE items for a single selected item and returns a pointer to it. If there is no item selected, or if there is more than one item selected, the function returns **NULL**. You must override the `CView::IsSelected` member function in your view class for this function to work. Override this function if you have your own method of storing contained OLE items.  
   
-##  <a name="getstartposition"></a>COleDocument::GetStartPosition  
- Chame essa função para obter a posição do primeiro item no documento.  
+##  <a name="getstartposition"></a>  COleDocument::GetStartPosition  
+ Call this function to get the position of the first item in the document.  
   
 ```  
 virtual POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A **posição** valor que pode ser usado para iniciar a iteração por meio dos itens do documento; **Nulo** se o documento não tem nenhum item.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used to begin iterating through the document's items; **NULL** if the document has no items.  
   
-### <a name="remarks"></a>Comentários  
- Passar o valor retornado para `GetNextItem`, `GetNextClientItem`, ou `GetNextServerItem`.  
+### <a name="remarks"></a>Remarks  
+ Pass the value returned to `GetNextItem`, `GetNextClientItem`, or `GetNextServerItem`.  
   
-##  <a name="hasblankitems"></a>COleDocument::HasBlankItems  
- Chame essa função para determinar se o documento contém todos os itens em branco.  
+##  <a name="hasblankitems"></a>  COleDocument::HasBlankItems  
+ Call this function to determine whether the document contains any blank items.  
   
 ```  
 BOOL HasBlankItems() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o documento contém todos os itens em branco; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document contains any blank items; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Um item em branco é aquele cujo retângulo está vazio.  
+### <a name="remarks"></a>Remarks  
+ A blank item is one whose rectangle is empty.  
   
-##  <a name="oneditchangeicon"></a>COleDocument::OnEditChangeIcon  
- Exibe a caixa de diálogo OLE alterar ícone e altera o ícone que representa o item OLE selecionado para o ícone que o usuário seleciona na caixa de diálogo.  
+##  <a name="oneditchangeicon"></a>  COleDocument::OnEditChangeIcon  
+ Displays the OLE Change Icon dialog box and changes the icon representing the currently selected OLE item to the icon the user selects in the dialog box.  
   
 ```  
 afx_msg void OnEditChangeIcon();
 ```  
   
-### <a name="remarks"></a>Comentários  
- `OnEditChangeIcon`cria e inicia um `COleChangeIconDialog` caixa de diálogo Alterar ícone.  
+### <a name="remarks"></a>Remarks  
+ `OnEditChangeIcon` creates and launches a `COleChangeIconDialog` Change Icon dialog box.  
   
-##  <a name="oneditconvert"></a>COleDocument::OnEditConvert  
- Exibe a caixa de diálogo converter OLE e converte ou ativa o item OLE selecionado de acordo com as seleções do usuário na caixa de diálogo.  
+##  <a name="oneditconvert"></a>  COleDocument::OnEditConvert  
+ Displays the OLE Convert dialog box and converts or activates the currently selected OLE item according to user selections in the dialog box.  
   
 ```  
 afx_msg void OnEditConvert();
 ```  
   
-### <a name="remarks"></a>Comentários  
- `OnEditConvert`cria e inicia um `COleConvertDialog` caixa de diálogo Converter.  
+### <a name="remarks"></a>Remarks  
+ `OnEditConvert` creates and launches a `COleConvertDialog` Convert dialog box.  
   
- Um exemplo de conversão é converter um documento do Microsoft Word em um documento do WordPad.  
+ An example of conversion is converting a Microsoft Word document into a WordPad document.  
   
-##  <a name="oneditlinks"></a>COleDocument::OnEditLinks  
- Exibe a caixa de diálogo Editar/Links OLE.  
+##  <a name="oneditlinks"></a>  COleDocument::OnEditLinks  
+ Displays the OLE Edit/Links dialog box.  
   
 ```  
 afx_msg void OnEditLinks();
 ```  
   
-### <a name="remarks"></a>Comentários  
- `OnEditLinks`cria e inicia um `COleLinksDialog` caixa de diálogo de Links que permite ao usuário alterar os objetos vinculados.  
+### <a name="remarks"></a>Remarks  
+ `OnEditLinks` creates and launches a `COleLinksDialog` Links dialog box that allows the user to change the linked objects.  
   
-##  <a name="onfilesendmail"></a>COleDocument::OnFileSendMail  
- Envia uma mensagem por meio do host de correio residentes (se houver) com o documento como um anexo.  
+##  <a name="onfilesendmail"></a>  COleDocument::OnFileSendMail  
+ Sends a message via the resident mail host (if any) with the document as an attachment.  
   
 ```  
 afx_msg void OnFileSendMail();
 ```  
   
-### <a name="remarks"></a>Comentários  
- `OnFileSendMail`chamadas `OnSaveDocument` para serializar (documentos sem título e modificados para um arquivo temporário, que é enviado por email Salvar). Se o documento não tiver sido modificado, um arquivo temporário não é necessário; o original é enviado. `OnFileSendMail`carrega MAPI32. DLL se ele ainda não tenha sido carregado.  
+### <a name="remarks"></a>Remarks  
+ `OnFileSendMail` calls `OnSaveDocument` to serialize (save) untitled and modified documents to a temporary file, which is then sent via electronic mail. If the document has not been modified, a temporary file is not needed; the original is sent. `OnFileSendMail` loads MAPI32.DLL if it has not already been loaded.  
   
- Ao contrário da implementação de `OnFileSendMail` para **CDocument**, essa função manipula arquivos compostos corretamente.  
+ Unlike the implementation of `OnFileSendMail` for **CDocument**, this function handles compound files correctly.  
   
- Para obter mais informações, consulte o [MAPI tópicos](../../mfc/mapi.md) e [suporte a MAPI no MFC](../../mfc/mapi-support-in-mfc.md) artigos...  
+ For more information, see the [MAPI Topics](../../mfc/mapi.md) and [MAPI Support in MFC](../../mfc/mapi-support-in-mfc.md) articles..  
   
-##  <a name="onshowviews"></a>COleDocument::OnShowViews  
- O framework chama essa função após a visibilidade do documento, as alterações de estado.  
+##  <a name="onshowviews"></a>  COleDocument::OnShowViews  
+ The framework calls this function after the document's visibility state changes.  
   
 ```  
 virtual void OnShowViews(BOOL bVisible);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bVisible`  
- Indica se o documento ficou visível ou invisível.  
+ Indicates whether the document has become visible or invisible.  
   
-### <a name="remarks"></a>Comentários  
- A versão padrão dessa função não faz nada. Substituí-lo se seu aplicativo deve executar qualquer processamento especial quando a visibilidade do documento é alterado.  
+### <a name="remarks"></a>Remarks  
+ The default version of this function does nothing. Override it if your application must perform any special processing when the document's visibility changes.  
   
-##  <a name="onupdateeditchangeicon"></a>COleDocument::OnUpdateEditChangeIcon  
- Chamado pela estrutura para atualizar o comando Alterar ícone no menu Editar.  
+##  <a name="onupdateeditchangeicon"></a>  COleDocument::OnUpdateEditChangeIcon  
+ Called by the framework to update the Change Icon command on the Edit menu.  
   
 ```  
 afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para um `CCmdUI` estrutura que representa o menu que gerou o comando update. As chamadas do manipulador de atualização de **habilitar** função de membro a `CCmdUI` estrutura por meio de `pCmdUI` para atualizar a interface do usuário.  
+ A pointer to a `CCmdUI` structure that represents the menu that generated the update command. The update handler calls the **Enable** member function of the `CCmdUI` structure through `pCmdUI` to update the user interface.  
   
-### <a name="remarks"></a>Comentários  
- `OnUpdateEditChangeIcon`Atualiza a interface do usuário do comando dependendo se existe ou não um ícone válido no documento. Substitua essa função para alterar o comportamento.  
+### <a name="remarks"></a>Remarks  
+ `OnUpdateEditChangeIcon` updates the command's user interface depending on whether or not a valid icon exists in the document. Override this function to change the behavior.  
   
-##  <a name="onupdateeditlinksmenu"></a>COleDocument::OnUpdateEditLinksMenu  
- Chamado pela estrutura para atualizar o comando vínculos no menu Editar.  
+##  <a name="onupdateeditlinksmenu"></a>  COleDocument::OnUpdateEditLinksMenu  
+ Called by the framework to update the Links command on the Edit menu.  
   
 ```  
 afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para um `CCmdUI` estrutura que representa o menu que gerou o comando update. As chamadas do manipulador de atualização de **habilitar** função de membro a `CCmdUI` estrutura por meio de `pCmdUI` para atualizar a interface do usuário.  
+ A pointer to a `CCmdUI` structure that represents the menu that generated the update command. The update handler calls the **Enable** member function of the `CCmdUI` structure through `pCmdUI` to update the user interface.  
   
-### <a name="remarks"></a>Comentários  
- Começando com o primeiro item OLE no documento, `OnUpdateEditLinksMenu` acessa cada item, testa se o item é um link e, se ele é um link, permite que o comando de Links. Substitua essa função para alterar o comportamento.  
+### <a name="remarks"></a>Remarks  
+ Starting with the first OLE item in the document, `OnUpdateEditLinksMenu` accesses each item, tests whether the item is a link, and, if it is a link, enables the Links command. Override this function to change the behavior.  
   
-##  <a name="onupdateobjectverbmenu"></a>COleDocument::OnUpdateObjectVerbMenu  
- Chamado pela estrutura para atualizar o *ObjectName* comando no menu Editar e no submenu de verbo acessado a partir de *ObjectName* comando, onde *ObjectName* é o nome do objeto OLE incorporado ao documento.  
+##  <a name="onupdateobjectverbmenu"></a>  COleDocument::OnUpdateObjectVerbMenu  
+ Called by the framework to update the *ObjectName* command on the Edit menu and the Verb submenu accessed from the *ObjectName* command, where *ObjectName* is the name of the OLE object embedded in the document.  
   
 ```  
 afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para um `CCmdUI` estrutura que representa o menu que gerou o comando update. As chamadas do manipulador de atualização de **habilitar** função de membro a `CCmdUI` estrutura por meio de `pCmdUI` para atualizar a interface do usuário.  
+ A pointer to a `CCmdUI` structure that represents the menu that generated the update command. The update handler calls the **Enable** member function of the `CCmdUI` structure through `pCmdUI` to update the user interface.  
   
-### <a name="remarks"></a>Comentários  
- `OnUpdateObjectVerbMenu`atualizações de *ObjectName* interface de usuário do comando dependendo se existe ou não um objeto válido no documento. Se existir um objeto, o *ObjectName* comando no menu Editar está habilitado. Quando esse comando de menu é selecionado, o submenu verbo é exibido. O submenu verbo contém todos os comandos de verbo disponíveis para o objeto, como editar, propriedades e assim por diante. Substitua essa função para alterar o comportamento.  
+### <a name="remarks"></a>Remarks  
+ `OnUpdateObjectVerbMenu` updates the *ObjectName* command's user interface depending on whether or not a valid object exists in the document. If an object exists, the *ObjectName* command on the Edit menu is enabled. When this menu command is selected, the Verb submenu is displayed. The Verb submenu contains all the verb commands available for the object, such as Edit, Properties, and so on. Override this function to change the behavior.  
   
-##  <a name="onupdatepastelinkmenu"></a>COleDocument::OnUpdatePasteLinkMenu  
- Chamado pela estrutura para determinar se um item OLE vinculado pode ser colado da área de transferência.  
+##  <a name="onupdatepastelinkmenu"></a>  COleDocument::OnUpdatePasteLinkMenu  
+ Called by the framework to determine whether a linked OLE item can be pasted from the Clipboard.  
   
 ```  
 afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para um `CCmdUI` estrutura que representa o menu que gerou o comando update. As chamadas do manipulador de atualização de **habilitar** função de membro a `CCmdUI` estrutura por meio de `pCmdUI` para atualizar a interface do usuário.  
+ A pointer to a `CCmdUI` structure that represents the menu that generated the update command. The update handler calls the **Enable** member function of the `CCmdUI` structure through `pCmdUI` to update the user interface.  
   
-### <a name="remarks"></a>Comentários  
- O comando de menu Colar especial está habilitado ou desabilitado dependendo se o item pode ser colado no documento ou não.  
+### <a name="remarks"></a>Remarks  
+ The Paste Special menu command is enabled or disabled depending on whether the item can be pasted into the document or not.  
   
-##  <a name="onupdatepastemenu"></a>COleDocument::OnUpdatePasteMenu  
- Chamado pela estrutura para determinar se um item OLE incorporado pode ser colado da área de transferência.  
+##  <a name="onupdatepastemenu"></a>  COleDocument::OnUpdatePasteMenu  
+ Called by the framework to determine whether an embedded OLE item can be pasted from the Clipboard.  
   
 ```  
 afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para um `CCmdUI` estrutura que representa o menu que gerou o comando update. As chamadas do manipulador de atualização de **habilitar** função de membro a `CCmdUI` estrutura por meio de `pCmdUI` para atualizar a interface do usuário.  
+ A pointer to a `CCmdUI` structure that represents the menu that generated the update command. The update handler calls the **Enable** member function of the `CCmdUI` structure through `pCmdUI` to update the user interface.  
   
-### <a name="remarks"></a>Comentários  
- O comando de menu colar e o botão estão habilitados ou desabilitados dependendo se o item pode ser colado no documento ou não.  
+### <a name="remarks"></a>Remarks  
+ The Paste menu command and button are enabled or disabled depending on whether the item can be pasted into the document or not.  
   
-##  <a name="removeitem"></a>COleDocument::RemoveItem  
- Chame essa função para remover um item do documento.  
+##  <a name="removeitem"></a>  COleDocument::RemoveItem  
+ Call this function to remove an item from the document.  
   
 ```  
 virtual void RemoveItem(CDocItem* pItem);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- Ponteiro para o item de documento a ser removido.  
+ Pointer to the document item to be removed.  
   
-### <a name="remarks"></a>Comentários  
- Você normalmente não precisa chamar essa função explicitamente. ele é chamado pelos destruidores de `COleClientItem` e `COleServerItem`.  
+### <a name="remarks"></a>Remarks  
+ You typically do not need to call this function explicitly; it is called by the destructors for `COleClientItem` and `COleServerItem`.  
   
-##  <a name="updatemodifiedflag"></a>COleDocument::UpdateModifiedFlag  
- Chame essa função para marcar o documento como modificado se qualquer um dos itens contidos OLE foram modificadas.  
+##  <a name="updatemodifiedflag"></a>  COleDocument::UpdateModifiedFlag  
+ Call this function to mark the document as modified if any of the contained OLE items have been modified.  
   
 ```  
 virtual void UpdateModifiedFlag();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Isso permite que o framework avisar o usuário para salvar o documento antes de fechar, mesmo se os dados nativos do documento não foi modificados.  
+### <a name="remarks"></a>Remarks  
+ This allows the framework to prompt the user to save the document before closing, even if the native data in the document has not been modified.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo MFC CONTÊINER](../../visual-cpp-samples.md)   
- [Exemplo MFC MFCBIND](../../visual-cpp-samples.md)   
- [Classe CDocument](../../mfc/reference/cdocument-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CONTAINER](../../visual-cpp-samples.md)   
+ [MFC Sample MFCBIND](../../visual-cpp-samples.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

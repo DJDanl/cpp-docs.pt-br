@@ -1,5 +1,5 @@
 ---
-title: Estrutura ABCFLOAT | Documentos do Microsoft
+title: ABCFLOAT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ABCFLOAT structure
+- ABCFLOAT structure [MFC]
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: dbeece873e4c6b8b314d13db75226f6d8db0b2ed
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 92ba0e9b1f578d50d3d6dcd61ed9f8647fc8bc8e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="abcfloat-structure"></a>Estrutura ABCFLOAT
-O `ABCFLOAT` estrutura contém as larguras de A, B e C de um caractere de fonte.  
+# <a name="abcfloat-structure"></a>ABCFLOAT Structure
+The `ABCFLOAT` structure contains the A, B, and C widths of a font character.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _ABCFLOAT { /* abcf */  
@@ -53,24 +53,24 @@ typedef struct _ABCFLOAT { /* abcf */
 } ABCFLOAT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *abcfA*  
- Especifica o espaçamento de um do caractere. O espaçamento de um é a distância para adicionar à posição atual antes do glifo de caracteres de desenho.  
+ Specifies the A spacing of the character. The A spacing is the distance to add to the current position before drawing the character glyph.  
   
  *abcfB*  
- Especifica o espaçamento B do caractere. O espaçamento de B é a largura da parte desenhado de glifo de caracteres.  
+ Specifies the B spacing of the character. The B spacing is the width of the drawn portion of the character glyph.  
   
  *abcfC*  
- Especifica o espaçamento C do caractere. O espaçamento de C é a distância para adicionar à posição atual para fornecer espaço em branco à direita do glifo caracteres.  
+ Specifies the C spacing of the character. The C spacing is the distance to add to the current position to provide white space to the right of the character glyph.  
   
-## <a name="remarks"></a>Comentários  
- As larguras de A, B e C são medidas ao longo da linha de base da fonte. O incremento de caractere (largura total) de um caractere é a soma dos espaços de A, B e C. A ou o espaço de C pode ser negativo para indicar underhangs ou overhangs.  
+## <a name="remarks"></a>Remarks  
+ The A, B, and C widths are measured along the base line of the font. The character increment (total width) of a character is the sum of the A, B, and C spaces. Either the A or the C space can be negative to indicate underhangs or overhangs.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** wingdi  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
 

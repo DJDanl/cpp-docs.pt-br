@@ -1,75 +1,93 @@
 ---
-title: "Criando um aplicativo de cont&#234;iner de documento ativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contêineres de documentos ativos [C++], criando"
-  - "documentos ativos [C++], contêineres"
-  - "aplicativos [MFC], contêiner de documentos ativos"
-  - "contêineres [C++], documento ativo"
-  - "COM MFC [C++], contenção de documentos ativos"
+title: Creating an Active Document Container Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- containers [MFC], active document
+- active document containers [MFC], creating
+- MFC COM, active document containment
+- applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Criando um aplicativo de cont&#234;iner de documento ativo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2122ea2436491734b819ae48e16a743f2c98aedc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A maneira mais simples e mais recomendada de criar um aplicativo de contêiner ativa do documento é criar um aplicativo de contêineres de MFC EXE usando o assistente de aplicativo MFC, então altera o aplicativo dar suporte à retenção ativa do documento.  
+---
+# <a name="creating-an-active-document-container-application"></a>Creating an Active Document Container Application
+The simplest and most recommended way to create an active document container application is to create an MFC EXE container application using the MFC Application Wizard, then modify the application to support active document containment.  
   
-#### Para criar um aplicativo de contêineres do documento ativo  
+#### <a name="to-create-an-active-document-container-application"></a>To create an active document container application  
   
-1.  No menu de **Arquivo** , clique em **Projeto**no submenu de **Novo** .  
+1.  From the **File** menu, click **Project**from the **New** submenu.  
   
-2.  No painel esquerdo, tipo de projeto de **Visual C\+\+** clique em.  
+2.  From the left pane, click **Visual C++** project type.  
   
-3.  **Aplicativo do MFC** Selecione no painel direito.  
+3.  Select **MFC Application** from the right pane.  
   
-4.  O nome do projeto `MyProj`, clique em **OK**.  
+4.  Name the project `MyProj`, click **OK**.  
   
-5.  Selecione a página de **Combina o suporte do documento** .  
+5.  Select the **Compound Document Support** page.  
   
-6.  Selecione a opção de **Contêiner** ou de **Contêiner\/servidor completo** .  
+6.  Select the **Container** or **Container/Full-server** option.  
   
-7.  Marque a caixa de seleção de **Contêiner do documento ativo** .  
+7.  Select the **Active document container** check box.  
   
-8.  Clique em **Concluir**.  
+8.  Click **Finish**.  
   
-9. Quando o assistente de aplicativo MFC terminar de gerar o aplicativo, abra os seguintes arquivos usando Solution Explorer:  
+9. When the MFC Application Wizard finishes generating the application, open the following files using Solution Explorer:  
   
     -   MyProjview.cpp  
   
-10. Em MyProjview.cpp, faça as seguintes alterações:  
+10. In MyProjview.cpp, make the following changes:  
   
-    -   Em `CMyProjView::OnPreparePrinting`, substitua o conteúdo da função com o seguinte código:  
+    -   In `CMyProjView::OnPreparePrinting`, replace the function contents with the following code:  
   
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/CPP/creating-an-active-document-container-application_1.cpp)]  
+         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]  
   
-     `OnPreparePrinting` fornece suporte de impressão.  Esse código substitui `DoPreparePrinting`, que é a preparação padrão de cópia.  
+     `OnPreparePrinting` provides printing support. This code replaces `DoPreparePrinting`, which is the default print preparation.  
   
-     A retenção ativa do documento fornece um esquema aprimorado de impressão:  
+     Active document containment provides an improved printing scheme:  
   
-    -   Você pode chamar primeiro para o documento ativo pela interfacede `IPrint`e para dizê\-la para imprimir\-se.  Isso é diferente de retenção OLE anterior, em que o contêiner tinha que processar uma imagem do item contido no objeto de `CDC`da impressora.  
+    -   You can first call the active document through its `IPrint` interface and tell it to print itself. This is different from previous OLE containment, in which the container had to render an image of the contained item onto the printer `CDC` object.  
   
-    -   Se isso falhar, digamos o item contido para imprimir\-se pela interfacede `IOleCommandTarget`  
+    -   If that fails, tell the contained item to print itself through its `IOleCommandTarget` interface  
   
-    -   Se isso falhar, faça sua própria renderização do item.  
+    -   If that fails, make your own rendering of the item.  
   
-     As funções de membro estáticas `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, conforme implementado no código anterior, tratam esse esquema aprimorado de impressão.  
+     The static member functions `COleDocObjectItem::OnPrint` and `COleDocObjectItem::OnPreparePrinting`, as implemented in the previous code, handle this improved printing scheme.  
   
-11. Adicionar qualquer implementação de seus próprios e criar o aplicativo.  
+11. Add any implementation of your own and build the application.  
   
-## Consulte também  
- [Contenção de documento ativa](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Estruturas, estilos, retornos de chamada e mapas de mensagem | Documentos do Microsoft
+title: Structures, Styles, Callbacks, and Message Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
-- message maps, MFC
+- message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 caps.latest.revision: 13
@@ -36,35 +36,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 6d540c5b39d756701c527231a03c06e439d84f3c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13e8abcb1e4bf952484a16a927b38efe4eb8f203
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="structures-styles-callbacks-and-message-maps"></a>Estruturas, estilos, retornos de chamada e mapas de mensagem
-Esta seção documenta as estruturas, estilos e funções de retorno de chamada usadas pelo Microsoft Foundation Class Library e mapas de mensagem do MFC.  
+# <a name="structures-styles-callbacks-and-message-maps"></a>Structures, Styles, Callbacks, and Message Maps
+This section documents the structures, styles, and callback functions used by the Microsoft Foundation Class Library and the MFC message maps.  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Estruturas usadas pelo MFC](../../mfc/reference/structures-used-by-mfc.md)  
- Fornece links para as estruturas chamadas a partir de várias funções de membro.  
+## <a name="in-this-section"></a>In This Section  
+ [Structures Used by MFC](../../mfc/reference/structures-used-by-mfc.md)  
+ Provides links to the structures called from various member functions.  
   
- [Estilos usados pelo MFC](../../mfc/reference/styles-used-by-mfc.md)  
- Fornece links para os estilos usados durante a criação de objetos MFC.  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)  
+ Provides links to the styles used when creating MFC objects.  
   
- [Funções de retorno de chamada usadas pelo MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
- Fornece links para as funções de retorno de chamada que aparecem na biblioteca do MFC.  
+ [Callback Functions Used by MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
+ Provides links to the callback functions appearing in the MFC Library.  
   
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)  
- Descreve as macros de mapeamento de mensagem e `CWnd` entradas de mapa de mensagem.  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)  
+ Describes the message mapping macros and `CWnd` message-map entries.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral da biblioteca de classe](../../mfc/class-library-overview.md)  
- Lista as classes na biblioteca MFC de acordo com a categoria.  
+## <a name="related-sections"></a>Related Sections  
+ [Class Library Overview](../../mfc/class-library-overview.md)  
+ Lists the classes in the MFC Library according to category.  
   
- [Exemplos de MFC](../../visual-cpp-samples.md)  
- Fornece links para exemplos que demonstram como usar a biblioteca MFC.
+ [MFC Samples](../../visual-cpp-samples.md)  
+ Provides links to samples that demonstrate using the MFC Library.
 
 
 

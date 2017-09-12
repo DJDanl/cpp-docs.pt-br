@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DSizeF | Documentos do Microsoft
+title: CD2DSizeF Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSizeF class
+- CD2DSizeF [MFC], CD2DSizeF
+- CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f780dc919f102023f2bd524fa69e73e76feec02b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6515cf90ab6a1236d2a3f7c30610c0baa1c23864
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsizef-class"></a>Classe CD2DSizeF
-Um wrapper para D2D1_SIZE_F.  
+# <a name="cd2dsizef-class"></a>CD2DSizeF Class
+A wrapper for D2D1_SIZE_F.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSizeF : public D2D1_SIZE_F;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Sobrecarregado. Constrói uma `CD2DSizeF` de objeto `D2D1_SIZE_F` objeto.|  
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Overloaded. Constructs a `CD2DSizeF` object from `D2D1_SIZE_F` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Retorna um `boolean` valor que indica se uma expressão não contém dados válidos ( `null`).|  
+|[CD2DSizeF::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeF::Operator CSize](#operator_csize)|Converte `CD2DSizeF` para `CSize` objeto.|  
+|[CD2DSizeF::operator CSize](#operator_csize)|Converts `CD2DSizeF` to `CSize` object.|  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_SIZE_F`  
   
  [CD2DSizeF](../../mfc/reference/cd2dsizef-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
- Constrói um objeto CD2DSizeF do objeto CSize.  
+##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
+ Constructs a CD2DSizeF object from CSize object.  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -94,36 +95,36 @@ CD2DSizeF(
     FLOAT cy = 0.);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `size`  
- tamanho da fonte  
+ source size  
   
  `cx`  
- largura de origem  
+ source width  
   
  `cy`  
- altura de origem  
+ source height  
   
-##  <a name="isnull"></a>CD2DSizeF::IsNull  
- Retorna um valor booliano que indica se uma expressão não contém dados válidos (nulo).  
+##  <a name="isnull"></a>  CD2DSizeF::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a largura e altura são vazios. Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if width and height are empty; otherwise FALSE.  
   
-##  <a name="operator_csize"></a>CD2DSizeF::Operator CSize  
- Converte CD2DSizeF CSize objeto.  
+##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
+ Converts CD2DSizeF to CSize object.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>Valor de retorno  
- Valor atual de tamanho D2D.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D size.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

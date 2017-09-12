@@ -1,86 +1,102 @@
 ---
-title: "Cole&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelos de matriz"
-  - "matrizes [C++], Classes "
-  - "classes de coleção, sobre classes de coleção"
-  - "classes de coleção, matrizes"
-  - "classes de coleção, listas"
-  - "classes de coleção, mapas"
-  - "classes de coleção, MFC"
-  - "classes de coleção, formas"
-  - "classes de coleção, baseado em modelo"
-  - "Coleções , sobre coleções"
-  - "Classes de coleção MFC"
-  - "MFC, Coleções "
-  - "formas"
-  - "formas, Coleção "
+title: Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- arrays [MFC], classes
+- MFC collection classes
+- shapes, collection
+- collection classes [MFC], MFC
+- collections, about collections
+- array templates [MFC]
+- collection classes [MFC], template-based
+- collection classes [MFC], about collection classes
+- collection classes [MFC], maps
+- collection classes [MFC], arrays
+- shapes
+- collection classes [MFC], lists
+- collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 caps.latest.revision: 18
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cole&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ae4981412a7cf494b551de7f5bb26c74512244
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A biblioteca de classes do Microsoft fornece classes de coleção para o gerenciamento de grupos de objetos.  Essas classes são de dois tipos:  
+---
+# <a name="collections"></a>Collections
+The Microsoft Foundation Class Library provides collection classes to manage groups of objects. These classes are of two types:  
   
--   [Classes de coleção criadas de modelos C\+\+](#_core_the_template.2d.based_collection_classes)  
+-   [Collection classes created from C++ templates](#_core_the_template_based_collection_classes)  
   
--   [Classes de coleção não criadas de modelos](#_core_the_collection_classes_not_based_on_templates)  
+-   [Collection classes not created from templates](#_core_the_collection_classes_not_based_on_templates)  
   
 > [!NOTE]
->  Se seu código já usa classes de coleção de nontemplate, você poderá continuar a usá\-las.  Se você grava a nova coleção fortemente tipado para classificar seus próprios tipos de dados, recomendamos que você use as classes de baseadas mais recentes.  
+>  If your code already uses nontemplate collection classes, you can continue to use them. If you write new type-safe collection classes for your own data types, we recommend that you use the newer template-based classes.  
   
-##  <a name="_core_collection_shapes"></a> Forma da coleção  
- Uma classe de coleção é caracterizada por sua forma “” e os tipos de seus elementos.  A forma refere\-se à maneira como os objetos são organizados e armazenados pela coleção.  MFC O fornece três formas básicas da coleção: , matrizes e listas, mapas \(também conhecidos como dicionários\).  Você pode escolher a forma da coleção que é mais adequado ao seu problema específico de programação.  
+##  <a name="_core_collection_shapes"></a> Collection Shapes  
+ A collection class is characterized by its "shape" and by the types of its elements. The shape refers to the way the objects are organized and stored by the collection. MFC provides three basic collection shapes: lists, arrays, and maps (also known as dictionaries). You can pick the collection shape that is most suited to your particular programming problem.  
   
- Cada uma das três formas fornecidas a coleção é descrita brevemente posteriormente neste tópico.  Para comparar os recursos de forma para ajudá\-lo a decidir qual é o melhor para seu programa, consulte [Recomendações para escolher uma classe de coleção](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md).  
+ Each of the three provided collection shapes is described briefly later in this topic. To compare the features of the shapes to help you decide which is best for your program, see [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
--   Lista  
+-   List  
   
-     A classe da lista fornece uma lista ordenada, não indexada de elementos, implementada como uma lista vinculada double.  Uma lista tem um “início” e “uma parte final,” e adicionando ou removendo elementos de início ou da parte final, ou inserindo ou excluindo elementos no meio, é muito rapidamente.  
+     The list class provides an ordered, nonindexed list of elements, implemented as a doubly linked list. A list has a "head" and a "tail," and adding or removing elements from the head or tail, or inserting or deleting elements in the middle, is very fast.  
   
--   Matriz  
+-   Array  
   
-     A classe da matriz fornece uma matriz feita dimensionar dinamicamente, ordenado, e indexada total de objetos.  
+     The array class provides a dynamically sized, ordered, and integer-indexed array of objects.  
   
--   O mapa \(também conhecido como um dicionário\)  
+-   Map (also known as a dictionary)  
   
-     Um mapa é uma coleção que associa um objeto de chave com um valor do objeto.  
+     A map is a collection that associates a key object with a value object.  
   
-##  <a name="_core_the_template.2d.based_collection_classes"></a> As classes com base na coleção  
- A maneira mais fácil de implementar uma coleção que contém objetos fortemente tipado de qualquer tipo é usar uma das classes com base em MFC.  Para obter exemplos dessas classes, consulte o exemplo [COLLECT](../top/visual-cpp-samples.md)MFC.  
+##  <a name="_core_the_template_based_collection_classes"></a> The Template-Based Collection Classes  
+ The easiest way to implement a type-safe collection that contains objects of any type is to use one of the MFC template-based classes. For examples of these classes, see the MFC sample [COLLECT](../visual-cpp-samples.md).  
   
- A tabela a seguir lista as classes com base em MFC da coleção.  
+ The following table lists the MFC template-based collection classes.  
   
-### Classes de modelo de coleção  
+### <a name="collection-template-classes"></a>Collection Template Classes  
   
-|Conteúdo da coleção|Matrizes|Listas|Mapas|  
-|-------------------------|--------------|------------|-----------|  
-|Coleções de objetos de qualquer tipo|`CArray`|`CList`|`CMap`|  
-|As coleções de ponteiros para os objetos de qualquer tipo|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
+|Collection contents|Arrays|Lists|Maps|  
+|-------------------------|------------|-----------|----------|  
+|Collections of objects of any type|`CArray`|`CList`|`CMap`|  
+|Collections of pointers to objects of any type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> As classes de coleção não baseadas em modelos  
- Se seu aplicativo já usa classes de nontemplate MFC, você poderá continuar a usá\-las.  No entanto, para novas coleções, recomendamos que você use as classes com base em log.  A tabela a seguir lista as classes de coleção de MFC que não se baseiam em modelos.  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> The Collection Classes Not Based on Templates  
+ If your application already uses MFC nontemplate classes, you can continue to use them. However, for new collections, we recommend that you use the template-based classes. The following table lists the MFC collection classes that are not based on templates.  
   
-### Classes de coleção de Nontemplate  
+### <a name="nontemplate-collection-classes"></a>Nontemplate Collection Classes  
   
-|Matrizes|Listas|Mapas|  
-|--------------|------------|-----------|  
+|Arrays|Lists|Maps|  
+|------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
 |`CDWordArray`|`CStringList`|`CMapStringToOb`|  
@@ -89,38 +105,40 @@ A biblioteca de classes do Microsoft fornece classes de coleção para o gerenci
 |`CWordArray`||`CMapWordToOb`|  
 |`CUIntArray`||`CMapWordToPtr`|  
   
- As características da tabela de classes de coleção de MFC em [Recomendações para escolher uma classe de coleção](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md) descrevem as classes de coleção de MFC em termos dessas características \(diferente da forma\):  
+ The Characteristics of MFC Collection Classes table in [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md) describes the MFC collection classes in terms of these characteristics (other than shape):  
   
--   Se a classe usa modelos C\+\+  
+-   Whether the class uses C++ templates  
   
--   Se os elementos armazenados na coleção podem ser serializados  
+-   Whether the elements stored in the collection can be serialized  
   
--   Se os elementos da coleção podem ser armazenados despejados para diagnóstico  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   Se a coleção é fortemente tipado  
+-   Whether the collection is type-safe  
   
-### O que você deseja fazer?  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-#### Tarefas gerais da classe Coleção\-  
+#### <a name="general-collection-class-tasks"></a>General Collection-Class Tasks  
   
--   [Recomendações para escolher uma classe de coleção](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md)  
+-   [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [Como fazer uma coleção fortemente tipada](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)  
   
--   [Criando coleções de pilhas e filas](../mfc/creating-stack-and-queue-collections.md)  
+-   [Creating Stack and Queue Collections](../mfc/creating-stack-and-queue-collections.md)  
   
--   [CArray::Add](../Topic/CArray::Add.md)  
+-   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### Tarefas com base em Coleção\- classe  
+#### <a name="template-based-collection-class-tasks"></a>Template-Based Collection-Class Tasks  
   
--   [Classes com base no modelo](../Topic/Template-Based%20Classes.md)  
+-   [Template-Based Classes](../mfc/template-based-classes.md)  
   
-#### Acessando os membros de uma coleção baseada em \(ou não\)  
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accessing the Members of a Collection (Template-Based or Not)  
   
--   [Acessando todos os membros de uma coleção](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [Excluindo todos os objetos em uma coleção CObject](../Topic/Deleting%20All%20Objects%20in%20a%20CObject%20Collection.md)  
+-   [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## Consulte também  
- [Conceitos](../mfc/mfc-concepts.md)   
- [Tópicos MFC gerais](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

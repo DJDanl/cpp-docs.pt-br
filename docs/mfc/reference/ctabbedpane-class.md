@@ -1,5 +1,5 @@
 ---
-title: Classe CTabbedPane | Documentos do Microsoft
+title: CTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTabbedPane class
+- CTabbedPane [MFC], DetachPane
+- CTabbedPane [MFC], EnableTabAutoColor
+- CTabbedPane [MFC], FloatTab
+- CTabbedPane [MFC], GetTabArea
+- CTabbedPane [MFC], GetTabWnd
+- CTabbedPane [MFC], HasAutoHideMode
+- CTabbedPane [MFC], IsTabLocationBottom
+- CTabbedPane [MFC], ResetTabs
+- CTabbedPane [MFC], SetTabAutoColors
+- CTabbedPane [MFC], m_bTabsAlwaysTop
+- CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
 caps.latest.revision: 27
 author: mikeblome
@@ -45,62 +55,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 70377d6be8ef4ec957c7270e501022107d4b093c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a5a64318a91378cbf14e4eae040702106555728
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabbedpane-class"></a>Classe CTabbedPane
-Implementa a funcionalidade de um painel com guias destacáveis.  
+# <a name="ctabbedpane-class"></a>CTabbedPane Class
+Implements the functionality of a pane with detachable tabs.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabbedPane : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`CTabbedPane::CTabbedPane`|Construtor padrão.|  
+|`CTabbedPane::CTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::DetachPane](#detachpane)|(Substitui [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
-|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Habilita ou desabilita a coloração automática das guias.|  
-|[CTabbedPane::FloatTab](#floattab)|Flutua um painel, mas apenas se o painel estiver atualmente em uma guia destacáveis. (Substitui [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CTabbedPane::GetTabArea](#gettabarea)|Retorna o tamanho e a posição da área de guia dentro da janela com guias.|  
+|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
+|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Enables or disables automatic coloring of tabs.|  
+|[CTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CTabbedPane::GetTabArea](#gettabarea)|Returns the size and position of the tab area within the tabbed window.|  
 |[CTabbedPane::GetTabWnd](#gettabwnd)||  
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determina se o painel com guias pode ser alternado para o modo de ocultar automaticamente. (Substitui [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
-|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Determina se as guias estão localizadas na parte inferior da janela.|  
-|[CTabbedPane::ResetTabs](#resettabs)|Redefine todos os painéis com guias para o estado padrão.|  
-|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Define uma lista de cores personalizadas que podem ser usados quando o recurso de cor automática está habilitado.|  
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to autohide mode. (Overrides [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
+|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Determines whether the tabs are located at the bottom of the window.|  
+|[CTabbedPane::ResetTabs](#resettabs)|Resets all tabbed panes to the default state.|  
+|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Sets a list of custom colors that can be used when the auto color feature is enabled.|  
   
-### <a name="data-members"></a>Membros de Dados  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|O local padrão para as guias no aplicativo.|  
-|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informações de classe de tempo de execução para um personalizado `CMFCTabCtrl`-objeto derivado.|  
+|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|The default location for tabs in the application.|  
+|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Runtime class information for a custom `CMFCTabCtrl`-derived object.|  
   
-## <a name="remarks"></a>Comentários  
- O framework cria automaticamente uma instância dessa classe quando um usuário anexar um painel para outro, apontando para a legenda do segundo painel. Todos os painéis com guias que são criados pela estrutura tem uma ID de -1.  
+## <a name="remarks"></a>Remarks  
+ The framework automatically creates an instance of this class when a user attaches one pane to another by pointing to the caption of the second pane. All of the tabbed panes that are created by the framework have an ID of -1.  
   
- Para especificar o guias normais em vez de guias de estilo do Outlook, passe o `AFX_CBRS_REGULAR_TABS` de estilo para o [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
+ To specify regular tabs instead of Outlook-style tabs, pass the `AFX_CBRS_REGULAR_TABS` style to the [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) method.  
   
- Se você criar um painel com guias com guias destacáveis, o painel pode ser destruído automaticamente pelo framework, portanto você não deve armazenar o ponteiro. Para obter um ponteiro para o painel com guias, chame o `CBasePane::GetParentTabbedPane` método.  
+ If you create a tabbed pane with detachable tabs, the pane may be destroyed automatically by the framework, so you should not store the pointer. To get a pointer to the tabbed pane, call the `CBasePane::GetParentTabbedPane` method.  
   
-## <a name="example"></a>Exemplo  
- Neste exemplo, podemos criar um `CTabbedPane` objeto. Em seguida, usamos [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) anexar guias adicionais.  
+## <a name="example"></a>Example  
+ In this example we create a `CTabbedPane` object. Next, we use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) to attach additional tabs.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -131,10 +141,10 @@ pTabbededBar->EnableDocking(CBRS_ALIGN_ANY);
 DockPane(pTabbededBar);
 ```  
   
-## <a name="example"></a>Exemplo  
- Outra maneira de criar um objeto da barra de controle com guias é usar [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). O `AttachToTabWnd` método cria dinamicamente um objeto de painel com guias usando informações de classe de tempo de execução definidas por [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
+## <a name="example"></a>Example  
+ Another way to create a tabbed control bar object is to use [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). The `AttachToTabWnd` method dynamically creates a tabbed pane object using runtime class information set by [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
- Neste exemplo, podemos criar um painel com guias dinamicamente, anexar duas guias e verifique a segunda guia não removível.  
+ In this example we create a tabbed pane dynamically, attach two tabs, and make the second tab non-detachable.  
   
 ```  
 DockPane(&m_wndClassView);
@@ -154,7 +164,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
     FALSE);
 ```  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -171,10 +181,10 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTabbedPane.h  
   
-##  <a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
 
   
 ```  
@@ -183,33 +193,33 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `bHide`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
- Habilita ou desabilita a coloração automática das guias.  
+##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
+ Enables or disables automatic coloring of tabs.  
   
 ```  
 static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Para habilitar a coloração automática das guias; Caso contrário, `FALSE`.  
+ `TRUE` to enable auto coloring of tabs; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Use esse método estático para habilitar ou desabilitar a coloração automática das guias em todos os painéis com guias no aplicativo. Quando esse recurso estiver habilitado, cada guia é preenchido por sua própria cor. Você pode encontrar a lista de cores que são usados para colorir as guias chamando o [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.  
+### <a name="remarks"></a>Remarks  
+ Use this static method to enable or disable automatic coloring of tabs in all tabbed panes in the application. When this feature is enabled, each tab is filled by its own color. You can find the list of colors that are used to color the tabs by calling the [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) method.  
   
- Você pode especificar a lista de cores que será usado para guias chamando [CTabbedPane::SetTabAutoColors](#settabautocolors).  
+ You can specify the list of colors that will be used for tabs by calling [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
- Por padrão, essa opção está desabilitada.  
+ By default, this option is disabled.  
   
-##  <a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
   
 ```  
@@ -220,18 +230,18 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `nTabID`  
  [in] `dockMethod`  
  [in] `bHide`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
- Retorna o tamanho e a posição da área da guia na janela com guias.  
+##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
+ Returns the size and position of the tab area in the tabbed window.  
   
 ```  
 virtual void GetTabArea(
@@ -239,106 +249,106 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- Contém o tamanho e posição, em coordenadas de tela da área de guia superior.  
+ Contains the size and position, in screen coordinates, of the top tab area.  
   
  [out] `rectTabAreaBottom`  
- Contém o tamanho e posição, em coordenadas de tela da área de guia inferior.  
+ Contains the size and position, in screen coordinates, of the bottom tab area.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método para determinar como encaixar um painel que um usuário está arrastando. Quando o usuário arrasta um painel na área do guia do painel de destino, o framework tentará adicioná-lo como uma nova guia do painel de destino. Caso contrário, ele tenta encaixar o painel no lado do painel de destino, o que envolve a criação de um novo contêiner de painel com um divisor de painel que separa os dois painéis.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine how to dock a pane that a user is dragging. When the user drags a pane over the tab area of the target pane, the framework tries to add it as a new tab of the target pane. Otherwise, it tries to dock the pane to the side of the target pane, which involves creating a new pane container with a pane divider that separates the two panes.  
   
- Substitua esse método em um `CTabbedPane`-derivado da classe para alterar esse comportamento.  
+ Override this method in a `CTabbedPane`-derived class to change this behavior.  
   
-##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
- Determina se as guias estão localizadas na parte inferior da janela.  
+##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
+ Determines whether the tabs are located at the bottom of the window.  
   
 ```  
 virtual BOOL IsTabLocationBottom() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a área da guia está localizada na parte inferior da janela com guias. Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab area is located at the bottom of the tabbed window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
- O local padrão para as guias no aplicativo.  
+##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
+ The default location for tabs in the application.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Defina este membro estático como `TRUE` para forçar todas as guias no aplicativo a ser exibido na parte superior do painel com guias.  
+### <a name="remarks"></a>Remarks  
+ Set this static member to `TRUE` to force all tabs in the application to be displayed at the top of the tabbed pane.  
   
- Você deve definir esse valor antes de um painel com guias foi criado.  
+ You must set this value before a tabbed pane has been created.  
   
- O valor padrão é `FALSE`.  
+ The default value is `FALSE`.  
   
-##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
- Informações de classe de tempo de execução para um personalizado `CMFCTabCtrl`-objeto derivado.  
+##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
+ Runtime class information for a custom `CMFCTabCtrl`-derived object.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Definir essa variável de membro estático em um ponteiro para as informações de classe de tempo de execução de um `CMFCTabCtrl`-objeto derivado se você estiver usando uma janela com guias personalizada dentro de um painel com guias.  
+### <a name="remarks"></a>Remarks  
+ Set this static member variable to a pointer to the runtime class information of a `CMFCTabCtrl`-derived object if you are using a custom tabbed window inside a tabbed pane.  
   
-##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
- Redefine todos os painéis com guias para o estado padrão.  
+##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
+ Resets all tabbed panes to the default state.  
   
 ```  
 static void ResetTabs();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para retornar todos os painéis com guias para seu estado padrão. Quando chamado, esse método redefine o estado de cor automática de todos os painéis com guias e tamanhos de borda.  
+### <a name="remarks"></a>Remarks  
+ Call this method to revert all tabbed panes to their default state. When called, this method resets the border sizes and auto color state of all tabbed panes.  
   
-##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
- Define uma lista de cores personalizadas que são usadas quando o recurso de cor automático está habilitado.  
+##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
+ Sets a list of custom colors that are used when the auto color feature is enabled.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `arColors`  
- Contém a matriz de cores para definir.  
+ Contains the array of colors to set.  
   
-### <a name="remarks"></a>Comentários  
- Use esse método para personalizar a lista de cores que são usadas quando o recurso de cor automático está habilitado. Esta é uma função estática e afeta todas as guias painéis em seu aplicativo.  
+### <a name="remarks"></a>Remarks  
+ Use this method to customize the list of colors that are used when the auto color feature is enabled. This is a static function and affects all tabbed panes in your application.  
   
- Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) para habilitar ou desabilitar o recurso de cor automática.  
+ Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) to enable or disable the auto color feature.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)   
- [Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)   
- [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)
 

@@ -1,123 +1,157 @@
 ---
-title: "TN068: realizando transa&#231;&#245;es com o driver ODBC do Microsoft Access 7 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.data.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN068"
-  - "transações, Chamando BeginTrans"
-  - "transações, Microsoft Access"
+title: 'TN068: Performing Transactions with the Microsoft Access 7 ODBC Driver | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.data.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN068 [MFC]
+- transactions [MFC], calling BeginTrans
+- transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN068: realizando transa&#231;&#245;es com o driver ODBC do Microsoft Access 7
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1edd7a30ce66a1f4a5cdfb9e96ed18a36495f14
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Performing Transactions with the Microsoft Access 7 ODBC Driver
 > [!NOTE]
->  A nota técnica a seguir não foi atualizada desde que ela foi incluída pela primeira vez na documentação online.  Como resultado, alguns procedimentos e tópicos podem estar incorretos ou expirados.  Para obter as informações mais recentes, é recomendável que você procure o tópico de interesse no índice de documentação online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Essa observação descreve como executar transações ao usar as classes da base de dados de MFC ODBC e o driver ODBC do Microsoft Access 7,0 incluído no driver ODBC do Microsoft Área De Trabalho os pacotes a versão 3,0.  
+ This note describes how to perform transactions when using the MFC ODBC database classes and the Microsoft Access 7.0 ODBC driver included in the Microsoft ODBC Desktop Driver Pack version 3.0.  
   
-## Visão Geral  
- Se seu aplicativo de base de dados executa transações, você deve ter cuidado para chamar `CDatabase::BeginTrans` e `CRecordset::Open` na sequência correta em seu aplicativo.  O driver do Microsoft Access 7,0 usa o mecanismo de base de dados do Microsoft Jet, e Jet requer que seu aplicativo não iniciar uma transação em qualquer base de dados que tenha um cursor aberto.  Para classes de base de dados de MFC ODBC, um cursor aberto é igual a `CRecordset` um objeto aberto.  
+## <a name="overview"></a>Overview  
+ If your database application performs transactions, you must be careful to call `CDatabase::BeginTrans` and `CRecordset::Open` in the correct sequence in your application. The Microsoft Access 7.0 driver uses the Microsoft Jet database engine, and Jet requires that your application not begin a transaction on any database that has an open cursor. For the MFC ODBC database classes, an open cursor equates to an open `CRecordset` object.  
   
- Se você abrir um conjunto de registros antes de chamar **BeginTrans**, você não pode consultar nenhuma mensagem de erro.  No entanto, qualquer conjunto de registros atualizar seu aplicativo faz ponderado permanente depois de chamar `CRecordset::Update`, e as atualizações não serão revertidas chamando **Reverter**.  Para evitar esse problema, você deve chamar **BeginTrans** primeiro e abre no conjunto de registros.  
+ If you open a recordset before calling **BeginTrans**, you may not see any error messages. However, any recordset updates your application makes become permanent after calling `CRecordset::Update`, and the updates will not be rolled back by calling **Rollback**. To avoid this problem, you must call **BeginTrans** first and then open the recordset.  
   
- MFC O verifica a funcionalidade de driver para a confirmação de cursor e o comportamento de reversão.  A classe `CDatabase` fornece duas funções de membro, `GetCursorCommitBehavior` e `GetCursorRollbackBehavior`, para determinar o efeito de qualquer transação no objeto aberto de `CRecordset` .  Para o driver ODBC do Microsoft Access 7,0, essas funções de membro retornam `SQL_CB_CLOSE` porque o driver de acesso não oferece suporte à preservação de cursor.  Em virtude disso, você deve chamar `CRecordset::Requery` após uma operação de **CommitTrans** ou de **Reverter** .  
+ MFC checks the driver functionality for cursor commit and rollback behavior. Class `CDatabase` provides two member functions, `GetCursorCommitBehavior` and `GetCursorRollbackBehavior`, to determine the effect of any transaction on your open `CRecordset` object. For the Microsoft Access 7.0 ODBC driver, these member functions return `SQL_CB_CLOSE` because the Access driver does not support cursor preservation. Therefore, you must call `CRecordset::Requery` following a **CommitTrans** or **Rollback** operation.  
   
- Quando você precisar executar uma após a outra várias transações, você não pode chamar **Requery** depois da primeira transação e depois iniciar a seguir.  Você deve fechar o conjunto de registros antes da próxima chamada a **BeginTrans** para satisfazer o requisito do Jet.  Observe que essa técnica descreve dois métodos de tratar essa situação:  
+ When you need to perform multiple transactions one after another, you cannot call **Requery** after the first transaction and then start the next one. You must close the recordset before the next call to **BeginTrans** in order to satisfy Jet's requirement. This technical note describes two methods of handling this situation:  
   
--   Fechando o conjunto de registros após cada operação de **CommitTrans** ou de **Reverter** .  
+-   Closing the recordset after each **CommitTrans** or **Rollback** operation.  
   
--   Usando a função **SQLFreeStmt**de ODBC API.  
+-   Using the ODBC API function **SQLFreeStmt**.  
   
-## Fechando o conjunto de registros após cada operação de CommitTrans ou de reversão  
- Antes de iniciar uma transação, certifique\-se de que o objeto do conjunto de registros é fechado.  Depois de chamar **BeginTrans**, chame a função de membro de **Abrir** conjunto de registros.  Feche o conjunto de registros imediatamente depois de chamar **CommitTrans** ou **Reverter**.  Observe que repetidamente abrir e fechar o conjunto de registros podem reduzir o desempenho de um aplicativo.  
+## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Closing the Recordset after each CommitTrans or Rollback Operation  
+ Before starting a transaction, make sure the recordset object is closed. After calling **BeginTrans**, call the recordset's **Open** member function. Close the recordset immediately after calling **CommitTrans** or **Rollback**. Note that repeatedly opening and closing the recordset can slow an application's performance.  
   
-## Usando SQLFreeStmt  
- Você também pode usar a função **SQLFreeStmt** de ODBC API para fechar explicitamente o cursor depois de ter terminado uma transação.  Para iniciar outra transação, chame **BeginTrans** seguido por `CRecordset::Requery`.  Ao chamar **SQLFreeStmt**, você deve especificar o HSTMT do conjunto de registros como o primeiro parâmetro e o **SQL\_CLOSE** como o segundo parâmetro.  Esse método é mais rápido do que abrindo e fechando o conjunto de registros no início de cada transação.  O código a seguir demonstra como implementar essa técnica:  
+## <a name="using-sqlfreestmt"></a>Using SQLFreeStmt  
+ You can also use the ODBC API function **SQLFreeStmt** to explicitly close the cursor after ending a transaction. To start another transaction, call **BeginTrans** followed by `CRecordset::Requery`. When calling **SQLFreeStmt**, you must specify the recordset's HSTMT as the first parameter and **SQL_CLOSE** as the second parameter. This method is faster than closing and opening the recordset at the start of every transaction. The following code demonstrates how to implement this technique:  
   
 ```  
 CMyDatabase db;  
-db.Open( "MYDATASOURCE" );  
-CMyRecordset rs( &db );  
-  
+db.Open("MYDATASOURCE");
+
+CMyRecordset rs(&db);
+
+ 
 // start transaction 1 and   
 // open the recordset  
-db.BeginTrans( );  
-rs.Open( );  
-  
+db.BeginTrans();
+
+rs.Open();
+
+ 
 // manipulate data  
-  
+ 
 // end transaction 1  
-db.CommitTrans( );  // or Rollback( )  
-  
+db.CommitTrans();
+*// or Rollback()  
+ 
 // close the cursor  
-::SQLFreeStmt( rs.m_hstmt, SQL_CLOSE );  
-  
+::SQLFreeStmt(rs.m_hstmt, SQL_CLOSE);
+
+ 
 // start transaction 2  
-db.BeginTrans( );  
-  
+db.BeginTrans();
+
+ 
 // now get the result set  
-rs.Requery( );  
-  
+rs.Requery();
+
+ 
 // manipulate data  
-  
+ 
 // end transaction 2  
-db.CommitTrans( );  
-  
-rs.Close( );  
-db.Close( );  
+db.CommitTrans();
+
+ 
+rs.Close();
+
+db.Close();
 ```  
   
- Outra maneira de implementar essa técnica é gravar uma nova função, **RequeryWithBeginTrans**, que você pode chamar para iniciar a transação seguinte depois que você confirmar ou reversão primeira.  Para escrever essa função, execute as seguintes etapas:  
+ Another way to implement this technique is to write a new function, **RequeryWithBeginTrans**, which you can call to start the next transaction after you commit or rollback the first one. To write such a function, do the following steps:  
   
-1.  Copie o código para **CRecordset::Requery\( \)** à nova função.  
+1.  Copy the code for **CRecordset::Requery( )** to the new function.  
   
-2.  Adicione a seguinte linha imediatamente depois da chamada para **SQLFreeStmt**:  
+2.  Add the following line immediately after the call to **SQLFreeStmt**:  
   
-     `m_pDatabase->BeginTrans( );`  
+ `m_pDatabase->BeginTrans( );`  
   
- Agora você pode chamar essa função entre cada par de transações:  
+ Now you can call this function between each pair of transactions:  
   
 ```  
 // start transaction 1 and   
 // open the recordset  
-db.BeginTrans( );  
-rs.Open( );  
-  
+db.BeginTrans();
+
+rs.Open();
+
+ 
 // manipulate data  
-  
+ 
 // end transaction 1  
-db.CommitTrans( );  // or Rollback( )  
-  
-// close the cursor, start new transaction,  
+db.CommitTrans();
+*// or Rollback()  
+ 
+// close the cursor,
+    start new transaction,  
 // and get the result set  
-rs.RequeryWithBeginTrans( );  
-  
+rs.RequeryWithBeginTrans();
+
+ 
 // manipulate data  
-  
+ 
 // end transaction 2  
-db.CommitTrans( );  // or Rollback( )  
+db.CommitTrans();
+*// or Rollback()  
 ```  
   
 > [!NOTE]
->  Não use essa técnica se você precisar alterar as variáveis **m\_strFilter** ou `m_strSort` do membro do conjunto de registros entre transações.  Nesse caso, você deve fechar o conjunto de registros após cada operação de **CommitTrans** ou de **Reverter** .  
+>  Do not use this technique if you need to change the recordset member variables **m_strFilter** or `m_strSort` between transactions. In that case, you should close the recordset after each **CommitTrans** or **Rollback** operation.  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

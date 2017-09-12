@@ -1,35 +1,53 @@
 ---
-title: "Inicializando a caixa de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inicializando caixas de diálogo"
-  - "caixas de diálogo MFC, inicializando"
-  - "caixas de diálogo modais, inicializando"
-  - "caixas de diálogo sem modo, inicializando"
-  - "Método OnInitDialog"
+title: Initializing the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes [MFC]
+- OnInitDialog method [MFC]
+- modal dialog boxes [MFC], initializing
+- modeless dialog boxes [MFC], initializing
+- MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Inicializando a caixa de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9981b1802f2a3a9e873c86ccee724ce781466f24
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Depois que a caixa de diálogo e todos os seus controles são criados mas antes que a caixa de diálogo \(de um ou outro tipo\) é exibido na tela, a função de membro de [OnInitDialog](../Topic/CDialog::OnInitDialog.md) do objeto da caixa de diálogo será chamada.  Para uma caixa de diálogo modal, isso ocorre durante a chamada de `DoModal` .  Para uma caixa de diálogo modeless, `OnInitDialog` é chamado quando **Criar** é chamado.  Você substitui `OnInitDialog` normalmente para inicializar os controles da caixa de diálogo, tais como definir o texto inicial de uma caixa de edição.  Você deve chamar a função de membro de `OnInitDialog` da classe base, `CDialog`, da substituição de `OnInitDialog` .  
+---
+# <a name="initializing-the-dialog-box"></a>Initializing the Dialog Box
+After the dialog box and all of its controls are created but just before the dialog box (of either type) appears on the screen, the dialog object's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) member function is called. For a modal dialog box, this occurs during the `DoModal` call. For a modeless dialog box, `OnInitDialog` is called when **Create** is called. You typically override `OnInitDialog` to initialize the dialog box's controls, such as setting the initial text of an edit box. You must call the `OnInitDialog` member function of the base class, `CDialog`, from your `OnInitDialog` override.  
   
- Se você quiser definir a cor do plano de fundo da caixa de diálogo \(e a de todas as caixas de diálogo restantes em seu aplicativo\), consulte [Definindo a cor do plano de fundo da caixa de diálogo](../mfc/setting-the-dialog-box’s-background-color.md).  
+ If you want to set your dialog box's background color (and that of all other dialog boxes in your application), see [Setting the Dialog Box's Background Color](../mfc/setting-the-dialog-boxs-background-color.md).  
   
-## Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

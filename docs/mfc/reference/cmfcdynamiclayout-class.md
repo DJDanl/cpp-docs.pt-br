@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCDynamicLayout | Documentos do Microsoft
+title: CMFCDynamicLayout Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,73 +42,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3066da5e1f874c2f0f2a2564b15582d7238c539b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 574595d3b7475376a27735c483df71e15298e614
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
-Especifica como os controles em uma janela são movidos e redimensionados conforme o usuário redimensiona a janela.  
+# <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
+Specifies how controls in a window are moved and resized as the user resizes the window.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDynamicLayout : public CObject  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCDynamicLayout::CMFCDynamicLayout`|Constrói um objeto `CMFCDynamicLayout`.|  
-|`CMFCDynamicLayout::~CMFCDynamicLayout`|Destruidor.|  
+|`CMFCDynamicLayout::CMFCDynamicLayout`|Constructs a `CMFCDynamicLayout` object.|  
+|`CMFCDynamicLayout::~CMFCDynamicLayout`|Destructor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDynamicLayout::AddItem](#additem)|Adiciona uma janela filho, geralmente um controle à lista de janelas que são controlados pelo Gerenciador de layout dinâmico.|  
-|[CMFCDynamicLayout::Adjust](#adjust)|Adiciona uma janela filho, geralmente um controle à lista de janelas que são controlados pelo Gerenciador de layout dinâmico.|  
-|[CMFCDynamicLayout::Create](#create)|Armazena e valida a janela do host.|  
-|[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Retorna um ponteiro para uma janela do host.|  
-|[CMFCDynamicLayout::GetMinSize](#getminsize)|Retorna o tamanho da janela abaixo do qual o layout não é ajustado.|  
-|[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Recupera o retângulo da área do cliente atual da janela.|  
-|[CMFCDynamicLayout::HasItem](#hasitem)|Verifica se um controle filho foi adicionado ao layout dinâmico.|  
-|[CMFCDynamicLayout::IsEmpty](#isempty)|Verifica se um layout dinâmico tem sem janelas filho adicionadas.|  
-|[CMFCDynamicLayout::LoadResource](#loadresource)|Lê o layout dinâmico de recursos AFX_DIALOG_LAYOUT e aplica o layout para a janela do host.|  
-|estático [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido horizontalmente quando o usuário redimensiona a janela de hospedagem.|  
-|estático [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido horizontalmente quando o usuário redimensiona a janela de hospedagem.|  
-|estático [CMFCDynamicLayout::MoveNone](#movenone)|Obtém um [MoveSettings](#movesettings_structure) valor que não representa nenhum movimento vertical ou horizontal, para um controle filho.|  
-|estático [CMFCDynamicLayout::MoveVertical](#movevertical)|Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido verticalmente quando o usuário redimensiona a janela de hospedagem.|  
-|[CMFCDynamicLayout::SetMinSize](#setminsize)|Define o tamanho da janela abaixo do qual o layout não é ajustado.|  
-|estático [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela de hospedagem.|  
-|estático [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela de hospedagem.|  
-|estático [CMFCDynamicLayout::SizeNone](#sizenone)|Obtém um [SizeSettings](#sizesettings_structure) valor que não representa a nenhuma alteração no tamanho de um controle filho.|  
-|estático [CMFCDynamicLayout::SizeVertical](#sizevertical)|Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado verticalmente quando o usuário redimensiona a janela de hospedagem.|  
+|[CMFCDynamicLayout::AddItem](#additem)|Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.|  
+|[CMFCDynamicLayout::Adjust](#adjust)|Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.|  
+|[CMFCDynamicLayout::Create](#create)|Stores and validates the host window.|  
+|[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Returns a pointer to a host window.|  
+|[CMFCDynamicLayout::GetMinSize](#getminsize)|Returns the window size below which layout is not adjusted.|  
+|[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Retrieves the rectangle for the window's current client area.|  
+|[CMFCDynamicLayout::HasItem](#hasitem)|Checks if a child control was added to dynamic layout.|  
+|[CMFCDynamicLayout::IsEmpty](#isempty)|Checks if a dynamic layout has no child windows added.|  
+|[CMFCDynamicLayout::LoadResource](#loadresource)|Reads the dynamic layout from AFX_DIALOG_LAYOUT resource and then applies the layout to the host window.|  
+|static [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::MoveNone](#movenone)|Gets a [MoveSettings](#movesettings_structure) value that represents no motion, vertical or horizontal, for a child control.|  
+|static [CMFCDynamicLayout::MoveVertical](#movevertical)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved vertically when the user resizes its hosting window.|  
+|[CMFCDynamicLayout::SetMinSize](#setminsize)|Sets the window size below which layout is not adjusted.|  
+|static [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::SizeNone](#sizenone)|Gets a [SizeSettings](#sizesettings_structure) value that represents no change in size for a child control.|  
+|static [CMFCDynamicLayout::SizeVertical](#sizevertical)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized vertically when the user resizes its hosting window.|  
   
-## <a name="nested-types"></a>Tipos aninhados  
+## <a name="nested-types"></a>Nested Types  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[Estrutura CMFCDynamicLayout::MoveSettings](#movesettings_structure)|Encapsula mover dados para controles em um layout dinâmico.|  
-|[Estrutura CMFCDynamicLayout::SizeSettings](#sizesettings_structure)|Encapsula os dados de alteração de tamanho para controles em um layout dinâmico.|  
+|[CMFCDynamicLayout::MoveSettings Structure](#movesettings_structure)|Encapsulates move data for controls in a dynamic layout.|  
+|[CMFCDynamicLayout::SizeSettings Structure](#sizesettings_structure)|Encapsulates size change data for controls in a dynamic layout.|  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxlayout.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlayout.h  
   
-##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
- Adiciona uma janela filho, geralmente um controle à lista de janelas que são controlados pelo Gerenciador de layout dinâmico.  
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem  
+ Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.  
   
 ```  
 BOOL AddItem(
@@ -121,120 +121,120 @@ BOOL AddItem(
     MoveSettings moveSettings SizeSettings sizeSettings);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- O identificador para a janela para adicionar.  
+ The handle to the window to add.  
   
  `nID`  
- A ID do controle filho para adicionar.  
+ The ID of the child control to add.  
   
  `moveSettings`  
- Uma estrutura que descreve como o controle deve ser movido como as alterações de tamanho de janela.  
+ A structure that describes how the control should be moved as the window size changes.  
   
  `sizeSettings`  
- Uma estrutura que descreve como o controle deve ser redimensionado como as alterações de tamanho de janela.  
+ A structure that describes how the control should be resized as the window size changes.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o item foi adicionado com êxito; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the item was added successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- A posição e o tamanho de um controle filho é alterado dinamicamente quando uma janela de hospedagem está sendo redimensionada.  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized.  
   
-##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
- Adiciona uma janela filho, geralmente um controle à lista de janelas que são controlados pelo Gerenciador de layout dinâmico.  
+##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust  
+ Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.  
   
 ```  
 void Adjust();
 ```  
   
-### <a name="remarks"></a>Comentários  
- A posição e o tamanho de um controle filho é alterado dinamicamente quando uma janela de hospedagem está sendo redimensionada.  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized.  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
- Armazena e valida a janela do host.  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
+ Stores and validates the host window.  
   
 ```  
 BOOL Create(CWnd* pHostWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  pHostWnd  
- Um ponteiro para a janela do host.  
+ A pointer to the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a criação bem-sucedida; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if creation succeeded; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
- Retorna um ponteiro para uma janela do host.  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
+ Returns a pointer to a host window.  
   
 ```  
 CWnd* GetHostWnd();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a janela do host.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the host window.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão todas as posições de controle filho recalculados em relação a esta janela.  
+### <a name="remarks"></a>Remarks  
+ By default all child control positions recalculated relative to this window.  
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
- Retorna o tamanho da janela abaixo do qual o layout não é ajustado.  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
+ Returns the window size below which layout is not adjusted.  
   
 ```  
 CSize GetMinSize();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O tamanho da janela abaixo do qual o layout não é ajustado.  
+### <a name="return-value"></a>Return Value  
+ The window size below which layout is not adjusted.  
   
-### <a name="remarks"></a>Comentários  
- A posição e o tamanho de um controle filho é alterado dinamicamente quando uma janela de hospedagem está sendo redimensionada, mas há um tamanho mínimo abaixo do qual o layout não é ajustado. O usuário pode redimensionar a janela para um tamanho menor, mas partes da janela, em seguida, estão ocultos da exibição.  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized, but there is a minimum size below which the layout is not adjusted. The user can resize the window to a smaller size, but parts of the window are then hidden from view.  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
- Recupera o retângulo da área do cliente atual da janela.  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
+ Retrieves the rectangle for the window's current client area.  
   
 ```  
 void GetHostWndRect(CRect& rect,);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `rect`  
- Depois que a função retorna, este parâmetro contém o retângulo delimitador da área de layout. Isso é um parâmetro de saída; o valor de entrada é substituído.  
+ After the function returns, this parameter contains the bounding rectangle of the layout area. This is an out parameter; the input value is overwritten.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
- Verifica se um controle filho foi adicionado ao layout dinâmico.  
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem  
+ Checks if a child control was added to dynamic layout.  
   
 ```  
 BOOL HasItem(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- O identificador de janela para o controle.  
+ The window handle for the control.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o layout já tem este item; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if layout already has this item; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
- Verifica se um layout dinâmico tem sem janelas filho adicionadas.  
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty  
+ Checks if a dynamic layout has no child windows added.  
   
 ```  
 BOOL IsEmpty();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o layout não tem itens; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if layout has no items; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
- Lê o layout dinâmico de recursos AFX_DIALOG_LAYOUT e aplica o layout para a janela do host.  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
+ Reads the dynamic layout from AFX_DIALOG_LAYOUT resource and then applies the layout to the host window.  
   
 ```  
 static BOOL LoadResource(CWnd* pHostWnd,
@@ -242,243 +242,243 @@ static BOOL LoadResource(CWnd* pHostWnd,
     DWORD dwSize);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pHostWnd`  
- Um ponteiro para a janela do host.  
+ A pointer to the host window.  
   
  `lpResource`  
- Um ponteiro para o buffer que contém o recurso AFX_DIALOG_LAYOUT.  
+ A pointer to the buffer that contains the AFX_DIALOG_LAYOUT resource.  
   
  `dwSize`  
- O tamanho do buffer em bytes.  
+ The buffer size in bytes.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o recurso é carregado e aplicado à janela host; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is loaded and applied to the host window; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
- Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido horizontalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveHorizontal(int nRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- Define como uma porcentagem quanto um controle filho é movido horizontalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is moved horizontally when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [MoveSettings](#movesettings_structure) valor que encapsula a solicitação Mover taxa.  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
- Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido horizontalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nXRatio`  
- Define como uma porcentagem quanto um controle filho é movido horizontalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is moved horizontally when the user resizes the host window.  
   
  `nYRatio`  
- Define como uma porcentagem quanto um controle filho é movido verticalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is moved vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [MoveSettings](#movesettings_structure) valor que encapsula a solicitação Mover taxa.  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
- Obtém um [MoveSettings](#movesettings_structure) valor que não representa nenhum movimento vertical ou horizontal, para um controle filho.  
+##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone  
+ Gets a [MoveSettings](#movesettings_structure) value that represents no motion, vertical or horizontal, for a child control.  
   
 ```  
 static MoveSettings MoveNone();  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A [MoveSettings](#movesettings_structure) valor que corrige o controle no local, para que ele não se move como o usuário redimensiona a janela do host.  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that fixes the control in place, so that it does not move as the user resizes the host window.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movesettings_structure"></a>Estrutura CMFCDynamicLayout::MoveSettings  
- Encapsula mover dados para controles em um layout dinâmico.  
+##  <a name="movesettings_structure"></a>  CMFCDynamicLayout::MoveSettings Structure  
+ Encapsulates move data for controls in a dynamic layout.  
   
 ```  
 struct CMFCDynamicLayout::MoveSettings;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Esta é uma classe aninhada dentro de `CMFCDynamicLayout`.  
+### <a name="remarks"></a>Remarks  
+ This is a nested class inside `CMFCDynamicLayout`.  
 
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
-Verifique se a mover dados especificam um movimento horizontal diferente de zero.  
+Check if the move data specifies a nonzero horizontal move.  
   
 
 ```  
 BOOL IsHorizontal() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `MoveSettings` objeto Especifica um movimento horizontal diferente de zero.  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies a nonzero horizontal move.  
 
  ## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
- Verifique se a mover dados não especificam nenhuma movimentação.  
+ Check if the move data specifies no movement.  
   
 ```  
 BOOL IsNone() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `MoveSettings` objeto não especifica nenhuma movimentação.  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies no movement.  
 
 ## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
-  Verifique se a mover dados especificam um movimento vertical diferente de zero.  
+  Check if the move data specifies a nonzero vertical movement.  
   
 ```  
 BOOL IsVertical() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `MoveSettings` objeto Especifica um movimento vertical diferente de zero.  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies a nonzero vertical movement.  
 
-##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
- Obtém um [MoveSettings](#movesettings_structure) valor que define o nível de controle filho é movido verticalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved vertically when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveVertical(int nRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- Define como uma porcentagem quanto um controle filho é movido verticalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is moved vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [MoveSettings](#movesettings_structure) valor que encapsula a solicitação Mover taxa.  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
- Define o tamanho da janela abaixo do qual o layout não é ajustado.  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
+ Sets the window size below which layout is not adjusted.  
   
 ```  
 void SetMinSize(const CSize& size);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `size`  
- O tamanho desejado abaixo do qual o layout não é ajustado.  
+ The desired size below which layout is not adjusted.  
   
-### <a name="remarks"></a>Comentários  
- A posição e o tamanho de um controle filho é alterado dinamicamente quando uma janela de hospedagem está sendo redimensionada, mas há um tamanho mínimo abaixo do qual o layout não é ajustado. O usuário pode redimensionar a janela para um tamanho menor, mas partes da janela, em seguida, estão ocultos da exibição.  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized, but there is a minimum size below which the layout is not adjusted. The user can resize the window to a smaller size, but parts of the window are then hidden from view.  
   
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
- Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeHorizontal(int nRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- Define como uma porcentagem quanto um controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is resized horizontally when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [SizeSettings](#sizesettings_structure) valor que encapsula a proporção do tamanho solicitado.  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
- Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nXRatio`  
- Define como uma porcentagem quanto um controle filho é redimensionado horizontalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is resized horizontally when the user resizes the host window.  
   
  `nYRatio`  
- Define como uma porcentagem quanto um controle filho é redimensionado verticalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is resized vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [SizeSettings](#sizesettings_structure) valor que encapsula a proporção do tamanho solicitado.  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
- Obtém um [SizeSettings](#sizesettings_structure) valor que não representa a nenhuma alteração no tamanho de um controle filho.  
+##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone  
+ Gets a [SizeSettings](#sizesettings_structure) value that represents no change in size for a child control.  
   
 ```  
 static SizeSettings SizeNone();  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A [SizeSettings](#sizesettings_structure) valor que corrige o controle em um determinado tamanho, para que ele não alterar o tamanho, como o usuário redimensiona a janela do host.  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that fixes the control at a certain size, so that it does not change size as the user resizes the host window.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizesettings_structure"></a>Estrutura CMFCDynamicLayout::SizeSettings  
- Encapsula os dados de alteração de tamanho para controles em um layout dinâmico.  
+##  <a name="sizesettings_structure"></a>  CMFCDynamicLayout::SizeSettings Structure  
+ Encapsulates size change data for controls in a dynamic layout.  
   
 ```  
 struct CMFCDynamicLayout::SizeSettings;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Esta é uma classe aninhada dentro de `CMFCDynamicLayout`.  
+### <a name="remarks"></a>Remarks  
+ This is a nested class inside `CMFCDynamicLayout`.  
 
 ## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFCDynamicLayout::SizeSettings::IsHorizontal
-Verifica se os dados de redimensionamento especificam um redimensionamento horizontal diferente de zero.  
+Checks if the resize data specifies a nonzero horizontal resizing.  
   
 ```  
 BOOL IsHorizontal() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `SizeSettings` objeto Especifica um redimensionamento horizontal diferente de zero. 
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies a nonzero horizontal resizing. 
 
 ## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
-Verifica se os dados de redimensionamento especificam sem redimensionamento.  
+Checks if the resize data specifies no resizing.  
   
 ```  
 BOOL IsNone() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `SizeSettings` objeto especifica sem redimensionamento.  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies no resizing.  
 
 ## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
-Verifica se os dados de redimensionamento especificam um redimensionamento vertical diferente de zero.  
+Checks if the resize data specifies a nonzero vertical resizing.  
   
 ```  
 BOOL IsVertical() const 
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- TRUE se o `SizeSettings` objeto Especifica um redimensionamento vertical diferente de zero.  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies a nonzero vertical resizing.  
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
- Obtém um [SizeSettings](#sizesettings_structure) valor que define o nível de controle filho é redimensionado verticalmente quando o usuário redimensiona a janela de hospedagem.  
+##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized vertically when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeVertical(int nRatio);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- Define como uma porcentagem quanto um controle filho é redimensionado verticalmente quando o usuário redimensiona a janela do host.  
+ Defines as a percentage how far a child control is resized vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [SizeSettings](#sizesettings_structure) valor que encapsula a proporção do tamanho solicitado.  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)
 

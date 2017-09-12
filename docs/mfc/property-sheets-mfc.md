@@ -1,54 +1,71 @@
 ---
-title: "Folhas de propriedade (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de diálogo, folhas de propriedade"
-  - "caixas de diálogo, guias"
-  - "folhas de propriedade"
-  - "caixas de diálogo de guia"
+title: Property Sheets (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], tabs
+- property sheets
+- dialog boxes [MFC], property sheets
+- tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Folhas de propriedade (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 579d5e55bb7d739749ab213ce66c299e88d8391b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Esta família de artigos explica como implementar o suporte para as folhas de propriedades em aplicativos de MFC.  Uma folha de propriedade, também conhecida como uma caixa de diálogo da guia, fornece uma maneira de gerenciar um número grande de controle em uma caixa de diálogo.  A folha de propriedade contiver páginas de propriedades, cada um com base em um recurso separado do modelo da caixa de diálogo.  Você pode dividir os controles da caixa de diálogo em grupos lógicos e colocar cada grupo em sua própria página de propriedades.  
+---
+# <a name="property-sheets-mfc"></a>Property Sheets (MFC)
+This family of articles explains how to implement support for property sheets in MFC applications. A property sheet, also known as a tab dialog box, provides a way to manage large numbers of controls in a dialog box. The property sheet contains property pages, each based on a separate dialog template resource. You can divide your dialog box's controls into logical groups and put each group on its own property page.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Folhas de propriedades e páginas de propriedade](../mfc/property-sheets-and-property-pages-in-mfc.md)  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-in-mfc.md)  
   
--   [Usando folhas de propriedades em seu aplicativo](../mfc/using-property-sheets-in-your-application.md)  
+-   [Using Property Sheets in Your Application](../mfc/using-property-sheets-in-your-application.md)  
   
--   [Adicionando controles a uma folha de propriedade](../mfc/adding-controls-to-a-property-sheet.md) \(em vez de uma página de propriedades\)  
+-   [Adding Controls to a Property Sheet](../mfc/adding-controls-to-a-property-sheet.md) (as opposed to a property page)  
   
--   [Troca de dados entre uma folha de propriedade e seu programa](../mfc/exchanging-data.md)  
+-   [Exchanging data between a property sheet and your program](../mfc/exchanging-data.md)  
   
--   [Criando uma folha de propriedade modeless](../mfc/creating-a-modeless-property-sheet.md)  
+-   [Creating a modeless property sheet](../mfc/creating-a-modeless-property-sheet.md)  
   
--   [Tratando o botão ser aplicado](../mfc/handling-the-apply-button.md)  
+-   [Handling the Apply button](../mfc/handling-the-apply-button.md)  
   
--   [Folhas de propriedades como assistentes](../mfc/property-sheets-as-wizards.md)  
+-   [Property Sheets as Wizards](../mfc/property-sheets-as-wizards.md)  
   
--   [Classe CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
+-   [Class CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
   
--   [Classe CPropertyPage](../mfc/reference/cpropertypage-class.md)  
+-   [Class CPropertyPage](../mfc/reference/cpropertypage-class.md)  
   
--   [Amostra](../top/visual-cpp-samples.md)  
+-   [Sample](../visual-cpp-samples.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

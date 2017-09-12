@@ -1,36 +1,51 @@
 ---
-title: "Fun&#231;&#227;o de membro ExitInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWinApp::ExitInstance"
-  - "CWinApp.ExitInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CWinApp, ExitInstance"
-  - "Método ExitInstance"
-  - "programas [C++], encerrando"
+title: ExitInstance Member Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: []
+dev_langs:
+- C++
+helpviewer_keywords:
+- programs [MFC], terminating
+- CWinApp class [MFC], ExitInstance
+- ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#227;o de membro ExitInstance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: acf9f8129f7d0725a2e1605ec7c13a6c712b12dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A função de membro de [ExitInstance](../Topic/CWinApp::ExitInstance.md) da classe [CWinApp](../mfc/reference/cwinapp-class.md) é chamada cada vez que uma cópia do seu aplicativo termina, normalmente no resultado do usuário que encerra o aplicativo.  
+---
+# <a name="exitinstance-member-function"></a>ExitInstance Member Function
+The [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) member function of class [CWinApp](../mfc/reference/cwinapp-class.md) is called each time a copy of your application terminates, usually as a result of the user quitting the application.  
   
- Substituir `ExitInstance` se você precisar do processamento especial de limpeza, como liberar recursos de \(GDI\) de graphics device interface ou desalocar memória usada durante a execução do programa.  A limpeza de itens padrão como documentos e exibições, porém, é fornecida pela estrutura, com outras funções substituível fazendo o específico especial de limpeza 2 esses objetos.  
+ Override `ExitInstance` if you need special cleanup processing, such as freeing graphics device interface (GDI) resources or deallocating memory used during program execution. Cleanup of standard items such as documents and views, however, is provided by the framework, with other overridable functions for doing special cleanup specific to those objects.  
   
-## Consulte também  
- [CWinApp: a classe do aplicativo](../Topic/CWinApp:%20The%20Application%20Class.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)
+

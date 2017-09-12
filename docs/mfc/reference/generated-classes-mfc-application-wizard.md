@@ -1,5 +1,5 @@
 ---
-title: Classes, Assistente de aplicativo MFC geradas | Documentos do Microsoft
+title: Generated Classes, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1b91e21ebcb7b4ce87964196b6e2dbd84ef8c1e7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2c57a0297648b05928ad6d1fecb2abb0b103d87
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="generated-classes-mfc-application-wizard"></a>Classes geradas, Assistente de Aplicativo MFC
-Este tópico lista os nomes de classes base e os arquivos gerados pelo seu projeto. Por padrão, os nomes são baseados no nome do projeto que você especificou no **caixa de diálogo Novo projeto**. Você pode alterar a maioria desses nomes, conforme descrito aqui:  
+# <a name="generated-classes-mfc-application-wizard"></a>Generated Classes, MFC Application Wizard
+This topic lists the names of base classes and files that your project generates. By default, the names are based on the project name that you specified in the **New Project Dialog Box**. You can change most of these names, as described here:  
   
- **Classes geradas**  
- Os nomes das classes criadas para o projeto. Por padrão, os nomes são baseados no nome do projeto. O projeto padrão cria um C*NomeDoProjeto*exibir classe C*NomeDoProjeto*classe App, C*NomeDoProjeto*classe, uma classe CMainFrame e uma classe CChildFrame Doc. Todos os outros valores nessa página contêm informações sobre a classe selecionada no momento o **classes geradas** lista.  
+ **Generated classes**  
+ The names of the classes created for the project. By default, the names are based on the project name. The default MFC project creates a C*ProjName*View class, a C*ProjName*App class, a C*ProjName*Doc class, a CMainFrame class, and a CChildFrame class. All other values on this page contain information about the class currently selected in the **Generated classes** list.  
   
- Para alterar um nome de classe, use o **nome da classe** caixa de texto.  
+ To change a class name, use the **Class Name** text box.  
   
- **Nome da classe**  
- O nome da classe que está selecionado no momento o **classes geradas** lista. Se a caixa estiver ativa, você pode alterar o nome da classe. Quando você altera o foco do **nome da classe** caixa, qualquer alteração no nome da classe selecionada aparece no **classes geradas** lista.  
+ **Class name**  
+ The name of the class that is currently selected in the **Generated classes** list. If the box is active, you can change the class name. When you change the focus from the **Class Name** box, any change to the selected class name appears in the **Generated classes** list.  
   
- **arquivo. h**  
- O nome do arquivo de cabeçalho da classe que está selecionado no momento o **classes geradas** lista. Se a caixa de texto estiver ativa, você pode alterar o nome do arquivo de cabeçalho.  
+ **.h file**  
+ The name of the header file of the class that is currently selected in the **Generated classes** list. If the text box is active, you can change the name of the header file.  
   
- **Classe base**  
- O nome da classe base da classe selecionada atualmente no **classes geradas** lista. Se a caixa estiver ativa, você pode selecionar da lista de outra classe para a classe base.  
+ **Base class**  
+ The name of the base class of the currently selected class in the **Generated classes** list. If the box is active, you can select from the list another class for the base class.  
   
- **arquivo. cpp**  
- O nome do arquivo de código fonte que está associado com a classe selecionada. Se a caixa de texto estiver ativa, você pode alterar o nome do arquivo de implementação.  
+ **.cpp file**  
+ The name of the source code file that is associated with the selected class. If the text box is active, you can change the name of the implementation file.  
   
-## <a name="see-also"></a>Consulte também  
- [Recursos avançados, Assistente de aplicativo MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
- [Tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

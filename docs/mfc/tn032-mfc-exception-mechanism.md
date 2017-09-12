@@ -1,36 +1,54 @@
 ---
-title: "TN032: mecanismo de exce&#231;&#227;o MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.exceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CException, usando"
-  - "MFC, exceções"
-  - "TN032"
+title: 'TN032: MFC Exception Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.exceptions
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN032
+- MFC, exceptions
+- CException class [MFC], using
 ms.assetid: 0271f0aa-82cb-47a2-b7ea-e88126fc7e43
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN032: mecanismo de exce&#231;&#227;o MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86c149585d9ea7905ace80f7a6aad51eab5dc6dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As versões anteriores do Visual C\+\+ não ofereciam suporte ao mecanismo de exceção padrão do C\+\+, e macros MFC fornecidos **TRY\/CATCH\/THROW** que foram usados no lugar.  Esta versão do Visual C\+\+ aceita completamente exceções C\+\+.  Essa observação cobrisse alguns dos detalhes de implementação avançadas de macros anteriores que incluem automaticamente como objetos baseados pilha de limpeza.  Como a pilha das exceções C\+\+ que desenrola por padrão, essa técnica observe que não é mais necessário.  
+---
+# <a name="tn032-mfc-exception-mechanism"></a>TN032: MFC Exception Mechanism
+Previous versions of Visual C++ did not support the standard C++ exception mechanism, and MFC provided macros **TRY/CATCH/THROW** that were used instead. This version of Visual C++ fully supports C++ exceptions. This note covered some of the advanced implementation details of the previous macros including how to automatically cleanup stack based objects. Because C++ exceptions support stack unwinding by default, this technical note is no longer necessary.  
   
- Consulte [Exceções: Usando macros de MFC e exceções C\+\+](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) para obter mais informações sobre as diferenças entre as macros MFC e as novas palavras\-chave C\+\+.  
+ Refer to [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) for more information on the differences between the MFC macros and the new C++ keywords.  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

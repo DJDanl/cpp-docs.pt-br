@@ -1,120 +1,138 @@
 ---
-title: "Designer da faixa de op&#231;&#245;es (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Designer da Faixa de Opções MFC"
-  - "Designer da faixa de opções (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Designer da faixa de op&#231;&#245;es (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O Designer de faixa de opções permite criar e personalizar as faixas de opções em aplicativos MFC.  Uma faixa de opções é um elemento de interface do usuário do usuário que organiza os comandos em grupos lógicos.  Esses grupos são exibidos em guias separadas em uma faixa na parte superior da janela.  A faixa de opções substitui a barra de menus e barras de ferramentas.  Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo.  Para obter mais informações, consulte [faixas de opções](http://go.microsoft.com/fwlink/?LinkId=129233).  A ilustração a seguir mostra uma faixa de opções.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![Controle de recursos de faixa de opções do MFC](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- Nas versões anteriores do Visual Studio, faixas de opções precisava ser criado ao escrever código que usa as classes de faixa de opções do MFC como [Classe de CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md).  Em [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], o designer de faixa de opções fornece um método alternativo para a criação de faixas de opções. Primeiro, criar e personalizar uma faixa de opções como um recurso.  Em seguida, carregar o recurso de faixa de opções do código no aplicativo do MFC.  Você pode até usar recursos de faixa de opções e classes de faixa de opções do MFC juntos.  Por exemplo, você pode criar um recurso de faixa de opções e, em seguida, adicionar programaticamente elementos mais a ele em tempo de execução por meio de código.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## Noções básicas sobre o Designer de faixa de opções  
- O designer de faixa de opções cria e armazena a faixa de opções como um recurso.  Quando você cria um recurso de faixa de opções, o designer de faixa de opções faz essas três coisas:  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   Adiciona uma entrada no script de definição de recurso de projeto \(\*. rc\).  No exemplo a seguir, `IDR_RIBBON` é o nome exclusivo que identifica o recurso da faixa de opções, `RT_RIBBON_XML` é o tipo de recurso, e `ribbon.mfcribbon-ms` é o nome do arquivo de recurso.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   Adiciona as definições de IDs de comando para resource.h.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   Cria um arquivo de recurso da faixa de opções \(\*.mfcribbon\-ms\) que contém o código XML que define os atributos, controles e botões da faixa de opções.  As alterações à faixa de opções no designer de faixa de opções são armazenadas no arquivo de recurso como XML.  O exemplo de código a seguir mostra parte do conteúdo de um arquivo ms \*.mfcribbon:  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- Para usar o recurso de faixa de opções em seu aplicativo do MFC, carregar o recurso chamando [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md).  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## Criando uma faixa de opções usando o Designer de faixa de opções  
- Estas são as duas maneiras de adicionar um recurso da faixa de opções ao seu projeto MFC:  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   Criar um aplicativo do MFC e configurar o Assistente de projeto do MFC para criar a faixa de opções.  Para obter mais informações, consulte [Instruções passo a passo: criando um aplicativo da faixa de opções usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   Em um projeto existente do MFC, crie um recurso de faixa de opções e carregá\-lo.  Para obter mais informações, consulte [Instruções passo a passo: atualizando o aplicativo de rabisco MFC \(parte 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Se o projeto já tiver uma faixa de opções codificada manualmente, MFC tem funções que você pode usar para converter a faixa de opções existente em um recurso de faixa de opções.  Para obter mais informações, consulte [Como converter uma faixa de opções MFC existente em um recurso da faixa de opções](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Faixas de opções podem ser criadas em aplicativos com base na caixa de diálogo.  Para obter mais informações, consulte [Tipo de aplicativo, Assistente de Aplicativo MFC](../Topic/Application%20Type,%20MFC%20Application%20Wizard.md).  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Personalizando as faixas de opções  
- Para abrir uma faixa de opções no designer de faixa de opções, clique duas vezes o recurso de faixa de opções no modo de exibição de recurso.  No designer, você pode adicionar, remover e personalizar elementos na faixa de opções, o botão do aplicativo ou a barra de ferramentas de acesso rápido.  Também é possível vincular eventos, por exemplo, eventos de clique de botão e eventos, para um método em seu aplicativo.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- A ilustração a seguir mostra os vários componentes no designer de faixa de opções.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![Designer de faixa de opções do MFC](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **Caixa de ferramentas:** contém controles que podem ser arrastados para a superfície de designer.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **a superfície de designer:** contém a representação visual do recurso da faixa de opções.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **Janela Propriedades:** lista os atributos do item selecionado na superfície de design.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **Janela de exibição de recurso:** exibe os recursos que incluem recursos de faixa de opções, no seu projeto.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **De ferramentas do Editor de faixa de opções:** contém comandos que lhe permitem visualizar a faixa de opções e altere seu tema visual.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- Os tópicos a seguir descrevem como usar os recursos do designer de faixa de opções:  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [Como personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [Como personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [Como adicionar controles de faixa de opções e manipuladores de evento](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [Como carregar um recurso da faixa de opções de um aplicativo MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## Definições de elementos da faixa de opções  
- ![Faixa de opções do MFC](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **Botão do aplicativo:** o botão é exibido no canto superior esquerdo de uma faixa de opções.  O botão do aplicativo substitui o menu Arquivo e é visível mesmo quando a faixa de opções é minimizada.  Quando o botão é clicado, é exibido um menu que possui uma lista de comandos.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **Barra de ferramentas de acesso rápido:** comandos usados com uma barra de ferramentas pequena e personalizável que exibe com frequência.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **Categoria**: O agrupamento lógico que representa o conteúdo de uma guia faixa de opções.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **Botão categoria padrão:** o botão que aparece na faixa de opções quando a faixa de opções é minimizada.  Quando o botão é clicado, a categoria reaparece como um menu.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **Painel:** uma área da barra de faixa de opções que exibe um grupo de controles relacionados.  Cada categoria de faixa de opções contém um ou mais painéis de faixa de opções.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **Elementos da faixa de opções:** controla os painéis, por exemplo, botões e caixas de combinação.  Para ver os vários controles que podem ser hospedados em uma faixa de opções, consulte [RibbonGadgets exemplo: aplicativo de Gadgets de faixa de opções](../top/visual-cpp-samples.md).  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)   
- [Trabalhando com arquivos de recurso](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

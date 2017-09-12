@@ -1,5 +1,5 @@
 ---
-title: Classe CMiniFrameWnd | Microsoft Docs
+title: CMiniFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMiniFrameWnd class
-- mini-frame windows
-- toolbars [C++]
+- CMiniFrameWnd [MFC], CMiniFrameWnd
+- CMiniFrameWnd [MFC], Create
+- CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 caps.latest.revision: 21
 author: mikeblome
@@ -39,45 +39,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7a7119a7317e8837c7ce672b2607a4e37b5239f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191683a95253c2a1eb0d8ed49552b5d2e507894
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
-Representa uma janela do quadro de meia altura geralmente Vista em torno de flutuando barras de ferramentas.  
+# <a name="cminiframewnd-class"></a>CMiniFrameWnd Class
+Represents a half-height frame window typically seen around floating toolbars.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMiniFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Constrói um objeto `CMiniFrameWnd`.|  
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Constructs a `CMiniFrameWnd` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::Create](#create)|Cria um `CMiniFrameWnd` objeto após a construção.|  
-|[CMiniFrameWnd::CreateEx](#createex)|Cria um `CMiniFrameWnd` objeto (com opções adicionais) após a construção.|  
+|[CMiniFrameWnd::Create](#create)|Creates a `CMiniFrameWnd` object after construction.|  
+|[CMiniFrameWnd::CreateEx](#createex)|Creates a `CMiniFrameWnd` object (with additional options) after construction.|  
   
-## <a name="remarks"></a>Comentários  
- Essas janelas com minise moldura comportam como janelas com moldura normal, exceto que eles não têm botões minimizar/maximizar ou menus e você só precisa único clique no menu do sistema para descartá-los.  
+## <a name="remarks"></a>Remarks  
+ These mini-frame windows behave like normal frame windows, except that they do not have minimize/maximize buttons or menus and you only have to single-click on the system menu to dismiss them.  
   
- Para usar um `CMiniFrameWnd` de objeto, primeiro defina o objeto. Em seguida, chame o [criar](#create) função de membro para exibir a janela do mini quadro.  
+ To use a `CMiniFrameWnd` object, first define the object. Then call the [Create](#create) member function to display the mini-frame window.  
   
- Para obter mais informações sobre como usar `CMiniFrameWnd` objetos, consulte o artigo [encaixe e barras de ferramentas flutuantes](../../mfc/docking-and-floating-toolbars.md).  
+ For more information on how to use `CMiniFrameWnd` objects, see the article [Docking and Floating Toolbars](../../mfc/docking-and-floating-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,21 +88,21 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
- Constrói um `CMiniFrameWnd` do objeto, mas não criar a janela.  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
+ Constructs a `CMiniFrameWnd` object, but does not create the window.  
   
 ```  
 CMiniFrameWnd();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Para criar a janela, chame [CMiniFrameWnd::Create](#create).  
+### <a name="remarks"></a>Remarks  
+ To create the window, call [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
- Cria a janela do mini-quadro Windows e anexa-o para o `CMiniFrameWnd` objeto.  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
+ Creates the Windows mini-frame window and attaches it to the `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL Create(
@@ -114,57 +114,57 @@ virtual BOOL Create(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpClassName`  
- Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows. O nome da classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função. Se **nulo**, a classe de janela será registrada para você pela estrutura. MFC fornece a classe padrão, os seguintes atributos e estilos:  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function. If **NULL**, the window class will be registered for you by the framework. MFC gives the default class the following styles and attributes:  
   
--   Conjuntos de bit de estilo **CS_DBLCLKS**, que envia duas vezes em mensagens para o procedimento de janela quando o usuário clica duas vezes o mouse.  
+-   Sets style bit **CS_DBLCLKS**, which sends double-click messages to the window procedure when the user double-clicks the mouse.  
   
--   Conjuntos de bits de estilo **CS_HREDRAW** e **CS_VREDRAW**, que direcionam o conteúdo da área do cliente seja redesenhado quando a janela de tamanho é alterado.  
+-   Sets style bits **CS_HREDRAW** and **CS_VREDRAW**, which direct the contents of the client area to be redrawn when the window changes size.  
   
--   Define o cursor de classe com o padrão do Windows **IDC_ARROW**.  
+-   Sets the class cursor to the Windows standard **IDC_ARROW**.  
   
--   Define o pincel do plano de fundo de classe **nulo**, portanto, a janela não apagará seu plano de fundo.  
+-   Sets the class background brush to **NULL**, so the window will not erase its background.  
   
--   Define o ícone de classe para o ícone do logotipo do Windows padrão, o sinalizador balançando.  
+-   Sets the class icon to the standard, waving-flag Windows logo icon.  
   
--   Define a janela para o tamanho padrão e a posição, conforme indicado pelo Windows.  
+-   Sets the window to the default size and position, as indicated by Windows.  
   
  `lpWindowName`  
- Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- Especifica os atributos de estilo de janela. Eles podem incluir estilos de janela padrão e um ou mais dos seguintes estilos especiais:  
+ Specifies the window style attributes. These can include standard window styles and one or more of the following special styles:  
   
-- **MFS_MOVEFRAME** permite que a janela do quadro simplificado a ser movido, basta clicar em qualquer borda da janela, não apenas a legenda.  
+- **MFS_MOVEFRAME** Allows the mini-frame window to be moved by clicking on any edge of the window, not just the caption.  
   
-- **MFS_4THICKFRAME** desabilita o redimensionamento de janela do quadro simplificado.  
+- **MFS_4THICKFRAME** Disables resizing of the mini-frame window.  
   
-- **MFS_SYNCACTIVE** sincroniza a ativação da janela do quadro simplificado para a ativação de sua janela pai.  
+- **MFS_SYNCACTIVE** Synchronizes the activation of the mini-frame window to the activation of its parent window.  
   
-- **MFS_THICKFRAME** permite que a janela do quadro simplificado ser dimensionados pequena de permitir que o conteúdo da área do cliente.  
+- **MFS_THICKFRAME** Allows the mini-frame window to be sized as small as the contents of the client area allow.  
   
-- **MFS_BLOCKSYSMENU** desabilita o acesso ao menu do sistema e o menu de controle e converte-os em parte da legenda (barra de título).  
+- **MFS_BLOCKSYSMENU** Disables access to the system menu and the control menu, and converts them to part of the caption (title bar).  
   
- Consulte [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores de estilo de janela possíveis. É a combinação de típica usada para janelas de mini-quadro **WS_POPUP | WS_CAPTION | WS_SYSMENU**.  
+ See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
- Um `RECT` estrutura especificando as dimensões desejadas da janela.  
+ A `RECT` structure specifying the desired dimensions of the window.  
   
  `pParentWnd`  
- Aponta para a janela pai. Use **nulo** para janelas de nível superior.  
+ Points to the parent window. Use **NULL** for top-level windows.  
   
  `nID`  
- Se a janela do quadro mini é criada como uma janela filho, esse é o identificador do controle filho; Caso contrário, 0.  
+ If the mini-frame window is created as a child window, this is the identifier of the child control; otherwise 0.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- **Criar** inicializa o nome da classe da janela e o nome da janela e registra os valores padrão para seu estilo e pai.  
+### <a name="remarks"></a>Remarks  
+ **Create** initializes the window's class name and window name and registers default values for its style and parent.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
- Cria um objeto `CMiniFrameWnd`.  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
+ Creates a `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -177,48 +177,48 @@ virtual BOOL CreateEx(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Especifica o estilo estendido do `CMiniFrameWnd` que está sendo criado. Aplicar qualquer um do [estendidos estilos de janela](../../mfc/reference/extended-window-styles.md) à janela.  
+ Specifies the extended style of the `CMiniFrameWnd` being created. Apply any of the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) to the window.  
   
  `lpClassName`  
- Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome da classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função ou qualquer um dos nomes predefinidos de classe de controle. Ele não deve ser **nulo**.  
+ Points to a null-terminated character string that names the Windows class (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be **NULL**.  
   
  `lpWindowName`  
- Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- Especifica os atributos de estilo de janela. Consulte [estilos de janela](../../mfc/reference/window-styles.md) e [CWnd::Create](../../mfc/reference/cwnd-class.md#create) para obter uma descrição dos valores possíveis.  
+ Specifies the window style attributes. See [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of the possible values.  
   
  `rect`  
- O tamanho e posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ The size and position of the window, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Aponta para o objeto de janela pai.  
+ Points to the parent window object.  
   
  `nID`  
- O identificador da janela filho.  
+ The identifier of the child window.  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro no caso de sucesso, falso em caso de falha.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>Comentários  
- O `CreateEx` parâmetros especificam o **WNDCLASS**, estilo de janela e posição inicial (opcionalmente) e o tamanho da janela. `CreateEx`também especifica a janela pai (se houver) e ID.  
+### <a name="remarks"></a>Remarks  
+ The `CreateEx` parameters specify the **WNDCLASS**, window style, and (optionally) initial position and size of the window. `CreateEx` also specifies the window's parent (if any) and ID.  
   
- Quando `CreateEx` executa o Windows envia o [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) mensagens na janela.  
+ When `CreateEx` executes, Windows sends the [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messages to the window.  
   
- Para estender a manipulação de mensagem padrão, derive uma classe de `CMiniFrameWnd`, adicione um mapa de mensagem para a nova classe e fornecer funções de membro para as mensagens acima. Substituir `OnCreate`, por exemplo, para executar inicialização necessária para uma nova classe.  
+ To extend the default message handling, derive a class from `CMiniFrameWnd`, add a message map to the new class, and provide member functions for the above messages. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Substituir mais **na***mensagem* adicionar mais funcionalidade a sua classe derivada de manipuladores de mensagens.  
+ Override further **On***Message* message handlers to add further functionality to your derived class.  
   
- Se o **WS_VISIBLE** estilo for fornecido, o Windows envia a janela de todas as mensagens necessárias para ativar e mostrar a janela. Se o estilo da janela especifica uma barra de título, o título da janela apontada pelo `lpszWindowName` parâmetro é exibido na barra de título.  
+ If the **WS_VISIBLE** style is given, Windows sends the window all the messages required to activate and show the window. If the window style specifies a title bar, the window title pointed to by the `lpszWindowName` parameter is displayed in the title bar.  
   
- O `dwStyle` parâmetro pode ser qualquer combinação de [estilos de janela](../../mfc/reference/window-styles.md).  
+ The `dwStyle` parameter can be any combination of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- Não há suporte para as janelas de ferramentas de paleta de estilo antigas. O estilo antigo, que não tem um botão "X" Fechar, tinha suporte durante a execução de um aplicativo MFC em versões anteriores do Windows, mas não há suporte para o Visual C++ .NET. Somente o novo `WS_EX_TOOLWINDOW` estilo agora tem suporte; para obter uma descrição desse estilo, consulte [estilos de janela estendidos](../../mfc/reference/extended-window-styles.md).  
+ The old style Palette toolbox windows are no longer supported. The old style, which did not have an "X" Close button, was supported when running an MFC application on previous versions of Windows, but is no longer supported in Visual C++.NET. Only the new `WS_EX_TOOLWINDOW` style is now supported; for a description of this style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)
 

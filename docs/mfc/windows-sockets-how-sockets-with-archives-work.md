@@ -1,63 +1,81 @@
 ---
-title: "Windows Sockets: como funcionam soquetes com arquivos mortos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "soquetes [C++], operação síncrona"
-  - "soquetes [C++], com arquivamentos"
-  - "soquete de estado síncrono"
-  - "objeto de soquete de dois estados"
-  - "Windows Sockets [C++], síncrona"
-  - "Windows Sockets [C++], com arquivamentos"
+title: 'Windows Sockets: How Sockets with Archives Work | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], synchronous
+- sockets [MFC], synchronous operation
+- sockets [MFC], with archives
+- synchronous state socket
+- Windows Sockets [MFC], with archives
+- two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets: como funcionam soquetes com arquivos mortos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: edef2616132af6fef8a9a573fd6d5ac6c3d91e34
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica como um objeto de [CSocket](../mfc/reference/csocket-class.md) , um objeto de [CSocketFile](../Topic/CSocketFile%20Class.md) , e um objeto de [CArchive](../mfc/reference/carchive-class.md) são combinados para simplificar enviar e receber dados por meio de um soquete do windows.  
+---
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: How Sockets with Archives Work
+This article explains how a [CSocket](../mfc/reference/csocket-class.md) object, a [CSocketFile](../mfc/reference/csocketfile-class.md) object, and a [CArchive](../mfc/reference/carchive-class.md) object are combined to simplify sending and receiving data through a Windows Socket.  
   
- O artigo [Soquetes do windows: Exemplo de soquetes usando arquivos mortos](../mfc/windows-sockets-example-of-sockets-using-archives.md) apresenta a função de **PacketSerialize** .  O objeto de arquivo morto do trabalho de exemplo de **PacketSerialize** bem como um objeto de arquivo morto passado a uma função de MFC [Serializar](../Topic/CObject::Serialize.md) .  A diferença é que essencial para soquetes, o arquivo morto não estiver anexada a um objeto padrão de [CFile](../mfc/reference/cfile-class.md) \(associado normalmente com um arquivo de disco\) mas a um objeto de `CSocketFile` .  Em vez de se conectando a um arquivo de disco, o objeto de `CSocketFile` se conecta a `CSocket` um objeto.  
+ The article [Windows Sockets: Example of Sockets Using Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md) presents the **PacketSerialize** function. The archive object in the **PacketSerialize** example works much like an archive object passed to an MFC [Serialize](../mfc/reference/cobject-class.md#serialize) function. The essential difference is that for sockets, the archive is attached not to a standard [CFile](../mfc/reference/cfile-class.md) object (typically associated with a disk file) but to a `CSocketFile` object. Rather than connecting to a disk file, the `CSocketFile` object connects to a `CSocket` object.  
   
- Um objeto de `CArchive` gerencia um buffer.  Quando o buffer de um arquivo morto enviando \(\) para armazenar for concluída, um objeto associado para fora de `CFile` grava o conteúdo do buffer.  Liberar o buffer de um arquivo morto anexado a um soquete é equivalente a enviar uma mensagem.  Quando o buffer de um arquivo morto de carregamento \(pull\) é concluído, o objeto de `CFile` de para ler até que o buffer está disponível novamente.  
+ A `CArchive` object manages a buffer. When the buffer of a storing (sending) archive is full, an associated `CFile` object writes out the buffer's contents. Flushing the buffer of an archive attached to a socket is equivalent to sending a message. When the buffer of a loading (receiving) archive is full, the `CFile` object stops reading until the buffer is available again.  
   
- A classe `CSocketFile` é derivado de `CFile`, mas não da suporte a funções de membro de [CFile](../mfc/reference/cfile-class.md) como as funções de posicionamento \(`Seek`, `GetLength`, `SetLength`, e assim por diante\), o bloqueio funções \(`LockRange`, `UnlockRange`\), ou a função de `GetPosition` .  Qualquer objeto de [CSocketFile](../Topic/CSocketFile%20Class.md) deve fazer é gravar ou para ler sequências de bytes ou de `CSocket` associado ao objeto.  Como um arquivo não estiver envolvido, as operações como `Seek` e nenhum `GetPosition` não fazem sentido.  `CSocketFile` é derivado de `CFile`, portanto herdaria normalmente todas essas funções de membro.  Para evitar isso, as funções de membro sem suporte de `CFile` são preteridos em `CSocketFile` para gerar [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Class `CSocketFile` derives from `CFile`, but it does not support [CFile](../mfc/reference/cfile-class.md) member functions such as the positioning functions (`Seek`, `GetLength`, `SetLength`, and so on), the locking functions (`LockRange`, `UnlockRange`), or the `GetPosition` function. All the [CSocketFile](../mfc/reference/csocketfile-class.md) object must do is write or read sequences of bytes to or from the associated `CSocket` object. Because a file is not involved, operations such as `Seek` and `GetPosition` make no sense. `CSocketFile` is derived from `CFile`, so it would normally inherit all of these member functions. To prevent this, the unsupported `CFile` member functions are overridden in `CSocketFile` to throw a [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
- As funções de membro das chamadas de objeto de `CSocketFile` do `CSocket` objeto para enviar ou receber dados.  
+ The `CSocketFile` object calls member functions of its `CSocket` object to send or receive data.  
   
- A figura a seguir mostra as relações entre esses objetos nos dois lados de comunicação.  
+ The following figure shows the relationships among these objects on both sides of the communication.  
   
- ![CArchive CSocketFile CSocket](../Image/vc38IA1.gif "vc38IA1")  
-CArchive, CSocketFile, e CSocket  
+ ![CArchive, CSocketFile, and CSocket](../mfc/media/vc38ia1.gif "vc38ia1")  
+CArchive, CSocketFile, and CSocket  
   
- O objetivo dessa complexidade aparente é impedi\-lo de ser necessidade de gerenciar os detalhes de soquete você mesmo.  Você cria o soquete, o arquivo, e o arquivo, e comece a enviar ou receber dados inserindo o ao arquivo morto ou extraindo o do arquivo morto.  [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../Topic/CSocketFile%20Class.md), e [CSocket](../mfc/reference/csocket-class.md) gerenciam os detalhes nos bastidores.  
+ The purpose of this apparent complexity is to shield you from the necessity of managing the details of the socket yourself. You create the socket, the file, and the archive, and then begin sending or receiving data by inserting it to the archive or extracting it from the archive. [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../mfc/reference/csocketfile-class.md), and [CSocket](../mfc/reference/csocket-class.md) manage the details behind the scenes.  
   
- Um objeto de `CSocket` é realmente um objeto de dois estados: às vezes assíncrona \(o estado normal\) e às vezes síncrona.  Em seu estado assíncrona, um soquete pode receber notificações assíncronas da estrutura.  No entanto, durante uma operação como a recepção ou enviar dados do soquete se torna síncrona.  Isso significa que o soquete uma assíncronos não receberá notificações adicionais até que a operação síncrona seja concluída.  Como alterar os modos, você pode, por exemplo, fazer algo como:  
+ A `CSocket` object is actually a two-state object: sometimes asynchronous (the usual state) and sometimes synchronous. In its asynchronous state, a socket can receive asynchronous notifications from the framework. However, during an operation such as receiving or sending data the socket becomes synchronous. This means the socket will receive no further asynchronous notifications until the synchronous operation has completed. Because it switches modes, you can, for example, do something like the following:  
   
- [!CODE [NVC_MFCSimpleSocket#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#2)]  
+ [!code-cpp[NVC_MFCSimpleSocket#2](../mfc/codesnippet/cpp/windows-sockets-how-sockets-with-archives-work_1.cpp)]  
   
- Se `CSocket` não foi implementado como um objeto de dois estado, ele pode ser possível para receber notificações adicionais para o mesmo tipo do evento quando você processava uma notificação anterior.  Por exemplo, talvez você obtenha uma notificação de `OnReceive` ao processar `OnReceive`.  No fragmento de código acima, extrair `str` de arquivo morto pode levar a recursão.  Alternando estados, `CSocket` impede a recursão evitando notificações adicionais.  A regra geral é nenhuma notificação em notificações.  
+ If `CSocket` were not implemented as a two-state object, it might be possible to receive additional notifications for the same kind of event while you were processing a previous notification. For example, you might get an `OnReceive` notification while processing an `OnReceive`. In the code fragment above, extracting `str` from the archive might lead to recursion. By switching states, `CSocket` prevents recursion by preventing additional notifications. The general rule is no notifications within notifications.  
   
 > [!NOTE]
->  `CSocketFile` também pode ser usado como um arquivo \(limitado sem\) de um objeto de `CArchive` .  Por padrão, o parâmetro de `bArchiveCompatible` construtor de `CSocketFile` é **Verdadeiro**.  Isso especifica que o objeto de arquivo é para uso com um arquivo morto.  Para usar o objeto de arquivo sem um arquivo, passe **Falso** no parâmetro de `bArchiveCompatible` .  
+>  A `CSocketFile` can also be used as a (limited) file without a `CArchive` object. By default, the `CSocketFile` constructor's `bArchiveCompatible` parameter is **TRUE**. This specifies that the file object is for use with an archive. To use the file object without an archive, pass **FALSE** in the `bArchiveCompatible` parameter.  
   
- No “modo compatível arquivo morto”, um objeto de `CSocketFile` fornece o melhor desempenho e reduz o perigo de um deadlock “.” Um deadlock acontece quando os soquetes enviando e recebendo estão aguardando se, ou esperando por um recurso comuns.  Essa situação poderia ocorrer se o objeto de `CArchive` trabalhado com `CSocketFile` a maneira como faria com um objeto de `CFile` .  Com `CFile`, o arquivo morto pode assumir que se receber o menos bytes de solicitada, a fim de arquivo for atingido.  Com `CSocketFile`, porém, os dados são baseado em mensagem; o buffer pode conter várias mensagens, portanto pull de menor que o número de bytes necessários não implica a fim de arquivo.  O aplicativo não bloqueia nesse caso como ela com `CFile`, e pode continuar lê mensagens do buffer até que o buffer está vazia.  A função de [IsBufferEmpty](../Topic/CArchive::IsBufferEmpty.md) em `CArchive` é útil para monitorar o estado do buffer de arquivo morto nesse caso.  
+ In its "archive compatible" mode, a `CSocketFile` object provides better performance and reduces the danger of a "deadlock." A deadlock occurs when both the sending and receiving sockets are waiting on each other, or waiting for a common resource. This situation might occur if the `CArchive` object worked with the `CSocketFile` the way it does with a `CFile` object. With `CFile`, the archive can assume that if it receives fewer bytes than it requested, the end of file has been reached. With `CSocketFile`, however, data is message based; the buffer can contain multiple messages, so receiving fewer than the number of bytes requested does not imply end of file. The application does not block in this case as it might with `CFile`, and it can continue reading messages from the buffer until the buffer is empty. The [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) function in `CArchive` is useful for monitoring the state of the archive's buffer in such a case.  
   
- Para obter mais informações, consulte [Soquetes do windows: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
-## Consulte também  
- [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)   
- [CObject::Serialize](../Topic/CObject::Serialize.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+
+

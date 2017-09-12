@@ -1,42 +1,60 @@
 ---
-title: "Exce&#231;&#245;es: examinando o conte&#250;do da exce&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "blocos catch, Exceções de função MFC"
-  - "Classe CException, exceções de classe"
-  - "tratamento de exceção, MFC"
-  - "lançando exceções, conteúdo de exceção"
-  - "tratamento de exceções de try-catch, conteúdo de exceção"
-  - "tratamento de exceções de try-catch, Exceções de função MFC"
+title: 'Exceptions: Examining Exception Contents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling [MFC], MFC
+- try-catch exception handling [MFC], MFC function exceptions
+- catch blocks, MFC function exceptions
+- CException class [MFC], class exceptions
+- try-catch exception handling [MFC], exception contents
+- throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Exce&#231;&#245;es: examinando o conte&#250;do da exce&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22ceae611fe0b5326e673e7845be9cfa2b68fbf0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Embora o argumento de um bloco de **catch** pode ser de praticamente qualquer tipo de dados, as funções de MFC lançam exceções de tipos derivados da classe `CException`.  Para capturar uma exceção gerada por uma função de MFC, em seguida, você grava um bloco de **catch** cujo argumento seja um ponteiro para um objeto de `CException` \(ou a um objeto derivado de `CException`, como `CMemoryException`\).  Dependendo do tipo exato de exceção, você pode examinar os membros de dados do objeto de exceção das informações de procedimento sobre o motivo específico que causou a exceção.  
+---
+# <a name="exceptions-examining-exception-contents"></a>Exceptions: Examining Exception Contents
+Although a **catch** block's argument can be of almost any data type, the MFC functions throw exceptions of types derived from the class `CException`. To catch an exception thrown by an MFC function, then, you write a **catch** block whose argument is a pointer to a `CException` object (or an object derived from `CException`, such as `CMemoryException`). Depending on the exact type of the exception, you can examine the data members of the exception object to gather information about the specific cause of the exception.  
   
- Por exemplo, o tipo de `CFileException` tem o membro de dados de `m_cause` , que contém um tipo enumerado que especifica a causa da exceção de arquivo.  Alguns exemplos dos valores de retorno possíveis são **CFileException::fileNotFound** e **CFileException::readOnly**.  
+ For example, the `CFileException` type has the `m_cause` data member, which contains an enumerated type that specifies the cause of the file exception. Some examples of the possible return values are **CFileException::fileNotFound** and **CFileException::readOnly**.  
   
- O exemplo a seguir mostra como examinar o conteúdo de `CFileException`.  Outros tipos de exceção podem ser examinados de forma semelhante.  
+ The following example shows how to examine the contents of a `CFileException`. Other exception types can be examined similarly.  
   
- [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/CPP/exceptions-examining-exception-contents_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]  
   
- Para obter mais informações, consulte [Exceções: Liberando objetos nas exceções](../Topic/Exceptions:%20Freeing%20Objects%20in%20Exceptions.md) e [Exceções: Capturando e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+ For more information, see [Exceptions: Freeing Objects in Exceptions](../mfc/exceptions-freeing-objects-in-exceptions.md) and [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## Consulte também  
- [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

@@ -1,34 +1,51 @@
 ---
-title: "Preciso derivar novas classes de CObject? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CObject, quando usar"
-  - "classes derivadas, de CObject"
+title: Do I Have to Derive New Classes from CObject? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- derived classes [MFC], from CObject
+- CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Preciso derivar novas classes de CObject?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fdcd3a478f05c6cd88c76fbfd84da861f3291ce2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Contrário, você não.  
+---
+# <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Do I Have to Derive New Classes from CObject?
+No, you don't.  
   
- Derivar uma classe de [CObject](../Topic/CObject%20Class.md) quando você precisa das instalações que fornece, como a serialização ou o creatability dinâmico.  Muitas classes de dados precisam ser serializados em arquivos, o que geralmente é uma boa ideia derivá\-los de `CObject`.  Para obter um exemplo de uma classe derivada de `CObject`, consulte [Exemplo de garrancho](../top/visual-cpp-samples.md).  
+ Derive a class from [CObject](../mfc/reference/cobject-class.md) when you need the facilities it provides, such as serialization or dynamic creatability. Many data classes need to be serialized to files, so it's often a good idea to derive them from `CObject`. For an example of a class derived from `CObject`, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Consulte também  
- [Classe CObject: perguntas frequentes](../mfc/cobject-class-frequently-asked-questions.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class: Frequently Asked Questions](../mfc/cobject-class-frequently-asked-questions.md)
+

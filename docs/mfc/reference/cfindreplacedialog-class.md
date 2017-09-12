@@ -1,5 +1,5 @@
 ---
-title: Classe CFindReplaceDialog | Microsoft Docs
+title: CFindReplaceDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,12 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- text searches, replacing text
-- text searches, CFindReplaceDialog class
-- Find/Replace dialog box
-- replacing text, CFindReplaceDialog class
-- CFindReplaceDialog class
-- replacing text
+- CFindReplaceDialog [MFC], CFindReplaceDialog
+- CFindReplaceDialog [MFC], Create
+- CFindReplaceDialog [MFC], FindNext
+- CFindReplaceDialog [MFC], GetFindString
+- CFindReplaceDialog [MFC], GetNotifier
+- CFindReplaceDialog [MFC], GetReplaceString
+- CFindReplaceDialog [MFC], IsTerminating
+- CFindReplaceDialog [MFC], MatchCase
+- CFindReplaceDialog [MFC], MatchWholeWord
+- CFindReplaceDialog [MFC], ReplaceAll
+- CFindReplaceDialog [MFC], ReplaceCurrent
+- CFindReplaceDialog [MFC], SearchDown
+- CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
 caps.latest.revision: 25
 author: mikeblome
@@ -52,74 +59,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6ec814e3e96addfdadaaaa855260c8dbd495537e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dac8fd589c2350d6964a0108efb25fc362a13910
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
-Permite que você implemente caixas de diálogo Localizar/Substituir padrão de cadeia de caracteres em seu aplicativo.  
+# <a name="cfindreplacedialog-class"></a>CFindReplaceDialog Class
+Allows you to implement standard string Find/Replace dialog boxes in your application.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFindReplaceDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Chamar essa função para construir um `CFindReplaceDialog` objeto.|  
+|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Call this function to construct a `CFindReplaceDialog` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::Create](#create)|Cria e exibe um `CFindReplaceDialog` caixa de diálogo.|  
-|[CFindReplaceDialog::FindNext](#findnext)|Chame essa função para determinar se o usuário deseja localizar a próxima ocorrência da cadeia de caracteres de localização.|  
-|[CFindReplaceDialog::GetFindString](#getfindstring)|Chame essa função para recuperar a cadeia de caracteres de localização atual.|  
-|[CFindReplaceDialog::GetNotifier](#getnotifier)|Chamar essa função para recuperar o **FINDREPLACE** estrutura em seu manipulador de mensagem registrados.|  
-|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|Chame essa função para recuperar a cadeia de caracteres de substituição atual.|  
-|[CFindReplaceDialog::IsTerminating](#isterminating)|Chame essa função para determinar se a caixa de diálogo está sendo encerrado.|  
-|[CFindReplaceDialog::MatchCase](#matchcase)|Chame essa função para determinar se o usuário deseja corresponder o caso da cadeia de caracteres localizar exatamente.|  
-|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|Chame essa função para determinar se o usuário deseja corresponder somente palavras inteiras.|  
-|[CFindReplaceDialog::ReplaceAll](#replaceall)|Chame essa função para determinar se o usuário deseja todas as ocorrências da cadeia de caracteres a ser substituído.|  
-|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|Chame essa função para determinar se o usuário deseja palavra atual a ser substituído.|  
-|[CFindReplaceDialog::SearchDown](#searchdown)|Chame essa função para determinar se o usuário deseja que a pesquisa seja feita em uma direção para baixo.|  
+|[CFindReplaceDialog::Create](#create)|Creates and displays a `CFindReplaceDialog` dialog box.|  
+|[CFindReplaceDialog::FindNext](#findnext)|Call this function to determine whether the user wants to find the next occurrence of the find string.|  
+|[CFindReplaceDialog::GetFindString](#getfindstring)|Call this function to retrieve the current find string.|  
+|[CFindReplaceDialog::GetNotifier](#getnotifier)|Call this function to retrieve the **FINDREPLACE** structure in your registered message handler.|  
+|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|Call this function to retrieve the current replace string.|  
+|[CFindReplaceDialog::IsTerminating](#isterminating)|Call this function to determine whether the dialog box is terminating.|  
+|[CFindReplaceDialog::MatchCase](#matchcase)|Call this function to determine whether the user wants to match the case of the find string exactly.|  
+|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|Call this function to determine whether the user wants to match entire words only.|  
+|[CFindReplaceDialog::ReplaceAll](#replaceall)|Call this function to determine whether the user wants all occurrences of the string to be replaced.|  
+|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|Call this function to determine whether the user wants the current word to be replaced.|  
+|[CFindReplaceDialog::SearchDown](#searchdown)|Call this function to determine whether the user wants the search to proceed in a downward direction.|  
   
-### <a name="public-data-members"></a>Membros de Dados Públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::m_fr](#m_fr)|Uma estrutura usada para personalizar um `CFindReplaceDialog` objeto.|  
+|[CFindReplaceDialog::m_fr](#m_fr)|A structure used to customize a `CFindReplaceDialog` object.|  
   
-## <a name="remarks"></a>Comentários  
- Ao contrário de outros Windows caixas de diálogo comuns, `CFindReplaceDialog` objetos são sem janela restrita, permitindo que os usuários interajam com outras janelas enquanto eles estão na tela. Há dois tipos de `CFindReplaceDialog` objetos: localizar as caixas de diálogo e caixas de diálogo Localizar/Substituir. Embora as caixas de diálogo permitir que o usuário para pesquisa de entrada e cadeias de caracteres de pesquisa/substituição, eles não executam a pesquisa ou substituição de funções. Você deve adicioná-los ao aplicativo.  
+## <a name="remarks"></a>Remarks  
+ Unlike the other Windows common dialog boxes, `CFindReplaceDialog` objects are modeless, allowing users to interact with other windows while they are on screen. There are two kinds of `CFindReplaceDialog` objects: Find dialog boxes and Find/Replace dialog boxes. Although the dialog boxes allow the user to input search and search/replace strings, they do not perform any of the searching or replacing functions. You must add these to the application.  
   
- Para construir um `CFindReplaceDialog` de objeto, use o construtor fornecido (que não possui argumentos). Como esta é uma caixa de diálogo sem janela restrita, alocar o objeto no heap usando o **novo** operador, em vez de na pilha.  
+ To construct a `CFindReplaceDialog` object, use the provided constructor (which has no arguments). Since this is a modeless dialog box, allocate the object on the heap using the **new** operator, rather than on the stack.  
   
- Uma vez um `CFindReplaceDialog` objeto foi construído, você deve chamar o [criar](#create) função de membro para criar e exibir a caixa de diálogo.  
+ Once a `CFindReplaceDialog` object has been constructed, you must call the [Create](#create) member function to create and display the dialog box.  
   
- Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar **criar**. O `m_fr` estrutura é do tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obter mais informações sobre essa estrutura, consulte o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Use the [m_fr](#m_fr) structure to initialize the dialog box before calling **Create**. The `m_fr` structure is of type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). For more information on this structure, see the Windows SDK.  
   
- Para a janela pai ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) de função e use o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensagem na janela do quadro que manipula esta mensagem registrada.  
+ In order for the parent window to be notified of find/replace requests, you must use the Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function and use the [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) message-map macro in your frame window that handles this registered message.  
   
- Você pode determinar se o usuário decidiu encerrar a caixa de diálogo com o `IsTerminating` função de membro.  
+ You can determine whether the user has decided to terminate the dialog box with the `IsTerminating` member function.  
   
- `CFindReplaceDialog`depende do COMMDLG. Arquivo DLL que é fornecido com o Windows versão 3.1 e posterior.  
+ `CFindReplaceDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- Para personalizar a caixa de diálogo, derive uma classe de `CFindReplaceDialog`, forneça um modelo de caixa de diálogo personalizada e adicionar um mapa de mensagem para processar as mensagens de notificação de controles estendidos. Todas as mensagens não processadas devem ser passadas para a classe base.  
+ To customize the dialog box, derive a class from `CFindReplaceDialog`, provide a custom dialog template, and add a message map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- Personalizando a função de gancho não é necessária.  
+ Customizing the hook function is not required.  
   
- Para obter mais informações sobre como usar `CFindReplaceDialog`, consulte [Classes de caixa de diálogo comuns](../../mfc/common-dialog-classes.md).  
+ For more information on using `CFindReplaceDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,28 +139,28 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
- Constrói um objeto `CFindReplaceDialog`.  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
+ Constructs a `CFindReplaceDialog` object.  
   
 ```  
 CFindReplaceDialog();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Porque o `CFindReplaceDialog` objeto é uma caixa de diálogo sem janela restrita, deve ser construir no heap, usando o `new` operador.  
+### <a name="remarks"></a>Remarks  
+ Because the `CFindReplaceDialog` object is a modeless dialog box, you must construct it on the heap by using the `new` operator.  
   
- Durante a destruição, a estrutura tenta executar um `delete this` no ponteiro para a caixa de diálogo. Se você criou a caixa de diálogo na pilha, o `this` ponteiro não existe e pode resultar em comportamento indefinido.  
+ During destruction, the framework tries to perform a `delete this` on the pointer to the dialog box. If you created the dialog box on the stack, the `this` pointer does not exist and undefined behavior may result.  
   
- Para obter mais informações sobre a construção de `CFindReplaceDialog` objetos, consulte o [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) visão geral. Use o [CFindReplaceDialog::Create](#create) a função de membro para exibir a caixa de diálogo.  
+ For more information on the construction of `CFindReplaceDialog` objects, see the [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) overview. Use the [CFindReplaceDialog::Create](#create) member function to display the dialog box.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView #170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
- Cria e exibe uma localização ou localizar/substituir caixa objeto dialog, dependendo do valor de `bFindDialogOnly`.  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
+ Creates and displays either a Find or Find/Replace dialog box object, depending on the value of `bFindDialogOnly`.  
   
 ```  
 virtual BOOL Create(
@@ -164,179 +171,179 @@ virtual BOOL Create(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bFindDialogOnly`  
- Definir esse parâmetro como `TRUE` para exibir uma **localizar** caixa de diálogo. Defina-a como `FALSE` para exibir uma **localizar/substituir** caixa de diálogo.  
+ Set this parameter to `TRUE` to display a **Find** dialog box. Set it to `FALSE` to display a **Find/Replace** dialog box.  
   
  `lpszFindWhat`  
- Ponteiro para a cadeia de caracteres de pesquisa de padrão quando a caixa de diálogo é exibida. Se `NULL`, a caixa de diálogo não contém uma cadeia de caracteres de pesquisa padrão.  
+ Pointer to the default search string when the dialog box appears. If `NULL`, the dialog box does not contain a default search string.  
   
  `lpszReplaceWith`  
- Ponteiro para a cadeia de caracteres de substituição de padrão quando a caixa de diálogo é exibida. Se `NULL`, a caixa de diálogo não contém uma cadeia de caracteres de substituição padrão.  
+ Pointer to the default replacement string when the dialog box appears. If `NULL`, the dialog box does not contain a default replacement string.  
   
  `dwFlags`  
- Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas que usam o operador OR bit a bit. O valor padrão é `FR_DOWN`, que especifica que a pesquisa continuar em uma direção descendente. Consulte o [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter mais informações sobre esses sinalizadores.  
+ One or more flags you can use to customize the settings of the dialog box, combined using the bitwise OR operator. The default value is `FR_DOWN`, which specifies that the search is to proceed in a downward direction. See the [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) structure in the Windows SDK for more information on these flags.  
   
  `pParentWnd`  
- Um ponteiro para a janela do pai ou o proprietário da caixa de diálogo. Esta é a janela que receberá a mensagem especial que indica que uma ação de localizar/substituir é solicitada. Se `NULL`, a janela principal do aplicativo é usada.  
+ A pointer to the dialog box's parent or owner window. This is the window that will receive the special message indicating that a find/replace action is requested. If `NULL`, the main window of the application is used.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o objeto de caixa de diálogo foi criado com êxito; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog box object was successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Para a janela pai ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) função cujo valor de retorno é um número exclusivo para a instância do aplicativo. A janela do quadro deve ter uma entrada de mapa de mensagem que declara a função de retorno de chamada ( `OnFindReplace` no exemplo a seguir) que manipula esta mensagem registrada. O fragmento de código a seguir é um exemplo de como fazer isso para uma classe de janela do quadro chamada `CMyRichEditView`:  
+### <a name="remarks"></a>Remarks  
+ In order for the parent window to be notified of find/replace requests, you must use the Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function whose return value is a message number unique to the application's instance. Your frame window should have a message map entry that declares the callback function ( `OnFindReplace` in the example that follows) that handles this registered message. The following code fragment is an example of how to do this for a frame window class named `CMyRichEditView`:  
   
- [!code-cpp[NVC_MFCDocView #171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
+ [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
- [!code-cpp[NVC_MFCDocView #172](../../mfc/codesnippet/cpp/cfindreplacedialog-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#172](../../mfc/codesnippet/cpp/cfindreplacedialog-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]  
   
- Dentro de seu `OnFindReplace` função, interpretar as intenções do usuário usando o [CFindReplaceDialog::FindNext](#findnext) e [CFindReplaceDialog::IsTerminating](#isterminating) métodos e você cria o código para as operações de localizar/substituir.  
+ Within your `OnFindReplace` function, you interpret the intentions of the user by using the [CFindReplaceDialog::FindNext](#findnext) and [CFindReplaceDialog::IsTerminating](#isterminating) methods and you create the code for the find/replace operations.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
- Chame essa função de sua função de retorno de chamada para determinar se o usuário deseja localizar a próxima ocorrência da cadeia de caracteres de pesquisa.  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
+ Call this function from your callback function to determine whether the user wants to find the next occurrence of the search string.  
   
 ```  
 BOOL FindNext() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário deseja localizar a próxima ocorrência da cadeia de caracteres de pesquisa; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to find the next occurrence of the search string; otherwise 0.  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
- Chame essa função de sua função de retorno de chamada para recuperar a cadeia de caracteres padrão para localizar.  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
+ Call this function from your callback function to retrieve the default string to find.  
   
 ```  
 CString GetFindString() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A cadeia de caracteres padrão para localizar.  
+### <a name="return-value"></a>Return Value  
+ The default string to find.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView #69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
- Chame essa função para recuperar um ponteiro para a caixa de diálogo Localizar Substituir atual.  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
+ Call this function to retrieve a pointer to the current Find Replace dialog box.  
   
 ```  
 static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lParam`  
- O **lparam** valor passado para a janela do quadro **OnFindReplace** função de membro.  
+ The **lparam** value passed to the frame window's **OnFindReplace** member function.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para a caixa de diálogo atual.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current dialog box.  
   
-### <a name="remarks"></a>Comentários  
- Ele deve ser usado dentro de sua função de retorno de chamada para acessar a caixa de diálogo atual, chame o membro de funções e acesso a `m_fr` estrutura.  
+### <a name="remarks"></a>Remarks  
+ It should be used within your callback function to access the current dialog box, call its member functions, and access the `m_fr` structure.  
   
-### <a name="example"></a>Exemplo  
- Consulte [CFindReplaceDialog::Create](#create) para obter um exemplo de como registrar o manipulador OnFindReplace para receber notificações de caixa de diálogo Localizar Substituir.  
+### <a name="example"></a>Example  
+ See [CFindReplaceDialog::Create](#create) for an example of how to register the OnFindReplace handler to receive notifications from the Find Replace dialog box.  
   
- [!code-cpp[NVC_MFCDocView #69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
- Chame essa função para recuperar a cadeia de caracteres de substituição atual.  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
+ Call this function to retrieve the current replace string.  
   
 ```  
 CString GetReplaceString() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A cadeia de caracteres padrão com o qual substituir cadeias de caracteres encontradas.  
+### <a name="return-value"></a>Return Value  
+ The default string with which to replace found strings.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CFindReplaceDialog::GetFindString](#getfindstring).  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
- Chame essa função em sua função de retorno de chamada para determinar se o usuário decidiu encerrar a caixa de diálogo.  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
+ Call this function within your callback function to determine whether the user has decided to terminate the dialog box.  
   
 ```  
 BOOL IsTerminating() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário decidiu encerrar a caixa de diálogo; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has decided to terminate the dialog box; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Se essa função retorna zero, você deve chamar o `DestroyWindow` a função de membro da caixa de diálogo atual e conjunto de qualquer caixa de diálogo caixa variável de ponteiro para **nulo**. Opcionalmente, também pode armazenar texto Localizar/Substituir última inserido e usá-lo para inicializar a caixa de diálogo Localizar/Substituir Avançar.  
+### <a name="remarks"></a>Remarks  
+ If this function returns nonzero, you should call the `DestroyWindow` member function of the current dialog box and set any dialog box pointer variable to **NULL**. Optionally, you can also store the find/replace text last entered and use it to initialize the next find/replace dialog box.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CFindReplaceDialog::GetFindString](#getfindstring).  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
- Usado para personalizar um `CFindReplaceDialog` objeto.  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
+ Used to customize a `CFindReplaceDialog` object.  
   
 ```  
 FINDREPLACE m_fr;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- `m_fr`é uma estrutura de tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Seus membros armazenam as características do objeto de caixa de diálogo. Depois de construir um `CFindReplaceDialog` do objeto, você pode usar `m_fr` para modificar vários valores na caixa de diálogo.  
+### <a name="remarks"></a>Remarks  
+ `m_fr` is a structure of type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Its members store the characteristics of the dialog-box object. After constructing a `CFindReplaceDialog` object, you can use `m_fr` to modify various values in the dialog box.  
   
- Para obter mais informações sobre essa estrutura, consulte o **FINDREPLACE** estrutura no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on this structure, see the **FINDREPLACE** structure in the Windows SDK.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
- Chame essa função para determinar se o usuário deseja corresponder o caso da cadeia de caracteres localizar exatamente.  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
+ Call this function to determine whether the user wants to match the case of the find string exactly.  
   
 ```  
 BOOL MatchCase() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário desejar localizar ocorrências da cadeia de caracteres de pesquisa que correspondam exatamente a ocorrência da cadeia de caracteres de pesquisa; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to find occurrences of the search string that exactly match the case of the search string; otherwise 0.  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
- Chame essa função para determinar se o usuário deseja corresponder somente palavras inteiras.  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
+ Call this function to determine whether the user wants to match entire words only.  
   
 ```  
 BOOL MatchWholeWord() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário deseja corresponder somente as palavras inteiras da cadeia de caracteres de pesquisa; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to match only the entire words of the search string; otherwise 0.  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
- Chame essa função para determinar se o usuário deseja todas as ocorrências da cadeia de caracteres a ser substituído.  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
+ Call this function to determine whether the user wants all occurrences of the string to be replaced.  
   
 ```  
 BOOL ReplaceAll() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário solicitou que todas as cadeias de caracteres de correspondência de cadeia de caracteres de substituição seja substituído; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has requested that all strings matching the replace string be replaced; otherwise 0.  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
- Chame essa função para determinar se o usuário deseja palavra atual a ser substituído.  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
+ Call this function to determine whether the user wants the current word to be replaced.  
   
 ```  
 BOOL ReplaceCurrent() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário solicitou que a cadeia de caracteres atualmente selecionada substituirá a cadeia de caracteres de substituição; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has requested that the currently selected string be replaced with the replace string; otherwise 0.  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
- Chame essa função para determinar se o usuário deseja que a pesquisa seja feita em uma direção para baixo.  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
+ Call this function to determine whether the user wants the search to proceed in a downward direction.  
   
 ```  
 BOOL SearchDown() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário deseja que a pesquisa seja feita em uma direção descendente; 0 se o usuário deseja que a pesquisa seja feita em uma direção para cima.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants the search to proceed in a downward direction; 0 if the user wants the search to proceed in an upward direction.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>See Also  
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
 

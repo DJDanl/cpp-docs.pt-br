@@ -1,49 +1,67 @@
 ---
-title: "Usando CSpinButtonCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CSpinButtonCtrl, usando"
-  - "controle de botão de rotação"
-  - "controles para cima-para baixo"
-  - "controles para cima-para baixo, controle de botão de rotação"
+title: Using CSpinButtonCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- up-down controls [MFC], spin button control
+- up-down controls
+- spin button control
+- CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CSpinButtonCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7afe4fb7053c5da720cf2ae219f85ea6bac649aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O controle *de botão de rotação* \(também conhecido como um controle *de up\-down* \) fornece um par de seta que um usuário pode clicar para ajustar um valor.  Esse valor é conhecido como *a posição atual*.  A posição permanecerá dentro do intervalo do botão de rotação.  Quando o usuário clica na seta para cima, a posição será movido para o máximo; e quando o usuário clica na seta para baixo, a posição será movido para o mínimo.  
+---
+# <a name="using-cspinbuttonctrl"></a>Using CSpinButtonCtrl
+The *spin button* control (also known as an *up-down* control) provides a pair of arrows that a user can click to adjust a value. This value is known as the *current position*. The position stays within the range of the spin button. When the user clicks the up arrow, the position moves toward the maximum; and when the user clicks the down arrow, the position moves toward the minimum.  
   
- O controle de botão de rotação é representado em MFC pela classe de [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) .  
+ The spin button control is represented in MFC by the [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) class.  
   
 > [!NOTE]
->  Por padrão, o intervalo para o botão de rotação tem o máximo definido como zero \(0\) e o mínimo definido como 100.  Como o valor máximo é menor que o valor mínimo, clique na seta para cima diminui a posição e clique na seta para baixo aumenta\-a.  Use [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md) para ajustar estes valores.  
+>  By default, the range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow decreases the position and clicking the down arrow increases it. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) to adjust these values.  
   
- Normalmente, a posição atual é exibido em um controle complementar.  O controle complementar é conhecido como *a janela de amigo*.  Para obter uma ilustração de um controle de botão de rotação, consulte [Sobre controles de Up\-Down](http://msdn.microsoft.com/library/windows/desktop/bb759889) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Typically, the current position is displayed in a companion control. The companion control is known as the *buddy window*. For an illustration of a spin button control, see [About Up-Down Controls](http://msdn.microsoft.com/library/windows/desktop/bb759889) in the Windows SDK.  
   
- Para criar um retorno controle e uma janela de amigo de controle de edição, no Visual Studio, arraste primeiro um controle de edição na caixa de diálogo ou na janela, e arraste um controle de rotação.  Selecione o controle de rotação e define as propriedades de **Buddy Automático** e de **Definir Inteiro Buddy** a **Retifique**.  Também definir a propriedade de **Alinhamento** ; **Alinhar à direita** é o mais comum.  Com essas configurações, o controle de edição é definido como a janela de amigo como precede diretamente o controle de edição na ordem da guia.  Integers do controle de edição e o controle de rotação são inseridos no lado direito de controle de edição.  Opcionalmente, você pode definir o intervalo válido de controle de rotação usando o método de [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md) .  Nenhum manipulador de eventos é necessário para se comunicar entre o controle de rotação e a janela de amigo porque ele troca de dados diretamente.  Se você usar um controle de rotação para qualquer outra finalidade, por exemplo, pesquise em uma sequência do windows ou caixas de diálogo, adicione um manipulador para a mensagem de `UDN_DELTAPOS` e executar a ação personalizada lá.  
+ To create a spin control and an edit control buddy window, in Visual Studio, first drag an edit control to the dialog box or window, and then drag a spin control. Select the spin control and set its **Auto Buddy** and **Set Buddy Integer** properties to **True**. Also set the **Alignment** property; **Right Align** is most typical. With these settings, the edit control is set as the buddy window because it directly precedes the edit control in the tab order. The edit control displays integers and the spin control is embedded in the right side of the edit control. Optionally, you can set the valid range of the spin control by using the [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) method. No event handlers are required to communicate between the spin control and buddy window because they exchange data directly. If you use a spin control for some other purpose, for example, to page through a sequence of windows or dialog boxes, then add a handler for the `UDN_DELTAPOS` message and perform your custom action there.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Estilos de botão Girar](../mfc/spin-button-styles.md)  
+-   [Spin Button Styles](../mfc/spin-button-styles.md)  
   
--   [Funções de membro do botão Girar](../Topic/Spin%20Button%20Member%20Functions.md)  
+-   [Spin Button Member Functions](../mfc/spin-button-member-functions.md)  
   
-## Consulte também  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

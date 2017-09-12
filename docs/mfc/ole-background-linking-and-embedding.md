@@ -1,44 +1,62 @@
 ---
-title: "Plano de fundo OLE: vinculando e inserindo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos inseridos [C++]"
-  - "tipos de item"
-  - "tipos de item, definido"
-  - "itens vinculados (OLE) [C++]"
-  - "itens inseridos OLE"
-  - "Itens OLE, tipos"
-  - "OLE, itens vinculados"
+title: 'OLE Background: Linking and Embedding | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Plano de fundo OLE: vinculando e inserindo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab76058d859758ac9c42e63839ad2fd683e58e08
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Usar o comando da pasta em um aplicativo de contêiner pode criar um componente inserida, ou o item inserido.  Os dados de origem para um item inserido são armazenados como parte do documento OLE que o contém.  Dessa forma, um arquivo de documento para um documento de tratamento de textos pode conter texto e também pode conter bitmaps, gráficos, fórmulas, ou qualquer outro tipo de dados.  
+---
+# <a name="ole-background-linking-and-embedding"></a>OLE Background: Linking and Embedding
+Using the Paste command in a container application can create an embedded component, or embedded item. The source data for an embedded item is stored as part of the OLE document that contains it. In this way, a document file for a word processor document can contain text and also can contain bitmaps, graphs, formulas, or any other type of data.  
   
- OLE fornece uma outra maneira de inserir dados de outro aplicativo: criação de um componente vinculado, ou item vinculado, ou um link.  As etapas para criar um item vinculado são semelhantes para criar um item inserido, exceto que você usa o comando de link de pasta em vez de comando da pasta.  Ao contrário de um componente inserida, um componente vinculado armazena um caminho para os dados originais, que são frequentemente em um arquivo separado.  
+ OLE provides another way to incorporate data from another application: creating a linked component, or linked item, or a link. The steps for creating a linked item are similar to those for creating an embedded item, except that you use the Paste Link command instead of the Paste command. Unlike an embedded component, a linked component stores a path to the original data, which is often in a separate file.  
   
- Por exemplo, se você estiver trabalhando em um documento de tratamento de textos e cria um item vinculado a algumas células na planilha, os dados para o item vinculado são armazenados no documento original da planilha.  O documento de tratamento de textos contém apenas as informações que especifica onde o item pode ser localizado, ou seja, contém um link para o documento original da planilha.  Quando você clicar duas vezes nas células, o aplicativo de planilha é iniciado e o documento original da planilha é carregado de onde foi armazenado.  
+ For example, if you are working in a word processor document and create a linked item to some spreadsheet cells, the data for the linked item is stored in the original spreadsheet document. The word processor document contains only the information specifying where the item can be found, that is, it contains a link to the original spreadsheet document. When you double-click the cells, the spreadsheet application is launched and the original spreadsheet document is loaded from where it was stored.  
   
- Cada item OLE, se inserido ou vinculado, tem um tipo associado a ele com base no aplicativo que o criou.  Por exemplo, um item de pincel do Microsoft é um tipo de item, e um item do Microsoft Excel é outro tipo.  Alguns aplicativos, porém, podem criar mais de um tipo de item.  Por exemplo, Microsoft Excel pode criar itens da planilha, itens do gráfico, e itens de macrosheet.  Cada um desses itens pode ser identificada exclusivamente pelo sistema usando um identificador ou **CLSID**da classe.  
+ Every OLE item, whether embedded or linked, has a type associated with it based on the application that created it. For example, a Microsoft Paintbrush item is one type of item, and a Microsoft Excel item is another type. Some applications, however, can create more than one item type. For example, Microsoft Excel can create worksheet items, chart items, and macrosheet items. Each of these items can be uniquely identified by the system using a Class Identifier or **CLSID**.  
   
-## Consulte também  
- [Plano de fundo OLE](../mfc/ole-background.md)   
- [Plano de fundo OLE: contêineres e servidores](../mfc/ole-background-containers-and-servers.md)   
- [Contêineres: itens clientes](../mfc/containers-client-items.md)   
- [Servidores: itens de servidor](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

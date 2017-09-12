@@ -1,79 +1,96 @@
 ---
-title: "Caixas de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CDialog, caixas de diálogo MFC"
-  - "caixas de diálogo MFC"
-  - "MFC, caixas de diálogo"
-  - "caixas de diálogo modais, caixas de diálogo MFC"
-  - "caixas de diálogo sem modo, caixas de diálogo MFC"
+title: Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless dialog boxes [MFC], MFC dialog boxes
+- MFC, dialog boxes
+- modal dialog boxes [MFC], MFC dialog boxes
+- CDialog class [MFC], MFC dialog boxes
+- MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Caixas de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: be78fe33a08b538da1574f5ccf9f1a042a7a374a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os aplicativos do windows se comunicam com que frequência o usuário pelas caixas de diálogo.  A classe [CDialog](../mfc/reference/cdialog-class.md) fornece uma interface para gerenciar caixas de diálogo, o publicador da caixa de diálogo do Visual C\+\+ o facilita a criação de caixas de diálogo e criar seus recursos de diálogo\- modelo, e os assistentes de código simplificam o processo de inicialização e validar os controles em uma caixa de diálogo e colete os valores inseridos pelo usuário.  
+---
+# <a name="dialog-boxes"></a>Dialog Boxes
+Applications for Windows frequently communicate with the user through dialog boxes. Class [CDialog](../mfc/reference/cdialog-class.md) provides an interface for managing dialog boxes, the Visual C++ dialog editor makes it easy to design dialog boxes and create their dialog-template resources, and Code wizards simplify the process of initializing and validating the controls in a dialog box and of gathering the values entered by the user.  
   
- As caixas de diálogo contêm os controles, incluindo:  
+ Dialog boxes contain controls, including:  
   
--   Controles comum do windows como caixas de edição, chaves, caixas de listagem, caixas de combinação, controles de árvore, controles de lista, e indicadores de progresso.  
+-   Windows common controls such as edit boxes, pushbuttons, list boxes, combo boxes, tree controls, list controls, and progress indicators.  
   
--   Controles ActiveX.  
+-   ActiveX controls.  
   
--   Controles Proprietário\-desenhados: controles que você é responsável para o desenho na caixa de diálogo.  
+-   Owner-drawn controls: controls that you are responsible for drawing in the dialog box.  
   
- A maioria das caixas de diálogo são modal, que exigem que o usuário fechar a caixa de diálogo antes de usar qualquer outra parte do programa.  Mas é possível criar as caixas de diálogo modeless, que permitem que os usuários trabalhem com outras janelas quando a caixa de diálogo estiver aberta.  MFC O oferece suporte aos tipos da caixa de diálogo com `CDialog`classe.  Os controles são organizados e gerenciados usando um recurso de diálogo\- modelo, criado com [editor da caixa de diálogo](../mfc/dialog-editor.md).  
+ Most dialog boxes are modal, which require the user to close the dialog box before using any other part of the program. But it is possible to create modeless dialog boxes, which let users work with other windows while the dialog box is open. MFC supports both kinds of dialog box with class `CDialog`. The controls are arranged and managed using a dialog-template resource, created with the [dialog editor](../windows/dialog-editor.md).  
   
- [Folhas de propriedades](../mfc/property-sheets-mfc.md), também conhecido como caixas de diálogo da guia, são as caixas de diálogo que contêm “páginas” de controles distintos da caixa de diálogo.  Cada página tiver uma pasta de arquivos “tab” na parte superior.  Clique em um guia coloca essa página para a frente da caixa de diálogo.  
+ [Property sheets](../mfc/property-sheets-mfc.md), also known as tab dialog boxes, are dialog boxes that contain "pages" of distinct dialog-box controls. Each page has a file folder "tab" at the top. Clicking a tab brings that page to the front of the dialog box.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Exemplo: Exibindo uma caixa de diálogo por um comando de menu](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
+-   [Example: Displaying a Dialog Box via a Menu Command](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   
--   [Componentes da caixa de diálogo na estrutura](../mfc/dialog-box-components-in-the-framework.md)  
+-   [Dialog-box components in the framework](../mfc/dialog-box-components-in-the-framework.md)  
   
--   [Caixas de diálogo modais e modeless](../mfc/modal-and-modeless-dialog-boxes.md)  
+-   [Modal and modeless dialog boxes](../mfc/modal-and-modeless-dialog-boxes.md)  
   
--   [Folhas de propriedades e páginas de propriedade](../mfc/property-sheets-and-property-pages-mfc.md) em uma caixa de diálogo  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-mfc.md) in a dialog box  
   
--   [Criando o recurso da caixa de diálogo](../Topic/Creating%20the%20Dialog%20Resource.md)  
+-   [Creating the dialog resource](../mfc/creating-the-dialog-resource.md)  
   
--   [Criando uma classe da caixa de diálogo com os assistentes de código](../mfc/creating-a-dialog-class-with-code-wizards.md)  
+-   [Creating a dialog class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md)  
   
--   [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)  
+-   [Life cycle of a dialog box](../mfc/life-cycle-of-a-dialog-box.md)  
   
--   [Caixa de diálogo de troca de dados \(DDX\) e validação \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Acesso fortemente tipado nos controles em uma caixa de diálogo](../Topic/Type-Safe%20Access%20to%20Controls%20in%20a%20Dialog%20Box.md)  
+-   [Type-safe access to controls in a dialog box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [Mensagens do windows da sua classe mapeamento](../mfc/mapping-windows-messages-to-your-class.md)  
+-   [Mapping Windows messages to your class](../mfc/mapping-windows-messages-to-your-class.md)  
   
--   [Funções de membro geralmente substituídas](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly Overridden Member Functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [Funções de membro geralmente unidas](../Topic/Commonly%20Added%20Member%20Functions.md)  
+-   [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)  
   
--   [Classes comuns da caixa de diálogo](../mfc/common-dialog-classes.md)  
+-   [Common dialog classes](../mfc/common-dialog-classes.md)  
   
--   [Caixas de diálogo no OLE](../mfc/dialog-boxes-in-ole.md)  
+-   [Dialog boxes in OLE](../mfc/dialog-boxes-in-ole.md)  
   
--   Crie um aplicativo cuja interface de usuário seja uma caixa de diálogo: consulte [CMNCTRL1](../top/visual-cpp-samples.md) ou [CMNCTRL2](../top/visual-cpp-samples.md) programas de exemplo.  O assistente do aplicativo fornece essa opção também.  
+-   Create an application whose user interface is a dialog box: see the [CMNCTRL1](../visual-cpp-samples.md) or [CMNCTRL2](../visual-cpp-samples.md) sample programs. The Application Wizard provides this option as well.  
   
--   [Exemplos](../mfc/dialog-sample-list.md)  
+-   [Samples](../mfc/dialog-sample-list.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

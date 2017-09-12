@@ -1,42 +1,60 @@
 ---
-title: "Componentes da caixa de di&#225;logo no Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes da caixa de diálogo, componentes da caixa de diálogo"
-  - "modelos de caixa de diálogo, Estrutura MFC"
-  - "caixas de diálogo MFC, sobre caixas de diálogo MFC"
-  - "caixas de diálogo MFC, criando"
-  - "caixas de diálogo MFC, recurso de caixa de diálogo"
+title: Dialog-Box Components in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], creating
+- dialog classes [MFC], dialog box components
+- MFC dialog boxes [MFC], about MFC dialog boxes
+- dialog templates [MFC], MFC framework
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Componentes da caixa de di&#225;logo no Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: febab670bf86f87701da0d6ea23784fa56979137
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Na estrutura de MFC, uma caixa de diálogo tem dois componentes:  
+---
+# <a name="dialog-box-components-in-the-framework"></a>Dialog-Box Components in the Framework
+In the MFC framework, a dialog box has two components:  
   
--   Um recurso de diálogo\- modelo que especifica da caixa de diálogo seu posicionamento da caixa controles e.  
+-   A dialog-template resource that specifies the dialog box's controls and their placement.  
   
-     O recurso da caixa de diálogo armazena um modelo da caixa de diálogo da qual o windows cria a janela caixa de diálogo e a exibição.  O modelo especifica as características da caixa de diálogo, incluindo seu tamanho, local, estilo, e os tipos e as posições de controles da caixa de diálogo.  Você usará um modelo geral da caixa de diálogo armazenado como um recurso, mas você também pode criar seu próprio modelo na memória.  
+     The dialog resource stores a dialog template from which Windows creates the dialog window and displays it. The template specifies the dialog box's characteristics, including its size, location, style, and the types and positions of the dialog box's controls. You will usually use a dialog template stored as a resource, but you can also create your own template in memory.  
   
--   Uma classe da caixa de diálogo, derivado de [CDialog](../mfc/reference/cdialog-class.md), para fornecer uma interface programática para gerenciar a caixa de diálogo.  
+-   A dialog class, derived from [CDialog](../mfc/reference/cdialog-class.md), to provide a programmatic interface for managing the dialog box.  
   
-     Um diálogo é uma janela e será anexada a uma janela do windows quando visível.  Quando a janela caixa de diálogo é criada, o recurso de diálogo\- modelo é usado como modelo para criar controles da janela filho para a caixa de diálogo.  
+     A dialog box is a window and will be attached to a Windows window when visible. When the dialog window is created, the dialog-template resource is used as a template for creating child window controls for the dialog box.  
   
-## Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

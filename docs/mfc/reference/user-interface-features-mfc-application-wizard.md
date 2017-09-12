@@ -1,5 +1,5 @@
 ---
-title: "Recursos de Interface do usuário, o Assistente de aplicativo MFC | Microsoft Docs"
+title: User Interface Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,57 +33,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0612ca4dc78cbca0cffdd9f0ecb580864848ec5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>Funcionalidades da interface do usuário, Assistente de Aplicativo MFC
-Este tópico explica as opções que você pode usar para especificar a aparência de seu aplicativo. Os recursos de interface de usuário disponíveis para seu projeto dependem do tipo de aplicativo especificado no [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página do Assistente de aplicativo MFC. Por exemplo, se você criar um aplicativo de interface de documento único, você não pode adicionar estilos de quadro filho.  
+# <a name="user-interface-features-mfc-application-wizard"></a>User Interface Features, MFC Application Wizard
+This topic explains the options that you can use to specify the look of your application. The user interface features available for your project depend on the type of application you specified in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard. For example, if you create a single document interface application, you cannot add child frame styles.  
   
- **Estilos de quadro principal**  
- Define os recursos do quadro de janela principal do seu aplicativo.  
+ **Main frame styles**  
+ Sets the features of your application's main window frame.  
   
-|Opção|Descrição|  
+|Option|Description|  
 |------------|-----------------|  
-|**Quadro grosso**|Cria uma janela que tem uma borda de dimensionamento. O padrão.|  
-|**Caixa de minimização**|Inclui uma caixa de minimização na janela do quadro principal. O padrão.|  
-|**Caixa de maximização**|Inclui uma caixa de maximização na janela do quadro principal. O padrão.|  
-|**Minimizado**|Abre a janela do quadro principal como um ícone.|  
-|**Maximizado**|Abre a janela do quadro principal para o tamanho total da exibição.|  
-|**Menu do sistema**|Inclui um menu do sistema na janela do quadro principal. O padrão.|  
-|**Sobre caixa**|Inclui um **sobre** caixa para o aplicativo. O usuário pode acessar essa caixa do aplicativo **ajuda** menu. O padrão e inalterável, a menos que você selecione **caixa de diálogo com base em**, no [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página.<br /><br /> **Observação** normalmente, uma opção disponível indica que o assistente não se aplicam a opção para o projeto, se a caixa de seleção do item não está disponível é marcada ou desmarcada. Nesse caso, o assistente sempre adiciona um **sobre** caixa para o projeto, a menos que você especifique primeiro o projeto como caixa de diálogo com base e, em seguida, desmarque a caixa.|  
-|**Barra de status inicial**|Adiciona uma barra de status para o seu aplicativo. A barra de status contém indicadores automática para as teclas do teclado CAPS LOCK, NUM LOCK e SCROLL LOCK e cadeias de uma linha de mensagem que exibe a Ajuda para comandos de menu e barra de ferramentas de botões. Clicar nessa opção também adiciona comandos de menu para exibir ou ocultar a barra de status. Por padrão, um aplicativo tem uma barra de status. Não disponível para tipos de aplicativo baseado na caixa de diálogo.|  
-|**Janela separadora**|Fornece uma barra de divisão. Na barra de divisão divide os modos de exibição principal do aplicativo. Em um aplicativo de interface MDI vários documentos, janela de cliente do quadro filho MDI é uma janela separadora e, em um aplicativo de interface (SDI) do documento único e vários aplicativos de nível superior do documento, a janela do cliente do quadro principal é uma janela separadora. Não disponível para tipos de aplicativo baseado na caixa de diálogo.|  
+|**Thick frame**|Creates a window that has a sizing border. The default.|  
+|**Minimize box**|Includes a minimize box in the main frame window. The default.|  
+|**Maximize box**|Includes a maximize box in the main frame window. The default.|  
+|**Minimized**|Opens the main frame window as an icon.|  
+|**Maximized**|Opens the main frame window to the full size of the display.|  
+|**System menu**|Includes a system menu in the main frame window. The default.|  
+|**About box**|Includes an **About** box for the application. The user can access this box from the application's **Help** menu. The default, and unchangeable unless you select **Dialog based**, in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page.<br /><br /> **Note** Usually, an unavailable option indicates that the wizard does not apply the option to the project, whether the unavailable item's check box is selected or cleared. In this case, the wizard always adds an **About** box to the project unless you first specify the project as dialog based and then uncheck the box.|  
+|**Initial status bar**|Adds a status bar to your application. The status bar contains automatic indicators for the keyboard's CAPS LOCK, NUM LOCK, and SCROLL LOCK keys and a message line that displays help strings for menu commands and toolbar buttons. Clicking this option also adds menu commands to display or hide the status bar. By default, an application has a status bar. Not available for dialog-based application types.|  
+|**Split window**|Provides a splitter bar. The splitter bar splits the application's main views. In a multiple document interface (MDI) application, the MDI child frame's client window is a splitter window, and in a single document interface (SDI) application and multiple top level document application, the main frame's client window is a splitter window. Not available for dialog-based application types.|  
   
- **Estilos de quadro filho**  
- Especifica a aparência e o estado inicial de quadros filho em seu aplicativo. Estilos de quadro filho estão disponíveis para apenas os aplicativos MDI.  
+ **Child frame styles**  
+ Specifies the appearance and initial state of the child frames in your application. Child frame styles are available for MDI applications only.  
   
-|Opção|Descrição|  
+|Option|Description|  
 |------------|-----------------|  
-|**Caixa de minimização filho**|Especifica se uma janela filho tem um botão de minimização (habilitado por padrão).|  
-|**Caixa de maximização filho**|Especifica se uma janela filho tem um botão de maximização (habilitado por padrão).|  
-|**Filho maximizado**|Especifica se uma janela filho é inicialmente maximizada, definindo o sinalizador cs.style **WS_MAXIMIZE** no [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) função de membro `CChildFrame`.|  
+|**Child minimize box**|Specifies whether a child window has a minimize button (enabled by default).|  
+|**Child maximize box**|Specifies whether a child window has a maximize button (enabled by default).|  
+|**Child maximized**|Specifies whether a child window is initially maximized by setting the cs.style flag **WS_MAXIMIZE** in the [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) member function of `CChildFrame`.|  
   
- **Barras de comando (menu/barra de ferramentas/faixa de opções)**  
- Indica se o seu aplicativo inclui menus, barras de ferramentas e/ou uma faixa de opções. Não disponível para aplicativos com base na caixa de diálogo.  
+ **Command bars (menu/toolbar/ribbon)**  
+ Indicates whether your application includes menus, toolbars, and/or a ribbon. Not available for dialog-based applications.  
   
-|Opção|Descrição|  
+|Option|Description|  
 |------------|-----------------|  
-|**Use um menu clássico**|Especifica que o aplicativo contém um menu clássico, não arrastável.|  
-|**Use uma barra de ferramentas de encaixe clássica**|Adiciona uma barra de ferramentas padrão do Windows para seu aplicativo. A barra de ferramentas contém botões para criar um novo documento. Abrir e salvar arquivos de documento; Recortar, copiar, colar ou imprimindo texto; e entrar no modo de Ajuda. A habilitação dessa opção também adiciona comandos de menu para exibir ou ocultar a barra de ferramentas.|  
-|**Use uma barra de ferramentas do estilo de navegador**|Adiciona uma barra de ferramentas do estilo do Internet Explorer para seu aplicativo.|  
-|**Use uma barra de menu e barra de ferramentas**|Indica que o aplicativo contém uma barra de menu arrastável e uma barra de ferramentas.|  
-|**Barras de ferramentas definidas pelo usuário e imagens**|Permite que o usuário personalize a barra de ferramentas e as imagens da barra de ferramentas em tempo de execução.|  
-|**Comportamento do menu personalizado**|Especifica se o menu contém a lista completa de itens quando aberto, ou se ele contém apenas os comandos que o usuário usa com mais frequência.|  
-|**Usar uma faixa de opções**|Usa uma faixa de opções do Office 2007 semelhante em seu aplicativo em vez de uma barra de menu ou barra de ferramentas.|  
+|**Use a classic menu**|Specifies that your application contains a classic, non-draggable menu.|  
+|**Use a classic docking toolbar**|Adds a standard Windows toolbar to your application. The toolbar contains buttons for creating a new document; opening and saving document files; cutting copying, pasting, or printing text; and entering Help mode. Enabling this option also adds menu commands to display or hide the toolbar.|  
+|**Use a browser style toolbar**|Adds an Internet Explorer-style toolbar to your application.|  
+|**Use a menu bar and toolbar**|Indicates that your application contains a draggable menu bar and a toolbar.|  
+|**User-defined toolbars and images**|Allows the user to customize the toolbar and the toolbar images at runtime.|  
+|**Personalized menu behavior**|Specifies whether the menu contains the full list of items when opened, or if it contains only the commands that the user most frequently uses.|  
+|**Use a ribbon**|Uses an Office 2007-like ribbon in your application instead of a menu bar or toolbar.|  
   
- **Título da caixa de diálogo**  
- Para [classe CDialog](../../mfc/reference/cdialog-class.md)-com base em aplicativos, esse título aparece na barra de título da caixa de diálogo. Para editar esse campo, você deve primeiro selecionar o **caixa de diálogo com base em** opção em **tipo de aplicativo**. Para obter mais informações, consulte [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
+ **Dialog title**  
+ For [CDialog Class](../../mfc/reference/cdialog-class.md)-based applications only, this title appears in the title bar of the dialog box. To edit this field, you must first select the **Dialog based** option under **Application type**. For more information, see [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

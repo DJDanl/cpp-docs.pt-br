@@ -1,43 +1,61 @@
 ---
-title: "Servidores de documentos ativos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "servidores de documentos ativos [C++]"
-  - "documentos ativos [C++], servidores"
-  - "servidores [C++], documento ativo"
+title: Active Document Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], servers
+- servers [MFC], active document
+- active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Servidores de documentos ativos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1dc80f4c1a84b17248df1e25dbcef7c85806c1f3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os servidores ativas do documento como documentos do host do word, Excel, ou do Powerpoint de outros tipos de aplicativo chamado documentos ativas.  Ao contrário de OLE inseriu os objetos \(que são exibidos somente na página de outro documento\), documentos ativas fornecem a interface completa e concluir a funcionalidade nativa de aplicativo de servidor que os cria.  Os usuários podem criar documentos usando o total poder de seus aplicativos favoritos \(se for documento ativo habilitado\), porém podem tratar o projeto resultante como uma única entidade.  
+---
+# <a name="active-document-servers"></a>Active Document Servers
+Active document servers such as Word, Excel, or PowerPoint host documents of other application types called active documents. Unlike OLE embedded objects (which are simply displayed within the page of another document), Active documents provide the full interface and complete native functionality of the server application that creates them. Users can create documents using the full power of their favorite applications (if they are active document enabled), yet can treat the resulting project as a single entity.  
   
- Os documentos ativos podem ter mais de uma página e sempre estão ativas no local.  Parte ativa de controle de documentos da interface do usuário, mesclando os menus com os menus de **Arquivo** e de **Ajuda** do contêiner.  Ocupam a área editando inteira do contêiner e controlam as exibições e o layout da página da impressora \(margens, os rodapés, e assim por diante\).  
+ Active documents can have more than one page and are always in-place active. Active documents control part of the user interface, merging their menus with the **File** and **Help** menus of the container. They occupy the entire editing area of the container and control the views and the layout of the printer page (margins, footers, and so on).  
   
- Servidores ativas do documento das ferramentas MFC com interfaces do documento\/exibição, mapas de expedição de comando, impressão, gerenciamento no menu, e gerenciamento do Registro.  Os requisitos específicos de programação são discutidos em [documentos ativas](../Topic/Active%20Documents.md).  
+ MFC implements active document servers with document/view interfaces, command dispatch maps, printing, menu management, and registry management. Specific programming requirements are discussed in [active documents](../mfc/active-documents.md).  
   
- MFC O da suporte a documentos ativos com a classe de [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) , derivado de [CCmdTarget](../Topic/CCmdTarget%20Class.md), e de [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derivado de [COleServerItem](../mfc/reference/coleserveritem-class.md).  O contêiner ativas MFC suporte do documento com a classe de [COleDocObjectItem](../Topic/COleDocObjectItem%20Class.md) , derivado de [COleClientItem](../mfc/reference/coleclientitem-class.md).  
+ MFC supports active documents with the [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) class, derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md), and [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derived from [COleServerItem](../mfc/reference/coleserveritem-class.md). MFC supports active document containers with the [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) class, derived from [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer` mapeia as interfaces ativas do documento e inicializa e ativa um documento ativo.  MFC O também fornece macros ao roteamento do comando de identificador em documentos ATIVOS.  Para usar documentos ativas em seu aplicativo, inclua AfxDocOb.h em seu arquivo de StdAfx.h.  
+ `CDocObjectServer` maps the active document interfaces and initializes and activates an active document. MFC also provides macros to handle command routing in ACTIVE documents. To use active documents in your application, include AfxDocOb.h in your StdAfx.h file.  
   
- Um servidor normal de MFC engancha acima de seu próprio `COleServerItem`\- classe derivada.  O assistente de aplicativo MFC gerencia essa classe para se você marcar a caixa de seleção de **Mini\-server** ou de **Full\-server** para fornecer ao servidor de aplicativos suporte do documento de composto.  Se você também marcar a caixa de seleção de **Active document server** , o assistente de aplicativo MFC gerenciar uma classe derivada de `CDocObjectServerItem` em vez disso.  
+ A regular MFC server hooks up its own `COleServerItem`-derived class. The MFC Application Wizard generates this class for you if you select the **Mini-server** or **Full-server** check box to give your application server compound document support. If you also select the **Active document server** check box, the MFC Application Wizard generates a class derived from `CDocObjectServerItem` instead.  
   
- A classe de `COleDocObjectItem` permite que um contêiner OLE se tornar um contêiner ativa do documento.  Você pode usar o assistente de aplicativo MFC para criar um contêiner ativa do documento selecionando a caixa de seleção de **Active document container** na página composta de suporte do documento do assistente de aplicativo MFC.  Para obter mais informações, consulte [Criando um aplicativo de contêineres do documento ativo](../mfc/creating-an-active-document-container-application.md).  
+ The `COleDocObjectItem` class allows an OLE container to become an active document container. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** checkbox in the Compound Document Support page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
-## Consulte também  
- [Contenção de documento ativa](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

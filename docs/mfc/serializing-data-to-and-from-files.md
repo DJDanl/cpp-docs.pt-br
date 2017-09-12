@@ -1,57 +1,75 @@
 ---
-title: "Serializando dados para e de arquivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dados [MFC]"
-  - "dados [MFC], serializando"
-  - "desserialização [C++]"
-  - "dados de documento [C++]"
-  - "documentos [C++], salvar"
-  - "documentos [C++], serialização"
-  - "salvando documentos"
-  - "serialização [C++], função de dados"
-  - "serialização [C++], função de documento"
+title: Serializing Data to and from Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], serialization
+- documents [MFC], saving
+- saving documents
+- deserialization [MFC]
+- serialization [MFC], role of document
+- serialization [MFC], role of data
+- data [MFC]
+- data [MFC], serializing
+- document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Serializando dados para e de arquivos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94f8f6b569b47bf54f0707c5e782b8d4e892bf7b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A exibição básica de persistência é que um objeto deve poder gravar seu estado atual, indicada pelos valores de suas variáveis de membro, ao armazenamento persistente.  Posteriormente, o objeto pode ser recriado ler, ou desserialização “,” o estado do objeto de armazenamento persistente.  Um ponto\-chave aqui é que o próprio objeto é responsável para ler e escrever seu próprio estado.  Assim, para que uma classe é persistente, implemente as operações básicas de serialização.  
+---
+# <a name="serializing-data-to-and-from-files"></a>Serializing Data to and from Files
+The basic idea of persistence is that an object should be able to write its current state, indicated by the values of its member variables, to persistent storage. Later, the object can be re-created by reading, or "deserializing," the object's state from persistent storage. A key point here is that the object itself is responsible for reading and writing its own state. Thus, for a class to be persistent, it must implement the basic serialization operations.  
   
- A estrutura fornece uma implementação padrão para salvar documentos em arquivos de disco em resposta à salvar e a salvar como comandos no menu arquivo e para carregar documentos de arquivos em disco em resposta ao comando aberto.  Com muito pouco trabalho, você pode implementar a capacidade de um documento de gravar e à leitura seus dados para e de um arquivo.  O elemento principal que você deve fazer é substituir a função de membro de [Serializar](../Topic/CObject::Serialize.md) em sua classe do documento.  
+ The framework provides a default implementation for saving documents to disk files in response to the Save and Save As commands on the File menu and for loading documents from disk files in response to the Open command. With very little work, you can implement a document's ability to write and read its data to and from a file. The main thing you must do is override the [Serialize](../mfc/reference/cobject-class.md#serialize) member function in your document class.  
   
- O assistente de aplicativo MFC coloca uma substituição esqueletal da função de membro `Serialize` de **CDocument** na classe do documento que você cria para.  Depois que você implementou variáveis de membro do seu aplicativo, você poderá preencher sua substituição de `Serialize` com código que envia os dados “em um objeto arquivo morto” conectado a um arquivo.  Um objeto de [CArchive](../mfc/reference/carchive-class.md) é semelhante aos objetos de entrada\/saída de `cin` e de `cout` de biblioteca iostream C\+\+.  No entanto, `CArchive` grava e ler o formato binário, não texto formatado.  
+ The MFC Application Wizard places a skeletal override of the **CDocument** member function `Serialize` in the document class it creates for you. After you have implemented your application's member variables, you can fill in your `Serialize` override with code that sends the data to an "archive object" connected to a file. A [CArchive](../mfc/reference/carchive-class.md) object is similar to the `cin` and `cout` input/output objects from the C++ iostream library. However, `CArchive` writes and reads binary format, not formatted text.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Série](../Topic/Serialization%20in%20MFC.md)  
+-   [Serialization](../mfc/serialization-in-mfc.md)  
   
--   [A função do documento na serialização](#_core_the_document.92.s_role_in_serialization)  
+-   [The document's role in serialization](#_core_the_document.92.s_role_in_serialization)  
   
--   [A função de dados na serialização](#_core_the_data.92.s_role_in_serialization)  
+-   [The data's role in serialization](#_core_the_data.92.s_role_in_serialization)  
   
--   [Ignorando o mecanismo de serialização](../mfc/bypassing-the-serialization-mechanism.md)  
+-   [Bypassing the serialization mechanism](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a> A função do documento na serialização  
- A estrutura responde automaticamente a Abrir, a salva, e a salva no menu arquivo como comandos chamando a função de membro de `Serialize` do documento se for implementada.  Um comando de `ID_FILE_OPEN` , por exemplo, chama uma função de manipulador no objeto de aplicativo.  Durante esse processo, o usuário verá e responde à caixa de diálogo abrir Arquivo e a estrutura obtém o nome de arquivo escolhido pelo usuário.  A estrutura cria uma configuração de objeto de `CArchive` para carregar dados no documento e passa o arquivo morto a `Serialize`.  A estrutura tem aberto o arquivo.  O código da função de membro de `Serialize` do documento ler os dados no por meio de arquivo, recriando objetos de dados quando necessário.  Para obter mais informações sobre a serialização, consulte o artigo [Serialização](../Topic/Serialization%20in%20MFC.md).  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> The Document's Role in Serialization  
+ The framework responds automatically to the File menu's Open, Save, and Save As commands by calling the document's `Serialize` member function if it is implemented. An `ID_FILE_OPEN` command, for example, calls a handler function in the application object. During this process, the user sees and responds to the File Open dialog box and the framework obtains the filename the user chooses. The framework creates a `CArchive` object set up for loading data into the document and passes the archive to `Serialize`. The framework has already opened the file. The code in your document's `Serialize` member function reads the data in through the archive, reconstructing data objects as needed. For more information about serialization, see the article [Serialization](../mfc/serialization-in-mfc.md).  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a> A função de dados na serialização  
- Em geral, os dados do tipo devem poder serializar\-se classe.  Ou seja, quando você passa um objeto em um arquivo, o objeto deve saber como escrever\-se ao arquivo morto e ler\-se de arquivo morto.  MFC O fornece suporte para fazer classes serializáveis dessa maneira.  Se você criar uma classe para definir um tipo de dados e você pretende serializar dados desse tipo, para criar a serialização.  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> The Data's Role in Serialization  
+ In general, class-type data should be able to serialize itself. That is, when you pass an object to an archive, the object should know how to write itself to the archive and how to read itself from the archive. MFC provides support for making classes serializable in this way. If you design a class to define a data type and you intend to serialize data of that type, design for serialization.  
   
-## Consulte também  
- [Usando documentos](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

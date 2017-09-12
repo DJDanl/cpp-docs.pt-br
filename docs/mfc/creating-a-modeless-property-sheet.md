@@ -1,43 +1,61 @@
 ---
-title: "Criando uma folha de propriedades sem janela restrita | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Create [C++], folhas de propriedade"
-  - "folhas de propriedades sem modo"
-  - "folhas de propriedade, sem modo"
+title: Creating a Modeless Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless property sheets
+- property sheets, modeless
+- Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Criando uma folha de propriedades sem janela restrita
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb93a55b9da82f75a1bdaab5818e11ae0e075d5f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Normalmente, as folhas da propriedade que você cria serão modal.  Ao usar uma folha de propriedades modal, o usuário deve fechar a folha de propriedades antes de usar qualquer outra parte do aplicativo.  Este artigo descreve métodos que você pode usar para criar uma folha de propriedade modeless que permite que o usuário mantém a folha de propriedades aberta para usar outras partes do aplicativo.  
+---
+# <a name="creating-a-modeless-property-sheet"></a>Creating a Modeless Property Sheet
+Normally, the property sheets you create will be modal. When using a modal property sheet, the user must close the property sheet before using any other part of the application. This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.  
   
- Para exibir uma folha de propriedade como uma caixa de diálogo modeless em vez de como uma caixa de diálogo modal, chame [CPropertySheet::Create](../Topic/CPropertySheet::Create.md) em vez de [DoModal](../Topic/CPropertySheet::DoModal.md).  Você também deve implementar algumas tarefas adicionais para dar suporte a uma folha de propriedade modeless.  
+ To display a property sheet as a modeless dialog box instead of as a modal dialog box, call [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) instead of [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). You must also implement some extra tasks to support a modeless property sheet.  
   
- Uma das tarefas adicionais são dados de troca entre a folha de propriedades e o objeto que externo está alterando quando a folha de propriedades está aberta.  Essa é geralmente a mesma tarefa que para caixas de diálogo modeless padrão.  A parte desta tarefa estiver implementando um canal de comunicação entre a folha de propriedades modeless e o objeto externo ao qual as configurações de propriedade se aplica.  Essa implementação é muito mais fácil se você deve derivar uma classe de [CPropertySheet](../mfc/reference/cpropertysheet-class.md) para a folha de propriedades modeless.  Este artigo que você tiver feito isso.  
+ One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open. This is generally the same task as for standard modeless dialog boxes. Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply. This implementation is far easier if you derive a class from [CPropertySheet](../mfc/reference/cpropertysheet-class.md) for your modeless property sheet. This article assumes you have done so.  
   
- Um método para comunicação entre a folha de propriedades modeless e o objeto externa \(a seleção atual em uma exibição, por exemplo\) é definir um ponteiro de folha de propriedade do objeto externo.  Defina uma função \(chamada algo como `SetMyExternalObject`\) em `CPropertySheet`\- classe derivada para alterar o ponteiro sempre que o foco for alterada de um objeto externa para outro.  A função de `SetMyExternalObject` precisará redefinir as configurações para que cada página de propriedades reflita o objeto externo recentemente selecionado.  Para fazer isso, a função de `SetMyExternalObject` deve poder acessar os objetos de [CPropertyPage](../mfc/reference/cpropertypage-class.md) que pertencem à classe de `CPropertySheet` .  
+ One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object. Define a function (called something like `SetMyExternalObject`) in the `CPropertySheet`-derived class to change the pointer whenever the focus changes from one external object to another. The `SetMyExternalObject` function needs to reset the settings for each property page to reflect the newly selected external object. To accomplish this, the `SetMyExternalObject` function must be able to access the [CPropertyPage](../mfc/reference/cpropertypage-class.md) objects belonging to the `CPropertySheet` class.  
   
- A maneira mais conveniente de fornecer acesso às páginas de propriedades em uma folha de propriedade é inserir os objetos em `CPropertySheet`\- objeto derivado de `CPropertyPage` .  A inserção `CPropertyPage` objetos em `CPropertySheet`\- o objeto derivado difere de design típico para as caixas de diálogo modal, onde o proprietário da folha de propriedades cria os objetos de `CPropertyPage` e os passa para a folha de propriedade por meio de [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md).  
+ The most convenient way to provide access to property pages within a property sheet is to embed the `CPropertyPage` objects in the `CPropertySheet`-derived object. Embedding `CPropertyPage` objects in the `CPropertySheet`-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the `CPropertyPage` objects and passes them to the property sheet via [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
   
- Há muitas alternativas da interface do usuário para determinar quando as configurações de folha de propriedade modeless devem ser aplicadas a um objeto externo.  Uma alternativa é aplicar as configurações da página de propriedades atual sempre que o usuário modifica qualquer valor.  Outra alternativa é fornecer um botão ser aplicado, que permite que o usuário acumule alterações nas páginas de propriedades antes de confirmar ao objeto externo.  Para obter informações sobre as maneiras para controlar o botão aplicados, consulte o artigo [Tratando o botão ser aplicado](../mfc/handling-the-apply-button.md).  
+ There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object. One alternative is to apply the settings of the current property page whenever the user changes any value. Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object. For information on ways to handle the Apply button, see the article [Handling the Apply Button](../mfc/handling-the-apply-button.md).  
   
-## Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)   
- [Trocando dados](../mfc/exchanging-data.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

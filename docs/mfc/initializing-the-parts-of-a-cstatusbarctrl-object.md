@@ -1,46 +1,64 @@
 ---
-title: "Inicializando as partes de um objeto CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CStatusBarCtrl, declarando partes de"
-  - "Classe CStatusBarCtrl, modo simples"
-  - "ícones, usando em barras de status"
-  - "barras de status simples"
-  - "barras de status, declarando partes de"
-  - "barras de status, ícones"
-  - "barras de status, modo simples"
+title: Initializing the Parts of a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBarCtrl class [MFC], simple mode
+- status bars [MFC], declaring parts of
+- simple status bars [MFC]
+- status bars [MFC], icons
+- status bars [MFC], simple mode
+- icons, using in status bars
+- CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Inicializando as partes de um objeto CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d946ed45cebba1d0f1f54a65e6c35129d209b57
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Por padrão, uma barra de status exibe informações de status usando os painéis separados.  Esses painéis \(também conhecidos como as partes\) podem conter uma cadeia de caracteres de texto, um ícone, ou ambos.  
+---
+# <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initializing the Parts of a CStatusBarCtrl Object
+By default, a status bar displays status information using separate panes. These panes (also referred to as parts) can contain either a text string, an icon, or both.  
   
- Use [SetParts](../Topic/CStatusBarCtrl::SetParts.md) para definir as partes, e o comprimento, a barra de status terá.  Depois que você criou as partes da barra de status, crie chamadas a [SetText](../Topic/CStatusBarCtrl::SetText.md) e a [SetIcon](../Topic/CStatusBarCtrl::SetIcon.md) para definir o texto ou no ícone para uma parte específica da barra de status.  Uma vez que a solicitação foi definida com êxito, o controle é redesenhado automaticamente.  
+ Use [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) to define how many parts, and the length, the status bar will have. After you have created the parts of the status bar, make calls to [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) and [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) to set the text or icon for a specific part of the status bar. Once the part has been successfully set, the control is automatically redrawn.  
   
- O exemplo a seguir inicializa um objeto existente de `CStatusBarCtrl` \(`m_StatusBarCtrl`\) com quatro painéis e defina um ícone \(IDI\_ICON1\) e qualquer texto na segunda parte.  
+ The following example initializes an existing `CStatusBarCtrl` object (`m_StatusBarCtrl`) with four panes and then sets an icon (IDI_ICON1) and some text in the second part.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/CPP/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
   
- Para obter mais informações sobre como definir o modo de um objeto da `CStatusBarCtrl` simples, consulte [Definindo o modo de um objeto de CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
+ For more information on setting the mode of a `CStatusBarCtrl` object to simple, see [Setting the Mode of a CStatusBarCtrl Object](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
-## Consulte também  
- [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

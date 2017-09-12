@@ -1,70 +1,88 @@
 ---
-title: "Controles ActiveX MFC: adicionando m&#233;todos de estoque | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método DoClick"
-  - "Controles ActiveX MFC, métodos"
-  - "Controles ActiveX MFC, métodos de estoque"
+title: 'MFC ActiveX Controls: Adding Stock Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], stock methods
+- MFC ActiveX controls [MFC], methods
+- DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controles ActiveX MFC: adicionando m&#233;todos de estoque
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a62e9c34de043f55b89b59554bf7aaac3b48421
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um método de estoque difere de um método personalizado que já está implementado pela classe [COleControl](../mfc/reference/colecontrol-class.md).  Por exemplo, `COleControl` contém uma função de membro predefinida que da suporte ao método update do controle.  A entrada do mapa de distribuição para esse método de estoque é **DISP\_STOCKFUNC\_REFRESH**.  
+---
+# MFC ActiveX Controls: Adding Stock Methods
+A stock method differs from a custom method in that it is already implemented by class [COleControl](../mfc/reference/colecontrol-class.md). For example, `COleControl` contains a predefined member function that supports the Refresh method for your control. The dispatch map entry for this stock method is **DISP_STOCKFUNC_REFRESH**.  
   
- da suporte`COleControl` dois métodos de estoque: DoClick e atualização.  A atualização é invocada pelo usuário de controle para atualização imediata a aparência do controle; DoClick é invocado para acionar o evento no controle.  
+ `COleControl` supports two stock methods: DoClick and Refresh. Refresh is invoked by the control's user to immediately update the control's appearance; DoClick is invoked to fire the control's Click event.  
   
-|Método|Entrada do mapa de distribuição|Comment|  
-|------------|-------------------------------------|-------------|  
-|`DoClick`|**DISP\_STOCKPROP\_DOCLICK \(\)**|Dispara um evento clique em.|  
-|**Atualizar**|**DISP\_STOCKPROP\_REFRESH \(\)**|Atualiza imediatamente a aparência do controle.|  
+|Method|Dispatch map entry|Comment|  
+|------------|------------------------|-------------|  
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Fires a Click event.|  
+|**Refresh**|**DISP_STOCKPROP_REFRESH( )**|Immediately updates the control's appearance.|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adicionando um método de estoque usando o assistente de método add  
- Adicione um método de estoque é simples usando [Adicionar o assistente do método](../ide/add-method-wizard.md).  O procedimento a seguir demonstra como adicionar o método de atualização em um controle criado usando o assistente de controle ActiveX de MFC.  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adding a Stock Method Using the Add Method Wizard  
+ Adding a stock method is simple using the [Add Method Wizard](../ide/add-method-wizard.md). The following procedure demonstrates adding the Refresh method to a control created using the MFC ActiveX Control Wizard.  
   
-#### Para adicionar o método de ações de atualização usando o assistente de método add  
+#### To add the stock Refresh method using the Add Method Wizard  
   
-1.  Carregar o projeto do controle.  
+1.  Load your control's project.  
   
-2.  Na exibição da classe, expanda o nó da biblioteca do controle.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Clique com o botão direito do mouse no nó da interface para o controle \(o segundo nó do nó da biblioteca\) para abrir o menu de atalho.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  No menu de atalho, clique **Adicionar** e clique em **Adicionar método**.  
+4.  From the shortcut menu, click **Add** and then click **Add Method**.  
   
-     Isso abre o assistente do método ser adicionado.  
+     This opens the Add Method Wizard.  
   
-5.  Na caixa de **Nome do Método** , clique **Atualizar**.  
+5.  In the **Method Name** box, click **Refresh**.  
   
-6.  Clique em **Concluir**.  
+6.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a> Adicionar alterações do assistente do método para os métodos de estoque  
- Como o método de ações de atualização é suportado pela classe base de controle, **Assistente de Adição de Método** não altera a declaração de classe do controle de nenhuma forma.  Adiciona uma entrada para o método no mapa da expedição de controle e seu arquivo de .IDL.  A seguinte linha é adicionada ao mapa de expedição de controle, localizado no arquivo de implementação \(.CPP\):  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Add Method Wizard Changes for Stock Methods  
+ Because the stock Refresh method is supported by the control's base class, the **Add Method Wizard** does not change the control's class declaration in any way. It adds an entry for the method to the control's dispatch map and to its .IDL file. The following line is added to the control's dispatch map, located in its implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-methods_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  
   
- Isso torna o método de atualização disponível para usuários do controle.  
+ This makes the Refresh method available to the control's users.  
   
- A seguinte linha é adicionada ao arquivo de .IDL de controle:  
+ The following line is added to the control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-methods_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]  
   
- Essa linha atribui ao método update um o número de identificação específico.  
+ This line assigns the Refresh method a specific ID number.  
   
-## Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

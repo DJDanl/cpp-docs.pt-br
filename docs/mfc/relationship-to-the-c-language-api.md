@@ -1,40 +1,57 @@
 ---
-title: "Relacionamento com a API da linguagem C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "livros [C++]"
-  - "livros [C++], sobre MFC e Windows SDK"
-  - "MFC [C++], API do Windows"
-  - "Visual C, Chamadas à API do Windows"
-  - "API do Windows [C++], e MFC"
+title: Relationship to the C-Language API | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- books [MFC], about MFC and Windows SDK
+- books [MFC]
+- MFC, Windows API
+- Visual C, Windows API calls
+- Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Relacionamento com a API da linguagem C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 789064722f019a3f31fd4e30510b2b45682b7f21
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A única característica que define a biblioteca de \(MFC\) de classes do Microsoft foundation independentemente de outras bibliotecas da classe para o windows é o mapeamento muito próximo a API do windows escrito em C \- idioma.  Além disso, normalmente é possível misturar as chamadas a biblioteca de classes livremente com chamadas à API do windows.  Esse acesso direto, porém, não significa que as classes têm uma substituição completo para o API.  Os desenvolvedores devem ainda ocasionalmente fazer chamadas às funções de algumas janelas, como [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) e [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), por exemplo.  Uma função do windows está envolvida por uma função de membro da classe apenas quando há uma melhoria clara a fazer isso.  
+---
+# <a name="relationship-to-the-c-language-api"></a>Relationship to the C-Language API
+The single characteristic that sets the Microsoft Foundation Class (MFC) Library apart from other class libraries for Windows is the very close mapping to the Windows API written in the C language. Further, you can generally mix calls to the class library freely with direct calls to the Windows API. This direct access does not, however, imply that the classes are a complete replacement for that API. Developers must still occasionally make direct calls to some Windows functions, such as [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) and [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), for example. A Windows function is wrapped by a class member function only when there is a clear advantage to doing so.  
   
- Como às vezes você precisa de fazer chamadas de função nativos do windows, você deve ter acesso à documentação da API do windows do C \- idioma.  Esta documentação é incluída com o Microsoft Visual C\+\+.  
+ Because you sometimes need to make native Windows function calls, you should have access to the C-language Windows API documentation. This documentation is included with Microsoft Visual C++.  
   
 > [!NOTE]
->  Para obter uma visão geral de como a estrutura de biblioteca MFC opera, consulte [Usando as classes para gravar aplicativos do windows](../Topic/Using%20the%20Classes%20to%20Write%20Applications%20for%20Windows.md).  
+>  For an overview of how the MFC Library framework operates, see [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
-## Consulte também  
- [Filosofia de design da classe geral](../mfc/general-class-design-philosophy.md)
+## <a name="see-also"></a>See Also  
+ [General Class Design Philosophy](../mfc/general-class-design-philosophy.md)
+

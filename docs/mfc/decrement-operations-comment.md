@@ -1,40 +1,58 @@
 ---
-title: "// Coment&#225;rio sobre opera&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comentários, MFC"
-  - "Arquivos de origem MFC, Comentários sobre operações"
-  - "Comentário sobre operações nos arquivos de origem MFC"
+title: -- Operations Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Operations comment in MFC source files
+- comments, MFC
+- MFC source files, Operations comments
 ms.assetid: f3bff48d-26be-4db6-8435-9e4d079838c9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Coment&#225;rio sobre opera&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f7b358534dbf0446aac45315f175ced930d0a53e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A seção de `// Operations` de uma declaração de classe de MFC contém funções de membro que você pode chamar o objeto para o fazer coisas ou executar ações executar operações \(\).  Essas funções são**const** normalmente não porque normalmente têm efeitos colaterais.  Podem ser virtuais ou nonvirtual dependendo das necessidades da classe.  Normalmente, esses membros são públicos.  
+---
+# <a name="-operations-comment"></a>// Operations Comment
+The `// Operations` section of an MFC class declaration contains member functions that you can call on the object to make it do things or perform actions (perform operations). These functions are typically non-**const** because they usually have side effects. They may be virtual or nonvirtual depending on the needs of the class. Typically, these members are public.  
   
- Na listagem de exemplo da classe `CStdioFile`, em [Um exemplo de comentários](../mfc/an-example-of-the-comments.md), a lista inclui duas funções de membro nesse comentário: `ReadString` e `WriteString`.  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes two member functions under this comment: `ReadString` and `WriteString`.  
   
- Como com atributos, as operações podem mais ser subdivididas.  
+ As with attributes, operations can be further subdivided.  
   
-## Consulte também  
- [Usando os arquivos de origem MFC](../Topic/Using%20the%20MFC%20Source%20Files.md)   
- [Um exemplo dos comentários](../mfc/an-example-of-the-comments.md)   
- [\/\/ Comentário da implementação](../mfc/decrement-implementation-comment.md)   
- [\/\/ Comentário sobre construtores](../mfc/decrement-constructors-comment.md)   
- [\/\/ Comentário sobre atributos](../Topic/--%20Attributes%20Comment.md)   
- [\/\/ Comentário sobre substituíveis](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

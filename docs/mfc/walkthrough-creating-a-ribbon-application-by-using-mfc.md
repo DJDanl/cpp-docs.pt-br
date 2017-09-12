@@ -1,102 +1,120 @@
 ---
-title: "Instru&#231;&#245;es passo a passo: criando um aplicativo da faixa de op&#231;&#245;es usando MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "criando um aplicativo de faixa de opções (MFC)"
-  - "aplicativo de faixa de opções, criando (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instru&#231;&#245;es passo a passo: criando um aplicativo da faixa de op&#231;&#245;es usando MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este passo a passo mostra como usar o **Assistente para Aplicativo do MFC** para criar um aplicativo que tenha uma faixa de opções por padrão.  Depois, você pode expandir a faixa de opções adicionando uma categoria de faixa de opções **Personalizado** que tem um painel de faixa de opções **Favoritos** e, em seguida, adicionando os comandos mais usados ao painel.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## Pré-requisitos  
- Este passo a passo pressupõe que você tenha definido [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para usar **Configurações Gerais de Desenvolvimento**.  Se você estiver usando configurações diferentes, alguns dos elementos da interface do usuário \(UI\) mencionados nas instruções talvez não sejam exibidos.  Para obter informações sobre como alterar configurações, consulte [How to: Reset Your Settings](http://msdn.microsoft.com/pt-br/c95c51be-e609-4769-abba-65e6beedec76).  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### Para criar um aplicativo do MFC que tenha uma faixa de opções  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  Use o **Assistente para Aplicativo do MFC** para criar um aplicativo do MFC que tenha uma faixa de opções.  Para executar o assistente, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C\+\+** em **Modelos Instalados**, selecione **MFC** e **Aplicativo do MFC**.  Digite um nome para o projeto. Por exemplo, `MFCRibbonApp`e, em seguida, clique em **OK**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  Na primeira página do **Assistente para Aplicativo do MFC**, clique em **Avançar**.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  Na página **Tipo de Aplicativo**, em **Estilo visual e cores**, selecione **Office 2007 \(Tema Azul\)**.  Deixe as outras configurações como estão.  Clique em **Avançar**.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  Na página **Suporte de Documento Composto**, verifique se **Nenhum** está selecionado e, em seguida, clique em **Próximo**.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  Na página **Propriedades do Modelo de Documento**, na caixa **Extensão do Arquivo**, digite uma extensão de nome de arquivo para documentos criados por esse aplicativo. Por exemplo, `mfcrbnapp`.  Clique em **Avançar**.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  Na página **Suporte de Banco de Dados**, verifique se **Nenhum** está selecionado e, em seguida, clique em **Próximo**.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  Na página **Recursos de Interface do Usuário**, verifique se **Usar uma faixa de opções** está selecionado.  Clique em **Avançar**.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. Por padrão, o **Assistente para Aplicativo do MFC** adiciona suporte para vários painéis de encaixe.  Como este passo a passo aborda apenas a faixa de opções, é possível remover essas opções do aplicativo.  Na página **Recursos Avançados**, desmarque todas as opções.  Clique em **Avançar**.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. Na página **Classes Geradas**, clique em **Concluir** para criar o aplicativo do MFC.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. Para verificar se o aplicativo foi criado com êxito, compile e o execute.  Para compilar o aplicativo, no menu **Compilar**, clique em **Compilar Solução**.  Se o aplicativo for compilado com êxito, execute\-o clicando em **Iniciar Depuração** no menu **Depurar**.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     O assistente cria automaticamente uma faixa de opções que tem uma categoria de faixa de opções chamada **Página Inicial**.  Esta faixa contém três painéis de faixa de opções, chamados de **Área de Transferência**, **Exibir** e **Janela**.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### Para adicionar uma categoria e um painel à faixa de opções  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  Para abrir o recurso da faixa de opções criado pelo assistente, no menu **Exibir**, aponte para **Outras Janelas** e, em seguida, clique em **Modo de Exibição de Recursos**.  Em **Modo de Exibição de Recursos**, clique em **Faixa de Opções** e, em seguida, clique duas vezes em **IDR\_RIBBON**.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  Primeiro, adicione uma categoria personalizada à faixa de opções clicando duas vezes em **Categoria** na **Caixa de Ferramentas**.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     Uma categoria com a legenda **Categoria1** é criada.  Por padrão, a categoria contém um painel.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     Clique com o botão direito do mouse em **Categoria1** e clique em **Propriedades**.  Na janela **Propriedades**, altere **Legenda** para `Personalizada`.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     As propriedades **Imagens Grandes** e **Imagens Pequenas** especificam os bitmaps usados como ícones para os elementos da faixa de opções nessa categoria.  Como a criação de bitmaps personalizados vai além do escopo deste passo a passo, basta reutilizar os bitmaps criados pelo assistente.  Bitmaps pequenos têm 16 pixels por 16 pixels.  Para imagens pequenas, use os bitmaps acessados pelo ID do recurso IDB\_FILESMALL.  Bitmaps grandes têm 32 pixels por 32 pixels.  Para imagens grandes, use os bitmaps acessados pelo ID do recurso IDB\_FILELARGE.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  Em monitores HDPI \(High Dots Per Inch, Muitos pontos por polegada\), as versões HDPI das imagens são usadas automaticamente.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  Em seguida, personalize o painel.  Os painéis são usados para agrupar itens logicamente relacionados uns aos outros.  Por exemplo, na guia **Página Inicial** deste aplicativo, os comandos **Recortar**, **Copiar** e **Colar** estão todos localizados no painel **Área de Transferência**.  Para personalizar o painel, clique com o botão direito do mouse em **Painel1** e, em seguida, clique em **Propriedades**.  Na janela **Propriedades**, altere **Legenda** para `Favoritos`.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     É possível especificar o **Índice de Imagem** para o painel.  Esse número especifica o ícone que será exibido se o painel da faixa de opções for adicionado à **Barra de Ferramentas de Acesso Rápido**.  O ícone não é exibido no painel da faixa de opções propriamente dito.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  Para verificar se a categoria e o painel da faixa de opções foram criados com êxito, visualize o controle da faixa de opções.  Na **Barra de Ferramentas do Editor da Barra de Ferramentas**, clique no botão **Faixa de Opções de Teste**.  Uma guia **Personalizar** e um painel **Favoritos** devem ser exibidos na faixa de opções.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### Para adicionar elementos aos painéis da faixa de opções  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  Para adicionar elementos ao painel criado no procedimento anterior, arraste os controles da seção **Editor da Faixa de Opções** da **Caixa de Ferramentas** para o painel no modo de exibição de Design.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  Primeiro, adicione um botão **Imprimir**.  O botão **Imprimir** terá um submenu contendo um comando **Impressão Rápida** que imprime usando a impressora padrão.  Esses dois comandos já estão definidos para esse aplicativo.  Eles estão localizados no menu do aplicativo.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     Para criar o botão **Imprimir**, arraste uma ferramenta Botão para o painel.  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     Na janela **Propriedades**, altere a propriedade **ID** para **ID\_FILE\_PRINT**, que já deve estar definida.  Altere **Legenda** para `Imprimir`.  Altere **Índice de Imagem** para `4`.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     Para criar o botão **Impressão Rápida**, clique na coluna de valor da propriedade próxima de **Itens de Menu**e, em seguida, clique nas reticências \(**...**\).  No **Editor de Itens**, clique no botão **Adicionar** sem rótulo para criar um item de menu.  Na janela **Propriedades**, altere **Legenda** para `Impressão Rápida`, **ID** para `ID_FILE_PRINT_DIRECT` e **Imagem** para `5`.  A propriedade image especifica o ícone de Impressão Rápida no recurso de bitmap IDB\_FILESMALL.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  Para verificar se os botões foram adicionados ao painel da faixa de opções, compile e execute o aplicativo.  Para compilar o aplicativo, no menu **Compilar**, clique em **Compilar Solução**.  Se o aplicativo for compilado com êxito, execute\-o clicando em **Iniciar Depuração** no menu **Depurar**.  O botão **Imprimir** e a caixa de combinação no painel **Favoritos** da guia **Personalizado** na faixa de opções devem ser exibidos.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## Próximas etapas  
- [Como personalizar a barra de ferramentas de acesso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Como personalizar o botão do aplicativo](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- Para exemplos de ponta a ponta, consulte [Exemplos \(MFC Feature Pack\)](../top/visual-cpp-samples.md).  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## Consulte também  
- [Explicações Passo\-a\-passo](../mfc/walkthroughs-mfc.md)   
- [Exemplos \(MFC Feature Pack\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

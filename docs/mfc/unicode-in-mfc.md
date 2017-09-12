@@ -1,69 +1,87 @@
 ---
-title: "Unicode em MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cadeias de caracteres [C++], Unicode"
-  - "Unicode [C++], ativando"
-  - "Unicode [C++], MFC"
-  - "caracteres largos, codificação"
-  - "caracteres largos, Unicode"
+title: Unicode in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, Unicode
+- Unicode [MFC], MFC
+- wide characters, encoding
+- strings [MFC], Unicode
+- Unicode [MFC], enabling
 ms.assetid: 1002004b-4113-4380-bf63-e1570934b793
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Unicode em MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66452e96c7ca61e3acad1ce1107b6ba24c0750b3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O da suporte ao padrão Unicode para codificar caracteres amplos em plataformas do Windows NT, Windows 2000, e Windows XP.  Os aplicativos Unicode não podem realizar em plataformas do Windows 98.  
+---
+# <a name="unicode-in-mfc"></a>Unicode in MFC
+MFC supports the Unicode standard for encoding wide characters on Windows NT, Windows 2000, and Windows XP platforms. Unicode applications cannot run on Windows 98 platforms.  
   
- As versões de Unicode as bibliotecas de MFC são descritas abaixo:  
+ The Unicode versions of the MFC libraries are described below:  
   
-### Bibliotecas de vínculo estáticos  
+### <a name="static-link-libraries"></a>Static Link Libraries  
   
-|Versão|Depurar|Descrição|  
-|------------|-------------|---------------|  
-|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|Biblioteca de vínculo estático Unicode MFC|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|Unicode MFC static link library|  
   
-### Bibliotecas de vínculo dinâmico\) nativa  
+### <a name="dynamic-link-libraries"></a>Dynamic-Link Libraries  
   
-|Versão|Depurar|Descrição|  
-|------------|-------------|---------------|  
-|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Biblioteca de importação de MFC Unicode \(veja anotações abaixo para a explicação de extensões de arquivo\)|  
-|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Biblioteca de importação de MFC Unicode que contém o código que deve ser vinculado estaticamente em um aplicativo ou em uma DLL|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Unicode MFC import library (see notes below for explanation of file extensions)|  
+|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Unicode MFC import library containing code that must be statically linked in an application or DLL|  
   
- **Tipos de arquivo**  
+ **File Types**  
   
--   Os arquivos de biblioteca de importação têm a extensão \(.lib\).  
+-   Import library files have the extension (.lib).  
   
--   Os arquivos de biblioteca de vínculo dinâmico\) nativa têm a extensão \(.dll\).  
+-   Dynamic-link library files have the extension (.dll).  
   
--   Os arquivos de definição de módulo \(.def\) são arquivos de texto que contêm instruções para definir um ou um arquivo .dll.  
+-   Module definition (.def) files are text files that contain statements for defining an .exe or .dll.  
   
--   Os arquivos de mapa \(.map\) são arquivos de texto que contêm informações que o vinculador usa ao vincular um programa.  
+-   Map (.map) files are text files that contain information that the linker uses when linking a program.  
   
--   Os arquivos de biblioteca \(.lib\) são usados em conjunto com as versões da DLL MFC.  Esses arquivos contêm código que deve ser vinculado estaticamente no aplicativo ou na DLL.  
+-   Library (.lib) files are used in conjunction with the DLL versions of MFC. These files contain code that must be statically linked in the application or DLL.  
   
--   Os arquivos de base de dados de programa \(.pdb\) contêm a depuração de projeto e informações de estado.  
+-   Program database (.pdb) files contain debugging and project state information.  
   
--   Os arquivos de depuração \(\) .dbg contêm informações \(COFF FPO, e o CodeView\) que o depurador do Visual C\+\+ usa.  
+-   Debug (.dbg) files contain information (COFF FPO, and CodeView) that the Visual C++ Debugger uses.  
   
- Para obter informações detalhadas sobre as convenções de nomenclatura, consulte [Convenções de nomenclatura de biblioteca](../Topic/Library%20Naming%20Conventions.md).  
+ For detailed information on naming conventions, see [Library Naming Conventions](../mfc/library-naming-conventions.md).  
   
- Para obter informações sobre como usar Unicode com MFC, consulte [Cadeias de caracteres: Unicode e suporte ao conjunto de caracteres de vários bytes \(MBCS\)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
+ For information on using Unicode with MFC, see [Strings: Unicode and Multibyte Character Set (MBCS) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-## Consulte também  
- [Conceitos](../mfc/mfc-concepts.md)   
- [Tópicos MFC gerais](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

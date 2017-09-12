@@ -1,39 +1,57 @@
 ---
-title: "Rolando, organizando, classificando e localizando em controles de lista | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CListCtrl, organizando a lista"
-  - "Classe CListCtrl, localizando itens em"
-  - "Classe CListCtrl, rolagem"
-  - "Classe CListCtrl, classificando"
-  - "listas de imagens [C++], organizando"
-  - "listas de imagens [C++], localizando itens"
-  - "listas de imagens [C++], rolagem"
-  - "listas de imagens [C++], classificando"
+title: Scrolling, Arranging, Sorting, and Finding in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], sorting
+- image lists [MFC], arranging
+- image lists [MFC], scrolling
+- CListCtrl class [MFC], finding items in
+- image lists [MFC], finding items
+- CListCtrl class [MFC], scrolling
+- CListCtrl class [MFC], sorting
+- CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Rolando, organizando, classificando e localizando em controles de lista
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6cbba0b023c86eb7d26c5d406255122914b3993f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os controles de listas \([CListCtrl](../Topic/CListCtrl%20Class.md)\) são roláveis por padrão.  Para obter mais informações, consulte [Posição de rolagem](http://msdn.microsoft.com/library/windows/desktop/bb774736) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] e na função de membro de [Rolagem](../Topic/CListCtrl::Scroll.md) .  
+---
+# <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Scrolling, Arranging, Sorting, and Finding in List Controls
+List controls ([CListCtrl](../mfc/reference/clistctrl-class.md)) are scrollable by default. For more information, see [Scroll Position](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK and the [Scroll](../mfc/reference/clistctrl-class.md#scroll) member function.  
   
- Você pode chamar funções de membro de `CListCtrl` para organizar itens de lista no controle, para classificar itens, e para localizar itens específicos.  Para obter mais informações, consulte [Organizando, para classificar, e localizar](http://msdn.microsoft.com/library/windows/desktop/bb774736) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] e os membros [Organizar](../Topic/CListCtrl::Arrange.md), [SortItems](../Topic/CListCtrl::SortItems.md), e [FindItem](../Topic/CListCtrl::FindItem.md)de [CListCtrl](../Topic/CListCtrl%20Class.md) .  
+ You can call `CListCtrl` member functions to arrange list items in the control, sort items, and find particular items. For more information, see [Arranging, Sorting, and Finding](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK and the [CListCtrl](../mfc/reference/clistctrl-class.md) members [Arrange](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems), and [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
-## Consulte também  
- [Usando CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

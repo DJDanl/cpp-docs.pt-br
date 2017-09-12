@@ -1,43 +1,61 @@
 ---
-title: "Sequ&#234;ncia de opera&#231;&#245;es para cria&#231;&#227;o de aplicativos OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [OLE]"
-  - "aplicativos [OLE], criando"
-  - "Aplicativos OLE [C++]"
-  - "Aplicativos OLE [C++], criando"
+title: Sequence of Operations for Creating OLE Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE applications [MFC], creating
+- OLE applications [MFC]
+- applications [OLE], creating
+- applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sequ&#234;ncia de opera&#231;&#245;es para cria&#231;&#227;o de aplicativos OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e194220ad1384def52e0a099fe82503bdf2a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A tabela a seguir mostra a função e a função da estrutura na criação de OLE que vincula e que insere aplicativos.  Esses representam as opções disponíveis em vez de uma sequência de etapas para executar.  
+---
+# <a name="sequence-of-operations-for-creating-ole-applications"></a>Sequence of Operations for Creating OLE Applications
+The following table shows your role and the framework's role in creating OLE linking and embedding applications. These represent options available rather than a sequence of steps to perform.  
   
-### Criando aplicativos OLE  
+### <a name="creating-ole-applications"></a>Creating OLE Applications  
   
-|Tarefa|Você fizer|A estrutura faz|  
-|------------|----------------|---------------------|  
-|Crie um componente COM.|Execute o assistente de aplicativo MFC.  Escolha **Full\-server** ou **Mini\-server** na guia de **Compound Document Support** .|A estrutura gerenciar um aplicativo do esqueleto com o recurso do componente COM habilitado.  Qualquer recurso de COM pode ser transferido para o seu aplicativo existente com apenas um pouco alteração.|  
-|Crie um aplicativo de contêiner a partir do zero.|Execute o assistente de aplicativo MFC.  Escolha **Contêiner** na guia de **Compound Document Support** .  Usar a exibição da classe, vai para o editor de origem.  Preencha o código para suas funções de manipulador da.|A estrutura gerenciar um aplicativo do esqueleto que pode inserir os objetos COM criados por aplicativos de componente COM \(servidor\).|  
-|Crie um aplicativo que oferece suporte à automação a partir do zero.|Execute o assistente de aplicativo MFC.  Escolha **Automação** da guia de **Recursos Avançados** .  Use a exibição da classe para expor métodos e propriedades em seu aplicativo para a automação.|A estrutura gerenciar um aplicativo do esqueleto que pode ser ativado e automatizado por outros aplicativos.|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create a COM component.|Run the MFC Application Wizard. Choose **Full-server** or **Mini-server** in the **Compound Document Support** tab.|The framework generates a skeleton application with COM component capability enabled. All of the COM capability can be transferred to your existing application with only slight modification.|  
+|Create a container application from scratch.|Run the MFC Application Wizard. Choose **Container** in the **Compound Document Support** tab. Using Class View, go to the source code editor. Fill in code for your COM handler functions.|The framework generates a skeleton application that can insert COM objects created by COM component (server) applications.|  
+|Create an application that supports Automation from scratch.|Run the MFC Application Wizard. Choose **Automation** from the **Advanced Features** tab. Use Class View to expose methods and properties in your application for automation.|The framework generates a skeleton application that can be activated and automated by other applications.|  
   
-## Consulte também  
- [Aproveitando o Framework](../mfc/building-on-the-framework.md)   
- [Sequência de operações para compilação de aplicativos MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Sequência de operações para criação de controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

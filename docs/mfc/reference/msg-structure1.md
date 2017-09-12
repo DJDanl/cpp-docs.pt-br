@@ -1,5 +1,5 @@
 ---
-title: Estrutura MSG&1; | Documentos do Microsoft
+title: MSG Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MSG structure
+- MSG structure [MFC]
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f26a97a4285db71f1c1f82cd199456bc528aff0c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c07f74157d8bcccb9c5b23727ce0a9107bfb51b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="msg-structure1"></a>Estrutura MSG&1;
-O `MSG` estrutura contém informações sobre a mensagem da fila de mensagens do thread.  
+# <a name="msg-structure1"></a>MSG Structure1
+The `MSG` structure contains message information from a thread's message queue.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagMSG {     // msg    
@@ -56,29 +56,29 @@ typedef struct tagMSG {     // msg
 } MSG;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
- *HWND*  
- Identifica a janela cujo procedimento de janela recebe a mensagem.  
+#### <a name="parameters"></a>Parameters  
+ *hwnd*  
+ Identifies the window whose window procedure receives the message.  
   
  `message`  
- Especifica o número da mensagem.  
+ Specifies the message number.  
   
  `wParam`  
- Especifica informações adicionais sobre a mensagem. O significado exato depende do valor da **mensagem** membro.  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `lParam`  
- Especifica informações adicionais sobre a mensagem. O significado exato depende do valor da **mensagem** membro.  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `time`  
- Especifica a hora em que a mensagem foi postada.  
+ Specifies the time at which the message was posted.  
   
  `pt`  
- Especifica a posição do cursor, em coordenadas da tela, quando a mensagem foi postada.  
+ Specifies the cursor position, in screen coordinates, when the message was posted.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 

@@ -1,87 +1,103 @@
 ---
-title: "TN029: janelas separadoras | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.windows.splitter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas separadoras, sobre janelas separadoras"
-  - "TN029"
+title: 'TN029: Splitter Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.windows.splitter
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN029
+- splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 caps.latest.revision: 18
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN029: janelas separadoras
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0885dea840b73b78be581383c7f4a194b5cb9a8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essa observação descreve o MFC [Classe de CSplitterWnd](../mfc/reference/csplitterwnd-class.md), que fornece divisões da janela e gerencia redimensionar de outras janelas do painel.  
+---
+# <a name="tn029-splitter-windows"></a>TN029: Splitter Windows
+This note describes the MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), which provides window splits and manages the resizing of other pane windows.  
   
-## Estilo do separador  
- `CSplitterWnd` oferece suporte a dois estilos diferentes do windows de linhas.  
+## <a name="splitter-styles"></a>Splitter Styles  
+ A `CSplitterWnd` supports two different styles of splitting windows.  
   
- “Nos separadores estáticos,” a janela do separador cria os painéis quando ela é criada.  A ordem e o número de painéis nunca são alterados.  As barras separadoras são usadas para redimensionar os diferentes painéis.  Você pode usar esse estilo para exibir uma classe diferente da exibição em cada painel.  O editor de gráficos do Visual C\+\+ e o gerenciador de arquivos do windows são exemplos de programas que usam esse estilo do separador.  Esse estilo da janela do separador não usa caixas do separador.  
+ In "static splitters," the splitter window creates the panes when it is created. The order and number of panes never change. Splitter bars are used to resize the different panes. You can use this style to display a different view class in each pane. The Visual C++ graphics editor and the Windows File Manager are examples of programs that use this splitter style. This style of splitter window does not use splitter boxes.  
   
- “Nos separadores dinâmicos”, os painéis adicionais são criados e destruído como as divisões do usuário e exibições de divisões não novas.  Esse separador começa com uma única exibição e fornece caixas de divisão para o usuário à divisão iniciada.  A janela do separador cria dinamicamente um novo objeto de exibição quando a exibição é dividida em uma direção.  Esse novo objeto de exibição representa o novo painel.  Se a exibição é dividida em duas direções usando a interface de teclado, a janela do separador cria três novos objetos de exibição para os três novos painéis.  Quando a divisão está ativa, as janelas exibem a caixa do separador como uma barra de divisão entre os painéis.  As janelas destroem exibir objetos adicionais quando o usuário remove uma divisão, mas a exibição original permanece até que a própria janela do separador foi destruída.  O Microsoft Excel e o Microsoft Word são exemplos de aplicativos que usam o estilo do separador dinâmico.  
+ In "dynamic splitters," additional panes are created and destroyed as the user splits and un-splits new views. This splitter starts out with a single view and provides splitter boxes for the user to initiate splitting. The splitter window dynamically creates a new view object when the view is split in one direction. This new view object represents the new pane. If the view is split in two directions by using the keyboard interface, the splitter window creates three new view objects for the three new panes. While the split is active, Windows displays the splitter box as a splitter bar between the panes. Windows destroys additional view objects when the user removes a split, but the original view remains until the splitter window itself is destroyed. Microsoft Excel and Microsoft Word are examples of applications that use the dynamic splitter style.  
   
- Quando você cria qualquer tipo da janela do divisor, você deve especificar o número máximo de linhas e de colunas que o separador gerenciará.  Um separador estático criará os painéis para preencher todas as linhas e colunas.  Um separador dinâmico criará apenas o primeiro o painel quando `CSplitterWnd` é criado.  
+ When you create either kind of splitter window, you must specify the maximum number of rows and columns that the splitter will manage. A static splitter will create panes to fill all the rows and columns. A dynamic splitter will create only the first pane when the `CSplitterWnd` is created.  
   
- O número máximo de painéis que você pode especificar para separadores estáticos é 16 linhas por 16 colunas.  As configurações recomendadas são:  
+ The maximum number of panes you can specify for static splitters is 16 rows by 16 columns. The recommended configurations are:  
   
--   linha 1 x 2 colunas: normalmente com diferentes painéis  
+-   1 row x 2 columns : usually with dissimilar panes  
   
--   2 x 1 linhas coluna: normalmente com diferentes painéis  
+-   2 rows x 1 column : usually with dissimilar panes  
   
--   2 linhas x 2 colunas: normalmente com painéis semelhantes  
+-   2 rows x 2 columns : usually with similar panes  
   
- O número máximo de painéis que você pode especificar para separadores dinâmicos é 2 linhas por 2 colunas.  As configurações recomendadas são:  
+ The maximum number of panes that you can specify for dynamic splitters is 2 rows by 2 columns. The recommended configurations are:  
   
--   linha 1 x 2 colunas: para dados de coluna  
+-   1 row x 2 columns : for columnar data  
   
--   2 x 1 linhas coluna: para dados textuais ou outros  
+-   2 rows x 1 column : for textual or other data  
   
--   2 linhas x 2 colunas: para a grade ou tabela orientou dados  
+-   2 rows x 2 columns : for grid or table oriented data  
   
-## Exemplos do separador  
- Muitos dos programas de exemplo MFC usam o windows do separador direta ou indiretamente.  O exemplo [VIEWEX](../top/visual-cpp-samples.md) gerais de MFC ilustra vários usos de separadores estáticos, inclusive como colocar um separador em um separador.  
+## <a name="splitter-examples"></a>Splitter Examples  
+ Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.  
   
- Você também pode usar ClassWizard para criar uma classe filho da janela do quadro de \(MDI\) de novo ambiente MDI que contém uma janela do separador.  Para obter mais informações sobre as janelas do divisor, consulte [Vários tipos de documento, exibições, e janelas do quadro](../mfc/multiple-document-types-views-and-frame-windows.md).  
+ You can also use ClassWizard to create a new multiple document interface (MDI) Child frame window class that contains a splitter window. For more information on splitter windows, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## Terminologia usada pela implementação  
- Eis uma lista de termos que são específicos do windows do separador:  
+## <a name="terminology-used-by-implementation"></a>Terminology Used by Implementation  
+ Here is a list of terms that are specific to splitter windows:  
   
  `CSplitterWnd`:  
- Uma janela que fornece controles e as barras de rolagem de linhas que são compartilhados entre todos os painéis em uma linha ou coluna.  Você especifica linhas e colunas com números com base em zero \(o primeiro painel é 0 \= linha e coluna \= 0\).  
+ A window that provides pane-splitting controls and scroll bars that are shared between all panes on a row or column. You specify rows and columns with zero-based numbers (the first pane is row = 0 and column = 0).  
   
- O painel:  
- Uma janela específica do aplicativo que `CSplitterWnd` gerencia.  Um painel é geralmente um objeto que é derivado de [Classe de CView](../Topic/CView%20Class.md), mas pode ser qualquer objeto de [CWnd](../Topic/CWnd%20Class.md) que tem a ID apropriada na janela filho  
+ Pane:  
+ An application-specific window that a `CSplitterWnd` manages. A pane is usually an object that is derived from the [CView Class](../mfc/reference/cview-class.md), but can be any [CWnd](../mfc/reference/cwnd-class.md) object that has the appropriate child window ID.  
   
- Para usar `CWnd`\- objeto derivada, passe `RUNTIME_CLASS` de objeto para a função de `CreateView` como se você estiver usando `CView`\- a classe derivada.  A sua classe deve usar `DECLARE_DYNCREATE` e `IMPLEMENT_DYNCREATE` porque a estrutura usa a criação dinâmico em tempo de execução.  Embora haja muito código em `CSplitterWnd` que é específico da classe de `CView` , [CObject::IsKindOf](../Topic/CObject::IsKindOf.md) sempre é usado antes que as ações serão executadas.  
+ To use a `CWnd`-derived object, pass the `RUNTIME_CLASS` of the object to the `CreateView` function as you would if you were using a `CView`-derived class. Your class must use `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` because the framework uses dynamic creation at runtime. Although there is a lot of code in `CSplitterWnd` that is specific to the `CView` class, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) is always used before those actions are performed.  
   
- Barra divisória:  
- Um controle que é colocado entre linhas e colunas os painéis.  Pode ser usado para ajustar os tamanhos das linhas ou colunas os painéis.  
+ Splitter Bar:  
+ A control that is placed between rows and columns of panes. It may be used to adjust the sizes of rows or columns of panes.  
   
- Caixa do separador:  
- Um controle em `CSplitterWnd` dinâmico que você pode usar para criar novas linhas ou colunas os painéis.  Está localizado na parte superior das barras de rolagem vertical ou à esquerda das barras de rolagem horizontal.  
+ Splitter Box:  
+ A control in a dynamic `CSplitterWnd` that you can use to create new rows or columns of panes. It is located at the top of the vertical scroll bars or to the left of the horizontal scroll bars.  
   
- Interseção do separador:  
- A interseção de uma barra vertical do separador e uma barra horizontal do separador.  Você pode arrastá\-lo simultaneamente para ajustar o tamanho de uma linha e uma coluna de painéis.  
+ Splitter Intersection:  
+ The intersection of a vertical splitter bar and a horizontal splitter bar. You can drag it to adjust the size of a row and column of panes simultaneously.  
   
-## Barras de rolagem compartilhadas  
- A classe de `CSplitterWnd` também suporta barras de rolagem compartilhadas.  Esses controles da barra de rolagem são filhos de `CSplitterWnd` e são compartilhados com os diferentes painéis o separador.  
+## <a name="shared-scroll-bars"></a>Shared Scroll Bars  
+ The `CSplitterWnd` class also supports shared scroll bars. These scroll bar controls are children of the `CSplitterWnd` and are shared with the different panes in the splitter.  
   
- Por exemplo, em uma janela de linha 1 x 2 colunas, você pode especificar WS\_VSCROLL ao criar `CSplitterWnd`.  O windows cria um controle especial da barra de rolagem que é compartilhado entre os dois painéis.  
+ For example, in a 1 row x 2 column window, you can specify WS_VSCROLL when creating the `CSplitterWnd`. Windows creates a special scroll bar control that is shared between the two panes.  
   
 ```  
 [      ][      ][^]  
@@ -89,57 +105,59 @@ Essa observação descreve o MFC [Classe de CSplitterWnd](../mfc/reference/cspli
 [      ][      ][v]  
 ```  
   
- Quando o usuário move a barra de rolagem, as mensagens de `WM_VSCROLL` serão enviadas a ambas as exibições.  Quando qualquer exibição define a posição da barra de rolagem, a barra de rolagem compartilhada será definida.  
+ When the user moves the scroll bar, `WM_VSCROLL` messages will be sent to both views. When either view sets the scroll bar position, the shared scroll bar will be set.  
   
- Observe que as barras de rolagem compartilhadas são mais úteis com objetos de visualização semelhantes.  Se você mescla exibições de tipos diferentes em um separador, você pode precisar escrever o código especial para coordenar as posições de rolagem.  Qualquer `CView`\- a classe derivada usando as APIs da barra de rolagem de `CWnd` delegará à barra de rolagem compartilhada se existir.  A implementação de `CScrollView` é um exemplo de uma classe de `CView` que suporte barras de rolagem compartilhadas.  As classes que não são derivadas de `CView`, as classes que dependem de barras de rolagem de não controle, ou classes que usam implementações padrão do windows \(por exemplo, `CEditView`\) não funcionarão com o recurso compartilhado da barra de rolagem de `CSplitterWnd`.  
+ Note that shared scroll bars are most useful with similar view objects. If you mix views of different types in a splitter, then you may have to write special code to coordinate their scroll positions. Any `CView`-derived class that uses the `CWnd` scroll bar APIs will delegate to the shared scroll bar if it exists. The `CScrollView` implementation is one example of a `CView` class that supports shared scroll bars. Classes that are not derived from `CView`, classes that rely on non-control scroll bars, or classes that use standard Windows implementations (for example, `CEditView`) will not work with the shared scroll bar feature of `CSplitterWnd`.  
   
-## Tamanhos mínimo  
- Para cada linha há uma altura mínima de linha, e cada coluna há uma largura mínima da coluna.  Este mínimo garante que um painel não for muito pequeno para ser exibido em detalhes completo.  
+## <a name="minimum-sizes"></a>Minimum Sizes  
+ For each row there is a minimum row height, and for each column there is a minimum column width. This minimum guarantees that a pane is not too small to be shown in complete detail.  
   
- Para uma janela estático do divisor, a altura e a largura da coluna mínimas iniciais de linha é 0.  Para uma janela dinâmico do divisor, a altura e a largura da coluna mínimas iniciais de linha são definidas pelo parâmetro de `sizeMin` da função de `CSplitterWnd::Create` .  
+ For a static splitter window, the initial minimum row height and column width is 0. For a dynamic splitter window, the initial minimum row height and column width are set by the `sizeMin` parameter of the `CSplitterWnd::Create` function.  
   
- Você pode modificar estes tamanhos mínimo usando as funções de [CSplitterWnd::SetRowInfo](../Topic/CSplitterWnd::SetRowInfo.md) e de [CSplitterWnd::SetColumnInfo](../Topic/CSplitterWnd::SetColumnInfo.md) .  
+ You can change these minimum sizes by using the [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) and [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) functions.  
   
-## Real em tamanhos ideais  
- O layout dos painéis na janela do separador depende do tamanho do tableau que os contém.  Quando um usuário redimensiona o quadro contentor, `CSplitterWnd` reposições e redimensionar os painéis de modo que caiba melhor possível.  
+## <a name="actual-vs-ideal-sizes"></a>Actual vs. Ideal Sizes  
+ The layout of the panes in the splitter window depends on the size of the frame that contains them. When a user resizes the containing frame, the `CSplitterWnd` repositions and resizes the panes so that they fit as well as possible.  
   
- O usuário pode definir manualmente os tamanhos de altura e largura de coluna da linha, ou o programa pode definir o tamanho ideal usando a classe de `CSplitterWnd` .  O tamanho real pode ser menor ou maior que o ideal.  As janelas ajustarão o tamanho real se não houver espaço suficiente exibir o tamanho ideal ou se houver muito espaço em branco à direita ou na parte inferior da janela do separador.  
+ The user can manually set the row height and column width sizes, or the program can set the ideal size by using the `CSplitterWnd` class. The actual size can be smaller or larger than the ideal. Windows will adjust the actual size if there is not enough room to display the ideal size or if there is too much empty space on the right or bottom of the splitter window.  
   
-## Controles personalizados.  
- Você pode substituir muitas funções para fornecer o comportamento personalizado e uma interface personalizado.  Você pode substituir o este primeiro conjunto para fornecer a aparência de backup para os vários componentes gráficos de uma janela do separador.  
+## <a name="custom-controls"></a>Custom Controls  
+ You can override many functions to provide customized behavior and a customized interface. You can override this first set to provide alternate imagery for the various graphical components of a splitter window.  
   
--   `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
+- `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
   
--   `virtual void OnInvertTracker(const CRect& rect);`  
+- `virtual void OnInvertTracker(const CRect& rect);`  
   
- Você chamará essa função para criar um controle compartilhado da barra de rolagem.  Você pode substituí\-los para criar controles adicionais ao lado da barra de rolagem.  
+ You call this function to create a shared scroll bar control. You can override it to create extra controls next to the scroll bar.  
   
--   `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
+- `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
   
- Essas funções implementa a lógica da janela dinâmico do separador.  Você pode substituir esses para fornecer uma lógica mais avançada do separador.  
+ These functions implement the logic of the dynamic splitter window. You can override these to provide more advanced splitter logic.  
   
--   `virtual void DeleteView(int row, int col);`  
+- `virtual void DeleteView(int row, int col);`  
   
--   `virtual BOOL SplitRow(int cyBefore);`  
+- `virtual BOOL SplitRow(int cyBefore);`  
   
--   `virtual BOOL SplitColumn(int cxBefore);`  
+- `virtual BOOL SplitColumn(int cxBefore);`  
   
--   `virtual void DeleteRow(int rowDelete);`  
+- `virtual void DeleteRow(int rowDelete);`  
   
--   `virtual void DeleteColumn(int colDelete);`  
+- `virtual void DeleteColumn(int colDelete);`  
   
-## Funcionalidade de CView  
- A classe de `CView` usa os seguintes comandos de alto nível delegar a `CSplitterWnd` a implementação.  Como esses comandos são virtuais, a implementação padrão de `CView` não exigirá a implementação inteira de `CSplitterWnd` ser vinculada no.  Para aplicativos que usam `CView` mas não `CSplitterWnd`, a implementação de `CSplitterWnd` não será vinculada com o aplicativo.  
+## <a name="cview-functionality"></a>CView Functionality  
+ The `CView` class uses the following high level commands to delegate to the `CSplitterWnd` implementation. Because these commands are virtual, the standard `CView` implementation will not require the entire `CSplitterWnd` implementation to be linked in. For applications that use `CView` but not `CSplitterWnd`, the `CSplitterWnd` implementation will not be linked with the application.  
   
  `virtual BOOL CanActivateNext(BOOL bPrev = FALSE);`  
- Verifica se ID\_NEXT\_PANE ou ID\_PREV\_PANE sejam atualmente possível.  
+ Checks whether ID_NEXT_PANE or ID_PREV_PANE is currently possible.  
   
  `virtual void ActivateNext(BOOL bPrev = FALSE);`  
- Executa o comando “do próximo painel” ou “do painel anterior”.  
+ Executes the "Next Pane" or "Previous Pane" command.  
   
  `virtual BOOL DoKeyboardSplit();`  
- Executa o comando dividido de teclado, em geral “janela de divisão”.  
+ Executes the keyboard split command, usually "Window Split".  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

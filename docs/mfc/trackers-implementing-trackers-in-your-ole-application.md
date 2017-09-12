@@ -1,40 +1,58 @@
 ---
-title: "Controladores: implementando controladores no aplicativo OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [OLE], controladores"
-  - "Classe CRectTracker, implementando controladores"
-  - "Aplicativos OLE [C++], controladores"
-  - "Contêineres OLE, controladores"
-  - "controladores"
-  - "acompanhando itens de OLE"
+title: 'Trackers: Implementing Trackers in Your OLE Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- OLE applications [MFC], trackers
+- applications [OLE], trackers
+- tracking OLE items [MFC]
+- OLE containers [MFC], trackers
+- CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controladores: implementando controladores no aplicativo OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45ad46989f2745b58a748b61f913001004e27696
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os perseguidores fornecem uma interface gráfica para que os usuários possam interagir com os itens do cliente.  Usando estilos diferentes de controlador, o cliente OLE que os itens podem ser exibidos com chocadas, bordas são redimensionados identificadores, ou uma variedade de outros efeitos visuais.  Este artigo descreve:  
+---
+# <a name="trackers-implementing-trackers-in-your-ole-application"></a>Trackers: Implementing Trackers in Your OLE Application
+Trackers provide a graphical interface to enable users to interact with OLE client items. By using different tracker styles, OLE client items can be displayed with hatched borders, resize handles, or a variety of other visual effects. This article describes:  
   
--   [Como implementar o controle em seu código](../mfc/how-to-implement-tracking-in-your-code.md).  
+-   [How to Implement Tracking in Your Code](../mfc/how-to-implement-tracking-in-your-code.md).  
   
--   [Borracha\-borda e perseguidores](../Topic/Rubber-Banding%20and%20Trackers.md).  
+-   [Rubber-Banding and Trackers](../mfc/rubber-banding-and-trackers.md).  
   
- O artigo também inclui o uso dos estilos com perseguidores.  Além disso, faz várias referências ao exemplo [OCLIENT](../top/visual-cpp-samples.md)MFC OLE.  
+ The article also covers the use of styles with trackers. In addition, it makes several references to the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
-## Consulte também  
- [Controladores](../mfc/trackers.md)
+## <a name="see-also"></a>See Also  
+ [Trackers](../mfc/trackers.md)
+
+

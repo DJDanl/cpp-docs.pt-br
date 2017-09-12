@@ -1,67 +1,85 @@
 ---
-title: "Como implementar o acompanhamento no c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CRectTracker, implementando controladores"
+title: 'How to: Implement Tracking in Your Code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Como implementar o acompanhamento no c&#243;digo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cc36a9c8b723d4ab06fde39595a70a69f29352ed
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para rastrear um item OLE, você deve tratar certos eventos relacionados ao item, como clique no item ou atualize a exibição do documento.  Em todos os casos, é suficiente para declarar um objeto temporário de [CRectTracker](../mfc/reference/crecttracker-class.md) e manipular o item por meio deste objeto.  
+---
+# <a name="how-to-implement-tracking-in-your-code"></a>How to: Implement Tracking in Your Code
+To track an OLE item, you must handle certain events related to the item, such as clicking the item or updating the view of the document. In all cases, it is sufficient to declare a temporary [CRectTracker](../mfc/reference/crecttracker-class.md) object and manipulate the item by means of this object.  
   
- Quando um usuário seleciona um item ou insere um objeto de um comando de menu, você deve inicializar o controlador com os estilos apropriados para representar o estado do item OLE.  A tabela a seguir descreve as convenções usadas pelo exemplo de OCLIENT.  Para obter mais informações sobre esses estilos, consulte `CRectTracker`.  
+ When a user selects an item or inserts an object with a menu command, you must initialize the tracker with the proper styles to represent the state of the OLE item. The following table outlines the conventions used by the OCLIENT sample. For more information on these styles, see `CRectTracker`.  
   
-### Estilos do contêiner e estados de item OLE  
+### <a name="container-styles-and-states-of-the-ole-item"></a>Container Styles and States of the OLE Item  
   
-|Estilo exibido|Estado de item OLE|  
-|--------------------|------------------------|  
-|Pontilhada borda|O item está vinculado|  
-|Contínua borda|O item é inserido no documento|  
-|As alças de redimensionamento|O item selecionado no momento|  
-|A borda chocada|O item está atualmente ativo in\-loco|  
-|O padrão de hachura será interrompido o item|O servidor do item está aberto|  
+|Style displayed|State of OLE item|  
+|---------------------|-----------------------|  
+|Dotted border|Item is linked|  
+|Solid border|Item is embedded in your document|  
+|Resize handles|Item is currently selected|  
+|Hatched border|Item is currently in-place active|  
+|Hatching pattern overlays item|Item's server is open|  
   
- Você pode controlar essa inicialização que usa facilmente um procedimento que verifica o estado do item OLE e define os estilos apropriadas.  A função de **SetupTracker** localizada no exemplo de OCLIENT demonstra a inicialização do controlador.  Os parâmetros para essa função é o endereço do controlador, *pTracker*; um ponteiro para o item que está relacionada ao controlador, `pItem`de cliente; e um ponteiro para um retângulo, *pTrueRect*.  Para um mais o exemplo completo dessa função, consulte o exemplo [OCLIENT](../top/visual-cpp-samples.md)MFC OLE.  
+ You can handle this initialization easily using a procedure that checks the state of the OLE item and sets the appropriate styles. The **SetupTracker** function found in the OCLIENT sample demonstrates tracker initialization. The parameters for this function are the address of the tracker, *pTracker*; a pointer to the client item that is related to the tracker, `pItem`; and a pointer to a rectangle, *pTrueRect*. For a more complete example of this function, see the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- O exemplo de código de **SetupTracker** apresenta uma única função; as linhas da função são intercaladas com auditoria dos recursos da função:  
+ The **SetupTracker** code example presents a single function; lines of the function are interspersed with discussion of the function's features:  
   
- [!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_1.cpp)]  
+ [!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]  
   
- O controlador é inicializado definindo o tamanho mínimo e limpando o estilo do controlador.  
+ The tracker is initialized by setting the minimum size and clearing the style of the tracker.  
   
- [!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_2.cpp)]  
+ [!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]  
   
- As seguintes linhas verificação para verificar se o item está selecionado no momento e se o item está vinculado ao documento ou inserido nele.  Redimensionar as alças posicionados no interior da borda são adicionados ao estilo, indicando que o item está selecionado no momento.  Se o item está vinculado ao documento, pontilhado o estilo da borda é usado.  Uma borda sólida é usada se o item é inserido.  
+ The following lines check to see whether the item is currently selected and whether the item is linked to the document or embedded in it. Resize handles located on the inside of the border are added to the style, indicating that the item is currently selected. If the item is linked to your document, the dotted border style is used. A solid border is used if the item is embedded.  
   
- [!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_3.cpp)]  
+ [!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]  
   
- O seguinte código será interrompido o item com um padrão chocado se o item está atualmente aberto.  
+ The following code overlays the item with a hatched pattern if the item is currently open.  
   
- [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_4.cpp)]  
+ [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- Você pode chamar essa função sempre que o controlador tem que ser exibido.  Por exemplo, chamar essa função da função de `OnDraw` da sua classe da exibição.  Isso atualiza a aparência do controlador sempre que a exibição é repintada.  Para obter um exemplo completo, consulte a função de **CMainView::OnDraw** de exemplo [OCLIENT](../top/visual-cpp-samples.md)MFC OLE.  
+ You can then call this function whenever the tracker has to be displayed. For example, call this function from the `OnDraw` function of your view class. This updates the tracker's appearance whenever the view is repainted. For a complete example, see the **CMainView::OnDraw** function of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- Em seu aplicativo, os eventos que exigem o código do controlador, como redimensionar, se movendo, ou a ocorrência que detecta, ocorrerão.  Essas ações geralmente indicam que uma tentativa está sendo feita capture ou mover o item.  Nesses casos, você precisará optar entre o que foi agarrado: um identificador redimensionar ou parte da borda entre os identificadores são redimensionados.  O manipulador de mensagens de `OnLButtonDown` é uma boa fonte para testar a posição do mouse em relação ao item.  Chame um a `CRectTracker::HitTest`.  Se o teste retorna algo além de **CRectTracker::hitOutside**, o item está sendo redimensionado ou movido.  Em virtude disso, você deve fazer uma chamada à função de membro de `Track` .  Consulte a função de **CMainView::OnLButtonDown** localizada no exemplo [OCLIENT](../top/visual-cpp-samples.md) MFC OLE para obter um exemplo completo.  
+ In your application, events that require tracker code, such as resizing, moving, or hit detecting, will occur. These actions usually indicate that an attempt is being made to grab or move the item. In these cases, you will need to decide what was grabbed: a resize handle or a portion of the border between resize handles. The `OnLButtonDown` message handler is a good place to test the position of the mouse in relation to the item. Make a call to `CRectTracker::HitTest`. If the test returns something besides **CRectTracker::hitOutside**, the item is being resized or moved. Therefore, you should make a call to the `Track` member function. See the **CMainView::OnLButtonDown** function located in the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for a complete example.  
   
- A classe de `CRectTracker` o fornece várias formas diferentes de cursor usadas para indicar se um mover, redimensionar ou, a operação de arrastamento está ocorrendo.  Para tratar esse evento, verifique se o item sob o mouse está selecionado no momento.  Se for, faça uma chamada a `CRectTracker::SetCursor`, ou chame o manipulador padrão.  O exemplo a seguir é de exemplo [OCLIENT](../top/visual-cpp-samples.md)MFC OLE:  
+ The `CRectTracker` class provides several different cursor shapes used to indicate whether a move, resize, or drag operation is taking place. To handle this event, check to see whether the item currently under the mouse is selected. If it is, make a call to `CRectTracker::SetCursor`, or call the default handler. The following example is from the MFC OLE sample [OCLIENT](../visual-cpp-samples.md):  
   
- [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_5.cpp)]  
+ [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]  
   
-## Consulte também  
- [Controladores: implementando controladores no aplicativo OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+## <a name="see-also"></a>See Also  
+ [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+
+

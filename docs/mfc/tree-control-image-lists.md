@@ -1,42 +1,60 @@
 ---
-title: "Listas de imagens de controle de &#225;rvore | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CTreeCtrl, listas de imagens"
-  - "imagens [C++], listas em controles de árvore"
-  - "controles em árvore, listas de imagens"
+title: Tree Control Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- images [MFC], lists in tree controls
+- tree controls [MFC], image lists
+- CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Listas de imagens de controle de &#225;rvore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcc246de7a4a0d403129589a9af1495f6f9084cb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Cada item em um controle de árvore[CTreeCtrl](../mfc/reference/ctreectrl-class.md)\(\) pode ter um par de imagens de bitmap associadas a eles.  As imagens aparecerão no lado esquerdo do rótulo de um item.  Uma imagem é exibida quando o item é selecionado, e a outra é exibida quando o item não é selecionado.  Por exemplo, um item pode exibir uma pasta aberta quando está selecionado e uma pasta fechado quando não está selecionado.  
+---
+# <a name="tree-control-image-lists"></a>Tree Control Image Lists
+Each item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a pair of bitmapped images associated with it. The images appear on the left side of an item's label. One image is displayed when the item is selected, and the other is displayed when the item is not selected. For example, an item might display an open folder when it is selected and a closed folder when it is not selected.  
   
- Para usar imagens de item, você deve criar uma lista de imagem construindo um objeto de [CImageList](../Topic/CImageList%20Class.md) e usando a função de [CImageList::Create](../Topic/CImageList::Create.md) para criar a lista de imagem associado.  Adicione os bitmaps desejados à lista, e associar a lista com o controle de árvore usando a função de membro de [SetImageList](../Topic/CTreeCtrl::SetImageList.md) .  Por padrão, todos os itens exibem a primeira imagem na lista de imagem para os estados selecionados e nonselected.  Você pode alterar o comportamento padrão para um item específico especificando os índices das imagens selecionadas e nonselected ao adicionar o item ao controle de árvore usando a função de membro de [InsertItem](../Topic/CTreeCtrl::InsertItem.md) .  Você pode alterar os índices depois de adicionar um item usando a função de membro de [SetItemImage](../Topic/CTreeCtrl::SetItemImage.md) .  
+ To use item images, you must create an image list by constructing a [CImageList](../mfc/reference/cimagelist-class.md) object and using the [CImageList::Create](../mfc/reference/cimagelist-class.md#create) function to create the associated image list. Then add the desired bitmaps to the list, and associate the list with the tree control by using the [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) member function. By default, all items display the first image in the image list for both the selected and nonselected states. You can change the default behavior for a particular item by specifying the indexes of the selected and nonselected images when adding the item to the tree control using the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. You can change the indexes after adding an item by using the [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) member function.  
   
- As listas de imagem de um controle de árvore também podem conter as imagens de sobreposição, que é criada para ser sobrepostos em imagens do item.  Um valor diferente de zero nos bits 8 a 11 do estado de um item do controle de árvore especifica o índice de uma imagem de sobreposição \(0 não indica nenhuma imagem da sobreposição\).  Como um de 4 bits, índice for usado, as imagens de sobreposição devem estar entre as primeiras 15 imagens em listas da imagem.  Para obter mais informações sobre os estados do item do controle de árvore, consulte [O item do controle de árvore indica a visão geral](../mfc/tree-control-item-states-overview.md) anteriormente neste tópico.  
+ A tree control's image lists can also contain overlay images, which are designed to be superimposed on item images. A nonzero value in bits 8 through 11 of a tree control item's state specifies the one-based index of an overlay image (0 indicates no overlay image). Because a 4-bit, one-based index is used, overlay images must be among the first 15 images in the image lists. For more information about tree control item states, see [Tree Control Item States Overview](../mfc/tree-control-item-states-overview.md) earlier in this topic.  
   
- Se uma lista de imagem do estado for especificada, um espaço reservas de controle de árvore à esquerda do ícone de cada item para uma imagem do estado.  Um aplicativo pode usar imagens de estado, como caixas de seleção marcadas e desmarcadas, para indicar estados definidos pelo aplicativo do item.  Um valor diferente de zero nos bits 12 a 15 especifica o índice de uma imagem do estado \(0 não indica nenhuma imagem do estado\).  
+ If a state image list is specified, a tree control reserves space to the left of each item's icon for a state image. An application can use state images, such as checked and cleared check boxes, to indicate application-defined item states. A nonzero value in bits 12 through 15 specifies the one-based index of a state image (0 indicates no state image).  
   
- Especificando o valor de **I\_IMAGECALLBACK** em vez do índice de uma imagem, você pode retardar especificar a imagem selecionada ou nonselected até que o item está prestes a ser redesenhado.  **I\_IMAGECALLBACK** direciona o controle de árvore para consultar o aplicativo para o índice enviando uma notificação de [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) .  
+ By specifying the **I_IMAGECALLBACK** value instead of the index of an image, you can delay specifying the selected or nonselected image until the item is about to be redrawn. **I_IMAGECALLBACK** directs the tree control to query the application for the index by sending the [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message.  
   
- A função de membro de [GetImageList](../Topic/CTreeCtrl::GetImageList.md) recupera o identificador da lista de imagem de um controle de árvore.  Essa função é útil se você precisar adicionar mais imagens na lista.  Para obter mais informações sobre listas da imagem, consulte [Usando CImageList](../mfc/using-cimagelist.md), [CImageList](../Topic/CImageList%20Class.md)*na referência de MFC*, e [Listas de imagem](http://msdn.microsoft.com/library/windows/desktop/bb761389) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ The [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) member function retrieves the handle of a tree control's image list. This function is useful if you need to add more images to the list. For more information about image lists, see [Using CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference*, and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK.  
   
-## Consulte também  
- [Usando CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

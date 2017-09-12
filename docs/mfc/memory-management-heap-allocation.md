@@ -1,40 +1,58 @@
 ---
-title: "Gerenciamento de mem&#243;ria: aloca&#231;&#227;o do heap | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador delete, usando com MFC de depuração"
-  - "detectando perdas de memória"
-  - "alocação de heap"
-  - "alocação de heap, descrito"
-  - "alocação de memória, memória heap"
-  - "perdas de memória, detectando"
-  - "memória, detectando perdas"
-  - "Operador new, usando com MFC de depuração"
+title: 'Memory Management: Heap Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC], detecting leaks
+- delete operator [MFC], using with debug MFC
+- heap allocation [MFC], described
+- memory allocation [MFC], heap memory
+- memory leaks [MFC], detecting
+- new operator [MFC], using with debug MFC
+- heap allocation [MFC]
+- detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gerenciamento de mem&#243;ria: aloca&#231;&#227;o do heap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3fa05362ea2d20b353ed6532686fbc54dcabb60
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O heap é reservado para as necessidades de alocação de memória do programa.  É uma área independentemente do código de programa e de pilha.  Os programas de 2.0 c típicos usam as funções `malloc` e **free** o aloque e desaloque a memória heap.  A versão de depuração MFC fornece versões alteradas dos operadores internos **new** e **delete** C\+\+ o aloque e desaloque objetos na memória heap.  
+---
+# <a name="memory-management-heap-allocation"></a>Memory Management: Heap Allocation
+The heap is reserved for the memory allocation needs of the program. It is an area apart from the program code and the stack. Typical C programs use the functions `malloc` and **free** to allocate and deallocate heap memory. The Debug version of MFC provides modified versions of the C++ built-in operators **new** and **delete** to allocate and deallocate objects in heap memory.  
   
- Quando você usa **new** e **delete** em vez de `malloc` e de **free**, você pode aproveitar os aprimoramentos de depuração de gerenciamento de memória da biblioteca de classe, que podem ser úteis para detectar possíveis vazamentos de memória.  Quando você cria seu programa com a versão lançada de MFC, as versões padrão dos operadores de **new** e de **delete** fornecem uma maneira eficiente de aloque e desaloque a memória \(a versão lançada de MFC não fornece modificadas versões destes operadores\).  
+ When you use **new** and **delete** instead of `malloc` and **free**, you are able to take advantage of the class library's memory-management debugging enhancements, which can be useful in detecting memory leaks. When you build your program with the Release version of MFC, the standard versions of the **new** and **delete** operators provide an efficient way to allocate and deallocate memory (the Release version of MFC does not provide modified versions of these operators).  
   
- Observe que o tamanho total dos objetos alocados no heap é limitado apenas pela memória virtual disponível do sistema.  
+ Note that the total size of objects allocated on the heap is limited only by your system's available virtual memory.  
   
-## Consulte também  
- [Gerenciamento de memória](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

@@ -1,41 +1,59 @@
 ---
-title: "Trabalhando com um controle de cabe&#231;alho | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles de cabeçalho"
-  - "controles de cabeçalho, trabalhando com"
+title: Working with a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], working with
+- header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Trabalhando com um controle de cabe&#231;alho
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9504196cddd69effb45300a1130051e2b8a1c184
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A forma fácil de usar um controle de cabeçalho \([CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md)\) está relacionado a um controle na lista; [Usando CListCtrl](../Topic/Using%20CListCtrl.md) consulte mais adiante nesta família do tópico.  Você também pode usar um controle de cabeçalho por si só.  O **InitCommonControls** MFC chama para você.  As tarefas principais são os seguintes:  
+---
+# <a name="working-with-a-header-control"></a>Working with a Header Control
+The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) is in conjunction with a list control; see [Using CListCtrl](../mfc/using-clistctrl.md) later in this topic family. You can also use a header control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [Criando o controle de cabeçalho](../mfc/creating-the-header-control.md)  
+-   [Creating the header control](../mfc/creating-the-header-control.md)  
   
--   [Adicionando itens ao controle de cabeçalho](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding items to the header control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Classificando itens no controle de cabeçalho](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Notificações de cabeçalho\- controle de processamento](../mfc/processing-header-control-notifications.md)  
+-   [Processing header-control notifications](../mfc/processing-header-control-notifications.md)  
   
- Se o objeto de controle do cabeçalho é inserido em uma exibição ou uma classe pai da caixa de diálogo, o controle é destruído no pai é destruído.  
+ If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## Consulte também  
- [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,61 +1,79 @@
 ---
-title: "Filosofia de design da classe geral | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], projeto de classe de MFC"
-  - "projetando classes"
-  - "MFC [C++], API do Windows"
-  - "Visual C, Chamadas à API do Windows"
-  - "API do Windows [C++], e MFC"
+title: General Class Design Philosophy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- designing classes [MFC]
+- MFC, Windows API
+- Visual C, Windows API calls
+- classes [MFC], MFC class design
+- Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Filosofia de design da classe geral
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 020ec3f850cb626206e14f2a8782b4a065670815
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Microsoft Windows foi criado muito antes da linguagem C\+\+ fosse popular.  Como os milhares de aplicativos usam a interface de programação de aplicativo \(API\) do Windows do C \- idioma, essa interface será mantida para o futuro próximo.  Qualquer interface do windows C\+\+ em virtude disso deve ser criada sobre o C \- idioma API de procedimento.  Isso garante que os aplicativos C\+\+ podem coexistir com aplicativos C.  
+---
+# <a name="general-class-design-philosophy"></a>General Class Design Philosophy
+Microsoft Windows was designed long before the C++ language became popular. Because thousands of applications use the C-language Windows application programming interface (API), that interface will be maintained for the foreseeable future. Any C++ Windows interface must therefore be built on top of the procedural C-language API. This guarantees that C++ applications will be able to coexist with C applications.  
   
- A biblioteca de classes do Microsoft é uma interface orientada a objeto para o windows que satisfaça os seguintes metas de design:  
+ The Microsoft Foundation Class Library is an object-oriented interface to Windows that meets the following design goals:  
   
--   Redução significativa no máximo para escrever um aplicativo do windows.  
+-   Significant reduction in the effort to write an application for Windows.  
   
--   Comparável a velocidade de execução de linguagem C \- API.  
+-   Execution speed comparable to that of the C-language API.  
   
--   Sobrecarga mínima do tamanho de código.  
+-   Minimum code size overhead.  
   
--   Capacidade de chamar diretamente qualquer função C do windows.  
+-   Ability to call any Windows C function directly.  
   
--   Conversão mais fácil dos aplicativos existentes de C a C\+\+.  
+-   Easier conversion of existing C applications to C++.  
   
--   Capacidade de aproveitar a base existente do windows do C \- linguagem de programação a experiência do.  
+-   Ability to leverage from the existing base of C-language Windows programming experience.  
   
--   Uso mais fácil da API do windows com C\+\+ do que com C.  
+-   Easier use of the Windows API with C++ than with C.  
   
--   Mais fácil de usar o entanto abstrações avançadas de recursos complicada como controles ActiveX, suporte da base de dados, impressão, barras de ferramentas, e barras de status.  
+-   Easier to use yet powerful abstractions of complicated features such as ActiveX controls, database support, printing, toolbars, and status bars.  
   
--   Retifique API do windows para C\+\+ que usa recursos efetivamente de linguagem C\+\+.  
+-   True Windows API for C++ that effectively uses C++ language features.  
   
- Para obter mais na criação da biblioteca MFC, consulte:  
+ For more on the design of the MFC Library, see:  
   
--   [A estrutura de aplicativo](../mfc/application-framework.md)  
+-   [The Application Framework](../mfc/application-framework.md)  
   
--   [Relação a linguagem C \- API](../mfc/relationship-to-the-c-language-api.md)  
+-   [Relationship to the C-Language API](../mfc/relationship-to-the-c-language-api.md)  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

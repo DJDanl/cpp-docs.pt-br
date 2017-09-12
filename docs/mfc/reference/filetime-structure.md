@@ -1,5 +1,5 @@
 ---
-title: Estrutura FILETIME | Documentos do Microsoft
+title: FILETIME Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- FILETIME structure
+- FILETIME structure [MFC]
 ms.assetid: e09557e2-b6d7-4dd5-a5b9-6328bca88595
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bf835cf913e4cb758983d21f63ef41a1af4c8a85
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 52f34a50872ad2e66f5fbbb6f211ac81e97f5ee8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="filetime-structure"></a>Estrutura FILETIME
-O `FILETIME` estrutura é um valor de 64 bits que representa o número de intervalos de 100 nanossegundos desde 1 de janeiro de 1601.  
+# <a name="filetime-structure"></a>FILETIME Structure
+The `FILETIME` structure is a 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _FILETIME {  
@@ -52,18 +52,18 @@ typedef struct _FILETIME {
 } FILETIME, *PFILETIME, *LPFILETIME;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *dwLowDateTime*  
- Especifica a baixa de 32 bits do tempo de arquivo.  
+ Specifies the low 32 bits of the file time.  
   
  *dwHighDateTime*  
- Especifica a alta de 32 bits do tempo de arquivo.  
+ Specifies the high 32 bits of the file time.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** windef.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** windef.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 
 

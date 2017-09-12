@@ -1,247 +1,261 @@
 ---
-title: "TN006: mapas de mensagem | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.messages.maps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapas de mensagem [C++], Mensagens do Windows"
-  - "Macro ON_COMMAND"
-  - "Macro ON_COMMAND_EX"
-  - "Macro ON_COMMAND_RANGE"
-  - "Macro ON_COMMAND_RANGE_EX"
-  - "Macro ON_CONTROL"
-  - "Macro ON_CONTROL_RANGE"
-  - "Macro ON_MESSAGE"
-  - "ON_NOTIFY (mensagem)"
-  - "Macro ON_NOTIFY_RANGE"
-  - "Macro ON_REGISTERED_MESSAGE"
-  - "Macro ON_UPDATE_COMMAND_UI"
-  - "TN006"
-  - "mensagens do Windows [C++], mapas de mensagem"
+title: 'TN006: Message Maps | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.messages.maps
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- ON_NOTIFY_RANGE macro [MFC]
+- ON_COMMAND macro [MFC]
+- ON_CONTROL_RANGE macro [MFC]
+- ON_REGISTERED_MESSAGE macro [MFC]
+- ON_NOTIFY message [MFC]
+- ON_COMMAND_RANGE_EX macro [MFC]
+- ON_MESSAGE macro [MFC]
+- Windows messages [MFC], message maps
+- ON_COMMAND_RANGE macro [MFC]
+- TN006
+- ON_CONTROL macro [MFC]
+- ON_COMMAND_EX macro [MFC]
+- message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
 caps.latest.revision: 16
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN006: mapas de mensagem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 61f2fb43508c80e8ad1aa58c2f74b967837b6874
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essa observação descreve a facilidade da mensagem MFC.  
+---
+# <a name="tn006-message-maps"></a>TN006: Message Maps
+This note describes the MFC message map facility.  
   
-## O problema  
- Microsoft Windows implementa funções virtuais nas classes da janela que usam a facilidade da mensagem.  Devido a grande número de mensagens envolvidas, forneça uma função virtual separada para cada mensagem do windows cria um vtable proibitiva grande.  
+## <a name="the-problem"></a>The Problem  
+ Microsoft Windows implements virtual functions in window classes that use its messaging facility. Due to the large number of messages involved, providing a separate virtual function for each Windows message would create a prohibitively large vtable.  
   
- Como o número de mensagens definidas pelo sistema do windows foi alterada com o passar do tempo, e porque os aplicativos podem definir suas próprias mensagens do windows, mapas de mensagem fornecem um nível de nomes indiretos que impede que as alterações de interface interrompam o código existente.  
+ Because the number of system-defined Windows messages changes over time, and because applications can define their own Windows messages, message maps provide a level of indirection that prevents interface changes from breaking existing code.  
   
-## Visão Geral  
- MFC O fornece uma alternativa à instrução de alternância que foi usada em programas baseados no Windows tradicionais para tratar mensagens enviadas para uma janela.  Um mapeamento das mensagens para os métodos pode ser definido de modo que quando uma mensagem é recebida por uma janela do, o método é chamado apropriado automaticamente.  Essa facilidade retornadas o mapa é criada para ser semelhante às funções virtuais mas tem os benefícios adicionais não possíveis com funções virtuais C\+\+.  
+## <a name="overview"></a>Overview  
+ MFC provides an alternative to the switch statement that was used in traditional Windows-based programs to handle messages sent to a window. A mapping from messages to methods can be defined so that when a message is received by a window, the appropriate method is called automatically. This message-map facility is designed to resemble virtual functions but has additional benefits not possible with C++ virtual functions.  
   
-## Definindo um mapa de mensagem  
- A macro de [DECLARE\_MESSAGE\_MAP](../Topic/DECLARE_MESSAGE_MAP.md) declara três membros para uma classe.  
+## <a name="defining-a-message-map"></a>Defining a Message Map  
+ The [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) macro declares three members for a class.  
   
--   Uma matriz privada de entradas de `AFX_MSGMAP_ENTRY` chamou `_messageEntries`.  
+-   A private array of `AFX_MSGMAP_ENTRY` entries called `_messageEntries`.  
   
--   Uma estrutura protegidos de `AFX_MSGMAP` chamou `messageMap` que aponta para `_messageEntries` a matriz.  
+-   A protected `AFX_MSGMAP` structure called `messageMap` that points to the `_messageEntries` array.  
   
--   Uma função protegida virtual chamado `GetMessageMap` que retorna o endereço de `messageMap`.  
+-   A protected virtual function called `GetMessageMap` that returns the address of `messageMap`.  
   
- Esta macro deve ser colocado na declaração de qualquer classe que usa mapas da mensagem.  Por convenção, estiver no final de declaração da classe.  Por exemplo:  
+ This macro should be put in the declaration of any class using message maps. By convention, it is at the end of the class declaration. For example:  
   
 ```  
 class CMyWnd : public CMyParentWndClass  
-{  
-    // my stuff...  
-  
-protected:  
-    //{{AFX_MSG(CMyWnd)  
-    afx_msg void OnPaint();  
-    //}}AFX_MSG  
-  
-    DECLARE_MESSAGE_MAP()  
+{ *// my stuff...  
+ 
+protected: *//{{AFX_MSG(CMyWnd)  
+    afx_msg void OnPaint();
+*//}}AFX_MSG  
+ 
+    DECLARE_MESSAGE_MAP() 
 };  
 ```  
   
- Este é o formato gerado por AppWizard e ClassWizard quando cria novas classes.  Os colchetes de \/\/{} \/\/{e} são necessários para ClassWizard.  
+ This is the format generated by AppWizard and ClassWizard when they create new classes. The //{{ and //}} brackets are needed for ClassWizard.  
   
- A tabela da mensagem é definida usando um conjunto de macros que se expandem em entradas da mensagem.  Início de uma tabela com uma chamada macro de [BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md) , que define a classe que é tratada por esse mapa da mensagem e pela classe pai ao qual as mensagens não manipulados são transmitidas.  A tabela termina com a chamada macro de [END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md) .  
+ The message map's table is defined by using a set of macros that expand to message map entries. A table starts with a [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro call, which defines the class that is handled by this message map and the parent class to which unhandled messages are passed. The table ends with the [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) macro call.  
   
- Entre esses dois chamadas macro é uma entrada para cada mensagem que será tratada por esse mapa da mensagem.  Cada mensagem padrão do windows tem uma macro do formulário ON\_WM\_*MESSAGE\_NAME* que gerencia uma entrada para essa mensagem.  
+ Between these two macro calls is an entry for each message to be handled by this message map. Every standard Windows message has a macro of the form ON_WM_*MESSAGE_NAME* that generates an entry for that message.  
   
- Uma assinatura da função padrão foi definida desempacotando os parâmetros de cada mensagem do windows e fornecendo a segurança de tipo.  Essas assinaturas podem ser localizadas no arquivo Afxwin.h na declaração de [CWnd](../Topic/CWnd%20Class.md).  Cada um é marcado com a palavra\-chave `afx_msg` para a identificação fácil.  
+ A standard function signature has been defined for unpacking the parameters of each Windows message and providing type safety. These signatures may be found in the file Afxwin.h in the declaration of [CWnd](../mfc/reference/cwnd-class.md). Each one is marked with the keyword `afx_msg` for easy identification.  
   
 > [!NOTE]
->  ClassWizard requer que você use a palavra\-chave de `afx_msg` em suas declarações de manipulador da mensagem.  
+>  ClassWizard requires that you use the `afx_msg` keyword in your message map handler declarations.  
   
- Essas assinaturas da função foram derivadas usando uma convenção simples.  O nome da função sempre inicia com `"On`”.  Isso é seguido pelo nome da mensagem do windows com “WM\_” removido e a primeira letra de cada palavra colocar em maiúscula.  Ordem dos parâmetros é `wParam` seguido por `LOWORD`\(`lParam`\) em `HIWORD`\(`lParam`\).  Os parâmetros não usado não são passados.  Todos os identificadores que estão envolvidas por classes de MFC são convertidas em ponteiros para os objetos apropriados MFC.  O exemplo a seguir mostra como lidar com a mensagem de `WM_PAINT` e fazer com que a função de `CMyWnd::OnPaint` a ser chamada:  
+ These function signatures were derived by using a simple convention. The name of the function always starts with `"On`". This is followed by the name of the Windows message with the "WM_" removed and the first letter of each word capitalized. The ordering of the parameters is `wParam` followed by `LOWORD`(`lParam`) then `HIWORD`(`lParam`). Unused parameters are not passed. Any handles that are wrapped by MFC classes are converted to pointers to the appropriate MFC objects. The following example shows how to handle the `WM_PAINT` message and cause the `CMyWnd::OnPaint` function to be called:  
   
 ```  
-BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
-    //{{AFX_MSG_MAP(CMyWnd)  
-    ON_WM_PAINT()  
-    //}}AFX_MSG_MAP  
+BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)  
+    ON_WM_PAINT() *//}}AFX_MSG_MAP  
 END_MESSAGE_MAP()  
 ```  
   
- A tabela da mensagem deve ser definida fora do escopo da definição da função ou da classe.  Não deve ser colocada em um bloco extern de C “2.0”.  
+ The message map table must be defined outside the scope of any function or class definition. It should not be put in an extern "C" block.  
   
 > [!NOTE]
->  ClassWizard modificará as entradas da mensagem que ocorrem entre o colchete de fechamento de \/\/{} \/\/{e}.  
+>  ClassWizard will modify the message map entries that occur between the //{{ and //}} comment bracket.  
   
-## Mensagens definidas pelo usuário do windows  
- As mensagens definidas pelo usuário podem ser incluídas em um mapa de mensagem usando a macro de [ON\_MESSAGE](../Topic/ON_MESSAGE.md) .  Esta macro aceita um número de mensagem e um método do formulário:  
+## <a name="user-defined-windows-messages"></a>User Defined Windows Messages  
+ User-defined messages may be included in a message map by using the [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) macro. This macro accepts a message number and a method of the form:  
   
-```  
-    // inside the class declaration  
-    afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);  
-  
-    #define WM_MYMESSAGE (WM_USER + 100)  
-  
+``` *// inside the class declaration  
+    afx_msg LRESULT OnMyMessage(WPARAM wParam, LPARAM lParam);
+
+ 
+ #<a name="define-wmmymessage-wmuser--100"></a>define WM_MYMESSAGE (WM_USER + 100)  
+ 
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
     ON_MESSAGE(WM_MYMESSAGE, OnMyMessage)  
 END_MESSAGE_MAP()  
 ```  
   
- Neste exemplo, é estabelecemos um manipulador para uma mensagem personalizada que tem um ID de mensagem do windows derivado da base de `WM_USER` padrão para mensagens definidas pelo usuário.  O exemplo a seguir mostra como chamar esse manipulador:  
+ In this example, we establish a handler for a custom message that has a Windows message ID derived from the standard `WM_USER` base for user-defined messages. The following example shows how to call this handler:  
   
 ```  
 CWnd* pWnd = ...;  
-pWnd->SendMessage(WM_MYMESSAGE);  
+pWnd->SendMessage(WM_MYMESSAGE);
 ```  
   
- O intervalo das mensagens definidas pelo usuário que usam essa abordagem deve estar no intervalo `WM_USER` a 0x7fff.  
+ The range of user-defined messages that use this approach must be in the range `WM_USER` to 0x7fff.  
   
 > [!NOTE]
->  ClassWizard não oferece suporte a inserir rotinas do manipulador de `ON_MESSAGE` da interface de usuário de ClassWizard.  Você deve digitar manualmente no publicador do Visual C\+\+.  ClassWizard analisará essas entradas e permitirá procurar\-las exatamente como todas as outras entradas retornadas mapa.  
+>  ClassWizard does not support entering `ON_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the Visual C++ editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
-## Mensagens registradas do windows  
- A função de [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) é usada para definir uma mensagem de nova janela que é garantida para ser exclusivo em todo o sistema.  A macro `ON_REGISTERED_MESSAGE` é usado para tratar essas mensagens.  Esta macro aceita um nome de uma variável de `UINT NEAR` que contém a ID de mensagem registrada do windows  Por exemplo  
+## Registered Windows Messages  
+ The [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function is used to define a new window message that is guaranteed to be unique throughout the system. The macro `ON_REGISTERED_MESSAGE` is used to handle these messages. This macro accepts a name of a `UINT NEAR` variable that contains the registered windows message ID. For example  
   
 ```  
 class CMyWnd : public CMyParentWndClass  
 {  
 public:  
-    CMyWnd();  
-  
-    //{{AFX_MSG(CMyWnd)  
-    afx_msg LRESULT OnFind(WPARAM wParam, LPARAM lParam);  
-    //}}AFX_MSG  
-  
-    DECLARE_MESSAGE_MAP()  
+    CMyWnd();
+
+ *//{{AFX_MSG(CMyWnd)  
+    afx_msg LRESULT OnFind(WPARAM wParam, LPARAM lParam); *//}}AFX_MSG  
+ 
+    DECLARE_MESSAGE_MAP() 
 };  
-  
-static UINT NEAR WM_FIND = RegisterWindowMessage("COMMDLG_FIND");  
-  
-BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)  
-    //{{AFX_MSG_MAP(CMyWnd)  
-    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)  
-    //}}AFX_MSG_MAP  
+ 
+static UINT NEAR WM_FIND = RegisterWindowMessage("COMMDLG_FIND");
+
+ 
+BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass) *//{{AFX_MSG_MAP(CMyWnd)  
+    ON_REGISTERED_MESSAGE(WM_FIND, OnFind) *//}}AFX_MSG_MAP  
 END_MESSAGE_MAP()  
 ```  
   
- A variável registrado da ID de mensagem do windows \(WM\_FIND neste exemplo\) deve ser uma variável de `NEAR` devido à maneira como `ON_REGISTERED_MESSAGE` é implementado.  
+ The registered Windows message ID variable (WM_FIND in this example) must be a `NEAR` variable because of the way `ON_REGISTERED_MESSAGE` is implemented.  
   
- O intervalo das mensagens definidas pelo usuário que usam essa abordagem será no intervalo 0xC000 a 0xFFFF.  
+ The range of user-defined messages that use this approach will be in the range 0xC000 to 0xFFFF.  
   
 > [!NOTE]
->  ClassWizard não oferece suporte a inserir rotinas do manipulador de `ON_REGISTERED_MESSAGE` da interface de usuário de ClassWizard.  Você deve digitar manualmente no editor de texto.  ClassWizard analisará essas entradas e permitirá procurar\-las exatamente como todas as outras entradas retornadas mapa.  
+>  ClassWizard does not support entering `ON_REGISTERED_MESSAGE` handler routines from the ClassWizard user interface. You must manually enter them from the text editor. ClassWizard will parse these entries and let you browse them just like any other message-map entries.  
   
-## Mensagens de comando  
- As mensagens do comando nos menus e de aceleradores são tratadas em mapas de mensagem com a macro de `ON_COMMAND` .  Esta macro aceita um ID do comando e um método.  Somente a mensagem específica de `WM_COMMAND` que tem `wParam` igual ao ID especificado do comando é tratada pelo método especificado na entrada retornadas mapa.  As funções de membro do manipulador do comando não têm nenhum parâmetro e `void`de retorno.  A macro tem o seguinte formato:  
+## Command Messages  
+ Command messages from menus and accelerators are handled in message maps with the `ON_COMMAND` macro. This macro accepts a command ID and a method. Only the specific `WM_COMMAND` message that has a `wParam` equal to the specified command ID is handled by the method specified in the message-map entry. Command handler member functions take no parameters and return `void`. The macro has the following form:  
   
 ```  
 ON_COMMAND(id, memberFxn)  
 ```  
   
- As mensagens de atualização de comando são roteadas através do mesmo mecanismo, mas usam a macro de `ON_UPDATE_COMMAND_UI` em vez disso.  As funções de membro do manipulador de atualização do comando têm um único parâmetro, um ponteiro para um objeto de [CCmdUI](../Topic/CCmdUI%20Class.md) , e `void`de retorno.  A macro tem o formato  
+ Command update messages are routed through the same mechanism, but use the `ON_UPDATE_COMMAND_UI` macro instead. Command update handler member functions take a single parameter, a pointer to a [CCmdUI](../mfc/reference/ccmdui-class.md) object, and return `void`. The macro has the form  
   
 ```  
 ON_UPDATE_COMMAND_UI(id, memberFxn)  
 ```  
   
- Usuários avançados podem usar a macro de `ON_COMMAND_EX` , que é um formulário estendido de manipuladores de mensagem do comando.  A macro fornece um superconjunto da funcionalidade de `ON_COMMAND` .  As funções de membro estendidos de comando\- manipulador têm um único parâmetro, `UINT` que contém a ID do comando, e retornam `BOOL`.  O valor de retorno deve ser `TRUE` para indicar que o comando esteve tratado.  Se o roteamento não continuará a outros objetos de destino do comando.  
+ Advanced users can use the `ON_COMMAND_EX` macro, which is an extended form of command message handlers. The macro provides a superset of the `ON_COMMAND` functionality. Extended command-handler member functions take a single parameter, a `UINT` that contains the command ID, and return a `BOOL`. The return value should be `TRUE` to indicate that the command has been handled. Otherwise routing will continue to other command target objects.  
   
- Exemplos destes formatos:  
+ Examples of these forms:  
   
--   Resource.h interna \(geralmente gerado pelo Visual C\+\+\)  
+-   Inside Resource.h (usually generated by Visual C++)  
   
-    ```  
-    #define    ID_MYCMD      100  
-    #define    ID_COMPLEX    101  
-    ```  
+ ```  
+ #<a name="define----idmycmd------100"></a>define    ID_MYCMD      100  
+ #<a name="define----idcomplex----101"></a>define    ID_COMPLEX    101  
+ ```  
   
--   Na declaração de classe  
+-   Inside the class declaration  
   
-    ```  
-    afx_msg void OnMyCommand();  
-    afx_msg void OnUpdateMyCommand(CCmdUI* pCmdUI);  
-    afx_msg BOOL OnComplexCommand(UINT nID);  
-    ```  
+ ```  
+    afx_msg void OnMyCommand();
+afx_msg void OnUpdateMyCommand(CCmdUI* pCmdUI);
+
+    afx_msg BOOL OnComplexCommand(UINT nID);
+
+ ```  
   
--   Na definição da mensagem  
+-   Inside the message map definition  
   
-    ```  
-    ON_COMMAND(ID_MYCMD, OnMyCommand)  
-    ON_UPDATE_COMMAND_UI(ID_MYCMD, OnUpdateMyCommand)  
-    ON_COMMAND_EX(ID_MYCMD, OnComplexCommand)  
-    ```  
+ ```  
+    ON_COMMAND(ID_MYCMD,
+    OnMyCommand)  
+    ON_UPDATE_COMMAND_UI(ID_MYCMD,
+    OnUpdateMyCommand)  
+    ON_COMMAND_EX(ID_MYCMD,
+    OnComplexCommand)  
+ ```  
   
--   No arquivo de implementação  
+-   In the implementation file  
   
-    ```  
+ ```  
     void CMyClass::OnMyCommand()  
-    {  
-        // handle the command  
-    }  
-  
+ { *// handle the command  
+ }  
+ 
     void CMyClass::OnUpdateMyCommand(CCmdUI* pCmdUI)  
-    {  
-        // set the UI state with pCmdUI  
-    }  
-  
+ { *// set the UI state with pCmdUI  
+ }  
+ 
     BOOL CMyClass::OnComplexCommand(UINT nID)  
-    {  
-        // handle the command  
-        return TRUE;  
-    }  
-    ```  
+ { *// handle the command  
+    return TRUE;  
+ }  
+ ```  
   
- Usuários avançados podem tratar um intervalo de comandos usando um manipulador de um único comando: [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md) ou `ON_COMMAND_RANGE_EX`.  Consulte a documentação do produto para obter mais informações sobre esses macros.  
+ Advanced users can handle a range of commands by using a single command handler: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) or `ON_COMMAND_RANGE_EX`. See the product documentation for more information about these macros.  
   
 > [!NOTE]
->  ClassWizard oferece suporte à criação de `ON_COMMAND` e de manipuladores de `ON_UPDATE_COMMAND_UI` , mas não da suporte à criação de `ON_COMMAND_EX` ou de manipuladores de `ON_COMMAND_RANGE` .  No entanto, o assistente da classe analisá\-lo\-á analisada e deixá\-l\-á procurar todas as quatro variantes de manipulador de comando.  
+>  ClassWizard supports creating `ON_COMMAND` and `ON_UPDATE_COMMAND_UI` handlers, but it does not support creating `ON_COMMAND_EX` or `ON_COMMAND_RANGE` handlers. However, Class Wizard will parse and let you browse all four command handler variants.  
   
-## Controle notificações  
- As mensagens que são enviadas dos controles filho a uma janela tem um bit adicional de informações na entrada da mensagem: a ID de controle  O manipulador de mensagens especificado em uma entrada da mensagem é chamado apenas se as seguintes condições forem verdadeiras:  
+## Control Notification Messages  
+ Messages that are sent from child controls to a window have an extra bit of information in their message map entry: the control's ID. The message handler specified in a message map entry is called only if the following conditions are true:  
   
--   O código da notificação de controle \(palavras de alta `lParam`\), como BN\_CLICKED, corresponde ao código de notificação especificado na entrada retornadas mapa.  
+-   The control notification code (high word of `lParam`), such as BN_CLICKED, matches the notification code specified in the message-map entry.  
   
--   A ID de controle \(`wParam`\) corresponde à ID do controle especificado na entrada retornadas mapa.  
+-   The control ID (`wParam`) matches the control ID specified in the message-map entry.  
   
- As notificações de controle personalizado podem usar a macro de [ON\_CONTROL](../Topic/ON_CONTROL.md) para definir uma entrada da mensagem com um código personalizado de notificação.  Esta macro tem o formato  
+ Custom control notification messages may use the [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) macro to define a message map entry with a custom notification code. This macro has the form  
   
 ```  
 ON_CONTROL(wNotificationCode, id, memberFxn)  
 ```  
   
- Para uso avançado [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md) pode ser usado para tratar uma notificação específica de controle de um intervalo de controles com o mesmo manipulador.  
+ For advanced usage [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) can be used to handle a specific control notification from a range of controls with the same handler.  
   
 > [!NOTE]
->  ClassWizard não oferece suporte à criação de um manipulador de `ON_CONTROL` ou de `ON_CONTROL_RANGE` na interface do usuário.  Você deve fazer logon com manualmente no editor de texto.  ClassWizard analisará essas entradas e permitirá procurar\-las exatamente como todas as outras entradas do mapa da mensagem.  
+>  ClassWizard does not support creating an `ON_CONTROL` or `ON_CONTROL_RANGE` handler in the user interface. You must manually enter them with the text editor. ClassWizard will parse these entries and let you browse them just like any other message map entries.  
   
- Os controles comum do windows usam [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mais avançada para notificações complexas do controle.  Esta versão MFC tem suporte direto dessa nova mensagem usando as macros de `ON_NOTIFY` e de `ON_NOTIFY_RANGE` .  Consulte a documentação do produto para obter mais informações sobre esses macros.  
+ The Windows Common Controls use the more powerful [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) for complex control notifications. This version of MFC has direct support for this new message by using the `ON_NOTIFY` and `ON_NOTIFY_RANGE` macros. See the product documentation for more information about these macros.  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

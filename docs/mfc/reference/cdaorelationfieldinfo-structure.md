@@ -1,5 +1,5 @@
 ---
-title: Estrutura CDaoRelationFieldInfo | Documentos do Microsoft
+title: CDaoRelationFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationFieldInfo structure
+- CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 58505b69e8acb04122bbf62d8cecf6635a4efb8a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationfieldinfo-structure"></a>Estrutura CDaoRelationFieldInfo
-O `CDaoRelationFieldInfo` estrutura contém informações sobre um campo em uma relação definida para objetos de acesso de dados (DAO).  
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo Structure
+The `CDaoRelationFieldInfo` structure contains information about a field in a relation defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationFieldInfo  
@@ -54,24 +54,24 @@ struct CDaoRelationFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- O nome do campo na tabela primária da relação.  
+ The name of the field in the primary table of the relation.  
   
  `m_strForeignName`  
- O nome do campo da tabela externa da relação.  
+ The name of the field in the foreign table of the relation.  
   
-## <a name="remarks"></a>Comentários  
- Um objeto de relação do DAO Especifica os campos em uma tabela primária e os campos em uma tabela externa que definem a relação. As referências ao principal na definição de estrutura acima indicam como as informações são retornadas no `m_pFieldInfos` membro de um [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto obtido chamando o [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) a função de membro da classe `CDaoDatabase`.  
+## <a name="remarks"></a>Remarks  
+ A DAO relation object specifies the fields in a primary table and the fields in a foreign table that define the relation. The references to Primary in the structure definition above indicate how the information is returned in the `m_pFieldInfos` member of a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object obtained by calling the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of class `CDaoDatabase`.  
   
- Objetos e objetos de campo de relação não são representados por uma classe do MFC. Em vez disso, o DAO objetos objetos MFC subjacentes da classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contém uma coleção de objetos de relação, chamado de coleção de relações. Cada objeto de relação, por sua vez, contém uma coleção de objetos de campo de relação. Cada objeto de campo de relação um campo na tabela primária se correlaciona com um campo da tabela externa. Juntos, os objetos de campo de relação definem um grupo de campos em cada tabela, que juntas definem a relação. `CDaoDatabase`permite que você acesse objetos de relação com um `CDaoRelationInfo` objeto chamando o `GetRelationInfo` função de membro. O `CDaoRelationInfo` objeto, em seguida, tem um membro de dados, `m_pFieldInfos`, que aponta para uma matriz de `CDaoRelationFieldInfo` objetos.  
+ Relation objects and relation field objects are not represented by an MFC class. Instead, the DAO objects underlying MFC objects of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contain a collection of relation objects, called the Relations collection. Each relation object, in turn, contains a collection of relation field objects. Each relation field object correlates a field in the primary table with a field in the foreign table. Taken together, the relation field objects define a group of fields in each table, which together define the relation. `CDaoDatabase` lets you access relation objects with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function. The `CDaoRelationInfo` object, then, has a data member, `m_pFieldInfos`, that points to an array of `CDaoRelationFieldInfo` objects.  
   
- Chamar o [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) a função de membro de recipiente `CDaoDatabase` objeto cuja relações de coleção é armazenado o objeto de relação que lhe interessam. Em seguida, acessar o `m_pFieldInfos` membro do [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto. `CDaoRelationFieldInfo`também define um `Dump` compilações de função de membro no modo de depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationFieldInfo` objeto.  
+ Call the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of the containing `CDaoDatabase` object in whose Relations collection is stored the relation object you are interested in. Then access the `m_pFieldInfos` member of the [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object. `CDaoRelationFieldInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationFieldInfo` object.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Estrutura CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)
 

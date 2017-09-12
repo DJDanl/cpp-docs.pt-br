@@ -1,5 +1,5 @@
 ---
-title: Classe CAnimationController | Documentos do Microsoft
+title: CAnimationController Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -63,7 +63,55 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationController class
+- CAnimationController [MFC], CAnimationController
+- CAnimationController [MFC], AddAnimationObject
+- CAnimationController [MFC], AddKeyframeToGroup
+- CAnimationController [MFC], AnimateGroup
+- CAnimationController [MFC], CleanUpGroup
+- CAnimationController [MFC], CreateKeyframe
+- CAnimationController [MFC], EnableAnimationManagerEvent
+- CAnimationController [MFC], EnableAnimationTimerEventHandler
+- CAnimationController [MFC], EnablePriorityComparisonHandler
+- CAnimationController [MFC], EnableStoryboardEventHandler
+- CAnimationController [MFC], FindAnimationGroup
+- CAnimationController [MFC], FindAnimationObject
+- CAnimationController [MFC], GetKeyframeStoryboardStart
+- CAnimationController [MFC], GetUIAnimationManager
+- CAnimationController [MFC], GetUIAnimationTimer
+- CAnimationController [MFC], GetUITransitionFactory
+- CAnimationController [MFC], GetUITransitionLibrary
+- CAnimationController [MFC], IsAnimationInProgress
+- CAnimationController [MFC], IsValid
+- CAnimationController [MFC], OnAnimationIntegerValueChanged
+- CAnimationController [MFC], OnAnimationManagerStatusChanged
+- CAnimationController [MFC], OnAnimationTimerPostUpdate
+- CAnimationController [MFC], OnAnimationTimerPreUpdate
+- CAnimationController [MFC], OnAnimationTimerRenderingTooSlow
+- CAnimationController [MFC], OnAnimationValueChanged
+- CAnimationController [MFC], OnBeforeAnimationStart
+- CAnimationController [MFC], OnHasPriorityCancel
+- CAnimationController [MFC], OnHasPriorityCompress
+- CAnimationController [MFC], OnHasPriorityConclude
+- CAnimationController [MFC], OnHasPriorityTrim
+- CAnimationController [MFC], OnStoryboardStatusChanged
+- CAnimationController [MFC], OnStoryboardUpdated
+- CAnimationController [MFC], RemoveAllAnimationGroups
+- CAnimationController [MFC], RemoveAnimationGroup
+- CAnimationController [MFC], RemoveAnimationObject
+- CAnimationController [MFC], RemoveTransitions
+- CAnimationController [MFC], ScheduleGroup
+- CAnimationController [MFC], SetRelatedWnd
+- CAnimationController [MFC], UpdateAnimationManager
+- CAnimationController [MFC], CleanUpGroup
+- CAnimationController [MFC], OnAfterSchedule
+- CAnimationController [MFC], gkeyframeStoryboardStart
+- CAnimationController [MFC], m_bIsValid
+- CAnimationController [MFC], m_lstAnimationGroups
+- CAnimationController [MFC], m_pAnimationManager
+- CAnimationController [MFC], m_pAnimationTimer
+- CAnimationController [MFC], m_pRelatedWnd
+- CAnimationController [MFC], m_pTransitionFactory
+- CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
 caps.latest.revision: 18
 author: mikeblome
@@ -83,131 +131,131 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 2cf243c25f14ba016f6f30af264322c658e7322c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e5301505ab34d2095472764df09dd8fd65553e7b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationcontroller-class"></a>Classe CAnimationController
-Implementa o controlador de animação, que fornece uma interface central para criar e gerenciar animações.  
+# <a name="canimationcontroller-class"></a>CAnimationController Class
+Implements the animation controller, which provides a central interface for creating and managing animations.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationController : public CObject;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationController::CAnimationController](#canimationcontroller)|Constrói um controlador de animação.|  
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.|  
+|[CAnimationController::CAnimationController](#canimationcontroller)|Constructs an animation controller.|  
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|The destructor. Called when animation controller object is being destroyed.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationController::AddAnimationObject](#addanimationobject)|Adiciona um objeto de animação a um grupo ao qual pertence o controlador de animação.|  
-|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Adiciona um quadro-chave ao grupo.|  
-|[CAnimationController::AnimateGroup](#animategroup)|Prepara um grupo para executar a animação e, opcionalmente, a agenda.|  
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|Sobrecarregado. Chamado pela estrutura para limpar o grupo quando animação foi agendada.|  
-|[CAnimationController::CreateKeyframe](#createkeyframe)|Sobrecarregado. Cria um quadro-chave que depende de transição e o adiciona ao grupo especificado.|  
-|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Define ou libera um manipulador para chamar quando o status do Gerenciador de animação é alterado.|  
-|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Define ou libera um manipulador para eventos de tempo e o manipulador para atualizações de tempo.|  
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Define ou libera o identificador de comparação de prioridade para chamar para determinar se um storyboard agendado pode ser cancelado, concluído, cortado ou compactado.|  
-|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Define ou libera um manipulador para eventos de status e a atualização do storyboard.|  
-|[CAnimationController::FindAnimationGroup](#findanimationgroup)|Sobrecarregado. Localiza um grupo de animação por seu storyboard.|  
-|[CAnimationController::FindAnimationObject](#findanimationobject)|Localiza o objeto de animação que contém uma variável de animação especificado.|  
-|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|Retorna um quadro-chave que identifica o início do storyboard.|  
-|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|Fornece acesso ao objeto de IUIAnimationManager encapsulado.|  
-|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|Fornece acesso ao objeto de IUIAnimationTimer encapsulado.|  
-|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|Um ponteiro de interface IUIAnimationTransitionFactory ou NULL, se a falha na criação da biblioteca de transição.|  
-|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|Fornece acesso ao objeto de IUIAnimationTransitionLibrary encapsulado.|  
-|[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|Informa se pelo menos um grupo é Reproduzir animação.|  
-|[CAnimationController::IsValid](#isvalid)|Informa se o controlador de animação é válido.|  
-|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Chamado pela estrutura quando o valor inteiro da variável de animação é alterado.|  
-|[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|Chamado pela estrutura em resposta a eventos de status alterado do Gerenciador de animação.|  
-|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|Chamado pela estrutura após uma atualização de animação.|  
-|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|Chamado pela estrutura antes do início de uma atualização de animação.|  
-|[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|Chamado pela estrutura quando a taxa de quadros de renderização para uma animação fica abaixo de uma taxa de quadros desejável mínimo.|  
-|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|Chamado pela estrutura quando o valor da variável de animação é alterado.|  
-|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|Chamado pela estrutura correta antes que a animação seja agendada.|  
-|[CAnimationController::OnHasPriorityCancel](#onhasprioritycancel)|Chamado pela estrutura para resolver conflitos de agendamento.|  
-|[CAnimationController::OnHasPriorityCompress](#onhasprioritycompress)|Chamado pela estrutura para resolver conflitos de agendamento.|  
-|[CAnimationController::OnHasPriorityConclude](#onhaspriorityconclude)|Chamado pela estrutura para resolver conflitos de agendamento.|  
-|[CAnimationController::OnHasPriorityTrim](#onhasprioritytrim)|Chamado pela estrutura para resolver conflitos de agendamento.|  
-|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Chamado pela estrutura quando o status de storyboard mudou.|  
-|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|Chamado pela estrutura quando storyboard tiver sido atualizado.|  
-|[CAnimationController::RemoveAllAnimationGroups](#removeallanimationgroups)|Remove todos os grupos de animação do controlador de animação.|  
-|[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|Remove um grupo de animação com a ID especificada do controlador de animação.|  
-|[CAnimationController::RemoveAnimationObject](#removeanimationobject)|Remova um objeto de animação do controlador de animação.|  
-|[CAnimationController::RemoveTransitions](#removetransitions)|Remove as transições de objetos de animação que pertencem ao grupo especificado.|  
-|[CAnimationController::ScheduleGroup](#schedulegroup)|Agenda uma animação.|  
-|[CAnimationController::SetRelatedWnd](#setrelatedwnd)|Estabelece uma relação entre o controlador de animação e uma janela.|  
-|[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|Direciona o Gerenciador de animação para atualizar os valores de todas as variáveis de animação.|  
+|[CAnimationController::AddAnimationObject](#addanimationobject)|Adds an animation object to a group that belongs to the animation controller.|  
+|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Adds a keyframe to group.|  
+|[CAnimationController::AnimateGroup](#animategroup)|Prepares a group to run animation and optionally schedules it.|  
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|Overloaded. Called by the framework to clean up the group when animation has been scheduled.|  
+|[CAnimationController::CreateKeyframe](#createkeyframe)|Overloaded. Creates a keyframe that depends on transition and adds it to the specified group.|  
+|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Sets or releases a handler to call when animation manager's status changes.|  
+|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Sets or releases a handler for timing events and handler for timing updates.|  
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Sets or releases the priority comparison handler to call to determine whether a scheduled storyboard can be cancelled, concluded, trimmed or compressed.|  
+|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Sets or releases a handler for storyboard status and update events.|  
+|[CAnimationController::FindAnimationGroup](#findanimationgroup)|Overloaded. Finds an animation group by its storyboard.|  
+|[CAnimationController::FindAnimationObject](#findanimationobject)|Finds animation object containing a specified animation variable.|  
+|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|Returns a keyframe that identifies start of storyboard.|  
+|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|Provides access to encapsulated IUIAnimationManager object.|  
+|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|Provides access to encapsulated IUIAnimationTimer object.|  
+|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|A pointer to IUIAnimationTransitionFactory interface or NULL, if creation of transition library failed.|  
+|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|Provides access to encapsulated IUIAnimationTransitionLibrary object.|  
+|[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|Tells whether at least one group is playing animation.|  
+|[CAnimationController::IsValid](#isvalid)|Tells whether animation controller is valid.|  
+|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Called by the framework when integer value of animation variable has changed.|  
+|[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|Called by the framework in response to StatusChanged event from animation manager.|  
+|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|Called by the framework after an animation update is finished.|  
+|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|Called by the framework before an animation update begins.|  
+|[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|Called by the framework when the rendering frame rate for an animation falls below a minimum desirable frame rate.|  
+|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|Called by the framework when value of animation variable has changed.|  
+|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|Called by the framework right before the animation is scheduled.|  
+|[CAnimationController::OnHasPriorityCancel](#onhasprioritycancel)|Called by the framework to resolve scheduling conflicts.|  
+|[CAnimationController::OnHasPriorityCompress](#onhasprioritycompress)|Called by the framework to resolve scheduling conflicts.|  
+|[CAnimationController::OnHasPriorityConclude](#onhaspriorityconclude)|Called by the framework to resolve scheduling conflicts.|  
+|[CAnimationController::OnHasPriorityTrim](#onhasprioritytrim)|Called by the framework to resolve scheduling conflicts.|  
+|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Called by the framework when storyboard status has changed.|  
+|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|Called by the framework when storyboard has been updated.|  
+|[CAnimationController::RemoveAllAnimationGroups](#removeallanimationgroups)|Removes all animation groups from animation controller.|  
+|[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|Removes an animation group with specified ID from animation controller.|  
+|[CAnimationController::RemoveAnimationObject](#removeanimationobject)|Remove an animation object from animation controller.|  
+|[CAnimationController::RemoveTransitions](#removetransitions)|Removes transitions from animation objects that belong to the specified group.|  
+|[CAnimationController::ScheduleGroup](#schedulegroup)|Schedules an animation.|  
+|[CAnimationController::SetRelatedWnd](#setrelatedwnd)|Establishes a relationship between animation controller and a window.|  
+|[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|Directs the animation manager to update the values of all animation variables.|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|Sobrecarregado. Um auxiliar que limpa o grupo.|  
-|[CAnimationController::OnAfterSchedule](#onafterschedule)|Chamado pela estrutura quando uma animação para o grupo especificado apenas foi agendada.|  
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|Overloaded. A helper that cleans up the group.|  
+|[CAnimationController::OnAfterSchedule](#onafterschedule)|Called by the framework when an animation for the specified group has just been scheduled.|  
   
-### <a name="protected-data-members"></a>Membros de dados protegidos  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Um quadro-chave que representa o início do storyboard.|  
-|[CAnimationController::m_bIsValid](#m_bisvalid)|Especifica se um controlador de animação é válido ou não. Esse membro é definido como FALSE se o sistema operacional atual não oferece suporte a API de animação do Windows.|  
-|[CAnimationController::m_lstAnimationGroups](#m_lstanimationgroups)|Uma lista de grupos de animação que pertencem a esse controlador de animação.|  
-|[CAnimationController::m_pAnimationManager](#m_panimationmanager)|Armazena um ponteiro para o objeto COM do Gerenciador de animação.|  
-|[CAnimationController::m_pAnimationTimer](#m_panimationtimer)|Armazena um ponteiro para o objeto COM do Timer de animação.|  
-|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|Um ponteiro para um objeto CWnd relacionado, o que pode ser redesenhado automaticamente quando o status do Gerenciador de animação foi alterado ou ocorreu o evento de atualização de post. Pode ser NULL.|  
-|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|Armazena um ponteiro para o objeto COM da fábrica de transição.|  
-|[CAnimationController::m_pTransitionLibrary](#m_ptransitionlibrary)|Armazena um ponteiro para o objeto COM da biblioteca de transição.|  
+|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|A keyframe that represents start of storyboard.|  
+|[CAnimationController::m_bIsValid](#m_bisvalid)|Specifies whether an animation controller is valid or not. This member is set to FALSE if current OS does not support Windows Animation API.|  
+|[CAnimationController::m_lstAnimationGroups](#m_lstanimationgroups)|A list of animation groups that belong to this animation controller.|  
+|[CAnimationController::m_pAnimationManager](#m_panimationmanager)|Stores a pointer to Animation Manager COM object.|  
+|[CAnimationController::m_pAnimationTimer](#m_panimationtimer)|Stores a pointer to Animation Timer COM object.|  
+|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|A pointer to a related CWnd object, which can be automatically redrawn when the status of animation manager has changed, or post update event has occurred. Can be NULL.|  
+|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|Stores a pointer to Transition Factory COM object.|  
+|[CAnimationController::m_pTransitionLibrary](#m_ptransitionlibrary)|Stores a pointer to Transition Library COM object.|  
   
-## <a name="remarks"></a>Comentários  
- A classe CAnimationController é a classe de chave que gerencia as animações. Você pode criar uma ou mais instâncias do controlador de animação em um aplicativo e, opcionalmente, conectar uma instância do controlador de animação a um objeto CWnd usando CAnimationController::SetRelatedWnd. Essa conexão é necessária para enviar mensagens WM_PAINT à janela relacionada automaticamente quando o status do Gerenciador de animação foi alterado ou o timer de animação foi atualizado. Se você não habilitar essa relação, você precisará redesenhar uma janela que exibe uma animação manualmente. Para essa finalidade, você pode derivar uma classe de CAnimationController e substituir OnAnimationManagerStatusChanged e/ou OnAnimationTimerPostUpdate e invalidar a uma ou mais janelas quando necessário.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationController class is the key class that manages animations. You may create one or more instances of animation controller in an application and, optionally, connect an instance of animation controller to a CWnd object using CAnimationController::SetRelatedWnd. This connection is required to send WM_PAINT messages to the related window automatically when animation manager status has changed or animation timer has been updated. If you do not enable this relation, you must redraw a window that displays an animation manually. For this purpose you can derive a class from CAnimationController and override OnAnimationManagerStatusChanged and/or OnAnimationTimerPostUpdate and invalidate one or more windows when necessary.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CAnimationController`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
- O destruidor. Chamado quando o objeto de controlador de animação está sendo destruído.  
+##  <a name="_dtorcanimationcontroller"></a>  CAnimationController::~CAnimationController  
+ The destructor. Called when animation controller object is being destroyed.  
   
 ```  
 virtual ~CAnimationController(void);
 ```   
   
-##  <a name="addanimationobject"></a>CAnimationController::AddAnimationObject  
- Adiciona um objeto de animação a um grupo ao qual pertence o controlador de animação.  
+##  <a name="addanimationobject"></a>  CAnimationController::AddAnimationObject  
+ Adds an animation object to a group that belongs to the animation controller.  
   
 ```  
 CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pObject`  
- Um ponteiro para um objeto de animação.  
+ A pointer to an animation object.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o grupo de animação novos ou existentes onde pObject foi adicionado se a função for bem-sucedida; NULL se pObject já foi adicionado a um grupo que pertence a outro controlador de animação.  
+### <a name="return-value"></a>Return Value  
+ A pointer to existing or new animation group where pObject has been added if function succeeds; NULL if pObject has already been added to a group that belongs to another animation controller.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para adicionar um objeto de animação para o controlador de animação. Um objeto será adicionado a um grupo de acordo com a ID do grupo do objeto (consulte CAnimationBaseObject::SetID). O controlador de animação criará um novo grupo se ele for o primeiro objeto que está sendo adicionado com a ID do grupo especificado. Um objeto de animação pode ser adicionado ao controlador uma animação apenas. Se você precisar adicionar um objeto para outro controlador, chame RemoveAnimationObject primeiro. Se você chamar SetID com GroupID novo para um objeto que já tenha sido adicionado a um grupo, o objeto será removido do grupo antigo e adicionado a outro grupo com a ID especificada.  
+### <a name="remarks"></a>Remarks  
+ Call this method to add an animation object to the animation controller. An object will be added to a group according to object's GroupID (see CAnimationBaseObject::SetID). The animation controller will create a new group if it's the first object being added with the specified GroupID. An animation object can be added to one animation controller only. If you need to add an object to another controller, call RemoveAnimationObject first. If you call SetID with new GroupID for an object that has been already added to a group, the object will be removed from the old group and added to another group with specified ID.  
   
-##  <a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup  
- Adiciona um quadro-chave ao grupo.  
+##  <a name="addkeyframetogroup"></a>  CAnimationController::AddKeyframeToGroup  
+ Adds a keyframe to group.  
   
 ```  
 BOOL AddKeyframeToGroup(
@@ -215,21 +263,21 @@ BOOL AddKeyframeToGroup(
     CBaseKeyFrame* pKeyframe);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo.  
+ Specifies Group ID.  
   
  `pKeyframe`  
- Um ponteiro para um quadro-chave.  
+ A pointer to a keyframe.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a função for bem-sucedida; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the function succeeds; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Normalmente você não precisa chamar esse método, use CAnimationController::CreateKeyframe, que cria e adiciona automaticamente o quadro-chave criado para um grupo.  
+### <a name="remarks"></a>Remarks  
+ Usually you don't need to call this method, use CAnimationController::CreateKeyframe instead, which creates and adds the created keyframe to a group automatically.  
   
-##  <a name="animategroup"></a>CAnimationController::AnimateGroup  
- Prepara um grupo para executar a animação e, opcionalmente, a agenda.  
+##  <a name="animategroup"></a>  CAnimationController::AnimateGroup  
+ Prepares a group to run animation and optionally schedules it.  
   
 ```  
 BOOL AnimateGroup(
@@ -237,46 +285,46 @@ BOOL AnimateGroup(
     BOOL bScheduleNow = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo.  
+ Specifies GroupID.  
   
  `bScheduleNow`  
- Especifica se deve executar a animação imediatamente.  
+ Specifies whether to run animation right away.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a animação foi agendada e executar com êxito.  
+### <a name="return-value"></a>Return Value  
+ TRUE if animation was successfully scheduled and run.  
   
-### <a name="remarks"></a>Comentários  
- Esse método faz o trabalho real Criando storyboard, adicionar variáveis de animação, aplicação de transições e definindo quadros-chave. É possível adiar o agendamento se você definir bScheduleNow como FALSE. Nesse caso, o grupo especificado manterá um storyboard que foi configurado para animação. Nesse ponto, você pode configurar eventos para as variáveis de animação e storyboard. Quando você realmente precisa executar a chamada de animação CAnimationController::ScheduleGroup.  
+### <a name="remarks"></a>Remarks  
+ This method does the actual work creating storyboard, adding animation variables, applying transitions and setting keyframes. It's possible to delay scheduling if you set bScheduleNow to FALSE. In this case the specified group will hold a storyboard that has been set up for animation. At that point you can setup events for the storyboard and animation variables. When you actually need to run the animation call CAnimationController::ScheduleGroup.  
   
-##  <a name="canimationcontroller"></a>CAnimationController::CAnimationController  
- Constrói um controlador de animação.  
+##  <a name="canimationcontroller"></a>  CAnimationController::CAnimationController  
+ Constructs an animation controller.  
   
 ```  
 CAnimationController(void);
 ```   
   
-##  <a name="cleanupgroup"></a>CAnimationController::CleanUpGroup  
- Chamado pela estrutura para limpar o grupo quando animação foi agendada.  
+##  <a name="cleanupgroup"></a>  CAnimationController::CleanUpGroup  
+ Called by the framework to clean up the group when animation has been scheduled.  
   
 ```  
 void CleanUpGroup(UINT32 nGroupID);  
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo.  
+ Specifies GroupID.  
   
  `pGroup`  
- Um ponteiro para o grupo de animação para limpar.  
+ A pointer to animation group to clean.  
   
-### <a name="remarks"></a>Comentários  
- Este método Remove todas as transições e quadros-chave do grupo especificado, porque eles não são relevantes após uma animação foi agendada.  
+### <a name="remarks"></a>Remarks  
+ This method removes all transitions and keyframes from the specified group, because they are not relevant after an animation has been scheduled.  
   
-##  <a name="createkeyframe"></a>CAnimationController::CreateKeyframe  
- Cria um quadro-chave que depende de transição e o adiciona ao grupo especificado.  
+##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe  
+ Creates a keyframe that depends on transition and adds it to the specified group.  
   
 ```  
 CKeyFrame* CreateKeyframe(
@@ -290,44 +338,44 @@ CKeyFrame* CreateKeyframe(
     UI_ANIMATION_SECONDS offset = 0.0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo para o qual o quadro-chave é criado.  
+ Specifies Group ID for which keyframe is created.  
   
  `pTransition`  
- Um ponteiro para a transição. Quadro-chave será inserida ao storyboard após essa transição.  
+ A pointer to transition. Keyframe will be inserted to storyboard after this transition.  
   
  `pKeyframe`  
- Um ponteiro para um quadro-chave base para esse quadro-chave.  
+ A pointer to base keyframe for this keyframe.  
   
  `offset`  
- Deslocamento em segundos desde o quadro-chave base especificado por pKeyframe.  
+ Offset in seconds from the base keyframe specified by pKeyframe.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o quadro-chave recém-criado se a função obtiver êxito.  
+### <a name="return-value"></a>Return Value  
+ A pointer to newly created keyframe if the function succeeds.  
   
-### <a name="remarks"></a>Comentários  
- Você pode armazenar o ponteiro retornado e outros quadros chave se baseará no quadro-chave recém-criado (consulte a segunda sobrecarga). É possível começar a transições em quadros-chave-Consulte CBaseTransition::SetKeyframes. Você não precisa excluir quadros chave criados dessa forma, pois eles são excluídos automaticamente por grupos de animação. Tenha cuidado ao criar quadros-chave com base em outros quadros-chave e transições e evitar referências circulares.  
+### <a name="remarks"></a>Remarks  
+ You can store the returned pointer and base other keyframes on the newly created keyframe (see the second overload). It's possible to begin transitions at keyframes - see CBaseTransition::SetKeyframes. You don't need to delete keyframes created in this way, because they are deleted automatically by animation groups. Be careful when creating keyframes based on other keyframes and transitions and avoid circular references.  
   
-##  <a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent  
- Define ou libera um manipulador para chamar quando o status do Gerenciador de animação é alterado.  
+##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent  
+ Sets or releases a handler to call when animation manager's status changes.  
   
 ```  
 virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- Especifica se deve definir ou liberar um manipulador.  
+ Specifies whether to set or release a handler.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o manipulador foi definido ou liberado com êxito.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the handler was successfully set or released.  
   
-### <a name="remarks"></a>Comentários  
- Quando um manipulador é definido (habilitado) animação do Windows chama OnAnimationManagerStatusChanged quando o status do Gerenciador de animação é alterado.  
+### <a name="remarks"></a>Remarks  
+ When a handler is set (enabled) Windows Animation calls OnAnimationManagerStatusChanged when animation manager's status changes.  
   
-##  <a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler  
- Define ou libera um manipulador para eventos de tempo e o manipulador para atualizações de tempo.  
+##  <a name="enableanimationtimereventhandler"></a>  CAnimationController::EnableAnimationTimerEventHandler  
+ Sets or releases a handler for timing events and handler for timing updates.  
   
 ```  
 virtual BOOL EnableAnimationTimerEventHandler(
@@ -335,38 +383,38 @@ virtual BOOL EnableAnimationTimerEventHandler(
     UI_ANIMATION_IDLE_BEHAVIOR idleBehavior = UI_ANIMATION_IDLE_BEHAVIOR_DISABLE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- Especifica se deve definir ou liberar os manipuladores.  
+ Specifies whether to set or release the handlers.  
   
  `idleBehavior`  
- Especifica o comportamento ocioso para o manipulador de atualização do temporizador.  
+ Specifies idle behavior for timer update handler.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se manipuladores foram definidos ou liberados; com êxito FALSE se este método é chamado pela segunda vez sem soltar os manipuladores pela primeira vez ou se qualquer outro erro ocorre.  
+### <a name="return-value"></a>Return Value  
+ TRUE if handlers were successfully set or released; FALSE if this method is called for a second time without releasing the handlers first, or if any other error occurs.  
   
-### <a name="remarks"></a>Comentários  
- Quando os manipuladores são definidos chamadas de API de animação do Windows (habilitadas) OnAnimationTimerPreUpdate, OnAnimationTimerPostUpdate, OnRenderingTooSlow métodos. Você precisa habilitar os temporizadores de animação permitir que a API de animação do Windows update storyboards. Caso contrário, você precisará chamar CAnimationController::UpdateAnimationManager para direcionar a animação manager para atualizar os valores de todas as variáveis de animação.  
+### <a name="remarks"></a>Remarks  
+ When the handlers are set (enabled) Windows Animation API calls OnAnimationTimerPreUpdate, OnAnimationTimerPostUpdate, OnRenderingTooSlow methods. You need to enable animation timers to allow Windows Animation API update storyboards. Otherwise you'll need to call CAnimationController::UpdateAnimationManager in order to direct the animation manager to update the values of all animation variables.  
   
-##  <a name="enableprioritycomparisonhandler"></a>CAnimationController::EnablePriorityComparisonHandler  
- Define ou libera o identificador de comparação de prioridade para chamar para determinar se um storyboard agendado pode ser cancelado, concluído, cortado ou compactado.  
+##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler  
+ Sets or releases the priority comparison handler to call to determine whether a scheduled storyboard can be cancelled, concluded, trimmed or compressed.  
   
 ```  
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dwHandlerType`  
- Uma combinação de UI_ANIMATION_PHT_ sinalizadores (consulte comentários), que especifica quais manipuladores para definir ou liberar.  
+ A combination of UI_ANIMATION_PHT_ flags (see remarks), which specifies what handlers to set or release.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o manipulador foi definido ou liberado com êxito.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the handler was successfully set or released.  
   
-### <a name="remarks"></a>Comentários  
- Quando um manipulador é definido (habilitado) animação do Windows chama os seguintes métodos virtuais dependendo dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler pode ser uma combinação dos seguintes sinalizadores: UI_ANIMATION_PHT_NONE - versão todos os manipuladores UI_ANIMATION_PHT_CANCEL - definir Cancelar manipulador comparação UI_ANIMATION_PHT_CONCLUDE - definir o manipulador de comparação de Conclude UI_ANIMATION_PHT_COMPRESS - definir Compress manipulador comparação UI_ANIMATION_PHT_TRIM - conjunto comparação Trim manipulador UI_ANIMATION_PHT_CANCEL_REMOVE - remover o manipulador de comparação de cancelar UI_ANIMATION_PHT_CONCLUDE_REMOVE - remover o manipulador de comparação Conclude UI_ANIMATION_PHT_COMPRESS_REMOVE - remover o manipulador de comparação de compactar UI_ANIMATION_PHT_TRIM_REMOVE - remover o manipulador de comparação de corte  
+### <a name="remarks"></a>Remarks  
+ When a handler is set (enabled) Windows Animation calls the following virtual methods depending on dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler can be a combination of the following flags: UI_ANIMATION_PHT_NONE - release all handlers UI_ANIMATION_PHT_CANCEL - set Cancel comparison handler UI_ANIMATION_PHT_CONCLUDE - set Conclude comparison handler UI_ANIMATION_PHT_COMPRESS - set Compress comparison handler UI_ANIMATION_PHT_TRIM - set Trim comparison handler UI_ANIMATION_PHT_CANCEL_REMOVE - remove Cancel comparison handler UI_ANIMATION_PHT_CONCLUDE_REMOVE - remove Conclude comparison handler UI_ANIMATION_PHT_COMPRESS_REMOVE - remove Compress comparison handler UI_ANIMATION_PHT_TRIM_REMOVE - remove Trim comparison handler  
   
-##  <a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler  
- Define ou libera um manipulador para eventos de status e a atualização do storyboard.  
+##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler  
+ Sets or releases a handler for storyboard status and update events.  
   
 ```  
 virtual BOOL EnableStoryboardEventHandler(
@@ -374,42 +422,42 @@ virtual BOOL EnableStoryboardEventHandler(
     BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo.  
+ Specifies Group ID.  
   
  `bEnable`  
- Especifica se deve definir ou liberar um manipulador.  
+ Specifies whether to set or release a handler.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o manipulador foi definido ou liberado; com êxito FALSE se o grupo especificado de animação agora está localizado ou animação para o grupo especificado não tiver sido iniciada e seu storyboard interno é nulo.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the handler was successfully set or released; FALSE if the specified animation group is now found or animation for the specified group has not been initiated and its internal storyboard is NULL.  
   
-### <a name="remarks"></a>Comentários  
- Quando um manipulador é definido (habilitado) API de animação do Windows chama métodos virtuais OnStoryboardStatusChanges e OnStoryboardUpdated. Um manipulador deve ser definido depois CAnimationController::Animate foi chamado para o grupo de animação especificada, porque ele cria o objeto de IUIAnimationStoryboard encapsulado.  
+### <a name="remarks"></a>Remarks  
+ When a handler is set (enabled) Windows Animation API calls OnStoryboardStatusChanges and OnStoryboardUpdated virtual methods. A handler must be set after CAnimationController::Animate has been called for the specified animation group, because it creates encapsulated IUIAnimationStoryboard object.  
   
-##  <a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup  
- Localiza um grupo de animação por sua ID de grupo.  
+##  <a name="findanimationgroup"></a>  CAnimationController::FindAnimationGroup  
+ Finds an animation group by its Group ID.  
   
 ```  
 CAnimationGroup* FindAnimationGroup(UINT32 nGroupID);  
 CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica uma ID do grupo.  
+ Specifies a GroupID.  
   
  `pStoryboard`  
- Um ponteiro para um storyboard.  
+ A pointer to a storyboard.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o grupo de animação ou NULL se o grupo com a ID especificada não foi encontrado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to animation group or NULL if the group with specified ID is not found.  
   
-### <a name="remarks"></a>Comentários  
- Use esse método para localizar um grupo de animação em tempo de execução. Um grupo é criado e adicionado à lista de grupos de animação interna quando um objeto de animação primeiro com GroupID específico está sendo adicionado ao controlador de animação.  
+### <a name="remarks"></a>Remarks  
+ Use this method to find an animation group at runtime. A group is created and added to the internal list of animation groups when a first animation object with particular GroupID is being added to animation controller.  
   
-##  <a name="findanimationobject"></a>CAnimationController::FindAnimationObject  
- Localiza o objeto de animação que contém uma variável de animação especificado.  
+##  <a name="findanimationobject"></a>  CAnimationController::FindAnimationObject  
+ Finds animation object containing a specified animation variable.  
   
 ```  
 BOOL FindAnimationObject(
@@ -418,185 +466,185 @@ BOOL FindAnimationObject(
     CAnimationGroup** ppGroup);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pVariable`  
- Um ponteiro para a variável de animação.  
+ A pointer to animation variable.  
   
  `ppObject`  
- Saída. Contém um ponteiro para o objeto de animação ou NULL.  
+ Output. Contains a pointer to animation object or NULL.  
   
  `ppGroup`  
- Saída. Contém um ponteiro para o grupo de animação que contém o objeto de animação ou NULL.  
+ Output. Contains a pointer to animation group that holds the animation object, or NULL.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o objeto foi encontrado; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if object was found; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Chamada de manipuladores de eventos quando ele é necessário para localizar um objeto de animação de entrada variável de animação.  
+### <a name="remarks"></a>Remarks  
+ Called from event handlers when it's required to find an animation object from incoming animation variable.  
   
-##  <a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart  
- Um quadro-chave que representa o início do storyboard.  
+##  <a name="g_keyframestoryboardstart"></a>  CAnimationController::gkeyframeStoryboardStart  
+ A keyframe that represents start of storyboard.  
   
 ```  
 static CBaseKeyFrame gkeyframeStoryboardStart;  
 ```  
   
-##  <a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart  
- Retorna um quadro-chave que identifica o início do storyboard.  
+##  <a name="getkeyframestoryboardstart"></a>  CAnimationController::GetKeyframeStoryboardStart  
+ Returns a keyframe that identifies start of storyboard.  
   
 ```  
 static CBaseKeyFrame* GetKeyframeStoryboardStart();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o quadro-chave base, que identifica o início do storyboard.  
+### <a name="return-value"></a>Return Value  
+ A pointer to base keyframe, which identifies start of storyboard.  
   
-### <a name="remarks"></a>Comentários  
- Obter esse quadro chave para basear outros quadros-chave ou transições ponto no tempo quando um storyboard é iniciado.  
+### <a name="remarks"></a>Remarks  
+ Obtain this keyframe to base any other keyframes or transitions on the moment in time when a storyboard starts.  
   
-##  <a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager  
- Fornece acesso ao objeto de IUIAnimationManager encapsulado.  
+##  <a name="getuianimationmanager"></a>  CAnimationController::GetUIAnimationManager  
+ Provides access to encapsulated IUIAnimationManager object.  
   
 ```  
 IUIAnimationManager* GetUIAnimationManager();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro de interface IUIAnimationManager ou NULL, se a falha na criação do Gerenciador de animação.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IUIAnimationManager interface or NULL, if creation of animation manager failed.  
   
-### <a name="remarks"></a>Comentários  
- Se o sistema operacional atual não oferece suporte a API de animação do Windows, esse método retorna NULL e depois que todas as chamadas subsequentes no CAnimationController::IsValid retornam FALSE. Talvez seja necessário acessar IUIAnimationManager para chamar seus métodos de interface, que não são compactados com o controlador de animação.  
+### <a name="remarks"></a>Remarks  
+ If current OS does not support Windows Animation API, this method returns NULL and after that all subsequent calls on CAnimationController::IsValid return FALSE. You may need to access IUIAnimationManager in order to call its interface methods, which are not wrapped by animation controller.  
   
-##  <a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer  
- Fornece acesso ao objeto de IUIAnimationTimer encapsulado.  
+##  <a name="getuianimationtimer"></a>  CAnimationController::GetUIAnimationTimer  
+ Provides access to encapsulated IUIAnimationTimer object.  
   
 ```  
 IUIAnimationTimer* GetUIAnimationTimer();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro de interface IUIAnimationTimer ou nulo, se a falha na criação do timer de animação.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IUIAnimationTimer interface or NULL, if creation of animation timer failed.  
   
-### <a name="remarks"></a>Comentários  
- Se o sistema operacional atual não oferece suporte a API de animação do Windows, esse método retorna NULL e depois que todas as chamadas subsequentes no CAnimationController::IsValid retornam FALSE.  
+### <a name="remarks"></a>Remarks  
+ If current OS does not support Windows Animation API, this method returns NULL and after that all subsequent calls on CAnimationController::IsValid return FALSE.  
   
-##  <a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory  
- Um ponteiro de interface IUIAnimationTransitionFactory ou NULL, se a falha na criação da biblioteca de transição.  
+##  <a name="getuitransitionfactory"></a>  CAnimationController::GetUITransitionFactory  
+ A pointer to IUIAnimationTransitionFactory interface or NULL, if creation of transition library failed.  
   
 ```  
 IUIAnimationTransitionFactory* GetUITransitionFactory();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para IUIAnimationTransitionFactory ou NULL, se a falha na criação da fábrica de transição.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IUIAnimationTransitionFactory or NULL, if creation of transition factory failed.  
   
-### <a name="remarks"></a>Comentários  
- Se o sistema operacional atual não oferece suporte a API de animação do Windows, esse método retorna NULL e depois que todas as chamadas subsequentes no CAnimationController::IsValid retornam FALSE.  
+### <a name="remarks"></a>Remarks  
+ If current OS does not support Windows Animation API, this method returns NULL and after that all subsequent calls on CAnimationController::IsValid return FALSE.  
   
-##  <a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary  
- Fornece acesso ao objeto de IUIAnimationTransitionLibrary encapsulado.  
+##  <a name="getuitransitionlibrary"></a>  CAnimationController::GetUITransitionLibrary  
+ Provides access to encapsulated IUIAnimationTransitionLibrary object.  
   
 ```  
 IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro de interface IUIAnimationTransitionLibrary ou NULL, se a falha na criação da biblioteca de transição.  
+### <a name="return-value"></a>Return Value  
+ A pointer to IUIAnimationTransitionLibrary interface or NULL, if creation of transition library failed.  
   
-### <a name="remarks"></a>Comentários  
- Se o sistema operacional atual não oferece suporte a API de animação do Windows, esse método retorna NULL e depois que todas as chamadas subsequentes no CAnimationController::IsValid retornam FALSE.  
+### <a name="remarks"></a>Remarks  
+ If current OS does not support Windows Animation API, this method returns NULL and after that all subsequent calls on CAnimationController::IsValid return FALSE.  
   
-##  <a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress  
- Informa se pelo menos um grupo é Reproduzir animação.  
+##  <a name="isanimationinprogress"></a>  CAnimationController::IsAnimationInProgress  
+ Tells whether at least one group is playing animation.  
   
 ```  
 virtual BOOL IsAnimationInProgress();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se houver uma animação em andamento para este controlador de animação; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if there is an animation in progress for this animation controller; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Verifica o status do Gerenciador de animação e retorna TRUE se o status for UI_ANIMATION_MANAGER_BUSY.  
+### <a name="remarks"></a>Remarks  
+ Checks status of animation manager and returns TRUE if the status is UI_ANIMATION_MANAGER_BUSY.  
   
-##  <a name="isvalid"></a>CAnimationController::IsValid  
- Informa se o controlador de animação é válido.  
+##  <a name="isvalid"></a>  CAnimationController::IsValid  
+ Tells whether animation controller is valid.  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o controlador de animação é válido. Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if animation controller is valid; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Esse método retorna FALSE apenas se a API de animação do Windows não é compatível com o sistema operacional atual e a criação do Gerenciador de animação falhou porque não está registrado. É necessário chamar GetUIAnimationManager pelo menos uma vez após a inicialização de bibliotecas COM para fazer com que a configuração desse sinalizador.  
+### <a name="remarks"></a>Remarks  
+ This method returns FALSE only if Windows Animation API is not supported on the current OS and creation of animation manager failed because it's not registered. You need to call GetUIAnimationManager at least once after initialization of COM libraries to cause setting of this flag.  
   
-##  <a name="m_bisvalid"></a>CAnimationController::m_bIsValid  
- Especifica se um controlador de animação é válido ou não. Esse membro é definido como FALSE se o sistema operacional atual não oferece suporte a API de animação do Windows.  
+##  <a name="m_bisvalid"></a>  CAnimationController::m_bIsValid  
+ Specifies whether an animation controller is valid or not. This member is set to FALSE if current OS does not support Windows Animation API.  
   
 ```  
 BOOL m_bIsValid;  
 ```  
   
-##  <a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups  
- Uma lista de grupos de animação que pertencem a esse controlador de animação.  
+##  <a name="m_lstanimationgroups"></a>  CAnimationController::m_lstAnimationGroups  
+ A list of animation groups that belong to this animation controller.  
   
 ```  
 CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;  
 ```  
   
-##  <a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager  
- Armazena um ponteiro para o objeto COM do Gerenciador de animação.  
+##  <a name="m_panimationmanager"></a>  CAnimationController::m_pAnimationManager  
+ Stores a pointer to Animation Manager COM object.  
   
 ```  
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;  
 ```  
   
-##  <a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer  
- Armazena um ponteiro para o objeto COM do Timer de animação.  
+##  <a name="m_panimationtimer"></a>  CAnimationController::m_pAnimationTimer  
+ Stores a pointer to Animation Timer COM object.  
   
 ```  
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;  
 ```  
   
-##  <a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd  
- Um ponteiro para um objeto CWnd relacionado, o que pode ser redesenhado automaticamente quando o status do Gerenciador de animação foi alterado ou ocorreu o evento de atualização de post. Pode ser NULL.  
+##  <a name="m_prelatedwnd"></a>  CAnimationController::m_pRelatedWnd  
+ A pointer to a related CWnd object, which can be automatically redrawn when the status of animation manager has changed, or post update event has occurred. Can be NULL.  
   
 ```  
 CWnd* m_pRelatedWnd;  
 ```  
   
-##  <a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory  
- Armazena um ponteiro para o objeto COM da fábrica de transição.  
+##  <a name="m_ptransitionfactory"></a>  CAnimationController::m_pTransitionFactory  
+ Stores a pointer to Transition Factory COM object.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;  
 ```  
   
-##  <a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary  
- Armazena um ponteiro para o objeto COM da biblioteca de transição.  
+##  <a name="m_ptransitionlibrary"></a>  CAnimationController::m_pTransitionLibrary  
+ Stores a pointer to Transition Library COM object.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;  
 ```  
   
-##  <a name="onafterschedule"></a>CAnimationController::OnAfterSchedule  
- Chamado pela estrutura quando uma animação para o grupo especificado apenas foi agendada.  
+##  <a name="onafterschedule"></a>  CAnimationController::OnAfterSchedule  
+ Called by the framework when an animation for the specified group has just been scheduled.  
   
 ```  
 virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo de animação que foi agendado.  
+ A pointer to an animation group, which has been scheduled.  
   
-### <a name="remarks"></a>Comentários  
- A implementação padrão remove quadros-chave de um grupo e faz a transição de variáveis de animação que pertencem ao grupo especificado. Pode ser substituído em uma classe derivada para executar quaisquer ações adicionais na agenda de animação.  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes keyframes from the specified group and transitions from animation variables that belong to the specified group. Can be overridden in a derived class to take any additional actions upon animation schedule.  
   
-##  <a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged  
- Chamado pela estrutura quando o valor inteiro da variável de animação é alterado.  
+##  <a name="onanimationintegervaluechanged"></a>  CAnimationController::OnAnimationIntegerValueChanged  
+ Called by the framework when integer value of animation variable has changed.  
   
 ```  
 virtual void OnAnimationIntegerValueChanged(
@@ -607,27 +655,27 @@ virtual void OnAnimationIntegerValueChanged(
     INT32 prevValue);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo de animação que contém um objeto de animação cujo valor foi alterado.  
+ A pointer to an animation group that holds an animation object whose value has changed.  
   
  `pObject`  
- Um ponteiro para um objeto de animação que contém uma variável de animação cujo valor foi alterado.  
+ A pointer to an animation object that contains an animation variable whose value has changed.  
   
  `variable`  
- Um ponteiro para uma variável de animação.  
+ A pointer to an animation variable.  
   
  `newValue`  
- Especifica o novo valor.  
+ Specifies new value.  
   
  `prevValue`  
- Especifica o valor anterior.  
+ Specifies previous value.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de variável de animação com EnableIntegerValueChangedEvent chamada para uma variável de animação específico ou objeto de animação. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable animation variable events with EnableIntegerValueChangedEvent called for a specific animation variable or animation object. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged  
- Chamado pela estrutura em resposta a eventos de status alterado do Gerenciador de animação.  
+##  <a name="onanimationmanagerstatuschanged"></a>  CAnimationController::OnAnimationManagerStatusChanged  
+ Called by the framework in response to StatusChanged event from animation manager.  
   
 ```  
 virtual void OnAnimationManagerStatusChanged(
@@ -635,52 +683,52 @@ virtual void OnAnimationManagerStatusChanged(
     UI_ANIMATION_MANAGER_STATUS previousStatus);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `newStatus`  
- Novo status do Gerenciador de animação.  
+ New animation manager status.  
   
  `previousStatus`  
- Status do Gerenciador de animação anterior.  
+ Previous animation manager status.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você ativar eventos do Gerenciador de animação com EnableAnimationManagerEvent. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. A implementação padrão atualiza uma janela relacionada, se ele tiver sido definido com SetRelatedWnd.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable animation manager events with EnableAnimationManagerEvent. It can be overridden in a derived class to take application-specific actions. The default implementation updates a related window if it has been set with SetRelatedWnd.  
   
-##  <a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate  
- Chamado pela estrutura após uma atualização de animação.  
+##  <a name="onanimationtimerpostupdate"></a>  CAnimationController::OnAnimationTimerPostUpdate  
+ Called by the framework after an animation update is finished.  
   
 ```  
 virtual void OnAnimationTimerPostUpdate();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar os manipuladores de eventos do timer usando EnableAnimationTimerEventHandler. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable timer event handlers using EnableAnimationTimerEventHandler. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate  
- Chamado pela estrutura antes do início de uma atualização de animação.  
+##  <a name="onanimationtimerpreupdate"></a>  CAnimationController::OnAnimationTimerPreUpdate  
+ Called by the framework before an animation update begins.  
   
 ```  
 virtual void OnAnimationTimerPreUpdate();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar os manipuladores de eventos do timer usando EnableAnimationTimerEventHandler. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable timer event handlers using EnableAnimationTimerEventHandler. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerRenderingTooSlow  
- Chamado pela estrutura quando a taxa de quadros de renderização para uma animação fica abaixo de uma taxa de quadros desejável mínimo.  
+##  <a name="onanimationtimerrenderingtooslow"></a>  CAnimationController::OnAnimationTimerRenderingTooSlow  
+ Called by the framework when the rendering frame rate for an animation falls below a minimum desirable frame rate.  
   
 ```  
 virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `fps`  
- A taxa de quadros atual em quadros por segundo.  
+ The current frame rate in frames per second.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar os manipuladores de eventos do timer usando EnableAnimationTimerEventHandler. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. A taxa de quadros desejável mínimo é especificada chamando IUIAnimationTimer::SetFrameRateThreshold.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable timer event handlers using EnableAnimationTimerEventHandler. It can be overridden in a derived class to take application-specific actions. The minimum desirable frame rate is specified by calling IUIAnimationTimer::SetFrameRateThreshold.  
   
-##  <a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged  
- Chamado pela estrutura quando o valor da variável de animação é alterado.  
+##  <a name="onanimationvaluechanged"></a>  CAnimationController::OnAnimationValueChanged  
+ Called by the framework when value of animation variable has changed.  
   
 ```  
 virtual void OnAnimationValueChanged(
@@ -691,41 +739,41 @@ virtual void OnAnimationValueChanged(
     DOUBLE prevValue);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo de animação que contém um objeto de animação cujo valor foi alterado.  
+ A pointer to an animation group that holds an animation object whose value has changed.  
   
  `pObject`  
- Um ponteiro para um objeto de animação que contém uma variável de animação cujo valor foi alterado.  
+ A pointer to an animation object that contains an animation variable whose value has changed.  
   
  `variable`  
- Um ponteiro para uma variável de animação.  
+ A pointer to an animation variable.  
   
  `newValue`  
- Especifica o novo valor.  
+ Specifies new value.  
   
  `prevValue`  
- Especifica o valor anterior.  
+ Specifies previous value.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de variável de animação com EnableValueChangedEvent chamada para uma variável de animação específico ou objeto de animação. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable animation variable events with EnableValueChangedEvent called for a specific animation variable or animation object. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart  
- Chamado pela estrutura correta antes que a animação seja agendada.  
+##  <a name="onbeforeanimationstart"></a>  CAnimationController::OnBeforeAnimationStart  
+ Called by the framework right before the animation is scheduled.  
   
 ```  
 virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo de animação cuja animação está prestes a iniciar.  
+ A pointer to an animation group whose animation is about to start.  
   
-### <a name="remarks"></a>Comentários  
- Essa chamada é roteada para CWnd relacionado e pode ser substituída em uma classe derivada para realizar as ações adicionais antes de inicia a animação para o grupo especificado.  
+### <a name="remarks"></a>Remarks  
+ This call is routed to related CWnd and can be overridden in a derived class to perform any additional actions before the animation starts for the specified group.  
   
-##  <a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel  
- Chamado pela estrutura para resolver conflitos de agendamento.  
+##  <a name="onhasprioritycancel"></a>  CAnimationController::OnHasPriorityCancel  
+ Called by the framework to resolve scheduling conflicts.  
   
 ```  
 virtual BOOL OnHasPriorityCancel(
@@ -734,24 +782,24 @@ virtual BOOL OnHasPriorityCancel(
     UI_ANIMATION_PRIORITY_EFFECT priorityEffect);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroupScheduled`  
- O grupo que possui o storyboard agendado no momento.  
+ The group that owns the currently scheduled storyboard.  
   
  `pGroupNew`  
- O grupo que possui o novo storyboard que está em conflito de agendamento com o storyboard agendado pGroupScheduled de propriedade.  
+ The group that owns the new storyboard that is in scheduling conflict with the scheduled storyboard owned by pGroupScheduled.  
   
  `priorityEffect`  
- O efeito potencial no pGroupNew se pGroupScheduled tem uma prioridade mais alta.  
+ The potential effect on pGroupNew if pGroupScheduled has a higher priority.  
   
-### <a name="return-value"></a>Valor de retorno  
- Deve retornar TRUE se o storyboard de propriedade pGroupNew tem prioridade. Deve retornar FALSE se o storyboard de propriedade pGroupScheduled tem prioridade.  
+### <a name="return-value"></a>Return Value  
+ Should return TRUE if storyboard owned by pGroupNew has priority. Should return FALSE if storyboard owned by pGroupScheduled has priority.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especifica UI_ANIMATION_PHT_CANCEL. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre o gerenciamento de conflito (http://msdn.microsoft.com/library/dd371759 (VS.85).aspx).  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable priority comparison events using CAnimationController::EnablePriorityComparisonHandler and specify UI_ANIMATION_PHT_CANCEL. It can be overridden in a derived class to take application-specific actions. Read Windows Animation API documentation for more information about Conflict Management (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress  
- Chamado pela estrutura para resolver conflitos de agendamento.  
+##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress  
+ Called by the framework to resolve scheduling conflicts.  
   
 ```  
 virtual BOOL OnHasPriorityCompress(
@@ -760,24 +808,24 @@ virtual BOOL OnHasPriorityCompress(
     UI_ANIMATION_PRIORITY_EFFECT priorityEffect);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroupScheduled`  
- O grupo que possui o storyboard agendado no momento.  
+ The group that owns the currently scheduled storyboard.  
   
  `pGroupNew`  
- O grupo que possui o novo storyboard que está em conflito de agendamento com o storyboard agendado pGroupScheduled de propriedade.  
+ The group that owns the new storyboard that is in scheduling conflict with the scheduled storyboard owned by pGroupScheduled.  
   
  `priorityEffect`  
- O efeito potencial no pGroupNew se pGroupScheduled tem uma prioridade mais alta.  
+ The potential effect on pGroupNew if pGroupScheduled has a higher priority.  
   
-### <a name="return-value"></a>Valor de retorno  
- Deve retornar TRUE se o storyboard de propriedade pGroupNew tem prioridade. Deve retornar FALSE se o storyboard de propriedade pGroupScheduled tem prioridade.  
+### <a name="return-value"></a>Return Value  
+ Should return TRUE if storyboard owned by pGroupNew has priority. Should return FALSE if storyboard owned by pGroupScheduled has priority.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especifica UI_ANIMATION_PHT_COMPRESS. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre o gerenciamento de conflito (http://msdn.microsoft.com/library/dd371759 (VS.85).aspx).  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable priority comparison events using CAnimationController::EnablePriorityComparisonHandler and specify UI_ANIMATION_PHT_COMPRESS. It can be overridden in a derived class to take application-specific actions. Read Windows Animation API documentation for more information about Conflict Management (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude  
- Chamado pela estrutura para resolver conflitos de agendamento.  
+##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude  
+ Called by the framework to resolve scheduling conflicts.  
   
 ```  
 virtual BOOL OnHasPriorityConclude(
@@ -786,24 +834,24 @@ virtual BOOL OnHasPriorityConclude(
     UI_ANIMATION_PRIORITY_EFFECT priorityEffect);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroupScheduled`  
- O grupo que possui o storyboard agendado no momento.  
+ The group that owns the currently scheduled storyboard.  
   
  `pGroupNew`  
- O grupo que possui o novo storyboard que está em conflito de agendamento com o storyboard agendado pGroupScheduled de propriedade.  
+ The group that owns the new storyboard that is in scheduling conflict with the scheduled storyboard owned by pGroupScheduled.  
   
  `priorityEffect`  
- O efeito potencial no pGroupNew se pGroupScheduled tem uma prioridade mais alta.  
+ The potential effect on pGroupNew if pGroupScheduled has a higher priority.  
   
-### <a name="return-value"></a>Valor de retorno  
- Deve retornar TRUE se o storyboard de propriedade pGroupNew tem prioridade. Deve retornar FALSE se o storyboard de propriedade pGroupScheduled tem prioridade.  
+### <a name="return-value"></a>Return Value  
+ Should return TRUE if storyboard owned by pGroupNew has priority. Should return FALSE if storyboard owned by pGroupScheduled has priority.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especifica UI_ANIMATION_PHT_CONCLUDE. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre o gerenciamento de conflito (http://msdn.microsoft.com/library/dd371759 (VS.85).aspx).  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable priority comparison events using CAnimationController::EnablePriorityComparisonHandler and specify UI_ANIMATION_PHT_CONCLUDE. It can be overridden in a derived class to take application-specific actions. Read Windows Animation API documentation for more information about Conflict Management (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim  
- Chamado pela estrutura para resolver conflitos de agendamento.  
+##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim  
+ Called by the framework to resolve scheduling conflicts.  
   
 ```  
 virtual BOOL OnHasPriorityTrim(
@@ -812,24 +860,24 @@ virtual BOOL OnHasPriorityTrim(
     UI_ANIMATION_PRIORITY_EFFECT priorityEffect);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroupScheduled`  
- O grupo que possui o storyboard agendado no momento.  
+ The group that owns the currently scheduled storyboard.  
   
  `pGroupNew`  
- O grupo que possui o novo storyboard que está em conflito de agendamento com o storyboard agendado pGroupScheduled de propriedade.  
+ The group that owns the new storyboard that is in scheduling conflict with the scheduled storyboard owned by pGroupScheduled.  
   
  `priorityEffect`  
- O efeito potencial no pGroupNew se pGroupScheduled tem uma prioridade mais alta.  
+ The potential effect on pGroupNew if pGroupScheduled has a higher priority.  
   
-### <a name="return-value"></a>Valor de retorno  
- Deve retornar TRUE se o storyboard de propriedade pGroupNew tem prioridade. Deve retornar FALSE se o storyboard de propriedade pGroupScheduled tem prioridade.  
+### <a name="return-value"></a>Return Value  
+ Should return TRUE if storyboard owned by pGroupNew has priority. Should return FALSE if storyboard owned by pGroupScheduled has priority.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos de comparação de prioridade usando CAnimationController::EnablePriorityComparisonHandler e especifica UI_ANIMATION_PHT_TRIM. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo. Documentação da API de animação do Windows de leitura para obter mais informações sobre o gerenciamento de conflito (http://msdn.microsoft.com/library/dd371759 (VS.85).aspx).  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable priority comparison events using CAnimationController::EnablePriorityComparisonHandler and specify UI_ANIMATION_PHT_TRIM. It can be overridden in a derived class to take application-specific actions. Read Windows Animation API documentation for more information about Conflict Management (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged  
- Chamado pela estrutura quando o status de storyboard mudou.  
+##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged  
+ Called by the framework when storyboard status has changed.  
   
 ```  
 virtual void OnStoryboardStatusChanged(
@@ -838,59 +886,59 @@ virtual void OnStoryboardStatusChanged(
     UI_ANIMATION_STORYBOARD_STATUS previousStatus);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo de animação que possui o storyboard cujo status foi alterado.  
+ A pointer to an animation group that owns the storyboard whose status has changed.  
   
  `newStatus`  
- Especifica o novo status.  
+ Specifies the new status.  
   
  `previousStatus`  
- Especifica o status anterior.  
+ Specifies the previous status.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos storyboard usando CAnimationController::EnableStoryboardEventHandler. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable storyboard events using CAnimationController::EnableStoryboardEventHandler. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated  
- Chamado pela estrutura quando storyboard tiver sido atualizado.  
+##  <a name="onstoryboardupdated"></a>  CAnimationController::OnStoryboardUpdated  
+ Called by the framework when storyboard has been updated.  
   
 ```  
 virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pGroup`  
- Um ponteiro para um grupo que possui o storyboard.  
+ A pointer to a group that owns the storyboard.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado se você habilitar eventos storyboard usando CAnimationController::EnableStoryboardEventHandler. Ele pode ser substituído em uma classe derivada para executar ações específicas do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This method is called if you enable storyboard events using CAnimationController::EnableStoryboardEventHandler. It can be overridden in a derived class to take application-specific actions.  
   
-##  <a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups  
- Remove todos os grupos de animação do controlador de animação.  
+##  <a name="removeallanimationgroups"></a>  CAnimationController::RemoveAllAnimationGroups  
+ Removes all animation groups from animation controller.  
   
 ```  
 void RemoveAllAnimationGroups();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Todos os grupos serão excluídos, o ponteiro se armazenado no nível do aplicativo, deve invalidado. Se CAnimationGroup::m_bAutodestroyAnimationObjects para um grupo que está sendo excluído for TRUE, todos os objetos de animação que pertencem a esse grupo serão excluídos; Caso contrário, suas referências ao controlador de animação do pai serão definidas como NULL e eles podem ser adicionados a outro controlador.  
+### <a name="remarks"></a>Remarks  
+ All groups will be deleted, their pointer, if stored at the application level, must be invalidated. If CAnimationGroup::m_bAutodestroyAnimationObjects for a group being deleted is TRUE, all animation objects that belong to that group will be deleted; otherwise their references to parent animation controller will be set to NULL and they can be added to another controller.  
   
-##  <a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup  
- Remove um grupo de animação com a ID especificada do controlador de animação.  
+##  <a name="removeanimationgroup"></a>  CAnimationController::RemoveAnimationGroup  
+ Removes an animation group with specified ID from animation controller.  
   
 ```  
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo de animação.  
+ Specifies animation group ID.  
   
-### <a name="remarks"></a>Comentários  
- Esse método Remove um grupo de animação a lista interna de grupos e exclui-lo, portanto se você armazenou um ponteiro para esse grupo de animação, ele deve ser invalidado. Se CAnimationGroup::m_bAutodestroyAnimationObjects for TRUE, todos os objetos de animação que pertencem a esse grupo serão excluídos; Caso contrário, suas referências ao controlador de animação do pai serão definidas como NULL e eles podem ser adicionados a outro controlador.  
+### <a name="remarks"></a>Remarks  
+ This method removes an animation group from the internal list of groups and deletes it, therefore if you stored a pointer to that animation group, it must be invalidated. If CAnimationGroup::m_bAutodestroyAnimationObjects is TRUE, all animation objects that belong to that group will be deleted; otherwise their references to parent animation controller will be set to NULL and they can be added to another controller.  
   
-##  <a name="removeanimationobject"></a>CAnimationController::RemoveAnimationObject  
- Remova um objeto de animação do controlador de animação.  
+##  <a name="removeanimationobject"></a>  CAnimationController::RemoveAnimationObject  
+ Remove an animation object from animation controller.  
   
 ```  
 void RemoveAnimationObject(
@@ -898,32 +946,32 @@ void RemoveAnimationObject(
     BOOL bNoDelete = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pObject`  
- Um ponteiro para um objeto de animação.  
+ A pointer to an animation object.  
   
  `bNoDelete`  
- Se esse parâmetro for TRUE o objeto não será excluído após a remoção.  
+ If this parameter is TRUE the object will not be deleted upon remove.  
   
-### <a name="remarks"></a>Comentários  
- Remove um objeto de animação do controlador de animação e o grupo de animação. Chame essa função se um determinado objeto não deve ser animado mais, ou se você precisar mover o objeto para outro controlador de animação. No último caso bNoDelete deve ser verdadeiro.  
+### <a name="remarks"></a>Remarks  
+ Removes an animation object from animation controller and animation group. Call this function if a particular object should not be animated anymore, or if you need to move the object to another animation controller. In the last case bNoDelete must be TRUE.  
   
-##  <a name="removetransitions"></a>CAnimationController::RemoveTransitions  
- Remove as transições de objetos de animação que pertencem ao grupo especificado.  
+##  <a name="removetransitions"></a>  CAnimationController::RemoveTransitions  
+ Removes transitions from animation objects that belong to the specified group.  
   
 ```  
 void RemoveTransitions(UINT32 nGroupID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID do grupo.  
+ Specifies Group ID.  
   
-### <a name="remarks"></a>Comentários  
- O grupo faz um loop sobre seus objetos de animação e chama ClearTransitions(FALSE) para cada objeto de animação. Esse método é chamado pela estrutura depois animação foi agendada.  
+### <a name="remarks"></a>Remarks  
+ The group loops over its animation objects and calls ClearTransitions(FALSE) for each animation object. This method is called by the framework after animation has been scheduled.  
   
-##  <a name="schedulegroup"></a>CAnimationController::ScheduleGroup  
- Agenda uma animação.  
+##  <a name="schedulegroup"></a>  CAnimationController::ScheduleGroup  
+ Schedules an animation.  
   
 ```  
 BOOL ScheduleGroup(
@@ -931,43 +979,43 @@ BOOL ScheduleGroup(
     UI_ANIMATION_SECONDS time = 0.0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nGroupID`  
- Especifica a ID de grupo para agendar animação.  
+ Specifies animation Group ID to schedule.  
   
  `time`  
- Especifica o tempo para agendar.  
+ Specifies time to schedule.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a animação foi agendada com êxito. FALSE se o storyboard não tiver sido criado, ou outro erro ocorre.  
+### <a name="return-value"></a>Return Value  
+ TRUE if animation was scheduled successfully. FALSE if storyboard has not been created, or other error occurs.  
   
-### <a name="remarks"></a>Comentários  
- Você deve chamar AnimateGroup com o parâmetro bScheduleNow definido como FALSE ScheduleGroup anterior. Você pode especificar o tempo de animação desejado é obtido do IUIAnimationTimer::GetTime. Se o parâmetro de tempo é 0.0, a animação será agendada para o horário atual.  
+### <a name="remarks"></a>Remarks  
+ You must call AnimateGroup with parameter bScheduleNow set to FALSE prior ScheduleGroup. You can specify the desired animation time obtained from IUIAnimationTimer::GetTime. If the time parameter is 0.0, the animation is scheduled for the current time.  
   
-##  <a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd  
- Estabelece uma relação entre o controlador de animação e uma janela.  
+##  <a name="setrelatedwnd"></a>  CAnimationController::SetRelatedWnd  
+ Establishes a relationship between animation controller and a window.  
   
 ```  
 void SetRelatedWnd(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Um ponteiro para o objeto de janela a ser definido.  
+ A pointer to window object to set.  
   
-### <a name="remarks"></a>Comentários  
- Se um objeto CWnd relacionado for definido, o controlador de animação pode atualizá-lo automaticamente (Enviar mensagem WM_PAINT) quando o status do Gerenciador de animação foi alterado ou evento de atualização de post timer ocorreu.  
+### <a name="remarks"></a>Remarks  
+ If a related CWnd object is set, the animation controller can automatically update it (send WM_PAINT message) when the status of animation manager has changed or timer post update event has occurred.  
   
-##  <a name="updateanimationmanager"></a>CAnimationController::UpdateAnimationManager  
- Direciona o Gerenciador de animação para atualizar os valores de todas as variáveis de animação.  
+##  <a name="updateanimationmanager"></a>  CAnimationController::UpdateAnimationManager  
+ Directs the animation manager to update the values of all animation variables.  
   
 ```  
 virtual void UpdateAnimationManager();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Chamar que esse método avança o Gerenciador de animação a hora atual, alterando o status de storyboards conforme necessário e atualizar quaisquer variáveis de animação apropriada interpolados valores. Este método chama internamente IUIAnimationTimer::GetTime(timeNow) e IUIAnimationManager::Update(timeNow). Substitua esse método em uma classe derivada para personalizar esse comportamento.  
+### <a name="remarks"></a>Remarks  
+ Calling this method advances the animation manager to current time, changing statuses of storyboards as necessary and updating any animation variables to appropriate interpolated values. Internally this method calls IUIAnimationTimer::GetTime(timeNow) and IUIAnimationManager::Update(timeNow). Override this method in a derived class to customize this behavior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

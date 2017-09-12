@@ -1,69 +1,87 @@
 ---
-title: "Imprimindo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentos, imprimindo"
-  - "imprimindo [MFC]"
-  - "imprimindo [MFC], da estrutura"
-  - "classes de exibição, operações de impressão"
+title: Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- view classes [MFC], print operations
+- documents [MFC], printing
+- printing [MFC], from framework
+- printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Imprimindo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 095ef2d763a44607c5d026b61301d46d7654dfe2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Exibição do dispositivo independentemente das ferramentas do Microsoft Windows.  MFC no, isso significa que os mesmos chamadas de desenho, na função de membro de `OnDraw` da sua classe da exibição, são responsáveis para desenhar na exibição e em outros dispositivos, como impressoras.  Para a visualização de impressão, o dispositivo de destino é uma saída de impressora simulada para a exibição.  
+---
+# <a name="printing"></a>Printing
+Microsoft Windows implements device-independent display. In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers. For print preview, the target device is a simulated printer output to the display.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> A função na impressão na função da estrutura  
- A classe de exibição tem responsabilidades as seguintes:  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Your Role in Printing vs. the Framework's Role  
+ Your view class has the following responsibilities:  
   
--   Informe a estrutura quantas páginas estão no documento.  
+-   Inform the framework how many pages are in the document.  
   
--   Quando solicitado para imprimir uma página especificada, desenhar essa parte do documento.  
+-   When asked to print a specified page, draw that portion of the document.  
   
--   Aloque e desaloque todas as fontes ou outros recursos de \(GDI\) de graphics device interface necessárias para imprimir.  
+-   Allocate and deallocate any fonts or other graphics device interface (GDI) resources needed for printing.  
   
--   Se necessário, enviar todos os códigos de escape necessários para alterar o modo de impressora antes de impressão uma página específica, por exemplo, para alterar a orientação de impressão em uma base por página.  
+-   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per-page basis.  
   
- As responsabilidades da estrutura são os seguintes:  
+ The framework's responsibilities are as follows:  
   
--   Exibir a caixa de diálogo de **Imprimir** .  
+-   Display the **Print** dialog box.  
   
--   Crie um objeto de [CDC](../Topic/CDC%20Class.md) para a impressora.  
+-   Create a [CDC](../mfc/reference/cdc-class.md) object for the printer.  
   
--   Chame as funções de membro de [StartDoc](../Topic/CDC::StartDoc.md) e de [EndDoc](../Topic/CDC::EndDoc.md) do objeto de `CDC` .  
+-   Call the [StartDoc](../mfc/reference/cdc-class.md#startdoc) and [EndDoc](../mfc/reference/cdc-class.md#enddoc) member functions of the `CDC` object.  
   
--   Chamar repetidamente a função de membro de [StartPage](../Topic/CDC::StartPage.md) do objeto de `CDC` , informando a classe da exibição que a página deve ser impressa, e chamam a função de membro de [EndPage](../Topic/CDC::EndPage.md) do objeto de `CDC` .  
+-   Repeatedly call the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../mfc/reference/cdc-class.md#endpage) member function of the `CDC` object.  
   
--   Chamar funções overridable na exibição nos momentos apropriados.  
+-   Call overridable functions in the view at the appropriate times.  
   
- Os artigos a seguir discutem como a estrutura da suporte à impressão e a visualização de impressão:  
+ The following articles discuss how the framework supports printing and print preview:  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Como usar como padrão a impressão é feita](../Topic/How%20Default%20Printing%20Is%20Done.md)  
+-   [How default printing is done](../mfc/how-default-printing-is-done.md)  
   
--   [Documentos de várias páginas](../mfc/multipage-documents.md)  
+-   [Multipage documents](../mfc/multipage-documents.md)  
   
--   [Cabeçalhos e rodapés](../mfc/headers-and-footers.md)  
+-   [Headers and footers](../mfc/headers-and-footers.md)  
   
--   [Alocando recursos de GDI para imprimir](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
--   [Visualizar impressão](../mfc/print-preview-architecture.md)  
+-   [Print preview](../mfc/print-preview-architecture.md)  
   
-## Consulte também  
- [Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)
+
+

@@ -1,40 +1,58 @@
 ---
-title: "Classes de documento ativas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classes de documento ativas"
+title: Active Document Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de documento ativas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6de937e1e23757bd42fb14a5f5d7dd0fcb7c923c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os documentos ativos podem ser exibidos na janela inteira do cliente de um navegador da Web, como o Internet Explorer 5.5, ou um contêiner ativa, como a pasta do Microsoft Office, que da suporte a documentos ativas.  
+---
+# <a name="active-document-classes"></a>Active Document Classes
+Active documents can be displayed either in the entire client window of a Web browser, such as Internet Explorer 5.5, or in an Active container, such as the Microsoft Office Binder, that supports Active documents.  
   
  [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- Mapeia as interfaces ativas do documento, e inicializa e ativa um objeto ativo do documento.  
+ Maps the Active document interfaces, and initializes and activates an Active document object.  
   
  [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Verbos OLE DB do servidor das ferramentas especificamente para servidores ativas do documento.  
+ Implements OLE server verbs specifically for Active document servers.  
   
- [COleDocObjectItem](../Topic/COleDocObjectItem%20Class.md)  
- Implementa confinação de documento ativa.  
+ [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
+ Implements Active document containment.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

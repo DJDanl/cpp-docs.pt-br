@@ -1,53 +1,72 @@
 ---
-title: "Como adicionar controles de faixa de op&#231;&#245;es e manipuladores de evento | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manipuladores de eventos, adicionando"
-  - "controles de faixa de opções, adicionando"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Como adicionar controles de faixa de op&#231;&#245;es e manipuladores de evento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os controles de Faixa De Opções são elementos, como os botões e as caixas de combinação, que você adiciona aos painéis.  Os painéis são as áreas da barra de fita que exibem um grupo de controles relacionados.  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- Neste tópico, você abrirá o designer da Faixa De Opções, adicionar um botão, e vincular em um evento que o mundo do exibe “hello”.  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### Para abrir o designer da Faixa De Opções  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  No Visual Studio, no menu de **Exibir** , clique em **Modo de Exibição de Recurso**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  Em **Modo de Exibição de Recurso**, clique duas vezes no recurso de fita para exibi\-lo na superfície de design.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### Para adicionar um botão e um manipulador de eventos  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  De **Barra de Ferramentas**, clique em **Botão** e arraste\-o em um painel na superfície de design.  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  Clique com o botão direito do mouse no botão e, em **Adicionar Manipulador de Eventos**.  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  Em **Assistente do manipulador de eventos**, confirme as configurações padrão e clique em **Adicionar e editar**.  Para obter mais informações, consulte [Assistente de Manipulador de Eventos](../ide/event-handler-wizard.md).  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  No editor de códigos, adicione o código a seguir na função de manipulador:  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## Consulte também  
- [Exemplo de RibbonGadgets: Aplicativo de gadget da Faixa De Opções](../top/visual-cpp-samples.md)   
- [Designer da faixa de opções \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

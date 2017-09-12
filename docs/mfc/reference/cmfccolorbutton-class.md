@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCColorButton | Microsoft Docs
+title: CMFCColorButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,18 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorButton::m_Color data member
-- CMFCColorButton::m_bAutoSetFocus data member
-- CMFCColorButton::m_pPopup data member
-- CMFCColorButton::m_nColumns data member
-- CMFCColorButton class
-- CMFCColorButton::m_strAutoColorText data member
-- CMFCColorButton::m_bAltColorDlg data member
-- CMFCColorButton::m_strDocColorsText data member
-- CMFCColorButton::m_strOtherText data member
-- CMFCColorButton::m_pPalette data member
-- CMFCColorButton::m_lstDocColors data member
-- CMFCColorButton::m_ColorAutomatic data member
+- CMFCColorButton [MFC], CMFCColorButton
+- CMFCColorButton [MFC], EnableAutomaticButton
+- CMFCColorButton [MFC], EnableOtherButton
+- CMFCColorButton [MFC], GetAutomaticColor
+- CMFCColorButton [MFC], GetColor
+- CMFCColorButton [MFC], SetColor
+- CMFCColorButton [MFC], SetColorName
+- CMFCColorButton [MFC], SetColumnsNumber
+- CMFCColorButton [MFC], SetDocumentColors
+- CMFCColorButton [MFC], SetPalette
+- CMFCColorButton [MFC], SizeToContent
+- CMFCColorButton [MFC], IsDrawXPTheme
+- CMFCColorButton [MFC], OnDraw
+- CMFCColorButton [MFC], OnDrawBorder
+- CMFCColorButton [MFC], OnDrawFocusRect
+- CMFCColorButton [MFC], OnShowColorPopup
+- CMFCColorButton [MFC], RebuildPalette
+- CMFCColorButton [MFC], UpdateColor
+- CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 caps.latest.revision: 34
 author: mikeblome
@@ -64,102 +71,102 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: b14c9bebe54cb255bf4b487daf0fbae580aee018
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45d0a0a1121db657cde55eb3c0f18ecb20099a82
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
-O `CMFCColorButton` e [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) classes são usadas em conjunto para implementar um controle de seletor de cor.  
+# <a name="cmfccolorbutton-class"></a>CMFCColorButton Class
+The `CMFCColorButton` and [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) classes are used together to implement a color picker control.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Constrói um novo `CMFCColorButton` objeto.|  
+|[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Constructs a new `CMFCColorButton` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Habilita e desabilita um botão "automático" que será posicionado acima dos botões de cor regular. (O botão automático padrão do sistema é rotulado **automática**.)|  
-|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Habilita e desabilita um botão "outro" que será posicionado abaixo dos botões de cor regular. (O padrão do sistema é rotulado "outro" botão **mais cores**.)|  
-|[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|Recupera a cor automática atual.|  
-|[CMFCColorButton::GetColor](#getcolor)|Recupera a cor do botão.|  
-|[CMFCColorButton::SetColor](#setcolor)|Define a cor do botão.|  
-|[CMFCColorButton::SetColorName](#setcolorname)|Define um nome de cor.|  
-|[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|Define o número de colunas na caixa de diálogo Seletor de cores.|  
-|[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|Especifica uma lista de cores específicas de documentos que são exibidos na caixa de diálogo Seletor de cores.|  
-|[CMFCColorButton::SetPalette](#setpalette)|Especifica uma paleta de cores padrão.|  
-|[CMFCColorButton::SizeToContent](#sizetocontent)|Altera o tamanho do controle button, dependendo de seu tamanho de texto e imagem.|  
+|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Enables and disables an "automatic" button that is positioned above the regular color buttons. (The standard system automatic button is labeled **Automatic**.)|  
+|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Enables and disables an "other" button that is positioned below the regular color buttons. (The standard system "other" button is labeled **More Colors**.)|  
+|[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|Retrieves the current automatic color.|  
+|[CMFCColorButton::GetColor](#getcolor)|Retrieves a button's color.|  
+|[CMFCColorButton::SetColor](#setcolor)|Sets a button's color.|  
+|[CMFCColorButton::SetColorName](#setcolorname)|Sets a color name.|  
+|[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|Sets the number of columns on the color picker dialog box.|  
+|[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|Specifies a list of document-specific colors that are displayed on the color picker dialog box.|  
+|[CMFCColorButton::SetPalette](#setpalette)|Specifies a palette of standard display colors.|  
+|[CMFCColorButton::SizeToContent](#sizetocontent)|Changes the size of the button control, depending on its text and image size.|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Indica se o botão de cor atual é exibido no estilo visual do Windows XP.|  
-|[CMFCColorButton::OnDraw](#ondraw)|Chamado pelo framework para exibir uma imagem do botão.|  
-|[CMFCColorButton::OnDrawBorder](#ondrawborder)|Chamado pelo framework para exibir a borda do botão.|  
-|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|Chamado pelo framework para exibir um retângulo de foco quando o botão tem foco.|  
-|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|Chamado pelo framework quando a caixa de diálogo de seletor de cor está prestes a ser exibido.|  
-|[CMFCColorButton::RebuildPalette](#rebuildpalette)|Inicializa o `m_pPalette` protegido membro de dados para a paleta especificada ou a paleta padrão do sistema.|  
-|[CMFCColorButton::UpdateColor](#updatecolor)|Chamado pelo framework quando o usuário seleciona uma cor na paleta de caixa de diálogo Seletor de cores.|  
+|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Indicates whether the current color button is displayed in the visual style of Windows XP.|  
+|[CMFCColorButton::OnDraw](#ondraw)|Called by the framework to display an image of the button.|  
+|[CMFCColorButton::OnDrawBorder](#ondrawborder)|Called by the framework to display the button's border.|  
+|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|Called by the framework to display a focus rectangle when the button has a focus.|  
+|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|Called by the framework when the color picker dialog box is about to be displayed.|  
+|[CMFCColorButton::RebuildPalette](#rebuildpalette)|Initializes the `m_pPalette` protected data member to the specified palette or the default system palette.|  
+|[CMFCColorButton::UpdateColor](#updatecolor)|Called by the framework when the user selects a color from the palette of the color picker dialog box.|  
   
-### <a name="data-members"></a>Membros de Dados  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_bAltColorDlg`|Um booliano. Se `TRUE`, exibe a estrutura de [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo de cor quando o *outros* botão é clicado, ou se `FALSE`, a caixa de diálogo de cor do sistema. O valor padrão é `TRUE`. Para obter mais informações, consulte [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
-|`m_bAutoSetFocus`|Um booliano. Se `TRUE`, a estrutura define o foco no menu de cor quando o menu é exibido, ou se `FALSE`, não altera o foco. O valor padrão é `TRUE`.|  
-|[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Indica se o modo de personalização está habilitado para o botão de cor.|  
-|`m_Color`|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor. Contém a cor atualmente selecionada.|  
-|`m_ColorAutomatic`|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor. Contém a cor padrão selecionado no momento.|  
-|`m_Colors`|Um [CArray](../../mfc/reference/carray-class.md) de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores. Contém as cores disponíveis no momento.|  
-|`m_lstDocColors`|Um [CList](../../mfc/reference/clist-class.md) de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores. Contém as cores do documento atual.|  
-|`m_nColumns`|Um inteiro. Contém o número de colunas a serem exibidas na grade de cores em um menu de seleção de cor.|  
-|`m_pPalette`|Um ponteiro para um [CPalette](../../mfc/reference/cpalette-class.md). Contém as cores que estão disponíveis no menu seleção de cor atual.|  
-|`m_pPopup`|Um ponteiro para um [CMFCColorPopupMenu classe](../../mfc/reference/cmfccolorpopupmenu-class.md) objeto. O menu de seleção de cor é exibido quando você clica no botão de cor.|  
-|`m_strAutoColorText`|Uma cadeia de caracteres. O rótulo do botão "automático" em um menu de seleção de cor.|  
-|`m_strDocColorsText`|Uma cadeia de caracteres. O rótulo do botão em um menu de seleção de cor que exibe as cores do documento.|  
-|`m_strOtherText`|Uma cadeia de caracteres. O rótulo do botão "outro" em um menu de seleção de cor.|  
+|`m_bAltColorDlg`|A Boolean. If `TRUE`, the framework displays the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) color dialog box when the *other* button is clicked, or if `FALSE`, the system color dialog box. The default value is `TRUE`. For more information, see [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
+|`m_bAutoSetFocus`|A Boolean. If `TRUE`, the framework sets the focus on the color menu when the menu is displayed, or if `FALSE`, does not change the focus. The default value is `TRUE`.|  
+|[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Indicates whether customization mode is enabled for the color button.|  
+|`m_Color`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value. Contains the currently selected color.|  
+|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value. Contains the currently selected default color.|  
+|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md) of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values. Contains the currently available colors.|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md) of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values. Contains the current document colors.|  
+|`m_nColumns`|An integer. Contains the number of columns to display in the grid of colors in a color selection menu.|  
+|`m_pPalette`|A pointer to a [CPalette](../../mfc/reference/cpalette-class.md). Contains the colors that are available in the current color selection menu.|  
+|`m_pPopup`|A pointer to a [CMFCColorPopupMenu Class](../../mfc/reference/cmfccolorpopupmenu-class.md) object. The color selection menu that is displayed when you click the color button.|  
+|`m_strAutoColorText`|A string. The label of the "automatic" button in a color selection menu.|  
+|`m_strDocColorsText`|A string. The label of the button in a color selection menu that displays the document colors.|  
+|`m_strOtherText`|A string. The label of the "other" button in a color selection menu.|  
   
-## <a name="remarks"></a>Comentários  
- Por padrão, o `CMFCColorButton` classe se comporta como um botão de ação que abre uma caixa de diálogo do seletor de cores. Caixa de diálogo Seletor de cor contém uma matriz de botões de cor pequeno e um botão "outros" que exibe um seletor de cores personalizadas. (O padrão do sistema é rotulado "outro" botão **mais cores**.) Quando um usuário seleciona uma cor nova, o `CMFCColorButton` objeto reflete a alteração e exibe a cor selecionada.  
+## <a name="remarks"></a>Remarks  
+ By default, the `CMFCColorButton` class behaves as a push button that opens a color picker dialog box. The color picker dialog box contains an array of small color buttons and an "other" button that displays a custom color picker. (The standard system "other" button is labeled **More Colors**.) When a user selects a new color, the `CMFCColorButton` object reflects the change and displays the selected color.  
   
- Criar um controle de botão de cor diretamente no seu código ou usando o **ClassWizard** ferramenta e um modelo de caixa de diálogo. Se você criar um controle de botão de cor diretamente, adicione um `CMFCColorButton` variável ao seu aplicativo e, em seguida, chame o construtor e `Create` métodos do `CMFCColorButton` objeto. Se você usar o **ClassWizard**, adicione um `CButton` variável ao seu aplicativo e, em seguida, altere o tipo da variável de `CButton` para `CMFCColorButton`.  
+ Create a color button control either directly in your code, or by using the **ClassWizard** tool and a dialog box template. If you create a color button control directly, add a `CMFCColorButton` variable to your application, and then call the constructor and `Create` methods of the `CMFCColorButton` object. If you use the **ClassWizard**, add a `CButton` variable to your application, and then change the type of the variable from `CButton` to `CMFCColorButton`.  
   
- Caixa de diálogo Seletor de cores ( [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md)) é exibida, o [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) método quando o framework chama o `OnLButtonDown` manipulador de eventos. O [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) método pode ser substituído para dar suporte a seleção de cor personalizada.  
+ The color picker dialog box ( [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md)) is displayed by the [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) method when the framework calls the `OnLButtonDown` event handler. The [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) method can be overridden to support custom color selection.  
   
- O `CMFCColorButton` notifica o objeto pai que está sendo alterado uma cor, enviando-um `WM_COMMAND | BN_CLICKED` notificação. O pai usa o [CMFCColorButton::GetColor](#getcolor) método para recuperar a cor atual.  
+ The `CMFCColorButton` object notifies its parent that a color is changing by sending it a `WM_COMMAND | BN_CLICKED` notification. The parent uses the [CMFCColorButton::GetColor](#getcolor) method to retrieve the current color.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como configurar um botão de cor usando vários métodos no `CMFCColorButton` classe. Os métodos de definir a cor do botão de cor e seu número de colunas e habilitar o automático e outros botões. Este exemplo é parte do [exemplo de demonstração de barra de Status](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a color button by using various methods in the `CMFCColorButton` class. The methods set the color of the color button and its number of columns, and enable the automatic and the other buttons. This example is part of the [Status Bar Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StatusBarDemo #10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n º 11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcolorbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolorbutton.h  
   
-##  <a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
- Constrói um novo `CMFCColorButton` objeto.  
+##  <a name="cmfccolorbutton"></a>  CMFCColorButton::CMFCColorButton  
+ Constructs a new `CMFCColorButton` object.  
   
 ```  
 CMFCColorButton();
 ```  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorButton::EnableAutomaticButton  
- Habilitar ou desabilitar o botão "automático" de um controle de seletor de cores e definir a cor automático (padrão).  
+##  <a name="enableautomaticbutton"></a>  CMFCColorButton::EnableAutomaticButton  
+ Enable or disable the "automatic" button of a color picker control and set the automatic (default) color.  
   
 ```  
 void EnableAutomaticButton(
@@ -168,20 +175,20 @@ void EnableAutomaticButton(
     BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- Especifica o texto do botão automático.  
+ Specifies the automatic button's text.  
   
  [in] `colorAutomatic`  
- Um valor RGB que especifica a cor do padrão do botão automático.  
+ An RGB value that specifies the automatic button's default color.  
   
  [in] `bEnable`  
- Especifica se o botão automático está habilitado ou desabilitado.  
+ Specifies whether the automatic button is enabled or disabled.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enableotherbutton"></a>CMFCColorButton::EnableOtherButton  
- Habilitar ou desabilitar o botão "outro", que aparece abaixo de botões de cor regular.  
+##  <a name="enableotherbutton"></a>  CMFCColorButton::EnableOtherButton  
+ Enable or disable the "other" button, which appears below regular color buttons.  
   
 ```  
 void EnableOtherButton(
@@ -190,66 +197,66 @@ void EnableOtherButton(
     BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- Especifica o texto do botão.  
+ Specifies the button's text.  
   
  [in] `bAltColorDlg`  
- Especifica se o [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo ou a caixa de diálogo de cor do sistema é aberta quando o usuário clica no botão.  
+ Specifies whether the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialog box or the system color dialog box is opened when the user clicks the button.  
   
  [in] `bEnable`  
- Especifica se o botão "outro" está habilitado ou desabilitado.  
+ Specifies whether the "other" button is enabled or disabled.  
   
-### <a name="remarks"></a>Comentários  
- Clique no botão "outro" para exibir uma caixa de diálogo de cor. Se o *bAltColorDlg* parâmetro é `TRUE`, o [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md) é exibido; caso contrário, a caixa de diálogo de cor do sistema é exibida.  
+### <a name="remarks"></a>Remarks  
+ Click the "other" button to display a color dialog box. If the *bAltColorDlg* parameter is `TRUE`, the [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md) is displayed; otherwise, the system color dialog box is displayed.  
   
-##  <a name="getautomaticcolor"></a>CMFCColorButton::GetAutomaticColor  
- Recupera a cor atual do automático (padrão).  
+##  <a name="getautomaticcolor"></a>  CMFCColorButton::GetAutomaticColor  
+ Retrieves the current automatic (default) color.  
   
 ```  
 COLORREF GetAutomaticColor() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um valor RGB que representa a cor automática atual.  
+### <a name="return-value"></a>Return Value  
+ An RGB value representing the current automatic color.  
   
-### <a name="remarks"></a>Comentários  
- A cor automática atual é definida pelo [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) método.  
+### <a name="remarks"></a>Remarks  
+ The current automatic color is set by the [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) method.  
   
-##  <a name="getcolor"></a>CMFCColorButton::GetColor  
- Recupera a cor atualmente selecionada.  
+##  <a name="getcolor"></a>  CMFCColorButton::GetColor  
+ Retrieves the currently selected color.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um valor RGB.  
+### <a name="return-value"></a>Return Value  
+ An RGB value.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawxptheme"></a>CMFCColorButton::IsDrawXPTheme  
- Indica se o botão de cor atual é exibido no estilo visual do Windows XP.  
+##  <a name="isdrawxptheme"></a>  CMFCColorButton::IsDrawXPTheme  
+ Indicates whether the current color button is displayed in the visual style of Windows XP.  
   
 ```  
 BOOL IsDrawXPTheme() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`se há suporte para os estilos visuais e o botão de cor atual é exibido no estilo visual do Windows XP. Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if visual styles are supported and the current color button is displayed in the visual style of Windows XP; otherwise, `FALSE`.  
   
-##  <a name="m_benabledincustomizemode"></a>CMFCColorButton::m_bEnabledInCustomizeMode  
- Define um botão de cor para o modo de personalização.  
+##  <a name="m_benabledincustomizemode"></a>  CMFCColorButton::m_bEnabledInCustomizeMode  
+ Sets a color button to customization mode.  
   
 ```  
 BOOL m_bEnabledInCustomizeMode;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se você precisar adicionar um botão de cor para a página da caixa de diálogo uma personalização (ou permitir que o usuário fazer outra seleção de cor durante a personalização), habilitar o botão, definindo a `m_bEnabledInCustomizeMode` membro `TRUE`. Por padrão, esse membro é definido como `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ If you need to add a color button to a customization dialog's page (or allow the user to make another color selection during customization), enable the button by setting the `m_bEnabledInCustomizeMode` member to `TRUE`. By default, this member is set to `FALSE`.  
   
-##  <a name="ondraw"></a>CMFCColorButton::OnDraw  
- Chamado pelo framework para processar uma imagem do botão.  
+##  <a name="ondraw"></a>  CMFCColorButton::OnDraw  
+ Called by the framework to render an image of the button.  
   
 ```  
 virtual void OnDraw(
@@ -258,21 +265,21 @@ virtual void OnDraw(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Aponta para o contexto de dispositivo que é usada para renderizar a imagem do botão.  
+ Points to the device context that is used to render the image of the button.  
   
  [in] `rect`  
- Um retângulo que circunda o botão.  
+ A rectangle that bounds the button.  
   
  [in] `uiState`  
- Especifica o estado visual do botão.  
+ Specifies the visual state of the button.  
   
-### <a name="remarks"></a>Comentários  
- Substitua este método para personalizar o processo de renderização.  
+### <a name="remarks"></a>Remarks  
+ Override this method to customize the rendering process.  
   
-##  <a name="ondrawborder"></a>CMFCColorButton::OnDrawBorder  
- Chamado pelo framework para exibir a borda do botão.  
+##  <a name="ondrawborder"></a>  CMFCColorButton::OnDrawBorder  
+ Called by the framework to display the border of the button.  
   
 ```  
 virtual void OnDrawBorder(
@@ -281,21 +288,21 @@ virtual void OnDrawBorder(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Aponta para o contexto de dispositivo usado para desenhar a borda.  
+ Points to the device context used to draw the border.  
   
  [in] `rectClient`  
- Um retângulo no contexto do dispositivo especificado pelo o `pDC` parâmetro que define os limites do botão a ser desenhada.  
+ A rectangle in the device context that is specified by the the `pDC` parameter that defines the boundaries of the button to be drawn.  
   
  [in] `uiState`  
- Especifica o estado visual do botão.  
+ Specifies the visual state of the button.  
   
-### <a name="remarks"></a>Comentários  
- Substitua essa função para personalizar a aparência da borda do botão de cor.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the color button's border appearance.  
   
-##  <a name="ondrawfocusrect"></a>CMFCColorButton::OnDrawFocusRect  
- Chamado pelo framework para exibir um retângulo de foco quando o botão tem foco.  
+##  <a name="ondrawfocusrect"></a>  CMFCColorButton::OnDrawFocusRect  
+ Called by the framework to display a focus rectangle when the button has focus.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -303,53 +310,53 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Aponta para o contexto de dispositivo usado para desenhar o retângulo de foco.  
+ Points to the device context used to draw the focus rectangle.  
   
  [in] `rectClient`  
- Um retângulo no contexto de dispositivo especificado pelo `pDC` parâmetro que define os limites do botão.  
+ A rectangle in the device context specified by the `pDC` parameter that defines the boundaries of the button.  
   
-### <a name="remarks"></a>Comentários  
- Substitua este método para personalizar a aparência do retângulo de foco.  
+### <a name="remarks"></a>Remarks  
+ Override this method to customize appearance of the focus rectangle.  
   
-##  <a name="onshowcolorpopup"></a>CMFCColorButton::OnShowColorPopup  
- Chamado antes da barra de cores pop-up é exibida.  
+##  <a name="onshowcolorpopup"></a>  CMFCColorButton::OnShowColorPopup  
+ Called before the popup color bar is displayed.  
   
 ```  
 virtual void OnShowColorPopup();
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="rebuildpalette"></a>CMFCColorButton::RebuildPalette  
- Inicializa o `m_pPalette` protegido membro de dados para a paleta especificada ou a paleta padrão do sistema.  
+##  <a name="rebuildpalette"></a>  CMFCColorButton::RebuildPalette  
+ Initializes the `m_pPalette` protected data member to the specified palette or the default system palette.  
   
 ```  
 void RebuildPalette(CPalette* pPal);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pPal`|Um ponteiro para uma paleta lógica ou `NULL`. Se `NULL`, a paleta padrão do sistema é usada.|  
+|[in] `pPal`|A pointer to a logical palette or `NULL`. If `NULL`, the default system palette is used.|  
   
-##  <a name="setcolor"></a>CMFCColorButton::SetColor  
- Especifica a cor do botão.  
+##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
+ Specifies the color of the button.  
   
 ```  
 void SetColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- Um valor RGB.  
+ An RGB value.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setcolorname"></a>CMFCColorButton::SetColorName  
- Especifica o nome de uma cor.  
+##  <a name="setcolorname"></a>  CMFCColorButton::SetColorName  
+ Specifies the name of a color.  
   
 ```  
 static void SetColorName(
@@ -357,32 +364,32 @@ static void SetColorName(
     const CString& strName);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- O valor da cor RGB.  
+ The color's RGB value.  
   
  [in] `strName`  
- Nome da cor.  
+ The color's name.  
   
-### <a name="remarks"></a>Comentários  
- A lista de nomes de cor é global por aplicativo. Consequentemente, esse método transfere seus parâmetros para [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
+### <a name="remarks"></a>Remarks  
+ The list of color names is global per application. Consequently, this method transfers its parameters to [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
   
-##  <a name="setcolumnsnumber"></a>CMFCColorButton::SetColumnsNumber  
- Define o número de colunas que são exibidas na tabela de cores é apresentada ao usuário durante o processo de seleção de cor do usuário.  
+##  <a name="setcolumnsnumber"></a>  CMFCColorButton::SetColumnsNumber  
+ Defines the number of columns that are displayed in the table of colors that is presented to the user during the user's color selection process.  
   
 ```  
 void SetColumnsNumber(int nColumns);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `nColumns`  
- Especifica o número de colunas.  
+ Specifies the number of columns.  
   
-### <a name="remarks"></a>Comentários  
- O usuário pode selecionar uma cor de uma barra de cores pop-up que exibe uma tabela de cores predefinidas. Use esse método para definir o número de colunas na tabela.  
+### <a name="remarks"></a>Remarks  
+ The user can select a color from a popup color bar that displays a table of predefined colors. Use this method to define the number of columns in the table.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorButton::SetDocumentColors  
- Especifica um conjunto de cores e o nome do conjunto. O conjunto de cores é exibido usando um [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) objeto.  
+##  <a name="setdocumentcolors"></a>  CMFCColorButton::SetDocumentColors  
+ Specifies a set of colors and the set's name. The set of colors is displayed using a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) object.  
   
 ```  
 void SetDocumentColors(
@@ -390,68 +397,68 @@ void SetDocumentColors(
     CList<COLORREF,COLORREF>& lstColors);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- Especifica o rótulo a ser exibido com o conjunto de cores do documento.  
+ Specifies the label to be displayed with the set of document colors.  
   
  [in] `lstColors`  
- Uma referência a uma lista de valores RGB.  
+ A reference to a list of RGB values.  
   
-### <a name="remarks"></a>Comentários  
- Um `CMFCColorButton` objeto mantém uma lista de valores RGB são transferidos para um [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) objeto. Quando a barra de cores é exibida, essas cores são mostradas em uma seção especial cujo nome é especificado pelo `lpszLabel` parâmetro.  
+### <a name="remarks"></a>Remarks  
+ A `CMFCColorButton` object maintains a list of RGB values that are transferred to a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) object. When the color bar is displayed, these colors are shown in a special section whose label is specified by the `lpszLabel` parameter.  
   
-##  <a name="setpalette"></a>CMFCColorButton::SetPalette  
- Especifica as cores padrão para exibir na barra de cores de pop-up.  
+##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
+ Specifies the standard colors to display on the popup color bar.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pPalette`  
- Um ponteiro para uma paleta de cores.  
+ A pointer to a color palette.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizetocontent"></a>CMFCColorButton::SizeToContent  
- Redimensiona o controle de botão para ajustar seu texto e imagem.  
+##  <a name="sizetocontent"></a>  CMFCColorButton::SizeToContent  
+ Resizes the button control to fit its text and image.  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bCalcOnly`  
- Se for diferente de zero, o novo tamanho do controle button é calculado, mas o tamanho real não é alterado.  
+ If nonzero, the new size of the button control is calculated but the actual size is not changed.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um `CSize` objeto que especifica um novo tamanho do controle de botão.  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that specifies a new button control size.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatecolor"></a>CMFCColorButton::UpdateColor  
- Chamado pelo framework quando o usuário seleciona uma cor da barra de cores exibe quando o usuário clica no botão de cor.  
+##  <a name="updatecolor"></a>  CMFCColorButton::UpdateColor  
+ Called by the framework when the user selects a color from the color bar that displays when the user clicks the color button.  
   
 ```  
 virtual void UpdateColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- Cor selecionada pelo usuário.  
+ A color selected by the user.  
   
-### <a name="remarks"></a>Comentários  
- O `UpdateColor` função altera a cor do botão selecionado no momento e notificará seu pai, enviando um `WM_COMMAND` mensagem com um `BN_CLICKED` notificação padrão. Use o [CMFCColorButton::GetColor](#getcolor) método para recuperar a cor selecionada.  
+### <a name="remarks"></a>Remarks  
+ The `UpdateColor` function changes the currently selected button's color and notifies its parent by sending a `WM_COMMAND` message with a `BN_CLICKED` standard notification. Use the [CMFCColorButton::GetColor](#getcolor) method to retrieve the selected color.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)   
- [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)   
+ [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md)   
+ [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [Classe CPalette](../../mfc/reference/cpalette-class.md)   
- [Classe CArray](../../mfc/reference/carray-class.md)   
- [Classe CList](../../mfc/reference/clist-class.md)   
+ [CPalette Class](../../mfc/reference/cpalette-class.md)   
+ [CArray Class](../../mfc/reference/carray-class.md)   
+ [CList Class](../../mfc/reference/clist-class.md)   
  [CString](../../atl-mfc-shared/reference/cstringt-class.md)
 

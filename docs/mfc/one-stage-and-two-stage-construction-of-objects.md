@@ -1,56 +1,74 @@
 ---
-title: "Constru&#231;&#227;o de objetos em um e dois est&#225;gios | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "criação do objeto, objetos gráficos"
-  - "objetos [C++], criando objetos gráficos"
-  - "objetos [C++], objetos gráficos"
-  - "construção de objetos em um e dois estágios"
+title: One-Stage and Two-Stage Construction of Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], creating graphic objects
+- object creation [MFC], graphic objects
+- objects [MFC], graphic objects
+- one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Constru&#231;&#227;o de objetos em um e dois est&#225;gios
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 154c97ac97e2410d786c27305d0262a8cb133c0a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você pode optar entre duas técnicas para criar objetos gráficos, como penalidades e escovas:  
+---
+# <a name="one-stage-and-two-stage-construction-of-objects"></a>One-Stage and Two-Stage Construction of Objects
+You have a choice between two techniques for creating graphic objects, such as pens and brushes:  
   
--   *construção de uma fase*: Construir e inicializar o objeto está em fase, todas com o construtor.  
+-   *One-stage construction*: Construct and initialize the object in one stage, all with the constructor.  
   
--   *Construção de dois estágios*: Construir e inicializar o objeto em duas fases separadas.  O construtor cria o objeto e uma função de inicialização para inicializá\-lo.  
+-   *Two-stage construction*: Construct and initialize the object in two separate stages. The constructor creates the object and an initialization function initializes it.  
   
- A construção de dois estágios sempre é mais segura.  Na construção de uma fase, o construtor pode gerar uma exceção se você fornecer argumentos incorretos ou a alocação de memória falha.  Esse problema pode ser evitado pela construção de dois estágios, embora você tem que verificar se há falha.  Em ambos os casos, destruir o objeto é o mesmo processo.  
+ Two-stage construction is always safer. In one-stage construction, the constructor could throw an exception if you provide incorrect arguments or memory allocation fails. That problem is avoided by two-stage construction, although you do have to check for failure. In either case, destroying the object is the same process.  
   
 > [!NOTE]
->  Essas técnicas se aplicam a criar todos os objetos, não apenas objetos gráficos.  
+>  These techniques apply to creating any objects, not just graphic objects.  
   
-## Exemplo de ambas as técnicas de compilação  
- O seguinte exemplo mostra breve ambos os métodos de construir um objeto de forma:  
+## <a name="example-of-both-construction-techniques"></a>Example of Both Construction Techniques  
+ The following brief example shows both methods of constructing a pen object:  
   
- [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/CPP/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Objetos gráficos](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
--   [Selecionando um objeto gráfico em um contexto do dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
+-   [Selecting a graphic object into a device context](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
--   [Contextos de dispositivo](../Topic/Device%20Contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Desenhar em uma exibição](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
-## Consulte também  
- [Objetos gráficos](../mfc/graphic-objects.md)
+## <a name="see-also"></a>See Also  
+ [Graphic Objects](../mfc/graphic-objects.md)
+
+

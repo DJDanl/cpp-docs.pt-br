@@ -1,45 +1,62 @@
 ---
-title: "Impress&#227;o e visualiza&#231;&#227;o de impress&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "visualizando a impressão"
-  - "visualizar impressão"
-  - "imprimindo [C++]"
-  - "imprimindo [C++], visualizar impressão"
-  - "imprimindo [MFC]"
+title: Printing and Print Preview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC]
+- previewing printing
+- printing [MFC]
+- print preview
+- printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Impress&#227;o e visualiza&#231;&#227;o de impress&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc0dd2a387ebdcfe43d68afdd894cf92fdd94827
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O oferece suporte a impressão e a visualização de impressão para documentos do programa pela classe [CView](../Topic/CView%20Class.md).  Para impressão e a visualização de impressão básicos, substitua apenas a função de membro de [OnDraw](../Topic/CView::OnDraw.md) da sua classe da exibição, que você deve fazer de qualquer maneira.  Essa função pode tirar à exibição na tela, a um contexto do dispositivo de impressora para uma impressora real, ou a um contexto do dispositivo que simular a impressora na tela.  
+---
+# <a name="printing-and-print-preview"></a>Printing and Print Preview
+MFC supports printing and print preview for your program's documents via class [CView](../mfc/reference/cview-class.md). For basic printing and print preview, simply override your view class's [OnDraw](../mfc/reference/cview-class.md#ondraw) member function, which you must do anyway. That function can draw to the view on the screen, to a printer device context for an actual printer, or to a device context that simulates your printer on the screen.  
   
- Você também pode adicionar código para gerenciar a impressão e visualização de várias páginas do documento, a seus documentos impressos, e para adicionar\-lhes cabeçalhos e rodapés.  
+ You can also add code to manage multipage document printing and preview, to paginate your printed documents, and to add headers and footers to them.  
   
- Esta família de artigos explica como imprimindo é implementado na biblioteca de classes do Microsoft \(MFC\) e como se beneficiar da arquitetura de impressão já criada na estrutura.  Os artigos também explicam como MFC o oferece suporte à implementação fácil da funcionalidade de visualização de impressão e como você pode usar e modificar essa funcionalidade.  
+ This family of articles explains how printing is implemented in the Microsoft Foundation Class Library (MFC) and how to take advantage of the printing architecture already built into the framework. The articles also explain how MFC supports easy implementation of print preview functionality and how you can use and modify that functionality.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Imprimindo](../mfc/printing.md)  
+-   [Printing](../mfc/printing.md)  
   
--   [Arquitetura de visualização de impressão](../mfc/print-preview-architecture.md)  
+-   [Print preview architecture](../mfc/print-preview-architecture.md)  
   
--   [Amostra](../top/visual-cpp-samples.md)  
+-   [Sample](../visual-cpp-samples.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

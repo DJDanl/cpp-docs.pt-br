@@ -1,55 +1,73 @@
 ---
-title: "Definindo as imagens para um item individual | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de combinação estendidas, imagens"
-  - "imagens [C++], itens de caixa de combinação"
+title: Setting the Images for an Individual Item | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extended combo boxes [MFC], images
+- images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Definindo as imagens para um item individual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc4ae8c5833256c105009348ebe8a4e2624eb51a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os tipos diferentes de imagens usadas pelo item estendido da caixa de combinação são determinados pelos valores em `iImage`, em **iSelectedImage**, e em membros de **iOverlay** da estrutura de [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) .  Cada valor é o índice de uma imagem associado na lista da imagem do controle.  Por padrão, esses membros são definidos como 0, fazendo com que o controle não exibe nenhuma imagem para o item.  Se você quiser usar imagens para um item específico, você pode alterar a estrutura dessa forma, qualquer uma ao inserir o item da caixa de combinação ou alterando um item existente na caixa de combinação.  
+---
+# <a name="setting-the-images-for-an-individual-item"></a>Setting the Images for an Individual Item
+The different types of images used by the extended combo box item are determined by the values in the `iImage`, **iSelectedImage**, and **iOverlay** members of the [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) structure. Each value is the index of an image in the associated image list of the control. By default, these members are set to 0, causing the control to display no image for the item. If you want to use images for a specific item, you can modify the structure accordingly, either when inserting the combo box item or by modifying an existing combo box item.  
   
-## Definindo a imagem para um novo item  
- Se você estiver inserindo um novo item, inicializar `iImage`, **iSelectedImage**, e membros da estrutura de **iOverlay** com os valores apropriados e insira o item com uma chamada a [CComboBoxEx::InsertItem](../Topic/CComboBoxEx::InsertItem.md).  
+## <a name="setting-the-image-for-a-new-item"></a>Setting the Image for a New Item  
+ If you are inserting a new item, initialize the `iImage`, **iSelectedImage**, and **iOverlay** structure members with the proper values and then insert the item with a call to [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- O exemplo a seguir insere um novo item estendido da caixa de combinação`cbi`\(\) no controle estendido da caixa de combinação`m_comboEx`\(\), fornecendo índices para todos os três estados de imagem:  
+ The following example inserts a new extended combo box item (`cbi`) into the extended combo box control (`m_comboEx`), supplying indices for all three image states:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
-## Definindo a imagem para um item existente  
- Se você estiver alterando um item existente, você precisar trabalhar com o membro de **mask** de uma estrutura de **COMBOBOXEXITEM** .  
+## <a name="setting-the-image-for-an-existing-item"></a>Setting the Image for an Existing Item  
+ If you are modifying an existing item, you need to work with the **mask** member of a **COMBOBOXEXITEM** structure.  
   
-#### Para alterar um item existente para usar imagens  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>To modify an existing item to use images  
   
-1.  Declare uma estrutura de **COMBOBOXEXITEM** e define o membro de dados de **mask** aos valores que você está interessado na alteração.  
+1.  Declare a **COMBOBOXEXITEM** structure and set the **mask** data member to the values you are interested in modifying.  
   
-2.  Usando essa estrutura, chame um a [CComboBoxEx::GetItem](../Topic/CComboBoxEx::GetItem.md).  
+2.  Using this structure, make a call to [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Modifique **mask**, `iImage`, e membros de **iSelectedImage** da estrutura recentemente retornada, usando os valores apropriados.  
+3.  Modify the **mask**, `iImage`, and **iSelectedImage** members of the newly returned structure, using the appropriate values.  
   
-4.  Chame um a [CComboBoxEx::SetItem](../Topic/CComboBoxEx::SetItem.md), passando na estrutura alterada.  
+4.  Make a call to [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), passing in the modified structure.  
   
- O exemplo a seguir demonstra esse procedimento alternando as imagens selecionadas e não selecionada do terceiro item estendido da caixa de combinação:  
+ The following example demonstrates this procedure by swapping the selected and unselected images of the third extended combo box item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   
-## Consulte também  
- [Usando CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

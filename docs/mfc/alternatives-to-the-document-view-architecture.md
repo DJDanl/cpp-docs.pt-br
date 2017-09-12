@@ -1,78 +1,96 @@
 ---
-title: "Alternativas &#224; arquitetura de documento/exibi&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CDocument, requisitos de espaço"
-  - "documentos, aplicativos sem"
-  - "modos de exibição, aplicativos sem"
+title: Alternatives to the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], applications without
+- CDocument class [MFC], space requirements
+- views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Alternativas &#224; arquitetura de documento/exibi&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d9f1d9a04a85565096892cd0e2ead82d5b74e288
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os aplicativos MFC normalmente usam a arquitetura do documento\/exibição para gerenciar informações, os formatos de arquivo, e a representação visual de dados aos usuários.  Para a maioria dos aplicativos de área de trabalho, a arquitetura do documento\/exibição é uma arquitetura apropriado e eficiente de aplicativo.  Essa arquitetura separa dados de exibição e, na maioria dos casos, simplifica o aplicativo e reduz o código redundante.  
+---
+# <a name="alternatives-to-the-documentview-architecture"></a>Alternatives to the Document/View Architecture
+MFC applications normally use the document/view architecture to manage information, file formats, and the visual representation of data to users. For the majority of desktop applications, the document/view architecture is an appropriate and efficient application architecture. This architecture separates data from viewing and, in most cases, simplifies your application and reduces redundant code.  
   
- No entanto, o documento\/arquitetura da exibição não é apropriado para algumas situações.  Considere esses exemplos:  
+ However, the document/view architecture is not appropriate for some situations. Consider these examples:  
   
--   Se você estiver movendo um aplicativo escrito em C no windows, talvez você queira concluir sua porta antes de adicionar o suporte do documento\/exibição ao aplicativo.  
+-   If you are porting an application written in C for Windows, you might want to complete your port before adding document/view support to your application.  
   
--   Se você estiver escrevendo um utilitário de peso leve, você pode descobrir que você pode fazer sem a arquitetura do documento\/exibição.  
+-   If you are writing a lightweight utility, you might find that you can do without the document/view architecture.  
   
--   Se seu código original já mistura o gerenciamento de dados com a exibição de dados, mova o código para o modelo de documento\/exibição não for o valor busca porque você deve desassociar os dois.  Você pode preferir deixar o código como é.  
+-   If your original code already mixes data management with data viewing, moving the code to the document/view model is not worth the effort because you must separate the two. You might prefer to leave the code as is.  
   
- Para criar um aplicativo que não usa arquitetura do documento\/exibição, desmarque a caixa de seleção de **Document\/View architecture support** na etapa 1 do assistente de aplicativo MFC.  Consulte [Assistente do aplicativo MFC](../Topic/MFC%20Application%20Wizard.md) para obter detalhes.  
+ To create an application that does not use the document/view architecture, clear the **Document/View architecture support** check box in step 1 of the MFC Application Wizard. See [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) for details.  
   
 > [!NOTE]
->  Os aplicativos baseados Diálogo\- gerados pelo assistente de aplicativo MFC não usam a arquitetura do documento\/exibição, a caixa de seleção de **Document\/View architecture support** é desabilitada se você selecionar o tipo de aplicativo da caixa de diálogo.  
+>  Dialog-based applications produced by the MFC Application Wizard do not use the document/view architecture, so the **Document/View architecture support** check box is disabled if you select the dialog application type.  
   
- Assistentes do Visual C\+\+, bem como os editores de origem e da caixa de diálogo, trabalho com o aplicativo gerado apenas como com qualquer outro aplicativo script gerado.  O aplicativo pode suportar barras de ferramentas, barras de rolagem, e uma barra de status, e tem uma caixa de **Sobre** .  Seu aplicativo não registrará nenhum modelo de documento, e não conterá uma classe do documento.  
+ The Visual C++ wizards, as well as the source and dialog editors, work with the generated application just as they would with any other Wizard-generated application. The application can support toolbars, scrollbars, and a status bar, and has an **About** box. Your application will not register any document templates, and it will not contain a document class.  
   
- Observe que o aplicativo gerado tem uma classe de exibição, **CChildView**, derivado de `CWnd`.  O MFC cria e coloca uma instância da classe da exibição dentro do windows do quadro criadas pelo seu aplicativo.  O impõe MFC ainda usando uma janela de exibição, como simplifica o posicionamento e gerenciar o conteúdo do aplicativo.  Você pode adicionar código de pintura ao membro de `OnPaint` dessa classe.  O código deve adicionar barras de rolagem a exibição em vez do quadro.  
+ Note that your generated application has a view class, **CChildView**, derived from `CWnd`. MFC creates and positions one instance of the view class within the frame windows created by your application. MFC still enforces using a view window, because it simplifies positioning and managing the application's content. You can add painting code to the `OnPaint` member of this class. Your code should add scrollbars to the view rather than to the frame.  
   
- Como a arquitetura do documento\/exibição fornecida por MFC é responsável para implementar muitos dos recursos básicos de um aplicativo, a ausência em seu projeto significa que você é responsável para implementar muitos recursos importantes de seu aplicativo:  
+ Because the document/view architecture provided by MFC is responsible for implementing many of an application's basic features, its absence in your project means that you are responsible for implementing many important features of your application:  
   
--   Conforme fornecido pelo assistente de aplicativo MFC, o menu para seu aplicativo contém apenas `New` e comandos de `Exit` no menu de **Arquivo** . \(O comando de `New` tem suporte apenas para aplicativos MDI, não aplicativos de SDI sem suporte do documento\/exibição.\) O recurso gerado a partir do menu não dará suporte a uma lista de MRU \(usado recentemente\).  
+-   As provided by the MFC Application Wizard, the menu for your application contains only `New` and `Exit` commands on the **File** menu. (The `New` command is supported only for MDI applications, not SDI applications without Document/View support.) The generated menu resource will not support an MRU (most recently used) list.  
   
--   Você deve adicionar funções e implementações do manipulador para todos os comandos que seu aplicativo suporte, inclusive **Abrir** e **Salvar** no menu de **Arquivo** .  O MFC normalmente fornece código para oferecer suporte a esses recursos, mas o suporte é associado com segurança à arquitetura do documento\/exibição.  
+-   You must add handler functions and implementations for any commands that your application will support, including **Open** and **Save** on the **File** menu. MFC normally provides code to support these features, but that support is tightly bound to the document/view architecture.  
   
--   A barra de ferramentas do aplicativo, se você solicitou um, será mínima.  
+-   The toolbar for your application, if you requested one, will be minimal.  
   
- É altamente recomendável que você use o assistente de aplicativo MFC para criar aplicativos sem a arquitetura do documento\/exibição, porque o assistente garante uma arquitetura correta de MFC.  No entanto, se você deve evitar usar o assistente, aqui estão várias abordagens para ignorar a arquitetura do documento\/exibição em seu código:  
+ It is strongly recommended that you use the MFC Application Wizard to create applications without the document/view architecture, because the wizard guarantees a correct MFC architecture. However, if you must avoid using the wizard, here are several approaches for bypassing the document/view architecture in your code:  
   
--   Tratar o documento como um anexo não utilizados e implementar seu código de gerenciamento de dados na classe de exibição, conforme sugerido acima.  A sobrecarga para o documento é relativamente baixa.  Um único objeto de [CDocument](../Topic/CDocument%20Class.md) apresentará uma pequena quantidade de sobrecarga por si só, mais a pequena sobrecarga de classes base, de [CCmdTarget](../Topic/CCmdTarget%20Class.md) e de [CObject](../Topic/CObject%20Class.md)de **CDocument** .  Ambas as últimas classes são pequenas.  
+-   Treat the document as an unused appendage and implement your data management code in the view class, as suggested above. Overhead for the document is relatively low. A single [CDocument](../mfc/reference/cdocument-class.md) object incurs a small amount of overhead by itself, plus the small overhead of **CDocument**'s base classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) and [CObject](../mfc/reference/cobject-class.md). Both of the latter classes are small.  
   
-     Declarado em **CDocument**:  
+     Declared in **CDocument**:  
   
-    -   Dois objetos de `CString` .  
+    -   Two `CString` objects.  
   
-    -   Três **BOOL**S.  
+    -   Three **BOOL**s.  
   
-    -   Um ponteiro de `CDocTemplate` .  
+    -   One `CDocTemplate` pointer.  
   
-    -   Um objeto de `CPtrList` , que contém uma lista das exibições do documento.  
+    -   One `CPtrList` object, which contains a list of the document's views.  
   
-     Além disso, o documento requer a quantidade de tempo criar o objeto de documento, seus objetos de exibição, uma janela do quadro, e um objeto de modelo de documento.  
+     Additionally, the document requires the amount of time to create the document object, its view objects, a frame window, and a document template object.  
   
--   Tratar o documento e a exibição como anexos não usado.  Coloque o seu código de gerenciamento de dados e de desenho na janela do quadro em vez da exibição.  Essa abordagem é mais próximo do modelo de programação do C \- idioma.  
+-   Treat both the document and view as unused appendages. Put your data management and drawing code in the frame window rather than the view. This approach is closer to the C-language programming model.  
   
--   Substituir as partes da estrutura de MFC que criam o documento e a exibição para eliminar a criação deless de todos eles.  O processo de criação do documento começa com uma chamada a `CWinApp::AddDocTemplate`.  Eliminar essa chamada da função de membro de `InitInstance` da classe do aplicativo e, em vez disso, crie uma janela de `InitInstance` você mesmo do quadro.  Coloque o seu código de gerenciamento de dados em sua classe da janela do quadro.  O processo de criação do documento\/exibição é ilustrado em [Documento\/criação da exibição](../mfc/document-view-creation.md).  Este é mais trabalho e requer uma compreensão mais profunda da estrutura, mas libera completamente a sobrecarga do documento\/exibição.  
+-   Override the parts of the MFC framework that create the document and view to eliminate creating them at all. The document creation process begins with a call to `CWinApp::AddDocTemplate`. Eliminate that call from your application class's `InitInstance` member function and, instead, create a frame window in `InitInstance` yourself. Put your data management code in your frame window class. The document/view creation process is illustrated in [Document/View Creation](../mfc/document-view-creation.md). This is more work and requires a deeper understanding of the framework, but it frees you entirely of the document/view overhead.  
   
- O artigo [MFC: Usar a base de dados de classificação sem documentos e exibições](../data/mfc-using-database-classes-without-documents-and-views.md) fornece exemplos mais concretos de backup do documento\/exibição no contexto dos aplicativos de base de dados.  
+ The article [MFC: Using Database Classes Without Documents and Views](../data/mfc-using-database-classes-without-documents-and-views.md) gives more concrete examples of document/view alternatives in the context of database applications.  
   
-## Consulte também  
- [Arquitetura de documento\/exibição](../Topic/Document-View%20Architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

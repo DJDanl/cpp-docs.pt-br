@@ -1,41 +1,59 @@
 ---
-title: "Folhas de propriedades e p&#225;ginas de propriedade em MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [MFC], folhas de propriedade"
-  - "páginas de propriedade, MFC"
-  - "folhas de propriedade, MFC"
-  - "caixas de diálogo de guia"
+title: Property Sheets and Property Pages in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages [MFC], MFC
+- controls [MFC], property sheets
+- property sheets, MFC
+- tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Folhas de propriedades e p&#225;ginas de propriedade em MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bd2a171b535dcf83b88958e784129e2cbd0b16f4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Uma folha de propriedade, também conhecida como uma caixa de diálogo da guia, é uma caixa de diálogo que contém páginas de propriedades.  Cada página de propriedades é baseada em um recurso do modelo da caixa de diálogo e contém controles.  É incluída em uma página com um guia na parte superior.  A guia da página e indica sua finalidade.  Os usuários clicam na guia da folha de propriedades para selecionar um conjunto de controles.  
+---
+# <a name="property-sheets-and-property-pages-in-mfc"></a>Property Sheets and Property Pages in MFC
+A property sheet, also known as a tab dialog box, is a dialog box that contains property pages. Each property page is based on a dialog template resource and contains controls. It is enclosed on a page with a tab on top. The tab names the page and indicates its purpose. Users click a tab in the property sheet to select a set of controls.  
   
- Use as páginas para agrupar os controles na folha de propriedade em conjuntos significativos.  A folha de propriedades contidas geralmente tem vários controles de seus próprios.  Esses se aplicam a todas as páginas.  
+ Use pages to group the controls in the property sheet into meaningful sets. The contained property sheet typically has several controls of its own. These apply to all pages.  
   
- As folhas de propriedades são baseadas na classe [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  As páginas de propriedades são baseadas na classe [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
+ Property sheets are based on class [CPropertySheet](../mfc/reference/cpropertysheet-class.md). Property pages are based on class [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
   
- Uma folha de propriedade é um tipo especial da caixa de diálogo que normalmente é usada para alterar os atributos de qualquer objeto externo, como a seleção atual em uma exibição.  A folha de propriedade tem três partes principais: a caixa de diálogo contentor, uma ou mais páginas de propriedades mostradas um de cada vez, e um guia na parte superior de cada página que o usuário clica em para selecionar essa página.  As folhas de propriedades são úteis em situações em que você tem vários grupos semelhantes de configurações de opções ou alterar.  Uma folha de propriedade agrupa informações de uma maneira explicativos.  
+ A property sheet is a special kind of dialog box that is generally used to modify the attributes of some external object, such as the current selection in a view. The property sheet has three main parts: the containing dialog box, one or more property pages shown one at a time, and a tab at the top of each page that the user clicks to select that page. Property sheets are useful for situations where you have several similar groups of settings or options to change. A property sheet groups information in an easily understood manner.  
   
 > [!NOTE]
->  Quando você está tentando mostrar uma folha de propriedade usando `CPropertySheet::DoModal`, o sistema pode gerar uma exceção de \(possibilidade.  Esta exceção ocorre porque o sistema está tentando alterar [Estilos de janela](../Topic/Window%20Styles.md) do objeto antes que o objeto foi criado.  Para obter mais informações sobre essa exceção, e também como evitar ou tratá\-los, consulte [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md).  
+>  When you are trying to show a property sheet by using `CPropertySheet::DoModal`, the system might generate a first-chance exception. This exception occurs because the system is trying to change the [Window Styles](../mfc/reference/styles-used-by-mfc.md#window-styles) of the object before the object has been created. For more information about this exception, and also how to avoid it or handle it, see [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).  
   
-## Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

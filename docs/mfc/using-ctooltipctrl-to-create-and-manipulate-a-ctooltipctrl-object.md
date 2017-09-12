@@ -1,49 +1,67 @@
 ---
-title: "Usando CToolTipCtrl para criar e manipular um objeto CToolTipCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolTipCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolTipCtrl, usando"
-  - "dicas de ferramenta [C++], criando"
+title: Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolTipCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], creating
+- CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CToolTipCtrl para criar e manipular um objeto CToolTipCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cfc091afcfea3eae5cc877d0a1a177f4f7221ac3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Aqui está um exemplo de uso de [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md) :  
+---
+# <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object
+Here is an example of [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) usage:  
   
-### Para criar e manipular um CToolTipCtrl  
+### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>To create and manipulate a CToolTipCtrl  
   
-1.  Construir o objeto de `CToolTipCtrl` .  
+1.  Construct the `CToolTipCtrl` object.  
   
-2.  Chame [Crie](../Topic/CToolTipCtrl::Create.md) para criar o controle de comum de dica de ferramenta do windows e anexá\-lo ao objeto de `CToolTipCtrl` .  
+2.  Call [Create](../mfc/reference/ctooltipctrl-class.md#create) to create the Windows tool tip common control and attach it to the `CToolTipCtrl` object.  
   
-3.  Chame [AddTool](../Topic/CToolTipCtrl::AddTool.md) para registrar uma ferramenta com o controle da dica de ferramenta, de modo que as informações armazenadas na dica de ferramenta é exibida quando o cursor é a ferramenta.  
+3.  Call [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) to register a tool with the tool tip control, so that the information stored in the tool tip is displayed when the cursor is on the tool.  
   
-4.  Chame [SetToolInfo](../Topic/CToolTipCtrl::SetToolInfo.md) para definir as informações que uma dica de ferramenta mantém para uma ferramenta.  
+4.  Call [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) to set the information that a tool tip maintains for a tool.  
   
-5.  Chame [SetToolRect](../Topic/CToolTipCtrl::SetToolRect.md) para definir um novo retângulo delimitador para uma ferramenta.  
+5.  Call [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) to set a new bounding rectangle for a tool.  
   
-6.  Chame [HitTest](../Topic/CToolTipCtrl::HitTest.md) para testar um ponto para determinar se estiver dentro do retângulo delimitador da ferramenta fornecida e, nesse caso, recuperar informações sobre a ferramenta.  
+6.  Call [HitTest](../mfc/reference/ctooltipctrl-class.md#hittest) to test a point to determine whether it is within the bounding rectangle of the given tool and, if so, retrieve information about the tool.  
   
-7.  Chame [GetToolCount](../Topic/CToolTipCtrl::GetToolCount.md) para recuperar uma contagem das ferramentas registradas com o controle da dica de ferramenta.  
+7.  Call [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) to retrieve a count of the tools registered with the tool tip control.  
   
-## Consulte também  
- [Usando CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

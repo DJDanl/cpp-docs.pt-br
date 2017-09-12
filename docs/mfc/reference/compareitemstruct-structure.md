@@ -1,5 +1,5 @@
 ---
-title: Estrutura COMPAREITEMSTRUCT | Documentos do Microsoft
+title: COMPAREITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COMPAREITEMSTRUCT structure
+- COMPAREITEMSTRUCT structure [MFC]
 ms.assetid: 4b7131a5-5c7d-4e98-aac7-e85650262b52
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 6c38c3e362f2e97cb51f5474aaa0bc05098b1ec2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ca1c8370a64667578092bb3ad0046cdcc0d2cf1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="compareitemstruct-structure"></a>Estrutura COMPAREITEMSTRUCT
-O `COMPAREITEMSTRUCT` estrutura fornece os identificadores e dados fornecidos pelo aplicativo para dois itens em uma caixa de combinação ou caixa de lista classificada, desenhados pelo proprietário.  
+# <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT Structure
+The `COMPAREITEMSTRUCT` structure supplies the identifiers and application-supplied data for two items in a sorted, owner-drawn list box or combo box.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagCOMPAREITEMSTRUCT {  
@@ -57,36 +57,36 @@ typedef struct tagCOMPAREITEMSTRUCT {
 } COMPAREITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- **ODT_LISTBOX** (que especifica uma caixa de listagem de desenho proprietário) ou **ODT_COMBOBOX** (que especifica uma caixa de combinação do desenho proprietário).  
+ **ODT_LISTBOX** (which specifies an owner-draw list box) or **ODT_COMBOBOX** (which specifies an owner-draw combo box).  
   
  `CtlID`  
- A identificação do controle de caixa de listagem ou caixa de combinação.  
+ The control ID for the list box or combo box.  
   
  `hwndItem`  
- O identificador de janela do controle.  
+ The window handle of the control.  
   
  *itemID1*  
- O índice do primeiro item na caixa de listagem ou caixa de combinação que estão sendo comparados.  
+ The index of the first item in the list box or combo box being compared.  
   
  *itemData1*  
- Dados fornecidos pelo aplicativo para o primeiro item que estão sendo comparado. Esse valor foi passado na chamada que adicionou o item à caixa de combinação ou lista.  
+ Application-supplied data for the first item being compared. This value was passed in the call that added the item to the combo or list box.  
   
  *itemID2*  
- Índice do segundo item na caixa de listagem ou caixa de combinação que estão sendo comparados.  
+ Index of the second item in the list box or combo box being compared.  
   
  *itemData2*  
- Dados fornecidos pelo aplicativo para o segundo item que estão sendo comparado. Esse valor foi passado na chamada que adicionou o item à caixa de combinação ou lista.  
+ Application-supplied data for the second item being compared. This value was passed in the call that added the item to the combo or list box.  
   
-## <a name="remarks"></a>Comentários  
- Sempre que um aplicativo adiciona um novo item a uma caixa de lista desenhado pelo proprietário ou caixa de combinação é criado com o **CBS_SORT** ou **LBS_SORT** estilo, o Windows envia o proprietário um `WM_COMPAREITEM` mensagem. O `lParam` parâmetro da mensagem contém um ponteiro longo para um `COMPAREITEMSTRUCT` estrutura. Ao receber a mensagem, o proprietário compara os dois itens e retorna um valor que indica qual item classifica antes da outra.  
+## <a name="remarks"></a>Remarks  
+ Whenever an application adds a new item to an owner-drawn list box or combo box created with the **CBS_SORT** or **LBS_SORT** style, Windows sends the owner a `WM_COMPAREITEM` message. The `lParam` parameter of the message contains a long pointer to a `COMPAREITEMSTRUCT` structure. Upon receiving the message, the owner compares the two items and returns a value indicating which item sorts before the other.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)
 
 

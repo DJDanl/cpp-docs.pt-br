@@ -1,5 +1,5 @@
 ---
-title: Classe CMultiPageDHtmlDialog | Documentos do Microsoft
+title: CMultiPageDHtmlDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMultiPageDHtmlDialog class
+- CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 caps.latest.revision: 22
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c00af20731b2c47a0074366722da3f4a0711ef85
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14f45cfc76755650624ccee4da74e18aba081278
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
-Uma caixa de diálogo de Multipágina exibe várias páginas HTML sequencialmente e trata os eventos de cada página.  
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
+A multipage dialog displays multiple HTML pages sequentially and handles the events from each page.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMultiPageDHtmlDialog : public CDHtmlDialog  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constrói um objeto de caixa de diálogo com várias páginas (estilo de assistente) DHTML.|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Destrói um objeto de caixa de diálogo DHTML várias páginas.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constructs a multipage (wizard-style) DHTML dialog object.|  
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Destroys a multipage DHTML dialog object.|  
   
-## <a name="remarks"></a>Comentários  
- O mecanismo para fazer isso é uma [mapa de evento DHTML e URL](http://msdn.microsoft.com/en-us/2a7332f0-79d7-46e4-b816-0a618c46777a), que contém [incorporado mapas de evento](http://msdn.microsoft.com/library/5346210f-f8b7-4e28-9d2c-d9d7fd42421d) para cada página.  
+## <a name="remarks"></a>Remarks  
+ The mechanism for doing this is a [DHTML and URL event map](dhtml-event-maps.md), which contains embedded event maps for each page.  
   
-## <a name="example"></a>Exemplo  
- Essa caixa de diálogo de Multipágina assume três recursos HTML que definem a funcionalidade de assistente simples. A primeira página tem uma `Next` botão, o segundo um **Prev** e `Next` botão e a terceira um **Prev** botão. Quando um dos botões é pressionado, chama uma função de manipulador [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) para carregar a nova página apropriada.  
+## <a name="example"></a>Example  
+ This multipage dialog assumes three HTML resources that define simple wizard-like functionality. The first page has a `Next` button, the second a **Prev** and `Next` button, and the third a **Prev** button. When one of the buttons is pressed, a handler function calls [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) to load the appropriate new page.  
   
- As partes relevantes da declaração de classe (em CMyMultiPageDlg.h):  
+ The pertinent parts of the class declaration (in CMyMultiPageDlg.h):  
   
- [!code-cpp[NVC_MFCDocView&#181;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
+ [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
- As partes relevantes da implementação de classe (em CMyMultipageDlg.cpp):  
+ The pertinent parts of the class implementation (in CMyMultipageDlg.cpp):  
   
- [!code-cpp[NVC_MFCDocView&#182;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
@@ -95,11 +95,11 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Constrói um objeto de caixa de diálogo com várias páginas (estilo de assistente) DHTML.  
+##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+ Constructs a multipage (wizard-style) DHTML dialog object.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -116,29 +116,29 @@ CMultiPageDHtmlDialog(
 CMultiPageDHtmlDialog();
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- A sequência terminada em nulo que é o nome de um recurso de modelo de caixa de diálogo.  
+ The null-terminated string that is the name of a dialog-box template resource.  
   
  `szHtmlResID`  
- A sequência terminada em nulo que é o nome de um recurso HTML.  
+ The null-terminated string that is the name of an HTML resource.  
   
  `pParentWnd`  
- Um ponteiro para o objeto de janela pai ou proprietário (do tipo [CWnd](../../mfc/reference/cwnd-class.md)) ao qual pertence o objeto de caixa de diálogo. Se for **nulo**, janela de pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
+ A pointer to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `nIDTemplate`  
- Contém o número de identificação de um recurso de modelo de caixa de diálogo.  
+ Contains the ID number of a dialog-box template resource.  
   
  `nHtmlResID`  
- Contém o número de identificação de um recurso HTML.  
+ Contains the ID number of an HTML resource.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- Destrói um objeto de caixa de diálogo DHTML várias páginas.  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog  
+ Destroys a multipage DHTML dialog object.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

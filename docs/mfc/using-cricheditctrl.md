@@ -1,58 +1,76 @@
 ---
-title: "Usando CRichEditCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRichEditCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CRichEditCtrl, usando"
-  - "controles de edição avançada, usando"
+title: Using CRichEditCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRichEditCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], using
+- CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CRichEditCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccf20f2b621e2b000ca28b380339ff479dac0ace
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um controle de edição rico é uma janela para que o usuário possa digitar e editar o texto.  O texto pode ser atribuído a formatação de caractere e de parágrafo, e pode incluir objetos OLE inseridos.  O controle de edição rico é representado em MFC pela classe de [CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md) .  
+---
+# <a name="using-cricheditctrl"></a>Using CRichEditCtrl
+A rich edit control is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. The rich edit control is represented in MFC by the [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) class.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Visão geral do controle de edição avançado](../mfc/overview-of-the-rich-edit-control.md)  
+-   [Overview of the Rich Edit Control](../mfc/overview-of-the-rich-edit-control.md)  
   
--   [Classes relacionadas aos controles de edição avançada](../mfc/classes-related-to-rich-edit-controls.md)  
+-   [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md)  
   
--   [Exemplos avançados de controle de edição](../Topic/Rich%20Edit%20Control%20Examples.md)  
+-   [Rich Edit Control Examples](../mfc/rich-edit-control-examples.md)  
   
--   [Formatação de caractere em controles de edição avançada](../mfc/character-formatting-in-rich-edit-controls.md)  
+-   [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md)  
   
--   [Formatação de parágrafo em controles de edição avançada](../Topic/Paragraph%20Formatting%20in%20Rich%20Edit%20Controls.md)  
+-   [Paragraph Formatting in Rich Edit Controls](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
   
--   [Seleção atual em um controle de edição avançado](../mfc/current-selection-in-a-rich-edit-control.md)  
+-   [Current Selection in a Rich Edit Control](../mfc/current-selection-in-a-rich-edit-control.md)  
   
--   [Quebras da palavra em um controle de edição avançado](../mfc/word-breaks-in-rich-edit-controls.md)  
+-   [Word Breaks in a Rich Edit Control](../mfc/word-breaks-in-rich-edit-controls.md)  
   
--   [Operações da área de transferência em controles de edição avançada](../mfc/clipboard-operations-in-rich-edit-controls.md)  
+-   [Clipboard Operations in Rich Edit Controls](../mfc/clipboard-operations-in-rich-edit-controls.md)  
   
--   [Operações de fluxo em controles de edição avançada](../mfc/stream-operations-in-rich-edit-controls.md)  
+-   [Stream Operations in Rich Edit Controls](../mfc/stream-operations-in-rich-edit-controls.md)  
   
--   [Imprimir em controles de edição avançada](../mfc/printing-in-rich-edit-controls.md)  
+-   [Printing in Rich Edit Controls](../mfc/printing-in-rich-edit-controls.md)  
   
--   [Controles de edição avançada sem fundo](../mfc/bottomless-rich-edit-controls.md)  
+-   [Bottomless Rich Edit Controls](../mfc/bottomless-rich-edit-controls.md)  
   
--   [Notificações de um controle de edição avançado](../mfc/notifications-from-a-rich-edit-control.md)  
+-   [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md)  
   
-## Consulte também  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

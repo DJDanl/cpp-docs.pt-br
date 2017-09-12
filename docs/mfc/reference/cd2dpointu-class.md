@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DPointU | Documentos do Microsoft
+title: CD2DPointU Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DPointU class
+- CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
 caps.latest.revision: 18
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 605415ad5a2739d8f8ac3a6a47c562796d55a813
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2edb9ea9618ba1eef1caf8513991c1d3f6d3d212
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dpointu-class"></a>Classe CD2DPointU
-Um wrapper para `D2D1_POINT_2U`.  
+# <a name="cd2dpointu-class"></a>CD2DPointU Class
+A wrapper for `D2D1_POINT_2U`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DPointU : public D2D1_POINT_2U;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|Sobrecarregado. Constrói uma `CD2DPointU` de objeto `D2D1_POINT_2U` objeto.|  
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|Overloaded. Constructs a `CD2DPointU` from object `D2D1_POINT_2U` object.|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPointU::Operator CPoint](#operator_cpoint)|Converte `CD2DPointU` para `CPoint` objeto.|  
+|[CD2DPointU::operator CPoint](#operator_cpoint)|Converts `CD2DPointU` to `CPoint` object.|  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_POINT_2U`  
   
  `CD2DPointU`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2dpointu"></a>CD2DPointU::CD2DPointU  
- Constrói um objeto CD2DPointU do objeto CPoint.  
+##  <a name="cd2dpointu"></a>  CD2DPointU::CD2DPointU  
+ Constructs a CD2DPointU object from CPoint object.  
   
 ```  
 CD2DPointU(const CPoint& pt);  
@@ -83,26 +83,26 @@ CD2DPointU(const D2D1_POINT_2U& pt);
 CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pt`  
- ponto de origem  
+ source point  
   
  `uX`  
- fonte de X  
+ source X  
   
  `uY`  
- origem Y  
+ source Y  
   
-##  <a name="operator_cpoint"></a>CD2DPointU::Operator CPoint  
- Converte CD2DPointU CPoint objeto.  
+##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint  
+ Converts CD2DPointU to CPoint object.  
   
 ```  
 operator CPoint();
 ```   
   
-### <a name="return-value"></a>Valor de retorno  
- Valor atual de D2D ponto.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D point.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

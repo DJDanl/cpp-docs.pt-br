@@ -1,5 +1,5 @@
 ---
-title: Classe CBaseKeyFrame | Documentos do Microsoft
+title: CBaseKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseKeyFrame class
+- CBaseKeyFrame [MFC], CBaseKeyFrame
+- CBaseKeyFrame [MFC], AddToStoryboard
+- CBaseKeyFrame [MFC], GetAnimationKeyframe
+- CBaseKeyFrame [MFC], IsAdded
+- CBaseKeyFrame [MFC], IsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_bAdded
+- CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 caps.latest.revision: 17
 author: mikeblome
@@ -42,60 +49,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cfbaac379097c89b5dcb52fa36c0cd1f6e3d2c7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f79f26454a66666e317122c27df4ccf82a64bde
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasekeyframe-class"></a>Classe CBaseKeyFrame
-Implementa a funcionalidade básica de um quadro-chave.  
+# <a name="cbasekeyframe-class"></a>CBaseKeyFrame Class
+Implements the basic functionality of a keyframe.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseKeyFrame : public CObject;  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Constrói um objeto de quadro-chave.|  
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Constructs a keyframe object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Adiciona um quadro-chave para criar um storyboard.|  
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Retorna o valor subjacente de quadro-chave.|  
-|[CBaseKeyFrame::IsAdded](#isadded)|Informa se um quadro-chave foi adicionado ao storyboard.|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Especifica se o quadro-chave deve ser adicionado ao storyboard em deslocamento ou após a transição.|  
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to storyboard.|  
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Returns the underlying keyframe value.|  
+|[CBaseKeyFrame::IsAdded](#isadded)|Tells whether a keyframe has been added to storyboard.|  
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifies whether the keyframe should be added to storyboard at offset, or after transition.|  
   
-### <a name="protected-data-members"></a>Membros de dados protegidos  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Especifica se esse quadro-chave foi adicionado a um storyboard.|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Especifica se esse quadro-chave deve ser adicionada ao storyboard em um deslocamento do outro quadro-chave existente, ou no final de alguma transição.|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Representa um quadro-chave de API de animação do Windows. Quando um quadro-chave não é inicializado, ele é definido como o valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Specifies whether this keyframe has been added to a storyboard.|  
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.|  
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
   
-## <a name="remarks"></a>Comentários  
- Encapsula a variável UI_ANIMATION_KEYFRAME. Serve como uma classe base para qualquer implementação de quadro-chave. Um quadro-chave representa um momento específico em um storyboard e pode ser usado para especificar os horários de início e término de transições. Há dois tipos de quadros-chave quadros-chave adicionados ao storyboard no deslocamento especificado (em hora) ou quadros-chave adicionados após a transição especificada. Porque as durações de algumas transições não podem ser conhecidas antes do início da animação, os valores reais de alguns quadros-chave são determinados em tempo de execução somente. Como quadros-chave podem depender de transições, que, em sua vez, dependem de quadros-chave, é importante evitar recursões infinitos quando criar cadeias de quadro-chave.  
+## <a name="remarks"></a>Remarks  
+ Encapsulates UI_ANIMATION_KEYFRAME variable. Serves as a base class for any keyframe implementation. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. There are two types of keyframes - keyframes added to storyboard at the specified offset (in time), or keyframes added after specified transition. Because durations of some transitions can't be known before animation starts, the actual values of some keyframes are determined at runtime only. Because keyframes may depend on transitions, which in their turn depend on keyframes, it's important to prevent infinite recursions when building keyframe chains.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
- Adiciona um quadro-chave para criar um storyboard.  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
+ Adds a keyframe to storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -103,86 +110,86 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Um ponteiro para um storyboard.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Se esse parâmetro for verdadeiro e o quadro-chave que está sendo adicionado depende de algum outro quadro-chave ou transição, esse método tenta adicionar esse quadro-chave ou a transição para o storyboard primeiro.  
+ If this parameter is TRUE and the keyframe being added depends on some other keyframe or transition, this method tries to add this keyframe or transition to storyboard first.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o quadro-chave foi adicionada ao storyboard com êxito; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if keyframe was added to storyboard successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Esse método é chamado para adicionar um quadro-chave para criar um storyboard.  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a keyframe to storyboard.  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
- Constrói um objeto de quadro-chave.  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
+ Constructs a keyframe object.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
- Retorna o valor subjacente de quadro-chave.  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
+ Returns the underlying keyframe value.  
   
 ```  
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um quadro-chave atual. O valor padrão é UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+### <a name="return-value"></a>Return Value  
+ A current keyframe. The default value is UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
-### <a name="remarks"></a>Comentários  
- Esse é um acessador para o valor subjacente de quadro-chave.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to the underlying keyframe value.  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
- Informa se um quadro-chave foi adicionado ao storyboard.  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
+ Tells whether a keyframe has been added to storyboard.  
   
 ```  
 BOOL IsAdded() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se um quadro-chave for adicionado a um storyboard; Caso contrário FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if a keyframe is added to a storyboard; otehrwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Na classe base IsAdded sempre retorna TRUE, mas ele é substituído nas classes derivadas.  
+### <a name="remarks"></a>Remarks  
+ In the base class IsAdded always returns TRUE, but it's overridden in derived classes.  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
- Especifica se o quadro-chave deve ser adicionado ao storyboard em deslocamento ou após a transição.  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
+ Specifies whether the keyframe should be added to storyboard at offset, or after transition.  
   
 ```  
 BOOL IsKeyframeAtOffset() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se o quadro-chave deve ser adicionado ao storyboard em um deslocamento especificado. FALSE se o quadro-chave deve ser adicionado ao storyboard após alguma transição.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the keyframe should be added to storyboard at some specified offset. FALSE if the keyframe should be added to storyboard after some transition.  
   
-### <a name="remarks"></a>Comentários  
- Especifica se o quadro-chave deve ser adicionado ao storyboard no deslocamento. O deslocamento ou transição deve ser especificada em uma classe derivada.  
+### <a name="remarks"></a>Remarks  
+ Specifies whether the keyframe should be added to storyboard at offset. The offset or transition must be specified in a derived class.  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
- Especifica se esse quadro-chave foi adicionado a um storyboard.  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
+ Specifies whether this keyframe has been added to a storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
- Especifica se esse quadro-chave deve ser adicionada ao storyboard em um deslocamento do outro quadro-chave existente, ou no final de alguma transição.  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
+ Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
- Representa um quadro-chave de API de animação do Windows. Quando um quadro-chave não é inicializado, ele é definido como o valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
+ Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CRecentFileList | Documentos do Microsoft
+title: CRecentFileList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- files [C++], most recently used
-- MRU files
-- CRecentFileList class
+- CRecentFileList [MFC], CRecentFileList
+- CRecentFileList [MFC], Add
+- CRecentFileList [MFC], GetDisplayName
+- CRecentFileList [MFC], GetSize
+- CRecentFileList [MFC], ReadList
+- CRecentFileList [MFC], Remove
+- CRecentFileList [MFC], UpdateMenu
+- CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
 caps.latest.revision: 19
 author: mikeblome
@@ -44,63 +49,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5d18daee2e4d809c750ae4654d731888df1db39e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3bda8ecbd413769fe3d4d12baf40b57f9da622a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crecentfilelist-class"></a>Classe CRecentFileList
-Suporta o controle de lista de arquivos usado mais recentemente (MRU).  
+# <a name="crecentfilelist-class"></a>CRecentFileList Class
+Supports control of the most recently used (MRU) file list.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRecentFileList  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecentFileList::CRecentFileList](#crecentfilelist)|Constrói um objeto `CRecentFileList`.|  
+|[CRecentFileList::CRecentFileList](#crecentfilelist)|Constructs a `CRecentFileList` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRecentFileList::Add](#add)|Adiciona um arquivo à lista de arquivos MRU.|  
-|[CRecentFileList::GetDisplayName](#getdisplayname)|Fornece um nome para exibição para a exibição do menu de um nome de arquivo MRU.|  
-|[CRecentFileList::GetSize](#getsize)|Recupera o número de arquivos na lista de arquivos MRU.|  
-|[CRecentFileList::ReadList](#readlist)|Lê a lista de arquivos MRU do registro ou. Arquivo INI.|  
-|[CRecentFileList::Remove](#remove)|Remove um arquivo da lista de arquivos MRU.|  
-|[CRecentFileList::UpdateMenu](#updatemenu)|Atualiza a exibição do menu da lista de arquivos MRU.|  
-|[CRecentFileList::WriteList](#writelist)|Grava a lista de arquivos MRU do registro ou. Arquivo INI.|  
+|[CRecentFileList::Add](#add)|Adds a file to the MRU file list.|  
+|[CRecentFileList::GetDisplayName](#getdisplayname)|Provides a display name for menu display of an MRU filename.|  
+|[CRecentFileList::GetSize](#getsize)|Retrieves the number of files in the MRU file list.|  
+|[CRecentFileList::ReadList](#readlist)|Reads the MRU file list from the registry or .INI file.|  
+|[CRecentFileList::Remove](#remove)|Removes a file from the MRU file list.|  
+|[CRecentFileList::UpdateMenu](#updatemenu)|Updates the menu display of the MRU file list.|  
+|[CRecentFileList::WriteList](#writelist)|Writes the MRU file list from the registry or .INI file.|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[[CRecentFileList::operator]](#operator_at)|Retorna um `CString` objeto na posição especificada.|  
+|[CRecentFileList::operator [ ]](#operator_at)|Returns a `CString` object at a given position.|  
   
-## <a name="remarks"></a>Comentários  
- Arquivos podem ser adicionados a ou excluídos da lista de arquivos MRU, a lista de arquivos pode ser lido ou gravada no registro ou um. INI e o menu Exibir a lista de arquivos MRU podem ser atualizados.  
+## <a name="remarks"></a>Remarks  
+ Files can be added to or deleted from the MRU file list, the file list can be read from or written to the registry or an .INI file, and the menu displaying the MRU file list can be updated.  
   
- Para obter mais informações sobre os itens de menu MRU, consulte  
+ For more information about MRU menu items, see  
   
--   Artigo da Base de dados de Conhecimento Q243751: como: adicionar manipuladores de comandos para itens de Menu MRU no aplicativo do MFC  
+-   Knowledge Base article Q243751 : HOWTO: Add Command Handlers for MRU Menu Items in MFC Application  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CRecentFileList`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
- Adiciona um arquivo à lista de arquivos usada mais recentemente (MRU).  
+##  <a name="add"></a>  CRecentFileList::Add  
+ Adds a file to the most recently used (MRU) file list.  
   
 ```  
 virtual void Add(LPCTSTR lpszPathName);
@@ -126,27 +131,27 @@ void Add(
     LPCTSTR lpszAppID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- Especifica o nome do caminho a ser adicionado à lista.  
+ Specifies pathname to be added to the list.  
   
  `lpszAppID`  
- Especifica a ID de modelo de usuário do aplicativo para o aplicativo.  
+ Specifies Application User Model ID for the application.  
   
  `pItem`  
- Especifica um ponteiro para o Shell do Item a ser adicionado à lista.  
+ Specifies a pointer to Shell Item to be added to the list.  
   
  `pLink`  
- Especifica um ponteiro para o Shell de Link a ser adicionado à lista.  
+ Specifies a pointer to Shell Link to be added to the list.  
   
  `pidl`  
- Especifica o IDLIST do item de shell que deve ser adicionado à pasta Documentos recentes.  
+ Specifies the IDLIST for the shell item that should be added to the recent docs folder.  
   
-### <a name="remarks"></a>Comentários  
- O nome do arquivo será adicionado à parte superior da lista MRU. Se o nome do arquivo já existir na lista MRU, ele será movido para a parte superior.  
+### <a name="remarks"></a>Remarks  
+ The file name will be added to the top of the MRU list. If the file name already exists in the MRU list, it will be moved to the top.  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
- Constrói um objeto `CRecentFileList`.  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
+ Constructs a `CRecentFileList` object.  
   
 ```  
 CRecentFileList(
@@ -157,27 +162,27 @@ CRecentFileList(
     int nMaxDispLen = AFX_ABBREV_FILENAME_LEN);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nStart`  
- Deslocamento para a numeração na exibição do menu da lista de arquivos MRU (usado mais recentemente).  
+ Offset for the numbering in the menu display of the MRU (most recently used) file list.  
   
  `lpszSection`  
- Aponta para o nome da seção do registro ou do aplicativo. Arquivo INI onde a lista de arquivos MRU é de leitura e/ou gravada.  
+ Points to the name of the section of the registry or the application's .INI file where the MRU file list is read and/or written.  
   
  `lpszEntryFormat`  
- Aponta para uma cadeia de caracteres de formato a ser usado para os nomes das entradas armazenadas no registro ou do aplicativo. Arquivo INI.  
+ Points to a format string to be used for the names of the entries stored in the registry or the application's .INI file.  
   
  `nSize`  
- Número máximo de arquivos na lista de arquivos MRU.  
+ Maximum number of files in the MRU file list.  
   
  `nMaxDispLen`  
- Comprimento máximo em caracteres, disponíveis para a exibição do menu de um nome de arquivo na lista de arquivos MRU.  
+ Maximum length, in characters, available for the menu display of a filename in the MRU file list.  
   
-### <a name="remarks"></a>Comentários  
- A cadeia de caracteres de formato apontada por `lpszEntryFormat` deve conter "%d", que será usado para substituir o índice de cada item MRU. Por exemplo, se a cadeia de caracteres de formato é `"file%d"` , em seguida, as entradas serão nomeadas `file0`, `file1`e assim por diante.  
+### <a name="remarks"></a>Remarks  
+ The format string pointed to by `lpszEntryFormat` should contain "%d", which will be used for substituting the index of each MRU item. For example, if the format string is `"file%d"` then the entries will be named `file0`, `file1`, and so on.  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
- Obtém um nome de exibição para um arquivo na lista de arquivos MRU, para uso na exibição do menu da lista MRU.  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
+ Obtains a display name for a file in the MRU file list, for use in the menu display of the MRU list.  
   
 ```  
 virtual BOOL GetDisplayName(
@@ -188,87 +193,87 @@ virtual BOOL GetDisplayName(
     BOOL bAtLeastName = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `strName`  
- Caminho completo do arquivo cujo nome é exibido na lista de arquivos MRU menu.  
+ Full path of the file whose name is to be displayed in the menu list of MRU files.  
   
  `nIndex`  
- Índice baseado em zero do arquivo na lista de arquivos MRU.  
+ Zero-based index of the file in the MRU file list.  
   
  *lpszCurDir*  
- Cadeia de caracteres contendo o diretório atual.  
+ String holding the current directory.  
   
  *nCurDir*  
- Comprimento da cadeia de caracteres do diretório atual.  
+ Length of the current directory string.  
   
  `bAtLeastName`  
- Se for diferente de zero, indica que o nome base do arquivo deve ser retornado, mesmo se ele exceder o comprimento máximo de exibição (passado como o `nMaxDispLen` parâmetro para o `CRecentFileList` construtor).  
+ If nonzero, indicates that the base name of the file should be returned, even if it exceeds the maximum display length (passed as the `nMaxDispLen` parameter to the `CRecentFileList` constructor).  
   
-### <a name="return-value"></a>Valor de retorno  
- **FALSE** não se há nenhum nome de arquivo no índice especificado na lista de arquivos usada mais recentemente (MRU).  
+### <a name="return-value"></a>Return Value  
+ **FALSE** if there is no filename at the specified index in the most recently used (MRU) file list.  
   
-### <a name="remarks"></a>Comentários  
- Se o arquivo estiver no diretório atual, a função deixa o diretório desativa a exibição. Se o nome do arquivo é muito longo, o diretório e a extensão são eliminados. Se o nome do arquivo ainda é muito longo, o nome de exibição é definido como uma cadeia de caracteres vazia, a menos que `bAtLeastName` é diferente de zero.  
+### <a name="remarks"></a>Remarks  
+ If the file is in the current directory, the function leaves the directory off the display. If the filename is too long, the directory and extension are stripped. If the filename is still too long, the display name is set to an empty string unless `bAtLeastName` is nonzero.  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
- Recupera o número de arquivos na lista de arquivos MRU.  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
+ Retrieves the number of files in the MRU file list.  
   
 ```  
 int GetSize() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de arquivos na atual usado mais recentemente a lista de arquivos (MRU).  
+### <a name="return-value"></a>Return Value  
+ The number of files in the current most recently used (MRU) file list.  
   
-##  <a name="operator_at"></a>[CRecentFileList::operator]  
- O subscrito sobrecarregado ( `[]`) operador retorna um único `CString` especificado pelo índice baseado em zero em `nIndex`.  
+##  <a name="operator_at"></a>  CRecentFileList::operator [ ]  
+ The overloaded subscript ( `[]`) operator returns a single `CString` specified by the zero-based index in `nIndex`.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de base zero um `CString` em um conjunto de `CString`s.  
+ Zero-based index of a `CString` in a set of `CString`s.  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
- Lê a lista de arquivos (MRU) do registro ou do aplicativo usados mais recentemente. Arquivo INI.  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
+ Reads the most recently used (MRU) file list from the registry or the application's .INI file.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
- Remove um arquivo da lista de arquivos MRU.  
+##  <a name="remove"></a>  CRecentFileList::Remove  
+ Removes a file from the MRU file list.  
   
 ```  
 virtual void Remove(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice baseado em zero do arquivo a ser removido da lista de arquivos usada mais recentemente (MRU).  
+ Zero-based index of the file to be removed from the most recently used (MRU) file list.  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
- Atualiza a exibição do menu da lista de arquivos MRU.  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
+ Updates the menu display of the MRU file list.  
   
 ```  
 virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- Um ponteiro para o [CCmdUI](../../mfc/reference/ccmdui-class.md) objeto do menu de lista de arquivos usado mais recentemente (MRU).  
+ A pointer to the [CCmdUI](../../mfc/reference/ccmdui-class.md) object for the most recently used (MRU) file list menu.  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
- Grava os lista mais usados recentemente (MRU) arquivos no registro ou do aplicativo. Arquivo INI.  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
+ Writes the most recently used (MRU) file list into the registry or the application's .INI file.  
   
 ```  
 virtual void WriteList();
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

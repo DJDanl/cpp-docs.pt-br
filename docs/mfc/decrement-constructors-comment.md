@@ -1,42 +1,60 @@
 ---
-title: "// Coment&#225;rio sobre construtores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comentários, comentário sobre construtores"
-  - "comentários, MFC"
-  - "construtores [C++], declarando"
-  - "comentário sobre construtores"
-  - "declarações, construtores"
-  - "declarando construtores, comentários de código"
-  - "construtores de instância, comentários de código"
-  - "Arquivos de origem MFC, Comentário sobre construtores"
+title: -- Constructors Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- constructors comment
+- declarations, constructors
+- MFC source files, Constructors comment
+- declaring constructors, code comments
+- comments, MFC
+- comments, constructors comment
+- constructors [MFC], declaring
+- instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Coment&#225;rio sobre construtores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66e3fbf55e2cbe677423a4990884921e8e46e76a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A seção de `// Constructors` de uma declaração de classe \(MFC declara construtores no sentido C\+\+\) bem como as funções de inicialização necessárias para usar realmente o objeto.  Por exemplo, `CWnd::Create` está na seção dos construtores como antes de usar o objeto de `CWnd` , “deve ser totalmente” construído pela primeira chamada no construtor de C\+\+ e chamar a função de **Criar** .  Normalmente, esses membros são públicos.  
+---
+# <a name="-constructors-comment"></a>// Constructors Comment
+The `// Constructors` section of an MFC class declaration declares constructors (in the C++ sense) as well as any initialization functions required to really use the object. For example, `CWnd::Create` is in the constructors section because before you use the `CWnd` object, it must be "fully constructed" by first calling the C++ constructor and then calling the **Create** function. Typically, these members are public.  
   
- Por exemplo, a classe `CStdioFile` tem três construtores, um dos quais é exibido na lista em [Um exemplo de comentários](../mfc/an-example-of-the-comments.md).  
+ For example, class `CStdioFile` has three constructors, one of which is shown in the listing under [An Example of the Comments](../mfc/an-example-of-the-comments.md).  
   
-## Consulte também  
- [Usando os arquivos de origem MFC](../Topic/Using%20the%20MFC%20Source%20Files.md)   
- [\/\/ Comentário da implementação](../mfc/decrement-implementation-comment.md)   
- [\/\/ Comentário sobre atributos](../Topic/--%20Attributes%20Comment.md)   
- [\/\/ Comentário sobre operações](../mfc/decrement-operations-comment.md)   
- [\/\/ Comentário sobre substituíveis](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

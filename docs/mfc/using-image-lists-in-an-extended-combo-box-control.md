@@ -1,50 +1,68 @@
 ---
-title: "Usando listas de imagens em um controle de caixa de combina&#231;&#227;o estendido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de combinação estendidas, imagens"
-  - "listas de imagens [C++], caixas de combinação"
-  - "imagens [C++], itens de caixa de combinação"
+title: Using Image Lists in an Extended Combo Box Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], combo boxes
+- extended combo boxes [MFC], images
+- images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando listas de imagens em um controle de caixa de combina&#231;&#227;o estendido
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b42104bf06020fa49435d6aa73bb9dea690aea49
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O recurso principal de controles estendidos da caixa de combinação é a capacidade de associação imagens de uma lista de imagem com os itens individuais em um controle da caixa de combinação.  Cada item pode exibir três imagens diferentes: um para seu estado selecionado, um para seu estado nonselected, e um terço de uma imagem de sobreposição.  
+---
+# <a name="using-image-lists-in-an-extended-combo-box-control"></a>Using Image Lists in an Extended Combo Box Control
+The main feature of extended combo box controls is the ability to associate images from an image list with individual items in a combo box control. Each item is able to display three different images: one for its selected state, one for its nonselected state, and a third for an overlay image.  
   
- O procedimento a seguir associa uma lista de imagem com um controle estendido da caixa de combinação:  
+ The following procedure associates an image list with an extended combo box control:  
   
-### Para associar uma lista de imagem com um controle estendido da caixa de combinação  
+### <a name="to-associate-an-image-list-with-an-extended-combo-box-control"></a>To associate an image list with an extended combo box control  
   
-1.  Cria uma nova lista de imagem \(ou use um objeto existente na lista de imagem\), usando o construtor de [CImageList](../Topic/CImageList%20Class.md) e o armazenamento do ponteiro resultante.  
+1.  Construct a new image list (or use an existing image list object), using the [CImageList](../mfc/reference/cimagelist-class.md) constructor and storing the resultant pointer.  
   
-2.  Inicializar o novo objeto da lista de imagem chamando [CImageList::Create](../Topic/CImageList::Create.md).  O código a seguir é um exemplo dessa chamada.  
+2.  Initialize the new image list object by calling [CImageList::Create](../mfc/reference/cimagelist-class.md#create). The following code is one example of this call.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/CPP/using-image-lists-in-an-extended-combo-box-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]  
   
-3.  Adicionar imagens opcionais para cada estado possível: selecionado ou nonselected, e uma sobreposição.  O código a seguir adiciona três imagens predefinidas.  
+3.  Add optional images for each possible state: selected or nonselected, and an overlay. The following code adds three predefined images.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/CPP/using-image-lists-in-an-extended-combo-box-control_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]  
   
-4.  Associar a lista de imagem com o controle com uma chamada a [CComboBoxEx::SetImageList](../Topic/CComboBoxEx::SetImageList.md).  
+4.  Associate the image list with the control with a call to [CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist).  
   
- A lista de imagem associada uma vez ao controle, você pode especificar individualmente as imagens que cada item usará para os três estados possíveis.  Para obter mais informações, consulte [Definindo as imagens de um item individual](../mfc/setting-the-images-for-an-individual-item.md).  
+ Once the image list has been associated with the control, you can individually specify the images each item will use for the three possible states. For more information, see [Setting the Images for an Individual Item](../mfc/setting-the-images-for-an-individual-item.md).  
   
-## Consulte também  
- [Usando CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

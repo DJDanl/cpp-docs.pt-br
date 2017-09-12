@@ -1,51 +1,69 @@
 ---
-title: "Conten&#231;&#227;o de documento ativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contêineres de documentos ativos [C++], sobre contêineres de documentos ativos"
-  - "documentos ativos [C++], contêineres"
-  - "contêineres [C++], documento ativo"
-  - "MFC [C++], Suporte COM"
-  - "COM MFC [C++], contenção de documentos ativos"
+title: Active Document Containment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- containers [MFC], active document
+- MFC, COM support
+- active document containers [MFC], about active document containers
+- MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Conten&#231;&#227;o de documento ativa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c35d1da52fab535036eb931f8ae0b3a916a7cc0c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A retenção ativa do documento é uma tecnologia que fornece um único quadro onde trabalhar com documentos, em vez de forçar para criar e usar vários aplicativo molda para cada tipo de documento.  Difere da tecnologia OLE básica de trabalho do com objetos inseridos em um documento composto no qual apenas uma única parte de conteúdo pode estar ativa.  A retenção ativa do documento, você ativar um documento inteiro \(isto é, um aplicativo inteiro, inclusive associados menus, barras de ferramentas, e assim por diante\) dentro do contexto de um único quadro.  
+---
+# <a name="active-document-containment"></a>Active Document Containment
+Active document containment is a technology that provides a single frame in which to work with documents, instead of forcing you to create and use multiple application frames for each document type. It differs from basic OLE technology in that OLE works with embedded objects within a compound document in which only a single piece of content can be active. With active document containment, you activate an entire document (that is, an entire application, including associated menus, toolbars, and so on) within the context of a single frame.  
   
- A tecnologia ativa de retenção de documentos foi desenvolvida originalmente para o Microsoft Office que implementa a pasta do Office.  No entanto, a tecnologia é flexível ao contêiner ativas do documento diferentes da pasta do Office e pode dar suporte a servidores diferentes de documentos do Office e aplicativos e compatíveis.  
+ The active document containment technology was originally developed for Microsoft Office to implement Office Binder. However, the technology is flexible enough to support active document containers other than Office Binder and can support document servers other than Office and Office-compatible applications.  
   
- O aplicativo que hospeda documentos ativos é chamado [contêiner do documento ativo](../mfc/active-document-containers.md).  Exemplos de tais contêiner é a pasta ou Microsoft Internet Explorer do Microsoft Office.  
+ The application that hosts active documents is called an [active document container](../mfc/active-document-containers.md). Examples of such containers are the Microsoft Office Binder or Microsoft Internet Explorer.  
   
- A retenção ativa do documento é implementada como um conjunto de extensões dos documentos OLE, a tecnologia composta do documento OLE.  As extensões são as interfaces adicionais que permite que um objeto inserível, in\-loco representa um documento inteiro em vez de uma única parte de conteúdo inserido.  Como documentos com OLE, a retenção ativa do documento usa um contêiner que fornece o espaço de exibição para documentos ativas, e os servidores que fornecem os recursos para os documentos ativas próprios da interface do usuário e de manipulação.  
+ Active document containment is implemented as a set of extensions to OLE documents, the compound document technology of OLE. The extensions are additional interfaces that allow an embeddable, in-place object to represent an entire document instead of a single piece of embedded content. As with OLE documents, active document containment uses a container that provides the display space for active documents, and servers that provide the user interface and manipulation capabilities for the active documents themselves.  
   
- [servidor ativo do documento](../mfc/active-document-servers.md) é um aplicativo \(como word, Excel, ou o Powerpoint\) que oferece suporte a uma ou mais classes ativas do documento, onde cada próprio objeto oferece suporte às interfaces de extensão que permitem que o objeto é ativado em um contêiner apropriado.  
+ An [active document server](../mfc/active-document-servers.md) is an application (such as Word, Excel, or PowerPoint) that supports one or more active document classes, where each object itself supports the extension interfaces that allow the object to be activated in a suitable container.  
   
- [documento ativo](../Topic/Active%20Documents.md) \(fornecido de um servidor ativo do documento como word ou Excel\) é essencialmente um documento completo convencional, que será inserido como um objeto em outro contêiner ativa do documento.  Diferentemente dos objetos inseridos, os documentos ativas têm controle total sobre as páginas, e a interface completa do aplicativo \(com todos os comandos e ferramentas subjacentes\) está disponível ao usuário para editá\-las.  
+ An [active document](../mfc/active-documents.md) (provided from an active document server such as Word or Excel) is essentially a full-scale, conventional document that is embedded as an object within another active document container. Unlike embedded objects, active documents have complete control over their pages, and the full interface of the application (with all its underlying commands and tools) is available to the user to edit them.  
   
- Um documento ativo é considerado melhor distinguindo a de um objeto inserido OLE do padrão.  Depois de convenção um objeto OLE, inserida é um que é exibido na página do documento que possui a, e o documento é gerenciada por um contêiner OLE.  O contêiner armazena os dados inseridos do objeto com o restante do documento.  No entanto, os objetos inseridos são delimitados sem controlam a página em que aparecem.  
+ An active document is best understood by distinguishing it from a standard OLE embedded object. Following the OLE convention, an embedded object is one that is displayed within the page of the document that owns it, and the document is managed by an OLE container. The container stores the embedded object's data with the rest of the document. However, embedded objects are limited in that they do not control the page on which they appear.  
   
- Os usuários de um aplicativo de contêiner ativa de documentos podem criar documentos ativas \(seções chamados na pasta do Office\) que usam seus aplicativos favoritos \(fornecidos esses aplicativos é o documento ativo habilitado\), porém os usuários podem gerenciar o projeto resultante como uma única entidade, que pode ser chamada exclusivamente, salvo, impresso, e assim por diante.  Da mesma forma, um usuário de um navegador da Internet pode controlar a rede inteira, bem como os sistemas de arquivos locais, como uma entidade de armazenamento único documento com a capacidade de procurar documentos no armazenamento de um único local.  
+ Users of an active document container application can create active documents (called sections in Office Binder) using their favorite applications (provided these applications are active document enabled), yet the users can manage the resulting project as a single entity, which can be uniquely named, saved, printed, and so on. In the same way, a user of an Internet browser can treat the entire network, as well as local file systems, as a single document storage entity with the ability to browse the documents in that storage from a single location.  
   
-## Programas de exemplo  
+## <a name="sample-programs"></a>Sample Programs  
   
--   O exemplo de [MFCBIND](../top/visual-cpp-samples.md) ilustra a implementação de um aplicativo de contêiner ativa do documento.  
+-   The [MFCBIND](../visual-cpp-samples.md) sample illustrates the implementation of an active document container application.  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

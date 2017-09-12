@@ -1,47 +1,65 @@
 ---
-title: "Troca de dados da caixa de di&#225;logo e valida&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles comuns [C++], caixas de diálogo"
-  - "dados [MFC], caixas de diálogo"
-  - "validação de dados [C++], caixas de diálogo"
-  - "DDV (validação dos dados da caixa de diálogo) [C++]"
-  - "DDX (troca de dados da caixa de diálogo) [C++], validação de dados"
-  - "dados de caixa de diálogo [C++]"
-  - "dados de caixa de diálogo [C++], recuperando"
-  - "caixas de diálogo [C++], recuperando dados"
-  - "caixas de diálogo [C++], validando dados"
-  - "recuperando dados de caixa de diálogo"
-  - "validando dados [C++], entrada de dados de caixa de diálogo"
-  - "controles comuns do Windows [C++], caixas de diálogo"
+title: Dialog Data Exchange and Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data validation [MFC], dialog boxes
+- dialog box data [MFC]
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDX (dialog data exchange) [MFC], data validation
+- dialog box data [MFC], retrieving
+- Windows common controls [MFC], dialog boxes
+- DDV (dialog data validation) [MFC]
+- data [MFC], dialog boxes
+- common controls [MFC], dialog boxes
+- dialog boxes [MFC], retrieving data
+- retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Troca de dados da caixa de di&#225;logo e valida&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed01ece0c4318b0c3cd92100147aab030222e2f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A caixa de diálogo de troca de dados \(DDX\) é um modo fácil de inicializar os controles na caixa de diálogo e colete a entrada de dados pelo usuário.  A validação de dados \(DDV\) da caixa de diálogo é uma maneira fácil validar a entrada de dados em uma caixa de diálogo.  Para tirar proveito de DDX e de DDV nas caixas de diálogo, use [Adicionar o assistente da variável de membro](../ide/add-member-variable-wizard.md) para criar os membros de dados e definir seus tipos de dados e especificar regras de validação.  
+---
+# <a name="dialog-data-exchange-and-validation"></a>Dialog Data Exchange and Validation
+Dialog data exchange (DDX) is an easy way to initialize the controls in your dialog box and to gather data input by the user. Dialog data validation (DDV) is an easy way to validate data entry in a dialog box. To take advantage of DDX and DDV in your dialog boxes, use the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create the data members and set their data types and specify validation rules.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Caixa de diálogo de troca de dados](../mfc/dialog-data-exchange.md)  
+-   [Dialog data exchange](../mfc/dialog-data-exchange.md)  
   
--   [Validação de dados na caixa de diálogo](../mfc/dialog-data-validation.md)  
+-   [Dialog data validation](../mfc/dialog-data-validation.md)  
   
-## Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

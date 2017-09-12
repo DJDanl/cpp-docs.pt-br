@@ -1,43 +1,61 @@
 ---
-title: "Usando CToolTipCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolTipCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolTipCtrl"
-  - "Classe CToolTipCtrl, criando dicas de ferramenta"
+title: Using CToolTipCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolTipCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], creating tool tips
+- CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CToolTipCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba708c5c1c8dbaa1b8de84ed81a7ccf20b023b0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A classe de [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md) encapsula a funcionalidade de um controle da dica de ferramenta, um pequeno janela pop\-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo.  Uma dica de ferramenta é ocultada na maioria das vezes, aparecendo apenas quando o usuário coloca o cursor em uma ferramenta e em planilhas nele para aproximadamente um meio de segundos.  A dica de ferramenta é exibida no cursor e desaparece quando o usuário clica em um botão do mouse em ou em que o cursor da ferramenta.  
+---
+# <a name="using-ctooltipctrl"></a>Using CToolTipCtrl
+The [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) class encapsulates the functionality of a tool tip control, a small pop-up window that displays a single line of text describing the purpose of a tool in an application. A tool tip is hidden most of the time, appearing only when the user puts the cursor on a tool and leaves it there for approximately one-half second. The tool tip appears near the cursor and disappears when the user clicks a mouse button or moves the cursor off of the tool.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Métodos para criar dicas de ferramenta](../mfc/methods-of-creating-tool-tips.md)  
+-   [Methods of Creating Tool Tips](../mfc/methods-of-creating-tool-tips.md)  
   
--   [Configurações do controle da dica de ferramenta](../mfc/settings-for-the-tool-tip-control.md)  
+-   [Settings for the Tool Tip Control](../mfc/settings-for-the-tool-tip-control.md)  
   
--   [Usando CToolTipCtrl para criar e manipular um objeto CToolTipCtrl](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
+-   [Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
   
--   [Manipulando o controle da dica de ferramenta](../mfc/manipulating-the-tool-tip-control.md)  
+-   [Manipulating the Tool Tip Control](../mfc/manipulating-the-tool-tip-control.md)  
   
-## Consulte também  
- [Usando CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

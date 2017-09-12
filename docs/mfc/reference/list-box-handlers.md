@@ -1,5 +1,5 @@
 ---
-title: Manipuladores de caixa de listagem | Documentos do Microsoft
+title: List Box Handlers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- list boxes, list box handlers
+- list boxes [MFC], list box handlers
 - ON_LBN_KILLFOCUS
 - ON_LBN_ERRSPACE
 - ON_LBN_SELCHANGE
@@ -42,25 +42,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d1d3ab57def4bb49031e3e108facdb025e52f85
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ceeccecea4fe5fa96f0d62e18200806ac5aeaa2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="list-box-handlers"></a>Manipuladores da caixa de listagem
-As seguintes entradas de mapa têm o protótipo de função correspondente.  
+# <a name="list-box-handlers"></a>List Box Handlers
+The following map entries have the corresponding function prototype.  
   
-|Entrada de mapa|Protótipo da função|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_LBN_DBLCLK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_LBN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_LBN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_LBN_SELCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_LBN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
 
 

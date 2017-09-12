@@ -1,5 +1,5 @@
 ---
-title: Adicionando um manipulador de mensagens do MFC | Documentos do Microsoft
+title: Adding an MFC Message Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handling, adding handlers
+- message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
 caps.latest.revision: 9
 author: mikeblome
@@ -33,28 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: b80ebf607b7a11bf80f14c5375a5ace27ce1047c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5568c7d75b0d98349c7086d9efd367c15deda51
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-message-handler"></a>Adicionando um manipulador de mensagens do MFC
-Você pode [usar a janela Properties para adicionar um manipulador de mensagens](../../mfc/reference/mapping-messages-to-functions.md) (uma função de membro que processa mensagens do Windows) para uma classe e o mapa de mensagens do Windows para o manipulador de mensagens. Você também pode adicionar [um manipulador de eventos para qualquer controle de caixa de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
+# <a name="adding-an-mfc-message-handler"></a>Adding an MFC Message Handler
+You can [use the Properties window to add a message handler](../../mfc/reference/mapping-messages-to-functions.md) (a member function that handles Windows messages) to a class and map Windows messages to the message handler. You can also add [an event handler for any dialog box control](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
- Usando a janela Propriedades para definir funções de manipulação de eventos e de mensagem, você pode atualizar automaticamente a tabela de expedição de mensagem (ou mapa de mensagem) e o arquivo de cabeçalho de classe.  
+ By using the Properties window to define message- and event-handling functions, you can automatically update the message-dispatch table (or message map) and your class header file.  
   
 > [!NOTE]
->  Você pode adicionar um manipulador de mensagens a uma classe ATL usando a janela Propriedades. No entanto, alguns resultados podem variar. Para obter mais informações, consulte o tópico ATL [adicionando um manipulador de mensagens ATL](../../atl/adding-an-atl-message-handler.md).  
+>  You can add a message handler to an ATL class using the Properties window; however, some results may vary. For more information, see the ATL topic [Adding an ATL Message Handler](../../atl/adding-an-atl-message-handler.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Navegando na estrutura da classe](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [Editor de caixa de diálogo](../../windows/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)   
+ [Dialog Editor](../../windows/dialog-editor.md)
 
 

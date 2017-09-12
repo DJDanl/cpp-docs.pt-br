@@ -1,5 +1,5 @@
 ---
-title: 'Mensagens WM _: T - Z | Documentos do Microsoft'
+title: 'WM_ Messages: T - Z | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,15 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ON_WM_VSCROLLCLIPBOARD
-- ON_WM_WININICHANGE
-- ON_WM_WINDOWPOSCHANGED
-- ON_WM_TCARD
-- ON_WM_TIMECHANGE
-- ON_WM_TIMER
-- WM_ messages
-- ON_WM_WINDOWPOSCHANGING
-- ON_WM_VKEYTOITEM
+- ON_WM_VSCROLLCLIPBOARD [MFC]
+- ON_WM_WININICHANGE [MFC]
+- ON_WM_WINDOWPOSCHANGED [MFC]
+- ON_WM_TCARD [MFC]
+- ON_WM_TIMECHANGE [MFC]
+- ON_WM_TIMER [MFC]
+- WM_ messages [MFC]
+- ON_WM_WINDOWPOSCHANGING [MFC]
+- ON_WM_VKEYTOITEM [MFC]
 - ON_WM_VSCROLL
 ms.assetid: c528bb2e-ddb5-4da6-b652-432a387408b8
 caps.latest.revision: 16
@@ -50,37 +50,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ff57d827dbb00afbe962385c74d7c2144335a073
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc6bde5395ade5019e1ece6868660762097b526e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="wm-messages-t---z"></a>Mensagens WM_: T - Z
-As seguintes entradas de mapa correspondem aos protótipos de função:  
+# <a name="wm-messages-t---z"></a>WM_ Messages: T - Z
+The following map entries correspond to the function prototypes:  
   
-|Entrada de mapa|Protótipo da função|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_WM_TCARD()|void afx_msg [OnTCard](../../mfc/reference/cwnd-class.md#ontcard)(UINT, DWORD);|  
-|ON_WM_TIMECHANGE()|void afx_msg [OnTimeChange](../../mfc/reference/cwnd-class.md#ontimechange)();|  
-|ON_WM_TIMER()|void afx_msg [OnTimer](../../mfc/reference/cwnd-class.md#ontimer)(UINT_PTR);|  
-|ON_WM_UNICHAR()|void afx_msg [OnUniChar](../../mfc/reference/cwnd-class.md#onunichar)(UINT, UINT, UINT);|  
-|ON_WM_UNINITMENUPOPUP()|void afx_msg [OnUnInitMenuPopup](../../mfc/reference/cwnd-class.md#onuninitmenupopup)(CMenu *, UINT);|  
-|ON_WM_USERCHANGED()|void afx_msg [OnUserChanged](../../mfc/reference/cwnd-class.md#onuserchanged)();|  
-|ON_WM_VKEYTOITEM()|int afx_msg [OnVKeyToItem](../../mfc/reference/cwnd-class.md#onvkeytoitem)(UINT, CWnd *, UINT);|  
-|ON_WM_VSCROLL()|void afx_msg [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)(UINT, UINT, CWnd *);|  
-|ON_WM_VSCROLLCLIPBOARD()|void afx_msg [OnVScrollClipboard](../../mfc/reference/cwnd-class.md#onvscrollclipboard)(CWnd *, UINT, UINT);|  
-|ON_WM_WINDOWPOSCHANGED()|void afx_msg [OnWindowPosChanged](../../mfc/reference/cwnd-class.md#onwindowposchanged)(WINDOWPOS *);|  
-|ON_WM_WINDOWPOSCHANGING()|void afx_msg [OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)(WINDOWPOS *);|  
-|ON_WM_WININICHANGE()|void afx_msg [OnWinIniChange](../../mfc/reference/cwnd-class.md#onwininichange)(LPSTR);|  
-|ON_WM_WTSSESSION_CHANGE()|void afx_msg [OnSessionChange](../../mfc/reference/cwnd-class.md#onsessionchange)(UINT, UINT);|  
-|ON_WM_XBUTTONDBLCLK()|void afx_msg [OnXButtonDblClk](../../mfc/reference/cwnd-class.md#onxbuttondblclk)(UINT, UINT, CPoint);|  
-|ON_WM_XBUTTONDOWN()|void afx_msg [OnXButtonDown](../../mfc/reference/cwnd-class.md#onxbuttondown)(UINT, UINT, CPoint);|  
-|ON_WM_XBUTTONUP()|void afx_msg [OnXButtonUp](../../mfc/reference/cwnd-class.md#onxbuttonup)(UINT, UINT, CPoint);|  
+|ON_WM_TCARD()|afx_msg void [OnTCard](../../mfc/reference/cwnd-class.md#ontcard)( UINT, DWORD );|  
+|ON_WM_TIMECHANGE()|afx_msg void [OnTimeChange](../../mfc/reference/cwnd-class.md#ontimechange)( );|  
+|ON_WM_TIMER()|afx_msg void [OnTimer](../../mfc/reference/cwnd-class.md#ontimer)( UINT_PTR );|  
+|ON_WM_UNICHAR()|afx_msg void [OnUniChar](../../mfc/reference/cwnd-class.md#onunichar)( UINT, UINT, UINT );|  
+|ON_WM_UNINITMENUPOPUP()|afx_msg void [OnUnInitMenuPopup](../../mfc/reference/cwnd-class.md#onuninitmenupopup)( CMenu*, UINT );|  
+|ON_WM_USERCHANGED()|afx_msg void [OnUserChanged](../../mfc/reference/cwnd-class.md#onuserchanged)();|  
+|ON_WM_VKEYTOITEM()|afx_msg int [OnVKeyToItem](../../mfc/reference/cwnd-class.md#onvkeytoitem)( UINT, CWnd*, UINT );|  
+|ON_WM_VSCROLL()|afx_msg void [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)( UINT, UINT, CWnd* );|  
+|ON_WM_VSCROLLCLIPBOARD()|afx_msg void [OnVScrollClipboard](../../mfc/reference/cwnd-class.md#onvscrollclipboard)( CWnd*, UINT, UINT );|  
+|ON_WM_WINDOWPOSCHANGED()|afx_msg void [OnWindowPosChanged](../../mfc/reference/cwnd-class.md#onwindowposchanged)( WINDOWPOS*);|  
+|ON_WM_WINDOWPOSCHANGING()|afx_msg void [OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)( WINDOWPOS*);|  
+|ON_WM_WININICHANGE()|afx_msg void [OnWinIniChange](../../mfc/reference/cwnd-class.md#onwininichange)( LPSTR );|  
+|ON_WM_WTSSESSION_CHANGE()|afx_msg void [OnSessionChange](../../mfc/reference/cwnd-class.md#onsessionchange)( UINT, UINT );|  
+|ON_WM_XBUTTONDBLCLK()|afx_msg void [OnXButtonDblClk](../../mfc/reference/cwnd-class.md#onxbuttondblclk)( UINT, UINT, CPoint );|  
+|ON_WM_XBUTTONDOWN()|afx_msg void [OnXButtonDown](../../mfc/reference/cwnd-class.md#onxbuttondown)( UINT, UINT, CPoint );|  
+|ON_WM_XBUTTONUP()|afx_msg void [OnXButtonUp](../../mfc/reference/cwnd-class.md#onxbuttonup)( UINT, UINT, CPoint );|  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)   
- [Manipuladores para mensagens WM _](../../mfc/reference/handlers-for-wm-messages.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)   
+ [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
 
 

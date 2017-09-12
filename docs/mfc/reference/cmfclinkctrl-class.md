@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCLinkCtrl | Documentos do Microsoft
+title: CMFCLinkCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCLinkCtrl class
+- CMFCLinkCtrl [MFC], SetURL
+- CMFCLinkCtrl [MFC], SetURLPrefix
+- CMFCLinkCtrl [MFC], SizeToContent
+- CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
 caps.latest.revision: 27
 author: mikeblome
@@ -38,48 +41,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8c926c0ef611470b137d2bb897c012a85645c90c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ce159218682677082c20a6ffe8d698570d53e984
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
-O `CMFCLinkCtrl` classe exibe um botão como um hiperlink e invoca o destino do link quando o botão for clicado.  
+# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl Class
+The `CMFCLinkCtrl` class displays a button as a hyperlink and invokes the link's target when the button is clicked.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCLinkCtrl : public CMFCButton  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::SetURL](#seturl)|Exibe a URL especificada como o texto do botão.|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Define o protocolo implícito (por exemplo, "http:") da URL.|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Redimensiona o botão para conter o texto do botão ou bitmap.|  
+|[CMFCLinkCtrl::SetURL](#seturl)|Displays a specified URL as the button text.|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Sets the implicit protocol (for example, "http:") of the URL.|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Resizes the button to contain the button text or bitmap.|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Chamado pela estrutura antes que o retângulo de foco do botão é desenhado.|  
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Called by the framework before the focus rectangle of the button is drawn.|  
   
-## <a name="remarks"></a>Comentários  
- Quando você clica em um botão que é derivado de `CMFCLinkCtrl` classe, o framework passa a URL do botão como um parâmetro para o `ShellExecute` método. O `ShellExecute` método abre o destino da URL.  
+## <a name="remarks"></a>Remarks  
+ When you click a button that is derived from the `CMFCLinkCtrl` class, the framework passes the URL of the button as a parameter to the `ShellExecute` method. Then the `ShellExecute` method opens the target of the URL.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como definir o tamanho de um `CMFCLinkCtrl` objeto e como definir uma url e uma dica de ferramenta em uma `CMFCLinkCtrl` objeto. Este exemplo é parte do [exemplo novos controles](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the size of a `CMFCLinkCtrl` object, and how to set a url and a tooltip in a `CMFCLinkCtrl` object. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls n º&9;](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls n º&10;](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -92,11 +95,11 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxlinkctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
- Chamado pela estrutura antes que o retângulo de foco do botão é desenhado.  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
+ Called by the framework before the focus rectangle of the button is drawn.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -104,45 +107,45 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Um ponteiro para um contexto de dispositivo.  
+ A pointer to a device context.  
   
  [in] `rectClient`  
- Um retângulo que circunda o controle de link.  
+ A rectangle that bounds the link control.  
   
-### <a name="remarks"></a>Comentários  
- Substitua este método quando desejar usar seu próprio código para desenhar um retângulo de foco do botão.  
+### <a name="remarks"></a>Remarks  
+ Override this method when you want to use your own code to draw the button's focus rectangle.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
- Exibe a URL especificada como o texto do botão.  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
+ Displays a specified URL as the button text.  
   
 ```  
 void SetURL(LPCTSTR lpszURL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszURL`  
- O texto do botão para exibir.  
+ The button text to display.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
- Define o protocolo implícito (por exemplo, "http:") da URL.  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
+ Sets the implicit protocol (for example, "http:") of the URL.  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPrefix`  
- O prefixo do protocolo de URL.  
+ The prefix of the URL protocol.  
   
-### <a name="remarks"></a>Comentários  
- Use esse método para definir o prefixo de URL. O prefixo não é exibido na face do botão, mas você pode usá-lo para ajudar a navegar até de destino da URL.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the URL prefix. The prefix is not displayed on the button's face, but you can use it to help browse to the URL's target.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
- Redimensiona o botão para conter o texto do botão ou bitmap.  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
+ Resizes the button to contain the button text or bitmap.  
   
 ```  
 virtual CSize SizeToContent(
@@ -150,21 +153,21 @@ virtual CSize SizeToContent(
     BOOL bHCenter=FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bVCenter`  
- `TRUE`para centralizar o texto do botão e bitmap verticalmente entre as partes superior e inferior do controle link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
+ `TRUE` to center the button text and bitmap vertically between the top and bottom of the link control; otherwise, `FALSE`. The default value is `FALSE`.  
   
  [in] `bHCenter`  
- `TRUE`para centralizar o texto do botão e bitmap horizontal entre os lados esquerdo e direito do controle link; Caso contrário, `FALSE`. O valor padrão é `FALSE`.  
+ `TRUE` to center the button text and bitmap horizontally between the left and right sides of the link control; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="return-value"></a>Valor de retorno  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contém o novo tamanho do controle de link.  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that contains the new size of the link control.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CLinkCtrl](../../mfc/reference/clinkctrl-class.md)   
- [Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)
+ [CLinkCtrl Class](../../mfc/reference/clinkctrl-class.md)   
+ [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md)
 

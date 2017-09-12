@@ -1,5 +1,5 @@
 ---
-title: Estrutura HSE_VERSION_INFO | Documentos do Microsoft
+title: HSE_VERSION_INFO Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HSE_VERSION_INFO structure
+- HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cab0574e157f98523a2baca1f758ecc5d148c926
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9772596a789080f7b2d77b02967a2731d52e6927
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="hseversioninfo-structure"></a>Estrutura HSE_VERSION_INFO
-Essa estrutura é apontada pelo `pVer` parâmetro o `CHttpServer::GetExtensionVersion` função de membro. Ele fornece o número de versão do ISA e uma descrição textual do ISA.  
+# <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO Structure
+This structure is pointed to by the `pVer` parameter in the `CHttpServer::GetExtensionVersion` member function. It provides the ISA version number and a text description of the ISA.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _HSE_VERSION_INFO {  
@@ -52,17 +52,17 @@ typedef struct _HSE_VERSION_INFO {
 } HSE_VERSION_INFO, *LPHSE_VERSION_INFO;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *dwExtensionVersion*  
- O número de versão dos ISA.  
+ The version number of the ISA.  
   
  *lpszExtensionDesc*  
- Texto de descrição do ISA. A implementação padrão fornece o texto do espaço reservado; substituir `CHttpServer::GetExtensionVersion` para fornecer sua própria descrição.  
+ The text description of the ISA. The default implementation provides placeholder text; override `CHttpServer::GetExtensionVersion` to provide your own description.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** httpext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** httpext.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 

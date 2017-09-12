@@ -1,51 +1,69 @@
 ---
-title: "Sequ&#234;ncia de cria&#231;&#227;o da janela geral | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas com moldura [C++], criando"
-  - "sequência [C++]"
-  - "sequência [C++], criação de janelas"
-  - "janelas [C++], criando"
+title: General Window Creation Sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sequence [MFC], window creation
+- frame windows [MFC], creating
+- windows [MFC], creating
+- sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 caps.latest.revision: 8
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sequ&#234;ncia de cria&#231;&#227;o da janela geral
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48eabbb2bfd7ca90c8dbe9f82207f8770018b0e2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Quando você cria uma janela de seu próprio, como uma janela filho, a estrutura muito usa o mesmo processo que o descrita em [Criação de documento\/exibição](../mfc/document-view-creation.md).  
+---
+# <a name="general-window-creation-sequence"></a>General Window Creation Sequence
+When you create a window of your own, such as a child window, the framework uses much the same process as that described in [Document/View Creation](../mfc/document-view-creation.md).  
   
- Todas as classes da janela fornecidas por MFC empregam [construção de dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md).  Ou seja, durante uma invocação de operador C\+\+ **new** , o construtor aloca e inicializa o objeto c criando mas não uma janela correspondente do windows.  Isso é feito mais tarde chamando a função de membro de [Crie](../Topic/CWnd::Create.md) do objeto da janela.  
+ All the window classes provided by MFC employ [two-stage construction](../mfc/one-stage-and-two-stage-construction-of-objects.md). That is, during an invocation of the C++ **new** operator, the constructor allocates and initializes a C++ object but does not create a corresponding Windows window. That is done afterward by calling the [Create](../mfc/reference/cwnd-class.md#create) member function of the window object.  
   
- A função de membro de **Criar** faz a janela do windows e armazena o `HWND` no membro de dados público [m\_hWnd](../Topic/CWnd::m_hWnd.md)do objeto C\+\+.  **Criar** fornece a flexibilidade total sobre os parâmetros de criação.  Antes de chamar **Criar**, talvez você queira registrar uma classe do windows com a função global [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) para definir os estilos do ícone e da classe para o quadro.  
+ The **Create** member function makes the Windows window and stores its `HWND` in the C++ object's public data member [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Create** gives complete flexibility over the creation parameters. Before calling **Create**, you may want to register a window class with the global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) in order to set the icon and class styles for the frame.  
   
- Para o windows do quadro, você pode usar a função de membro de [LoadFrame](../Topic/CFrameWnd::LoadFrame.md) em vez de **Criar**.  `LoadFrame` faz a janela do windows usando menos parâmetros.  Obtém muitos valores padrão de recursos, incluindo a legenda do quadro, o ícone, a tabela de aceleração, e o menu.  
+ For frame windows, you can use the [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) member function instead of **Create**. `LoadFrame` makes the Windows window using fewer parameters. It gets many default values from resources, including the frame's caption, icon, accelerator table, and menu.  
   
 > [!NOTE]
->  Os ícones, tabela de aceleração, e recursos no menu devem ter uma ID de recurso comuns, como **IDR\_MAINFRAME**, para que sejam carregados por LoadFrame.  
+>  Your icon, accelerator table, and menu resources must have a common resource ID, such as **IDR_MAINFRAME**, for them to be loaded by LoadFrame.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Objetos da janela](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Registrar a janela “classificar”](../mfc/registering-window-classes.md)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md)  
   
--   [Objetos de destruição da janela](../mfc/destroying-window-objects.md)  
+-   [Destroying window objects](../mfc/destroying-window-objects.md)  
   
--   [Criando o windows do quadro do documento](../Topic/Creating%20Document%20Frame%20Windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## Consulte também  
- [Criando janelas](../Topic/Creating%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating Windows](../mfc/creating-windows.md)
+
+

@@ -1,70 +1,87 @@
 ---
-title: "Imprimir arquitetura de visualiza&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "visualizando a impressão"
-  - "visualizar impressão, arquitetura"
-  - "visualizar impressão, modificações em MFC"
-  - "visualizar impressão, process"
-  - "imprimindo [MFC], visualizar impressão"
+title: Print Preview Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- print preview [MFC], process
+- previewing printing
+- print preview [MFC], architecture
+- printing [MFC], print preview
+- print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Imprimir arquitetura de visualiza&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4460ad3ea8377c566cfd55e50010db5f1ed9254
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica como a estrutura de MFC implementa a funcionalidade de visualização da impressão.  Os tópicos abordados incluem:  
+---
+# <a name="print-preview-architecture"></a>Print Preview Architecture
+This article explains how the MFC framework implements print preview functionality. Topics covered include:  
   
--   [Processo de visualização de impressão](#_core_the_print_preview_process)  
+-   [Print preview process](#_core_the_print_preview_process)  
   
--   [Visualizar impressão de alteração](#_core_modifying_print_preview)  
+-   [Modifying print preview](#_core_modifying_print_preview)  
   
- A visualização de impressão é um pouco diferente da ótica e visualização de impressão porque, em vez de diretamente desenhar uma imagem em um dispositivo, o aplicativo deve simular a impressora que usa a tela.  Para acomodar isso, a biblioteca de classes do Microsoft define uma classe \(\) não documentado especial derivada de [CDC Class](../Topic/CDC%20Class.md), **CPreviewDC**chamado.  Todos os objetos de `CDC` contêm dois contextos de dispositivo, mas geralmente são idênticos.  Em um objeto de **CPreviewDC** , são diferentes: o primeiro representa a impressora que está sendo simulada, e o segundo representa a tela no qual a saída são exibidas na verdade.  
+ Print preview is somewhat different from screen display and printing because, instead of directly drawing an image on a device, the application must simulate the printer using the screen. To accommodate this, the Microsoft Foundation Class Library defines a special (undocumented) class derived from [CDC Class](../mfc/reference/cdc-class.md), called **CPreviewDC**. All `CDC` objects contain two device contexts, but usually they are identical. In a **CPreviewDC** object, they are different: the first represents the printer being simulated, and the second represents the screen on which output is actually displayed.  
   
-##  <a name="_core_the_print_preview_process"></a> O processo de visualização de impressão  
- Quando o usuário seleciona o comando de visualização de impressão no menu de **Arquivo** , a estrutura cria um objeto de **CPreviewDC** .  Sempre que o aplicativo executa uma operação que define uma característica de contexto do dispositivo de impressora, a estrutura também executa uma operação semelhante no contexto do dispositivo da tela.  Por exemplo, se o seu aplicativo selecionar uma fonte para imprimir, a estrutura selecionar uma fonte para a visualização que simula ótica a fonte da impressora.  Sempre que o aplicativo enviaria saída para a impressora, em vez da estrutura envia a saída à tela.  
+##  <a name="_core_the_print_preview_process"></a> The Print Preview Process  
+ When the user selects the Print Preview command from the **File** menu, the framework creates a **CPreviewDC** object. Whenever your application performs an operation that sets a characteristic of the printer device context, the framework also performs a similar operation on the screen device context. For example, if your application selects a font for printing, the framework selects a font for screen display that simulates the printer font. Whenever your application would send output to the printer, the framework instead sends the output to the screen.  
   
- A visualização de impressão também difere de impressão na ordem e cada uma desenha as páginas de um documento.  Durante a impressão, a estrutura continua um loop de impressão até que algum intervalo de páginas seja renderizado.  Durante a visualização de impressão, uma ou duas páginas são exibidas a qualquer momento, e o aplicativo espera; nenhuma página adicional é exibida até que o usuário responder.  Durante a visualização de impressão, o aplicativo deve também responder a mensagens de `WM_PAINT` , como faz durante a visualização ótica comum.  
+ Print preview also differs from printing in the order that each draws the pages of a document. During printing, the framework continues a print loop until a certain range of pages has been rendered. During print preview, one or two pages are displayed at any time, and then the application waits; no further pages are displayed until the user responds. During print preview, the application must also respond to `WM_PAINT` messages, just as it does during ordinary screen display.  
   
- A função de [CView::OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) será chamada quando o modo de visualização é chamado, assim como é no início de um trabalho de cópia.  A estrutura de [Estrutura de CPrintInfo](../mfc/reference/cprintinfo-structure.md) passada para a função contém vários membros cujos valores você pode definir para ajustar certas características da operação de visualização da impressão.  Por exemplo, você pode definir o membro de **m\_nNumPreviewPages** para especificar se você deseja visualizar o documento no modo de uma página ou de duas página.  
+ The [CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) function is called when preview mode is invoked, just as it is at the beginning of a print job. The [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) structure passed to the function contains several members whose values you can set to adjust certain characteristics of the print preview operation. For example, you can set the **m_nNumPreviewPages** member to specify whether you want to preview the document in one-page or two-page mode.  
   
-##  <a name="_core_modifying_print_preview"></a> Visualizar impressão de alteração  
- Você pode modificar o comportamento e a aparência de visualização de impressão em várias maneiras um pouco esforço.  Por exemplo, você pode, entre outros coisas:  
+##  <a name="_core_modifying_print_preview"></a> Modifying Print Preview  
+ You can modify the behavior and appearance of print preview in a number of ways rather easily. For example, you can, among other things:  
   
--   Faz com que a janela de visualização de impressão exibe uma barra de rolagem para facilitar o acesso a qualquer página do documento.  
+-   Cause the print preview window to display a scroll bar for easy access to any page of the document.  
   
--   Faz com que a visualização de impressão manter a posição do usuário no documento começando sua exibição na página atual.  
+-   Cause print preview to maintain the user's position in the document by beginning its display at the current page.  
   
--   Causar a inicialização diferente a ser executada para a visualização de impressão e a impressão.  
+-   Cause different initialization to be performed for print preview and printing.  
   
--   Causar a visualização de impressão para exibir números de página em seus próprios formatos.  
+-   Cause print preview to display page numbers in your own formats.  
   
- Se você souber quanto tempo o documento é e chama `SetMaxPage` com o valor apropriado, a estrutura pode usar essas informações no modo de visualização bem como durante a impressão.  Uma vez que a estrutura souber o tamanho do documento, pode fornecer a janela de visualização com uma barra de rolagem, permitindo que o usuário página para a frente e para trás no documento em modo de visualização.  Se você não definiu o tamanho do documento, a estrutura não pode posicionar a caixa de rolagem para indicar a posição atual, a estrutura não adiciona uma barra de rolagem.  Nesse caso, o usuário deve usar os botões da próxima página e de página anterior na barra de controle da janela de visualização para chamar através do documento.  
+ If you know how long the document is and call `SetMaxPage` with the appropriate value, the framework can use this information in preview mode as well as during printing. Once the framework knows the length of the document, it can provide the preview window with a scroll bar, allowing the user to page back and forth through the document in preview mode. If you haven't set the length of the document, the framework cannot position the scroll box to indicate the current position, so the framework doesn't add a scroll bar. In this case, the user must use the Next Page and Previous Page buttons on the preview window's control bar to page through the document.  
   
- Para a visualização de impressão, talvez seja útil atribuir um valor ao membro de `m_nCurPage` de `CPrintInfo`, mesmo que você nunca faça\-o de impressão comum.  Durante a impressão comum, esse membro representa as informações de estrutura a sua classe da exibição.  Isso é semelhante à estrutura informa a exibição que a página deve ser impressa.  
+ For print preview, you may find it useful to assign a value to the `m_nCurPage` member of `CPrintInfo`, even though you would never do so for ordinary printing. During ordinary printing, this member carries information from the framework to your view class. This is how the framework tells the view which page should be printed.  
   
- Por outro lado, quando o modo de visualização de impressão é iniciado, o membro de `m_nCurPage` leva as informações na direção oposta: exibição à estrutura.  A estrutura usa o valor desse membro para determinar qual a página deve ser visualizada primeiro.  O valor padrão desse membro é 1, o que a primeira página do documento é exibida inicialmente.  Você pode substituir `OnPreparePrinting` para definir esse membro ao número da página que está sendo exibida no comando de visualização de impressão foi chamado.  Dessa forma, o aplicativo mantiver a posição atual do usuário ao mover de modo de exibição normal para o modo de visualização da impressão.  
+ By contrast, when print preview mode is started, the `m_nCurPage` member carries information in the opposite direction: from the view to the framework. The framework uses the value of this member to determine which page should be previewed first. The default value of this member is 1, so the first page of the document is displayed initially. You can override `OnPreparePrinting` to set this member to the number of the page being viewed at the time the Print Preview command was invoked. This way, the application maintains the user's current position when moving from normal display mode to print preview mode.  
   
- Talvez você queira `OnPreparePrinting` para executar a inicialização diferente dependendo se será chamada para um trabalho de cópia ou para a visualização de impressão.  Você pode determinar esse revisando a variável de membro de **m\_bPreview** na estrutura de `CPrintInfo` .  Esse membro é definido como **Verdadeiro** quando a visualização de impressão é invocado.  
+ Sometimes you may want `OnPreparePrinting` to perform different initialization depending on whether it is called for a print job or for print preview. You can determine this by examining the **m_bPreview** member variable in the `CPrintInfo` structure. This member is set to **TRUE** when print preview is invoked.  
   
- A estrutura de `CPrintInfo` também contém um membro **m\_strPageDesc**nomeado, que é usado para formatar as cadeias de caracteres exibidas na parte inferior da tela nos modos de página única e de várias páginas.  Por padrão essas cadeias de caracteres são a página “ *n*” formulário e “páginas *em* \- *m*”, mas você pode alterar **m\_strPageDesc** de dentro de `OnPreparePrinting` e definir as cadeias de caracteres para algo mais elaborado.  Consulte [Estrutura de CPrintInfo](../mfc/reference/cprintinfo-structure.md)*na referência de MFC* para obter mais informações.  
+ The `CPrintInfo` structure also contains a member named **m_strPageDesc**, which is used to format the strings displayed at the bottom of the screen in single-page and multiple-page modes. By default these strings are of the form "Page *n*" and "Pages *n* - *m*," but you can modify **m_strPageDesc** from within `OnPreparePrinting` and set the strings to something more elaborate. See [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) in the *MFC Reference* for more information.  
   
-## Consulte também  
- [Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)   
- [Imprimindo](../mfc/printing.md)   
- [Classe de CView](../Topic/CView%20Class.md)   
- [CDC Class](../Topic/CDC%20Class.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)   
+ [Printing](../mfc/printing.md)   
+ [CView Class](../mfc/reference/cview-class.md)   
+ [CDC Class](../mfc/reference/cdc-class.md)
+

@@ -1,43 +1,61 @@
 ---
-title: "Servidores de automa&#231;&#227;o: problemas de tempo de vida do objeto | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Servidores de automação, vida útil do objeto"
-  - "tempo de vida, servidor de automação"
-  - "objetos [C++], tempo de vida"
-  - "servidores, tempo de vida da Automação"
+title: 'Automation Servers: Object-Lifetime Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], lifetime
+- lifetime, automation server
+- Automation servers, object lifetime
+- servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Servidores de automa&#231;&#227;o: problemas de tempo de vida do objeto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffb133e595e8367b2c454e2c77b3e453d65f4afe
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Quando um cliente de automação cria ou ativa um item OLE, o servidor passa o cliente um ponteiro para esse objeto.  O cliente estabelece uma referência ao objeto com uma chamada à função do OLE [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  Essa referência é em vigor até que o cliente chama [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). \(Os aplicativos cliente gravados com as classes com OLE DB da biblioteca de classes do Microsoft não precisam fazer essas chamadas; a estrutura faz isso.\) O sistema OLE e o próprio servidor podem estabelecer referências ao objeto.  Um servidor não deve ser destruído um objeto como as referências externas ao objeto permanecem aplicado.  
+---
+# <a name="automation-servers-object-lifetime-issues"></a>Automation Servers: Object-Lifetime Issues
+When an Automation client creates or activates an OLE item, the server passes the client a pointer to that object. The client establishes a reference to the object through a call to the OLE function [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). This reference is in effect until the client calls [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Client applications written with the Microsoft Foundation Class Library's OLE classes need not make these calls; the framework does so.) The OLE system and the server itself may establish references to the object. A server should not destroy an object as long as external references to the object remain in effect.  
   
- A estrutura interna mantém uma contagem do número de referências a qualquer objeto de servidor derivado de [CCmdTarget](../Topic/CCmdTarget%20Class.md).  Esta contagem é atualizada quando um cliente de automação ou outra entidade adicionam ou liberam uma referência ao objeto.  
+ The framework maintains an internal count of the number of references to any server object derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md). This count is updated when an Automation client or other entity adds or releases a reference to the object.  
   
- Quando a contagem de referência se tornar 0, a estrutura chama a função virtual [CCmdTarget::OnFinalRelease](../Topic/CCmdTarget::OnFinalRelease.md).  A implementação padrão desse chamadas de função do operador **delete** para excluir esse objeto.  
+ When the reference count becomes 0, the framework calls the virtual function [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). The default implementation of this function calls the **delete** operator to delete this object.  
   
- A biblioteca de classes do Microsoft fornece recursos adicionais para o comportamento do aplicativo de controle quando os clientes externas têm referências para objetos de aplicativo.  Além de manter uma contagem das referências para cada objeto, os servidores mantêm uma contagem global de objetos ativas.  As funções [AfxOleLockApp](../Topic/AfxOleLockApp.md) globais e [AfxOleUnlockApp](../Topic/AfxOleUnlockApp.md) atualiza a contagem de aplicativo de objetos ativas.  Se essa contagem é diferente de zero, o aplicativo não encerra quando o usuário escolhe o final do menu do sistema ou a saída do menu arquivo.  Em vez disso, a janela principal do aplicativo está oculta \(mas não destruído\) até que todas as solicitações de cliente pendentes sejam concluídas.  Normalmente, `AfxOleLockApp` e `AfxOleUnlockApp` são chamados nos construtores e em destruidores, respectivamente, das classes a automação de suporte.  
+ The Microsoft Foundation Class Library provides additional facilities for controlling application behavior when external clients have references to the application's objects. Besides maintaining a count of references to each object, servers maintain a global count of active objects. The global functions [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) and [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) update the application's count of active objects. If this count is nonzero, the application does not terminate when the user chooses Close from the system menu or Exit from the File menu. Instead, the application's main window is hidden (but not destroyed) until all pending client requests have been completed. Typically, `AfxOleLockApp` and `AfxOleUnlockApp` are called in the constructors and destructors, respectively, of classes that support Automation.  
   
- Às vezes as circunstâncias força o servidor para encerrar quando um cliente ainda não tiver uma referência a um objeto.  Por exemplo, um recurso em que o servidor depende pode ficar indisponível, fazendo com que o servidor encontrar um erro.  O usuário também pode fechar um documento de servidor que contém os objetos que outros aplicativos têm referências.  
+ Sometimes circumstances force the server to terminate while a client still has a reference to an object. For example, a resource on which the server depends may become unavailable, causing the server to encounter an error. The user may also close a server document that contains objects to which other applications have references.  
   
- Em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)], consulte `IUnknown::AddRef` e `IUnknown::Release`.  
+ In the Windows SDK, see `IUnknown::AddRef` and `IUnknown::Release`.  
   
-## Consulte também  
- [Servidores de automação](../mfc/automation-servers.md)   
- [AfxOleCanExitApp](../Topic/AfxOleCanExitApp.md)
+## <a name="see-also"></a>See Also  
+ [Automation Servers](../mfc/automation-servers.md)   
+ [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe CDocObjectServer | Documentos do Microsoft
+title: CDocObjectServer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,12 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- CDocObjectServer class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- CDocObjectServer [MFC], CDocObjectServer
+- CDocObjectServer [MFC], ActivateDocObject
+- CDocObjectServer [MFC], OnActivateView
+- CDocObjectServer [MFC], OnApplyViewState
+- CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
 caps.latest.revision: 23
 author: mikeblome
@@ -44,81 +43,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 75fb0ba49d105a673e862ed3044e85ac9e990e9c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 90a2db624b814069b2f56edff2033b39f3901256
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocobjectserver-class"></a>Classe CDocObjectServer
-Implementa as interfaces OLE adicionais necessárias para fazer um normal `COleDocument` server em um servidor DocObject completo: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, e `IPrint`.  
+# <a name="cdocobjectserver-class"></a>CDocObjectServer Class
+Implements the additional OLE interfaces needed to make a normal `COleDocument` server into a full DocObject server: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, and `IPrint`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocObjectServer : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Constrói um objeto `CDocObjectServer`.|  
+|[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Constructs a `CDocObjectServer` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::ActivateDocObject](#activatedocobject)|Ativa o servidor de objeto de documento, mas não exibi-la.|  
+|[CDocObjectServer::ActivateDocObject](#activatedocobject)|Activates the document object server, but does not show it.|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::OnActivateView](#onactivateview)|Exibe a exibição DocObject.|  
-|[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Restaura o estado da exibição DocObject.|  
-|[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Salva o estado da exibição DocObject.|  
+|[CDocObjectServer::OnActivateView](#onactivateview)|Displays the DocObject view.|  
+|[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Restores the state of the DocObject view.|  
+|[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Saves the state of the DocObject view.|  
   
-## <a name="remarks"></a>Comentários  
- `CDocObjectServer`é derivado de `CCmdTarget` e trabalha em conjunto com `COleServerDoc` para expor as interfaces.  
+## <a name="remarks"></a>Remarks  
+ `CDocObjectServer` is derived from `CCmdTarget` and works closely with `COleServerDoc` to expose the interfaces.  
   
- Pode conter um documento do servidor DocObject [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) objetos que representam a interface de servidor DocObject itens.  
+ A DocObject server document can contain [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) objects, which represent the server interface to DocObject items.  
   
- Para personalizar seu servidor DocObject, derivar sua própria classe de `CDocObjectServer` e substituir suas funções de instalação do modo de exibição, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), e [OnSaveViewState](#onsaveviewstate). Você precisará fornecer uma nova instância da sua classe em resposta a chamadas de estrutura.  
+ To customize your DocObject server, derive your own class from `CDocObjectServer` and override its view setup functions, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), and [OnSaveViewState](#onsaveviewstate). You will need to provide a new instance of your class in response to framework calls.  
   
- Para obter mais informações sobre DocObjects, consulte [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) no *referência da MFC*. Consulte também [Internet primeiras etapas: documentos ativos](../../mfc/active-documents-on-the-internet.md) e [documentos ativos](../../mfc/active-documents-on-the-internet.md).  
+ For further information on DocObjects, see [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) and [COleCmdUI](../../mfc/reference/colecmdui-class.md) in the *MFC Reference*. Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
- Consulte também o seguinte artigo da Base de dados de Conhecimento:  
+ Also see the following Knowledge Base article:  
   
--   Q247382: PRB: dicas de ferramentas para controles do servidor de documentos ActiveX estão ocultos pelo contêiner de documento ActiveX  
+-   Q247382 : PRB: ToolTips for Controls in ActiveX Document Server Are Hidden by the ActiveX Document Container  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocObjectServer`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdocob.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
- Chame essa função para ativar o servidor de objeto de documento (mas não mostrar uma).  
+##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject  
+ Call this function to activate (but not show) the document object server.  
   
 ```  
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>Comentários  
- `ActivateDocObject`chamadas `IOleDocumentSite`do **ActivateMe** método, mas não mostra o modo de exibição porque ele aguarda para obter instruções específicas sobre como configurar e exibir o modo de exibição fornecido na chamada para [CDocObjectServer::OnActivateView](#onactivateview).  
+### <a name="remarks"></a>Remarks  
+ `ActivateDocObject` calls `IOleDocumentSite`'s **ActivateMe** method, but does not show the view because it waits for specific instructions on how to set up and display the view, given in the call to [CDocObjectServer::OnActivateView](#onactivateview).  
   
- Juntos, `ActivateDocObject` e `OnActivateView` ativar e mostrar a exibição DocObject. Ativação DocObject difere de outros tipos de ativação no local de OLE. Ativação DocObject ignora a exibição das bordas de hachura in-loco e adornos de objeto (por exemplo, alças de dimensionamento), ignora as funções de extensão de objeto e desenha as barras de rolagem dentro do retângulo de exibição em vez de desenhá-los fora do retângulo (como ativação in-loco normal).  
+ Together, `ActivateDocObject` and `OnActivateView` activate and display the DocObject view. DocObject activation differs from other kinds of OLE in-place activation. DocObject activation bypasses displaying in-place hatch borders and object adornments (such as sizing handles), ignores object extent functions, and draws scroll bars within the view rectangle as opposed to drawing them outside that rectangle (as in normal in-place activation).  
   
-##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
- Constrói e inicializa um objeto `CDocObjectServer`.  
+##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer  
+ Constructs and initializes a `CDocObjectServer` object.  
   
 ```  
 explicit CDocObjectServer(
@@ -126,63 +125,63 @@ explicit CDocObjectServer(
     LPOLEDOCUMENTSITE pDocSite = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pOwner*  
- Um ponteiro para o documento de site do cliente que é o cliente para o servidor DocObject.  
+ A pointer to the client site document that is the client for the DocObject server.  
   
  `pDocSite`  
- Um ponteiro para o `IOleDocumentSite` interface implementada pelo contêiner.  
+ A pointer to the `IOleDocumentSite` interface implemented by the container.  
   
-### <a name="remarks"></a>Comentários  
- Quando um DocObject está ativa, o cliente site interface OLE ( `IOleDocumentSite`) é o que permite que o servidor DocObject para se comunicar com seu cliente (o contêiner). Quando um servidor DocObject é ativado, ele primeiro verifica se o contêiner implementa o `IOleDocumentSite` interface. Nesse caso, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) é chamado para ver se o contêiner oferece suporte a DocObjects. Por padrão, `GetDocObjectServer` retorna **nulo**. Você deve substituir `COleServerDoc::GetDocObjectServer` para construir um novo `CDocObjectServer` objeto ou um objeto derivado de seus próprio com ponteiros para o `COleServerDoc` contêiner e seu `IOleDocumentSite` interface como argumentos para o construtor.  
+### <a name="remarks"></a>Remarks  
+ When a DocObject is active, the client site OLE interface ( `IOleDocumentSite`) is what allows the DocObject server to communicate with its client (the container). When a DocObject server is activated, it first checks that the container implements the `IOleDocumentSite` interface. If so, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) is called to see if the container supports DocObjects. By default, `GetDocObjectServer` returns **NULL**. You must override `COleServerDoc::GetDocObjectServer` to construct a new `CDocObjectServer` object or a derived object of your own, with pointers to the `COleServerDoc` container and its `IOleDocumentSite` interface as arguments to the constructor.  
   
-##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
- Chame essa função para exibir o modo de exibição DocObject.  
+##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView  
+ Call this function to display the DocObject view.  
   
 ```  
 virtual HRESULT OnActivateView();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna um valor de aviso ou erro. Por padrão, retorna **NOERROR** se bem-sucedido; caso contrário, **E_FAIL**.  
+### <a name="return-value"></a>Return Value  
+ Returns an error or warning value. By default, returns **NOERROR** if successful; otherwise, **E_FAIL**.  
   
-### <a name="remarks"></a>Comentários  
- Esta função cria uma janela de quadro in-loco, desenha as barras de rolagem no modo de exibição, configura os menus servidor compartilha com seu contêiner, adiciona controles frame, define o objeto ativo, e finalmente mostra a janela de quadro in-loco e define o foco.  
+### <a name="remarks"></a>Remarks  
+ This function creates an in-place frame window, draws scrollbars within the view, sets up the menus the server shares with its container, adds frame controls, sets the active object, then finally shows the in-place frame window and sets the focus.  
   
-##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
- Substitua essa função para restaurar o estado da exibição DocObject.  
+##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState  
+ Override this function to restore the state of the DocObject view.  
   
 ```  
 virtual void OnApplyViewState(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `ar`  
- Um `CArchive` objeto do qual serializar o estado de exibição.  
+ A `CArchive` object from which to serialize the view state.  
   
-### <a name="remarks"></a>Comentários  
- Essa função é chamada quando o modo de exibição está sendo exibido pela primeira vez após sua instanciação. `OnApplyViewState`Instrui a reinicializar ele próprio acordo com os dados em um modo de exibição de `CArchive` objeto salvo anteriormente com [OnSaveViewState](#onsaveviewstate). O modo de exibição deve validar os dados a `CArchive` porque o contêiner não tenta interpretar os dados de estado de exibição de forma alguma.  
+### <a name="remarks"></a>Remarks  
+ This function is called when the view is being displayed for the first time after its instantiation. `OnApplyViewState` instructs a view to reinitialize itself according to the data in the `CArchive` object previously saved with [OnSaveViewState](#onsaveviewstate). The view must validate the data in the `CArchive` object because the container does not attempt to interpret the view state data in any way.  
   
- Você pode usar `OnSaveViewState` para armazenar informações persistentes específicas para o estado da exibição. Se você substituir `OnSaveViewState` para armazenar informações, você desejará substituir `OnApplyViewState` para ler as informações e aplicá-lo ao modo de exibição quando ela é ativada recentemente.  
+ You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.  
   
-##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
- Substitua essa função para salvar informações de estado extra sobre o modo de exibição DocObject.  
+##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState  
+ Override this function to save extra state information about your DocObject view.  
   
 ```  
 virtual void OnSaveViewState(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `ar`  
- Um `CArchive` de objeto para o qual o estado de exibição é serializado.  
+ A `CArchive` object to which the view state is serialized.  
   
-### <a name="remarks"></a>Comentários  
- O estado pode incluir propriedades como o tipo de exibição, o fator de zoom, inserção e o ponto de seleção e assim por diante. O contêiner normalmente chama essa função antes de desativar o modo de exibição. O estado salvo pode ser restaurado posteriormente por meio de [OnApplyViewState](#onapplyviewstate).  
+### <a name="remarks"></a>Remarks  
+ Your state might include properties like the view type, zoom factor, insertion and selection point, and so on. The container typically calls this function before deactivating the view. The saved state can later be restored through [OnApplyViewState](#onapplyviewstate).  
   
- Você pode usar `OnSaveViewState` para armazenar informações persistentes específicas para o estado da exibição. Se você substituir `OnSaveViewState` para armazenar informações, você desejará substituir `OnApplyViewState` para ler as informações e aplicá-lo ao modo de exibição quando ela é ativada recentemente.  
+ You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocObjectServerItem Class](../../mfc/reference/cdocobjectserveritem-class.md)
 

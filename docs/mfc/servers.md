@@ -1,72 +1,90 @@
 ---
-title: "Servidores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "servidor completo"
-  - "miniservidor"
-  - "aplicativos de servidor OLE"
-  - "aplicativos de servidor OLE, ativação"
-  - "aplicativos de servidor OLE, tipos de servidor"
-  - "aplicativos de servidor"
-  - "servidores"
+title: Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC]
+- OLE server applications [MFC], activation
+- full-server
+- servers
+- mini-server
+- OLE server applications [MFC], server types
+- server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Servidores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47c6019418107070d1982c7cc55a1e303ff30536
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um aplicativo de servidor \(ou o aplicativo componente\) criam itens com OLE DB \(ou componentes\) para o uso de aplicativos do contêiner.  Um aplicativo de servidor visual da edição também da suporte à edição ou o ativação in\-loco visual.  Outra forma de servidor OLE é [servidor de automação](../mfc/automation-servers.md).  Alguns aplicativos para servidores só dão suporte à criação de itens digitados; outro oferecem suporte à criação de itens digitados e vinculados.  Alguns vincular só dão suporte, embora isso é raro.  Todos os aplicativos de servidor devem oferecer suporte à ativação por aplicativos de contêiner quando o usuário deseja editar um item.  Um aplicativo pode ser um contêiner e um servidor.  Ou é possível inserir dados em seus documentos, e cria os dados que podem ser inseridos como itens nos documentos de outros aplicativos.  
+---
+# <a name="servers"></a>Servers
+A server application (or component application) creates OLE items (or components) for use by container applications. A visual editing server application also supports visual editing or in-place activation. Another form of OLE server is an [automation server](../mfc/automation-servers.md). Some server applications support only the creation of embedded items; others support the creation of both embedded and linked items. Some support linking only, although this is rare. All server applications must support activation by container applications when the user wants to edit an item. An application can be both a container and a server. In other words, it can both incorporate data into its documents, and create data that can be incorporated as items into other applications' documents.  
   
- Um miniserver é um tipo especial de aplicativo de servidor que pode ser iniciado apenas por um contêiner.  Um descompasso da Microsoft e o gráfico do Microsoft são exemplos de miniservers.  Um miniserver não armazena documentos como arquivos em disco.  Em vez disso, a leitura de seus documentos de escreve\-os e aos itens em documentos que pertencem a contêiner.  No resultado, um miniserver oferece suporte a inserir apenas, não vinculando.  
+ A miniserver is a special type of server application that can only be launched by a container. Microsoft Draw and Microsoft Graph are examples of miniservers. A miniserver does not store documents as files on disk. Instead, it reads its documents from and writes them to items in documents belonging to containers. As a result, a miniserver supports embedding only, not linking.  
   
- Um servidor completo pode ser executado como um aplicativo autônomo ou ser iniciado por um aplicativo do contêiner.  Um servidor completo pode armazenar documentos como arquivos em disco.  Pode suportar inserir apenas, inserção e vincular, ou vincular somente.  O usuário de um aplicativo de contêiner pode criar um item inserido escolhendo o comando recortar ou de cópia no servidor e o comando da pasta no contêiner.  Um item vinculado é criado escolhendo o comando imprimir do servidor e o comando do link da pasta no contêiner.  Como alternativa, o usuário pode criar um item inserido ou vinculado usando a caixa de diálogo do objeto de inserção.  
+ A full server can be run either as a stand-alone application or launched by a container application. A full server can store documents as files on disk. It can support embedding only, both embedding and linking, or linking only. The user of a container application can create an embedded item by choosing the Cut or Copy command in the server and the Paste command in the container. A linked item is created by choosing the Copy command in the server and the Paste Link command in the container. Alternatively, the user can create an embedded or linked item using the Insert Object dialog box.  
   
- A tabela a seguir resume as características dos diferentes tipos de servidores:  
+ The following table summarizes characteristics of different types of servers:  
   
-### Características do servidor  
+### <a name="server-characteristics"></a>Server Characteristics  
   
-|Tipo de servidor|Oferece suporte a várias instâncias|Itens pelo documento|Documentos pela instância|  
-|----------------------|-----------------------------------------|--------------------------|-------------------------------|  
-|Miniserver|Sim|1|1|  
-|O servidor de SDI completo|Sim|1 \(se vincular tem suporte, 1 ou mais\)|1|  
-|Servidor full\-scale MDI|Nenhum \(não obrigatória\)|1 \(se vincular tem suporte, 1 ou mais\)|0 ou mais|  
+|Type of server|Supports multiple instances|Items per document|Documents per instance|  
+|--------------------|---------------------------------|------------------------|----------------------------|  
+|Miniserver|Yes|1|1|  
+|SDI full server|Yes|1 (if linking is supported, 1 or more)|1|  
+|MDI full server|No (not required)|1 (if linking is supported, 1 or more)|0 or more|  
   
- Um aplicativo de servidor deve oferecer suporte a vários contêineres simultaneamente, se mais de um contêiner é usado para editar um item inserido ou vinculado.  Se o servidor é um aplicativo de SDI \(ou um miniserver com uma interface da caixa de diálogo\), várias instâncias de servidor devem poder executar simultaneamente.  Isso permite uma instância separada do aplicativo controlar cada solicitação do contêiner.  
+ A server application should support multiple containers simultaneously, in the event that more than one container will be used to edit an embedded or linked item. If the server is an SDI application (or a miniserver with a dialog box interface), multiple instances of the server must be able to run simultaneously. This allows a separate instance of the application to handle each container request.  
   
- Se o servidor é um aplicativo MDI, pode criar uma nova janela filho MDI cada vez que um contêiner precisa editar um item.  Dessa forma, uma única instância do aplicativo poderá oferecer suporte a vários contêineres.  
+ If the server is an MDI application, it can create a new MDI child window each time a container needs to edit an item. In this way, a single instance of the application can support multiple containers.  
   
- Seu aplicativo de servidor deve informar a DLL do sistema do que fazer se uma instância de servidor já está sendo executada enquanto outro contêiner solicitar seus serviços: se deve iniciar uma nova instância do servidor ou direcionar solicitações de todos os contêineres a uma instância do servidor.  
+ Your server application must tell the OLE system DLLs what to do if one instance of the server is already running when another container requests its services: whether it should launch a new instance of the server or direct all containers' requests to one instance of the server.  
   
- Para obter mais detalhes sobre servidores, consulte:  
+ For more details on servers, see:  
   
--   [Servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md)  
+-   [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)  
   
--   [Servidores: Implementando documentos do servidor](../mfc/servers-implementing-server-documents.md)  
+-   [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)  
   
--   [Servidores: Implementando o windows no local do quadro](../Topic/Servers:%20Implementing%20In-Place%20Frame%20Windows.md)  
+-   [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)  
   
--   [Servidores: Itens do servidor](../mfc/servers-server-items.md)  
+-   [Servers: Server Items](../mfc/servers-server-items.md)  
   
--   [Servidores: Problemas da interface do usuário](../mfc/servers-user-interface-issues.md)  
+-   [Servers: User-Interface Issues](../mfc/servers-user-interface-issues.md)  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Contêineres](../mfc/containers.md)   
- [Contêineres: recursos avançados](../mfc/containers-advanced-features.md)   
- [Menus e recursos \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Registro](../mfc/registration.md)   
- [Servidores de automação](../mfc/automation-servers.md)
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)   
+ [Automation Servers](../mfc/automation-servers.md)
+
+

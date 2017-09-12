@@ -1,42 +1,60 @@
 ---
-title: "Fun&#231;&#227;o da exibi&#231;&#227;o na impress&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CView, função na impressão"
-  - "Método OnDraw, e impressão"
-  - "imprimindo [MFC], Método OnDraw"
-  - "imprimindo [MFC], modos de exibição"
-  - "imprimindo exibições"
-  - "modos de exibição, imprimindo"
+title: Role of the View in Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], printing
+- OnDraw method [MFC], and printing
+- printing [MFC], OnDraw method [MFC]
+- printing [MFC], views
+- CView class [MFC], role in printing
+- printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#227;o da exibi&#231;&#227;o na impress&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28d18718ca992c77d20416e63adb24c24cc6a647
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Sua exibição também executa duas funções importantes para imprimir o documento associado.  
+---
+# <a name="role-of-the-view-in-printing"></a>Role of the View in Printing
+Your view also plays two important roles in printing its associated document.  
   
- A exibição:  
+ The view:  
   
--   Usa o mesmo código de [OnDraw](../Topic/CView::OnDraw.md) para desenhar a impressora a respeito de descompasso na tela.  
+-   Uses the same [OnDraw](../mfc/reference/cview-class.md#ondraw) code to draw on the printer as to draw on the screen.  
   
--   Manages que divide o documento em páginas a serem impressas.  
+-   Manages dividing the document into pages for printing.  
   
- Para obter mais informações sobre a impressão e sobre a função da exibição na impressão, consulte [Impressão e visualização de impressão](../mfc/printing-and-print-preview.md).  
+ For more information about printing and about the view's role in printing, see [Printing and Print Preview](../mfc/printing-and-print-preview.md).  
   
-## Consulte também  
- [Usando exibições](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

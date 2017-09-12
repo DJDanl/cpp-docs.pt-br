@@ -1,5 +1,5 @@
 ---
-title: Classe CDockablePane | Documentos do Microsoft
+title: CDockablePane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -77,7 +77,69 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDockablePane class
+- CDockablePane [MFC], CDockablePane
+- CDockablePane [MFC], AttachToTabWnd
+- CDockablePane [MFC], CalcFixedLayout
+- CDockablePane [MFC], CanAcceptMiniFrame
+- CDockablePane [MFC], CanAcceptPane
+- CDockablePane [MFC], CanAutoHide
+- CDockablePane [MFC], CanBeAttached
+- CDockablePane [MFC], ConvertToTabbedDocument
+- CDockablePane [MFC], CopyState
+- CDockablePane [MFC], Create
+- CDockablePane [MFC], CreateDefaultPaneDivider
+- CDockablePane [MFC], CreateEx
+- CDockablePane [MFC], CreateTabbedPane
+- CDockablePane [MFC], DockPaneContainer
+- CDockablePane [MFC], DockPaneStandard
+- CDockablePane [MFC], DockToRecentPos
+- CDockablePane [MFC], DockToWindow
+- CDockablePane [MFC], EnableAutohideAll
+- CDockablePane [MFC], EnableGripper
+- CDockablePane [MFC], GetAHRestoredRect
+- CDockablePane [MFC], GetAHSlideMode
+- CDockablePane [MFC], GetCaptionHeight
+- CDockablePane [MFC], GetDefaultPaneDivider
+- CDockablePane [MFC], GetDockingStatus
+- CDockablePane [MFC], GetDragSensitivity
+- CDockablePane [MFC], GetLastPercentInPaneContainer
+- CDockablePane [MFC], GetTabArea
+- CDockablePane [MFC], GetTabbedPaneRTC
+- CDockablePane [MFC], HasAutoHideMode
+- CDockablePane [MFC], HitTest
+- CDockablePane [MFC], IsAutohideAllEnabled
+- CDockablePane [MFC], IsAutoHideMode
+- CDockablePane [MFC], IsDocked
+- CDockablePane [MFC], IsHideInAutoHideMode
+- CDockablePane [MFC], IsInFloatingMultiPaneFrameWnd
+- CDockablePane [MFC], IsResizable
+- CDockablePane [MFC], IsTabLocationBottom
+- CDockablePane [MFC], IsTracked
+- CDockablePane [MFC], IsVisible
+- CDockablePane [MFC], OnAfterChangeParent
+- CDockablePane [MFC], OnAfterDockFromMiniFrame
+- CDockablePane [MFC], OnBeforeChangeParent
+- CDockablePane [MFC], OnBeforeFloat
+- CDockablePane [MFC], RemoveFromDefaultPaneDividier
+- CDockablePane [MFC], ReplacePane
+- CDockablePane [MFC], RestoreDefaultPaneDivider
+- CDockablePane [MFC], SetAutoHideMode
+- CDockablePane [MFC], SetAutoHideParents
+- CDockablePane [MFC], SetLastPercentInPaneContainer
+- CDockablePane [MFC], SetRestoredDefaultPaneDivider
+- CDockablePane [MFC], SetTabbedPaneRTC
+- CDockablePane [MFC], ShowPane
+- CDockablePane [MFC], Slide
+- CDockablePane [MFC], ToggleAutoHide
+- CDockablePane [MFC], UndockPane
+- CDockablePane [MFC], CheckAutoHideCondition
+- CDockablePane [MFC], CheckStopSlideCondition
+- CDockablePane [MFC], DrawCaption
+- CDockablePane [MFC], OnPressButtons
+- CDockablePane [MFC], OnSlide
+- CDockablePane [MFC], m_bDisableAnimation
+- CDockablePane [MFC], m_bHideInAutoHideMode
+- CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 caps.latest.revision: 34
 author: mikeblome
@@ -97,166 +159,166 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: dea1f1ce66c0e9bedbe83109ab62055a4af2ebce
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0c875c528aa58dfc262b0b72bf4204b2497a7b7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdockablepane-class"></a>Classe CDockablePane
-Implementa um painel que pode ser encaixado em um site de encaixe ou incluído em um painel com guias.  
+# <a name="cdockablepane-class"></a>CDockablePane Class
+Implements a pane that can either be docked in a dock site or included in a tabbed pane.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDockablePane : public CPane  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockablePane::CDockablePane](#cdockablepane)|Constrói e inicializa um objeto `CDockablePane`.|  
+|[CDockablePane::CDockablePane](#cdockablepane)|Constructs and initializes a `CDockablePane` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Anexa um painel para outro painel. Isso cria um painel com guias.|  
-|[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Retorna o tamanho do retângulo de painel.|  
-|[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|Determina se o quadro mini especificado pode ser encaixado ao painel.|  
-|[CDockablePane::CanAcceptPane](#canacceptpane)|Determina se outro painel pode ser encaixado para o painel atual.|  
-|[CDockablePane::CanAutoHide](#canautohide)|Determina se o painel oferece suporte ao modo de ocultar automaticamente. (Substitui [CBasePane::CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide).)|  
-|[CDockablePane::CanBeAttached](#canbeattached)|Determina se o painel atual pode ser encaixado para outro painel.|  
-|[CDockablePane::ConvertToTabbedDocument](#converttotabbeddocument)|Converte um ou mais painéis encaixáveis documentos MDI com guias.|  
-|[CDockablePane::CopyState](#copystate)|Copia o estado de um painel acoplável.|  
-|[CDockablePane::Create](#create)|Cria o controle do Windows e anexa-o para o `CDockablePane` objeto.|  
-|[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|Cria um divisor padrão para o painel de como ele está sendo encaixado em uma janela de quadro.|  
-|[CDockablePane::CreateEx](#createex)|Cria o controle do Windows e anexa-o para o `CDockablePane` objeto.|  
-|[CDockablePane::CreateTabbedPane](#createtabbedpane)|Cria um painel com guias do painel atual.|  
-|[CDockablePane::DockPaneContainer](#dockpanecontainer)|Encaixa um contêiner para o painel.|  
-|[CDockablePane::DockPaneStandard](#dockpanestandard)|Encaixa um painel usando a estrutura de tópicos de encaixe (padrão).|  
-|`CDockablePane::DockToFrameWindow`|Usado internamente. Para encaixar um painel, use [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) ou [CDockablePane::DockToWindow](#docktowindow).|  
-|[CDockablePane::DockToRecentPos](#docktorecentpos)|Encaixa um painel para sua posição de encaixe recente armazenada.|  
-|[CDockablePane::DockToWindow](#docktowindow)|Encaixa um painel de encaixe para outro painel de encaixe.|  
-|[CDockablePane::EnableAutohideAll](#enableautohideall)|Habilita ou desabilita o modo de ocultar automaticamente para esse painel junto com outros painéis no contêiner.|  
-|[CDockablePane::EnableGripper](#enablegripper)|Mostra ou oculta a legenda (garra).|  
-|[CDockablePane::GetAHRestoredRect](#getahrestoredrect)|Especifica a posição do painel quando visível no modo de ocultar automaticamente.|  
-|[CDockablePane::GetAHSlideMode](#getahslidemode)|Recupera o modo de slide de ocultar automaticamente para o painel.|  
-|`CDockablePane::GetAutoHideButton`|Usado internamente.|  
-|`CDockablePane::GetAutoHideToolBar`|Usado internamente.|  
-|[CDockablePane::GetCaptionHeight](#getcaptionheight)|Retorna a altura da legenda do atual.|  
-|[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)|Retorna o divisor de painéis padrão para o contêiner do painel.|  
-|[CDockablePane::GetDockingStatus](#getdockingstatus)|Determina a capacidade de um painel encaixado com base no local do ponteiro fornecido.|  
-|[CDockablePane::GetDragSensitivity](#getdragsensitivity)|Retorna a sensibilidade de arrastar de um painel de encaixe.|  
-|[CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|Recupera a porcentagem de espaço que ocupa um painel dentro do seu contêiner.|  
-|[CDockablePane::GetTabArea](#gettabarea)|Recupera a área da guia do painel.|  
-|[CDockablePane::GetTabbedPaneRTC](#gettabbedpanertc)|Retorna as informações de classe de tempo de execução sobre uma janela com guias que é criada quando outro painel encaixa ao painel atual.|  
-|[CDockablePane::HasAutoHideMode](#hasautohidemode)|Especifica se um painel de encaixe pode ser alternado para o modo de ocultar automaticamente.|  
-|[CDockablePane::HitTest](#hittest)|Especifica o local específico em um painel onde o usuário clica em um mouse.|  
-|`CDockablePane::IsAccessibilityCompatible`|Usado internamente.|  
-|[CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)|Indica se o painel de encaixe e todos os outros painéis no contêiner podem ser colocados no modo de ocultar automaticamente.|  
-|[CDockablePane::IsAutoHideMode](#isautohidemode)|Determina se um painel está no modo de ocultar automaticamente.|  
-|`CDockablePane::IsChangeState`|Usado internamente.|  
-|[CDockablePane::IsDocked](#isdocked)|Determina se o painel atual está encaixado.|  
-|[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)|Determina o comportamento de um painel que está no modo de ocultar automaticamente, se ele é exibido (ou oculto) chamando `ShowPane`.|  
-|[CDockablePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Especifica se o painel em uma janela de quadro de vários painéis.|  
-|[CDockablePane::IsResizable](#isresizable)|Especifica se o painel é redimensionável.|  
-|[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Especifica se o guias estão localizadas na parte superior ou inferior do painel.|  
-|[CDockablePane::IsTracked](#istracked)|Especifica se um painel está sendo arrastado pelo usuário.|  
-|[CDockablePane::IsVisible](#isvisible)|Determina se o painel atual está visível.|  
-|[CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)|Usado internamente.|  
-|[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Chamado pela estrutura quando o pai de um painel é alterado. (Substitui [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
-|[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chamado pela estrutura quando uma barra de encaixe flutuante se encaixa em uma janela do quadro.|  
-|[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pela estrutura quando o pai do painel está prestes a ser alterada. (Substitui [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
-|[CDockablePane::OnBeforeFloat](#onbeforefloat)|Chamado pela estrutura quando um painel está prestes a float. (Substitui [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|  
-|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|O framework chama esse método quando um painel está sendo desencaixado.|  
-|[CDockablePane::ReplacePane](#replacepane)|Substitui o painel com um painel especificado.|  
-|[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|O framework chama esse método como um painel é desserializado para restaurar o divisor de painel padrão.|  
-|`CDockablePane::SaveState`|Usado internamente.|  
-|`CDockablePane::Serialize`|Serializa o painel. (Substitui `CBasePane::Serialize`.)|  
-|[CDockablePane::SetAutoHideMode](#setautohidemode)|Alterna o painel de encaixe entre visível e o modo de ocultar automaticamente.|  
-|[CDockablePane::SetAutoHideParents](#setautohideparents)|Define o botão Ocultar automaticamente e ocultar automaticamente a barra de ferramentas do painel.|  
-|`CDockablePane::SetDefaultPaneDivider`|Usado internamente.|  
-|[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|Define a porcentagem de espaço que ocupa um painel dentro do seu contêiner.|  
-|`CDockablePane::SetResizeMode`|Usado internamente.|  
-|[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|Define o divisor de painel padrão restaurada.|  
-|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|Define as informações de classe de tempo de execução para uma janela com guias que é criada quando dois painéis encaixe juntos.|  
-|[CDockablePane::ShowPane](#showpane)|Mostra ou oculta um painel.|  
-|[CDockablePane::Slide](#slide)|Mostra ou oculta um painel com uma animação deslizante que exibe apenas quando o painel está no modo de ocultar automaticamente.|  
-|[CDockablePane::ToggleAutoHide](#toggleautohide)|Modo de ocultar automaticamente alterna. (Substitui [CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) .)|  
-|[CDockablePane::UndockPane](#undockpane)|Desencaixa um painel da janela principal do quadro ou um contêiner de janela miniframe.|  
-|`CDockablePane::UnSetAutoHideMode`|Usado internamente. Para definir o modo de ocultar automaticamente, use [CDockablePane::SetAutoHideMode](#setautohidemode)|  
+|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Attaches a pane to another pane. This creates a tabbed pane.|  
+|[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Returns the size of the pane rectangle.|  
+|[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|Determines whether the specified mini frame can be docked to the pane.|  
+|[CDockablePane::CanAcceptPane](#canacceptpane)|Determines whether another pane can be docked to the current pane.|  
+|[CDockablePane::CanAutoHide](#canautohide)|Determines whether the pane supports auto-hide mode. (Overrides [CBasePane::CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide).)|  
+|[CDockablePane::CanBeAttached](#canbeattached)|Determines whether the current pane can be docked to another pane.|  
+|[CDockablePane::ConvertToTabbedDocument](#converttotabbeddocument)|Converts one or more dockable panes to MDI tabbed documents.|  
+|[CDockablePane::CopyState](#copystate)|Copies the state of a dockable pane.|  
+|[CDockablePane::Create](#create)|Creates the Windows control and attaches it to the `CDockablePane` object.|  
+|[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|Creates a default divider for the pane as it is being docked to a frame window.|  
+|[CDockablePane::CreateEx](#createex)|Creates the Windows control and attaches it to the `CDockablePane` object.|  
+|[CDockablePane::CreateTabbedPane](#createtabbedpane)|Creates a tabbed pane from the current pane.|  
+|[CDockablePane::DockPaneContainer](#dockpanecontainer)|Docks a container to the pane.|  
+|[CDockablePane::DockPaneStandard](#dockpanestandard)|Docks a pane by using outline (standard) docking.|  
+|`CDockablePane::DockToFrameWindow`|Used internally. To dock a pane, use [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) or [CDockablePane::DockToWindow](#docktowindow).|  
+|[CDockablePane::DockToRecentPos](#docktorecentpos)|Docks a pane to its stored recent docking position.|  
+|[CDockablePane::DockToWindow](#docktowindow)|Docks one docking pane to another docking pane.|  
+|[CDockablePane::EnableAutohideAll](#enableautohideall)|Enables or disables auto-hide mode for this pane together with other panes in the container.|  
+|[CDockablePane::EnableGripper](#enablegripper)|Shows or hides the caption (gripper).|  
+|[CDockablePane::GetAHRestoredRect](#getahrestoredrect)|Specifies the position of the pane when visible in auto-hide mode.|  
+|[CDockablePane::GetAHSlideMode](#getahslidemode)|Retrieves the auto hide slide mode for the pane.|  
+|`CDockablePane::GetAutoHideButton`|Used internally.|  
+|`CDockablePane::GetAutoHideToolBar`|Used internally.|  
+|[CDockablePane::GetCaptionHeight](#getcaptionheight)|Returns the height of the current caption.|  
+|[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)|Returns the default pane divider for the pane's container.|  
+|[CDockablePane::GetDockingStatus](#getdockingstatus)|Determines the ability of a pane to be docked based on the provided pointer location.|  
+|[CDockablePane::GetDragSensitivity](#getdragsensitivity)|Returns the drag sensitivity of a docking pane.|  
+|[CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|Retrieves the percentage of space that a pane occupies within its container.|  
+|[CDockablePane::GetTabArea](#gettabarea)|Retrieves the tab area for the pane.|  
+|[CDockablePane::GetTabbedPaneRTC](#gettabbedpanertc)|Returns the runtime class information about a tabbed window that is created when another pane docks to the current pane.|  
+|[CDockablePane::HasAutoHideMode](#hasautohidemode)|Specifies whether a docking pane can be switched to auto-hide mode.|  
+|[CDockablePane::HitTest](#hittest)|Specifies the specific location in a pane where the user clicks a mouse.|  
+|`CDockablePane::IsAccessibilityCompatible`|Used internally.|  
+|[CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)|Indicates whether the docking pane and all other panes in the container can be placed in auto-hide mode.|  
+|[CDockablePane::IsAutoHideMode](#isautohidemode)|Determines whether a pane is in auto-hide mode.|  
+|`CDockablePane::IsChangeState`|Used internally.|  
+|[CDockablePane::IsDocked](#isdocked)|Determines whether the current pane is docked.|  
+|[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)|Determines the behavior of a pane that is in auto-hide mode if it is shown (or hidden) by calling `ShowPane`.|  
+|[CDockablePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifies whether the pane is in a multi-pane frame window.|  
+|[CDockablePane::IsResizable](#isresizable)|Specifies whether the pane is resizable.|  
+|[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Specifies whether tabs are located at the top or bottom of the pane.|  
+|[CDockablePane::IsTracked](#istracked)|Specifies whether a pane is being dragged by the user.|  
+|[CDockablePane::IsVisible](#isvisible)|Determines whether the current pane is visible.|  
+|[CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)|Used internally.|  
+|[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Called by the framework when the parent of a pane has changed. (Overrides [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
+|[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Called by the framework when a floating docking bar docks at a frame window.|  
+|[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Called by the framework when the parent of the pane is about to change. (Overrides [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
+|[CDockablePane::OnBeforeFloat](#onbeforefloat)|Called by the framework when a pane is about to float. (Overrides [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|  
+|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|The framework calls this method when a pane is being undocked.|  
+|[CDockablePane::ReplacePane](#replacepane)|Replaces the pane with a specified pane.|  
+|[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|The framework calls this method as a pane is deserialized to restore the default pane divider.|  
+|`CDockablePane::SaveState`|Used internally.|  
+|`CDockablePane::Serialize`|Serializes the pane. (Overrides `CBasePane::Serialize`.)|  
+|[CDockablePane::SetAutoHideMode](#setautohidemode)|Toggles the docking pane between visible and auto-hide mode.|  
+|[CDockablePane::SetAutoHideParents](#setautohideparents)|Sets the auto-hide button and auto-hide toolbar for the pane.|  
+|`CDockablePane::SetDefaultPaneDivider`|Used internally.|  
+|[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|Sets the percentage of space that a pane occupies within its container.|  
+|`CDockablePane::SetResizeMode`|Used internally.|  
+|[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|Sets the restored default pane divider.|  
+|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|Sets the runtime class information for a tabbed window that is created when two panes dock together.|  
+|[CDockablePane::ShowPane](#showpane)|Shows or hides a pane.|  
+|[CDockablePane::Slide](#slide)|Shows or hides a pane with a sliding animation which displays only when the pane is in auto-hide mode.|  
+|[CDockablePane::ToggleAutoHide](#toggleautohide)|Toggles auto-hide mode. (Overrides [CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) .)|  
+|[CDockablePane::UndockPane](#undockpane)|Undocks a pane from either the main frame window or a miniframe window container.|  
+|`CDockablePane::UnSetAutoHideMode`|Used internally. To set the auto-hide mode, use [CDockablePane::SetAutoHideMode](#setautohidemode)|  
   
-### <a name="protected-methods"></a>Métodos Protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Determina se o painel de encaixe está oculto (no modo de ocultar automaticamente).|  
-|[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Determina quando um painel de encaixe de ocultação automática deve parar deslizante.|  
-|[CDockablePane::DrawCaption](#drawcaption)|Desenha a legenda encaixe do painel (garra).|  
-|[CDockablePane::OnPressButtons](#onpressbuttons)|Chamado quando o usuário pressionar um botão legenda que o `AFX_HTCLOSE` e `AFX_HTMAXBUTTON` botões.|  
-|[CDockablePane::OnSlide](#onslide)|Chamado pela estrutura para renderizar o efeito de slide ocultar automaticamente quando o painel é mostrado ou oculto.|  
+|[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Determines whether the docking pane is hidden (in auto-hide mode).|  
+|[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Determines when an auto-hide docking pane should stop sliding.|  
+|[CDockablePane::DrawCaption](#drawcaption)|Draws the docking pane caption (gripper).|  
+|[CDockablePane::OnPressButtons](#onpressbuttons)|Called when the user presses a caption button other than the `AFX_HTCLOSE` and `AFX_HTMAXBUTTON` buttons.|  
+|[CDockablePane::OnSlide](#onslide)|Called by the framework to render the auto-hide slide effect when the pane is either shown or hidden.|  
   
-### <a name="data-members"></a>Membros de Dados  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Especifica se a animação de ocultação automática do painel acoplável está desabilitada.|  
-|[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Determina o comportamento do painel quando o painel está no modo de ocultar automaticamente.|  
-|[CDockablePane::m_nSlideSteps](#m_nslidesteps)|Especifica a velocidade da animação do painel quando ele está sendo mostrado ou oculto quando no modo de ocultar automaticamente.|  
+|[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Specifies whether auto-hide animation of the dockable pane is disabled.|  
+|[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Determines the behavior of the pane when the pane is in auto-hide mode.|  
+|[CDockablePane::m_nSlideSteps](#m_nslidesteps)|Specifies the animation speed of the pane when it is being shown or hidden when in auto-hide mode.|  
   
-## <a name="remarks"></a>Comentários  
- `CDockablePane`implementa a seguinte funcionalidade:  
+## <a name="remarks"></a>Remarks  
+ `CDockablePane` implements the following functionality:  
   
--   Encaixar um painel para uma janela de quadro principal.  
+-   Docking a pane to a main frame window.  
   
--   Alternar um painel para o modo de ocultar automaticamente.  
+-   Switching a pane to auto-hide mode.  
   
--   Anexando um painel para uma janela com guias.  
+-   Attaching a pane to a tabbed window.  
   
--   Flutuante um painel em uma janela miniframe.  
+-   Floating a pane in a miniframe window.  
   
--   Encaixar um painel para outro painel flutuante em uma janela miniframe.  
+-   Docking a pane to another pane that is floating in a miniframe window.  
   
--   Redimensionar um painel.  
+-   Resizing a pane.  
   
--   Carregar e salvar o estado de um painel de encaixe.  
+-   Loading and saving state for a docking pane.  
   
     > [!NOTE]
-    >  As informações de estado é salvo no registro do Windows.  
+    >  State information is saved to the Windows registry.  
   
--   Criando um painel com ou sem uma legenda. A legenda pode ter um rótulo de texto e ele pode ser preenchido com uma cor de gradiente.  
+-   Creating a pane with or without a caption. The caption can have a text label and it can be filled with a gradient color.  
   
--   Arrastando um painel ao exibir o conteúdo do painel  
+-   Dragging a pane while displaying the contents of the pane  
   
--   Arrastando um painel ao exibir um retângulo de arrastar.  
+-   Dragging a pane while displaying a drag rectangle.  
   
- Para usar um painel de encaixe em seu aplicativo, derive sua classe do painel do `CDockablePane` classe. Ou incorporar o objeto derivado para o objeto de janela do quadro principal ou em um objeto de janela que controla a instância do painel. Em seguida, chame o [CDockablePane::Create](#create) método ou o [CDockablePane::CreateEx](#createex) método ao processar o `WM_CREATE` mensagem na janela do quadro principal. Finalmente, defina o objeto de painel chamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), ou [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
+ To use a docking pane in your application, derive your pane class from the `CDockablePane` class. Either embed the derived object into the main frame window object or into a window object that controls the instance of your pane. Then call the [CDockablePane::Create](#create) method or the [CDockablePane::CreateEx](#createex) method when you process the `WM_CREATE` message in the main frame window. Finally, set up the pane object by calling [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), or [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
   
-## <a name="customization-tips"></a>Dicas de personalização  
- As dicas a seguir se aplicam a `CDockablePane` objetos:  
+## <a name="customization-tips"></a>Customization Tips  
+ The following tips apply to `CDockablePane` objects:  
   
--   Se você chamar [CDockablePane::AttachToTabWnd](#attachtotabwnd) para dois painéis encaixáveis, não com guias, um ponteiro para uma janela com guias será retornado o `ppTabbedControlBar` parâmetro. Você pode continuar a adicionar guias na janela com guias usando esse parâmetro.  
+-   If you call [CDockablePane::AttachToTabWnd](#attachtotabwnd) for two non-tabbed, dockable panes, a pointer to a tabbed window will be returned in the `ppTabbedControlBar` parameter. You can continue to add tabs to the tabbed window by using this parameter.  
   
--   O tipo de painel com guias que é criado pela [CDockablePane::AttachToTabWnd](#attachtotabwnd) é determinado pelo `CDockablePane` objeto o `pTabControlBarAttachTo` parâmetro. Você pode chamar [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) para definir o tipo de painel com guias que o `CDockablePane` será criado. O tipo padrão é determinado pelo `dwTabbedStyle` de [CDockablePane::Create](#create) quando você cria o `CDockablePane`. Se `dwTabbedStyle` é o tipo padrão é de AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar classe](../../mfc/reference/cmfcoutlookbar-class.md); se `dwTabbedStyle` é o tipo padrão é de AFX_CBRS_REGULAR_TABS [CTabbedPane classe](../../mfc/reference/ctabbedpane-class.md).  
+-   The kind of tabbed pane that is created by [CDockablePane::AttachToTabWnd](#attachtotabwnd) is determined by the `CDockablePane` object in the `pTabControlBarAttachTo` parameter. You can call [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) to set the kind of tabbed pane that the `CDockablePane` will create. The default type is determined by the `dwTabbedStyle` of [CDockablePane::Create](#create) when you first create the `CDockablePane`. If `dwTabbedStyle` is AFX_CBRS_OUTLOOK_TABS the default type is [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md); if `dwTabbedStyle` is AFX_CBRS_REGULAR_TABS the default type is [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).  
   
--   Se você deseja encaixar um painel acoplável para outro, chame o [CDockablePane::DockToWindow](#docktowindow) método. O painel original deve ser encaixado em algum lugar antes de chamar esse método.  
+-   If you want to dock one dockable pane to another, call the [CDockablePane::DockToWindow](#docktowindow) method. The original pane must be docked somewhere before you call this method.  
   
--   A variável de membro [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode) controles como o comportamento dos painéis encaixáveis Auto Ocultar modo quando você chama [CDockablePane::ShowPane](#showpane). Se essa variável de membro é definido como `TRUE`, painéis encaixáveis e seus botões de ocultar automaticamente ficará oculta. Caso contrário, eles serão slide e sair.  
+-   The member variable [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode) controls how dockable panes behave in auto hide mode when you call [CDockablePane::ShowPane](#showpane). If this member variable is set to `TRUE`, dockable panes and their auto hide buttons will be hidden. Otherwise, they will slide in and out.  
   
--   Você pode desativar a animação de ocultar automaticamente definindo a [CDockablePane::m_bDisableAnimation](#m_bdisableanimation) variável de membro para `TRUE`.  
+-   You can disable auto-hide animation by setting the [CDockablePane::m_bDisableAnimation](#m_bdisableanimation) member variable to `TRUE`.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como configurar um `CDockablePane` objeto usando vários métodos na `CDockablePane` classe. O exemplo ilustra como habilitar a ocultar automaticamente todos os recursos para o painel acoplável, a legenda ou garra, habilitar o modo de ocultar automaticamente, mostrar o painel e animar um painel que está no modo de ocultar automaticamente. Este trecho de código é parte do [exemplo de demonstração do Visual Studio](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CDockablePane` object by using various methods in the `CDockablePane` class. The example illustrates how to enable the auto-hide all feature for the dockable pane, enable the caption or the gripper, enable the auto-hide mode, show the pane, and animate a pane that is in auto-hide mode. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#27;](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]  
-[!code-cpp[NVC_MFC_VisualStudioDemo&#28;](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -269,11 +331,11 @@ class CDockablePane : public CPane
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxDockablePane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDockablePane.h  
   
-##  <a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd  
- Anexa o painel atual para um painel de destino, criando um painel com guias.  
+##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd  
+ Attaches the current pane to a target pane, creating a tabbed pane.  
   
 ```  
 virtual CDockablePane* AttachToTabWnd(
@@ -283,45 +345,45 @@ virtual CDockablePane* AttachToTabWnd(
     CDockablePane** ppTabbedControlBar = NULL);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- [in] [out]`pTabControlBarAttachTo`  
- Especifica que liga o painel atual ao painel de destino. O painel de destino deve ser um painel acoplável.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pTabControlBarAttachTo`  
+ Specifies the target pane that the current pane attaches to. The target pane must be a dockable pane.  
   
  [in] `dockMethod`  
- Especifica o método de encaixe.  
+ Specifies the docking method.  
   
  [in] `bSetActive`  
- `TRUE`Para ativar o painel com guias após a operação de anexação. Caso contrário, `FALSE`.  
+ `TRUE` to activate the tabbed pane after the attach operation; otherwise, `FALSE`.  
   
  [out] `ppTabbedControlBar`  
- Contém o painel com guias que resulta da operação de anexação.  
+ Contains the tabbed pane that results from the attach operation.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o painel atual, se não for um painel com guias; Caso contrário, um ponteiro para o painel com guias que resulta da operação de anexação. O valor de retorno é `NULL` se o painel atual não pode ser anexado, ou se ocorrer um erro.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current pane, if it is not a tabbed pane; otherwise a pointer to the tabbed pane that results from the attach operation. The return value is `NULL` if the current pane cannot be attached, or if an error occurs.  
   
-### <a name="remarks"></a>Comentários  
- Quando um painel acoplável anexa a outro painel usando esse método, ocorre o seguinte:  
+### <a name="remarks"></a>Remarks  
+ When one dockable pane attaches to another pane using this method, the following occurs:  
   
-1.  As verificações de estrutura se o painel de destino `pTabControlBarAttachTo` é uma expressão de encaixe painel ou se ela é derivada de [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
+1.  The framework checks whether the target pane `pTabControlBarAttachTo` is a regular docking pane or if it is derived from [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
   
-2.  Se o painel de destino é um painel com guias, o framework adiciona o painel atual a ele como uma guia.  
+2.  If the target pane is a tabbed pane, the framework adds the current pane to it as a tab.  
   
-3.  Se o painel de destino é um painel de encaixe comum, o framework cria um painel com guias.  
+3.  If the target pane is a regular docking pane, the framework creates a tabbed pane.  
   
-    -   O framework chama `pTabControlBarAttachTo->CreateTabbedPane`. O estilo do novo painel com guias depende do `m_pTabbedControlBarRTC` membro. Por padrão, esse membro é definido como a classe de tempo de execução do [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Se você passar o `AFX_CBRS_OUTLOOK_TABS` de estilo como o `dwTabbedStyle` parâmetro para o [CDockablePane::Create](#create) método, o objeto de classe de tempo de execução é definido como a classe de tempo de execução do [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). Você pode alterar esse membro a qualquer momento para alterar o estilo do painel de novo.  
+    -   The framework calls `pTabControlBarAttachTo->CreateTabbedPane`. The style of the new tabbed pane depends on the `m_pTabbedControlBarRTC` member. By default, this member is set to the runtime class of [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). If you pass the `AFX_CBRS_OUTLOOK_TABS` style as the `dwTabbedStyle` parameter to the [CDockablePane::Create](#create) method, the runtime class object is set to the runtime class of [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). You can change this member at any time to change the style of the new pane.  
   
-    -   Quando esse método cria um painel com guias, o framework substitui o ponteiro para `pTabControlBarAttachTo` (se o painel estiver encaixado ou flutuante em uma janela de múltiplas miniframe) com um ponteiro para o novo painel com guias.  
+    -   When this method creates a tabbed pane, the framework replaces the pointer to `pTabControlBarAttachTo` (if the pane is docked or floating in a multi-miniframe window) with a pointer to the new tabbed pane.  
   
-    -   Adiciona a estrutura de `pTabControlBarAttachTo` para o painel com guias, como a primeira guia. O framework, em seguida, adiciona o painel atual como uma segunda guia.  
+    -   The framework adds the `pTabControlBarAttachTo` pane to the tabbed pane as the first tab. The framework then adds the current pane as a second tab.  
   
-4.  Se o painel atual é derivado de `CBaseTabbedPane`, todas as suas guias são movidas para `pTabControlBarAttachTo` e o painel atual é destruído. Portanto, tenha cuidado ao chamar esse método, pois um ponteiro para o painel atual pode ser inválido quando o método retorna.  
+4.  If the current pane is derived from `CBaseTabbedPane`, all of its tabs are moved to `pTabControlBarAttachTo` and the current pane is destroyed. Therefore, be careful when you call this method, because a pointer to the current pane may be invalid when the method returns.  
   
- Se você anexar um painel para outro quando estiver criando um layout de encaixe, defina `dockMethod` para `DM_SHOW`.  
+ If you attach one pane to another when building a docking layout, set `dockMethod` to `DM_SHOW`.  
   
- Você deve encaixar o painel primeiro antes de anexar outro painel para ele.  
+ You should dock the first pane before you attach another pane to it.  
   
-##  <a name="calcfixedlayout"></a>CDockablePane::CalcFixedLayout  
- Retorna o tamanho do retângulo de painel.  
+##  <a name="calcfixedlayout"></a>  CDockablePane::CalcFixedLayout  
+ Returns the size of the pane rectangle.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -329,151 +391,151 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
- Não usado.  
+ Not used.  
   
  [in] `bHorz`  
- Não usado.  
+ Not used.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um `CSize` objeto que contém o tamanho do retângulo de painel.  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that contains the size of the pane rectangle.  
   
-##  <a name="canacceptminiframe"></a>CDockablePane::CanAcceptMiniFrame  
- Determina se miniquadro especificado pode ser encaixado ao painel.  
+##  <a name="canacceptminiframe"></a>  CDockablePane::CanAcceptMiniFrame  
+ Determines whether the specified mini-frame can be docked to the pane.  
   
 ```  
 virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pMiniFrame`  
- Ponteiro para uma `CPaneFrameWnd` objeto.  
+ Pointer to a `CPaneFrameWnd` object.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se `pMiniFrame` podem ser encaixados no painel; caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if `pMiniFrame` can be docked to the pane; otherwise, `FALSE`.  
   
-##  <a name="canacceptpane"></a>CDockablePane::CanAcceptPane  
- Determina se outro painel pode ser encaixado para o painel atual.  
+##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
+ Determines whether another pane can be docked to the current pane.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Especifica o painel para encaixar o painel atual.  
+ Specifies the pane to dock to the current pane.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel especificado pode ser encaixado para esse painel; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified pane can be docked to this pane; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método antes de um painel é encaixado para o painel atual.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method before a pane is docked to the current pane.  
   
- Substitua essa função em uma classe derivada para ativar ou desativar encaixe para um painel específico.  
+ Override this function in a derived class to enable or disable docking to a specific pane.  
   
- Por padrão, esse método retorna `TRUE` se `pBar` ou seu pai é do tipo `CDockablePane`.  
+ By default, this method returns `TRUE` if either `pBar` or its parent is of type `CDockablePane`.  
   
-##  <a name="canautohide"></a>CDockablePane::CanAutoHide  
- Determina se o painel pode ocultar automaticamente.  
+##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
+ Determines whether the pane can auto-hide.  
   
 ```  
 virtual BOOL CanAutoHide() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ocultar automaticamente; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can auto-hide; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- `CDockablePane::CanAutoHide`Retorna `FALSE` em qualquer uma das seguintes situações:  
+### <a name="remarks"></a>Remarks  
+ `CDockablePane::CanAutoHide` returns `FALSE` in any of the following situations:  
   
--   O painel não tem nenhum pai.  
+-   The pane has no parent.  
   
--   O Gerenciador de encaixe não permite painéis para ocultar automaticamente.  
+-   The docking manager does not allow panes to auto-hide.  
   
--   O painel não é encaixado.  
+-   The pane is not docked.  
   
-##  <a name="canbeattached"></a>CDockablePane::CanBeAttached  
- Determina se o painel atual pode ser encaixado para outro painel.  
+##  <a name="canbeattached"></a>  CDockablePane::CanBeAttached  
+ Determines whether the current pane can be docked to another pane.  
   
 ```  
 virtual BOOL CanBeAttached() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável pode ser encaixado para outro painel ou a janela do quadro principal; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane can be docked to another pane or to the main frame window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, esse método sempre retornará `TRUE`. Substitua esse método em uma classe derivada para ativar ou desativar encaixe sem chamar [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
+### <a name="remarks"></a>Remarks  
+ By default, this method always returns `TRUE`. Override this method in a derived class to enable or disable docking without calling [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
-##  <a name="cdockablepane"></a>CDockablePane::CDockablePane  
- Constrói e inicializa um [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto.  
+##  <a name="cdockablepane"></a>  CDockablePane::CDockablePane  
+ Constructs and initializes a [CDockablePane](../../mfc/reference/cdockablepane-class.md) object.  
   
 ```  
 CDockablePane();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Depois que você construir um objeto de painel acoplável, chame [CDockablePane::Create](#create) ou [CDockablePane::CreateEx](#createex) para criá-lo.  
+### <a name="remarks"></a>Remarks  
+ After you construct a dockable pane object, call [CDockablePane::Create](#create) or [CDockablePane::CreateEx](#createex) to create it.  
   
-##  <a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument  
- Converte um ou mais painéis encaixáveis documentos MDI com guias.  
+##  <a name="converttotabbeddocument"></a>  CDockablePane::ConvertToTabbedDocument  
+ Converts one or more dockable panes to MDI tabbed documents.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bActiveTabOnly`  
- Quando você converte um `CTabbedPane`, especifique `TRUE` para converter apenas a guia ativa. Especifique `FALSE` para converter todas as guias no painel.  
+ When you convert a `CTabbedPane`, specify `TRUE` to convert only the active tab. Specify `FALSE` to convert all tabs in the pane.  
   
-##  <a name="checkautohidecondition"></a>CDockablePane::CheckAutoHideCondition  
- Determina se o painel de encaixe está oculto (também conhecido como modo de ocultar automaticamente).  
+##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
+ Determines whether the docking pane is hidden (also known as autohide mode).  
   
 ```  
 virtual BOOL CheckAutoHideCondition();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a condição de ocultar é atendida; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the hide condition is met; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- A estrutura usa um temporizador para verificar periodicamente se deseja ocultar um painel acoplável ocultar automaticamente. O método retorna `TRUE` quando o painel não estiver ativo, o painel não está sendo redimensionado e não é o ponteiro do mouse sobre o painel.  
+### <a name="remarks"></a>Remarks  
+ The framework uses a timer to periodically check whether to hide an autohide dockable pane. The method returns `TRUE` when the pane is not active, the pane is not being resized, and the mouse pointer is not over the pane.  
   
- Se todas as condições anteriores forem atendidas, a estrutura chama [CDockablePane::Slide](#slide) para ocultar o painel.  
+ If all the previous conditions are met, the framework calls [CDockablePane::Slide](#slide) to hide the pane.  
   
-##  <a name="checkstopslidecondition"></a>CDockablePane::CheckStopSlideCondition  
- Determina quando um painel de encaixe AutoOcultar deve parar deslizante.  
+##  <a name="checkstopslidecondition"></a>  CDockablePane::CheckStopSlideCondition  
+ Determines when an autohide docking pane should stop sliding.  
   
 ```  
 virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bDirection`  
- `TRUE`Se o painel estiver visível; `FALSE` se o painel está oculto.  
+ `TRUE` if the pane is visible; `FALSE` if the pane is hidden.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a condição de parada for atendida; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the stop condition is met; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Quando um painel acoplável é definido para o modo de ocultar automaticamente, a estrutura usa efeitos deslizantes para mostrar ou ocultar o painel. O framework chama essa função quando o painel é deslizante. `CheckStopSlideCondition`Retorna `TRUE` quando o painel é totalmente visível ou quando ela é totalmente oculta.  
+### <a name="remarks"></a>Remarks  
+ When a dockable pane is set to autohide mode, the framework uses sliding effects to show or hide the pane. The framework calls this function when the pane is sliding. `CheckStopSlideCondition` returns `TRUE` when the pane is fully visible or when it is fully hidden.  
   
- Substitua esse método em uma classe derivada implementar efeitos AutoOcultar personalizado.  
+ Override this method in a derived class to implement custom autohide effects.  
   
-##  <a name="copystate"></a>CDockablePane::CopyState  
- Copia o estado de um painel acoplável.  
+##  <a name="copystate"></a>  CDockablePane::CopyState  
+ Copies the state of a dockable pane.  
   
 ```  
 virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pOrgBar`  
- Um ponteiro para um painel acoplável.  
+ A pointer to a dockable pane.  
   
-### <a name="remarks"></a>Comentários  
- `CDockablePane::CopyState`Copia o estado do `pOrgBar` para o painel atual chamando os métodos a seguir:  
+### <a name="remarks"></a>Remarks  
+ `CDockablePane::CopyState` copies the state of `pOrgBar` to the current pane by calling the following methods:  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -485,8 +547,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
   
 - [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)  
   
-##  <a name="create"></a>CDockablePane::Create  
- Cria o controle do Windows e anexa-o para o [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto.  
+##  <a name="create"></a>  CDockablePane::Create  
+ Creates the Windows control and attaches it to the [CDockablePane](../../mfc/reference/cdockablepane-class.md) object.  
   
 ```  
 virtual BOOL Create(
@@ -512,52 +574,52 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCaption`  
- Especifica o nome da janela.  
+ Specifies the window name.  
   
- [in] [out]`pParentWnd`  
- Especifica a janela pai.  
+ [in] [out] `pParentWnd`  
+ Specifies the parent window.  
   
  [in] `rect`  
- Especifica o tamanho e a posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ Specifies the size and position of the window, in client coordinates of `pParentWnd`.  
   
  [in] `bHasGripper`  
- `TRUE`para criar o painel com uma legenda; Caso contrário, `FALSE`.  
+ `TRUE` to create the pane with a caption; otherwise, `FALSE`.  
   
  [in] `nID`  
- Especifica a identificação da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para este painel de encaixe.  
+ Specifies the ID of the child window. This value must be unique if you want to save docking state for this docking pane.  
   
  [in] `dwStyle`  
- Especifica os atributos de estilo da janela.  
+ Specifies the window style attributes.  
   
  [in] `dwTabbedStyle`  
- Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda deste painel.  
+ Specifies the tabbed style of a tabbed window that is created when the user drags a pane on the caption of this pane.  
   
  [in] `dwControlBarStyle`  
- Especifica os atributos de estilo adicionais.  
+ Specifies additional style attributes.  
   
- [in] [out]`pContext`  
- Especifica o contexto de criação da janela.  
+ [in] [out] `pContext`  
+ Specifies the create context of the window.  
   
  [in] `lpszWindowName`  
- Especifica o nome da janela.  
+ Specifies the window name.  
   
  [in] `sizeDefault`  
- Especifica o tamanho da janela.  
+ Specifies the size of the window.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável é criado com êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane is successfully created; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Cria um painel do Windows e anexa-o para o `CDockablePane` objeto.  
+### <a name="remarks"></a>Remarks  
+ Creates a Windows pane and attaches it to the `CDockablePane` object.  
   
- Se o `dwStyle` estilo da janela tem o `CBRS_FLOAT_MULTI` sinalizador, a janela miniframe pode flutuar com outros painéis na janela miniframe. Por padrão, painéis de encaixe podem apenas ser flutuantes individualmente.  
+ If the `dwStyle` window style has the `CBRS_FLOAT_MULTI` flag, the miniframe window can float with other panes in the miniframe window. By default, docking panes can only float individually.  
   
- Se o `dwTabbedStyle` parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis do Outlook-style com guias quando outro painel é anexado a esse painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ If the `dwTabbedStyle` parameter has the `AFX_CBRS_OUTLOOK_TABS` flag specified, the pane creates Outlook-style tabbed panes when another pane is attached to this pane using the [CDockablePane::AttachToTabWnd](#attachtotabwnd) method. By default, dockable panes create regular tabbed panes of type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="createdefaultpanedivider"></a>CDockablePane::CreateDefaultPaneDivider  
- Cria um divisor padrão para o painel de como ele está sendo encaixado em uma janela de quadro.  
+##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
+ Creates a default divider for the pane as it is being docked to a frame window.  
   
 ```  
 static CPaneDivider* __stdcall CreateDefaultPaneDivider(
@@ -566,31 +628,31 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
     CRuntimeClass* pSliderRTC = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `dwAlignment`  
- Especifica o lado do quadro principal ao qual o painel está encaixado. Se `dwAlignment` contém o `CBRS_ALIGN_LEFT` ou `CBRS_ALIGN_RIGHT` sinalizador, esse método cria uma vertical ( `CPaneDivider::SS_VERT`) divisor; caso contrário, esse método cria um horizontal ( `CPaneDivider::SS_HORZ`) divisor.  
+ Specifies the side of the main frame to which the pane is being docked. If `dwAlignment` contains the `CBRS_ALIGN_LEFT` or `CBRS_ALIGN_RIGHT` flag, this method creates a vertical ( `CPaneDivider::SS_VERT`) divider; otherwise, this method creates a horizontal ( `CPaneDivider::SS_HORZ`) divider.  
   
  [in] `pParent`  
- Ponteiro para o quadro principal.  
+ Pointer to the parent frame.  
   
  [in] `pSliderRTC`  
- Não usado.  
+ Not used.  
   
-### <a name="return-value"></a>Valor de retorno  
- Esse método retorna um ponteiro para o divisor recém-criado, ou `NULL` se houver falha na criação do divisor.  
+### <a name="return-value"></a>Return Value  
+ This method returns a pointer to the newly-created divider, or `NULL` if divider creation fails.  
   
-### <a name="remarks"></a>Comentários  
- `dwAlignment`pode ser qualquer um dos seguintes valores:  
+### <a name="remarks"></a>Remarks  
+ `dwAlignment` can be any of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CBRS_ALIGN_TOP`|O painel está sendo encaixado na parte superior da área do cliente de uma janela de quadro.|  
-|`CBRS_ALIGN_BOTTOM`|O painel está sendo encaixado na parte inferior da área do cliente de uma janela de quadro.|  
-|`CBRS_ALIGN_LEFT`|O painel está sendo encaixado à esquerda da área do cliente de uma janela de quadro.|  
-|`CBRS_ALIGN_RIGHT`|O painel é sendo encaixado à direita da área do cliente de uma janela de quadro.|  
+|`CBRS_ALIGN_TOP`|The pane is being docked to the top of the client area of a frame window.|  
+|`CBRS_ALIGN_BOTTOM`|The pane is being docked to the bottom of the client area of a frame window.|  
+|`CBRS_ALIGN_LEFT`|The pane is being docked to the left side of the client area of a frame window.|  
+|`CBRS_ALIGN_RIGHT`|The pane is being docked to the right side of the client area of a frame window.|  
   
-##  <a name="createex"></a>CDockablePane::CreateEx  
- Cria o controle do Windows e anexa-o para o [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto.  
+##  <a name="createex"></a>  CDockablePane::CreateEx  
+ Creates the Windows control and attaches it to the [CDockablePane](../../mfc/reference/cdockablepane-class.md) object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -606,66 +668,66 @@ virtual BOOL CreateEx(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `dwStyleEx`  
- Especifica os atributos de estilo estendido para a nova janela.  
+ Specifies the extended style attributes for the new window.  
   
  [in] `lpszCaption`  
- Especifica o nome da janela.  
+ Specifies the window name.  
   
- [in] [out]`pParentWnd`  
- Especifica a janela pai.  
+ [in] [out] `pParentWnd`  
+ Specifies the parent window.  
   
  [in] `rect`  
- Especifica o tamanho e a posição da janela, em coordenadas do cliente de `pParentWnd`.  
+ Specifies the size and position of the window, in client coordinates of `pParentWnd`.  
   
  [in] `bHasGripper`  
- `TRUE`para criar o painel com uma legenda; Caso contrário, `FALSE`.  
+ `TRUE` to create the pane with a caption; otherwise, `FALSE`.  
   
  [in] `nID`  
- Especifica a identificação da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para este painel de encaixe.  
+ Specifies the ID of the child window. This value must be unique if you want to save the docking state for this docking pane.  
   
  [in] `dwStyle`  
- Especifica os atributos de estilo da janela.  
+ Specifies the window style attributes.  
   
  [in] `dwTabbedStyle`  
- Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda deste painel.  
+ Specifies the tabbed style of a tabbed window that is created when the user drags a pane on the caption of this pane.  
   
  [in] `dwControlBarStyle`  
- Especifica os atributos de estilo adicionais.  
+ Specifies the additional style attributes.  
   
- [in] [out]`pContext`  
- Especifica o contexto de criação da janela.  
+ [in] [out] `pContext`  
+ Specifies the create context of the window.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável é criado com êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane is successfully created; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Cria um painel do Windows e anexa-o para o `CDockablePane` objeto.  
+### <a name="remarks"></a>Remarks  
+ Creates a Windows pane and attaches it to the `CDockablePane` object.  
   
- Se o `dwStyle` estilo da janela tem o `CBRS_FLOAT_MULTI` sinalizador, a janela miniframe pode flutuar com outros painéis na janela miniframe. Por padrão, painéis de encaixe podem apenas ser flutuantes individualmente.  
+ If the `dwStyle` window style has the `CBRS_FLOAT_MULTI` flag, the miniframe window can float with other panes in the miniframe window. By default, docking panes can only float individually.  
   
- Se o `dwTabbedStyle` parâmetro tem o `AFX_CBRS_OUTLOOK_TABS` sinalizador especificado, o painel cria painéis do Outlook-style com guias quando outro painel é anexado a esse painel usando o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método. Por padrão, os painéis encaixáveis criam painéis com guias regulares do tipo [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ If the `dwTabbedStyle` parameter has the `AFX_CBRS_OUTLOOK_TABS` flag specified, the pane creates Outlook-style tabbed panes when another pane is attached to this pane using the [CDockablePane::AttachToTabWnd](#attachtotabwnd) method. By default, dockable panes create regular tabbed panes of type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="createtabbedpane"></a>CDockablePane::CreateTabbedPane  
- Cria um painel com guias do painel atual.  
+##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
+ Creates a tabbed pane from the current pane.  
   
 ```  
 virtual CTabbedPane* CreateTabbedPane();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O novo painel com guias ou `NULL` se a operação de criação falha.  
+### <a name="return-value"></a>Return Value  
+ The new tabbed pane, or `NULL` if the create operation failed.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método quando ele cria um painel com guias para substituir esse painel. Para obter mais informações, consulte [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it creates a tabbed pane to replace this pane. For more information, see [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
   
- Substituir esse método em uma classe derivada para personalizar painéis como com guias são criados e inicializados.  
+ Override this method in a derived class to customize how tabbed panes are created and initialized.  
   
- Painel com guias é criado de acordo com as informações de classe de tempo de execução armazenadas na `m_pTabbedControlBarRTC` membro, que é inicializado, o [CDockablePane::CreateEx](#createex) método.  
+ The tabbed pane is created according to the runtime class information stored in the `m_pTabbedControlBarRTC` member, which is initialized by the [CDockablePane::CreateEx](#createex) method.  
   
-##  <a name="dockpanecontainer"></a>CDockablePane::DockPaneContainer  
- Encaixa um contêiner para o painel.  
+##  <a name="dockpanecontainer"></a>  CDockablePane::DockPaneContainer  
+ Docks a container to the pane.  
   
 ```  
 virtual BOOL DockPaneContainer(
@@ -674,58 +736,58 @@ virtual BOOL DockPaneContainer(
     AFX_DOCK_METHOD dockMethod);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `barContainerManager`  
- Uma referência ao Gerenciador de contêiner do contêiner que está sendo encaixado.  
+ A reference to the container manager of the container that is being docked.  
   
  [in] `dwAlignment`  
- `DWORD`que especifica o lado do painel ao qual o contêiner está sendo encaixado.  
+ `DWORD` that specifies the side of the pane to which the container is being docked.  
   
  [in] `dockMethod`  
- Não usado.  
+ Not used.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o contêiner foi encaixado com êxito para o painel; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the container was successfully docked to the pane; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- `dwAlignment`pode ser qualquer um dos seguintes valores:  
+### <a name="remarks"></a>Remarks  
+ `dwAlignment` can be any of the following values:  
   
-|Valor|Descrição|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CBRS_ALIGN_TOP`|O contêiner está sendo encaixado na parte superior do painel.|  
-|`CBRS_ALIGN_BOTTOM`|O contêiner está sendo encaixado na parte inferior do painel.|  
-|`CBRS_ALIGN_LEFT`|O contêiner está sendo encaixado à esquerda do painel.|  
-|`CBRS_ALIGN_RIGHT`|O contêiner está sendo encaixado à direita do painel.|  
+|`CBRS_ALIGN_TOP`|The container is being docked to the top of the pane.|  
+|`CBRS_ALIGN_BOTTOM`|The container is being docked to the bottom of the pane.|  
+|`CBRS_ALIGN_LEFT`|The container is being docked to the left of the pane.|  
+|`CBRS_ALIGN_RIGHT`|The container is being docked to the right of the pane.|  
   
-##  <a name="dockpanestandard"></a>CDockablePane::DockPaneStandard  
- Encaixa um painel usando a estrutura de tópicos de encaixe (padrão).  
+##  <a name="dockpanestandard"></a>  CDockablePane::DockPaneStandard  
+ Docks a pane by using outline (standard) docking.  
   
 ```  
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bWasDocked`  
- Quando o método retorna, esse valor contém `TRUE` se o painel com êxito encaixado; caso contrário, ele contém `FALSE`.  
+ When the method returns, this value contains `TRUE` if the pane was successfully docked; otherwise, it contains `FALSE`.  
   
-### <a name="return-value"></a>Valor de retorno  
- Se o painel foi encaixado em uma janela com guias, ou se uma janela com guias foi criada como resultado de encaixe, esse método retorna um ponteiro para a janela com guias. Se o painel tenha sido encaixada com êxito, esse método retorna o `this` ponteiro. Se encaixe falhado, esse método retornará `NULL`.  
+### <a name="return-value"></a>Return Value  
+ If the pane was docked to a tabbed window, or if a tabbed window was created as a result of docking, this method returns a pointer to the tabbed window. If the pane was otherwise successfully docked, this method returns the `this` pointer. If docking failed, this method returns `NULL`.  
   
-##  <a name="docktorecentpos"></a>CDockablePane::DockToRecentPos  
- Encaixa um painel para sua posição de encaixe armazenada.  
+##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
+ Docks a pane to its stored docking position.  
   
 ```  
 BOOL CDockablePane::DockToRecentPos();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel está encaixado com êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is successfully docked; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Painéis encaixáveis armazenam informações recentes de encaixe em uma [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) objeto.  
+### <a name="remarks"></a>Remarks  
+ Dockable panes store recent docking information in a [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) object.  
   
-##  <a name="docktowindow"></a>CDockablePane::DockToWindow  
- Encaixa um painel de encaixe para outro painel de encaixe.  
+##  <a name="docktowindow"></a>  CDockablePane::DockToWindow  
+ Docks one docking pane to another docking pane.  
   
 ```  
 virtual BOOL DockToWindow(
@@ -734,24 +796,24 @@ virtual BOOL DockToWindow(
     LPCRECT lpRect = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- [in] [out]`pTargetWindow`  
- Especifica o painel acoplável para encaixar esse painel.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pTargetWindow`  
+ Specifies the dockable pane to dock this pane to.  
   
  [in] `dwAlignment`  
- Especifica o alinhamento de encaixe do painel. Pode ser um dos CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Definido em afxres.h).  
+ Specifies the docking alignment for the pane. May be one of CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM or CBRS_ALIGN_ANY. (Defined in afxres.h.)  
   
  [in] `lpRect`  
- Especifica o retângulo de encaixe do painel.  
+ Specifies the docking rectangle for the pane.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel foi encaixado com êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was docked successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para encaixar um painel para outro painel com o alinhamento especificado por `dwAlignment`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to dock one pane to another pane with the alignment specified by `dwAlignment`.  
   
-##  <a name="drawcaption"></a>CDockablePane::DrawCaption  
- Desenha a legenda (também chamada de garra) de um painel de encaixe.  
+##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
+ Draws the caption (also called the gripper) of a docking pane.  
   
 ```  
 virtual void DrawCaption(
@@ -759,102 +821,102 @@ virtual void DrawCaption(
     CRect rectCaption);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Representa o contexto de dispositivo usado para o desenho.  
+ Represents the device context used for drawing.  
   
  [in] `rectCaption`  
- Especifica o retângulo delimitador da legenda do painel.  
+ Specifies the bounding rectangle of the pane's caption.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método para desenhar a legenda de um painel acoplável.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to draw the caption of a dockable pane.  
   
- Substitua esse método em uma classe derivada para personalizar a aparência da legenda.  
+ Override this method in a derived class to customize the appearance of the caption.  
   
-##  <a name="enableautohideall"></a>CDockablePane::EnableAutohideAll  
- Habilita ou desabilita o modo de ocultar automaticamente para esse painel e para outros painéis no contêiner.  
+##  <a name="enableautohideall"></a>  CDockablePane::EnableAutohideAll  
+ Enables or disables autohide mode for this pane and for other panes in the container.  
   
 ```  
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Para habilitar a ocultar automaticamente todos os recursos para o painel acoplável; Caso contrário, `FALSE`.  
+ `TRUE` to enable the autohide all feature for the dockable pane; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Quando um usuário mantém o `Ctrl` chave e clica no botão de pin para alternar de um painel para o modo de ocultar automaticamente, todos os outros painéis no mesmo contêiner também são alternados para o modo de ocultar automaticamente.  
+### <a name="remarks"></a>Remarks  
+ When a user holds the `Ctrl` key and clicks the pin button to switch a pane to autohide mode, all other panes in the same container are also switched to autohide mode.  
   
- Chamar esse método com `bEnable` definida como `FALSE` para desabilitar esse recurso para um determinado painel.  
+ Call this method with `bEnable` set to `FALSE` to disable this feature for a particular pane.  
   
-##  <a name="enablegripper"></a>CDockablePane::EnableGripper  
- Mostra ou oculta a legenda (também chamada de garra).  
+##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
+ Shows or hides the caption (also called the gripper).  
   
 ```  
 virtual void EnableGripper(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Para habilitar a legenda; Caso contrário, `FALSE`.  
+ `TRUE` to enable the caption; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Quando o framework cria painéis encaixáveis, eles não têm o **WS_STYLE** estilo da janela, mesmo se especificado. Isso significa que a legenda do painel é uma área não cliente que é controlada pela estrutura, mas essa área difere de legenda da janela padrão.  
+### <a name="remarks"></a>Remarks  
+ When the framework creates dockable panes, they do not have the **WS_STYLE** window style, even if specified. This means that the pane's caption is a non-client area that is controlled by the framework, but this area differs from the standard window caption.  
   
- Você pode mostrar ou ocultar a legenda a qualquer momento. O framework oculta a legenda quando um painel é adicionado como uma guia para uma janela com guias ou quando um painel é flutuante em uma janela miniframe.  
+ You can show or hide the caption at any time. The framework hides the caption when a pane is added as a tab to a tabbed window or when a pane is floated in a miniframe window.  
   
-##  <a name="getahrestoredrect"></a>CDockablePane::GetAHRestoredRect  
- Especifica a posição do painel no modo de ocultar automaticamente.  
+##  <a name="getahrestoredrect"></a>  CDockablePane::GetAHRestoredRect  
+ Specifies the position of the pane when in auto-hide mode.  
   
 ```  
 CRect GetAHRestoredRect() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um `CRect` objeto que contém a posição do painel quando ele estiver no modo de ocultar automaticamente.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that contains the position of the pane when it is in auto-hide mode.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getahslidemode"></a>CDockablePane::GetAHSlideMode  
- Recupera o modo de slide de ocultar automaticamente para o painel.  
+##  <a name="getahslidemode"></a>  CDockablePane::GetAHSlideMode  
+ Retrieves the auto-hide slide mode for the pane.  
   
 ```  
 virtual UINT GetAHSlideMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um `UINT` que especifica o modo de slide de ocultar automaticamente para o painel. O valor de retorno pode ser `AFX_AHSM_MOVE` ou `AFX_AHSM_STRETCH`, mas a implementação usa apenas `AFX_AHSM_MOVE`.  
+### <a name="return-value"></a>Return Value  
+ A `UINT` that specifies the auto-hide slide mode for the pane. The return value can be either `AFX_AHSM_MOVE` or `AFX_AHSM_STRETCH`, but the implementation only uses `AFX_AHSM_MOVE`.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight  
- Retorna a altura, em pixels, da legenda do atual.  
+##  <a name="getcaptionheight"></a>  CDockablePane::GetCaptionHeight  
+ Returns the height, in pixels, of the current caption.  
   
 ```  
 virtual int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A altura da legenda, em pixels.  
+### <a name="return-value"></a>Return Value  
+ The height of the caption, in pixels.  
   
-### <a name="remarks"></a>Comentários  
- A altura da legenda é 0 se a legenda ocultos pelo [CDockablePane::EnableGripper](#enablegripper) método, ou se o painel não tem uma legenda.  
+### <a name="remarks"></a>Remarks  
+ The caption height is 0 if the caption was hidden by the [CDockablePane::EnableGripper](#enablegripper) method, or if the pane does not have a caption.  
   
-##  <a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider  
- Retorna o divisor de painéis padrão para o contêiner do painel.  
+##  <a name="getdefaultpanedivider"></a>  CDockablePane::GetDefaultPaneDivider  
+ Returns the default pane divider for the pane's container.  
   
 ```  
 CPaneDivider* GetDefaultPaneDivider() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Válido [CPaneDivider](../../mfc/reference/cpanedivider-class.md) objeto se o painel acoplável é encaixado à janela principal do quadro, ou `NULL` se o painel encaixável não é encaixado ou se ele estiver flutuando.  
+### <a name="return-value"></a>Return Value  
+ A valid [CPaneDivider](../../mfc/reference/cpanedivider-class.md) object if the dockable pane is docked to the main frame window, or `NULL` if the dockable pane is not docked or if it is floating.  
   
-### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre os divisores de painel, consulte [CPaneDivider classe](../../mfc/reference/cpanedivider-class.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about pane dividers, see [CPaneDivider Class](../../mfc/reference/cpanedivider-class.md).  
   
-##  <a name="getdockingstatus"></a>CDockablePane::GetDockingStatus  
- Determina a capacidade de um painel encaixado com base no local do ponteiro fornecido.  
+##  <a name="getdockingstatus"></a>  CDockablePane::GetDockingStatus  
+ Determines the ability of a pane to be docked based on the provided pointer location.  
   
 ```  
 virtual AFX_CS_STATUS GetDockingStatus(
@@ -862,55 +924,55 @@ virtual AFX_CS_STATUS GetDockingStatus(
     int nSensitivity);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pt`  
- O local do ponteiro em coordenadas de tela.  
+ The location of the pointer in screen coordinates.  
   
  [in] `nSensitivity`  
- A distância, em pixels, da borda de um retângulo o ponteiro deve estar Ativar encaixe.  
+ The distance, in pixels, away from the edge of a rectangle the pointer must be to enable docking.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um dos valores de status a seguir:  
+### <a name="return-value"></a>Return Value  
+ One of the following status values:  
   
-|Valor `AFX_CS_STATUS`|Significado|  
+|`AFX_CS_STATUS` value|Meaning|  
 |---------------------------|-------------|  
-|`CS_NOTHING`|O ponteiro não está em um site de encaixe. A estrutura não encaixar o painel.|  
-|`CS_DOCK_IMMEDIATELY`|O ponteiro estiver localizado em um site de encaixe em modo imediato (o painel usa o `DT_IMMEDIATE` modo de encaixe). O framework encaixa o painel imediatamente.|  
-|`CS_DELAY_DOCK`|O ponteiro está sobre um site de encaixe outro painel de encaixe ou uma borda do quadro principal. O framework encaixa o painel após um atraso. Consulte a seção de comentários para obter mais informações sobre esse atraso.|  
-|`CS_DELAY_DOCK_TO_TAB`|O ponteiro estiver localizado em um site de encaixe que faz com que o painel seja encaixado em uma janela com guias. Isso ocorre quando o ponteiro estiver localizado pela legenda de outro painel de encaixe ou a área da guia de um painel com guias.|  
+|`CS_NOTHING`|The pointer is not over a dock site. The framework does not dock the pane.|  
+|`CS_DOCK_IMMEDIATELY`|The pointer is located over the dock site in immediate mode (the pane uses the `DT_IMMEDIATE` docking mode). The framework docks the pane immediately.|  
+|`CS_DELAY_DOCK`|The pointer is over a dock site that is another docking pane or is an edge of the main frame. The framework docks the pane after a delay. See the Remarks section for more information about this delay.|  
+|`CS_DELAY_DOCK_TO_TAB`|The pointer is located over a dock site that causes the pane to be docked in a tabbed window. This occurs when the pointer is located over the caption of another docking pane or over the tab area of a tabbed pane.|  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método para manipular o encaixe de um painel flutuante.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to handle docking of a floating pane.  
   
- Para barras flutuantes ou encaixando painéis que usam o `DT_IMMEDIATE` encaixe modo, o framework atrasa o comando de encaixe para permitir que o usuário mover a janela da área de cliente do quadro principal antes de encaixe ocorre. O tempo de atraso é medido em milissegundos e é controlado pelo [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membro de dados... O valor padrão de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) é 200. Esse comportamento emula o comportamento de encaixe da [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ For floating toolbars or docking panes that use the `DT_IMMEDIATE` docking mode, the framework delays the dock command to enable the user to move the window out of the client area of the parent frame before docking occurs. The length of the delay is measured in milliseconds and is controlled by the [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) data member.. The default value of [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) is 200. This behavior emulates the docking behavior of [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
   
- Para o atraso de estados de encaixe ( `CS_DELAY_DOCK` e `CS_DELAY_DOCK_TO_TAB`), a estrutura não executa encaixe até que o usuário solta o botão do mouse. Se usar um painel de `DT_STANDARD` encaixe modo, o framework exibe um retângulo no local de encaixe projetado. Se usar um painel de `DT_SMART` encaixe modo, o framework exibe marcadores de encaixe inteligente e retângulos semitransparentes no local de encaixe projetado. Para especificar o modo de encaixe para o painel, chame o [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) método. Para obter mais informações sobre o encaixe inteligentes, consulte [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
+ For delayed docking states ( `CS_DELAY_DOCK` and `CS_DELAY_DOCK_TO_TAB`), the framework does not perform docking until the user releases the mouse button. If a pane uses the `DT_STANDARD` docking mode, the framework displays a rectangle at the projected docking location. If a pane uses the `DT_SMART` docking mode, the framework displays smart docking markers and semi-transparent rectangles at the projected docking location. To specify the docking mode for your pane, call the [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) method. For more information about smart docking, see [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
-##  <a name="getdragsensitivity"></a>CDockablePane::GetDragSensitivity  
- Retorna a sensibilidade de arrastar de um painel de encaixe.  
+##  <a name="getdragsensitivity"></a>  CDockablePane::GetDragSensitivity  
+ Returns the drag sensitivity of a docking pane.  
   
 ```  
 static const CSize& GetDragSensitivity();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contém a largura e altura em pixels, de um retângulo centralizado em um ponto de arrastar. A operação de arrastar não começa até que o ponteiro do mouse é movido para fora desse retângulo.  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that contains the width and height, in pixels, of a rectangle centered on a drag point. The drag operation does not begin until the mouse pointer moves outside this rectangle.  
   
-##  <a name="getlastpercentinpanecontainer"></a>CDockablePane::GetLastPercentInPaneContainer  
- Recupera a porcentagem de espaço que ocupa um painel em seu contêiner ( [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md)).  
+##  <a name="getlastpercentinpanecontainer"></a>  CDockablePane::GetLastPercentInPaneContainer  
+ Retrieves the percentage of space that a pane occupies in its container ( [CPaneContainer Class](../../mfc/reference/cpanecontainer-class.md)).  
   
 ```  
 int GetLastPercentInPaneContainer() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um `int` que especifica a porcentagem de espaço que o painel ocupa em seu contêiner.  
+### <a name="return-value"></a>Return Value  
+ An `int` that specifies the percentage of space that the pane occupies in its container.  
   
-### <a name="remarks"></a>Comentários  
- Esse método é usado quando o contêiner ajusta seu layout.  
+### <a name="remarks"></a>Remarks  
+ This method is used when the container adjusts its layout.  
   
-##  <a name="gettabarea"></a>CDockablePane::GetTabArea  
- Recupera a área da guia do painel.  
+##  <a name="gettabarea"></a>  CDockablePane::GetTabArea  
+ Retrieves the tab area for the pane.  
   
 ```  
 virtual void GetTabArea(
@@ -918,46 +980,46 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `rectTabAreaTop`  
- `GetTabArea`preenche essa variável com a área da guia se guias estão localizadas na parte superior do painel. Se o guias estão localizadas na parte inferior do painel, essa variável é preenchida com um retângulo vazio.  
+ `GetTabArea` fills this variable with the tab area if tabs are located at the top of the pane. If tabs are located at the bottom of the pane, this variable is filled with an empty rectangle.  
   
  [in] `rectTabAreaBottom`  
- `GetTabArea`preenche essa variável com a área da guia se guias estão localizadas na parte inferior do painel. Se o guias estão localizadas na parte superior do painel, essa variável é preenchida com um retângulo vazio.  
+ `GetTabArea` fills this variable with the tab area if tabs are located at the bottom of the pane. If tabs are located at the top of the pane, this variable is filled with an empty rectangle.  
   
-### <a name="remarks"></a>Comentários  
- Esse método é usado somente em classes derivadas de `CDockablePane` e guias. Para obter mais informações, consulte [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) e [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
+### <a name="remarks"></a>Remarks  
+ This method is used only in classes that are derived from `CDockablePane` and have tabs. For more information, see [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) and [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
   
-##  <a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC  
- Retorna as informações de classe de tempo de execução sobre uma janela com guias que é criada quando outro painel encaixa ao painel atual.  
+##  <a name="gettabbedpanertc"></a>  CDockablePane::GetTabbedPaneRTC  
+ Returns the runtime class information about a tabbed window that is created when another pane docks to the current pane.  
   
 ```  
 CRuntimeClass* GetTabbedPaneRTC() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- As informações de classe de tempo de execução para o painel acoplável.  
+### <a name="return-value"></a>Return Value  
+ The runtime class information for the dockable pane.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para recuperar as informações de classe de tempo de execução para painéis com guias que são criados dinamicamente. Isso pode ocorrer quando um usuário arrasta um painel para a legenda do outro painel, ou se você chamar o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método para criar programaticamente um painel com guias de dois painéis encaixáveis.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the runtime class information for tabbed panes that are created dynamically. This can occur when a user drags one pane to the caption of another pane, or if you call the [CDockablePane::AttachToTabWnd](#attachtotabwnd) method to programmatically create a tabbed pane from two dockable panes.  
   
- Você pode definir as informações de classe de tempo de execução chamando o [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) método.  
+ You can set the runtime class information by calling the [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) method.  
   
-##  <a name="hasautohidemode"></a>CDockablePane::HasAutoHideMode  
- Especifica se um painel de encaixe pode ser alternado para o modo de ocultar automaticamente.  
+##  <a name="hasautohidemode"></a>  CDockablePane::HasAutoHideMode  
+ Specifies whether a docking pane can be switched to autohide mode.  
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável pode ser alternado para o modo de ocultar automaticamente; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane can be switched to autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Substitua esse método em uma classe derivada para desabilitar o modo de ocultar automaticamente para um painel acoplável específico.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to disable autohide mode for a specific dockable pane.  
   
-##  <a name="hittest"></a>CDockablePane::HitTest  
- Especifica o local em um painel onde o usuário clica em um mouse.  
+##  <a name="hittest"></a>  CDockablePane::HitTest  
+ Specifies the location in a pane where the user clicks a mouse.  
   
 ```  
 virtual int HitTest(
@@ -965,205 +1027,205 @@ virtual int HitTest(
     BOOL bDetectCaption = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Especifica o ponto de teste.  
+ Specifies the point to test.  
   
  [in] `bDetectCaption`  
- `TRUE`Se `HTCAPTION` deve ser retornado se o ponto está na legenda do painel; caso contrário, `FALSE`.  
+ `TRUE` if `HTCAPTION` should be returned if the point is on the pane's caption; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um dos seguintes valores:  
+### <a name="return-value"></a>Return Value  
+ One of the following values:  
   
-- `HTNOWHERE`Se `point` não está no painel acoplável.  
+- `HTNOWHERE` if `point` is not in the dockable pane.  
   
-- `HTCLIENT`Se `point` está na área do cliente do painel acoplável.  
+- `HTCLIENT` if `point` is in the client area of the dockable pane.  
   
-- `HTCAPTION`Se `point` está na área de legenda do painel acoplável.  
+- `HTCAPTION` if `point` is in the caption area of the dockable pane.  
   
-- `AFX_HTCLOSE`Se `point` está no botão Fechar.  
+- `AFX_HTCLOSE` if `point` is on the close button.  
   
-- `HTMAXBUTTON`Se `point` estiver no botão pin.  
+- `HTMAXBUTTON` if `point` is on the pin button.  
   
-##  <a name="isautohideallenabled"></a>CDockablePane::IsAutohideAllEnabled  
- Indica se o painel de encaixe e todos os outros painéis no contêiner podem ser alternados para o modo de ocultar automaticamente.  
+##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
+ Indicates whether the docking pane and all other panes in the container can be switched to autohide mode.  
   
 ```  
 virtual BOOL IsAutohideAllEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel encaixável e todos os outros painéis no contêiner, podem ser alternados para o modo de ocultar automaticamente; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane, and all other panes in the container, can be switched to autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Um usuário habilita o modo de ocultar automaticamente, clicando no botão de pin encaixe ao mesmo tempo mantendo a **Ctrl** chave  
+### <a name="remarks"></a>Remarks  
+ A user enables autohide mode by clicking the docking pin button while holding the **Ctrl** key  
   
- Para habilitar ou desabilitar esse comportamento, chame o [CDockablePane::EnableAutohideAll](#enableautohideall) método.  
+ To enable or disable this behavior, call the [CDockablePane::EnableAutohideAll](#enableautohideall) method.  
   
-##  <a name="isautohidemode"></a>CDockablePane::IsAutoHideMode  
- Determina se um painel está no modo de ocultar automaticamente.  
+##  <a name="isautohidemode"></a>  CDockablePane::IsAutoHideMode  
+ Determines whether a pane is in autohide mode.  
   
 ```  
 virtual BOOL IsAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável estiver no modo de ocultar automaticamente. Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane is in autohide mode; otherwise, `FALSE`.  
   
-##  <a name="isdocked"></a>CDockablePane::IsDocked  
- Determina se o painel atual está encaixado.  
+##  <a name="isdocked"></a>  CDockablePane::IsDocked  
+ Determines whether the current pane is docked.  
   
 ```  
 virtual BOOL IsDocked() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel encaixável não pertence a uma janela miniframe ou se ele estiver flutuando em uma janela miniframe com outro painel. `FALSE`Se o painel é um filho de uma janela miniframe e não outros painéis que pertencem à janela miniframe.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane does not belong to a miniframe window or if it is floating in a miniframe window with another pane. `FALSE` if the pane is a child of a miniframe window and there are no other panes that belong to the miniframe window.  
   
-### <a name="remarks"></a>Comentários  
- Para determinar se o painel está encaixado na janela do quadro principal, chame [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). Se o método retorna um ponteiro não-NULL, o painel é encaixado na janela principal do quadro.  
+### <a name="remarks"></a>Remarks  
+ To determine whether the pane is docked to the main frame window, call [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). If the method returns a non-NULL pointer, the pane is docked at the main frame window.  
   
-##  <a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode  
- Determina o comportamento de um painel que está no modo de ocultar automaticamente, se ele é exibido (ou oculto) chamando [CDockablePane::ShowPane](#showpane).  
+##  <a name="ishideinautohidemode"></a>  CDockablePane::IsHideInAutoHideMode  
+ Determines the behavior of a pane that is in autohide mode if it is shown (or hidden) by calling [CDockablePane::ShowPane](#showpane).  
   
 ```  
 virtual BOOL IsHideInAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável deve ficar oculto quando no modo de ocultar automaticamente; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane should be hidden when in autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Quando um painel acoplável está no modo de ocultar automaticamente, ela tem um comportamento diferente quando você chama `ShowPane` para ocultar ou mostrar o painel. Esse comportamento é controlado pelo membro estático [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode). Se este membro é `TRUE`, painel encaixável e sua barra de ferramentas de ocultar automaticamente relacionados ou botão Ocultar automaticamente é ocultada ou exibida ao chamar `ShowPane`. Caso contrário, o painel acoplável é ativado ou desativado e sua barra de ferramentas relacionados AutoOcultar ou botão Ocultar automaticamente está sempre visível.  
+### <a name="remarks"></a>Remarks  
+ When a dockable pane is in autohide mode, it behaves differently when you call `ShowPane` to hide or show the pane. This behavior is controlled by the static member [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode). If this member is `TRUE`, the dockable pane and its related autohide toolbar or autohide button is hidden or shown when you call `ShowPane`. Otherwise, the dockable pane is activated or deactivated, and its related autohide toolbar or autohide button is always visible.  
   
- Substitua esse método em uma classe derivada para alterar o comportamento padrão para painéis individuais.  
+ Override this method in a derived class to change the default behavior for individual panes.  
   
- O valor padrão para `m_bHideInAutoHideMode` é `FALSE`.  
+ The default value for `m_bHideInAutoHideMode` is `FALSE`.  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CDockablePane::IsInFloatingMultiPaneFrameWnd  
- Especifica se o painel estiver em uma janela de quadro de vários painéis ( [CMultiPaneFrameWnd classe](../../mfc/reference/cmultipaneframewnd-class.md)).  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CDockablePane::IsInFloatingMultiPaneFrameWnd  
+ Specifies whether the pane is in a multi-pane frame window ( [CMultiPaneFrameWnd Class](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver em uma janela de quadro de vários painéis; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is in a multi-pane frame window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isresizable"></a>CDockablePane::IsResizable  
- Especifica se o painel é redimensionável.  
+##  <a name="isresizable"></a>  CDockablePane::IsResizable  
+ Specifies whether the pane is resizable.  
   
 ```  
 virtual BOOL IsResizable() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver redimensionável; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is resizable; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, os painéis encaixáveis são redimensionáveis. Para evitar o redimensionamento, substituir esse método em uma classe derivada e retornar `FALSE`. Observe que uma `FALSE` valor leva a uma falha na `ASSERT` na [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane). Use [CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) em vez disso, para encaixar um painel dentro de um quadro principal.  
+### <a name="remarks"></a>Remarks  
+ By default, dockable panes are resizable. To prevent resizing, override this method in a derived class and return `FALSE`. Note that a `FALSE` value leads to a failed `ASSERT` in [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane). Use [CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) instead to dock a pane within a parent frame.  
   
- Painéis que não podem ser redimensionadas podem nenhuma flutuação nem entrar no modo de ocultar automaticamente e sempre estão localizados na borda externa do quadro principal.  
+ Panes that cannot be resized can neither float nor enter auto-hide mode and are always located at the outer edge of the parent frame.  
   
-##  <a name="istablocationbottom"></a>CDockablePane::IsTabLocationBottom  
- Especifica se o guias estão localizadas na parte superior ou inferior do painel.  
+##  <a name="istablocationbottom"></a>  CDockablePane::IsTabLocationBottom  
+ Specifies whether tabs are located at the top or bottom of the pane.  
   
 ```  
 virtual BOOL IsTabLocationBottom() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o guias estão localizadas na parte inferior do painel. `FALSE` se guias estão localizadas na parte superior do painel.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are located at the bottom of the pane; `FALSE` if tabs are located at the top of the pane.  
   
-### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).  
   
-##  <a name="istracked"></a>CDockablePane::IsTracked  
- Especifica se um painel está sendo movido pelo usuário.  
+##  <a name="istracked"></a>  CDockablePane::IsTracked  
+ Specifies whether a pane is being moved by the user.  
   
 ```  
 BOOL IsTracked() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel estiver sendo movido; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is being moved; otherwise, `FALSE`.  
   
-##  <a name="isvisible"></a>CDockablePane::IsVisible  
- Determina se o painel atual está visível.  
+##  <a name="isvisible"></a>  CDockablePane::IsVisible  
+ Determines whether the current pane is visible.  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel acoplável estiver visível; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the dockable pane is visible; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para determinar se um painel acoplável está visível. Você pode usar esse método em vez de chamar [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) ou testando o `WS_VISIBLE` estilo. O estado de visibilidade retornado depende se o modo de ocultar automaticamente está habilitado ou desabilitado e o valor de [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode) propriedade.  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine whether a dockable pane is visible. You can use this method instead of calling [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) or testing for the `WS_VISIBLE` style. The returned visibility state depends on whether autohide mode is enabled or disabled and on the value of the [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode) property.  
   
- Se o painel acoplável estiver no modo de ocultar automaticamente e `IsHideInAutoHideMode` retorna `FALSE` o estado de visibilidade é sempre `FALSE`.  
+ If the dockable pane is in autohide mode and `IsHideInAutoHideMode` returns `FALSE` the visibility state is always `FALSE`.  
   
- Se o painel acoplável estiver no modo de ocultar automaticamente e `IsHideInAutoHideMode` retorna `TRUE` o estado de visibilidade depende do estado de visibilidade da barra de ferramentas AutoOcultar relacionados.  
+ If the dockable pane is in autohide mode and `IsHideInAutoHideMode` returns `TRUE` the visibility state depends on the visibility state of the related autohide toolbar.  
   
- Se o painel encaixável não estiver no modo de ocultar automaticamente, o estado de visibilidade é determinado pelo [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) método.  
+ If the dockable pane is not in autohide mode, the visibility state is determined by the [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) method.  
   
-##  <a name="m_bdisableanimation"></a>CDockablePane::m_bDisableAnimation  
- Especifica se a animação de ocultar automaticamente do painel acoplável está desabilitada.  
+##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
+ Specifies whether autohide animation of the dockable pane is disabled.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;  
 ```  
   
-##  <a name="m_bhideinautohidemode"></a>CDockablePane::m_bHideInAutoHideMode  
- Determina o comportamento do painel quando o painel está no modo de ocultar automaticamente.  
+##  <a name="m_bhideinautohidemode"></a>  CDockablePane::m_bHideInAutoHideMode  
+ Determines the behavior of the pane when the pane is in autohide mode.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Esse valor afeta todos os painéis de encaixe no aplicativo.  
+### <a name="remarks"></a>Remarks  
+ This value affects all docking panes in the application.  
   
- Se você definir esse membro como `TRUE`, painéis encaixáveis ocultas ou mostradas com seus botões e barras de ferramentas AutoOcultar relacionados ao chamar [CDockablePane::ShowPane](#showpane).  
+ If you set this member to `TRUE`, dockable panes are hidden or shown with their related autohide toolbars and buttons when you call [CDockablePane::ShowPane](#showpane).  
   
- Se você definir esse membro como `FALSE`, painéis encaixáveis estão ativadas ou desativadas quando você chama [CDockablePane::ShowPane](#showpane).  
+ If you set this member to `FALSE`, dockable panes are activated or deactivated when you call [CDockablePane::ShowPane](#showpane).  
   
-##  <a name="m_nslidesteps"></a>CDockablePane::m_nSlideSteps  
- Especifica a velocidade da animação do painel quando ele estiver no modo de ocultar automaticamente.  
+##  <a name="m_nslidesteps"></a>  CDockablePane::m_nSlideSteps  
+ Specifies the animation speed of the pane when it is in autohide mode.  
   
 ```  
 AFX_IMPORT_DATA static int m_nSlideSteps;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Para obter um efeito de animação mais rápido, diminua esse valor. Para obter um efeito de animação mais lento, aumente esse valor.  
+### <a name="remarks"></a>Remarks  
+ For a faster animation effect, decrease this value. For a slower animation effect, increase this value.  
   
-##  <a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pWndOldParent`  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockFromMiniFrame  
- Chamado pela estrutura quando uma barra de encaixe flutuante se encaixa em uma janela do quadro.  
+##  <a name="onafterdockfromminiframe"></a>  CDockablePane::OnAfterDockFromMiniFrame  
+ Called by the framework when a floating docking bar docks at a frame window.  
   
 ```  
 virtual void OnAfterDockFromMiniFrame();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, esse método não fará nada.  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent  
- O framework chama esse método antes de alterar o pai do painel.  
+##  <a name="onbeforechangeparent"></a>  CDockablePane::OnBeforeChangeParent  
+ The framework calls this method before it changes the parent of the pane.  
   
 ```  
 virtual void OnBeforeChangeParent(
@@ -1171,20 +1233,20 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pWndNewParent`  
- Um ponteiro para a nova janela pai.  
+ A pointer to the new parent window.  
   
  [in] `bDelay`  
- `BOOL`que especifica se deve atrasar o recálculo do layout do encaixe se o painel estiver desencaixado. Para obter mais informações, consulte [CDockablePane::UndockPane](#undockpane).  
+ `BOOL` that specifies whether to delay recalculation of the docking layout if the pane is undocked. For more information, see [CDockablePane::UndockPane](#undockpane).  
   
-### <a name="remarks"></a>Comentários  
- Se o painel estiver encaixado e o novo pai não permitir encaixe, esse método desencaixa o painel.  
+### <a name="remarks"></a>Remarks  
+ If the pane is docked and the new parent does not allow docking, this method undocks the pane.  
   
- Se o painel está sendo convertido em um documento com guias, este método armazena a posição de encaixe recente. A estrutura usa a posição de encaixe recente para restaurar a posição do painel quando ele é convertido para um estado encaixado.  
+ If the pane is being converted to a tabbed document, this method stores its recent docking position. The framework uses the recent docking position to restore the position of the pane when it is converted back to a docked state.  
   
-##  <a name="onbeforefloat"></a>CDockablePane::OnBeforeFloat  
- A estrutura chama esse método antes de um painel faz a transição para o estado flutuante.  
+##  <a name="onbeforefloat"></a>  CDockablePane::OnBeforeFloat  
+ The framework calls this method before a pane transitions to a floating state.  
   
 ```  
 virtual BOOL OnBeforeFloat(
@@ -1192,59 +1254,59 @@ virtual BOOL OnBeforeFloat(
     AFX_DOCK_METHOD dockMethod);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `rectFloat`  
- Especifica a posição e o tamanho do painel quando está no estado flutuante.  
+ Specifies the position and size of the pane when it is in a floating state.  
   
  [in] `dockMethod`  
- Especifica o método de encaixe. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
+ Specifies the docking method. See [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) for a list of possible values.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o painel pode ser flutuante; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Esse método é chamado pela estrutura quando um painel está prestes a float. Você pode substituir esse método em uma classe derivada se você quiser executar qualquer processamento antes que o painel flutua.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when a pane is about to float. You can override this method in a derived class if you want to perform any processing before the pane floats.  
   
-##  <a name="onpressbuttons"></a>CDockablePane::OnPressButtons  
- Chamado quando o usuário pressionar um botão legenda que o `AFX_HTCLOSE` e `AFX_HTMAXBUTTON` botões.  
+##  <a name="onpressbuttons"></a>  CDockablePane::OnPressButtons  
+ Called when the user presses a caption button other than the `AFX_HTCLOSE` and `AFX_HTMAXBUTTON` buttons.  
   
 ```  
 virtual void OnPressButtons(UINT nHit);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `nHit`  
- Este parâmetro não é usado.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Comentários  
- Se você adicionar um botão personalizado para a legenda de um painel acoplável, substitui esse método para receber notificações quando um usuário pressiona o botão.  
+### <a name="remarks"></a>Remarks  
+ If you add a custom button to the caption of a dockable pane, override this method to receive notifications when a user presses the button.  
   
-##  <a name="onslide"></a>CDockablePane::OnSlide  
- Chamado pela estrutura para animar o painel quando ele estiver no modo de ocultar automaticamente.  
+##  <a name="onslide"></a>  CDockablePane::OnSlide  
+ Called by the framework to animate the pane when it is in autohide mode.  
   
 ```  
 virtual void OnSlide(BOOL bSlideOut);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bSlideOut`  
- `TRUE`para mostrar o painel; `FALSE` para ocultar o painel.  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
-### <a name="remarks"></a>Comentários  
- Substitua esse método em uma classe derivada implementar efeitos AutoOcultar personalizado.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to implement custom autohide effects.  
   
-##  <a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveFromDefaultPaneDividier  
- O framework chama esse método quando um painel está sendo desencaixado.  
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier  
+ The framework calls this method when a pane is being undocked.  
   
 ```  
 void RemoveFromDefaultPaneDividier();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Este método define o divisor de painéis padrão `NULL` e remove o painel do seu contêiner.  
+### <a name="remarks"></a>Remarks  
+ This method sets the default pane divider to `NULL` and removes the pane from its container.  
   
-##  <a name="replacepane"></a>CDockablePane::ReplacePane  
- Substitui o painel com um painel especificado.  
+##  <a name="replacepane"></a>  CDockablePane::ReplacePane  
+ Replaces the pane with a specified pane.  
   
 ```  
 BOOL ReplacePane(
@@ -1253,31 +1315,31 @@ BOOL ReplacePane(
     BOOL bRegisterWithFrame = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pBarToReplaceWith`  
- Um ponteiro para um painel acoplável.  
+ A pointer to a dockable pane.  
   
  [in] `dockMethod`  
- Não usado.  
+ Not used.  
   
  [in] `bRegisterWithFrame`  
- Se `TRUE`, o novo painel está registrado com o Gerenciador de encaixe do pai do painel antigo. O novo painel é inserido no índice do painel anterior na lista de painéis que é mantida pelo Gerenciador de encaixe.  
+ If `TRUE`, the new pane is registered with the docking manager of the parent of the old pane. The new pane is inserted at the index of the old pane in the list of panes that is maintained by the docking manager.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a substituição for bem-sucedida; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the replacement is successful; otherwise, `FALSE`.  
   
-##  <a name="restoredefaultpanedivider"></a>CDockablePane::RestoreDefaultPaneDivider  
- Quando um painel é desserializado, o framework chama esse método para restaurar o divisor de painel padrão.  
+##  <a name="restoredefaultpanedivider"></a>  CDockablePane::RestoreDefaultPaneDivider  
+ When a pane is deserialized, the framework calls this method to restore the default pane divider.  
   
 ```  
 void RestoreDefaultPaneDivider();
 ```  
   
-### <a name="remarks"></a>Comentários  
- O divisor de painéis padrão restaurada substitui o divisor de painéis padrão atual, se ele existir.  
+### <a name="remarks"></a>Remarks  
+ The restored default pane divider replaces the current default pane divider, if it exists.  
   
-##  <a name="setautohidemode"></a>CDockablePane::SetAutoHideMode  
- Alterna o painel de encaixe entre visível e o modo de ocultar automaticamente.  
+##  <a name="setautohidemode"></a>  CDockablePane::SetAutoHideMode  
+ Toggles the docking pane between visible and autohide mode.  
   
 ```  
 virtual CMFCAutoHideBar* SetAutoHideMode(
@@ -1287,29 +1349,29 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bMode`  
- `TRUE`Para habilitar o modo de ocultar automaticamente; `FALSE` para habilitar o modo de encaixe regular.  
+ `TRUE` to enable autohide mode; `FALSE` to enable regular docking mode.  
   
  [in] `dwAlignment`  
- Especifica o alinhamento do painel de ocultar automaticamente para criar.  
+ Specifies the alignment of the autohide pane to create.  
   
- [in] [out]`pCurrAutoHideBar`  
- Um ponteiro para a barra de ferramentas de ocultar automaticamente atual. Pode ser `NULL`.  
+ [in] [out] `pCurrAutoHideBar`  
+ A pointer to the current autohide toolbar. Can be `NULL`.  
   
  [in] `bUseTimer`  
- Especifica se deseja usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou ocultar o painel imediatamente.  
+ Specifies whether to use the autohide effect when the user switches the pane to autohide mode or to hide the pane immediately.  
   
-### <a name="return-value"></a>Valor de retorno  
- Ocultar automaticamente barra de ferramentas que foi criada como resultado de alternar para o modo de ocultar automaticamente, ou `NULL`.  
+### <a name="return-value"></a>Return Value  
+ The autohide toolbar that was created as a result of switching to autohide mode, or `NULL`.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método quando um usuário clica no botão de pin para alternar o painel acoplável para o modo de ocultar automaticamente ou para o modo normal de encaixe.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user clicks the pin button to switch the dockable pane to autohide mode or to regular docking mode.  
   
- Chame esse método para alternar programaticamente um painel acoplável para o modo de ocultar automaticamente. O painel deve ser encaixado à janela principal do quadro ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) deve retornar um ponteiro válido para o [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
+ Call this method to switch a dockable pane to autohide mode programmatically. The pane must be docked to the main frame window ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) must return a valid pointer to the [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-##  <a name="setautohideparents"></a>CDockablePane::SetAutoHideParents  
- Define o botão Ocultar automaticamente e ocultar automaticamente a barra de ferramentas do painel.  
+##  <a name="setautohideparents"></a>  CDockablePane::SetAutoHideParents  
+ Sets the auto-hide button and auto-hide toolbar for the pane.  
   
 ```  
 void SetAutoHideParents(
@@ -1317,67 +1379,67 @@ void SetAutoHideParents(
     CMFCAutoHideButton* pBtn);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pToolBar`  
- Ponteiro para uma barra de ferramentas de ocultar automaticamente.  
+ Pointer to an auto-hide toolbar.  
   
  [in] `pBtn`  
- Ponteiro para um botão de ocultar automaticamente.  
+ Pointer to an auto-hide button.  
   
-##  <a name="setlastpercentinpanecontainer"></a>CDockablePane::SetLastPercentInPaneContainer  
- Define a porcentagem de espaço que ocupa um painel em seu contêiner.  
+##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
+ Sets the percentage of space that a pane occupies in its container.  
   
 ```  
 void SetLastPercentInPaneContainer(int n);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- Um `int` que especifica a porcentagem de espaço que o painel ocupa em seu contêiner.  
+ An `int` that specifies the percentage of space that the pane occupies in its container.  
   
-### <a name="remarks"></a>Comentários  
- O framework ajusta o painel para usar o novo valor quando o layout é recalculado.  
+### <a name="remarks"></a>Remarks  
+ The framework adjusts the pane to use the new value when the layout is recalculated.  
   
-##  <a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider  
- Define o divisor de painel padrão restaurada.  
+##  <a name="setrestoreddefaultpanedivider"></a>  CDockablePane::SetRestoredDefaultPaneDivider  
+ Sets the restored default pane divider.  
   
 ```  
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `hRestoredSlider`  
- Um identificador para um divisor de painel (controle deslizante).  
+ A handle to a pane divider (slider).  
   
-### <a name="remarks"></a>Comentários  
- Um divisor de painel padrão restaurada é obtido quando um painel é desserializado. Para obter mais informações, consulte [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
+### <a name="remarks"></a>Remarks  
+ A restored default pane divider is obtained when a pane is deserialized. For more information, see [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
   
-##  <a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC  
- Define as informações de classe de tempo de execução para uma janela com guias que é criada quando dois painéis encaixe juntos.  
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC  
+ Sets the runtime class information for a tabbed window that is created when two panes dock together.  
   
 ```  
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pRTC`  
- As informações de classe de tempo de execução para o painel com guias.  
+ The runtime class information for the tabbed pane.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para definir as informações de classe de tempo de execução para painéis com guias que são criados dinamicamente. Isso pode ocorrer quando um usuário arrasta um painel para a legenda do outro painel, ou se você chamar o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método para criar programaticamente um painel com guias de dois painéis encaixáveis.  
+### <a name="remarks"></a>Remarks  
+ Call this method to set the runtime class information for tabbed panes that are created dynamically. This can occur when a user drags one pane to the caption of another pane, or if you call the [CDockablePane::AttachToTabWnd](#attachtotabwnd) method to programmatically create a tabbed pane from two dockable panes.  
   
- A classe de tempo de execução padrão é definida de acordo com o `dwTabbedStyle` parâmetro do [CDockablePane::Create](#create) e [CDockablePane::CreateEx](#createex). Para personalizar os novos painéis com guias, derive a classe de uma das seguintes classes:  
+ The default runtime class is set according to the `dwTabbedStyle` parameter of [CDockablePane::Create](#create) and [CDockablePane::CreateEx](#createex). To customize the new tabbed panes, derive your class from one of the following classes:  
   
-- [Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
+- [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)  
   
-- [Classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
+- [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md)  
   
-- [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).  
+- [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
- Em seguida, chame esse método com o ponteiro para suas informações de classe de tempo de execução.  
+ Then, call this method with the pointer to its runtime class information.  
   
-##  <a name="showpane"></a>CDockablePane::ShowPane  
- Mostra ou oculta um painel.  
+##  <a name="showpane"></a>  CDockablePane::ShowPane  
+ Shows or hides a pane.  
   
 ```  
 virtual void ShowPane(
@@ -1386,21 +1448,21 @@ virtual void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`para mostrar o painel; `FALSE` para ocultar o painel.  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`Para atrasar a ajustar o layout de encaixe; `FALSE` para ajustar o layout de encaixe imediatamente.  
+ `TRUE` to delay adjusting the docking layout; `FALSE` to adjust the docking layout immediately.  
   
  [in] `bActivate`  
- `TRUE`Para ativar o painel quando exibido; Caso contrário, `FALSE`.  
+ `TRUE` to activate the pane when shown; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Chamar esse método em vez do [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) quando mostrando ou ocultando painéis encaixáveis.  
+### <a name="remarks"></a>Remarks  
+ Call this method instead of the [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) when showing or hiding dockable panes.  
   
-##  <a name="slide"></a>CDockablePane::Slide  
- Anima um painel que está no modo de ocultar automaticamente.  
+##  <a name="slide"></a>  CDockablePane::Slide  
+ Animates a pane that is in autohide mode.  
   
 ```  
 virtual void Slide(
@@ -1408,48 +1470,48 @@ virtual void Slide(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bSlideOut`  
- `TRUE`para mostrar o painel; `FALSE` para ocultar o painel.  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
  [in] `bUseTimer`  
- `TRUE`para mostrar ou ocultar o painel com o efeito de ocultar automaticamente; `FALSE` para mostrar ou ocultar o painel imediatamente.  
+ `TRUE` to show or hide the pane with the autohide effect; `FALSE` to show or hide the pane immediately.  
   
-### <a name="remarks"></a>Comentários  
- O framework chama esse método para animar um painel que está no modo de ocultar automaticamente.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to animate a pane that is in autohide mode.  
   
- Esse método usa o `CDockablePane::m_nSlideDefaultTimeOut` valor para determinar o tempo limite para o efeito de slide. O valor padrão para o tempo limite é 1. Se você personalizar o algoritmo de ocultar automaticamente, modifique esse membro para alterar o tempo limite.  
+ This method uses the `CDockablePane::m_nSlideDefaultTimeOut` value to determine the time out for the slide effect. The default value for the time out is 1. If you customize the autohide algorithm, modify this member to change the time out.  
   
-##  <a name="toggleautohide"></a>CDockablePane::ToggleAutoHide  
- Alterna o painel entre sempre visível e o modo de ocultar automaticamente.  
+##  <a name="toggleautohide"></a>  CDockablePane::ToggleAutoHide  
+ Toggles the pane between always visible and auto-hide mode.  
   
 ```  
 virtual void ToggleAutoHide();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Esse método alterna o modo de ocultar automaticamente para o painel chamando [CDockablePane::SetAutoHideMode](#setautohidemode).  
+### <a name="remarks"></a>Remarks  
+ This method toggles auto-hide mode for the pane by calling [CDockablePane::SetAutoHideMode](#setautohidemode).  
   
-##  <a name="undockpane"></a>CDockablePane::UndockPane  
- Desencaixa um painel da janela principal do quadro ou um contêiner de janela miniframe.  
+##  <a name="undockpane"></a>  CDockablePane::UndockPane  
+ Undocks a pane from either the main frame window or a miniframe window container.  
   
 ```  
 virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bDelay`  
- `TRUE`Para atrasar a calcular o layout de encaixe; `FALSE` para recalcular o layout de encaixe imediatamente.  
+ `TRUE` to delay calculating the docking layout; `FALSE` to recalculate the docking layout immediately.  
   
-### <a name="remarks"></a>Comentários  
- Chame esse método para desencaixar um painel da janela de quadro principal ou de um contêiner de janela de múltiplas miniframe (um painel flutuante em uma janela única miniframe com outros painéis).  
+### <a name="remarks"></a>Remarks  
+ Call this method to undock a pane from the main frame window or from a multi-miniframe window container (a pane that is floating in a single miniframe window with other panes).  
   
- Você deve desencaixar um painel antes de executar qualquer operação externa que não é executada pelo [CDockingManager](../../mfc/reference/cdockingmanager-class.md). Por exemplo, você deverá desencaixar um painel para movê-lo programaticamente de um local para outro.  
+ You must undock a pane before you perform any external operation that is not performed by the [CDockingManager](../../mfc/reference/cdockingmanager-class.md). For example, you must undock a pane to move it programmatically from one location to another.  
   
- O framework desencaixa automaticamente painéis antes que eles são destruídos.  
+ The framework automatically undocks panes before they are destroyed.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CPane](../../mfc/reference/cpane-class.md)
+ [CPane Class](../../mfc/reference/cpane-class.md)
 

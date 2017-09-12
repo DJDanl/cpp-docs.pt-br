@@ -1,5 +1,5 @@
 ---
-title: Classe CDocItem | Documentos do Microsoft
+title: CDocItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,14 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- items, document
-- document items
-- server documents, document items
-- CDocItem class
-- container document items
-- client document items
-- OLE documents, items
-- server documents
+- CDocItem [MFC], GetDocument
+- CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
 caps.latest.revision: 22
 author: mikeblome
@@ -43,78 +37,78 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1ade88aa562180d5c3a6a7afe3fe26943a5d811d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7846499918e1ef1456cc1ebcd5b5aa8225ad1133
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocitem-class"></a>Classe CDocItem
-A classe base para itens de documento, que são componentes de dados do documento.  
+# <a name="cdocitem-class"></a>CDocItem Class
+The base class for document items, which are components of a document's data.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocItem : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocItem::GetDocument](#getdocument)|Retorna o documento que contém o item.|  
-|[CDocItem::IsBlank](#isblank)|Determina se o item contém todas as informações.|  
+|[CDocItem::GetDocument](#getdocument)|Returns the document that contains the item.|  
+|[CDocItem::IsBlank](#isblank)|Determines whether the item contains any information.|  
   
-## <a name="remarks"></a>Comentários  
- `CDocItem`objetos são usados para representar itens OLE em documentos de cliente e servidor.  
+## <a name="remarks"></a>Remarks  
+ `CDocItem` objects are used to represent OLE items in both client and server documents.  
   
- Para obter mais informações, consulte o artigo [contêineres: Implementando um contêiner](../../mfc/containers-implementing-a-container.md).  
+ For more information, see the article [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocItem`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
- Chame essa função para obter o documento que contém o item.  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
+ Call this function to get the document that contains the item.  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o documento que contém o item; **Nulo**, se o item não é parte de um documento.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the item; **NULL**, if the item is not part of a document.  
   
-### <a name="remarks"></a>Comentários  
- Essa função é substituída nas classes derivadas [COleClientItem](../../mfc/reference/coleclientitem-class.md) e [classe derivada COleServerItem](../../mfc/reference/coleserveritem-class.md), retorna um ponteiro para um uma [COleDocument](../../mfc/reference/coledocument-class.md), um [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), ou uma [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objeto.  
+### <a name="remarks"></a>Remarks  
+ This function is overridden in the derived classes [COleClientItem](../../mfc/reference/coleclientitem-class.md) and [COleServerItem](../../mfc/reference/coleserveritem-class.md), returning a pointer to either a [COleDocument](../../mfc/reference/coledocument-class.md), a [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), or a [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) object.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
- Chamado pela estrutura quando ocorre de serialização padrão.  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
+ Called by the framework when default serialization occurs.  
   
 ```  
 virtual BOOL IsBlank() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o item não contém nenhuma informação; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item contains no information; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, `CDocItem` objetos não estão em branco. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objetos às vezes estão em branco porque elas derivam diretamente de `CDocItem`. No entanto, [classe derivada COleServerItem](../../mfc/reference/coleserveritem-class.md) objetos são sempre em branco. Por padrão, os aplicativos OLE contendo `COleClientItem` objetos que não têm nenhum x ou y extensão são serializados. Isso é feito retornando **TRUE** da substituição de `IsBlank` quando o item não tem x ou y extensão.  
+### <a name="remarks"></a>Remarks  
+ By default, `CDocItem` objects are not blank. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objects are sometimes blank because they derive directly from `CDocItem`. However, [COleServerItem](../../mfc/reference/coleserveritem-class.md) objects are always blank. By default, OLE applications containing `COleClientItem` objects that have no x or y extent are serialized. This is done by returning **TRUE** from an override of `IsBlank` when the item has no x or y extent.  
   
- Substitua essa função se você deseja implementar outras ações durante a serialização.  
+ Override this function if you want to implement other actions during serialization.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe COleDocument](../../mfc/reference/coledocument-class.md)   
- [Classe da classe derivada COleServerItem](../../mfc/reference/coleserveritem-class.md)   
- [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)   
+ [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)
 

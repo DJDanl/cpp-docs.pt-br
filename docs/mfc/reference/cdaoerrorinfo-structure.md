@@ -1,5 +1,5 @@
 ---
-title: Estrutura CDaoErrorInfo | Documentos do Microsoft
+title: CDaoErrorInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoErrorInfo structure
+- CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
 caps.latest.revision: 13
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 3a3b33f6a7b95edcb2476b03356d32e74d1b8954
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 892fe56216d890d74b6c0486c7ffbf0b4a6f43ee
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoerrorinfo-structure"></a>Estrutura CDaoErrorInfo
-O `CDaoErrorInfo` estrutura contém informações sobre um objeto de erro definida para objetos de acesso de dados (DAO).  
+# <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo Structure
+The `CDaoErrorInfo` structure contains information about an error object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoErrorInfo  
@@ -57,33 +57,33 @@ struct CDaoErrorInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *m_lErrorCode*  
- Um código de erro numérico do DAO. Consulte o tópico "Dados acesso erros interceptáveis" na Ajuda do DAO.  
+ A numeric DAO error code. See the topic "Trappable Data Access Errors" in DAO Help.  
   
  *m_strSource*  
- O nome do objeto ou aplicativo que originalmente gerou o erro. A propriedade Source Especifica uma expressão de cadeia de caracteres que representa o objeto que originalmente gerou o erro; a expressão é normalmente o nome da classe do objeto. Para obter detalhes, consulte o tópico "Propriedade Source" na Ajuda do DAO.  
+ The name of the object or application that originally generated the error. The Source property specifies a string expression representing the object that originally generated the error; the expression is usually the object's class name. For details, see the topic "Source Property" in DAO Help.  
   
  *m_strDescription*  
- Uma cadeia de caracteres descritiva associada ao erro. Para obter detalhes, consulte o tópico "Propriedade Description" na Ajuda do DAO.  
+ A descriptive string associated with an error. For details, see the topic "Description Property" in DAO Help.  
   
  *m_strHelpFile*  
- Um caminho totalmente qualificado para um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "Propriedades HelpContext e HelpFile" na Ajuda do DAO.  
+ A fully qualified path to a Microsoft Windows Help file. For details, see the topic "HelpContext, HelpFile Properties" in DAO Help.  
   
  *m_lHelpContext*  
- Uma ID de contexto para um tópico em um arquivo de Ajuda do Microsoft Windows. Para obter detalhes, consulte o tópico "Propriedades HelpContext e HelpFile" na Ajuda do DAO.  
+ A context ID for a topic in a Microsoft Windows Help file. For details, see the topic "HelpContext, HelpFile Properties" in DAO Help.  
   
-## <a name="remarks"></a>Comentários  
- MFC não encapsula os objetos de erro DAO em uma classe. Em vez disso, o [CDaoException](../../mfc/reference/cdaoexception-class.md) classe fornece uma interface para acessar a coleção de erros contida no DAO **DBEngine** objeto, o objeto que contém todos os espaços de trabalho. Quando uma operação DAO MFC lança um `CDaoException` de objeto que você capture, MFC preenche uma `CDaoErrorInfo` estrutura e o armazena no objeto de exceção [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro. (Se você optar por chamar diretamente o DAO, você deve chamar o objeto de exceção [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro para preencher `m_pErrorInfo`.)  
+## <a name="remarks"></a>Remarks  
+ MFC does not encapsulate DAO error objects in a class. Instead, the [CDaoException](../../mfc/reference/cdaoexception-class.md) class supplies an interface for accessing the Errors collection contained in the DAO **DBEngine** object, the object that also contains all workspaces. When an MFC DAO operation throws a `CDaoException` object that you catch, MFC fills a `CDaoErrorInfo` structure and stores it in the exception object's [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) member. (If you choose to call DAO directly, you must call the exception object's [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) member function yourself to fill `m_pErrorInfo`.)  
   
- Para obter mais informações sobre o tratamento de erros do DAO, consulte o artigo [exceções: exceções de banco de dados](../../mfc/exceptions-database-exceptions.md). Para obter informações relacionadas, consulte o tópico "Objeto Error" na Ajuda do DAO.  
+ For more information about handling DAO errors, see the article [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md). For related information, see the topic "Error Object" in DAO Help.  
   
- As informações recuperadas pelo [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) função de membro é armazenada em um `CDaoErrorInfo` estrutura. Examine o [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) membro de dados de um `CDaoException` objeto catch em um manipulador de exceção ou chamada `GetErrorInfo` de um `CDaoException` objeto que você criar explicitamente para verificar erros que possam ter ocorrido durante uma chamada direta para as interfaces do DAO. `CDaoErrorInfo`também define um `Dump` compilações de função de membro no modo de depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoErrorInfo` objeto.  
+ Information retrieved by the [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) member function is stored in a `CDaoErrorInfo` structure. Examine the [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) data member from a `CDaoException` object that you catch in an exception handler, or call `GetErrorInfo` from a `CDaoException` object that you create explicitly in order to check errors that might have occurred during a direct call to the DAO interfaces. `CDaoErrorInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoErrorInfo` object.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Classe CDaoException](../../mfc/reference/cdaoexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoException Class](../../mfc/reference/cdaoexception-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Estrutura WINDOWPLACEMENT | Documentos do Microsoft
+title: WINDOWPLACEMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPLACEMENT structure
+- WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26448daeff10c576944e5d9af79fa08a67b86c4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowplacement-structure"></a>Estrutura WINDOWPLACEMENT
-O `WINDOWPLACEMENT` estrutura contém informações sobre o posicionamento de uma janela na tela**.**  
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT Structure
+The `WINDOWPLACEMENT` structure contains information about the placement of a window on the screen**.**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
@@ -56,54 +56,54 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 } WINDOWPLACEMENT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *length*  
- Especifica o comprimento, em bytes, da estrutura**.**  
+ Specifies the length, in bytes, of the structure**.**  
   
  `flags`  
- Especifica sinalizadores que controlam a posição da janela minimizada e o método pelo qual a janela é restaurada. Esse membro pode ser um ou ambos os sinalizadores a seguir:  
+ Specifies flags that control the position of the minimized window and the method by which the window is restored. This member can be one or both of the following flags:  
   
-- **WPF_SETMINPOSITION** Especifica que as posições x e y da janela minimizada pode ser especificada**.** Esse sinalizador deve ser especificado se as coordenadas são definidas no **ptMinPosition** membro.  
+- **WPF_SETMINPOSITION** Specifies that the x- and y-positions of the minimized window can be specified**.** This flag must be specified if the coordinates are set in the **ptMinPosition** member.  
   
-- **WPF_RESTORETOMAXIMIZED** Especifica que a janela restaurada será ser maximizada, independentemente se ele foi maximizado antes que ele foi minimizado. Essa configuração é válida somente na próxima vez que a janela é restaurada. Ele não altera o comportamento de restauração padrão. Esse sinalizador é válido somente quando o **SW_SHOWMINIMIZED** valor for especificado para o **showCmd** membro.  
+- **WPF_RESTORETOMAXIMIZED** Specifies that the restored window will be maximized, regardless of whether it was maximized before it was minimized. This setting is valid only the next time the window is restored. It does not change the default restoration behavior. This flag is valid only when the **SW_SHOWMINIMIZED** value is specified for the **showCmd** member.  
   
  *showCmd*  
- Especifica o estado atual da apresentação da janela. Esse membro pode ser um dos seguintes valores:  
+ Specifies the current show state of the window. This member can be one of the following values:  
   
-- **SW_HIDE** oculta a janela e passa a ativação para outra janela.  
+- **SW_HIDE** Hides the window and passes activation to another window.  
   
-- **SW_MINIMIZE** minimiza a janela especificada e ativa a janela de nível superior na lista do sistema.  
+- **SW_MINIMIZE** Minimizes the specified window and activates the top-level window in the system's list.  
   
-- **SW_RESTORE** ativa e exibe uma janela. Se a janela for minimizada ou maximizada, Windows restaurá-lo em seu tamanho e posição original (mesmo que **SW_SHOWNORMAL**).  
+- **SW_RESTORE** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_SHOWNORMAL**).  
   
-- **SW_SHOW** ativa uma janela e exibe-o em sua posição e tamanho atual.  
+- **SW_SHOW** Activates a window and displays it in its current size and position.  
   
-- **SW_SHOWMAXIMIZED** ativa uma janela e exibe uma janela maximizada.  
+- **SW_SHOWMAXIMIZED** Activates a window and displays it as a maximized window.  
   
-- **SW_SHOWMINIMIZED** ativa uma janela e exibe-o como um ícone.  
+- **SW_SHOWMINIMIZED** Activates a window and displays it as an icon.  
   
-- **SW_SHOWMINNOACTIVE** exibe uma janela como um ícone. A janela ativa no momento permanece ativa.  
+- **SW_SHOWMINNOACTIVE** Displays a window as an icon. The window that is currently active remains active.  
   
-- **SW_SHOWNA** exibe uma janela em seu estado atual. A janela ativa no momento permanece ativa.  
+- **SW_SHOWNA** Displays a window in its current state. The window that is currently active remains active.  
   
-- **SW_SHOWNOACTIVATE** exibe uma janela em seu tamanho e posição mais recentes. A janela ativa no momento permanece ativa.  
+- **SW_SHOWNOACTIVATE** Displays a window in its most recent size and position. The window that is currently active remains active.  
   
-- **SW_SHOWNORMAL** ativa e exibe uma janela. Se a janela for minimizada ou maximizada, Windows restaurá-lo em seu tamanho e posição original (mesmo que **SW_RESTORE**).  
+- **SW_SHOWNORMAL** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_RESTORE**).  
   
  *ptMinPosition*  
- Especifica a posição do canto esquerdo superior da janela quando a janela é minimizada.  
+ Specifies the position of the window's top-left corner when the window is minimized.  
   
  `ptMaxPosition`  
- Especifica a posição do canto esquerdo superior da janela quando a janela for maximizada.  
+ Specifies the position of the window's top-left corner when the window is maximized.  
   
  *rcNormalPosition*  
- Especifica as coordenadas da janela quando a janela está na posição normal (restaurada).  
+ Specifies the window's coordinates when the window is in the normal (restored) position.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
 
 

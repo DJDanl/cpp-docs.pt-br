@@ -1,49 +1,67 @@
 ---
-title: "Cria&#231;&#227;o de documento/exibi&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquitetura de documento/exibição, criando documento/exibição"
-  - "documentos, criando"
-  - "MFC, documentos"
-  - "MFC, modos de exibição"
-  - "criadores de objeto"
-  - "tabelas [C++]"
-  - "tabelas [C++], objetos que cada objeto MFC cria"
-  - "modos de exibição, e janelas com moldura"
-  - "modos de exibição, criando"
+title: Document-View Creation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], creating
+- views [MFC], and frame windows
+- views [MFC], creating
+- tables [MFC]
+- MFC, views
+- document/view architecture [MFC], creating document/view
+- object creators
+- MFC, documents
+- tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cria&#231;&#227;o de documento/exibi&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2015a51280871e07614fb41e6fd3e1bae8398813
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A estrutura fornece implementações dos comandos de `New` e de **Abrir** \(entre outros\) no menu de **Arquivo** .  A criação de um novo documento e da janela de exibição associado e do quadro é uma busca cooperativo entre o objeto do aplicativo, um modelo de documento, o documento recém\-criado, e a janela recém\-criado do quadro.  A tabela a seguir resume os objetos que criam.  
+---
+# <a name="documentview-creation"></a>Document/View Creation
+The framework supplies implementations of the `New` and **Open** commands (among others) on the **File** menu. Creation of a new document and its associated view and frame window is a cooperative effort among the application object, a document template, the newly created document, and the newly created frame window. The following table summarizes which objects create what.  
   
-### Designers do objeto  
+### <a name="object-creators"></a>Object Creators  
   
-|Designer|Cria|  
-|--------------|----------|  
-|Objeto de aplicativo|Modelo de documento|  
-|Modelo de documento|Documento|  
-|Modelo de documento|Janela do quadro|  
-|Janela do quadro|View|  
+|Creator|Creates|  
+|-------------|-------------|  
+|Application object|Document template|  
+|Document template|Document|  
+|Document template|Frame window|  
+|Frame window|View|  
   
-## Consulte também  
- [Modelos de documento e o processo de criação de documento\/exibição](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Criação do modelo de documento](../Topic/Document%20Template%20Creation.md)   
- [Relacionamentos entre objetos MFC](../mfc/relationships-among-mfc-objects.md)   
- [Criando novos documentos, janelas e exibições](../Topic/Creating%20New%20Documents,%20Windows,%20and%20Views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

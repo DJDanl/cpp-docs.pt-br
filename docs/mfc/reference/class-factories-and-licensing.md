@@ -1,5 +1,5 @@
 ---
-title: Alocadores de classe e licenciamento | Microsoft Docs
+title: Class Factories and Licensing | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- class factories, and licensing
+- class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
 caps.latest.revision: 13
 author: mikeblome
@@ -33,53 +33,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 17a99edadeb7a5bd923126bce7fbef50313e1867
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0971f2ddbe9bc0efc531c6de5eb54e25f8d66a7a
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="class-factories-and-licensing"></a>Alocadores de classe e licenciamento
-Para criar uma instância do seu controle OLE, um aplicativo de contêiner chama uma função de membro de fábrica de classe do controle. Como o controle é um objeto OLE real, a fábrica de classe é responsável pela criação de instâncias de seu controle. Cada classe de controle OLE deve ter uma fábrica de classes.  
+# <a name="class-factories-and-licensing"></a>Class Factories and Licensing
+To create an instance of your OLE control, a container application calls a member function of the control's class factory. Because your control is an actual OLE object, the class factory is responsible for creating instances of your control. Every OLE control class must have a class factory.  
   
- Outro recurso importante de controles OLE é sua capacidade de impor uma licença. ControlWizard permite incorporar licenciamento durante a criação do seu projeto de controle. Para obter mais informações sobre o licenciamento do controle, consulte o artigo [controles ActiveX: licenciamento An ActiveX Control](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
+ Another important feature of OLE controls is their ability to enforce a license. ControlWizard allows you to incorporate licensing during the creation of your control project. For more information on control licensing, see the article [ActiveX Controls: Licensing An ActiveX Control](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
- A tabela a seguir lista várias macros e funções usadas para declarar e implementar a fábrica de classe do controle e a licença de seu controle.  
+ The following table lists several macros and functions used to declare and implement your control's class factory and to license of your control.  
   
-### <a name="class-factories-and-licensing"></a>Alocadores de classe e licenciamento  
+### <a name="class-factories-and-licensing"></a>Class Factories and Licensing  
   
 |||  
 |-|-|  
-|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Declara a fábrica de classe para uma página de propriedade ou OLE.|  
-|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implementa o controle `GetClassID` de função e declara uma instância da fábrica de classe.|  
-|[BEGIN_OLEFACTORY](#begin_olefactory)|Começa a declaração de qualquer função de licenciamento.|  
-|[END_OLEFACTORY](#end_olefactory)|Termina a declaração de qualquer função de licenciamento.|  
-|[AfxVerifyLicFile](#afxverifylicfile)|Verifica se um controle é licenciado para uso em um computador específico.|  
+|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Declares the class factory for an OLE control or property page.|  
+|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implements the control's `GetClassID` function and declares an instance of the class factory.|  
+|[BEGIN_OLEFACTORY](#begin_olefactory)|Begins the declaration of any licensing functions.|  
+|[END_OLEFACTORY](#end_olefactory)|Ends the declaration of any licensing functions.|  
+|[AfxVerifyLicFile](#afxverifylicfile)|Verifies whether a control is licensed for use on a particular computer.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
- Declara uma fábrica de classes e a `GetClassID` a função de membro da classe do controle.  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
+ Declares a class factory and the `GetClassID` member function of your control class.  
   
 ```   
 DECLARE_OLECREATE_EX(class_name)   
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- O nome da classe de controle.  
+ The name of the control class.  
   
-### <a name="remarks"></a>Comentários  
- Use esta macro no arquivo de cabeçalho de classe de controle para um controle que não dão suporte ao licenciamento.  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file for a control that does not support licensing.  
   
- Observe que essa macro tem a mesma finalidade como o exemplo de código a seguir:  
+ Note that this macro serves the same purpose as the following code sample:  
   
- [!code-cpp[NVC_MFCAxCtl #14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
+ [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>Requisitos  
-  **Cabeçalho** afxctl. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
- Implementa a fábrica de classe do controle e o [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) função de membro da classe do controle.  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
+ Implements your control's class factory and the [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) member function of your control class.  
   
 ```   
 IMPLEMENT_OLECREATE_EX(
@@ -98,55 +98,55 @@ IMPLEMENT_OLECREATE_EX(
     b8)   
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- O nome da classe de página de propriedade do controle.  
+ The name of the control property page class.  
   
  *external_name*  
- O nome do objeto exposto a aplicativos.  
+ The object name exposed to applications.  
   
  *l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*  
- Componentes da classe de **CLSID**. Para obter mais informações sobre esses parâmetros, consulte os comentários para [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).  
+ Components of the class's **CLSID**. For more information on these parameters, see the Remarks for [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).  
   
-### <a name="remarks"></a>Comentários  
- Esta macro deve aparecer no arquivo de implementação para qualquer classe de controle que usa o `DECLARE_OLECREATE_EX` macro ou `BEGIN_OLEFACTORY` e `END_OLEFACTORY` macros. O nome externo é o identificador do controle OLE que é exposto a outros aplicativos. Contêineres de usam esse nome para solicitar um objeto dessa classe de controle.  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLECREATE_EX` macro or the `BEGIN_OLEFACTORY` and `END_OLEFACTORY` macros. The external name is the identifier of the OLE control that is exposed to other applications. Containers use this name to request an object of this control class.  
   
-### <a name="requirements"></a>Requisitos  
-  **Cabeçalho** afxctl. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
- Começa a declaração de sua fábrica de classe no arquivo de cabeçalho da classe do controle.  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
+ Begins the declaration of your class factory in the header file of your control class.  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Especifica o nome da classe de controle cuja fábrica de classe é por isso.  
+ Specifies the name of the control class whose class factory this is.  
   
-### <a name="remarks"></a>Comentários  
- Declarações de funções de licenciamento de fábrica de classe devem começar imediatamente após `BEGIN_OLEFACTORY`.  
+### <a name="remarks"></a>Remarks  
+ Declarations of class factory licensing functions should begin immediately after `BEGIN_OLEFACTORY`.  
   
-### <a name="requirements"></a>Requisitos  
-  **Cabeçalho** afxctl. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
- Termina a declaração de fábrica de classe do controle.  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
+ Ends the declaration of your control's class factory.  
   
 ```  
 END_OLEFACTORY(class_name)   
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- O nome da classe de controle cuja fábrica de classe é por isso.  
+ The name of the control class whose class factory this is.  
   
-### <a name="requirements"></a>Requisitos  
-  **Cabeçalho** afxctl. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
- Chamar essa função para verificar se o arquivo de licença nomeado pelo `pszLicFileName` é válido para o controle OLE.  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
+ Call this function to verify that the license file named by `pszLicFileName` is valid for the OLE control.  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -156,30 +156,30 @@ BOOL AFXAPI AfxVerifyLicFile(
     UINT cch = -1); 
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- O identificador de instância da DLL associada ao controle licenciado.  
+ The instance handle of the DLL associated with the licensed control.  
   
  `pszLicFileName`  
- Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do arquivo de licença.  
+ Points to a null-terminated character string containing the license filename.  
   
  `pszLicFileContents`  
- Aponta para uma sequência de bytes que deve corresponder a sequência encontrada no início do arquivo de licença.  
+ Points to a byte sequence that must match the sequence found at the beginning of the license file.  
   
  `cch`  
- Número de caracteres em `pszLicFileContents`.  
+ Number of characters in `pszLicFileContents`.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o arquivo de licença existe e começa com a sequência de caracteres em `pszLicFileContents`; caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the license file exists and begins with the character sequence in `pszLicFileContents`; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Se `cch` é -1, essa função usa:  
+### <a name="remarks"></a>Remarks  
+ If `cch` is -1, this function uses:  
   
- [!code-cpp[36 NVC_MFC_Utilities](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>Requisitos  
-  **Cabeçalho** afxctl. h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
 
-## <a name="see-also"></a>Consulte também  
- [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

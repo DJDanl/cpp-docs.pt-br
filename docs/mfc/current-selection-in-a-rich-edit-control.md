@@ -1,41 +1,59 @@
 ---
-title: "Sele&#231;&#227;o atual em um controle de edi&#231;&#227;o avan&#231;ada | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CRichEditCtrl, seleção atual em"
-  - "seleção atual em CRichEditCtrls"
-  - "controles de edição avançada, seleção atual em"
-  - "seleção, atual em CRichEditCtrl"
+title: Current Selection in a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- current selection in CRichEditCtrls
+- CRichEditCtrl class [MFC], current selection in
+- rich edit controls [MFC], current selection in
+- selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sele&#231;&#227;o atual em um controle de edi&#231;&#227;o avan&#231;ada
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0f40011dcdc9e4153341a4b91ffef3a184db53c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O usuário pode selecionar o texto em um controle de edição avançado \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\) usando o mouse ou o teclado.  A seleção atual é o intervalo de caracteres selecionados, ou a posição do ponto de inserção se nenhum caractere é selecionado.  Um aplicativo pode obter informações sobre a seleção atual, defina a seleção atual, determina quando a seleção atual for alterado, e mostrar ou ocultar o realce de seleção.  
+---
+# <a name="current-selection-in-a-rich-edit-control"></a>Current Selection in a Rich Edit Control
+The user can select text in a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) by using the mouse or the keyboard. The current selection is the range of selected characters, or the position of the insertion point if no characters are selected. An application can get information about the current selection, set the current selection, determine when the current selection changes, and show or hide the selection highlight.  
   
- Para determinar a seleção atual em um controle de edição avançado, use a função de membro de [GetSel](../Topic/CRichEditCtrl::GetSel.md) .  Para definir a seleção atual, use a função de membro de [SetSel](../Topic/CRichEditCtrl::SetSel.md) .  A estrutura de [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) é usada com essas funções para especificar um intervalo de caracteres.  Para recuperar informações sobre o conteúdo da seleção atual, você pode usar a função de membro de [GetSelectionType](../Topic/CRichEditCtrl::GetSelectionType.md) .  
+ To determine the current selection in a rich edit control, use the [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) member function. To set the current selection, use the [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) member function. The [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure is used with these functions to specify a range of characters. To retrieve information about the contents of the current selection, you can use the [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) member function.  
   
- Por padrão, um controle de edição mostra rico e oculta o realce de seleção quando vence e perder o foco.  Você pode mostrar ou ocultar o realce de seleção a qualquer momento usando a função de membro de [HideSelection](../Topic/CRichEditCtrl::HideSelection.md) .  Por exemplo, um aplicativo pode fornecer uma caixa de diálogo Pesquisar para localizar o texto em um controle de edição sofisticado.  O aplicativo pode selecionar o texto correspondente sem fechar a caixa de diálogo, nesse caso `HideSelection` deve usar para realçar a seleção.  
+ By default, a rich edit control shows and hides the selection highlight when it gains and loses the focus. You can show or hide the selection highlight at any time by using the [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) member function. For example, an application might provide a Search dialog box to find text in a rich edit control. The application might select matching text without closing the dialog box, in which case it must use `HideSelection` to highlight the selection.  
   
- Para obter o texto selecionado em um controle de edição avançado, use a função de membro de [GetSelText](../Topic/CRichEditCtrl::GetSelText.md) .  O texto é copiado para a matriz de caracteres especificada.  Você deve assegurar que a matriz é grande o suficiente para manter o texto selecionado mais um caractere nulo sendo encerrado.  
+ To get the selected text in a rich edit control, use the [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) member function. The text is copied to the specified character array. You must ensure that the array is large enough to hold the selected text plus a terminating null character.  
   
- Você pode procurar por uma cadeia de caracteres em um controle de edição rico usando a função de membro que [FindText](../Topic/CRichEditCtrl::FindText.md) da estrutura de [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) usada por essa função especifica o intervalo de texto a ser pesquisado e a cadeia de caracteres para pesquisar por.  Você também pode especificar opções como se a pesquisa diferencia maiúsculas de minúsculas.  
+ You can search for a string in a rich edit control by using the [FindText](../mfc/reference/cricheditctrl-class.md#findtext) member function The [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure used with this function specifies the text range to search and the string to search for. You can also specify such options as whether the search is case-sensitive.  
   
-## Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

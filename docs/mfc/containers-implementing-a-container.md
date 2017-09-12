@@ -1,77 +1,95 @@
 ---
-title: "Cont&#234;ineres: implementando um cont&#234;iner | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [OLE], Contêiner OLE"
-  - "Contêineres OLE, implementando"
+title: 'Containers: Implementing a Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], OLE container
+- OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cont&#234;ineres: implementando um cont&#234;iner
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e9b68ee081de334a8ee0b5bfe599876a52c46896
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo resume o procedimento para implementar um contêiner e aponte para outros artigos que fornecem mais explicações detalhadas sobre como implementar contêiner.  Também lista alguns recursos opcionais do que você pode querer implementar e os artigos que descrevem esses recursos.  
+---
+# <a name="containers-implementing-a-container"></a>Containers: Implementing a Container
+This article summarizes the procedure for implementing a container and points you to other articles that provide more detailed explanations about implementing containers. It also lists some optional OLE features you may want to implement and the articles describing these features.  
   
-#### Para preparar a classe CWinApp\- derivada  
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>To prepare your CWinApp-derived class  
   
-1.  Inicializar as bibliotecas do chamando **AfxOleInit** na função de membro de `InitInstance` .  
+1.  Initialize the OLE libraries by calling **AfxOleInit** in the `InitInstance` member function.  
   
-2.  Chame `CDocTemplate::SetContainerInfo` em `InitInstance` para atribuir o menu e os recursos de acelerador usados quando um item é inserido no local ativado.  Para obter mais informações sobre esse tópico, consulte [Ativação](../mfc/activation-cpp.md).  
+2.  Call `CDocTemplate::SetContainerInfo` in `InitInstance` to assign the menu and accelerator resources used when an embedded item is activated in-place. For more information on this topic, see [Activation](../mfc/activation-cpp.md).  
   
- Esses recursos são fornecidos para você automaticamente quando você usa o assistente de aplicativo MFC para criar um aplicativo do contêiner.  Consulte [Criando um programa MFC EXE](../Topic/MFC%20Application%20Wizard.md).  
+ These features are provided for you automatically when you use the MFC Application Wizard to create a container application. See [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
-#### Para preparar a classe de exibição  
+#### <a name="to-prepare-your-view-class"></a>To prepare your view class  
   
-1.  Keep selecionou track dois itens mantendo um ponteiro, ou lista de ponteiros se você oferece suporte a várias seleções, os itens selecionados.  A função de `OnDraw` deve chamar todos os itens com OLE DB.  
+1.  Keep track of selected items by maintaining a pointer, or list of pointers if you support multiple selection, to the selected items. Your `OnDraw` function must draw all OLE items.  
   
-2.  Substituir `IsSelected` para verificar se o item transmitido a ele está selecionado no momento.  
+2.  Override `IsSelected` to check whether the item passed to it is currently selected.  
   
-3.  Implementar um manipulador de mensagens de **OnInsertObject** para exibir a caixa de diálogo de **Inserir objeto** .  
+3.  Implement an **OnInsertObject** message handler to display the **Insert Object** dialog box.  
   
-4.  Implementar um manipulador de mensagens de `OnSetFocus` para transferir o foco de exibição para um item inserido no local OLE ativa.  
+4.  Implement an `OnSetFocus` message handler to transfer focus from the view to an in-place active OLE embedded item.  
   
-5.  Implementar um manipulador de mensagens de `OnSize` para informar um item inserido OLE que precisa alterar o retângulo para refletir em tamanho a alteração da exibição contentor.  
+5.  Implement an `OnSize` message handler to inform an OLE embedded item that it needs to change its rectangle to reflect the change in size of its containing view.  
   
- Como a implementação desses recursos variar radicalmente de um aplicativo à seguinte, o assistente do aplicativo fornece apenas uma implementação básica.  Você provavelmente terá que personalizar essas funções para obter seu aplicativo funcionem corretamente.  Para obter um exemplo, consulte o exemplo de [CONTÊINER](../top/visual-cpp-samples.md) .  
+ Because the implementation of these features varies dramatically from one application to the next, the application wizard provides only a basic implementation. You will likely have to customize these functions to get your application to function properly. For an example of this, see the [CONTAINER](../visual-cpp-samples.md) sample.  
   
-#### Para tratar itens digitados e vinculados  
+#### <a name="to-handle-embedded-and-linked-items"></a>To handle embedded and linked items  
   
-1.  Derivar uma classe de [COleClientItem](../mfc/reference/coleclientitem-class.md).  Os objetos dessa classe representa os itens que foram inseridos em ou vinculados ao documento OLE.  
+1.  Derive a class from [COleClientItem](../mfc/reference/coleclientitem-class.md). Objects of this class represent items that have been embedded in or linked to your OLE document.  
   
-2.  Substituição **OnChange**, `OnChangeItemPosition`, e `OnGetItemPosition`.  Essas funções tratam o tamanho, o posicionamento, e a alteração de itens digitados e vinculados.  
+2.  Override **OnChange**, `OnChangeItemPosition`, and `OnGetItemPosition`. These functions handle sizing, positioning, and modifying embedded and linked items.  
   
- O assistente de aplicativo derivará a classe para você, mas você precisará provavelmente de substituir **OnChange** e outras funções listadas a ele na etapa 2 do procedimento anterior.  As implementações do esqueleto precisam ser personalizadas para a maioria dos aplicativos, porque essas funções são implementadas diferente de um aplicativo a seguir.  Para obter exemplos disso, consulte os exemplos [DRAWCLI](../top/visual-cpp-samples.md) e [CONTÊINER](../top/visual-cpp-samples.md)MFC.  
+ The application wizard will derive the class for you, but you will likely need to override **OnChange** and the other functions listed with it in step 2 in the preceding procedure. The skeleton implementations need to be customized for most applications, because these functions are implemented differently from one application to the next. For examples of this, see the MFC samples [DRAWCLI](../visual-cpp-samples.md) and [CONTAINER](../visual-cpp-samples.md).  
   
- Você deve adicionar um número de itens de menu à estrutura de aplicativo de contêineres para dar suporte a OLE.  Para obter mais informações sobre esses [Menus e recursos: Adições do contêiner](../mfc/menus-and-resources-container-additions.md), consulte.  
+ You must add a number of items to the container application's menu structure to support OLE. For more information on these, see [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md).  
   
- Talvez você também queira oferecer suporte a alguns dos seguintes recursos em seu aplicativo de contêineres:  
+ You may also want to support some of the following features in your container application:  
   
--   Ativação no local ao editar um item inserido.  
+-   In-place activation when editing an embedded item.  
   
-     Para obter mais informações, consulte [Ativação](../mfc/activation-cpp.md).  
+     For more information, see [Activation](../mfc/activation-cpp.md).  
   
--   Criação de itens com OLE DB arrastando e removendo uma seleção de um aplicativo de servidor.  
+-   Creation of OLE items by dragging and dropping a selection from a server application.  
   
-     Para obter mais informações, consulte [Arraste e solte \(OLE\)](../mfc/drag-and-drop-ole.md).  
+     For more information, see [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
--   Links para objetos inseridos ou ao contêiner da combinação\/aplicativos para servidores.  
+-   Links to embedded objects or combination container/server applications.  
   
-     Para obter mais informações, consulte [Contêiner: Recursos avançados](../mfc/containers-advanced-features.md).  
+     For more information, see [Containers: Advanced Features](../mfc/containers-advanced-features.md).  
   
-## Consulte também  
- [Contêineres](../mfc/containers.md)   
- [Contêineres: itens clientes](../mfc/containers-client-items.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)
+
+

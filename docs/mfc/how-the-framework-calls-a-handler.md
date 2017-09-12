@@ -1,44 +1,62 @@
 ---
-title: "Como o Framework chama um identificador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de comandos, chamando manipuladores e código em MFC"
-  - "roteamento de comando, MFC"
-  - "funções de manipulador, Estrutura MFC"
-  - "MFC, roteamento de comando"
+title: How the Framework Calls a Handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- handler functions, MFC framework
+- command handling [MFC], calling handlers and code in MFC
+- command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Como o Framework chama um identificador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 629e9d10934b2bfd39d3ad224cc194bdb250d670
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os tópicos a seguir verifica primeiro como a estrutura, roteia comandos a seguir examina como outras mensagens e notificações de controle são enviadas ao windows:  
+---
+# <a name="how-the-framework-calls-a-handler"></a>How the Framework Calls a Handler
+The following topics first examine how the framework routes commands, then examine how other messages and control notifications are sent to windows:  
   
--   [Mensagem que envia e recebe que](../mfc/message-sending-and-receiving.md)  
+-   [Message sending and receiving](../mfc/message-sending-and-receiving.md)  
   
--   [Como as mensagens de noncommand atingirem os manipuladores](../Topic/How%20Noncommand%20Messages%20Reach%20Their%20Handlers.md)  
+-   [How noncommand messages reach their handlers](../mfc/how-noncommand-messages-reach-their-handlers.md)  
   
--   [Roteamento de comando](../mfc/command-routing.md)  
+-   [Command routing](../mfc/command-routing.md)  
   
--   [Ilustração de roteamento de comando](../mfc/command-routing-illustration.md)  
+-   [Command Routing Illustration](../mfc/command-routing-illustration.md)  
   
--   [O manipulador de OnCmdMsg](../mfc/oncmdmsg-handler.md)  
+-   [The OnCmdMsg Handler](../mfc/oncmdmsg-handler.md)  
   
--   [Substituindo o roteamento de comando padrão](../mfc/overriding-the-standard-command-routing.md)  
+-   [Overriding the Standard Command Routing](../mfc/overriding-the-standard-command-routing.md)  
   
-## Consulte também  
- [Manipulação e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

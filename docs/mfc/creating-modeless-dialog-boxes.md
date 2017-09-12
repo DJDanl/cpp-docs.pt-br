@@ -1,31 +1,49 @@
 ---
-title: "Criando caixas de di&#225;logo sem janela restrita | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caixas de diálogo MFC, criando"
-  - "caixas de diálogo MFC, sem modo"
-  - "caixas de diálogo sem modo, criando"
+title: Creating Modeless Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], modeless
+- modeless dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], creating
 ms.assetid: 70d78c7f-3d40-477b-9f78-0f33c359f88b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Criando caixas de di&#225;logo sem janela restrita
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bce5070444e778e8dbf09827103bc8e2c516adf2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para uma caixa de diálogo modeless, você deve fornecer seu próprio construtor público em sua classe da caixa de diálogo.  Para criar uma caixa de diálogo modeless, chame o construtor público e chame a função de membro de [Crie](../Topic/CDialog::Create.md) do objeto da caixa de diálogo para carregar o recurso da caixa de diálogo.  Você pode chamar **Criar** o durante ou depois da chamada de construtor.  Se o recurso de diálogo tem a propriedade **WS\_VISIBLE**, a caixa de diálogo aparecerá imediatamente.  Caso contrário, você deve chamar a função de membro de [ShowWindow](../Topic/CWnd::ShowWindow.md) .  
+---
+# <a name="creating-modeless-dialog-boxes"></a>Creating Modeless Dialog Boxes
+For a modeless dialog box, you must provide your own public constructor in your dialog class. To create a modeless dialog box, call your public constructor and then call the dialog object's [Create](../mfc/reference/cdialog-class.md#create) member function to load the dialog resource. You can call **Create** either during or after the constructor call. If the dialog resource has the property **WS_VISIBLE**, the dialog box appears immediately. If not, you must call its [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) member function.  
   
-## Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

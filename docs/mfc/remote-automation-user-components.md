@@ -1,32 +1,50 @@
 ---
-title: "Componentes do usu&#225;rio de automa&#231;&#227;o remota | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], Automação"
-  - "Automação Remota [C++], componentes de usuário"
+title: Remote Automation User Components | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLLs [MFC], Automation
+- Remote Automation [MFC], user components
 ms.assetid: 601591cc-a442-440a-988e-baf3284b0d46
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Componentes do usu&#225;rio de automa&#231;&#227;o remota
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29735b6e515f5d6c04cfcc0014a9f69cc1a22cb4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você precisará garantir que cada máquina cliente contém seu programa cliente e todas as dlls de suporte necessária.  Você também precisará garantir que o aplicativo servidor e todas as dlls de suporte exigir presentes no computador do servidor.  Finalmente, você precisará garantir que seu programa de servidor está registrado em cada computador cliente antes que o gerenciador de RAC pode ser executado para configurar a conexão.  Se o programa do está registrando \(como a maioria é\), você só precisa executar o programa do servidor no computador cliente para fazer.  Falhando isso, você poderá ter que executar um arquivo de registro que você fornece, ou editar manualmente o Registro.  
+---
+# <a name="remote-automation-user-components"></a>Remote Automation User Components
+You will need to ensure that each client machine contains your client program and any support DLLs it requires. You will also need to ensure that the server application and any support DLLs it requires are present on the server machine. Finally, you will need to ensure that your server program is registered on each client machine before RAC Manager can be run to configure the connection. If the program is self-registering (as most will be), you need only execute the server program on the client machine to register it. Failing that, you may have to execute a registration file that you provide, or manually edit the registry.  
   
-## Consulte também  
- [Gerenciador de automação \(MFC\)](../mfc/automation-manager-mfc.md)   
- [Gerenciador de conexões de automação remota](../mfc/remote-automation-connection-manager.md)   
- [Instalação de automação remota](../Topic/Remote%20Automation%20Installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

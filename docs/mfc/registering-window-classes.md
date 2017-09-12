@@ -1,47 +1,65 @@
 ---
-title: "Registrando classes de janela | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WndProc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AfxRegisterWndClass"
-  - "classes [C++], registrando classes de janela"
-  - "MFC, janelas"
-  - "registrando classes de janela"
-  - "registro, registrando classes"
-  - "classes de janela, registrando"
-  - "Método WinMain"
-  - "Método WinMain, e registrando classes de janela"
-  - "Método WndProc"
+title: Registering Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WndProc
+dev_langs:
+- C++
+helpviewer_keywords:
+- window classes [MFC], registering
+- registry [MFC], registering classes
+- AfxRegisterWndClass method [MFC]
+- MFC, windows
+- WinMain method [MFC], and registering window classes
+- WndProc method [MFC]
+- classes [MFC], registering window classes
+- WinMain method [MFC]
+- registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Registrando classes de janela
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9687fea9a7f9978b53ec2f7584225ddd534f06d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A janela “classificar” na programação tradicional para o windows definem as características de uma classe “” \(não classe criando c\) que qualquer número do windows pode ser criado.  Esse tipo de classe é um modelo ou um modelo para criar o windows.  
+---
+# <a name="registering-window-classes"></a>Registering Window Classes
+Window "classes" in traditional programming for Windows define the characteristics of a "class" (not a C++ class) from which any number of windows can be created. This kind of class is a template or model for creating windows.  
   
-## Registro da classe de janela em programas tradicionais para o windows  
- Em um programa tradicional no windows, sem MFC, você processa todas as mensagens em uma janela no procedimento “de janela” ou “em**WndProc**”. **WndProc** é associado a uma janela de “por meio de um processo de registro da classe janela”.  A janela principal é registrada na função de `WinMain` , mas outras classes do windows podem ser registradas em qualquer lugar no aplicativo.  O registro depende de uma estrutura que contém um ponteiro para a função de **WndProc** junto com as especificações do cursor, escova em segundo plano, e assim por diante.  A estrutura é passado como um parâmetro, junto com o nome da cadeia de caracteres da classe, em uma chamada anterior à função de **RegisterClass** .  Portanto, uma classe do registro pode ser compartilhada por várias janelas.  
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Window Class Registration in Traditional Programs for Windows  
+ In a traditional program for Windows, without MFC, you process all messages to a window in its "window procedure" or "**WndProc**." A **WndProc** is associated with a window by means of a "window class registration" process. The main window is registered in the `WinMain` function, but other classes of windows can be registered anywhere in the application. Registration depends on a structure that contains a pointer to the **WndProc** function together with specifications for the cursor, background brush, and so forth. The structure is passed as a parameter, along with the string name of the class, in a prior call to the **RegisterClass** function. Thus, a registration class can be shared by multiple windows.  
   
-## Registro da classe de janela em programas MFC  
- Em contraste, a maior parte da atividade de registro da classe da janela é estabelecida automaticamente em um programa\-quadro MFC.  Se você estiver usando o MFC, você normalmente a classe deriva da janela c criando de uma classe existente na biblioteca que usa a sintaxe normal C\+\+ para herança da classe.  A estrutura ainda usa “classes tradicionais,” registro e fornece vários padrões as registrado para você, quando necessário.  Você pode registrar classes adicionais do registro chamando [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) função global e depois passando a classe registrada à função de membro de **Criar** de `CWnd`.  Como descrito aqui, a “classe tradicional registro” no windows não deve ser ofuscada com a classe c. criando  
+## <a name="window-class-registration-in-mfc-programs"></a>Window Class Registration in MFC Programs  
+ In contrast, most window class registration activity is done automatically in an MFC framework program. If you are using MFC, you typically derive a C++ window class from an existing library class using the normal C++ syntax for class inheritance. The framework still uses traditional "registration classes," and it provides several standard ones, registered for you when needed. You can register additional registration classes by calling the [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) global function and then passing the registered class to the **Create** member function of `CWnd`. As described here, the traditional "registration class" in Windows is not to be confused with a C++ class.  
   
- Para obter mais informações, consulte [Observação 1 técnica](../mfc/tn001-window-class-registration.md).  
+ For more information, see [Technical Note 1](../mfc/tn001-window-class-registration.md).  
   
-## Consulte também  
- [Criando janelas](../Topic/Creating%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating Windows](../mfc/creating-windows.md)
+
+

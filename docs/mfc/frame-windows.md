@@ -1,94 +1,112 @@
 ---
-title: "Janelas com moldura | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CFrameWnd, janelas com moldura"
-  - "janelas de documento com moldura"
-  - "janelas com moldura [C++]"
-  - "janelas com moldura [C++], sobre janelas com moldura"
-  - "MDI [C++], janelas com moldura"
-  - "MFC [C++], janelas com moldura"
-  - "single document interface (SDI)"
-  - "single document interface (SDI), janelas com moldura"
-  - "janelas separadoras, e janelas com moldura"
-  - "exibições [C++], e janelas com moldura"
-  - "classes de janela [C++], moldura"
-  - "janelas [C++], MDI"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows [MFC]
+- windows [MFC], MDI
+- window classes [MFC], frame
+- single document interface (SDI) [MFC]
+- single document interface (SDI) [MFC], frame windows
+- views [MFC], and frame windows
+- CFrameWnd class [MFC], frame windows
+- frame windows [MFC]
+- frame windows [MFC], about frame widows
+- MFC, frame windows
+- MDI [MFC], frame windows
+- splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Janelas com moldura
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e53a48c981fa6e470c33e54ef24bbb9bf500f09
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Quando um aplicativo executa no windows, o usuário interage com os documentos exibidos no windows do quadro.  Uma janela do quadro do documento tem dois componentes principais: o quadro e o conteúdo que enquadram.  Uma janela do quadro de documento pode ser uma janela do quadro de [interface de um único documento](../mfc/sdi-and-mdi.md) \(SDI\) ou uma janela filho de [ambiente MDI](../mfc/sdi-and-mdi.md) \(MDI\).  O windows gerencia a maioria da interação do usuário com a janela do quadro: mover e redimensionar a janela, fechar a, e minimizar\-la e maximizar.  Você gerencia o conteúdo dentro do quadro.  
+---
+# <a name="frame-windows"></a>Frame Windows
+When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
   
-## O windows e exibições do quadro  
- As janelas do quadro do da estrutura de MFC para conter exibições.  Os dois componentes — quadro e conteúdo — são representados e gerenciados por duas classes diferentes em MFC.  Uma classe de quadro\- janela gerencia o quadro, e uma classe de exibição gerencia o conteúdo.  A janela de exibição é um filho da janela do quadro.  Desenhando interação e outra do usuário com o documento ocorre na área de cliente da exibição, não a área de cliente da janela do quadro.  A janela do quadro fornece um quadro visível em torno de uma exibição, termina com uma barra de legenda e controles como um menu de controle, botões da janela de padrão para minimizar e maximizar a janela, e controles para redimensionar a janela.  Os “conteúdo” consistem na área de cliente da janela do, que é completamente ocupada por uma janela filho — a exibição.  A figura a seguir mostra a relação entre uma janela do quadro e uma exibição.  
+## <a name="frame-windows-and-views"></a>Frame Windows and Views  
+ The MFC framework uses frame windows to contain views. The two components — frame and contents — are represented and managed by two different classes in MFC. A frame-window class manages the frame, and a view class manages the contents. The view window is a child of the frame window. Drawing and other user interaction with the document take place in the view's client area, not the frame window's client area. The frame window provides a visible frame around a view, complete with a caption bar and standard window controls such as a control menu, buttons to minimize and maximize the window, and controls for resizing the window. The "contents" consist of the window's client area, which is fully occupied by a child window — the view. The following figure shows the relationship between a frame window and a view.  
   
- ![Modo de exibição de janela de quadro](../mfc/media/vc37fx1.png "vc37FX1")  
-Janela e exibição do quadro  
+ ![Frame window view](../mfc/media/vc37fx1.gif "vc37fx1")  
+Frame Window and View  
   
-## Janelas de quadro e janelas do separador  
- Outra organização comum é que a janela do quadro frame várias exibições, normalmente usando [janela do separador](../mfc/multiple-document-types-views-and-frame-windows.md).  Em uma janela do divisor, a área de cliente da janela do quadro é ocupada por uma janela do divisor, por sua vez que tenha várias janelas filho, os painéis, que são chamadas exibições.  
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows and Splitter Windows  
+ Another common arrangement is for the frame window to frame multiple views, usually using a [splitter window](../mfc/multiple-document-types-views-and-frame-windows.md). In a splitter window, the frame window's client area is occupied by a splitter window, which in turn has multiple child windows, called panes, which are views.  
   
-### Que você deseja saber mais?  
- **Tópicos gerais da janela do quadro**  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ **General Frame Window Topics**  
   
--   [Objetos da janela](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Classes da janela do quadro](../mfc/frame-window-classes.md)  
+-   [Frame window classes](../mfc/frame-window-classes.md)  
   
--   [As classes de Quadro\- janela criadas pelo assistente de aplicativo](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [The Frame-Window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Estilos da janela do quadro](../Topic/Frame-Window%20Styles%20\(C++\).md)  
+-   [Frame window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Que fazem o windows do quadro](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
- **Tópicos em usar as janelas do quadro**  
+ **Topics on Using Frame Windows**  
   
--   [Usando o windows do quadro](../Topic/Using%20Frame%20Windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Criando o windows do quadro do documento](../Topic/Creating%20Document%20Frame%20Windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Janelas de destruição do quadro](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [Gerenciando janelas filho MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Gerenciando a exibição atual](../mfc/managing-the-current-view.md) em uma janela do tableau que contém mais de uma exibição  
+-   [Managing the current view](../mfc/managing-the-current-view.md) in a frame window that contains more than one view  
   
--   [Gerenciando menus, barras de controle, e aceleradores \(outros objetos que compartilham o espaço da janela do quadro\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (other objects that share the frame window's space)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **Tópicos sobre recursos especiais da janela do quadro**  
+ **Topics on Special Frame Window Capabilities**  
   
--   [Arrastando e removendo arquivos](../Topic/Dragging%20and%20Dropping%20Files%20in%20a%20Frame%20Window.md) do Explorador de Arquivos ou o gerenciador de arquivos em uma janela do quadro  
+-   [Dragging and dropping files](../mfc/dragging-and-dropping-files-in-a-frame-window.md) from File Explorer or File Manager into a frame window  
   
--   [Respondendo a troca dinâmicas de dados \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [Estados de Semimodal: Ajuda contextual do windows \(que orquestra outras ações da janela\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: Context-sensitive Windows Help (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
--   [Estados de Semimodal: impressão e visualização de impressão \(que orquestram outras ações da janela\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: printing and print preview (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
- **Tópicos em outros tipos do windows**  
+ **Topics on Other Kinds of Windows**  
   
--   [Usando exibições](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [Caixas de diálogo](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [Controles](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## Consulte também  
- [Janelas](../mfc/windows.md)
+## <a name="see-also"></a>See Also  
+ [Windows](../mfc/windows.md)
+
+

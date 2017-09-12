@@ -1,57 +1,75 @@
 ---
-title: "&#193;rea de Transfer&#234;ncia: usando o mecanismo &#193;rea de Transfer&#234;ncia OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [OLE], Área de Transferência"
-  - "Área de Transferência [C++], Formatos OLE"
-  - "formatos [C++], Área de Transferência para OLE"
-  - "Área de Transferência OLE"
-  - "Área de Transferência OLE, formatos"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# &#193;rea de Transfer&#234;ncia: usando o mecanismo &#193;rea de Transfer&#234;ncia OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Formatos padrão de OLE e alguns formatos OLE\- específicos para transferir dados através da área de transferência.  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- Quando você recortam ou os dados de cópia de um aplicativo, os dados são armazenados na área de transferência a ser usada posteriormente em operações de pasta.  Esses dados estão em vários formatos.  Quando um usuário escolhe para colar dados da área de transferência, o aplicativo pode escolher quais esses formatos a usar.  O aplicativo deve ser gravado para escolher o formato que fornece a maioria das informações, a menos que o usuário solicitar especificamente um determinado formato, usando o especiais da pasta.  Antes de continuar, talvez você queira ler os tópicos de [Objetos de dados e fontes de dados \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) .  Descreve os fundamentos de como as transferências de dados funciona, e de como os implementar em seus aplicativos.  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- O windows definem vários formatos padrão que podem ser usados transferindo dados através da área de transferência.  Esses incluem metarquivos, texto, bitmaps, e outros.  OLE define um número de OLE\- formatos específicos, também.  Para aplicativos que precisam mais detalhes do que determinado por esses formatos padrão, é uma boa ideia registre seus próprios formatos personalizados da área de transferência.  Use a função [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) da API do Win32 para fazer isso.  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- Por exemplo, Microsoft Excel registra um formato personalizado para planilhas.  Esse formato leva muito mais informações do que, por exemplo, um bitmap faz.  Quando esses dados forem colados em um aplicativo que dê suporte ao formato da planilha, todas as fórmulas e valores da planilha são mantidos e podem ser atualizados se necessário.  O Microsoft Excel também coloca dados na área de transferência em formatos de modo que possa ser colada como um item OLE.  Qualquer contêiner OLE do documento pode colar essas informações como um item inserido.  Este item inserido pode ser alterado usando o Microsoft Excel.  A área de transferência também contém um bitmap simples da imagem do intervalo selecionado na planilha.  Isso também pode ser colados em contêineres com OLE DB do documento ou em editores de bitmap, como paint.  No caso de um bitmap, porém, não há como manipular os dados como uma planilha.  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- Para recuperar a quantidade de informações máximo da área de transferência, os aplicativos devem verificar esses formatos personalizados antes de colar dados da área de transferência.  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- Por exemplo, para habilitar o comando de divisão, você pode gravar em um manipulador algo como:  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!CODE [NVC_MFCListView#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#3)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copiando e colando dados](../Topic/Clipboard:%20Copying%20and%20Pasting%20Data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Adicionar outros formatos](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [Usando a área de transferência do windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [Objetos de dados OLE e fontes de dados e transferência de dados\)](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## Consulte também  
- [Área de Transferência](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

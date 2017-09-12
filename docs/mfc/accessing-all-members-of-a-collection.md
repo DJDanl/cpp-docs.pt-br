@@ -1,87 +1,107 @@
 ---
-title: "Acessando todos os membros de uma cole&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, coleções"
-  - "enumerações [MFC]"
-  - "enumerando coleções"
-  - "coleções, acessando"
-  - "classes de coleção, acessando membros"
-  - "matrizes [C++], iteração"
-  - "iteração, coleções"
-  - "acesso de membro, coleções"
-  - "iterações de coleções de lista"
-  - "Classes de coleção MFC, acessando membros"
-  - "loop por meio de coleções"
-  - "estruturas de loop, o loop pelas coleções"
+title: Accessing All Members of a Collection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- enumerations [MFC]
+- enumerating collections [MFC]
+- collections [MFC], accessing
+- collection classes [MFC]
+- accessing members"
+- arrays [MFC], iterating
+- iteration [MFC], collections
+- member access [MFC], collections
+- list collection iteration [MFC]s
+- MFC collection classes [MFC], accessing members
+- collections [MFC], looping through
+- loop structures [MFC], looping through collections
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Acessando todos os membros de uma cole&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4fd4aa1189b62b6689795ef1ba4ac2585cfcb059
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As classes de coleção MFC matriz — ambos baseado em modelo e não — usar índices para acessar seus elementos. As classes de coleção MFC lista e mapa — ambos baseado em modelo e não — use um indicador do tipo **posição** para descrever uma posição especificada dentro da coleção. Para acessar um ou mais membros dessas coleções, você primeiro inicializar o indicador de posição repetidamente passa nessa posição na coleção e pede para retornar o próximo elemento. A coleção não é responsável por manter informações de estado sobre o progresso da iteração. Essa informação é mantida no indicador de posição. Mas, dada uma posição específica, a coleção é responsável por retornar o próximo elemento.  
+---
+# <a name="accessing-all-members-of-a-collection"></a>Accessing All Members of a Collection
+The MFC array collection classes — both template-based and not — use indexes to access their elements. The MFC list and map collection classes — both template-based and not — use an indicator of type **POSITION** to describe a given position within the collection. To access one or more members of these collections, you first initialize the position indicator and then repeatedly pass that position to the collection and ask it to return the next element. The collection is not responsible for maintaining state information about the progress of the iteration. That information is kept in the position indicator. But, given a particular position, the collection is responsible for returning the next element.  
   
- Os procedimentos a seguir mostram como iterar sobre os três tipos principais de coleções fornecidos com o MFC:  
+ The following procedures show how to iterate over the three main types of collections provided with MFC:  
   
--   [Percorrer uma matriz](#_core_to_iterate_an_array)  
+-   [Iterating an array](#_core_to_iterate_an_array)  
   
--   [Iteração de uma lista](#_core_to_iterate_a_list)  
+-   [Iterating a list](#_core_to_iterate_a_list)  
   
--   [Iterando um mapa](#_core_to_iterate_a_map)  
+-   [Iterating a map](#_core_to_iterate_a_map)  
   
-### Para repetir uma matriz  
+### <a name="_core_to_iterate_an_array"></a> To iterate an array  
   
-1.  Use números seqüenciais de índice com o `GetAt` função de membro:  
+1.  Use sequential index numbers with the `GetAt` member function:  
   
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_1.cpp)]  
+     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]  
   
-     Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, um a nontemplate classes predefinidas.`GetAt` Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo de armazenamento.  
+     This example uses a typed pointer array that contains pointers to `CPerson` objects. The array is derived from class `CObArray`, one of the nontemplate predefined classes. `GetAt` returns a pointer to a `CPerson` object. For typed pointer collection classes — arrays or lists — the first parameter specifies the base class; the second parameter specifies the type to store.  
   
-     O `CTypedPtrArray` também classe sobrecargas de **\[ \]** operador para que você possa usar a sintaxe de subscrito de matriz comum de acessar elementos de uma matriz.  Uma alternativa para a instrução no corpo do `for` loop acima é  
+     The `CTypedPtrArray` class also overloads the **[ ]** operator so that you can use the customary array-subscript syntax to access elements of an array. An alternative to the statement in the body of the `for` loop above is  
   
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_2.cpp)]  
+     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   
-     Este operador contiverem **const** e não\-**const** versões. O **const** versão, que é invocado para **const** matrizes, podem aparecer apenas no lado direito de uma instrução de atribuição.  
+     This operator exists in both **const** and non-**const** versions. The **const** version, which is invoked for **const** arrays, can appear only on the right side of an assignment statement.  
   
-### Para repetir uma lista  
+### <a name="_core_to_iterate_a_list"></a> To iterate a list  
   
-1.  Use as funções de membro `GetHeadPosition` e `GetNext` para examinar a lista:  
+1.  Use the member functions `GetHeadPosition` and `GetNext` to work your way through the list:  
   
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_3.cpp)]  
+     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]  
   
-     Este exemplo usa uma lista de ponteiro tipado para contêm ponteiros para `CPerson` objetos. A declaração de lista assemelha\-se à matriz no procedimento de [para iterar uma matriz](#_core_to_iterate_an_array) mas é derivada da classe `CObList`.`GetNext` Retorna um ponteiro para um `CPerson` objeto.  
+     This example uses a typed pointer list to contain pointers to `CPerson` objects. The list declaration resembles the one for the array in the procedure [To iterate an array](#_core_to_iterate_an_array) but is derived from class `CObList`. `GetNext` returns a pointer to a `CPerson` object.  
   
-### Para iterar um mapa  
+### <a name="_core_to_iterate_a_map"></a> To iterate a map  
   
-1.  Use `GetStartPosition` para ir para o início do mapa e `GetNextAssoc` repetidamente obter a próxima chave e valor do mapa, conforme mostrado no exemplo a seguir:  
+1.  Use `GetStartPosition` to get to the beginning of the map and `GetNextAssoc` to repeatedly get the next key and value from the map, as shown by the following example:  
   
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_4.cpp)]  
+     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]  
   
-     Este exemplo usa um modelo simples de mapa \(em vez de uma coleção do tipo ponteiro\) que usa `CString` chaves e armazena ponteiros para `CPerson` objetos. Quando você usa funções de acesso como `GetNextAssoc`, a classe fornece ponteiros para `CPerson` objetos. Se você usar uma das coleções de mapa fora do modelo em vez disso, você deve converter retornado `CObject` ponteiro para um ponteiro para um `CPerson`.  
+     This example uses a simple map template (rather than a typed pointer collection) that uses `CString` keys and stores pointers to `CPerson` objects. When you use access functions such as `GetNextAssoc`, the class provides pointers to `CPerson` objects. If you use one of the nontemplate map collections instead, you must cast the returned `CObject` pointer to a pointer to a `CPerson`.  
   
     > [!NOTE]
-    >  Para mapas de fora do modelo, o compilador exige uma referência para um `CObject` ponteiro no último parâmetro para `GetNextAssoc`. Na entrada, você deve converter os ponteiros para tipo, conforme mostrado no exemplo a seguir.  
+    >  For nontemplate maps, the compiler requires a reference to a `CObject` pointer in the last parameter to `GetNextAssoc`. On input, you must cast your pointers to that type, as shown in the next example.  
   
-     A solução de modelo é mais simples e ajuda a fornecer melhor segurança de tipos. O código fora do modelo é mais complicado, como você pode ver aqui:  
+     The template solution is simpler and helps provide better type safety. The nontemplate code is more complicated, as you can see here:  
   
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/CPP/accessing-all-members-of-a-collection_5.cpp)]  
+     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]  
   
- Para obter mais informações, consulte [Excluir todos os objetos em uma coleção CObject](../Topic/Deleting%20All%20Objects%20in%20a%20CObject%20Collection.md).  
+ For more information, see [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md).  
   
-## Consulte também  
- [Coleções](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

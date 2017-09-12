@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCMenuBar | Documentos do Microsoft
+title: CMFCMenuBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -64,7 +64,56 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCMenuBar class
+- CMFCMenuBar [MFC], AdjustLocations
+- CMFCMenuBar [MFC], AllowChangeTextLabels
+- CMFCMenuBar [MFC], AllowShowOnPaneMenu
+- CMFCMenuBar [MFC], CalcFixedLayout
+- CMFCMenuBar [MFC], CalcLayout
+- CMFCMenuBar [MFC], CalcMaxButtonHeight
+- CMFCMenuBar [MFC], CanBeClosed
+- CMFCMenuBar [MFC], CanBeRestored
+- CMFCMenuBar [MFC], Create
+- CMFCMenuBar [MFC], CreateEx
+- CMFCMenuBar [MFC], CreateFromMenu
+- CMFCMenuBar [MFC], EnableHelpCombobox
+- CMFCMenuBar [MFC], EnableMenuShadows
+- CMFCMenuBar [MFC], GetAvailableExpandSize
+- CMFCMenuBar [MFC], GetColumnWidth
+- CMFCMenuBar [MFC], GetDefaultMenu
+- CMFCMenuBar [MFC], GetDefaultMenuResId
+- CMFCMenuBar [MFC], GetFloatPopupDirection
+- CMFCMenuBar [MFC], GetForceDownArrows
+- CMFCMenuBar [MFC], GetHelpCombobox
+- CMFCMenuBar [MFC], GetHMenu
+- CMFCMenuBar [MFC], GetMenuFont
+- CMFCMenuBar [MFC], GetMenuItem
+- CMFCMenuBar [MFC], GetRowHeight
+- CMFCMenuBar [MFC], GetSystemButton
+- CMFCMenuBar [MFC], GetSystemButtonsCount
+- CMFCMenuBar [MFC], GetSystemMenu
+- CMFCMenuBar [MFC], HighlightDisabledItems
+- CMFCMenuBar [MFC], IsButtonExtraSizeAvailable
+- CMFCMenuBar [MFC], IsHighlightDisabledItems
+- CMFCMenuBar [MFC], IsMenuShadows
+- CMFCMenuBar [MFC], IsRecentlyUsedMenus
+- CMFCMenuBar [MFC], IsShowAllCommands
+- CMFCMenuBar [MFC], IsShowAllCommandsDelay
+- CMFCMenuBar [MFC], LoadState
+- CMFCMenuBar [MFC], OnChangeHot
+- CMFCMenuBar [MFC], OnDefaultMenuLoaded
+- CMFCMenuBar [MFC], OnSendCommand
+- CMFCMenuBar [MFC], OnSetDefaultButtonText
+- CMFCMenuBar [MFC], OnToolHitTest
+- CMFCMenuBar [MFC], PreTranslateMessage
+- CMFCMenuBar [MFC], RestoreOriginalstate
+- CMFCMenuBar [MFC], SaveState
+- CMFCMenuBar [MFC], SetDefaultMenuResId
+- CMFCMenuBar [MFC], SetForceDownArrows
+- CMFCMenuBar [MFC], SetMaximizeMode
+- CMFCMenuBar [MFC], SetMenuButtonRTC
+- CMFCMenuBar [MFC], SetMenuFont
+- CMFCMenuBar [MFC], SetRecentlyUsedMenus
+- CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
 caps.latest.revision: 36
 author: mikeblome
@@ -84,94 +133,94 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ab2896f5ebab0df894f70e5ddb85bae3a5e1d5af
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 759f583ce439a116e13855a034cc27bc1dec5a58
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
-Uma barra de menus que implementa o encaixe.  
+# <a name="cmfcmenubar-class"></a>CMFCMenuBar Class
+A menu bar that implements docking.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCMenuBar : public CMFCToolbar  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Substitui `CMFCToolBar::AdjustLocations`.)|  
-|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Especifica se os rótulos de texto podem ser mostrados em imagens dos botões de barra de ferramentas. (Substitui [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
-|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Substitui `CPane::AllowShowOnPaneMenu`.)|  
-|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Calcula o tamanho horizontal da barra de ferramentas. (Substitui [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|  
-|[CMFCMenuBar::CalcLayout](#calclayout)|(Substitui `CMFCToolBar::CalcLayout`.)|  
-|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Calcula a altura máxima dos botões na barra de ferramentas. (Substitui [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|  
-|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Especifica se o usuário pode fechar a barra de ferramentas. (Substitui [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|  
-|[CMFCMenuBar::CanBeRestored](#canberestored)|Determina se o sistema pode restaurar uma barra de ferramentas para seu estado original após a personalização. (Substitui [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
-|[CMFCMenuBar::Create](#create)|Cria um controle de menu e anexa a um `CMFCMenuBar` objeto.|  
-|[CMFCMenuBar::CreateEx](#createex)|Cria um `CMFCMenuBar` objeto com opções de estilo adicionais.|  
-|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Inicializa uma `CMFCMenuBar` objeto. Aceita um `HMENU` parâmetro que atua como um modelo para um preenchida `CMFCMenuBar`.|  
-|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Permite que um **ajuda** caixa de combinação que está localizada no lado direito da barra de menus.|  
-|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Especifica se deve exibir sombras para menus pop-up.|  
-|[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Substitui [CPane::GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|  
-|[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|Retorna a largura da barra de ferramentas. (Substitui [CMFCToolBar::GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|  
-|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|Retorna um identificador para o menu original no arquivo de recurso.|  
-|[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|Retorna o identificador de recurso do menu original no arquivo de recurso.|  
+|[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Overrides `CMFCToolBar::AdjustLocations`.)|  
+|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Specifies whether text labels can be shown under images on the toolbar buttons. (Overrides [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
+|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Overrides `CPane::AllowShowOnPaneMenu`.)|  
+|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Calculates the horizontal size of the toolbar. (Overrides [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|  
+|[CMFCMenuBar::CalcLayout](#calclayout)|(Overrides `CMFCToolBar::CalcLayout`.)|  
+|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Calculates the maximum height of buttons in the toolbar. (Overrides [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|  
+|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Specifies whether a user can close the toolbar. (Overrides [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|  
+|[CMFCMenuBar::CanBeRestored](#canberestored)|Determines whether the system can restore a toolbar to its original state after customization. (Overrides [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
+|[CMFCMenuBar::Create](#create)|Creates a menu control and attaches it to a `CMFCMenuBar` object.|  
+|[CMFCMenuBar::CreateEx](#createex)|Creates a `CMFCMenuBar` object with additional style options.|  
+|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Initializes a `CMFCMenuBar` object. Accepts a `HMENU` parameter that acts as a template for a populated `CMFCMenuBar`.|  
+|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Enables a **Help** combo box that is located on the right side of the menu bar.|  
+|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Specifies whether to display shadows for pop-up menus.|  
+|[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Overrides [CPane::GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|  
+|[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|Returns the width of the toolbar buttons. (Overrides [CMFCToolBar::GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|  
+|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|Returns a handle to the original menu in the resource file.|  
+|[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|Returns the resource identifier for the original menu in the resource file.|  
 |[CMFCMenuBar::GetFloatPopupDirection](#getfloatpopupdirection)||  
 |[CMFCMenuBar::GetForceDownArrows](#getforcedownarrows)||  
-|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Retorna um ponteiro para o **ajuda** caixa de combinação.|  
-|[CMFCMenuBar::GetHMenu](#gethmenu)|Retorna o identificador para o menu que é anexado ao `CMFCMenuBar` objeto.|  
-|[CMFCMenuBar::GetMenuFont](#getmenufont)|Retorna a fonte atual global para objetos de menu.|  
-|[CMFCMenuBar::GetMenuItem](#getmenuitem)|Retorna o botão da barra de ferramentas associado com o índice do item fornecido.|  
-|[CMFCMenuBar::GetRowHeight](#getrowheight)|Retorna a altura dos botões da barra de ferramentas. (Substitui [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Returns a pointer to the **Help** combo box.|  
+|[CMFCMenuBar::GetHMenu](#gethmenu)|Returns the handle to the menu that is attached to the `CMFCMenuBar` object.|  
+|[CMFCMenuBar::GetMenuFont](#getmenufont)|Returns the current global font for menu objects.|  
+|[CMFCMenuBar::GetMenuItem](#getmenuitem)|Returns the toolbar button associated with the provided item index.|  
+|[CMFCMenuBar::GetRowHeight](#getrowheight)|Returns the height of toolbar buttons. (Overrides [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
 |[CMFCMenuBar::GetSystemButton](#getsystembutton)||  
 |[CMFCMenuBar::GetSystemButtonsCount](#getsystembuttonscount)||  
 |[CMFCMenuBar::GetSystemMenu](#getsystemmenu)||  
-|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|Indica se os itens de menu desativados são realçadas.|  
-|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se a barra de ferramentas pode exibir botões que tem estendido bordas. (Substitui [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
-|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Indica se os itens desabilitados são realçados.|  
-|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Indica se as sombras são desenhadas para menus pop-up.|  
-|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Indica se os comandos de menu usados recentemente são exibidos na barra de menus.|  
-|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Indica se os menus pop-up exibem todos os comandos.|  
-|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Indica se os menus exibem todos os comandos após um pequeno atraso.|  
-|[CMFCMenuBar::LoadState](#loadstate)|Carrega o estado do `CMFCMenuBar` objeto do registro.|  
-|[CMFCMenuBar::OnChangeHot](#onchangehot)|Chamado pela estrutura quando um usuário seleciona um botão na barra de ferramentas. (Substitui [CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|  
-|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Chamado pela estrutura quando uma janela de quadro carrega menu padrão do arquivo de recurso.|  
-|[CMFCMenuBar::OnSendCommand](#onsendcommand)|(Substitui `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Chamado pela estrutura quando um menu está em modo de personalização e o usuário altera o texto de um item de menu.|  
-|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Substitui `CMFCToolBar::OnToolHitTest`.)|  
-|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(Substitui `CMFCToolBar::PreTranslateMessage`.)|  
-|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Chamado pela estrutura quando um menu está em modo de personalização e o usuário seleciona **redefinir** para uma barra de menus.|  
-|[CMFCMenuBar::SaveState](#savestate)|Salva o estado do `CMFCMenuBar` objeto no registro.|  
-|[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Define o menu original no arquivo de recurso.|  
+|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|Indicates whether disabled menu items are highlighted.|  
+|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determines whether the toolbar can display buttons that have extended borders. (Overrides [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Indicates whether disabled items are highlighted.|  
+|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Indicates whether shadows are drawn for pop-up menus.|  
+|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Indicates whether recently used menu commands are displayed on the menu bar.|  
+|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Indicates whether pop-up menus display all commands.|  
+|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Indicates whether menus display all the commands after a short delay.|  
+|[CMFCMenuBar::LoadState](#loadstate)|Loads the state of the `CMFCMenuBar` object from the registry.|  
+|[CMFCMenuBar::OnChangeHot](#onchangehot)|Called by the framework when a user selects a button on the toolbar. (Overrides [CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|  
+|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Called by the framework when a frame window loads the default menu from the resource file.|  
+|[CMFCMenuBar::OnSendCommand](#onsendcommand)|(Overrides `CMFCToolBar::OnSendCommand`.)|  
+|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Called by the framework when a menu is in customization mode and the user changes a menu item's text.|  
+|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Overrides `CMFCToolBar::OnToolHitTest`.)|  
+|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(Overrides `CMFCToolBar::PreTranslateMessage`.)|  
+|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Called by the framework when a menu is in customization mode and the user selects **Reset** for a menu bar.|  
+|[CMFCMenuBar::SaveState](#savestate)|Saves the state of the `CMFCMenuBar` object to the registry.|  
+|[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Sets the original menu in the resource file.|  
 |[CMFCMenuBar::SetForceDownArrows](#setforcedownarrows)||  
-|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|Chamado pela estrutura quando uma janela filho MDI muda seu modo de exibição. Se a janela filho MDI é maximizada recentemente ou não é maximizada, esse método atualiza a barra de menus.|  
-|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|Define as informações de classe de tempo de execução são geradas quando o usuário cria dinamicamente os botões de menu.|  
-|[CMFCMenuBar::SetMenuFont](#setmenufont)|Define a fonte para todos os menus do aplicativo.|  
-|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|Especifica se uma barra de menus exibe os comandos de menu usados recentemente.|  
-|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Especifica se a barra de menu mostra todos os comandos.|  
+|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|Called by the framework when an MDI child window changes its display mode. If the MDI child window is newly maximized or is no longer maximized, this method updates the menu bar.|  
+|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|Sets the runtime class information that is generated when the user dynamically creates menu buttons.|  
+|[CMFCMenuBar::SetMenuFont](#setmenufont)|Sets the font for all menus in the application.|  
+|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|Specifies whether a menu bar displays recently used menu commands.|  
+|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Specifies whether the menu bar shows all commands.|  
   
-## <a name="remarks"></a>Comentários  
- O `CMFCMenuBar` classe é uma barra de menus que implementa a funcionalidade de encaixe. Ele é semelhante a uma barra de ferramentas, embora ele não pode ser fechado - ele sempre será exibido.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCMenuBar` class is a menu bar that implements docking functionality. It resembles a toolbar, although it cannot be closed - it is always displayed.  
   
- `CMFCMenuBar`oferece suporte à opção de exibir os objetos de item de menu usados recentemente. Se essa opção estiver habilitada, o `CMFCMenuBar` exibe somente um subconjunto de comandos disponíveis na primeira exibição. Depois disso, os comandos usados recentemente são exibidos junto com o original subconjunto de comandos. Além disso, o usuário sempre pode expandir o menu para exibir todos os comandos disponíveis. Portanto, cada comando disponível é configurado para exibir constantemente, ou para exibir somente se ele tiver sido selecionado recentemente.  
+ `CMFCMenuBar` supports the option of displaying recently used menu item objects. If this option is enabled, the `CMFCMenuBar` displays only a subset of the available commands on first viewing. Thereafter, recently used commands are displayed together with the original subset of commands. In addition, the user can always expand the menu to view all available commands. Thus, each available command is configured to display constantly, or to display only if it has been recently selected.  
   
- Para usar um `CMFCMenuBar` de objeto, incorporá-lo no objeto de quadro de janela principal. Ao processar o `WM_CREATE` a mensagem, chame `CMFCMenuBar::Create` ou `CMFCMenuBar::CreateEx`. Independentemente de qual criar a função é usar, passe um ponteiro para a janela do quadro principal. Habilitar o encaixe chamando [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Encaixar esse menu chamando [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane).  
+ To use a `CMFCMenuBar` object, embed it in the main window frame object. When processing the `WM_CREATE` message, call `CMFCMenuBar::Create` or `CMFCMenuBar::CreateEx`. Regardless of which create function you use, pass in a pointer to the main frame window. Then enable docking by calling [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dock this menu by calling [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane).  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar vários métodos no `CMFCMenuBar` classe. O exemplo mostra como definir o estilo do painel, habilitar o botão Personalizar, habilitar uma caixa de Ajuda, sombras para menus pop-up e atualizar a barra de menus. Este trecho de código é parte do [exemplo IE demonstração](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCMenuBar` class. The example shows how to set the style of the pane, enable the customize button, enable a Help box, enable shadows for pop-up menus, and update the menu bar. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo n º&1;](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo n º&3;](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -188,42 +237,42 @@ class CMFCMenuBar : public CMFCToolbar
   
  `CMFCMenuBar`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxmenubar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmenubar.h  
   
-##  <a name="adjustlocations"></a>CMFCMenuBar::AdjustLocations  
- Ajusta as posições dos itens de menu na barra de menus.  
+##  <a name="adjustlocations"></a>  CMFCMenuBar::AdjustLocations  
+ Adjusts the positions of the menu items on the menu bar.  
   
 ```  
 virtual void AdjustLocations();
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="allowchangetextlabels"></a>CMFCMenuBar::AllowChangeTextLabels  
- Determina se os rótulos de texto são permitidos em imagens na barra de menus.  
+##  <a name="allowchangetextlabels"></a>  CMFCMenuBar::AllowChangeTextLabels  
+ Determines whether text labels are allowed under images in the menu bar.  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna `TRUE` se o usuário pode optar por mostrar rótulos de texto em imagens.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the user can choose to show text labels under images.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="allowshowonpanemenu"></a>CMFCMenuBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu  
 
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout  
 
   
 ```  
@@ -232,15 +281,15 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
  [in] `bHorz`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calclayout"></a>CMFCMenuBar::CalcLayout  
+##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout  
 
   
 ```  
@@ -249,49 +298,49 @@ virtual CSize CalcLayout(
     int nLength = -1);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `dwMode`  
  [in] `nLength`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight  
+##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight  
 
   
 ```  
 virtual int CalcMaxButtonHeight();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed  
+##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed  
 
   
 ```  
 virtual BOOL CanBeClosed() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canberestored"></a>CMFCMenuBar::CanBeRestored  
+##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored  
 
   
 ```  
 virtual BOOL CanBeRestored() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCMenuBar::Create  
- Cria um controle de menu e anexa a um [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto.  
+##  <a name="create"></a>  CMFCMenuBar::Create  
+ Creates a menu control and attaches it to a [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object.  
   
 ```  
 virtual BOOL Create(
@@ -300,26 +349,26 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_MENUBAR);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- Ponteiro para a janela pai para o novo `CMFCMenuBar` objeto.  
+ Pointer to the parent window for the new `CMFCMenuBar` object.  
   
  [in] `dwStyle`  
- O estilo de barra de menu de novo.  
+ The style of the new menu bar.  
   
  [in] `nID`  
- A ID da janela filho da barra de menus.  
+ The ID for the child window of the menu bar.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE` caso bem-sucedido; caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Depois que você construir um `CMFCMenuBar` do objeto, você deve chamar `Create`. Esse método cria o `CMFCMenuBar` controlar e anexa-o para o `CMFCMenuBar` objeto.  
+### <a name="remarks"></a>Remarks  
+ After you construct a `CMFCMenuBar` object, you must call `Create`. This method creates the `CMFCMenuBar` control and attaches it to the `CMFCMenuBar` object.  
   
- Para obter mais informações sobre estilos de barra de ferramentas, consulte [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).  
+ For more information about toolbar styles, see [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).  
   
-##  <a name="createex"></a>CMFCMenuBar::CreateEx  
- Cria um [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto com estilos estendidos especificados.  
+##  <a name="createex"></a>  CMFCMenuBar::CreateEx  
+ Creates a [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object with specified extended styles.  
   
 ```  
 virtual BOOL CreateEx(
@@ -333,38 +382,38 @@ virtual BOOL CreateEx(
     UINT nID =AFX_IDW_MENUBAR);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- Ponteiro para a janela pai do novo `CMFCMenuBar` objeto.  
+ Pointer to the parent window of the new `CMFCMenuBar` object.  
   
  [in] `dwCtrlStyle`  
- Estilos adicionais para a nova barra de menu.  
+ Additional styles for the new menu bar.  
   
  [in] `dwStyle`  
- O estilo principal da nova barra de menu.  
+ The main style of the new menu bar.  
   
  [in] `rcBorders`  
- A `CRect` parâmetro que especifica os tamanhos para as bordas do `CMFCMenuBar` objeto.  
+ A `CRect` parameter that specifies the sizes for the borders of the `CMFCMenuBar` object.  
   
  [in] `nID`  
- A ID da janela filho da barra de menus.  
+ The ID for the child window of the menu bar.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Você deve usar essa função em vez de [CMFCMenuBar::Create](#create) quando você deseja especificar estilos além do estilo de barra de ferramentas. Alguns estilos adicionais usados com frequência são `TBSTYLE_TRANSPARENT` e `CBRS_TOP`.  
+### <a name="remarks"></a>Remarks  
+ You should use this function instead of [CMFCMenuBar::Create](#create) when you want to specify styles in addition to the toolbar style. Some frequently used additional styles are `TBSTYLE_TRANSPARENT` and `CBRS_TOP`.  
   
- Para listas de estilos adicionais, consulte [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439), [estilos de controle comum](http://msdn.microsoft.com/library/windows/desktop/bb775498), e [comuns estilos de janela](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ For lists of additional styles, see [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439), [common control styles](http://msdn.microsoft.com/library/windows/desktop/bb775498), and [common window styles](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
-### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o `CreateEx` método o `CMFCMenuBar` classe. Este trecho de código é parte do [exemplo IE demonstração](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `CreateEx` method of the `CMFCMenuBar` class. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo n º&1;](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo n º&2;](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]  
   
-##  <a name="createfrommenu"></a>CMFCMenuBar::CreateFromMenu  
- Inicializa uma [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto. Modelos esse método de `CMFCMenuBar` objeto após um `HMENU` parâmetro.  
+##  <a name="createfrommenu"></a>  CMFCMenuBar::CreateFromMenu  
+ Initializes a [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object. This method models the `CMFCMenuBar` object after a `HMENU` parameter.  
   
 ```  
 virtual void CreateFromMenu(
@@ -373,21 +422,21 @@ virtual void CreateFromMenu(
     BOOL bForceUpdate = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `hMenu`  
- Um identificador para um recurso do menu. `CreateFromMenu`usa esse recurso como um modelo para o `CMFCMenuBar`.  
+ A handle to a menu resource. `CreateFromMenu` uses this resource as a template for the `CMFCMenuBar`.  
   
  [in] `bDefaultMenu`  
- Um valor booleano que indica se o novo menu é o menu padrão.  
+ A Boolean that indicates whether the new menu is the default menu.  
   
  [in] `bForceUpdate`  
- Um valor booleano que indica se esse método força uma atualização de menu.  
+ A Boolean that indicates whether this method forces a menu update.  
   
-### <a name="remarks"></a>Comentários  
- Use esse método se você quiser um controle de menu para ter os mesmos itens de menu como um recurso do menu. Chamar esse método depois de você chamar [CMFCMenuBar::Create](#create) ou [CMFCMenuBar::CreateEx](#createex).  
+### <a name="remarks"></a>Remarks  
+ Use this method if you want a menu control to have the same menu items as a menu resource. You call this method after you call either [CMFCMenuBar::Create](#create) or [CMFCMenuBar::CreateEx](#createex).  
   
-##  <a name="enablehelpcombobox"></a>CMFCMenuBar::EnableHelpCombobox  
- Permite que um **ajuda** caixa de combinação que está localizada no lado direito da barra de menus.  
+##  <a name="enablehelpcombobox"></a>  CMFCMenuBar::EnableHelpCombobox  
+ Enables a **Help** combo box that is located on the right side of the menu bar.  
   
 ```  
 void EnableHelpCombobox(
@@ -396,171 +445,171 @@ void EnableHelpCombobox(
     int nComboBoxWidth = 150);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- A ID de comando para o botão do **ajuda** caixa de combinação.  
+ The command ID for the button of the **Help** combo box.  
   
  [in] `lpszPrompt`  
- Uma cadeia de caracteres que contém o texto que exibe a estrutura da caixa de combinação se ele estiver vazio e não está ativo. Por exemplo, "Insira o texto aqui".  
+ A string that contains the text that the framework displays in the combo box if it is empty and not active. For example, "Enter the text here".  
   
  [in] `nComboBoxWidth`  
- A largura do botão da caixa de combinação em pixels.  
+ The width of the button for the combo box in pixels.  
   
-### <a name="remarks"></a>Comentários  
- O **ajuda** caixa de combinação é semelhante a **ajuda** caixa de combinação na barra de menu do [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+### <a name="remarks"></a>Remarks  
+ The **Help** combo box resembles the **Help** combo box in the menu bar of [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- Quando você chamar esse método com `uiID` definido como 0, esse método oculta a caixa de combinação. Caso contrário, esse método exibe a caixa de combinação automaticamente no lado direito da barra de menus. Depois de chamar esse método, chame [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) para obter um ponteiro para o inserido [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
+ When you call this method with `uiID` set to 0, this method hides the combo box. Otherwise, this method displays the combo box automatically on the right side of your menu bar. After you call this method, call [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) to obtain a pointer to the inserted [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) object.  
   
-##  <a name="enablemenushadows"></a>CMFCMenuBar::EnableMenuShadows  
- Ativa as sombras de menus pop-up.  
+##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
+ Enables shadows for pop-up menus.  
   
 ```  
 static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- Um parâmetro booleano que indica se as sombras devem ser habilitadas para menus pop-up.  
+ A Boolean parameter that indicates whether shadows should be enabled for pop-up menus.  
   
-### <a name="remarks"></a>Comentários  
- Esse método usa o algoritmo é complexo e pode diminuir o desempenho do seu aplicativo em sistemas mais lentos.  
+### <a name="remarks"></a>Remarks  
+ The algorithm that this method uses is complex and may decrease the performance of your application on slower systems.  
   
-##  <a name="getavailableexpandsize"></a>CMFCMenuBar::GetAvailableExpandSize  
+##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize  
 
   
 ```  
 virtual int GetAvailableExpandSize() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcolumnwidth"></a>CMFCMenuBar::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth  
 
   
 ```  
 virtual int GetColumnWidth() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getdefaultmenu"></a>CMFCMenuBar::GetDefaultMenu  
- Recupera um identificador para o menu original. O framework carrega menu original do arquivo de recurso.  
+##  <a name="getdefaultmenu"></a>  CMFCMenuBar::GetDefaultMenu  
+ Retrieves a handle to the original menu. The framework loads the original menu from the resource file.  
   
 ```  
 HMENU GetDefaultMenu() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um identificador para um recurso do menu.  
+### <a name="return-value"></a>Return Value  
+ A handle to a menu resource.  
   
-### <a name="remarks"></a>Comentários  
- Se seu aplicativo personaliza um menu, você pode usar esse método para recuperar um identificador para o menu original.  
+### <a name="remarks"></a>Remarks  
+ If your application customizes a menu, you can use this method to retrieve a handle to the original menu.  
   
-##  <a name="getdefaultmenuresid"></a>CMFCMenuBar::GetDefaultMenuResId  
- Recupera o identificador de recurso do menu padrão.  
+##  <a name="getdefaultmenuresid"></a>  CMFCMenuBar::GetDefaultMenuResId  
+ Retrieves the resource identifier for the default menu.  
   
 ```  
 UINT GetDefaultMenuResId() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um identificador de recurso do menu.  
+### <a name="return-value"></a>Return Value  
+ A menu resource identifier.  
   
-### <a name="remarks"></a>Comentários  
- O framework carrega o menu padrão para o `CMFCMenuBar` objeto do arquivo de recurso.  
+### <a name="remarks"></a>Remarks  
+ The framework loads the default menu for the `CMFCMenuBar` object from the resource file.  
   
-##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection  
+##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection  
 
   
 ```  
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows  
+##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows  
 
   
 ```  
 BOOL GetForceDownArrows();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethelpcombobox"></a>CMFCMenuBar::GetHelpCombobox  
- Retorna um ponteiro para o **ajuda** caixa de combinação.  
+##  <a name="gethelpcombobox"></a>  CMFCMenuBar::GetHelpCombobox  
+ Returns a pointer to the **Help** combo box.  
   
 ```  
 CMFCToolBarComboBoxButton* GetHelpCombobox();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o **ajuda** caixa de combinação. `NULL`Se o **ajuda** caixa de combinação está ocultada ou não habilitada.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the **Help** combo box. `NULL` if the **Help** combo box is hidden or not enabled.  
   
-### <a name="remarks"></a>Comentários  
- O **ajuda** caixa de combinação está localizada no lado direito da barra de menus. Chame o método [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) para habilitar esta caixa de combinação.  
+### <a name="remarks"></a>Remarks  
+ The **Help** combo box is located on the right side of the menu bar. Call the method [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) to enable this combo box.  
   
-##  <a name="gethmenu"></a>CMFCMenuBar::GetHMenu  
- Recupera o identificador para o menu anexado para o [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto.  
+##  <a name="gethmenu"></a>  CMFCMenuBar::GetHMenu  
+ Retrieves the handle to the menu attached to the [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object.  
   
 ```  
 HMENU GetHMenu() const;  
 ```  
   
-##  <a name="getmenufont"></a>CMFCMenuBar::GetMenuFont  
- Recupera a fonte do menu atual.  
+##  <a name="getmenufont"></a>  CMFCMenuBar::GetMenuFont  
+ Retrieves the current menu font.  
   
 ```  
 static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bHorz`  
- Um parâmetro booleano que especifica se deve retornar a fonte horizontal ou vertical. `TRUE`indica a fonte horizontal.  
+ A Boolean parameter that specifies whether to return the horizontal or vertical font. `TRUE` indicates the horizontal font.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um [CFont](../../mfc/reference/cfont-class.md) parâmetro que contém a fonte de barra de menu atual.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CFont](../../mfc/reference/cfont-class.md) parameter that contains the current menu bar font.  
   
-### <a name="remarks"></a>Comentários  
- A fonte retornada é um parâmetro global para o aplicativo. Duas fontes globais são mantidas para todas as `CMFCMenuBar` objetos. Essas fontes separadas são usados para barras de menus horizontal e vertical.  
+### <a name="remarks"></a>Remarks  
+ The returned font is a global parameter for the application. Two global fonts are maintained for all `CMFCMenuBar` objects. These separate fonts are used for horizontal and vertical menu bars.  
   
-##  <a name="getmenuitem"></a>CMFCMenuBar::GetMenuItem  
- Recupera um [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) baseada em objeto em uma barra de menus no índice de item.  
+##  <a name="getmenuitem"></a>  CMFCMenuBar::GetMenuItem  
+ Retrieves a [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) object on a menu bar based on the item index.  
   
 ```  
 CMFCToolBarButton* GetMenuItem(int iItem) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- O índice do item de menu para retornar.  
+ The index of the menu item to return.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o `CMFCToolBarButton` que coincide com o índice especificado pelo objeto `iItem`. `NULL`Se o índice é inválido.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CMFCToolBarButton` object that matches the index specified by `iItem`. `NULL` if the index is invalid.  
   
-##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
   
 ```  
 virtual int GetRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsystembutton"></a>CMFCMenuBar::GetSystemButton  
+##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton  
 
   
 ```  
@@ -569,136 +618,136 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
     BOOL bByCommand = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `uiBtn`  
  [in] `bByCommand`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsystembuttonscount"></a>CMFCMenuBar::GetSystemButtonsCount  
+##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount  
 
   
 ```  
 int GetSystemButtonsCount() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsystemmenu"></a>CMFCMenuBar::GetSystemMenu  
+##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu  
 
   
 ```  
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="highlightdisableditems"></a>CMFCMenuBar::HighlightDisabledItems  
- Controla se o framework realça os itens de menu desativados.  
+##  <a name="highlightdisableditems"></a>  CMFCMenuBar::HighlightDisabledItems  
+ Controls whether the framework highlights disabled menu items.  
   
 ```  
 static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bHighlight`  
- Um parâmetro booleano que indica se o framework realça os itens de menu não está disponível.  
+ A Boolean parameter that indicates whether the framework highlights unavailable menu items.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, a estrutura não realçar itens de menu não está disponível quando o usuário posiciona o ponteiro do mouse sobre eles.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not highlight unavailable menu items when the user positions the mouse pointer over them.  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable  
 
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishighlightdisableditems"></a>CMFCMenuBar::IsHighlightDisabledItems  
- Indica se o framework realça os itens de menu não está disponível.  
+##  <a name="ishighlightdisableditems"></a>  CMFCMenuBar::IsHighlightDisabledItems  
+ Indicates whether the framework highlights unavailable menu items.  
   
 ```  
 static BOOL IsHighlightDisabledItems();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se os itens de menu não disponíveis são realçados. Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if unavailable menu items are highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Por padrão, a estrutura não realçar itens de menu não está disponível quando o usuário posiciona o ponteiro do mouse sobre eles. Use o [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems) método para habilitar esse recurso.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not highlight unavailable menu items when the user positions the mouse pointer over them. Use the [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems) method to enable this feature.  
   
-##  <a name="ismenushadows"></a>CMFCMenuBar::IsMenuShadows  
- Indica se o framework desenha sombras para menus pop-up.  
+##  <a name="ismenushadows"></a>  CMFCMenuBar::IsMenuShadows  
+ Indicates whether the framework draws shadows for pop-up menus.  
   
 ```  
 static BOOL IsMenuShadows();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a estrutura desenha sombras de menu; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework draws menu shadows; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Use o [CMFCMenuBar::EnableMenuShadows](#enablemenushadows) método para habilitar ou desabilitar esse recurso.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCMenuBar::EnableMenuShadows](#enablemenushadows) method to enable or disable this feature.  
   
-##  <a name="isrecentlyusedmenus"></a>CMFCMenuBar::IsRecentlyUsedMenus  
- Indica se os comandos de menu usados recentemente são exibidos na barra de menus.  
+##  <a name="isrecentlyusedmenus"></a>  CMFCMenuBar::IsRecentlyUsedMenus  
+ Indicates whether recently used menu commands are displayed on the menu bar.  
   
 ```  
 static BOOL IsRecentlyUsedMenus();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o `CMFCMenuBar` objeto mostra usado recentemente comandos de menu; caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CMFCMenuBar` object shows recently used menu commands; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Use a função [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus) para controlar se a barra de menu mostra recentemente usados comandos de menu.  
+### <a name="remarks"></a>Remarks  
+ Use the function [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus) to control whether the menu bar shows recently used menu commands.  
   
-##  <a name="isshowallcommands"></a>CMFCMenuBar::IsShowAllCommands  
- Indica se os menus exibem todos os comandos.  
+##  <a name="isshowallcommands"></a>  CMFCMenuBar::IsShowAllCommands  
+ Indicates whether menus display all commands.  
   
 ```  
 static BOOL IsShowAllCommands();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o `CMFCMenuBar` exibe todos os comandos; caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CMFCMenuBar` displays all commands; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Um `CMFCMenuBar` objeto pode ser configurado para mostrar todos os comandos ou mostrar apenas um subconjunto de comandos. Para obter mais informações sobre esse recurso, consulte [CMFCMenuBar classe](../../mfc/reference/cmfcmenubar-class.md).  
+### <a name="remarks"></a>Remarks  
+ A `CMFCMenuBar` object can be configured to either show all commands or show only a subset of commands. For more information about this feature, see [CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md).  
   
- `IsShowAllCommands`informa como esse recurso é configurado para o `CMFCMenuBar` objeto. Para controlar quais comandos de menu são mostrados, use os métodos [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) e [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus).  
+ `IsShowAllCommands` will tell you how this feature is configured for the `CMFCMenuBar` object. To control which menu commands are shown, use the methods [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) and [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus).  
   
-##  <a name="isshowallcommandsdelay"></a>CMFCMenuBar::IsShowAllCommandsDelay  
- Indica se o [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto exibe todos os comandos após um pequeno atraso.  
+##  <a name="isshowallcommandsdelay"></a>  CMFCMenuBar::IsShowAllCommandsDelay  
+ Indicates whether the [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object displays all the commands after a short delay.  
   
 ```  
 static BOOL IsShowAllCommandsDelay();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a barra de menu exibe menus completos após um pequeno intervalo; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu bar displays full menus after a short delay; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Quando você configura uma barra de menus para itens de exibição usada recentemente, a barra de menus exibe o menu completo em uma das duas maneiras:  
+### <a name="remarks"></a>Remarks  
+ When you configure a menu bar to display recently used items, the menu bar displays the full menu in one of two ways:  
   
--   Exiba o menu completo após um intervalo programado de quando o usuário passa o cursor sobre a seta na parte inferior do menu.  
+-   Display the full menu after a programmed delay from when the user hovers the cursor over the arrow at the bottom of the menu.  
   
--   Exiba o menu completo após o usuário clicar na seta na parte inferior do menu.  
+-   Display the full menu after the user clicks the arrow at the bottom of the menu.  
   
- Por padrão, todos os `CMFCMenuBar` objetos usam a opção para exibir o menu completo após um pequeno atraso. Essa opção não pode ser alterada programaticamente no `CMFCMenuBar` classe. No entanto, um usuário pode alterar o comportamento durante a personalização da barra de ferramentas usando o **personalizar** caixa de diálogo...  
+ By default, all `CMFCMenuBar` objects use the option to display the full menu after a short delay. This option cannot be changed programmatically in the `CMFCMenuBar` class. However, a user can change the behavior during toolbar customization by using the **Customize** dialog box..  
   
-##  <a name="loadstate"></a>CMFCMenuBar::LoadState  
- Carrega o estado da barra de menus do registro do Windows.  
+##  <a name="loadstate"></a>  CMFCMenuBar::LoadState  
+ Loads the state of the menu bar from the Windows registry.  
   
 ```  
 virtual BOOL LoadState(
@@ -707,82 +756,82 @@ virtual BOOL LoadState(
     UINT uiID = (UINT)-1);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Uma cadeia de caracteres que contém o caminho de uma chave de registro do Windows.  
+ A string that contains the path of a Windows registry key.  
   
  [in] `nIndex`  
- A identificação do controle de barra de menus.  
+ The control ID for the menu bar.  
   
  [in] `uiID`  
- Um valor reservado.  
+ A reserved value.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Use o [CMFCMenuBar::SaveState](#savestate) método para salvar o estado da barra de menus no registro. As informações salvas incluem os itens de menu, o estado de encaixe e a posição da barra de menus.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCMenuBar::SaveState](#savestate) method to save the state of the menu bar to the registry. The saved information includes the menu items, the dock state, and the position of the menu bar.  
   
- Na maioria dos casos, seu aplicativo não chamar `LoadState`. O framework chama esse método quando ele inicializa o espaço de trabalho.  
+ In most cases your application does not call `LoadState`. The framework calls this method when it initializes the workspace.  
   
-##  <a name="onchangehot"></a>CMFCMenuBar::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot  
 
   
 ```  
 virtual void OnChangeHot(int iHot);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `iHot`  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondefaultmenuloaded"></a>CMFCMenuBar::OnDefaultMenuLoaded  
- O framework chama esse método quando ele carrega o recurso de menu do arquivo de recurso.  
+##  <a name="ondefaultmenuloaded"></a>  CMFCMenuBar::OnDefaultMenuLoaded  
+ The framework calls this method when it loads the menu resource from the resource file.  
   
 ```  
 virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `hMenu`  
- O identificador do menu anexados para o `CMFCMenuBar` objeto.  
+ The handle for the menu attached to the `CMFCMenuBar` object.  
   
-### <a name="remarks"></a>Comentários  
- A implementação padrão dessa função não faz nada. Substitua essa função para executar código personalizado depois que o framework carrega um recurso de menu do arquivo de recurso.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to execute custom code after the framework loads a menu resource from the resource file.  
   
-##  <a name="onsendcommand"></a>CMFCMenuBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand  
 
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetdefaultbuttontext"></a>CMFCMenuBar::OnSetDefaultButtonText  
- O framework chama esse método quando o usuário altera o texto de um item na barra de menus.  
+##  <a name="onsetdefaultbuttontext"></a>  CMFCMenuBar::OnSetDefaultButtonText  
+ The framework calls this method when the user changes the text of an item on the menu bar.  
   
 ```  
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- Um ponteiro para o [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) objeto que o usuário deseja personalizar.  
+ A pointer to the [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) object that the user wants to customize.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se a estrutura aplica as alterações do usuário para a barra de menus; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework applies the user changes to the menu bar; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- A implementação padrão para esse método altera o texto do botão com o texto que o usuário fornece.  
+### <a name="remarks"></a>Remarks  
+ The default implementation for this method changes the text of the button to the text that the user provides.  
   
-##  <a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest  
 
   
 ```  
@@ -791,45 +840,45 @@ virtual INT_PTR OnToolHitTest(
     TOOLINFO* pTI) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
  [in] `pTI`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuBar::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage  
 
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="restoreoriginalstate"></a>CMFCMenuBar::RestoreOriginalstate  
- Chamado pela estrutura quando o usuário seleciona **redefinir** do **personalizar** caixa de diálogo.  
+##  <a name="restoreoriginalstate"></a>  CMFCMenuBar::RestoreOriginalstate  
+ Called by the framework when the user selects **Reset** from the **Customize** dialog box.  
   
 ```  
 virtual BOOL RestoreOriginalstate();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Este método é chamado quando o usuário seleciona **redefinir** no menu de personalização. Manualmente, você pode chamar esse método para redefinir programaticamente o estado da barra de menus. Esse método carrega o estado original do arquivo de recurso.  
+### <a name="remarks"></a>Remarks  
+ This method is called when the user selects **Reset** from the customization menu. You can also manually call this method to programmatically reset the state of the menu bar. This method loads the original state from the resource file.  
   
- Substituir esse método se desejar fazer qualquer processamento quando o usuário seleciona o **redefinir** opção.  
+ Override this method if you want to do any processing when the user selects the **Reset** option.  
   
-##  <a name="savestate"></a>CMFCMenuBar::SaveState  
- Salva o estado do [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto no registro do Windows.  
+##  <a name="savestate"></a>  CMFCMenuBar::SaveState  
+ Saves the state of the [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object to the Windows registry.  
   
 ```  
 virtual BOOL SaveState (
@@ -838,54 +887,54 @@ virtual BOOL SaveState (
     UINT uiID = (UINT)-1);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Uma cadeia de caracteres que contém o caminho de uma chave de registro do Windows.  
+ A string that contains the path of a Windows registry key.  
   
  [in] `nIndex`  
- A identificação do controle de barra de menus.  
+ The control ID for the menu bar.  
   
  [in] `uiID`  
- Um valor reservado.  
+ A reserved value.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se for bem-sucedida; Caso contrário, `FALSE`;  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`;  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, seu aplicativo não chamar `SaveState`. O framework chama esse método quando o espaço de trabalho é serializado. Para obter mais informações, consulte [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
+### <a name="remarks"></a>Remarks  
+ Usually, your application does not call `SaveState`. The framework calls this method when the workspace is serialized. For more information, see [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
- As informações salvas incluem os itens de menu, o estado de encaixe e a posição da barra de menus.  
+ The saved information includes the menu items, the dock state, and the position of the menu bar.  
   
-##  <a name="setdefaultmenuresid"></a>CMFCMenuBar::SetDefaultMenuResId  
- Define o menu padrão para uma [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) objeto com base na ID do recurso.  
+##  <a name="setdefaultmenuresid"></a>  CMFCMenuBar::SetDefaultMenuResId  
+ Sets the default menu for a [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) object based on the resource ID.  
   
 ```  
 void SetDefaultMenuResId(UINT uiResId);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `uiResId`  
- A ID de recurso para o novo padrão.  
+ The resource ID for the new default menu.  
   
-### <a name="remarks"></a>Comentários  
- O [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate) método restaura o menu padrão do arquivo de recurso.  
+### <a name="remarks"></a>Remarks  
+ The [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate) method restores the default menu from the resource file.  
   
- Use o [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) método para recuperar o menu padrão sem ser restaurado.  
+ Use the [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) method to retrieve the default menu without restoring it.  
   
-##  <a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows  
+##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows  
 
   
 ```  
 void SetForceDownArrows(BOOL bValue);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bValue`  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setmaximizemode"></a>CMFCMenuBar::SetMaximizeMode  
- O framework chama esse método quando um MDI muda seu modo de exibição e a barra de menus deve ser atualizada.  
+##  <a name="setmaximizemode"></a>  CMFCMenuBar::SetMaximizeMode  
+ The framework calls this method when a MDI changes its display mode and the menu bar must be updated.  
   
 ```  
 void SetMaximizeMode(
@@ -894,35 +943,35 @@ void SetMaximizeMode(
     BOOL bRecalcLayout = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bMax`  
- Um valor booleano que especifica o modo. Consulte a seção Comentários para obter mais informações.  
+ A Boolean that specifies the mode. See the Remarks section for more information.  
   
  [in] `pWnd`  
- Um ponteiro para a janela filho MDI que está mudando.  
+ A pointer to the MDI child window that is changing.  
   
  [in] `bRecalcLayout`  
- Um valor booleano que especifica se o layout da barra de menus deve ser recalculado imediatamente.  
+ A Boolean that specifies whether the layout of the menu bar should be recalculated immediately.  
   
-### <a name="remarks"></a>Comentários  
- Quando uma janela filho MDI é maximizada, uma barra de menus anexada à janela principal do quadro MDI exibe o menu de sistema e o **minimizar**, **maximizar** e **fechar** botões. Se `bMax` é `TRUE` e `pWnd` não é `NULL`, a janela filho MDI é maximizada e a barra de menus deve incorporar os controles adicionais. Caso contrário, a barra de menus retorna ao seu estado normal.  
+### <a name="remarks"></a>Remarks  
+ When an MDI child window is maximized, a menu bar attached to the MDI main frame window displays the system menu and the **Minimize**, **Maximize** and **Close** buttons. If `bMax` is `TRUE` and `pWnd` is not `NULL`, the MDI child window is maximized and the menu bar must incorporate the extra controls. Otherwise, the menu bar returns to its regular state.  
   
-##  <a name="setmenubuttonrtc"></a>CMFCMenuBar::SetMenuButtonRTC  
- Define as informações de classe de tempo de execução que a estrutura usa quando o usuário cria botões de menu.  
+##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
+ Sets the runtime class information that the framework uses when the user creates menu buttons.  
   
 ```  
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuButtonRTC`  
- O [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informações para uma classe derivam do [CMFCMenuButton classe](../../mfc/reference/cmfcmenubutton-class.md).  
+ The [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) information for a class derived from the [CMFCMenuButton Class](../../mfc/reference/cmfcmenubutton-class.md).  
   
-### <a name="remarks"></a>Comentários  
- Quando um usuário adiciona novos botões à barra de menus, o framework cria dinamicamente os botões. Por padrão, cria `CMFCMenuButton` objetos. Substitui esse método para alterar o tipo de objeto de botão que cria a estrutura.  
+### <a name="remarks"></a>Remarks  
+ When a user adds new buttons to the menu bar, the framework creates the buttons dynamically. By default, it creates `CMFCMenuButton` objects. Override this method to change the type of button objects that the framework creates.  
   
-##  <a name="setmenufont"></a>CMFCMenuBar::SetMenuFont  
- Define a fonte para todas as barras de menu em seu aplicativo.  
+##  <a name="setmenufont"></a>  CMFCMenuBar::SetMenuFont  
+ Sets the font for all menu bars in your application.  
   
 ```  
 static BOOL SetMenuFont(
@@ -930,48 +979,48 @@ static BOOL SetMenuFont(
     BOOL bHorz = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpLogFont`  
- Um ponteiro para um [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) estrutura que define a fonte para definir.  
+ A pointer to a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) structure that defines the font to set.  
   
  [in] `bHorz`  
- TRUE se você quiser que o `lpLogFont` parâmetro a ser usado para a fonte vertical, FALSE se você quiser a ser usado para a fonte horizontal.  
+ TRUE if you want the `lpLogFont` parameter to be used for the vertical font, FALSE if you want it to be used for horizontal font.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o método teve êxito; Caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Comentários  
- Duas fontes são usadas para todos os `CMFCMenuBar` objetos. Essas fontes separadas são usados para barras de menus horizontal e vertical.  
+### <a name="remarks"></a>Remarks  
+ Two fonts are used for all `CMFCMenuBar` objects. These separate fonts are used for horizontal and vertical menu bars.  
   
- As configurações de fonte são variáveis globais e afetam todos os `CMFCMenuBar` objetos.  
+ The font settings are global variables and affect all `CMFCMenuBar` objects.  
   
-##  <a name="setrecentlyusedmenus"></a>CMFCMenuBar::SetRecentlyUsedMenus  
- Controla se uma barra de menus exibe recentemente usados comandos de menu.  
+##  <a name="setrecentlyusedmenus"></a>  CMFCMenuBar::SetRecentlyUsedMenus  
+ Controls whether a menu bar displays recently used menu commands.  
   
 ```  
 static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bOn`  
- Um booliano que controla se os comandos de menu usados recentemente são exibidos.  
+ A Boolean that controls whether recently used menu commands are displayed.  
   
-##  <a name="setshowallcommands"></a>CMFCMenuBar::SetShowAllCommands  
- Controla se um menu mostra todos os comandos disponíveis.  
+##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
+ Controls whether a menu shows all the available commands.  
   
 ```  
 static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bShowAllCommands`  
- Um parâmetro booleano que especifica se o menu pop-up mostra todos os comandos de menu.  
+ A Boolean parameter that specifies whether the pop-up menu shows all the menu commands.  
   
-### <a name="remarks"></a>Comentários  
- Se um menu não exibir todos os comandos de menu, ele oculta os comandos que raramente são usados. Para obter mais informações sobre como exibir comandos de menu, consulte [CMFCMenuBar classe](../../mfc/reference/cmfcmenubar-class.md).  
+### <a name="remarks"></a>Remarks  
+ If a menu does not display all the menu commands, it hides the commands that are rarely used. For more information about displaying menu commands, see [CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
 

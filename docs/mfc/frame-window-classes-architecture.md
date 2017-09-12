@@ -1,47 +1,65 @@
 ---
-title: "Classes de janela com moldura (arquitetura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.frame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de janela com moldura, arquitetura de documento/exibição"
+title: Frame Window Classes (Architecture) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.frame
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de janela com moldura (arquitetura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66f5c9f7ab9d8e72fb357accf84eb93bf44595ea
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Na arquitetura do documento\/exibição, as janelas de peças são as janelas que contêm uma janela de exibição.  Também dão suporte a ter as barras de controle anexadas a eles.  
+---
+# <a name="frame-window-classes-architecture"></a>Frame Window Classes (Architecture)
+In document/view architecture, frame windows are windows that contain a view window. They also support having control bars attached to them.  
   
- Em aplicativos \(MDI\) de interface de documentos, a janela principal é derivada de `CMDIFrameWnd`.  Contém indiretamente os itens dos documentos, que são objetos de `CMDIChildWnd` .  `CMDIChildWnd` objetos, por sua vez, contém as exibições de documentos.  
+ In multiple document interface (MDI) applications, the main window is derived from `CMDIFrameWnd`. It indirectly contains the documents' frames, which are `CMDIChildWnd` objects. The `CMDIChildWnd` objects, in turn, contain the documents' views.  
   
- Em aplicativos \(SDI\) da interface de único documento, a janela principal, derivada de `CFrameWnd`, contém a exibição do documento atual.  
+ In single document interface (SDI) applications, the main window, derived from `CFrameWnd`, contains the view of the current document.  
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- A classe base da janela principal do quadro de um aplicativo de SDI.  Também a classe base para qualquer outro quadro de janela de classificação.  
+ The base class for an SDI application's main frame window. Also the base class for all other frame window classes.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- A classe base da janela principal do quadro de um aplicativo MDI.  
+ The base class for an MDI application's main frame window.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- A classe base para o windows do quadro do documento de um aplicativo MDI.  
+ The base class for an MDI application's document frame windows.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Fornece a janela do quadro para uma exibição quando um documento de servidor está sendo editado no lugar.  
+ Provides the frame window for a view when a server document is being edited in place.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,52 +1,70 @@
 ---
-title: "Clientes de automa&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Clientes de automação"
-  - "clientes"
-  - "clientes, Automação"
-  - "bibliotecas de tipo, Clientes de automação"
+title: Automation Clients | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- clients, Automation
+- Automation clients
+- type libraries, Automation clients
+- clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Clientes de automa&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e6ae8b10687d7ff99ee6b980c89768f9d757be28
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A automação possibilita para que seu aplicativo manipule os objetos implementados em outro aplicativo, ou expõe objetos para que possam ser manipulados.  Um cliente de automação é um aplicativo que pode manipular expõe os objetos que pertencem a um outro aplicativo.  O aplicativo que expõe objetos é chamado servidor de automação.  O cliente manipula os objetos de aplicativo de servidor acessando as propriedades e as funções desses objetos.  
+---
+# <a name="automation-clients"></a>Automation Clients
+Automation makes it possible for your application to manipulate objects implemented in another application, or to expose objects so they can be manipulated. An Automation client is an application that can manipulate exposed objects belonging to another application. The application that exposes the objects is called the Automation server. The client manipulates the server application's objects by accessing those objects' properties and functions.  
   
-### Tipos de clientes de automação  
- Há dois tipos de clientes de automação:  
+### <a name="types-of-automation-clients"></a>Types of Automation Clients  
+ There are two types of Automation clients:  
   
--   Clientes que \(dinamicamente em tempo de execução\) adquira informações sobre as propriedades e o funcionamento do servidor.  
+-   Clients that dynamically (at run time) acquire information about the properties and operations of the server.  
   
--   Clientes que possuem informações estáticas \(fornecida em tempo de compilação\) que especifica as propriedades e o funcionamento do servidor.  
+-   Clients that possess static information (provided at compile time) that specifies the properties and operations of the server.  
   
- Os clientes do primeiro tipo adquirem informações sobre os métodos e as propriedades do servidor consultando o mecanismo de OLE `IDispatch` do sistema.  Embora seja suficiente usar para clientes dinâmicos, `IDispatch` é difícil de ser usada para os clientes estáticos, onde os objetos que estão sendo por devem ser conhecidos em tempo de compilação.  Para clientes associados estáticos, as classes do Microsoft fornecem a classe de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) .  
+ Clients of the first kind acquire information about the server's methods and properties by querying the OLE system's `IDispatch` mechanism. Although it is adequate to use for dynamic clients, `IDispatch` is difficult to use for static clients, where the objects being driven must be known at compile time. For static bound clients, the Microsoft Foundation classes provide the [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) class.  
   
- Os clientes associados estáticos usam uma classe de proxy que está vinculada estatisticamente com o aplicativo cliente.  Esta classe fornece uma encapsulamento fortemente tipado C\+\+ propriedades e as operações de aplicativo de servidor.  
+ Static bound clients use a proxy class that is statically linked with the client application. This class provides a type-safe C++ encapsulation of the server application's properties and operations.  
   
- A classe `COleDispatchDriver` fornece suporte principal para o lado do cliente de automação.  Usando a caixa de diálogo `Add New Item` , você cria uma classe derivada de `COleDispatchDriver`.  
+ The class `COleDispatchDriver` provides the principal support for the client side of Automation. Using the `Add New Item` dialog box, you create a class derived from `COleDispatchDriver`.  
   
- Você especifica o arquivo de biblioteca de tipos que descreve as propriedades e as funções do objeto de aplicativo de servidor.  A caixa de diálogo do item adicionar ler este arquivo e cria `COleDispatchDriver`\- classe derivada, com funções de membro que seu aplicativo pode chamar para acessar os objetos de aplicativo de servidor em C\+\+ de uma maneira fortemente tipado.  A funcionalidade adicional herdada de `COleDispatchDriver` simplifica o processo do servidor apropriado de automação.  
+ You then specify the type-library file describing the properties and functions of the server application's object. The Add Item dialog box reads this file and creates the `COleDispatchDriver`-derived class, with member functions that your application can call to access the server application's objects in C++ in a type-safe manner. Additional functionality inherited from `COleDispatchDriver` simplifies the process of calling the proper Automation server.  
   
-### Eventos de manipulação de clientes de automação  
- Se você quiser tratar eventos no cliente de automação, você precisa adicionar uma interface de coletor.  MFC O fornece suporte do assistente para adicionar interfaces de coletor para controles ActiveX, mas não oferece suporte para outros servidores COM.  Para obter mais informações sobre como adicionar uma interface de coletor em um cliente de MFC para as interfaces de origem descritas por servidores COM, consulte HOWTO: Crie uma interface de coletor no cliente MFC\- baseado em COM \(KB 181845\) em [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;181845](http://support.microsoft.com/default.aspx?scid=kb;en-us;181845).  
+### <a name="handling-events-in-automation-clients"></a>Handling Events in Automation Clients  
+ If you want to handle events in your automation client, you need to add a sink interface. MFC provides wizard support to add sink interfaces for ActiveX controls, but not support for other COM servers. For information on how to add a sink interface in an MFC client for source interfaces described by COM servers, see HOWTO: Create a Sink Interface in MFC-Based COM Client (KB 181845) at [http://support.microsoft.com/default.aspxscid=kb;en-us;181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
-## Consulte também  
- [Clientes de automação: usando bibliotecas de tipo](../Topic/Automation%20Clients:%20Using%20Type%20Libraries.md)   
- [Automação](../mfc/automation.md)   
- [Assistente de aplicativo MFC](../Topic/MFC%20Application%20Wizard.md)
+## <a name="see-also"></a>See Also  
+ [Automation Clients: Using Type Libraries](../mfc/automation-clients-using-type-libraries.md)   
+ [Automation](../mfc/automation.md)   
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

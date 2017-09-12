@@ -1,52 +1,69 @@
 ---
-title: "Manipuladores para mensagens do Windows padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afx_msg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funções [C++], manipulador"
-  - "funções de manipulador, mensagens padrão do Windows"
-  - "tratamento de mensagens [C++], manipuladores de mensagens do Windows"
-  - "mensagens [C++], Janelas"
-  - "mensagens do Windows [C++], manipuladores"
+title: Handlers for Standard Windows Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- afx_msg
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows messages [MFC], handlers
+- message handling [MFC], Windows message handlers
+- handler functions, standard Windows messages
+- functions [MFC], handler
+- messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Manipuladores para mensagens do Windows padr&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fa19a16623224e92442b00d6ea082d70c8ba040
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os manipuladores padrão para mensagens padrão do windows \(**WM\_**\) são predefinidos na classe `CWnd`.  A biblioteca de classes utilizar nomes desses manipuladores do nome da mensagem.  Por exemplo, o manipulador para a mensagem de `WM_PAINT` for declarado em `CWnd` como:  
+---
+# <a name="handlers-for-standard-windows-messages"></a>Handlers for Standard Windows Messages
+Default handlers for standard Windows messages (**WM_**) are predefined in class `CWnd`. The class library bases names for these handlers on the message name. For example, the handler for the `WM_PAINT` message is declared in `CWnd` as:  
   
  `afx_msg void OnPaint();`  
   
- A palavra\-chave de **afx\_msg** sugere o efeito da palavra\-chave C\+\+ **virtual** distinguindo os manipuladores de outras funções de membro de `CWnd` .  Observe, no entanto, essas funções que não são de fato virtuais; são implementados em vez de pelos mapas da mensagem.  Os mapas de mensagem somente dependem de macros padrão de pré\-processador, não de todas as extensões da linguagem C\+\+.  A palavra\-chave de **afx\_msg** resolve para o espaço em branco depois de pré\-processamento.  
+ The **afx_msg** keyword suggests the effect of the C++ **virtual** keyword by distinguishing the handlers from other `CWnd` member functions. Note, however, that these functions are not actually virtual; they are instead implemented through message maps. Message maps depend solely on standard preprocessor macros, not on any extensions to the C++ language. The **afx_msg** keyword resolves to white space after preprocessing.  
   
- Para substituir um manipulador definido em uma classe base, defina apenas uma função com o mesmo protótipo em sua classe derivada e criar uma entrada retornadas o mapa do manipulador.  O manipulador “” substitui qualquer manipulador de mesmo nome em qualquer uma das classes base da classe.  
+ To override a handler defined in a base class, simply define a function with the same prototype in your derived class and to make a message-map entry for the handler. Your handler "overrides" any handler of the same name in any of your class's base classes.  
   
- Em alguns casos, o manipulador deve chamar o manipulador substituído em uma classe base para que a classe base e o windows podem operar na mensagem.  Quando você chama o manipulador da classe base em sua substituição depende das condições.  Às vezes você deve chamar o manipulador da classe base primeiro e às vezes durá\-lo.  Às vezes você chama o manipulador da classe base condicional, se você escolher não tratar a mensagem você mesmo.  Às vezes você deve chamar o manipulador da classe base, então condicional para executar seu próprio código do manipulador, dependendo do valor ou o estado retornada pelo manipulador da classe base.  
+ In some cases, your handler should call the overridden handler in the base class so the base class(es) and Windows can operate on the message. Where you call the base-class handler in your override depends on the circumstances. Sometimes you must call the base-class handler first and sometimes last. Sometimes you call the base-class handler conditionally, if you choose not to handle the message yourself. Sometimes you should call the base-class handler, then conditionally execute your own handler code, depending on the value or state returned by the base-class handler.  
   
 > [!CAUTION]
->  Não é seguro alterar os argumentos passados em um manipulador se você pretende os passados para um manipulador da classe base.  Por exemplo, você poderia ser tentado alterar o argumento de `nChar` do manipulador de `OnChar` \(para converter para letras maiúsculas, por exemplo\).  Esse comportamento é razoavelmente obscuro, mas se você precisa realizar esse efeito, use a função de membro **SendMessage** de `CWnd` em vez disso.  
+>  It is not safe to modify the arguments passed into a handler if you intend to pass them to a base-class handler. For example, you might be tempted to modify the `nChar` argument of the `OnChar` handler (to convert to uppercase, for example). This behavior is fairly obscure, but if you need to accomplish this effect, use the `CWnd` member function **SendMessage** instead.  
   
- Como você determina o modo adequado de substituir uma mensagem fornecida?  Quando a janela Propriedades grava o esqueleto da função de manipulador para uma determinada mensagem — um manipulador de `OnCreate` para `WM_CREATE`, por exemplo destaca — na forma da função de membro substituída recomendada.  O exemplo a seguir recomenda que a chamada do manipulador primeiro o manipulador da classe base e continua somente contanto que não retorna – 1.  
+ How do you determine the proper way to override a given message When the Properties window writes the skeleton of the handler function for a given message — an `OnCreate` handler for `WM_CREATE`, for example — it sketches in the form of the recommended overridden member function. The following example recommends that the handler first call the base-class handler and proceed only on condition that it does not return -1.  
   
- [!CODE [NVC_MFCMessageHandling#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#3)]  
+ [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Por convenção, os nomes desses manipuladores começam com o prefixo “em.” Alguns desses manipuladores não têm nenhum argumento, enquanto outros precisam de muitos.  Alguns também têm um tipo de retorno diferente `void`.  Os manipuladores padrão para todas as mensagens de **WM\_** são documentados na *referência de MFC* como funções de membro da classe `CWnd` cujos nomes começam com “em.” As declarações de função de membro em `CWnd` são prefixadas com **afx\_msg**.  
+ By convention, the names of these handlers begin with the prefix "On." Some of these handlers take no arguments, while others take several. Some also have a return type other than `void`. The default handlers for all **WM_** messages are documented in the *MFC Reference* as member functions of class `CWnd` whose names begin with "On." The member function declarations in `CWnd` are prefixed with **afx_msg**.  
   
-## Consulte também  
- [Declarando funções de manipulador de mensagens](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

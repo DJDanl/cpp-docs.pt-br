@@ -1,124 +1,142 @@
 ---
-title: "Exce&#231;&#245;es: convertendo a partir de macros de exce&#231;&#227;o MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "blocos catch, delimitando"
-  - "Classe CException, excluindo objetos de classe CException"
-  - "conversões, código gravado com macros MFC"
-  - "convertendo exceções"
-  - "tratamento de exceção, convertendo exceções"
-  - "objetos de exceção"
-  - "objetos de exceção, excluindo"
-  - "exceções, convertendo"
-  - "exceções, excluindo objetos de exceção"
-  - "palavras-chave [C++], Macros "
-  - "Macros , Palavras-chave em C++"
+title: 'Exceptions: Converting from MFC Exception Macros | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting exceptions [MFC]
+- exception objects [MFC]
+- conversions [MFC], code written with MFC macros
+- keywords [MFC], macros
+- macrosv, C++ keywords
+- exception objects [MFC], deleting
+- CException class [MFC], deleting CException class objects
+- exceptions [MFC], converting
+- exceptions [MFC], deleting exception objects
+- catch blocks [MFC], delimiting
+- exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Exce&#231;&#245;es: convertendo a partir de macros de exce&#231;&#227;o MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 41f83358d6a472a01a32ccf9b86d62481f6e03a7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este é um tópico avançada.  
+---
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions: Converting from MFC Exception Macros
+This is an advanced topic.  
   
- Este artigo explica como converter o código existente gravado com macros da classe do Microsoft — **TRY**, **CATCH**, **THROW**, etc — para usar as palavras\-chave **try**, **catch**, e `throw`de controle de exceções das linguagens C\+\+.  Os tópicos incluem:  
+ This article explains how to convert existing code written with Microsoft Foundation Class macros — **TRY**, **CATCH**, **THROW**, and so on — to use the C++ exception-handling keywords **try**, **catch**, and `throw`. Topics include:  
   
--   [Vantagens de conversão](#_core_advantages_of_converting)  
+-   [Conversion advantages](#_core_advantages_of_converting)  
   
--   [Convertendo o código com macros de exceção para usar exceções C\+\+](#_core_doing_the_conversion)  
+-   [Converting code with exception macros to use C++ exceptions](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a> Vantagens de conversão  
- Você provavelmente não precisa converter o código existente, embora você deve estar ciente das diferenças entre as implementações macro na versão 3,0 do MFC e as implementações em versões anteriores.  Essas diferenças e as alterações subsequentes no comportamento do código são discutidas em [Exceções: Alterações em macros de exceção na versão 3,0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
+##  <a name="_core_advantages_of_converting"></a> Advantages of Converting  
+ You probably do not need to convert existing code, although you should be aware of differences between the macro implementations in MFC version 3.0 and the implementations in earlier versions. These differences and subsequent changes in code behavior are discussed in [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
- As principais vantagens de conversão são:  
+ The principal advantages of converting are:  
   
--   O código que usa palavras\-chave de controle de exceções das linguagens C\+\+ compila a um .EXE ou a um .DLL ligeiramente menor.  
+-   Code that uses the C++ exception-handling keywords compiles to a slightly smaller .EXE or .DLL.  
   
--   As palavras\-chave de controle de exceções das linguagens C\+\+ são mais versáteis: Podem tratar exceções de qualquer tipo de dados que podem ser copiadas \(`int`, **float**, `char`, e assim por diante\), enquanto que as macros controlam somente exceções da classe `CException` e das classes derivadas delas.  
+-   The C++ exception-handling keywords are more versatile: They can handle exceptions of any data type that can be copied (`int`, **float**, `char`, and so on), whereas the macros handle exceptions only of class `CException` and classes derived from it.  
   
- A principal diferença entre as macros e keywords é aquele código que usa macros “automaticamente” exclui uma exceção capturada quando a exceção sai do escopo.  O código que usa palavras\-chave não faz, assim você deve excluir explicitamente uma exceção capturada.  Para obter mais informações, consulte o artigo [Exceções: Capturando e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+ The major difference between the macros and the keywords is that code using the macros "automatically" deletes a caught exception when the exception goes out of scope. Code using the keywords does not, so you must explicitly delete a caught exception. For more information, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
- Outra diferença é sintaxe.  A sintaxe para macros e palavra\-chave difere em três aspectos:  
+ Another difference is syntax. The syntax for macros and keywords differs in three respects:  
   
-1.  Argumentos e declarações macro de exceção:  
+1.  Macro arguments and exception declarations:  
   
-     Uma invocação macro de **CATCH** tem a seguinte sintaxe:  
+     A **CATCH** macro invocation has the following syntax:  
   
-     *Exception\_class de* **CATCH\(**, *exception\_object\_pointer\_name* **\)**  
+     **CATCH(** *exception_class*, *exception_object_pointer_name* **)**  
   
-     Observe a vírgula entre o nome da classe e o nome do ponteiro do objeto.  
+     Notice the comma between the class name and the object pointer name.  
   
-     A declaração de exceção para a palavra\-chave de **catch** usa esta sintaxe:  
+     The exception declaration for the **catch** keyword uses this syntax:  
   
-     *exception\_name*  **\)** *de exception\_type*de**catch\(**  
+     **catch(** *exception_type* *exception_name***)**  
   
-     Essa instrução de declaração de exceção indica o tipo de exceção os identificadores do bloco de captura.  
+     This exception declaration statement indicates the type of exception the catch block handles.  
   
-2.  Delimitação de blocos de try\/catch:  
+2.  Delimitation of catch blocks:  
   
-     Com macros, a macro de **CATCH** \(com seus argumentos\) inicia o primeiro bloco de captura; a macro de `AND_CATCH` inicia blocos subsequentes de captura, e a macro de `END_CATCH` finaliza a sequência de blocos de try\/catch.  
+     With the macros, the **CATCH** macro (with its arguments) begins the first catch block; the `AND_CATCH` macro begins subsequent catch blocks, and the `END_CATCH` macro terminates the sequence of catch blocks.  
   
-     Com as palavras\-chave, a palavra\-chave de **catch** \(com sua declaração de exceção\) inicia cada bloco de captura.  Não há nenhuma contraparte a macro de `END_CATCH` ; o bloco de captura termina com a chave de fechamento.  
+     With the keywords, the **catch** keyword (with its exception declaration) begins each catch block. There is no counterpart to the `END_CATCH` macro; the catch block ends with its closing brace.  
   
-3.  A expressão de lançamento:  
+3.  The throw expression:  
   
-     Macros usam o novo lançamento de `THROW_LAST` a exceção atual.  A palavra\-chave de `throw` , sem o argumento, tem o mesmo efeito.  
+     The macros use `THROW_LAST` to re-throw the current exception. The `throw` keyword, with no argument, has the same effect.  
   
-##  <a name="_core_doing_the_conversion"></a> Para fazer a conversão  
+##  <a name="_core_doing_the_conversion"></a> Doing the Conversion  
   
-#### Para converter o código usando macros para usar as palavras\-chave de controle de exceções das linguagens C\+\+  
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>To convert code using macros to use the C++ exception-handling keywords  
   
-1.  Localize todas as ocorrências de macros **TRY**, **CATCH**, `AND_CATCH`, `END_CATCH`, **THROW**, e `THROW_LAST`MFC.  
+1.  Locate all occurrences of the MFC macros **TRY**, **CATCH**, `AND_CATCH`, `END_CATCH`, **THROW**, and `THROW_LAST`.  
   
-2.  Substituir ou excluir todas as ocorrências de macros seguintes:  
+2.  Replace or delete all occurrences of the following macros:  
   
-     **TRY** \(substitua pelo **try**\)  
+     **TRY** (Replace it with **try**)  
   
-     **CATCH** \(substitua pelo **catch**\)  
+     **CATCH** (Replace it with **catch**)  
   
-     `AND_CATCH` \(substitua pelo **catch**\)  
+     `AND_CATCH` (Replace it with **catch**)  
   
-     `END_CATCH` \(excluir ele\)  
+     `END_CATCH` (Delete it)  
   
-     **THROW** \(substitua pelo `throw`\)  
+     **THROW** (Replace it with `throw`)  
   
-     `THROW_LAST` \(substitua pelo `throw`\)  
+     `THROW_LAST` (Replace it with `throw`)  
   
-3.  Modifique os argumentos macro de modo que formem declarações válidos de exceção.  
+3.  Modify the macro arguments so that they form valid exception declarations.  
   
-     Por exemplo, alteração  
+     For example, change  
   
-     [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]  
   
-     para  
+     to  
   
-     [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]  
   
-4.  Modifique o código em blocos de try\/catch de modo que exclui objetos de exceção conforme necessário.  Para obter mais informações, consulte o artigo [Exceções: Capturando e excluindo exceções](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+4.  Modify the code in the catch blocks so that it deletes exception objects as necessary. For more information, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
- Aqui está um exemplo do código de manipulação de exceções gerais usando macros de exceção MFC.  Observe que porque o código no exemplo a seguir usa macros, a exceção `e` será excluída automaticamente:  
+ Here is an example of exception-handling code using MFC exception macros. Note that because the code in the following example uses the macros, the exception `e` is deleted automatically:  
   
- [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]  
   
- O código no exemplo seguinte usa palavras\-chave de exceção C\+\+, a exceção deve ser explicitamente excluída:  
+ The code in the next example uses the C++ exception keywords, so the exception must be explicitly deleted:  
   
- [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_4.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]  
   
- Para obter mais informações, consulte [Exceções: Usando macros de MFC e exceções C\+\+](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
+ For more information, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
   
-## Consulte também  
- [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

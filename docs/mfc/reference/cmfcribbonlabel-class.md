@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonLabel | Documentos do Microsoft
+title: CMFCRibbonLabel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonLabel class
+- CMFCRibbonLabel [MFC], CMFCRibbonLabel
+- CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
 caps.latest.revision: 21
 author: mikeblome
@@ -36,45 +37,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b93e0f6c46818515c8d6bcd8d71b78dcaa435ea6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c778ed32d761f895c4a5f95c319198748983f1be
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
-Implementa um rótulo de texto não clicável para uma faixa de opções.  
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel Class
+Implements a non-clickable text label for a ribbon.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constrói e inicializa um `CMFCRibbonLabel` objeto com a cadeia de caracteres de texto especificado.|  
-|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruidor.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constructs and initializes a `CMFCRibbonLabel` object with the specified text string.|  
+|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|Usado pelo framework para criar uma instância desse tipo de classe dinâmica.|  
-|`CMFCRibbonLabel::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto associado esse tipo de classe.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o elemento de rótulo de faixa de opções atual. (Substitui [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|`CMFCRibbonLabel::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonLabel::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determines the accessibility data for the current ribbon label element. (Overrides [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
-### <a name="remarks"></a>Comentários  
- Depois de criar um rótulo de faixa de opções, adicioná-lo a um painel chamando [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+### <a name="remarks"></a>Remarks  
+ After you create a ribbon label, add it to a panel by calling [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- Você não pode adicionar um rótulo de faixa de opções para a barra de ferramentas de acesso rápido.  
+ You cannot add a ribbon label to the Quick Access Toolbar.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -83,11 +84,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxRibbonLabel.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
- Constrói e inicializa um [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que exibe a cadeia de caracteres de texto especificado.  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
+ Constructs and initializes a [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) object that displays the specified text string.  
   
 ```  
 CMFCRibbonLabel(
@@ -95,15 +96,15 @@ CMFCRibbonLabel(
     BOOL bIsMultiLine = FALSE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- O texto exibido no rótulo.  
+ The text to appear in the label.  
   
  [in] `bIsMultiLine`  
- `TRUE`para especificar que o rótulo é um rótulo de várias linha; Caso contrário, `FALSE`.  
+ `TRUE` to specify that the label is a multi-line label; otherwise, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
- Determina os dados de acessibilidade para o elemento de rótulo de faixa de opções atual.  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
+ Determines the accessibility data for the current ribbon label element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -111,18 +112,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- Representa a janela pai do rótulo da faixa de opções atual.  
+ Represents the parent window of the current ribbon label.  
   
  [out] `data`  
- Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade do rótulo da faixa de opções atual.  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current ribbon label.  
   
-### <a name="return-value"></a>Valor de retorno  
- `TRUE`Se o `data` parâmetro estava com êxito preenchido com os dados de acessibilidade do rótulo da faixa de opções atual; caso contrário, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current ribbon label; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

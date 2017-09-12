@@ -1,35 +1,53 @@
 ---
-title: "Processando mensagens de notifica&#231;&#227;o em controles de lista | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CListCtrl, processando notificações"
-  - "processando notificações"
+title: Processing Notification Messages in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- processing notifications [MFC]
+- CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Processando mensagens de notifica&#231;&#227;o em controles de lista
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5891cae5528e221bebf5d59863881dd863fd99a4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Como os usuários clicam em cabeçalhos de coluna, arraste ícones, rótulos de edição, e assim por diante, o controle da lista[CListCtrl](../Topic/CListCtrl%20Class.md)\(\) envia notificações à janela pai.  Tratar essas mensagens se você deseja fazer algo na resposta.  Por exemplo, quando o usuário clica em um cabeçalho de coluna, talvez você queira classificar itens com base no conteúdo da coluna clicada, como no Microsoft Outlook.  
+---
+# <a name="processing-notification-messages-in-list-controls"></a>Processing Notification Messages in List Controls
+As users click column headers, drag icons, edit labels, and so on, the list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) sends notification messages to its parent window. Handle these messages if you want to do something in response. For example, when the user clicks a column header, you might want to sort the items based on the contents of the clicked column, as in Microsoft Outlook.  
   
- Mensagens de **WM\_NOTIFY** de processo do controle da lista na exibição ou a classe da caixa de diálogo.  Use a janela Propriedades para criar uma função de manipulador de [OnChildNotify](../Topic/CWnd::OnChildNotify.md) com uma instrução switch com base em notificação que está sendo tratada.  
+ Process **WM_NOTIFY** messages from the list control in your view or dialog class. Use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement based on which notification message is being handled.  
   
- Para obter uma lista de notificações que um controle de lista pode enviar à janela pai, consulte [Referência do controle de exibição de lista](http://msdn.microsoft.com/library/windows/desktop/bb774737) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For a list of the notifications a list control can send to its parent window, see [List View Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb774737) in the Windows SDK.  
   
-## Consulte também  
- [Usando CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

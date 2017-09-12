@@ -1,5 +1,5 @@
 ---
-title: "Manipuladores da caixa de combinação | Documentos do Microsoft"
+title: Combo Box Handlers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,7 @@ helpviewer_keywords:
 - ON_CBN_DROPDOWN
 - ON_CBN_EDITUPDATE
 - ON_CBN_KILLFOCUS
-- combo boxes, handlers
+- combo boxes [MFC], handlers
 - ON_CBN_EDITCHANGE
 - ON_CBN_ERRSPACE
 - ON_CBN_SELENDOK
@@ -54,31 +54,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3e20aea5d99fe6d706fee41a0e24a60a3b39b410
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6b08c91d092992bf65c233ef14bc78234a7a621e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-handlers"></a>Manipuladores da caixa de combinação
-As seguintes entradas de mapa correspondem aos protótipos de função.  
+# <a name="combo-box-handlers"></a>Combo Box Handlers
+The following map entries correspond to the function prototypes.  
   
-|Entrada de mapa|Protótipo da função|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg|  
-|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CBN_CLOSEUP( \<id>, \<memberFxn> )|afx_msg void memberFxn( )|  
+|ON_CBN_DBLCLK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_DROPDOWN( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_EDITCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_EDITUPDATE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_SELCHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_SELENDCANCEL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_SELENDOK( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_CBN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
 
 

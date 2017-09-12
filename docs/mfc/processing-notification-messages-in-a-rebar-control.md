@@ -1,55 +1,73 @@
 ---
-title: "Processando mensagens de notifica&#231;&#227;o em um controle rebar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CReBarCtrl, mensagens de notificação envidas por"
-  - "notificações, CReBarCtrl"
-  - "mensagens de notificação RBN_"
-  - "mensagens de notificação RBN_, descrição de"
+title: Processing Notification Messages in a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- RBN_ notification messages, description of
+- CReBarCtrl class [MFC], notification messages sent by
+- RBN_ notification messages [MFC]
+- notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Processando mensagens de notifica&#231;&#227;o em um controle rebar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9f6dd828b8864763d46592d270db38927198a0e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Na classe pai do controle de rebar, crie uma função de manipulador de `OnChildNotify` com uma instrução switch de todas as notificações de rebar\- controle \(\)`CReBarCtrl`você queira manipular.  As notificações são enviadas para a janela pai quando o usuário arrasta objetos sobre o controle de rebar, alterar o layout das faixas de rebar, exclui faixas de controle de rebar, e assim por diante.  
+---
+# <a name="processing-notification-messages-in-a-rebar-control"></a>Processing Notification Messages in a Rebar Control
+In the parent class of the rebar control, create an `OnChildNotify` handler function with a switch statement for any rebar-control (`CReBarCtrl`) notification messages you want to handle. Notifications are sent to the parent window when the user drags objects over the rebar control, changes the layout of the rebar bands, deletes bands from the rebar control, and so on.  
   
- As seguintes notificações podem ser enviadas pelo objeto de controle de rebar:  
+ The following notification messages can be sent by the rebar control object:  
   
--   **RBN\_AUTOSIZE** enviados por um controle de rebar \(criado com o estilo de **RBS\_AUTOSIZE** \) quando o rebar se é redimensionado automaticamente.  
+-   **RBN_AUTOSIZE** Sent by a rebar control (created with the **RBS_AUTOSIZE** style) when the rebar automatically resizes itself.  
   
--   **RBN\_BEGINDRAG** enviados por um controle de rebar quando o usuário inicia a arraste uma faixa.  
+-   **RBN_BEGINDRAG** Sent by a rebar control when the user begins dragging a band.  
   
--   **RBN\_CHILDSIZE** enviados por um controle de rebar quando a janela filho de uma linha distribuída é redimensionada.  
+-   **RBN_CHILDSIZE** Sent by a rebar control when a band's child window is resized.  
   
--   **RBN\_DELETEDBAND** enviados por um controle de rebar depois que uma faixa foi excluída.  
+-   **RBN_DELETEDBAND** Sent by a rebar control after a band has been deleted.  
   
--   **RBN\_DELETINGBAND** enviados por um controle de rebar quando uma faixa está prestes a ser excluída.  
+-   **RBN_DELETINGBAND** Sent by a rebar control when a band is about to be deleted.  
   
--   **RBN\_ENDDRAG** enviados por um controle de rebar quando o usuário para de arrastar uma faixa.  
+-   **RBN_ENDDRAG** Sent by a rebar control when the user stops dragging a band.  
   
--   **RBN\_GETOBJECT** enviados por um controle de rebar \(criado com o estilo de **RBS\_REGISTERDROP** \) quando um objeto é arrastado para uma faixa no controle.  
+-   **RBN_GETOBJECT** Sent by a rebar control (created with the **RBS_REGISTERDROP** style) when an object is dragged over a band in the control.  
   
--   **RBN\_HEIGHTCHANGE** enviados por um controle de rebar quando sua altura foi alterado.  
+-   **RBN_HEIGHTCHANGE** Sent by a rebar control when its height has changed.  
   
--   **RBN\_LAYOUTCHANGED** enviados por um controle de rebar quando o usuário alterar o layout das faixas de controle.  
+-   **RBN_LAYOUTCHANGED** Sent by a rebar control when the user changes the layout of the control's bands.  
   
- Para obter mais informações sobre essas mensagens de notificação, consulte [Referência de controle de Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774375) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information on these notifications, see [Rebar Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb774375) in the Windows SDK.  
   
-## Consulte também  
- [Usando CReBarCtrl](../Topic/Using%20CReBarCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

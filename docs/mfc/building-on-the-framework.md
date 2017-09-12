@@ -1,44 +1,62 @@
 ---
-title: "Aproveitando o Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "estrutura de aplicativo [C++], criando aplicativos"
-  - "aplicativos [MFC]"
-  - "classes específicas de aplicativo [C++]"
-  - "MFC [C++], desenvolvimento de aplicativo"
+title: Building on the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application-specific classes [MFC]
+- application framework [MFC], building applications
+- applications [MFC]
+- MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Aproveitando o Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14e4e98f27711fcc2b7f022d452b99f3a55969c6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A função na configuração de um aplicativo com a estrutura MFC é fornecer o código\-fonte de aplicativo específico e conectar os componentes definindo que mensagens e comandos que respondem a.  Você usa a linguagem C\+\+ e as técnicas padrão do C\+\+ derivar suas próprias classes específicos do aplicativo das fornecidas pela biblioteca de classe e substituir e aumentar o comportamento da classe base.  
+---
+# <a name="building-on-the-framework"></a>Building on the Framework
+Your role in configuring an application with the MFC framework is to supply the application-specific source code and to connect the components by defining what messages and commands to which they respond. You use the C++ language and standard C++ techniques to derive your own application-specific classes from those supplied by the class library and to override and augment the base class's behavior.  
   
- Em tópicos relacionados, as tabelas a seguir descrevem a sequência geral das operações que você seguirá normalmente e suas responsabilidades nas responsabilidades da estrutura:  
+ In related topics, the following tables describe the general sequence of operations you will typically follow and your responsibilities versus the framework's responsibilities:  
   
--   [Valor de sequência criando um aplicativo com a estrutura](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
+-   [Sequence for Building an Application with the Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
   
--   [Sequência de operações para criação de aplicativos OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
+-   [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
   
--   [Sequência de operações para criação de controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
+-   [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
   
--   [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)  
+-   [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)  
   
- Em geral, siga estas tabelas com uma sequência de etapas para criar um aplicativo de MFC, embora algumas das etapas são opções alternativas.  Por exemplo, o tipo de uso um dos aplicativos de classe da exibição de vários tipos disponíveis.  
+ For the most part, you can follow these tables as a sequence of steps for creating an MFC application, although some of the steps are alternative options. For example, most applications use one type of view class from the several types available.  
   
-## Consulte também  
- [Tópicos MFC gerais](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

@@ -1,49 +1,67 @@
 ---
-title: "Fun&#231;&#245;es de membro de controle deslizante | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CSliderCtrl, métodos"
-  - "controles deslizantes, funções de membro"
+title: Slider Control Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], methods
+- slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#245;es de membro de controle deslizante
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 440f9a20c1d73bc7f7b125867216d356251d4a08
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um aplicativo pode chamar funções de membro de controle deslizante para recuperar informações sobre o controle deslizante[CSliderCtrl](../mfc/reference/csliderctrl-class.md)\(\) e modificar suas características.  
+---
+# <a name="slider-control-member-functions"></a>Slider Control Member Functions
+An application can call the slider control's member functions to retrieve information about the slider control ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) and to change its characteristics.  
   
- Para recuperar a posição do controle deslizante \(isto é, o valor que o usuário optou\), use a função de membro de [GetPos](../Topic/CSliderCtrl::GetPos.md) .  Para definir a posição do controle deslizante, use a função de membro de [SetPos](../Topic/CSliderCtrl::SetPos.md) .  A qualquer momento você pode usar a função de membro de `VerifyPos` para garantir que o controle deslizante está entre os valores mínimo e máximo.  
+ To retrieve the position of the slider (that is, the value the user has chosen), use the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function. To set the position of the slider, use the [SetPos](../mfc/reference/csliderctrl-class.md#setpos) member function. At any time you can use the `VerifyPos` member function to make sure that the slider is between the minimum and maximum values.  
   
- O intervalo de um controle deslizante é o conjunto de valores contíguas que o controle deslizante pode representar.  A maioria dos aplicativos usa a função de membro de [SetRange](../Topic/CSliderCtrl::SetRange.md) para definir o intervalo de um controle deslizante quando for criado.  Os aplicativos podem alterar dinamicamente o intervalo após o controle deslizante foram criados usando as funções de membro de [SetRangeMax](../Topic/CSliderCtrl::SetRangeMax.md) e de [SetRangeMin](../Topic/CSliderCtrl::SetRangeMin.md) .  Um aplicativo que permite que o intervalo seja alterado dinamicamente normalmente recupera as configurações final do intervalo quando o usuário foi concluída trabalhar com o controle deslizante.  Para recuperar essas configurações, use [GetRange](../Topic/CSliderCtrl::GetRange.md), [GetRangeMax](../Topic/CSliderCtrl::GetRangeMax.md), e as funções de membro de [GetRangeMin](../Topic/CSliderCtrl::GetRangeMin.md) .  
+ The range of a slider control is the set of contiguous values that the slider control can represent. Most applications use the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function to set the range of a slider control when it is first created. Applications can dynamically alter the range after the slider control has been created by using the [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) and [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) member functions. An application that allows the range to be changed dynamically typically retrieves the final range settings when the user has finished working with the slider control. To retrieve these settings, use the [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), and [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) member functions.  
   
- Um aplicativo pode usar o estilo de `TBS_AUTOTICKS` para que as marcas de escala de um controle deslizante exibidas automaticamente.  Se um aplicativo precisar controlar a posição ou frequência das marcas de escala, porém, um número de funções de membro podem ser usadas.  
+ An application can use the `TBS_AUTOTICKS` style to have a slider control's tick marks displayed automatically. If an application needs to control the position or frequency of the tick marks, however, a number of member functions can be used.  
   
- Para definir a posição da marca de escala, um aplicativo pode usar a função de membro de [SetTic](../Topic/CSliderCtrl::SetTic.md) .  A função de membro de [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md) permite que um aplicativo defina as marcas de escala que aparece em intervalos regulares para o intervalo de controle deslizante.  Por exemplo, o aplicativo pode usar essa função de membro para exibir apenas 10 marcas de escala em um intervalo de 1 a 100.  
+ To set the position of a tick mark, an application can use the [SetTic](../mfc/reference/csliderctrl-class.md#settic) member function. The [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) member function allows an application to set tick marks that appear at regular intervals in the slider control's range. For example, the application can use this member function to display only 10 tick marks in a range of 1 through 100.  
   
- Para recuperar o índice no intervalo que corresponde a uma marca de escala, use a função de membro de [GetTic](../Topic/CSliderCtrl::GetTic.md) .  A função de membro de [GetTicArray](../Topic/CSliderCtrl::GetTicArray.md) recupera uma matriz desses índices.  Para recuperar a posição da marca de escala, nas coordenadas do cliente, use a função de membro de [GetTicPos](../Topic/CSliderCtrl::GetTicPos.md) .  Um aplicativo pode recuperar o número de marcas de escala usando a função de membro de [GetNumTics](../Topic/CSliderCtrl::GetNumTics.md) .  
+ To retrieve the index in the range corresponding to a tick mark, use the [GetTic](../mfc/reference/csliderctrl-class.md#gettic) member function. The [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) member function retrieves an array of these indices. To retrieve the position of a tick mark, in client coordinates, use the [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) member function. An application can retrieve the number of tick marks by using the [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) member function.  
   
- A função de membro de [ClearTics](../Topic/CSliderCtrl::ClearTics.md) remove todas as marcas de escala de um controle deslizante.  
+ The [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) member function removes all of a slider control's tick marks.  
   
- Uma linha de controle deslizante tamanho determina como a distância do controle deslizante se move quando um aplicativo recebe uma notificação de **TB\_LINEDOWN** ou de **TB\_LINEUP** .  Da mesma forma, o tamanho da página determina a resposta às notificações de **TB\_PAGEDOWN** e de **TB\_PAGEUP** .  Os aplicativos podem recuperar e definir valores de linha e do tamanho da página usando [GetLineSize](../Topic/CSliderCtrl::GetLineSize.md), [SetLineSize](../Topic/CSliderCtrl::SetLineSize.md), [GetPageSize](../Topic/CSliderCtrl::GetPageSize.md), e as funções de membro de [SetPageSize](../Topic/CSliderCtrl::SetPageSize.md) .  
+ A slider control's line size determines how far the slider moves when an application receives a **TB_LINEDOWN** or **TB_LINEUP** notification message. Similarly, the page size determines the response to the **TB_PAGEDOWN** and **TB_PAGEUP** notification messages. Applications can retrieve and set the line and page size values by using the [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), and [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) member functions.  
   
- Um aplicativo pode usar as funções de membro para recuperar as dimensões de um controle deslizante.  A função de membro de [GetThumbRect](../Topic/CSliderCtrl::GetThumbRect.md) recupera o retângulo delimitador para o controle deslizante.  A função de membro de [GetChannelRect](../Topic/CSliderCtrl::GetChannelRect.md) recupera o retângulo delimitador para o canal de controle deslizante. \(O canal é a área na qual o controle deslizante se movimenta e que contém o realce quando um intervalo seja selecionado.\)  
+ An application can use member functions to retrieve the dimensions of a slider control. The [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) member function retrieves the bounding rectangle for the slider. The [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) member function retrieves the bounding rectangle for the slider control's channel. (The channel is the area over which the slider moves and which contains the highlight when a range is selected.)  
   
- Se um controle deslizante tem o estilo de `TBS_ENABLESELRANGE` , o usuário pode selecionar um intervalo de valores contíguas deles.  Várias funções de membro permitem que o intervalo de seleção é definido dinamicamente.  A função de membro de [SetSelection](../Topic/CSliderCtrl::SetSelection.md) define as posições de início e término de uma seleção.  Quando o usuário foi concluída definir um intervalo de seleção, um aplicativo pode recuperar as configurações usando a função de membro de [GetSelection](../Topic/CSliderCtrl::GetSelection.md) .  Para desmarcar a seleção de um usuário, use a função de membro de [ClearSel](../Topic/CSliderCtrl::ClearSel.md) .  
+ If a slider control has the `TBS_ENABLESELRANGE` style, the user can select a range of contiguous values from it. A number of member functions allow the selection range to be adjusted dynamically. The [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) member function sets the starting and ending positions of a selection. When the user has finished setting a selection range, an application can retrieve the settings by using the [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) member function. To clear a user's selection, use the [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) member function.  
   
-## Consulte também  
- [Usando CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

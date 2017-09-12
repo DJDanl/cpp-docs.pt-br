@@ -1,34 +1,50 @@
 ---
-title: "Cont&#234;ineres: estados de item do cliente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "itens de cliente e contêineres OLE"
-  - "tempo de vida, estados de tempo de vida e itens do cliente de contêiner OLE"
-  - "Contêineres OLE, estados de item do cliente"
-  - "estados, item do cliente de contêiner OLE"
+title: 'Containers: Client-Item States | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE containers [MFC], client-item states
+- states, OLE container client-item
+- lifetime, lifetime states and OLE container client items
+- client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cont&#234;ineres: estados de item do cliente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba2e8fc0ad0f57ec6c964d592442033a63ebb67f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica os diferentes estados que um item de cliente passa através de seu tempo de vida.  
+---
+# <a name="containers-client-item-states"></a>Containers: Client-Item States
+This article explains the different states a client item passes through in its lifetime.  
   
- Um item de cliente passa por meio de vários estados a é criado, alterado ativado, e salvo.  Cada vez que as alterações de estado do item, a estrutura chamam [COleClientItem::OnChange](../Topic/COleClientItem::OnChange.md) à notificação de `OLE_CHANGED_STATE` .  O segundo parâmetro é um valor de enumeração de **COleClientItem::ItemState** .  Pode ser um dos seguintes:  
+ A client item passes through several states as it is created, activated, modified, and saved. Each time the item's state changes, the framework calls [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) with the `OLE_CHANGED_STATE` notification. The second parameter is a value from the **COleClientItem::ItemState** enumeration. It can be one of the following:  
   
 -   **COleClientItem::emptyState**  
   
@@ -40,17 +56,18 @@ Este artigo explica os diferentes estados que um item de cliente passa através 
   
 -   **COleClientItem::activeUIState**  
   
- No estado vazia, um item do cliente não ainda é completamente um item.  A memória foi alocada para ela, mas ainda não foi inicializada com os dados do do item.  Este é o estado que um item de cliente está em quando foi criado com uma chamada a **new** mas não se submeteu na segunda etapa da criação normal de duas etapas.  
+ In the empty state, a client item is not yet completely an item. Memory has been allocated for it, but it has not yet been initialized with the OLE item's data. This is the state a client item is in when it has been created through a call to **new** but has not yet undergone the second step of the typical two-step creation.  
   
- Na segunda etapa, executada por uma chamada a `COleClientItem::CreateFromFile` ou a outra função de **CreateFrom***xxxx* , o item é criado completamente.  Os dados do \(de um arquivo ou de alguma outra origem, como a área de transferência\) foram associados a `COleClientItem`\- objeto derivada.  Agora o item está no estado carregado.  
+ In the second step, performed through a call to `COleClientItem::CreateFromFile` or another **CreateFrom***xxxx* function, the item is completely created. The OLE data (from a file or some other source, such as the Clipboard) has been associated with the `COleClientItem`-derived object. Now the item is in the loaded state.  
   
- Quando um item foi aberto na janela do servidor em vez de aberto no lugar no documento de contêiner, é \(ou abrir completamente\) no estado aberto.  Nesse estado, uma crosshatch é desenhada em geral sobre a representação do item na janela do contêiner para indicar que o item está ativa em outro lugar.  
+ When an item has been opened in the server's window rather than opened in place in the container's document, it is in the open (or fully open) state. In this state, a cross-hatch usually is drawn over the representation of the item in the container's window to indicate that the item is active elsewhere.  
   
- Quando um item foi ativado no lugar, passa, normalmente apenas brevemente, por meio do estado ativo.  Insira o estado ativo da interface do usuário, em que o servidor se mesclou os menus, barras de ferramentas, e outros componentes de interface do usuário com as do contêiner.  A presença desses componentes de interface do usuário faz distinção o estado ativo da interface do usuário do estado ativo.  Caso contrário, o estado ativo se assemelha ao estado ativo da interface do usuário.  Se o servidor oferecer suporte desfazer, o servidor será necessário reter informações OLE desfazer\- estado do item até alcançar carregado ou abrir o estado.  
+ When an item has been activated in place, it passes, usually only briefly, through the active state. It then enters the UI active state, in which the server has merged its menus, toolbars, and other user-interface components with those of the container. The presence of these user-interface components distinguishes the UI active state from the active state. Otherwise, the active state resembles the UI active state. If the server supports Undo, the server is required to retain the OLE item's undo-state information until it reaches the loaded or open state.  
   
-## Consulte também  
- [Contêineres](../mfc/containers.md)   
- [Ativação](../mfc/activation-cpp.md)   
- [Contêineres: notificações de item do cliente](../mfc/containers-client-item-notifications.md)   
- [Controladores](../mfc/trackers.md)   
- [Classe de CRectTracker](../mfc/reference/crecttracker-class.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Containers: Client-Item Notifications](../mfc/containers-client-item-notifications.md)   
+ [Trackers](../mfc/trackers.md)   
+ [CRectTracker Class](../mfc/reference/crecttracker-class.md)
+

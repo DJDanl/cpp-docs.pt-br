@@ -1,5 +1,5 @@
 ---
-title: Classe CIPAddressCtrl | Documentos do Microsoft
+title: CIPAddressCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,12 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- IP address control
-- Internet address edit box
-- CIPAddressCtrl class
-- Internet protocol address box
-- common controls, Internet Explorer 4.0
-- Internet Explorer 4.0 common controls
+- CIPAddressCtrl [MFC], CIPAddressCtrl
+- CIPAddressCtrl [MFC], ClearAddress
+- CIPAddressCtrl [MFC], Create
+- CIPAddressCtrl [MFC], CreateEx
+- CIPAddressCtrl [MFC], GetAddress
+- CIPAddressCtrl [MFC], IsBlank
+- CIPAddressCtrl [MFC], SetAddress
+- CIPAddressCtrl [MFC], SetFieldFocus
+- CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
 caps.latest.revision: 22
 author: mikeblome
@@ -48,51 +51,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b3849580c7bfd07f241e55cc48144959566d7d09
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f895fb30442e4a0546201004eadba91deeff464
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
-Fornece a funcionalidade do controle de endereço IP comuns do Windows.  
+# <a name="cipaddressctrl-class"></a>CIPAddressCtrl Class
+Provides the functionality of the Windows common IP Address control.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CIPAddressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Constrói um objeto `CIPAddressCtrl`.|  
+|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Constructs a `CIPAddressCtrl` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|Limpa o conteúdo do controle de endereço IP.|  
-|[CIPAddressCtrl::Create](#create)|Cria um controle de endereço IP e a anexa a um `CIPAddressCtrl` objeto.|  
-|[CIPAddressCtrl::CreateEx](#createex)|Cria um controle de endereço IP com os estilos estendidos do Windows especificados e a anexa a um `CIPAddressCtrl` objeto.|  
-|[CIPAddressCtrl::GetAddress](#getaddress)|Recupera os valores de endereço para todos os quatro campos no controle de endereço IP.|  
-|[CIPAddressCtrl::IsBlank](#isblank)|Determina se todos os campos no controle de endereço IP estão vazios.|  
-|[CIPAddressCtrl::SetAddress](#setaddress)|Define os valores de endereço para todos os quatro campos no controle de endereço IP.|  
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Define o foco do teclado para o campo especificado no controle de endereço IP.|  
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Define o intervalo no campo especificado no controle de endereço IP.|  
+|[CIPAddressCtrl::ClearAddress](#clearaddress)|Clears the contents of the IP Address Control.|  
+|[CIPAddressCtrl::Create](#create)|Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::CreateEx](#createex)|Creates an IP Address control with the specified Windows extended styles and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::GetAddress](#getaddress)|Retrieves the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::IsBlank](#isblank)|Determines if all fields in the IP Address Control are empty.|  
+|[CIPAddressCtrl::SetAddress](#setaddress)|Sets the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Sets the keyboard focus to the specified field in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Sets the range in the specified field in the IP Address Control.|  
   
-## <a name="remarks"></a>Comentários  
- Um controle de endereço IP, um controle semelhante a um controle de edição permite que você insira e manipular um endereço numérico em formato de IP (Internet Protocol).  
+## <a name="remarks"></a>Remarks  
+ An IP Address control, a control similar to an edit control, allows you to enter and manipulate a numerical address in Internet Protocol (IP) format.  
   
- Esse controle (e, portanto, a `CIPAddressCtrl` classe) está disponível apenas para programas em execução no Microsoft Internet Explorer 4.0 e posterior. Eles também estarão disponíveis em versões futuras do Windows e Windows NT.  
+ This control (and therefore the `CIPAddressCtrl` class) is available only to programs running under Microsoft Internet Explorer 4.0 and later. They will also be available under future versions of Windows and Windows NT.  
   
- Para obter mais informações sobre o controle de endereço IP, consulte [controles de endereço IP](http://msdn.microsoft.com/library/windows/desktop/bb761372) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more general information about the IP Address Control, see [IP Address Controls](http://msdn.microsoft.com/library/windows/desktop/bb761372) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,28 +104,28 @@ class CIPAddressCtrl : public CWnd
   
  `CIPAddressCtrl`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
- Cria um objeto `CIPAddressCtrl`.  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
+ Creates a `CIPAddressCtrl` object.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
- Limpa o conteúdo do controle de endereço IP.  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
+ Clears the contents of the IP Address Control.  
   
 ```  
 void ClearAddress();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), as described in the Windows SDK.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
- Cria um controle de endereço IP e a anexa a um `CIPAddressCtrl` objeto.  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
+ Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -132,33 +135,33 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o **WS_CHILD** porque o controle deve ser uma janela filho de estilo. Consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter uma lista de estilos do windows.  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- Uma referência para o tamanho e a posição do controle de endereço IP. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
+ A reference to the IP Address Control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- Um ponteiro para a janela pai do controle de endereço IP. Ele não deve ser **nulo.**  
+ A pointer to the IP Address Control's parent window. It must not be **NULL.**  
   
  `nID`  
- Identificação. do controle de endereço IP  
+ The IP Address Control's ID.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a inicialização foi bem sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Você construir um `CIPAddressCtrl` objeto em duas etapas.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CIPAddressCtrl` object in two steps.  
   
-1.  Chame o construtor, que cria o `CIPAddressCtrl` objeto.  
+1.  Call the constructor, which creates the `CIPAddressCtrl` object.  
   
-2.  Chamar **criar**, que cria o controle de endereço IP.  
+2.  Call **Create**, which creates the IP Address Control.  
   
- Se você quiser usar estilos estendidos do windows com o controle, chame [CreateEx](#createex) em vez de **criar**.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
- Chame essa função para criar um controle (uma janela filho) e associá-lo a `CIPAddressCtrl` objeto.  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
+ Call this function to create a control (a child window) and associate it with the `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -169,30 +172,30 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o `dwExStyle` parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Estilo do controle de endereço IP. Aplica uma combinação de estilos de janela. Você deve incluir o **WS_CHILD** porque o controle deve ser uma janela filho de estilo. Consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter uma lista de estilos do windows.  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Um ponteiro para a janela que é o pai do controle.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- ID da janela filho. do controle  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
- Recupera os valores de endereço para todos os quatro campos no controle de endereço IP.  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
+ Retrieves the address values for all four fields in the IP Address Control.  
   
 ```  
 int GetAddress(
@@ -204,50 +207,50 @@ int GetAddress(
 int GetAddress(DWORD& dwAddress);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- Uma referência para o valor do campo 0 de um endereço IP compactada.  
+ A reference to the field 0 value from a packed IP address.  
   
  `nField1`  
- Uma referência para o valor do campo 1 de um endereço IP compactada.  
+ A reference to the field 1 value from a packed IP address.  
   
  `nField2`  
- Uma referência para o valor do campo 2 de um endereço IP compactada.  
+ A reference to the field 2 value from a packed IP address.  
   
  `nField3`  
- Uma referência para o valor do campo 3 de um endereço IP compactada.  
+ A reference to the field 3 value from a packed IP address.  
   
  `dwAddress`  
- Uma referência para o endereço de uma `DWORD` valor que recebe o endereço IP. Consulte **comentários** para uma tabela que mostra como `dwAddress` é preenchido.  
+ A reference to the address of a `DWORD` value that receives the IP address. See **Remarks** for a table that shows how `dwAddress` is filled.  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de campos de linha em branco no controle de endereço IP.  
+### <a name="return-value"></a>Return Value  
+ The number of non-blank fields in the IP Address Control.  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. No primeiro protótipo acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita, respectivamente, preencher os quatro parâmetros. No segundo protótipo acima, `dwAddress` é preenchida da seguinte maneira.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|Campo|Que contém o valor do campo de bits|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24 a 31|  
-|1|16 a 23|  
-|2|8 a 15|  
-|3|0 a 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
- Determina se todos os campos no controle de endereço IP estão vazios.  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
+ Determines if all fields in the IP Address Control are empty.  
   
 ```  
 BOOL IsBlank() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se todos os campos de controle de endereço IP estiverem vazios; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if all of the IP Address Control fields are empty; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), as described in the Windows SDK.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
- Define os valores de endereço para todos os quatro campos no controle de endereço IP.  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
+ Sets the address values for all four fields in the IP Address Control.  
   
 ```  
 void SetAddress(
@@ -259,48 +262,48 @@ void SetAddress(
 void SetAddress(DWORD dwAddress);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- O valor do campo 0 de um endereço IP compactado.  
+ The field 0 value from a packed IP address.  
   
  `nField1`  
- O valor do campo 1 de um endereço IP compactado.  
+ The field 1 value from a packed IP address.  
   
  `nField2`  
- O valor do campo 2 de um endereço IP compactado.  
+ The field 2 value from a packed IP address.  
   
  `nField3`  
- O valor do campo 3 de um endereço IP compactado.  
+ The field 3 value from a packed IP address.  
   
  `dwAddress`  
- Um `DWORD` valor que contém o novo endereço IP. Consulte **comentários** para uma tabela que mostra como o `DWORD` valor é preenchido.  
+ A `DWORD` value that contains the new IP address. See **Remarks** for a table that shows how the `DWORD` value is filled.  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. No primeiro protótipo acima, os números nos campos de 0 a 3 do controle, lidos da esquerda para a direita, respectivamente, preencher os quatro parâmetros. No segundo protótipo acima, `dwAddress` é preenchida da seguinte maneira.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|Campo|Que contém o valor do campo de bits|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24 a 31|  
-|1|16 a 23|  
-|2|8 a 15|  
-|3|0 a 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
- Define o foco do teclado para o campo especificado no controle de endereço IP.  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
+ Sets the keyboard focus to the specified field in the IP Address Control.  
   
 ```  
 void SetFieldFocus(WORD nField);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nField`  
- Índice do campo com base em zero para o qual o foco deve ser definido. Se esse valor for maior que o número de campos, o foco será definido para o primeiro campo em branco. Se todos os campos são não em branco, o foco será definido para o primeiro campo.  
+ Zero-based field index to which the focus should be set. If this value is greater than the number of fields, focus is set to the first blank field. If all fields are non-blank, focus is set to the first field.  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), as described in the Windows SDK.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
- Define o intervalo no campo especificado no controle de endereço IP.  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
+ Sets the range in the specified field in the IP Address Control.  
   
 ```  
 void SetFieldRange(
@@ -309,22 +312,22 @@ void SetFieldRange(
     BYTE nUpper);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nField`  
- Índice do campo com base em zero para o qual o intervalo será aplicado.  
+ Zero-based field index to which the range will be applied.  
   
  `nLower`  
- Uma referência a um número inteiro recebendo o limite inferior do campo especificado neste controle de endereço IP.  
+ A reference to an integer receiving the lower limit of the specified field in this IP Address Control.  
   
  `nUpper`  
- Uma referência a um número inteiro recebendo o limite superior do campo especificado neste controle de endereço IP.  
+ A reference to an integer receiving the upper limit of the specified field in this IP Address Control.  
   
-### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Use os dois parâmetros, `nLower` e `nUpper`, para indicar os limites inferiores e superiores do campo, em vez do *wRange* parâmetro usado com a mensagem do Win32.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), as described in the Windows SDK. Use the two parameters, `nLower` and `nUpper`, to indicate the lower and upper limits of the field, instead of the *wRange* parameter used with the Win32 message.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CWnd](../../mfc/reference/cwnd-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

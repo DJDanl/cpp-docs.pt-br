@@ -1,5 +1,5 @@
 ---
-title: Estrutura SOCKADDR | Documentos do Microsoft
+title: SOCKADDR Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SOCKADDR structure
+- SOCKADDR structure [MFC]
 ms.assetid: df1ed66a-f4b8-43f8-8db8-8c2533d25f68
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 28984fcc5614a5f901a01ffdeff4ea5f360f63fc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 269d20023d1f95a82c62244a0e77b2b902ba0b19
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="sockaddr-structure"></a>Estrutura SOCKADDR
-O `SOCKADDR` estrutura é usada para armazenar um endereço IP (Internet Protocol) para uma máquina que participam de uma comunicação de Windows Sockets.  
+# <a name="sockaddr-structure"></a>SOCKADDR Structure
+The `SOCKADDR` structure is used to store an Internet Protocol (IP) address for a machine participating in a Windows Sockets communication.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct sockaddr {  
@@ -52,22 +52,22 @@ struct sockaddr {
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *sa_family*  
- Família de endereços de soquete.  
+ Socket address family.  
   
  *sa_data*  
- Tamanho máximo de todas as estruturas de endereço de soquete diferente.  
+ Maximum size of all the different socket address structures.  
   
-## <a name="remarks"></a>Comentários  
- Kit do desenvolvedor do Microsoft TCP/IP Sockets só oferece suporte os domínios de endereço da Internet. Para realmente preencher valores para cada parte de um endereço, você deve usar o `SOCKADDR_IN` estrutura de dados, que é especificamente para esse formato de endereço. O `SOCKADDR` e `SOCKADDR_IN` estruturas de dados têm o mesmo tamanho. Você simplesmente converter para alternar entre os tipos de estrutura de dois.  
+## <a name="remarks"></a>Remarks  
+ The Microsoft TCP/IP Sockets Developer's Kit only supports the Internet address domains. To actually fill in values for each part of an address, you use the `SOCKADDR_IN` data structure, which is specifically for this address format. The `SOCKADDR` and the `SOCKADDR_IN` data structures are the same size. You simply cast to switch between the two structure types.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Winsock2  
+## <a name="requirements"></a>Requirements  
+ **Header:** winsock2.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Estrutura SOCKADDR_IN](../../mfc/reference/sockaddr-in-structure.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [SOCKADDR_IN Structure](../../mfc/reference/sockaddr-in-structure.md)   
  [CAsyncSocket::Create](../../mfc/reference/casyncsocket-class.md#create)   
  [CSocket::Create](../../mfc/reference/csocket-class.md#create)
 
