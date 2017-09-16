@@ -1,37 +1,55 @@
 ---
-title: "Usando um contexto de dispositivo n&#227;o recortado | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Controles ActiveX MFC, contexto de dispositivo não recortado"
+title: Using an Unclipped Device Context | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando um contexto de dispositivo n&#227;o recortado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb4e5f4a40aa1885add7fdb68d1f8123563ef12e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Se você você tiver certeza de que o controle não pt fora do retângulo de cliente, você pode realizar um pequeno ganho mas detectável de velocidade desabilitando a chamada a `IntersectClipRect` que é feito por `COleControl`.  Para fazer isso, remova o sinalizador de **clipPaintDC** do conjunto de sinalizadores retornados por [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md).  Por exemplo:  
+---
+# <a name="using-an-unclipped-device-context"></a>Using an Unclipped Device Context
+If you are absolutely certain that your control does not paint outside its client rectangle, you can realize a small but detectable speed gain by disabling the call to `IntersectClipRect` that is made by `COleControl`. To do this, remove the **clipPaintDC** flag from the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/CPP/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/using-an-unclipped-device-context_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
   
- O código para remover este sinalizador é gerado automaticamente se você selecionar a opção de **Unclipped Device Context** na página de [Controle configurações](../mfc/reference/control-settings-mfc-activex-control-wizard.md) , ao criar seu controle com o assistente de controle ActiveX de MFC.  
+ The code to remove this flag is automatically generated if you select the **Unclipped Device Context** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page, when creating your control with the MFC ActiveX Control Wizard.  
   
- Se você estiver usando a ativação sem o windows, essa otimização não tem nenhum efeito.  
+ If you are using windowless activation, this optimization has no effect.  
   
-## Consulte também  
- [Controles ActiveX MFC: otimização](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

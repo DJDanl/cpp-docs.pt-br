@@ -1,5 +1,5 @@
 ---
-title: Editando um manipulador de mensagens | Documentos do Microsoft
+title: Editing a Message Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handlers
-- message handling, editing handlers
+- message handlers [MFC]
+- message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 caps.latest.revision: 9
 author: mikeblome
@@ -34,27 +34,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: e9befbe9bf05623b3ecd05248985dd74f2526b43
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 54747ba6d51f200f674e47afea41d3482c33b107
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="editing-a-message-handler"></a>Editando um manipulador de mensagens
-Depois de definir um manipulador de mensagens, você pode ir para definição da função de membro para adicionar ou modificar o código.  
+# <a name="editing-a-message-handler"></a>Editing a Message Handler
+Once you have defined a message handler, you can go to the member function's definition to add or modify code.  
   
- Para saltar para uma definição de função de membro de [editor de diálogo](../../windows/dialog-editor.md), clique duas vezes em um controle para o qual um manipulador já está definido. Você navega até o arquivo no qual o manipulador de mensagens do controle selecionado é definido.  
+ To jump to a member function definition from the [dialog editor](../../windows/dialog-editor.md), double-click a control for which a handler is already defined. This navigates you to the file in which the selected control's message handler is defined.  
   
- Para saltar para uma definição de função de membro de [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique duas vezes no nome da função na exibição de classe.  
+ To jump to a member function definition from [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), double-click the function name in Class View.  
   
-## <a name="see-also"></a>Consulte também  
- [Mapeando mensagens para funções](../../mfc/reference/mapping-messages-to-functions.md)   
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando na estrutura da classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Struct char_traits&lt;wchar_t&gt; | Microsoft Docs
+title: char_traits&lt;wchar_t&gt; Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,34 +34,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 14d43585a5a18305a73f7edc995d9ae17106ef39
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d8e35828caa6de04cf61539ceb829dd239d7e18
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraitsltwchartgt-struct"></a>Struct char_traits&lt;wchar_t&gt;
-Uma classe que é uma especialização da struct de modelo **char_traits\<CharType>** para um elemento do tipo `wchar_t`.  
+# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; Struct
+A class that is a specialization of the template struct **char_traits\<CharType>** to an element of type `wchar_t`.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<wchar_t>;
 ```  
   
-## <a name="remarks"></a>Comentários  
- A especialização permite que a struct aproveite funções de biblioteca que manipulam objetos desse tipo `wchar_t`.  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `wchar_t`.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [Struct char_traits](../standard-library/char-traits-struct.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [char_traits Struct](../standard-library/char-traits-struct.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

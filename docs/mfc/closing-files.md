@@ -1,36 +1,54 @@
 ---
-title: "Fechando arquivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arquivos  [C++], fechamento"
-  - "MFC [C++], operações de arquivo"
+title: Closing Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, file operations
+- files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fechando arquivos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 893cdd50e3bf23585acf7cff7c81392c79f9b8f6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Como ocorre em operações de E\/S, quando você terminar com um arquivo, você deve fechá\-lo.  
+---
+# <a name="closing-files"></a>Closing Files
+As usual in I/O operations, once you finish with a file, you must close it.  
   
-#### Para fechar um arquivo  
+#### <a name="to-close-a-file"></a>To close a file  
   
-1.  Use a função de membro de **Fechar** .  Essa função fecha o arquivo do sistema de arquivos e os buffers de liberações se necessário.  
+1.  Use the **Close** member function. This function closes the file-system file and flushes buffers if necessary.  
   
- Se você atribuiu o objeto de [CFile](../mfc/reference/cfile-class.md) no quadro \(como no exemplo mostrado em [Abrindo arquivos](../Topic/Opening%20Files.md)\), o objeto será fechado automaticamente e destruído em quando sai do escopo.  Observe que exclui o objeto de `CFile` não exclui o arquivo físico no sistema de arquivos.  
+ If you allocated the [CFile](../mfc/reference/cfile-class.md) object on the frame (as in the example shown in [Opening Files](../mfc/opening-files.md)), the object will automatically be closed and then destroyed when it goes out of scope. Note that deleting the `CFile` object does not delete the physical file in the file system.  
   
-## Consulte também  
- [Arquivos](../mfc/files-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Files](../mfc/files-in-mfc.md)
+
+

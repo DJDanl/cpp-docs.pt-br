@@ -1,48 +1,66 @@
 ---
-title: "Windows Sockets: convertendo cadeias de caracteres | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "soquetes [C++], problemas de conversão de cadeias de caracteres multibyte"
-  - "conversão de cadeia de caracteres, cadeias de caracteres multibyte"
-  - "Windows Sockets [C++], conversão de cadeias de caracteres multibyte"
+title: 'Windows Sockets: Converting Strings | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], multibyte character string conversion
+- sockets [MFC], multibyte character string conversion issues
+- string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets: convertendo cadeias de caracteres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fae6b9a092324ead56304b5498d6792873b377ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo e dois artigos complementares explicam vários problemas na programação de soquetes do windows.  Este artigo abrange converter cadeias de caracteres.  Outros problemas são abordados em [Soquetes do windows: Bloqueio](../Topic/Windows%20Sockets:%20Blocking.md) e em [Soquetes do windows: A ordenação de bytes](../mfc/windows-sockets-byte-ordering.md).  
+---
+# <a name="windows-sockets-converting-strings"></a>Windows Sockets: Converting Strings
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers converting strings. The other issues are covered in [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).  
   
- Se você usar ou se deriva da classe [CAsyncSocket](../Topic/CAsyncSocket%20Class.md), você precisará gerenciar esses problemas você mesmo.  Se você usar ou se deriva da classe [CSocket](../mfc/reference/csocket-class.md), o MFC gerenciá\-los para você.  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## Convertendo cadeias de caracteres  
- Se você se comunica entre os aplicativos que usam as cadeias de caracteres armazenadas em formatos diferentes ampla de caracteres, como Unicode ou conjuntos de caracteres multibyte \(MBCS\), ou entre um desses e um aplicativo usando cadeias de caracteres ANSI, você deve gerenciar as conversões você mesmo sob `CAsyncSocket`.  O objeto de `CArchive` usado com um objeto de `CSocket` gerencia essa conversão para você por meio dos recursos da classe [CString](../atl-mfc-shared/reference/cstringt-class.md).  Para obter mais informações, consulte a especificação de soquetes do windows, localizada em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+## <a name="converting-strings"></a>Converting Strings  
+ If you communicate between applications that use strings stored in different wide-character formats, such as Unicode or multibyte character sets (MBCS), or between one of these and an application using ANSI character strings, you must manage the conversions yourself under `CAsyncSocket`. The `CArchive` object used with a `CSocket` object manages this conversion for you through the capabilities of class [CString](../atl-mfc-shared/reference/cstringt-class.md). For more information, see the Windows Sockets specification, located in the Windows SDK.  
   
- Para obter mais informações, consulte:  
+ For more information, see:  
   
--   [Soquetes do windows: Usando a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Soquetes do windows: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Soquetes do windows: Plano de fundo](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Soquetes do windows: Soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Soquetes do windows: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## Consulte também  
- [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

@@ -1,59 +1,77 @@
 ---
-title: "Rolando e colocando exibi&#231;&#245;es em escala | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manipuladores de mensagens"
-  - "lidando com erros, barras de rolagem na classe de exibição"
-  - "dimensionando exibições"
-  - "barras de rolagem, mensagens"
-  - "rolando exibições"
+title: Scrolling and Scaling Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- scaling views [MFC]
+- message handling [MFC], scroll bars in view class [MFC]
+- scroll bars [MFC], messages
+- scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Rolando e colocando exibi&#231;&#245;es em escala
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ba8ef3c6b1eaa228d136289323209d8bf220023
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O oferece suporte às exibições que vá e exibições que são dimensionadas automaticamente ao tamanho da janela do tableau que os exibe.  A classe `CScrollView` oferece suporte aos tipos de exibições.  
+---
+# <a name="scrolling-and-scaling-views"></a>Scrolling and Scaling Views
+MFC supports views that scroll and views that are automatically scaled to the size of the frame window that displays them. Class `CScrollView` supports both kinds of views.  
   
- Para obter mais informações sobre de rolagem e de escala, consulte a classe [CScrollView](../mfc/reference/cscrollview-class.md)*na referência de MFC*.  Para obter um exemplo de rolagem, consulte [O exemplo rabiscar](../top/visual-cpp-samples.md).  
+ For more information about scrolling and scaling, see class [CScrollView](../mfc/reference/cscrollview-class.md) in the *MFC Reference*. For a scrolling example, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Rolando uma exibição  
+-   Scrolling a view  
   
--   Dimensionando uma exibição  
+-   Scaling a view  
   
--   [\<caps:sentence id\="tgt8" sentenceid\="f321fcf7c88bc6e3f892ae0fc9b2f0d8" class\="tgtSentence"\>Coordenadas de exibição\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [View coordinates](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
   
-##  <a name="_core_scrolling_a_view"></a> Rolando uma exibição  
- Vezes o tamanho de um documento é maior que o tamanho sua exibição pode exibir.  Isso pode ocorrer porque os dados de documento aumentam ou o usuário reduz a janela que molda a exibição.  Nesses casos, a exibição deve oferecer suporte à rolagem.  
+##  <a name="_core_scrolling_a_view"></a> Scrolling a View  
+ Frequently the size of a document is greater than the size its view can display. This may occur because the document's data increases or the user shrinks the window that frames the view. In such cases, the view must support scrolling.  
   
- Qualquer exibição pode tratar mensagens da barra de rolagem em suas funções de membro de `OnHScroll` e de `OnVScroll` .  Você ou pode implementar a manipulação de mensagens da barra de rolagem nessas funções, fazendo com que todo o trabalho você mesmo, ou você pode usar a classe de `CScrollView` para tratar a rolagem para você.  
+ Any view can handle scroll-bar messages in its `OnHScroll` and `OnVScroll` member functions. You can either implement scroll-bar message handling in these functions, doing all the work yourself, or you can use the `CScrollView` class to handle scrolling for you.  
   
- `CScrollView` faz o seguinte:  
+ `CScrollView` does the following:  
   
--   Gerencia tamanhos da janela e do visor e modos de mapeamento  
+-   Manages window and viewport sizes and mapping modes  
   
--   Confirmadas automaticamente em resposta a mensagens da barra de rolagem  
+-   Scrolls automatically in response to scroll-bar messages  
   
- Você pode especificar por quanto para rolar para uma “página” \(quando o usuário clica em um eixo da barra de rolagem\) e uma linha “” \(quando o usuário clica em em uma seta de rolagem\).  Planejar esses valores adequados à natureza da exibição.  Por exemplo, talvez você queira colocar em incrementos de 1 pixels para uma exibição dos gráficos mas em incrementos baseados na linha altura em documentos de texto.  
+ You can specify how much to scroll for a "page" (when the user clicks in a scroll-bar shaft) and a "line" (when the user clicks in a scroll arrow). Plan these values to suit the nature of your view. For example, you might want to scroll in 1-pixel increments for a graphics view but in increments based on the line height in text documents.  
   
-##  <a name="_core_scaling_a_view"></a> Dimensionando uma exibição  
- Quando você deseja que a exibição automaticamente para se ajustar ao tamanho da janela do quadro, você pode usar `CScrollView` para dimensionar em vez de rolagem.  A exibição lógica é alongada ou reduzida para ajustar exatamente à área do cliente da janela.  Uma exibição dimensionada não tem nenhuma barra de rolagem.  
+##  <a name="_core_scaling_a_view"></a> Scaling a View  
+ When you want the view to automatically fit the size of its frame window, you can use `CScrollView` for scaling instead of scrolling. The logical view is stretched or shrunk to fit the window's client area exactly. A scaled view has no scroll bars.  
   
-## Consulte também  
- [Usando exibições](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

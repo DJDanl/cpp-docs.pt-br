@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.cvt.<cvt/wbuffer>
-- stdext::cvt::<cvt/wbuffer>
-- <cvt/wbuffer>
+- stdext.cvt.<cvt/wbuffer>", "stdext::cvt::<cvt/wbuffer>", "<cvt/wbuffer>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,25 +33,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 75ebf7b06883f0cf79f7826c110ccdfe88009992
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 16c6e1b36d75fcdf8c6a01bf57771dd8c572d6c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
-O cabeçalho `<cvt/wstring>` nas versões anteriores do Visual Studio definia a classe de modelo da [Classe wbuffer_convert](../standard-library/wbuffer-convert-class.md) no namespace stdext::cvt. O cabeçalho é mantido para compatibilidade com versões anteriores. O novo código deve usar a versão da classe que é definida em [\<locale>](../standard-library/locale.md) no namespace `std`  
+The header `<cvt/wstring>` in previous versions of Visual Studio defined the template class [wbuffer_convert Class](../standard-library/wbuffer-convert-class.md) in the stdext::cvt namespace. The header is maintained for backward compatibility. New code should use the version of the class that is defined in [\<locale>](../standard-library/locale.md) in the `std` namespace  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <cvt/wbuffer>  
   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

@@ -1,42 +1,60 @@
 ---
-title: "Exemplo de confinamento do documento ativo: Office Binder | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contêineres de documentos ativos [C++], exemplos"
-  - "documentos ativos [C++], contêineres"
-  - "contêineres [C++], documento ativo"
-  - "exemplos [C++], contenção de documentos ativos"
-  - "COM MFC [C++], contenção de documentos ativos"
-  - "Office Binder"
+title: 'Example of Active Document Containment: Office Binder | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- examples [MFC], active document containment
+- containers [MFC], active document
+- active document containers [MFC], examples
+- Office Binder [MFC]
+- MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Exemplo de confinamento do documento ativo: Office Binder
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a7202da76d8b7bf66f0d912b4cc855ccfd12d2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A pasta do Microsoft Office é um exemplo de um contêiner ativa do documento.  Uma pasta do Office inclui dois painéis principais, como os contêineres geralmente fazem.  O painel esquerdo contém os ícones que correspondem aos documentos ativas na pasta.  Cada documento é chamado *uma seção* na pasta.  Por exemplo, uma pasta pode conter documentos do word, o Powerpoint arquivos, planilhas do Excel, e assim por diante.  
+---
+# <a name="example-of-active-document-containment-office-binder"></a>Example of Active Document Containment: Office Binder
+The Microsoft Office Binder is an example of an active document container. An Office Binder includes two primary panes, as containers typically do. The left pane contains icons that correspond to active documents in the Binder. Each document is called a *section* within the Binder. For example, a Binder can contain Word documents, PowerPoint files, Excel spreadsheets, and so on.  
   
- Clique em um ícone no painel esquerdo ativa o documento ativo correspondente.  O painel direito da pasta exibe o conteúdo do documento ativo atualmente selecionado.  
+ Clicking an icon in the left pane activates the corresponding active document. The right pane of the Binder then displays the contents of the currently selected active document.  
   
- Se você abrir e ativa um documento do word em uma pasta, a barra de menus e barras de ferramentas do word aparecem na parte superior do quadro na exibição, e você pode editar o conteúdo do documento com qualquer comando ou ferramenta do word.  No entanto, a barra de menus é uma combinação das barras de menus da pasta e do word.  Como a pasta e as palavras têm menus de **Ajuda** , o conteúdo de menus respectivos são mesclados.  Os contêineres ativas do documento como a pasta do Office fornecem automaticamente a mesclagem do menu de **Ajuda** ; para obter mais informações, consulte [A mesclagem do menu ajuda](../Topic/Help%20Menu%20Merging.md).  
+ If you open and activate a Word document in a Binder, the Word menu bar and toolbars appear at the top of the view frame, and you can edit the document's contents using any Word command or tool. However, the menu bar is a combination of both the Binder's and Word's menu bars. Because both Binder and Word have **Help** menus, the contents of the respective menus are merged. Active document containers such as Office Binder automatically provide **Help** menu merging; for more information, see [Help Menu Merging](../mfc/help-menu-merging.md).  
   
- Quando você seleciona um documento ativo de outro tipo de aplicativo, a interface da pasta muda para acomodar a do tipo de aplicativo ativa do documento.  Por exemplo, se uma pasta contém uma planilha do Excel, você observará que os menus na pasta se alteram quando você seleciona a seção da planilha do Excel.  
+ When you select an active document of another application type, the Binder's interface changes to accommodate that of the active document's application type. For example, if a Binder contains an Excel spreadsheet, you will observe that the menus in the Binder change when you select the Excel spreadsheet section.  
   
- Há, naturalmente, outros tipos possíveis de contêineres ao lado das pastas.  Pesquisador de Arquivos usa a interface comum de dual e o painel no qual o painel esquerdo usa um controle de árvore para exibir uma lista hierárquica de diretórios em uma unidade ou em uma rede, quando o painel direito para exibir os arquivos contidos no diretório selecionado.  Um navegador de Internet tipo de contêiner \(como o Microsoft Internet Explorer\), em vez de usar uma interface de dual e o painel, geralmente tem um único quadro e fornece navegação usando hiperlinks.  
+ There are, of course, other possible types of containers beside Binders. File Explorer uses the typical dual-pane interface in which the left pane uses a tree control to display a hierarchical list of directories in a drive or network, while the right pane displays the files contained in the currently selected directory. An Internet browser-type of container (such as Microsoft Internet Explorer), rather than using a dual-pane interface, usually has a single frame and provides navigation using hyperlinks.  
   
-## Consulte também  
- [Contenção de documento ativa](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

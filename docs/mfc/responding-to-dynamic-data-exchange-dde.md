@@ -1,36 +1,54 @@
 ---
-title: "Respondendo &#224; troca din&#226;mica de dados (DDE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DDE (troca dinâmica de dados), janelas com moldura"
-  - "janelas com moldura [C++], troca dinâmica de dados (DDE)"
-  - "janelas com moldura [C++], registro de shell"
-  - "registro, shell"
-  - "registro, arquivos usados mais recentemente"
-  - "respondendo à troca dinâmica de dados (DDE)"
-  - "Shell, registrando tipos de arquivo"
-  - "janelas [C++], e troca dinâmica de dados"
+title: Responding to Dynamic Data Exchange (DDE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- registry [MFC], most recently used files
+- frame windows [MFC], dynamic data exchange (DDE)
+- DDE (Dynamic Data Exchange), frame windows
+- registration [MFC], shell
+- Shell [MFC], registering file types
+- windows [MFC], and dynamic data exchange
+- responding to dynamic data exchange (DDE)
+- frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Respondendo &#224; troca din&#226;mica de dados (DDE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45145f664fcb9e8d1d069bb84209e51460adf041
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A janela do quadro pode responder a solicitações de \(DDE\) de troca dinâmicas de dados para abrir arquivos do gerenciador de arquivos \(se a extensão de arquivo é registrada ou associada ao aplicativo\).  Consulte [Registro de Shell](../mfc/special-cwinapp-services.md).  
+---
+# <a name="responding-to-dynamic-data-exchange-dde"></a>Responding to Dynamic Data Exchange (DDE)
+The frame window can respond to dynamic data exchange (DDE) requests to open files from the File Manager (if the file extension is registered or associated with the application). See [Shell Registration](../mfc/special-cwinapp-services.md).  
   
-## Consulte também  
- [Usando janelas com moldura](../Topic/Using%20Frame%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

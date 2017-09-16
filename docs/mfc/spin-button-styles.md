@@ -1,50 +1,68 @@
 ---
-title: "Estilos de bot&#227;o Girar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CSpinButtonCtrl, estilos"
-  - "controle de botão de rotação, estilos"
-  - "estilos, CSpinButtonCtrl"
-  - "estilos, controle de botão de rotação"
+title: Spin Button Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- styles [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl class [MFC], styles
+- styles [MFC], spin button control
+- spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estilos de bot&#227;o Girar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f13ad271270af4c5eb5bcc12d62c3397d8edb8fb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Muitas das configurações de um botão de rotação[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\(\) são controladas por estilos.  Você pode definir os seguintes estilos usando a janela de **Propriedades** no publicador da caixa de diálogo.  
+---
+# <a name="spin-button-styles"></a>Spin Button Styles
+Many of the settings for a spin button ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) are controlled by styles. You can set the following styles using the **Properties** window in the dialog editor.  
   
--   **Orientação** Vertical ou horizontal.  Controla a orientação dos botões de seta.  Associado ao estilo de `UDS_HORZ` .  
+-   **Orientation** Either Vertical or Horizontal. Controls the orientation of the arrow buttons. Associated with the `UDS_HORZ` style.  
   
--   Um**Alinhamento** de livre, da esquerda, ou da direita.  Controla o local do botão de rotação.  Posição esquerda e direita o botão de rotação ao lado da janela de amigo.  A largura da janela de amigo é diminuída para acomodar o botão de rotação.  Associado aos estilos de `UDS_ALIGNLEFT` e de `UDS_ALIGNRIGHT` .  
+-   **Alignment** One of Unattached, Left, or Right. Controls the location of the spin button. Left and Right position the spin button next to the buddy window. The width of the buddy window is decreased to accommodate the spin button. Associated with the `UDS_ALIGNLEFT` and `UDS_ALIGNRIGHT` styles.  
   
--   **Buddy Automático** Seleciona automaticamente a janela anterior na ordem z como janela de amigo para o botão de rotação.  Em um modelo da caixa de diálogo, esse é o controle que precede o botão de rotação na ordem da guia.  Associado ao estilo de `UDS_AUTOBUDDY` .  
+-   **Auto Buddy** Automatically selects the previous window in Z-order as buddy window to the spin button. In a dialog template, this is the control which precedes the spin button in the tab order. Associated with the `UDS_AUTOBUDDY` style.  
   
--   **Definir Inteiro Buddy** Faz com que o controle de rotação é incrementada e diminui a legenda da janela de amigo como a posição atual é alterado.  Associado ao estilo de `UDS_SETBUDDYINT` .  
+-   **Set Buddy Integer** Causes the spin control to increment and decrement the caption of the buddy window as the current position changes. Associated with the `UDS_SETBUDDYINT` style.  
   
--   **No Thousands** não insere o separador de milhar no valor na legenda da janela de amigo.  Associado ao estilo de `UDS_NOTHOUSANDS` .  
+-   **No Thousands** Does not insert the thousands separator in the value in the caption of the buddy window. Associated with the `UDS_NOTHOUSANDS` style.  
   
     > [!NOTE]
-    >  Definir esse estilo se você desejar usar a caixa de diálogo de troca de dados \(DDX\) para obter o valor inteiro do controle de amigo.  `DDX_Text` não aceita milhar inseridos.  
+    >  Set this style if you want to use dialog data exchange (DDX) to get the integer value from the buddy control. `DDX_Text` does not accept embedded thousand separators.  
   
--   **Wrap** causa a posição “envolver” como o valor é incrementado ou diminuído além do intervalo do controle.  Associado ao estilo de `UDS_WRAP` .  
+-   **Wrap** Causes the position to "wrap" as the value is incremented or decremented beyond the range of the control. Associated with the `UDS_WRAP` style.  
   
--   **Arrow Keys** faz com que o botão de rotação incrementa ou diminui a posição quando as teclas de SETA PARA CIMA e PARA BAIXO são pressionadas.  Associado ao estilo de `UDS_ARROWKEYS` .  
+-   **Arrow Keys** Causes the spin button to increment or decrement the position when the UP ARROW and DOWN ARROW keys are pressed. Associated with the `UDS_ARROWKEYS` style.  
   
-## Consulte também  
- [Usando CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

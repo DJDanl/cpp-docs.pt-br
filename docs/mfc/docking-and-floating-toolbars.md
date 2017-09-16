@@ -1,122 +1,140 @@
 ---
-title: "Encaixando e flutuando barras de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBRS_SIZE_DYNAMIC"
-  - "CBRS_SIZE_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Constante CBRS_ALIGN_ANY"
-  - "Constante CBRS_SIZE_DYNAMIC"
-  - "Constante CBRS_SIZE_FIXED"
-  - "barras de ferramentas de tamanho fixo"
-  - "paletas flutuantes"
-  - "barras de ferramentas flutuantes"
-  - "janelas com moldura, ancoragem de barra de ferramentas"
-  - "paletas, flutuante"
-  - " (tamanho)"
-  - " (tamanho), barras de ferramentas"
-  - "controles de barra de ferramentas [MFC], disposição"
-  - "barras de ferramentas [C++], encaixe"
-  - "barras de ferramentas [C++], flutuante"
-  - "barras de ferramentas [C++],  (tamanho)"
-  - "barras de ferramentas [C++], disposição"
+title: Docking and Floating Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBRS_SIZE_DYNAMIC
+- CBRS_SIZE_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- size [MFC], toolbars
+- size
+- frame windows [MFC], toolbar docking
+- CBRS_ALIGN_ANY constant [MFC]
+- palettes, floating
+- toolbars [MFC], docking
+- CBRS_SIZE_DYNAMIC constant [MFC]
+- floating toolbars
+- toolbars [MFC], size
+- toolbars [MFC], floating
+- fixed-size toolbars
+- CBRS_SIZE_FIXED constant [MFC]
+- toolbar controls [MFC], wrapping
+- toolbars [MFC], wrapping
+- floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Encaixando e flutuando barras de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a22dbdc0aec475896833460411275c7bae8c3b85
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A biblioteca de classes do Microsoft oferece suporte às barras de ferramentas encaixáveis.  Uma barra de ferramentas encaixável pode ser anexado, ou logon, a qualquer lado da janela pai, ou a ele pode ser desanexado, ou flutuado, em sua própria janela de mini\- quadro.  Este artigo explica como usar barras de ferramentas encaixáveis em seus aplicativos.  
+---
+# <a name="docking-and-floating-toolbars"></a>Docking and Floating Toolbars
+The Microsoft Foundation Class Library supports dockable toolbars. A dockable toolbar can be attached, or docked, to any side of its parent window, or it can be detached, or floated, in its own mini-frame window. This article explains how to use dockable toolbars in your applications.  
   
- Se você usar o assistente de aplicativo para gerar o esqueleto do seu aplicativo, você será solicitado a escolha se você deseja barras de ferramentas encaixáveis.  Por padrão, o assistente de aplicativo gerencia o código que executa três ações necessárias coloque uma barra de ferramentas encaixável em seu aplicativo:  
+ If you use the Application Wizard to generate the skeleton of your application, you are asked to choose whether you want dockable toolbars. By default, the Application Wizard generates the code that performs the three actions necessary to place a dockable toolbar in your application:  
   
--   [Habilitar o encaixe em uma janela do quadro](#_core_enabling_docking_in_a_frame_window).  
+-   [Enable docking in a frame window](#_core_enabling_docking_in_a_frame_window).  
   
--   [Habilitar o encaixe de uma barra de ferramentas](#_core_enabling_docking_for_a_toolbar).  
+-   [Enable docking for a toolbar](#_core_enabling_docking_for_a_toolbar).  
   
--   [Encaixe a barra de ferramentas \(à janela do quadro\)](#_core_docking_the_toolbar).  
+-   [Dock the toolbar (to the frame window)](#_core_docking_the_toolbar).  
   
- Se qualquer uma dessas etapas estiverem ausentes, o aplicativo exibe uma barra de ferramentas padrão.  As duas últimas etapas devem ser executadas para cada barra de ferramentas encaixável em seu aplicativo.  
+ If any of these steps are missing, your application will display a standard toolbar. The last two steps must be performed for each dockable toolbar in your application.  
   
- Outros tópicos abordados neste artigo incluem:  
+ Other topics covered in this article include:  
   
--   [Flutuando a barra de ferramentas](#_core_floating_the_toolbar)  
+-   [Floating the toolbar](#_core_floating_the_toolbar)  
   
--   [Redimensionando dinamicamente a barra de ferramentas](#_core_dynamically_resizing_the_toolbar)  
+-   [Dynamically resizing the toolbar](#_core_dynamically_resizing_the_toolbar)  
   
--   [Definindo as posições de quebra automática para uma barra de ferramentas de estilo fixa](#_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar)  
+-   [Setting wrap positions for a fixed-style toolbar](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
   
- Consulte o exemplo [DOCKTOOL](../top/visual-cpp-samples.md) gerais de MFC para obter exemplos.  
+ See the MFC General sample [DOCKTOOL](../visual-cpp-samples.md) for examples.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a> Habilitando o encaixe em uma janela do quadro  
- Para as barras de ferramentas a uma janela do quadro, a janela do quadro ou \(o destino\) devem ser habilitados para permitir logon.  Isso é feito usando a função de [CFrameWnd::EnableDocking](../Topic/CFrameWnd::EnableDocking.md) , que assume um parâmetro de `DWORD` que é um conjunto de indicação os bits de estilo que o lado da janela do quadro aceita o encaixe.  Se uma barra de ferramentas está prestes a ser inserida e houver vários lados que pode ser feito logon no, os lados indicados no parâmetro passado a `EnableDocking` são usados na seguinte ordem: parte superior, inferior, à esquerda, direita.  Se você deseja poder entre barras de controle em qualquer lugar, passe `CBRS_ALIGN_ANY` a `EnableDocking`.  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Enabling Docking in a Frame Window  
+ To dock toolbars to a frame window, the frame window (or destination) must be enabled to allow docking. This is done using the [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) function, which takes one `DWORD` parameter that is a set of style bits indicating which side of the frame window accepts docking. If a toolbar is about to be docked and there are multiple sides that it could be docked to, the sides indicated in the parameter passed to `EnableDocking` are used in the following order: top, bottom, left, right. If you want to be able to dock control bars anywhere, pass `CBRS_ALIGN_ANY` to `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a> Habilitando o encaixe de uma barra de ferramentas  
- Após preparar o destino do logon, você deve preparar a barra de ferramentas \(ou a origem\) de uma maneira semelhante.  Chame [CControlBar::EnableDocking](../Topic/CControlBar::EnableDocking.md) para cada barra de ferramentas que você deseja inserir, especificando os lados de destino à qual a barra de ferramentas deve fazer logon.  Se nenhum dos lados especificados na chamada à correspondência de `CControlBar::EnableDocking` os lados habilitados digitando na janela do quadro, a barra de ferramentas não podem efetuar logon — flutuarão.  Uma vez que foi flutuado, ele permanecerá uma barra de ferramentas flutuante, conseguir fazer logon na janela do quadro.  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Enabling Docking for a Toolbar  
+ After you have prepared the destination for docking, you must prepare the toolbar (or source) in a similar fashion. Call [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) for each toolbar you want to dock, specifying the destination sides to which the toolbar should dock. If none of the sides specified in the call to `CControlBar::EnableDocking` match the sides enabled for docking in the frame window, the toolbar cannot dock — it will float. Once it has been floated, it remains a floating toolbar, unable to dock to the frame window.  
   
- Se o efeito desejado é uma barra de ferramentas permanentemente flutuante, chama `EnableDocking` com um parâmetro de 0.  Em [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md)chamada.  A barra de ferramentas permaneça float, permanentemente não é possível fazer em qualquer lugar.  
+ If the effect you want is a permanently floating toolbar, call `EnableDocking` with a parameter of 0. Then call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). The toolbar remains floating, permanently unable to dock anywhere.  
   
-##  <a name="_core_docking_the_toolbar"></a> Registrando a barra de ferramentas  
- A estrutura chama [CFrameWnd::DockControlBar](../Topic/CFrameWnd::DockControlBar.md) quando o usuário tenta remover a barra de ferramentas em um lado da janela do tableau que permite fazer logon.  
+##  <a name="_core_docking_the_toolbar"></a> Docking the Toolbar  
+ The framework calls [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) when the user attempts to drop the toolbar on a side of the frame window that allows docking.  
   
- Além disso, você pode chamar essa função a qualquer momento para as barras de controle para a janela do quadro.  Isso é feito normalmente durante a inicialização.  Mais de uma barra de ferramentas pode ser entrada para um lado específico da janela do quadro.  
+ In addition, you can call this function at any time to dock control bars to the frame window. This is normally done during initialization. More than one toolbar can be docked to a particular side of the frame window.  
   
-##  <a name="_core_floating_the_toolbar"></a> Flutuando a barra de ferramentas  
- Desanexando uma barra de ferramentas encaixável da janela do quadro é chamado flutuando a barra de ferramentas.  Chame [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md) para fazer isso.  Especifique a barra de ferramentas a ser flutuados, o ponto onde deve ser colocada, e um estilo de alinhamento que determina se a barra de ferramentas de flutuação é horizontal ou vertical.  
+##  <a name="_core_floating_the_toolbar"></a> Floating the Toolbar  
+ Detaching a dockable toolbar from the frame window is called floating the toolbar. Call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) to do this. Specify the toolbar to be floated, the point where it should be placed, and an alignment style that determines whether the floating toolbar is horizontal or vertical.  
   
- A estrutura chamará essa função quando um usuário arrasta uma barra de ferramentas fora de seu local digitado solta\-a em um local em que o logon não está habilitado.  Isso pode ser em qualquer lugar dentro ou fora da janela do quadro.  Como com `DockControlBar`, você também pode chamar essa função durante a inicialização.  
+ The framework calls this function when a user drags a toolbar off its docked location and drops it in a location where docking is not enabled. This can be anywhere inside or outside the frame window. As with `DockControlBar`, you can also call this function during initialization.  
   
- A implementação de MFC de barras de ferramentas encaixáveis não fornece alguns dos recursos estendidos localizados em alguns aplicativos que dão suporte a barra de ferramentas encaixáveis.  Os recursos como barras de ferramentas e não forem fornecidos.  
+ The MFC implementation of dockable toolbars does not provide some of the extended features found in some applications that support dockable toolbars. Features such as customizable toolbars are not provided.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a> Redimensionando dinamicamente a barra de ferramentas  
- A partir da versão 4,0 do Visual C\+\+, você pode torná\-la possível para usuários de seu aplicativo redimensionar dinamicamente barras de ferramentas flutuante.  Normalmente, uma barra de ferramentas tem uma forma longa, linear, exibidas horizontalmente.  Mas você pode alterar a forma da barra de ferramentas orientação e.  Por exemplo, quando o usuário insere uma barra de ferramentas em um dos lados verticais da janela do quadro, a forma é alterado para um layout vertical.  Também é possível refazer a barra de ferramentas em um retângulo com várias linhas de botões.  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamically Resizing the Toolbar  
+ As of Visual C++ version 4.0, you can make it possible for users of your application to resize floating toolbars dynamically. Typically, a toolbar has a long, linear shape, displayed horizontally. But you can change the toolbar's orientation and its shape. For example, when the user docks a toolbar against one of the vertical sides of the frame window, the shape changes to a vertical layout. It's also possible to reshape the toolbar into a rectangle with multiple rows of buttons.  
   
- Você pode:  
+ You can:  
   
--   Especifique o tamanho dinâmica como uma característica da barra de ferramentas.  
+-   Specify dynamic sizing as a toolbar characteristic.  
   
--   Especifique o tamanho fixo como uma característica da barra de ferramentas.  
+-   Specify fixed sizing as a toolbar characteristic.  
   
- Para fornecer esse suporte, há dois novos estilos da barra de ferramentas para uso em seus chamadas para a função de membro de [CToolBar::Create](../Topic/CToolBar::Create.md) .  Elas são:  
+ To provide this support, there are two new toolbar styles for use in your calls to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) member function. They are:  
   
--   A barra de controle de**CBRS\_SIZE\_DYNAMIC**é dinâmico.  
+-   **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
--   A barra de controle de**CBRS\_SIZE\_FIXED**é fixa.  
+-   **CBRS_SIZE_FIXED** Control bar is fixed.  
   
- O estilo dinâmico de tamanho permite que o usuário redimensionar a barra de ferramentas a serem flutuantes, mas não quando estiver conectado.  A barra de ferramentas “envolve” onde necessário deformar como os arrastos as bordas do usuário.  
+ The size dynamic style lets your user resize the toolbar while it is floating, but not while it is docked. The toolbar "wraps" where needed to change shape as the user drags its edges.  
   
- O estilo tamanho fixo preserva os estados de quebra automática de uma barra de ferramentas, corrigir a posição dos botões em cada coluna.  O usuário do aplicativo não pode alterar a forma da barra de ferramentas.  Encapsula na barra de ferramentas em locais criados, como os locais dos separadores entre os botões.  Mantém essa forma se a barra de ferramentas será entrada ou float.  O efeito é uma paleta fixa com várias colunas dos botões.  
+ The size fixed style preserves the wrap states of a toolbar, fixing the position of the buttons in each column. Your application's user can't change the shape of the toolbar. The toolbar wraps at designated places, such as the locations of separators between the buttons. It maintains this shape whether the toolbar is docked or floating. The effect is a fixed palette with multiple columns of buttons.  
   
- Você também pode usar [CToolBar::GetButtonStyle](../Topic/CToolBar::GetButtonStyle.md) para retornar um estado e um estilo dos botões em suas barras de ferramentas.  O estilo de um botão determina como o botão é exibido e como responder à entrada do usuário; o estado indica se o botão está em um estado ajustado.  
+ You can also use [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) to return a state and style for buttons on your toolbars. A button's style determines how the button appears and how it responds to user input; the state tells whether the button is in a wrapped state.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar"></a> Definindo as posições de quebra automática para uma barra de ferramentas de estilo fixa  
- Para uma barra de ferramentas com o estilo tamanho fixo, os índices criados no botão na barra de ferramentas na barra de ferramentas envolverão.  O código a seguir mostra como fazer isso na substituição de `OnCreate` da janela do quadro principal:  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Setting Wrap Positions for a Fixed-Style Toolbar  
+ For a toolbar with the size fixed style, designate toolbar button indexes at which the toolbar will wrap. The following code shows how to do this in your main frame window's `OnCreate` override:  
   
- [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/CPP/docking-and-floating-toolbars_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
   
- Mostra de [DOCKTOOL](../top/visual-cpp-samples.md) de exemplo gerais de MFC como usar funções de membro das classes [CControlBar](../mfc/reference/ccontrolbar-class.md) e [CToolBar](../mfc/reference/ctoolbar-class.md) para gerenciar o layout dinâmico de uma barra de ferramentas.  Consulte o arquivo EDITBAR.CPP em DOCKTOOL.  
+ The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) shows how to use member functions of classes [CControlBar](../mfc/reference/ccontrolbar-class.md) and [CToolBar](../mfc/reference/ctoolbar-class.md) to manage dynamic layout of a toolbar. See the file EDITBAR.CPP in DOCKTOOL.  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Conceitos básicos da barra de ferramentas](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Dicas de ferramenta da barra de ferramentas](../Topic/Toolbar%20Tool%20Tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Usando suas barras de ferramentas antigos](../Topic/Using%20Your%20Old%20Toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## Consulte também  
- [Implementação da barra de ferramentas MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

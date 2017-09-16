@@ -1,5 +1,5 @@
 ---
-title: Classe CPtrList | Documentos do Microsoft
+title: CPtrList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - lists, generic
-- CPtrList class
+- CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
 caps.latest.revision: 23
@@ -35,50 +35,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 430d98d399e3c5131b248e10b9c7cfcec8dedc04
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f9265c795d8aef95f72899a39fd2a40409b76a1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cptrlist-class"></a>Classe CPtrList
-Oferece suporte a listas de ponteiros void.  
+# <a name="cptrlist-class"></a>CPtrList Class
+Supports lists of void pointers.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPtrList : public CObject  
 ```  
   
-## <a name="members"></a>Membros  
- As funções de membro do `CPtrList` são semelhantes às funções de membro da classe [CObList](../../mfc/reference/coblist-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObList` para obter a função específica de membro. Ao ver um `CObject` ponteiro como um parâmetro de função ou o valor de retorno, substituir um ponteiro para `void`.  
+## <a name="members"></a>Members  
+ The member functions of `CPtrList` are similar to the member functions of class [CObList](../../mfc/reference/coblist-class.md). Because of this similarity, you can use the `CObList` reference documentation for member function specifics. Wherever you see a `CObject` pointer as a function parameter or return value, substitute a pointer to `void`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- por exemplo, traduz para  
+ for example, translates to  
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>Comentários  
- `CPtrList`incorpora o `IMPLEMENT_DYNAMIC` macro para dar suporte ao acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de elementos de lista de ponteiro individual, você deve definir a profundidade do contexto do despejo como 1 ou maior.  
+## <a name="remarks"></a>Remarks  
+ `CPtrList` incorporates the `IMPLEMENT_DYNAMIC` macro to support run-time type access and dumping to a `CDumpContext` object. If you need a dump of individual pointer list elements, you must set the depth of the dump context to 1 or greater.  
   
- Listas de ponteiro não podem ser serializadas.  
+ Pointer lists cannot be serialized.  
   
- Quando um `CPtrList` objeto é excluído, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.  
+ When a `CPtrList` object is deleted, or when its elements are removed, only the pointers are removed, not the entities they reference.  
   
- Para obter mais informações sobre como usar o `CPtrList`, consulte o artigo [coleções](../../mfc/collections.md).  
+ For more information on using `CPtrList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcoll. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe cObList](../../mfc/reference/coblist-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObList Class](../../mfc/reference/coblist-class.md)
 

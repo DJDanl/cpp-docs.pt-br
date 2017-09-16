@@ -1,44 +1,62 @@
 ---
-title: "Destruindo objetos de janela | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas com moldura, destruindo"
-  - "objetos de janela, excluindo"
-  - "objetos de janela, destruindo"
-  - "objetos de janela, removendo"
+title: Destroying Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], destroying
+- window objects [MFC], deleting
+- window objects [MFC], destroying
+- window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Destruindo objetos de janela
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b72195923ba98afbd281bbda2a85d3e599258a43
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Deve ser feito com suas próprias janelas filho para destruir o objeto da janela C\+\+ quando o usuário for concluído com a janela.  Se esses objetos não são destruídos, o aplicativo não recuperará sua memória.  Felizmente, a estrutura gerencia a destruição bem como a criação da janela para o windows do quadro, exibições, e caixas de diálogo.  Se você criar janelas adicionais, você é responsável por destrui\-las.  
+---
+# <a name="destroying-window-objects"></a>Destroying Window Objects
+Care must be taken with your own child windows to destroy the C++ window object when the user is finished with the window. If these objects are not destroyed, your application will not recover their memory. Fortunately, the framework manages window destruction as well as creation for frame windows, views, and dialog boxes. If you create additional windows, you are responsible for destroying them.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [Atribuindo e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
--   [Desanexando um CWnd do HWND](../Topic/Detaching%20a%20CWnd%20from%20Its%20HWND.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
--   [Sequência geral de criação da janela](../mfc/general-window-creation-sequence.md)  
+-   [General Window Creation Sequence](../mfc/general-window-creation-sequence.md)  
   
--   [Janelas de destruição do quadro](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
-## Consulte também  
- [Objetos de janela](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

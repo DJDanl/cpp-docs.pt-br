@@ -1,39 +1,57 @@
 ---
-title: "Fornecendo ativa&#231;&#227;o sem cintila&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ativação [C++], sem cintilação"
-  - "cintilação, Controles ActiveX MFC"
-  - "Controles ActiveX MFC [C++], sem cintilação"
+title: Providing Flicker-Free Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], flicker-free
+- flicker, MFC ActiveX controls
+- activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fornecendo ativa&#231;&#227;o sem cintila&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3a0fa52ddc550194c4ebd968742236ef404ab0d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Se o controle é desenha idêntica no estado inativo e ativas \(e não usa a ativação sem windows\), você pode eliminar as operações de desenho e a cintilação visual de rastreamento que ocorrem normalmente ao fazer a transição entre os estados ativas e inativas.  Para fazer isso, inclua o sinalizador de **noFlickerActivate** no conjunto de sinalizadores retornados por [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md).  Por exemplo:  
+---
+# <a name="providing-flicker-free-activation"></a>Providing Flicker-Free Activation
+If your control draws itself identically in the inactive and active states (and does not use windowless activation), you can eliminate the drawing operations and the accompanying visual flicker that normally occur when making the transition between the inactive and active states. To do this, include the **noFlickerActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-flicker-free-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/CPP/providing-flicker-free-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-flicker-free-activation_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]  
   
- O código para incluir esse sinalizador é gerado automaticamente se você selecionar a opção de **Flicker\-Free activation** na página de [Controle configurações](../mfc/reference/control-settings-mfc-activex-control-wizard.md) ao criar seu controle com o assistente de controle ActiveX de MFC.  
+ The code to include this flag is automatically generated if you select the **Flicker-Free activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page when creating your control with the MFC ActiveX Control Wizard.  
   
- Se você estiver usando a ativação sem o windows, essa otimização não tem nenhum efeito.  
+ If you are using windowless activation, this optimization has no effect.  
   
-## Consulte também  
- [Controles ActiveX MFC: otimização](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

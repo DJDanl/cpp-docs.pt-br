@@ -1,5 +1,5 @@
 ---
-title: Classe CDaoDatabase | Documentos do Microsoft
+title: CDaoDatabase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,11 +40,32 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- database classes [C++], DAO
-- CDaoDatabase class, vs. CDatabase class
-- CDaoDatabase class, and workspace
-- CDaoDatabase class
-- CDatabase class, vs. CDaoDatabase class
+- CDaoDatabase [MFC], CDaoDatabase
+- CDaoDatabase [MFC], CanTransact
+- CDaoDatabase [MFC], CanUpdate
+- CDaoDatabase [MFC], Close
+- CDaoDatabase [MFC], Create
+- CDaoDatabase [MFC], CreateRelation
+- CDaoDatabase [MFC], DeleteQueryDef
+- CDaoDatabase [MFC], DeleteRelation
+- CDaoDatabase [MFC], DeleteTableDef
+- CDaoDatabase [MFC], Execute
+- CDaoDatabase [MFC], GetConnect
+- CDaoDatabase [MFC], GetName
+- CDaoDatabase [MFC], GetQueryDefCount
+- CDaoDatabase [MFC], GetQueryDefInfo
+- CDaoDatabase [MFC], GetQueryTimeout
+- CDaoDatabase [MFC], GetRecordsAffected
+- CDaoDatabase [MFC], GetRelationCount
+- CDaoDatabase [MFC], GetRelationInfo
+- CDaoDatabase [MFC], GetTableDefCount
+- CDaoDatabase [MFC], GetTableDefInfo
+- CDaoDatabase [MFC], GetVersion
+- CDaoDatabase [MFC], IsOpen
+- CDaoDatabase [MFC], Open
+- CDaoDatabase [MFC], SetQueryTimeout
+- CDaoDatabase [MFC], m_pDAODatabase
+- CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
 caps.latest.revision: 23
 author: mikeblome
@@ -64,171 +85,171 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c173ea0c0132752c08504053d9b00cdec8d3f69b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9d19701a292fe48515a1cb2846bec6a6a06044ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaodatabase-class"></a>Classe CDaoDatabase
-Representa uma conexão a um banco de dados por meio do qual você pode operar nos dados.  
+# <a name="cdaodatabase-class"></a>CDaoDatabase Class
+Represents a connection to a database through which you can operate on the data.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoDatabase : public CObject  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Constrói um objeto `CDaoDatabase`. Chamar **abrir** para conectar o objeto para um banco de dados.|  
+|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Constructs a `CDaoDatabase` object. Call **Open** to connect the object to a database.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoDatabase::CanTransact](#cantransact)|Retorna zero se o banco de dados oferece suporte a transações.|  
-|[CDaoDatabase::CanUpdate](#canupdate)|Retorna zero se o `CDaoDatabase` objeto é atualizável (não somente leitura).|  
-|[CDaoDatabase::Close](#close)|Fecha a conexão de banco de dados.|  
-|[CDaoDatabase::Create](#create)|Cria o objeto de banco de dados DAO subjacente e inicializa o `CDaoDatabase` objeto.|  
-|[CDaoDatabase::CreateRelation](#createrelation)|Define uma nova relação entre as tabelas no banco de dados.|  
-|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Exclui um objeto querydef salvo na coleção QueryDefs do banco de dados.|  
-|[CDaoDatabase::DeleteRelation](#deleterelation)|Exclui uma relação existente entre as tabelas no banco de dados.|  
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Exclui a definição de uma tabela no banco de dados. Isso exclui a tabela real e todos os seus dados.|  
-|[CDaoDatabase::Execute](#execute)|Executa uma consulta de ação. Chamando **Execute** para uma consulta que retorna resultados lança uma exceção.|  
-|[CDaoDatabase::GetConnect](#getconnect)|Retorna a cadeia de conexão usada para conectar-se a `CDaoDatabase` objeto para um banco de dados. Usado para ODBC.|  
-|[CDaoDatabase::GetName](#getname)|Retorna o nome do banco de dados atualmente em uso.|  
-|[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Retorna o número de consultas definidas para o banco de dados.|  
-|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Retorna informações sobre uma consulta especificada definida no banco de dados.|  
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Retorna o número de segundos após o qual banco de dados de operações de consulta atingirá o tempo limite. Afeta todas as demais abrir, adicionar novos, atualizar e editar operações e outras operações em fontes de dados ODBC (somente) como **Execute** chamadas.|  
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Retorna o número de registros afetado pela última atualização, editar ou Adicionar operação ou por uma chamada a **Execute**.|  
-|[CDaoDatabase::GetRelationCount](#getrelationcount)|Retorna o número de relações definidas entre tabelas no banco de dados.|  
-|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Retorna informações sobre uma relação especificada definida entre tabelas no banco de dados.|  
-|[Cdaodatabase:: Gettabledefcount](#gettabledefcount)|Retorna o número de tabelas definidas no banco de dados.|  
-|[Cdaodatabase:: Gettabledefinfo](#gettabledefinfo)|Retorna informações sobre uma tabela especificada no banco de dados.|  
-|[CDaoDatabase::GetVersion](#getversion)|Retorna a versão do mecanismo de banco de dados associado com o banco de dados.|  
-|[CDaoDatabase::IsOpen](#isopen)|Retorna zero se o `CDaoDatabase` objeto atualmente está conectado a um banco de dados.|  
-|[CDaoDatabase::Open](#open)|Estabelece uma conexão a um banco de dados.|  
-|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Define o número de segundos após o qual banco de dados de consulta operações (em fontes de dados ODBC apenas) atingirá o tempo limite. Afeta todas as demais abre, adicionar novos, atualizar e excluir operações.|  
+|[CDaoDatabase::CanTransact](#cantransact)|Returns nonzero if the database supports transactions.|  
+|[CDaoDatabase::CanUpdate](#canupdate)|Returns nonzero if the `CDaoDatabase` object is updatable (not read-only).|  
+|[CDaoDatabase::Close](#close)|Closes the database connection.|  
+|[CDaoDatabase::Create](#create)|Creates the underlying DAO database object and initializes the `CDaoDatabase` object.|  
+|[CDaoDatabase::CreateRelation](#createrelation)|Defines a new relation among the tables in the database.|  
+|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Deletes a querydef object saved in the database's QueryDefs collection.|  
+|[CDaoDatabase::DeleteRelation](#deleterelation)|Deletes an existing relation between tables in the database.|  
+|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Deletes the definition of a table in the database. This deletes the actual table and all of its data.|  
+|[CDaoDatabase::Execute](#execute)|Executes an action query. Calling **Execute** for a query that returns results throws an exception.|  
+|[CDaoDatabase::GetConnect](#getconnect)|Returns the connection string used to connect the `CDaoDatabase` object to a database. Used for ODBC.|  
+|[CDaoDatabase::GetName](#getname)|Returns the name of the database currently in use.|  
+|[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Returns the number of queries defined for the database.|  
+|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Returns information about a specified query defined in the database.|  
+|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Returns the number of seconds after which database query operations will time out. Affects all subsequent open, add new, update, and edit operations and other operations on ODBC data sources (only) such as **Execute** calls.|  
+|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Returns the number of records affected by the last update, edit, or add operation or by a call to **Execute**.|  
+|[CDaoDatabase::GetRelationCount](#getrelationcount)|Returns the number of relations defined between tables in the database.|  
+|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Returns information about a specified relation defined between tables in the database.|  
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Returns the number of tables defined in the database.|  
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Returns information about a specified table in the database.|  
+|[CDaoDatabase::GetVersion](#getversion)|Returns the version of the database engine associated with the database.|  
+|[CDaoDatabase::IsOpen](#isopen)|Returns nonzero if the `CDaoDatabase` object is currently connected to a database.|  
+|[CDaoDatabase::Open](#open)|Establishes a connection to a database.|  
+|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Sets the number of seconds after which database query operations (on ODBC data sources only) will time out. Affects all subsequent open, add new, update, and delete operations.|  
   
-### <a name="public-data-members"></a>Membros de Dados Públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Um ponteiro para o objeto de banco de dados subjacente do DAO.|  
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Um ponteiro para o [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objeto que contém o banco de dados e define seu espaço de transação.|  
+|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|A pointer to the underlying DAO database object.|  
+|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|A pointer to the [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object that contains the database and defines its transaction space.|  
   
-## <a name="remarks"></a>Comentários  
- Para obter informações sobre os formatos de banco de dados com suporte, consulte o [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) função de membro. Você pode ter um ou mais `CDaoDatabase` objetos ativos de cada vez em um determinado "espaço" representado por uma [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objeto. O espaço de trabalho mantém uma coleção de objetos de banco de dados aberto, chamado a coleção de bancos de dados.  
+## <a name="remarks"></a>Remarks  
+ For information about the database formats supported, see the [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) member function. You can have one or more `CDaoDatabase` objects active at a time in a given "workspace," represented by a [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object. The workspace maintains a collection of open database objects, called the Databases collection.  
   
 > [!NOTE]
->  As classes de banco de dados MFC DAO são diferentes das classes de banco de dados MFC com base em ODBC. Todos os nomes de classe de banco de dados DAO têm o prefixo "CDao". Classe `CDaoDatabase` fornece uma interface semelhante da classe ODBC [CDatabase](../../mfc/reference/cdatabase-class.md). A principal diferença é que `CDatabase` acessa o DBMS por meio de conectividade aberta de banco de dados (ODBC) e um driver ODBC desse DBMS. `CDaoDatabase`acessa os dados por meio de um acesso de dados objeto (DAO) com base no mecanismo de banco de dados Microsoft Jet. Em geral, as classes do MFC com base em DAO são mais capacitadas que as classes do MFC com base em ODBC; as classes com base em DAO podem acessar dados, inclusive por meio de drivers ODBC, por meio de seu próprio mecanismo de banco de dados. As classes com base em DAO também dão suporte a operações de linguagem de definição de dados (DDL), como adicionar tabelas por meio de classes, sem a necessidade de chamar diretamente o DAO.  
+>  The MFC DAO database classes are distinct from the MFC database classes based on ODBC. All DAO database class names have the "CDao" prefix. Class `CDaoDatabase` supplies an interface similar to that of the ODBC class [CDatabase](../../mfc/reference/cdatabase-class.md). The main difference is that `CDatabase` accesses the DBMS through Open Database Connectivity (ODBC) and an ODBC driver for that DBMS. `CDaoDatabase` accesses data through a Data Access Object (DAO) based on the Microsoft Jet database engine. In general, the MFC classes based on DAO are more capable than the MFC classes based on ODBC; the DAO-based classes can access data, including through ODBC drivers, via their own database engine. The DAO-based classes also support Data Definition Language (DDL) operations, such as adding tables via the classes, without having to call DAO directly.  
   
-## <a name="usage"></a>Uso  
- Você pode criar objetos de banco de dados implicitamente, quando você cria objetos de conjunto de registros. Mas você também pode criar objetos de banco de dados explicitamente. Para usar um banco de dados explicitamente com `CDaoDatabase`, faça o seguinte:  
+## <a name="usage"></a>Usage  
+ You can create database objects implicitly, when you create recordset objects. But you can also create database objects explicitly. To use an existing database explicitly with `CDaoDatabase`, do either of the following:  
   
--   Construir uma `CDaoDatabase` objeto, passando um ponteiro para um aberto [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objeto.  
+-   Construct a `CDaoDatabase` object, passing a pointer to an open [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object.  
   
--   Ou crie um `CDaoDatabase` objeto sem especificar o espaço de trabalho (MFC cria um objeto de espaço de trabalho temporária).  
+-   Or construct a `CDaoDatabase` object without specifying the workspace (MFC creates a temporary workspace object).  
   
- Para criar um novo Microsoft Jet (. Banco de dados MDB), construir um `CDaoDatabase` objeto e chamar seu [criar](#create) função de membro. Fazer *não* chamar **abrir** depois **criar**.  
+ To create a new Microsoft Jet (.MDB) database, construct a `CDaoDatabase` object and call its [Create](#create) member function. Do *not* call **Open** after **Create**.  
   
- Para abrir um banco de dados existente, construir um `CDaoDatabase` objeto e chamar seu [abrir](#open) função de membro.  
+ To open an existing database, construct a `CDaoDatabase` object and call its [Open](#open) member function.  
   
- Qualquer uma dessas técnicas acrescenta o objeto de banco de dados DAO à coleção de bancos de dados do espaço de trabalho e abre uma conexão aos dados. Quando você constrói, em seguida, [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), ou [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objetos para operar no banco de dados conectado, passe os construtores para esses objetos um ponteiro para o `CDaoDatabase` objeto. Quando você terminar de usar a conexão, chame o [fechar](#close) membro de função e destruir o `CDaoDatabase` objeto. **Fechar** fechar qualquer conjunto de registros que não tenha fechado anteriormente.  
+ Any of these techniques appends the DAO database object to the workspace's Databases collection and opens a connection to the data. When you then construct [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), or [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objects for operating on the connected database, pass the constructors for these objects a pointer to your `CDaoDatabase` object. When you finish using the connection, call the [Close](#close) member function and destroy the `CDaoDatabase` object. **Close** closes any recordsets you have not closed previously.  
   
-## <a name="transactions"></a>Transações  
- Processamento de transações do banco de dados é fornecido no nível do espaço de trabalho, consulte o [BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans), e [reversão](../../mfc/reference/cdaoworkspace-class.md#rollback) funções de membro da classe `CDaoWorkspace`.  
+## <a name="transactions"></a>Transactions  
+ Database transaction processing is supplied at the workspace level — see the [BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans), and [Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) member functions of class `CDaoWorkspace`.  
   
-## <a name="odbc-connections"></a>Conexões ODBC  
- A maneira recomendada para trabalhar com fontes de dados ODBC é anexar tabelas externas a um Microsoft Jet (. Banco de dados MDB).  
+## <a name="odbc-connections"></a>ODBC Connections  
+ The recommended way to work with ODBC data sources is to attach external tables to a Microsoft Jet (.MDB) database.  
   
-## <a name="collections"></a>Coleções  
- Cada banco de dados mantém suas próprias coleções de querydef, tabledef, conjunto de registros e objetos de relação. Classe `CDaoDatabase` fornece funções de membro para manipular esses objetos.  
+## <a name="collections"></a>Collections  
+ Each database maintains its own collections of tabledef, querydef, recordset, and relation objects. Class `CDaoDatabase` supplies member functions for manipulating these objects.  
   
 > [!NOTE]
->  Os objetos são armazenados em DAO, não no objeto de banco de dados MFC. MFC fornece classes para objetos querydef, tabledef e recordset, mas não para objetos de relação.  
+>  The objects are stored in DAO, not in the MFC database object. MFC supplies classes for tabledef, querydef, and recordset objects but not for relation objects.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoDatabase`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
- Chame essa função de membro para determinar se o banco de dados permite que as transações.  
+##  <a name="cantransact"></a>  CDaoDatabase::CanTransact  
+ Call this member function to determine whether the database allows transactions.  
   
 ```  
 BOOL CanTransact();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o banco de dados oferece suporte a transações; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the database supports transactions; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- As transações são gerenciadas no espaço de trabalho do banco de dados.  
+### <a name="remarks"></a>Remarks  
+ Transactions are managed in the database's workspace.  
   
-##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
- Chame essa função de membro para determinar se o `CDaoDatabase` objeto permite atualizações.  
+##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate  
+ Call this member function to determine whether the `CDaoDatabase` object allows updates.  
   
 ```  
 BOOL CanUpdate();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o `CDaoDatabase` objeto permite atualizações; caso contrário, 0, indicando que você passado **TRUE** na `bReadOnly` quando você abriu o `CDaoDatabase` objeto ou que o próprio banco de dados é somente leitura. Consulte o [abrir](#open) função de membro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDaoDatabase` object allows updates; otherwise 0, indicating either that you passed **TRUE** in `bReadOnly` when you opened the `CDaoDatabase` object or that the database itself is read-only. See the [Open](#open) member function.  
   
-### <a name="remarks"></a>Comentários  
- Para obter informações sobre atualização de banco de dados, consulte o tópico "Propriedade atualizável" na Ajuda do DAO.  
+### <a name="remarks"></a>Remarks  
+ For information about database updatability, see the topic "Updatable Property" in DAO Help.  
   
-##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
- Constrói um objeto `CDaoDatabase`.  
+##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase  
+ Constructs a `CDaoDatabase` object.  
   
 ```  
 CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pWorkspace*  
- Um ponteiro para o `CDaoWorkspace` objeto que conterá o novo objeto de banco de dados. Se você aceitar o valor padrão de **nulo**, o construtor cria um temporário `CDaoWorkspace` objeto que usa o espaço de trabalho padrão DAO. Você pode obter um ponteiro para o objeto do espaço de trabalho através de [m_pWorkspace](#m_pworkspace) membro de dados.  
+ A pointer to the `CDaoWorkspace` object that will contain the new database object. If you accept the default value of **NULL**, the constructor creates a temporary `CDaoWorkspace` object that uses the default DAO workspace. You can get a pointer to the workspace object via the [m_pWorkspace](#m_pworkspace) data member.  
   
-### <a name="remarks"></a>Comentários  
- Depois de criar o objeto, se você estiver criando um novo Microsoft Jet (. MDB) do banco de dados, chamar o objeto [criar](#create) função de membro. Se você, em vez disso, abrir um banco de dados existente, chame o objeto [abrir](#open) função de membro.  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, if you are creating a new Microsoft Jet (.MDB) database, call the object's [Create](#create) member function. If you are, instead, opening an existing database, call the object's [Open](#open) member function.  
   
- Quando terminar com o objeto, você deve chamar seu [fechar](#close) membro de função e, em seguida, destrua o `CDaoDatabase` objeto.  
+ When you finish with the object, you should call its [Close](#close) member function and then destroy the `CDaoDatabase` object.  
   
- Talvez seja conveniente para incorporar o `CDaoDatabase` objeto em sua classe de documento.  
+ You might find it convenient to embed the `CDaoDatabase` object in your document class.  
   
 > [!NOTE]
->  A `CDaoDatabase` objeto também é criado implicitamente se você abrir um [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto sem passar um ponteiro para um existente `CDaoDatabase` objeto. Esse objeto de banco de dados é fechado quando você fechar o objeto recordset.  
+>  A `CDaoDatabase` object is also created implicitly if you open a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object without passing a pointer to an existing `CDaoDatabase` object. This database object is closed when you close the recordset object.  
   
-##  <a name="close"></a>CDaoDatabase::Close  
- Chame essa função de membro para desconectar um banco de dados e fechar qualquer conjunto de registros aberto, tabledefs e querydefs associado com o banco de dados.  
+##  <a name="close"></a>  CDaoDatabase::Close  
+ Call this member function to disconnect from a database and close any open recordsets, tabledefs, and querydefs associated with the database.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Comentários  
- É recomendável fechar esses objetos por conta própria antes de chamar essa função de membro. Fechando uma `CDaoDatabase` objeto remove da coleção de bancos de dados a ele associada [espaço](../../mfc/reference/cdaoworkspace-class.md). Porque **fechar** não destrói o `CDaoDatabase` do objeto, você pode reutilizar o objeto abrindo o mesmo banco de dados ou outro banco de dados.  
+### <a name="remarks"></a>Remarks  
+ It is good practice to close these objects yourself before you call this member function. Closing a `CDaoDatabase` object removes it from the Databases collection in the associated [workspace](../../mfc/reference/cdaoworkspace-class.md). Because **Close** does not destroy the `CDaoDatabase` object, you can reuse the object by opening the same database or a different database.  
   
 > [!CAUTION]
->  Chamar o [atualização](../../mfc/reference/cdaorecordset-class.md#update) função de membro (se houver edições pendentes) e o **fechar** função de membro em todos os objetos de conjunto de registros aberto antes de fechar um banco de dados. Se você sair de uma função que declara [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) ou `CDaoDatabase` objetos na pilha, o banco de dados é fechado, as alterações não salvas serão perdidas, todas as transações pendentes serão revertidas e todas as edições pendentes em seus dados serão perdidas.  
+>  Call the [Update](../../mfc/reference/cdaorecordset-class.md#update) member function (if there are pending edits) and the **Close** member function on all open recordset objects before you close a database. If you exit a function that declares [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) or `CDaoDatabase` objects on the stack, the database is closed, any unsaved changes are lost, all pending transactions are rolled back, and any pending edits to your data are lost.  
   
 > [!CAUTION]
->  Se você tentar fechar um objeto de banco de dados enquanto os objetos do conjunto de registros estão abertos, ou se você tentar fechar um objeto de espaço de trabalho enquanto quaisquer objetos de banco de dados pertencentes a esse espaço de trabalho específico estão abertos, os objetos de conjunto de registros serão fechados e quaisquer atualizações ou edições pendentes serão revertidas. Se você tentar fechar um objeto de espaço de trabalho enquanto quaisquer objetos de banco de dados pertencentes a ele são abertos, a operação fecha todos os objetos de banco de dados pertencentes a esse objeto de trabalho específico, o que pode resultar em objetos de conjunto de registros não fechada que está sendo fechados. Se você fechar o objeto de banco de dados, o MFC relata uma falha de asserção em compilações de depuração.  
+>  If you try to close a database object while any recordset objects are open, or if you try to close a workspace object while any database objects belonging to that specific workspace are open, those recordset objects will be closed and any pending updates or edits will be rolled back. If you try to close a workspace object while any database objects belonging to it are open, the operation closes all database objects belonging to that specific workspace object, which may result in unclosed recordset objects being closed. If you do not close your database object, MFC reports an assertion failure in debug builds.  
   
- Se o objeto de banco de dados é definido fora do escopo de uma função e a função sair sem fechá-lo, o objeto de banco de dados permanecerá aberto até que explicitamente fechada ou é o módulo no qual ele é definido fora do escopo.  
+ If the database object is defined outside the scope of a function, and you exit the function without closing it, the database object will remain open until explicitly closed or the module in which it is defined is out of scope.  
   
-##  <a name="create"></a>CDaoDatabase::Create  
- Para criar um novo Microsoft Jet (. MDB) banco de dados, chame essa função de membro depois que você construir um `CDaoDatabase` objeto.  
+##  <a name="create"></a>  CDaoDatabase::Create  
+ To create a new Microsoft Jet (.MDB) database, call this member function after you construct a `CDaoDatabase` object.  
   
 ```  
 virtual void Create(
@@ -237,69 +258,69 @@ virtual void Create(
     int dwOptions = 0);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Uma expressão de cadeia de caracteres que é o nome do arquivo de banco de dados que você está criando. Ele pode ser o caminho completo e nome de arquivo, como "c:\\\MYDB. MDB". Você deve fornecer um nome. Se você não fornecer uma extensão de nome de arquivo. MDB é acrescentado. Se a rede oferecer suporte a uniform naming convention (UNC), você pode também especificar um caminho de rede, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB". Somente o Microsoft Jet (. Arquivos de banco de dados MDB) podem ser criados usando essa função de membro. (Barras invertidas duplas são necessárias em literais de cadeia de caracteres como "\\" é o caractere de escape do C++.)  
+ A string expression that is the name of the database file that you are creating. It can be the full path and filename, such as "C:\\\MYDB.MDB". You must supply a name. If you do not supply a filename extension, .MDB is appended. If your network supports the uniform naming convention (UNC), you can also specify a network path, such as "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB". Only Microsoft Jet (.MDB) database files can be created using this member function. (Double backslashes are required in string literals because "\\" is the C++ escape character.)  
   
  `lpszLocale`  
- Uma expressão de cadeia de caracteres usada para especificar a ordem de agrupamento para criar o banco de dados. O valor padrão é **dbLangGeneral**. Os possíveis valores são:  
+ A string expression used to specify collating order for creating the database. The default value is **dbLangGeneral**. Possible values are:  
   
-- **dbLangGeneral** inglês, francês, alemão, português, italiano e espanhol moderno  
+- **dbLangGeneral** English, German, French, Portuguese, Italian, and Modern Spanish  
   
-- **dbLangArabic** árabe  
+- **dbLangArabic** Arabic  
   
-- **dbLangCyrillic** russo  
+- **dbLangCyrillic** Russian  
   
-- **dbLangCzech** tcheco  
+- **dbLangCzech** Czech  
   
-- **dbLangDutch** holandês  
+- **dbLangDutch** Dutch  
   
-- **dbLangGreek** grego  
+- **dbLangGreek** Greek  
   
-- **dbLangHebrew** hebraico  
+- **dbLangHebrew** Hebrew  
   
-- **dbLangHungarian** húngaro  
+- **dbLangHungarian** Hungarian  
   
-- **dbLangIcelandic** Islandês  
+- **dbLangIcelandic** Icelandic  
   
-- **dbLangNordic** Idiomas nórdicos (Microsoft Jet banco de dados mecanismo somente na versão 1.0)  
+- **dbLangNordic** Nordic languages (Microsoft Jet database engine version 1.0 only)  
   
-- **dbLangNorwdan** norueguês e dinamarquês  
+- **dbLangNorwdan** Norwegian and Danish  
   
-- **dbLangPolish** polonês  
+- **dbLangPolish** Polish  
   
-- **dbLangSpanish** espanhol tradicional  
+- **dbLangSpanish** Traditional Spanish  
   
-- **dbLangSwedfin** sueco e finlandês  
+- **dbLangSwedfin** Swedish and Finnish  
   
-- **dbLangTurkish** turco  
+- **dbLangTurkish** Turkish  
   
  `dwOptions`  
- Um inteiro que indica uma ou mais opções. Os possíveis valores são:  
+ An integer that indicates one or more options. Possible values are:  
   
-- **dbEncrypt** criar um banco de dados criptografado.  
+- **dbEncrypt** Create an encrypted database.  
   
-- **dbVersion10** criar um banco de dados com a versão de banco de dados Microsoft Jet 1.0.  
+- **dbVersion10** Create a database with Microsoft Jet database version 1.0.  
   
-- **dbVersion11** criar um banco de dados com a versão de banco de dados Microsoft Jet 1.1.  
+- **dbVersion11** Create a database with Microsoft Jet database version 1.1.  
   
-- **dbVersion20** criar um banco de dados com a versão de banco de dados Microsoft Jet 2.0.  
+- **dbVersion20** Create a database with Microsoft Jet database version 2.0.  
   
-- **dbVersion30** criar um banco de dados com a versão do banco de dados Microsoft Jet 3.0.  
+- **dbVersion30** Create a database with Microsoft Jet database version 3.0.  
   
- Se você omitir a constante de criptografia, é criado um banco de dados não criptografado. Você pode especificar somente uma constante de versão. Se você omitir uma constante de versão, é criado um banco de dados que usa a versão do banco de dados Microsoft Jet 3.0.  
+ If you omit the encryption constant, an unencrypted database is created. You can specify only one version constant. If you omit a version constant, a database that uses the Microsoft Jet database version 3.0 is created.  
   
 > [!CAUTION]
->  Se um banco de dados não for criptografado, é possível, mesmo se você implementar a segurança de senha do usuário, para ler diretamente o arquivo de disco binário que constitui o banco de dados.  
+>  If a database is not encrypted, it is possible, even if you implement user/password security, to directly read the binary disk file that constitutes the database.  
   
-### <a name="remarks"></a>Comentários  
- **Criar** cria o arquivo de banco de dados e o objeto de banco de dados DAO subjacente e inicializa o objeto C++. O objeto é acrescentado à coleção de bancos de dados do espaço de trabalho associado. O objeto de banco de dados está em um estado aberto; Não chame **abrir** depois **criar**.  
+### <a name="remarks"></a>Remarks  
+ **Create** creates the database file and the underlying DAO database object and initializes the C++ object. The object is appended to the associated workspace's Databases collection. The database object is in an open state; do not call **Open** after **Create**.  
   
 > [!NOTE]
->  Com **criar**, você pode criar apenas Microsoft Jet (. Bancos de dados MDB). É possível criar bancos de dados ISAM ou bancos de dados ODBC.  
+>  With **Create**, you can create only Microsoft Jet (.MDB) databases. You cannot create ISAM databases or ODBC databases.  
   
-##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
- Chame essa função de membro para estabelecer uma relação entre um ou mais campos em uma tabela primária no banco de dados e um ou mais campos em uma tabela externa (outra tabela no banco de dados).  
+##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
+ Call this member function to establish a relation between one or more fields in a primary table in the database and one or more fields in a foreign table (another table in the database).  
   
 ```  
 void CreateRelation(
@@ -313,106 +334,106 @@ void CreateRelation(
 void CreateRelation(CDaoRelationInfo& relinfo);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- O nome exclusivo do objeto relation. O nome deve começar com uma letra e pode conter um máximo de 40 caracteres. Ele pode incluir números e caracteres de sublinhado, mas não pode incluir espaços ou pontuação.  
+ The unique name of the relation object. The name must start with a letter and can contain a maximum of 40 characters. It can include numbers and underscore characters but cannot include punctuation or spaces.  
   
  `lpszTable`  
- O nome da tabela primária na relação. Se a tabela não existir, o MFC lança uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ The name of the primary table in the relation. If the table does not exist, MFC throws an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
  `lpszForeignTable`  
- O nome da tabela externa na relação. Se a tabela não existir, o MFC lança uma exceção do tipo `CDaoException`.  
+ The name of the foreign table in the relation. If the table does not exist, MFC throws an exception of type `CDaoException`.  
   
  `lAttributes`  
- Um valor longo que contém informações sobre o tipo de relação. Você pode usar esse valor para impor integridade referencial, entre outras coisas. Você pode usar o operador OR bit a bit ( **|**) para combinar qualquer um dos seguintes valores (contanto que a combinação faz sentido):  
+ A long value that contains information about the relationship type. You can use this value to enforce referential integrity, among other things. You can use the bitwise-OR operator ( **&#124;**) to combine any of the following values (as long as the combination makes sense):  
   
-- **dbRelationUnique** relação é-para-um.  
+- **dbRelationUnique** Relationship is one-to-one.  
   
-- **dbRelationDontEnforce** relação não é imposta (sem integridade referencial).  
+- **dbRelationDontEnforce** Relationship is not enforced (no referential integrity).  
   
-- **dbRelationInherited** relação existe em um banco de dados não atuais que contém as duas tabelas anexadas.  
+- **dbRelationInherited** Relationship exists in a noncurrent database that contains the two attached tables.  
   
-- **dbRelationUpdateCascade** atualizações ocorrerão em cascata (para obter mais informações sobre em cascata, consulte comentários).  
+- **dbRelationUpdateCascade** Updates will cascade (for more on cascades, see Remarks).  
   
-- **dbRelationDeleteCascade** exclusões serão transmitida.  
+- **dbRelationDeleteCascade** Deletions will cascade.  
   
  *lpszField*  
- Um ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome de um campo na tabela primária (chamado `lpszTable`).  
+ A pointer to a null-terminated string containing the name of a field in the primary table (named by `lpszTable`).  
   
  *lpszForeignField*  
- Um ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome de um campo da tabela externa (chamado `lpszForeignTable`).  
+ A pointer to a null-terminated string containing the name of a field in the foreign table (named by `lpszForeignTable`).  
   
  *relinfo*  
- Uma referência a um [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto que contém informações sobre a relação que você deseja criar.  
+ A reference to a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object that contains information about the relation you want to create.  
   
-### <a name="remarks"></a>Comentários  
- A relação não pode envolver uma consulta ou uma tabela anexada do banco de dados.  
+### <a name="remarks"></a>Remarks  
+ The relationship cannot involve a query or an attached table from an external database.  
   
- Use a primeira versão da função quando o parceiro envolve um campo em cada uma das duas tabelas. Use a segunda versão quando o parceiro envolve vários campos. O número máximo de campos em uma relação é 14.  
+ Use the first version of the function when the relation involves one field in each of the two tables. Use the second version when the relation involves multiple fields. The maximum number of fields in a relation is 14.  
   
- Essa ação cria um objeto de relação DAO subjacente, mas isso é um detalhe de implementação do MFC, pois o encapsulamento de objetos de relação do MFC está contido na classe `CDaoDatabase`. MFC não fornece uma classe para relações.  
+ This action creates an underlying DAO relation object, but this is an MFC implementation detail since MFC's encapsulation of relation objects is contained within class `CDaoDatabase`. MFC does not supply a class for relations.  
   
- Se você definir a relação de atributos de objeto para ativar as operações em cascata, o mecanismo de banco de dados automaticamente atualiza ou exclui registros em uma ou mais tabelas quando são feitas alterações em tabelas relacionadas de chave primárias.  
+ If you set the relation object's attributes to activate cascade operations, the database engine automatically updates or deletes records in one or more other tables when changes are made to related primary key tables.  
   
- Por exemplo, suponha que você estabelecer uma relação de exclusão em cascata entre uma tabela clientes e uma tabela Pedidos. Quando você exclui registros da tabela Customers, registros na tabela de pedidos relacionados a esse cliente também serão excluídos. Além disso, se você estabelecer cascade delete relações entre a tabela Pedidos e a outras tabelas, registros dessas tabelas são excluídos automaticamente quando você exclui registros da tabela Customers.  
+ For example, suppose you establish a cascade delete relationship between a Customers table and an Orders table. When you delete records from the Customers table, records in the Orders table related to that customer are also deleted. In addition, if you establish cascade delete relationships between the Orders table and other tables, records from those tables are automatically deleted when you delete records from the Customers table.  
   
- Para obter informações relacionadas, consulte o tópico "Método CreateRelation" na Ajuda do DAO.  
+ For related information, see the topic "CreateRelation Method" in DAO Help.  
   
-##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
- Chame essa função de membro para excluir querydef especificado — consulta salva — da `CDaoDatabase` QueryDefs de coleção objeto da.  
+##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef  
+ Call this member function to delete the specified querydef — saved query — from the `CDaoDatabase` object's QueryDefs collection.  
   
 ```  
 void DeleteQueryDef(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- O nome da consulta salva para excluir.  
+ The name of the saved query to delete.  
   
-### <a name="remarks"></a>Comentários  
- Em seguida, essa consulta não é definida no banco de dados.  
+### <a name="remarks"></a>Remarks  
+ Afterwards, that query is no longer defined in the database.  
   
- Para obter informações sobre como criar objetos de querydef, consulte a classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Um objeto querydef se torna associado um determinado `CDaoDatabase` objeto quando você construir o `CDaoQueryDef` objeto, passando um ponteiro para o objeto de banco de dados.  
+ For information about creating querydef objects, see class [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). A querydef object becomes associated with a particular `CDaoDatabase` object when you construct the `CDaoQueryDef` object, passing it a pointer to the database object.  
   
-##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
- Chame essa função de membro para excluir uma relação existente da coleção de relações do objeto de banco de dados.  
+##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation  
+ Call this member function to delete an existing relation from the database object's Relations collection.  
   
 ```  
 void DeleteRelation(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- O nome do parceiro para excluir.  
+ The name of the relation to delete.  
   
-### <a name="remarks"></a>Comentários  
- Posteriormente, a relação não existe.  
+### <a name="remarks"></a>Remarks  
+ Afterwards, the relation no longer exists.  
   
- Para obter informações relacionadas, consulte o tópico "Método Delete" na Ajuda do DAO.  
+ For related information, see the topic "Delete Method" in DAO Help.  
   
-##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
- Chame essa função de membro para excluir a tabela especificada e todos os seus dados a partir de `CDaoDatabase` TableDefs de coleção objeto da.  
+##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef  
+ Call this member function to delete the specified table and all of its data from the `CDaoDatabase` object's TableDefs collection.  
   
 ```  
 void DeleteTableDef(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- O nome do tabledef para excluir.  
+ The name of the tabledef to delete.  
   
-### <a name="remarks"></a>Comentários  
- Posteriormente, essa tabela não está definida no banco de dados.  
+### <a name="remarks"></a>Remarks  
+ Afterwards, that table is no longer defined in the database.  
   
 > [!NOTE]
->  Tenha cuidado para não excluir tabelas do sistema.  
+>  Be very careful not to delete system tables.  
   
- Para obter informações sobre como criar objetos tabledef, consulte a classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Um objeto tabledef se torna associado um determinado `CDaoDatabase` objeto quando você construir o `CDaoTableDef` objeto, passando um ponteiro para o objeto de banco de dados.  
+ For information about creating tabledef objects, see class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). A tabledef object becomes associated with a particular `CDaoDatabase` object when you construct the `CDaoTableDef` object, passing it a pointer to the database object.  
   
- Para obter informações relacionadas, consulte o tópico "Método Delete" na Ajuda do DAO.  
+ For related information, see the topic "Delete Method" in DAO Help.  
   
-##  <a name="execute"></a>CDaoDatabase::Execute  
- Chame essa função de membro para executar uma consulta de ação ou executar uma instrução SQL no banco de dados.  
+##  <a name="execute"></a>  CDaoDatabase::Execute  
+ Call this member function to run an action query or execute a SQL statement on the database.  
   
 ```  
 void Execute(
@@ -420,106 +441,106 @@ void Execute(
     int nOptions = dbFailOnError);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszSQL`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que contém um comando SQL válido para executar.  
+ Pointer to a null-terminated string containing a valid SQL command to execute.  
   
  `nOptions`  
- Um inteiro que especifica as opções relacionadas à integridade da consulta. Você pode usar o operador OR bit a bit ( **|**) para combinar qualquer uma das seguintes constantes (desde que a combinação faz sentido — por exemplo, você não iria combinar **dbInconsistent** com **dbConsistent**):  
+ An integer that specifies options relating to the integrity of the query. You can use the bitwise-OR operator ( **&#124;**) to combine any of the following constants (provided the combination makes sense — for example, you would not combine **dbInconsistent** with **dbConsistent**):  
   
-- **dbDenyWrite** negar a permissão de gravação para outros usuários.  
+- **dbDenyWrite** Deny write permission to other users.  
   
-- **dbInconsistent** atualizações inconsistentes (padrão).  
+- **dbInconsistent** (Default) Inconsistent updates.  
   
-- **dbConsistent** atualizações consistentes.  
+- **dbConsistent** Consistent updates.  
   
-- **dbSQLPassThrough** passagem SQL. Faz com que a instrução SQL a serem passados para uma fonte de dados ODBC para processamento.  
+- **dbSQLPassThrough** SQL pass-through. Causes the SQL statement to be passed to an ODBC data source for processing.  
   
-- **dbFailOnError** reverter atualizações se ocorrer um erro.  
+- **dbFailOnError** Roll back updates if an error occurs.  
   
-- **dbSeeChanges** gerar um erro de tempo de execução, se outro usuário está alterando dados que você está editando.  
+- **dbSeeChanges** Generate a run-time error if another user is changing data you are editing.  
   
 > [!NOTE]
->  Se ambos os **dbInconsistent** e **dbConsistent** são incluídos ou se não for incluído, o resultado é o padrão. Para obter uma explicação das constantes, consulte o tópico "Executar o método" na Ajuda do DAO.  
+>  If both **dbInconsistent** and **dbConsistent** are included or if neither is included, the result is the default. For an explanation of these constants, see the topic "Execute Method" in DAO Help.  
   
-### <a name="remarks"></a>Comentários  
- **Executar** funciona apenas para consultas de ação ou consultas passagem SQL que não retornam os resultados. Ele não funciona para consultas select, que retorna registros.  
+### <a name="remarks"></a>Remarks  
+ **Execute** works only for action queries or SQL pass-through queries that do not return results. It does not work for select queries, which return records.  
   
- Para uma definição e informações sobre consultas de ação, consulte os tópicos "Consulta de ação" e "Executar o método" na Ajuda do DAO.  
+ For a definition and information about action queries, see the topics "Action Query" and "Execute Method" in DAO Help.  
   
 > [!TIP]
->  Dada uma instrução SQL sintaticamente correta e permissões adequadas, o **Execute** função de membro não falhará mesmo se não for uma única linha pode ser modificada ou excluída. Portanto, sempre use o **dbFailOnError** opção ao usar o **Execute** função de membro para executar uma atualização ou consulta exclusão. Essa opção faz com que o MFC acionar uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) e reverte todas as alterações bem-sucedidas se qualquer um dos registros afetados estão bloqueados e não pode ser atualizada ou excluída. Observe que você sempre pode chamar `GetRecordsAffected` para ver quantos registros foram afetados.  
+>  Given a syntactically correct SQL statement and proper permissions, the **Execute** member function will not fail even if not a single row can be modified or deleted. Therefore, always use the **dbFailOnError** option when using the **Execute** member function to run an update or delete query. This option causes MFC to throw an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md) and rolls back all successful changes if any of the records affected are locked and cannot be updated or deleted. Note that you can always call `GetRecordsAffected` to see how many records were affected.  
   
- Chamar o [GetRecordsAffected](#getrecordsaffected) a função de membro do objeto de banco de dados para determinar o número de registros afetados pelo mais recente **Execute** chamar. Por exemplo, `GetRecordsAffected` retorna informações sobre o número de registros excluídos, atualizados ou inseridos durante a execução de uma consulta ação. A contagem retornada não refletirá as alterações nas tabelas relacionadas quando cascade atualiza ou exclui estão em vigor.  
+ Call the [GetRecordsAffected](#getrecordsaffected) member function of the database object to determine the number of records affected by the most recent **Execute** call. For example, `GetRecordsAffected` returns information about the number of records deleted, updated, or inserted when executing an action query. The count returned will not reflect changes in related tables when cascade updates or deletes are in effect.  
   
- **Executar** não retorna um conjunto de registros. Usando **Execute** em uma consulta que seleciona registros faz com que o MFC acionar uma exceção do tipo `CDaoException`. (Não há nenhum `ExecuteSQL` análogo à função de membro `CDatabase::ExecuteSQL`.)  
+ **Execute** does not return a recordset. Using **Execute** on a query that selects records causes MFC to throw an exception of type `CDaoException`. (There is no `ExecuteSQL` member function analogous to `CDatabase::ExecuteSQL`.)  
   
-##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
- Chame essa função de membro para recuperar a cadeia de conexão usada para conectar-se a `CDaoDatabase` objeto para um banco de dados ODBC ou ISAM.  
+##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
+ Call this member function to retrieve the connection string used to connect the `CDaoDatabase` object to an ODBC or ISAM database.  
   
 ```  
 CString GetConnect();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A conexão de cadeia de caracteres se [abrir](#open) foi chamado com êxito em uma fonte de dados ODBC; caso contrário, uma cadeia de caracteres vazia. Para um Microsoft Jet (. Banco de dados MDB), a cadeia de caracteres sempre está vazia, a menos que você defini-lo para uso com o **dbSQLPassThrough** opção usada com a [Execute](#execute) função de membro ou usados na abertura de um conjunto de registros.  
+### <a name="return-value"></a>Return Value  
+ The connection string if [Open](#open) has been called successfully on an ODBC data source; otherwise, an empty string. For a Microsoft Jet (.MDB) database, the string is always empty unless you set it for use with the **dbSQLPassThrough** option used with the [Execute](#execute) member function or used in opening a recordset.  
   
-### <a name="remarks"></a>Comentários  
- A cadeia de caracteres fornece informações sobre a origem de um banco de dados aberto ou usados em uma consulta de passagem. A cadeia de caracteres de conexão é composta de um especificador de tipo de banco de dados e zero ou mais parâmetros separados por ponto e vírgula.  
-  
-> [!NOTE]
->  Usando as classes MFC DAO para se conectar a uma fonte de dados por meio de ODBC é menos eficiente do que conectar-se por meio de uma tabela anexada.  
+### <a name="remarks"></a>Remarks  
+ The string provides information about the source of an open database or a database used in a pass-through query. The connection string is composed of a database type specifier and zero or more parameters separated by semicolons.  
   
 > [!NOTE]
->  A cadeia de caracteres de conexão é usada para passar informações adicionais para ODBC e alguns drivers ISAM conforme necessário. Ele não é usado para. Bancos de dados MDB. Para tabelas base do banco de dados Microsoft Jet, a cadeia de caracteres de conexão é uma cadeia de caracteres vazia ("") exceto quando você usá-lo para uma consulta passagem SQL conforme descrito em retornar valor acima.  
+>  Using the MFC DAO classes to connect to a data source via ODBC is less efficient than connecting via an attached table.  
   
- Consulte o [abrir](#open) função de membro para obter uma descrição de como a cadeia de caracteres de conexão é criada. Depois que a cadeia de caracteres de conexão foi definida no **abrir** chamada, você pode posteriormente usá-lo para verificar a configuração para determinar o tipo de fonte de dados ODBC, a senha ou a ID de usuário do banco de dados, caminho.  
+> [!NOTE]
+>  The connection string is used to pass additional information to ODBC and certain ISAM drivers as needed. It is not used for .MDB databases. For Microsoft Jet database base tables, the connection string is an empty string ("") except when you use it for a SQL pass-through query as described under Return Value above.  
   
-##  <a name="getname"></a>CDaoDatabase::GetName  
- Chame essa função de membro para recuperar o nome do banco de dados aberto no momento, o que é o nome de um arquivo de banco de dados existente ou o nome de uma fonte de dados ODBC registrada.  
+ See the [Open](#open) member function for a description of how the connection string is created. Once the connection string has been set in the **Open** call, you can later use it to check the setting to determine the type, path, user ID, Password, or ODBC data source of the database.  
+  
+##  <a name="getname"></a>  CDaoDatabase::GetName  
+ Call this member function to retrieve the name of the currently open database, which is the name of an existing database file or the name of a registered ODBC data source.  
   
 ```  
 CString GetName();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O caminho completo e o nome do arquivo do banco de dados se for bem-sucedida; Caso contrário, vazio [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
+### <a name="return-value"></a>Return Value  
+ The full path and file name of the database if successful; otherwise, an empty [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
-### <a name="remarks"></a>Comentários  
- Se a rede oferecer suporte a uniform naming convention (UNC), você também pode especificar um caminho de rede — por exemplo, "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Barras invertidas duplas são necessárias em literais de cadeia de caracteres como "\\" é o caractere de escape do C++.)  
+### <a name="remarks"></a>Remarks  
+ If your network supports the uniform naming convention (UNC), you can also specify a network path—for example, "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB.MDB". (Double backslashes are required in string literals because "\\" is the C++ escape character.)  
   
- Por exemplo, convém exibir esse nome em um título. Se ocorrer um erro enquanto o nome está sendo recuperado, o MFC lança uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ You might, for example, want to display this name in a heading. If an error occurs while the name is being retrieved, MFC throws an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
 > [!NOTE]
->  Para melhorar o desempenho quando os bancos de dados externos são acessados, recomendamos que você anexar tabelas de banco de dados externo para um banco de dados Microsoft Jet (. MDB) em vez de conectar diretamente à fonte de dados.  
+>  For better performance when external databases are being accessed, we recommend that you attach external database tables to a Microsoft Jet database (.MDB) rather than connecting directly to the data source.  
   
- O tipo de banco de dados é indicado pelo arquivo ou diretório que o caminho aponta, da seguinte maneira:  
+ The database type is indicated by the file or directory that the path points to, as follows:  
   
-|Pontos de caminho para...|Tipo de banco de dados|  
+|Pathname points to..|Database type|  
 |--------------------------|-------------------|  
-|. Arquivo MDB|Banco de dados Microsoft Jet (Microsoft Access)|  
-|Diretório que contém. Arquivos DBF|banco de dados do dBASE|  
-|Diretório que contém. Arquivo XLS|Banco de dados do Microsoft Excel|  
-|Diretório que contém. PDX (s)|Banco de dados Paradox|  
-|Diretório que contém os arquivos de banco de dados de texto corretamente formatado|Banco de dados de formato de texto|  
+|.MDB file|Microsoft Jet database (Microsoft Access)|  
+|Directory that contains .DBF file(s)|dBASE database|  
+|Directory that contains .XLS file|Microsoft Excel database|  
+|Directory that contains .PDX file(s)|Paradox database|  
+|Directory that contains appropriately formatted text database files|Text format database|  
   
- Para bancos de dados ODBC, como o SQL Server e Oracle, a cadeia de caracteres de conexão do banco de dados identifica um nome de fonte de dados (DSN) que é registrado pelo ODBC.  
+ For ODBC databases such as SQL Server and Oracle, the database's connection string identifies a data source name (DSN) that's registered by ODBC.  
   
-##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
- Chame essa função de membro para recuperar o número de consultas definidas na coleção QueryDefs do banco de dados.  
+##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount  
+ Call this member function to retrieve the number of queries defined in the database's QueryDefs collection.  
   
 ```  
 short GetQueryDefCount();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de consultas definidas no banco de dados.  
+### <a name="return-value"></a>Return Value  
+ The number of queries defined in the database.  
   
-### <a name="remarks"></a>Comentários  
- `GetQueryDefCount`é útil se você precisar percorrer todos os querydefs na coleção QueryDefs. Para obter informações sobre uma determinada consulta na coleção, consulte [GetQueryDefInfo](#getquerydefinfo).  
+### <a name="remarks"></a>Remarks  
+ `GetQueryDefCount` is useful if you need to loop through all querydefs in the QueryDefs collection. To obtain information about a given query in the collection, see [GetQueryDefInfo](#getquerydefinfo).  
   
-##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
- Chame essa função de membro para obter vários tipos de informações sobre uma consulta definida no banco de dados.  
+##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo  
+ Call this member function to obtain various kinds of information about a query defined in the database.  
   
 ```  
 void GetQueryDefInfo(
@@ -534,79 +555,79 @@ void GetQueryDefInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- O índice da consulta predefinida na coleção QueryDefs do banco de dados, para a pesquisa por índice.  
+ The index of the predefined query in the database's QueryDefs collection, for lookup by index.  
   
  *querydefinfo*  
- Uma referência a um [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) objeto que retorna as informações solicitadas.  
+ A reference to a [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) object that returns the information requested.  
   
  `dwInfoOptions`  
- Opções que especificam quais informações sobre o conjunto de registros a recuperar. As opções disponíveis são listadas aqui, junto com o que ele faz a função retornar sobre o conjunto de registros:  
+ Options that specify which information about the recordset to retrieve. The available options are listed here along with what they cause the function to return about the recordset:  
   
-- `AFX_DAO_PRIMARY_INFO`(Padrão) Nome e tipo  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Type  
   
-- `AFX_DAO_SECONDARY_INFO`Adição de informações principais: data de criação, data da última atualização, retorna registros, Updatable  
+- `AFX_DAO_SECONDARY_INFO` Primary information plus: Date Created, Date of Last Update, Returns Records, Updatable  
   
-- `AFX_DAO_ALL_INFO`Informações principais e secundárias mais: SQL, conectar, ODBCTimeout  
+- `AFX_DAO_ALL_INFO` Primary and secondary information plus: SQL, Connect, ODBCTimeout  
   
  `lpszName`  
- Uma cadeia de caracteres que contém o nome de uma consulta definida no banco de dados, a pesquisa por nome.  
+ A string containing the name of a query defined in the database, for lookup by name.  
   
-### <a name="remarks"></a>Comentários  
- Duas versões da função são fornecidas para que você pode selecionar uma consulta por índice na coleção QueryDefs do banco de dados ou pelo nome da consulta.  
+### <a name="remarks"></a>Remarks  
+ Two versions of the function are supplied so you can select a query either by index in the database's QueryDefs collection or by the name of the query.  
   
- Para obter uma descrição das informações retornadas em *querydefinfo*, consulte o [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) estrutura. Essa estrutura tem membros que correspondem aos itens de informações listadas na descrição do `dwInfoOptions`. Se você solicitar um nível de informações, você obterá quaisquer níveis anteriores de informações também.  
+ For a description of the information returned in *querydefinfo*, see the [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. If you request one level of information, you get any prior levels of information as well.  
   
-##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
- Chame essa função de membro para recuperar o número de segundos permitido antes que as operações subsequentes no banco de dados conectado são atingiu o tempo limite atual.  
+##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
+ Call this member function to retrieve the current number of seconds to allow before subsequent operations on the connected database are timed out.  
   
 ```  
 short GetQueryTimeout();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um inteiro curto que contém o valor de tempo limite em segundos.  
+### <a name="return-value"></a>Return Value  
+ A short integer containing the timeout value in seconds.  
   
-### <a name="remarks"></a>Comentários  
- Uma operação pode expirar devido a problemas de acesso à rede, tempo de processamento de consulta excessiva e assim por diante. Enquanto a configuração estiver em vigor, ela afeta todos os abertos, adicionar novos, atualizar e excluir operações em qualquer conjunto de registros associado a esse `CDaoDatabase` objeto. Você pode alterar a configuração de tempo limite atual chamando [SetQueryTimeout](#setquerytimeout). Alterar o valor de tempo limite de consulta para um conjunto de registros após a abertura não altera o valor do conjunto de registros. Por exemplo, subsequente [mover](../../mfc/reference/cdaorecordset-class.md#move) operações não usa o novo valor. O valor padrão é inicialmente definido quando o mecanismo de banco de dados é inicializado.  
+### <a name="remarks"></a>Remarks  
+ An operation might time out due to network access problems, excessive query processing time, and so on. While the setting is in effect, it affects all open, add new, update, and delete operations on any recordsets associated with this `CDaoDatabase` object. You can change the current timeout setting by calling [SetQueryTimeout](#setquerytimeout). Changing the query timeout value for a recordset after opening does not change the value for the recordset. For example, subsequent [Move](../../mfc/reference/cdaorecordset-class.md#move) operations do not use the new value. The default value is initially set when the database engine is initialized.  
   
- O valor padrão de tempo limite de consulta é obtido do registro do Windows. Se não houver nenhuma configuração do registro, o padrão é 60 segundos. Nem todos os bancos de dados suportam a capacidade de definir um valor de tempo limite de consulta. Se você definir um valor de tempo limite de consulta de 0, não haverá tempo limite; e a comunicação com o banco de dados pode parar de responder. Esse comportamento pode ser útil durante o desenvolvimento. Se a chamada falhar, o MFC lançará uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ The default value for query timeouts is taken from the Windows registry. If there is no registry setting, the default is 60 seconds. Not all databases support the ability to set a query timeout value. If you set a query timeout value of 0, no timeout occurs; and communication with the database may stop responding. This behavior may be useful during development. If the call fails, MFC throws an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
- Para obter informações relacionadas, consulte o tópico "Propriedade QueryTimeout" na Ajuda do DAO.  
+ For related information, see the topic "QueryTimeout Property" in DAO Help.  
   
-##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
- Chame essa função de membro para determinar o número de registros afetados pela chamada mais recente do [Execute](#execute) função de membro.  
+##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected  
+ Call this member function to determine the number of records affected by the most recent call of the [Execute](#execute) member function.  
   
 ```  
 long GetRecordsAffected();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um inteiro longo que contém o número de registros afetados.  
+### <a name="return-value"></a>Return Value  
+ A long integer containing the number of records affected.  
   
-### <a name="remarks"></a>Comentários  
- O valor retornado inclui o número de registros excluídos, atualizados ou inseridos por uma consulta de ação executar com **Execute**. A contagem retornada não refletirá as alterações nas tabelas relacionadas quando cascade atualiza ou exclui estão em vigor.  
+### <a name="remarks"></a>Remarks  
+ The value returned includes the number of records deleted, updated, or inserted by an action query run with **Execute**. The count returned will not reflect changes in related tables when cascade updates or deletes are in effect.  
   
- Para obter informações relacionadas, consulte o tópico "Propriedade RecordsAffected" na Ajuda do DAO.  
+ For related information, see the topic "RecordsAffected Property" in DAO Help.  
   
-##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
- Chame essa função de membro para obter o número de relações definidas entre tabelas no banco de dados.  
+##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount  
+ Call this member function to obtain the number of relations defined between tables in the database.  
   
 ```  
 short GetRelationCount();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de relações definidas entre tabelas no banco de dados.  
+### <a name="return-value"></a>Return Value  
+ The number of relations defined between tables in the database.  
   
-### <a name="remarks"></a>Comentários  
- **GetRelationCount** é útil se você precisar percorrer todas as relações definidas na coleção de relações do banco de dados. Para obter informações sobre uma determinada relação na coleção, consulte [GetRelationInfo](#getrelationinfo).  
+### <a name="remarks"></a>Remarks  
+ **GetRelationCount** is useful if you need to loop through all defined relations in the database's Relations collection. To obtain information about a given relation in the collection, see [GetRelationInfo](#getrelationinfo).  
   
- Para ilustrar o conceito de uma relação, considere uma tabela fornecedores e uma tabela produtos, que pode ter uma relação um-para-muitos. Essa relação, um fornecedor pode fornecer mais de um produto. Outras relações são um e muitos-para-muitos.  
+ To illustrate the concept of a relation, consider a Suppliers table and a Products table, which might have a one-to-many relationship. In this relationship, one supplier can supply more than one product. Other relations are one-to-one and many-to-many.  
   
-##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
- Chame essa função de membro para obter informações sobre uma relação especificada na coleção de relações do banco de dados.  
+##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo  
+ Call this member function to obtain information about a specified relation in the database's Relations collection.  
   
 ```  
 void GetRelationInfo(
@@ -621,46 +642,46 @@ void GetRelationInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- O índice do objeto relation na coleção de relações do banco de dados, para a pesquisa por índice.  
+ The index of the relation object in the database's Relations collection, for lookup by index.  
   
  *relinfo*  
- Uma referência a um [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto que retorna as informações solicitadas.  
+ A reference to a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object that returns the information requested.  
   
  `dwInfoOptions`  
- Opções que especificam quais informações sobre a relação para recuperar. As opções disponíveis são listadas aqui, junto com o que elas causam a função retornar sobre a relação:  
+ Options that specify which information about the relation to retrieve. The available options are listed here along with what they cause the function to return about the relation:  
   
-- `AFX_DAO_PRIMARY_INFO`(Padrão) Tabela estrangeira da tabela, nome  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Table, Foreign Table  
   
-- `AFX_DAO_SECONDARY_INFO`Atributos, informações de campo  
+- `AFX_DAO_SECONDARY_INFO` Attributes, Field Information  
   
- As informações do campo é uma [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) objeto que contém os campos da tabela primária envolvido na relação.  
+ The Field Information is a [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) object containing the fields from the primary table involved in the relation.  
   
  `lpszName`  
- Uma cadeia de caracteres que contém o nome do objeto relation, para a pesquisa por nome.  
+ A string containing the name of the relation object, for lookup by name.  
   
-### <a name="remarks"></a>Comentários  
- Duas versões dessa função fornecem acesso por índice ou por nome. Para obter uma descrição das informações retornadas em *relinfo*, consulte o [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) estrutura. Essa estrutura tem membros que correspondem aos itens de informações listadas na descrição do `dwInfoOptions`. Se você solicitar informações em um nível, também obter informações em qualquer níveis anteriores.  
+### <a name="remarks"></a>Remarks  
+ Two versions of this function provide access either by index or by name. For a description of the information returned in *relinfo*, see the [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. If you request information at one level, you also get information at any prior levels as well.  
   
 > [!NOTE]
->  Se você definir a relação de atributos de objeto para ativar as operações em cascata ( **dbRelationUpdateCascades** ou **dbRelationDeleteCascades**), o mecanismo de banco de dados Microsoft Jet automaticamente atualiza ou exclui registros em um ou mais tabelas quando são feitas alterações relacionadas a tabelas de chave primárias. Por exemplo, suponha que você estabelecer uma relação de exclusão em cascata entre uma tabela clientes e uma tabela Pedidos. Quando você exclui registros da tabela Customers, registros na tabela de pedidos relacionados a esse cliente também serão excluídos. Além disso, se você estabelecer cascade delete relações entre a tabela Pedidos e a outras tabelas, registros dessas tabelas são excluídos automaticamente quando você exclui registros da tabela Customers.  
+>  If you set the relation object's attributes to activate cascade operations ( **dbRelationUpdateCascades** or **dbRelationDeleteCascades**), the Microsoft Jet database engine automatically updates or deletes records in one or more other tables when changes are made to related primary key tables. For example, suppose you establish a cascade delete relationship between a Customers table and an Orders table. When you delete records from the Customers table, records in the Orders table related to that customer are also deleted. In addition, if you establish cascade delete relationships between the Orders table and other tables, records from those tables are automatically deleted when you delete records from the Customers table.  
   
-##  <a name="gettabledefcount"></a>Cdaodatabase:: Gettabledefcount  
- Chame essa função de membro para recuperar o número de tabelas definidas no banco de dados.  
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount  
+ Call this member function to retrieve the number of tables defined in the database.  
   
 ```  
 short GetTableDefCount();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O número de tabledefs definidos no banco de dados.  
+### <a name="return-value"></a>Return Value  
+ The number of tabledefs defined in the database.  
   
-### <a name="remarks"></a>Comentários  
- `GetTableDefCount`é útil se você precisar percorrer todos os tabledefs na coleção TableDefs do banco de dados. Para obter informações sobre uma determinada tabela na coleção, consulte [GetTableDefInfo](#gettabledefinfo).  
+### <a name="remarks"></a>Remarks  
+ `GetTableDefCount` is useful if you need to loop through all tabledefs in the database's TableDefs collection. To obtain information about a given table in the collection, see [GetTableDefInfo](#gettabledefinfo).  
   
-##  <a name="gettabledefinfo"></a>Cdaodatabase:: Gettabledefinfo  
- Chame essa função de membro para obter vários tipos de informações sobre uma tabela definida no banco de dados.  
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo  
+ Call this member function to obtain various kinds of information about a table defined in the database.  
   
 ```  
 void GetTableDefInfo(
@@ -675,76 +696,76 @@ void GetTableDefInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- O índice do objeto tabledef na coleção TableDefs do banco de dados, para a pesquisa por índice.  
+ The index of the tabledef object in the database's TableDefs collection, for lookup by index.  
   
  `tabledefinfo`  
- Uma referência a um [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) objeto que retorna as informações solicitadas.  
+ A reference to a [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) object that returns the information requested.  
   
  `dwInfoOptions`  
- Opções que especificam quais informações sobre a tabela para recuperar. As opções disponíveis são listadas aqui, junto com o que elas causam a função retornar sobre a relação:  
+ Options that specify which information about the table to retrieve. The available options are listed here along with what they cause the function to return about the relation:  
   
-- `AFX_DAO_PRIMARY_INFO`(Padrão) Atributos de nome, atualizável,  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Updatable, Attributes  
   
-- `AFX_DAO_SECONDARY_INFO`Adição de informações principais: data de criação, data da última atualização, nome da tabela de origem, conectar-se  
+- `AFX_DAO_SECONDARY_INFO` Primary information plus: Date Created, Date Last Updated, Source Table Name, Connect  
   
-- `AFX_DAO_ALL_INFO`Informações principais e secundárias mais: contagem de registros de regra de validação, texto de validação  
+- `AFX_DAO_ALL_INFO` Primary and secondary information plus: Validation Rule, Validation Text, Record Count  
   
  `lpszName`  
- O nome do objeto tabledef, pesquisa por nome.  
+ The name of the tabledef object, for lookup by name.  
   
-### <a name="remarks"></a>Comentários  
- Duas versões da função são fornecidas para que você pode selecionar uma tabela pelo índice na coleção TableDefs do banco de dados ou pelo nome da tabela.  
+### <a name="remarks"></a>Remarks  
+ Two versions of the function are supplied so you can select a table either by index in the database's TableDefs collection or by the name of the table.  
   
- Para obter uma descrição das informações retornadas em `tabledefinfo`, consulte o [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) estrutura. Essa estrutura tem membros que correspondem aos itens de informações listadas na descrição do `dwInfoOptions`. Se você solicitar informações em um nível, você obtém informações de todos os níveis anteriores também.  
+ For a description of the information returned in `tabledefinfo`, see the [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. If you request information at one level, you get information for any prior levels as well.  
   
 > [!NOTE]
->  O `AFX_DAO_ALL_INFO` opção fornece informações que podem ser lentas obter. Nesse caso, os registros na tabela de contagem pode ser muito demorada se houver muitos registros.  
+>  The `AFX_DAO_ALL_INFO` option provides information that can be slow to obtain. In this case, counting the records in the table could be very time consuming if there are many records.  
   
-##  <a name="getversion"></a>CDaoDatabase::GetVersion  
- Chame essa função de membro para determinar a versão do arquivo de banco de dados Microsoft Jet.  
+##  <a name="getversion"></a>  CDaoDatabase::GetVersion  
+ Call this member function to determine the version of the Microsoft Jet database file.  
   
 ```  
 CString GetVersion();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) que indica a versão do arquivo de banco de dados associado ao objeto.  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that indicates the version of the database file associated with the object.  
   
-### <a name="remarks"></a>Comentários  
- O valor retornado representa o número de versão no formato "principal"; Por exemplo, "3.0". O número de versão do produto (por exemplo, 3.0) consiste em número de versão (3), um ponto e o número de versão (0). As versões de data são 1.0, 1.1, 2.0 e 3.0.  
+### <a name="remarks"></a>Remarks  
+ The value returned represents the version number in the form "major.minor"; for example, "3.0". The product version number (for example, 3.0) consists of the version number (3), a period, and the release number (0). The versions to date are 1.0, 1.1, 2.0, and 3.0.  
   
- Para obter informações relacionadas, consulte o tópico "Propriedade Version" na Ajuda do DAO.  
+ For related information, see the topic "Version Property" in DAO Help.  
   
-##  <a name="isopen"></a>CDaoDatabase::IsOpen  
- Chame essa função de membro para determinar se o `CDaoDatabase` objeto está atualmente aberto em um banco de dados.  
+##  <a name="isopen"></a>  CDaoDatabase::IsOpen  
+ Call this member function to determine whether the `CDaoDatabase` object is currently open on a database.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o `CDaoDatabase` objeto for aberto; caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDaoDatabase` object is currently open; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
- Contém um ponteiro para a interface OLE para o objeto de banco de dados DAO base o `CDaoDatabase` objeto.  
+##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase  
+ Contains a pointer to the OLE interface for the DAO database object underlying the `CDaoDatabase` object.  
   
-### <a name="remarks"></a>Comentários  
- Use esse ponteiro se você precisar acessar a interface do DAO diretamente.  
+### <a name="remarks"></a>Remarks  
+ Use this pointer if you need to access the DAO interface directly.  
   
- Para obter informações sobre o DAO chamada diretamente, consulte [técnico 54 Observação](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
+ For information about calling DAO directly, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
- Contém um ponteiro para o [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objeto que contém o objeto de banco de dados.  
+##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace  
+ Contains a pointer to the [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object that contains the database object.  
   
-### <a name="remarks"></a>Comentários  
- Use esse ponteiro se você precisar acessá-lo diretamente — por exemplo, para obter ponteiros para outros objetos de banco de dados da coleção de bancos de dados do espaço de trabalho.  
+### <a name="remarks"></a>Remarks  
+ Use this pointer if you need to access the workspace directly — for example, to obtain pointers to other database objects in the workspace's Databases collection.  
   
-##  <a name="open"></a>CDaoDatabase::Open  
- Você deve chamar essa função de membro para inicializar construído recentemente `CDaoDatabase` objeto que representa um banco de dados existente.  
+##  <a name="open"></a>  CDaoDatabase::Open  
+ You must call this member function to initialize a newly constructed `CDaoDatabase` object that represents an existing database.  
   
 ```  
 virtual void Open(
@@ -754,79 +775,79 @@ virtual void Open(
     LPCTSTR lpszConnect = _T(""));
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Uma expressão de cadeia de caracteres que é o nome de um Microsoft Jet existente (. Arquivo de banco de dados MDB). Se o nome do arquivo tem uma extensão, é necessário. Se a rede oferecer suporte a uniform naming convention (UNC), você pode também especificar um caminho de rede, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Barras invertidas duplas são necessárias em literais de cadeia de caracteres como "\\" é o caractere de escape do C++.)  
+ A string expression that is the name of an existing Microsoft Jet (.MDB) database file. If the filename has an extension, it is required. If your network supports the uniform naming convention (UNC), you can also specify a network path, such as "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB.MDB". (Double backslashes are required in string literals because "\\" is the C++ escape character.)  
   
- Algumas considerações se aplicam ao usar `lpszName`. Se ele:  
+ Some considerations apply when using `lpszName`. If it:  
   
--   Refere-se a um banco de dados que já está aberto para acesso exclusivo por outro usuário, MFC lança uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md). Intercepte essa exceção para avisar o usuário que o banco de dados não está disponível.  
+-   Refers to a database that is already open for exclusive access by another user, MFC throws an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md). Trap that exception to let your user know that the database is unavailable.  
   
--   É uma cadeia de caracteres vazia ("") e *lpszConnect* é "ODBC;", é exibida uma caixa de diálogo listando registrados de todos os nomes de fonte de dados ODBC para que o usuário pode selecionar um banco de dados. Você deve evitar conexões diretas com fontes de dados ODBC; Use uma tabela anexada.  
+-   Is an empty string ("") and *lpszConnect* is "ODBC;", a dialog box listing all registered ODBC data source names is displayed so the user can select a database. You should avoid direct connections to ODBC data sources; use an attached table instead.  
   
--   Caso contrário, não se refere a um banco de dados existente ou o nome da válido fonte de dados ODBC, MFC lança uma exceção do tipo `CDaoException`.  
+-   Otherwise does not refer to an existing database or valid ODBC data source name, MFC throws an exception of type `CDaoException`.  
   
 > [!NOTE]
->  Para obter detalhes sobre códigos de erro do DAO, consulte o DAOERR. Arquivo de H. Para obter informações relacionadas, consulte o tópico "Dados acesso erros interceptáveis" na Ajuda do DAO.  
+>  For details about DAO error codes, see the DAOERR.H file. For related information, see the topic "Trappable Data Access Errors" in DAO Help.  
   
  `bExclusive`  
- Um valor booleano que é **TRUE** se o banco de dados deve ser aberto para acesso exclusivo de (não compartilhado) e **FALSE** se o banco de dados deve ser aberto para acesso compartilhado. Se você omitir esse argumento, o banco de dados é aberto para acesso compartilhado.  
+ A Boolean value that is **TRUE** if the database is to be opened for exclusive (nonshared) access and **FALSE** if the database is to be opened for shared access. If you omit this argument, the database is opened for shared access.  
   
  `bReadOnly`  
- Um valor booleano que é **TRUE** se o banco de dados deve ser aberto para acesso somente leitura e **FALSE** se o banco de dados deve ser aberto para acesso de leitura/gravação. Se você omitir esse argumento, o banco de dados é aberto para acesso de leitura/gravação. Todos os conjuntos de registros dependentes herdam esse atributo.  
+ A Boolean value that is **TRUE** if the database is to be opened for read-only access and **FALSE** if the database is to be opened for read/write access. If you omit this argument, the database is opened for read/write access. All dependent recordsets inherit this attribute.  
   
  `lpszConnect`  
- Uma expressão de cadeia de caracteres usada para abrir o banco de dados. Essa cadeia de caracteres constitui o ODBC para se conectar a argumentos. Você deve fornecer os argumentos exclusivos e somente leitura para fornecer uma cadeia de caracteres de origem. Se o banco de dados é um banco de dados Microsoft Jet (. MDB), essa cadeia de caracteres está vazia (""). A sintaxe para o valor padrão — **t**("") — fornece a portabilidade para Unicode, bem como ANSI compilações do seu aplicativo.  
+ A string expression used for opening the database. This string constitutes the ODBC connect arguments. You must supply the exclusive and read-only arguments to supply a source string. If the database is a Microsoft Jet database (.MDB), this string is empty (""). The syntax for the default value — **_T**("") — provides portability for Unicode as well as ANSI builds of your application.  
   
-### <a name="remarks"></a>Comentários  
- **Abra** associa o banco de dados ao objeto DAO subjacente. Você não pode usar o objeto de banco de dados para construir o conjunto de registros, tabledef ou querydef objetos até que ele é inicializado. **Abra** acrescenta o objeto de banco de dados à coleção de bancos de dados do espaço de trabalho associado.  
+### <a name="remarks"></a>Remarks  
+ **Open** associates the database with the underlying DAO object. You cannot use the database object to construct recordset, tabledef, or querydef objects until it is initialized. **Open** appends the database object to the associated workspace's Databases collection.  
   
- Use os parâmetros da seguinte maneira:  
+ Use the parameters as follows:  
   
--   Se você estiver abrindo um Microsoft Jet (. Banco de dados MDB), use o `lpszName` parâmetro e passe a cadeia de caracteres vazia para o `lpszConnect` parâmetro ou passe uma cadeia de caracteres de senha do formulário "; PWD = password "se o banco de dados protegido por senha (. MDB somente bancos de dados).  
+-   If you are opening a Microsoft Jet (.MDB) database, use the `lpszName` parameter and pass an empty string for the `lpszConnect` parameter or pass a password string of the form ";PWD=password" if the database is password-protected (.MDB databases only).  
   
--   Se você estiver abrindo uma fonte de dados ODBC, passe uma cadeia de caracteres de conexão ODBC válida em `lpszConnect` e uma cadeia de caracteres vazia `lpszName`.  
+-   If you are opening an ODBC data source, pass a valid ODBC connection string in `lpszConnect` and an empty string in `lpszName`.  
   
- Para obter informações relacionadas, consulte o tópico "Método OpenDatabase" na Ajuda do DAO.  
+ For related information, see the topic "OpenDatabase Method" in DAO Help.  
   
 > [!NOTE]
->  Para melhorar o desempenho ao acessar bancos de dados externos, incluindo bancos de dados ISAM e fontes de dados ODBC, é recomendável que você anexar tabelas de banco de dados externo para um banco de dados do mecanismo do Microsoft Jet (. MDB) em vez de conectar diretamente à fonte de dados.  
+>  For better performance when accessing external databases, including ISAM databases and ODBC data sources, it is recommended that you attach external database tables to a Microsoft Jet engine database (.MDB) rather than connecting directly to the data source.  
   
- É possível que uma tentativa de conexão de tempo limite se, por exemplo, o host DBMS está indisponível. Se a tentativa de conexão falhar, **abrir** lança uma exceção do tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ It is possible for a connection attempt to time out if, for example, the DBMS host is unavailable. If the connection attempt fails, **Open** throws an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
- Os comentários restantes se aplicam somente para bancos de dados ODBC:  
+ The remaining remarks apply only to ODBC databases:  
   
- Se o banco de dados é um banco de dados ODBC e os parâmetros no seu **abrir** chamada não contêm informações suficientes para fazer a conexão, o driver ODBC abre uma caixa de diálogo para obter as informações necessárias do usuário. Quando você chama **abrir**, sua cadeia de caracteres de conexão, `lpszConnect`, é armazenado em particular e está disponível por chamar o [GetConnect](#getconnect) função de membro.  
+ If the database is an ODBC database and the parameters in your **Open** call do not contain enough information to make the connection, the ODBC driver opens a dialog box to obtain the necessary information from the user. When you call **Open**, your connection string, `lpszConnect`, is stored privately and is available by calling the [GetConnect](#getconnect) member function.  
   
- Se desejar, você pode abrir sua própria caixa de diálogo antes de chamar **abrir** para obter informações do usuário, como uma senha, em seguida, adicionar essas informações para a cadeia de caracteres de conexão que você passar para **abrir**. Ou talvez você queira salvar a cadeia de caracteres de conexão que você passe (talvez no registro do Windows) para que você possa reutilizá-lo na próxima vez que seu aplicativo chama **abrir** em uma `CDaoDatabase` objeto.  
+ If you wish, you can open your own dialog box before you call **Open** to get information from the user, such as a password, then add that information to the connection string you pass to **Open**. Or you might want to save the connection string you pass (perhaps in the Windows registry) so you can reuse it the next time your application calls **Open** on a `CDaoDatabase` object.  
   
- Você também pode usar a cadeia de caracteres de conexão para vários níveis de autorização de logon (cada um para um outro `CDaoDatabase` objeto) ou para transmitir outras informações específicas do banco de dados.  
+ You can also use the connection string for multiple levels of login authorization (each for a different `CDaoDatabase` object) or to convey other database-specific information.  
   
-##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
- Chame essa função de membro para ignorar o número padrão de segundos permitido antes do tempo limite do banco de dados conectado operações posteriores.  
+##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout  
+ Call this member function to override the default number of seconds to allow before subsequent operations on the connected database time out.  
   
 ```  
 void SetQueryTimeout(short nSeconds);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nSeconds`  
- O número de segundos permitido antes de uma tentativa de consulta expire.  
+ The number of seconds to allow before a query attempt times out.  
   
-### <a name="remarks"></a>Comentários  
- Uma operação pode expirar devido a problemas de acesso à rede, o tempo de processamento de consulta excessiva e assim por diante. Chamar `SetQueryTimeout` antes de abrir o conjunto de registros ou antes de chamar o conjunto de registros [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [atualização](../../mfc/reference/cdaorecordset-class.md#update), ou [excluir](../../mfc/reference/cdaorecordset-class.md#delete) funções de membro, se você quiser alterar o valor de tempo limite de consulta. A configuração afeta todas as demais [abrir](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, **atualização**, e **excluir** chamadas para qualquer conjunto de registros associado a esse `CDaoDatabase` objeto. Alterar o valor de tempo limite de consulta para um conjunto de registros após a abertura não altera o valor do conjunto de registros. Por exemplo, subsequente [mover](../../mfc/reference/cdaorecordset-class.md#move) operações não usa o novo valor.  
+### <a name="remarks"></a>Remarks  
+ An operation might time out because of network access problems, excessive query processing time, and so on. Call `SetQueryTimeout` before opening your recordset or before calling the recordset's [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [Update](../../mfc/reference/cdaorecordset-class.md#update), or [Delete](../../mfc/reference/cdaorecordset-class.md#delete) member functions if you want to change the query timeout value. The setting affects all subsequent [Open](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, **Update**, and **Delete** calls to any recordsets associated with this `CDaoDatabase` object. Changing the query timeout value for a recordset after opening does not change the value for the recordset. For example, subsequent [Move](../../mfc/reference/cdaorecordset-class.md#move) operations do not use the new value.  
   
- O valor padrão de tempo limite de consulta é 60 segundos. Nem todos os bancos de dados suportam a capacidade de definir um valor de tempo limite de consulta. Se você definir um valor de tempo limite de consulta de 0, não haverá tempo limite; a comunicação com o banco de dados pode parar de responder. Esse comportamento pode ser útil durante o desenvolvimento.  
+ The default value for query timeouts is 60 seconds. Not all databases support the ability to set a query timeout value. If you set a query timeout value of 0, no timeout occurs; the communication with the database may stop responding. This behavior may be useful during development.  
   
- Para obter informações relacionadas, consulte o tópico "Propriedade QueryTimeout" na Ajuda do DAO.  
+ For related information, see the topic "QueryTimeout Property" in DAO Help.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)   
- [Classe CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)   
- [Classe CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)   
- [Classe CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)   
- [Classe CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Classe CDaoException](../../mfc/reference/cdaoexception-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
+ [CDaoException Class](../../mfc/reference/cdaoexception-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Funções &lt;numeric&gt; | Microsoft Docs"
+title: '&lt;numeric&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+helpviewer_keywords:
+- std::accumulate [C++]
+- std::adjacent_difference [C++]
+- std::inner_product [C++]
+- std::iota [C++]
+- std::partial_sum [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5d356585509e7398da3f697f935c866e393b2c42
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnumericgt-functions"></a>Funções &lt;numeric&gt;
+# <a name="ltnumericgt-functions"></a>&lt;numeric&gt; functions
 ||||  
 |-|-|-|  
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
 ##  <a name="accumulate"></a>  accumulate  
- Calcula a soma de todos os elementos em um intervalo especificado, incluindo qualquer valor inicial ao calcular somas parciais sucessivas ou calcula o resultado de resultados parciais sucessivos obtidos usando uma operação binária especificada diferente da soma.  
+ Computes the sum of all the elements in a specified range including some initial value by computing successive partial sums or computes the result of successive partial results similarly obtained from using a specified binary operation other than the sum.  
   
 ```  
 template <class InputIterator, class Type>  
@@ -43,26 +49,26 @@ Type accumulate(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>Parâmetros   
+### <a name="parameters"></a>Parameters   
  `first`  
- Um iterador de entrada que trata o primeiro elemento no intervalo para ser somado ou combinado de acordo com uma operação binária especificada.  
+ An input iterator addressing the first element in the range to be summed or combined according to a specified binary operation.  
   
  `last`  
- Um iterador de entrada que trata o último elemento no intervalo para ser somado ou combinado, de acordo com uma operação binária especificada que está uma posição além do elemento final de fato incluído no acúmulo iterado.  
+ An input iterator addressing the last element in the range to be summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `val`  
- Um valor inicial para o qual cada elemento por sua vez é adicionado ou combinado de acordo com uma operação binária especificada.  
+ An initial value to which each element is in turn added or combined with according to a specified binary operation.  
   
  `binary_op`  
- A operação binária que deve ser aplicada a cada elemento no intervalo especificado e o resultado de suas aplicações anteriores.  
+ The binary operation that is to be applied to the each element in the specified range and the result of its previous applications.  
   
-### <a name="return-value"></a>Valor de retorno  
- A soma de `val` e todos os elementos no intervalo especificado para a primeira função de modelo ou, para a segunda função de modelo, o resultado da aplicação de operação binária especificada, em vez da operação de soma, para ( *PartialResult, \*Iter*), em que *PartialResult* é o resultado de aplicações anteriores da operação e `Iter` é um iterador apontando para um elemento no intervalo.  
+### <a name="return-value"></a>Return Value  
+ The sum of `val` and all the elements in the specified range for the first template function, or, for the second template function, the result of applying the binary operation specified, instead of the sum operation, to ( *PartialResult, \*Iter*), where *PartialResult* is the result of previous applications of the operation and `Iter` is an iterator pointing to an element in the range.  
   
-### <a name="remarks"></a>Comentários  
- O valor inicial garante que haverá um resultado bem definido quando o intervalo estiver vazio. Nesse caso, `val` é retornado. A operação binária não precisa ser associativa ou comutativa. O resultado é inicializado com o valor inicial `val` e, então, o *resultado* = `binary_op` ( *resultado*, **\***`Iter`) é calculado iterativamente pelo intervalo, em que `Iter` é um iterador apontando para o elemento sucessivo no intervalo. O intervalo deve ser válido e a complexidade deve ser linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.  
+### <a name="remarks"></a>Remarks  
+ The initial value insures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operation does not need to be associative or commutative. The result is initialized to the initial value `val` and then *result* = `binary_op` ( *result*, **\***`Iter`) is calculated iteratively through the range, where `Iter` is an iterator pointing to successive element in the range. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_accum.cpp  
@@ -162,7 +168,7 @@ The vector of partial products is:
 ```  
   
 ##  <a name="adjacent_difference"></a>  adjacent_difference  
- Calcula as diferenças sucessivas entre cada elemento e seu predecessor em um intervalo de entrada e gera os resultados em um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de diferença é substituída por outra operação binária especificada.  
+ Computes the successive differences between each element and its predecessor in an input range and outputs the results to a destination range or computes the result of a generalized procedure where the difference operation is replaced by another, specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIterator>  
@@ -179,32 +185,32 @@ OutputIterator adjacent_difference(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `first`  
- Um iterador de entrada que trata o primeiro elemento no intervalo de entrada cujos elementos deverão ser diferenciados com seus respectivos antecessores ou onde o par de valores deverá ser operado por qualquer outra operação binária especificada.  
+ An input iterator addressing the first element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `last`  
- Um iterador de entrada que trata o último elemento no intervalo de entrada cujos elementos deverão ser diferenciados com seus respectivos antecessores ou onde o par de valores deverá ser operado por qualquer outra operação binária especificada.  
+ An input iterator addressing the last element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `result`  
- Um iterador de saída que trata o primeiro elemento em um intervalo de destino onde a série de diferenças ou os resultados da operação especificada deverão ser armazenados.  
+ An output iterator addressing the first element a destination range where the series of differences or the results of the specified operation is to be stored.  
   
  `binary_op`  
- A operação binária que deverá ser aplicada na operação generalizada substituindo a operação de subtração no procedimento de diferenciação.  
+ The binary operation that is to be applied in the generalized operation replacing the operation of subtraction in the differencing procedure.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de saída que trata a extremidade do intervalo de destino: `result` + ( `last` - `first`).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`).  
   
-### <a name="remarks"></a>Comentários  
- O iterador de saída _ *resultados* tem permissão para ser o iterador mesmo como o iterador de entrada * primeiro * para que `adjacent_difference`s pode ser computado em vigor.  
+### <a name="remarks"></a>Remarks  
+ The output iterator _ *result* is allowed to be the same iterator as the input iterator * first,* so that `adjacent_difference`s may be computed in place.  
   
- Uma sequência de valores *um*1, *um*2, *um*3, em um intervalo de entrada, a primeira função de modelo armazena sucessivas **partial_difference**s *um*1, *um*2 - *um*1, a3 - *um*2 no intervalo de destino.  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the first template function stores successive **partial_difference**s *a*1, *a*2 - *a*1, a3 - *a*2, in the destination range.  
   
- Para uma sequência de valores *a*1, *a*2, *a*3, em um intervalo de entrada, a segunda função de modelo armazena **partial_difference**s sucessivas *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, no intervalo de destino.  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive **partial_difference**s *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, in the destination range.  
   
- A operação binária `binary_op` não precisa obrigatoriamente ser associativa ou comutativa, pois a ordem das operações aplicada é totalmente especificada.  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_adj_diff.cpp  
@@ -266,7 +272,7 @@ int main( )
 ```  
   
 ##  <a name="inner_product"></a>  inner_product  
- Calcula a soma do produto em relação ao elemento de dois intervalos e a adiciona a um valor inicial especificado ou calcula o resultado de um procedimento generalizado, em que as operações binárias de produto e a soma são substituídas por outras operações binárias especificadas.  
+ Computes the sum of the element-wise product of two ranges and adds it to a specified initial value or computes the result of a generalized procedure where the sum and product binary operations are replaced by other specified binary operations.  
   
 ```  
 template <class InputIterator1, class InputIterator2, class Type>  
@@ -286,42 +292,42 @@ Type inner_product(
     BinaryOperation2  binary_op2);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `first1`  
- Um iterador de entrada que trata o primeiro elemento no primeiro intervalo cujo produto interno ou produto interno generalizado com o segundo intervalo deverá ser calculado.  
+ An input iterator addressing the first element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `last1`  
- Um iterador de entrada que trata o último elemento no primeiro intervalo cujo produto interno ou produto interno generalizado com o segundo intervalo deverá ser calculado.  
+ An input iterator addressing the last element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `first2`  
- Um iterador de entrada que trata o primeiro elemento no segundo intervalo cujo produto interno ou produto interno generalizado com o primeiro intervalo deverá ser calculado.  
+ An input iterator addressing the first element in the second range whose inner product or generalized inner product with the first range is to be computed.  
   
  `val`  
- Um valor inicial para o qual deve ser adicionado o produto interno ou o produto interno generalizado entre os intervalos.  
+ An initial value to which the inner product or generalized inner product between the ranges is to be added.  
   
  *binary_op1*  
- A operação binária que substitui a operação de produto interna da soma aplicada aos produtos em relação ao elemento na generalização do produto interno.  
+ The binary operation that replaces the inner product operation of sum applied to the element-wise products in the generalization of the inner product.  
   
  *binary_op2*  
- A operação binária que substitui a operação em relação ao elemento do produto interno da multiplicação na generalização do produto interno.  
+ The binary operation that replaces the inner product element-wise operation of multiply in the generalization of the inner product.  
   
-### <a name="return-value"></a>Valor de retorno  
- A primeira função membro retorna a soma dos produtos em relação ao elemento e adiciona a ela o valor inicial especificado. Então, para intervalos de valores *a*i e *b*i, ela retornará:  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the sum of the element-wise products and adds to it the specified initial value. So for ranges of values *a*i and *b*i, it returns:  
   
- `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- substituindo iterativamente `val` com `val` + ( *um*, \* *b*i).  
+ by iteratively replacing `val` with `val` + ( *a*i \* *b*i ).  
   
- A segunda função membro retorna:  
+ The second member function returns:  
   
- `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
+ `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
- substituindo iterativamente `val` com `val` *binary_op1* ( *um*, *binary_op2* *b*i).  
+ by iteratively replacing `val` with `val` *binary_op1* ( *a*i *binary_op2* *b*i ).  
   
-### <a name="remarks"></a>Comentários  
- O valor inicial garante que haverá um resultado bem definido quando o intervalo estiver vazio. Nesse caso, `val` é retornado. As operações binárias não precisam ser associativas ou comutativas. O intervalo deve ser válido e a complexidade deve ser linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.  
+### <a name="remarks"></a>Remarks  
+ The initial value ensures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operations do not need to be associative or commutative. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_inner_prod.cpp  
@@ -412,27 +418,27 @@ int main()
 ```  
   
 ##  <a name="iota"></a>  iota  
- Armazena um valor inicial, começando com o primeiro elemento e preenchendo com incrementos sucessivos do valor (` value++`) em cada um dos elementos no intervalo `[ first,  last)`.  
+ Stores a starting value, beginning with the first element and filling with successive increments of that value ( ` value++`) in each of the elements in the interval `[ first,  last)`.  
   
 ```  
 template <class ForwardIterator, class Type>  
 void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `first`  
- Um iterador de entrada que trata o primeiro elemento no intervalo a ser preenchido.  
+ An input iterator that addresses the first element in the range to be filled.  
   
  `last`  
- Um iterador de entrada que trata o último elemento no intervalo a ser preenchido.  
+ An input iterator that addresses the last element in the range to be filled.  
   
  `value`  
- O valor inicial para armazenar no primeiro elemento e incrementar sucessivamente para elementos subsequentes.  
+ The starting value to store in the first element and to successively increment for subsequent elements.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>Exemplo  
-  O exemplo a seguir demonstra alguns usos para a função `iota` ao preencher uma [lista](../standard-library/list.md) de inteiros e, em seguida, preencher um [vetor](../standard-library/vector.md) com o `list` para que a função [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) possa ser usada.  
+### <a name="example"></a>Example  
+  The following example demonstrates some uses for the `iota` function by filling a [list](../standard-library/list.md) of integers and then filling a [vector](../standard-library/vector.md) with the `list` so that the [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) function can be used.  
   
 ```cpp  
 // compile by using: cl /EHsc /nologo /W4 /MTd  
@@ -473,7 +479,7 @@ int main(void)
 ```  
   
 ##  <a name="partial_sum"></a>  partial_sum  
- Calcula uma série de somas em um intervalo de entrada, do primeiro ao *i*-ésimo elemento e armazena o resultado de cada soma no *i*-ésimo elemento de um intervalo de destino ou calcula o resultado de um procedimento generalizado, em que a operação de soma é substituída por outra operação binária especificada.  
+ Computes a series of sums in an input range from the first element through the *i*th element and stores the result of each such sum in the *i*th element of a destination range or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIt>  
@@ -490,32 +496,32 @@ OutputIterator partial_sum(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `first`  
- Um iterador de entrada que trata o primeiro elemento no intervalo para ser parcialmente somado ou combinado de acordo com uma operação binária especificada.  
+ An input iterator addressing the first element in the range to be partially summed or combined according to a specified binary operation.  
   
  `last`  
- Um iterador de entrada que trata o último elemento no intervalo para ser parcialmente somado ou combinado, de acordo com uma operação binária especificada que está uma posição além do elemento final de fato incluído no acúmulo iterado.  
+ An input iterator addressing the last element in the range to be partially summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `result`  
- Um iterador de saída que trata o primeiro elemento em um intervalo de destino onde a série de somas parciais ou os resultados da operação especificada deverão ser armazenados.  
+ An output iterator addressing the first element a destination range where the series of partial sums or the results of the specified operation is to be stored.  
   
  `binary_op`  
- A operação binária que deverá ser aplicada na operação generalizada substituindo a operação de soma no procedimento de soma parcial.    
+ The binary operation that is to be applied in the generalized operation replacing the operation of sum in the partial sum procedure.    
   
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de saída que trata a extremidade do intervalo de destino: `result` + ( `last` - `first`),  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`),  
   
-### <a name="remarks"></a>Comentários  
- O iterador de saída `result` tem permissão para ser o mesmo iterador que o iterador de entrada `first`, de modo que as somas parciais podem ser calculadas adequadamente.  
+### <a name="remarks"></a>Remarks  
+ The output iterator `result` is allowed to be the same iterator as the input iterator `first`, so that partial sums may be computed in place.  
   
- Para uma sequência de valores *a*1, *a*2, *a*3, em um intervalo de entrada, a primeira função de modelo armazena somas parciais sucessivas no intervalo de destino, em que o *i*-ésimo elemento é fornecido por (  ( ( *a*1 + *a*2) + *a*3) *a*i).  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the first template function stores successive partial sums in the destination range, where the *i*th element is given by (  ( ( *a*1 + *a*2) + *a*3) *a*i).  
   
- Uma sequência de valores *um*1, *um*2, *um*3, em um intervalo de entrada, a segunda função de modelo armazena sucessivas somas parciais no intervalo de destino, em que o elemento ith é determinado por ((( *um*1 `binary_op` *um*2) `binary_op` *um*3) *um*,).  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the second template function stores successive partial sums in the destination range, where the ith element is given by (  ( ( *a*1 `binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).  
   
- A operação binária `binary_op` não precisa obrigatoriamente ser associativa ou comutativa, pois a ordem das operações aplicada é totalmente especificada.  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_partial_sum.cpp  
@@ -575,7 +581,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<numeric>](../standard-library/numeric.md)
 
 

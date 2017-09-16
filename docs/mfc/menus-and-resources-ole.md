@@ -1,74 +1,92 @@
 ---
-title: "Menus e recursos (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicativos [OLE], menus e recursos"
-  - "contêineres [C++], aplicativos de contêiner OLE"
-  - "ativação no local, Menus e recursos OLE"
-  - "menus [C++], Aplicativos de documento OLE"
-  - "Aplicativos OLE [C++], menus e recursos"
-  - "Contêineres OLE, menus e recursos"
-  - "Menus e recursos OLE"
-  - "aplicativos de servidor OLE, menus e recursos"
-  - "Servidores de edição visual OLE"
-  - "aplicativos de servidor, Menus e recursos OLE"
-  - "barras de status, Aplicativos de documento OLE"
-  - "edição de cadeia de caracteres, aplicativos de edição visual"
-  - "tabelas de cadeias de caracteres, aplicativos de edição visual"
-  - "barras de ferramentas [C++], Aplicativos de documento OLE"
-  - "edição visual, menus e recursos de aplicativo"
+title: Menus and Resources (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE visual editing servers [MFC]
+- status bars [MFC], OLE document applications
+- visual editing [MFC], application menus and resources
+- string tables [MFC], visual editing applications
+- OLE containers [MFC], menus and resources
+- OLE applications [MFC], menus and resources
+- OLE server applications [MFC], menus and resources
+- toolbars [MFC], OLE document applications
+- string editing [MFC], visual editing applications
+- server applications [MFC], OLE menus and resources
+- applications [OLE], menus and resources
+- menus [MFC], OLE document applications
+- in-place activation [MFC], OLE menus and resources
+- containers [MFC], OLE container applications
+- OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Menus e recursos (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ca4f6b95f418e59610131a4b6fbf2f684074630e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este grupo de artigos explica o uso de menus e recursos em aplicativos OLE do documento MFC.  
+---
+# <a name="menus-and-resources-ole"></a>Menus and Resources (OLE)
+This group of articles explains the use of menus and resources in MFC OLE document applications.  
   
- Requisitos adicionais de locais visuais OLE de edição no menu e outros recursos fornecidos por aplicativos OLE do documento porque há um número de modos nos quais os aplicativos do contêiner e do servidor \(componente\) podem ser iniciados e usado.  Por exemplo, um aplicativo de servidor completo pode executar em qualquer um de três modos:  
+ OLE visual editing places additional requirements on the menu and other resources provided by OLE document applications because there are a number of modes in which both container and server (component) applications can be started and used. For example, a full-server application can run in any of these three modes:  
   
--   Suporte apenas.  
+-   Stand alone.  
   
--   No lugar, para editar um item dentro do contexto de um contêiner.  
+-   In place, for editing an item within the context of a container.  
   
--   Abrir, editando um item fora do contexto do respectivo contêiner, frequentemente em uma janela separada.  
+-   Open, for editing an item outside the context of its container, often in a separate window.  
   
- Isso exige três layouts separados no menu, um para cada modo que o aplicativo.  As tabelas de aceleração também são necessárias para cada novo modo.  Um aplicativo de contêiner pode ou não der suporte à ativação in\-loco; em caso afirmativo, precisa de uma nova estrutura de menu e tabelas de aceleração associados.  
+ This requires three separate menu layouts, one for each possible mode of the application. Accelerator tables are also necessary for each new mode. A container application may or may not support in-place activation; if it does, it needs a new menu structure and associated accelerator tables.  
   
- O ativação in\-loco exige que o contêiner e aplicativos para servidores devem para negociar o menu, na barra de ferramentas, e o espaço da barra de status.  Todos os recursos devem ser criados com isso em mente.  O artigo [Menus e recursos: A mesclagem de menu](../mfc/menus-and-resources-menu-merging.md) este tópico abrange em detalhes.  
+ In-place activation requires that the container and server applications must negotiate for menu, toolbar, and status bar space. All resources must be designed with this in mind. The article [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md) covers this topic in detail.  
   
- Devido a esses problemas, os aplicativos OLE de documentos criados com o assistente de aplicativo podem ter até quatro menus e recursos separados da tabela de aceleração.  Esses são usados pelos seguintes motivos:  
+ Because of these issues, OLE document applications created with the application wizard can have up to four separate menus and accelerator table resources. These are used for the following reasons:  
   
-|Nome do recurso|Uso|  
-|---------------------|---------|  
-|**IDR\_MAINFRAME**|Usado em um aplicativo MDI se nenhum arquivo é aberto, ou em um aplicativo de SDI independentemente dos arquivos abertos.  Este é o menu padrão usado em aplicativos de não OLE.|  
-|**IDR\_projectTYPE\<\>**|Usado em um aplicativo MDI se os arquivos estão abertos.  Usado quando um aplicativo é executado de modo autônomo.  Este é o menu padrão usado em aplicativos de não OLE.|  
-|**\<\>IDR\_projectTYPE\_SRVR\_IP**|Usado pelo servidor ou do contêiner quando um objeto está aberto no lugar.|  
-|**\<\>IDR\_projectTYPE\_SRVR\_EMB**|Usado por um aplicativo de servidor se um objeto é aberto sem usar a ativação local.|  
+|Resource name|Use|  
+|-------------------|---------|  
+|**IDR_MAINFRAME**|Used in an MDI application if no file is open, or in an SDI application regardless of open files. This is the standard menu used in non-OLE applications.|  
+|**IDR_\<project>TYPE**|Used in an MDI application if files are open. Used when an application is running stand-alone. This is the standard menu used in non-OLE applications.|  
+|**IDR_\<project>TYPE_SRVR_IP**|Used by the server or container when an object is open in place.|  
+|**IDR_\<project>TYPE_SRVR_EMB**|Used by a server application if an object is opened without using in-place activation.|  
   
- Cada um desses nomes de recurso representará um menu e, geralmente, uma tabela de aceleração.  Um esquema semelhante deve ser usado em aplicativos MFC que não são criados com o assistente de aplicativo.  
+ Each of these resource names represents a menu and, usually, an accelerator table. A similar scheme should be used in MFC applications that are not created with the application wizard.  
   
- Os artigos a seguir discutem os tópicos relacionados aos contêineres, a servidores, e à mesclagem de menu necessário para implementar a ativação no local:  
+ The following articles discuss topics related to containers, servers, and the menu merging necessary to implement in-place activation:  
   
--   [Menus e recursos: Adições do contêiner](../mfc/menus-and-resources-container-additions.md)  
+-   [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)  
   
--   [Menus e recursos: Adições de servidor](../mfc/menus-and-resources-server-additions.md)  
+-   [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md)  
   
--   [Menus e recursos: A mesclagem de menu](../mfc/menus-and-resources-menu-merging.md)  
+-   [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md)  
   
-## Consulte também  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)
+
+

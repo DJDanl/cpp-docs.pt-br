@@ -1,5 +1,5 @@
 ---
-title: Estrutura space_info | Microsoft Docs
+title: space_info Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,45 +31,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: e8573fab6f0d1a1ad43a9be2e3be1ddd8f556748
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bd6c8f5e4107c785e1283c028dfcf4e3f7f5e1ef
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="spaceinfo-structure"></a>Estrutura space_info
-Mantém informações sobre um volume.  
+# <a name="spaceinfo-structure"></a>space_info Structure
+Holds information about a volume.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-struct space_info    {
+struct space_info   {
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
     };  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-data-members"></a>Membros de Dados Públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|`unsigned long long available`|Representa o número de bytes que estão disponíveis para representar os dados no volume.|  
-|`unsigned long long capacity`|Representa o número total de bytes que o volume pode representar.|  
-|`unsigned long long free`|Representa o número de bytes que não são usados para representar os dados no volume.|  
+|`unsigned long long available`|Represents the number of bytes that are available to represent data on the volume.|  
+|`unsigned long long capacity`|Represents the total number of bytes that the volume can represent.|  
+|`unsigned long long free`|Represents the number of bytes that are not used to represent data on the volume.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<filesystem >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<filesystem>  
   
  **Namespace:** std::experimental::filesystem  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [espaço](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
- [Navegação no sistema de arquivos (C++)](../standard-library/file-system-navigation.md)
+ [space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
+ [File System Navigation (C++)](../standard-library/file-system-navigation.md)
 
 

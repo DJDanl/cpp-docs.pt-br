@@ -1,58 +1,78 @@
 ---
-title: "Como converter uma faixa de op&#231;&#245;es MFC existente em um recurso da faixa de op&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Faixa de opções do MFC, convertendo um recurso de faixa de opções"
-  - "recurso de faixa de opções, convertendo de uma faixa de opções do MFC"
+title: 'How to: Convert an Existing MFC Ribbon to a Ribbon Resource | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource, converting from an MFC ribbon
+- MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Como converter uma faixa de op&#231;&#245;es MFC existente em um recurso da faixa de op&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30ed9bd9483e00dc4845b4e318a66bfb21f4531f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os recursos da Faixa De Opções são mais fáceis de exibir, modificar e, lembre\-se de que as fitas manualmente valores.  Este tópico descreve como converter uma fita manualmente codificado em um projeto de MFC em um recurso de fita.  
+---
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>How to: Convert an Existing MFC Ribbon to a Ribbon Resource
+Ribbon resources are easier to visualize, modify, and maintain than manually coded ribbons. This topic describes how to convert a manually coded ribbon in an MFC Project into a ribbon resource.  
   
- Você deve ter um projeto existente de MFC que tem o código que usa as classes de fita MFC, por exemplo, [Classe de CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md).  
+ You must have an existing MFC project that has code that uses the MFC ribbon classes, for example, [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  
   
-### Para converter uma fita MFC a um recurso de fita  
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>To convert an MFC ribbon to a ribbon resource  
   
-1.  No Visual Studio, em um projeto existente de MFC, abra o arquivo de origem em que o objeto de CMFCRibbonBar é inicializado.  Normalmente, o arquivo é mainfrm.cpp.  Adicione o seguinte código após o código de inicialização da fita.  
+1.  In Visual Studio, in an existing MFC project, open the source file where the CMFCRibbonBar object is initialized. Typically, the file is mainfrm.cpp. Add the following code after the initialization code for the ribbon.  
   
-    ```  
-    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");  
-    ```  
+ ```  
+    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
+
+ ```  
   
-     Salve e feche o arquivo.  
+     Save and close the file.  
   
-2.  Criar e executar o aplicativo MFC e, no Bloco De Notas, copie RibbonOutput.txt aberto e seu conteúdo.  
+2.  Build and run the MFC application, and then in Notepad, open RibbonOutput.txt and copy its contents.  
   
-3.  No Visual Studio, no menu de **Projeto** , clique **Adicionar Recurso**.  Na caixa de diálogo de **Adicionar Recurso** , **Faixa de Opções** selecione e clique em **Novo**.  
+3.  In Visual Studio, on the **Project** menu, click **Add Resource**. In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio cria um recurso de fita e abri\-lo no Modo Design.  A ID do recurso de fita é IDR\_RIBBON1, que é exibido em **Modo de Exibição de Recurso**.  A fita é definida no arquivo XML de ribbon1.mfcribbon\-ms.  
+     Visual Studio creates a ribbon resource and opens it in design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon is defined in the ribbon1.mfcribbon-ms XML file.  
   
-4.  No Visual Studio, ribbon1.mfcribbon\-ms abertos, excluir seu conteúdo, e colar o conteúdo do RibbonOutput.txt, que você copiou anterior.  Salvar e fechar ribbon1.mfcribbon\-ms.  
+4.  In Visual Studio, open ribbon1.mfcribbon-ms, delete its contents, and then paste the contents of RibbonOutput.txt, which you copied earlier. Save and close ribbon1.mfcribbon-ms.  
   
-5.  Novamente abrir o arquivo de origem em que o objeto de CMFCRibbonBar é inicializada \(normalmente, mainfrm.cpp\) e faça comentários do código existente de fita.  Adicione o seguinte código após o código que você comentou out.  
+5.  Again open the source file where the CMFCRibbonBar object is initialized (typically, mainfrm.cpp) and comment out the existing ribbon code. Add the following code after the code that you commented out.  
   
-    ```  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ ```  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
-6.  Crie o projeto e execute o programa.  
+6.  Build the project and run the program.  
   
-## Consulte também  
- [Designer da faixa de opções \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

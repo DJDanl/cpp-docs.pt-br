@@ -1,40 +1,58 @@
 ---
-title: "CTreeCtrl vs. CTreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-  - "CTreeView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CTreeCtrl, vs. classe CTreeView"
-  - "Classe CTreeView, vs. classe CTreeCtrl"
-  - "controles em árvore, e exibição de árvore"
-  - "controles de exibição de árvore"
+title: CTreeCtrl vs. CTreeView | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+- CTreeView
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree view controls
+- CTreeCtrl class [MFC], vs. CTreeView class [MFC]
+- CTreeView class [MFC], vs. CTreeCtrl class [MFC]
+- tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CTreeCtrl vs. CTreeView
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9579c973c75898cb243fc1b47b638c35bd0423ea
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O fornece duas classes que encapsulam controles de árvore: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).  Cada classe é útil em situações diferentes.  
+---
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
+MFC provides two classes that encapsulate tree controls: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) and [CTreeView](../mfc/reference/ctreeview-class.md). Each class is useful in different situations.  
   
- Use `CTreeCtrl` quando precisar de um controle simples de janela filho; por exemplo, em uma caixa de diálogo.  Você precisará especialmente para usar `CTreeCtrl` se haverá outros controles filho na janela, como em uma caixa de diálogo comum.  
+ Use `CTreeCtrl` when you need a plain child window control; for instance, in a dialog box. You'd especially want to use `CTreeCtrl` if there will be other child controls in the window, as in a typical dialog box.  
   
- Use `CTreeView` quando o controle de árvore para atuar como uma janela de exibição na arquitetura do documento\/exibição assim como um controle de árvore.  `CTreeView` ocupará a área do cliente de uma janela do quadro ou da janela do separador.  Será redimensionado automaticamente quando a janela pai é redimensionada, e pode processar mensagens do comando de menus, as teclas de aceleração, e as barras de ferramentas.  Desde que um controle de árvore contém os dados necessários para exibir a árvore, o objeto correspondente de documento não tem que ser complicado — você pode usar [CDocument](../Topic/CDocument%20Class.md) mesmo como o documento em seu modelo de documento.  
+ Use `CTreeView` when you want the tree control to act like a view window in document/view architecture as well as a tree control. A `CTreeView` will occupy the entire client area of a frame window or splitter window. It will be automatically resized when its parent window is resized, and it can process command messages from menus, accelerator keys, and toolbars. Since a tree control contains the data necessary to display the tree, the corresponding document object does not have to be complicated — you could even use [CDocument](../mfc/reference/cdocument-class.md) as the document type in your document template.  
   
-## Consulte também  
- [Usando CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

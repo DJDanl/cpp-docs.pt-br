@@ -1,62 +1,80 @@
 ---
-title: "Plano de fundo OLE: implementa&#231;&#227;o MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IMarshall"
-  - "IMoniker"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe IMarshall"
-  - "Interface IMoniker, MFC"
-  - "Bibliotecas MFC, implementando"
-  - "Interface OLE IMarshal"
-  - "Interface OLE IMoniker"
-  - "OLE IUnknown"
-  - "implementação de biblioteca OLE MFC"
-  - "OLE, arquivos compostos"
+title: 'OLE Background: MFC Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IMarshall
+- IMoniker
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC libraries, implementing
+- OLE MFC library implementation
+- OLE IMarshal interface
+- IMoniker interface, MFC
+- IMarshall class [MFC]
+- OLE, compound files
+- OLE IMoniker interface
+- OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Plano de fundo OLE: implementa&#231;&#227;o MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c814fe6b2c59d8b43329a46048e64e7ad42e322b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Devido ao tamanho e a complexidade de API OLE bruto, chame diretamente para gravar aplicativos OLE pode ser muito demorado.  A meta da implementação da biblioteca de classes do Microsoft OLE é reduzir a quantidade de trabalho que você precisa tornar a gravação completa caracterizada, os aplicativos podem OLE\-.  
+---
+# <a name="ole-background-mfc-implementation"></a>OLE Background: MFC Implementation
+Because of the size and complexity of the raw OLE API, calling it directly to write OLE applications can be very time consuming. The goal of the Microsoft Foundation Class Library implementation of OLE is to reduce the amount of work you have to do to write full-featured, OLE-capable applications.  
   
- Este artigo explica as partes da API OLE que não foram MFC interno implementado.  A discussão também explica como o que é mapeado implementados a seção de OLE [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ This article explains the parts of the OLE API that have not been implemented inside MFC. The discussion also explains how what is implemented maps to the OLE section of the Windows SDK.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Partes de OLE não implementadas pela biblioteca de classes  
- Alguns recursos e interfaces OLE não são fornecidos diretamente por MFC.  Se quiser usar esses recursos, você pode chamar a API OLE diretamente.  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Portions of OLE Not Implemented by the Class Library  
+ A few interfaces and features of OLE are not directly provided by MFC. If you want to use these features, you can call the OLE API directly.  
   
- Interface de IMoniker  
- A interface de `IMoniker` é implementada pela biblioteca de classe \(por exemplo, a classe de `COleServerItem` \) mas não tiver sido expostos anteriormente ao programador.  Para obter mais informações sobre essa interface, consulte implementações OLE DB do moniker na seção de OLE [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  No entanto, consulte também a classe [CMonikerFile](../Topic/CMonikerFile%20Class.md) e [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
+ IMoniker Interface  
+ The `IMoniker` interface is implemented by the class library (for example, the `COleServerItem` class) but has not previously been exposed to the programmer. For more information about this interface, see OLE Moniker Implementations in the OLE section of the Windows SDK. However, see also class [CMonikerFile](../mfc/reference/cmonikerfile-class.md) and [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
- IUnknown e interfaces de IMarshal  
- A interface de **IUnknown** é implementada pela biblioteca de classes mas não expõe ao programador.  A interface de **IMarshal** não é implementada pela biblioteca de classes mas é usada internamente.  Os servidores de automação compilados usando a biblioteca de classe já tem recursos internos marshaling.  
+ IUnknown and IMarshal Interfaces  
+ The **IUnknown** interface is implemented by the class library but is not exposed to the programmer. The **IMarshal** interface is not implemented by the class library but is used internally. Automation servers built using the class library already have marshaling capabilities built in.  
   
- Docfiles \(arquivos compostos\)  
- Os arquivos parcialmente compostos têm suporte pela biblioteca da classe.  Nenhuma das funções que manipulam diretamente arquivos compostos além de criação são suportadas.  O usa MFC classe **COleFileStream** para dar suporte à manipulação dos fluxos com funções de arquivos padrão.  Para obter mais informações, consulte o artigo [Contêiner: Arquivos compostos](../mfc/containers-compound-files.md).  
+ Docfiles (Compound Files)  
+ Compound files are partially supported by the class library. None of the functions that directly manipulate compound files beyond creation are supported. MFC uses class **COleFileStream** to support manipulation of streams with standard file functions. For more information, see the article [Containers: Compound Files](../mfc/containers-compound-files.md).  
   
- Servidores em processo e manipuladores de objeto  
- Os servidores em processo e os manipuladores do objeto permitem a implementação de dados visuais de edição ou de objetos completo do Component Object Model \(COM\) em uma biblioteca de vínculo dinâmico\) nativa \(DLL\).  Para fazer isso, você pode implementar seu DLL chamando apis OLE diretamente.  No entanto, se você estiver escrevendo um servidor de automação e seu servidor não tem nenhuma interface do usuário, você pode usar AppWizard para fazer seu servidor a um servidor em processo e colocá\-las completamente em uma DLL.  Para obter mais informações sobre esses tópicos, consulte [Servidores de automação](../mfc/automation-servers.md).  
+ In-Process Servers and Object Handlers  
+ In-process servers and object handlers allow implementation of visual editing data or full Component Object Model (COM) objects in a dynamic-link library (DLL). To do this, you can implement your DLL by calling the OLE API directly. However, if you are writing an Automation server and your server has no user interface, you can use AppWizard to make your server an in-process server and put it completely into a DLL. For more information about these topics, see [Automation Servers](../mfc/automation-servers.md).  
   
 > [!TIP]
->  A maneira mais fácil de implementar um servidor de automação é colocá\-lo em uma DLL.  MFC O da suporte a essa abordagem.  
+>  The easiest way to implement an Automation server is to place it in a DLL. MFC supports this approach.  
   
- Para obter mais informações sobre como as interfaces OLE DB OLE de ferramentas das classes do Microsoft, consulte a [38](../mfc/tn038-mfc-ole-iunknown-implementation.md)técnicas MFC notas, [39](../mfc/tn039-mfc-ole-automation-implementation.md), e [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
+ For more information on how the Microsoft Foundation OLE classes implement OLE interfaces, see MFC Technical Notes [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), and [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-## Consulte também  
- [Plano de fundo OLE](../mfc/ole-background.md)   
- [Plano de fundo OLE: estratégias de implementação](../mfc/ole-background-implementation-strategies.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Implementation Strategies](../mfc/ole-background-implementation-strategies.md)
+
+

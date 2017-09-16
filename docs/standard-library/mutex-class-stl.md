@@ -1,5 +1,5 @@
 ---
-title: "Classe mutex (biblioteca padrão C++)| Microsoft Docs"
+title: mutex Class (C++ Standard Library)| Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,107 +36,114 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e08c7c13d1e182bc3299f11769eddb699b03ab3f
+helpviewer_keywords:
+- std::mutex [C++]
+- std::mutex [C++], mutex
+- std::mutex [C++], lock
+- std::mutex [C++], native_handle
+- std::mutex [C++], try_lock
+- std::mutex [C++], unlock
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ff1727e4d308dd7c3824aa6bfb86b385876c74aa
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="mutex-class-c-standard-library"></a>Classe mutex (biblioteca padrão C++)
-Representa um *tipo mutex*. Objetos desse tipo podem ser usados para impor a exclusão mútua dentro de um programa.  
+# <a name="mutex-class-c-standard-library"></a>mutex Class (C++ Standard Library)
+Represents a *mutex type*. Objects of this type can be used to enforce mutual exclusion within a program.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 class mutex;
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[mutex](#mutex)|Constrói um objeto `mutex`.|  
-|[Destruidor mutex::~mutex](#dtormutex_destructor)|Libera todos os recursos que foram usados pelo objeto `mutex`.|  
+|[mutex](#mutex)|Constructs a `mutex` object.|  
+|[mutex::~mutex Destructor](#dtormutex_destructor)|Releases any resources that were used by the `mutex` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock](#lock)|Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.|  
-|[native_handle](#native_handle)|Retorna o tipo específico à implementação que representa o identificador mutex.|  
-|[try_lock](#try_lock)|Tenta obter a propriedade do `mutex` sem o bloqueio.|  
-|[unlock](#unlock)|Libera a propriedade do `mutex`.|  
+|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the `mutex`.|  
+|[native_handle](#native_handle)|Returns the implementation-specific type that represents the mutex handle.|  
+|[try_lock](#try_lock)|Attempts to obtain ownership of the `mutex` without blocking.|  
+|[unlock](#unlock)|Releases ownership of the `mutex`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
  **Namespace:** std  
   
-##  <a name="lock"></a>mutex
- Bloqueia o thread de chamada até que ele tenha obtido a propriedade do `mutex`.  
+##  <a name="lock"></a>  mutex::lock
+ Blocks the calling thread until the thread obtains ownership of the `mutex`.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="mutex"></a>  Construtor mutex::mutex  
- Constrói um objeto `mutex` que não está bloqueado.  
+##  <a name="mutex"></a>  mutex::mutex Constructor  
+ Constructs a `mutex` object that is not locked.  
   
 ```cpp  
 constexpr mutex() noexcept;
 ```  
   
-##  <a name="dtormutex_destructor"></a>  Destruidor mutex::~mutex  
- Libera todos os recursos usados pelo objeto `mutex`.  
+##  <a name="dtormutex_destructor"></a>  mutex::~mutex Destructor  
+ Releases any resources that are used by the `mutex` object.  
   
 ```cpp  
 ~mutex();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se o objeto estiver bloqueado quando o destruidor for executado, o comportamento será indefinido.  
+### <a name="remarks"></a>Remarks  
+ If the object is locked when the destructor runs, the behavior is undefined.  
   
-##  <a name="native_handle"></a>mutex::native_handle
- Retorna o tipo específico à implementação que representa o identificador mutex. O identificador mutex pode ser usado de maneiras específicas da implementação.  
+##  <a name="native_handle"></a>  mutex::native_handle
+ Returns the implementation-specific type that represents the mutex handle. The mutex handle can be used in implementation-specific ways.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `native_handle_type` é definido como um `Concurrency::critical_section *` que é convertido como `void *`.  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a `Concurrency::critical_section *` that's cast as `void *`.  
   
-##  <a name="try_lock"></a>mutex:: try_lock
- Tenta obter a propriedade do `mutex` sem o bloqueio.  
+##  <a name="try_lock"></a>  mutex::try_lock
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 bool try_lock();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- `true` se o método obtiver a propriedade do `mutex` com êxito; caso contrário, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentários  
- Se o thread de chamada já for o proprietário do `mutex`, o comportamento será indefinido.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="unlock"></a>mutex:: Unlock
- Libera a propriedade do `mutex`.  
+##  <a name="unlock"></a>  mutex::unlock
+ Releases ownership of the `mutex`.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se o thread de chamada não for o proprietário do `mutex`, o comportamento será indefinido.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread does not own the `mutex`, the behavior is undefined.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

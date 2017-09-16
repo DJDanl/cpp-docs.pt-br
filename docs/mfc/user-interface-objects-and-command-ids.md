@@ -1,44 +1,62 @@
 ---
-title: "Objetos de interface do usu&#225;rio e IDs de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de comandos, objetos de interface do usuário"
-  - "IDs de comando, objetos de interface do usuário"
-  - "roteamento de comando, MFC"
-  - "atalhos de teclado, associando a IDs"
-  - "itens de menu, associando a IDs"
-  - "MFC, roteamento de comando"
-  - "controles de barra de ferramentas [MFC], ID de comando"
-  - "objetos de interface do usuário, associando a IDs"
+title: User-Interface Objects and Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts, associating with IDs
+- MFC, command routing
+- toolbar controls [MFC], command ID
+- menu items, associating with IDs
+- user interface objects [MFC], associating with IDs
+- command IDs, user interface objects
+- command routing [MFC], MFC
+- command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Objetos de interface do usu&#225;rio e IDs de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b3051afe12e290990d6248e4cfc1ad2994e617f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os itens de menu, os botões da barra de ferramentas, e teclas de aceleração “são objetos de interface do usuário” capazes de gerar comandos.  Cada um objeto da interface do usuário possui uma ID  Você associa um objeto da interface do usuário com um comando atribuindo a mesma ID do objeto e o comando.  Como explicado em [Mensagens](../mfc/messages.md), comandos são implementados como mensagens especiais.  A figura “comandos na estrutura” abaixo mostra como a estrutura gerencia comandos.  Quando um objeto da interface do usuário gerencie um comando, como `ID_EDIT_CLEAR_ALL`, um dos objetos em seu aplicativo trata o comando — na figura a seguir, a função de `OnEditClearAll` do objeto de documento é chamada através da mensagem do documento.  
+---
+# <a name="user-interface-objects-and-command-ids"></a>User-Interface Objects and Command IDs
+Menu items, toolbar buttons, and accelerator keys are "user-interface objects" capable of generating commands. Each such user-interface object has an ID. You associate a user-interface object with a command by assigning the same ID to the object and the command. As explained in [Messages](../mfc/messages.md), commands are implemented as special messages. The figure "Commands in the Framework" below shows how the framework manages commands. When a user-interface object generates a command, such as `ID_EDIT_CLEAR_ALL`, one of the objects in your application handles the command — in the figure below, the document object's `OnEditClearAll` function is called via the document's message map.  
   
- ![Estrutura Vc&#95;commands](../mfc/media/vc385p1.png "vc385P1")  
-Comandos na estrutura  
+ ![Commands in the Framework](../mfc/media/vc385p1.gif "vc385p1")  
+Commands in the Framework  
   
- A figura “comando que atualiza na estrutura” abaixo mostra como o MFC atualiza objetos de interface do usuário como itens de menu e botões da barra de ferramentas.  Antes que um menu suspensa, ou durante o loop ocioso no caso de botões da barra de ferramentas, rotas MFC um comando de atualização.  Na figura abaixo, o objeto de documento chama o manipulador de comando de atualização, `OnUpdateEditClearAll`, para habilitar ou desabilitar o objeto da interface do usuário.  
+ The figure "Command Updating in the Framework" below shows how MFC updates user-interface objects such as menu items and toolbar buttons. Before a menu drops down, or during the idle loop in the case of toolbar buttons, MFC routes an update command. In the figure below, the document object calls its update command handler, `OnUpdateEditClearAll`, to enable or disable the user-interface object.  
   
- ![Estrutura de atualização de comando](../Image/vc385P2.png "vc385P2")  
-Comando que atualiza na estrutura  
+ ![Command updating in the Framework](../mfc/media/vc385p2.png "vc385p2")  
+Command Updating in the Framework  
   
-## Consulte também  
- [Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

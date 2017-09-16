@@ -1,49 +1,67 @@
 ---
-title: "Mapas de mensagem derivados | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapas de mensagem derivados"
-  - "lidando com erros, manipuladores de mensagens derivados"
-  - "mapas de mensagem, derivado"
-  - "mensagens, roteamento"
+title: Derived Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handling [MFC], derived message handlers
+- messages, routing
+- message maps [MFC]], derived
+- derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Mapas de mensagem derivados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76817ca4892bbdba9d67434d4c95741b690c3be3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Durante a manipulação de mensagens, verifique o mapa de uma classe em si não é o final de história retornadas mapa.  O que acontece se a classe `CMyView` \(derivado de `CView`\) não tem nenhuma entrada correspondente para uma mensagem?  
+---
+# <a name="derived-message-maps"></a>Derived Message Maps
+During message handling, checking a class's own message map is not the end of the message-map story. What happens if class `CMyView` (derived from `CView`) has no matching entry for a message  
   
- Lembre\-se de que `CView`, a classe base de `CMyView`, é derivado por sua vez de `CWnd`.  Assim `CMyView` *é*`CView` e *é*`CWnd`.  Cada uma dessas classes tem seu próprio mapa da mensagem.  A figura “uma hierarquia de exibição” abaixo mostra a relação hierárquica das classes, mas tenha em mente que um objeto de `CMyView` é um único objeto que possui as características das três classes.  
+ Keep in mind that `CView`, the base class of `CMyView`, is derived in turn from `CWnd`. Thus `CMyView` *is* a `CView` and *is* a `CWnd`. Each of those classes has its own message map. The figure "A View Hierarchy" below shows the hierarchical relationship of the classes, but keep in mind that a `CMyView` object is a single object that has the characteristics of all three classes.  
   
- ![Hierarquia de exibição VC](../mfc/media/vc38621.png "vc38621")  
-Uma hierarquia de exibição  
+ ![Hierarchy of a view](../mfc/media/vc38621.gif "vc38621")  
+A View Hierarchy  
   
- Isso se uma mensagem não pode ser correspondida da mensagem de `CMyView` da classe, a estrutura também procura o mapa da mensagem da sua classe base imediata.  A macro de `BEGIN_MESSAGE_MAP` no início da mensagem especifica dois nomes da classe como argumentos:  
+ So if a message can't be matched in class `CMyView`'s message map, the framework also searches the message map of its immediate base class. The `BEGIN_MESSAGE_MAP` macro at the start of the message map specifies two class names as its arguments:  
   
- [!CODE [NVC_MFCMessageHandling#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#2)]  
+ [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
   
- Os primeiros nomes de argumento a classe na qual o mapa da mensagem pertence.  O segundo argumento fornecerá uma conexão com a classe base imediata — `CView` aqui — assim que a estrutura pode procurar seu mapa da mensagem, também.  
+ The first argument names the class to which the message map belongs. The second argument provides a connection with the immediate base class — `CView` here — so the framework can search its message map, too.  
   
- Os manipuladores de mensagem fornecidos em uma classe base e são herdados pela classe derivada.  Isso é muito semelhante às funções de membro virtuais normais sem precisar fazer todas as funções de membro do manipulador virtuais.  
+ The message handlers provided in a base class are thus inherited by the derived class. This is very similar to normal virtual member functions without needing to make all handler member functions virtual.  
   
- Se nenhum manipulador é encontrado em qualquer um dos mapas da mensagem da classe base, o processamento padrão da mensagem é executado.  Se a mensagem for um comando, a estrutura rotear\-la no próximo destino de comando.  Se for uma mensagem padrão do windows, a mensagem será passado ao procedimento de janela padrão apropriado.  
+ If no handler is found in any of the base-class message maps, default processing of the message is performed. If the message is a command, the framework routes it to the next command target. If it is a standard Windows message, the message is passed to the appropriate default window procedure.  
   
- Para acelerar a correspondência retornadas mapa, a estrutura armazena em cachê correspondências recentes na probabilidade que receberá a mesma mensagem novamente.  Uma resultado dessa é a estrutura que processa mensagens não manipulado suficiente eficiente.  Os mapas de mensagem também são espaço mais eficientes do que as implementações que usam funções virtuais.  
+ To speed message-map matching, the framework caches recent matches on the likelihood that it will receive the same message again. One consequence of this is that the framework processes unhandled messages quite efficiently. Message maps are also more space-efficient than implementations that use virtual functions.  
   
-## Consulte também  
- [Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md)
+
+

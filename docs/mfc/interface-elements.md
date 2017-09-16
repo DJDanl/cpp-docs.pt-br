@@ -1,71 +1,89 @@
 ---
-title: "Elementos da interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquitetura [C++], MFC Feature Pack"
-  - "MFC Feature Pack, arquitetura"
+title: Interface Elements | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- architecture [MFC], MFC Feature Pack
+- MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Elementos da interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19599bd4aa299b60034a2bffa9cd0dafaaeb3107
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este documento descreve os elementos da interface que foram introduzidos em [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, e também descreve diferenças com a versão anterior de biblioteca.  
+---
+# <a name="interface-elements"></a>Interface Elements
+This document describes interface elements that were introduced in [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, and also describes differences with the earlier version of the library.  
   
- A ilustração a seguir mostra um aplicativo que é construído usando novos elementos da interface.  
+ The following illustration shows an application that was built by using the new interface elements.  
   
- ![Aplicativo de exemplo do MFC Feature Pack](../mfc/media/mfc_featurepack.png "MFC\_FeaturePack")  
+ ![MFC Feature Pack example application](../mfc/media/mfc_featurepack.png "mfc_featurepack")  
   
-## Encaixe da janela  
- A funcionalidade de encaixe da janela semelhante ao encaixe da janela que a interface gráfica do usuário de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] usa.  
+## <a name="window-docking"></a>Window Docking  
+ Window docking functionality resembles the window docking that the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] graphical user interface uses.  
   
-## As barras de controle agora são painéis  
- As barras de controle agora são conhecidas como os painéis e derivadas de [Classe de CBasePane](../mfc/reference/cbasepane-class.md).  Em versões anteriores de MFC, a classe base de barras de controle era `CControlBar`.  
+## <a name="control-bars-are-now-panes"></a>Control Bars are Now Panes  
+ Control bars are now known as panes and are derived from [CBasePane Class](../mfc/reference/cbasepane-class.md). In earlier versions of MFC, the base class of control bars was `CControlBar`.  
   
- A janela principal do quadro do aplicativo normalmente é representada por [Classe de CFrameWndEx](../mfc/reference/cframewndex-class.md) ou por [Classe CMDIFrameWndEx](../Topic/CMDIFrameWndEx%20Class.md).  O quadro principal é chamado *de site de plug\-in*.  Os painéis podem ter um dos três tipos de pais: um site de plug\-in, uma barra de plug\-in, ou uma janela de mini\- quadro.  
+ The application main frame window is usually represented by the [CFrameWndEx Class](../mfc/reference/cframewndex-class.md) or the [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md). The main frame is called the *dock site*. Panes can have one of three types of parents: a dock site, a dock bar, or a mini-frame window.  
   
- Há dois tipos de painéis: não redimensionável e redimensionável.  Os painéis redimensionável, como barras de status e barras de ferramentas, podem ser redimensionados usando separadores ou controles deslizantes.  Os painéis redimensionável poderão formar um contêiner \(o painel pode ser inserida para outro painel, criando um separador entre eles\).  Porém, os painéis redimensionável não podem ser anexados \(logon\) para inserir barras.  
+ There are two types of panes: non-resizable and resizable. Resizable panes, such as status bars and toolbars, can be resized by using splitters or sliders. Resizable panes can form containers (one pane can be docked to another pane, creating a splitter between them). However, resizable panes cannot be attached (docked) to dock bars.  
   
- Se seu aplicativo usa os painéis não redimensionável, derive\-os de [Classe de CPane](../mfc/reference/cpane-class.md).  Se seu aplicativo usa os painéis redimensionável, derive\-os de [Classe de CDockablePane](../Topic/CDockablePane%20Class.md)  
+ If your application uses non-resizable panes, derive them from [CPane Class](../mfc/reference/cpane-class.md).  If your application uses resizable panes, derive them from [CDockablePane Class](../mfc/reference/cdockablepane-class.md)  
   
-## Entre o site  
- O local de encaixe \(ou a janela do quadro principal\) possuem todos os painéis e janelas de mini\- quadro em um aplicativo.  O local de encaixe contém um membro de [CDockingManager](../mfc/reference/cdockingmanager-class.md) .  Esse membro mantém uma lista de todos os painéis que pertencem ao site de plug\-in.  A lista estiver ordenada de forma que os painéis criados nas bordas externos do site de plug\-in são posicionados no início da lista.  Quando a estrutura redesenha ao site de plug\-in, dará um loop nessa lista e ajustar o layout de cada painel para incluir o retângulo delimitador de site atual de plug\-in.  Você pode chamar `AdjustDockingLayout` ou `RecalcLayout` quando você precisa ajustar o layout de encaixe, e a estrutura redireciona essa chamada ao gerenciador de encaixe.  
+## <a name="dock-site"></a>Dock Site  
+ The dock site (or main frame window) owns all panes and mini-frame windows in an application. The dock site contains a [CDockingManager](../mfc/reference/cdockingmanager-class.md) member. This member maintains a list of all panes that belong to the dock site. The list is ordered so that the panes created at the outer edges of the dock site are positioned at the start of the list. When the framework redraws the dock site, it loops over this list and adjusts the layout of each pane to include the current bounding rectangle of the dock site. You can call `AdjustDockingLayout` or `RecalcLayout` when you have to adjust the docking layout, and the framework redirects this call to the docking manager.  
   
-## Barras de plug\-in  
- Cada janela principal do quadro pode posicionar *barras de encaixe* ao longo das bordas.  Uma barra de plug\-in é um painel que pertence a [Classe de CDockSite](../mfc/reference/cdocksite-class.md).  As barras de plug\-in podem aceitar os objetos derivados de [CPane](../mfc/reference/cpane-class.md), como barras de ferramentas.  Para criar barras de plug\-in quando a janela principal do quadro é inicializada, chame `EnableDocking`.  Para habilitar barras ocultar automaticamente, chame `EnableAutoHideBars`.  `EnableAutoHideBars` cria objetos de [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) , posicionando\-os ao lado de cada barra de plug\-in.  
+## <a name="dock-bars"></a>Dock Bars  
+ Each main frame window can position *dock bars* along its borders. A dock bar is a pane that belongs to a [CDockSite Class](../mfc/reference/cdocksite-class.md). Dock bars can accept objects derived from [CPane](../mfc/reference/cpane-class.md), such as toolbars. To create dock bars when the main frame window is initialized, call `EnableDocking`. To enable auto hide bars, call `EnableAutoHideBars`. `EnableAutoHideBars` creates [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objects, and positions them next to each dock bar.  
   
- Cada barra de plug\-in é dividida em linhas de plug\-in.  As linhas de plug\-in são representadas por [Classe de CDockingPanesRow](../mfc/reference/cdockingpanesrow-class.md).  Cada linha de plug\-in contém uma lista das barras de ferramentas.  Se um usuário insira uma barra de ferramentas ou mova a barra de ferramentas de uma linha para outra na mesma barra de plug\-in, a estrutura ou cria uma linha nova e redimensionar a barra de plug\-in consequentemente, ou posicionar a barra de ferramentas em uma linha existente.  
+ Each dock bar is divided into dock rows. Dock rows are represented by the [CDockingPanesRow Class](../mfc/reference/cdockingpanesrow-class.md). Each dock row contains a list of toolbars. If a user docks a toolbar or moves the toolbar from one row to another within the same dock bar, the framework either creates a new row and resizes the dock bar accordingly, or it positions the toolbar on an existing row.  
   
-## Janelas de Mini\- quadro  
- Um painel de flutuação reside em uma janela de mini\- quadro.  As janelas de Mini\- quadro são representadas por duas classes: [Classe de CMDITabInfo](../Topic/CMDITabInfo%20Class.md) \(que podem conter apenas um painel\) e [Classe de CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) \(que podem conter vários painéis.\)  Para serem flutuantes um painel em seu código, chame [CBasePane::FloatPane](../Topic/CBasePane::FloatPane.md).  Depois que um painel flutua, a estrutura cria automaticamente uma janela de mini\- quadro e essa janela de mini\- quadro se torna o pai do painel de flutuação.  Quando o painel de flutuação enter, a estrutura redefine seu pai, e o painel flutuante se torna uma barra de plug\-in \(para barras de ferramentas\) ou um site de plug\-in \(para os painéis redimensionável.\)  
+## <a name="mini-frame-windows"></a>Mini-frame Windows  
+ A floating pane resides in a mini-frame window. Mini-frame windows are represented by two classes: [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md) (which can contain only one pane) and [CMultiPaneFrameWnd Class](../mfc/reference/cmultipaneframewnd-class.md) (which can contain several panes). To float a pane in your code, call [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). After a pane floats, the framework automatically creates a mini-frame window and that mini-frame window becomes the floating pane's parent. When the floating pane docks, the framework resets its parent, and the floating pane becomes a dock bar (for toolbars) or a dock site (for resizable panes).  
   
-## Divisores do painel  
- Os divisores do painel \(também denominados controles deslizantes ou separadores\) são representados por [Classe de CPaneDivider](../mfc/reference/cpanedivider-class.md).  Quando um usuário faz logon em um painel, a estrutura cria divisores do painel, independentemente de se o painel está conectado no site de plug\-in ou em outro painel.  Quando um painel no site de plug\-in, o divisor do painel é chamado *o divisor padrão do painel*.  O divisor padrão do painel é responsável para o layout de todos os painéis de encaixe no site de plug\-in.  O gerenciador de plug\-in mantém uma lista de divisores padrão do painel, e uma lista de painéis.  Os gerenciadores de plug\-in são responsáveis pelo layout de todos os painéis de encaixe.  
+## <a name="pane-dividers"></a>Pane Dividers  
+ Pane dividers (also named sliders or splitters) are represented by the [CPaneDivider Class](../mfc/reference/cpanedivider-class.md). When a user docks a pane, the framework creates pane dividers, regardless of whether the pane is docked at the dock site or at another pane. When a pane docks to the dock site, the pane divider is called the *default pane divider*. The default pane divider is responsible for the layout of all the docking panes in the dock site. The dock manager maintains a list of default pane dividers, and a list of panes. Dock managers are responsible for the layout of all the docking panes.  
   
-## Containers  
- Todos os painéis redimensionável, quando conectados entre si, são mantidos em contêineres.  Os contêineres são representados por [Classe de CPaneContainer](../mfc/reference/cpanecontainer-class.md).  Cada contêiner tem ponteiros ao seu painel esquerdo, o painel direito, um contêiner esquerdo, um contêiner direito, e o separador entre as partes esquerda e direita. \(*Esquerda* e *direita* não se refere a físicos lado mas identifica um pouco ramificações de uma estrutura de árvore.\) Assim podemos criar uma árvore dos painéis e dos separadores e como consequência para obter layouts complexos os painéis que podem ser redimensionados juntos.  A classe de `CPaneContainer` mantém a árvore dos contêineres; também mantêm duas listas de painéis e os controles deslizantes que residem nessa árvore.  Os gerenciadores do contêiner do painel geralmente inseridos nos controles deslizantes padrão e nas janelas de mini\- tableau que levam vários painéis.  
+## <a name="containers"></a>Containers  
+ All resizable panes, when docked to each other, are maintained in containers. Containers are represented by the [CPaneContainer Class](../mfc/reference/cpanecontainer-class.md). Each container has pointers to its left pane, right pane, left sub-container, right sub-container, and the splitter between the left and right parts. (*Left* and *right* do not refer to physical sides but rather identify the branches of a tree structure.) In this manner we can build a tree of panes and splitters and therefore achieve complex layouts of panes that can be resized together. The `CPaneContainer` class maintains the tree of containers; it also maintains two lists of panes and sliders that reside in this tree. Pane container managers are usually embedded into default sliders and mini-frame windows that carry multiple panes.  
   
-## Barras de controle de ocultar automaticamente  
- Por padrão, cada `CDockablePane` da suporte ao recurso de ocultar automaticamente.  Quando um usuário clica no botão do pin na legenda de `CDockablePane`, a estrutura alterna o painel para o modo de ocultar automaticamente.  Para tratar o clicar em, a estrutura [Classe de CMFCAutoHideBar](../Topic/CMFCAutoHideBar%20Class.md) cria e [Classe de CMFCAutoHideButton](../mfc/reference/cmfcautohidebutton-class.md) associados ao objeto de `CMFCAutoHideBar` .  A estrutura coloca nova `CMFCAutoHideBar` em [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md).  A estrutura também anexar `CMFCAutoHideButton` à barra de ferramentas.  [Classe de CDockingManager](../mfc/reference/cdockingmanager-class.md) mantém `CDockablePane`.  
+## <a name="auto-hide-control-bars"></a>Auto-hide Control Bars  
+ By default, each `CDockablePane` supports the auto-hide feature. When a user clicks the pin button on the caption of the `CDockablePane`, the framework switches the pane to auto-hide mode. To handle the click, the framework creates a [CMFCAutoHideBar Class](../mfc/reference/cmfcautohidebar-class.md) and a [CMFCAutoHideButton Class](../mfc/reference/cmfcautohidebutton-class.md) associated with the `CMFCAutoHideBar` object. The framework puts the new `CMFCAutoHideBar` on the [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). The framework also attaches the `CMFCAutoHideButton` to the toolbar. The [CDockingManager Class](../mfc/reference/cdockingmanager-class.md) maintains the `CDockablePane`.  
   
-## Barras de controle com guias e barras do Outlook  
- [Classe de CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md) implementa a funcionalidade de base de uma janela com guias com guias destacáveis.  Para usar um objeto de `CMFCBaseTabCtrl` , inicializando [Classe CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) em seu aplicativo.  `CBaseTabbedPane` é derivado de `CDockablePane` e mantém um ponteiro para um objeto de `CMFCBaseTabCtrl` .  `CBaseTabbedPane` permite que os usuários insiram e redimensionar as barras de controle com guias.  Uso [CDockablePane::AttachToTabWnd](../Topic/CDockablePane::AttachToTabWnd.md) criar dinamicamente as barras de controle que é inserida e listado.  
+## <a name="tabbed-control-bars-and-outlook-bars"></a>Tabbed Control Bars and Outlook Bars  
+ The [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md) implements the base functionality of a tabbed window with detachable tabs. To use a `CMFCBaseTabCtrl` object, initialize a [CBaseTabbedPane Class](../mfc/reference/cbasetabbedpane-class.md) in your application. `CBaseTabbedPane` is derived from `CDockablePane` and maintains a pointer to a `CMFCBaseTabCtrl` object. The `CBaseTabbedPane` enables users to dock and resize tabbed control bars. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) to dynamically create control bars that are docked and tabbed.  
   
- O controle da barra do Outlook também é baseado em barras com guias.  [Classe CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) é derivado de `CBaseTabbedPane`.  Para obter mais informações sobre como usar a barra do Outlook, consulte [Classe CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md).  
+ The Outlook bar control is also based on tabbed bars. The [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md) is derived from `CBaseTabbedPane`. For more information about how to use Outlook bar, see [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md).  
   
-## Consulte também  
- [Conceitos](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

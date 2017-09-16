@@ -1,62 +1,80 @@
 ---
-title: "Classes de documento | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de documento"
+title: Document Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de documento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e93e195b4cd2648b2e860e061e3e4d2a59809d59
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Documenta os objetos da classe, criados por objetos do documento modelo, gerenciar os dados do aplicativo.  Você derivará uma classe para seus documentos de uma dessas classes.  
+---
+# <a name="document-classes"></a>Document Classes
+Document class objects, created by document-template objects, manage the application's data. You will derive a class for your documents from one of these classes.  
   
- Os objetos da classe do documento interagem com os objetos de exibição.  Os objetos de exibição representam a área do cliente de uma janela, exibem dados de um documento, e permitem que os usuários interajam com ela.  Os documentos e exibições são criados por um objeto de documento modelo.  
+ Document class objects interact with view objects. View objects represent the client area of a window, display a document's data, and allow users to interact with it. Documents and views are created by a document-template object.  
   
- [CDocument](../Topic/CDocument%20Class.md)  
- A classe base para documentos específicos do aplicativo.  Derivar a classe ou suas classes do documento de **CDocument**.  
+ [CDocument](../mfc/reference/cdocument-class.md)  
+ The base class for application-specific documents. Derive your document class or classes from **CDocument**.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- Usado para a implementação composta de documento, bem como o suporte básico do contêiner.  Funciona como um contêiner para classes derivaram\-se de [CDocItem](../mfc/reference/cdocitem-class.md).  Esta classe pode ser usada como a classe base para documentos contêiner e é a classe base para `COleServerDoc`.  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from [CDocItem](../mfc/reference/cdocitem-class.md). This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Uma classe derivada de `COleDocument` que fornece a infraestrutura para vincular.  Você deve derivar as classes do documento para aplicativos de contêiner desta classe em vez de `COleDocument` se desejar aos links de suporte a objetos inseridos.  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Mantém a lista de itens do cliente que estão no controle de edição sofisticado.  Usado com [CRichEditView](../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
- [COleServerDoc](../Topic/COleServerDoc%20Class.md)  
- Usado como a classe base para o documento de aplicativo de servidor classifica.  os objetos de`COleServerDoc` fornecem o volume de suporte do servidor com interações com objetos de [COleServerItem](../mfc/reference/coleserveritem-class.md) .  O recurso visual da edição é fornecido com o uso da arquitetura do documento\/exibição de biblioteca da classe.  
+ [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
+ Used as the base class for server-application document classes. `COleServerDoc` objects provide the bulk of server support through interactions with [COleServerItem](../mfc/reference/coleserveritem-class.md) objects. Visual editing capability is provided using the class library's document/view architecture.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
- Fornece, [CHtmlEditView](../mfc/reference/chtmleditview-class.md), a funcionalidade do navegador da web de HTML a edição da plataforma no contexto da arquitetura de documento exibição MFC.  
+ Provides, with [CHtmlEditView](../mfc/reference/chtmleditview-class.md), the functionality of the WebBrowser HTML editing platform within the context of the MFC document-view architecture.  
   
-## Classes relacionadas  
- Os objetos da classe de documentos podem ser persistentes — ou seja podem gravar seu estado para um suporte de memória e ler novamente.  MFC O fornece a classe de `CArchive` para facilitar transferir os dados de documento em um suporte de memória.  
+## <a name="related-classes"></a>Related Classes  
+ Document class objects can be persistent — in other words, they can write their state to a storage medium and read it back. MFC provides the `CArchive` class to facilitate transferring the document's data to a storage medium.  
   
  [CArchive](../mfc/reference/carchive-class.md)  
- Ele coopera com um objeto de [CFile](../mfc/reference/cfile-class.md) para o repositório persistente de ferramentas para objetos com a serialização [CObject::Serialize](../Topic/CObject::Serialize.md)\(consulte\).  
+ Cooperates with a [CFile](../mfc/reference/cfile-class.md) object to implement persistent storage for objects through serialization (see [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- Os documentos também podem conter objetos OLE.  `CDocItem` é a classe base dos itens de cliente e de servidor.  
+ Documents can also contain OLE objects. `CDocItem` is the base class of the server and client items.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- Classe base abstrata de [COleClientItem](../mfc/reference/coleclientitem-class.md) e de [COleServerItem](../mfc/reference/coleserveritem-class.md).  Os objetos das classes derivadas de `CDocItem` representam partes de documentos.  
+ Abstract base class of [COleClientItem](../mfc/reference/coleclientitem-class.md) and [COleServerItem](../mfc/reference/coleserveritem-class.md). Objects of classes derived from `CDocItem` represent parts of documents.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Manipulador de controle genérico | Documentos do Microsoft"
+title: Generic Control Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- handlers, ON_CONTROL
-- handlers
-- GenericControl Handler
-- ON_CONTROL macro
+- handlers [MFC], ON_CONTROL
+- handlers [MFC]
+- GenericControl Handler [MFC]
+- ON_CONTROL macro [MFC]
 ms.assetid: 1e25e583-5d5a-4363-8904-839991a8570d
 caps.latest.revision: 10
 author: mikeblome
@@ -36,21 +36,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c2e300cf00ca2ecf0818f0131e28345fc598a34e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 59b8b63f9e03c229515d1c8484cadd131f307a7e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="generic-control-handler"></a>Manipulador de controle genérico
-A seguinte entrada de mapa corresponde ao protótipo da função.  
+# <a name="generic-control-handler"></a>Generic Control Handler
+The following map entry corresponds to the function prototype.  
   
-|Entrada de mapa|Protótipo da função|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_CONTROL ( \<wNotifyCode >, \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_CONTROL( \<wNotifyCode>, \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
 
 

@@ -1,80 +1,99 @@
 ---
-title: "Personaliza&#231;&#227;o de teclado e mouse | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "personalizações, teclado e mouse (extensões MFC)"
-  - "personalizações de teclado e mouse (Extensões MFC)"
+title: Keyboard and Mouse Customization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- customizations [MFC], keyboard and mouse (MFC Extensions)
+- keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
 caps.latest.revision: 23
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Personaliza&#231;&#227;o de teclado e mouse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cbce5ace18bf7b4fc185055b00c9306a86e75090
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC permite que o usuário do seu aplicativo para personalizar o modo como ele trata a entrada de mouse e teclado. O usuário pode personalizar a entrada do teclado atribuindo atalhos de teclado para comandos. O usuário também pode personalizar a entrada de mouse, selecionando o comando que deve ser executado quando o usuário clica duas vezes dentro do windows específico do aplicativo. Este tópico explica como personalizar a entrada para seu aplicativo.  
+---
+# <a name="keyboard-and-mouse-customization"></a>Keyboard and Mouse Customization
+MFC allows the user of your application to customize how it handles keyboard and mouse input. The user can customize keyboard input by assigning keyboard shortcuts to commands. The user can also customize the mouse input by selecting the command that should be executed when the user double-clicks inside specific windows of the application. This topic explains how to customize the input for your application.  
   
- No **personalização** caixa de diálogo, o usuário pode alterar os controles personalizados para o mouse e teclado. Para exibir essa caixa de diálogo, o usuário aponta para **Personalizar** sobre o **exibição** menu e, em seguida, clica em **barras de ferramentas e encaixe**. Na caixa de diálogo, o usuário clica em um a **teclado** guia ou **Mouse** guia.  
+ In the **Customization** dialog box, the user can change the custom controls for the mouse and the keyboard. To display this dialog box, the user points to **Customize** on the **View** menu and then clicks **Toolbars and Docking**. In the dialog box, the user clicks either the **Keyboard** tab or the **Mouse** tab.  
   
-## Personalização do teclado  
- A ilustração a seguir mostra o **teclado** guia de **personalização** caixa de diálogo.  
+## <a name="keyboard-customization"></a>Keyboard Customization  
+ The following illustration shows the **Keyboard** tab of the **Customization** dialog box.  
   
- ![Na guia teclado da caixa de diálogo de personalização](../mfc/media/mfcnextkeyboardtab.png "MFCNextKeyboardTab")  
-Guia de personalização de teclado  
+ ![Keyboard tab in the Customize dialog box](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")  
+Keyboard Customization Tab  
   
- O usuário interage com a guia de teclado para atribuir um ou mais atalhos de teclado a um comando. Os comandos disponíveis são listados no lado esquerdo da guia. O usuário pode selecionar todos os comandos disponíveis no menu. Comandos de menu só podem ser associados um atalho de teclado. Depois que o usuário insere um novo atalho, o **atribuir** botão fica habilitado. Quando o usuário clica nesse botão, o aplicativo associa esse atalho o comando selecionado.  
+ The user interacts with the keyboard tab to assign one or more keyboard shortcuts to a command. The available commands are listed on the left side of the tab. The user can select any available command from the menu. Only menu commands can be associated with a keyboard shortcut. After the user enters a new shortcut, the **Assign** button becomes enabled. When the user clicks this button, the application associates the selected command with that shortcut.  
   
- Todos os atalhos de teclado atribuído no momento são listados na caixa de listagem na coluna à direita. O usuário também pode selecionar atalhos individuais e removê\-los ou redefinir todos os mapeamentos para o aplicativo.  
+ All of the currently assigned keyboard shortcuts are listed in the list box in the right column. The user can also select individual shortcuts and remove them, or reset all the mappings for the application.  
   
- Se você deseja oferecer suporte a essa personalização em seu aplicativo, você deve criar um [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md) objeto. Para criar um `CKeyboardManager` de objeto, chame a função [CWinAppEx::InitKeyboardManager](../Topic/CWinAppEx::InitKeyboardManager.md). Esse método cria e inicializa um Gerenciador de teclado. Se você criar Gerenciador de um teclado manualmente, você ainda deve chamar `CWinAppEx::InitKeyboardManager` para inicializá\-lo.  
+ If you want to support this customization in your application, you must create a [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md) object. To create a `CKeyboardManager` object, call the function [CWinAppEx::InitKeyboardManager](../mfc/reference/cwinappex-class.md#initkeyboardmanager). This method creates and initializes a keyboard manager. If you create a keyboard manager manually, you still must call `CWinAppEx::InitKeyboardManager` to initialize it.  
   
- Se você usar o Assistente para criar seu aplicativo, o assistente irá inicializar o Gerenciador de teclado. Depois que o aplicativo inicializa o Gerenciador de teclado, o framework adiciona um **teclado** guia para o **personalização** caixa de diálogo.  
+ If you use the Wizard to create your application, the Wizard will initialize the keyboard manager. After your application initializes the keyboard manager, the framework adds a **Keyboard** tab to the **Customization** dialog box.  
   
-## Personalização de mouse  
- A ilustração a seguir mostra o **Mouse** guia de **personalização** caixa de diálogo.  
+## <a name="mouse-customization"></a>Mouse Customization  
+ The following illustration shows the **Mouse** tab of the **Customization** dialog box.  
   
- ![Na guia Mouse da caixa de diálogo de personalização](../mfc/media/mfcnextmousetab.png "MFCNextMouseTab")  
-Guia de personalização de mouse  
+ ![Mouse tab in the Customize dialog box](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")  
+Mouse Customization Tab  
   
- O usuário interage com essa guia para atribuir um menu de comando para o mouse clique duas vezes em ação. O usuário seleciona um modo de exibição do lado esquerdo da janela e, em seguida, usa os controles no lado direito para associar um comando com a ação de clicar duas vezes. Depois que o usuário clica **Fechar**, o aplicativo executa o comando associado sempre que o usuário clica duas vezes em qualquer lugar no modo de exibição.  
+ The user interacts with this tab to assign a menu command to the mouse double-click action. The user selects a view from the left side of the window and then uses the controls on the right side to associate a command with the double-click action. After the user clicks **Close**, the application executes the associated command whenever the user double-clicks anywhere in the view.  
   
- Por padrão, a personalização de mouse não está habilitada quando você cria um aplicativo usando o assistente.  
+ By default, mouse customization is not enabled when you create an application by using the Wizard.  
   
-#### Para habilitar a personalização de mouse  
+#### <a name="to-enable-mouse-customization"></a>To enable mouse customization  
   
-1.  Inicializar um [CMouseManager](../mfc/reference/cmousemanager-class.md) chamando [CWinAppEx::InitMouseManager](../Topic/CWinAppEx::InitMouseManager.md).  
+1.  Initialize a [CMouseManager](../mfc/reference/cmousemanager-class.md) object by calling [CWinAppEx::InitMouseManager](../mfc/reference/cwinappex-class.md#initmousemanager).  
   
-2.  Obter um ponteiro para o Gerenciador de mouse usando [CWinAppEx::GetMouseManager](../Topic/CWinAppEx::GetMouseManager.md).  
+2.  Obtain a pointer to the mouse manager by using [CWinAppEx::GetMouseManager](../mfc/reference/cwinappex-class.md#getmousemanager).  
   
-3.  Adicionar modos de exibição para o Gerenciador de mouse usando o [CMouseManager::AddView](../Topic/CMouseManager::AddView.md) método. Faça isso para cada modo de exibição que você deseja adicionar ao Gerenciador de mouse.  
+3.  Add views to the mouse manager by using the [CMouseManager::AddView](../mfc/reference/cmousemanager-class.md#addview) method. Do this for every view you want to add to the mouse manager.  
   
- Depois que o aplicativo inicializa o Gerenciador de mouse, o framework adiciona o **Mouse** guia para o **Personalizar** caixa de diálogo. Se você não adicionar nenhum modo de exibição, acessando a guia fará com que uma exceção não tratada. Depois de ter criado uma lista de modos de exibição, o **Mouse** guia está disponível para o usuário.  
+ After your application initializes the mouse manager, the framework adds the **Mouse** tab to the **Customize** dialog box. If you do not add any views, accessing the tab will cause an unhandled exception. After you have created a list of views, the **Mouse** tab is available to the user.  
   
- Quando você adiciona um novo modo de exibição para o Gerenciador de mouse, você atribui uma ID exclusiva. Se você deseja oferecer suporte a personalização de mouse para uma janela, você deve processar o `WM_LBUTTONDBLCLICK` mensagem e chame o [CWinAppEx::OnViewDoubleClick](../Topic/CWinAppEx::OnViewDoubleClick.md) função. Quando você chamar essa função, um dos parâmetros é a ID dessa janela. É responsabilidade do programador para controlar os números de ID e os objetos associados a eles.  
+ When you add a new view to the mouse manager, you give it a unique ID. If you want to support mouse customization for a window, you must process the `WM_LBUTTONDBLCLICK` message and call the [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) function. When you call this function, one of the parameters is the ID for that window. It is the responsibility of the programmer to keep track of the ID numbers and the objects associated with them.  
   
-## Questões de segurança  
- Conforme descrito em [Ferramentas definidas pelo usuário](../Topic/User-defined%20Tools.md), o usuário pode associar uma ID de ferramentas definidas pelo usuário com o evento de clique duplo. Quando o usuário clica duas vezes em um modo de exibição, o aplicativo procura por uma ferramenta de usuário que corresponde a ID associada. Se o aplicativo encontra uma ferramenta correspondente, ele executa a ferramenta. Se o aplicativo não conseguir encontrar uma ferramenta correspondente, envia uma mensagem WM\_COMMAND com a ID para o modo de exibição que foi clicado duas vezes.  
+## <a name="security-concerns"></a>Security Concerns  
+ As described in [User-defined Tools](../mfc/user-defined-tools.md), the user can associate a user-defined tool ID with the double-click event. When the user double-clicks a view, the application looks for a user tool that matches the associated ID. If the application finds a matching tool, it executes the tool. If the application cannot find a matching tool, it sends a WM_COMMAND message with the ID to the view that was double-clicked.  
   
- As configurações personalizadas são armazenadas no registro. Editando o registro, um invasor pode substituir uma ID de usuário válido ferramenta com um comando arbitrário. Quando o usuário clica duas vezes em um modo de exibição, o modo de exibição processa o comando instalados e o invasor. Isso poderia causar um comportamento inesperado e potencialmente perigoso.  
+ The customized settings are stored in the registry. By editing the registry, an attacker can replace a valid user tool ID with an arbitrary command. When the user double-clicks a view, the view processes the command that the attacker planted. This could cause unexpected and potentially dangerous behavior.  
   
- Além disso, esse tipo de ataque pode ignorar proteções de interface do usuário. Por exemplo, suponha que um aplicativo tiver desabilitada a impressão. Isto é, na interface do usuário, o **impressão** menu e botão estão indisponíveis. Normalmente, isso impede que o aplicativo de impressão. Mas se um invasor tiver editado o registro, um usuário poderia agora pode enviar o comando Imprimir diretamente clicando duas vezes em modo de exibição, ignorando os elementos da interface de usuário que não estão disponíveis.  
+ In addition, this kind of attack can bypass user interface safeguards. For example, suppose an application has printing disabled. That is, in its user interface, the **Print** menu and button are unavailable. Normally this prevents the application from printing. But if an attacker edited the registry, a user could now could send the print command directly by double-clicking the view, bypassing the user interface elements that are unavailable.  
   
- Para se proteger contra esse tipo de ataque, adicione código para o manipulador de comando do aplicativo para verificar se um comando é válido antes de ser executado. Não dependem de interface do usuário para impedir que um comando seja enviado para o aplicativo.  
+ To guard against this kind of attack, add code to your application command handler to verify that a command is valid before it is executed. Do not depend on the user interface to prevent a command from being sent to the application.  
   
-## Consulte também  
- [Personalização para MFC](../mfc/customization-for-mfc.md)   
- [Classe de CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md)   
- [Classe de CMouseManager](../mfc/reference/cmousemanager-class.md)   
- [Implicações de segurança da personalização](../Topic/Security%20Implications%20of%20Customization.md)
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)   
+ [CKeyboardManager Class](../mfc/reference/ckeyboardmanager-class.md)   
+ [CMouseManager Class](../mfc/reference/cmousemanager-class.md)   
+ [Security Implications of Customization](../mfc/security-implications-of-customization.md)
+
+

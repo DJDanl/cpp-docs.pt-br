@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCAutoHideBar | Documentos do Microsoft
+title: CMFCAutoHideBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCAutoHideToolBar class
+- CMFCAutoHideBar [MFC], CMFCAutoHideBar
+- CMFCAutoHideBar [MFC], AddAutoHideWindow
+- CMFCAutoHideBar [MFC], AllowShowOnPaneMenu
+- CMFCAutoHideBar [MFC], CalcFixedLayout
+- CMFCAutoHideBar [MFC], Create
+- CMFCAutoHideBar [MFC], GetFirstAHWindow
+- CMFCAutoHideBar [MFC], GetVisibleCount
+- CMFCAutoHideBar [MFC], OnShowControlBarMenu
+- CMFCAutoHideBar [MFC], RemoveAutoHideWindow
+- CMFCAutoHideBar [MFC], SetActiveInGroup
+- CMFCAutoHideBar [MFC], SetRecentVisibleState
+- CMFCAutoHideBar [MFC], ShowAutoHideWindow
+- CMFCAutoHideBar [MFC], StretchPane
+- CMFCAutoHideBar [MFC], UnSetAutoHideMode
+- CMFCAutoHideBar [MFC], UpdateVisibleState
+- CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
 caps.latest.revision: 35
 author: mikeblome
@@ -50,69 +65,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: db15fc9fa3925230e372b6e13368f455dcfbb1a9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bbbb09f536af4b2d50b482dc9b2211bd693ad235
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
-O `CMFCAutoHideBar` é uma classe ferramentas especiais que implementa o recurso de ocultar automaticamente.  
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar Class
+The `CMFCAutoHideBar` class is a special toolbar class that implements the auto-hide feature.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCAutoHideBar : public CPane  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
-|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Substitui `CPane::AllowShowOnPaneMenu`.)|  
-|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Substitui [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCAutoHideBar::Create](#create)|Cria uma barra de controle e anexa-o para o [CPane](../../mfc/reference/cpane-class.md) objeto. (Substitui [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Overrides `CPane::AllowShowOnPaneMenu`.)|  
+|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCAutoHideBar::Create](#create)|Creates a control bar and attaches it to the [CPane](../../mfc/reference/cpane-class.md) object. (Overrides [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
-|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chamado pela estrutura quando um menu Painel especial está prestes a ser exibido. (Substitui [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
+|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|Called by the framework when a special pane menu is about to be displayed. (Overrides [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCAutoHideBar::RemoveAutoHideWindow](#removeautohidewindow)||  
-|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(Substitui [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
+|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(Overrides [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
 |[CMFCAutoHideBar::SetRecentVisibleState](#setrecentvisiblestate)||  
 |[CMFCAutoHideBar::ShowAutoHideWindow](#showautohidewindow)||  
-|[CMFCAutoHideBar::StretchPane](#stretchpane)|Expande um painel vertical ou horizontalmente. (Substitui [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
+|[CMFCAutoHideBar::StretchPane](#stretchpane)|Stretches a pane vertically or horizontally. (Overrides [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
 |[CMFCAutoHideBar::UnSetAutoHideMode](#unsetautohidemode)||  
 |[CMFCAutoHideBar::UpdateVisibleState](#updatevisiblestate)||  
   
-### <a name="data-members"></a>Membros de Dados  
+### <a name="data-members"></a>Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|O tempo de espera entre o momento em que o usuário coloca o cursor do mouse sobre um [CMFCAutoHideButton classe](../../mfc/reference/cmfcautohidebutton-class.md) e o momento em que a estrutura mostra a janela associada.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|The time delay between the moment when the user places the mouse cursor over a [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md) and the moment when the framework shows the associated window.|  
   
-## <a name="remarks"></a>Comentários  
- Quando o usuário alterna um painel de encaixe para o modo de ocultar automaticamente, o framework cria automaticamente uma `CMFCAutoHideBar` objeto. Ele também cria o necessário [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) e [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objetos. Cada `CAutoHideDockSite` objeto está associado um indivíduo `CMFCAutoHideButton`.  
+## <a name="remarks"></a>Remarks  
+ When the user switches a dock pane to auto-hide mode, the framework automatically creates a `CMFCAutoHideBar` object. It also creates the necessary [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) and [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objects. Each `CAutoHideDockSite` object is associated with an individual `CMFCAutoHideButton`.  
   
- O `CMFCAutoHideBar` classe implementa a exibição de um `CAutoHideDockSite` quando o mouse do usuário passa sobre uma `CMFCAutoHideButton`. Quando a barra de ferramentas recebe uma mensagem WM_MOUSEMOVE, `CMFCAutoHideBar` inicia um cronômetro. Quando o temporizador é concluído, ele envia a barra de ferramentas uma notificação de evento WM_TIMER. A barra de ferramentas manipula esse evento, verificando se o ponteiro do mouse é posicionado sobre o botão Ocultar automaticamente mesmo que ele foi posicionado sobre quando o timer é iniciado. Se for, o arquivo `CAutoHideDockSite` é exibida.  
+ The `CMFCAutoHideBar` class implements the display of a `CAutoHideDockSite` when a user's mouse hovers over a `CMFCAutoHideButton`. When the toolbar receives a WM_MOUSEMOVE message, `CMFCAutoHideBar` starts a timer. When the timer finishes, it sends the toolbar a WM_TIMER event notification. The toolbar handles this event by checking whether the mouse pointer is positioned over the same auto-hide button that it was positioned over when the timer started. If it is, the attached `CAutoHideDockSite` is displayed.  
   
- Você pode controlar o comprimento do intervalo do temporizador, definindo `m_nShowAHWndDelay`. O valor padrão é 400 ms.  
+ You can control the length of the timer's delay by setting `m_nShowAHWndDelay`. The default value is 400 ms.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar um `CMFCAutoHideBar` e usa seu `GetDockSiteRow` método.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCAutoHideBar` object and use its `GetDockSiteRow` method.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#26;](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -125,11 +140,11 @@ class CMFCAutoHideBar : public CPane
   
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxautohidebar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
- Adiciona a funcionalidade um `CDockablePane` janela que permite ocultar automaticamente.  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
+ Adds functionality to a `CDockablePane` window that enables it to auto-hide.  
   
 ```  
 CMFCAutoHideButton* AddAutoHideWindow(
@@ -137,17 +152,17 @@ CMFCAutoHideButton* AddAutoHideWindow(
     DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `pAutoHideWnd`  
- A janela que você deseja ocultar.  
+ The window that you want to hide.  
   
  [in] `dwAlignment`  
- Um valor que especifica o alinhamento do botão Ocultar automaticamente com a janela do aplicativo.  
+ A value that specifies the alignment of the auto-hide button with the application window.  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
- O `dwAlignment` parâmetro indica onde o botão Ocultar automaticamente reside no aplicativo. O parâmetro pode ser qualquer um dos seguintes valores:  
+### <a name="remarks"></a>Remarks  
+ The `dwAlignment` parameter indicates where the auto-hide button resides in the application. The parameter can be any one of the following values:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -157,18 +172,18 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -177,24 +192,24 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
  [in] `bHorz`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
- Constrói um objeto CMFCAutoHideBar.  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
+ Constructs a CMFCAutoHideBar object.  
   
 ```  
 CMFCAutoHideBar();
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -208,7 +223,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszClassName`  
  [in] `dwStyle`  
  [in] `rect`  
@@ -217,102 +232,102 @@ virtual BOOL Create(
  [in] `dwControlBarStyle`  
  [in] `pContext`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
- Retorna um ponteiro para a primeira janela de ocultar automaticamente no aplicativo.  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
+ Returns a pointer to the first auto-hide window in the application.  
   
 ```  
 CDockablePane* GetFirstAHWindow();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A primeira janela de ocultar automaticamente no aplicativo, ou NULL se não houver um.  
+### <a name="return-value"></a>Return Value  
+ The first auto-hide window in the application, or NULL if there isn't one.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
- Obtém o número de botões de ocultar automaticamente visíveis.  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
+ Gets the number of visible auto-hide buttons.  
   
 ```  
 int GetVisibleCount();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna o número de botões de ocultar automaticamente visíveis.  
+### <a name="return-value"></a>Return Value  
+ Returns the number of visible auto-hide buttons.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
- O tempo de espera entre o momento em que o usuário coloca o cursor do mouse sobre um [CMFCAutoHideButton classe](../../mfc/reference/cmfcautohidebutton-class.md) e o momento em que a estrutura mostra a janela associada.  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
+ The time delay between the moment when the user places the mouse cursor over a [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md) and the moment when the framework shows the associated window.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Quando o usuário coloca o cursor do mouse sobre um `CMFCAutoHideButton`, há um pequeno atraso antes da estrutura exibe a janela associada. Esse parâmetro determina o comprimento desse atraso em milissegundos.  
+### <a name="remarks"></a>Remarks  
+ When the user places the mouse cursor over a `CMFCAutoHideButton`, there is a slight delay before the framework displays the associated window. This parameter determines the length of that delay in milliseconds.  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `CPoint`  
   
-### <a name="return-value"></a>Valor de retorno  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
- Remove e destrói a janela de ocultar automaticamente.  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
+ Removes and destroys the auto-hide window.  
   
 ```  
     BOOL RemoveAutoHideWindow(CDockablePane* pAutoHideWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- CDockablePane *`pAutoHideWnd`  
- A janela de ocultar automaticamente para remover.  
+### <a name="parameters"></a>Parameters  
+ CDockablePane* `pAutoHideWnd`  
+ The auto-hide window to remove.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se for bem-sucedida; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
- Sinaliza uma barra de ocultar automaticamente como ativa.  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
+ Flags an auto-hide bar as active.  
   
 ```  
 virtual void SetActiveInGroup(BOOL bActive);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- [in] BOOL`bActive`  
- TRUE para definir como ativo; Caso contrário, FALSE.  
+### <a name="parameters"></a>Parameters  
+ [in] BOOL `bActive`  
+ TRUE to set to active; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
- Consulte [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
+### <a name="remarks"></a>Remarks  
+ See [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
 void SetRecentVisibleState(BOOL bState);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `bState`  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
- Mostra a janela de ocultar automaticamente.  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
+ Shows the auto-hide window.  
   
 ```  
 BOOL ShowAutoHideWindow(
@@ -321,21 +336,21 @@ BOOL ShowAutoHideWindow(
         BOOL bDelay);  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- [in] CDockablePane *`pAutoHideWnd`  
- [in] BOOL`bShow`  
- VERDADEIRO para mostrar a janela.  
+### <a name="parameters"></a>Parameters  
+ [in] CDockablePane* `pAutoHideWnd`  
+ [in] BOOL `bShow`  
+ TRUE to show the window.  
   
- [in] BOOL`bDelay`  
- Este parâmetro é ignorado.  
+ [in] BOOL `bDelay`  
+ This parameter is ignored.  
   
-### <a name="return-value"></a>Valor de retorno  
- TRUE se for bem-sucedida; Caso contrário, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
- Redimensiona a barra de ocultar automaticamente em seu estado recolhido para ajustar o `CMFCAutoHideButton` objeto.  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
+ Resizes the auto-hide bar in its collapsed state to fit the `CMFCAutoHideButton` object.  
   
 ```  
 virtual CSize StretchPane(
@@ -343,45 +358,45 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] `nLength`  
- O valor é usado na implementação base. Em implementações derivadas, use esse valor para indicar o tamanho do painel redimensionado.  
+ The value is unused in the base implementation. In derived implementations, use this value to indicate the length of the resized pane.  
   
  [in] `bVert`  
- O valor é usado na implementação base. Em implementações derivadas, use `TRUE` para manipular o caso em que a barra de ocultação automática é recolhida verticalmente, e `FALSE` para o caso em que a barra de ocultação automática é recolhida horizontalmente.  
+ The value is unused in the base implementation. In derived implementations, use `TRUE` to handle the case where the auto-hide bar is collapsed vertically, and `FALSE` for the case where the auto-hide bar is collapsed horizontally.  
   
-### <a name="return-value"></a>Valor de retorno  
- O tamanho resultante do painel redimensionado.  
+### <a name="return-value"></a>Return Value  
+ The resulting size of the resized pane.  
   
-### <a name="remarks"></a>Comentários  
- Classes derivadas podem substituir esse método para personalizar o comportamento.  
+### <a name="remarks"></a>Remarks  
+ Derived classes can override this method to customize the behavior.  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
- Desativa oculta automaticamente modo para um grupo de barras de ocultar automaticamente.  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
+ Disables auto-hide mode for a group of auto-hide bars.  
   
 ```  
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  [in] pFirstBarInGroup  
- Um ponteiro para a primeira barra de ocultar automaticamente no grupo.  
+ A pointer to the first auto-hide bar in the group.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
- Chamado pela estrutura quando a barra de ocultar automaticamente precisa ser redesenhado.  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
+ Called by the framework when the auto-hide bar needs to be redrawn.  
   
 ```  
 void UpdateVisibleState();
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CPane](../../mfc/reference/cpane-class.md)   
- [Classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)   
- [Classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)
+ [CPane Class](../../mfc/reference/cpane-class.md)   
+ [CAutoHideDockSite Class](../../mfc/reference/cautohidedocksite-class.md)   
+ [CMFCAutoHideButton Class](../../mfc/reference/cmfcautohidebutton-class.md)
 

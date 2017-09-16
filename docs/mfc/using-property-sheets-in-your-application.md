@@ -1,74 +1,92 @@
 ---
-title: "Usando folhas de propriedade no aplicativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método AddPage"
-  - "Classe CPropertyPage, estilos"
-  - "Método Create [C++], folhas de propriedade"
-  - "recursos da caixa de diálogo"
-  - "modelos de caixa de diálogo, folhas de propriedade"
-  - "Folhas de propriedade do método DoModal"
-  - "páginas de propriedade, folhas de propriedade"
-  - "folhas de propriedade, sobre folhas de propriedade"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando folhas de propriedade no aplicativo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para usar uma folha de propriedade em seu aplicativo, conclua as seguintes etapas:  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  Crie um recurso do modelo da caixa de diálogo para cada página de propriedades.  Tenha em mente que o usuário pode alternar de uma página para outra, assim que apresentam cada página tão consistentemente possível.  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     Os modelos da caixa de diálogo para todas as páginas não precisam ser o mesmo tamanho.  A estrutura usa o tamanho da maior página para determinar a quantidade de espaço a ser atribuído a folha de propriedade para as páginas de propriedades.  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     Quando você cria o recurso de modelo da caixa de diálogo para uma página de propriedades, você deve especificar os seguintes estilos na folha de propriedades propriedades da caixa de diálogo:  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   Defina a caixa de edição de **Legenda** na página de **Geral** o texto que você deseja aparecer na guia da página.  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   Defina a caixa de listagem de **Estilo** na página de **Estilos** a **Filho**.  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   Defina a caixa de listagem de **Borda** na página de **Estilos** a **Fino**.  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   Verifique se a caixa de seleção de **Titlebar** na página de **Estilos** está selecionada.  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   Verifique se a caixa de seleção de **Desabilitado** na página de **Mais Estilos** está selecionada.  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  Crie [CPropertyPage](../mfc/reference/cpropertypage-class.md)\- classe derivada que corresponde a cada modelo da caixa de diálogo da página de propriedades.  Consulte [Adicionando uma classe](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md).  Escolha `CPropertyPage` como a classe base.  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  Crie variáveis de membro para manter os valores dessa página de propriedades.  O processo para adicionar variáveis de membro a uma página de propriedades é exatamente igual ao adicionar variáveis de membro a uma caixa de diálogo, para uma página de propriedades é uma caixa de diálogo especializada.  Para obter mais informações, consulte [Definindo variáveis de membro para controles da caixa de diálogo](../mfc/defining-member-variables-for-dialog-controls.md).  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  Construir um objeto de [CPropertySheet](../mfc/reference/cpropertysheet-class.md) em seu código\-fonte.  Em geral, você constrói o objeto de `CPropertySheet` no manipulador para o comando que exibe a folha de propriedades.  Esse objeto representa a folha de propriedade inteira.  Se você criar uma folha de propriedades modal com a função de [DoModal](../Topic/CPropertySheet::DoModal.md) , a estrutura fornece três botões de comando por padrão: OK, cancel, e se aplica.  A estrutura não cria nenhum botão de comando para as folhas de propriedades modeless criadas com a função de [Crie](../Topic/CPropertySheet::Create.md) .  Você não precisa gerar uma classe de `CPropertySheet` a menos que você deseje que a adicionar outros controles \(como uma janela de visualização\) ou exibir uma folha de propriedade modeless.  Esta etapa é necessária para folhas de propriedades modeless porque não contêm nenhum controle padrão que podem ser usados para fechar a folha de propriedades.  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  Para cada página é adicionada à folha de propriedade, faça o seguinte:  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   Construir um objeto para cada `CPropertyPage`\- classe derivada que você criou anteriormente neste processo.  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   Chame [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) para cada página.  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     Normalmente, o objeto que cria `CPropertySheet` também cria os objetos de `CPropertyPage` nesta etapa.  No entanto, se você implementa `CPropertySheet`\- classe derivada, você pode inserir os objetos de `CPropertyPage` no objeto de `CPropertySheet` e chamar `AddPage` para cada página de `CPropertySheet`\- construtor de classe derivada.  `AddPage` adiciona o objeto de `CPropertyPage` à lista de folha de propriedade de páginas realmente mas não cria a janela para essa página.  Consequentemente, não é necessário esperar até a criação da janela de folha de propriedade para chamar `AddPage`; você pode chamar `AddPage` do construtor de folha de propriedades.  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     Por padrão, se uma folha de propriedade tem mais das guias que caberá em uma única linha de folha de propriedade, os guias empilharão em várias linhas.  Para desabilitar pilha, chame [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) com o parâmetro definido como **Falso**.  Você deve chamar `EnableStackedTabs` quando você cria a folha de propriedades.  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  Chame [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) ou [Crie](../Topic/CPropertySheet::Create.md) para exibir a folha de propriedades.  Chame `DoModal` para criar uma folha de propriedade como uma caixa de diálogo modal.  Chame **Criar** para criar a folha de propriedades como uma caixa de diálogo modeless.  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  Dados do Exchange entre páginas de propriedades e o proprietário da folha de propriedades.  Isso é explicado no artigo [Troca de dados](../mfc/exchanging-data.md).  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- Para obter um exemplo de como usar folhas de propriedades, consulte o exemplo [PROPDLG](../top/visual-cpp-samples.md)gerais de MFC.  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

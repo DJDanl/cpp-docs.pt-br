@@ -1,39 +1,57 @@
 ---
-title: "Comunicando-se com um controle de &#225;rvore | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comunicações, controles em árvore"
-  - "Classe CTreeCtrl, chamando funções de membro"
-  - "controles em árvore"
-  - "controles em árvore, comunicando com"
+title: Communicating with a Tree Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], communicating with
+- CTreeCtrl class [MFC], calling member functions
+- communications, tree controls
+- tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Comunicando-se com um controle de &#225;rvore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ab92bdc6b811f2590a66281e33c5e269df0f369
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você usa métodos diferentes chamando funções de membro em um objeto de [CTreeCtrl](../mfc/reference/ctreectrl-class.md) dependendo de como o objeto foi criado:  
+---
+# <a name="communicating-with-a-tree-control"></a>Communicating with a Tree Control
+You use different methods for calling member functions in a [CTreeCtrl](../mfc/reference/ctreectrl-class.md) object depending on how the object was created:  
   
--   Se o controle de árvore está em uma caixa de diálogo, use uma variável de membro do tipo `CTreeCtrl` que você criou na classe da caixa de diálogo.  
+-   If the tree control is in a dialog box, use a member variable of type `CTreeCtrl` that you create in the dialog box class.  
   
--   Se o controle de árvore é uma janela filho, use o objeto de `CTreeCtrl` \(ou o ponteiro\) que você usou para criar o objeto.  
+-   If the tree control is a child window, use the `CTreeCtrl` object (or pointer) you used to construct the object.  
   
--   Se você estiver usando um objeto de `CTreeView` , use a função [CTreeView::GetTreeCtrl](../Topic/CTreeView::GetTreeCtrl.md) para obter uma referência ao controle de árvore.  Você pode inicializar outra referência a esse valor ou atribuir o endereço da referência a um ponteiro de `CTreeCtrl` .  
+-   If you're using a `CTreeView` object, use the function [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) to get a reference to the tree control. You can initialize another reference with this value or assign the address of the reference to a `CTreeCtrl` pointer.  
   
-## Consulte também  
- [Usando CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

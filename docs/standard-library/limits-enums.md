@@ -1,5 +1,5 @@
 ---
-title: "Enumerações &lt;limits&gt; | Microsoft Docs"
+title: '&lt;limits&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 519cc2c696b5dcb67fed79fd04c3e7d66e7d0ad9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 29eb4488b4bfc3768145ca970fa21dbf0b6130a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlimitsgt-enums"></a>Enumerações &lt;limits&gt;
+# <a name="ltlimitsgt-enums"></a>&lt;limits&gt; enums
 |||  
 |-|-|  
 |[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|  
   
-##  <a name="float_denorm_style"></a> Enumeração float_denorm_style  
- A enumeração descreve os vários métodos que uma implementação pode escolher para representar um valor de ponto flutuante desnormalizado — um pequeno demais para ser representado como um valor normalizado:  
+##  <a name="float_denorm_style"></a>  float_denorm_style Enumeration  
+ The enumeration describes the various methods that an implementation can choose for representing a denormalized floating-point value — one too small to represent as a normalized value:  
   
 ```
 enum float_denorm_style {
@@ -34,20 +34,20 @@ enum float_denorm_style {
     denorm_present = 1    };
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A enumeração retornará:  
+### <a name="return-value"></a>Return Value  
+ The enumeration returns:  
   
-- **denorm_indeterminate** se a presença ou ausência de formas desnormalizadas não puder ser determinada no momento da conversão.  
+- **denorm_indeterminate** if the presence or absence of denormalized forms cannot be determined at translation time.  
   
-- **denorm_absent** se formas desnormalizadas estiverem ausentes.  
+- **denorm_absent** if denormalized forms are absent.  
   
-- **denorm_present** se formas desnormalizadas estiverem presentes.  
+- **denorm_present** if denormalized forms are present.  
   
-### <a name="example"></a>Exemplo  
-  Consulte [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) para ver um exemplo em que os valores da enumeração podem ser acessados.  
+### <a name="example"></a>Example  
+  See [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) for an example in which the values of this enumeration may be accessed.  
   
-##  <a name="float_round_style"></a> Enumeração float_round_style  
- A enumeração descreve os vários métodos que uma implementação pode escolher para fazer o arredondamento de um valor de ponto flutuante para um valor inteiro.  
+##  <a name="float_round_style"></a>  float_round_style Enumeration  
+ The enumeration describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
   
 ```
 enum float_round_style {    
@@ -58,23 +58,23 @@ enum float_round_style {
     round_toward_neg_infinity = 3    };
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- A enumeração retornará:  
+### <a name="return-value"></a>Return Value  
+ The enumeration returns:  
   
-- **round_indeterminate** se o método de arredondamento não puder ser determinado.  
+- **round_indeterminate** if the rounding method cannot be determined.  
   
-- **round_toward_zero** se o arredondamento for feito em direção a zero.  
+- **round_toward_zero** if the round toward zero.  
   
-- **round_to_nearest** se o arredondamento for feito para o inteiro mais próximo.  
+- **round_to_nearest** if the round to nearest integer.  
   
-- **round_toward_infinity** se o arredondamento for feito se distanciando de zero.  
+- **round_toward_infinity** if the round away from zero.  
   
-- **round_toward_neg_infinity** se o arredondamento for feito para o inteiro mais negativo.  
+- **round_toward_neg_infinity** if the round to more negative integer.  
   
-### <a name="example"></a>Exemplo  
-  Consulte [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) para ver um exemplo em que os valores da enumeração podem ser acessados.  
+### <a name="example"></a>Example  
+  See [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) for an example in which the values of this enumeration may be accessed.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<limits>](../standard-library/limits.md)
 
 

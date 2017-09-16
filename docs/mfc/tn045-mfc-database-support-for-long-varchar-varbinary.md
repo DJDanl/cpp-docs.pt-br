@@ -1,123 +1,147 @@
 ---
-title: "TN045: suporte a MFC/banco de dados para Varchar/Varbinary longo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN045"
-  - "tipo de dados Varbinary"
-  - "tipo de dados Varchar"
+title: 'TN045: MFC-Database Support for Long Varchar-Varbinary | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN045
+- Varbinary data type
+- Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN045: suporte a MFC/banco de dados para Varchar/Varbinary longo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24ceed47a8f963361ecfd6a8961ab961b59455d4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: MFC/Database Support for Long Varchar/Varbinary
 > [!NOTE]
->  A nota técnica a seguir não foi atualizada desde que ela foi incluída pela primeira vez na documentação online.  Como resultado, alguns procedimentos e tópicos podem estar incorretos ou expirados.  Para obter as informações mais recentes, é recomendável que você procure o tópico de interesse no índice de documentação online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Essa observação descreve como recuperar e enviar os tipos de dados ODBC **SQL\_LONGVARCHAR** e de **SQL\_LONGVARBINARY** usando as classes da base de dados de MFC.  
+ This note describes how to retrieve and send the ODBC **SQL_LONGVARCHAR** and **SQL_LONGVARBINARY** data types using the MFC database classes.  
   
-## Visão geral do suporte ao longo de Varchar\/Varbinary  
- Os tipos de dados ODBC **SQL\_LONG\_VARCHAR** e de **SQL\_LONGBINARY** \(mencionados aqui como colunas de dados\) demoradas podem manter grandes volumes de dados.  Há 3 modos que você pode tratar desses dados:  
+## <a name="overview-of-long-varcharvarbinary-support"></a>Overview of Long Varchar/Varbinary Support  
+ The ODBC **SQL_LONG_VARCHAR** and **SQL_LONGBINARY** data types (referred to here as long data columns) can hold huge amounts of data. There are 3 ways you can handle this data:  
   
--   Associá\-los a `CString`\/`CByteArray`.  
+-   Bind it to a `CString`/`CByteArray`.  
   
--   Associá\-lo a `CLongBinary`.  
+-   Bind it to a `CLongBinary`.  
   
--   O não associar de todo o e não o recuperar e não o enviar o valor de dados longo manualmente, independentemente das classes base de dados do.  
+-   Do not bind it at all and retrieve and send the long data value manually, independent of the database classes.  
   
- Cada um dos três métodos tem vantagens e desvantagens.  
+ Each of the three methods has advantages and disadvantages.  
   
- As colunas de dados de longa execução não há suporte para parâmetros a uma consulta.  Só há suporte para outputColumns.  
+ Long data columns are not supported for parameters to a query. They are only supported for outputColumns.  
   
-## Associando uma coluna de dados maior a um CString\/CByteArray  
- Vantagens:  
+## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>Binding a Long Data Column to a CString/CByteArray  
+ Advantages:  
   
- Essa abordagem é simples e compreender, você trabalha com classes familiares.  A estrutura fornece suporte de `CFormView` para `CString` com `DDX_Text`.  Você tem muitos da funcionalidade geral da cadeia de caracteres ou da coleção com as classes de `CString` e de `CByteArray` , e você pode controlar a quantidade de memória alocada localmente para conter o valor de dados.  A estrutura mantém uma cópia antiga de dados do campo durante **Editar** ou chamadas de função de `AddNew` , e a estrutura pode detectar automaticamente alterações nos dados.  
+ This approach is simple to understand, and you work with familiar classes. The framework provides `CFormView` support for `CString` with `DDX_Text`. You have lots of general string or collection functionality with the `CString` and `CByteArray` classes, and you can control the amount of memory allocated locally to hold the data value. The framework maintains an old copy of field data during **Edit** or `AddNew` function calls, and the framework can automatically detect changes to the data for you.  
   
 > [!NOTE]
->  Desde que `CString` é criado para funcionar em dados de caracteres, e `CByteArray` para trabalhar em dados binários, é recomendado que você coloque os dados de caractere \(**SQL\_LONGVARCHAR**\) em `CString`, e os dados binários \(**SQL\_LONGVARBINARY**\) em `CByteArray`.  
+>  Since `CString` is designed for working on character data, and `CByteArray` for working on binary data, it is recommended that you put the character data (**SQL_LONGVARCHAR**) into `CString`, and the binary data (**SQL_LONGVARBINARY**) into `CByteArray`.  
   
- As funções de RFX para `CString` e `CByteArray` têm um argumento adicional que permite substituir o tamanho padrão da memória alocada para conter o valor recuperado da coluna de dados.  Observe o argumento de nMaxLength nas declarações de função:  
+ The RFX functions for `CString` and `CByteArray` have an additional argument which lets you override the default size of allocated memory to hold the retrieved value for the data column. Note the nMaxLength argument in the following function declarations:  
   
 ```  
-void AFXAPI RFX_Text(CFieldExchange* pFX, const char *szName,  
-    CString& value, int nMaxLength = 255, int nColumnType =  
-    SQL_VARCHAR);  
-  
-void AFXAPI RFX_Binary(CFieldExchange* pFX, const char *szName,   
-    CByteArray& value,int nMaxLength = 255);  
+void AFXAPI RFX_Text(CFieldExchange* pFX,
+    const char *szName,  
+    CString& value,
+    int nMaxLength = 255,
+    int nColumnType = 
+    SQL_VARCHAR);
+
+ 
+void AFXAPI RFX_Binary(CFieldExchange* pFX,
+    const char *szName,   
+    CByteArray& value,
+    int nMaxLength = 255);
 ```  
   
- Se você recuperar dados de uma coluna longa em `CString` ou em `CByteArray`, a quantidade máxima de dados é retornada, por padrão, 255 bytes.  Qualquer coisa além disso é ignorado.  Nesse caso, a estrutura gerará a exceção **AFX\_SQL\_ERROR\_DATA\_TRUNCATED**.  Felizmente, você pode aumentar o nMaxLength explicitamente os valores maiores, até **MAXINT**.  
+ If you retrieve a long data column into a `CString` or `CByteArray`, the maximum returned amount of data is, by default, 255 bytes. Anything beyond this is ignored. In this case, the framework will throw the exception **AFX_SQL_ERROR_DATA_TRUNCATED**. Fortunately, you can explicitly increase nMaxLength to greater values, up to **MAXINT**.  
   
 > [!NOTE]
->  O valor de nMaxLength é usado por MFC para definir o buffer local da função de **SQLBindColumn** .  Este é o buffer local para armazenamento de dados e não afeta a verdade a quantidade de dados retornados pelo driver ODBC.  `RFX_Text` e `RFX_Binary` só fazem uma chamada usando **SQLFetch** para recuperar os dados do base de dados de back\-end.  Cada driver ODBC tem uma limitação diferente na quantidade de dados que podem ser retornadas em um único busca.  Esse limite pode ser muito menor que o valor definido no nMaxLength, nesse caso **AFX\_SQL\_ERROR\_DATA\_TRUNCATED** a exceção será lançada.  Nestas circunstâncias, alterne para usar `RFX_LongBinary` em vez de `RFX_Text` ou de `RFX_Binary` de forma que todos os dados podem ser recuperados.  
+>  The value of nMaxLength is used by MFC to set the local buffer of the **SQLBindColumn** function. This is the local buffer for storage of the data and does not actually affect the amount of data returned by the ODBC driver. `RFX_Text` and `RFX_Binary` only make one call using **SQLFetch** to retrieve the data from the back-end database. Each ODBC driver has a different limitation on the amount of data they can return in a single fetch. This limit may be much smaller than the value set in nMaxLength, in which case the exception **AFX_SQL_ERROR_DATA_TRUNCATED** will be thrown. Under these circumstances, switch to using `RFX_LongBinary` instead of `RFX_Text` or `RFX_Binary` so that all the data can be retrieved.  
   
- ClassWizard associará **SQL\_LONGVARCHAR** a `CString`, ou **SQL\_LONGVARBINARY** a `CByteArray` para você.  Se você desejar atribuir mais de 255 bytes em que você recupera a coluna de dados longa, você pode fornecer um valor explícito para o nMaxLength.  
+ ClassWizard will bind a **SQL_LONGVARCHAR** to a `CString`, or a **SQL_LONGVARBINARY** to a `CByteArray` for you. If you want to allocate more than 255 bytes into which you retrieve your long data column, you can then supply an explicit value for nMaxLength.  
   
- Quando uma coluna de dados longa for associada a `CString` ou a `CByteArray`, atualizando o trabalho de campo somente o mesmo de quando for associada a um SQL\_**VARCHAR** ou a SQL\_**VARBINARY**.  Durante **Editar**, o valor de dados está armazenado em cachê acionado e depois quando comparado **Atualizar** é chamado para detectar alterações no valor de dados e definir adequadamente os valores incorretos e nulos para a coluna.  
+ When a long data column is bound to a `CString` or `CByteArray`, updating the field works just the same as when it is bound to a SQL_**VARCHAR** or SQL_**VARBINARY**. During **Edit**, the data value is cached away and later compared when **Update** is called to detect changes to the data value and set the Dirty and Null values for the column appropriately.  
   
-## Associando uma coluna de dados maior a um CLongBinary  
- Se a coluna de dados longa pode conter mais bytes de **MAXINT** de dados, você deve considerar provavelmente recuperar\-la em `CLongBinary`.  
+## <a name="binding-a-long-data-column-to-a-clongbinary"></a>Binding a Long Data Column to a CLongBinary  
+ If your long data column may contain more **MAXINT** bytes of data, you should probably consider retrieving it into a `CLongBinary`.  
   
- Vantagens:  
+ Advantages:  
   
- Isso recupera uma coluna longa de dados inteira, até a memória disponível.  
+ This retrieves an entire long data column, up to available memory.  
   
- Desvantagens:  
+ Disadvantages:  
   
- Os dados são mantidos na memória.  Essa abordagem também é proibitivamente caro para grandes quantidades de dados.  Você deve chamar `SetFieldDirty` para que o membro de dados associados certifique\-se de que o campo está incluído em uma operação de **Atualizar** .  
+ The data is held in memory. This approach is also prohibitively expensive for very large amounts of data. You must call `SetFieldDirty` for the bound data member to ensure the field is included in an **Update** operation.  
   
- Se você recuperar colunas de dados longas em `CLongBinary`, as classes da base de dados verificarão o tamanho total da coluna de dados longa, então atribuem um segmento de memória de `HGLOBAL` grande o suficiente para guardará\-lo o valor de dados.  As classes de base de dados recuperam em todo o valor de dados em `HGLOBAL`atribuído.  
+ If you retrieve long data columns into a `CLongBinary`, the database classes will check the total size of the long data column, then allocate an `HGLOBAL` memory segment large enough to hold it the entire data value. The database classes then retrieve the entire data value into the allocated `HGLOBAL`.  
   
- Se a fonte de dados não pode retornar o tamanho estimado da coluna de dados longa, a estrutura gerará a exceção **AFX\_SQL\_ERROR\_SQL\_NO\_TOTAL**.  Se a tentativa para alocar `HGLOBAL` falhar, uma exceção padrão de memória será gerada.  
+ If the data source cannot return the expected size of the long data column, the framework will throw the exception **AFX_SQL_ERROR_SQL_NO_TOTAL**. If the attempt to allocate the `HGLOBAL` fails, a standard memory exception is thrown.  
   
- ClassWizard associará **SQL\_LONGVARCHAR** ou **SQL\_LONGVARBINARY** a `CLongBinary` para você.  `CLongBinary` selecione como a variável na caixa de diálogo da variável de membro adicionar.  ClassWizard irá adicionar uma chamada de `RFX_LongBinary` a sua chamada de `DoFieldExchange` e será incrementado o número total de campos associados.  
+ ClassWizard will bind an **SQL_LONGVARCHAR** or **SQL_LONGVARBINARY** to a `CLongBinary` for you. Select `CLongBinary` as the Variable Type in the Add Member Variable dialog. ClassWizard will then add an `RFX_LongBinary` call to your `DoFieldExchange` call and increment the total number of bound fields.  
   
- Para atualizar valores de dados longos da coluna, primeiramente certifique\-se que `HGLOBAL` atribuído é grande o suficiente para manter seus novos dados chamando **::GlobalSize** no membro de `m_hData` de `CLongBinary`.  Se for muito pequeno, liberar `HGLOBAL` e atribua um o tamanho apropriado.  `m_dwDataLength` em definido para refletir o novo tamanho.  
+ To update long data column values, first make sure the allocated `HGLOBAL` is large enough to hold your new data by calling **::GlobalSize** on the `m_hData` member of the `CLongBinary`. If it is too small, release the `HGLOBAL` and allocate one the appropriate size. Then set `m_dwDataLength` to reflect the new size.  
   
- Caso contrário, se `m_dwDataLength` é maior que o tamanho dos dados que você estiver substituindo, você poderá liberar e realocar `HGLOBAL`, ou deixe\-o atribuído.  Verifique indicar o número de bytes realmente usados em `m_dwDataLength`.  
+ Otherwise, if `m_dwDataLength` is larger than the size of the data you're replacing, you can either free and reallocate the `HGLOBAL`, or leave it allocated. Make sure to indicate the number of bytes actually used in `m_dwDataLength`.  
   
-## Como atualizar um CLongBinary funciona  
- Não é necessário entender como atualizar `CLongBinary` funciona, mas pode ser útil como um exemplo de como enviar valores de dados longos a uma fonte de dados, se você escolher o terceiro método, descrita abaixo.  
-  
-> [!NOTE]
->  Para que um campo de `CLongBinary` é incluído em uma atualização, você deve chamar explicitamente `SetFieldDirty` para o campo.  Se você fizer alguma alteração a um campo, definindo o incluir nulo, você deve chamar `SetFieldDirty`.  Você também deve chamar `SetFieldNull`, com o segundo parâmetro que é **Falso**, para marcar o campo como tendo um valor.  
-  
- Ao atualizar um campo de `CLongBinary` , o mecanismo de **DATA\_AT\_EXEC** ODBC do uso de classes base de dados do \(consulte a documentação do ODBC no argumento de rgbValue de **SQLSetPos** \).  Quando a estrutura prepara a inserção ou de atualização, em vez de aponte para `HGLOBAL` que contém os dados, *o endereço* de `CLongBinary` são definidos como *o valor* da coluna por vez, e o indicador de comprimento definido como **SQL\_DATA\_AT\_EXEC**.  Posteriormente, quando a instrução de atualização é enviada à fonte de dados, **SQLExecDirect** retornará **SQL\_NEED\_DATA**.  Isso alerta a estrutura que o valor do parâmetro para essa coluna é o endereço de `CLongBinary`.  A estrutura **SQLGetData** chama uma vez com um buffer pequeno, aguardando que o driver retornar o comprimento real dos dados.  Se o driver retorna o comprimento real de objeto binário grande \(BLOB\), o MFC o realoca tanto espaço quanto necessário para buscar o BLOB.  Se a fonte de dados retornar **SQL\_NO\_TOTAL**, indicando que não pode determinar o tamanho do BLOB, MFC criará blocos menores.  O tamanho inicial padrão é 64K, os blocos e subsequentes serão double o tamanho; por exemplo, o segundo será 128K, a terceira é 256K, e assim por diante.  O tamanho inicial é configurável.  
-  
-## Não se associando: Recuperar\/que envia dados diretamente de ODBC com SQLGetData  
- Com esse método você ignora completamente as classes da base de dados, e o negócio com a coluna de dados longa que você mesmo.  
-  
- Vantagens:  
-  
- Você pode armazenar em cachê dados em disco se necessário, ou decida dinamicamente a quantidade de dados a ser recuperado.  
-  
- Desvantagens:  
-  
- Não terá suporte de **Editar** ou de `AddNew` da estrutura, e você deve escrever o código você mesmo para executar a funcionalidade básica \(**Excluir** funciona apesar de, desde que não é uma operação de nível de coluna\).  
-  
- Nesse caso, a coluna longa de dados deve estar na lista de seleção do conjunto de registros, mas não deve ser associada pela estrutura.  Uma forma de fazer isso é fornecer sua própria instrução SQL por meio de `GetDefaultSQL` ou como o argumento de lpszSQL à função de `CRecordset`**Abrir** , e não associar a coluna adicional com uma chamada de função de RFX\_.  ODBC exige que os campos associados são exibidas à direita dos campos associados, o que adiciona suas coluna ou colunas desassociadas ao final da lista de seleção.  
+## <a name="how-updating-a-clongbinary-works"></a>How Updating a CLongBinary Works  
+ It is not necessary to understand how updating a `CLongBinary` works, but it may be useful as an example on how to send long data values to a data source, if you choose this third method, described below.  
   
 > [!NOTE]
->  Como a coluna de dados longa não é associada pela estrutura, as alterações feitas nele não serão manipuladas com chamadas de `CRecordset::Update` .  Você deve criar e enviar SQL necessário **INSERIR** e instruções de **ATUALIZAR** você mesmo.  
+>  In order for a `CLongBinary` field to be included in an update, you must explicitly call `SetFieldDirty` for the field. If you make any change to a field, including setting it Null, you must call `SetFieldDirty`. You must also call `SetFieldNull`, with the second parameter being **FALSE**, to mark the field as having a value.  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+ When updating a `CLongBinary` field, the database classes use ODBC's **DATA_AT_EXEC** mechanism (see ODBC documentation on **SQLSetPos**'s rgbValue argument). When the framework prepares the insert or update statement, instead of pointing to the `HGLOBAL` containing the data, the *address* of the `CLongBinary` is set as the *value* of the column instead, and the length indicator set to **SQL_DATA_AT_EXEC**. Later, when the update statement is sent to the data source, **SQLExecDirect** will return **SQL_NEED_DATA**. This alerts the framework that the value of the param for this column is actually the address of a `CLongBinary`. The framework calls **SQLGetData** once with a small buffer, expecting the driver to return the actual length of the data. If the driver returns the actual length of the binary large object (the BLOB), MFC reallocates as much space as necessary to fetch the BLOB. If the data source returns **SQL_NO_TOTAL**, indicating that it can't determine the size of the BLOB, MFC will create smaller blocks. The default initial size is 64K, and subsequent blocks will be double the size; for example, the second will be 128K, the third is 256K, and so on. The initial size is configurable.  
+  
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Not Binding: Retrieving/Sending Data Directly from ODBC with SQLGetData  
+ With this method you completely bypass the database classes, and deal with the long data column yourself.  
+  
+ Advantages:  
+  
+ You can cache data to disk if necessary, or decide dynamically how much data to retrieve.  
+  
+ Disadvantages:  
+  
+ You don't get the framework's **Edit** or `AddNew` support, and you must write code yourself to perform basic functionality (**Delete** does work though, since it is not a column level operation).  
+  
+ In this case, the long data column must be in the select list of the recordset, but should not be bound to by the framework. One way to do this is to supply your own SQL statement via `GetDefaultSQL` or as the lpszSQL argument to `CRecordset`'s **Open** function, and not bind the extra column with an RFX_ function call. ODBC requires that unbound fields appear to the right of bound fields, so add your unbound column or columns to the end of the select list.  
+  
+> [!NOTE]
+>  Because your long data column is not bound by the framework, changes to it will not be handled with `CRecordset::Update` calls. You must create and send the required SQL **INSERT** and **UPDATE** statements yourself.  
+  
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

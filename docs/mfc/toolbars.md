@@ -1,45 +1,63 @@
 ---
-title: "Barras de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barras de comando, Barras de ferramentas MFC"
-  - "barras de ferramentas [C++]"
+title: Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC]
+- command bars [MFC], MFC toolbars
 ms.assetid: c22ecc5b-a84c-4979-8d1a-8e3e71d5ce33
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Barras de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 645fe8448588aac0ad40192e9028cfe0002a4365
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A família da barra de ferramentas dos artigos descreve as barras de ferramentas MFC e como criar e usar.  
+---
+# <a name="toolbars"></a>Toolbars
+The toolbar family of articles describes MFC toolbars and how to create and use them.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Implementação da barra de ferramentas de MFC](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC toolbar implementation](../mfc/mfc-toolbar-implementation.md)  
   
--   [Conceitos básicos da barra de ferramentas](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Como atualizar objetos de interface do usuário \(habilitar\/botões da barra de ferramentas do\)](../mfc/how-to-update-user-interface-objects.md)  
+-   [How to Update User-Interface Objects (enable/disable toolbar buttons)](../mfc/how-to-update-user-interface-objects.md)  
   
--   As classes de [CToolBar](../mfc/reference/ctoolbar-class.md) e de [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [Amostra](../mfc/toolbar-sample-list.md)  
+-   [Sample](../mfc/toolbar-sample-list.md)  
   
- Para obter mais informações sobre as barras de ferramentas MFC, consulte o artigo Q232017, “HOWTO: Adicionar o texto para os botões da barra de ferramentas,” na Base de Dados de Conhecimento Microsoft em http:\/\/support.microsoft.com.  
+ For more information about MFC toolbars, see article Q232017, "HOWTO: Add Text to Toolbar Buttons," in the Microsoft Knowledge Base at http://support.microsoft.com.  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)   
- [Editor de Barra de Ferramentas](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Toolbar Editor](../windows/toolbar-editor.md)
+
+

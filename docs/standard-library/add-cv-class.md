@@ -1,5 +1,5 @@
 ---
-title: Classe add_cv | Microsoft Docs
+title: add_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_cv
 - type_traits/std::add_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
-ms.openlocfilehash: efa1d246eb793cb2d0a64347aa062e7ab908e7c4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8d36187e25e3b6d64a9455b6d88333e5c1eff000
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addcv-class"></a>Classe add_cv
-Cria o tipo const volátil do tipo.  
+# <a name="addcv-class"></a>add_cv Class
+Makes const volatile type from type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,16 +54,16 @@ template <class T>
 using add_cv_t = typename add_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
 *T*  
-O tipo a ser modificado.  
+The type to modify.  
   
-## <a name="remarks"></a>Comentários  
-Uma instância do tipo modificado `add_cv<T>` tem um typedef do membro `type` equivalente a *T* modificado por [add_volatile](../standard-library/add-volatile-class.md) e [add_const](../standard-library/add-const-class.md), a menos que *T* já tenha os qualificadores cv, seja uma referência ou uma função.  
+## <a name="remarks"></a>Remarks  
+An instance of the modified type `add_cv<T>` has a `type` member typedef equivalent to *T* modified by both [add_volatile](../standard-library/add-volatile-class.md) and [add_const](../standard-library/add-const-class.md), unless *T* already has the cv-qualifiers, is a reference, or is a function.  
   
-O tipo auxiliar `add_cv_t<T>` é um atalho para acessar o typedef `type` do membro `add_cv<T>`.
+The `add_cv_t<T>` helper type is a shortcut to access the `add_cv<T>` member typedef `type`.
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // add_cv.cpp
@@ -109,12 +108,12 @@ invoked volatile S.f()
 invoked const volatile S.f()  
 ```  
   
-## <a name="requirements"></a>Requisitos  
-**Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<type_traits>  
 **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [<type_traits>](../standard-library/type-traits.md)   
-[Classe remove_const](../standard-library/remove-const-class.md)   
-[Classe remove_volatile](../standard-library/remove-volatile-class.md)
+[remove_const Class](../standard-library/remove-const-class.md)   
+[remove_volatile Class](../standard-library/remove-volatile-class.md)
 

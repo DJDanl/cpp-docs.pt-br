@@ -1,5 +1,5 @@
 ---
-title: Struct char_traits | Microsoft Docs
+title: char_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iosfwd/std::char_traits
-- char_traits
 - string/std::char_traits::char_type
 - string/std::char_traits::int_type
 - string/std::char_traits::off_type
@@ -55,67 +54,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 558234b6411d3f2d10e84e3befda99084c7ca6d2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e4b0571c6e9ee43fbd4dac0712440dd7bf5103c4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraits-struct"></a>Struct char_traits
-A struct char_traits descreve os atributos associados a um caractere.  
+# <a name="chartraits-struct"></a>char_traits Struct
+The char_traits struct describes attributes associated with a character.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 struct char_traits;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- O tipo de dados do elemento.  
+ The element data type.  
   
-## <a name="remarks"></a>Comentários  
- A struct de modelo descreve várias características de caractere para o tipo **CharType**. A classe de modelo [basic_string](../standard-library/basic-string-class.md), bem como várias classes de modelo iostream, incluindo [basic_ios](../standard-library/basic-ios-class.md), usam essas informações para manipular elementos do tipo **CharType**. Esse tipo de elemento não deve exigir construção ou destruição explícita. Ele deve fornecer um construtor padrão, um construtor de cópia e um operador de atribuição com a semântica esperada. Uma cópia bit a bit deve ter o mesmo efeito que uma atribuição. Nenhuma das funções membro da struct char_traits pode gerar exceções.  
+## <a name="remarks"></a>Remarks  
+ The template struct describes various character traits for type **CharType**. The template class [basic_string](../standard-library/basic-string-class.md) as well as several iostream template classes, including [basic_ios](../standard-library/basic-ios-class.md), use this information to manipulate elements of type **CharType**. Such an element type must not require explicit construction or destruction. It must supply a default constructor, a copy constructor, and an assignment operator, with the expected semantics. A bitwise copy must have the same effect as an assignment. None of the member functions of struct char_traits can throw exceptions.  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Um tipo de caractere.|  
-|[int_type](#int_type)|Um tipo de inteiro que pode representar um caractere do tipo `char_type` ou um caractere de EOF (final de arquivo).|  
-|[off_type](#off_type)|Um tipo de inteiro que pode representar compensações entre posições em um fluxo.|  
-|[pos_type](#pos_type)|Um tipo de inteiro que pode representar posições em um fluxo.|  
-|[state_type](#state_type)|Um tipo que representa o estado de conversão de caracteres multibyte em um fluxo.|  
+|[char_type](#char_type)|A type of character.|  
+|[int_type](#int_type)|An integer type that can represent a character of type `char_type` or an end-of-file (EOF) character.|  
+|[off_type](#off_type)|An integer type that can represent offsets between positions in a stream.|  
+|[pos_type](#pos_type)|An integer type that can represent positions in a stream.|  
+|[state_type](#state_type)|A type that represents the conversion state in for multibyte characters in a stream.|  
   
-### <a name="member-functions"></a>Funções membro  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[assign](#assign)|Atribui um valor de caractere a outro.|  
-|[compare](#compare)|Compara até um número especificado de caracteres em duas cadeias de caracteres.|  
-|[copy](#copy)|Copia um número especificado de caracteres de uma cadeia de caracteres para outra. Preterido. Use [char_traits::_Copy_s](#copy_s) em vez disso.|  
-|[_Copy_s](#copy_s)|Copia um número especificado de caracteres de uma cadeia de caracteres para outra.|  
-|[eof](#eof)|Retorna o caractere de EOF (final de arquivo).|  
-|[eq](#eq)|Testa se dois caracteres `char_type` são iguais.|  
-|[eq_int_type](#eq_int_type)|Testa se dois caracteres representados como `int_type`s são iguais.|  
-|[find](#find)|Pesquisa a primeira ocorrência de um caractere especificado em um intervalo de caracteres.|  
-|[length](#length)|Retorna o comprimento de uma cadeia de caracteres.|  
-|[lt](#lt)|Testa se um caractere é menor que outro.|  
-|[move](#move)|Copia um número especificado de caracteres em uma sequência para outra sequência possivelmente sobreposta. Preterido. Use [char_traits::_Move_s](#move_s) em vez disso.|  
-|[_Move_s](#move_s)|Copia um número especificado de caracteres em uma sequência para outra sequência possivelmente sobreposta.|  
-|[not_eof](#not_eof)|Testa se um caractere é o caractere EOF (final de arquivo).|  
-|[to_char_type](#to_char_type)|Converte um caractere `int_type` para o caractere `char_type` correspondente e retorna o resultado.|  
-|[to_int_type](#to_int_type)|Converte um caractere `char_type` para o caractere `int_type` correspondente e retorna o resultado.|  
+|[assign](#assign)|Assigns one character value to another.|  
+|[compare](#compare)|Compares up to a specified number of characters in two strings.|  
+|[copy](#copy)|Copies a specified number of characters from one string to another. Deprecated. Use [char_traits::_Copy_s](#copy_s) instead.|  
+|[_Copy_s](#copy_s)|Copies a specified number of characters from one string to another.|  
+|[eof](#eof)|Returns the end-of-file (EOF) character.|  
+|[eq](#eq)|Tests whether two `char_type` characters are equal.|  
+|[eq_int_type](#eq_int_type)|Tests whether two characters represented as `int_type`s are equal.|  
+|[find](#find)|Searches for the first occurrence of a specified character in a range of characters.|  
+|[length](#length)|Returns the length of a string.|  
+|[lt](#lt)|Tests whether one character is less than another.|  
+|[move](#move)|Copies a specified number of characters in a sequence to another, possible overlapping, sequence. Deprecated. Use [char_traits::_Move_s](#move_s) instead.|  
+|[_Move_s](#move_s)|Copies a specified number of characters in a sequence to another, possible overlapping, sequence.|  
+|[not_eof](#not_eof)|Tests whether a character is the end-of-file (EOF) character.|  
+|[to_char_type](#to_char_type)|Converts an `int_type` character to the corresponding `char_type` character and returns the result.|  
+|[to_int_type](#to_int_type)|Converts a `char_type` character to the corresponding `int_type` character and returns the result.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
  **Namespace:** std  
   
 ##  <a name="assign"></a>  char_traits::assign  
- Atribui um valor de caractere a outro ou para um intervalo de elementos em uma cadeia de caracteres.  
+ Assigns one character value to another or to a range of elements in a string.  
   
 ```  
 static void assign(char_type& _CharTo,
@@ -126,23 +125,23 @@ static char_type *assign(char_type* strTo,
     char_type _CharFrom);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  **_** *CharFrom*  
- O caractere cujo valor deve ser atribuído.  
+ The character whose value is to be assigned.  
   
  *_CharTo*  
- O elemento ao qual deve ser atribuído o valor de caractere.  
+ The element that is to be assigned the character value.  
   
  * strTo*  
- A matriz de caracteres ou cadeia de caracteres a cujos elementos iniciais devem ser atribuídos valores de caracteres.  
+ The string or character array whose initial elements are to be assigned character values.  
   
  `_Num`  
- O número de elementos aos quais serão atribuídos valores.  
+ The number of elements that are going to be assigned values.  
   
-### <a name="return-value"></a>Valor retornado  
- A segunda função membro retorna um ponteiro para a cadeia de caracteres a cujos primeiros `_Num` elementos foram atribuídos valores de *_CharFrom*.  
+### <a name="return-value"></a>Return Value  
+ The second member function returns a pointer to the string whose first `_Num` elements have been assigned values of *_CharFrom*.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_assign.cpp  
@@ -184,20 +183,20 @@ The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```  
   
 ##  <a name="char_type"></a>  char_traits::char_type  
- Um tipo de caractere.  
+ A type of character.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo é um sinônimo do parâmetro de modelo **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [copy](#copy) que demonstra como declarar e usar o `char_type`.  
+### <a name="example"></a>Example  
+  See the example for [copy](#copy) for an example of how to declare and use `char_type`.  
   
 ##  <a name="compare"></a>  char_traits::compare  
- Compara até um número especificado de caracteres em duas cadeias de caracteres.  
+ Compares up to a specified number of characters in two strings.  
   
 ```  
 static int compare(const char_type* str1,
@@ -205,25 +204,25 @@ static int compare(const char_type* str1,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  * str1*  
- A primeira das duas cadeias de caracteres a serem comparadas entre si.  
+ The first of two strings to be compared to each other.  
   
  * str2*  
- A segunda das duas cadeias de caracteres a serem comparadas entre si.  
+ The second of two strings to be compared to each other.  
   
  `_Num`  
- O número de elementos nas cadeias de caracteres a serem comparados.  
+ The number of elements in the strings to be compared.  
   
-### <a name="return-value"></a>Valor retornado  
- Um valor negativo se a primeira cadeia de caracteres for menor que a segunda cadeia de caracteres; 0 se as duas cadeias de caracteres forem iguais; ou um valor positivo se a primeira cadeia de caracteres for maior que a segunda cadeia de caracteres.  
+### <a name="return-value"></a>Return Value  
+ A negative value if the first string is less than the second string, 0 if the two strings are equal, or a positive value if the first string is greater than the second string.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre as cadeias de caracteres é feita por elemento, primeiro testando a igualdade e então, se um par de elementos na sequência tiver um teste não igual, eles são testados para menor que.  
+### <a name="remarks"></a>Remarks  
+ The comparison between the strings is made element by element, first testing for equality and then, if a pair of elements in the sequence tests not equal, they are tested for less than.  
   
- Se duas cadeias de caracteres comparem-se como iguais em um intervalo, mas uma for mais longa do que a outra, a mais curta das duas será menor que a mais longa.  
+ If two strings compare equal over a range but one is longer than the other, then the shorter of the two is less than the longer one.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_compare.cpp  
@@ -257,9 +256,9 @@ int main() {
 ```  
   
 ##  <a name="copy"></a>  char_traits::copy  
- Copia um número especificado de caracteres de uma cadeia de caracteres para outra.  
+ Copies a specified number of characters from one string to another.  
   
- Esse método pode não ser seguro, pois depende do chamador para verificar se os valores passados estão corretos. Considere usar [char_traits::_Copy_s](#copy_s) em vez disso.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct. Consider using [char_traits::_Copy_s](#copy_s) instead.  
   
 ```  
 static char_type *copy(char_type* _To,
@@ -267,23 +266,23 @@ static char_type *copy(char_type* _To,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_To`  
- O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `_From`  
- O elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `_Num`  
- O número de elementos a serem copiados.  
+ The number of elements to be copied.  
   
-### <a name="return-value"></a>Valor retornado  
- O primeiro elemento copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
+### <a name="return-value"></a>Return Value  
+ The first element copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>Comentários  
- As sequências de caracteres de origem e destino não devem se sobrepor.  
+### <a name="remarks"></a>Remarks  
+ The source and destination character sequences must not overlap.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_copy.cpp  
@@ -315,7 +314,7 @@ The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```  
   
 ##  <a name="copy_s"></a>  char_traits::_Copy_s  
- Copia um número especificado de caracteres de uma cadeia de caracteres para outra.  
+ Copies a specified number of characters from one string to another.  
   
 ```  
 static char_type *_Copy_s(
@@ -325,26 +324,26 @@ static char_type *_Copy_s(
     size_t count);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dest`  
- A matriz de caractere ou cadeia de caracteres de destino para receber a sequência de caracteres copiada.  
+ The string or character array targeted to receive the copied sequence of characters.  
   
  `dest_size`  
- O tamanho do `dest`. Se `char_type` for `char`, esse tamanho estará em bytes. Se `char_type` for `wchar_t`, esse tamanho estará em palavras.  
+ The size of `dest`. If `char_type` is `char`, then this size is in bytes. If `char_type` is `wchar_t`, then this size is in words.  
   
  `_From`  
- A matriz de caracteres ou cadeia de caracteres de origem a ser copiada.  
+ The source string or character array to be copied.  
   
  `count`  
- O número de elementos a serem copiados.  
+ The number of elements to be copied.  
   
-### <a name="return-value"></a>Valor retornado  
- A matriz de caractere ou cadeia de caracteres de destino para receber a sequência de caracteres copiada.  
+### <a name="return-value"></a>Return Value  
+ The string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>Comentários  
- As sequências de caracteres de origem e destino não devem se sobrepor.  
+### <a name="remarks"></a>Remarks  
+ The source and destination character sequences must not overlap.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits__Copy_s.cpp  
@@ -376,21 +375,21 @@ The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-ab
 ```  
   
 ##  <a name="eof"></a>  char_traits::eof  
- Retorna o caractere de EOF (final de arquivo).  
+ Returns the end-of-file (EOF) character.  
   
 ```  
 static int_type eof();
 ```  
   
-### <a name="return-value"></a>Valor retornado  
- O caractere EOF.  
+### <a name="return-value"></a>Return Value  
+ The EOF character.  
   
-### <a name="remarks"></a>Comentários  
- Um valor que representa o fim do arquivo (como `EOF` ou `WEOF`).  
+### <a name="remarks"></a>Remarks  
+ A value that represents end of file (such as `EOF` or `WEOF`).  
   
- Os padrão C++ determina que esse valor não deve corresponder a um valor `char_type` válido. O compilador do Visual C++ impõe essa restrição para o tipo `char`, mas não para o tipo `wchar_t`. O exemplo abaixo demonstra isso.  
+ The C++ standard states that this value must not correspond to a valid `char_type` value. The Visual C++ compiler enforces this constraint for type `char`, but not for type `wchar_t`. The example below demonstrates this.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eof.cpp  
@@ -424,23 +423,23 @@ The eof marker for char_traits<wchar_t> is: 65535
 ```  
   
 ##  <a name="eq"></a>  char_traits::eq  
- Testa se dois caracteres `char_type` são iguais.  
+ Tests whether two `char_type` characters are equal.  
   
 ```  
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- O primeiro de dois caracteres a serem testados quanto à igualdade.  
+ The first of two characters to be tested for equality.  
   
  `_Ch2`  
- O segundo de dois caracteres a serem testados quanto à igualdade.  
+ The second of two characters to be tested for equality.  
   
-### <a name="return-value"></a>Valor retornado  
- **true** se o primeiro caractere for igual ao segundo caractere; caso contrário **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is equal to the second character; otherwise **false**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eq.cpp  
@@ -481,23 +480,23 @@ The character ch1 is equal to the character ch3.
 ```  
   
 ##  <a name="eq_int_type"></a>  char_traits::eq_int_type  
- Testa se dois caracteres representados como `int_type`s são iguais ou não.  
+ Tests whether two characters represented as `int_type`s are equal or not.  
   
 ```  
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- O primeiro dos dois caracteres a serem testados quanto à igualdade como **int_type**s.  
+ The first of the two characters to be tested for equality as **int_type**s.  
   
  `_Ch2`  
- O segundo de dois caracteres a serem testados quanto à igualdade como `int_type`s.  
+ The second of the two characters to be tested for equality as `int_type`s.  
   
-### <a name="return-value"></a>Valor retornado  
- **true** se o primeiro caractere for igual ao segundo caractere; caso contrário **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is equal to the second character; otherwise **false**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_eq_int_type.cpp  
@@ -563,7 +562,7 @@ The int_type representation of character ch1
 ```  
   
 ##  <a name="find"></a>  char_traits::find  
- Pesquisa a primeira ocorrência de um caractere especificado em um intervalo de caracteres.  
+ Searches for the first occurrence of a specified character in a range of characters.  
   
 ```  
 static const char_type* find(const char_type* str,
@@ -571,20 +570,20 @@ static const char_type* find(const char_type* str,
     const char_type& _Ch);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `str`  
- O primeiro caractere na cadeia de caracteres a ser pesquisado.  
+ The first character in the string to be searched.  
   
  `_Num`  
- O número de posições, contando da primeira, no intervalo a ser pesquisado.  
+ The number of positions, counting from the first, in the range to be searched.  
   
  `_Ch`  
- O caractere a ser pesquisado no intervalo.  
+ The character to be searched for in the range.  
   
-### <a name="return-value"></a>Valor retornado  
- Um ponteiro para a primeira ocorrência do caractere especificado no intervalo se uma correspondência for encontrada; caso contrário, um ponteiro nulo.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first occurrence of the specified character in the range if a match is found; otherwise, a null pointer.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_find.cpp  
@@ -627,33 +626,33 @@ The result2 of the search is NULL.
 ```  
   
 ##  <a name="int_type"></a>  char_traits::int_type  
- Um tipo de inteiro que pode representar um caractere do tipo `char_type` ou um caractere de EOF (final de arquivo).  
+ An integer type that can represent a character of type `char_type` or an end-of-file (EOF) character.  
   
 ```  
 typedef long int_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Deve ser possível fazer a conversão de tipo de um valor do tipo **CharType** para `int_type` e, em seguida, de volta para **CharType** sem alterar o valor original.  
+### <a name="remarks"></a>Remarks  
+ It must be possible to type cast a value of type **CharType** to `int_type` then back to **CharType** without altering the original value.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [eq_int_type](#eq_int_type) para obter um exemplo de como declarar e usar `int_type`.  
+### <a name="example"></a>Example  
+  See the example for [eq_int_type](#eq_int_type) for an example of how to declare and use `int_type`.  
   
 ##  <a name="length"></a>  char_traits::length  
- Retorna o comprimento de uma cadeia de caracteres.  
+ Returns the length of a string.  
   
 ```  
 static size_t length(const char_type* str);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `str`  
- A cadeia de caracteres C cujo tamanho deve ser medido.  
+ The C-string whose length is to be measured.  
   
-### <a name="return-value"></a>Valor retornado  
- O número de elementos na sequência que está sendo medida, não incluindo o terminador nulo.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the sequence being measured, not including the null terminator.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_length.cpp  
@@ -680,23 +679,23 @@ The length of C-string str1 is: 5.
 ```  
   
 ##  <a name="lt"></a>  char_traits::lt  
- Testa se um caractere é menor que outro.  
+ Tests whether one character is less than another.  
   
 ```  
 static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch1`  
- O primeiro de dois caracteres a serem testados quanto a serem menores que.  
+ The first of two characters to be tested for less than.  
   
  `_Ch2`  
- O segundo de dois caracteres a serem testados quanto a serem menores que.  
+ The second of two characters to be tested for less than.  
   
-### <a name="return-value"></a>Valor retornado  
- **true** se o primeiro caractere for menor que o segundo caractere; caso contrário **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first character is less than the second character; otherwise **false**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_lt.cpp  
@@ -736,9 +735,9 @@ The character ch3 is not less than the character ch2.
 ```  
   
 ##  <a name="move"></a>  char_traits::move  
- Copia um número especificado de caracteres em uma sequência para outra sequência possivelmente sobreposta.  
+ Copies a specified number of characters in a sequence to another, possibly overlapping sequence.  
   
- Esse método pode não ser seguro, pois depende do chamador para verificar se os valores passados estão corretos. Considere usar [char_traits::_Move_s](#move_s) em vez disso.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct. Consider using [char_traits::_Move_s](#move_s) instead.  
   
 ```  
 static char_type *move(char_type* _To,
@@ -746,23 +745,23 @@ static char_type *move(char_type* _To,
     size_t _Num);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_To`  
- O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `_From`  
- O elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `_Num`  
- O número de elementos a serem copiados da cadeia de caracteres de origem.  
+ The number of elements to be copied from the source string.  
   
-### <a name="return-value"></a>Valor retornado  
- O primeiro elemento `_To` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
+### <a name="return-value"></a>Return Value  
+ The first element `_To` copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>Comentários  
- A origem e o destino podem se sobrepor.  
+### <a name="remarks"></a>Remarks  
+ The source and destination may overlap.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_move.cpp  
@@ -809,7 +808,7 @@ The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```  
   
 ##  <a name="move_s"></a>  char_traits::_Move_s  
- Copia um número especificado de caracteres em uma sequência para outra sequência possivelmente sobreposta.  
+ Copies a specified number of characters in a sequence to another, possibly overlapping sequence.  
   
 ```  
 static char_type *_Move_s(
@@ -819,26 +818,26 @@ static char_type *_Move_s(
     size_t count);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dest`  
- O elemento no início da matriz de cadeia de caracteres ou caractere direcionado para receber a sequência de caracteres copiada.  
+ The element at the beginning of the string or character array targeted to receive the copied sequence of characters.  
   
  `dest_size`  
- O tamanho do `dest`. Se `char_type` for `char`, então isso estará em bytes. Se `char_type` for `wchar_t`, então isso estará em palavras.  
+ The size of `dest`. If `char_type` is `char`, then this is in bytes. If `char_type` is `wchar_t`, then this is in words.  
   
  `_From`  
- O elemento no início da matriz de cadeia de caracteres ou caractere de origem a ser copiado.  
+ The element at the beginning of the source string or character array to be copied.  
   
  `count`  
- O número de elementos a serem copiados da cadeia de caracteres de origem.  
+ The number of elements to be copied from the source string.  
   
-### <a name="return-value"></a>Valor retornado  
- O primeiro elemento `dest` copiado para a matriz de caracteres ou cadeia de caracteres destinada a receber a sequência de caracteres copiada.  
+### <a name="return-value"></a>Return Value  
+ The first element `dest` copied into the string or character array targeted to receive the copied sequence of characters.  
   
-### <a name="remarks"></a>Comentários  
- A origem e o destino podem se sobrepor.  
+### <a name="remarks"></a>Remarks  
+ The source and destination may overlap.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits__Move_s.cpp  
@@ -885,22 +884,22 @@ The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) i
 ```  
   
 ##  <a name="not_eof"></a>  char_traits::not_eof  
- Testa se um caractere não é o caractere EOF (fim de arquivo) ou se é o EOF.  
+ Tests whether a character is not the end-of-file (EOF) character or is the EOF.  
   
 ```  
 static int_type not_eof(const int_type& _Ch);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- O caractere representado como um `int_type` a ser testado para determinar se ele é o caractere EOF ou não.  
+ The character represented as an `int_type` to be tested for whether it is the EOF character or not.  
   
-### <a name="return-value"></a>Valor retornado  
- A representação `int_type` do caractere testado, se o **int_type** do caractere não for igual ao do caractere EOF.  
+### <a name="return-value"></a>Return Value  
+ The `int_type` representation of the character tested, if the **int_type** of the character is not equal to that of the EOF character.  
   
- Se o valor `int_type` do caractere for igual ao valor do EOF `int_type`, então **false**.  
+ If the character `int_type` value is equal to the EOF `int_type` value, then **false**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_not_eof.cpp  
@@ -954,63 +953,63 @@ The eofTest2 indicates int2 is an EOF character.
 ```  
   
 ##  <a name="off_type"></a>  char_traits::off_type  
- Um tipo de inteiro que pode representar compensações entre posições em um fluxo.  
+ An integer type that can represent offsets between positions in a stream.  
   
 ```  
 typedef streamoff off_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo é um inteiro com sinal que descreve um objeto que pode armazenar um deslocamento de byte envolvido em várias operações de posicionamento de fluxo. Normalmente é um sinônimo de [streamoff](../standard-library/ios-typedefs.md#streamoff), mas tem essencialmente as mesmas propriedades que aquele tipo.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a byte offset involved in various stream positioning operations. It is typically a synonym for [streamoff](../standard-library/ios-typedefs.md#streamoff), but it has essentially the same properties as that type.  
   
 ##  <a name="pos_type"></a>  char_traits::pos_type  
- Um tipo de inteiro que pode representar posições em um fluxo.  
+ An integer type that can represent positions in a stream.  
   
 ```  
 typedef streampos pos_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode armazenar todas as informações necessárias para restaurar um indicador de posição de arquivo arbitrária dentro de um fluxo. Normalmente é um sinônimo de [streamoff](../standard-library/ios-typedefs.md#streampos), mas em qualquer caso tem essencialmente as mesmas propriedades que aquele tipo.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can store all the information needed to restore an arbitrary file-position indicator within a stream. It is typically a synonym for [streampos](../standard-library/ios-typedefs.md#streampos), but in any case it has essentially the same properties as that type.  
   
 ##  <a name="state_type"></a>  char_traits::state_type  
- Um tipo que representa o estado de conversão para caracteres multibyte em um fluxo.  
+ A type that represents the conversion state for multibyte characters in a stream.  
   
 ```  
 typedef implementation-defined state_type;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo descreve um objeto que pode representar o estado da conversão. Normalmente é um sinônimo de `mbstate_t`, mas em qualquer caso tem essencialmente as mesmas propriedades que aquele tipo.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can represent a conversion state. It is typically a synonym for `mbstate_t`, but in any case it has essentially the same properties as that type.  
   
 ##  <a name="to_char_type"></a>  char_traits::to_char_type  
- Converte um caractere `int_type` para o caractere `char_type` correspondente e retorna o resultado.  
+ Converts an `int_type` character to the corresponding `char_type` character and returns the result.  
   
 ```  
 static char_type to_char_type(const int_type& _Ch);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- O caractere `int_type` a ser representado como um `char_type`.  
+ The `int_type` character to be represented as a `char_type`.  
   
-### <a name="return-value"></a>Valor retornado  
- O caractere `char_type` que corresponde ao caractere `int_type`.  
+### <a name="return-value"></a>Return Value  
+ The `char_type` character corresponding to the `int_type` character.  
   
- Um valor de `_Ch` que não pode ser representado como tal produz um resultado não especificado.  
+ A value of `_Ch` that cannot be represented as such yields an unspecified result.  
   
-### <a name="remarks"></a>Comentários  
- As operações de conversão [to_int_type](#to_int_type) e `to_char_type` são o inverso umas das outras, de modo que:  
+### <a name="remarks"></a>Remarks  
+ The conversion operations [to_int_type](#to_int_type) and `to_char_type` are inverse to each other, so that:  
   
  `to_int_type` ( `to_char_type` ( *x* ) ) == *x*  
   
- para qualquer `int_type` *x* e  
+ for any `int_type` *x* and  
   
  `to_char_type` ( `to_int_type` ( *x* ) ) == *x*  
   
- para qualquer `char_type` *x*.  
+ for any `char_type` *x*.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_to_char_type.cpp  
@@ -1086,31 +1085,31 @@ The recovered char_type of ch2 is equal to the original ch2.
 ```  
   
 ##  <a name="to_int_type"></a>  char_traits::to_int_type  
- Converte um caractere `char_type` para o caractere `int_type` correspondente e retorna o resultado.  
+ Converts a `char_type` character to the corresponding `int_type` character and returns the result.  
   
 ```  
 static int_type to_int_type(const char_type& _Ch);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- O caractere `char_type` a ser representada como um `int_type`.  
+ The `char_type` character to be represented as an `int_type`.  
   
-### <a name="return-value"></a>Valor retornado  
- O caractere `int_type` que corresponde ao caractere `char_type`.  
+### <a name="return-value"></a>Return Value  
+ The `int_type` character corresponding to the `char_type` character.  
   
-### <a name="remarks"></a>Comentários  
- As operações de conversão `to_int_type` e [to_char_type](#to_char_type) são o inverso umas às outras, de modo que:  
+### <a name="remarks"></a>Remarks  
+ The conversion operations `to_int_type` and [to_char_type](#to_char_type) are inverse to each other, so that:  
   
  `to_int_type` ( `to_char_type` ( *x* ) ) == *x*  
   
- para qualquer `int_type` *x* e  
+ for any `int_type` *x*, and  
   
  `to_char_type` ( `to_int_type` ( *x* ) ) == *x*  
   
- para qualquer `char_type` *x*.  
+ for any `char_type` *x*.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // char_traits_to_int_type.cpp  
@@ -1184,7 +1183,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

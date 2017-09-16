@@ -1,5 +1,5 @@
 ---
-title: Classe gslice | Microsoft Docs
+title: gslice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- gslice
 - valarray/std::gslice
 - valarray/std::gslice::size
 - valarray/std::gslice::start
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gslice class
+- std::gslice [C++]
+- std::gslice [C++], size
+- std::gslice [C++], start
+- std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 caps.latest.revision: 21
 author: corob-msft
@@ -37,52 +39,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fa02312073af18591d25e31d465b268153b56784
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b3e42db53019cd891373285c9f8a36dfb540189
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="gslice-class"></a>Classe gslice
-Uma classe de utilitário para valarray que é usada para definir subconjuntos multidimensionais de um valarray. Se um valarray for considerado uma matriz multidimensional com todos os elementos em uma matriz, a fatia extrairá um vetor da matriz multidimensional.  
+# <a name="gslice-class"></a>gslice Class
+A utility class to valarray that is used to define multidimensional subsets of a valarray. If a valarray is regarded as a multidimensional matrix with all elements in an array, then the slice extracts a vector out of the multidimensional array.  
   
-## <a name="remarks"></a>Comentários  
- A classe armazena os parâmetros que caracterizam a um objeto do tipo [gslice_array](../standard-library/gslice-array-class.md). O subconjunto de um valarray é construído indiretamente quando um objeto da classe gslice aparece como um argumento para um objeto da classe [valarray](../standard-library/valarray-class.md#op_at)**\<Tipo>**. Os valores armazenados que especificam o subconjunto selecionado do valarray pai incluem:  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [gslice_array](../standard-library/gslice-array-class.md). The subset of a valarray is indirectly constructed when an object of class gslice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   Um índice inicial.  
+-   A starting index.  
   
--   Um vetor de tamanho da classe **valarray<size_t>**.  
+-   A length vector of class **valarray<size_t>**.  
   
--   Um vetor de distância da classe **valarray<size_t>**.  
+-   A stride vector of class **valarray<size_t>**.  
   
- Os dois vetores devem ter o mesmo tamanho.  
+ The two vectors must have the same length.  
   
- Se o conjunto definido por um gslice for o subconjunto de um valarray constante, o gslice será um novo valarray. Se o conjunto definido por um gslice for o subconjunto de um valarray não constante, o gslice terá semântica de referência ao valarray original. O mecanismo de avaliação para valarrays não constantes economiza tempo e memória.  
+ If the set defined by a gslice is the subset of a constant valarray, then the gslice is a new valarray. If the set defined by a gslice is the subset of a nonconstant valarray, then the gslice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- Operações em valarrays são garantidas somente se os subconjuntos de origem e de destino definidos pelos gslices forem diferentes e todos os índices forem válidos.  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the gslices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>Construtores  
-  
-|||  
-|-|-|  
-|[gslice](#gslice)|Define um subconjunto de um `valarray` que consiste em várias fatias do `valarray` que são iniciados todos em um elemento especificado.|  
-  
-### <a name="member-functions"></a>Funções membro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um `valarray`.|  
-|[start](#start)|Localiza o índice inicial de uma fatia geral de um `valarray`.|  
-|[stride](#stride)|Encontra a distância entre os elementos em uma fatia geral de um `valarray`.|  
+|[gslice](#gslice)|Defines a subset of a `valarray` that consists of multiple slices of the `valarray` that all start at a specified element.|  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<valarray>  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[size](#size)|Finds the array values specifying the numbers of elements in a general slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a general slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a general slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
  **Namespace:** std  
   
 ##  <a name="gslice"></a>  gslice::gslice  
- Uma classe de utilitário para valarray usada para definir fatias multidimensionais de um valarray.  
+ A utility class to valarray that is used to define multi-dimensional slices of a valarray.  
   
 ```  
 gslice();
@@ -93,23 +95,23 @@ gslice(
     const valarray<size_t>& _IncArray);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- O índice de valarray do primeiro elemento no subconjunto.  
+ The valarray index of the first element in the subset.  
   
  `_LenArray`  
- Uma matriz que especifica o número de elementos em cada fatia.  
+ An array specifying the number of elements in each slice.  
   
  `_IncArray`  
- Uma matriz que especifica a distância em cada fatia.  
+ An array specifying the stride in each slice.  
   
-### <a name="return-value"></a>Valor de retorno  
- O construtor padrão armazena zero para o índice inicial e vetores de comprimento zero para os vetores de comprimento e distância. O segundo construtor armazena `_StartIndex` para o índice inicial, `_LenArray` para a matriz de tamanho e `_IncArray` para a matriz de distância.  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zero for the starting index, and zero-length vectors for the length and stride vectors. The second constructor stores `_StartIndex` for the starting index, `_LenArray` for the length array, and `_IncArray` for the stride array.  
   
-### <a name="remarks"></a>Comentários  
- **gslice** define um subconjunto de um valarray que consiste em várias fatias do valarray, cada uma iniciada com o mesmo elemento especificado. A capacidade de usar matrizes para definir várias fatias é a única diferença entre `gslice` e [slice::slice](../standard-library/slice-class.md#slice). A primeira fatia tem um primeiro elemento com um índice de `_StartIndex`, um número de elementos especificado pelo primeiro elemento de `_LenArray` e uma distância fornecida pelo primeiro elemento de `_IncArray`. O conjunto seguinte de fatias ortogonais tem os primeiros elementos fornecidos pela primeira fatia. O segundo elemento de `_LenArray` especifica o número de elementos. A distância é fornecida pelo segundo elemento de `_IncArray`. Uma terceira dimensão de fatias usaria os elementos da matriz bidimensional como elementos iniciais e continuaria da mesma forma  
+### <a name="remarks"></a>Remarks  
+ **gslice** defines a subset of a valarray that consists of multiple slices of the valarray that each start at the same specified element. The ability to use arrays to define multiple slices is the only difference between `gslice` and [slice::slice](../standard-library/slice-class.md#slice). The first slice has a first element with an index of `_StartIndex`, a number of elements specified by the first element of `_LenArray`, and a stride given by the first element of `_IncArray`. The next set of orthogonal slices has first elements given by the first slice. The second element of `_LenArray` specifies the number of elements. The stride is given by the second element of `_IncArray`. A third dimension of slices would take the elements of the two-dimensional array as the starting elements and proceed analogously  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_ctor.cpp  
@@ -157,19 +159,19 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```  
   
 ##  <a name="size"></a>  gslice::size  
- Encontra os valores da matriz especificando os números dos elementos em uma fatia geral de um valarray.  
+ Finds the array values specifying the numbers of elements in a general slice of a valarray.  
   
 ```  
 valarray<size_t> size() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um valarray que especifica o número de elementos em cada fatia de uma fatia geral de um valarray.  
+### <a name="return-value"></a>Return Value  
+ A valarray specifying the number of elements in each slice of a general slice of a valarray.  
   
-### <a name="remarks"></a>Comentários  
- A função membro retorna os tamanhos armazenados das fatias.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored lengths of slices.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_size.cpp  
@@ -232,16 +234,16 @@ The size of vaResult is:
 ```  
   
 ##  <a name="start"></a>  gslice::start  
- Localiza o índice inicial de uma fatia geral de um valarray.  
+ Finds the starting index of a general slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- O índice inicial de uma fatia geral de um valarray.  
+### <a name="return-value"></a>Return Value  
+ The starting index of a general slice of a valarray.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_start.cpp  
@@ -293,16 +295,16 @@ The index of the first element of vaResult is: 0.
 ```  
   
 ##  <a name="stride"></a>  gslice::stride  
- Encontra a distância entre os elementos em uma fatia geral de um valarray.  
+ Finds the distance between elements in a general slice of a valarray.  
   
 ```  
 valarray<size_t> stride() const;
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Um valarray que especifica as distâncias entre os elementos em cada fatia de uma fatia geral de um valarray.  
+### <a name="return-value"></a>Return Value  
+ A valarray specifying the distances between elements in each slice of a general slice of a valarray.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_stride.cpp  
@@ -358,7 +360,7 @@ The strides of vaResult are:
  vaGSlice.stride ( ) = ( 7 4 ).  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

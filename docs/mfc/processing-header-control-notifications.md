@@ -1,36 +1,54 @@
 ---
-title: "Processando notifica&#231;&#245;es de controle do cabe&#231;alho | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CHeaderCtrl, processando notificações"
-  - "controles [MFC], cabeçalho"
-  - "notificações de controle de cabeçalho"
-  - "controles de cabeçalho, processando notificações"
-  - "notificações, processando para CHeaderCtrl"
+title: Processing Header-Control Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], processing notifications
+- controls [MFC], header
+- notifications [MFC], processing for CHeaderCtrl
+- header controls [MFC], processing notifications
+- header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Processando notifica&#231;&#245;es de controle do cabe&#231;alho
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: da13a2c3c352a7688242aa84c138dc1253b062a7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Na exibição ou a classe da caixa de diálogo, use a janela Propriedades para criar uma função de manipulador de [OnChildNotify](../Topic/CWnd::OnChildNotify.md) com uma instrução switch de todas as notificações de cabeçalho\- controle \(\)[CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md)você queira manipular [Mensagens de mapeamento a funções](../Topic/Mapping%20Messages%20to%20Functions.md)\(consulte\).  As notificações são enviadas para a janela pai quando o usuário clica em ou clique duas vezes em um item de cabeçalho, arraste um divisor entre itens, e assim por diante.  
+---
+# <a name="processing-header-control-notifications"></a>Processing Header-Control Notifications
+In your view or dialog class, use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement for any header-control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) notification messages you want to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)). Notifications are sent to the parent window when the user clicks or double-clicks a header item, drags a divider between items, and so on.  
   
- As notificações associadas a um controle de cabeçalho são listadas em [Referência de controle de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775239) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ The notification messages associated with a header control are listed in [Header Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb775239) in the Windows SDK.  
   
-## Consulte também  
- [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

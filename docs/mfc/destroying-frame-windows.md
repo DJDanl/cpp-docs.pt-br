@@ -1,48 +1,66 @@
 ---
-title: "Destruindo janelas com moldura | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PostNcDestroy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Default"
-  - "destruindo janelas com moldura"
-  - "Método DestroyWindow"
-  - "janelas de documento com moldura, destruindo"
-  - "janelas com moldura [C++], destruindo"
-  - "MFC [C++], janelas com moldura"
-  - "Método OnClose"
-  - "Método OnNcDestroy, e janelas com moldura"
-  - "Método PostNcDestroy"
-  - "janelas [C++], destruindo"
+title: Destroying Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PostNcDestroy
+dev_langs:
+- C++
+helpviewer_keywords:
+- Default method [MFC]
+- DestroyWindow method [MFC]
+- frame windows [MFC], destroying
+- OnNcDestroy method, and frame windows
+- document frame windows [MFC], destroying
+- destroying frame windows
+- MFC, frame windows
+- windows [MFC], destroying
+- OnClose method [MFC]
+- PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Destruindo janelas com moldura
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: afa6392a6cf1e3b6717a42bc577cfd4720370907
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A estrutura de MFC gerencia a destruição bem como a criação da janela para as janelas associadas com documentos e as exibições da estrutura.  Se você criar janelas adicionais, você é responsável por destrui\-las.  
+---
+# <a name="destroying-frame-windows"></a>Destroying Frame Windows
+The MFC framework manages window destruction as well as creation for those windows associated with framework documents and views. If you create additional windows, you are responsible for destroying them.  
   
- Na estrutura, quando o usuário fecha a janela do quadro, o manipulador padrão de [OnClose](../Topic/CWnd::OnClose.md) da janela chama [DestroyWindow](../Topic/CWnd::DestroyWindow.md).  A função de membro a última chamada quando a janela do windows é destruída é [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md), que faz qualquer limpeza, chama a função de membro de [Opção](../Topic/CWnd::Default.md) para executar a limpeza do windows, e chama alteração da função de membro virtual [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md).  A implementação de [CFrameWnd](../mfc/reference/cframewnd-class.md) de `PostNcDestroy` exclui o objeto da janela C\+\+.  Você nunca deve usar o operador C\+\+ **delete** em uma janela do quadro.  Use `DestroyWindow` em vez disso.  
+ In the framework, when the user closes the frame window, the window's default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). The last member function called when the Windows window is destroyed is [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), which does some cleanup, calls the [Default](../mfc/reference/cwnd-class.md#default) member function to perform Windows cleanup, and lastly calls the virtual member function [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). The [CFrameWnd](../mfc/reference/cframewnd-class.md) implementation of `PostNcDestroy` deletes the C++ window object. You should never use the C++ **delete** operator on a frame window. Use `DestroyWindow` instead.  
   
- Quando a janela principal fecha, o aplicativo será fechada.  Se houver documentos não salvas alterados, a estrutura exibe uma caixa de mensagem para perguntar se os documentos são salvos e garante que os documentos apropriadas estão salvos se necessário.  
+ When the main window closes, the application closes. If there are modified unsaved documents, the framework displays a message box to ask if the documents should be saved and ensures that the appropriate documents are saved if necessary.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Criando o windows do quadro do documento](../Topic/Creating%20Document%20Frame%20Windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## Consulte também  
- [Usando janelas com moldura](../Topic/Using%20Frame%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

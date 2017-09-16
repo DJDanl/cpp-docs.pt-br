@@ -1,5 +1,5 @@
 ---
-title: Estrutura DHtmlUrlEventMapEntry | Documentos do Microsoft
+title: DHtmlUrlEventMapEntry Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DHtmlUrlEventMapEntry structure
+- DHtmlUrlEventMapEntry structure [MFC]
 ms.assetid: 43117c1f-1a51-406c-aa2f-fea647080049
 caps.latest.revision: 10
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2932c4a6f9f4d4237da5afe2a8d77dac64496371
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191a1fdb998922860701a16353d0f20f12ceca1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dhtmlurleventmapentry-structure"></a>Estrutura DHtmlUrlEventMapEntry
-O `DHtmlUrlEventMapEntry` estrutura oferece suporte ao mapa de evento multi-URL.  
+# <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry Structure
+The `DHtmlUrlEventMapEntry` structure provides multi-URL event map support.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct DHtmlUrlEventMapEntry  
@@ -53,17 +53,17 @@ const DHtmlEventMapEntry *pEventMap;
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `szUrl`  
- A URL.  
+ The URL.  
   
  *pEventMap*  
- O mapa de evento associado à URL.  
+ The event map associated with the URL.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 

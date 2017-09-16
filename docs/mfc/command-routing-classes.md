@@ -1,40 +1,58 @@
 ---
-title: "Classes de roteamento do comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.command"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "roteamento de comando, Classes "
-  - "MFC, roteamento de comando"
+title: Command Routing Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.command
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de roteamento do comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27401c529be06eb473f3dc53c5e32ebfce13e726
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-à medida que o usuário interage com o aplicativo escolhendo menus ou botões da barra de controle com o mouse, as mensagens dos envios de aplicativo do objeto da interface do usuário afetado comando\- a um destino satisfatório objeto.  As classes de Comando\- destino derivadas de `CCmdTarget` incluem [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../Topic/CWnd%20Class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../Topic/CDocument%20Class.md), [CView](../Topic/CView%20Class.md), e as classes derivadas deless.  O roteamento automático de comando da suporte à estrutura de forma que os comandos possam ser tratados pela maioria objeto apropriado atualmente ativo no aplicativo.  
+---
+# <a name="command-routing-classes"></a>Command Routing Classes
+As the user interacts with the application by choosing menus or control-bar buttons with the mouse, the application sends messages from the affected user-interface object to an appropriate command-target object. Command-target classes derived from `CCmdTarget` include [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), and the classes derived from them. The framework supports automatic command routing so that commands can be handled by the most appropriate object currently active in the application.  
   
- Um objeto da classe `CCmdUI` é passado para manipuladores de interface de usuário do comando de atualização de seus destinos de comando \(\)[ON\_UPDATE\_COMMAND\_UI](../Topic/ON_UPDATE_COMMAND_UI.md)para permitir que você atualiza o estado da interface do usuário para um comando específico \(por exemplo, para verificar ou remover a verificação dos itens de menu\).  Você chamar funções de membro do objeto de `CCmdUI` para atualizar o estado do objeto da interface do usuário.  Esse processo é o mesmo que o objeto da interface do usuário associado a um comando específico é um item de menu ou botão ou ambos.  
+ An object of class `CCmdUI` is passed to your command targets' update command UI ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) handlers to allow you to update the state of the user interface for a particular command (for instance, to check or remove the check from menu items). You call member functions of the `CCmdUI` object to update the state of the UI object. This process is the same whether the UI object associated with a particular command is a menu item or a button or both.  
   
- [CCmdTarget](../Topic/CCmdTarget%20Class.md)  
- Serve como a classe base para todas as classes de objetos que podem receber e responder a mensagens do.  
+ [CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
+ Serves as the base class for all classes of objects that can receive and respond to messages.  
   
- [CCmdUI](../Topic/CCmdUI%20Class.md)  
- Fornece uma interface programática para atualizar objetos de interface do usuário como itens de menu ou botões da barra de controle.  O objeto de destino do comando habilitar, desabilitar, verifica, e\/ou limpa o objeto da interface do usuário com esse objeto.  
+ [CCmdUI](../mfc/reference/ccmdui-class.md)  
+ Provides a programmatic interface for updating user-interface objects such as menu items or control-bar buttons. The command target object enables, disables, checks, and/or clears the user-interface object with this object.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

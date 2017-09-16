@@ -1,5 +1,5 @@
 ---
-title: Adicionando uma classe do MFC | Documentos do Microsoft
+title: Adding an MFC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- classes [C++], adding MFC
+- classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
 caps.latest.revision: 13
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bf285131bf7acd7a6b0a14b564c5e53518a9979a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 84d060fc72afc8b4bfc76c6bb109f4bcbd3602e6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-class"></a>Adicionando uma classe do MFC
-Para adicionar classes derivadas de classes da biblioteca Microsoft Foundation Class (MFC) ao seu projeto, use o **Add Class** disponível no comando [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Especifique o nome da nova classe, selecione a classe base e selecione a ID da caixa de diálogo com a qual ele está associado (se houver). O Assistente de código cria um arquivo de cabeçalho e um arquivo de implementação e os adiciona ao seu projeto.  
+# <a name="adding-an-mfc-class"></a>Adding an MFC Class
+To add classes derived from Microsoft Foundation Class (MFC) library classes to your project, use the **Add Class** command available from [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Specify the name of the new class, select the base class, and select the ID of the dialog box with which it is associated (if any). The code wizard creates a header file and an implementation file and adds them to your project.  
   
 > [!NOTE]
->  Você pode adicionar classes MFC para um aplicativo COM ATL se você inicialmente [criou o aplicativo com suporte a MFC](../../atl/reference/mfc-support-in-atl-projects.md). Você também pode adicionar classes MFC para projetos do Win32 que têm suporte do MFC.  
+>  You can add MFC classes to an ATL COM application if you initially [created the application with MFC support](../../atl/reference/mfc-support-in-atl-projects.md). You can also add MFC classes to Win32 projects that have MFC support.  
   
-### <a name="to-add-an-mfc-class-to-your-project"></a>Para adicionar uma classe do MFC para seu projeto  
+### <a name="to-add-an-mfc-class-to-your-project"></a>To add an MFC class to your project  
   
-1.  No modo de exibição de classe, clique no nome do projeto. Clique em **adicionar** e, em seguida, clique em **Add Class** para abrir o [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo.  
+1.  From Class View, right-click the project name. Click **Add** and then click **Add Class** to open the [Add Class](../../ide/add-class-dialog-box.md) dialog box.  
   
-2.  No painel de modelos, selecione **classe do MFC** e pressione a **adicionar** botão.  
+2.  In the Templates pane, select **MFC Class** and press the **Add** button.  
   
-3.  Definir as configurações para a nova classe de [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md) caixa de diálogo.  
+3.  Define the settings for the new class in the [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md) dialog box.  
   
-4.  Clique em **concluir** para fechar o assistente e exibir a nova classe no modo de exibição de classe. Você também pode exibir os arquivos criados pelo assistente no **Solution Explorer**.  
+4.  Click **Finish** to close the wizard and view the new class in Class View. You can also view the files created by the wizard in **Solution Explorer**.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Visão geral da classe](../../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Class Overview](../../mfc/class-library-overview.md)
 
 

@@ -1,54 +1,72 @@
 ---
-title: "&#193;rea de Transfer&#234;ncia: usando a &#193;rea de Transfer&#234;ncia do Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Área de Transferência [C++], comandos"
-  - "Área de Transferência [C++], API da Área de Transferência do Windows"
-  - "Comandos da Área de Transferência"
-  - "Comandos da Área de Transferência, implementando"
-  - "comandos [C++], implementando Editar"
-  - "funções do manipulador de comando Recortar/Copiar e Colar"
-  - "funções de manipulador, Comandos Recortar/Copiar e Colar"
-  - "Área de Transferência do Windows [C++]"
+title: 'Clipboard: Using the Windows Clipboard | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard commands
+- Cut/Copy and Paste command handler functions [MFC]
+- handler functions, Cut/Copy and Paste commands
+- Clipboard [MFC], commands
+- commands [MFC], implementing Edit
+- Clipboard commands [MFC], implementing
+- Windows Clipboard [MFC]
+- Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# &#193;rea de Transfer&#234;ncia: usando a &#193;rea de Transfer&#234;ncia do Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12a35751354566d8d260734aea6f19f9f8a8cabb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este tópico descreve como usar a área de transferência padrão apis do windows em seu aplicativo MFC.  
+---
+# <a name="clipboard-using-the-windows-clipboard"></a>Clipboard: Using the Windows Clipboard
+This topic describes how to use the standard Windows Clipboard API within your MFC application.  
   
- A maioria dos aplicativos do windows oferecem suporte a dados recortar ou copiar para a área de transferência do windows e colar dados da área de transferência.  Os formatos de dados da área de transferência variam entre aplicativos.  A estrutura aceitar apenas um número limitado de formatos da área de transferência para um número limitado de classes.  Você implementará normalmente os comandos Área de transferência\- relacionados, copiar, — recortar e colar — no menu editar para sua exibição.  A biblioteca de classe define os IDs de comando para esses comandos: **ID\_EDIT\_CUT**, **ID\_EDIT\_COPY**, e **ID\_EDIT\_PASTE**.  A linha mensagem\- avisos também estiver definida.  
+ Most applications for Windows support cutting or copying data to the Windows Clipboard and pasting data from the Clipboard. The Clipboard data formats vary among applications. The framework supports only a limited number of Clipboard formats for a limited number of classes. You will normally implement the Clipboard-related commands — Cut, Copy, and Paste — on the Edit menu for your view. The class library defines the command IDs for these commands: **ID_EDIT_CUT**, **ID_EDIT_COPY**, and **ID_EDIT_PASTE**. Their message-line prompts are also defined.  
   
- [Mensagens e comandos na estrutura](../mfc/messages-and-commands-in-the-framework.md) explica como manipular comandos de menu em seu aplicativo mapeando o comando de menu a uma função de manipulador.  Como seu aplicativo não define o manipulador que as funções para a área de transferência comando no menu editar, ele permanecerá desabilitado.  Para escrever funções do manipulador para os comandos recortar e de cópia, implemente a seleção em seu aplicativo.  Para escrever uma função de manipulador para o comando de pasta, consulte a área de transferência para ver se contiver dados em um formato que seu aplicativo pode aceitar.  Por exemplo, para habilitar o comando de cópia, você pode gravar em um manipulador algo como:  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md) explains how to handle menu commands in your application by mapping the menu command to a handler function. As long as your application does not define handler functions for the Clipboard commands on the Edit menu, they remain disabled. To write handler functions for the Cut and Copy commands, implement selection in your application. To write a handler function for the Paste command, query the Clipboard to see whether it contains data in a format your application can accept. For example, to enable the Copy command, you might write a handler something like the following:  
   
- [!CODE [NVC_MFCListView#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#2)]  
+ [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]  
   
- Os comandos recortar, copiar e, na pasta só são úteis em determinados contextos.  Os comandos recortar e de cópia deve ser habilitado apenas quando algo está selecionado e, o comando da pasta somente quando algo está na área de transferência.  Você pode fornecer este comportamento definindo as funções de manipulador de atualização que habilitam ou desabilitam esses comandos dependendo do contexto.  Para obter mais informações, consulte [Como atualizar objetos de interface do usuário](../mfc/how-to-update-user-interface-objects.md).  
+ The Cut, Copy, and Paste commands are only meaningful in certain contexts. The Cut and Copy commands should be enabled only when something is selected, and the Paste command only when something is in the Clipboard. You can provide this behavior by defining update handler functions that enable or disable these commands depending on the context. For more information, see [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md).  
   
- A biblioteca de classes do Microsoft fornece suporte da área de transferência para a edição de texto com as classes de `CEdit` e de `CEditView` .  As classes com OLE DB também simplificam implementar as operações da área de transferência que envolvem itens com OLE DB.  Para obter mais informações sobre classes OLE, consulte [Área de transferência: Usando o mecanismo OLE da área de transferência](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
+ The Microsoft Foundation Class Library does provide Clipboard support for text editing with the `CEdit` and `CEditView` classes. The OLE classes also simplify implementing Clipboard operations that involve OLE items. For more information on the OLE classes, see [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
   
- Implementar outros comandos de menu editar, como desfazer \(**ID\_EDIT\_UNDO**\) e refazer \(**ID\_EDIT\_REDO**\), será deixado também.  Se seu aplicativo não oferece suporte a esses comandos, você pode facilmente excluí\-los do arquivo de recursos usando os editores de recursos do Visual C\+\+.  
+ Implementing other Edit menu commands, such as Undo (**ID_EDIT_UNDO**) and Redo (**ID_EDIT_REDO**), is also left to you. If your application does not support these commands, you can easily delete them from your resource file using the Visual C++ resource editors.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copiando e colando dados](../Topic/Clipboard:%20Copying%20and%20Pasting%20Data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Usando o mecanismo OLE da área de transferência](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
-## Consulte também  
- [Área de Transferência](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

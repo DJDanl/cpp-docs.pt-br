@@ -1,53 +1,71 @@
 ---
-title: "Modelos de documento e o processo de cria&#231;&#227;o de documento/exibi&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CDocTemplate"
-  - "modelos de documento, e exibições"
-  - "arquitetura de documento/exibição, criando documento/exibição"
-  - "ícones, para vários modelos de documento"
-  - "MFC, modelos de documento"
-  - "vários modelos de documento"
-  - "único modelo de documento"
-  - "modelos, modelos de documento"
+title: Document Templates and the Document-View Creation Process | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- icons, for multiple document templates
+- document templates [MFC], and views
+- document/view architecture [MFC], creating document/view
+- single document template
+- MFC, document templates
+- multiple document template
+- CDocTemplate class [MFC]
+- templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Modelos de documento e o processo de cria&#231;&#227;o de documento/exibi&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9df24e536d134962d189ed45a869bf793ae7b0a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para gerenciar o processo complexo de criar documentos com as exibições e janelas associadas do quadro, usa dois da estrutura documentam classes de modelo: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) para aplicativos de SDI e [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) para aplicativos MDI.  `CSingleDocTemplate` pode criar e armazenar um documento de um tipo de cada vez.  `CMultiDocTemplate` mantém uma lista de vários documentos abertos de um tipo.  
+---
+# <a name="document-templates-and-the-documentview-creation-process"></a>Document Templates and the Document/View Creation Process
+To manage the complex process of creating documents with their associated views and frame windows, the framework uses two document template classes: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) for SDI applications and [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for MDI applications. A `CSingleDocTemplate` can create and store one document of one type at a time. A `CMultiDocTemplate` keeps a list of many open documents of one type.  
   
- Alguns aplicativos dão suporte a vários tipos de documento.  Por exemplo, um aplicativo pode oferecer suporte a documentos de texto e documentos de gráficos.  Nesse aplicativo, quando o usuário escolha o novo comando no menu arquivo, mostra quais de uma caixa de diálogo uma lista de documento novo possível digitar para abrir o.  Para cada tipo de documento com suporte, o aplicativo usa um objeto distinto de modelo de documento.  A figura a seguir ilustra a configuração de um aplicativo MDI que o da suporte a dois tipos de documento e mostra a vários documentos abertos.  
+ Some applications support multiple document types. For example, an application might support text documents and graphics documents. In such an application, when the user chooses the New command on the File menu, a dialog box shows a list of possible new document types to open. For each supported document type, the application uses a distinct document template object. The following figure illustrates the configuration of an MDI application that supports two document types and shows several open documents.  
   
- ![Com 2 tipos de aplicativo MDI](../mfc/media/vc387h1.png "vc387H1")  
-Um aplicativo MDI com dois tipos de documento  
+ ![MDI application that has two document types](../mfc/media/vc387h1.gif "vc387h1")  
+An MDI Application with Two Document Types  
   
- Os modelos do documento são criados e mantidos pelo objeto do aplicativo.  Uma das tarefas principais executadas durante a função de `InitInstance` de seu aplicativo for construir um ou mais modelos do documento de tipo apropriado.  Esse recurso é descrito em [Criação de modelo de documento](../Topic/Document%20Template%20Creation.md).  O objeto do aplicativo armazena um ponteiro para cada modelo de documento em sua lista de modelo e fornece uma interface para adicionar modelos do documento.  
+ Document templates are created and maintained by the application object. One of the key tasks performed during your application's `InitInstance` function is to construct one or more document templates of the appropriate kind. This feature is described in [Document Template Creation](../mfc/document-template-creation.md). The application object stores a pointer to each document template in its template list and provides an interface for adding document templates.  
   
- Se precisar dar suporte a dois ou mais tipos de documento, você deve adicionar uma chamada adicional a [AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md) para cada tipo de documento.  
+ If you need to support two or more document types, you must add an extra call to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) for each document type.  
   
- Um ícone é registrado para cada modelo de documento com base em sua posição na lista de aplicativos de modelos do documento.  A ordem dos modelos do documento é determinada pela ordem em que são adicionados com chamadas a `AddDocTemplate`.  O MFC supõe que o primeiro recurso do ícone no aplicativo é o ícone de aplicativo, o próximo recurso de ícone é o primeiro ícone de documento, e assim por diante.  
+ An icon is registered for each document template based on its position in the application's list of document templates. The order of the document templates is determined by the order they are added with calls to `AddDocTemplate`. MFC assumes that the first Icon resource in the application is the application icon, the next Icon resource is the first document icon, and so on.  
   
- Por exemplo, um modelo de documento é a terceira de três para o aplicativo.  Se houver um recurso do ícone no aplicativo no índice 3, esse ícone é usado para o modelo de documento.  Caso contrário, o ícone no índice 0 é usado como padrão.  
+ For example, a document template is the third of three for the application. If there is an Icon resource in the application at index 3, that icon is used for the document template. If not, the icon at index 0 is used as a default.  
   
-## Consulte também  
- [Tópicos MFC gerais](../mfc/general-mfc-topics.md)   
- [Criação do modelo de documento](../Topic/Document%20Template%20Creation.md)   
- [Criação de documento\/exibição](../mfc/document-view-creation.md)   
- [Relacionamentos entre objetos MFC](../mfc/relationships-among-mfc-objects.md)   
- [Criando novos documentos, janelas e exibições](../Topic/Creating%20New%20Documents,%20Windows,%20and%20Views.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Criando um aplicativo MFC com base em formulários | Documentos do Microsoft"
+title: Creating a Forms-Based MFC Application | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], forms-based
-- forms-based applications
+- forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 caps.latest.revision: 12
 author: mikeblome
@@ -34,59 +34,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b95d52f5ecf97f43bd21dd0f2a8c4fd478431ce3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23cd8d4c90f9d2e5dfc7cc63e622123b31305c4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-a-forms-based-mfc-application"></a>Criando um aplicativo MFC com base em formulários
-Um formulário é uma caixa de diálogo com controles que permitem que um usuário acessar e possivelmente alterar dados. Você talvez queira desenvolver um aplicativo em que o usuário seleciona de uma seleção de formulários. Normalmente, um aplicativo baseado em formulários permite que os formulários de acesso do usuário por clique **novo** do **arquivo** menu. Um aplicativo baseado em diálogo, que não dão aos usuários acesso a uma **novo** opção o **arquivo** menu, também é considerado um aplicativo baseado em formulários.  
+# <a name="creating-a-forms-based-mfc-application"></a>Creating a Forms-Based MFC Application
+A form is a dialog box with controls that let a user access and possibly change data. You may want to develop an application in which the user selects from a selection of forms. Commonly, a forms-based application lets the user access forms by click **New** from the **File** menu. A dialog-based application, which does not give users access to a **New** option in the **File** menu, is also considered a forms-based application.  
   
- Uma interface de documento único (SDI), aplicativos com base em formulários permite que apenas uma instância de um formulário para ser executado em um momento específico. É possível executar diferentes formas ao mesmo tempo em um aplicativo baseado em formulários de SDI selecionando um novo formulário do **novo** opção o **arquivo** menu.  
+ A single document interface (SDI), forms-based application allows only one instance of a particular form to run at a time. It is possible to run different forms at the same time from an SDI forms-based application by selecting a new form from the **New** option in the **File** menu.  
   
- Se você criar uma interface de documentos múltiplos (MDI), aplicativos baseados em formulários, o aplicativo poderá ser capaz de dar suporte a várias instâncias do mesmo formulário.  
+ If you create a multiple document interface (MDI), forms-based application, the application will be able to support multiple instances of the same form.  
   
- Se você criar um aplicativo com suporte a vários documentos de nível superior, a área de trabalho é o pai implícito para o documento e o quadro do documento não está restrito a área do cliente do aplicativo. Você pode abrir várias instâncias do documento, cada um com seu próprio quadro, o menu e o ícone da barra de tarefas. Você pode fechar instâncias subsequentes de documentos individualmente, mas se você selecionar o `Exit` opção o **arquivo** menu da instância inicial, o aplicativo fecha todas as instâncias.  
+ If you create an application with multiple top-level document support, the desktop is the implicit parent for the document and the document's frame is not restricted to the client area of the application. You can open multiple instances of the document, each with its own frame, menu, and task bar icon. You can close subsequent instances of documents individually, but if you select the `Exit` option from the **File** menu of the initial instance, the application closes all instances.  
   
- SDI e MDI vários aplicativos de nível superior do documento são todos os formulários com base em e usam a arquitetura de exibição de documentos.  
+ SDI, MDI, and multiple top-level document applications are all forms based and use the document/view architecture.  
   
- Qualquer aplicativo baseado em diálogo, por definição, é baseada em formulários. Um aplicativo baseado em diálogo não usa a arquitetura de documento/exibição, portanto, você deve gerenciar os métodos de criação e o acesso para seus próprios formulários adicionais.  
+ Any dialog-based application, by definition, is forms based. A dialog-based application does not use the document/view architecture, so you must manage the creation and access methods for your own additional forms.  
   
- A classe base para aplicativos baseados em formulário é [CFormView](../../mfc/reference/cformview-class.md). Se seu aplicativo tiver suporte do banco de dados, você também pode selecionar qualquer classe que deriva de `CFormView`. Um formulário é derivada de qualquer janela de `CFormView` ou de qualquer classe que herda de `CFormView`.  
+ The base class for form-based applications is [CFormView](../../mfc/reference/cformview-class.md). If your application has database support, then you can also select any class that derives from `CFormView`. A form is any window derived from `CFormView` or from any class that inherits from `CFormView`.  
   
- Mesmo se você usar uma classe base, como [CView](../../mfc/reference/cview-class.md), você posteriormente pode tornar seus aplicativos baseados em formulários, [adicionando uma classe do MFC](../../mfc/reference/adding-an-mfc-class.md) derivado de `CFormView` e verificando o **DocTemplate gerar recursos** caixa de seleção o [MFC Class Wizard](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
+ Even if you use a base class such as [CView](../../mfc/reference/cview-class.md), you can later make your applications forms-based by [adding an MFC class](../../mfc/reference/adding-an-mfc-class.md) derived from `CFormView` and checking the **Generate DocTemplate resources** checkbox in the [MFC Class Wizard](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
- Depois que você concluir o assistente, o projeto é aberto, e se você selecionou `CFormView` (ou uma classe que herda de `CFormView`) como sua classe base ou se você criou um aplicativo baseado em diálogo, Visual C++ abre o editor de caixa de diálogo. Neste ponto, você está pronto para criar o primeiro formulário.  
+ Once you finish with the wizard, your project opens, and if you selected `CFormView` (or a class that inherits from `CFormView`) as your base class or if you created a dialog-based application, Visual C++ opens the dialog editor. At this point, you are ready to design your first form.  
   
-### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Para começar a criar um executável MFC baseada em formulários  
+### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>To begin creating a forms-based MFC executable  
   
-1.  Siga as instruções na [criando um aplicativo MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  No Assistente de aplicativo MFC [tipo de aplicativo](../../mfc/reference/application-type-mfc-application-wizard.md) página, selecione o **suporte para a arquitetura de documento/exibição** caixa de seleção.  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **Document/view architecture support** check box.  
   
-3.  Selecione **único documento**, **vários documentos**, ou **vários documentos de nível superior**.  
+3.  Select **Single document**, **Multiple documents**, or **Multiple top-level documents**.  
   
     > [!NOTE]
-    >  Se você escolheu um SDI, MDI ou vários aplicativo de interface de nível superior do documento, por padrão, `CView` é definido como a classe base para o modo de exibição do aplicativo no [Classes geradas](../../mfc/reference/generated-classes-mfc-application-wizard.md) página do assistente. Para criar um aplicativo baseado em formulários, você deve selecionar `CFormView` como a classe base para o modo de exibição do aplicativo. Observe que o assistente não fornece nenhum suporte de impressão para um aplicativo baseado em formulários.  
+    >  If you chose a SDI, MDI, or multiple top-level document interface application, by default, `CView` is set as the base class for your application's view in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a forms-based application, you must select `CFormView` as the base class for the application's view. Note that the wizard provides no printing support for a forms-based application.  
   
-4.  Defina quaisquer opções de projeto que você deseja em outras páginas do assistente.  
+4.  Set any other project options you want on the other pages of the wizard.  
   
-5.  Clique em **concluir** para gerar o aplicativo de esqueleto.  
+5.  Click **Finish** to generate the skeleton application.  
   
- Para obter mais informações, consulte:  
+ For more information, see:  
   
--   [Classes de exibição derivadas](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [Alternativas à arquitetura de documento/exibição](../../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to the Document/View Architecture](../../mfc/alternatives-to-the-document-view-architecture.md)  
   
--   [Opções de Design de aplicativo](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de aplicativo MFC](../../mfc/reference/mfc-application-wizard.md)   
- [Modos de exibição de formulário](../../mfc/form-views-mfc.md)   
- [Criando um aplicativo MFC no estilo do Explorer arquivo](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
- [Criando um aplicativo MFC no estilo de navegador da Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Form Views](../../mfc/form-views-mfc.md)   
+ [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 
 

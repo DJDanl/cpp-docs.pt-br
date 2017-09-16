@@ -1,44 +1,61 @@
 ---
-title: "Barras de status | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barras de controle, barra de status"
-  - "barras de status"
+title: Status Bars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars
+- control bars [MFC], status bar
 ms.assetid: fcbc5029-1aab-4e14-adf7-419038a4935e
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Barras de status
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 756f1c85ae09693bff8900d191a48d76056457f6
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As barras de status propiciam a seu aplicativo em um local exibir mensagens e informações úteis para o usuário sem interromper o trabalho do usuário.  Exibido normalmente na parte inferior da janela, as barras de status têm os painéis “,” que incluem “indicadores” e “uma linha mensagem”. Os indicadores fornecem o status dessas opções a seguir como ENROLAM LOCK, se a gravação macro é ativada, e assim por diante.  A linha da mensagem na barra de status pode exibir informações sobre o status do programa ou em um botão da barra de ferramentas ou item de menu que o usuário seja apontando com ao mouse em.  
+---
+# <a name="status-bars"></a>Status Bars
+Status bars give your application a place to display messages and useful information to the user without interrupting the user's work. Typically displayed at the bottom of a window, status bars have "panes," which include "indicators" and a "message line." The indicators give the status of such things as SCROLL LOCK, whether macro recording is turned on, and so on. The message line on the status bar can display information about program status or about a toolbar button or menu item that the user is pointing to with the mouse.  
   
- Crie uma barra de status em seu programa selecionando a opção de **Initial Status Bar** no assistente de aplicativo MFC.  
+ Create a status bar in your program by selecting the **Initial Status Bar** option in the MFC Application Wizard.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Implementação da barra de status em MFC](../mfc/status-bar-implementation-in-mfc.md)  
+-   [Status bar implementation in MFC](../mfc/status-bar-implementation-in-mfc.md)  
   
--   [Atualizando o texto de um painel barra de status](../mfc/updating-the-text-of-a-status-bar-pane.md)  
+-   [Updating the text of a status bar pane](../mfc/updating-the-text-of-a-status-bar-pane.md)  
   
--   [Criando um novo painel barra de status \(que atualiza o texto de um painel barra de status\)](../mfc/updating-the-text-of-a-status-bar-pane.md)  
+-   [Creating a new status-bar pane (Updating the text of a status bar pane)](../mfc/updating-the-text-of-a-status-bar-pane.md)  
   
--   [Fazendo um painel barra de status exibe o texto \(que atualiza o texto de um painel barra de status\)](../mfc/updating-the-text-of-a-status-bar-pane.md)  
+-   [Making a status-bar pane display text (Updating the text of a status bar pane)](../mfc/updating-the-text-of-a-status-bar-pane.md)  
   
--   [Informações do comando na barra de status](../Topic/How%20to:%20Display%20Command%20Information%20in%20the%20Status%20Bar.md)  
+-   [Display command information in the status bar](../mfc/how-to-display-command-information-in-the-status-bar.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

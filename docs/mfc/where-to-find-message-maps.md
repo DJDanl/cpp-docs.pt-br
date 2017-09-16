@@ -1,43 +1,61 @@
 ---
-title: "Onde encontrar mapas de mensagens | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "localizando mapas de mensagem"
-  - "Macros , mapa de mensagem"
-  - "mapas de mensagem, localizando"
-  - "macros de mapa de mensagem"
+title: Where to Find Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- macros, message map
+- locating message maps
+- message classes [MFC], finding
+- message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Onde encontrar mapas de mensagens
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 405b0b58e4b8a5ff9b27aecc12562d94f6b31506
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Quando você cria um novo aplicativo do esqueleto com o assistente de aplicativo, o assistente de aplicativo grava um mapa de mensagem para cada classe de comando\- destino criada para você.  Isso inclui seu aplicativo, o documento, exibição, e classes derivadas de quadro\- janela.  Alguns desses mapas de mensagem já têm entradas fornecidas pela mensagens do assistente do aplicativo para determinadas por comandos e predefinidos, e alguns são apenas espaços reservados para manipuladores que você adicionará.  
+---
+# <a name="where-to-find-message-maps"></a>Where to Find Message Maps
+When you create a new skeleton application with the Application Wizard, the Application Wizard writes a message map for each command-target class it creates for you. This includes your derived application, document, view, and frame-window classes. Some of these message maps already have the entries supplied by the Application Wizard for certain messages and predefined commands, and some are just placeholders for handlers that you will add.  
   
- O mapa de uma classe é localizado no arquivo de .CPP da classe.  Trabalhando com mapas básicos de mensagem que o assistente de aplicativo cria, você usa a janela Propriedades para adicionar entradas para as mensagens e comandos que tratará cada classe.  Um mapa típico da mensagem pode ter esta aparência depois que você adicionar algumas entradas:  
+ A class's message map is located in the .CPP file for the class. Working with the basic message maps that the Application Wizard creates, you use the Properties window to add entries for the messages and commands that each class will handle. A typical message map might look like the following after you add some entries:  
   
- [!CODE [NVC_MFCMessageHandling#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#1)]  
+ [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]  
   
- O mapa da mensagem consiste em uma coleção de macros.  Dois macros, [BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md) e [END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md), oferecem suporte ao mapa da mensagem.  Outros macros, como `ON_COMMAND`, preenche o conteúdo da mensagem.  
+ The message map consists of a collection of macros. Two macros, [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) and [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), bracket the message map. Other macros, such as `ON_COMMAND`, fill in the message map's contents.  
   
 > [!NOTE]
->  Macros retornadas mapa não são seguidas por ponto\-e\-vírgula.  
+>  The message-map macros are not followed by semicolons.  
   
- Quando você usar o assistente para adicionar classe para criar uma nova classe, fornece um mapa de mensagem da classe.  Como alternativa, você pode criar um mapa de mensagem manualmente usando o editor de origem.  
+ When you use the Add Class wizard to create a new class, it provides a message map for the class. Alternatively, you can create a message map manually using the source code editor.  
   
-## Consulte também  
- [Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md)
+
+

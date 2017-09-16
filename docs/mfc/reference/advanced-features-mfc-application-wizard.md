@@ -1,5 +1,5 @@
 ---
-title: "Recursos avançados, Assistente de aplicativo MFC | Microsoft Docs"
+title: Advanced Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,62 +33,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 9a291af4641742cd9b771c80a7ea0770fab6de06
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a476f56ef4119065884a152f475fa86bfb9a090
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>Funcionalidades avançadas, Assistente de Aplicativo MFC
-Este tópico lista as opções para recursos adicionais para seu aplicativo, como a Ajuda, suporte para impressão e assim por diante. Em cada seção, especifique o suporte adicional para esses recursos avançados.  
+# <a name="advanced-features-mfc-application-wizard"></a>Advanced Features, MFC Application Wizard
+This topic lists options for additional features for your application, such as Help, printing support, and so on. In each section, specify additional support for these advanced features.  
   
- **Ajuda contextual (HTML)**  
- Gera um conjunto de arquivos de ajuda para obter ajuda contextual, disponíveis por meio de um menu de Ajuda e F1 ou clicando em um **ajuda** botão em uma caixa de diálogo. O suporte para ajuda requer o compilador de ajuda. Se você não tiver o compilador de ajuda, poderá instalá-lo executando novamente a instalação.  
+ **Context-sensitive help (HTML)**  
+ Generates a set of help files for context-sensitive help, available by using F1 and a Help menu, or by clicking a **Help** button on a dialog box. Help support requires the help compiler. If you do not have the help compiler, you can install it by rerunning Setup.  
   
- Consulte [ajuda HTML: Ajuda sensível ao contexto de seus programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [arquivos de Ajuda (Ajuda HTML)](../../ide/help-files-html-help.md) para obter mais informações.  
+ See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../ide/help-files-html-help.md) for more information.  
   
- **Impressão e visualização de impressão**  
- Gera o código para lidar com a impressão, imprimir a instalação e comandos de visualização de impressão chamando funções de membro [classe CView](../../mfc/reference/cview-class.md) da biblioteca do MFC. O assistente também adiciona comandos dessas funções ao menu do aplicativo. Suporte de impressão está disponível somente para aplicativos que especifiquem **suporte para a arquitetura de documento/exibição** no [tipo de aplicativo, Assistente de aplicativo MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página do assistente. Por padrão, os aplicativos de documento/exibição têm suporte para impressão.  
+ **Printing and print preview**  
+ Generates the code to handle the print, print setup and print preview commands by calling member functions in the [CView Class](../../mfc/reference/cview-class.md) from the MFC library. The wizard also adds commands for these functions to the application's menu. Printing support is available only for applications that specify **Document/view architecture support** in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the wizard. By default, document/view applications have printing support.  
   
- **Automação**  
- Especifica que o aplicativo pode lidar com os objetos que são implementados em outro aplicativo, ou expõe o aplicativo a clientes de automação.  
+ **Automation**  
+ Specifies that the application can handle objects that are implemented in another application, or exposes the application to Automation clients.  
   
- **Controles ActiveX**  
- Oferece suporte para controles ActiveX (padrão). Se você não selecionar essa opção e depois quiser inserir controles ActiveX em seu projeto, você deve adicionar uma chamada para [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) em seu aplicativo [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) função de membro.  
+ **ActiveX controls**  
+ Supports ActiveX controls (default). If you do not select this option and later want to insert ActiveX controls into your project, you must add a call to [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) in your application's [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) member function.  
   
- **MAPI (API de mensagens)**  
- Especifica que o aplicativo pode criar, manipular, transferir e armazenar mensagens de email.  
+ **MAPI (Messaging API)**  
+ Specifies that the application can create, manipulate, transfer, and store mail messages.  
   
- **Soquetes do Windows**  
- Oferece suporte ao Windows Sockets, que você pode usar para escrever aplicativos que se comuniquem por redes TCP/IP.  
+ **Windows sockets**  
+ Supports Windows sockets, which you can use to write applications that communicate over TCP/IP networks.  
   
- **Acessibilidade ativa**  
- Adiciona suporte para [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) para [CWnd](../../mfc/reference/cwnd-class.md)-classes derivadas, que você pode usar para personalizar a interface do usuário para melhor interação com clientes de acessibilidade.  
+ **Active Accessibility**  
+ Adds support for [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.  
   
- **Manifesto de controle comum**  
- Habilitado por padrão. Gera um manifesto de aplicativo para habilitar a DLL de Controle Comum que é fornecida com o Microsoft Windows XP e sistemas operacionais mais recentes.  
+ **Common Control Manifest**  
+ Enabled by default. Generates an application manifest to enable the Common Control DLL that is included with Microsoft Windows XP and newer operating systems.  
   
- A versão 6 da DLL de Controle Comum não atualiza automaticamente a versão anterior dos Controles Comuns que seus aplicativos existentes usam. Para usar a versão 6 da DLL de Controle Comum, você deve criar um manifesto de aplicativo que direcione o aplicativo para carregar a DLL. Essa DLL de Controle Comum também oferece suporte aos temas do Windows XP.  
+ Version 6 of the Common Control DLL does not automatically update the earlier version of the Common Controls that your existing applications use. To use version 6 of the Common Control DLL, you must create an application manifest that directs your application to load the DLL. This Common Control DLL also supports the Windows XP themes.  
   
- Um manifesto de aplicativo também pode especificar outros DLLs e versões que seu aplicativo precisa. Para obter mais informações sobre manifestos de aplicativo, consulte [aplicativos isolados e Assemblies lado a lado](http://msdn.microsoft.com/library/dd408052) no [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](http://msdn.microsoft.com/library/dd408052) in the Windows SDK.  
   
- **Gerenciador de reinicialização de suporte**  
- Adiciona suporte para o [Gerenciador de reinicialização do Windows](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [como fazer: usar o novo Gerenciador de reinicialização](http://msdn.microsoft.com/vstudio/ee886407).  
+ **Support Restart Manager**  
+ Adds support for the [Windows Restart Manager](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
   
- **Painéis de quadros avançado**  
- |Opção|Descrição|  
+ **Advanced frame panes**  
+ |Option|Description|  
 |------------|-----------------|  
-|**Painel de encaixe do Explorer**|Cria um painel que se parece com o Visual Studio **Solution Explorer** à esquerda da janela do quadro principal.|  
-|**Quadro de encaixe de saída**|Cria um painel que se parece com o Visual Studio **saída** painel está localizado sob a janela do quadro principal.|  
-|**Encaixar o painel de propriedades**|Cria um painel que se parece com o Visual Studio **propriedades** painel à direita da janela do quadro principal.|  
-|**Painel de navegação**|Cria um painel de encaixe semelhante ao da barra de navegação do Outlook e está localizado à esquerda da janela principal do quadro.|  
-|**Barra de legenda**|Cria uma barra de legenda do estilo do Office acima da janela do quadro principal.|  
+|**Explorer docking pane**|Creates a docking pane that resembles the Visual Studio **Solution Explorer** to the left of the main frame window.|  
+|**Output docking frame**|Creates a docking pane that resembles the Visual Studio **Output** pane that is located under the main frame window.|  
+|**Properties docking pane**|Creates a docking pane that resembles the Visual Studio **Properties** pane to the right of the main frame window.|  
+|**Navigation pane**|Creates a docking pane that resembles the Outlook navigation bar and is located to the left of the main frame window.|  
+|**Caption bar**|Creates an Office-style caption bar above the main frame window.|  
   
- **Número de arquivos na lista de arquivos recentes**  
- Especifica o número de arquivos a serem relacionados na lista de itens usados mais recentemente. O número padrão é 4.  
+ **Number of files on recent file list**  
+ Specifies the number of files to be listed on the most recently used list. The default number is 4.  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de aplicativo do MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

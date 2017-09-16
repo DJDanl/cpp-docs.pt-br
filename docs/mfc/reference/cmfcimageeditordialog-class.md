@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCImageEditorDialog | Documentos do Microsoft
+title: CMFCImageEditorDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCImageEditorDialog class
+- CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
 caps.latest.revision: 24
 author: mikeblome
@@ -35,48 +35,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1a629f9699aa2d6fb185737b51b36259ce574fe0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 25f543323ca4404518cca1946b4686bd8a4197c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcimageeditordialog-class"></a>Classe CMFCImageEditorDialog
-O `CMFCImageEditorDialog` classe oferece suporte a uma caixa de diálogo do editor de imagem.  
+# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog Class
+The `CMFCImageEditorDialog` class supports an image editor dialog box.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCImageEditorDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Constrói um objeto `CMFCImageEditorDialog`.|  
+|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Constructs a `CMFCImageEditorDialog` object.|  
   
-## <a name="remarks"></a>Comentários  
- O `CMFCImageEditorDialog` classe fornece uma caixa de diálogo que inclui:  
+## <a name="remarks"></a>Remarks  
+ The `CMFCImageEditorDialog` class provides a dialog box that includes:  
   
--   Uma área de imagem que você pode usar para modificar pixels individuais em uma imagem.  
+-   A picture area that you use to modify individual pixels in an image.  
   
--   Ferramentas para modificar os pixels na área da imagem de desenho.  
+-   Drawing tools to modify the pixels in the picture area.  
   
--   Uma paleta de cores para especificar a cor que é usada pelas ferramentas de desenho.  
+-   A color palette to specify the color that is used by the drawing tools.  
   
--   Uma área de visualização que exibe o efeito de sua edição.  
+-   A preview area that displays the effect of your edit.  
   
- A ilustração a seguir mostra um editor de imagens a caixa de diálogo.  
+ The following illustration shows an image editor dialog box.  
   
- ![Caixa de diálogo CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")  
+ ![CMFCImageEditorDialog dialog box](../../mfc/reference/media/imageedit.png "imageedit")  
   
- Uma maneira de usar um `CMFCImageEditorDialog` objeto é passá-lo um `CBitmap` imagem a ser editada. Não crie uma imagem grande porque a área de edição de imagem tem um tamanho limitado e o tamanho de pixel lógico é ajustado para caber na área. Chamar o `DoModal` método para iniciar a caixa de diálogo modal.  
+ One way to use a `CMFCImageEditorDialog` object is to pass it a `CBitmap` image to be edited. Do not create a large image because the image editing area has a limited size and the logical pixel size is adjusted to fit the area. Call the `DoModal` method to start a modal dialog box.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,11 +89,11 @@ class CMFCImageEditorDialog : public CDialogEx
   
  [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afximageeditordialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximageeditordialog.h  
   
-##  <a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog  
- Constrói um objeto `CMFCImageEditorDialog`.  
+##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
+ Constructs a `CMFCImageEditorDialog` object.  
   
 ```  
 CMFCImageEditorDialog(
@@ -102,29 +102,29 @@ CMFCImageEditorDialog(
     int nBitsPixel=-1);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- Ponteiro para uma imagem.  
+ Pointer to an image.  
   
  `pParent`  
- Ponteiro para a janela pai da caixa de diálogo de editor imagem atual.  
+ Pointer to the parent window of the current image editor dialog box.  
   
  `nBitsPixel`  
- O número de bits usados para representar a cor de um único pixel, que também é conhecida como profundidade de cores.  Se o `nBitsPixel` parâmetro é -1, a intensidade de cor é derivada da imagem especificada pelo `pBitmap` parâmetro. O valor padrão é -1.  
+ The number of bits used to represent the color of a single pixel, which is also referred to as color depth.  If the `nBitsPixel` parameter is -1, the color depth is derived from the image specified by the `pBitmap` parameter. The default value is -1.  
   
-### <a name="return-value"></a>Valor de retorno  
- Para modificar uma imagem, passe um ponteiro de imagem para o `CMFCImageEditorDialog` construtor. Em seguida, chamar o `DoModal` método para abrir a caixa de diálogo modal. Quando o `DoModal` método retorna, o bitmap conterá a nova imagem.  
+### <a name="return-value"></a>Return Value  
+ To modify an image, pass an image pointer to the `CMFCImageEditorDialog` constructor. Then call the `DoModal` method to open a modal dialog box. When the `DoModal` method returns, the bitmap contains the new image.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar um objeto de `CMFCImageEditorDialog` classe. Este exemplo é parte do [exemplo novos controles](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCImageEditorDialog` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls n º&8;](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  
-[!code-cpp[40 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  
+[!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
 

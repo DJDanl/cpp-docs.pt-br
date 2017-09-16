@@ -1,30 +1,45 @@
 ---
-title: Operadores &lt;forward_list&gt; | Microsoft Docs
+title: '&lt;forward_list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- forward_list/std::operator!=
+- forward_list/std::operator==
+- forward_list/std::operatoroperator&gt;
+- forward_list/std::operatoroperator&gt=;
+- forward_list/std::operatoroperator&lt;
+- forward_list/std::operatoroperator&lt;=
+dev_langs:
+- C++
 ms.assetid: 57492e09-3836-4dbc-9ae5-78ecf506c190
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ddf548e760d723bff19b58ac8dfe6ec60acdbbcc
+helpviewer_keywords:
+- std::operator!= (forward_list)
+- std::operator== (forward_list)
+- std::operatoroperator&gt; (forward_list)
+- std::operatoroperator&gt=; (forward_list)
+- std::operatoroperator&lt; (forward_list)
+- std::operatoroperator&lt;= (forward_list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c00c7d1e506e60a0a8612601835ef4a91b98ea99
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltforwardlistgt-operators"></a>Operadores &lt;forward_list&gt;
+# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.  
   
 ```
 bool operator==(
@@ -32,18 +47,18 @@ bool operator==(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="remarks"></a>Comentários  
- Esta função de modelo sobrecarrega `operator==` para comparar dois objetos da classe de modelo `forward_list`. A função retorna `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.  
+### <a name="remarks"></a>Remarks  
+ This template function overloads `operator==` to compare two objects of template class `forward_list`. The function returns `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.  
   
 ```
 bool operator!=(
@@ -51,21 +66,21 @@ bool operator!=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se as listas não forem iguais; **false** se as listas forem iguais.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>Comentários  
- Esta função do modelo retorna `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `!(left == right)`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Testa se o objeto da lista de encaminhamento à esquerda do operador é menor que o objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.  
   
 ```
 bool operator<(
@@ -73,21 +88,21 @@ bool operator<(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>Valor de retorno  
- `true` se a lista no lado esquerdo do operador for menor que ou diferente da lista à direita do operador; caso contrário, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>Comentários  
- Esta função de modelo sobrecarrega `operator<` para comparar dois objetos da classe de modelo `forward_list`. A função retorna `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.  
+### <a name="remarks"></a>Remarks  
+ This template function overloads `operator<` to compare two objects of template class `forward_list`. The function returns `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.  
   
 ```
 bool operator<=(
@@ -95,21 +110,21 @@ bool operator<=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>Valor de retorno  
- `true` se a lista no lado esquerdo do operador for menor que ou igual à lista à direita do operador; caso contrário, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>Comentários  
- Esta função do modelo retorna `!(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `!(right < left)`.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Testa se o objeto da lista de encaminhamento à esquerda do operador é maior que o objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.  
   
 ```
 bool operator>(
@@ -117,21 +132,21 @@ bool operator>(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>Valor de retorno  
- `true` se a lista no lado esquerdo do operador for maior que a lista à direita do operador; caso contrário, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>Comentários  
- Esta função do modelo retorna `right < left`.  
+### <a name="remarks"></a>Remarks  
+ This template function returns `right < left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.  
+ Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.  
   
 ```
 bool operator>=(
@@ -139,20 +154,20 @@ bool operator>=(
     const forward_list <Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
   
-|Parâmetro|Descrição|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Um objeto do tipo `forward_list`.|  
-|`right`|Um objeto do tipo `forward_list`.|  
+|`left`|An object of type `forward_list`.|  
+|`right`|An object of type `forward_list`.|  
   
-### <a name="return-value"></a>Valor de retorno  
- `true` se a lista de encaminhamento no lado esquerdo do operador for maior que ou igual à lista de encaminhamento à direita do operador; caso contrário, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the forward list on the left side of the operator is greater than or equal to the forward list on the right side of the operator; otherwise `false`.  
   
-### <a name="remarks"></a>Comentários  
- A função do modelo retorna `!(left < right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

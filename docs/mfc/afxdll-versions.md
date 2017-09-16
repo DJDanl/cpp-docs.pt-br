@@ -1,39 +1,57 @@
 ---
-title: "Vers&#245;es AFXDLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afxdll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Biblioteca AFXDLL"
-  - "assistentes de aplicativo [C++], Usos padrão AFXDLL"
-  - "Versão de DLL do MFC [C++]"
-  - "MFC [C++], Versão AFXDLL"
-  - "DLLs MFC [C++], vinculação dinâmica a biblioteca"
-  - "Bibliotecas MFC [C++], vinculação dinâmica"
+title: AFXDLL Versions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC DLLs [MFC], dynamic linking to library
+- AFXDLL library
+- application wizards [MFC], default uses AFXDLL
+- MFC libraries [MFC], dynamic linking
+- MFC, AFXDLL version
+- DLL version of MFC [MFC]
 ms.assetid: c078ae8f-85a9-43cb-9ded-c09ca2c45723
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Vers&#245;es AFXDLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 43d53b604fa6153642044c3660a0393d1c047c07
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Em vez de criar seu aplicativo estaticamente vinculando às bibliotecas de código em MFC, você pode criar seu aplicativo usar uma das bibliotecas de AFXDLL, que contém o MFC em uma DLL que vários aplicativos em execução pode ser compartilhada.  Para uma tabela de nomes de AFXDLL, consulte [DLL: Convenções de nomenclatura](../build/naming-conventions-for-mfc-dlls.md).  
+---
+# <a name="afxdll-versions"></a>AFXDLL Versions
+Instead of building your application by statically linking to the MFC object-code libraries, you can build your application to use one of the AFXDLL libraries, which contain MFC in a DLL that multiple running applications can share. For a table of AFXDLL names, see [DLLs: Naming Conventions](../build/naming-conventions-for-mfc-dlls.md).  
   
 > [!NOTE]
->  Por padrão, o assistente de aplicativo MFC cria um projeto de AFXDLL.  Para usar em vez de vincular estático de código MFC, defina a opção de **Usar MFC em uma Static Library** no assistente de aplicativo MFC.  Vinculação estática não está disponível na edição Standard do Visual C\+\+.  
+>  By default, the MFC Application Wizard creates an AFXDLL project. To use static linking of MFC code instead, set the **Use MFC in a static library** option in the MFC Application Wizard. Static linking is not available in the Standard Edition of Visual C++.  
   
-## Consulte também  
- [Versões de biblioteca MFC](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

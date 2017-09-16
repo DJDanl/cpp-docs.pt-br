@@ -1,43 +1,61 @@
 ---
-title: "Ilustra&#231;&#227;o de roteamento do comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de comandos, roteando comandos"
-  - "roteamento de comando, Manipulador OnCmdMsg"
-  - "MFC, roteamento de comando"
+title: Command Routing Illustration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Ilustra&#231;&#227;o de roteamento do comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17f5b5930936f1c7839b5f435eafbeae611d39fd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para ilustrar, considere uma mensagem do comando de um espaço livre qualquer item de menu no menu de edição de um aplicativo MDI.  Suponha que a função de manipulador deste comando for uma função de membro da classe do documento de aplicativo.  Veja como o comando atingir seu manipulador depois que o usuário escolhe o item de menu:  
+---
+# <a name="command-routing-illustration"></a>Command Routing Illustration
+To illustrate, consider a command message from a Clear All menu item in an MDI application's Edit menu. Suppose the handler function for this command happens to be a member function of the application's document class. Here's how that command reaches its handler after the user chooses the menu item:  
   
-1.  A janela principal do quadro obtém a mensagem do primeiro comando.  
+1.  The main frame window receives the command message first.  
   
-2.  A janela principal do quadro MDI da janela ativa no momento filho MDI uma possibilidade tratar o comando.  
+2.  The main MDI frame window gives the currently active MDI child window a chance to handle the command.  
   
-3.  O roteamento padrão de uma janela filho MDI do quadro da sua exibição uma possibilidade no comando antes de verificar seu próprio mapa da mensagem.  
+3.  The standard routing of an MDI child frame window gives its view a chance at the command before checking its own message map.  
   
-4.  A exibição verifique seu próprio mapa de mensagem primeiro e, não localizando nenhum manipulador, rotas seguintes o comando ao documento associado.  
+4.  The view checks its own message map first and, finding no handler, next routes the command to its associated document.  
   
-5.  Verifica o documento seu mapa da mensagem e localiza um manipulador.  Essa função de membro do documento é chamada e o roteamento.  
+5.  The document checks its message map and finds a handler. This document member function is called and the routing stops.  
   
- Se o documento não tinha um manipulador rotearia em seguida, o comando para seu modelo de documento.  O comando retorna à exibição e na janela do quadro.  Finalmente, a janela do quadro poderia verificar seu mapa da mensagem.  Se houve falha nessa verificação além disso, o comando será roteado de volta para a janela principal do quadro MDI e para o objeto do aplicativo — o destino final de comandos não manipulado.  
+ If the document did not have a handler, it would next route the command to its document template. Then the command would return to the view and then the frame window. Finally, the frame window would check its message map. If that check failed as well, the command would be routed back to the main MDI frame window and then to the application object — the ultimate destination of unhandled commands.  
   
-## Consulte também  
- [Como o Framework chama um identificador](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

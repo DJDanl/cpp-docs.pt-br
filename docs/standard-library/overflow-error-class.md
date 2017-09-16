@@ -1,5 +1,5 @@
 ---
-title: Classe overflow_error | Microsoft Docs
+title: overflow_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- overflow_error
 - stdexcept/std::overflow_error
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0bcfc791c9e147ee505a8e94173437d3615bc589
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 61dd1daa1e7a17b53285cee185a6191fc60c2ed5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="overflowerror-class"></a>Classe overflow_error
-A classe serve como a classe base para todas as exceções geradas para relatar um estouro aritmético.  
+# <a name="overflowerror-class"></a>overflow_error Class
+The class serves as the base class for all exceptions thrown to report an arithmetic overflow.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class overflow_error : public runtime_error {  
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Comentários  
- O valor retornado por [what](../standard-library/exception-class.md) é uma cópia de **message**`.`[data](../standard-library/basic-string-class.md#data).  
+## <a name="remarks"></a>Remarks  
+ The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // overflow_error.cpp  
@@ -90,13 +89,13 @@ Type class std::overflow_error
 *\  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<stdexcept>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stdexcept>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
- [Classe runtime_error](../standard-library/runtime-error-class.md)   
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [runtime_error Class](../standard-library/runtime-error-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

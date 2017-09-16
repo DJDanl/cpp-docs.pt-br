@@ -1,77 +1,95 @@
 ---
-title: "Derivando uma classe de CObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CObject, derivando de"
-  - "Classe CObject, derivando de classes que podem ser serializadas"
-  - "Macro DECLARE_DYNAMIC"
-  - "Macro DECLARE_DYNCREATE"
-  - "Macro DECLARE_SERIAL"
-  - "classes derivadas, de CObject"
-  - "macros [C++], serialização"
-  - "serialização [C++], Macros "
+title: Deriving a Class from CObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- DECLARE_DYNCREATE macro [MFC]
+- DECLARE_SERIAL macro [MFC]
+- macros [MFC], serialization
+- serialization [MFC], macros
+- DECLARE_DYNAMIC macro [MFC]
+- derived classes [MFC], from CObject
+- CObject class [MFC], deriving serializable classes
+- CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Derivando uma classe de CObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e4313f4c84ede76206fb64ffb55cf5e9ba6e87f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo descreve as etapas mínimas necessárias para derivar uma classe de [CObject](../Topic/CObject%20Class.md).  Outros artigos da classe de `CObject` descrevem as etapas necessárias para tirar proveito dos recursos específicos de `CObject` , como a serialização e suporte de diagnóstico de depuração.  
+---
+# <a name="deriving-a-class-from-cobject"></a>Deriving a Class from CObject
+This article describes the minimum steps necessary to derive a class from [CObject](../mfc/reference/cobject-class.md). Other `CObject` class articles describe the steps needed to take advantage of specific `CObject` features, such as serialization and diagnostic debugging support.  
   
- Em discussões de `CObject`, os termos “interface do arquivo” e “o arquivo implementação” é frequentemente usado.  O arquivo da interface \(geralmente chamado do arquivo de cabeçalho, ou. O arquivo de H\) contém a declaração de classe e qualquer outra informações necessárias para usar a classe.  O arquivo de implementação \(ou arquivo de .CPP\) contém a definição de classe bem como o código que implementa funções de membro da classe.  Por exemplo, para uma classe nomeada `CPerson`, você normalmente deve criar um arquivo da interface nomeada PERSON.H e o arquivo de implementação PERSON.CPP denominada.  No entanto, para algumas pequenas classes que não são compartilhadas entre aplicativos, algumas vezes é mais fácil combinar a interface e a implementação do em um único arquivo de .CPP.  
+ In the discussions of `CObject`, the terms "interface file" and "implementation file" are used frequently. The interface file (often called the header file, or .H file) contains the class declaration and any other information needed to use the class. The implementation file (or .CPP file) contains the class definition as well as the code that implements the class member functions. For example, for a class named `CPerson`, you would typically create an interface file named PERSON.H and an implementation file named PERSON.CPP. However, for some small classes that will not be shared among applications, it is sometimes easier to combine the interface and implementation into a single .CPP file.  
   
- Você pode escolher entre quatro níveis de funcionalidade para derivar uma classe de `CObject`:  
+ You can choose from four levels of functionality when deriving a class from `CObject`:  
   
--   Funcionalidade básica: Não há suporte para obter informações ou a serialização da classe de tempo de execução mas inclui gerenciamento de memória diagnóstico.  
+-   Basic functionality: No support for run-time class information or serialization but includes diagnostic memory management.  
   
--   Funcionalidade básica mais suporte para as informações da classe de tempo de execução.  
+-   Basic functionality plus support for run-time class information.  
   
--   Funcionalidade básica mais suporte para as informações da classe de tempo de execução e a criação dinâmico.  
+-   Basic functionality plus support for run-time class information and dynamic creation.  
   
--   Funcionalidade básica mais suporte para as informações da classe de tempo de execução, a criação dinâmico, e a serialização.  
+-   Basic functionality plus support for run-time class information, dynamic creation, and serialization.  
   
- As classes criada para reutilização posterior \(aqueles que servirá como classes base\) devem incluir pelo menos o suporte da classe de tempo de execução e suporte de serialização, se houver necessidade futura de serialização é antecipada.  
+ Classes designed for reuse (those that will later serve as base classes) should at least include run-time class support and serialization support, if any future serialization need is anticipated.  
   
- Você escolhe o nível de funcionalidade usando macros específicos de declaração e a implementação na declaração e na implementação das classes que você se deriva de `CObject`.  
+ You choose the level of functionality by using specific declaration and implementation macros in the declaration and implementation of the classes you derive from `CObject`.  
   
- A tabela a seguir mostra a relação entre as macros usado para serialização de suporte e informações de tempo de execução.  
+ The following table shows the relationship among the macros used to support serialization and run-time information.  
   
-### Macros usados para as informações de serialização e de tempo de execução  
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros Used for Serialization and Run-Time Information  
   
-|Macro usado|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator\>\><br /><br /> CArchive::operator\<\<|  
-|-----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
-|Funcionalidade básica de `CObject`|Não|Não|Não|  
-|`DECLARE_DYNAMIC`|Sim|Não|Não|  
-|`DECLARE_DYNCREATE`|Sim|Sim|Não|  
-|`DECLARE_SERIAL`|Sim|Sim|Sim|  
+|Macro used|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator>><br /><br /> CArchive::operator<<|  
+|----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
+|Basic `CObject` functionality|No|No|No|  
+|`DECLARE_DYNAMIC`|Yes|No|No|  
+|`DECLARE_DYNCREATE`|Yes|Yes|No|  
+|`DECLARE_SERIAL`|Yes|Yes|Yes|  
   
-#### Para usar a funcionalidade básica de CObject  
+#### <a name="to-use-basic-cobject-functionality"></a>To use basic CObject functionality  
   
-1.  Use a sintaxe normal do C\+\+ para derivar a sua classe de `CObject` \(ou uma classe derivada de `CObject`\).  
+1.  Use the normal C++ syntax to derive your class from `CObject` (or from a class derived from `CObject`).  
   
-     O exemplo a seguir mostra o caso mais simples, a derivação de uma classe de `CObject`:  
+     The following example shows the simplest case, the derivation of a class from `CObject`:  
   
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/CPP/deriving-a-class-from-cobject_1.h)]  
+     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- Normalmente, o entanto, talvez você queira substituir algumas das funções de membro de `CObject` para lidar com valores específicos de sua nova classe.  Por exemplo, você pode geralmente queira substituir a função de `Dump` de `CObject` para fornecer saída de depuração para o conteúdo da classe.  Para obter detalhes sobre como anular `Dump`, consulte o artigo [Diagnóstico: Despejando conteúdo do objeto](http://msdn.microsoft.com/pt-br/727855b1-5a83-44bd-9fe3-f1d535584b59).  Talvez você também queira substituir a função de `AssertValid` de `CObject` para fornecer teste personalizados para validar a consistência dos membros de dados de objetos da classe.  Para obter uma descrição de como substituir `AssertValid`, consulte [MFC ASSERT\_VALID e CObject::AssertValid](http://msdn.microsoft.com/pt-br/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ Normally, however, you may want to override some of `CObject`'s member functions to handle the specifics of your new class. For example, you may usually want to override the `Dump` function of `CObject` to provide debugging output for the contents of your class. For details on how to override `Dump`, see the article [Diagnostics: Dumping Object Contents](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59). You may also want to override the `AssertValid` function of `CObject` to provide customized testing to validate the consistency of the data members of class objects. For a description of how to override `AssertValid`, see [MFC ASSERT_VALID and CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
   
- O artigo [Especificando níveis de funcionalidade](../mfc/specifying-levels-of-functionality.md) descreve como especificar outros níveis de funcionalidade, inclusive informações da classe de tempo de execução, a criação do objeto dinâmico, e a serialização.  
+ The article [Specifying Levels of Functionality](../mfc/specifying-levels-of-functionality.md) describes how to specify other levels of functionality, including run-time class information, dynamic object creation, and serialization.  
   
-## Consulte também  
- [Usando CObject](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

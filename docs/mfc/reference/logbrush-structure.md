@@ -1,5 +1,5 @@
 ---
-title: Estrutura LOGBRUSH | Documentos do Microsoft
+title: LOGBRUSH Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGBRUSH structure
+- LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd4d96a7f7c858f8b3cf2e39bdc98233224a1e7a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logbrush-structure"></a>Estrutura LOGBRUSH
-O `LOGBRUSH` estrutura define o estilo, cor e padrão de um pincel físico. Ele é usado pelo Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) e [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funções.  
+# <a name="logbrush-structure"></a>LOGBRUSH Structure
+The `LOGBRUSH` structure defines the style, color, and pattern of a physical brush. It is used by the Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) and [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) functions.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tag LOGBRUSH { /* lb */  
@@ -53,56 +53,56 @@ typedef struct tag LOGBRUSH { /* lb */
 } LOGBRUSH;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `lbStyle`  
- Especifica o estilo de pincel. O `lbStyle` membro deve ser um dos seguintes estilos:  
+ Specifies the brush style. The `lbStyle` member must be one of the following styles:  
   
-- **BS_DIBPATTERN** um pincel de padrão definido pela especificação de um bitmap independente de dispositivo (DIB). Se `lbStyle` é **BS_DIBPATTERN**, o **lbHatch** membro contém um identificador para um DIB compactada.  
+- **BS_DIBPATTERN** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB.  
   
-- **BS_DIBPATTERNPT** um pincel de padrão definido pela especificação de um bitmap independente de dispositivo (DIB). Se `lbStyle` é **BS_DIBPATTERNPT**, o **lbHatch** membro contém um ponteiro para um DIB compactada.  
+- **BS_DIBPATTERNPT** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB.  
   
-- **BS_HATCHED** Hatched pincel.  
+- **BS_HATCHED** Hatched brush.  
   
-- **BS_HOLLOW** vazado pincel.  
+- **BS_HOLLOW** Hollow brush.  
   
-- **BS_NULL** igual **BS_HOLLOW**.  
+- **BS_NULL** Same as **BS_HOLLOW**.  
   
-- **BS_PATTERN** padrão pincel definido por um bitmap de memória.  
+- **BS_PATTERN** Pattern brush defined by a memory bitmap.  
   
-- **BS_SOLID** pincel sólido.  
+- **BS_SOLID** Solid brush.  
   
  `lbColor`  
- Especifica a cor na qual o pincel for emitida. Se `lbStyle` é o **BS_HOLLOW** ou **BS_PATTERN** estilo, **lbColor** será ignorado. Se `lbStyle` é **BS_DIBPATTERN** ou **BS_DIBPATTERNBT**, a palavra de ordem inferior de **lbColor** Especifica se o **bmiColors** membros a [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) estrutura contêm explícito vermelho, verde, azul (valores RGB) ou índices na paleta de lógica realizada no momento. O **lbColor** membro deve ser um dos seguintes valores:  
+ Specifies the color in which the brush is to be drawn. If `lbStyle` is the **BS_HOLLOW** or **BS_PATTERN** style, **lbColor** is ignored. If `lbStyle` is **BS_DIBPATTERN** or **BS_DIBPATTERNBT**, the low-order word of **lbColor** specifies whether the **bmiColors** members of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contain explicit red, green, blue (RGB) values or indices into the currently realized logical palette. The **lbColor** member must be one of the following values:  
   
-- **DIB_PAL_COLORS** a tabela de cores consiste em uma matriz de índices de 16 bits na paleta de lógica realizada no momento.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indices into the currently realized logical palette.  
   
-- **DIB_RGB_COLORS** a tabela de cores contém valores literais de RGB.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lbHatch*  
- Especifica um estilo de hachura. O significado depende do estilo de pincel definido pelo `lbStyle`. Se `lbStyle` é **BS_DIBPATTERN**, o **lbHatch** membro contém um identificador para um DIB compactada. Se `lbStyle` é **BS_DIBPATTERNPT**, o **lbHatch** membro contém um ponteiro para um DIB compactada. Se `lbStyle` é **BS_HATCHED**, o **lbHatch** membro Especifica a orientação das linhas usadas para criar a hachura. Ele pode ser um dos seguintes valores:  
+ Specifies a hatch style. The meaning depends on the brush style defined by `lbStyle`. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB. If `lbStyle` is **BS_HATCHED**, the **lbHatch** member specifies the orientation of the lines used to create the hatch. It can be one of the following values:  
   
-- `HS_BDIAGONAL`Um compartimento de 45 graus para cima e da esquerda para direita  
+- `HS_BDIAGONAL` A 45-degree upward, left-to-right hatch  
   
-- `HS_CROSS`Hachura horizontal e vertical  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Hachura de 45 graus  
+- `HS_DIAGCROSS` 45-degree crosshatch  
   
-- `HS_FDIAGONAL`Um compartimento de 45 graus para baixo, esquerda para a direita  
+- `HS_FDIAGONAL` A 45-degree downward, left-to-right hatch  
   
-- `HS_HORIZONTAL`Hachura horizontal  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Hachura vertical  
+- `HS_VERTICAL` Vertical hatch  
   
- Se `lbStyle` é **BS_PATTERN**, **lbHatch** é um identificador para o bitmap que define o padrão. Se `lbStyle` é **BS_SOLID** ou **BS_HOLLOW**, **lbHatch** será ignorado.  
+ If `lbStyle` is **BS_PATTERN**, **lbHatch** is a handle to the bitmap that defines the pattern. If `lbStyle` is **BS_SOLID** or **BS_HOLLOW**, **lbHatch** is ignored.  
   
-## <a name="remarks"></a>Comentários  
- Embora **lbColor** controla a cor de primeiro plano de um pincel de hachura de [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) e [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) funções controlam a cor do plano de fundo.  
+## <a name="remarks"></a>Remarks  
+ Although **lbColor** controls the foreground color of a hatch brush, the [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) and [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) functions control the background color.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** wingdi  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
 

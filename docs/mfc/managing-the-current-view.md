@@ -1,40 +1,58 @@
 ---
-title: "Gerenciando a exibi&#231;&#227;o atual | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exibição atual na janela com moldura"
-  - "desativando exibições"
-  - "janelas com moldura, exibição atual"
-  - "Método OnActivateView"
-  - "modos de exibição, ativando"
-  - "modos de exibição, e método OnActivateView "
-  - "modos de exibição, atual"
-  - "modos de exibição, desativando"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gerenciando a exibi&#231;&#227;o atual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Como parte da implementação padrão do windows do quadro, uma janela do quadro mantém acompanha de uma exibição atualmente ativo.  Se a janela do quadro contiver mais de uma exibição, como por exemplo em uma janela do divisor, a exibição atual é a exibição mais recente em uso.  A exibição ativa é independente da janela ativa no windows ou no foco de entrada atual.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- Quando a exibição ativa for alterada, a estrutura notifica a exibição atual chamando a função de membro de [OnActivateView](../Topic/CView::OnActivateView.md) .  Você pode saber se a exibição está sendo ativada ou desativada examinando o parâmetro de `OnActivateView``bActivate` .  Por padrão, `OnActivateView` define o foco para a exibição atual da ativação.  Você pode substituir `OnActivateView` para executar qualquer processamento especial quando a exibição é desativada ou reativados.  Por exemplo, você pode fornecer sugestões visuais especiais para distinguir a exibição ativa de outro, exibições inativas.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- Uma janela do quadro encaminha comandos à exibição ativa \(\) atual, conforme descrito em [Roteamento de comando](../mfc/command-routing.md), como parte do roteamento de comando padrão.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## Consulte também  
- [Usando janelas com moldura](../Topic/Using%20Frame%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

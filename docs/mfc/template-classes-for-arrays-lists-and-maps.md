@@ -1,55 +1,73 @@
 ---
-title: "Classes de modelo para matrizes, listas e mapas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.template"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrizes [C++], Classes "
-  - "classes de lista"
-  - "classes de mapa"
-  - "classes de modelo"
-  - "classes de modelo, para matrizes/listas e mapas"
+title: Template Classes for Arrays, Lists, and Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.template
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- template classes [MFC], for arrays/lists and maps
+- list classes [MFC]
+- map classes [MFC]
+- template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de modelo para matrizes, listas e mapas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b4679d54f0c36307eb8931660749688278314dd7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essas classes de coleção são os modelos cujos parâmetros determinam os tipos de objetos armazenados em agregações.  `CArray`, `CMap`, e as classes de `CList` usam as funções globais auxiliar que geralmente devem ser personalizadas.  Para obter mais informações sobre essas funções auxiliares, consulte [Auxiliares da classe de coleção](../mfc/reference/collection-class-helpers.md).  As classes do ponteiro são wrappers para outras classes da biblioteca de classes.  Usando esses wrappers, você inscrever a verificação de tipo do compilador para ajudar a evitar erros.  Para obter mais informações sobre como usar essas classes, consulte [Coleções](../mfc/collections.md).  
+---
+# <a name="template-classes-for-arrays-lists-and-maps"></a>Template Classes for Arrays, Lists, and Maps
+These collection classes are templates whose parameters determine the types of the objects stored in the aggregates. The `CArray`, `CMap`, and `CList` classes use global helper functions that must usually be customized. For more information about these helper functions, see [Collection Class Helpers](../mfc/reference/collection-class-helpers.md). The typed pointer classes are wrappers for other classes in the class library. By using these wrappers, you enlist the compiler's type-checking to help you avoid errors. For more information on using these classes, see [Collections](../mfc/collections.md).  
   
- Essas classes fornecem modelos que você pode usar para criar matrizes, listas, mapas e usando qualquer tipo você gostaria.  
+ These classes provide templates you can use to create arrays, lists, and maps using any type you like.  
   
  [CArray](../mfc/reference/carray-class.md)  
- A classe do modelo para fazer matrizes de tipos arbitrários.  
+ Template class for making arrays of arbitrary types.  
   
  [CList](../mfc/reference/clist-class.md)  
- A classe do modelo para fazer lista de tipos arbitrários.  
+ Template class for making lists of arbitrary types.  
   
  [CMap](../mfc/reference/cmap-class.md)  
- A classe do modelo para fazer mapas com chave e tipos de valores arbitrários.  
+ Template class for making maps with arbitrary key and value types.  
   
  [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)  
- A classe do modelo para matrizes de tipo seguras dos ponteiros.  
+ Template class for type-safe arrays of pointers.  
   
  [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)  
- A classe do modelo para listas de tipo seguras de ponteiros.  
+ Template class for type-safe lists of pointers.  
   
- [CTypedPtrMap](../Topic/CTypedPtrMap%20Class.md)  
- A classe do modelo para mapas tipo seguro com ponteiros.  
+ [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)  
+ Template class for type-safe maps with pointers.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

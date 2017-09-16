@@ -1,23 +1,38 @@
 ---
-title: Operadores &lt;set&gt; | Microsoft Docs
+title: '&lt;set&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- set/std::operator!=
+- set/std::operator&gt;
+- set/std::operator&gt;=
+- set/std::operator&lt;
+- set/std::operator&lt;=
+- set/std::operator==
+dev_langs:
+- C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ce8af6d17082b8838b01a9121e91d3ee23f90d4
+helpviewer_keywords:
+- std::operator!= (set)
+- std::operator&gt; (set)
+- std::operator&gt;= (set)
+- std::operator&lt; (set)
+- std::operator&lt;= (set)
+- std::operator== (set)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b986da86efac9cdfa027b23d2fe973062a52c8b7
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsetgt-operators"></a>Operadores &lt;set&gt;
+# <a name="ltsetgt-operators"></a>&lt;set&gt; operators
 ||||  
 |-|-|-|  
 |[operator!= (set)](#op_neq)|[operator&gt; (set)](#op_gt)|[operator&gt;= (set)](#eq)|  
@@ -26,26 +41,26 @@ ms.lasthandoff: 04/29/2017
 |[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|  
   
 ##  <a name="op_neq"></a>  operator!= (set)  
- Testa se o objeto set à esquerda do operador é diferente do objeto set à direita.  
+ Tests if the set object on the left side of the operator is not equal to the set object on the right side.  
   
 ```
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se os sets não forem iguais; **false** se os sets forem iguais.  
+### <a name="return-value"></a>Return Value  
+ **true** if the sets are not equal; **false** if sets are equal.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set é baseada em uma comparação de paridade de seus elementos. Dois sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison between their elements. Two sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_ne.cpp  
@@ -83,26 +98,26 @@ The sets s1 and s3 are equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt; (set)  
- Testa se o objeto set à esquerda do operador é menor do que o objeto set à direita.  
+ Tests if the set object on the left side of the operator is less than the set object on the right side.  
   
 ```
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true**, se o set à esquerda do operador for estritamente menor que o set à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is strictly less than the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos é baseada em uma comparação do primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_lt.cpp  
@@ -140,26 +155,26 @@ The set s1 is not less than the set s3.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;= (set)  
- Testa se o objeto set à esquerda do operador é menor ou igual ao objeto set à direita.  
+ Tests if the set object on the left side of the operator is less than or equal to the set object on the right side.  
   
 ```
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true**, se o set à esquerda do operador for menor ou igual ao set à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is less than or equal to the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set baseia-se em uma comparação par de seus elementos. A relação menor que ou igual a entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_le.cpp  
@@ -204,26 +219,26 @@ Set s1 is less than or equal to the set s4.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator== (set)  
- Testa se o objeto set à esquerda do operador é igual ao objeto set à direita.  
+ Tests if the set object on the left side of the operator is equal to the set object on the right side.  
   
 ```
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true**, se o set à esquerda do operador for igual ao set à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is equal to the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set baseia-se em uma comparação par de seus elementos. Dois sets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. Two sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_eq.cpp  
@@ -261,26 +276,26 @@ The sets s1 and s3 are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt; (set)  
- Testa se o objeto set à esquerda do operador é maior que o objeto set à direita.  
+ Tests if the set object on the left side of the operator is greater than the set object on the right side.  
   
 ```
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true**, se o set à esquerda do operador for maior que o set à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is greater than the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_gt.cpp  
@@ -318,26 +333,26 @@ The set s1 is greater than the set s3.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;= (set)  
- Testa se o objeto set à esquerda do operador é maior ou igual ao objeto set à direita.  
+ Tests if the set object on the left side of the operator is greater than or equal to the set object on the right side.  
   
 ```
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
  `right`  
- Um objeto do tipo **set**.  
+ An object of type **set**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true**, se o set à esquerda do operador for maior ou igual ao set à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is greater than or equal to the set on the right side of the list; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos set baseia-se em uma comparação par de seus elementos. A relação maior que ou igual entre dois objetos é baseada em uma comparação entre o primeiro par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_ge.cpp  
@@ -382,26 +397,26 @@ Set s1 is greater than or equal to set s4.
 ```  
   
 ##  <a name="op_neq_multiset"></a>  operator!= (multiset)  
- Testa se o objeto multiset à esquerda do operador é diferente do objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is not equal to the multiset object on the right side.  
   
 ```
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se os sets ou multisets não forem iguais; **false** se os sets ou multisets forem iguais.  
+### <a name="return-value"></a>Return Value  
+ **true** if the sets or multisets are not equal; **false** if sets or multisets are equal.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset é baseada em uma comparação de paridade de seus elementos. Dois sets ou multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison between their elements. Two sets or multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_ne.cpp  
@@ -439,26 +454,26 @@ The multisets s1 and s3 are equal.
 ```  
   
 ##  <a name="op_lt_multiset"></a>  operator&lt; (multiset)  
- Testa se o objeto multiset à esquerda do operador é menor que o objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is less than the multiset object on the right side.  
   
 ```
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o multiset à esquerda do operador for estritamente menor que o multiset à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is strictly less than the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset baseia-se em uma comparação par de seus elementos. A relação menor que entre dois objetos é baseada em uma comparação do primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_lt.cpp  
@@ -500,26 +515,26 @@ The multiset s1 is not less than the multiset s3.
 ```  
   
 ##  <a name="op_lt_eq_multiset"></a>  operator&lt;= (multiset)  
- Testa se o objeto multiset à esquerda do operador é menor ou igual ao objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is less than or equal to the multiset object on the right side.  
   
 ```
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o multiset à esquerda do operador for menor ou igual ao multiset à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is less than or equal to the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset baseia-se em uma comparação par de seus elementos. A relação menor que ou igual a entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_le.cpp  
@@ -570,26 +585,26 @@ The multiset s1 is less than or equal to the multiset s4.
 ```  
   
 ##  <a name="op_eq_eq_multiset"></a>  operator== (multiset)  
- Testa se o objeto multiset à esquerda do operador é igual ao objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is equal to the multiset object on the right side.  
   
 ```
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o multiset à esquerda do operador for igual ao multiset à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is equal to the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset baseia-se em uma comparação par de seus elementos. Dois sets ou multisets serão iguais se tiverem o mesmo número de elementos e seus respectivos elementos tiverem os mesmos valores. Caso contrário, são diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. Two sets or multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_eq.cpp  
@@ -627,26 +642,26 @@ The multisets s1 and s3 are equal.
 ```  
   
 ##  <a name="op_gt_multiset"></a>  operator&gt; (multiset)  
- Testa se o objeto multiset à esquerda do operador é maior que o objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is greater than the multiset object on the right side.  
   
 ```
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o multiset à esquerda do operador for maior que o multiset à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is greater than the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset baseia-se em uma comparação par de seus elementos. A relação maior que entre dois objetos é baseada em uma comparação entre o primeiro par de elementos desiguais.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_gt.cpp  
@@ -688,26 +703,26 @@ The multiset s1 is greater than the multiset s3.
 ```  
   
 ##  <a name="op_gt_eq_multiset"></a>  operator&gt;= (multiset)  
- Testa se o objeto multiset à esquerda do operador é maior ou igual ao objeto multiset à direita.  
+ Tests if the multiset object on the left side of the operator is greater than or equal to the multiset object on the right side.  
   
 ```
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
  `right`  
- Um objeto do tipo `multiset`.  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>Valor de retorno  
- **true** se o multiset à esquerda do operador for maior ou igual ao multiset à direita do operador; caso contrário, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is greater than or equal to the multiset on the right side of the list; otherwise **false**.  
   
-### <a name="remarks"></a>Comentários  
- A comparação entre os objetos multiset baseia-se em uma comparação par de seus elementos. A relação maior que ou igual entre dois objetos é baseada em uma comparação entre o primeiro par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_ge.cpp  
@@ -757,7 +772,7 @@ The multiset s1 is greater than or equal to the multiset s4.
 *\  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [\<set>](../standard-library/set.md)
 
 

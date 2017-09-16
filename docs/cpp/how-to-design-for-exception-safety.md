@@ -1,125 +1,141 @@
 ---
-title: "Como projetar tendo em vista a seguran&#231;a da exce&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Design for Exception Safety | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
 caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Como projetar tendo em vista a seguran&#231;a da exce&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 22a642cdb8d789dda99d127dda7905dc08b33a9b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/11/2017
 
-Uma das vantagens do mecanismo de exceção é que a execução, junto com dados sobre a exceção, ele diretamente da instrução que gerou a exceção da primeira instrução de captura que os identificadores ele.  O manipulador pode ser qualquer número de níveis acima da pilha de chamadas.  As funções que são chamadas entre a instrução try e a instrução do lançamento não são necessárias para saber nada sobre a exceção que é lançada.  No entanto, precisam ser criados de forma que eles possam sair do escopo “inesperado” em qualquer momento em que uma exceção pode propagar acima de baixo, e faz isso sem sair atrás de objetos parcialmente criados, de memória escape, ou as estruturas de dados que estão em estados inutilizáveis.  
+---
+# <a name="how-to-design-for-exception-safety"></a>How to: Design for Exception Safety
+One of the advantages of the exception mechanism is that execution, together with data about the exception, jumps directly from the statement that throws the exception to the first catch statement that handles it. The handler may be any number of levels up in the call stack. Functions that are called between the try statement and the throw statement are not required to know anything about the exception that is thrown.  However, they have to be designed so that they can go out of scope "unexpectedly" at any point where an exception might propagate up from below, and do so without leaving behind partially created objects, leaked memory, or data structures that are in unusable states.  
   
-## Técnicas básicas  
- Uma política robusta manipulação de exceções gerais requer o cuidado e deve fazer parte do processo de design.  Em geral, a maioria de exceções são detectadas e lançadas nas camadas inferior de um módulo de software, mas geralmente essas camadas não têm suficiente contexto para tratar o erro ou para expor uma mensagem aos usuários finais.  Nas camadas médias, as funções podem capturar e lançar novamente uma exceção quando precisam inspecionar o objeto de exceção, apresentam informações adicionais úteis a prever a camada superior que captura finalmente a exceção.  Uma função deve capturar e “” engulir uma exceção apenas se pode recuperar a ela.  Em muitos casos, o comportamento correto nas camadas médias deixar é uma extensão de exceção acima da pilha de chamadas.  Mesmo na camada a mais alta, pode ser apropriada deixar uma exceção sem\-tratamento encerrar um programa se a exceção permite que o programa em um estado no qual sua exatidão não pode ser garantida.  
+## <a name="basic-techniques"></a>Basic Techniques  
+ A robust exception-handling policy requires careful thought and should be part of the design process. In general, most exceptions are detected and thrown at the lower layers of a software module, but typically these layers do not have enough context to handle the error or expose a message to end users. In the middle layers, functions can catch and rethrow an exception when they have to inspect the exception object, or they have additional useful information to provide for the upper layer that ultimately catches the exception. A function should catch and "swallow" an exception only if it is able to completely recover from it. In many cases, the correct behavior in the middle layers is to let an exception propagate up the call stack. Even at the highest layer, it might be appropriate to let an unhandled exception terminate a program if the exception leaves the program in a state in which its correctness cannot be guaranteed.  
   
- Não importa como uma função tratará uma exceção, para ajudar a garantir que é seguro exceções gerais “,” deve ser criado de acordo com as seguintes regras básicas.  
+ No matter how a function handles an exception, to help guarantee that it is "exception-safe," it must be designed according to the following basic rules.  
   
-### Manter classes de recursos simples  
- Quando você encapsula o gerenciamento de recursos manual em classes, use uma classe que não faça nada mais gerenciar cada recurso; caso contrário, você poderá apresentar vazamentos.  Use [ponteiros inteligente](../cpp/smart-pointers-modern-cpp.md) quando possível, conforme mostrado no exemplo a seguir.  Este exemplo é intencionalmente artificial e simplista realce as diferenças quando `shared_ptr` é usado.  
+### <a name="keep-resource-classes-simple"></a>Keep Resource Classes Simple  
+ When you encapsulate manual resource management in classes, use a class that does nothing else to manage each resource; otherwise, you might introduce leaks. Use [smart pointers](../cpp/smart-pointers-modern-cpp.md) when possible, as shown in the following example. This example is intentionally artificial and simplistic to highlight the differences when `shared_ptr` is used.  
   
 ```cpp  
-// old-style new/delete version  
-class NDResourceClass {  
+// old-style new/delete version  
+class NDResourceClass {  
 private:  
-    int*   m_p;  
-    float* m_q;  
+    int*   m_p;  
+    float* m_q;  
 public:  
-    NDResourceClass() : m_p(0), m_q(0) {  
-        m_p = new int;  
-        m_q = new float;  
-    }  
+    NDResourceClass() : m_p(0), m_q(0) {  
+        m_p = new int;  
+        m_q = new float;  
+    }  
   
-    ~NDResourceClass() {  
-        delete m_p;  
-        delete m_q;  
-    }  
-    // Potential leak! When a constructor emits an exception,   
-    // the destructor will not be invoked.     
+    ~NDResourceClass() {  
+        delete m_p;  
+        delete m_q;  
+    }  
+    // Potential leak! When a constructor emits an exception,   
+    // the destructor will not be invoked.     
 };  
   
-// shared_ptr version  
-#include <memory>  
+// shared_ptr version  
+#include <memory>  
   
-using namespace std;  
+using namespace std;  
   
-class SPResourceClass {  
+class SPResourceClass {  
 private:  
-    shared_ptr<int> m_p;  
-    shared_ptr<float> m_q;  
+    shared_ptr<int> m_p;  
+    shared_ptr<float> m_q;  
 public:  
-    SPResourceClass() : m_p(new int), m_q(new float) { }  
-    // Implicitly defined dtor is OK for these members,   
-    // shared_ptr will clean up and avoid leaks regardless.  
+    SPResourceClass() : m_p(new int), m_q(new float) { }  
+    // Implicitly defined dtor is OK for these members,   
+    // shared_ptr will clean up and avoid leaks regardless.  
 };  
   
-// A more powerful case for shared_ptr  
+// A more powerful case for shared_ptr  
   
-class Shape {  
-    // ...  
+class Shape {  
+    // ...  
 };  
   
-class Circle : public Shape {  
-    // ...  
+class Circle : public Shape {  
+    // ...  
 };  
   
-class Triangle : public Shape {  
-    // ...  
+class Triangle : public Shape {  
+    // ...  
 };  
   
-class SPShapeResourceClass {  
+class SPShapeResourceClass {  
 private:  
-    shared_ptr<Shape> m_p;  
-    shared_ptr<Shape> m_q;  
+    shared_ptr<Shape> m_p;  
+    shared_ptr<Shape> m_q;  
 public:  
-    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
+    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
   
 ```  
   
-### Use o idioma de RAII para gerenciar recursos  
- Para exceções gerais ser segura, uma função deve garantir que os objetos que alocou usando `malloc` ou `new` serem destruídos, e todos os recursos como os identificadores de arquivo são fechados ou liberados até mesmo se uma exceção é gerada.  O idioma *aquisição de recursos é inicialização* \(RAII\) amarra o gerenciamento desses recursos ao tempo de variáveis automático.  Quando uma função sair do escopo, retornando normalmente ou devido a uma exceção, os destruidores para todas as variáveis automático completa construídos serão invocados.  Um objeto de wrapper de RAII como um ponteiro inteligente chama a função apropriada de exclusão ou fim em seu destruidor.  Exceções gerais em código seguro, é importante criticamente passar imediatamente a propriedade de cada recurso a qualquer tipo de objeto de RAII.  Observe que `vector`, `string`, `make_shared`, `fstream`, e as classes semelhantes tratam a aquisição de recursos para você.  No entanto, `unique_ptr` e as construções tradicionais de `shared_ptr` são especiais como a aquisição de recursos é executada pelo usuário em vez do objeto; consequentemente, contam como *a versão do recurso é destruição* mas são duvidosos como RAII.  
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII Idiom to Manage Resources  
+ To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or `new` are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. When a function goes out of scope, either by returning normally or because of an exception, the destructors for all fully-constructed automatic variables are invoked. An RAII wrapper object such as a smart pointer calls the appropriate delete or close function in its destructor. In exception-safe code, it is critically important to pass ownership of each resource immediately to some kind of RAII object. Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.  
   
-## As três garantias de exceção  
- Normalmente, a segurança de exceção é discutida em termos das três garantias de exceção que uma função pode oferecer: *a garantia de não falhar*, *a garantia forte*, e *a garantia básica*.  
+## <a name="the-three-exception-guarantees"></a>The Three Exception Guarantees  
+ Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.  
   
-### Garantia de não falha  
- A garantia de não falha \(ou “, não geram”\) a garantia é a mais segura que uma função pode fornecer.  Indica que a função não gerará uma exceção ou não permitirá que se propague.  Porém, você não pode fornecer essa garantia da menos que \(a\) você souberem que todas as funções que esse as chamadas de função também são sem falha, ou \(b\) souber que todas as exceções que são geradas são capturadas antes que alcancem essa função, ou \(c\) souber capturar e manipular todas as exceções corretamente que podem acessar esta função.  
+### <a name="no-fail-guarantee"></a>No-fail Guarantee  
+ The no-fail (or, "no-throw") guarantee is the strongest guarantee that a function can provide. It states that the function will not throw an exception or allow one to propagate. However, you cannot reliably provide such a guarantee unless (a) you know that all the functions that this function calls are also no-fail, or (b) you know that any exceptions that are thrown are caught before they reach this function, or (c) you know how to catch and correctly handle all exceptions that might reach this function.  
   
- A garantia forte e a garantia básica confiam na suposição que os destruidores são sem falha.  Todos os contêineres e na garantia de biblioteca padrão do que os destruidores não lançam.  Também há um requisito para trás: A biblioteca padrão exige que os tipos definidos pelo usuário que são dados \- para o exemplo, porque o modelo argumento\- deve ter destruidores de reprodução.  
+ Both the strong guarantee and the basic guarantee rely on the assumption that the destructors are no-fail. All containers and types in the Standard Library guarantee that their destructors do not throw. There is also a converse requirement: The Standard Library requires that user-defined types that are given to it—for example, as template arguments—must have non-throwing destructors.  
   
-### Garantia forte  
- A garantia forte que indica se uma função sai do escopo por causa de uma exceção, não escapará a memória e o estado de programa não será alterado.  Uma função que fornece uma garantia forte é essencialmente uma transação com a confirmação ou a semântica da reversão: ou tem êxito por ou não tem nenhum efeito.  
+### <a name="strong-guarantee"></a>Strong Guarantee  
+ The strong guarantee states that if a function goes out of scope because of an exception, it will not leak memory and program state will not be modified. A function that provides a strong guarantee is essentially a transaction that has commit or rollback semantics: either it completely succeeds or it has no effect.  
   
-### Garantia básica  
- A garantia básica é a mais fraco dos três.  No entanto, pode ser a melhor opção quando uma garantia forte é muito dispendiosa o consumo de memória ou no desempenho.  A garantia básica que indica se uma exceção ocorrer, nenhuma memória é escape e o objeto ainda está em um estado utilizável mesmo que os dados possam ter sido alterado.  
+### <a name="basic-guarantee"></a>Basic Guarantee  
+ The basic guarantee is the weakest of the three. However, it might be the best choice when a strong guarantee is too expensive in memory consumption or in performance. The basic guarantee states that if an exception occurs, no memory is leaked and the object is still in a usable state even though the data might have been modified.  
   
-## Classes seguras exceções gerais  
- Uma classe pode ajudar a garantir sua própria segurança de exceção, mesmo quando é consumida por funções não seguro, se impedindo que é criado parcialmente ou parcialmente destruir.  Se um construtor de classe é encerrado antes da conclusão, o objeto será criado e nunca seu destruidor nunca será chamado.  Embora as variáveis automático que são inicializados antes de exceção têm seus destruidores a memória ou os recursos de chamadas, dinamicamente atribuída que não são gerenciados por um ponteiro inteligente ou por uma variável automático semelhante serão ignorados.  
+## <a name="exception-safe-classes"></a>Exception-Safe Classes  
+ A class can help ensure its own exception safety, even when it is consumed by unsafe functions, by preventing itself from being partially constructed or partially destroyed. If a class constructor exits before completion, then the object is never created and its destructor will never be called. Although automatic variables that are initialized prior to the exception will have their destructors invoked, dynamically allocated memory or resources that are not managed by a smart pointer or similar automatic variable will be leaked.  
   
- Os tipos internos são sem qualquer falha, e os tipos de biblioteca padrão oferecem suporte a garantia básica no mínimo.  Siga estas diretrizes para qualquer tipo definido pelo usuário que deve ser: seguro exceções gerais  
+ The built-in types are all no-fail, and the Standard Library types support the basic guarantee at a minimum. Follow these guidelines for any user-defined type that must be exception-safe:  
   
--   Use ponteiros inteligente ou outros wrappers de RAII\- tipo para gerenciar todos os recursos.  Evite a funcionalidade de gerenciamento de recursos no destruidor da classe, como o destruidor não será invocado se o construtor gerencie uma exceção.  No entanto, se a classe for um gerenciador de recursos dedicado que controla apenas um recurso, é aceitável usar o destruidor para gerenciar recursos.  
+-   Use smart pointers or other RAII-type wrappers to manage all resources. Avoid resource management functionality in your class destructor, because the destructor will not be invoked if the constructor throws an exception. However, if the class is a dedicated resource manager that controls just one resource, then it's acceptable to use the destructor to manage resources.  
   
--   Entenda que uma exceção lançada em um construtor de classe base não pode ser engulida em um construtor de classe derivada.  Se você deseja traduzir e a reabilitação geram a exceção da classe base em um construtor derivada, use um bloco try da função.  Para obter mais informações, consulte [\(NOTINBUILD\)How to: Handle Exceptions in Base Class Constructors \(C\+\+\)](http://msdn.microsoft.com/pt-br/53bb822e-785b-4581-9517-210dd05060a3).  
+-   Understand that an exception thrown in a base class constructor cannot be swallowed in a derived class constructor. If you want to translate and re-throw the base class exception in a derived constructor, use a function try block.   
   
--   Considere armazenar especialmente se nenhum estado da classe em um membro de dados que é encapsulado em um ponteiro inteligente, se a classe tiver um conceito de “inicialização que é permitida a falhar.” Embora C\+\+ permite membros de dados não inicializada, o não oferece suporte a instâncias de classe não inicializado ou parcialmente inicializadas.  Um construtor deve ter êxito ou falhar; nenhum objeto é criado se o construtor não executa até a conclusão.  
+-   Consider whether to store all class state in a data member that is wrapped in a smart pointer, especially if a class has a concept of "initialization that is permitted to fail." Although C++ allows for uninitialized data members, it does not support uninitialized or partially initialized class instances. A constructor must either succeed or fail; no object is created if the constructor does not run to completion.  
   
--   Não permita que nenhuma exceções escapem de um destruidor.  Um axioma básico C\+\+ é que os destruidores nunca devem permitir que uma exceção propague acima da pilha de chamadas.  Se um destruidor deve executar uma operação potencial de reprodução, deverá fazê\-lo em um bloco try catch e engulir a exceção.  A biblioteca padrão fornece essa garantia em todos os destruidores que define o.  
+-   Do not allow any exceptions to escape from a destructor. A basic axiom of C++ is that destructors should never allow an exception to propagate up the call stack. If a destructor must perform a potentially exception-throwing operation, it must do so in a try catch block and swallow the exception. The standard library provides this guarantee on all destructors it defines.  
   
-## Consulte também  
- [Erros e tratamento de exceções](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [Como realizar a interface entre códigos excepcional e não excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+## <a name="see-also"></a>See Also  
+ [Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [How to: Interface Between Exceptional and Non-Exceptional Code](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

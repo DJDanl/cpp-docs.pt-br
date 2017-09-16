@@ -1,67 +1,85 @@
 ---
-title: "Personalizando a apar&#234;ncia de um controle de barra de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBSTYLE_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolBar, estilos"
-  - "Classe CToolBarCtrl, estilos de objeto"
-  - "barras de ferramentas planas"
-  - "estilos TBSTYLE_"
-  - "controles de barra de ferramentas [MFC], Estilo "
-  - "barras de ferramentas transparentes"
+title: Customizing the Appearance of a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBSTYLE_
+dev_langs:
+- C++
+helpviewer_keywords:
+- flat toolbars
+- CToolBar class [MFC], styles
+- transparent toolbars
+- TBSTYLE_ styles [MFC]
+- CToolBarCtrl class [MFC], object styles
+- toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Personalizando a apar&#234;ncia de um controle de barra de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f3f482e66b7c584f7f7ec176fdef5df895a3260
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A classe `CToolBarCtrl` fornece muitos estilos que afetam a aparência \(e, ocasionalmente, o comportamento\) do objeto da barra de ferramentas.  Modifique o objeto da barra de ferramentas definindo o parâmetro de `dwCtrlStyle` da função de membro de `CToolBarCtrl::Create` \(ou `CToolBar::CreateEx`\), quando você criar o controle da barra de ferramentas.  
+---
+# <a name="customizing-the-appearance-of-a-toolbar-control"></a>Customizing the Appearance of a Toolbar Control
+Class `CToolBarCtrl` provides many styles that affect the appearance (and, occasionally, the behavior) of the toolbar object. Modify the toolbar object by setting the `dwCtrlStyle` parameter of the `CToolBarCtrl::Create` (or `CToolBar::CreateEx`) member function, when you first create the toolbar control.  
   
- Os seguintes estilos afetam o aspecto “3D” dos botões da barra de ferramentas e o posicionamento do texto do botão:  
+ The following styles affect the "3D" aspect of the toolbar buttons and the placement of the button text:  
   
--   **TBSTYLE\_FLAT** cria uma barra de ferramentas simples na barra de ferramentas e os botões são transparentes.  O texto do botão é exibido sob bitmaps do botão.  Quando esse estilo for usado, o botão abaixo do cursor será realçado automaticamente.  
+-   **TBSTYLE_FLAT** Creates a flat toolbar where both the toolbar and the buttons are transparent. Button text appears under button bitmaps. When this style is used, the button underneath the cursor is automatically highlighted.  
   
--   **TBSTYLE\_TRANSPARENT** cria uma barra de ferramentas transparente.  Em uma barra de ferramentas transparente, a barra de ferramentas é transparente mas os botões não são.  O texto do botão é exibido sob bitmaps do botão.  
+-   **TBSTYLE_TRANSPARENT** Creates a transparent toolbar. In a transparent toolbar, the toolbar is transparent but the buttons are not. Button text appears under button bitmaps.  
   
--   Os locais de**TBSTYLE\_LIST**alterações o texto à direita dos bitmaps do botão.  
+-   **TBSTYLE_LIST** Places button text to the right of button bitmaps.  
   
 > [!NOTE]
->  Para evitar problemas para repintar, os estilos de **TBSTYLE\_FLAT** e de **TBSTYLE\_TRANSPARENT** devem ser definidos antes que o objeto da barra de ferramentas está visível.  
+>  To prevent repaint problems, the **TBSTYLE_FLAT** and **TBSTYLE_TRANSPARENT** styles should be set before the toolbar object is visible.  
   
- Os seguintes estilos determinam se a barra de ferramentas permite que um usuário reposicione os botões individuais dentro de um objeto da barra de ferramentas usando o arraste e solte os:  
+ The following styles determine if the toolbar allows a user to reposition individual buttons within a toolbar object using drag and drop:  
   
--   **TBSTYLE\_ALTDRAG** permite que os usuários alterem uma posição de botão da barra de ferramentas arrastando a enquanto mantém pressionada ALT.  Se esse estilo não for especificado, o usuário deve manter a tecla SHIFT pressionada enquanto você arrasta um botão.  
+-   **TBSTYLE_ALTDRAG** Allows users to change a toolbar button's position by dragging it while holding down ALT. If this style is not specified, the user must hold down SHIFT while dragging a button.  
   
     > [!NOTE]
-    >  O estilo de `CCS_ADJUSTABLE` deve ser especificado para habilitar os botões da barra de ferramentas a ser arrastados.  
+    >  The `CCS_ADJUSTABLE` style must be specified to enable toolbar buttons to be dragged.  
   
--   **TBSTYLE\_REGISTERDROP** gerenciar notificações de **TBN\_GETOBJECT** para solicitar objetos de destino de descarte quando o ponteiro do mouse no passar sobre os botões da barra de ferramentas.  
+-   **TBSTYLE_REGISTERDROP** Generates **TBN_GETOBJECT** notification messages to request drop target objects when the mouse pointer passes over toolbar buttons.  
   
- Os estilos afetam outras visual e os aspectos nonvisual da barra de ferramentas objetos:  
+ The remaining styles affect visual and nonvisual aspects of the toolbar object:  
   
--   `TBSTYLE_WRAPABLE` cria uma barra de ferramentas que pode ter várias linhas de botões.  Os botões da barra de ferramentas relacionadas podem a “quebra automática” para a linha seguinte à barra de ferramentas se tornam muito estreita para incluir todos os botões na mesma linha.  Envolver ocorre nos limites de divisão e de nongroup.  
+-   `TBSTYLE_WRAPABLE` Creates a toolbar that can have multiple lines of buttons. Toolbar buttons can "wrap" to the next line when the toolbar becomes too narrow to include all buttons on the same line. Wrapping occurs on separation and nongroup boundaries.  
   
--   **TBSTYLE\_CUSTOMERASE** gerenciar notificações de **NM\_CUSTOMDRAW** ao processar mensagens de `WM_ERASEBKGND` .  
+-   **TBSTYLE_CUSTOMERASE** Generates **NM_CUSTOMDRAW** notification messages when it processes `WM_ERASEBKGND` messages.  
   
--   `TBSTYLE_TOOLTIPS` cria um controle de dica de ferramenta que um aplicativo possa usar para exibir o texto descritivo para os botões da barra de ferramentas.  
+-   `TBSTYLE_TOOLTIPS` Creates a tool tip control that an application can use to display descriptive text for the buttons in the toolbar.  
   
- Para uma lista completa de estilo da barra de ferramentas e de estilo estendidos, consulte [Estilos de controle da barra de ferramentas e do botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) e [Estilos estendidos da barra de ferramentas](http://msdn.microsoft.com/library/windows/desktop/bb760430) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For a complete listing of toolbar styles and extended styles, see [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) and [Toolbar Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760430) in the Windows SDK.  
   
-## Consulte também  
- [Usando CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

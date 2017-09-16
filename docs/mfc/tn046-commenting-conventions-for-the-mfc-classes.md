@@ -1,32 +1,51 @@
 ---
-title: "TN046: conven&#231;&#245;es de coment&#225;rio para as classes MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN046"
+title: 'TN046: Commenting Conventions for the MFC Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN046
 ms.assetid: 0d6ff3c9-4a5d-44df-b121-be4b0a649947
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN046: conven&#231;&#245;es de coment&#225;rio para as classes MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40557c04b07bdf1416901cc2c2ec846405398cd2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Esta nota técnica descrita originalmente as convenções usadas para comentar as classes do MFC. Essas informações agora são abordadas em [MFC: usando os arquivos de origem MFC](../Topic/Using%20the%20MFC%20Source%20Files.md).  
+---
+# <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: Commenting Conventions for the MFC Classes
+This technical note originally described the conventions used to comment the MFC classes. This information is now covered in [MFC: Using the MFC Source Files](../mfc/using-the-mfc-source-files.md).  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

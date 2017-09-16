@@ -1,112 +1,130 @@
 ---
-title: "Fundamentos da barra de ferramentas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RT_TOOLBAR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assistentes de aplicativo [C++], instalando barras de ferramentas de aplicativo padrão"
-  - "IDs de comando, botões da barra de ferramentas"
-  - "Classe CToolBar, barras de ferramentas no Assistente de Aplicativo"
-  - "inserindo barra de ferramentas na classe de janela com moldura"
-  - "classes de janela com moldura, barra de ferramentas inserida em"
-  - "Método LoadBitmap, barras de ferramentas"
-  - "Método LoadToolBar"
-  - "recursos [MFC], barra de ferramentas"
-  - "Recurso RT_TOOLBAR"
-  - "Método SetButtons"
-  - "controles de barra de ferramentas [MFC], ID de comando"
-  - "controles de barra de ferramentas [MFC], barras de ferramentas criadas com o Assistente de Aplicativo"
-  - "Editor da barra de ferramentas, Assistente de Aplicativo"
-  - "barras de ferramentas [C++], adicionando padrão com o Assistente de Aplicativo"
-  - "barras de ferramentas [C++], criando"
+title: Toolbar Fundamentals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RT_TOOLBAR
+dev_langs:
+- C++
+helpviewer_keywords:
+- embedding toolbar in frame window class [MFC]
+- application wizards [MFC], installing default application toolbars
+- toolbars [MFC], creating
+- resources [MFC], toolbar
+- toolbar controls [MFC], toolbars created using Application Wizard
+- toolbar controls [MFC], command ID
+- RT_TOOLBAR resource [MFC]
+- toolbars [MFC], adding default using Application Wizard
+- LoadBitmap method [MFC], toolbars
+- Toolbar editor [MFC], Application Wizard
+- command IDs [MFC], toolbar buttons
+- SetButtons method [MFC]
+- CToolBar class [MFC], default toolbars in Application Wizard
+- frame window classes [MFC], toolbar embedded in
+- LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fundamentos da barra de ferramentas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a13bba531e4faaedba2b87efd4dc2647a11026
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo descreve a implementação fundamental de MFC que permite adicionar uma barra de ferramentas padrão para o seu aplicativo selecionando uma opção no assistente do aplicativo.  Os tópicos abordados incluem:  
+---
+# <a name="toolbar-fundamentals"></a>Toolbar Fundamentals
+This article describes the fundamental MFC implementation that lets you add a default toolbar to your application by selecting an option in the Application Wizard. Topics covered include:  
   
--   [A opção da barra de ferramentas do assistente de aplicativo](#_core_the_appwizard_toolbar_option)  
+-   [The Application Wizard toolbar option](#_core_the_appwizard_toolbar_option)  
   
--   [A barra de ferramentas do código](#_core_the_toolbar_in_code)  
+-   [The toolbar in code](#_core_the_toolbar_in_code)  
   
--   [Editando o recurso da barra de ferramentas](#_core_editing_the_toolbar_resource)  
+-   [Editing the toolbar resource](#_core_editing_the_toolbar_resource)  
   
--   [Mais barras de ferramentas](#_core_multiple_toolbars)  
+-   [Multiple toolbars](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a> A opção da barra de ferramentas do assistente de aplicativo  
- Para obter uma única barra de ferramentas com botões padrão, selecione a opção padrão da barra de ferramentas de encaixe na página rotulada recursos de interface do usuário.  Isso adicionará o código no aplicativo que:  
+##  <a name="_core_the_appwizard_toolbar_option"></a> The Application Wizard Toolbar Option  
+ To get a single toolbar with default buttons, select the Standard Docking toolbar option on the page labeled User Interface Features. This adds code to your application that:  
   
--   Cria o objeto da barra de ferramentas.  
+-   Creates the toolbar object.  
   
--   Gerencia a barra de ferramentas, inclusive sua capacidade de inserir ou float.  
+-   Manages the toolbar, including its ability to dock or to float.  
   
-##  <a name="_core_the_toolbar_in_code"></a> A barra de ferramentas do código  
- A barra de ferramentas é um objeto de [CToolBar](../mfc/reference/ctoolbar-class.md) declarado como um membro de dados da classe de **CMainFrame** do seu aplicativo.  Ou seja o objeto da barra de ferramentas é inserido no objeto da janela principal do quadro.  Isso significa que o MFC cria a barra de ferramentas quando cria a janela do quadro e destrói a barra de ferramentas quando destrói a janela do quadro.  A seguinte declaração parcial da classe, para um aplicativo \(MDI\) de interface de documentos, mostra membros de dados para uma barra de ferramentas inserido e uma barra de status inserido.  Também mostra a substituição da função de membro de `OnCreate` .  
+##  <a name="_core_the_toolbar_in_code"></a> The Toolbar in Code  
+ The toolbar is a [CToolBar](../mfc/reference/ctoolbar-class.md) object declared as a data member of your application's **CMainFrame** class. In other words, the toolbar object is embedded in the main frame window object. This means that MFC creates the toolbar when it creates the frame window and destroys the toolbar when it destroys the frame window. The following partial class declaration, for a multiple document interface (MDI) application, shows data members for an embedded toolbar and an embedded status bar. It also shows the override of the `OnCreate` member function.  
   
- [!CODE [NVC_MFCListView#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#6)]  
+ [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- A criação da barra de ferramentas ocorre em **CMainFrame::OnCreate**.  MFC O chama [OnCreate](../Topic/CWnd::OnCreate.md) depois de criar a janela para o quadro mas antes que fique visível.  `OnCreate` padrão que o assistente do aplicativo gerenciar faz as seguintes tarefas da barra de ferramentas:  
+ Toolbar creation occurs in **CMainFrame::OnCreate**. MFC calls [OnCreate](../mfc/reference/cwnd-class.md#oncreate) after creating the window for the frame but before it becomes visible. The default `OnCreate` that the Application Wizard generates does the following toolbar tasks:  
   
-1.  Chama a função de membro de [Crie](../Topic/CToolBar::Create.md) do objeto de `CToolBar` para criar o objeto subjacente de [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) .  
+1.  Calls the `CToolBar` object's [Create](../mfc/reference/ctoolbar-class.md#create) member function to create the underlying [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object.  
   
-2.  Chama [LoadToolBar](../Topic/CToolBar::LoadToolBar.md) para carregar informações de recursos da barra de ferramentas.  
+2.  Calls [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) to load the toolbar resource information.  
   
-3.  As chamadas funcionam para habilitar o encaixe, flutuação, e as dicas de ferramenta.  Para obter detalhes sobre essas chamadas, consulte o artigo [Barras de ferramentas de acoplamento flexível e flutuante](../mfc/docking-and-floating-toolbars.md).  
+3.  Calls functions to enable docking, floating, and tool tips. For details about these calls, see the article [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  O exemplo [DOCKTOOL](../top/visual-cpp-samples.md) gerais de MFC inclui ilustrações de barras de ferramentas novos e antigos MFC.  As barras de ferramentas que usam **COldToolbar** exigem chamadas na etapa 2 para `LoadBitmap` \(em vez de `LoadToolBar`\) e a `SetButtons`.  As novas barras de ferramentas requerem chamadas a `LoadToolBar`.  
+>  The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) includes illustrations of both old and new MFC toolbars. The toolbars that use **COldToolbar** require calls in step 2 to `LoadBitmap` (rather than `LoadToolBar`) and to `SetButtons`. The new toolbars require calls to `LoadToolBar`.  
   
- Encaixe o, flutuação, e as chamadas das dicas de ferramentas são opcionais.  Você pode remover as linhas de `OnCreate` se preferir.  O resultado é uma barra de ferramentas que permanece fixa, não é possível de float ou redock e conseguir exibir dicas de ferramenta.  
+ The docking, floating, and tool tips calls are optional. You can remove those lines from `OnCreate` if you prefer. The result is a toolbar that remains fixed, unable to float or redock and unable to display tool tips.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a> Editando o recurso da barra de ferramentas  
- A barra de ferramentas padrão que você obtém o com o assistente de aplicativo é baseada em um recurso personalizado de **RT\_TOOLBAR** , apresentado na versão 4,0 do MFC.  Você poderá editar esse recurso com [editor da barra de ferramentas](../mfc/toolbar-editor.md).  O publicador permite facilmente adicionar, excluir, e reordenar os botões.  Contém um editor gráfico dos botões que é muito semelhante ao editor de gráficos geral no Visual C\+\+.  Se você editar barras de ferramentas em versões anteriores do Visual C\+\+, você encontrará a tarefa muito mais fácil agora.  
+##  <a name="_core_editing_the_toolbar_resource"></a> Editing the Toolbar Resource  
+ The default toolbar you get with the Application Wizard is based on an **RT_TOOLBAR** custom resource, introduced in MFC version 4.0. You can edit this resource with the [toolbar editor](../windows/toolbar-editor.md). The editor lets you easily add, delete, and rearrange buttons. It contains a graphical editor for the buttons that is very similar to the general graphics editor in Visual C++. If you edited toolbars in previous versions of Visual C++, you'll find the task much easier now.  
   
- Para conectar um botão da barra de ferramentas para um comando, você fornece ao botão uma ID de comando, como `ID_MYCOMMAND`.  Especifique a ID do comando na página de propriedades do publicador no botão da barra de ferramentas.  Crie uma função de manipulador para o comando \(consulte [Mensagens de mapeamento a funções](../Topic/Mapping%20Messages%20to%20Functions.md) para obter mais informações\).  
+ To connect a toolbar button to a command, you give the button a command ID, such as `ID_MYCOMMAND`. Specify the command ID in the button's property page in the toolbar editor. Then create a handler function for the command (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) for more information).  
   
- Novo trabalho das funções de membro de [CToolBar](../mfc/reference/ctoolbar-class.md) com o recurso de **RT\_TOOLBAR** .  [LoadToolBar](../Topic/CToolBar::LoadToolBar.md) tem agora o local de [LoadBitmap](../Topic/CToolBar::LoadBitmap.md) para carregar o bitmap das imagens do botão da barra de ferramentas, e [SetButtons](../Topic/CToolBar::SetButtons.md) para definir os estilos do botão e para conectar os botões com bitmap create imagem.  
+ New [CToolBar](../mfc/reference/ctoolbar-class.md) member functions work with the **RT_TOOLBAR** resource. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) now takes the place of [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) to load the bitmap of the toolbar button images, and [SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons) to set the button styles and connect buttons with bitmap images.  
   
- Para obter detalhes sobre como usar o editor da barra de ferramentas, consulte [Editor da barra de ferramentas](../mfc/toolbar-editor.md).  
+ For details about using the toolbar editor, see [Toolbar Editor](../windows/toolbar-editor.md).  
   
-##  <a name="_core_multiple_toolbars"></a> Mais barras de ferramentas  
- O assistente de aplicativo fornece com uma barra de ferramentas padrão.  Se você precisar de mais de uma barra de ferramentas em seu aplicativo, você pode definir seu código para as barras de ferramentas adicionais com base no código script gerado para a barra de ferramentas padrão.  
+##  <a name="_core_multiple_toolbars"></a> Multiple Toolbars  
+ The Application Wizard provides you with one default toolbar. If you need more than one toolbar in your application, you can model your code for additional toolbars based on the wizard-generated code for the default toolbar.  
   
- Se você quiser exibir uma barra de ferramentas como o resultado de um comando, você precisará:  
+ If you want to display a toolbar as the result of a command, you'll need to:  
   
--   Crie um novo recurso da barra de ferramentas com o publicador da barra de ferramentas e carregá\-los em `OnCreate` com a função de membro de [LoadToolbar](../Topic/CToolBar::LoadToolBar.md) .  
+-   Create a new toolbar resource with the toolbar editor and load it in `OnCreate` with the [LoadToolbar](../mfc/reference/ctoolbar-class.md#loadtoolbar) member function.  
   
--   Digitar um novo objeto de [CToolBar](../mfc/reference/ctoolbar-class.md) em sua classe da janela principal do quadro.  
+-   Embed a new [CToolBar](../mfc/reference/ctoolbar-class.md) object in your main frame window class.  
   
--   Faça as chamadas de funções apropriadas em `OnCreate` para inserir ou em float a barra de ferramentas, defina os estilos, e assim por diante.  
+-   Make the appropriate function calls in `OnCreate` to dock or float the toolbar, set its styles, and so on.  
   
-### Que você deseja saber mais?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Implementação da barra de ferramentas \(MFC informações de visão geral em barras de ferramentas\)](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC Toolbar Implementation (overview information on toolbars)](../mfc/mfc-toolbar-implementation.md)  
   
--   [Barras de ferramentas de acoplamento flexível e flutuante](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [Dicas de ferramenta da barra de ferramentas](../Topic/Toolbar%20Tool%20Tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   As classes de [CToolBar](../mfc/reference/ctoolbar-class.md) e de [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [Trabalhar com o controle da barra de ferramentas](../Topic/Working%20with%20the%20Toolbar%20Control.md)  
+-   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
--   [Usando suas barras de ferramentas antigos](../Topic/Using%20Your%20Old%20Toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## Consulte também  
- [Implementação da barra de ferramentas MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

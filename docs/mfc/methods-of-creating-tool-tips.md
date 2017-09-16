@@ -1,38 +1,56 @@
 ---
-title: "M&#233;todos de cria&#231;&#227;o de dicas de ferramenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolTipCtrl, criando dicas de ferramenta"
-  - "dicas de ferramenta [C++], criando"
-  - "dicas de ferramenta [C++], controles de dica de ferramenta"
+title: Methods of Creating Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], creating tool tips
+- tool tips [MFC], tool tip controls
+- tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# M&#233;todos de cria&#231;&#227;o de dicas de ferramenta
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f241e39e640da8927943d3628af9ccc7e430c0f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O fornece três classes para criar e gerenciar o controle da dica de ferramenta: [CWnd](../Topic/CWnd%20Class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md) e [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md).  As funções de membro da dica de ferramenta nessas classes envolvem o controle \(API do windows.  A classe `CToolBarCtrl` e a classe `CToolTipCtrl` são derivadas da classe `CWnd`.  
+---
+# <a name="methods-of-creating-tool-tips"></a>Methods of Creating Tool Tips
+MFC provides three classes to create and manage the tool tip control: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) and [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). The tool tip member functions in these classes wrap the Windows common control API. Class `CToolBarCtrl` and class `CToolTipCtrl` are derived from class `CWnd`.  
   
- `CWnd` fornece quatro funções de membro para criar e gerenciar dicas de ferramenta: [EnableToolTips](../Topic/CWnd::EnableToolTips.md), [CancelToolTips](../Topic/CWnd::CancelToolTips.md), [FilterToolTipMessage](../Topic/CWnd::FilterToolTipMessage.md), e [OnToolHitTest](../Topic/CWnd::OnToolHitTest.md).  Consulte estas funções de membro individuais para obter mais informações sobre como implementam dicas de ferramenta.  
+ `CWnd` provides four member functions to create and manage tool tips: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), and [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). See these individual member functions for more information about how they implement tool tips.  
   
- Se você criar uma barra de ferramentas usando `CToolBarCtrl`, você pode implementar dicas de ferramenta para essa barra de ferramentas diretamente usando as seguintes funções de membro: [GetToolTips](../Topic/CToolBarCtrl::GetToolTips.md) e [SetToolTips](../Topic/CToolBarCtrl::SetToolTips.md).  Consulte estas funções de membro individuais e [Notificações de dica de ferramenta de manipulação](../mfc/handling-tool-tip-notifications.md) para obter mais informações sobre como implementam dicas de ferramenta.  
+ If you create a toolbar using `CToolBarCtrl`, you can implement tool tips for that toolbar directly using the following member functions: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) and [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). See these individual member functions and [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md) for more information about how they implement tool tips.  
   
- A classe de `CToolTipCtrl` fornece a funcionalidade de controle da dica de ferramenta comum do windows.  Um único controle da dica de ferramenta pode fornecer informações para mais de uma ferramenta.  Uma ferramenta é uma janela, como uma janela filho ou um controle, ou uma área retangular aplicativo definida na área do cliente de uma janela.  A classe de [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) é derivado de `CToolTipCtrl` e fornece estilos e a funcionalidade visuais adicionais.  
+ The `CToolTipCtrl` class provides the functionality of the Windows common tool tip control. A single tool tip control can provide information for more than one tool. A tool is either a window, such as a child window or control, or an application-defined rectangular area within a window's client area. The [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) class derives from `CToolTipCtrl` and provides additional visual styles and functionality.  
   
-## Consulte também  
- [Usando CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Estrutura WSADATA | Documentos do Microsoft
+title: WSADATA Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WSADATA structure
+- WSADATA structure [MFC]
 ms.assetid: 80cc60e5-f9ae-4290-8ed5-07003136627d
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 221e83f6bc926bbe632cdb1255898b91c257a1c9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d640639aaf048173547cbeaf4f40d2041c026768
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="wsadata-structure"></a>Estrutura WSADATA
-O `WSADATA` estrutura é usada para armazenar informações de inicialização do Windows Sockets retornadas por uma chamada para o `AfxSocketInit` função global.  
+# <a name="wsadata-structure"></a>WSADATA Structure
+The `WSADATA` structure is used to store Windows Sockets initialization information returned by a call to the `AfxSocketInit` global function.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct WSAData {  
@@ -57,36 +57,36 @@ struct WSAData {
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *wVersion*  
- A versão da especificação do Windows Sockets que a DLL do Windows Sockets espera que o chamador para use.  
+ The version of the Windows Sockets specification that the Windows Sockets DLL expects the caller to use.  
   
  *wHighVersion*  
- A versão mais recente da especificação do Windows Sockets que pode oferecer suporte a essa DLL (também codificada como acima). Normalmente, isso é o mesmo que **wVersion**.  
+ The highest version of the Windows Sockets specification that this DLL can support (also encoded as above). Normally, this is the same as **wVersion**.  
   
  *szDescription*  
- Uma cadeia de ASCII finalizados com null em que a DLL do Windows Sockets copia uma descrição da implementação do Windows Sockets, incluindo a identificação do fornecedor. O texto (até 256 caracteres) pode conter qualquer caractere, mas fornecedores são evitaram contra incluindo controle e formatação de caracteres: o uso mais provável que um aplicativo irá colocar isso é para exibi-lo (possivelmente truncado) em uma mensagem de status.  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies a description of the Windows Sockets implementation, including vendor identification. The text (up to 256 characters in length) can contain any characters, but vendors are cautioned against including control and formatting characters: the most likely use that an application will put this to is to display it (possibly truncated) in a status message.  
   
  *szSystemStatus*  
- Uma cadeia de ASCII finalizados com null em que a DLL do Windows Sockets copia informações relevantes de status ou de configuração. A DLL do Windows Sockets deve usar este campo somente se as informações podem ser úteis para o usuário ou oferecer suporte à equipe; ele não deve ser considerado como uma extensão do **szDescription** campo.  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies relevant status or configuration information. The Windows Sockets DLL should use this field only if the information might be useful to the user or support staff; it should not be considered as an extension of the **szDescription** field.  
   
  *iMaxSockets*  
- O número máximo de soquetes que um único processo potencialmente pode abrir. Uma implementação do Windows Sockets pode fornecer um pool global de soquetes para alocação de qualquer processo. Como alternativa, ele pode alocar recursos por processo de soquetes. O número também pode refletir a maneira que a DLL do Windows Sockets ou o software de rede foi configurado. Criadores de aplicativo podem usar esse número como uma indicação crua se a implementação do Windows Sockets é usada pelo aplicativo. Por exemplo, um servidor X Windows pode verificar **iMaxSockets** quando iniciado pela primeira vez: se for menor do que 8, o aplicativo exibirá uma mensagem de erro instruindo o usuário para reconfigurar o software de rede. (Essa é uma situação na qual o **szSystemStatus** texto pode ser usado.) Obviamente, não há nenhuma garantia de que um determinado aplicativo pode alocar realmente **iMaxSockets** soquetes, já que pode haver outros aplicativos do Windows Sockets em uso.  
+ The maximum number of sockets that a single process can potentially open. A Windows Sockets implementation can provide a global pool of sockets for allocation to any process; alternately, it can allocate per-process resources for sockets. The number can well reflect the way in which the Windows Sockets DLL or the networking software was configured. Application writers can use this number as a crude indication of whether the Windows Sockets implementation is usable by the application. For example, an X Windows server might check **iMaxSockets** when first started: if it is less than 8, the application would display an error message instructing the user to reconfigure the networking software. (This is a situation in which the **szSystemStatus** text might be used.) Obviously there is no guarantee that a particular application can actually allocate **iMaxSockets** sockets, since there can be other Windows Sockets applications in use.  
   
  *iMaxUdpDg*  
- O tamanho em bytes do maior datagrama de protocolo de datagrama de usuário (UDP) que podem ser enviadas ou recebidas por um aplicativo do Windows Sockets. Se a implementação não impõe limites, **iMaxUdpDg** é zero. Em muitas implementações de soquetes Berkeley, há um limite implícito de 8192 bytes datagramas UDP (que estão fragmentadas se necessário). Uma implementação do Windows Sockets pode impor um limite com base, por exemplo, na alocação de buffers de remontagem de fragmento. O valor mínimo de **iMaxUdpDg** para uma compatível com Windows Sockets implementação é 512. Observe que, independentemente do valor **iMaxUdpDg**, não é recomendável tentar enviar um datagrama de difusão é maior do que unidade máxima de transmissão (MTU) para a rede. (A API do Windows Sockets não fornecem um mecanismo para descobrir a MTU, mas deve ser nem menos de 512 bytes).  
+ The size in bytes of the largest User Datagram Protocol (UDP) datagram that can be sent or received by a Windows Sockets application. If the implementation imposes no limit, **iMaxUdpDg** is zero. In many implementations of Berkeley sockets, there is an implicit limit of 8192 bytes on UDP datagrams (which are fragmented if necessary). A Windows Sockets implementation can impose a limit based, for instance, on the allocation of fragment reassembly buffers. The minimum value of **iMaxUdpDg** for a compliant Windows Sockets implementation is 512. Note that regardless of the value of **iMaxUdpDg**, it is inadvisable to attempt to send a broadcast datagram that is larger than the Maximum Transmission Unit (MTU) for the network. (The Windows Sockets API does not provide a mechanism to discover the MTU, but it must be no less than 512 bytes.)  
   
  *lpVendorInfo*  
- Um ponteiro oposto a uma estrutura de dados específicos de fornecedor. A definição dessa estrutura (se fornecido) está além do escopo da especificação do Windows Sockets.  
+ A far pointer to a vendor-specific data structure. The definition of this structure (if supplied) is beyond the scope of the Windows Sockets specification.  
   
 > [!NOTE]
->  Em MFC, o `WSADATA` estrutura é retornada pelo `AfxSocketInit` função, que você chama em seu `InitInstance` função. Você pode recuperar a estrutura e armazená-lo em seu programa se você precisar usar informações dela mais tarde.  
+>  In MFC, the `WSADATA` structure is returned by the `AfxSocketInit` function, which you call in your `InitInstance` function. You can retrieve the structure and store it in your program if you need to use information from it later.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** Winsock2  
+## <a name="requirements"></a>Requirements  
+ **Header:** winsock2.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres de modelo, documento MFC Assistente para Adicionar classe | Documentos do Microsoft
+title: Document Template Strings, MFC Add Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,63 +33,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d99b1b447e29d1ddc89857149df52dc85664dcab
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a59d61f3fd4c0c08396be20dfc38dada842d41be
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="document-template-strings-mfc-add-class-wizard"></a>Cadeias de caracteres de modelo do documento, Assistente para Adicionar Classe MFC
-Esta página do assistente está disponível somente para classes que atendem aos seguintes critérios:  
+# <a name="document-template-strings-mfc-add-class-wizard"></a>Document Template Strings, MFC Add Class Wizard
+This page of the wizard is available only for classes meeting the following criteria:  
   
--   O projeto MFC oferece suporte à arquitetura de documento/exibição.  
+-   The MFC project supports the document/view architecture.  
   
--   A classe base da nova classe é [CFormView](../../mfc/reference/cformview-class.md).  
+-   The base class of the new class is [CFormView](../../mfc/reference/cformview-class.md).  
   
--   A caixa de seleção **DocTemplate gerar recursos** é verificada no **nomes** seção o [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md).  
+-   The check box **Generate DocTemplate resources** is checked on the **Names** section of the [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md).  
   
- O assistente fornece padrões para os seguintes valores para ajudar no design do modo de exibição de formulários, gerenciamento e localização. Como a maioria das cadeias de caracteres de modelo de documento são visíveis e usado por usuários do formulário, eles são localizados na **idioma de recurso** indicado no [tipos de aplicativos](../../mfc/reference/application-type-mfc-application-wizard.md) página do Assistente de aplicativo MFC quando o projeto foi criado.  
-  
-> [!NOTE]
->  O assistente não oferece suporte a impressão automática para classes derivadas de `CFormView`.  
-  
- Consulte [modelos de documento e o processo de criação de documento/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md) para obter mais informações.  
-  
-## <a name="nonlocalized-strings"></a>Cadeias de caracteres não localizadas  
- Aplica-se a aplicativos que criam documentos do usuário. Os usuários podem abrir e salvar documentos muito mais fácil se o tipo de documento tem uma extensão de arquivo e a ID do tipo de arquivo. Esses itens não são localizados, porque eles são usados pelo sistema e não pelo usuário.  
-  
- **Extensão de arquivo**  
- Define a extensão de arquivo associada ao tipo de documento para este aplicativo de formulários. O padrão de extensão de arquivo com base no nome da classe. Por exemplo, se a nova classe MFC é chamada **CWidget**, por padrão, a extensão de arquivo é. wid. A extensão de arquivo é usada em filtros de arquivo e o **abrir** e **Salvar como** caixas de diálogo.  
-  
- Se você alterar a extensão de arquivo, a alteração é refletida no **nome do filtro** caixa.  
+ The wizard provides defaults for the following values to help with forms view design, management, and localization. Because most document template strings are visible and used by the form's users, they are localized into the **Resource language** indicated in the [Application Types](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard when the project was created.  
   
 > [!NOTE]
->  Se você alterar a extensão de arquivo padrão, não inclua o período.  
+>  The wizard does not provide automatic printing support for classes derived from `CFormView`.  
   
- **ID do tipo de arquivo**  
- Define o rótulo para o tipo de documento no registro do sistema.  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## <a name="localized-strings"></a>Cadeias de caracteres localizadas  
- Produz cadeias de caracteres associadas com os formulários e os documentos que são lidos e usados pelos usuários do aplicativo, para que as cadeias de caracteres são localizadas.  
+## <a name="nonlocalized-strings"></a>Nonlocalized strings  
+ Applies to applications that create user documents. Users can open and save documents more easily if the document type has a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
- **Nome do tipo de documento**  
- Identifica o tipo de documento no qual um documento do aplicativo pode ser agrupado. Por padrão, ele é baseado no nome da classe. Por exemplo, se a nova classe MFC é chamada **CWidget**, por padrão, o nome do tipo de documento é Widget. Alterar o padrão não altera quaisquer outras opções na caixa de diálogo.  
+ **File extension**  
+ Sets the file extension associated with the document type for this forms application. The file extension default based on the class name. For example, if the new MFC class is named **CWidget**, by default, the file extension is .wid. The file extension is used in file filters and the **Open** and **Save as** dialog boxes.  
   
- **Nome do filtro**  
- Define o nome que os usuários podem indicar para localizar os arquivos do tipo de arquivo especificado. Essa opção está disponível na **arquivos do tipo** e **Salvar como tipo** opções padrão do Windows **abrir** e **Salvar como** caixas de diálogo. Por padrão, o nome é baseado no nome do projeto e arquivos, seguidos pela extensão indicado na **extensão**. Por exemplo, se seu projeto for chamado Widget, e a extensão do arquivo é .wid, o **nome do filtro** é Widget arquivos (*.wid) por padrão.  
+ If you change the file extension, the change is reflected in the **Filter name** box.  
   
- **Nome curto do arquivo novo**  
- Define o nome que aparece no padrão do Windows `New` caixa de diálogo, se o projeto tiver mais de um modelo de documento. Se seu aplicativo é um [servidor de automação](../../mfc/automation-servers.md), esse nome é usado como o nome curto do seu objeto de automação. Por padrão, esse nome é baseado no nome da classe.  
+> [!NOTE]
+>  If you change the default file extension, do not include the period.  
   
- **Nome completo do tipo de arquivo**  
- Define o nome do tipo de arquivo no registro do sistema. Se seu aplicativo for um servidor de automação, esse nome é usado como o nome longo de seu objeto de automação. Por padrão, esse nome se baseia no nome da classe mais. Documento. Por exemplo, se o nome da classe é **CWidget**, o **nome longo do tipo de arquivo** é documento de Widget.  
+ **File type ID**  
+ Sets the label for your document type in the system registry.  
   
- **Classe de documento**  
- Indica a classe de documento do projeto. Por padrão, essa classe é classe de documento do aplicativo principal, conforme listado no [Classes geradas de revisão](../../mfc/reference/generated-classes-mfc-application-wizard.md) página do Assistente de aplicativo MFC. Você pode selecionar outra classe de documento da lista, se você tiver adicionado outras classes de documento no projeto.  
+## <a name="localized-strings"></a>Localized strings  
+ Produces strings associated with the forms and documents that are read and used by the application's users, so the strings are localized.  
   
-## <a name="see-also"></a>Consulte também  
- [MFC Assistente para Adicionar classe](../../mfc/reference/mfc-add-class-wizard.md)   
- [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)
+ **Doc type name**  
+ Identifies the type of document under which a document of the application can be grouped. By default, it is based on the name of the class. For example, if the new MFC class is named **CWidget**, by default, the document type name is Widget. Changing the default does not change any other options in this dialog box.  
+  
+ **Filter name**  
+ Sets the name that users can indicate to find files of the specified file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the name is based on the project name plus Files, followed by the extension indicated in **File Extension**. For example, if your project is named Widget, and the file extension is .wid, the **Filter name** is Widget Files (*.wid) by default.  
+  
+ **File new short name**  
+ Sets the name appearing in the standard Windows `New` dialog box, if the project has more than one document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, this name is based on the class name.  
+  
+ **File type long name**  
+ Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, this name is based on the class name plus .Document. For example, if the class name is **CWidget**, the **File type long name** is Widget Document.  
+  
+ **Document class**  
+ Indicates the project's document class. By default, this class is the main application's document class, as listed in the [Review Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the MFC Application Wizard. You can select another document class from the list, if you have added other document classes in the project.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC Add Class Wizard](../../mfc/reference/mfc-add-class-wizard.md)   
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

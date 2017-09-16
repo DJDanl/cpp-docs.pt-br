@@ -1,5 +1,5 @@
 ---
-title: "Manipuladores do controle de edição | Documentos do Microsoft"
+title: Edit Control Handlers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,15 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ON_EN_ERRSPACE macro
-- ON_EN_SETFOCUS macro
-- ON_EN_UPDATE macro
-- ON_EN_MAXTEXT macro
-- ON_EN_CHANGE macro
-- ON_EN_HSCROLL macro
-- ON_EN_VSCROLL macro
-- ON_EN_KILLFOCUS macro
-- edit controls, edit control handlers
+- ON_EN_ERRSPACE macro [MFC]
+- ON_EN_SETFOCUS macro [MFC]
+- ON_EN_UPDATE macro [MFC]
+- ON_EN_MAXTEXT macro [MFC]
+- ON_EN_CHANGE macro [MFC]
+- ON_EN_HSCROLL macro [MFC]
+- ON_EN_VSCROLL macro [MFC]
+- ON_EN_KILLFOCUS macro [MFC]
+- edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
 caps.latest.revision: 10
 author: mikeblome
@@ -48,28 +48,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8ec4f95f284d850b6a780d9a8c8154e0b6154337
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 50e93478a3a4649dbd2fc0ae4e089470e1b38a8e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="edit-control-handlers"></a>Manipuladores do controle de edição
-As seguintes entradas de mapa correspondem ao protótipo da função.  
+# <a name="edit-control-handlers"></a>Edit Control Handlers
+The following map entries correspond to the function prototype.  
   
-|Entrada de mapa|Protótipo da função|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
-|ON_EN_CHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_HSCROLL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_UPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_EN_VSCROLL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
+|ON_EN_CHANGE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_ERRSPACE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_HSCROLL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_KILLFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_MAXTEXT( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_SETFOCUS( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_UPDATE( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
+|ON_EN_VSCROLL( \<id>, \<memberFxn> )|afx_msg void memberFxn( );|  
   
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Adicionando um consumidor ODBC do MFC | Documentos do Microsoft
+title: Adding an MFC ODBC Consumer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,29 +31,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aea73b8200826e4be3969e8521d9a1fe3b793499
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e345261ba9cde7e7d97c3741de0e34fd7fd2db8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-odbc-consumer"></a>Adicionando um Consumidor ODBC do MFC
-Um consumidor ODBC do MFC consiste em um ODBC recordset classe associações e de dados necessárias para acessar uma fonte de dados.  
+# <a name="adding-an-mfc-odbc-consumer"></a>Adding an MFC ODBC Consumer
+An MFC ODBC consumer consists of an ODBC recordset class and data bindings necessary to access a data source.  
   
-### <a name="to-add-an-mfc-odbc-consumer"></a>Para adicionar um consumidor ODBC do MFC  
+### <a name="to-add-an-mfc-odbc-consumer"></a>To add an MFC ODBC consumer  
   
-1.  No modo de exibição de classe, clique com botão direito no projeto. No menu de atalho, clique em **adicionar** e, em seguida, clique em **Adicionar classe**.  
+1.  In Class View, right-click the project. On the shortcut menu, click **Add** and then click **Add Class**.  
   
-2.  Na pasta do Visual C++, clique duas vezes o **MFC ODBC consumidor** ícone ou selecione-o e clique em **abrir**.  
+2.  In the Visual C++ folder, double-click the **MFC ODBC Consumer** icon or select it and click **Open**.  
   
-     Abre o Assistente de consumidor ODBC MFC.  
+     The MFC ODBC Consumer Wizard opens.  
   
-3.  Definir as configurações, conforme descrito em [Assistente de consumidor ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
+3.  Define settings as described in [MFC ODBC Consumer Wizard](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
   
-4.  Clique em **concluir** para fechar o assistente, que irá inserir o código de consumidor ODBC recém-criado em seu projeto.  
+4.  Click **Finish** to close the wizard, which will insert the newly created ODBC consumer code in your project.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)
 
 

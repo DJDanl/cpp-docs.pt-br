@@ -1,5 +1,5 @@
 ---
-title: "Configurações do aplicativo, Assistente de controle ActiveX do MFC | Documentos do Microsoft"
+title: Application Settings, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,38 +34,38 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 355f096b1c5943e8c20bb58ceb7117e3e49d11ad
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e4fb7cc0e9c07d1f1996531bfc4c5b2c05146a2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-settings-mfc-activex-control-wizard"></a>Configurações do aplicativo, Assistente de Controle ActiveX MFC
-Use esta página do Assistente de controle de ActiveX MFC para criar e adicionar recursos básicos para um novo projeto do ActiveX MFC. Essas configurações se aplicam ao próprio aplicativo e não a qualquer elemento do controle ou um recurso específico.  
+# <a name="application-settings-mfc-activex-control-wizard"></a>Application Settings, MFC ActiveX Control Wizard
+Use this page of the MFC ActiveX Control Wizard to design and add basic features to a new MFC ActiveX project. These settings apply to the application itself and not to any specific feature or element of the control.  
   
- **Licença de tempo de execução**  
- Selecione esta opção para gerar um arquivo de licença de usuário para distribuir com o controle. A licença é um arquivo de texto *NomeDoProjeto*. lic. Esse arquivo deve estar no mesmo diretório que a DLL do controle para permitir que uma instância do controle a ser criado em um ambiente de tempo de design. Geralmente distribuir esse arquivo com o controle, mas os clientes não distribuí-lo.  
+ **Run-time license**  
+ Select this option to generate a user license file to distribute with the control. The license is a text file, *projname*.lic. This file must be in the same directory as the control's DLL to allow an instance of the control to be created in a design-time environment. You usually distribute this file with your control, but your customers do not distribute it.  
   
- **Gerar arquivos de ajuda**  
- Selecione esta opção para gerar arquivos de ajuda com stubs e configurar o projeto para incluir a Ajuda para o seu controle. Um projeto padrão, criado sem essa opção, apenas gera uma **sobre** caixa que é exibida quando o usuário clica o controle usa F1 ou clicar em **ajuda** no contêiner do controle.  
+ **Generate help files**  
+ Select this option to generate stubbed help files and configure the project to include help for your control. A default project, created without this option, generates only an **About** box that is displayed when the user right clicks the control, uses F1, or clicks **Help** on the control's container.  
   
 > [!NOTE]
->  Como ajuda é exibida depende de como seu controle interage com seu contêiner. Se você incluir ajuda com seu contêiner, você deve tratar mensagens entre o controle e o contêiner para exibir a Ajuda de forma apropriada.  
+>  How help is displayed depends on how your control interacts with its container. If you include help with your container, you must handle messages between the control and the container to display the help appropriately.  
   
- Ao gerar arquivos de ajuda usando o assistente, seu projeto inclui o seguinte:  
+ When you generate help files using the wizard, your project includes the following:  
   
--   O arquivo vcxproj contém código para criar e configurar o arquivo de ajuda quando o projeto é criado.  
+-   The file .vcxproj contains code to build and configure the help file when the project is built.  
   
--   O arquivo *projnamePropPage*. cpp inclui um [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) função no construtor.  
+-   The file *projnamePropPage*.cpp file includes a [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) function in the constructor.  
   
--   O arquivo projname.hpj, é o arquivo de projeto de Ajuda usado pelo compilador de ajuda para criar o arquivo de Ajuda do controle ActiveX. O arquivo. hpj é um arquivo de texto que contém as informações sobre a criação de seu arquivo de Ajuda e os caminhos para os arquivos adicionais (por exemplo, bitmaps) inclui o arquivo de Ajuda.  
+-   The file projname.hpj, is the help project file used by the help compiler to create the ActiveX control's help file. The .hpj file is a text file containing the information about building your help file and the paths to the additional files (for example, bitmaps) the help file includes.  
   
--   O projeto inclui o diretório HLP para conter os arquivos de bitmap de Ajuda do projeto e o arquivo de tópico da Ajuda (*NomeDoProjeto*. rtf). Esse arquivo de Ajuda contém tópicos da Ajuda padrão para as propriedades, eventos e métodos com suporte de vários controles ActiveX comuns. Você pode editar o arquivo. RTF para adicionar ou remover tópicos específicos de Ajuda.  
+-   The project includes the HLP directory to contain the project help bitmap files and the help topic file (*projname*.rtf). This help topic file contains the standard help topics for the common properties, events, and methods supported by many ActiveX controls. You can edit the .rtf file to add or remove specific help topics.  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de controle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Nomes de controle, Assistente de controle ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [Configurações de controle, Assistente de controle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
 
 

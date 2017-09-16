@@ -1,74 +1,92 @@
 ---
-title: "Classes DAO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], Classes "
-  - "classes de banco de dados [C++], DAO"
+title: DAO Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], DAO
+- DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes DAO
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dbc2c515978597e4d7a386ec05afe1e5caae6563
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essas classes funcionam com as outras classes da estrutura de aplicativo para fornecer acesso fácil a bases de dados \(DAO\) de objeto de acesso a dados, que usa o mesmo mecanismo de base de dados que o Microsoft Visual Basic e o Microsoft Access.  As classes de DAO também podem acessar uma ampla variedade de bases de dados dos drivers de ODBC estão disponíveis.  
+---
+# <a name="dao-classes"></a>DAO Classes
+These classes work with the other application framework classes to give easy access to Data Access Object (DAO) databases, which use the same database engine as Microsoft Visual Basic and Microsoft Access. The DAO classes can also access a wide variety of databases for which Open Database Connectivity (ODBC) drivers are available.  
   
- Programas que usam bases de dados de DAO terá pelo menos um objeto de `CDaoDatabase` e um objeto de `CDaoRecordset` .  
+ Programs that use DAO databases will have at least a `CDaoDatabase` object and a `CDaoRecordset` object.  
   
 > [!NOTE]
->  A partir do Visual C\+\+ .NET, o ambiente e os assistentes do Visual C\+\+ não dão suporte a DAO \(embora as classes de DAO são incluídas e você ainda pode usar o\).  A Microsoft recomenda que você use ODBC para novos projetos MFC.  Você só deve usar DAO manter os aplicativos existentes.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.  
   
  [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)  
- Gerencia uma sessão nomeada, protegida por senha da base de dados de logon para fazer logoff.  A maioria de programas usam o espaço de trabalho padrão.  
+ Manages a named, password-protected database session from login to logoff. Most programs use the default workspace.  
   
  [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)  
- Uma conexão a um base de dados através da qual você pode operar com os dados.  
+ A connection to a database through which you can operate on the data.  
   
  [CDaoRecordset](../mfc/reference/cdaorecordset-class.md)  
- Representa um conjunto de registros selecionado de uma fonte de dados.  
+ Represents a set of records selected from a data source.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Um modo de exibição que mostra os registros do banco de dados nos controles.  
+ A view that displays database records in controls.  
   
  [CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)  
- Representa uma definição de consulta, geralmente uma salva em um base de dados.  
+ Represents a query definition, usually one saved in a database.  
   
  [CDaoTableDef](../mfc/reference/cdaotabledef-class.md)  
- Representa a definição armazenada de uma tabela base ou de uma tabela anexada.  
+ Represents the stored definition of a base table or an attached table.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Representa uma condição de exceção que ocorre classes de DAO.  
+ Represents an exception condition arising from the DAO classes.  
   
  [CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)  
- Dá suporte a rotinas de troca de campo de registro \(DFX\) DAO usadas pelas classes de banco de dados DAO.  Normalmente não usará diretamente essa classe.  
+ Supports the DAO record field exchange (DFX) routines used by the DAO database classes. You will normally not directly use this class.  
   
-## Classes relacionadas  
+## <a name="related-classes"></a>Related Classes  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Encapsula um identificador para o armazenamento de um objeto binário grande \(BLOB\), como um bitmap.  os objetos de`CLongBinary` são usados para gerenciar os objetos grandes de dados armazenados em tabelas de base de dados.  
+ Encapsulates a handle to storage for a binary large object (BLOB), such as a bitmap. `CLongBinary` objects are used to manage large data objects stored in database tables.  
   
- [COleCurrency](../Topic/COleCurrency%20Class.md)  
- Wrapper do tipo OLE **CURRENCY**de automação, um tipo aritmética de ponto fixo, com 15 dígitos antes do ponto decimal e 4 dígitos em seguida.  
+ [COleCurrency](../mfc/reference/colecurrency-class.md)  
+ Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.  
   
  [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- Wrapper do tipo **DATA**de automação OLE.  Representa a data e hora.  
+ Wrapper for the OLE automation type **DATE**. Represents date and time values.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  
- Wrapper do tipo **VARIANT**de automação OLE.  Os dados em **VARIANT**s podem ser armazenados em diversos formatos.  
+ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be stored in many formats.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

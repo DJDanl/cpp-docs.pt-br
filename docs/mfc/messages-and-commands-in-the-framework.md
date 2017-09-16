@@ -1,50 +1,68 @@
 ---
-title: "Mensagens e comandos no Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programação controlada por evento"
-  - "eventos [C++], roteamento de comando em MFC"
-  - "eventos [C++], programação controlada por evento"
-  - "programação controlada por mensagem"
+title: Messages and Commands in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- events [MFC], command routing in MFC
+- event-driven programming [MFC]
+- events [MFC], event-driven programming
+- message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Mensagens e comandos no Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40bdb27fe1812237f7b9ad3439d6abd227fd427b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Os aplicativos escritos para o Microsoft Windows são mensagem “por”. Em resposta a eventos como cliques do mouse, as teclas, movimentos da janela, e assim por diante, o windows enviam mensagens à janela apropriada.  As mensagens do windows do processo de aplicativos da estrutura funciona como qualquer outro aplicativo do windows.  Mas ela também fornece alguns aprimoramentos que fazem mensagens de processamento mais fáceis, mais visando, e as encapsularam melhor.  
+---
+# <a name="messages-and-commands-in-the-framework"></a>Messages and Commands in the Framework
+Applications written for Microsoft Windows are "message driven." In response to events such as mouse clicks, keystrokes, window movements, and so on, Windows sends messages to the proper window. Framework applications process Windows messages like any other application for Windows. But the framework also provides some enhancements that make processing messages easier, more maintainable, and better encapsulated.  
   
- Os tópicos a seguir apresentam os termos chaves usados no restante da família do artigo para discutir mensagens e comandos:  
+ The following topics introduce the key terms used in the rest of the article family to discuss messages and commands:  
   
--   [Mensagens](../mfc/messages.md)  
+-   [Messages](../mfc/messages.md)  
   
--   [Manipuladores de mensagem](../mfc/message-handlers.md)  
+-   [Message handlers](../mfc/message-handlers.md)  
   
--   [Categorias de mensagem](../mfc/message-categories.md)  
+-   [Message categories](../mfc/message-categories.md)  
   
--   [Mensagens do windows e mensagens de notificação controle\-](../mfc/message-categories.md)  
+-   [Windows messages and control-notification messages](../mfc/message-categories.md)  
   
--   [Mensagens de comando](../mfc/message-categories.md)  
+-   [Command messages](../mfc/message-categories.md)  
   
--   [Mapas da mensagem](../mfc/mapping-messages.md)  
+-   [Message maps](../mfc/mapping-messages.md)  
   
--   [Objetos de interface do usuário e IDs de comando](../mfc/user-interface-objects-and-command-ids.md)  
+-   [User-interface objects and command IDs](../mfc/user-interface-objects-and-command-ids.md)  
   
--   [Destinos de comando](../Topic/Command%20Targets.md)  
+-   [Command targets](../mfc/command-targets.md)  
   
-## Consulte também  
- [Manipulação e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

@@ -1,68 +1,86 @@
 ---
-title: "Classes de exce&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.exception"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de exceção"
-  - "tratamento de exceção, classes de exceção"
-  - "MFC, exceções"
+title: Exception Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.exception
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception classes [MFC]
+- exception handling [MFC], exception classes
+- MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de exce&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f917d9f426a9ce20644c1897c595ba58fc9b5d41
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A biblioteca de classe fornece um mecanismo manipulação de exceções gerais com base na classe `CException`.  A estrutura de aplicativo usa exceções no seu código; você também pode usá\-los em vossos.  Para obter mais informações, consulte o artigo [Exceções](../mfc/exception-handling-in-mfc.md).  Você pode derivar seus próprios tipos de exceção de `CException`.  
+---
+# <a name="exception-classes"></a>Exception Classes
+The class library provides an exception-handling mechanism based on class `CException`. The application framework uses exceptions in its code; you can also use them in yours. For more information, see the article [Exceptions](../mfc/exception-handling-in-mfc.md). You can derive your own exception types from `CException`.  
   
- MFC O fornece uma classe de exceção de que você pode derivar suas próprias exceção bem como classes de exceção para todas as exceções que oferece suporte.  
+ MFC provides an exception class from which you can derive your own exception as well as exception classes for all of the exceptions it supports.  
   
  [CException](../mfc/reference/cexception-class.md)  
- A classe base para exceções.  
+ The base class for exceptions.  
   
  [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Uma exceção de arquivo morto.  
+ An archive exception.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Uma exceção resultante de uma falha em uma operação de base de dados de DAO.  
+ An exception resulting from a failure in a DAO database operation.  
   
  [CDBException](../mfc/reference/cdbexception-class.md)  
- Uma exceção resultante de uma falha no processamento da base de dados do ODBC.  
+ An exception resulting from a failure in ODBC database processing.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  
- Uma exceção com orientada.  
+ A file-oriented exception.  
   
  [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
- Uma exceção de memória insuficiente.  
+ An out-of-memory exception.  
   
  [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
- Uma exceção resultante de usar um recurso sem suporte.  
+ An exception resulting from using an unsupported feature.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- Uma exceção resultante de uma falha no processamento OLE.  Esta classe é usada por contêineres e por servidores.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
- [COleDispatchException](../Topic/COleDispatchException%20Class.md)  
- Uma exceção resultante de um erro durante a automação.  As exceções de automação são geradas por servidores de automação e capturadas pelos clientes de automação.  
+ [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
+ An exception resulting from an error during automation. Automation exceptions are thrown by automation servers and caught by automation clients.  
   
  [CResourceException](../mfc/reference/cresourceexception-class.md)  
- Uma exceção resultante de uma falha ao carregar um recurso do windows.  
+ An exception resulting from a failure to load a Windows resource.  
   
  [CUserException](../mfc/reference/cuserexception-class.md)  
- Uma exceção usada para parar uma operação iniciada pelo usuário.  Normalmente, o usuário esteve notificado do problema antes que essa exceção seja gerada.  
+ An exception used to stop a user-initiated operation. Typically, the user has been notified of the problem before this exception is thrown.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

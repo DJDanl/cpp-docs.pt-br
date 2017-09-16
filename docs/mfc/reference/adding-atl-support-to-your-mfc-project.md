@@ -1,5 +1,5 @@
 ---
-title: Adicionando suporte ATL ao seu projeto MFC | Documentos do Microsoft
+title: Adding ATL Support to Your MFC Project | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,43 +34,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e112ec3b96345666c7a72da3b88d44a8438f7b73
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b06402781d11f3f0eb1bbb935bac8e2edd742cc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-atl-support-to-your-mfc-project"></a>Adicionando suporte ATL ao seu projeto MFC
-Se você já tiver criado um aplicativo baseado no MFC, em seguida, você pode adicionar suporte para a biblioteca ATL (Active Template) facilmente executando ATL a adicionar suporte ao Assistente de projeto do MFC.  
+# <a name="adding-atl-support-to-your-mfc-project"></a>Adding ATL Support to Your MFC Project
+If you have already created an MFC-based application, then you can add support for the Active Template Library (ATL) easily by running the Add ATL Support to MFC Project Wizard.  
   
 > [!NOTE]
->  ATL e MFC não são suportados em geral nas edições Express do Visual Studio.  
+>  ATL and MFC are not generally supported in the Express editions of Visual Studio.  
   
 > [!NOTE]
->  Esse suporte só se aplica a objetos simples adicionados a um executável do MFC ou projeto de DLL. Você pode adicionar outros objetos (incluindo controles ActiveX) para projetos MFC, mas os objetos podem não funcionar conforme o esperado.  
+>  This support applies only to simple COM objects added to an MFC executable or DLL project. You can add other COM objects (including ActiveX controls) to MFC projects, but the objects might not operate as expected.  
   
-### <a name="to-add-atl-support-to-your-mfc-project"></a>Para adicionar suporte ATL ao seu projeto MFC  
+### <a name="to-add-atl-support-to-your-mfc-project"></a>To add ATL support to your MFC project  
   
-1.  No Solution Explorer, clique no projeto ao qual você deseja adicionar suporte ATL.  
+1.  In Solution Explorer, right-click the project to which you want to add ATL support.  
   
-2.  No menu de atalho, clique em **adicionar**e, em seguida, clique em **Adicionar classe**.  
+2.  On the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  Selecione o **adicionar suporte ATL ao projeto MFC** ícone.  
+3.  Select the **Add ATL Support to MFC Project** icon.  
   
     > [!NOTE]
-    >  Esse ícone está localizado na pasta ATL o **categorias** painel.  
+    >  This icon is located in the ATL folder in the **Categories** pane.  
   
-4.  Quando solicitado, clique em **Sim** para adicionar suporte ATL.  
+4.  When prompted, click **Yes** to add ATL support.  
   
- Para obter mais informações sobre como adicionar suporte ATL altera o código do seu projeto MFC, consulte [detalhes da ATL suporte adicionado pelo assistente ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
+ For more information about how adding ATL support changes your MFC project's code, see [Details of ATL Support Added by the ATL Wizard](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando na estrutura da classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

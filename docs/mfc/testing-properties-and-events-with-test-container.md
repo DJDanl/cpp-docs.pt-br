@@ -1,69 +1,87 @@
 ---
-title: "Testando propriedades e eventos com cont&#234;iner de teste | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Contêiner de Teste de Controle ActiveX"
-  - "Controles ActiveX [C++], testando"
-  - "depurando controles ActiveX"
-  - "propriedades [MFC], testando"
-  - "contêiner de teste"
-  - "testando, contêineres de teste"
-  - "tstcon32.exe"
+title: Testing Properties and Events with Test Container | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- testing, test containers
+- tstcon32.exe
+- debugging ActiveX controls
+- test container
+- ActiveX Control Test Container
+- ActiveX controls [MFC], testing
+- properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Testando propriedades e eventos com cont&#234;iner de teste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b3edf6c89e6d960ad2aad3058364755b53be07db
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O aplicativo de contêineres de teste, enviado no Visual C\+\+, é um contêiner do controle ActiveX para testar e depurar controles ActiveX.  O contêiner de teste permite que o desenvolvedor de controle testar a funcionalidade de controle alterar suas propriedades, invocando seus métodos, e acionando seus eventos.  O contêiner de teste pode exibir logs de notificações de associação de dados e também fornece recursos para testar uma funcionalidade de persistência de controle ActiveX: você pode salvar propriedades para um fluxo ou ao substorage, recarregar\-las, e examinar os dados armazenados do fluxo.  Esta seção descreve como usar os recursos básicos do contêiner de teste.  Para obter informações adicionais, selecione o menu de **Ajuda** quando em execução testam o contêiner.  
+---
+# <a name="testing-properties-and-events-with-test-container"></a>Testing Properties and Events with Test Container
+The Test Container application, shipped in Visual C++, is an ActiveX control container for testing and debugging ActiveX controls. Test Container allows the control developer to test the control's functionality by changing its properties, invoking its methods, and firing its events. Test Container can display logs of data-binding notifications and also provides facilities for testing an ActiveX control's persistence functionality: you can save properties to a stream or to substorage, reload them, and examine the stored stream data. This section describes how to use the basic features of Test Container. For additional information, select the **Help** menu while running Test Container.  
   
-### Para acessar o contêiner de teste de controle ActiveX  
+### <a name="to-access-the-activex-control-test-container"></a>To access the ActiveX Control Test Container  
   
-1.  Criar [Exemplo de TSTCON: Contêiner de teste de controle ActiveX](../top/visual-cpp-samples.md).  
+1.  Build the [TSTCON Sample: ActiveX Control Test Container](../visual-cpp-samples.md).  
   
-### Para testar o controle ActiveX  
+### <a name="to-test-your-activex-control"></a>To test your ActiveX control  
   
-1.  No menu de **Editar** do contêiner de teste, clique em **Insert New Control**.  
+1.  On the **Edit** menu of Test Container, click **Insert New Control**.  
   
-2.  Na caixa de **Inserir controle** o controle, selecione e clique em **OK**desejados.  O controle será exibido no contêiner do controle.  
+2.  In the **Insert Control** box, select the desired control and click **OK**. The control will appear in the control container.  
   
     > [!NOTE]
-    >  Se o controle não está listado na caixa de diálogo de **Inserir controle** , certifique\-se de fazer com que seja registrado com o comando de **Registrar Controles** no menu de **Arquivo** do contêiner de teste.  
+    >  If your control is not listed in the **Insert Control** dialog box, make sure you have registered it with the **Register Controls** command from the **File** menu of Test Container.  
   
- Neste momento você pode testar as propriedades ou os eventos do controle.  
+ At this point you can test your control's properties or events.  
   
-#### Para testar propriedades  
+#### <a name="to-test-properties"></a>To test properties  
   
-1.  No menu de **Controle** , clique **Invoke Methods**.  
+1.  On the **Control** menu, click **Invoke Methods**.  
   
-2.  Na lista suspensa de **Nome do Método** , selecione o método de PropPut da propriedade que você deseja testar.  
+2.  In the **Method Name** drop-down list, select the PropPut method for the property you want to test.  
   
-3.  Modifique **Valor do Parâmetro** ou **Tipo de parâmetro** e clique no botão de **Definir valor** .  
+3.  Modify the **Parameter Value** or **Parameter Type** and click on the **Set Value** button.  
   
-4.  Clique **Invocar** para aplicar o novo valor ao objeto.  
+4.  Click **Invoke** to apply the new value to the object.  
   
-     A propriedade contém agora o novo valor.  
+     The property now contains the new value.  
   
-#### Para testar eventos e especificar o destino de informações do evento.  
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>To test events and specify the destination of event information.  
   
-1.  No menu de **Opções** , clique em **Log**.  
+1.  On the **Options** menu, click **Logging**.  
   
-2.  Especifique o destino de informações do evento.  
+2.  Specify the destination of event information.  
   
-## Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Como depurar um controle ActiveX](../Topic/How%20to:%20Debug%20an%20ActiveX%20Control.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [How to: Debug an ActiveX Control](/visualstudio/debugger/how-to-debug-an-activex-control)
+
+

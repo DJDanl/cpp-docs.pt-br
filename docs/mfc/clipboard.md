@@ -1,57 +1,74 @@
 ---
-title: "&#193;rea de Transfer&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Área de Transferência"
-  - "Área de Transferência, programação"
-  - "copiando dados"
-  - "recortando e copiando dados"
-  - "transferindo dados"
+title: Clipboard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cutting and copying data
+- copying data
+- Clipboard
+- Clipboard, programming
+- transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
 caps.latest.revision: 10
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# &#193;rea de Transfer&#234;ncia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ecf2044ecfa659b8ab372d72ce71930e430dc8b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Esta família de artigos explica como implementar o suporte para a área de transferência do windows em aplicativos MFC.  A área de transferência do windows é usada em duas maneiras:  
+---
+# <a name="clipboard"></a>Clipboard
+This family of articles explains how to implement support for the Windows Clipboard in MFC applications. The Windows Clipboard is used in two ways:  
   
--   Implementando comandos de menu padrão de edição, como divisão, copie e cole.  
+-   Implementing standard Edit menu commands, such as Cut, Copy, and Paste.  
   
--   Implementando a transferência de dados com uniforme de arrastar e soltar \(OLE\).  
+-   Implementing uniform data transfer with drag and drop (OLE).  
   
- A área de transferência é o método padrão do windows de transferir dados entre uma origem e um destino.  Também pode ser muito útil em operações do.  Com o advento OLE, há dois mecanismos da área de transferência do windows.  A área de transferência padrão apis do windows ainda estiver disponível, mas foi complementadas com o mecanismo OLE de transferência de dados.  A transferência de dados \(OLE \(UDT\) oferece suporte a segmentação de dados, a cópia, e a pasta com a área de transferência e arrastar e remoção.  
+ The Clipboard is the standard Windows method of transferring data between a source and a destination. It can also be very useful in OLE operations. With the advent of OLE, there are two Clipboard mechanisms in Windows. The standard Windows Clipboard API is still available, but it has been supplemented with the OLE data transfer mechanism. OLE uniform data transfer (UDT) supports Cut, Copy, and Paste with the Clipboard and drag and drop.  
   
- A área de transferência é um serviço do sistema compartilhado por sessão inteira do windows, o que não tem um identificador ou uma classe de seu próprio.  Você gerencia a área de transferência com as funções de membro da classe [CWnd](../Topic/CWnd%20Class.md).  
+ The Clipboard is a system service shared by the entire Windows session, so it does not have a handle or class of its own. You manage the Clipboard through member functions of class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Quando usar cada o mecanismo da área de transferência](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
+-   [When to use each Clipboard mechanism](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   
--   [Usando a área de transferência tradicional apis do windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the traditional Windows Clipboard API](../mfc/clipboard-using-the-windows-clipboard.md)  
   
--   [Usando o mecanismo OLE da área de transferência](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [Copiando e colando dados](../Topic/Clipboard:%20Copying%20and%20Pasting%20Data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Adicionar outros formatos](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="1bc8aafd7da110d0b343b54cffa169d9" class\="tgtSentence"\>A área de transferência do windows\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms648709)  
+-   [The Windows Clipboard](https://msdn.microsoft.com/library/ms648709)  
   
--   [Implementando o arraste e descartar \(OLE\)](../mfc/drag-and-drop-ole.md)  
+-   [Implementing drag and drop (OLE)](../mfc/drag-and-drop-ole.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

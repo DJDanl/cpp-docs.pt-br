@@ -1,5 +1,5 @@
 ---
-title: Classe CCommandLineInfo | Documentos do Microsoft
+title: CCommandLineInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,12 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCommandLineInfo class
-- command line, parsing
-- parsing, command-line arguments
-- argv argument
-- startup code, parsing command-line arguments
-- application flags [C++]
+- CCommandLineInfo [MFC], CCommandLineInfo
+- CCommandLineInfo [MFC], ParseParam
+- CCommandLineInfo [MFC], m_bRunAutomated
+- CCommandLineInfo [MFC], m_bRunEmbedded
+- CCommandLineInfo [MFC], m_bShowSplash
+- CCommandLineInfo [MFC], m_nShellCommand
+- CCommandLineInfo [MFC], m_strDriverName
+- CCommandLineInfo [MFC], m_strFileName
+- CCommandLineInfo [MFC], m_strPortName
+- CCommandLineInfo [MFC], m_strPrinterName
+- CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
 caps.latest.revision: 21
 author: mikeblome
@@ -50,131 +55,131 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
-ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f54c7bf6e7c0c13028317237b46da41acb357bcd
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/21/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
-Auxilia na análise da linha de comando na inicialização do aplicativo.  
+# <a name="ccommandlineinfo-class"></a>CCommandLineInfo Class
+Aids in parsing the command line at application startup.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCommandLineInfo : public CObject  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Constrói um padrão `CCommandLineInfo` objeto.|  
+|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Constructs a default `CCommandLineInfo` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::ParseParam](#parseparam)|Substitua esse retorno de chamada para analisar os parâmetros individuais.|  
+|[CCommandLineInfo::ParseParam](#parseparam)|Override this callback to parse individual parameters.|  
   
-### <a name="public-data-members"></a>Membros de Dados Públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indica a linha de comando `/Automation` opção foi encontrada.|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indica a linha de comando `/Embedding` opção foi encontrada.|  
-|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Indica se uma tela de entrada deve ser mostrada.|  
-|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Indica o shell de comando para ser processado.|  
-|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Indica o driver nome caso o comando do shell é imprimir; Caso contrário, está vazio.|  
-|[CCommandLineInfo::m_strFileName](#m_strfilename)|Indica o nome do arquivo deve ser aberto ou impresso; vazio se o comando do shell é novo ou DDE.|  
-|[CCommandLineInfo::m_strPortName](#m_strportname)|Indica a porta nome caso o comando do shell é imprimir; Caso contrário, está vazio.|  
-|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|Indica a impressora nome caso o comando do shell é imprimir; Caso contrário, está vazio.|  
-|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|Indica o identificador exclusivo de reinicialização para o Gerenciador de reinicialização, se o Gerenciador de reinicialização reiniciar o aplicativo.|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indicates the command-line `/Automation` option was found.|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indicates the command-line `/Embedding` option was found.|  
+|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Indicates if a splash screen should be shown.|  
+|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Indicates the shell command to be processed.|  
+|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Indicates the driver name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strFileName](#m_strfilename)|Indicates the file name to be opened or printed; empty if the shell command is New or DDE.|  
+|[CCommandLineInfo::m_strPortName](#m_strportname)|Indicates the port name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|Indicates the printer name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|Indicates the unique restart identifier for the restart manager if the restart manager restarted the application.|  
   
-## <a name="remarks"></a>Comentários  
- Um aplicativo MFC normalmente criará uma instância dessa classe no local a [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) função do seu objeto de aplicativo. Esse objeto é então passado para [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline), que chama repetidamente [ParseParam](#parseparam) para preencher o `CCommandLineInfo` objeto. O `CCommandLineInfo` objeto é então passado para [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand) para lidar com os argumentos de linha de comando e sinalizadores.  
+## <a name="remarks"></a>Remarks  
+ An MFC application will typically create a local instance of this class in the [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) function of its application object. This object is then passed to [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline), which repeatedly calls [ParseParam](#parseparam) to fill the `CCommandLineInfo` object. The `CCommandLineInfo` object is then passed to [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand) to handle the command-line arguments and flags.  
   
- Você pode usar esse objeto para encapsular os parâmetros e opções de linha de comando a seguir:  
+ You can use this object to encapsulate the following command-line options and parameters:  
   
-|Argumento de linha de comando|Comando executado|  
+|Command-line argument|Command executed|  
 |----------------------------|----------------------|  
-|*app*|Novo arquivo.|  
-|*aplicativo* filename|Abrir o arquivo.|  
-|*aplicativo* `/p` nome de arquivo|Imprima na impressora padrão.|  
-|*aplicativo* `/pt` porta de driver de impressora do nome de arquivo|Imprima para a impressora especificada.|  
-|*app*`/dde`|Iniciar e await comando DDE.|  
-|*app*`/Automation`|Inicie-o como um servidor de automação OLE.|  
-|*app*`/Embedding`|Inicialização para editar um item OLE incorporado.|  
-|*app*`/Register`<br /><br /> *app*`/Regserver`|Informa o aplicativo para executar as tarefas de registro.|  
-|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|  
+|*app*|New file.|  
+|*app* filename|Open file.|  
+|*app* `/p` filename|Print file to default printer.|  
+|*app* `/pt` filename printer driver port|Print file to the specified printer.|  
+|*app* `/dde`|Start up and await DDE command.|  
+|*app* `/Automation`|Start up as an OLE automation server.|  
+|*app* `/Embedding`|Start up to edit an embedded OLE item.|  
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informs the application to perform any registration tasks.|  
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informs the application to perform any un-registration tasks.|  
   
- Derivar uma nova classe de `CCommandLineInfo` para lidar com outros sinalizadores e valores de parâmetro. Substituir [ParseParam](#parseparam) para lidar com os sinalizadores de novo.  
+ Derive a new class from `CCommandLineInfo` to handle other flags and parameter values. Override [ParseParam](#parseparam) to handle the new flags.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CCommandLineInfo`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
- Esse construtor cria um `CCommandLineInfo` objeto com valores padrão.  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
+ This constructor creates a `CCommandLineInfo` object with default values.  
   
 ```  
 CCommandLineInfo();
 ```  
   
-### <a name="remarks"></a>Comentários  
- O padrão é mostrar a tela inicial ( `m_bShowSplash=TRUE`) e para executar o comando novo no menu Arquivo ( `m_nShellCommand` **= NewFile**).  
+### <a name="remarks"></a>Remarks  
+ The default is to show the splash screen ( `m_bShowSplash=TRUE`) and to execute the New command on the File menu ( `m_nShellCommand`**=NewFile**).  
   
- O aplicativo framework chama [ParseParam](#parseparam) para preencher os membros de dados deste objeto.  
+ The application framework calls [ParseParam](#parseparam) to fill data members of this object.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- Indica que o `/Automation` sinalizador foi encontrado na linha de comando.  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
+ Indicates that the `/Automation` flag was found on the command line.  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se `TRUE`, isso significa iniciar como um servidor de automação OLE.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means start up as an OLE automation server.  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- Indica que o `/Embedding` sinalizador foi encontrado na linha de comando.  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
+ Indicates that the `/Embedding` flag was found on the command line.  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se `TRUE`, isso significa iniciar para editar um item OLE incorporado.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means start up for editing an embedded OLE item.  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
- Indica que a tela inicial deve ser exibida.  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
+ Indicates that the splash screen should be displayed.  
   
 ```  
 BOOL m_bShowSplash;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Se `TRUE`, isso significa que a tela inicial para esse aplicativo deve ser exibido durante a inicialização. A implementação padrão de [ParseParam](#parseparam) define esse membro de dados como `TRUE` se [m_nShellCommand](#m_nshellcommand) é igual a `CCommandLineInfo::FileNew`.  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means the splash screen for this application should be displayed during startup. The default implementation of [ParseParam](#parseparam) sets this data member to `TRUE` if [m_nShellCommand](#m_nshellcommand) is equal to `CCommandLineInfo::FileNew`.  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
- Indica o comando do shell para esta instância do aplicativo.  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
+ Indicates the shell command for this instance of the application.  
   
 ```  
 m_nShellCommand;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O tipo para este membro de dados é o seguinte tipo enumerado, que é definido na `CCommandLineInfo` classe.  
+### <a name="remarks"></a>Remarks  
+ The type for this data member is the following enumerated type, which is defined in the `CCommandLineInfo` class.  
   
 ```  
 enum {  
@@ -190,83 +195,83 @@ enum {
     };  
 ```  
   
- Para obter uma descrição destes valores, consulte a lista a seguir.  
+ For a brief description of these values, see the following list.  
   
-- `CCommandLineInfo::FileNew`Indica que nenhum nome de arquivo foi encontrado na linha de comando.  
+- `CCommandLineInfo::FileNew` Indicates that no file name was found on the command line.  
   
-- `CCommandLineInfo::FileOpen`Indica que um nome de arquivo foi encontrado na linha de comando e que nenhum dos sinalizadores a seguir foram encontrados na linha de comando: `/p`, `/pt`, `/dde`.  
+- `CCommandLineInfo::FileOpen` Indicates that a file name was found on the command line and that none of the following flags were found on the command line: `/p`, `/pt`, `/dde`.  
   
-- `CCommandLineInfo::FilePrint`Indica que o `/p` sinalizador foi encontrado na linha de comando.  
+- `CCommandLineInfo::FilePrint` Indicates that the `/p` flag was found on the command line.  
   
-- `CCommandLineInfo::FilePrintTo`Indica que o `/pt` sinalizador foi encontrado na linha de comando.  
+- `CCommandLineInfo::FilePrintTo` Indicates that the `/pt` flag was found on the command line.  
   
-- `CCommandLineInfo::FileDDE`Indica que o `/dde` sinalizador foi encontrado na linha de comando.  
+- `CCommandLineInfo::FileDDE` Indicates that the `/dde` flag was found on the command line.  
   
-- `CCommandLineInfo::AppRegister`Indica que o `/Register` ou `/Regserver` sinalizador foi encontrado na linha de comando e o aplicativo foi solicitado a registrar.  
+- `CCommandLineInfo::AppRegister` Indicates that the `/Register` or `/Regserver` flag was found on the command line and the application was asked to register.  
   
-- `CCommandLineInfo::AppUnregister`Indica que o `/Unregister` ou `/Unregserver` foi solicitado para cancelar o registro.  
+- `CCommandLineInfo::AppUnregister` Indicates that the `/Unregister` or `/Unregserver` application was asked to unregister.  
   
-- `CCommandLineInfo::RestartByRestartManager`Indica que o aplicativo foi reiniciado pelo Gerenciador de reinicialização.  
+- `CCommandLineInfo::RestartByRestartManager` Indicates that the application was restarted by the restart manager.  
   
-- `CCommandLineInfo::FileNothing`Desativa a exibição de uma nova janela filho MDI na inicialização. Por design, os aplicativos gerados pelo Assistente de aplicativo MDI exibem uma nova janela filho na inicialização. Para desativar esse recurso, um aplicativo pode usar `CCommandLineInfo::FileNothing` como o comando do shell quando ela chama [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand`é chamado pelo `InitInstance( )` de todos os `CWinApp` classes derivadas.  
+- `CCommandLineInfo::FileNothing` Turns off the display of a new MDI child window on startup. By design, Application Wizard-generated MDI applications display a new child window on startup. To turn off this feature, an application can use `CCommandLineInfo::FileNothing` as the shell command when it calls [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand` is called by the `InitInstance( )` of all `CWinApp` derived classes.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView&#55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
- Armazena o valor do terceiro parâmetro de sinalizador não na linha de comando.  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
+ Stores the value of the third non-flag parameter on the command line.  
   
 ```  
 CString m_strDriverName;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, este parâmetro é o nome do driver de impressora para um comando do shell para impressão. A implementação padrão de [ParseParam](#parseparam) define isso se apenas de membro de dados a `/pt` sinalizador foi encontrado na linha de comando.  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer driver for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
- Armazena o valor do primeiro parâmetro não sinalizador na linha de comando.  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
+ Stores the value of the first non-flag parameter on the command line.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, este parâmetro é o nome do arquivo a ser aberto.  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the file to open.  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
- Armazena o valor do quarto parâmetro não sinalizador na linha de comando.  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
+ Stores the value of the fourth non-flag parameter on the command line.  
   
 ```  
 CString m_strPortName;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, este parâmetro é o nome da porta da impressora para um comando do shell para impressão. A implementação padrão de [ParseParam](#parseparam) define isso se apenas de membro de dados a `/pt` sinalizador foi encontrado na linha de comando.  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer port for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
- Armazena o valor do segundo parâmetro de sinalizador não na linha de comando.  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
+ Stores the value of the second non-flag parameter on the command line.  
   
 ```  
 CString m_strPrinterName;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, este parâmetro é o nome da impressora para um comando do shell para impressão. A implementação padrão de [ParseParam](#parseparam) define isso se apenas de membro de dados a `/pt` sinalizador foi encontrado na linha de comando.  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
- O exclusivo reinicie identificador na linha de comando.  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
+ The unique restart identifier on the command line.  
   
 ```  
 CString m_strRestartIdentifier;  
 ```  
   
-### <a name="remarks"></a>Comentários  
- O identificador de reinicialização é exclusivo para cada instância do aplicativo.  
+### <a name="remarks"></a>Remarks  
+ The restart identifier is unique for each instance of the application.  
   
- Se o Gerenciador de reinicialização sai do aplicativo e estiver configurado para reiniciá-lo, o Gerenciador de reinicialização executa o aplicativo da linha de comando com o identificador de reinicialização como um parâmetro opcional. Quando o Gerenciador de reinicialização usa o identificador de reinicialização, o aplicativo pode reabrir documentos anteriormente abertos e recuperar arquivos salva automaticamente.  
+ If the restart manager exits the application and is configured to restart it, the restart manager executes the application from the command line with the restart identifier as an optional parameter. When the restart manager uses the restart identifier, the application can reopen the previously open documents and recover autosaved files.  
   
-##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
- O framework chama essa função para análise/interpretar parâmetros individuais na linha de comando. A segunda versão difere da primeira apenas em projetos de Unicode.  
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam  
+ The framework calls this function to parse/interpret individual parameters from the command line. The second version differs from the first only in Unicode projects.  
   
 ```  
 virtual void ParseParam(
@@ -281,44 +286,44 @@ virtual void ParseParam(
     BOOL bLast);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pszParam`  
- O parâmetro ou sinalizador.  
+ The parameter or flag.  
   
  *bFlag*  
- Indica se `pszParam` é um parâmetro ou um sinalizador.  
+ Indicates whether `pszParam` is a parameter or a flag.  
   
  `bLast`  
- Indica se este é o último parâmetro ou sinalizador na linha de comando.  
+ Indicates if this is the last parameter or flag on the command line.  
   
-### <a name="remarks"></a>Comentários  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) chamadas `ParseParam` uma vez para cada parâmetro ou sinalizador na linha de comando, passando o argumento `pszParam`. Se o primeiro caractere do parâmetro é um ' **-**'ou' **/**', ele será removido e *bFlag* é definido como `TRUE`. Ao analisar o parâmetro final, `bLast` é definido como `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) calls `ParseParam` once for each parameter or flag on the command line, passing the argument to `pszParam`. If the first character of the parameter is a ' **-**' or a ' **/**', then it is removed and *bFlag* is set to `TRUE`. When parsing the final parameter, `bLast` is set to `TRUE`.  
   
- A implementação padrão dessa função reconhece os seguintes sinalizadores: `/p`, `/pt`, `/dde`, `/Automation`, e `/Embedding`, conforme mostrado na tabela a seguir:  
+ The default implementation of this function recognizes the following flags: `/p`, `/pt`, `/dde`, `/Automation`, and `/Embedding`, as shown in the following table:  
   
-|Argumento de linha de comando|Comando executado|  
+|Command-line argument|Command executed|  
 |----------------------------|----------------------|  
-|*app*|Novo arquivo.|  
-|*aplicativo* filename|Abrir o arquivo.|  
-|*aplicativo* `/p` nome de arquivo|Imprima na impressora padrão.|  
-|*aplicativo* `/pt` porta de driver de impressora do nome de arquivo|Imprima para a impressora especificada.|  
-|*app*`/dde`|Iniciar e await comando DDE.|  
-|*app*`/Automation`|Inicie-o como um servidor de automação OLE.|  
-|*app*`/Embedding`|Inicialização para editar um item OLE incorporado.|  
-|*app*`/Register`<br /><br /> *app*`/Regserver`|Informa o aplicativo para executar as tarefas de registro.|  
-|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informa o aplicativo para executar quaisquer tarefas de cancelamento de registro.|  
+|*app*|New file.|  
+|*app* filename|Open file.|  
+|*app* `/p` filename|Print file to default printer.|  
+|*app* `/pt` filename printer driver port|Print file to the specified printer.|  
+|*app* `/dde`|Start up and await DDE command.|  
+|*app* `/Automation`|Start up as an OLE automation server.|  
+|*app* `/Embedding`|Start up to edit an embedded OLE item.|  
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informs the application to perform any registration tasks.|  
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informs the application to perform any un-registration tasks.|  
   
- Essas informações são armazenadas em [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). Sinalizadores são marcados por um uma barra ' **/**'ou hífen' **-**'.  
+ This information is stored in [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), and [m_nShellCommand](#m_nshellcommand). Flags are marked by either a forward-slash ' **/**' or hyphen ' **-**'.  
   
- A implementação padrão coloca o primeiro parâmetro de sinalizador não em [m_strFileName](#m_strfilename). No caso do `/pt` sinalizador, a implementação padrão coloca o segundo, terceiro e quarto parâmetros não sinalizador em [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), e [m_strPortName](#m_strportname), respectivamente.  
+ The default implementation puts the first non-flag parameter into [m_strFileName](#m_strfilename). In the case of the `/pt` flag, the default implementation puts the second, third, and fourth non-flag parameters into [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), and [m_strPortName](#m_strportname), respectively.  
   
- A implementação padrão também define [m_bShowSplash](#m_bshowsplash) para `TRUE` somente no caso de um novo arquivo. No caso de um novo arquivo, o usuário tem a ação que envolvem o próprio aplicativo. Em qualquer outro caso, incluindo a abertura de arquivos existentes usando o shell, a ação do usuário envolve o arquivo diretamente. Em um ponto de vista centrado em documentos, a tela inicial não precisa de anunciar o aplicativo Iniciar.  
+ The default implementation also sets [m_bShowSplash](#m_bshowsplash) to `TRUE` only in the case of a new file. In the case of a new file, the user has taken action involving the application itself. In any other case, including opening existing files using the shell, the user action involves the file directly. In a document-centric standpoint, the splash screen does not need to announce the application starting up.  
   
- Substitua essa função em sua classe derivada para lidar com outros valores de parâmetro e o sinalizador.  
+ Override this function in your derived class to handle other flag and parameter values.  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)   
  [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
 

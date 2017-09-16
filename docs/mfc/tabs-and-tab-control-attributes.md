@@ -1,42 +1,60 @@
 ---
-title: "Guias e atributos de controle da guia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributos [C++], tópicos de referência"
-  - "Classe CTabCtrl, atributo de controle de tabulação"
-  - "controles de guia, atributos"
-  - "guias"
-  - "guias, atributos"
+title: Tabs and Tab Control Attributes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- attributes [MFC], reference topics
+- tab controls [MFC], attributes
+- tabs [MFC]
+- tabs [MFC], attributes
+- CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Guias e atributos de controle da guia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 84eea9a0dae8328bb0b2e202a9e643c20b37ba00
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você tem controle consideráveis sobre a aparência e o comportamento das guias que compõem um controle da guia \([CTabCtrl](../Topic/CTabCtrl%20Class.md)\).  Cada guia pode ter um rótulo, um ícone, um estado do item, e um valor de 32 bits definido pelo aplicativo associado a ela.  Para cada guia, você pode exibir o ícone, o rótulo, ou ambos.  
+---
+# <a name="tabs-and-tab-control-attributes"></a>Tabs and Tab Control Attributes
+You have considerable control over the appearance and behavior of tabs that make up a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Each tab can have a label, an icon, an item state, and an application-defined 32-bit value associated with it. For each tab, you can display the icon, the label, or both.  
   
- Além disso, cada item da guia pode ter três estados possíveis: pressionada, folgado, ou realçado.  Esse estado pode ser definido apenas alterando um item existente da guia.  Para alterar um item existente da guia, recuperá\-lo com uma chamada a [GetItem](../Topic/CTabCtrl::GetItem.md), modifique\-o a estrutura de `TCITEM` \(especificamente os membros de dados de **dwState** e de **dwStateMask** \), e o retorna na estrutura de `TCITEM` alterada por uma chamada a [SetItem](../Topic/CTabCtrl::SetItem.md).  Se você precisar desmarque os estados do item de todos os itens da guia em `CTabCtrl` objetos, faz uma chamada a [DeselectAll](../Topic/CTabCtrl::DeselectAll.md).  Essa função redefine o estado de todos os itens de guia ou de todos os itens a não ser que aquele selecionado no momento.  
+ In addition, each tab item can have three possible states: pressed, unpressed, or highlighted. This state can only be set by modifying an existing tab item. To modify an existing tab item, retrieve it with a call to [GetItem](../mfc/reference/ctabctrl-class.md#getitem), modify the `TCITEM` structure (specifically the **dwState** and **dwStateMask** data members), and then return the modified `TCITEM` structure with a call to [SetItem](../mfc/reference/ctabctrl-class.md#setitem). If you need to clear the item states of all the tab items in a `CTabCtrl` object, make a call to [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). This function resets the state of all tab items or all items except the one currently selected.  
   
- O código a seguir limpa o estado de todos os itens da guia e então altera o estado do terceiro item:  
+ The following code clears the state of all tab items and then modifies the state of the third item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/CPP/tabs-and-tab-control-attributes_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]  
   
- Para obter mais informações sobre os atributos da guia, consulte [Guias e atributos da guia](http://msdn.microsoft.com/library/windows/desktop/bb760550) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Para obter mais informações sobre como adicionar guias a um controle da guia, consulte [Adicionando guias a um controle da guia](../mfc/adding-tabs-to-a-tab-control.md) posteriormente neste tópico.  
+ For more information about tab attributes, see [Tabs and Tab Attributes](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK. For more information about adding tabs to a tab control, see [Adding Tabs to a Tab Control](../mfc/adding-tabs-to-a-tab-control.md) later in this topic.  
   
-## Consulte também  
- [Usando CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

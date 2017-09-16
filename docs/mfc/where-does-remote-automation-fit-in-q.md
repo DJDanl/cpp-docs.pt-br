@@ -1,40 +1,57 @@
 ---
-title: "Onde entra a automa&#231;&#227;o remota? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automação remota, DCOM"
+title: Where Does Remote Automation Fit In? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Onde entra a automa&#231;&#227;o remota?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 005dc04f96136ac53dd0b06605d348d8c3414c0b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-DCOM foi liberado em 1996 e está disponível com plataformas de 32 bits e de 64 bits do somente.  A equipe do Visual Basic no Microsoft Visual Basic sempre viu como a utilização de automação para permitir que os componentes se comuniquem.  A falta de uma versão distribuída limitou drasticamente o uso desses recursos em ambientes do enterprise, para que a equipe que desenvolve Visual Basic 4,0 Enterprise Edition decide investigar a criação de seu próprio conjunto de componentes remota para as partes de automação OLE e COM.  Claramente, o objetivo principal foi garantir que o resultado seja compatível com o e pode ser substituído por DCOM quando se torne disponível.  Continuaram em para implementar a automação store \(RA\) para plataformas de 16 bits e de 32 bits do windows.  
+---
+# <a name="where-does-remote-automation-fit-in"></a>Where Does Remote Automation Fit In?
+DCOM was released in 1996 and is available with 32-bit and 64-bit platforms only. The Visual Basic team at Microsoft has always seen Visual Basic as using Automation to allow its components to communicate. The lack of a distributed version severely limited the use of these capabilities in enterprise environments, so the team developing Visual Basic 4.0 Enterprise Edition decided to investigate the creation of its own set of remoting components for the Automation parts of OLE and COM. Clearly, a major goal was to ensure that the result would be compatible with and could be replaced by DCOM when it became available. They then proceeded to implement Remote Automation (RA) for both 16-bit and 32-bit Windows platforms.  
   
- A automação remoto não está associada a um determinado idioma, mas até a versão do Visual C\+\+ 4,2 Enterprise Edition, foi enviada somente com o Visual Basic 4,0.  Lembre\-se de que a automação remoto completamente incluídos por DCOM.  Se você tem a oportunidade de usar DCOM em vez de automação remoto em seus aplicativos, você deve fazer isso.  Entretanto, há os cenários onde a automação remoto é mais apropriado:  
+ Remote Automation is not tied to any specific language, but until the release of Visual C++ 4.2 Enterprise Edition, it was shipped only with Visual Basic 4.0. Be aware that Remote Automation is wholly subsumed by DCOM. If you have the opportunity to use DCOM instead of Remote Automation in your applications, you should do so. Nevertheless, there are scenarios where Remote Automation is more appropriate:  
   
--   Sempre que você tem clientes de 16 bits.  
+-   Wherever you have 16-bit clients.  
   
--   Se sua organização não desenrolou uma versão DCOM\- habilitada do Windows NT 95 ou do Windows ainda.  
+-   If your organization has not rolled out a DCOM-enabled version of Windows NT or Windows 95 yet.  
   
--   Se você estiver atualizando um pacote de aplicativos existente que usa a automação remoto para usar componentes C\+\+ no lugar de um ou mais componentes do Visual Basic.  
+-   If you are upgrading an existing application suite that uses Remote Automation to use C++ components in place of one or more Visual Basic components.  
   
- Não precisa estar nenhuma diferença entre programas projetados para usar a automação remoto e aqueles criados para usar a automação sobre DCOM, e os utilitários de configuração tornam muito simples alternar a operação entre a automação remoto e o DCOM.  Consequentemente, não é difícil atualizar um aplicativo de automação remoto ao DCOM uma vez que a infraestrutura está em vigor.  
+ There need be no difference between programs created to use Remote Automation and those created to use Automation over DCOM, and the configuration utilities make it very simple to switch operation between Remote Automation and DCOM. Consequently, it is not difficult to upgrade an application from Remote Automation to DCOM once the infrastructure is in place.  
   
-## Consulte também  
- [O que a automação remota fornece?](../mfc/what-does-remote-automation-provide-q.md)   
- [Histórico de DCOM](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [What Does Remote Automation Provide](what-does-remote-automation-provide-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

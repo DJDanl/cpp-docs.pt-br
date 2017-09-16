@@ -1,58 +1,76 @@
 ---
-title: "Otimizando persist&#234;ncia e inicializa&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Controles ActiveX MFC, otimizando"
-  - "otimização, Controles ActiveX"
-  - "otimizando o desempenho, Controles ActiveX"
-  - "desempenho, Controles ActiveX"
+title: Optimizing Persistence and Initialization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], optimizing
+- performance, ActiveX controls
+- optimization, ActiveX controls
+- optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Otimizando persist&#234;ncia e inicializa&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f6d40a2fb9619e182562333c9548aca1e7cf4ca
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Por padrão, a persistência e a inicialização em um controle são tratadas pela função de membro de `DoPropExchange` .  Em um controle típico, essa função contém as chamadas para várias funções de **PX\_** \(`PX_Color`, `PX_Font`, e assim por diante\), um para cada propriedade.  
+---
+# <a name="optimizing-persistence-and-initialization"></a>Optimizing Persistence and Initialization
+By default, persistence and initialization in a control are handled by the `DoPropExchange` member function. In a typical control, this function contains calls to several **PX_** functions (`PX_Color`, `PX_Font`, and so on), one for each property.  
   
- Esse método tem a vantagem de que uma única implementação de `DoPropExchange` pode ser usada para inicialização, para a persistência em formato binário, e para a persistência no formato também chamado de “\-” catchall usado por qualquer contêiner.  Essa função fornece todas as informações sobre as propriedades e seus valores padrão em um local conveniente.  
+ This approach has the advantage that a single `DoPropExchange` implementation can be used for initialization, for persistence in binary format, and for persistence in the so-called "property-bag" format used by some containers. This one function provides all information about the properties and their default values in one convenient place.  
   
- No entanto, essa generalidade vem às custas da eficiência.  As funções de **PX\_** obtém a flexibilidade com as implementações multicamadas que são inerentemente menos eficientes do que mais diretos, mas as abordagens menos flexíveis.  Além disso, se um controle passa um valor padrão a uma função de **PX\_** , esse valor padrão deve ser fornecido o tempo todo, mesmo em situações quando o valor padrão não necessariamente ser usado.  Se gerar o valor padrão é uma tarefa nontrivial \(por exemplo, quando o valor é obtido de uma propriedade de ambiente\), o acréscimo, trabalho desnecessário é feita nos casos em que o valor padrão não é usado.  
+ However, this generality comes at the expense of efficiency. The **PX_** functions get their flexibility through multilayered implementations that are inherently less efficient than more direct, but less flexible, approaches. Furthermore, if a control passes a default value to a **PX_** function, that default value must be provided every time, even in situations when the default value may not necessarily be used. If generating the default value is a nontrivial task (for example, when the value is obtained from an ambient property), then extra, unnecessary work is done in cases where the default value is not used.  
   
- Você pode melhorar o desempenho binário de persistência do controle substituindo a função de `Serialize` do controle.  A implementação padrão dessa função de membro faz uma chamada à função de `DoPropExchange` .  Substituindo a, você pode fornecer uma implementação mais direta para a persistência binário.  Por exemplo, considere esta função de `DoPropExchange` :  
+ You can improve your control's binary persistence performance by overriding your control's `Serialize` function. The default implementation of this member function makes a call to your `DoPropExchange` function. By overriding it, you can provide a more direct implementation for binary persistence. For example, consider this `DoPropExchange` function:  
   
- [!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/CPP/optimizing-persistence-and-initialization_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#1](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_1.cpp)]  
   
- Para melhorar o desempenho de persistência binária deste controle, você pode substituir a função de `Serialize` como segue:  
+ To improve the performance of this control's binary persistence, you can override the `Serialize` function as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/CPP/optimizing-persistence-and-initialization_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#2](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_2.cpp)]  
   
- A variável local de `dwVersion` pode ser usado para detectar a versão do estado persistente de controle que está sendo carregada ou salvo.  Você pode usar essa variável em vez de chamar [CPropExchange::GetVersion](../Topic/CPropExchange::GetVersion.md).  
+ The `dwVersion` local variable can be used to detect the version of the control's persistent state being loaded or saved. You can use this variable instead of calling [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion).  
   
- Para salvar pouco espaço no formato persistente para uma propriedade de **BOOL** \(e para manter compatíveis com o formato gerado por `PX_Bool`\), você pode armazenar a propriedade como **BYTE**, como segue:  
+ To save a little space in the persistent format for a **BOOL** property (and to keep it compatible with the format produced by `PX_Bool`), you can store the property as a **BYTE**, as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/CPP/optimizing-persistence-and-initialization_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Observe que nos exemplos de carga, uma variável temporário é usado e seu valor é então atribuído, em vez de convertendo `m_boolProp` a uma referência de **BYTE** .  A técnica de conversão resultaria em apenas um byte de `m_boolProp` que está sendo alterado, deixando os bytes restantes não inicializado.  
+ Note that in the load case, a temporary variable is used and then its value is assigned, rather than casting `m_boolProp` to a **BYTE** reference. The casting technique would result in only one byte of `m_boolProp` being modified, leaving the remaining bytes uninitialized.  
   
- Para o mesmo controle, você pode otimizar a inicialização de controle substituindo [COleControl::OnResetState](../Topic/COleControl::OnResetState.md) como segue:  
+ For the same control, you can optimize the control's initialization by overriding [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/CPP/optimizing-persistence-and-initialization_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#4](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_4.cpp)]  
   
- Embora `Serialize` e `OnResetState` sejam substituídos, a função de `DoPropExchange` deve ser mantida intacto porque ainda é usada para a persistência no formato do com conjunto.  É importante manter todas essas três funções para assegurar que o controle gerencia suas propriedades forma consistente, independentemente do mecanismo de persistência o contêiner usa.  
+ Although `Serialize` and `OnResetState` have been overridden, the `DoPropExchange` function should be kept intact because it is still used for persistence in the property-bag format. It is important to maintain all three of these functions to ensure that the control manages its properties consistently, regardless of which persistence mechanism the container uses.  
   
-## Consulte também  
- [Controles ActiveX MFC: otimização](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

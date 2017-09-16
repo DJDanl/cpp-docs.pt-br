@@ -1,49 +1,67 @@
 ---
-title: "Personaliza&#231;&#227;o para MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "personalizações, Extensões MFC"
+title: Customization for MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- customizations, MFC Extensions
 ms.assetid: 3b1b7532-8cc9-48dc-9bbe-7fd4060530b5
 caps.latest.revision: 21
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Personaliza&#231;&#227;o para MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0ef91cd5d7626850cd38de1308c1a3473128d4d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este tópico fornece dicas para personalizar um aplicativo MFC.  
+---
+# <a name="customization-for-mfc"></a>Customization for MFC
+This topic provides tips for customizing an MFC application.  
   
-## Personalizações gerais  
- Você pode salvar e carregar o estado do aplicativo ao Registro.  Quando você habilitar essa opção, seu aplicativo carrega o estado inicial do Registro.  Se você alterar o layout inicial de encaixe de seu aplicativo, você terá que deseja limpar os dados de Registro para seu aplicativo.  Caso contrário, os dados no Registro substituirão todas as modificações feitas ao layout inicial.  
+## <a name="general-customizations"></a>General Customizations  
+ You can save and load the state of your application to the registry. When you enable this option, your application will load its initial state from the registry. If you change the initial docking layout for your application, you will have to clear the registry data for your application. Otherwise, the data in the registry will override any changes that you made to the initial layout.  
   
-## Personalizações específicas classe  
- As dicas adicionais de personalização podem ser encontrados nos seguintes tópicos:  
+## <a name="class-specific-customizations"></a>Class-Specific Customizations  
+ Additional customization tips can be found in the following topics:  
   
--   [Classe de CBasePane](../mfc/reference/cbasepane-class.md)  
+-   [CBasePane Class](../mfc/reference/cbasepane-class.md)  
   
--   [Classe de CDockablePane](../Topic/CDockablePane%20Class.md)  
+-   [CDockablePane Class](../mfc/reference/cdockablepane-class.md)  
   
--   [Classe de CDockingManager](../mfc/reference/cdockingmanager-class.md)  
+-   [CDockingManager Class](../mfc/reference/cdockingmanager-class.md)  
   
--   [Classe de CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md)  
+-   [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md)  
   
-## Dicas adicionais de personalização  
- [Personalização de teclado e mouse](../mfc/keyboard-and-mouse-customization.md)  
+## <a name="additional-customization-tips"></a>Additional Customization Tips  
+ [Keyboard and Mouse Customization](../mfc/keyboard-and-mouse-customization.md)  
   
- [Ferramentas definidas pelo usuário](../Topic/User-defined%20Tools.md)  
+ [User-defined Tools](../mfc/user-defined-tools.md)  
   
-## Consulte também  
- [Aplicativos para desktop do MFC](../mfc/mfc-desktop-applications.md)   
- [Implicações de segurança da personalização](../Topic/Security%20Implications%20of%20Customization.md)
+## <a name="see-also"></a>See Also  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)   
+ [Security Implications of Customization](../mfc/security-implications-of-customization.md)
+
+

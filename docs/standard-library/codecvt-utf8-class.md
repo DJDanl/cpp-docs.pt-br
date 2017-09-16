@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8
 - codecvt/std::codecvt_utf8
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 1f6c2724747d22aa662779fa8f6433647a7853f3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8294e0edecb56016671223ee7f0d23e6ff0c3d71
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
-Representa uma faceta de [localidade](../standard-library/locale-class.md) convertida entre caracteres largos codificados como UCS-2 ou UCS-4 e um fluxo de bytes codificado como UTF-8.
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-O tipo de elemento de caractere largo.  
+The wide-character element type.  
 `Maxcode`  
-O número máximo de caracteres da faceta de localidade.  
+The maximum number of characters for the locale facet.  
 `Mode`  
-Informações de configuração para a faceta de localidade.  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>Comentários
+## <a name="remarks"></a>Remarks
 
-O fluxo de bytes pode ser gravado em um arquivo binário ou em um arquivo de texto.  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requirements
 
-Cabeçalho: <codecvt> Namespace: std
+Header: <codecvt> Namespace: std
 

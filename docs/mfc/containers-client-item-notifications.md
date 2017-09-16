@@ -1,62 +1,80 @@
 ---
-title: "Cont&#234;ineres: notifica&#231;&#245;es de item do cliente | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "itens de cliente e contêineres OLE"
-  - "notificações, item cliente de contêiner"
-  - "Contêineres OLE, notificações de item cliente"
+title: 'Containers: Client-Item Notifications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], container client item
+- OLE containers [MFC], client-item notifications
+- client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cont&#234;ineres: notifica&#231;&#245;es de item do cliente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5023d697e6c87199d449687f21e35c3e31fea854
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo descreve as funções substituível que a estrutura de MFC chama quando os aplicativos de servidor são itens no documento do aplicativo cliente.  
+---
+# <a name="containers-client-item-notifications"></a>Containers: Client-Item Notifications
+This article discusses the overridable functions that the MFC framework calls when server applications modify items in your client application's document.  
   
- [COleClientItem](../mfc/reference/coleclientitem-class.md) define várias funções substituível que são chamadas em resposta a solicitações de aplicativo componente, que também é chamado do aplicativo de servidor.  Esses overridables geralmente atuam como notificações.  Informam o aplicativo de contêineres de vários eventos, como rolagem, a ativação, ou alteração de posição, e as alterações que o usuário faz ao editar ou não para manipular o item.  
+ [COleClientItem](../mfc/reference/coleclientitem-class.md) defines several overridable functions that are called in response to requests from the component application, which is also called the server application. These overridables usually act as notifications. They inform the container application of various events, such as scrolling, activation, or a change of position, and of changes that the user makes when editing or otherwise manipulating the item.  
   
- A estrutura notifica o aplicativo de contêiner das alterações com uma chamada a `COleClientItem::OnChange`, uma função substituível cuja implementação é necessária.  Esta função protegida recebe dois argumentos.  O primeiro especifica o motivo pelo qual o servidor modificou o item:  
+ The framework notifies your container application of changes through a call to `COleClientItem::OnChange`, an overridable function whose implementation is required. This protected function receives two arguments. The first specifies the reason the server changed the item:  
   
-|Notificação|Significado|  
-|-----------------|-----------------|  
-|`OLE_CHANGED`|A aparência OLE do item foi alterada.|  
-|`OLE_SAVED`|O item OLE foi salvo.|  
-|`OLE_CLOSED`|O item OLE foi fechado.|  
-|**OLE\_RENAMED**|O documento do servidor que contém o item OLE foi renomeado.|  
-|`OLE_CHANGED_STATE`|O item OLE foi alterada de um estado para outro.|  
-|**OLE\_CHANGED\_ASPECT**|O aspecto OLE de descompasso de item foi alterado pela estrutura.|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|`OLE_CHANGED`|The OLE item's appearance has changed.|  
+|`OLE_SAVED`|The OLE item has been saved.|  
+|`OLE_CLOSED`|The OLE item has been closed.|  
+|**OLE_RENAMED**|The server document containing the OLE item has been renamed.|  
+|`OLE_CHANGED_STATE`|The OLE item has changed from one state to another.|  
+|**OLE_CHANGED_ASPECT**|The OLE item's draw aspect has been changed by the framework.|  
   
- Estes são valores de enumeração de **OLE\_NOTIFICATION** , que é definida em AFXOLE.H.  
+ These values are from the **OLE_NOTIFICATION** enumeration, which is defined in AFXOLE.H.  
   
- O segundo argumento para a função especifica como o item foi alterado ou estado que fez logon:  
+ The second argument to this function specifies how the item has changed or what state it has entered:  
   
-|Quando o primeiro argumento for|Segundo argumento|  
-|-------------------------------------|-----------------------|  
-|`OLE_SAVED` ou `OLE_CLOSED`|Não é usado.|  
-|`OLE_CHANGED`|Especifica o aspecto de item OLE que foi alterado.|  
-|`OLE_CHANGED_STATE`|Descreve o estado que está sendo registrado \(`emptyState`, **loadedState**, `openState`, `activeState`, ou `activeUIState`\).|  
+|When first argument is|Second argument|  
+|----------------------------|---------------------|  
+|`OLE_SAVED` or `OLE_CLOSED`|Is not used.|  
+|`OLE_CHANGED`|Specifies the aspect of the OLE item that has changed.|  
+|`OLE_CHANGED_STATE`|Describes the state being entered (`emptyState`, **loadedState**, `openState`, `activeState`, or `activeUIState`).|  
   
- Para obter mais informações sobre os estados que um item do cliente pode assumir, consulte [Contêiner: Estados de cliente item](../mfc/containers-client-item-states.md).  
+ For more information about the states a client item can assume, see [Containers: Client-Item States](../mfc/containers-client-item-states.md).  
   
- A estrutura chama `COleClientItem::OnGetItemPosition` quando um item está sendo alternado para o edição no local.  A implementação é necessária para os aplicativos que dão suporte ao editar no local.  O assistente de aplicativo MFC fornece uma implementação básica, que atribui as coordenadas do item ao objeto de `CRect` que é passado como um argumento a `OnGetItemPosition`.  
+ The framework calls `COleClientItem::OnGetItemPosition` when an item is being activated for in-place editing. Implementation is required for applications that support in-place editing. The MFC Application Wizard provides a basic implementation, which assigns the item's coordinates to the `CRect` object that is passed as an argument to `OnGetItemPosition`.  
   
- Se a posição OLE ou o tamanho de um item são alteradas durante o editar no local, as informações do contêiner sobre os retângulos da posição e o recuo do item deve ser atualizada e o servidor deve receber informações sobre as alterações.  A estrutura chama `COleClientItem::OnChangeItemPosition` para essa finalidade.  O assistente de aplicativo MFC fornece uma substituição que chama a função da classe base.  Você deve editar a função que o assistente de aplicativo para escrever seu `COleClientItem`\- classe derivada de forma que a função atualiza todas as informações mantidas pelo objeto de cliente item.  
+ If an OLE item's position or size changes during in-place editing, the container's information about the item's position and clipping rectangles must be updated and the server must receive information about the changes. The framework calls `COleClientItem::OnChangeItemPosition` for this purpose. The MFC Application Wizard provides an override that calls the base class's function. You should edit the function that the application wizard writes for your `COleClientItem`-derived class so that the function updates any information retained by your client-item object.  
   
-## Consulte também  
- [Contêineres](../mfc/containers.md)   
- [Contêineres: estados de item do cliente](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../Topic/COleClientItem::OnChangeItemPosition.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client-Item States](../mfc/containers-client-item-states.md)   
+ [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+

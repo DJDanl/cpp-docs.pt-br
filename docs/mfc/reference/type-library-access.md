@@ -1,5 +1,5 @@
 ---
-title: "Acesso à biblioteca de tipo | Documentos do Microsoft"
+title: Type Library Access | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type libraries, accessing
+- type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
 author: mikeblome
@@ -33,68 +33,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c531cfd358a6f049754b55a5bc8902ad5a37d975
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-library-access"></a>Acesso à biblioteca de tipos
-Bibliotecas de tipos expõem as interfaces de um controle OLE para outros aplicativos compatíveis com OLE. Cada controle OLE deve ter uma biblioteca de tipos, se uma ou mais interfaces devem ser expostos.  
+# <a name="type-library-access"></a>Type Library Access
+Type libraries expose the interfaces of an OLE control to other OLE-aware applications. Each OLE control must have a type library if one or more interfaces are to be exposed.  
   
- As seguintes macros permitem um controle OLE fornecer acesso à sua própria biblioteca de tipos:  
+ The following macros allow an OLE control to provide access to its own type library:  
   
-### <a name="type-library-access"></a>Acesso à biblioteca de tipos  
+### <a name="type-library-access"></a>Type Library Access  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declara um `GetTypeLib` a função de membro de um controle OLE (deve ser usado na declaração da classe).|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa uma `GetTypeLib` função de membro de um controle OLE (deve ser usado na implementação da classe).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
- Declara o `GetTypeLib` função membro da sua classe de controle.  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Declares the `GetTypeLib` member function of your control class.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- O nome da classe de controle relacionada à biblioteca de tipos.  
+ The name of the control class related to the type library.  
   
-### <a name="remarks"></a>Comentários  
- Use essa macro no arquivo de cabeçalho de classe de controle.  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file.  
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
- Implementa o controle `GetTypeLib` função de membro.  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implements the control's `GetTypeLib` member function.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- O nome da classe de controle relacionada à biblioteca de tipos.  
+ The name of the control class related to the type library.  
   
  *tlid*  
- O número de identificação da biblioteca de tipos.  
+ The ID number of the type library.  
   
  `wVerMajor`  
- O número de versão principal da biblioteca de tipo.  
+ The type library major version number.  
   
  `wVerMinor`  
- O número de versão secundária da biblioteca de tipo.  
+ The type library minor version number.  
   
-### <a name="remarks"></a>Comentários  
- Essa macro deve aparecer no arquivo de implementação para qualquer classe de controle que usa o `DECLARE_OLETYPELIB` macro.  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLETYPELIB` macro.  
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-## <a name="see-also"></a>Consulte também  
- [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

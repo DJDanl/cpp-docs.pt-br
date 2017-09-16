@@ -1,5 +1,5 @@
 ---
-title: Estrutura DELETEITEMSTRUCT | Documentos do Microsoft
+title: DELETEITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DELETEITEMSTRUCT structure
+- DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
 caps.latest.revision: 13
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f5936cbb863cf8ace851609cb1dc8352e21f9456
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 609cce99d61b1b3262fc0f72ac9c20cc38369973
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="deleteitemstruct-structure"></a>Estrutura DELETEITEMSTRUCT
-O `DELETEITEMSTRUCT` estrutura descreve um item excluído de caixa de listagem ou caixa de combinação desenhados pelo proprietário.  
+# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT Structure
+The `DELETEITEMSTRUCT` structure describes a deleted owner-drawn list-box or combo-box item.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDELETEITEMSTRUCT { /* ditms */  
@@ -55,30 +55,30 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 } DELETEITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Especifica **ODT_LISTBOX** (uma caixa de listagem de desenho proprietário) ou **ODT_COMBOBOX** (uma caixa de combinação do desenho proprietário).  
+ Specifies **ODT_LISTBOX** (an owner-drawn list box) or **ODT_COMBOBOX** (an owner-drawn combo box).  
   
  `CtlID`  
- Especifica o identificador da caixa de listagem ou caixa de combinação.  
+ Specifies the identifier of the list box or combo box.  
   
  `itemID`  
- Especifica o índice do item na caixa de listagem ou caixa de combinação que está sendo removido.  
+ Specifies index of the item in the list box or combo box being removed.  
   
  `hwndItem`  
- Identifica o controle.  
+ Identifies the control.  
   
  `itemData`  
- Especifica os dados definidos pelo aplicativo para o item. Esse valor é passado para o controle de **lParam** parâmetro da mensagem, que adiciona o item à caixa de listagem ou caixa de combinação.  
+ Specifies application-defined data for the item. This value is passed to the control in the **lParam** parameter of the message that adds the item to the list box or combo box.  
   
-## <a name="remarks"></a>Comentários  
- Quando um item é removido da caixa de listagem ou caixa de combinação ou caixa de listagem ou caixa de combinação é destruída, o Windows envia o `WM_DELETEITEM` mensagens para o proprietário de cada item excluído. O **lParam** parâmetro da mensagem contém um ponteiro para essa estrutura.  
+## <a name="remarks"></a>Remarks  
+ When an item is removed from the list box or combo box or when the list box or combo box is destroyed, Windows sends the `WM_DELETEITEM` message to the owner for each deleted item. The **lParam** parameter of the message contains a pointer to this structure.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** atldbcli.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
 
 

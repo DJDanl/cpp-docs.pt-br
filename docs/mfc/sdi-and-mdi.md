@@ -1,40 +1,57 @@
 ---
-title: "SDI e MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas com moldura, aplicativos MDI"
-  - "janelas com moldura, Aplicativos SDI"
-  - "MDI, vs. SDI"
-  - "MFC, janelas"
-  - "single document interface (SDI), aplicativos"
+title: SDI and MDI | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], SDI applications
+- frame windows [MFC], MDI applications
+- MFC, windows
+- single document interface (SDI) [MFC], applications
+- MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# SDI e MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 974b31893158d532397441f37403028e39aa60de
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O facilita o trabalho com aplicativos de \(MDI\) da interface \(SDI\) e interface de documentos em um único documento.  
+---
+# <a name="sdi-and-mdi"></a>SDI and MDI
+MFC makes it easy to work with both single-document interface (SDI) and multiple-document interface (MDI) applications.  
   
- Os aplicativos de SDI permitem apenas uma janela do quadro do documento aberto de cada vez.  Os aplicativos MDI permitem que as várias janelas do quadro do documento estão abertas na mesma instância de um aplicativo.  Um aplicativo MDI tem uma janela no de que as várias janelas filho MDI, que são as janelas próprias do quadro, podem ser abertas, cada uma contendo um documento separado.  Em alguns aplicativos, as janelas filho podem ser de tipos diferentes, como o windows do gráfico e janelas da planilha.  Nesse caso, a barra de menus pode ser alterada conforme as janelas filho MDI de tipos diferentes são ativadas.  
+ SDI applications allow only one open document frame window at a time. MDI applications allow multiple document frame windows to be open in the same instance of an application. An MDI application has a window within which multiple MDI child windows, which are frame windows themselves, can be opened, each containing a separate document. In some applications, the child windows can be of different types, such as chart windows and spreadsheet windows. In that case, the menu bar can change as MDI child windows of different types are activated.  
   
 > [!NOTE]
->  No Windows 95 e versões posteriores, os aplicativos geralmente são SDI como o sistema operacional adotou uma exibição “documento centralizado”.  
+>  Under Windows 95 and later, applications are commonly SDI because the operating system has adopted a "document-centered" view.  
   
- Para obter mais informações, consulte [Documentos, exibições, e a estrutura](../mfc/documents-views-and-the-framework.md).  
+ For more information, see [Documents, Views, and the Framework](../mfc/documents-views-and-the-framework.md).  
   
-## Consulte também  
- [Usando as classes para escrever aplicativos para Windows](../Topic/Using%20the%20Classes%20to%20Write%20Applications%20for%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

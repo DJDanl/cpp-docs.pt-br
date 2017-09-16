@@ -1,5 +1,5 @@
 ---
-title: Classe CDaoFieldExchange | Documentos do Microsoft
+title: CDaoFieldExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,15 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DAO (Data Access Objects), record field exchange (DFX)
-- field exchange
-- DFX (DAO record field exchange)
-- RFX (record field exchange), DAO classes
-- field exchange, record for DAO classes
-- exchanging data between databases and recordsets
-- DFX (DAO record field exchange), DAO Record Field Exchange
-- RFX (record field exchange)
-- CDaoFieldExchange class
+- CDaoFieldExchange [MFC], IsValidOperation
+- CDaoFieldExchange [MFC], SetFieldType
+- CDaoFieldExchange [MFC], m_nOperation
+- CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 caps.latest.revision: 23
 author: mikeblome
@@ -46,135 +41,135 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 31b7121f8e93f85ed73b5d095ac0995f3ddee721
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc73eb6ba90585dfc308e5dd06e9cd3071a0a8ce
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaofieldexchange-class"></a>Classe CDaoFieldExchange
-Oferece suporte as rotinas de troca (DFX) dos campos de registro DAO usadas pelas classes de banco de dados DAO.  
+# <a name="cdaofieldexchange-class"></a>CDaoFieldExchange Class
+Supports the DAO record field exchange (DFX) routines used by the DAO database classes.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoFieldExchange  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Retorna zero se a operação atual é apropriado para o tipo de campo que está sendo atualizado.|  
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Especifica o tipo de conjunto de registros membro de dados, coluna ou parâmetro — representado por todas as chamadas subsequentes a funções DFX até a próxima chamada para `SetFieldType`.|  
+|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Returns nonzero if the current operation is appropriate for the type of field being updated.|  
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Specifies the type of recordset data member — column or parameter — represented by all subsequent calls to DFX functions until the next call to `SetFieldType`.|  
   
-### <a name="public-data-members"></a>Membros de Dados Públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|A operação DFX realizada pela chamada atual para o conjunto de registros `DoFieldExchange` função de membro.|  
-|[CDaoFieldExchange::m_prs](#m_prs)|Um ponteiro para o conjunto de registros no qual DFX operações estão sendo executadas.|  
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|The DFX operation being performed by the current call to the recordset's `DoFieldExchange` member function.|  
+|[CDaoFieldExchange::m_prs](#m_prs)|A pointer to the recordset on which DFX operations are being performed.|  
   
-## <a name="remarks"></a>Comentários  
- `CDaoFieldExchange`não tem uma classe base.  
+## <a name="remarks"></a>Remarks  
+ `CDaoFieldExchange` does not have a base class.  
   
- Use essa classe, se você estiver escrevendo rotinas de troca de dados para tipos de dados personalizados. Caso contrário, você não diretamente usará essa classe. DFX troca dados entre os membros de dados do campo para o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto e os campos correspondentes do registro atual na fonte de dados. DFX gerencia a troca em duas direções, da fonte de dados e à fonte de dados. Consulte [técnico 53 Observação](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) para obter informações sobre como escrever rotinas DFX personalizadas.  
+ Use this class if you are writing data exchange routines for custom data types; otherwise, you will not directly use this class. DFX exchanges data between the field data members of your [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object and the corresponding fields of the current record on the data source. DFX manages the exchange in both directions, from the data source and to the data source. See [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) for information about writing custom DFX routines.  
   
 > [!NOTE]
->  As classes de banco de dados DAO são diferentes das classes de banco de dados MFC com base em conectividade aberta de banco de dados (ODBC). Todos os nomes de classe de banco de dados DAO têm o prefixo "CDao". Você ainda pode acessar fontes de dados ODBC com as classes DAO. Em geral, as classes do MFC com base em DAO são mais capacitadas que as classes do MFC com base em ODBC. As classes com base em DAO podem acessar dados, inclusive por meio de drivers ODBC, por meio de seu próprio mecanismo de banco de dados. Elas também dão suporte a operações de linguagem de definição de dados (DDL), como adicionar tabelas por meio de classes em vez de precisar chamar DAO por conta própria.  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes. In general, the MFC classes based on DAO are more capable than the MFC classes based on ODBC. The DAO-based classes can access data, including through ODBC drivers, via their own database engine. They also support Data Definition Language (DDL) operations, such as adding tables via the classes instead of having to call DAO yourself.  
   
 > [!NOTE]
->  Troca de campos de registro DAO (DFX) é muito semelhante a troca de campos de registro (RFX) nas classes de banco de dados baseado em ODBC MFC ( `CDatabase`, `CRecordset`). Se você entender RFX, você achará DFX fácil de usar.  
+>  DAO record field exchange (DFX) is very similar to record field exchange (RFX) in the ODBC-based MFC database classes ( `CDatabase`, `CRecordset`). If you understand RFX, you will find it easy to use DFX.  
   
- Um `CDaoFieldExchange` objeto fornece as informações de contexto necessária para DAO registrar troca de campos para que ela ocorra. `CDaoFieldExchange`objetos de suportam a um número de operações, incluindo parâmetros de ligação e membros de dados de campo e definir vários sinalizadores nos campos do registro atual. DFX operações são executadas em membros de dados de classe de conjunto de registros de tipos definidos pelo `enum` **FieldType** em `CDaoFieldExchange`. Possíveis **FieldType** valores são:  
+ A `CDaoFieldExchange` object provides the context information needed for DAO record field exchange to take place. `CDaoFieldExchange` objects support a number of operations, including binding parameters and field data members and setting various flags on the fields of the current record. DFX operations are performed on recordset-class data members of types defined by the `enum`**FieldType** in `CDaoFieldExchange`. Possible **FieldType** values are:  
   
-- **CDaoFieldExchange::outputColumn** para membros de dados do campo.  
+- **CDaoFieldExchange::outputColumn** for field data members.  
   
-- **CDaoFieldExchange::param** para membros de dados do parâmetro.  
+- **CDaoFieldExchange::param** for parameter data members.  
   
- O [IsValidOperation](#isvalidoperation) função de membro é fornecida para escrever suas próprias rotinas DFX personalizadas. Você usará [SetFieldType](#setfieldtype) frequentemente em seu [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) funções. Para obter detalhes sobre as funções globais DFX, consulte [funções de troca de campos do registro](../../mfc/reference/record-field-exchange-functions.md). Para obter informações sobre como escrever rotinas DFX personalizadas para seus próprios tipos de dados, consulte [técnico 53 Observação](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
+ The [IsValidOperation](#isvalidoperation) member function is provided for writing your own custom DFX routines. You will use [SetFieldType](#setfieldtype) frequently in your [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) functions. For details about the DFX global functions, see [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md). For information about writing custom DFX routines for your own data types, see [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDaoFieldExchange`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
- Se você escrever sua própria função DFX, chame `IsValidOperation` no início de sua função para determinar se a operação atual pode ser executada em um tipo de membro de dados de campo específico (um **CDaoFieldExchange::outputColumn** ou um **CDaoFieldExchange::param**).  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
+ If you write your own DFX function, call `IsValidOperation` at the beginning of your function to determine whether the current operation can be performed on a particular field data member type (a **CDaoFieldExchange::outputColumn** or a **CDaoFieldExchange::param**).  
   
 ```  
 BOOL IsValidOperation();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a operação atual é apropriada para o tipo de campo que está sendo atualizado.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current operation is appropriate for the type of field being updated.  
   
-### <a name="remarks"></a>Comentários  
- Algumas das operações executadas pelo mecanismo de DFX se aplicam somente a um tipo de campo possíveis. Siga o modelo das funções DFX existentes.  
+### <a name="remarks"></a>Remarks  
+ Some of the operations performed by the DFX mechanism apply only to one of the possible field types. Follow the model of the existing DFX functions.  
   
- Para obter informações adicionais sobre como escrever rotinas DFX personalizadas, consulte [técnico 53 Observação](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
+ For additional information on writing custom DFX routines, see [Technical Note 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
- Identifica a operação a ser executada no [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto associado ao objeto do exchange de campo.  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
+ Identifies the operation to be performed on the [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object associated with the field exchange object.  
   
-### <a name="remarks"></a>Comentários  
- O `CDaoFieldExchange` objeto fornece o contexto para um número de diferentes operações DFX no conjunto de registros.  
+### <a name="remarks"></a>Remarks  
+ The `CDaoFieldExchange` object supplies the context for a number of different DFX operations on the recordset.  
   
 > [!NOTE]
->  O **PSEUDONULL** descrito em operações de MarkForAddNew e SetFieldNull abaixo é um valor usado para marcar campos nulos. O mecanismo de troca de campos de registro (DFX) DAO usa esse valor para determinar quais campos foram explicitamente marcadas como Null. **PSEUDONULL** não é necessário para [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) e [COleCurrency](../../mfc/reference/colecurrency-class.md) campos.  
+>  The **PSEUDONULL** value described under the MarkForAddNew and SetFieldNull operations below is a value used to mark fields Null. The DAO record field exchange mechanism (DFX) uses this value to determine which fields have been explicitly marked Null. **PSEUDONULL** is not required for [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) and [COleCurrency](../../mfc/reference/colecurrency-class.md) fields.  
   
- Os valores possíveis de **m_nOperation** são:  
+ Possible values of **m_nOperation** are:  
   
-|Operação|Descrição|  
+|Operation|Description|  
 |---------------|-----------------|  
-|**AddToParameterList**|Cria o **parâmetros** cláusula da instrução SQL.|  
-|**AddToSelectList**|Cria o **selecione** cláusula da instrução SQL.|  
-|**BindField**|Associa um campo no banco de dados para um local de memória no seu aplicativo.|  
-|**BindParam**|Define os valores de parâmetro de consulta do conjunto de registros.|  
-|**Correção**|Define o status Null para um campo.|  
-|**AllocCache**|Aloca o cache usado para verificar se há "sujos" campos do conjunto de registros.|  
-|**StoreField**|Salva o registro atual no cache.|  
-|**LoadField**|Restaura as variáveis de membro de dados armazenados em cache no conjunto de registros.|  
-|**FreeCache**|Libera o cache usado para verificar se há "sujos" campos do conjunto de registros.|  
-|`SetFieldNull`|Define o status do campo como nulo e o valor para **PSEUDONULL**.|  
-|**MarkForAddNew**|Marca os campos "sujos" se não **PSEUDONULL**.|  
-|**MarkForEdit**|Marca os campos "sujos" se não corresponder o cache.|  
-|**SetDirtyField**|Conjuntos de campo valores marcados como "sujos".|  
-|**DumpField**|Despeja o conteúdo de um campo (somente debug).|  
-|**MaxDFXOperation**|Usado para verificação de entrada.|  
+|**AddToParameterList**|Builds the **PARAMETERS** clause of the SQL statement.|  
+|**AddToSelectList**|Builds the **SELECT** clause of the SQL statement.|  
+|**BindField**|Binds a field in the database to a memory location in your application.|  
+|**BindParam**|Sets parameter values for the recordset's query.|  
+|**Fixup**|Sets the Null status for a field.|  
+|**AllocCache**|Allocates the cache used to check for "dirty" fields in the recordset.|  
+|**StoreField**|Saves the current record to the cache.|  
+|**LoadField**|Restores the cached data member variables in the recordset.|  
+|**FreeCache**|Frees the cache used to check for "dirty" fields in the recordset.|  
+|`SetFieldNull`|Sets a field's status to Null and value to **PSEUDONULL**.|  
+|**MarkForAddNew**|Marks fields "dirty" if not **PSEUDONULL**.|  
+|**MarkForEdit**|Marks fields "dirty" if they do not match the cache.|  
+|**SetDirtyField**|Sets field values marked as "dirty."|  
+|**DumpField**|Dumps a field's contents (debug only).|  
+|**MaxDFXOperation**|Used for input checking.|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
- Contém um ponteiro para o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto associado a `CDaoFieldExchange` objeto.  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
+ Contains a pointer to the [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object associated with the `CDaoFieldExchange` object.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
- Chamar `SetFieldType` em seu `CDaoRecordset` da classe `DoFieldExchange` substituir.  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
+ Call `SetFieldType` in your `CDaoRecordset` class's `DoFieldExchange` override.  
   
 ```  
 void SetFieldType(UINT nFieldType);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nFieldType`  
- Um valor de **enum FieldType**, declarados no `CDaoFieldExchange`, que pode ser um dos seguintes:  
+ A value of the **enum FieldType**, declared in `CDaoFieldExchange`, which can be either of the following:  
   
 - **CDaoFieldExchange::outputColumn**  
   
 - **CDaoFieldExchange::param**  
   
-### <a name="remarks"></a>Comentários  
- Normalmente, ClassWizard grava essa chamada para você. Se você escrever sua própria função e estiver usando o Assistente para gravar seu `DoFieldExchange` function, adicionar chamadas para sua própria função de fora o mapeamento de campos. Se você não usar o assistente, não haverá um mapa de campos. A chamada precede chamadas a funções DFX, uma para cada membro de dados do campo de sua classe e identifica o tipo de campo como **CDaoFieldExchange::outputColumn**.  
+### <a name="remarks"></a>Remarks  
+ Normally, ClassWizard writes this call for you. If you write your own function and are using the wizard to write your `DoFieldExchange` function, add calls to your own function outside the field map. If you do not use the wizard, there will not be a field map. The call precedes calls to DFX functions, one for each field data member of your class, and identifies the field type as **CDaoFieldExchange::outputColumn**.  
   
- Se você parametrizar sua classe de conjunto de registros, adicione chamadas DFX para todos os membros de dados de parâmetro (fora de mapa de campo) e preceder essas chamadas com uma chamada para `SetFieldType`. Passar o valor **CDaoFieldExchange::param**. (Em vez disso, você pode usar um [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e defina seus valores de parâmetro.)  
+ If you parameterize your recordset class, you should add DFX calls for all parameter data members (outside the field map) and precede these calls with a call to `SetFieldType`. Pass the value **CDaoFieldExchange::param**. (You can, instead, use a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) and set its parameter values.)  
   
- Em geral, cada grupo de chamadas de função DFX associados a membros de dados de campo ou membros de dados do parâmetro deve ser precedido por uma chamada para `SetFieldType`. O `nFieldType` parâmetro de cada `SetFieldType` chamada identifica o tipo dos membros de dados representados pelas chamadas de função DFX que seguem o `SetFieldType` chamar.  
+ In general, each group of DFX function calls associated with field data members or parameter data members must be preceded by a call to `SetFieldType`. The `nFieldType` parameter of each `SetFieldType` call identifies the type of the data members represented by the DFX function calls that follow the `SetFieldType` call.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)
 

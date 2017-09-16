@@ -1,5 +1,5 @@
 ---
-title: Classe remove_extent | Microsoft Docs
+title: remove_extent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_extent
 - type_traits/std::remove_extent
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 670e0b97c79fb7d022b2ca5ed08326b31c96e336
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6b2d2e786775171867fc973947acb280d16d7a38
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removeextent-class"></a>Classe remove_extent
-Cria tipo de elemento do tipo de matriz.  
+# <a name="removeextent-class"></a>remove_extent Class
+Makes element type from array type.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_extent_t = typename remove_extent<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- O tipo a ser modificado.  
+ The type to modify.  
   
-## <a name="remarks"></a>Comentários  
- Uma instância de `remove_extent<T>` mantém um tipo modificado que é `T1` quando `T` é da forma `T1[N]`, caso contrário, `T`.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_extent<T>` holds a modified-type that is `T1` when `T` is of the form `T1[N]`, otherwise `T`.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -89,12 +88,12 @@ remove_extent_t<int[5]> == int
 remove_extent_t<int[5][10]> == int [10]  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe remove_all_extents](../standard-library/remove-all-extents-class.md)
+ [remove_all_extents Class](../standard-library/remove-all-extents-class.md)
 

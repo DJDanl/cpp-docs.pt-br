@@ -1,7 +1,7 @@
 ---
-title: Ferramentas de vinculador LNK2019 erro | Microsoft Docs
+title: Linker Tools Error LNK2019 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -36,70 +36,70 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: fad921c3b4f13f5704c293188c0b91315146c33c
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 879eb99c918f80af66b20154acfd915d1ae45702
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk2019"></a>Erro das Ferramentas de Vinculador LNK2019
-símbolo externo não resolvido '*símbolo*'referenciado na função'*função*'  
+# <a name="linker-tools-error-lnk2019"></a>Linker Tools Error LNK2019
+unresolved external symbol '*symbol*' referenced in function '*function*'  
   
-O código compilado para *função* faz uma referência ou uma chamada para *símbolo*, mas esse símbolo não está definido em qualquer uma das bibliotecas ou arquivos de objeto especificados para o vinculador.  
+The compiled code for *function* makes a reference or call to *symbol*, but that symbol isn't defined in any of the libraries or object files specified to the linker.  
   
-Essa mensagem de erro é seguida por erro fatal [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Você deve corrigir todos os LNK2001 e LNK2019 erros para corrigir o erro LNK1120.  
+This error message is followed by fatal error [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). You must fix all LNK2001 and LNK2019 errors to fix error LNK1120.  
   
-## <a name="possible-causes"></a>Causas possíveis  
+## <a name="possible-causes"></a>Possible causes  
   
-Há muitas maneiras de obter esse erro, mas todos eles envolvem uma referência a uma função ou variável que não é possível o vinculador *resolver*, ou localizar uma definição para. O compilador pode identificar quando um símbolo não é *declarado*, mas não quando ele não está *definido*, porque a definição pode estar em um arquivo de origem diferente ou na biblioteca. Se um símbolo é chamado, mas nunca é definido, o vinculador gerará um erro de símbolo externo não resolvido.  
+There are many ways to get this error, but all of them involve a reference to a function or variable that the linker can't *resolve*, or find a definition for. The compiler can identify when a symbol is not *declared*, but not when it is not *defined*, because the definition may be in a different source file or library. If a symbol is referred to but never defined, the linker generates an unresolved external symbol error.  
   
-Aqui estão alguns problemas comuns que causam LNK2019:  
+Here are some common problems that cause LNK2019:  
   
--   **O arquivo de objeto ou a biblioteca que contém a definição do símbolo não está vinculada.** No Visual Studio, verifique se que o arquivo de origem que contém a definição é compilado e vinculado como parte do seu projeto. Na linha de comando, verifique se que o arquivo de origem que contém a definição é compilado, e que o arquivo de objeto resultante é incluído na lista de arquivos para vincular.  
+-   **The object file or library that contains the definition of the symbol is not linked.** In Visual Studio, verify that the source file that contains the definition is built and linked as part of your project. On the command line, verify that the source file that contains the definition is compiled, and that the resulting object file is included in the list of files to link.  
   
--   **A declaração do símbolo não foi digitada o mesmo que a definição do símbolo.** Verificar a ortografia e a capitalização é usada na declaração e a definição, e sempre que o símbolo é usado ou chamado.  
+-   **The declaration of the symbol is not spelled the same as the definition of the symbol.** Verify the correct spelling and capitalization is used in both the declaration and the definition, and wherever the symbol is used or called.  
   
--   **Uma função é usada, mas o tipo ou o número de parâmetros não correspondem a definição da função.** A declaração da função deve corresponder a definição. Verifique se a chamada de função corresponde a declaração e a declaração corresponde a definição. Código que chama as funções de modelo também deve ter declarações de função de modelo que incluem os mesmos parâmetros de modelo como a definição de correspondência. Para obter um exemplo de uma incompatibilidade da declaração de modelo, consulte o exemplo LNK2019e.cpp na seção de exemplos.  
+-   **A function is used but the type or number of the parameters do not match the function definition.** The function declaration must match the definition. Verify that the function call matches the declaration, and that the declaration matches the definition. Code that invokes template functions must also have matching template function declarations that include the same template parameters as the definition. For an example of a template declaration mismatch, see sample LNK2019e.cpp in the Examples section.  
   
--   **Uma função ou variável é declarada, mas não definido.** Isso geralmente significa que existe uma declaração em um arquivo de cabeçalho, mas nenhuma definição correspondente é implementada. Para funções de membro ou membros de dados estáticos, a implementação deve incluir o seletor de escopo de classe. Para obter um exemplo, consulte [corpo ausente da função ou variável](../../error-messages/tool-errors/missing-function-body-or-variable.md).  
+-   **A function or variable is declared but not defined.** This usually means a declaration exists in a header file, but no matching definition is implemented. For member functions or static data members, the implementation must include the class scope selector. For an example, see [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md).  
   
--   **A convenção de chamada for diferente entre a declaração da função e a definição da função.** Convenções de chamada ([cdecl](../../cpp/cdecl.md), [stdcall](../../cpp/stdcall.md), [fastcall](../../cpp/fastcall.md), ou [vectorcall](../../cpp/vectorcall.md)) são codificados como parte do nome decorado. Verifique se a convenção de chamada é o mesmo.  
+-   **The calling convention is different between the function declaration and the function definition.** Calling conventions ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), or [__vectorcall](../../cpp/vectorcall.md)) are encoded as part of the decorated name. Verify that the calling convention is the same.  
   
--   **Um símbolo é definido em um arquivo C, mas declarado sem usando extern "C" em um arquivo C++.** Símbolos definidos em um arquivo que é compilado como C tem diferentes nomes decorados de símbolos declarados em um arquivo C++, a menos que você use um [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modificador. Verifique se a declaração corresponde a ligação de compilação para cada símbolo. Da mesma forma, se você definir um símbolo em um arquivo de C++ que será usado por um programa em C, use `extern "C"` na definição.  
+-   **A symbol is defined in a C file, but declared without using extern "C" in a C++ file.** Symbols defined in a file that is compiled as C have different decorated names than symbols declared in a C++ file unless you use an [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modifier. Verify that the declaration matches the compilation linkage for each symbol. Similarly, if you define a symbol in a C++ file that will be used by a C program, use `extern "C"` in the definition.  
   
--   **Um símbolo é definido como estático e posteriormente referenciado fora do arquivo.** No C++, ao contrário de C, [constantes globais](../../error-messages/tool-errors/global-constants-in-cpp.md) ter `static` vinculação. Para contornar essa limitação, você pode incluir o `const` inicializações em um cabeçalho de arquivo e incluem esse cabeçalho nos arquivos. cpp, ou você pode fazer a variável não constante e usar uma referência constante para acessá-lo.  
+-   **A symbol is defined as static and then later referenced outside the file.** In C++, unlike C, [global constants](../../error-messages/tool-errors/global-constants-in-cpp.md) have `static` linkage. To get around this limitation, you can include the `const` initializations in a header file and include that header in your .cpp files, or you can make the variable non-constant and use a constant reference to access it.  
   
--   **Um membro estático de uma classe não está definido.** Um membro de classe estática deve ter uma definição exclusiva ou violar a regra de definição de um. Um membro de classe estática que não pode ser definido em linha deve ser definido em um arquivo de origem usando seu nome totalmente qualificado. Se ele não está definido em todos os, o vinculador gerará LNK2019.  
+-   **A static member of a class is not defined.** A static class member must have a unique definition, or it will violate the one-definition rule. A static class member that cannot be defined inline must be defined in one source file by using its fully-qualified name. If it is not defined at all, the linker generates LNK2019.  
   
--   **Uma dependência de compilação é definida somente como uma dependência de projeto na solução.** Em versões anteriores do Visual Studio, esse nível de dependência foi suficiente. No entanto, começando com o Visual Studio 2010, o Visual Studio requer um [referência projeto a projeto](/visualstudio/ide/managing-references-in-a-project). Se seu projeto não tem uma referência de projeto a projeto, você receberá esse erro vinculador. Adicione uma referência de projeto a projeto para corrigi-lo.  
+-   **A build dependency is only defined as a project dependency in the solution.** In earlier versions of Visual Studio, this level of dependency was sufficient. However, starting with Visual Studio 2010, Visual Studio requires a [project-to-project reference](/visualstudio/ide/managing-references-in-a-project). If your project does not have a project-to-project reference, you may receive this linker error. Add a project-to-project reference to fix it.  
   
--   **Criar um aplicativo de console usando as configurações para um aplicativo do Windows**. Se a mensagem de erro é semelhante a **símbolo externo não resolvido WinMain referenciado na função**`function_name`, link usando **/SUBSYSTEM** em vez de **/Subsystem: Windows**. Para obter mais informações sobre essa configuração e para obter instruções sobre como definir essa propriedade no Visual Studio, consulte [/SUBSYSTEM (especificar subsistema)](../../build/reference/subsystem-specify-subsystem.md).  
+-   **You build a console application by using settings for a Windows application**. If the error message is similar to **unresolved external symbol WinMain referenced in function**`function_name`, link by using **/SUBSYSTEM:CONSOLE** instead of **/SUBSYSTEM:WINDOWS**. For more information about this setting, and for instructions on how to set this property in Visual Studio, see [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md).  
   
--   **Você pode usar opções de compilador diferentes para a função inlining nos arquivos de origem diferente.** Usando funções embutidas definidas em arquivos. cpp e combinação de opções do compilador inlining função nos arquivos de origem diferentes pode causar LNK2019. Para obter mais informações, consulte [problemas de Inlining da função](../../error-messages/tool-errors/function-inlining-problems.md).  
+-   **You use different compiler options for function inlining in different source files.** Using inlined functions defined in .cpp files and mixing function inlining compiler options in different source files can cause LNK2019. For more information, see [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md).  
   
--   **Você pode usar variáveis automáticas fora de seu escopo.** Variáveis automáticas (escopo da função) podem ser usados somente no escopo da função. Essas variáveis não podem ser declaradas `extern` e usado em outros arquivos de origem. Para obter um exemplo, consulte [variáveis de automáticas (escopo da função)](../../error-messages/tool-errors/automatic-function-scope-variables.md).  
+-   **You use automatic variables outside their scope.** Automatic (function scope) variables can only be used in the scope of that function. These variables can't be declared `extern` and used in other source files. For an example, see [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md).  
   
--   **Chamar funções instrinsic ou passar tipos de argumento para funções intrínsecas que não têm suporte em sua arquitetura de destino.** Por exemplo, se você usar um AVX2 intrínseco, mas não especificar o [/arch: avx2](../../build/reference/arch-x86.md) opção de compilador, o compilador assumirá que o intrínseco é uma função externa. Em vez de gerar uma instrução embutido, o compilador gera uma chamada para um símbolo externo com o mesmo nome como intrínseca. Quando o vinculador tenta localizar a definição dessa função ausente, ele gera LNK2019. Verifique se que você use somente intrínsecos e tipos com suporte por sua arquitetura de destino.  
+-   **You call instrinsic functions or pass argument types to intrinsic functions that are not supported on your target architecture.** For example, if you use an AVX2 intrinsic, but do not specify the [/ARCH:AVX2](../../build/reference/arch-x86.md) compiler option, the compiler assumes that the intrinsic is an external function. Instead of generating an inline instruction, the compiler generates a call to an external symbol with the same name as the intrinsic. When the linker tries to find the definition of this missing function, it generates LNK2019. Verify that you only use intrinsics and types supported by your target architecture.  
   
--   **Combinar o código que usa native wchar\_t com código não.** Trabalho de conformidade de linguagem C++ que foi feito no Visual C++ 2005 feitas `wchar_t` um tipo nativo por padrão. Você deve usar o [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção de compilador ao gerar código compatível com os arquivos de biblioteca e objeto compilados usando versões anteriores do Visual C++. Se nem todos os arquivos foram compilados usando o mesmo **/Zc:wchar\_t** configurações, tipo de referências não podem ser resolvidos em tipos compatíveis. Verifique `wchar_t` tipos em todos os arquivos de biblioteca e objeto são compatíveis, atualizando os tipos que são usados ou usando consistente **/ZC:** configurações ao compilar.  
+-   **You mix code that uses native wchar\_t with code that doesn't.** C++ language conformance work that was done in Visual C++ 2005 made `wchar_t` a native type by default. You must use the [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) compiler option to generate code compatible with library and object files compiled by using earlier versions of Visual C++. If not all files have been compiled by using the same **/Zc:wchar\_t** settings, type references may not resolve to compatible types. Verify that `wchar_t` types in all library and object files are compatible, either by updating the types that are used, or by using consistent **/Zc:wchar_t** settings when you compile.  
   
-## <a name="diagnosis-tools"></a>Ferramentas de diagnóstico    
+## <a name="diagnosis-tools"></a>Diagnosis tools    
   
-Pode ser difícil saber por que o vinculador não é possível encontrar uma definição de símbolo específico. Geralmente, o problema é que não incluir o código que contém a definição na criação ou criaram diferentes opções de compilação decorado nomes de símbolos externos. Há várias ferramentas e opções que podem ajudá-lo a diagnosticar um erro de LNK2019.  
+It can be difficult to tell why the linker can't find a particular symbol definition. Often the problem is that you have not included the code that contains the definition in your build, or build options have created different decorated names for external symbols. There are several tools and options that can help you diagnose a LNK2019 error.  
   
--   O [/verbose](../../build/reference/verbose-print-progress-messages.md) opção de vinculador pode ajudá-lo a determinar quais arquivos as vinculador de referências. Isso pode ajudá-lo a verificar se o arquivo que contém a definição do símbolo está incluído em sua compilação.  
+-   The [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) linker option can help you determine which files the linker references. This can help you verify whether the file that contains the definition of the symbol is included in your build.  
   
--   O [/EXPORTA](../../build/reference/dash-exports.md) e [/símbolos](../../build/reference/symbols.md) opções do utilitário DUMPBIN podem ajudá-lo a descobrir quais símbolos são definidos nos arquivos. dll e o objeto ou a biblioteca. Verifique se que o exportado decorado correspondência de nomes que de decorado nomeia o vinculador procura.  
+-   The [/EXPORTS](../../build/reference/dash-exports.md) and [/SYMBOLS](../../build/reference/symbols.md) options of the DUMPBIN utility can help you discover which symbols are defined in your .dll and object or library files. Verify that the exported decorated names match the decorated names the linker searches for.  
   
--   O utilitário UNDNAME pode mostrar o símbolo externo não decorado equivalente para um nome decorado.  
-## <a name="examples"></a>Exemplos  
+-   The UNDNAME utility can show you the equivalent undecorated external symbol for a decorated name.  
+## <a name="examples"></a>Examples  
   
-Aqui estão alguns exemplos de código que causa um erro LNK2019, junto com informações sobre como corrigir o erro.  
+Here are several examples of code that causes a LNK2019 error, together with information about how to fix the error.  
   
-### <a name="a-symbol-is-declared-but-not-defined"></a>Um símbolo é declarado mas não definido  
+### <a name="a-symbol-is-declared-but-not-defined"></a>A symbol is declared but not defined  
   
-Neste exemplo, uma variável externa é declarada mas não definida:  
+In this example, an external variable is declared but not defined:  
   
 ```cpp  
 // LNK2019.cpp  
@@ -111,7 +111,7 @@ int main() {
 }  
 ```  
   
-Aqui está outro exemplo onde uma variável e a função são declarados como `extern` , mas é fornecida nenhuma definição:  
+Here is another example where a variable and function are declared as `extern` but no definition is provided:  
   
 ```cpp  
 // LNK2019c.cpp  
@@ -126,11 +126,11 @@ void f() {
 int main() {}  
 ```  
   
-A menos que `i` e `g` são definidos em um dos arquivos incluídos na compilação, o vinculador gere LNK2019. Você pode corrigir os erros, incluindo o arquivo de código fonte que contém as definições como parte da compilação. Como alternativa, você pode passar os arquivos. obj ou. lib que contêm as definições para o vinculador.  
+Unless `i` and `g` are defined in one of the files included in the build, the linker generates LNK2019. You can fix the errors by including the source code file that contains the definitions as part of the compilation. Alternatively, you can pass .obj files or .lib files that contain the definitions to the linker.  
   
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>Um membro de dados estático está declarado mas não definido  
+### <a name="a-static-data-member-is-declared-but-not-defined"></a>A static data member is declared but not defined  
   
-LNK2019 também pode ocorrer quando um membro de dados estático está declarado mas não definido. O exemplo a seguir gera LNK2019 e mostra como corrigi-lo.  
+LNK2019 can also occur when a static data member is declared but not defined. The following sample generates LNK2019, and shows how to fix it.  
   
 ```cpp  
 // LNK2019b.cpp  
@@ -149,9 +149,9 @@ int main() {
 }  
 ```  
   
-### <a name="declaration-parameters-do-not-match-definition"></a>Parâmetros de declaração não coincidem definição  
+### <a name="declaration-parameters-do-not-match-definition"></a>Declaration parameters do not match definition  
   
-Código que chama as funções de modelo deve ter a correspondência de declarações de função do modelo. Declarações devem incluir os mesmos parâmetros de modelo como a definição. O exemplo a seguir gera LNK2019 em um operador definido pelo usuário e mostra como corrigi-lo.  
+Code that invokes template functions must have matching template function declarations. Declarations must include the same template parameters as the definition. The following sample generates LNK2019 on a user-defined operator, and shows how to fix it.  
   
 ```cpp  
 // LNK2019e.cpp  
@@ -179,9 +179,9 @@ int main() {
 }  
 ```  
   
-### <a name="inconsistent-wchart-type-definitions"></a>Definições de tipo wchar_t inconsistente  
+### <a name="inconsistent-wchart-type-definitions"></a>Inconsistent wchar_t type definitions  
   
-Este exemplo cria uma DLL que tenha uma exportação que usa `WCHAR`, que resolve para `wchar_t`.  
+This sample creates a DLL that has an export that uses `WCHAR`, which resolves to `wchar_t`.  
   
 ```cpp  
 // LNK2019g.cpp  
@@ -191,7 +191,7 @@ Este exemplo cria uma DLL que tenha uma exportação que usa `WCHAR`, que resolv
 __declspec(dllexport) void func(WCHAR*) {}  
 ```  
   
-O próximo exemplo usa a DLL no exemplo anterior e gera LNK2019 porque os tipos não assinados curto * e WCHAR\* não são iguais.  
+The next sample uses the DLL in the previous sample, and generates LNK2019 because the types unsigned short* and WCHAR\* are not the same.  
   
 ```cpp  
 // LNK2019h.cpp  
@@ -204,10 +204,10 @@ int main() {
 }  
 ```  
   
- Para corrigir esse erro, altere `unsigned short` para `wchar_t` ou `WCHAR`, ou compile LNK2019g.cpp usando **/Zc:wchar_t-**.  
+ To fix this error, change `unsigned short` to `wchar_t` or `WCHAR`, or compile LNK2019g.cpp by using **/Zc:wchar_t-**.  
   
-## <a name="additional-resources"></a>Recursos adicionais  
+## <a name="additional-resources"></a>Additional resources  
   
-Para obter mais informações sobre possíveis causas e soluções LNK2001, consulte a pergunta de estouro de pilha [o que é um erro de símbolo externo indefinido referência/não resolvidos e como corrigi-lo?](http://stackoverflow.com/q/12573816/2002113).  
+For more information about possible causes and solutions for LNK2001, see the Stack Overflow question [What is an undefined reference/unresolved external symbol error and how do I fix it?](http://stackoverflow.com/q/12573816/2002113).  
 
 

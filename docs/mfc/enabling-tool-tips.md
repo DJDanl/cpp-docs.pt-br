@@ -1,38 +1,56 @@
 ---
-title: "Habilitando dicas de ferramenta | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "habilitando dicas de ferramenta"
-  - "inicializando dicas de ferramenta"
-  - "dicas de ferramenta [C++], ativando"
-  - "dicas de ferramenta [C++], inicializando"
+title: Enabling Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing tool tips [MFC]
+- enabling tool tips [MFC]
+- tool tips [MFC], initializing
+- tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Habilitando dicas de ferramenta
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee1005229690073748667706bc3ce6b8609b0ea8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você pode habilitar o suporte da dica de ferramenta para os controles filho de uma janela \(como os controles em uma exibição ou em uma caixa de diálogo de formulário\).  
+---
+# <a name="enabling-tool-tips"></a>Enabling Tool Tips
+You can enable tool tip support for the child controls of a window (such as the controls on a form view or dialog box).  
   
-### Para habilitar dicas de ferramenta para os controles filho de uma janela  
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>To enable tool tips for the child controls of a window  
   
-1.  Chame `EnableToolTips` para a janela para a qual você deseja fornecer dicas de ferramenta.  
+1.  Call `EnableToolTips` for the window for which you want to provide tool tips.  
   
-2.  Forneça uma cadeia de caracteres para cada controle no manipulador de [Notificação de TTN\_NEEDTEXT](../Topic/Handling%20TTN_NEEDTEXT%20Notification%20for%20Tool%20Tips.md) .  O manipulador está no mapa da mensagem da janela que contém os controles filho \(por exemplo, sua classe da exibição de formulário\).  Este manipulador deve chamar uma função que identifica o controle e definir **pszText** para especificar o texto usado pelo controle da dica de ferramenta.  
+2.  Provide a string for each control in your [TTN_NEEDTEXT notification](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) handler. The handler is in the message map of the window that contains the child controls (for example, your form view class). This handler should call a function that identifies the control and sets **pszText** to specify the text used by the tool tip control.  
   
-## Consulte também  
- [Dicas de ferramenta no Windows derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

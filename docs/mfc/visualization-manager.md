@@ -1,87 +1,105 @@
 ---
-title: "Gerenciador de visualiza&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gerenciador de visualização"
+title: Visualization Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gerenciador de visualiza&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 263fd911d68d6b179ee110594e4b8ed855b69473
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-O gerenciador visual é um objeto que controla a aparência de um aplicativo inteiro.  Atua como uma única classe onde você pode colocar qualquer código de desenho para seu aplicativo.  A biblioteca MFC inclui vários gerenciadores visuais.  Você também pode criar seu próprio gerenciador visual se você deseja criar uma exibição personalizada para seu aplicativo.  As imagens a seguir mostram o mesmo aplicativo quando os gerenciadores visuais diferentes são habilitados:  
+---
+# <a name="visualization-manager"></a>Visualization Manager
+The visual manager is an object that controls the appearance of a whole application. It acts as a single class where you can put all the drawing code for your application. The MFC Library includes several visual managers. You can also create your own visual manager if you want to create a custom view for your application. The following images show the same application when different visual managers are enabled:  
   
- ![MyApp renderizado por CMFCVisualManagerWindows](../Image/VMWindows.png "VMWindows")  
-MyApp usando o gerenciador de visual de CMFCVisualManagerWindows  
+ ![MyApp as rendered by CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows")  
+MyApp that uses the CMFCVisualManagerWindows visual manager  
   
- ![MyApp renderizado por CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "VMVS2005")  
-MyApp usando o gerenciador do visual CMFCVisualManagerVS2005  
+ ![MyApp as rendered by CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005")  
+MyApp that uses the CMFCVisualManagerVS2005 visual manager  
   
- ![MyApp renderizado por CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "VMOfficeXP")  
-MyApp usando o gerenciador de visual de CMFCVisualManagerOfficeXP  
+ ![MyApp as rendered by CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp")  
+MyApp that uses the CMFCVisualManagerOfficeXP visual manager  
   
- ![MyApp renderizado por CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "VMOffice2003")  
-MyApp usando o gerenciador do visual CMFCVisualManagerOffice2003  
+ ![MyApp as rendered by CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003")  
+MyApp that uses the CMFCVisualManagerOffice2003 visual manager  
   
- ![MyApp renderizado por CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MSOffice2007")  
-MyApp usando o gerenciador do visual CMFCVisualManagerOffice2007  
+ ![MyApp as rendered by CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007")  
+MyApp that uses the CMFCVisualManagerOffice2007 visual manager  
   
- Por padrão, o gerenciador visual mantém o código de desenho para vários elementos da interface gráfica do usuário.  Para fornecer os elementos personalizados de interface do usuário, é necessário substituir os métodos relacionados de desenho do visual.  Para a lista desses métodos, consulte [Classe de CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md).  Os métodos que você pode substituir para fornecer uma aparência personalizado são todos os métodos que começam com `OnDraw`.  
+ By default, the visual manager maintains the drawing code for several GUI elements. To provide custom UI elements, you need to override the related drawing methods of the visual manager. For the list of these methods, see [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md). The methods that you can override to provide a custom appearance are all the methods that start with `OnDraw`.  
   
- Seu aplicativo pode ter somente um objeto de `CMFCVisualManager` .  Para obter um ponteiro para o gerenciador visual para seu aplicativo, chame a função estática [CMFCVisualManager::GetInstance](../Topic/CMFCVisualManager::GetInstance.md).  Como todos os gerenciadores visuais herdam de `CMFCVisualManager`, o método de `CMFCVisualManager::GetInstance` obterá um ponteiro para o gerenciador visual apropriado, mesmo se você criar um gerenciador visual personalizado.  
+ Your application can have only one `CMFCVisualManager` object. To obtain a pointer to the visual manager for your application, call the static function [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Because all visual managers inherit from `CMFCVisualManager`, the `CMFCVisualManager::GetInstance` method will get a pointer to the appropriate visual manager, even if you create a custom visual manager.  
   
- Se você quiser criar um gerenciador visual personalizado, deverá derivá\-lo de um gerenciador visual que já existe.  A classe padrão para derivar de é `CMFCVisualManager`.  Entretanto, você pode usar um gerenciador visual melhor diferente se assemelha ao que você deseja para seu aplicativo.  Por exemplo, se você quiser usar o gerenciador do visual `CMFCVisualManagerOffice2007` , mas desejado para alterar apenas como os separadores de tabela, você pode derivar sua classe personalizada de `CMFCVisualManagerOffice2007`.  Neste cenário, você deve substituir apenas os métodos para desenhar separadores.  
+ If you want to create a custom visual manager, you must derive it from a visual manager that already exists. The default class to derive from is `CMFCVisualManager`. However, you can use a different visual manager if it better resembles what you want for your application. For example, if you wanted to use the `CMFCVisualManagerOffice2007` visual manager, but wanted only to change how separators look, you could derive your custom class from `CMFCVisualManagerOffice2007`. In this scenario, you should overwrite only the methods for drawing separators.  
   
- Há duas maneiras possíveis de usar um gerenciador visual específico para seu aplicativo.  Um modo é chamar o método de [CMFCVisualManager::SetDefaultManager](../Topic/CMFCVisualManager::SetDefaultManager.md) e passe o gerenciador visual apropriado como um parâmetro.  O exemplo de código mostra como você usaria o gerenciador do visual `CMFCVisualManagerVS2005` com esse método:  
+ There are two possible ways to use a specific visual manager for your application. One way is to call the [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) method and pass the appropriate visual manager as a parameter. The following code example shows how you would use the `CMFCVisualManagerVS2005` visual manager with this method:  
   
 ```  
-CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));  
+CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```  
   
- Outra maneira de usar um gerenciador visual em seu aplicativo for criá\-la manualmente.  O aplicativo usará esse gerenciador visual para qualquer renderização.  No entanto, pois pode haver somente um objeto de `CMFCVisualManager` pelo aplicativo, você precisará excluir o gerenciador visual atual antes de criar um novo.  No exemplo a seguir, `CMyVisualManager` é um gerenciador visual personalizado que é derivado de `CMFCVisualManager`.  O método seguinte será alterado se o gerenciador visual é usado para exibir o aplicativo, dependendo de um índice:  
+ The other way to use a visual manager in your application is to create it manually. The application will then use this new visual manager for all the rendering. However, because there can be only one `CMFCVisualManager` object per application, you will have to delete the current visual manager before you create a new one. In the following example, `CMyVisualManager` is a custom visual manager that is derived from `CMFCVisualManager`. The following method will change what visual manager is used to display your application, depending on an index:  
   
 ```  
 void CMyApp::SetSkin (int index)  
 {  
-   if (CMFCVisualManager::GetInstance() != NULL)  
-   {  
-      delete CMFCVisualManager::GetInstance();  
-   }  
-  
-   switch (index)  
-   {  
-   case DEFAULT_STYLE:  
-      // The following statement creates a new CMFCVisualManager  
-      CMFCVisualManager::GetInstance();  
-      break;  
-  
-   case CUSTOM_STYLE:  
-      new CMyVisualManager;  
-      break;  
-  
-   default:  
-      CMFCVisualManager::GetInstance();  
-      break;  
-   }  
-  
-   CMFCVisualManager::GetInstance()->RedrawAll();  
-}  
+    if (CMFCVisualManager::GetInstance() != NULL)  
+ {  
+    delete CMFCVisualManager::GetInstance();
+
+ }  
+ 
+    switch (index)  
+ {  
+    case DEFAULT_STYLE: *// The following statement creates a new CMFCVisualManager  
+    CMFCVisualManager::GetInstance();
+break;  
+ 
+    case CUSTOM_STYLE:  
+    new CMyVisualManager;  
+    break; 
+ 
+    default: 
+    CMFCVisualManager::GetInstance();
+break;  
+ }  
+ 
+    CMFCVisualManager::GetInstance()->RedrawAll();
+
+} 
 ```  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)   
- [Classe de CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)
+

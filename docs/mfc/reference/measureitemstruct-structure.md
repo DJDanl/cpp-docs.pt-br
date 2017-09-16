@@ -1,5 +1,5 @@
 ---
-title: Estrutura MEASUREITEMSTRUCT | Documentos do Microsoft
+title: MEASUREITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MEASUREITEMSTRUCT structure
+- MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9d32a3ad7c5e420dfa0e7395fd9583654cd174ac
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6eb06380885269ba55c187e1151d296808ccbe08
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="measureitemstruct-structure"></a>Estrutura MEASUREITEMSTRUCT
-O `MEASUREITEMSTRUCT` estrutura informa ao Windows das dimensões de um item de menu ou controle de desenho proprietário.  
+# <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT Structure
+The `MEASUREITEMSTRUCT` structure informs Windows of the dimensions of an owner-drawn control or menu item.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagMEASUREITEMSTRUCT {  
@@ -56,32 +56,32 @@ typedef struct tagMEASUREITEMSTRUCT {
 } MEASUREITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Contém o tipo de controle. Os valores para os tipos de controle são da seguinte maneira:  
+ Contains the control type. The values for control types are as follows:  
   
-- **ODT_COMBOBOX** caixa de combinação do desenho proprietário  
+- **ODT_COMBOBOX** Owner-draw combo box  
   
-- **ODT_LISTBOX** caixa de listagem de desenho proprietário  
+- **ODT_LISTBOX** Owner-draw list box  
   
-- **ODT_MENU** menus de desenho proprietário  
+- **ODT_MENU** Owner-draw menu  
   
  `CtlID`  
- Contém a ID do controle de botão, caixa de listagem ou caixa de combinação. Este membro não é usado em um menu.  
+ Contains the control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- Contém a ID do item de menu em um menu ou a ID do item de caixa de listagem para uma caixa de combinação de altura variável ou a caixa de listagem. Este membro não é usado para uma caixa de combinação de altura fixa ou caixa de listagem ou para um botão.  
+ Contains the menu-item ID for a menu or the list-box-item ID for a variable-height combo box or list box. This member is not used for a fixed-height combo box or list box, or for a button.  
   
  *itemWidth*  
- Especifica a largura de um item de menu. O proprietário do item de menu desenho proprietário deve preencher esse membro antes de retornar a mensagem.  
+ Specifies the width of a menu item. The owner of the owner-draw menu item must fill this member before it returns from the message.  
   
  *itemHeight*  
- Especifica a altura de um item individual em um menu ou uma caixa de listagem. Antes de retornar a mensagem, o proprietário da caixa de combinação do desenho proprietário, caixa de listagem ou item de menu deve preencher esse membro. A altura máxima de um item de caixa de listagem é 255.  
+ Specifies the height of an individual item in a list box or a menu. Before it returns from the message, the owner of the owner-draw combo box, list box, or menu item must fill out this member. The maximum height of a list box item is 255.  
   
  `itemData`  
- Para uma caixa de combinação ou caixa de listagem, este membro contém o valor que foi passado para a caixa de listagem por um dos seguintes:  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
-- [CComboBox:: AddString](../../mfc/reference/ccombobox-class.md#addstring)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
 - [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
@@ -89,7 +89,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- Para um menu, esse membro contém o valor que foi passado para o menu por um dos seguintes:  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
 - [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
@@ -97,13 +97,13 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Isso permite que o Windows processar a interação do usuário com o controle corretamente. Falha ao preencher os membros adequados a `MEASUREITEMSTRUCT` estrutura fará com que a operação incorreta do controle.  
+ This allows Windows to process user interaction with the control correctly. Failure to fill out the proper members in the `MEASUREITEMSTRUCT` structure will cause improper operation of the control.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
 
 

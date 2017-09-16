@@ -1,38 +1,56 @@
 ---
-title: "Gerenciador de conex&#245;es de automa&#231;&#227;o remota | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Clientes de automação, configurando para Automação Remota"
-  - "Servidores de automação, configurando para Automação Remota"
-  - "Ferramenta Gerenciador de RAC"
-  - "registro, Automação remota"
-  - "Gerenciador de conexões de automação remota"
-  - "Automação remota, configurando máquinas cliente e servidor"
+title: Remote Automation Connection Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation clients [MFC], configuring for Remote Automation
+- registry [MFC], remote Automation
+- Automation servers [MFC], configuring for Remote Automation
+- Remote Automation Connection Manager [MFC]
+- Remote Automation [MFC], configuring client and server machines
+- RAC Manager tool [MFC]
 ms.assetid: 562eb7bc-f95c-46ad-ac97-f0dfa98362af
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gerenciador de conex&#245;es de automa&#231;&#227;o remota
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7c4d783aabc56bf33ce334b037a0489ef38220c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Para configurar computadores cliente e de servidor, você precisa fazer alterações no Registro.  Em vez disso, fazendo a mão é muito mais fácil usar a ferramenta remoto do gerenciador de \(RAC\) de conexão de automação.  Essa ferramenta, RACMGR32.EXE, junto com RACREG32.DLL, precisa ser copiada para o diretório que você escolha.  PATH colocando o no, pode ser executado do usando a barra de tarefas executada.  Como alternativa, você pode criar\-lhe um atalho ou coloque uma referência a ele no menu Iniciar.  
+---
+# <a name="remote-automation-connection-manager"></a>Remote Automation Connection Manager
+To configure both client and server machines, you need to make registry changes. Rather than doing this by hand, it is far easier to use the Remote Automation Connection (RAC) Manager tool. This tool, RACMGR32.EXE, along with RACREG32.DLL, needs to be copied to any directory you choose. By putting it in the PATH, it can be executed from the taskbar using Run. Alternatively, you can create a shortcut to it or place a reference to it on the Start menu.  
   
- RACMGR32 é gravado no Visual Basic e precisa como consequência alguns DLL do suporte do Visual Basic.  Esses arquivos são colocados no mesmo diretório que RACMGR32.EXE em CD\-ROM.  As versões desses arquivos que são instalados pela instalação do Visual C\+\+ Enterprise Edition são equivalentes ou mais recentes do que aqueles fornecidos com o Visual Basic 5,0 Enterprise Edition.  A configuração do Visual C\+\+ copia as novas versões dos arquivos do Visual Basic no diretório do sistema.  Para o windows 9x, esse diretório é normalmente C:\\Windows\\System.  Para o Windows NT e o Windows 2000, normalmente é C:\\WINNT\\system32.  A instalação também registra esses arquivos no sistema operacional.  Você pode removê\-las da instalação do Visual Basic.  
+ RACMGR32 is written in Visual Basic and therefore needs some Visual Basic support DLLs. These files are placed in the same directory as RACMGR32.EXE on the CD-ROM. The versions of these files that are installed by the Setup for Visual C++ Enterprise Edition are equivalent or more recent than those that shipped with Visual Basic Enterprise Edition 5.0. The Visual C++ Setup copies the new versions of the Visual Basic files to your system directory. For Windows 9x, this directory is typically C:\Windows\System. For Windows NT and Windows 2000, it is typically C:\WINNT\system32. Setup also registers these files with the operating system. You may remove them from your Visual Basic installation.  
   
-## Consulte também  
- [Gerenciador de automação \(MFC\)](../mfc/automation-manager-mfc.md)   
- [Componentes do usuário de automação remota](../mfc/remote-automation-user-components.md)   
- [Instalação de automação remota](../Topic/Remote%20Automation%20Installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation User Components](../mfc/remote-automation-user-components.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

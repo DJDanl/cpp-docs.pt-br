@@ -1,5 +1,5 @@
 ---
-title: "Configurações de controle, Assistente de controle ActiveX do MFC | Documentos do Microsoft"
+title: Control Settings, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,82 +33,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 35ec579e6f777a3dffd87adc5a86af2ea38b30f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a2d6f7e2db8002a276e5304301399c84182dffbb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-settings-mfc-activex-control-wizard"></a>Configurações de controle, Assistente de Controle ActiveX MFC
-Use esta página do Assistente para especificar como deseja que o controle comporte-se. Por exemplo, pode basear o controle sobre os tipos de controle padrão do Windows, otimizar sua aparência e comportamento ou indicar que o controle pode agir como um contêiner para outros controles.  
+# <a name="control-settings-mfc-activex-control-wizard"></a>Control Settings, MFC ActiveX Control Wizard
+Use this page of the wizard to specify how you want the control to behave. For example, you can base the control on standard Windows control types, optimize its behavior and appearance, or indicate that the control can act as a container for other controls.  
   
- Para obter mais informações sobre como selecionar opções nesta página para maximizar a eficiência do controle, consulte [controles ActiveX MFC: otimização](../../mfc/mfc-activex-controls-optimization.md).  
+ For more information about how to select options on this page to maximize the efficiency of the control, see [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).  
   
-## <a name="uielement-list"></a>Lista UIElement  
- **Criar um controle com base em**  
- Nesta lista, você pode selecionar o tipo de controle do qual o controle deve ser herdada. A lista é um subconjunto das classes de controle que estão disponíveis para `CreateWindowEx` e controles comuns adicionais que são especificados em commctrl. h. Sua seleção determina o estilo do controle no `PreCreateWindow` funcionar a *NomeDoProjeto*Ctrl.cpp arquivo. Para obter mais informações, consulte [controles ActiveX MFC: subclasses de um controle de Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
+## <a name="uielement-list"></a>UIElement List  
+ **Create control based on**  
+ On this list, you can select the kind of control from which your control should inherit. The list is a subset of the control classes that are available for `CreateWindowEx` and additional common controls that are specified in commctrl.h. Your selection determines the style of the control in the `PreCreateWindow` function in the *ProjName*Ctrl.cpp file. For more information, see [MFC ActiveX Controls: Subclassing a Windows Control](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|Controle|Descrição|  
+|Control|Description|  
 |-------------|-----------------|  
-|**BOTÃO**|Um controle de botão do Windows|  
-|**CAIXA DE COMBINAÇÃO**|Um controle de caixa de combinação do Windows|  
-|**EDITAR**|Um controle de caixa de edição do Windows|  
-|**CAIXA DE LISTAGEM**|Um controle de caixa de listagem do Windows|  
-|**BARRA DE ROLAGEM**|Um controle de barra de rolagem do Windows|  
-|**ESTÁTICO**|Um controle estático do Windows|  
-|**msctls_hotkey32**|Um controle comum chave de acesso|  
-|**msctls_progress32**|Uma barra de controle comum de progresso|  
-|**msctls_statusbar32**|Uma barra de controle comum de status|  
-|**msctls_trackbar32**|Um controle de barra de controle comum|  
-|**msctls_updown32**|Um botão de rotação (ou para cima para baixo) controle comum|  
-|**SysAnimate32**|Um controle comum de animação|  
-|**SysHeader32**|Um controle de cabeçalho comum|  
-|**SysListView32**|Um controle comum do modo de exibição de lista|  
-|**SysTabControl32**|Um controle de guia comum|  
-|**SysTreeView32**|Um controle comum do modo de exibição de árvore|  
+|**BUTTON**|A Windows button control|  
+|**COMBOBOX**|A Windows combo box control|  
+|**EDIT**|A Windows edit box control|  
+|**LISTBOX**|A Windows list box control|  
+|**SCROLLBAR**|A Windows scroll bar control|  
+|**STATIC**|A Windows static control|  
+|**msctls_hotkey32**|A hot key common control|  
+|**msctls_progress32**|A progress bar common control|  
+|**msctls_statusbar32**|A status bar common control|  
+|**msctls_trackbar32**|A track bar common control|  
+|**msctls_updown32**|A spin button (or up-down) common control|  
+|**SysAnimate32**|An animation common control|  
+|**SysHeader32**|A header common control|  
+|**SysListView32**|A list view common control|  
+|**SysTabControl32**|A tab common control|  
+|**SysTreeView32**|A tree view common control|  
   
- **Ativar quando visível**  
- Especifica que uma janela é criada para o controle quando ele é acessado. Por padrão, o **ativa quando visível** está selecionada. Se você deseja adiar a ativação do controle até que o contêiner exige (por exemplo, quando um usuário clica com o mouse), desmarque essa opção. Quando esse recurso estiver desativado, o controle não incorrer em despesas de criação da janela até que seja necessário. Para obter mais informações, consulte [desativar a opção Ativar quando visível](../../mfc/turning-off-the-activate-when-visible-option.md).  
+ **Activates when visible**  
+ Specifies that a window is created for the control when it is accessed. By default, the **Activates when visible** option is selected. If you want to defer control activation until the container requires it (for example, when a user clicks the mouse), clear this option. When this feature is off, the control does not incur the expense of window creation until it is required. For more information, see [Turning off the Activate When Visible Option](../../mfc/turning-off-the-activate-when-visible-option.md).  
   
- **Invisível em tempo de execução**  
- Especifica que o controle não tem nenhuma interface do usuário em tempo de execução. Um timer é um tipo de controle que talvez você queira ser invisível.  
+ **Invisible at run time**  
+ Specifies that the control has no user interface at run time. A timer is a kind of control that you might want to be invisible.  
   
- **Tem uma caixa de diálogo sobre**  
- Especifica que o controle tem o padrão do Windows **sobre** caixa de diálogo que exibe o número da versão e informações sobre direitos autorais.  
+ **Has an About box dialog**  
+ Specifies that the control has the standard Windows **About** dialog box, which displays version number and copyright information.  
   
 > [!NOTE]
->  Como o usuário acessar a Ajuda para o controle depende de como você implementou a Ajuda e se você tiver integrado a Ajuda de controle com a Ajuda do contêiner. Para obter mais informações sobre como integrar o ajuda a [biblioteca MSDN](http://go.microsoft.com/fwlink/linkid=150542) site, procure "Adicionando sensível ao contexto ajuda para um controle ActiveX do MFC".  
+>  How the user accesses help for the control depends on how you have implemented the help and whether you have integrated the control help with the container help. For more information about how to integrate help, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Adding Context-Sensitive Help to an MFC ActiveX Control".  
   
- Quando você seleciona essa opção, ele insere o `AboutBox` controlar o método na classe de controle de projeto (C*NomeDoProjeto*Ctrl.cpp) e adiciona AboutBox ao mapa de expedição do projeto. Por padrão, essa opção é selecionada.  
+ When you select this option, it inserts the `AboutBox` control method in the project control class (C*ProjName*Ctrl.cpp) and adds AboutBox to the project dispatch map. By default, this option is selected.  
   
- **Código otimizado de desenho**  
- Especifica que o contêiner restaura objetos GDI originais automaticamente depois que todos os controles de contêiner, que são desenhadas para o mesmo contexto de dispositivo, foram emitidas. Para obter mais informações sobre esse recurso, consulte [otimizando o desenho de controle](../../mfc/optimizing-control-drawing.md).  
+ **Optimized drawing code**  
+ Specifies that the container restores the original GDI objects automatically after all the container controls, which are drawn to the same device context, have been drawn. For more information about this feature, see [Optimizing Control Drawing](../../mfc/optimizing-control-drawing.md).  
   
- **Ativação sem janelas**  
- Especifica que o controle não produz uma janela quando ele está ativado. Ativação sem janelas permite que os controles não retangulares ou transparentes e um controle sem janelas requer menos sobrecarga do sistema que um controle que possui uma janela. Não permite um controle sem janelas para um contexto de dispositivo não recortado ou ativação sem cintilação. Contêineres que foram criados antes de 1996 não dão suporte a ativação sem janelas. Para obter mais informações sobre como usar essa opção, consulte [fornecendo ativação sem janelas](../../mfc/providing-windowless-activation.md).  
+ **Windowless activation**  
+ Specifies that the control does not produce a window when it is activated. Windowless activation allows for nonrectangular or transparent controls, and a windowless control requires less system overhead than a control that has a window requires. A windowless control does not allow for an unclipped device context or flicker-free activation. Containers that were created before 1996 do not support windowless activation. For more information about how to use this option, see [Providing Windowless Activation](../../mfc/providing-windowless-activation.md).  
   
- **Contexto de dispositivo não recortado**  
- Substituições [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) no cabeçalho de controle (*NomeDoProjeto*ctrl.h) para desabilitar a chamada para `IntersectClipRect` feitas pelo `COleControl`. Quando você seleciona essa opção, ele oferece uma vantagem de velocidade pequeno. Se você selecionar **ativação sem janelas**, esse recurso não está disponível. Para obter mais informações, consulte [usando um contexto de dispositivo não recortado](../../mfc/using-an-unclipped-device-context.md).  
+ **Unclipped device context**  
+ Overrides [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) in the control header (*projname*ctrl.h) to disable the call to `IntersectClipRect` made by `COleControl`. When you select this option, it provides a small speed advantage. If you select **Windowless activation**, this feature is not available. For more information, see [Using an Unclipped Device Context](../../mfc/using-an-unclipped-device-context.md).  
   
- **Ativação sem cintilação**  
- Elimina as operações de desenho e a cintilação que acompanha este artigo visual que ocorrem entre os estados ativos e inativos do controle. Se você selecionar **ativação sem janelas**, esse recurso não está disponível. Quando você definir essa opção, o `noFlickerActivate` sinalizador é um dos sinalizadores que são retornados pelo [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Para obter mais informações, consulte [fornecendo ativação sem cintilação](../../mfc/providing-flicker-free-activation.md).  
+ **Flicker-free activation**  
+ Eliminates the drawing operations and the accompanying visual flicker that occur between the active and inactive states of the control. If you select **Windowless activation**, this feature is not available. When you set this option, the `noFlickerActivate` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information, see [Providing Flicker-Free Activation](../../mfc/providing-flicker-free-activation.md).  
   
- **Disponível na caixa de diálogo Inserir objeto**  
- Especifica que o controle estarão disponível na **Inserir objeto** caixa de diálogo para contêineres habilitados. Quando você seleciona essa opção, o `afxRegInsertable` sinalizador é um dos sinalizadores que são retornados pelo `AfxOleRegisterControlClass`. Usando o **Inserir objeto** caixa de diálogo, o usuário poderá inserir recém-criado ou objetos existentes em um documento composto.  
+ **Available in Insert Object dialog**  
+ Specifies that the control will be available in the **Insert Object** dialog box for enabled containers. When you select this option, the `afxRegInsertable` flag is one of the flags that are returned by `AfxOleRegisterControlClass`. By using the **Insert Object** dialog box, a user can insert newly created or existing objects into a compound document.  
   
- **Notificações de ponteiro do mouse quando inativo**  
- Permite que o controle para processar notificações de ponteiro do mouse, se o controle está ativo ou não. Quando você seleciona essa opção, o `pointerInactive` sinalizador é um dos sinalizadores que são retornados pelo [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Para obter mais informações sobre como usar essa opção, consulte [fornecendo Mouse interação enquanto inativo](../../mfc/providing-mouse-interaction-while-inactive.md).  
+ **Mouse pointer notifications when inactive**  
+ Enables the control to process mouse pointer notifications, whether control is active or not. When you select this option, the `pointerInactive` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information about how to use this option, see [Providing Mouse Interaction While Inactive](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
- **Atua como um controle de quadro simples**  
- Especifica que o controle é um contêiner para outros controles, definindo o `OLEMISC_SIMPLEFRAME` bit para o controle. Para obter mais informações, sobre o [biblioteca MSDN](http://go.microsoft.com/fwlink/linkid=150542) site, procure "Confinamento de Site simples quadro".  
+ **Acts as a simple frame control**  
+ Specifies that the control is a container for other controls by setting the `OLEMISC_SIMPLEFRAME` bit for the control. For more information, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Simple Frame Site Containment".  
   
- **Carrega as propriedades de forma assíncrona**  
- Permite uma redefinição de dados assíncronas anteriores e inicia uma nova carga da propriedade assíncrona do controle.  
+ **Loads properties asynchronously**  
+ Enables a reset of any previous asynchronous data and initiates a new load of the asynchronous property of the control.  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de controle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Configurações do aplicativo, Assistente de controle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Nomes de controle, Assistente de controle ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 
 

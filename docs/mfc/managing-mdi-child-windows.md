@@ -1,50 +1,68 @@
 ---
-title: "Gerenciando janelas filhos MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MDICLIENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas filho"
-  - "janelas filho, e janela MDICLIENT"
-  - "janelas com moldura [C++], Janelas filho MDI"
-  - "MDI [C++], janelas filho"
-  - "MDI [C++], janelas com moldura"
-  - "Janela MDICLIENT"
-  - "janelas [C++], MDI"
+title: Managing MDI Child Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MDICLIENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MDI [MFC], child windows
+- child windows [MFC], and MDICLIENT window
+- MDICLIENT window [MFC]
+- windows [MFC], MDI
+- frame windows [MFC], MDI child windows
+- child windows [MFC]
+- MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gerenciando janelas filhos MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11655e9d318d7b240b72da8fbe4cfdd465210b1c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As janelas do quadro principal \(MDI uma pelo aplicativo\) contêm uma janela filho especial chamada a janela de **MDICLIENT** .  A janela de **MDICLIENT** gerencia a área da janela do quadro principal, e própria cliente tem janelas filho: as janelas de documentos, derivadas de `CMDIChildWnd`.  Como as janelas de documentos são as janelas próprias do quadro \(janelas filho MDI\), também podem ter seus próprios filhos.  Em todos esses casos, a janela pai gerencia as janelas filho e encaminha\-lhes alguns comandos.  
+---
+# <a name="managing-mdi-child-windows"></a>Managing MDI Child Windows
+MDI main frame windows (one per application) contain a special child window called the **MDICLIENT** window. The **MDICLIENT** window manages the client area of the main frame window, and itself has child windows: the document windows, derived from `CMDIChildWnd`. Because the document windows are frame windows themselves (MDI child windows), they can also have their own children. In all of these cases, the parent window manages its child windows and forwards some commands to them.  
   
- Em uma janela do quadro MDI, a janela do quadro gerencia a janela de **MDICLIENT** , reposicionando a junto com barras de controle.  A janela de **MDICLIENT** , por sua vez, gerencia todas as janelas filho MDI do quadro.  A figura a seguir mostra a relação entre uma janela do quadro MDI, a janela de **MDICLIENT** , e as janelas filho do quadro do documento.  
+ In an MDI frame window, the frame window manages the **MDICLIENT** window, repositioning it in conjunction with control bars. The **MDICLIENT** window, in turn, manages all MDI child frame windows. The following figure shows the relationship between an MDI frame window, its **MDICLIENT** window, and its child document frame windows.  
   
- ![Janelas de quadro MDI filho](../mfc/media/vc37gb1.png "vc37GB1")  
-O windows e filho MDI do quadro  
+ ![Child windows in an MDI frame window](../mfc/media/vc37gb1.gif "vc37gb1")  
+MDI Frame Windows and Children  
   
- Uma janela do quadro MDI também funciona em conjunto com a janela filho MDI atual, se houver.  As mensagens do comando de representantes da janela do quadro MDI ao filho MDI antes de tentar os tratar própria.  
+ An MDI frame window also works in conjunction with the current MDI child window, if there is one. The MDI frame window delegates command messages to the MDI child before it tries to handle them itself.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Criando o windows do quadro do documento](../Topic/Creating%20Document%20Frame%20Windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Estilos de Quadro\- janela](../Topic/Frame-Window%20Styles%20\(C++\).md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
-## Consulte também  
- [Usando janelas com moldura](../Topic/Using%20Frame%20Windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

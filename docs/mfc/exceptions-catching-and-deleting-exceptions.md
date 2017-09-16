@@ -1,65 +1,83 @@
 ---
-title: "Exce&#231;&#245;es: obtendo e excluindo exce&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Macro AND_CATCH"
-  - "blocos catch, obtendo e excluindo exceções"
-  - "tratamento de exceção, obtendo e excluindo exceções"
-  - "exceções, excluindo"
-  - "execução, retornos do bloco catch"
-  - "tratamento de exceções de try-catch, obtendo e excluindo exceções"
+title: 'Exceptions: Catching and Deleting Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions [MFC], deleting
+- AND_CATCH macro [MFC]
+- try-catch exception handling [MFC], catching and deleting exceptions
+- exception handling [MFC], catching and deleting exceptions
+- catch blocks [MFC], catching and deleting exceptions
+- execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Exce&#231;&#245;es: obtendo e excluindo exce&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24544b69849dca2425cdd0df6e7919c89f0a1e72
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As seguintes instruções e exemplos a seguir mostram como capturar exceções e excluir.  Para obter mais informações sobre como **try**, **catch**, e as palavras\-chave de `throw` , consulte [Manipulação de exceção C\+\+](../cpp/cpp-exception-handling.md).  
+---
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions: Catching and Deleting Exceptions
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and `throw` keywords, see [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- Os manipuladores de exceção deverá excluir objetos que manipulam exceção de, porque a falha ao excluir a exceção faz com que um vazamento de memória sempre que o código captura uma exceção.  
+ Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.  
   
- O bloco de **catch** deve excluir uma exceção quando:  
+ Your **catch** block must delete an exception when:  
   
--   O bloco de **catch** gerará uma nova exceção.  
+-   The **catch** block throws a new exception.  
   
-     Naturalmente, você não deve excluir a exceção se você gerou a mesma exceção novamente:  
+     Of course, you must not delete the exception if you throw the same exception again:  
   
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
   
--   Retorna a execução de dentro do bloco de **catch** .  
+-   Execution returns from within the **catch** block.  
   
 > [!NOTE]
->  Ao excluir `CException`, use a função de membro de **Excluir** para excluir a exceção.  Não use a palavra\-chave de **delete** , pois pode falhar se a exceção não estiver no heap.  
+>  When deleting a `CException`, use the **Delete** member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.  
   
-#### Para capturar exceções e excluir  
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions  
   
-1.  Use a palavra\-chave de **try** para configurar um bloco de **try** .  Executar todas as instruções de programa que possa gerar uma exceção dentro de um bloco de **try** .  
+1.  Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.  
   
-     Use a palavra\-chave de **catch** para configurar um bloco de **catch** .  Código de manipulação de exceções gerais de local em um bloco de **catch** .  O código no bloco de **catch** é executado apenas se o código dentro do bloco de **try** gerará uma exceção do tipo especificado na instrução de **catch** .  
+     Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.  
   
-     O esqueleto seguir mostra como **try** e blocos de **catch** são organizados normalmente:  
+     The following skeleton shows how **try** and **catch** blocks are normally arranged:  
   
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
   
-     Quando uma exceção é gerada, passa de controle ao primeiro bloco de **catch** cuja exceções gerais declaração corresponde ao tipo da exceção.  Você pode controlar seletivamente tipos diferentes de exceções com blocos sequenciais de **catch** como listados abaixo:  
+     When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:  
   
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_3.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
   
- Para obter mais informações, consulte [Exceções: A conversão de macros de exceção MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
+ For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
-## Consulte também  
- [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

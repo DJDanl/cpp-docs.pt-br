@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <forward_list>
-- std::<forward_list>
-- std.<forward_list>
+- <forward_list>", "std::<forward_list>", "std.<forward_list>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,47 +33,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8177a16536343b85978d1a2a861559b0387840c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
-Define a classe de modelo de contêiner forward_list, bem como diversos modelos de suporte.  
+Defines the container template class forward_list and several supporting templates.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <forward_list>  
 ```  
   
-### <a name="operators"></a>Operadores  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é igual ao objeto da lista de encaminhamento à direita.|  
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Testa se o objeto da lista de encaminhamento à esquerda do operador não é igual ao objeto da lista de encaminhamento à direita.|  
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor que o objeto da lista de encaminhamento à direita.|  
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é menor ou igual ao objeto da lista de encaminhamento à direita.|  
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior que o objeto da lista de encaminhamento à direita.|  
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Testa se o objeto da lista de encaminhamento à esquerda do operador é maior ou igual ao objeto da lista de encaminhamento à direita.|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.|  
   
-### <a name="functions"></a>Funções  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[swap](../standard-library/forward-list-functions.md#swap)|Troca os elementos de duas listas de encaminhamento.|  
+|[swap](../standard-library/forward-list-functions.md#swap)|Exchanges the elements of two forward lists.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[forward_list](../standard-library/forward-list-class.md)|Descreve um objeto que controla uma sequência de elementos de tamanho variado. A sequência é armazenada como uma lista de elementos vinculada exclusivamente, com cada um contendo um membro do tipo `Type`.|  
+|[forward_list](../standard-library/forward-list-class.md)|Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of elements, each containing a member of type `Type`.|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

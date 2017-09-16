@@ -1,38 +1,56 @@
 ---
-title: "Substituindo o roteamento de comando padr&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de comandos, roteando comandos"
-  - "roteamento de comando, substituição"
-  - "MFC, roteamento de comando"
-  - "substituição, roteamento de comando padrão"
+title: Overriding the Standard Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command routing [MFC], overriding
+- command handling [MFC], routing commands
+- overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Substituindo o roteamento de comando padr&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e3ec91173fb783709d9ca2e32f6faefe2e792bd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Em casos raros quando você deve implementar algumas variações da estrutura padrão que roteia, você pode substituí\-la.  A exibição é alterar o roteamento em uma ou mais classes substituindo `OnCmdMsg` nessas classes.  Faça isso:  
+---
+# <a name="overriding-the-standard-command-routing"></a>Overriding the Standard Command Routing
+In rare cases when you must implement some variation of the standard framework routing, you can override it. The idea is to change the routing in one or more classes by overriding `OnCmdMsg` in those classes. Do so:  
   
--   Na classe de quebra a ordem passar a um objeto não padrão.  
+-   In the class that breaks the order to pass to a nondefault object.  
   
--   O novo objeto não padrão ou em destinos de comando pode transferir comandos por sua vez como.  
+-   In the new nondefault object or in command targets it might in turn pass commands to.  
   
- Se você inserir um novo objeto no roteamento, a sua classe deve ser uma classe de comando\- destino.  Nas versões substituindo de `OnCmdMsg`, certifique\-se de chamar a versão que está sendo substituído.  Consulte a função de membro de [OnCmdMsg](../Topic/CCmdTarget::OnCmdMsg.md) da classe `CCmdTarget`*na referência de MFC* e nas versões em classes como `CView` e **CDocument** no código\-fonte fornecido para exemplos.  
+ If you insert some new object into the routing, its class must be a command-target class. In your overriding versions of `OnCmdMsg`, be sure to call the version that you're overriding. See the [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) member function of class `CCmdTarget` in the *MFC Reference* and the versions in such classes as `CView` and **CDocument** in the supplied source code for examples.  
   
-## Consulte também  
- [Como o Framework chama um identificador](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

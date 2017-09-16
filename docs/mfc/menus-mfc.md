@@ -1,46 +1,63 @@
 ---
-title: "Menus (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menus"
-  - "menus, manipulando durante a execução"
-  - "menus, Recursos MFC com os quais trabalhar"
-  - "menus, atualizando como alterações de contexto"
+title: Menus (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], updating as context changes
+- menus [MFC], MFC resources for working with
+- menus [MFC], manipulating during execution
+- menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Menus (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b85ffd163a882fd1da8f8c6f9d698b8102a5d2e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-MFC O fornece dois elementos para ajudá\-lo a trabalhar com menus:  
+---
+# <a name="menus-mfc"></a>Menus (MFC)
+MFC supplies two elements to help you work with menus:  
   
--   Classe [CMenu](../mfc/reference/cmenu-class.md) para manipular os menus de seu programa em tempo de execução.  Use a documentação de `CMenu` e o exemplo para saber como usar efetivamente `CMenu` .  
+-   Class [CMenu](../mfc/reference/cmenu-class.md) for manipulating your program's menus at run time. Use the documentation for `CMenu` and the sample to learn how to use `CMenu` effectively.  
   
--   Um mecanismo para atualizar menus e botões da barra de ferramentas: habilitá\-las ou desabilitar dinamicamente para atender às condições de programa atual.  
+-   A mechanism for updating menus and toolbar buttons: enabling or disabling them on the fly to suit current program conditions.  
   
- Visual C\+\+ também fornece [editor de menu](../Topic/Menu%20Editor.md) para criar e editar recursos no menu do programa.  
+ Visual C++ also provides a [menu editor](../windows/menu-editor.md) for creating and editing your program's menu resources.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Objetos de manipulação do menu durante a execução do programa](../Topic/Manipulating%20Menus%20During%20Program%20Execution.md)  
+-   [Manipulating menu objects during program execution](../mfc/manipulating-menus-during-program-execution.md)  
   
--   [Como atualizar objetos de interface do usuário](../mfc/how-to-update-user-interface-objects.md)  
+-   [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)  
   
--   [Amostra](../mfc/menu-sample-list.md)  
+-   [Sample](../mfc/menu-sample-list.md)  
   
-## Consulte também  
- [Elementos da interface do usuário](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

@@ -1,41 +1,59 @@
 ---
-title: "Itens pai e filho do controle de &#225;rvore | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "itens filho no controle de árvore"
-  - "Classe CTreeCtrl, itens pai e filho"
-  - "Itens pai em CTreeCtrl"
-  - "controles em árvore, itens pai e filho"
+title: Tree Control Parent and Child Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- parent items in CTreeCtrl [MFC]
+- child items in tree control [MFC]
+- CTreeCtrl class [MFC], parent and child items
+- tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Itens pai e filho do controle de &#225;rvore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 823c7ce4bf946d8698b670f3c8b014d7dec1d7e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Qualquer item em um controle de árvore[CTreeCtrl](../mfc/reference/ctreectrl-class.md)\(\) pode ter uma lista de subitens, que são chamadas de itens filho, associada a ele.  Um item que tem um ou mais itens filho é chamado um item pai.  Um item filho é exibida abaixo de seu item pai e recuado para indicar que está subordinado ao pai.  Um item que não tem nenhum pai está no topo da hierarquia e é chamado um item raiz.  
+---
+# <a name="tree-control-parent-and-child-items"></a>Tree Control Parent and Child Items
+Any item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a list of subitems, which are called child items, associated with it. An item that has one or more child items is called a parent item. A child item is displayed below its parent item and is indented to indicate it is subordinate to the parent. An item that has no parent is at the top of the hierarchy and is called a root item.  
   
- Em um determinado momento, o estado da lista pai de um item de itens filho pode ser expandido ou recolhido.  Quando o estado é expandido, os itens filhos são exibidos abaixo do item pai.  Quando for recolhido, os itens filhos não serão exibidos.  Na lista as alternâncias automaticamente entre os estados expandidos e recolhidos quando o usuário clicar duas vezes no item pai ou, se o pai possui o estilo de **TVS\_HASBUTTONS** , quando o usuário clicar no botão associado ao item pai.  Um aplicativo pode expandir ou recolher os itens filho usando a função de membro de [Expanda](../Topic/CTreeCtrl::Expand.md) .  
+ At any given time, the state of a parent item's list of child items can be either expanded or collapsed. When the state is expanded, the child items are displayed below the parent item. When it is collapsed, the child items are not displayed. The list automatically toggles between the expanded and collapsed states when the user double-clicks the parent item or, if the parent has the **TVS_HASBUTTONS** style, when the user clicks the button associated with the parent item. An application can expand or collapse the child items by using the [Expand](../mfc/reference/ctreectrl-class.md#expand) member function.  
   
- Você adiciona um item a um controle de árvore chamando a função de membro de [InsertItem](../Topic/CTreeCtrl::InsertItem.md) .  Essa função retorna um identificador do tipo de **HTREEITEM** , que identifica exclusivamente o item.  Ao adicionar um item, você deve especificar o identificador do item pai do novo item.  Se você especificar **nulo** ou o valor de **TVI\_ROOT** em vez de um identificador pai do item na estrutura de [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) ou o parâmetro de `hParent` , o item será adicionado como um item raiz.  
+ You add an item to a tree control by calling the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. This function returns a handle of the **HTREEITEM** type, which uniquely identifies the item. When adding an item, you must specify the handle of the new item's parent item. If you specify **NULL** or the **TVI_ROOT** value instead of a parent item handle in the [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) structure or `hParent` parameter, the item is added as a root item.  
   
- Um controle de árvore envia uma notificação de [TVN\_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) quando a lista pai de um item de itens filho está prestes a ser expandida ou recolhido.  A notificação a oportunidade de evitar a modificação ou de definir quaisquer atributos do item pai que dependa do estado da lista de itens filho.  Após alterar o estado da lista, o controle de árvore envia uma notificação de [TVN\_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) .  
+ A tree control sends a [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) notification message when a parent item's list of child items is about to be expanded or collapsed. The notification gives you the opportunity to prevent the change or to set any attributes of the parent item that depend on the state of the list of child items. After changing the state of the list, the tree control sends a [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) notification message.  
   
- Quando uma lista de itens filho é expandida, é recuada relativo para o item pai.  Você pode definir a quantidade de recuo usando a função de membro de [SetIndent](../Topic/CTreeCtrl::SetIndent.md) ou recuperar a quantidade atual usando a função de membro de [GetIndent](../Topic/CTreeCtrl::GetIndent.md) .  
+ When a list of child items is expanded, it is indented relative to the parent item. You can set the amount of indentation by using the [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) member function or retrieve the current amount by using the [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) member function.  
   
-## Consulte também  
- [Usando CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

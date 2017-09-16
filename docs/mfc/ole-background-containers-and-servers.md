@@ -1,52 +1,70 @@
 ---
-title: "Plano de fundo OLE: cont&#234;ineres e servidores | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contêineres, aplicativos de contêiner OLE"
-  - "servidor completo"
-  - "Contêineres OLE, aplicativos de contêiner"
-  - "aplicativos de servidor completo OLE"
-  - "aplicativos de servidor OLE, sobre aplicativos de servidor"
-  - "aplicativos de servidor OLE, aplicativos de miniservidor"
-  - "aplicativos de servidor"
-  - "aplicativos de servidor, comunicação com contêineres"
-  - "aplicativos de servidor, definido"
-  - "aplicativos de servidor, de servidor completo vs. miniservidor"
-  - "aplicativos de servidor, requisitos"
+title: 'OLE Background: Containers and Servers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE full-server applications [MFC]
+- server applications [MFC], communication with containers
+- full-server [MFC]
+- server applications [MFC], requirements
+- server applications [MFC], defined
+- OLE server applications [MFC], about server applications
+- server applications [MFC], full-server vs. mini-server
+- OLE server applications [MFC], mini-server applications
+- OLE containers [MFC], container applications
+- containers [MFC], OLE container applications
+- server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Plano de fundo OLE: cont&#234;ineres e servidores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8f9c9a5735d7c66935acafee320335861d7030e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um aplicativo de contêiner é um aplicativo que pode inserir itens inseridos ou vinculados em seus próprios documentos.  Os documentos gerenciados por um aplicativo de contêiner deve ser capaz de armazenar e exibir componentes com OLE DB do documento bem como os dados criados pelo próprio aplicativo.  Um aplicativo de contêineres também deve permitir que os usuários insiram novos itens ou editar itens existentes ativando aplicativos de servidor quando necessário.  Os requisitos da interface do usuário de um aplicativo de contêineres são listados no artigo [Contêiner: Problemas da interface do usuário](../mfc/containers-user-interface-issues.md).  
+---
+# <a name="ole-background-containers-and-servers"></a>OLE Background: Containers and Servers
+A container application is an application that can incorporate embedded or linked items into its own documents. The documents managed by a container application must be able to store and display OLE document components as well as the data created by the application itself. A container application must also allow users to insert new items or edit existing items by activating server applications when necessary. The user-interface requirements of a container application are listed in the article [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md).  
   
- Um aplicativo de aplicativo de servidor ou do componente é um aplicativo que pode criar componentes com OLE DB do documento para uso por aplicativos de contêiner.  Aplicativos para servidores de suporte geralmente arraste e solte ou copiar seus dados para a área de transferência de modo que um aplicativo de contêiner pode inserir os dados como um item inserido ou vinculado.  Um aplicativo pode ser um contêiner e um servidor.  
+ A server application or component application is an application that can create OLE document components for use by container applications. Server applications usually support drag and drop or copying their data to the Clipboard so that a container application can insert the data as an embedded or linked item. An application can be both a container and a server.  
   
- A maioria dos servidores autônomos são aplicativos ou servidores completas; podem ser executados como aplicativos autônomos ou podem ser iniciados por um aplicativo do contêiner.  Um miniserver é um tipo especial de aplicativo de servidor que pode ser iniciado apenas por um contêiner.  Não pode ser executado como um aplicativo autônomo.  Um descompasso da Microsoft e os servidores de gráfico do Microsoft são exemplos de miniservers.  
+ Most servers are stand-alone applications or full servers; they can either be run as stand-alone applications or can be launched by a container application. A miniserver is a special type of server application that can be launched only by a container. It cannot be run as a stand-alone application. Microsoft Draw and Microsoft Graph servers are examples of miniservers.  
   
- Os contêineres e os servidores não se comunicam diretamente.  Em vez disso, se comunicam com OLE DB \(DLL\) em bibliotecas de vínculo dinâmico\) nativa do sistema.  Esses DLL fornecem funções que os contêineres e a chamada de servidores, e os contêineres e servidores fornece as funções de retorno de chamada que chamam as dlls.  
+ Containers and servers do not communicate directly. Instead, they communicate through the OLE system dynamic-link libraries (DLL). These DLLs provide functions that containers and servers call, and the containers and servers provide callback functions that the DLLs call.  
   
- Usar essa mídia de comunicação, um contêiner não precisa saber os detalhes de implementação do aplicativo para servidores.  Permite que um contêiner aceita os itens criados por qualquer servidor sem precisar definir os tipos de servidores com que pode trabalhar.  No resultado, o usuário de um aplicativo de contêiner pode tirar proveito dos aplicativos e formatos de dados futuros.  Se essas novos aplicativos são componentes do, um documento composto poderá inserir os itens criados por esses aplicativos.  
+ Using this means of communication, a container does not need to know the implementation details of the server application. It allows a container to accept items created by any server without having to define the types of servers with which it can work. As a result, the user of a container application can take advantage of future applications and data formats. If these new applications are OLE components, then a compound document will be able to incorporate items created by those applications.  
   
-## Consulte também  
- [Plano de fundo OLE](../mfc/ole-background.md)   
- [Plano de fundo OLE: implementação MFC](../mfc/ole-background-mfc-implementation.md)   
- [Contêineres](../mfc/containers.md)   
- [Servidores](../mfc/servers.md)   
- [Contêineres: itens clientes](../mfc/containers-client-items.md)   
- [Servidores: itens de servidor](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: MFC Implementation](../mfc/ole-background-mfc-implementation.md)   
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

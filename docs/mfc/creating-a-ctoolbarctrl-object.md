@@ -1,47 +1,65 @@
 ---
-title: "Criando um objeto CToolBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolBarCtrl, criando barras de ferramentas"
-  - "controles de barra de ferramentas [MFC], criando"
+title: Creating a CToolBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], creating
+- CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
 caps.latest.revision: 11
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Criando um objeto CToolBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5041670f733d353220f16d32fa5c56f66ba64904
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-os objetos de[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) contêm várias estruturas de dados internas — uma lista de bitmaps da imagem do botão, uma lista de cadeias de caracteres do rótulo do botão, e uma lista de estruturas de `TBBUTTON` — aquele associado uma imagem e\/ou uma cadeia de caracteres com a posição, o estilo, o estado, e a ID de comando do botão.  Cada um dos elementos dessas estruturas de dados é referenciado por um índice de base zero.  Antes de usar um objeto de `CToolBarCtrl` , você deve configurar essas estruturas de dados.  Para obter uma lista das estruturas de dados, consulte [Controles da barra de ferramentas](https://msdn.microsoft.com/en-us/library/47xcww9x.aspx) em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  A lista de cadeias de caracteres só pode ser usada para rótulos do botão; não é possível recuperar cadeias de caracteres da barra de ferramentas.  
+---
+# <a name="creating-a-ctoolbarctrl-object"></a>Creating a CToolBarCtrl Object
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objects contain several internal data structures — a list of button image bitmaps, a list of button label strings, and a list of `TBBUTTON` structures — that associate an image and/or string with the position, style, state, and command ID of the button. Each of the elements of these data structures is referred to by a zero-based index. Before you can use a `CToolBarCtrl` object, you must set up these data structures. For a list of the data structures, see [Toolbar Controls](https://msdn.microsoft.com/library/47xcww9x.aspx) in the Windows SDK. The list of strings can only be used for button labels; you cannot retrieve strings from the toolbar.  
   
- Para usar um objeto de `CToolBarCtrl` , normalmente você seguirá estas etapas:  
+ To use a `CToolBarCtrl` object, you will typically follow these steps:  
   
-### Para usar um objeto de CToolBarCtrl  
+### <a name="to-use-a-ctoolbarctrl-object"></a>To use a CToolBarCtrl object  
   
-1.  Construir o objeto de [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) .  
+1.  Construct the [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object.  
   
-2.  Chame [Crie](../Topic/CToolBarCtrl::Create.md) para criar o controle comuns da barra de ferramentas do windows e anexá\-lo ao objeto de `CToolBarCtrl` .  Se você quiser imagens de bitmap para os botões, adicione os bitmaps no botão na barra de ferramentas [AddBitmap](../Topic/CToolBarCtrl::AddBitmap.md)chamando.  Se você quiser rótulos de cadeia de caracteres para os botões, adicione as cadeias de caracteres à barra de ferramentas chamando [AddString](../Topic/CToolBarCtrl::AddString.md) e\/ou [AddStrings](../Topic/CToolBarCtrl::AddStrings.md).  Depois de chamar `AddString` e\/ou `AddStrings`, você deve chamar [Dimensionamento automático](../Topic/CToolBarCtrl::AutoSize.md) para obter a cadeia de caracteres ou as cadeias de caracteres apareça.  
+2.  Call [Create](../mfc/reference/ctoolbarctrl-class.md#create) to create the Windows toolbar common control and attach it to the `CToolBarCtrl` object. If you want bitmap images for buttons, add the button bitmaps to the toolbar by calling [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). If you want string labels for buttons, add the strings to the toolbar by calling [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) and/or [AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). After calling `AddString` and/or `AddStrings`, you should call [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) in order to get the string or strings to appear.  
   
-3.  Adicionar estruturas de botão na barra de ferramentas [AddButtons](../Topic/CToolBarCtrl::AddButtons.md)chamando.  
+3.  Add button structures to the toolbar by calling [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).  
   
-4.  Se você quiser dicas de ferramenta, tratar mensagens de **TTN\_NEEDTEXT** na janela do proprietário da barra de ferramentas como descrito em [Notificações de dica de ferramenta de manipulação](../mfc/handling-tool-tip-notifications.md).  
+4.  If you want tool tips, handle **TTN_NEEDTEXT** messages in the toolbar's owner window as described in [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md).  
   
-5.  Se você deseja que o usuário possam personalizar a barra de ferramentas, tratar notificações de personalização na janela do proprietário como descrito em [Notificações de personalização de manipulação](../Topic/Handling%20Customization%20Notifications.md).  
+5.  If you want your user to be able to customize the toolbar, handle customization notification messages in the owner window as described in [Handling Customization Notifications](../mfc/handling-customization-notifications.md).  
   
-## Consulte também  
- [Usando CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

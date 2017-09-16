@@ -1,46 +1,64 @@
 ---
-title: "Usando CToolBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CToolBarCtrl"
-  - "controles de barra de ferramentas [MFC], criando"
+title: Using CToolBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC]
+- toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando CToolBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 856893014c79c71262e1442ef5707bb83dd72dc7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Você pode usar o controle da barra de ferramentas \([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)\) para criar uma janela de controle que contém botões e espaços opcionais.  Cada botão na janela de controle da barra de ferramentas envia uma mensagem de comando para a janela pai como o usuário a escolher.  Normalmente, os botões em uma barra de ferramentas correspondem aos itens no menu do aplicativo, fornecendo adicional e maneira mais direta para que o usuário acesse os comandos de um aplicativo.  
+---
+# <a name="using-ctoolbarctrl"></a>Using CToolBarCtrl
+You can use the toolbar control ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) to create a control window containing buttons and optional spaces. Each button in the toolbar control window sends a command message to the parent window as the user chooses it. Typically, the buttons in a toolbar correspond to items in the application's menu, providing an additional and more direct way for the user to access an application's commands.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Métodos para criar uma barra de ferramentas](../mfc/methods-of-creating-a-toolbar.md)  
+-   [Methods of Creating a Toolbar](../mfc/methods-of-creating-a-toolbar.md)  
   
--   [Configurações do controle da barra de ferramentas](../mfc/settings-for-the-toolbar-control.md)  
+-   [Settings for the Toolbar Control](../mfc/settings-for-the-toolbar-control.md)  
   
--   [Criando um objeto de CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)  
+-   [Creating a CToolBarCtrl Object](../mfc/creating-a-ctoolbarctrl-object.md)  
   
--   [Usando listas de imagem em um controle da barra de ferramentas](../mfc/using-image-lists-in-a-toolbar-control.md)  
+-   [Using Image Lists in a Toolbar Control](../mfc/using-image-lists-in-a-toolbar-control.md)  
   
--   [Usando os botões suspensos em um controle da barra de ferramentas](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
+-   [Using Drop-Down Buttons in a Toolbar Control](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
   
--   [Personalizando a aparência de um controle da barra de ferramentas](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
+-   [Customizing the Appearance of a Toolbar Control](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
-## Consulte também  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,50 +1,68 @@
 ---
-title: "Cabe&#231;alhos e rodap&#233;s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rodapés, imprimindo"
-  - "cabeçalhos, imprimindo"
-  - "rodapés de página"
-  - "rodapés de página, imprimindo"
-  - "cabeçalhos de página"
-  - "cabeçalhos de página, imprimindo"
-  - "imprimindo [MFC], cabeçalhos e rodapés"
-  - "imprimindo [MFC], documentos multipágina"
+title: Headers and Footers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], multipage documents
+- page headers [MFC], printing
+- headers [MFC], printing
+- footers [MFC], printing
+- page footers [MFC], printing
+- page headers [MFC]
+- printing [MFC], headers and footers
+- page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cabe&#231;alhos e rodap&#233;s
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46314bd0bc97dd9d346c2abd1310902a21bb6d1c
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica como adicionar cabeçalhos e rodapés para um documento impresso.  
+---
+# <a name="headers-and-footers"></a>Headers and Footers
+This article explains how to add headers and footers to a printed document.  
   
- Quando você examina um documento na tela, o nome do documento e seu local atual no documento são exibidos normalmente na barra de título e em uma barra de status.  Ao examinar uma cópia impressa de um documento, é útil ter o nome e o número da página mostrados em um cabeçalho ou rodapé.  Essa é uma forma comum em mesmo que os programas de WYSIWYG diferem em execução como ótica a visualização de impressão e.  
+ When you look at a document on the screen, the name of the document and your current location in the document are commonly displayed in a title bar and a status bar. When looking at a printed copy of a document, it's useful to have the name and page number shown in a header or footer. This is a common way in which even WYSIWYG programs differ in how they perform printing and screen display.  
   
- A função de membro de [OnPrint](../Topic/CView::OnPrint.md) é o local apropriado para imprimir cabeçalhos ou rodapés porque é chamada para cada página, e porque é chamada somente imprimindo, não para a visualização ótica.  Você pode definir uma função separada para imprimir um cabeçalho ou rodapé, e transfira o contexto do dispositivo de impressora de `OnPrint`.  Talvez seja necessário ajustar a origem ou a extensão da janela antes de chamar [OnDraw](../Topic/CView::OnDraw.md) para evitar que o corpo da página sobreposição do cabeçalho ou rodapé.  Você também pode precisar alterar `OnDraw` porque a quantidade de documento que se ajusta na página pudesse ser reduzida.  
+ The [OnPrint](../mfc/reference/cview-class.md#onprint) member function is the appropriate place to print headers or footers because it is called for each page, and because it is called only for printing, not for screen display. You can define a separate function to print a header or footer, and pass it the printer device context from `OnPrint`. You might need to adjust the window origin or extent before calling [OnDraw](../mfc/reference/cview-class.md#ondraw) to avoid having the body of the page overlap the header or footer. You might also have to modify `OnDraw` because the amount of the document that fits on the page could be reduced.  
   
- Uma maneira de compensar a área do cabeçalho ou o rodapé é usar o membro de **m\_rectDraw** de [CPrintInfo](../mfc/reference/cprintinfo-structure.md).  Cada vez que uma página é impressa, este membro está inicializado com a área utilizável da página.  Se você imprime um cabeçalho ou rodapé antes que imprimir o corpo da página, você pode reduzir o tamanho do retângulo armazenado em **m\_rectDraw** para a conta para a área do cabeçalho ou o rodapé.  Em `OnPrint` pode se referir a **m\_rectDraw** para saber quanto a área permanece imprimindo o corpo da página.  
+ One way to compensate for the area taken by the header or footer is to use the **m_rectDraw** member of [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Each time a page is printed, this member is initialized with the usable area of the page. If you print a header or footer before printing the body of the page, you can reduce the size of the rectangle stored in **m_rectDraw** to account for the area taken by the header or footer. Then `OnPrint` can refer to **m_rectDraw** to find out how much area remains for printing the body of the page.  
   
- Você não pode imprimir um cabeçalho, ou qualquer outra coisa, de [OnPrepareDC](../Topic/CView::OnPrepareDC.md), porque é chamado antes que a função de membro de `StartPage` de [CDC](../Topic/CDC%20Class.md) seja chamada.  Nesse ponto, o contexto do dispositivo de impressora é considerado estar em um limite de página.  Você pode executar somente imprimir da função de membro de `OnPrint` .  
+ You cannot print a header, or anything else, from [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc), because it is called before the `StartPage` member function of [CDC](../mfc/reference/cdc-class.md) has been called. At that point, the printer device context is considered to be at a page boundary. You can perform printing only from the `OnPrint` member function.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Imprimindo documentos de várias páginas](../mfc/multipage-documents.md)  
+-   [Printing multipage documents](../mfc/multipage-documents.md)  
   
--   [Alocando recursos de GDI para imprimir](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
-## Consulte também  
- [Imprimindo](../mfc/printing.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)
+
+

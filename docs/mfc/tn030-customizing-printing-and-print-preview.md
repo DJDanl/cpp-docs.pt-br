@@ -1,131 +1,152 @@
 ---
-title: "TN030: personalizando impress&#227;o e visualiza&#231;&#227;o de impress&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.print"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "personalizando impressão e visualização de impressão"
-  - "visualizar impressão, personalizando"
-  - "imprimindo [MFC], modos de exibição"
-  - "imprimindo exibições"
-  - "TN030"
+title: 'TN030: Customizing Printing and Print Preview | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.print
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN030
+- customizing printing and print preview
+- printing [MFC], views
+- printing views [MFC]
+- print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN030: personalizando impress&#227;o e visualiza&#231;&#227;o de impress&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 614925379b4a3b7399d4603082e01ba959c163fe
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Customizing Printing and Print Preview
 > [!NOTE]
->  A nota técnica a seguir não foi atualizada desde que ela foi incluída pela primeira vez na documentação online.  Como resultado, alguns procedimentos e tópicos podem estar incorretos ou expirados.  Para obter as informações mais recentes, é recomendável que você procure o tópico de interesse no índice de documentação online.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Essa observação descreve o processo de personalizar a impressão e a visualização de impressão e descreve as finalidades de rotinas de retorno de chamada usadas em `CView` e as rotinas de retorno de chamada e as funções de membro de **CPreviewView**.  
+ This note describes the process of customizing printing and print preview and describes the purposes of the callback routines used in `CView` and the callback routines and member functions of **CPreviewView**.  
   
-## O problema  
- MFC O fornece uma solução completo para a maioria das necessidades de impressão e visualizar impressão.  Na maioria dos casos, vez código adicional é necessária para ter uma exibição capaz de imprimir e visualizar.  No entanto, há maneiras de otimizar a impressão de que exigem a tensão significativa da parte do desenvolvedor, e alguns aplicativos precisam adicionar elementos específicos da interface do usuário no modo de visualização da impressão.  
+## <a name="the-problem"></a>The Problem  
+ MFC provides a complete solution for most printing and print preview needs. In most cases, little additional code is required to have a view able to print and preview. However, there are ways to optimize printing that require significant effort on the part of the developer, and some applications need to add specific user interface elements to the print preview mode.  
   
-## Impressão eficiente  
- Quando um aplicativo MFC será impressa usando os métodos padrão, o windows direcionam todas as chamadas gráficos de saída de \(GDI\) da interface de dispositivo metarquivo de memória.  Quando `EndPage` é chamado, o windows executam o metarquivo uma vez para cada físico a faixa da impressora requer para imprimir uma página.  Durante a renderização, GDI consulta que frequência o procedimento de anulação para determinar se continuar.  Normalmente o procedimento de anulação permite que as mensagens sejam processadas de forma que o usuário pode anular o trabalho de cópia usando uma caixa de diálogo de impressão.  
+## <a name="efficient-printing"></a>Efficient Printing  
+ When an MFC application prints using the standard methods, Windows directs all Graphical Device Interface (GDI) output calls to an in-memory metafile. When `EndPage` is called, Windows plays the metafile once for each physical band that the printer requires to print one page. During this rendering, GDI frequently queries the Abort Procedure to determine if it should continue. Typically the abort procedure allows messages to be processed so that the user may abort the print job using a printing dialog.  
   
- Infelizmente, isso pode reduzir o processo de impressão.  Se a impressão em seu aplicativo deve ser mais rápido do que pode ser obtida usando a técnica padrão, você deve implementar a borda manual.  
+ Unfortunately, this can slow the printing process. If the printing in your application must be faster than can be achieved using the standard technique, you must implement manual banding.  
   
-## A borda de cópia  
- Para unir\-se manualmente, você deve com referência ao implementar o loop de cópia de modo que `OnPrint` for chamado várias vezes por página \(uma vez por linha distribuída\).  O loop de impressão é implementado na função de **OnFilePrint** em viewprnt.cpp.  No `CView`\- classe derivada, você sobrecarregar essa função para que a entrada da mensagem para tratar o comando copiar chama a função de cópia.  Copie a rotina de **OnFilePrint** e alterar o loop de cópia para implementar a borda.  Você provavelmente também pode querer passe o retângulo de borda às funções de impressão de forma que você possa otimizar o desenho com base na seção da página que está sendo impressa.  
+## <a name="print-banding"></a>Print Banding  
+ In order to manually band, you must re implement the print loop such that `OnPrint` is called multiple times per page (once per band). The print loop is implemented in the **OnFilePrint** function in viewprnt.cpp. In your `CView`-derived class, you overload this function so that the message map entry for handling the print command calls your print function. Copy the **OnFilePrint** routine and change the print loop to implement banding. You will probably also want to pass the banding rectangle to your printing functions so that you can optimize drawing based on the section of the page being printed.  
   
- Segundo, você normalmente deve chamar `QueryAbort` ao chamar a faixa.  Caso contrário, o procedimento de anulação não será chamado e o usuário não poderá cancelar do trabalho de cópia.  
+ Second, you must frequently call `QueryAbort` while drawing the band. Otherwise, the Abort Procedure will not get called and the user will be unable to cancel the print job.  
   
-## Visualização de impressão: O papel eletrônico com a interface do usuário  
- Visualização de impressão, basicamente, o tenta transformar a exibição em uma emulação de uma impressora.  Por padrão, a área do cliente da janela principal é usada para exibir totalmente uma ou duas páginas dentro da janela.  O usuário pode ampliar em uma área da página para consulta com mais detalhes.  Com suporte adicional, o mesmo usuário pode ser permitido editar o documento em modo de visualização.  
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Print Preview: Electronic Paper with User Interface  
+ Print Preview, in essence, tries to turn the display into an emulation of a printer. By default, the client area of the main window is used to display one or two pages fully within the window. The user is able to zoom in on an area of the page to see it in more detail. With additional support, the user may even be allowed to edit the document in preview mode.  
   
-## Personalizando a visualização de impressão  
- Essa observe o trata apenas um aspecto de visualização da impressão de alteração: Adicionando interface do usuário para o modo de visualização.  Outras alterações são possíveis, mas tais alterações estão fora do escopo desta discussão.  
+## <a name="customizing-print-preview"></a>Customizing Print Preview  
+ This note only deals with one aspect of modifying print preview: Adding UI to preview mode. Other modifications are possible, but such changes are out of the scope of this discussion.  
   
-## Para adicionar interface do usuário para o modo de visualização  
+## <a name="to-add-ui-to-the-preview-mode"></a>To add UI to the preview mode  
   
-1.  Derivar uma classe de exibição de **CPreviewView**.  
+1.  Derive a view class from **CPreviewView**.  
   
-2.  Adicionar manipuladores de comando para os aspectos de interface do usuário que você deseja.  
+2.  Add command handlers for the UI aspects you desire.  
   
-3.  Se você estiver adicionando aspectos visuais à exibição, a substituição `OnDraw` e executando o desenho depois de chamar **CPreviewView::OnDraw.**  
+3.  If you are adding visual aspects to the display, override `OnDraw` and perform your drawing after calling **CPreviewView::OnDraw.**  
   
-## OnFilePrintPreview  
- Este é o manipulador de comando para a visualização de impressão.  Sua implementação padrão é:  
+## <a name="onfileprintpreview"></a>OnFilePrintPreview  
+ This is the command handler for print preview. Its default implementation is:  
   
 ```  
 void CView::OnFilePrintPreview()  
-{  
-    // In derived classes, implement special window handling here  
-    // Be sure to Unhook Frame Window close if hooked.  
-  
-    // must not create this on the frame. Must outlive this function  
+{ *// In derived classes,
+    implement special window handling here *// Be sure to Unhook Frame Window close if hooked.  
+ *// must not create this on the frame. Must outlive this function  
     CPrintPreviewState* pState = new CPrintPreviewState;  
-  
-    if (!DoPrintPreview(AFX_IDD_PREVIEW_TOOLBAR, this,  
-                RUNTIME_CLASS(CPreviewView), pState))  
-    {  
-        // In derived classes, reverse special window handling  
-        // here for Preview failure case  
-  
-        TRACE0("Error: DoPrintPreview failed");  
-        AfxMessageBox(AFX_IDP_COMMAND_FAILURE);  
-        delete pState;      // preview failed to initialize,   
-                    // delete State now  
-    }  
+ 
+    if (!DoPrintPreview(AFX_IDD_PREVIEW_TOOLBAR,
+    this,  
+    RUNTIME_CLASS(CPreviewView),
+    pState))  
+ { *// In derived classes,
+    reverse special window handling *// here for Preview failure case  
+ 
+    TRACE0("Error: DoPrintPreview failed");
+
+    AfxMessageBox(AFX_IDP_COMMAND_FAILURE);
+
+ delete pState;      // preview failed to initialize, *// delete State now  
+ }  
 }  
 ```  
   
- **DoPrintPreview** ocultará o painel principal do aplicativo.  As barras de controle, como a barra de status, podem ser retidas especificando\-os no membro\>de**dwStates** de pState\- \(é um bitmask e os bits de barras de controle individuais são definidos por **AFX\_CONTROLBAR\_MASK**AFX\_IDW\_MYBAR \(\)\).  O pState\-**nIDMainPane** \>da janela é a janela que será oculta automaticamente e reshown.  **DoPrintPreview** criará uma barra de botões para a visualização padrão interface do usuário.  Se a manipulação especial da janela é necessária, como ocultar ou mostrar outras janelas, que devem ser feitas antes que **DoPrintPreview** ser chamado.  
+ **DoPrintPreview** will hide the main pane of the application. Control Bars, such as the status bar, can be retained by specifying them in the pState->**dwStates** member (This is a bit mask and the bits for individual control bars are defined by **AFX_CONTROLBAR_MASK**( AFX_IDW_MYBAR)). The window pState->**nIDMainPane** is the window that will be automatically hidden and reshown. **DoPrintPreview** will then create a button bar for the standard Preview UI. If special window handling is needed, such as to hide or show other windows, that should be done before **DoPrintPreview** is called.  
   
- Por padrão, quando a visualização de impressão é concluída, retornará as barras de controle para seus estados original e ao painel principal a visível.  Se a manipulação especial é necessária, deve ser feita em uma substituição de **EndPrintPreview.** Se **DoPrintPreview** falha, fornecer a manipulação especial.  
+ By default, when print preview finishes, it returns the control bars to their original states and the main pane to visible. If special handling is needed, it should be done in an override of **EndPrintPreview.** If **DoPrintPreview** fails, also provide special handling.  
   
- DoPrintPreview é chamado com:  
+ DoPrintPreview is called with:  
   
--   A ID do recurso do modelo da caixa de diálogo para a barra de ferramentas de visualização.  
+-   The Resource ID of the dialog template for the preview toolbar.  
   
--   Um ponteiro para a exibição para executar a impressão para a visualização de impressão.  
+-   A pointer to the view to perform the printing for the print preview.  
   
--   A classe de tempo de execução da classe da exibição visualização.  Isso será criado dinamicamente em DoPrintPreview.  
+-   The run-time class of the Preview View class. This will be dynamically created in DoPrintPreview.  
   
--   O ponteiro de CPrintPreviewState.  Observe que a estrutura de CPrintPreviewState \(ou a estrutura derivado se o aplicativo precisar de mais estado preservado\) *não*  devem ser criadas no quadro.  DoPrintPreview é modeless e essa estrutura deve EndPrintPreview sobreviver até que seja chamado.  
+-   The CPrintPreviewState pointer. Note that the CPrintPreviewState structure (or the derived structure if the application needs more state preserved) must *not* be created on the frame. DoPrintPreview is modeless and this structure must survive until EndPrintPreview is called.  
   
     > [!NOTE]
-    >  Se uma exibição ou uma classe separada de exibição são necessárias para imprimir o suporte, um ponteiro para o objeto deve ser passado como o segundo parâmetro.  
+    >  If a separate view or view class is needed for printing support, a pointer to that object should be passed as the second parameter.  
   
-## EndPrintPreview  
- Isso é chamado para finalizar o modo de visualização da impressão.  Geralmente é desejável mover para a página no documento que foi exibido na visualização de impressão.  **EndPrintPreview** é a possibilidade de aplicativo para fazer isso.  O membro\>de`m_nCurPage` de pInfo\- é a página que foi exibido \(a mais à esquerda se duas páginas são exibidas\), e o ponteiro é uma dica a respeito de onde na página o usuário está interessado.  Desde que a estrutura de exibição de aplicativo é desconhecida à estrutura, você deve fornecer o código ao mover para o ponto selecionado.  
+## <a name="endprintpreview"></a>EndPrintPreview  
+ This is called to terminate the print preview mode. It is often desirable to move to the page in the document that was last displayed in print preview. **EndPrintPreview** is the application's chance to do that. The pInfo->`m_nCurPage` member is the page that was last displayed (leftmost if two pages were displayed), and the pointer is a hint as to where on the page the user was interested. Since the structure of the application's view is unknown to the framework, then you must provide the code to move to the chosen point.  
   
- Você deve executar a maioria das ações antes de chamar **CView::EndPrintPreview**.  Essa chamada inverte os efeitos de **DoPrintPreview** e exclui o pView, o pDC, e o pInfo.  
+ You should perform most actions before calling **CView::EndPrintPreview**. This call reverses the effects of **DoPrintPreview** and deletes pView, pDC, and pInfo.  
   
 ```  
 // Any further cleanup should be done here.  
-CView::EndPrintPreview(pDC, pInfo, point, pView);  
+CView::EndPrintPreview(pDC,
+    pInfo,
+    point,
+    pView);
 ```  
   
-## CWinApp::OnFilePrintSetup  
- Isso deve ser mapeado para o item de menu de configuração de cópia.  Na maioria dos casos, não é necessário substituir a implementação.  
+## <a name="cwinapponfileprintsetup"></a>CWinApp::OnFilePrintSetup  
+ This must be mapped for the Print Setup menu item. In most cases, it is not necessary to override the implementation.  
   
-## Nomenclatura de página  
- Outros tema que são de numeração e da ordem de página.  Para aplicativos simples do tipo de processador de textos, esse é um problema simples.  A maioria dos sistemas de visualização de impressão assumem que cada página impressa corresponde a uma página no documento.  
+## <a name="page-nomenclature"></a>Page Nomenclature  
+ Another issue is that of page numbering and order. For simple word processor type applications, this is a straightforward issue. Most print preview systems assume that each printed page corresponds to one page in the document.  
   
- Tente fornecer uma solução generalizada, há várias coisas a serem considerados.  Imagine um sistema de CAD.  O usuário tem um desenho que abrange várias folhas de E\- tamanho.  Em um plotador de E\- tamanho \(ou um secundário, dimensionado\), a numeração de página seria como no caso simples.  Mas em uma impressora a laser, imprimindo 16 páginas de um tamanho por folha, que a visualização de impressão considera uma página”? “  
+ In trying to provide a generalized solution, there are several things to consider. Imagine a CAD system. The user has a drawing that covers several E-size sheets. On an E-size (or a smaller, scaled) plotter, page numbering would be as in the simple case. But on a laser printer, printing 16 A-size pages per sheet, what does print preview consider a "page"  
   
- Como os estados introdutórios de parágrafo, a visualização de impressão está atuando como uma impressora.  Em virtude disso, o usuário verá o que deixa da impressora específico que está selecionada.  É responsabilidade a exibição para determinar quais imagem é impressa em cada página.  
+ As the introductory paragraph states, Print Preview is acting like a printer. Therefore, the user will see what would come out of the particular printer that is selected. It is up to the view to determine what image is printed on each page.  
   
- A cadeia de caracteres de descrição da página na estrutura de `CPrintInfo` fornece uma maneira de exibir o número da página ao usuário se pode ser representada como um número por página \(como na página “1 " ou “nas páginas 1\-2”\). Essa cadeia de caracteres é usada pela implementação padrão de **CPreviewView::OnDisplayPageNumber**.  Se uma exibição diferente for necessária, se pode substituir essa função virtual para fornecer, por exemplo, “Sheet1 seções, A, B”.  
+ The page description string in the `CPrintInfo` structure provides a means of displaying the page number to the user if it can be represented as one number per page (as in "Page 1" or "Pages 1-2"). This string is used by the default implementation of **CPreviewView::OnDisplayPageNumber**. If a different display is needed, one may override this virtual function to provide, for example, "Sheet1, Sections A, B".  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

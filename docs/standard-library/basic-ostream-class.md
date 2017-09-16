@@ -1,16 +1,15 @@
 ---
-title: Classe basic_ostream | Microsoft Docs
+title: basic_ostream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ostream/std::basic_ostream
-- basic_ostream
 - ostream/std::basic_ostream::flush
 - ostream/std::basic_ostream::put
 - ostream/std::basic_ostream::seekp
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_ostream class
+- std::basic_ostream [C++]
+- std::basic_ostream [C++], flush
+- std::basic_ostream [C++], put
+- std::basic_ostream [C++], seekp
+- std::basic_ostream [C++], sentry
+- std::basic_ostream [C++], swap
+- std::basic_ostream [C++], tellp
+- std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 caps.latest.revision: 24
 author: corob-msft
@@ -41,32 +47,32 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f99eb93378a544b0bf1b7abe224bf8f75158ca82
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: dda04a0f81123cd23313149db639a0359b3c93bc
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicostream-class"></a>Classe basic_ostream
-Essa classe de modelo descreve um objeto que controla a inserção de elementos e objetos codificados em um buffer de fluxo com elementos do tipo **Elem**, também conhecido como [char_type](../standard-library/basic-ios-class.md#char_type), cujas características de caractere são determinadas pela classe **Tr**, também conhecida como [traits_type](../standard-library/basic-ios-class.md#traits_type).  
+# <a name="basicostream-class"></a>basic_ostream Class
+This template class describes an object that controls insertion of elements and encoded objects into a stream buffer with elements of type **Elem**, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class **Tr**, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_ostream : virtual public basic_ios<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Um `char_type`.  
+ A `char_type`.  
   
  `Tr`  
- O caractere `traits_type`.  
+ The character `traits_type`.  
   
-## <a name="remarks"></a>Comentários  
- A maioria das funções membro que sobrecarrega o [operator<<](#op_lt_lt) é composta por funções de entrada formatadas. Elas seguem o padrão:  
+## <a name="remarks"></a>Remarks  
+ Most of the member functions that overload [operator<<](#op_lt_lt) are formatted output functions. They follow the pattern:  
   
 ```  
 iostate state = goodbit;  
@@ -92,7 +98,7 @@ setstate(state);
 return (*this);
 ```  
   
- Duas outras funções membro são funções de saída sem formatação. Elas seguem o padrão:  
+ Two other member functions are unformatted output functions. They follow the pattern:  
   
 ```  
 iostate state = goodbit;  
@@ -118,45 +124,45 @@ setstate(state);
 return (*this);
 ```  
   
- Ambos os grupos de funções chama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** se encontram uma falha durante a inserção de elementos.  
+ Both groups of functions call [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** if they encounter a failure while inserting elements.  
   
- Um objeto da classe basic_istream\< **Elem**, **Tr**> armazena somente um objeto base virtual público da classe [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr >**.  
+ An object of class basic_istream\< **Elem**, **Tr**> stores only a virtual public base object of class [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>**.  
   
-## <a name="example"></a>Exemplo  
- Consulte o exemplo de [Classe basic_ifstream](../standard-library/basic-ofstream-class.md) para saber mais sobre fluxos de saída.  
+## <a name="example"></a>Example  
+ See the example for [basic_ofstream Class](../standard-library/basic-ofstream-class.md) to learn more about output streams.  
   
-### <a name="constructors"></a>Construtores  
-  
-|||  
-|-|-|  
-|[basic_ostream](#basic_ostream)|Constrói um objeto `basic_ostream`.|  
-  
-### <a name="member-functions"></a>Funções membro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[flush](#flush)|Libera o buffer.|  
-|[put](#put)|Coloca um caractere em um fluxo.|  
-|[seekp](#seekp)|Redefine a posição no fluxo de saída.|  
-|[sentry](#sentry)|A classe aninhada descreve um objeto cuja declaração estrutura as funções de saída formatadas e as funções de saída não formatadas.|  
-|[swap](#op_eq)|Troca os valores desse objeto `basic_ostream` por aqueles do objeto `basic_ostream` fornecido.|  
-|[tellp](#tellp)|Relata a posição no fluxo de saída.|  
-|[write](#write)|Coloca caracteres em um fluxo.|  
+|[basic_ostream](#basic_ostream)|Constructs a `basic_ostream` object.|  
   
-### <a name="operators"></a>Operadores  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#basic_ostream_operator_eq)|Atribui o valor do objeto parâmetro `basic_ostream` fornecido para esse objeto.|  
-|[operator<<](#basic_ostream_operator_lt_lt)|Grava no fluxo.|  
+|[flush](#flush)|Flushes the buffer.|  
+|[put](#put)|Puts a character in a stream.|  
+|[seekp](#seekp)|Resets position in output stream.|  
+|[sentry](#sentry)|The nested class describes an object whose declaration structures the formatted output functions and the unformatted output functions.|  
+|[swap](#op_eq)|Exchanges the values of this `basic_ostream` object for those of the provided `basic_ostream` object.|  
+|[tellp](#tellp)|Reports position in output stream.|  
+|[write](#write)|Puts characters in a stream.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator=](#basic_ostream_operator_eq)|Assigns the value of the provided `basic_ostream` object parameter to this object.|  
+|[operator<<](#basic_ostream_operator_lt_lt)|Writes to the stream.|  
 
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<ostream >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ostream>  
   
  **Namespace:** std  
   
 ##  <a name="basic_ostream"></a>  basic_ostream::basic_ostream  
- Constrói um objeto `basic_ostream`.  
+ Constructs a `basic_ostream` object.  
   
 ```  
 explicit basic_ostream(
@@ -166,36 +172,36 @@ explicit basic_ostream(
 basic_ostream(basic_ostream&& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Um objeto do tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).  
+ An object of type [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
- `true` se esse for um fluxo padrão; caso contrário, `false`.  
+ `true` if this is a standard stream; otherwise, `false`.  
   
  `right`  
- Uma referência rvalue a um objeto do tipo `basic_ostream`.  
+ An rvalue reference to an object of type `basic_ostream`.  
   
-### <a name="remarks"></a>Comentários  
- O primeiro construtor inicializa a classe base chamando [init](../standard-library/basic-ios-class.md#init)(`strbuf`). O segundo construtor inicializa a classe base chamando [basic_ios::move](../standard-library/basic-ios-class.md#move)`(``right``)`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [init](../standard-library/basic-ios-class.md#init)(`strbuf`). The second constructor initializes the base class by calling [basic_ios::move](../standard-library/basic-ios-class.md#move)`(right)`.  
   
-### <a name="example"></a>Exemplo  
-  Consulte o exemplo de [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) para saber mais sobre fluxos de saída.  
+### <a name="example"></a>Example  
+  See the example for [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) to learn more about output streams.  
   
 ##  <a name="flush"></a>  basic_ostream::flush  
- Libera o buffer.  
+ Flushes the buffer.  
   
 ```  
 basic_ostream<Elem, Tr>& flush();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto basic_ostream.  
+### <a name="return-value"></a>Return Value  
+ A reference to the basic_ostream object.  
   
-### <a name="remarks"></a>Comentários  
- Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) não for um ponteiro nulo, a função chamará **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync). Se isso retornar -1, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). Retorna **\*this**.  
+### <a name="remarks"></a>Remarks  
+ If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is not a null pointer, the function calls **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync). If that returns -1, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**). It returns **\*this**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ostream_flush.cpp  
@@ -215,7 +221,7 @@ test
 ```  
   
 ##  <a name="basic_ostream_operator_lt_lt"></a>  basic_ostream::operator&lt;&lt;  
- Grava no fluxo.  
+ Writes to the stream.  
   
 ```  
 basic_ostream<Elem, Tr>& operator<<(
@@ -243,41 +249,41 @@ basic_ostream<Elem, Tr>& operator<<(long double val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `Pfn`  
- Um ponteiro de função.  
+ A function pointer.  
   
  `strbuf`  
- Um ponteiro para um objeto **stream_buf**.  
+ A pointer to a **stream_buf** object.  
   
  `val`  
- Um elemento para gravar no fluxo.  
+ An element to write to the stream.  
   
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto basic_ostream.  
+### <a name="return-value"></a>Return Value  
+ A reference to the basic_ostream object.  
   
-### <a name="remarks"></a>Comentários  
- O cabeçalho `<ostream>` também define vários operadores de inserção global. Para obter mais informações, consulte [operador <<](../standard-library/ostream-operators.md#op_lt_lt).  
+### <a name="remarks"></a>Remarks  
+ The `<ostream>` header also defines several global insertion operators. For more information, see [operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
   
- A primeira função de membro garante que uma expressão do formulário **ostr << endl** chame [endl](../standard-library/ostream-functions.md#endl)**(ostr)** e, em seguida, retorne **\*this**. A segunda e a terceira funções garantem que outros manipuladores, como [hexa](../standard-library/ios-functions.md#hex), comportem-se de modo semelhante. As funções restantes são todas as funções de saída formatadas.  
+ The first member function ensures that an expression of the form **ostr << endl** calls [endl](../standard-library/ostream-functions.md#endl)**(ostr)**, and then returns **\*this**. The second and third functions ensure that other manipulators, such as [hex](../standard-library/ios-functions.md#hex), behave similarly. The remaining functions are all formatted output functions.  
   
- A função  
+ The function  
   
 ```  
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```  
   
- extrai elementos de `strbuf`, se `strbuf` não for um ponteiro nulo e insere-os. A extração para no fim do arquivo ou se uma extração gerar uma exceção (que é gerada novamente). Ela também parará, sem extrair o elemento em questão, se uma inserção falhar. Se a função não inserir nenhum elemento ou se uma extração gerar uma exceção, a função chamará [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Em qualquer caso, a função retorna **\*this**.  
+ extracts elements from `strbuf`, if `strbuf` is not a null pointer, and inserts them. Extraction stops on end of file, or if an extraction throws an exception (which is rethrown). It also stops, without extracting the element in question, if an insertion fails. If the function inserts no elements, or if an extraction throws an exception, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). In any case, the function returns **\*this**.  
   
- A função  
+ The function  
   
 ```  
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```  
   
- converte `_Val` para um valor booleano campo e o insere chamando [use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Aqui, **OutIt** é definido como [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr>**. A função retorna **\*this**.  
+ converts `_Val` to a Boolean field and inserts it by calling [use_facet](../standard-library/basic-filebuf-class.md#open)**<num_put\<Elem, OutIt>**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Here, **OutIt** is defined as [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr>**. The function returns **\*this**.  
   
- As funções  
+ The functions  
   
 ```  
 basic_ostream<Elem, Tr>& operator<<(short val);
@@ -291,9 +297,9 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```  
   
- cada um converte `val` para um campo numérico e insere-o chamando **use_facet<num_put\<Elem, OutIt>**(`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Aqui, **OutIt** é definido como **ostreambuf_iterator\<Elem, Tr>**. A função retorna **\*this**.  
+ each convert `val` to a numeric field and insert it by calling **use_facet<num_put\<Elem, OutIt>**(`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Here, **OutIt** is defined as **ostreambuf_iterator\<Elem, Tr>**. The function returns **\*this**.  
   
- As funções  
+ The functions  
   
 ```  
 basic_ostream<Elem, Tr>& operator<<(float val);
@@ -301,9 +307,9 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```  
   
- cada um converte `val` para um campo numérico e insere-o chamando **use_facet<num_put\<Elem, OutIt>**(`getloc`)**. put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Aqui, **OutIt** é definido como **ostreambuf_iterator\<Elem, Tr>**. A função retorna **\*this**.  
+ each convert `val` to a numeric field and insert it by calling **use_facet<num_put\<Elem, OutIt>**(`getloc`)**. put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Here, **OutIt** is defined as **ostreambuf_iterator\<Elem, Tr>**. The function returns **\*this**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ostream_op_write.cpp  
@@ -354,37 +360,37 @@ int main()
 ```  
   
 ##  <a name="op_eq"></a>  basic_ostream::operator=  
- Atribui valores para o parâmetro de objeto `basic_ostream` fornecido para esse objeto.  
+ Assigns values for the provided `basic_ostream` object parameter to this object.  
   
 ```  
 basic_ostream& operator=(basic_ostream&& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- Uma referência `rvalue` a um objeto `basic_ostream`.  
+ An `rvalue` reference to a `basic_ostream` object.  
   
-### <a name="remarks"></a>Comentários  
- O operador do membro chama `(``right``)` de troca.  
+### <a name="remarks"></a>Remarks  
+ The member operator calls swap `(right)`.  
   
 ##  <a name="put"></a>  basic_ostream::put  
- Coloca um caractere em um fluxo.  
+ Puts a character in a stream.  
   
 ```  
 basic_ostream<Elem, Tr>& put(char_type _Ch);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Um caractere.  
+ A character.  
   
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto basic_ostream.  
+### <a name="return-value"></a>Return Value  
+ A reference to the basic_ostream object.  
   
-### <a name="remarks"></a>Comentários  
- A função de saída não formatada insere o elemento `_Ch`. Retorna **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The unformatted output function inserts the element `_Ch`. It returns **\*this**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ostream_put.cpp  
@@ -406,7 +412,7 @@ l
 ```  
   
 ##  <a name="seekp"></a>  basic_ostream::seekp  
- Redefine a posição no fluxo de saída.  
+ Reset position in output stream.  
   
 ```  
 basic_ostream<Elem, Tr>& seekp(pos_type _Pos);
@@ -414,23 +420,23 @@ basic_ostream<Elem, Tr>& seekp(pos_type _Pos);
 basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- A posição no fluxo.  
+ The position in the stream.  
   
  `_Off`  
- O deslocamento em relação a `_Way`.  
+ The offset relative to `_Way`.  
   
  `_Way`  
- Uma das enumerações de [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).  
+ One of the [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) enumerations.  
   
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto basic_ostream.  
+### <a name="return-value"></a>Return Value  
+ A reference to the basic_ostream object.  
   
-### <a name="remarks"></a>Comentários  
- Se [falha](../standard-library/basic-ios-class.md#fail) é **false**, as chamadas de função de membro primeiro **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf)  **->**  [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*), para alguns `pos_type` objeto temporário **newpos**. Se **fail** for false, a segunda função chamará **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*). Em ambos os casos, se (`off_type`)**newpos ==** (`off_type`)(-1) (a operação de posicionamento falhar), a função chamará **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Ambas as funções retornam **\*this**.  
+### <a name="remarks"></a>Remarks  
+ If [fail](../standard-library/basic-ios-class.md#fail) is **false**, the first member function calls **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*), for some `pos_type` temporary object **newpos**. If **fail** is false, the second function calls **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*). In either case, if (`off_type`)**newpos ==** (`off_type`)(-1) (the positioning operation fails), then the function calls **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Both functions return **\*this**.  
   
-### <a name="example"></a>Exemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ostream_seekp.cpp  
@@ -461,73 +467,73 @@ int main()
 ```  
   
 ##  <a name="sentry"></a>  basic_ostream::sentry  
- A classe aninhada descreve um objeto cuja declaração estrutura as funções de saída formatadas e as funções de saída não formatadas.  
+ The nested class describes an object whose declaration structures the formatted output functions and the unformatted output functions.  
   
 class sentry {  
    public:  
    explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };  
   
-### <a name="remarks"></a>Comentários  
- A classe aninhada descreve um objeto cuja declaração estrutura as funções de saída formatadas e as funções de saída não formatadas. Se **ostr.**[good](../standard-library/basic-ios-class.md#good) for **true** e **ostr.**[tie](../standard-library/basic-ios-class.md#tie) não for um ponteiro nulo, o construtor chamará **ostr.tie->**[flush](#flush). O construtor então armazena o valor retornado por **ostr.good** no **status**. Uma chamada posterior a **operador bool** entrega esse valor armazenado.  
+### <a name="remarks"></a>Remarks  
+ The nested class describes an object whose declaration structures the formatted output functions and the unformatted output functions. If **ostr.**[good](../standard-library/basic-ios-class.md#good) is **true** and **ostr.**[tie](../standard-library/basic-ios-class.md#tie) is not a null pointer, the constructor calls **ostr.tie->**[flush](#flush). The constructor then stores the value returned by **ostr.good** in **status**. A later call to **operator bool** delivers this stored value.  
   
- Se `uncaught_exception` retornar **false** e [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) for diferente de zero, o destruidor chamará [flush](#flush).  
+ If `uncaught_exception` returns **false** and [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) is nonzero, the destructor calls [flush](#flush).  
   
 ##  <a name="swap"></a>  basic_ostream::swap  
- Troca os valores desse `basic_ostream` objeto pelo valores do `basic_ostream` fornecido.  
+ Exchanges the values of this `basic_ostream` object for the values of the provided `basic_ostream`.  
   
 ```  
 void swap(basic_ostream& right);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- Uma referência a um objeto `basic_ostream`.  
+ A reference to a `basic_ostream` object.  
   
-### <a name="remarks"></a>Comentários  
- As função membro chama [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(``right``)` para trocar o conteúdo desse objeto pelo conteúdo de `right`.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)` to exchange the contents of this object for the contents of `right`.  
   
 ##  <a name="tellp"></a>  basic_ostream::tellp  
- Relata a posição no fluxo de saída.  
+ Report position in output stream.  
   
 ```  
 pos_type tellp();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Posição no fluxo de saída.  
+### <a name="return-value"></a>Return Value  
+ Position in output stream.  
   
-### <a name="remarks"></a>Comentários  
- Se [fail](../standard-library/basic-ios-class.md#fail) for **false**, a função membro retornará [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Caso contrário, retornará `pos_type`(-1).  
+### <a name="remarks"></a>Remarks  
+ If [fail](../standard-library/basic-ios-class.md#fail) is **false**, the member function returns [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Otherwise, it returns `pos_type`(-1).  
   
-### <a name="example"></a>Exemplo  
-  Consulte [seekp](#seekp) para obter um exemplo usando `tellp`.  
+### <a name="example"></a>Example  
+  See [seekp](#seekp) for an example using `tellp`.  
   
 ##  <a name="write"></a>  basic_ostream::write  
- Coloque caracteres em um fluxo.  
+ Put characters in a stream.  
   
 ```  
 basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `count`  
- Contagem de caracteres a colocar no fluxo.  
+ Count of characters to put into the stream.  
   
  `str`  
- Caracteres a colocar no fluxo.  
+ Characters to put into the stream.  
   
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao objeto basic_ostream.  
+### <a name="return-value"></a>Return Value  
+ A reference to the basic_ostream object.  
   
-### <a name="remarks"></a>Comentários  
- A [função de saída não formatado](../standard-library/basic-ostream-class.md) insere a sequência de elementos `count` começando em `str`.  
+### <a name="remarks"></a>Remarks  
+ The [unformatted output function](../standard-library/basic-ostream-class.md) inserts the sequence of `count` elements beginning at `str`.  
   
-### <a name="example"></a>Exemplo  
-  Consulte [streamsize](../standard-library/ios-typedefs.md#streamsize) para obter um exemplo usando `write`.  
+### <a name="example"></a>Example  
+  See [streamsize](../standard-library/ios-typedefs.md#streamsize) for an example using `write`.  
   
-## <a name="see-also"></a>Consulte também  
- [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programação de iostream](../standard-library/iostream-programming.md)   
- [Convenções de iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

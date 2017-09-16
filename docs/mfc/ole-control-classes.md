@@ -1,78 +1,96 @@
 ---
-title: "Classes de controle OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classes ActiveX [C++]"
-  - "Classes de controle ActiveX [C++]"
-  - "Controles ActiveX [C++], Classes de controle OLE"
-  - "controles personalizados [MFC], Classes "
-  - "Classes de controle OLE [C++]"
-  - "Controles OLE [C++], Classes "
-  - "classes de componentes reutilizáveis"
+title: OLE Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- custom controls [MFC], classes
+- ActiveX controls [MFC], OLE control classes
+- ActiveX control classes [MFC]
+- OLE controls [MFC], classes
+- OLE control classes [MFC]
+- reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de controle OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a81de0a104d188f50c112d9f199ca04e315af920
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essas são as classes principais que você usa para gravar controladores OLE.  A classe de `COleControlModule` em um módulo de controlador OLE é como a classe de [CWinApp](../mfc/reference/cwinapp-class.md) em um aplicativo.  Cada módulo implementa um ou vários controladores; OLE esses controles são representados por objetos de `COleControl` .  Esses controles se comunicam com seus contêineres usando objetos de `CConnectionPoint` .  
+---
+# <a name="ole-control-classes"></a>OLE Control Classes
+These are the primary classes you use when writing OLE controls. The `COleControlModule` class in an OLE control module is like the [CWinApp](../mfc/reference/cwinapp-class.md) class in an application. Each module implements one or more OLE controls; these controls are represented by `COleControl` objects. These controls communicate with their containers using `CConnectionPoint` objects.  
   
- As classes de `CPictureHolder` e de `CFontHolder` encapsulam interfaces COM para imagens e fontes, quando as classes de `COlePropertyPage` e de `CPropExchange` o ajudarem a implementar páginas de propriedades e persistência da propriedade para o controle.  
+ The `CPictureHolder` and `CFontHolder` classes encapsulate COM interfaces for pictures and fonts, while the `COlePropertyPage` and `CPropExchange` classes help you implement property pages and property persistence for your control.  
   
  [COleControlModule](../mfc/reference/colecontrolmodule-class.md)  
- Substitui a classe de `CWinApp` para o módulo de controlador OLE.  Derivar da classe de `COleControlModule` para desenvolver um objeto do módulo de controlador OLE.  O fornece funções de membro para inicializar o módulo de controlador OLE.  
+ Replaces the `CWinApp` class for your OLE control module. Derive from the `COleControlModule` class to develop an OLE control module object. It provides member functions for initializing your OLE control's module.  
   
  [COleControl](../mfc/reference/colecontrol-class.md)  
- Derivar da classe de `COleControl` para desenvolver um controlador OLE.  Derivada de `CWnd`, esta classe é herdada toda a funcionalidade de um objeto da janela do windows mais a funcionalidade específica OLE\- adicionais, como o acionamento do evento e a capacidade de dar suporte a métodos e propriedades.  
+ Derive from the `COleControl` class to develop an OLE control. Derived from `CWnd`, this class inherits all the functionality of a Windows window object plus additional OLE-specific functionality, such as event firing and the ability to support methods and properties.  
   
- [CConnectionPoint](../Topic/CConnectionPoint%20Class.md)  
- A classe de `CConnectionPoint` define um tipo especial de interface usada para se comunicar com outros objetos OLE, chamado em um ponto de conexão.  Um ponto de conexão implementa uma interface de saída que possa iniciar ações em outros objetos, como eventos de acionamento e notificações de alteração.  
+ [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)  
+ The `CConnectionPoint` class defines a special type of interface used to communicate with other OLE objects, called a connection point. A connection point implements an outgoing interface that is able to initiate actions on other objects, such as firing events and change notifications.  
   
  [CPictureHolder](../mfc/reference/cpictureholder-class.md)  
- Encapsula a funcionalidade de um objeto da imagem do windows e da interface de `IPicture` COM; usados para implementar a propriedade personalizada da imagem de um controlador OLE.  
+ Encapsulates the functionality of a Windows picture object and the `IPicture` COM interface; used to implement the custom Picture property of an OLE control.  
   
  [CFontHolder](../mfc/reference/cfontholder-class.md)  
- Encapsula a funcionalidade de um objeto de fonte do windows e da interface de `IFont` COM; usados para implementar a propriedade de estoque de fonte de um controlador OLE.  
+ Encapsulates the functionality of a Windows font object and the `IFont` COM interface; used to implement the stock Font property of an OLE control.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Exibe as propriedades de um controlador OLE em uma interface gráfica, semelhantes a uma caixa de diálogo.  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
- [CPropExchange](../Topic/CPropExchange%20Class.md)  
- Oferece suporte a implementação de persistência de propriedade para os controladores OLE.  Análoga a [CDataExchange](../Topic/CDataExchange%20Class.md) para caixas de diálogo.  
+ [CPropExchange](../mfc/reference/cpropexchange-class.md)  
+ Supports the implementation of property persistence for your OLE controls. Analogous to [CDataExchange](../mfc/reference/cdataexchange-class.md) for dialog boxes.  
   
- [CMonikerFile](../Topic/CMonikerFile%20Class.md)  
- Usa um moniker, ou uma representação de cadeia de caracteres que pode fazer em um moniker, de forma síncrona e o associa ao fluxo para o qual o moniker é um nome.  
+ [CMonikerFile](../mfc/reference/cmonikerfile-class.md)  
+ Takes a moniker, or a string representation that it can make into a moniker, and binds it synchronously to the stream for which the moniker is a name.  
   
  [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)  
- Funciona de modo semelhante a `CMonikerFile`; no entanto, o associará o moniker de forma assíncrona para o fluxo para o qual o moniker é um nome.  
+ Works similarly to `CMonikerFile`; however, it binds the moniker asynchronously to the stream for which the moniker is a name.  
   
  [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)  
- Implementa uma propriedade de controle OLE que pode ser carregada de forma assíncrona.  
+ Implements an OLE control property that can be loaded asynchronously.  
   
  [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md)  
- Implementa uma propriedade de controle OLE transferida de forma assíncrona e armazenada em cache em um arquivo de memória.  
+ Implements an OLE control property transferred asynchronously and cached in a memory file.  
   
  [COleCmdUI](../mfc/reference/colecmdui-class.md)  
- Permite um documento ativo receber os comandos que se originam na interface de usuário de seu contêiner \(como FileNew, abra, imprime, e assim por diante\), e permite que um contêiner recebe comandos que se originam na interface de usuário ativa do documento.  
+ Allows an Active document to receive commands that originate in its container's user interface (such as FileNew, Open, Print, and so on), and allows a container to receive commands that originate in the Active document's user interface.  
   
  [COleSafeArray](../mfc/reference/colesafearray-class.md)  
- Funciona com matrizes do tipo e a dimensão arbitrários.  
+ Works with arrays of arbitrary type and dimension.  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

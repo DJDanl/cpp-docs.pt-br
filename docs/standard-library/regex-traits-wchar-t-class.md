@@ -1,5 +1,5 @@
 ---
-title: Classe regex_traits&lt;wchar_t&gt; | Microsoft Docs
+title: regex_traits&lt;wchar_t&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,39 +33,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 1fc36c417982eee0a08b54631e53c4161ea91206
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ae4c5f27ccfa714272050cccb7f6332b7893b473
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regextraitsltwchartgt-class"></a>Classe regex_traits&lt;wchar_t&gt;
-Especialização de regex_traits para wchar_t.  
+# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; Class
+Specialization of regex_traits for wchar_t.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
 class regex_traits<wchar_t>  
 ```  
   
-## <a name="remarks"></a>Comentários  
- A classe é uma especialização explícita da classe de modelo [regex_traits](../standard-library/regex-traits-class.md) para elementos do tipo `wchar_t` (de forma que possa aproveitar as funções da biblioteca que manipulam objetos desse tipo).  
+## <a name="remarks"></a>Remarks  
+ The class is an explicit specialization of template class [regex_traits](../standard-library/regex-traits-class.md) for elements of type `wchar_t` (so that it can take advantage of library functions that manipulate objects of this type).  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[Classe regex_constants](../standard-library/regex-constants-class.md)  
-[Classe regex_error](../standard-library/regex-error-class.md)  
-[\<Funções regex>](../standard-library/regex-functions.md)  
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)  
-[\<Operadores regex>](../standard-library/regex-operators.md)  
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Classe regex_traits](../standard-library/regex-traits-class.md)  
-[\<Typedef regex>](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

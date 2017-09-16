@@ -1,64 +1,82 @@
 ---
-title: "Classes OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classes ActiveX [C++]"
-  - "classes [C++], OLE"
-  - "OLE [C++], Classes "
-  - "Classes OLE [C++]"
+title: OLE Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- classes [MFC], OLE
+- OLE classes [MFC]
+- OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eab656859bbba98ec2605c9cc95e26565494cbbb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-As classes OLE funcionam com as outras classes da estrutura de aplicativo para fornecer acesso fácil a API ActiveX, fornecendo aos programas uma maneira fácil fornecer a capacidade de ActiveX para seus usuários.  Usando ActiveX, você pode:  
+---
+# <a name="ole-classes"></a>OLE Classes
+The OLE classes work with the other application framework classes to provide easy access to the ActiveX API, giving your programs an easy way to provide the power of ActiveX to your users. Using ActiveX, you can:  
   
--   Crie os documentos compostos, que permitem que os usuários criem e editar documentos que contêm os dados criados por vários aplicativos, inclusive o texto, os gráficos, as planilhas, o correta, ou outros tipos de dados.  
+-   Create compound documents, which allow users to create and edit documents containing data created by multiple applications, including text, graphics, spreadsheets, sound, or other types of data.  
   
--   Crie os objetos OLE que podem ser inseridos em documentos compostos.  
+-   Create OLE objects that can be embedded in compound documents.  
   
--   Use o OLE arraste e solte para copiar dados entre aplicativos.  
+-   Use OLE drag and drop to copy data between applications.  
   
--   Use a automação para controlar um programa com outro.  
+-   Use Automation to control one program with another.  
   
--   Crie os controles ActiveX e os contêineres do controle ActiveX \(chamado anteriormente contêiner de controladores OLE e do controlador OLE, respectivamente\).  
+-   Create ActiveX controls and ActiveX control containers (formerly called OLE controls and OLE control containers, respectively).  
   
- As seguintes categorias de classes têm suporte: ActiveX  
+ The following categories of classes support ActiveX:  
   
--   [Classe de contêiner OLE](../mfc/ole-container-classes.md)  
+-   [OLE Container Classes](../mfc/ole-container-classes.md)  
   
--   [Classes de Servidor OLE](../mfc/ole-server-classes.md)  
+-   [OLE Server Classes](../mfc/ole-server-classes.md)  
   
--   [Arrastar e soltar OLE e Classes de Transferência de Dados](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+-   [OLE Drag-and-Drop and Data Transfer Classes](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
--   [Classes de Diálogo Comuns OLE](../mfc/ole-common-dialog-classes.md)  
+-   [OLE Common Dialog Classes](../mfc/ole-common-dialog-classes.md)  
   
--   [Classes de Automação OLE](../Topic/OLE%20Automation%20Classes.md)  
+-   [OLE Automation Classes](../mfc/ole-automation-classes.md)  
   
--   [Classes de controle OLE](../mfc/ole-control-classes.md)  
+-   [OLE Control Classes](../mfc/ole-control-classes.md)  
   
--   [Classes de Documento Ativas](../mfc/active-document-classes.md)  
+-   [Active Document Classes](../mfc/active-document-classes.md)  
   
--   [Classes Relacionadas a OLE](../mfc/ole-related-classes.md)  
+-   [OLE-Related Classes](../mfc/ole-related-classes.md)  
   
- Para ver a herança de uma classe, use o [Gráfico da hierarquia de classe](../mfc/hierarchy-chart.md).  
+ To see the inheritance of a class, use the [Class Hierarchy Chart](../mfc/hierarchy-chart.md).  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

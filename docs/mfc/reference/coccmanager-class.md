@@ -1,5 +1,5 @@
 ---
-title: Classe COccManager | Documentos do Microsoft
+title: COccManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,10 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- custom controls [MFC], sites
-- COccManager class
-- CNoTrackObject class
-- ActiveX control containers [C++], control site
+- COccManager [MFC], CreateContainer
+- COccManager [MFC], CreateDlgControls
+- COccManager [MFC], CreateSite
+- COccManager [MFC], GetDefBtnCode
+- COccManager [MFC], IsDialogMessage
+- COccManager [MFC], IsLabelControl
+- COccManager [MFC], IsMatchingMnemonic
+- COccManager [MFC], OnEvent
+- COccManager [MFC], PostCreateDialog
+- COccManager [MFC], PreCreateDialog
+- COccManager [MFC], SetDefaultButton
+- COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 caps.latest.revision: 20
 author: mikeblome
@@ -49,71 +57,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 14a75c491a7061d921d6c0c250c6224f4e7d2f04
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdb6d322e821527fb41ed3e6777dcdac240e5e74
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coccmanager-class"></a>Classe COccManager
-Gerencia vários sites de controle personalizado. implementado por `COleControlContainer` e `COleControlSite` objetos.  
+# <a name="coccmanager-class"></a>COccManager Class
+Manages various custom control sites; implemented by `COleControlContainer` and `COleControlSite` objects.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COccManager : public CNoTrackObject  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|Cria um **COleContainer** objeto.|  
-|[COccManager::CreateDlgControls](#createdlgcontrols)|Cria controles ActiveX, hospedados pelo associado `COleContainer` objeto.|  
-|[COccManager::CreateSite](#createsite)|Cria um objeto `COleClientSite`.|  
-|[COccManager::GetDefBtnCode](#getdefbtncode)|Recupera o código do botão padrão.|  
-|[COccManager::IsDialogMessage](#isdialogmessage)|Determina o destino de uma mensagem de caixa de diálogo.|  
-|[COccManager::IsLabelControl](#islabelcontrol)|Determina se o controle especificado é um controle de rótulo.|  
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Determina se o mnemônico atual corresponde à mnemônico do controle especificado.|  
-|[COccManager::OnEvent](#onevent)|Tentativas de lidar com o evento especificado.|  
-|[COccManager::PostCreateDialog](#postcreatedialog)|Libera os recursos alocados durante a criação da caixa de diálogo.|  
-|[COccManager::PreCreateDialog](#precreatedialog)|Processa um modelo de caixa de diálogo para controles ActiveX.|  
-|[COccManager::SetDefaultButton](#setdefaultbutton)|Alterna o estado padrão do controle especificado.|  
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Separa os controles ActiveX existentes de controles comuns do modelo de caixa de diálogo especificada.|  
+|[COccManager::CreateContainer](#createcontainer)|Creates a **COleContainer** object.|  
+|[COccManager::CreateDlgControls](#createdlgcontrols)|Creates ActiveX controls, hosted by the associated `COleContainer` object.|  
+|[COccManager::CreateSite](#createsite)|Creates a `COleClientSite` object.|  
+|[COccManager::GetDefBtnCode](#getdefbtncode)|Retrieves the code of the default button.|  
+|[COccManager::IsDialogMessage](#isdialogmessage)|Determines the target of a dialog message.|  
+|[COccManager::IsLabelControl](#islabelcontrol)|Determines if the specified control is a label control.|  
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Determines if the current mnemonic matches the mnemonic of the specified control.|  
+|[COccManager::OnEvent](#onevent)|Attempts to handle the specified event.|  
+|[COccManager::PostCreateDialog](#postcreatedialog)|Frees resources allocated during dialog creation.|  
+|[COccManager::PreCreateDialog](#precreatedialog)|Processes a dialog template for ActiveX controls.|  
+|[COccManager::SetDefaultButton](#setdefaultbutton)|Toggles the default state of the specified control.|  
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Separates any existing ActiveX controls from common controls in the specified dialog template.|  
   
-## <a name="remarks"></a>Comentários  
- A classe base, **CNoTrackObject**, é uma classe base não documentada (localizada em AFXTLS. H). Projetado para uso pela estrutura MFC, classes derivadas do **CNoTrackObject** classe são isentos de detecção de vazamento de memória. Não é recomendável que você derivar diretamente de **CNoTrackObject**.  
+## <a name="remarks"></a>Remarks  
+ The base class, **CNoTrackObject**, is an undocumented base class (located in AFXTLS.H). Designed for use by the MFC framework, classes derived from the **CNoTrackObject** class are exempt from memory leak detection. It is not recommended that you derive directly from **CNoTrackObject**.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CNoTrackObject`  
   
  `COccManager`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxocc.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxocc.h  
   
-##  <a name="createcontainer"></a>COccManager::CreateContainer  
- Chamado pela estrutura para criar um contêiner de controle.  
+##  <a name="createcontainer"></a>  COccManager::CreateContainer  
+ Called by the framework to create a control container.  
   
 ```  
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Um ponteiro para o objeto de janela associado ao contêiner de site personalizadas.  
+ A pointer to the window object associated with the custom site container.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o contêiner recém-criado; Caso contrário, **nulo**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created container; otherwise **NULL**.  
   
-### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre como criar sites personalizados, consulte [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
+### <a name="remarks"></a>Remarks  
+ For more information on creating custom sites, see [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
- Chame essa função para criar controles ActiveX especificados pelo `pOccDialogInfo` parâmetro.  
+##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
+ Call this function to create ActiveX controls specified by the `pOccDialogInfo` parameter.  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -128,63 +136,63 @@ virtual BOOL CreateDlgControls(
     _AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pWndParent*  
- Um ponteiro para o pai do objeto de caixa de diálogo.  
+ A pointer to the parent of the dialog object.  
   
  `lpszResourceName`  
- O nome do recurso que está sendo criado.  
+ The name of the resource being created.  
   
  `pOccDialogInfo`  
- Um ponteiro para o modelo de caixa de diálogo usado para criar o objeto de caixa de diálogo.  
+ A pointer to the dialog template used to create the dialog object.  
   
  `lpResource`  
- Um ponteiro para um recurso.  
+ A pointer to a resource.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o controle foi criado com êxito; Caso contrário, zero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control was created successfully; otherwise zero.  
   
-##  <a name="createsite"></a>COccManager::CreateSite  
- Chamado pela estrutura para criar um site de controle, hospedado pelo contêiner apontado por `pCtrlCont`.  
+##  <a name="createsite"></a>  COccManager::CreateSite  
+ Called by the framework to create a control site, hosted by the container pointed to by `pCtrlCont`.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pCtrlCont`  
- Um ponteiro para o contêiner de controle hospedando o novo site do controle.  
+ A pointer to the control container hosting the new control site.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o site de controle recém-criado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created control site.  
   
-### <a name="remarks"></a>Comentários  
- Substituir essa função para criar um controle personalizado do site, usando seu [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-classe derivada.  
+### <a name="remarks"></a>Remarks  
+ Override this function to create a custom control site, using your [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-derived class.  
   
- Cada contêiner de controle pode hospedar vários sites. Crie sites adicionais com várias chamadas para `CreateSite`.  
+ Each control container can host multiple sites. Create additional sites with multiple calls to `CreateSite`.  
   
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
- Chame essa função para determinar se o controle é um botão de ação padrão.  
+##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
+ Call this function to determine if the control is a default push button.  
   
 ```  
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- O objeto de janela que contém o controle de botão.  
+ The window object containing the button control.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um dos seguintes valores:  
+### <a name="return-value"></a>Return Value  
+ One of the following values:  
   
-- **DLGC_DEFPUSHBUTTON** controle é o botão padrão na caixa de diálogo.  
+- **DLGC_DEFPUSHBUTTON** Control is the default button in the dialog.  
   
-- **DLGC_UNDEFPUSHBUTTON** controle não é o botão padrão na caixa de diálogo.  
+- **DLGC_UNDEFPUSHBUTTON** Control is not the default button in the dialog.  
   
-- **0** controle não é um botão.  
+- **0** Control is not a button.  
   
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
- Chamado pela estrutura para determinar se uma mensagem destina-se a caixa de diálogo especificada e, se for, processa a mensagem.  
+##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
+ Called by the framework to determine whether a message is intended for the specified dialog box and, if it is, processes the message.  
   
 ```  
 virtual BOOL IsDialogMessage(
@@ -192,41 +200,41 @@ virtual BOOL IsDialogMessage(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pWndDlg*  
- Um ponteiro para a caixa de diálogo de destino pretendido da mensagem.  
+ A pointer to the intended target dialog of the message.  
   
  `lpMsg`  
- Um ponteiro para um `MSG` estrutura que contém a mensagem a ser verificada.  
+ A pointer to an `MSG` structure that contains the message to be checked.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se a mensagem é processada; Caso contrário, zero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is processed; otherwise zero.  
   
-### <a name="remarks"></a>Comentários  
- O comportamento padrão do `IsDialogMessage` é verificar se há mensagens de teclado e convertê-los em seleções para a caixa de diálogo correspondente. Por exemplo, a tecla TAB, quando pressionadas, seleciona o próximo controle ou grupo de controles.  
+### <a name="remarks"></a>Remarks  
+ The default behavior of `IsDialogMessage` is to check for keyboard messages and convert them into selections for the corresponding dialog box. For example, the TAB key, when pressed, selects the next control or group of controls.  
   
- Substitua essa função para fornecer um comportamento personalizado para mensagens enviadas para a caixa de diálogo especificada.  
+ Override this function to provide custom behavior for messages sent to the specified dialog.  
   
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
- Chame essa função para determinar se o controle especificado é um controle de rótulo.  
+##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
+ Call this function to determine if the specified control is a label control.  
   
 ```  
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);  
 static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Um ponteiro para a janela que contém o controle.  
+ A pointer to the window containing the control.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o controle é um rótulo; Caso contrário, zero  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control is a label; otherwise zero  
   
-### <a name="remarks"></a>Comentários  
- Um controle label é aquele que atua como um rótulo para qualquer controle vem a seguir na ordem.  
+### <a name="remarks"></a>Remarks  
+ A label control is one that acts like a label for whatever control is next in the ordering.  
   
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
- Chame essa função para determinar se o atual mnemônico corresponde que representado pelo controle.  
+##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
+ Call this function to determine if the current mnemonic matches that represented by the control.  
   
 ```  
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -239,20 +247,20 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Um ponteiro para a janela que contém o controle.  
+ A pointer to the window containing the control.  
   
  `lpMsg`  
- Um ponteiro para a mensagem que contém o mnemônico para corresponder.  
+ A pointer to the message containing the mnemonic to match.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o mnemônico coincide com o controle; Caso contrário, zero  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the mnemonic matches the control; otherwise zero  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onevent"></a>COccManager::OnEvent  
- Chamado pela estrutura para manipular o evento especificado.  
+##  <a name="onevent"></a>  COccManager::OnEvent  
+ Called by the framework to handle the specified event.  
   
 ```  
 virtual BOOL OnEvent(
@@ -262,27 +270,27 @@ virtual BOOL OnEvent(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pCmdTarget*  
- Um ponteiro para o `CCmdTarget` tentar manipular o evento de objeto  
+ A pointer to the `CCmdTarget` object attempting to handle the event  
   
  `idCtrl`  
- A ID de recurso do controle.  
+ The resource ID of the control.  
   
  `pEvent`  
- O evento sendo manipulado.  
+ The event being handled.  
   
  `pHandlerInfo`  
- Se não **nulo**, `OnEvent` preenche o **pTarget** e **pmf** membros a **AFX_CMDHANDLERINFO** estrutura em vez de distribuir o comando. Normalmente, esse parâmetro deve ser **nulo**.  
+ If not **NULL**, `OnEvent` fills in the **pTarget** and **pmf** members of the **AFX_CMDHANDLERINFO** structure instead of dispatching the command. Typically, this parameter should be **NULL**.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o evento foi tratado, caso contrário zero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the event was handled, otherwise zero.  
   
-### <a name="remarks"></a>Comentários  
- Substitua essa função para personalizar o processo de manipulação de eventos padrão.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the default event-handling process.  
   
-##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
- Chamado pela estrutura para processar um modelo de caixa de diálogo para controles ActiveX antes de criar a caixa de diálogo real.  
+##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
+ Called by the framework to process a dialog template for ActiveX controls before creating the actual dialog box.  
   
 ```  
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -290,39 +298,39 @@ virtual const DLGTEMPLATE* PreCreateDialog(
     const DLGTEMPLATE* pOrigTemplate);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pOccDialogInfo`  
- Um **_AFX_OCC_DIALOG_INFO** estrutura que contém informações sobre o modelo de caixa de diálogo e os controles ActiveX hospedados pela caixa de diálogo.  
+ An **_AFX_OCC_DIALOG_INFO** structure containing information on the dialog template and any ActiveX controls hosted by the dialog.  
   
  *pOrigTemplate*  
- Um ponteiro para o modelo de caixa de diálogo a ser usado na criação de caixa de diálogo.  
+ A pointer to the dialog template to be used in creating the dialog box.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para uma estrutura de modelo de caixa de diálogo usada para criar a caixa de diálogo.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a dialog template structure used to create the dialog box.  
   
-### <a name="remarks"></a>Comentários  
- O comportamento padrão faz uma chamada para `SplitDialogTemplate`, determinando se há qualquer ActiveX controles presente e, em seguida, retorna o modelo de caixa de diálogo resultante.  
+### <a name="remarks"></a>Remarks  
+ The default behavior makes a call to `SplitDialogTemplate`, determining if there are any ActiveX controls present and then returns the resultant dialog template.  
   
- Substitua essa função para personalizar o processo de criação de uma caixa de diálogo Hospedando controles ActiveX.  
+ Override this function to customize the process of creating a dialog box hosting ActiveX controls.  
   
-##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
- Chamado pela estrutura para liberar a memória alocada para o modelo de caixa de diálogo.  
+##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
+ Called by the framework to free memory allocated for the dialog template.  
   
 ```  
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pOccDialogInfo`  
- Um **_AFX_OCC_DIALOG_INFO** estrutura que contém informações sobre o modelo de caixa de diálogo e os controles ActiveX hospedados pela caixa de diálogo.  
+ An **_AFX_OCC_DIALOG_INFO** structure containing information on the dialog template and any ActiveX controls hosted by the dialog.  
   
-### <a name="remarks"></a>Comentários  
- Esta memória foi alocada por uma chamada para `SplitDialogTemplate`e foi usado para todos os controles ActiveX hospedados na caixa de diálogo.  
+### <a name="remarks"></a>Remarks  
+ This memory was allocated by a call to `SplitDialogTemplate`, and was used for any hosted ActiveX controls in the dialog box.  
   
- Substitua essa função para personalizar o processo de limpeza de todos os recursos usados pelo objeto de caixa de diálogo.  
+ Override this function to customize the process of cleaning up any resources used by the dialog box object.  
   
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
- Chame essa função para definir o controle como o botão padrão.  
+##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
+ Call this function to set the control as the default button.  
   
 ```  
 static void AFX_CDECL SetDefaultButton(
@@ -330,23 +338,23 @@ static void AFX_CDECL SetDefaultButton(
     BOOL bDefault);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Um ponteiro para a janela que contém o controle.  
+ A pointer to the window containing the control.  
   
  `bDefault`  
- Diferente de zero se o controle deve se tornar o botão padrão; Caso contrário, zero.  
+ Nonzero if the control should become the default button; otherwise zero.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, zero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  O controle deve ter o **OLEMISC_ACTSLIKEBUTTON** conjunto de bits de status. Para obter mais informações sobre **OLEMISC** sinalizadores, consulte o [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) tópico o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  The control must have the **OLEMISC_ACTSLIKEBUTTON** status bit set. For more information on **OLEMISC** flags, see the [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) topic in the Windows SDK.  
   
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
- Chamado pela estrutura para dividir os controles ActiveX em controles de caixa de diálogo comuns.  
+##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
+ Called by the framework to split the ActiveX controls from common dialog controls.  
   
 ```  
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -354,28 +362,28 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
     DLGITEMTEMPLATE** ppOleDlgItems);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pTemplate`  
- Um ponteiro para o modelo de caixa de diálogo a ser examinada.  
+ A pointer to the dialog template to be examined.  
   
  `ppOleDlgItems`  
- Uma lista de ponteiros para itens de caixa de diálogo que são controles ActiveX.  
+ A list of pointers to dialog box items that are ActiveX controls.  
   
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para uma estrutura de modelo de caixa de diálogo que contém somente os controles ActiveX não. Se os controles ActiveX não estiverem presentes, **nulo** é retornado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a dialog template structure containing only non-ActiveX controls. If no ActiveX controls are present, **NULL** is returned.  
   
-### <a name="remarks"></a>Comentários  
- Se todos os controles ActiveX forem encontrados, o modelo é analisado e um novo modelo, que contém somente os controles ActiveX não, é criado. Todos os controles ActiveX encontrados durante esse processo são adicionados ao `ppOleDlgItems`.  
+### <a name="remarks"></a>Remarks  
+ If any ActiveX controls are found, the template is analyzed and a new template, containing only non-ActiveX controls, is created. Any ActiveX controls found during this process are added to `ppOleDlgItems`.  
   
- Se não houver nenhum controle ActiveX no modelo, **nulo** é retornado *.*  
+ If there are no ActiveX controls in the template, **NULL** is returned *.*  
   
 > [!NOTE]
->  Memória alocada para o novo modelo for liberado no `PostCreateDialog` função.  
+>  Memory allocated for the new template is freed in the `PostCreateDialog` function.  
   
- Substitua essa função para personalizar esse processo.  
+ Override this function to customize this process.  
   
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe COleControlSite](../../mfc/reference/colecontrolsite-class.md)   
- [Classe COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleControlSite Class](../../mfc/reference/colecontrolsite-class.md)   
+ [COleControlContainer Class](../../mfc/reference/colecontrolcontainer-class.md)
 

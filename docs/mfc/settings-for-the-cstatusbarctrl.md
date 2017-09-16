@@ -1,46 +1,64 @@
 ---
-title: "Configura&#231;&#245;es do CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CStatusBarCtrl, configurações"
-  - "controles da barra de status, configurações"
+title: Settings for the CStatusBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bar controls [MFC], settings
+- CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Configura&#231;&#245;es do CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d7a94d4f8943c35c3adfad13314bc7b44d05efeb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A posição padrão de uma janela de status de [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) é o longo da parte inferior da janela pai, mas você pode especificar o estilo de `CCS_TOP` para solicitar aparecerão na parte superior da área da janela pai do cliente.  
+---
+# <a name="settings-for-the-cstatusbarctrl"></a>Settings for the CStatusBarCtrl
+The default position of a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) status window is along the bottom of the parent window, but you can specify the `CCS_TOP` style to have it appear at the top of the parent window's client area.  
   
- Você pode especificar o estilo de **SBARS\_SIZEGRIP** para incluir um aperto de dimensionamento na extremidade direita da janela de status de `CStatusBarCtrl` .  Um aperto de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário possa clicar e arrastar para redimensionar a janela pai.  
+ You can specify the **SBARS_SIZEGRIP** style to include a sizing grip at the right end of the `CStatusBarCtrl` status window. A sizing grip is similar to a sizing border; it is a rectangular area that the user can click and drag to resize the parent window.  
   
 > [!NOTE]
->  Se você combinar `CCS_TOP` e os estilos de **SBARS\_SIZEGRIP** , o aperto resultante de dimensionamento não funciona mesmo que o sistema desenhe o na janela de status.  
+>  If you combine the `CCS_TOP` and **SBARS_SIZEGRIP** styles, the resulting sizing grip is not functional even though the system draws it in the status window.  
   
- O procedimento da janela para a janela de status define automaticamente o tamanho e posição inicial da janela de controle.  A largura é igual a da área da janela pai do cliente.  A altura é baseada em métricas de fonte que está selecionada atualmente no contexto do dispositivo da janela de status e a largura das bordas da janela.  
+ The window procedure for the status window automatically sets the initial size and position of the control window. The width is the same as that of the parent window's client area. The height is based on the metrics of the font that is currently selected into the status window's device context and on the width of the window's borders.  
   
- O procedimento de janela automaticamente ajusta o tamanho da janela de status sempre que recebe uma mensagem de `WM_SIZE` .  Normalmente, quando o tamanho da janela pai for alterado, o pai envia uma mensagem de `WM_SIZE` à janela de status.  
+ The window procedure automatically adjusts the size of the status window whenever it receives a `WM_SIZE` message. Typically, when the size of the parent window changes, the parent sends a `WM_SIZE` message to the status window.  
   
- Você pode definir a altura mínima da área de desenho de uma janela de status chamando [SetMinHeight](../Topic/CStatusBarCtrl::SetMinHeight.md), especificando a altura mínima em pixels.  A área de desenho não inclui as bordas da janela.  
+ You can set the minimum height of a status window's drawing area by calling [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), specifying the minimum height in pixels. The drawing area does not include the window's borders.  
   
- Você recupera as larguras das bordas de uma janela de status chamando [GetBorders](../Topic/CStatusBarCtrl::GetBorders.md).  Essa função de membro inclui o ponteiro para uma matriz de três elemento que recebe a largura da borda horizontal, vertical da borda, e da borda entre os retângulos.  
+ You retrieve the widths of the borders of a status window by calling [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). This member function includes the pointer to a three-element array that receives the width of the horizontal border, the vertical border, and the border between rectangles.  
   
-## Consulte também  
- [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

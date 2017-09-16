@@ -1,59 +1,77 @@
 ---
-title: "Executando automa&#231;&#227;o remota usando AUTOCLIK e AUTODRIV | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Exemplo de AUTOCLIK [MFC]"
+title: Running Remote Automation Using AUTOCLIK and AUTODRIV | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Executando automa&#231;&#227;o remota usando AUTOCLIK e AUTODRIV
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 56240a60197b63f5098ecef080719bd96bde81d1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-AUTOCLIK é um aplicativo de exemplo simples do servidor de automação que você pode usar como uma base da qual obter mais informações sobre a automação remoto.  AUTODRIV é um aplicativo cliente simples de automação que as unidades AUTOCLIK.  Você pode usá\-los para demonstrar a automação remoto.  
+---
+# Running Remote Automation Using AUTOCLIK and AUTODRIV
+AUTOCLIK is a simple Automation server sample application that you can use as a base from which to learn more about Remote Automation. AUTODRIV is a simple Automation client application that drives AUTOCLIK. You can use them to demonstrate Remote Automation.  
   
-#### Para instalar AUTOCLIK.EXE em dois computadores e levá\-lo que usa a automação remoto  
+#### To install AUTOCLIK.EXE on two machines and drive it using Remote Automation  
   
-1.  Instalar o aplicativo de exemplo de [AUTOCLIK](../top/visual-cpp-samples.md) no computador de desenvolvimento.  
+1.  Install the [AUTOCLIK](../visual-cpp-samples.md) sample application onto your development machine.  
   
-2.  Criar AUTOCLIK.EXE.  
+2.  Build AUTOCLIK.EXE.  
   
-3.  Executar AUTOCLIK.EXE na forma autônoma e feche\-o em para baixo.  Isso registrar\-o\-&z como um servidor de automação.  
+3.  Run AUTOCLIK.EXE in standalone fashion and then shut it down. This will register it as an Automation server.  
   
-4.  Copiar AUTOCLIK.EXE a um computador remoto, executá\-lo lá, e feche\-o em para baixo.  
+4.  Copy AUTOCLIK.EXE to a remote machine, run it there, and then shut it down.  
   
-5.  Executar AUTODRIV.EXE no computador local e verifique se inicie o executando AUTOCLIK.EXE.  Para saber mais sobre AUTODRIV.EXE, consulte [AUTOCLIK](../top/visual-cpp-samples.md).  
+5.  Run AUTODRIV.EXE on the local machine and verify that running it starts AUTOCLIK.EXE. To find out more about AUTODRIV.EXE, see [AUTOCLIK](../visual-cpp-samples.md).  
   
-6.  No computador remoto, inicie AUTMGR32.EXE \(gerenciador de automação\).  
+6.  On the remote machine, start AUTMGR32.EXE (Automation Manager).  
   
-7.  No computador remoto, inicie RACMGR32.EXE \(gerenciador de conexões de automação remoto\).  
+7.  On the remote machine, start RACMGR32.EXE (Remote Automation Connection Manager).  
   
-8.  No gerenciador de conexões remoto de automação, AutoClik.Document selecione na lista de **OLE Classes** .  
+8.  In the Remote Automation Connection Manager, select AutoClik.Document from the **OLE Classes** list.  
   
-9. Escolha uma política de segurança do sistema da guia de **Acesso para cliente** para conceder acesso de cliente a AutoClik.Document.  
+9. Choose a system security policy from the **Client Access** tab to grant client access to AutoClik.Document.  
   
-10. No computador local, inicie o RACMGR32.EXE e selecione AutoClik.Document de **OLE Classes** lista.  
+10. On the local machine, start RACMGR32.EXE and select AutoClik.Document from the **OLE Classes** list.  
   
-11. Na guia de **Conexão do Servidor** , escolha o endereço de rede do computador remoto e o protocolo de rede apropriado.  
+11. From the **Server Connection** tab, choose both the network address of the remote machine and the appropriate network protocol.  
   
-12. Com o AutoClik.Document ainda selecionado na caixa de listagem de **OLE Classes** , escolha o comando de **Remoto** no menu de `Register` .  
+12. With AutoClik.Document still selected in the **OLE Classes** list box, choose the **Remote** command from the `Register` menu.  
   
-13. No computador local, AUTODRIV.EXE na execução ou no projeto do Visual Basic equivalente AUTOCLIK.MAK se você quer ter o Visual Basic, em vez de um MFC, o cliente.  
+13. On the local machine, run AUTODRIV.EXE or the equivalent AUTOCLIK.MAK Visual Basic project if you want to have a Visual Basic, rather than an MFC, client.  
   
- No computador remoto, agora você deve ver AUTOCLIK que executa comandos iniciado de cliente local.  
+ On the remote machine, you should now be able to see AUTOCLIK executing commands initiated from the local client.  
   
-## Consulte também  
- [Automação remota](../mfc/remote-automation.md)
+## See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+
+

@@ -1,110 +1,128 @@
 ---
-title: "Windows Sockets: plano de fundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comunicações [C++], domínio"
-  - "tipos de dados [C++], soquete"
-  - "soquetes de datagrama [C++]"
-  - "email [C++]"
-  - "email [C++], programação para"
-  - "Internet Protocol Suite"
-  - "email [C++]"
-  - "email [C++], programação para"
-  - "dados orientados a registros [C++]"
-  - "fluxo de dados em sequência"
-  - "Identificador SOCKET"
-  - "soquetes [C++], soquetes de fluxo"
-  - "soquetes de fluxo [C++]"
-  - "Windows Sockets [C++], soquetes de fluxo"
-  - "servidores X Window"
+title: 'Windows Sockets: Background | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- record-oriented data [MFC]
+- e-mail [MFC]
+- Internet Protocol Suite
+- mail [MFC]
+- communications [MFC], domain
+- Windows Sockets [MFC], stream sockets
+- mail [MFC], programming for
+- sockets [MFC], stream sockets
+- datagram sockets [MFC]
+- SOCKET handle
+- data types [MFC], socket
+- e-mail [MFC], programming for
+- X Window servers
+- sequenced data flow
+- stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets: plano de fundo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46508947915847d1ac921d10431f96441a972722
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica a natureza e a finalidade de soquetes do windows.  O artigo também:  
+---
+# <a name="windows-sockets-background"></a>Windows Sockets: Background
+This article explains the nature and purpose of Windows Sockets. The article also:  
   
--   [Define o termo “soquete”](#_core_definition_of_a_socket).  
+-   [Defines the term "socket"](#_core_definition_of_a_socket).  
   
--   [Descreve o tipo de dados do identificador de SOQUETE](#_core_the_socket_data_type).  
+-   [Describes the SOCKET handle data type](#_core_the_socket_data_type).  
   
--   [Descreve usos para soquetes](#_core_uses_for_sockets).  
+-   [Describes uses for sockets](#_core_uses_for_sockets).  
   
- A especificação de soquetes do windows define uma interface de programação binário correspondente de rede do Microsoft Windows.  Soquetes do windows baseiam\-se na implementação de soquetes do UNIX em Berkeley Software Distribution \(DEB, versão 4,3\) de Universidade de California em Berkeley.  A especificação inclui as rotinas e extensões de soquete de DEB\- estilo específicas do windows.  Usar soquetes do windows permite seu aplicativo se comunicar por meio de toda a rede que se conformar a soquetes apis do windows.  No Win32, soquetes do windows preveem a segurança de thread.  
+ The Windows Sockets specification defines a binary-compatible network programming interface for Microsoft Windows. Windows Sockets are based on the UNIX sockets implementation in the Berkeley Software Distribution (BSD, release 4.3) from the University of California at Berkeley. The specification includes both BSD-style socket routines and extensions specific to Windows. Using Windows Sockets permits your application to communicate across any network that conforms to the Windows Sockets API. On Win32, Windows Sockets provide for thread safety.  
   
- Muitos provedores de software de rede oferecem suporte a soquetes do windows nos protocolos de rede que incluem o protocolo TCP\/IP, o Xerox Network System \(XNS\), protocolo de DECnet de Digital Equipment Corporation, o Exchange pacote\/Exchange empacotado colocado em sequência IPX\/SPX \(\), e outro da Internet de Novell Corporation.  Embora a especificação atual de soquetes do windows define a abstração de soquetes de TCP\/IP, qualquer protocolo de rede pode estar de acordo com os soquetes do windows fornecendo sua própria \(DLL\) versão da biblioteca de vínculo dinâmico\) que implementa os soquetes do windows.  Exemplos de aplicativos comerciais gravados com soquetes do windows incluem servidores windows X, emuladores terminais, e sistemas de email eletrônicos.  
-  
-> [!NOTE]
->  A finalidade de soquetes do windows é acionado abstrair a rede subjacente de modo que não seja necessário conhecer a rede e assim que seu aplicativo pode executar em qualquer rede que ofereça suporte a soquetes.  Em virtude disso, esta documentação não discute os detalhes de protocolos de rede.  
-  
- A programação da suporte à biblioteca de classes do Microsoft \(MFC\) com os soquetes apis do windows fornecendo duas classes.  Uma dessas classes, `CSocket`, o fornece um nível alto de abstração para simplificar sua programação de comunicações de rede.  
-  
- Soquetes especificação do windows, soquetes do windows: Uma interface aberta para a computação da rede no Microsoft Windows, agora na versão 1,1, foi desenvolvida como um padrão aberto do sistema de rede por um grupo grande de indivíduos e de corporaçõs na comunidade TCP\/IP e livremente está disponível para uso.  Soquetes o modelo de programação dão suporte a um domínio “comunicação” atualmente, usando o pacote do protocolo IP.  A especificação está disponível em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
-  
-> [!TIP]
->  Como os soquetes usam o pacote do protocolo IP, são a rota preferida para os aplicativos que dão suporte à comunicação da Internet “na informações de estrada.”  
-  
-##  <a name="_core_definition_of_a_socket"></a> Definição de um soquete  
- Um soquete é um ponto de extremidade de comunicação — um objeto através do qual um aplicativo de soquetes do windows envia ou recebe pacotes de dados por meio de uma rede.  Um soquete tem um tipo e é associado a um processo em execução, e pode ter um nome.  Atualmente, de soquetes troca de dados geralmente apenas com outros soquetes no mesmo domínio de uma comunicação “,” usando o pacote do protocolo IP.  
-  
- Ambos os tipos de soquetes são bidirecionais; são fluxos de dados que podem ser comunicados em ambas as direções simultaneamente \(completa frente e verso\).  
-  
- Dois tipos de soquete estão disponíveis:  
-  
--   Soquetes de fluxo  
-  
-     Soquetes de fluxo preveem um fluxo de dados sem limites do registro: um fluxo de bytes.  Os fluxos são certamente entregue corretamente e para ser colocados em sequência e unduplicated.  
-  
--   Soquetes de datagrama  
-  
-     Soquetes de datagrama oferecem suporte a um fluxo de dados orientado interfaces que não é garantido para ser entregue e não podem ser colocados em sequência como enviado ou unduplicated.  
-  
- “Colocado em sequência” significa que os pacotes são entregues na ordem enviado. “Unduplicated” significa que você obtém um pacote específico apenas uma vez.  
+ Many network software vendors support Windows Sockets under network protocols including Transmission Control Protocol/Internet Protocol (TCP/IP), Xerox Network System (XNS), Digital Equipment Corporation's DECNet protocol, Novell Corporation's Internet Packet Exchange/Sequenced Packed Exchange (IPX/SPX), and others. Although the present Windows Sockets specification defines the sockets abstraction for TCP/IP, any network protocol can comply with Windows Sockets by supplying its own version of the dynamic-link library (DLL) that implements Windows Sockets. Examples of commercial applications written with Windows Sockets include X Windows servers, terminal emulators, and electronic mail systems.  
   
 > [!NOTE]
->  Em alguns protocolos de rede, como o XNS, os fluxos podem ser orientada registro, como fluxos de registros em vez de fluxos de bytes.  No protocolo TCP\/IP mais comum, no entanto, os fluxos são fluxos de byte.  Soquetes do windows fornecem um nível de independente de abstração de protocolo subjacente.  
+>  The purpose of Windows Sockets is to abstract away the underlying network so that you do not have to be knowledgeable about that network and so your application can run on any network that supports sockets. Consequently, this documentation does not discuss the details of network protocols.  
   
- Para obter informações sobre estes tipos e que tipo de soquete a usar em que situações, consulte [Soquetes do windows: Soquetes de fluxo](../mfc/windows-sockets-stream-sockets.md) e [Soquetes do windows: Soquetes de datagrama](../mfc/windows-sockets-datagram-sockets.md).  
+ The Microsoft Foundation Class Library (MFC) supports programming with the Windows Sockets API by supplying two classes. One of these classes, `CSocket`, provides a high level of abstraction to simplify your network communications programming.  
   
-##  <a name="_core_the_socket_data_type"></a> O tipo de dados de SOQUETE  
- Cada objeto de soquete MFC encapsula um identificador para um objeto de soquetes do windows.  O tipo de dados desse identificador é **SOCKET**.  Um identificador de **SOCKET** equivale a `HWND` para uma janela.  As classes de soquete MFC fornecem operações encapsuladas no identificador.  
-  
- O tipo de dados de **SOCKET** é descrito em detalhes em [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Consulte “o tipo de dados soquete e avalia o erro” nos soquetes do windows.  
-  
-##  <a name="_core_uses_for_sockets"></a> Usa para soquetes  
- Soquetes são altamente úteis em pelo menos três contextos de comunicações:  
-  
--   Modelos cliente\/servidor.  
-  
--   Cenários ponto a ponto, como aplicativos de mensagem.  
-  
--   Fazendo chamadas de procedimento remoto \(RPC\) com o aplicativo receptor interprete uma mensagem como uma chamada de função.  
+ The Windows Sockets specification, Windows Sockets: An Open Interface for Network Computing Under Microsoft Windows, now at version 1.1, was developed as an open networking standard by a large group of individuals and corporations in the TCP/IP community and is freely available for use. The sockets programming model supports one "communication domain" currently, using the Internet Protocol Suite. The specification is available in the Windows SDK.  
   
 > [!TIP]
->  Os argumentos ideais para usar soquetes de MFC é quando você estiver gravando as duas extremindades de comunicação: usando o MFC em ambas as extremidades.  Para obter mais informações sobre esse tópico, inclusive como gerenciar os casos quando você estiver se comunicando com os aplicativos não MFC, consulte [Soquetes do windows: A ordenação de bytes](../mfc/windows-sockets-byte-ordering.md).  
+>  Because sockets use the Internet Protocol Suite, they are the preferred route for applications that support Internet communications on the "information highway."  
   
- Especificação de soquetes do windows de Para obter mais informações, consulte: **ntohs**, **ntohl**, **htons**, **htonl**.  Além disso, consulte os seguintes tópicos:  
+##  <a name="_core_definition_of_a_socket"></a> Definition of a Socket  
+ A socket is a communication endpoint — an object through which a Windows Sockets application sends or receives packets of data across a network. A socket has a type and is associated with a running process, and it may have a name. Currently, sockets generally exchange data only with other sockets in the same "communication domain," which uses the Internet Protocol Suite.  
   
--   [Soquetes do windows: Usando soquetes com arquivos mortos](../mfc/windows-sockets-using-sockets-with-archives.md)  
+ Both kinds of sockets are bidirectional; they are data flows that can be communicated in both directions simultaneously (full-duplex).  
   
--   [Soquetes do windows: Exemplo de soquetes usando arquivos mortos](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
+ Two socket types are available:  
   
--   [Soquetes do windows: Usando a classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   Stream sockets  
   
-## Consulte também  
- [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)
+     Stream sockets provide for a data flow without record boundaries: a stream of bytes. Streams are guaranteed to be delivered and to be correctly sequenced and unduplicated.  
+  
+-   Datagram sockets  
+  
+     Datagram sockets support a record-oriented data flow that is not guaranteed to be delivered and may not be sequenced as sent or unduplicated.  
+  
+ "Sequenced" means that packets are delivered in the order sent. "Unduplicated" means that you get a particular packet only once.  
+  
+> [!NOTE]
+>  Under some network protocols, such as XNS, streams can be record oriented, as streams of records rather than streams of bytes. Under the more common TCP/IP protocol, however, streams are byte streams. Windows Sockets provides a level of abstraction independent of the underlying protocol.  
+  
+ For information about these types and which kind of socket to use in which situations, see [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md) and [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md).  
+  
+##  <a name="_core_the_socket_data_type"></a> The SOCKET Data Type  
+ Each MFC socket object encapsulates a handle to a Windows Sockets object. The data type of this handle is **SOCKET**. A **SOCKET** handle is analogous to the `HWND` for a window. MFC socket classes provide operations on the encapsulated handle.  
+  
+ The **SOCKET** data type is described in detail in the Windows SDK. See "Socket Data Type and Error Values" under Windows Sockets.  
+  
+##  <a name="_core_uses_for_sockets"></a> Uses for Sockets  
+ Sockets are highly useful in at least three communications contexts:  
+  
+-   Client/server models.  
+  
+-   Peer-to-peer scenarios, such as messaging applications.  
+  
+-   Making remote procedure calls (RPC) by having the receiving application interpret a message as a function call.  
+  
+> [!TIP]
+>  The ideal case for using MFC sockets is when you are writing both ends of the communication: using MFC at both ends. For more information on this topic, including how to manage the case when you're communicating with non-MFC applications, see [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).  
+  
+ For more information, see Windows Sockets Specification: **ntohs**, **ntohl**, **htons**, **htonl**. Also, see the following topics:  
+  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
+  
+-   [Windows Sockets: Example of Sockets Using Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md)  
+  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+  
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

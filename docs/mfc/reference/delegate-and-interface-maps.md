@@ -1,5 +1,5 @@
 ---
-title: Delegado e a Interface mapear Macros (MFC) | Microsoft Docs
+title: Delegate and Interface Map Macros (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.reviewer: 
@@ -11,9 +11,9 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- delegate map macros
-- event map macros
-- interface map macros
+- delegate map macros [MFC]
+- event map macros [MFC]
+- interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 caps.latest.revision: 1
 author: mikeblome
@@ -33,178 +33,178 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9b6bd91f5fe02f3747a104be13b448d503af843c
-ms.openlocfilehash: 51bf4627c8939a381ceaf14d51d05518b3859718
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 481801757db191eabe10d1f199afad29222636f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
 |||  
 |-|-|  
-|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Inicia um mapa de delegado.|
-|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Começa a definição do mapa interfaced.|
-|[Delegado CommandHandler](#commandhandler)|Registra os métodos de retorno de chamada com uma fonte de comando.  |
-|[END_DELEGATE_MAP](#end_delegate_map)|Termina um mapa de delegado.|
-|[END_INTERFACE_MAP](#end_interface_map)|Termina o mapa de interface no arquivo de implementação. |
-|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Cria uma entrada no mapa do delegado.|
-|[INTERFACE_PART](#interface_part)|Usado entre o `BEGIN_INTERFACE_MAP` macro e `END_INTERFACE_MAP` macro para cada interface que seu objeto oferecerá suporte.|
-|[MAKE_DELEGATE](#make_delegate)|Anexa um manipulador de eventos para um controle gerenciado.|
+|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Begins a delegate map.|
+|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Begins the definition of the interfaced map.|
+|[CommandHandler Delegate](#commandhandler)|Registers callback methods with a command source.  |
+|[END_DELEGATE_MAP](#end_delegate_map)|Ends a delegate map.|
+|[END_INTERFACE_MAP](#end_interface_map)|Ends the interface map in the implementation file. |
+|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Creates an entry in the delegate map.|
+|[INTERFACE_PART](#interface_part)|Used between the `BEGIN_INTERFACE_MAP` macro and the `END_INTERFACE_MAP` macro for each interface your object will support.|
+|[MAKE_DELEGATE](#make_delegate)|Attaches an event handler to a managed control.|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
-Inicia um mapa de delegado.  
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
+Begins a delegate map.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `CLASS`  
- A classe em que o controle gerenciado está hospedado.  
+ The class in which the managed control is hosted.  
    
-### <a name="remarks"></a>Comentários  
- Esta macro marca o início de uma lista de entradas de delegado, que compõem um mapa de delegado. Para obter um exemplo de como essa macro é usada, consulte [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
+### <a name="remarks"></a>Remarks  
+ This macro marks the beginning of a list of delegate entries, which compose a delegate map. For an example of how this macro is used, see [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>Consulte também  
- [Como coletar eventos do Windows Forms de classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+### <a name="see-also"></a>See Also  
+ [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
-Começa a definição do mapa interfaced quando usado no arquivo de implementação.  
+Begins the definition of the interfaced map when used in the implementation file.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- A classe na qual o mapa de interface é a ser definido  
+ The class in which the interface map is to be defined  
   
  `baseClass`  
- A classe da qual `theClass` deriva.  
+ The class from which `theClass` derives from.  
    
-### <a name="remarks"></a>Comentários  
- Para cada interface que é implementada, há um ou mais `INTERFACE_PART` invocações de macro. Para cada agregação, que usa a classe, há um **INTERFACE_AGGREGATE** invocação de macro.  
+### <a name="remarks"></a>Remarks  
+ For each interface that is implemented, there is one or more `INTERFACE_PART` macro invocations. For each aggregate that the class uses, there is one **INTERFACE_AGGREGATE** macro invocation.  
   
- Para obter mais informações sobre mapas de interface, consulte [38 de observação técnica](../tn038-mfc-ole-iunknown-implementation.md).  
+ For more information on interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
  
-##  <a name="commandhandler"></a>Delegado CommandHandler
-Registra os métodos de retorno de chamada com uma fonte de comando.  
+##  <a name="commandhandler"></a>CommandHandler Delegate
+Registers callback methods with a command source.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- A ID de comando.  
+ The command ID.  
    
-### <a name="remarks"></a>Comentários  
- Este delegado registra os métodos de retorno de chamada com uma fonte de comando. Quando você adiciona um delegado para o objeto de origem de comando, o método de retorno de chamada se torna um manipulador de comandos provenientes da fonte especificada.  
+### <a name="remarks"></a>Remarks  
+ This delegate registers callback methods with a command source. When you add a delegate to the command source object, the callback method becomes a handler for commands coming from the specified source.  
   
- Para obter mais informações, consulte [como: Adicionar roteamento de comando para o controle de formulários do Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
+ For more information, see [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Para obter mais informações sobre como usar formulários do Windows, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwinforms.h (definido no assembly atlmfc\lib\mfcmifc80.dll)  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
    
-### <a name="see-also"></a>Consulte também  
- [Como adicionar roteamento de comando ao controle do Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+### <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>CommandUIHandler
-Registra os métodos de retorno de chamada com uma mensagem de comando de atualização de interface do usuário.  
+Registers callback methods with a user interface update command message.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- A ID de comando.  
+ The command ID.  
   
  `cmdUI`  
- A ID de mensagem de comando.  
+ The command message ID.  
    
-### <a name="remarks"></a>Comentários  
- Este delegado registra os métodos de retorno de chamada com uma mensagem de comando de atualização de interface do usuário. `CommandUIHandler`é semelhante a [CommandHandler](#commandhandler) exceto que este delegado é usado com comandos de atualização do objeto de interface de usuário. Comandos de atualização de interface do usuário devem ser mapeados-para-um com métodos de manipulador de mensagens.  
+### <a name="remarks"></a>Remarks  
+ This delegate registers callback methods with a user interface update command message. `CommandUIHandler` is similar to [CommandHandler](#commandhandler) except that this delegate is used with user interface object update commands. User interface update commands should be mapped one-to-one with message handler methods.  
   
- Para obter mais informações sobre como usar formulários do Windows, consulte [usando um controle de usuário do Windows Form no MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwinforms.h (definido no assembly atlmfc\lib\mfcmifc80.dll)  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
    
-### <a name="see-also"></a>Consulte também  
- [Como: adicionar comandos de controle de formulários do roteamento para o Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+### <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [CommandHandler](#commandhandler)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
-Termina um mapa de delegado.  
+Ends a delegate map.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 END_DELEGATE_MAP();  
 ```  
    
-### <a name="remarks"></a>Comentários  
- Esta macro marca o final de uma lista de entradas de delegado, que compõem um mapa de delegado. Para obter um exemplo de como essa macro é usada, consulte [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
+### <a name="remarks"></a>Remarks  
+ This macro marks the end of a list of delegate entries, which compose a delegate map. For an example of how this macro is used, see [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>See Also  
 
- [Como coletar eventos do Windows Forms de classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
  
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
-Termina o mapa de interface no arquivo de implementação.  
+Ends the interface map in the implementation file.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```
 END_INTERFACE_MAP( )    
 ```  
    
-### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre mapas de interface, consulte [38 de observação técnica](../tn038-mfc-ole-iunknown-implementation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
    
-### <a name="see-also"></a>Consulte também  
- [Macros e globais](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [BEGIN_INTERFACE_MAP](#begin_interface_map)
  
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
-Cria uma entrada no mapa do delegado.  
+Creates an entry in the delegate map.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `MEMBER`  
- O método do manipulador de eventos a ser anexado ao controle.  
+ The event handler method to be attached to the control.  
   
  `ARG0`  
- O primeiro argumento do método do manipulador de eventos gerenciados, como **objeto ^**.  
+ The first argument of the managed event handler method, such as **Object^**.  
   
  `ARG1`  
- O segundo argumento do método do manipulador de eventos gerenciados, como **EventArgs ^**.  
+ The second argument of the managed event handler method, such as **EventArgs^**.  
    
-### <a name="remarks"></a>Comentários  
- Cada entrada no mapa de delegado corresponde a um delegado de manipulador de eventos gerenciados criado pelo [MAKE_DELEGATE](#make_delegate).  
+### <a name="remarks"></a>Remarks  
+ Each entry in the delegate map corresponds to a managed event handler delegate created by [MAKE_DELEGATE](#make_delegate).  
    
-### <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como usar `EVENT_DELEGATE_ENTRY` para criar uma entrada no mapa do delegado a `OnClick` manipulador de eventos; também consulte o exemplo de código em `MAKE_DELEGATE`. Para obter mais informações, consulte [como: coletor de eventos do Windows Forms de Classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+### <a name="example"></a>Example  
+ The following code example shows how to use `EVENT_DELEGATE_ENTRY` to create an entry in the delegate map for the `OnClick` event handler; also see the code example in `MAKE_DELEGATE`. For more information, see [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -213,58 +213,58 @@ END_DELEGATE_MAP()
 
 ```  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>See Also  
  [MAKE_DELEGATE](#make_delegate)   
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-Usado entre o `BEGIN_INTERFACE_MAP` macro e `END_INTERFACE_MAP` macro para cada interface que seu objeto oferecerá suporte.  
+Used between the `BEGIN_INTERFACE_MAP` macro and the `END_INTERFACE_MAP` macro for each interface your object will support.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- O nome da classe que contém o mapa de interface.    
+ The name of the class that contains the interface map.    
  `iid`  
- O IID deve ser mapeada para a classe incorporada.    
+ The IID that is to be mapped to the embedded class.    
  *localClass*  
- O nome da classe local.  
+ The name of the local class.  
    
-### <a name="remarks"></a>Comentários  
- Ele permite que você mapeie um IID para um membro da classe indicado pelo `theClass` e *localClass*.  
+### <a name="remarks"></a>Remarks  
+ It allows you to map an IID to a member of the class indicated by `theClass` and *localClass*.  
   
- Para obter mais informações sobre mapas de interface, consulte [38 de observação técnica](../tn038-mfc-ole-iunknown-implementation.md).  
+ For more information on interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
    
  
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
-Anexa um manipulador de eventos para um controle gerenciado.  
+Attaches an event handler to a managed control.  
    
-### <a name="syntax"></a>Sintaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `DELEGATE`  
- Delegar o tipo do manipulador de eventos gerenciados, como [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
+ The type of the managed event handler delegate, such as [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
  `MEMBER`  
- O nome do método do manipulador de eventos a ser anexado ao controle.  
+ The name of the event handler method to be attached to the control.  
    
-### <a name="remarks"></a>Comentários  
- Esta macro cria um delegado de manipulador de eventos gerenciado do tipo `DELEGATE` e do nome `MEMBER`. O delegado de manipulador de eventos gerenciado permite que uma classe nativa manipular eventos gerenciados.  
+### <a name="remarks"></a>Remarks  
+ This macro creates a managed event handler delegate of type `DELEGATE` and of the name `MEMBER`. The managed event handler delegate allows a native class to handle managed events.  
    
-### <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como chamar `MAKE_DELEGATE` para anexar um `OnClick` manipulador de eventos para um controle MFC `MyControl`. Para obter uma explicação mais ampla de como essa macro funciona em um aplicativo MFC, consulte [como: coletor de eventos do Windows Forms de Classes C++ nativas](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+### <a name="example"></a>Example  
+ The following code example shows how to call `MAKE_DELEGATE` to attach an `OnClick` event handler to an MFC control `MyControl`. For a broader explanation of how this macro works in an MFC application, see [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -276,10 +276,10 @@ void CMyView::OnInitialUpdate()
 }
 ```
    
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>Consulte também  
+### <a name="see-also"></a>See Also  
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)   
  [EVENT_DELEGATE_ENTRY](#event_delegate_entry)

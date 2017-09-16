@@ -1,52 +1,70 @@
 ---
-title: "Controle e exibi&#231;&#227;o de lista | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe CListCtrl, e CListView"
-  - "Classe CListView, e CListCtrl"
-  - "controles de lista, Exibição de lista"
-  - "exibições de lista"
-  - "modos de exibição, lista e controle de lista"
+title: List Control and List View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListView class [MFC], and CListCtrl
+- views [MFC], list and list control
+- CListCtrl class [MFC], and CListView
+- list views [MFC]
+- list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controle e exibi&#231;&#227;o de lista
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a60bf5c088c3914f9ed73a34a1dfa40f58bb1a5
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Por conveniência, o MFC encapsula o controle da lista de duas formas.  Você pode usar controles da lista:  
+---
+# <a name="list-control-and-list-view"></a>List Control and List View
+For convenience, MFC encapsulates the list control in two ways. You can use list controls:  
   
--   Diretamente, inserindo um objeto de [CListCtrl](../Topic/CListCtrl%20Class.md) em uma classe da caixa de diálogo.  
+-   Directly, by embedding a [CListCtrl](../mfc/reference/clistctrl-class.md) object in a dialog class.  
   
--   Indiretamente, usando a classe [CListView](../mfc/reference/clistview-class.md).  
+-   Indirectly, by using class [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView` facilita a integração de um controle da lista com a arquitetura do documento\/exibição MFC, encapsulando o controle de modo muito semelhante [CEditView](../Topic/CEditView%20Class.md) encapsula um controle de edição: o controle preenche a área da superfície inteira de uma exibição de MFC. \(A exibição *é* o controle, a conversão `CListView`.\)  
+ `CListView` makes it easy to integrate a list control with the MFC document/view architecture, encapsulating the control much as [CEditView](../mfc/reference/ceditview-class.md) encapsulates an edit control: the control fills the entire surface area of an MFC view. (The view *is* the control, cast to `CListView`.)  
   
- Um objeto de `CListView` herda de [CCtrlView](../mfc/reference/cctrlview-class.md) e suas classes base e adiciona uma função de membro para recuperar o controle subjacente da lista.  Usa membros de exibição para trabalhar com a exibição como uma exibição.  Use a função de membro de [GetListCtrl](../Topic/CListView::GetListCtrl.md) para obter acesso às funções de membro do controle da lista.  Use esses membros:  
+ A `CListView` object inherits from [CCtrlView](../mfc/reference/cctrlview-class.md) and its base classes and adds a member function to retrieve the underlying list control. Use view members to work with the view as a view. Use the [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) member function to gain access to the list control's member functions. Use these members to:  
   
--   Adicionar, excluir, ou manipular itens “” na lista.  
+-   Add, delete, or manipulate "items" in the list.  
   
--   O conjunto ou define atributos de controle da lista.  
+-   Set or get list control attributes.  
   
- Para obter uma referência a `CListCtrl` que é a base de `CListView`, chame `GetListCtrl` da sua classe da exibição de lista:  
+ To obtain a reference to the `CListCtrl` underlying a `CListView`, call `GetListCtrl` from your list view class:  
   
- [!CODE [NVC_MFCListView#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#4)]  
+ [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]  
   
- Este tópico descreve duas formas de usar o controle da lista.  
+ This topic describes both ways to use the list control.  
   
-## Consulte também  
- [Usando CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

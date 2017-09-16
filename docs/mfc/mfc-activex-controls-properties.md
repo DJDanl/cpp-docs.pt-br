@@ -1,49 +1,67 @@
 ---
-title: "Controles ActiveX MFC: propriedades | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Controles ActiveX MFC, propriedades"
-  - "propriedades [MFC]"
-  - "propriedades [MFC], Controles ActiveX"
+title: 'MFC ActiveX Controls: Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], ActiveX controls
+- MFC ActiveX controls [MFC], properties
+- properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controles ActiveX MFC: propriedades
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fb056d7e94cd786d0e62167abccf1e599f2c63fc
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Um controle ActiveX será acionado eventos para se comunicar com o contêiner do controle.  O contêiner, em retorno, usa métodos e propriedades para se comunicar com o controle.  Os métodos e as propriedades são semelhantes em uso e purpose, respectivamente, funções de membro e as variáveis de membro c criando classe.  As propriedades são os membros de dados de controle ActiveX que são expostos a qualquer contêiner.  As propriedades fornecem uma interface para aplicativos que contêm controles ActiveX, como clientes de automação e contêiner do controle ActiveX.  
+---
+# <a name="mfc-activex-controls-properties"></a>MFC ActiveX Controls: Properties
+An ActiveX control fires events to communicate with its control container. The container, in return, uses methods and properties to communicate with the control. Methods and properties are similar in use and purpose, respectively, to member functions and member variables of a C++ class. Properties are data members of the ActiveX control that are exposed to any container. Properties provide an interface for applications that contain ActiveX controls, such as Automation clients and ActiveX control containers.  
   
- As propriedades também são chamadas de atributos.  
+ Properties are also called attributes.  
   
- Para obter mais informações sobre os métodos de controle ActiveX, consulte o artigo [Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md).  
+ For more information on ActiveX control methods, see the article [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md).  
   
- Os controles ActiveX podem implementar os métodos e propriedades de estoque e personalizados.  A classe `COleControl` fornece uma implementação das propriedades de estoque. \(Para obter uma lista completa das propriedades de estoque, consulte o artigo [Controles ActiveX MFC: Adicionando as propriedades de estoque](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Stock%20Properties.md).\) As propriedades personalizadas, definidas pelo desenvolvedor, adicionam recursos especializados a um controle ActiveX.  Para obter mais informações, consulte [Controles ActiveX MFC: Adicionando propriedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md).  
+ ActiveX controls can implement both stock and custom methods and properties. Class `COleControl` provides an implementation for stock properties. (For a complete list of stock properties, see the article [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md).) Custom properties, defined by the developer, add specialized capabilities to an ActiveX control. For more information, see [MFC ActiveX Controls: Adding Custom Properties](../mfc/mfc-activex-controls-adding-custom-properties.md).  
   
- As propriedades personalizadas e de estoque, como métodos, têm suporte por um mecanismo que consiste em um mapa de distribuição que trata propriedades e os métodos e as funções de membro existente de `COleControl` a serem classificados.  Além disso, essas propriedades podem ter parâmetros que o desenvolvedor usa para transmitir informações adicionais para o controle.  
+ Both custom and stock properties, like methods, are supported by a mechanism that consists of a dispatch map that handles properties and methods and existing member functions of the `COleControl` class. In addition, these properties can have parameters that the developer uses to pass extra information to the control.  
   
- Os artigos a seguir discutem propriedades do controle ActiveX com mais detalhes:  
+ The following articles discuss ActiveX control properties in more detail:  
   
--   [Controles ActiveX MFC: Adicionando as propriedades de estoque](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Stock%20Properties.md)  
+-   [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [Controles ActiveX MFC: Adicionando propriedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [MFC ActiveX Controls: Adding Custom Properties](../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [Controles ActiveX MFC: Implementação de propriedade avançada](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
+-   [MFC ActiveX Controls: Advanced Property Implementation](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
   
--   [Controles ActiveX MFC: Acessando propriedades de ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
+-   [MFC ActiveX Controls: Accessing Ambient Properties](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
-## Consulte também  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

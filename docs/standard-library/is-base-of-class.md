@@ -1,5 +1,5 @@
 ---
-title: Classe is_base_of | Microsoft Docs
+title: is_base_of Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_base_of
 - type_traits/std::is_base_of
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 22b1f7f93d82fbe5780352c11cb9024b8305d79c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 061d16596c8e85196e8f2d14f60ab08ac93c1fa2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isbaseof-class"></a>Classe is_base_of
-Testa se um tipo é a base de outro.  
+# <a name="isbaseof-class"></a>is_base_of Class
+Tests whether one type is base of another.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Base, class Derived>  
 struct is_base_of;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `Base`  
- A classe base com relação à qual testar.  
+ The base class to test for.  
   
  `Derived`  
- O tipo derivado com relação ao qual testar.  
+ The derived type to test for.  
   
-## <a name="remarks"></a>Comentários  
- Uma instância do predicado de tipo será verdadeira se o tipo `Base` for uma classe base do tipo `Derived`; caso contrário, será falsa.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Base` is a base class of the type `Derived`, otherwise it holds false.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -97,12 +96,12 @@ is_base_of<base, derived> == true
 is_base_of<derived, base> == false  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Classe is_convertible](../standard-library/is-convertible-class.md)
+ [is_convertible Class](../standard-library/is-convertible-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe type_index | Microsoft Docs
+title: type_index Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,38 +33,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e00ba54975dfac0439509e63606e9992d86c9522
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e77d1dd69a2db5e211348e6373d35f337f0b0f17
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="typeindex-class"></a>Classe type_index
-A classe `type_index` encapsula um ponteiro para a [Classe type_info](../cpp/type-info-class.md) para auxiliar na indexação por esses objetos.  
+# <a name="typeindex-class"></a>type_index Class
+The `type_index` class wraps a pointer to [type_info Class](../cpp/type-info-class.md) to assist in indexing by such objects.  
   
-classe type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
+class type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- O construtor inicializa `ptr` para `&tinfo`.  
+ The constructor initializes `ptr` to `&tinfo`.  
   
- `name` retorna `ptr->name()`.  
+ `name` returns `ptr->name()`.  
   
- `hash_code` retorna `ptr->hash_code().`  
+ `hash_code` returns `ptr->hash_code().`  
   
- `operator==` retorna `*ptr == right.ptr`.  
+ `operator==` returns `*ptr == right.ptr`.  
   
- `operator!=` retorna `!(*this == right)`.  
+ `operator!=` returns `!(*this == right)`.  
   
- `operator<` retorna `*ptr->before(*right.ptr)`.  
+ `operator<` returns `*ptr->before(*right.ptr)`.  
   
- `operator<=` retorna `!(right < *this).`  
+ `operator<=` returns `!(right < *this).`  
   
- `operator>` retorna `right < *this`.  
+ `operator>` returns `right < *this`.  
   
- `operator>=` retorna `!(*this < right)`.  
+ `operator>=` returns `!(*this < right)`.  
   
-## <a name="see-also"></a>Consulte também  
- [Informações de tipo em tempo de execução](../cpp/run-time-type-information.md)   
+## <a name="see-also"></a>See Also  
+ [Run-Time Type Information](../cpp/run-time-type-information.md)   
  [\<typeindex>](../standard-library/typeindex.md)
 
 

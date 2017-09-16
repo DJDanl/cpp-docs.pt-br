@@ -1,32 +1,50 @@
 ---
-title: "Usando um modelo da caixa de di&#225;logo na mem&#243;ria | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelos de caixa de diálogo"
-  - "modelos de caixa de diálogo, na memória"
-  - "caixas de diálogo MFC, modelos de caixa de diálogo"
-  - "modelos, para caixas de diálogo"
+title: Using a Dialog Template in Memory | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates [MFC], for dialog boxes
+- dialog templates [MFC]
+- dialog templates [MFC], in memory
+- MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando um modelo da caixa de di&#225;logo na mem&#243;ria
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d6f2472c78698511f42be18b963dc61c5c4ac3eb
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Em vez de usar os métodos dados em [Criar tabela da caixa de diálogo](../mfc/creating-a-dialog-class-with-code-wizards.md), você pode criar qualquer tipo de caixa de diálogo indiretamente de um modelo da caixa de diálogo na memória.  Classe de [CDialog](../mfc/reference/cdialog-class.md) Para obter mais informações, consulte *na referência de MFC*.  
+---
+# <a name="using-a-dialog-template-in-memory"></a>Using a Dialog Template in Memory
+Instead of using the methods given in the [Dialog Creation table](../mfc/creating-a-dialog-class-with-code-wizards.md), you can create either kind of dialog box indirectly from a dialog template in memory. For more information, see class [CDialog](../mfc/reference/cdialog-class.md) in the *MFC Reference*.  
   
-## Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

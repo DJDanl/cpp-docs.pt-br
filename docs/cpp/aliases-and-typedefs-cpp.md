@@ -1,64 +1,77 @@
 ---
-title: "Aliases e typedefs (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typedef"
-dev_langs: 
-  - "C++"
+title: Aliases and typedefs (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typedef
+dev_langs:
+- C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Aliases e typedefs (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ab1d0d08368e75e26f4ca51f49f80c162d791f7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/11/2017
 
-Você pode usar uma *declaração de alias* para declarar um nome para uso como sinônimo de um tipo declarado anteriormente.  \(Esse mecanismo também é chamado informalmente de *alias de tipo*\).  Você também pode usar esse mecanismo para criar um *modelo de alias*, o que pode ser particularmente útil para alocadores personalizados.  
+---
+# <a name="aliases-and-typedefs-c"></a>Aliases and typedefs (C++)
+You can use an *alias declaration* to declare a name to use as a synonym for a previously declared type. (This mechanism is also referred to informally as a *type alias*). You can also use this mechanism to create an *alias template*, which can be particularly useful for custom allocators.  
   
-## Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 using identifier = type;  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Remarks  
  `identifier`  
- O nome do alias.  
+ The name of the alias.  
   
  `type`  
- O identificador de tipo para o qual você está criando um alias.  
+ The type identifier you are creating an alias for.  
   
- Um alias não introduz um novo tipo e não podem alterar o significado de um nome de tipo existente.  
+ An alias does not introduce a new type and cannot change the meaning of an existing type name.  
   
- A forma mais simples de alias é equivalente ao mecanismo `typedef` de C\+\+03:  
+ The simplest form of an alias is equivalent to the `typedef` mechanism from C++03:  
   
 ```cpp  
-  
 // C++11  
 using counter = long;  
   
 // C++03 equivalent:  
 // typedef long counter;  
-  
 ```  
   
- Os dois permitem a criação de variáveis do tipo “counter”.  Algo mais útil seria um alias de tipo para `std::ios_base::fmtflags` como este:  
+ Both of these enable the creation of variables of type "counter". Something more useful would be a type alias like this one for `std::ios_base::fmtflags`:  
   
 ```cpp  
-  
 // C++11  
 using fmtfl = std::ios_base::fmtflags;  
+  
 // C++03 equivalent:  
 // typedef std::ios_base::fmtflags fmtfl;  
   
@@ -66,13 +79,11 @@ fmtfl fl_orig = std::cout.flags();
 fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout.hex;  
 // ...  
 std::cout.flags(fl_hex);  
-  
 ```  
   
- Os aliases também funcionam com ponteiros de função, mas são muito mais legíveis que o equivalente de typedef:  
+ Aliases also work with function pointers, but are much more readable than the equivalent typedef:  
   
 ```cpp  
-  
 // C++11  
 using func = void(*)(int);  
   
@@ -85,7 +96,7 @@ func fptr = &actual_function;
   
 ```  
   
- Uma restrição do mecanismo `typedef` é que ele não funciona com modelos.  No entanto, a sintaxe de alias de tipo no C\+\+11 permite a criação de modelos de alias:  
+ A limitation of the `typedef` mechanism is that it doesn't work with templates. However, the type alias syntax in C++11 enables the creation of alias templates:  
   
 ```cpp  
 template<typename T> using ptr = T*;   
@@ -95,11 +106,10 @@ ptr<int> ptr_int;
   
 ```  
   
-## Exemplo  
- O exemplo a seguir demonstra como usar um modelo de alias com um alocador personalizado – nesse caso, um tipo de vetor de inteiro.  Você pode substituir qualquer tipo por `int` para criar um alias conveniente para ocultar as listas de parâmetros complexas em seu código funcional principal.  Ao usar o alocador personalizado em todo o seu código, você pode melhorar a legibilidade e reduzir o risco de introduzir bugs causados por erros de digitação.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use an alias template with a custom allocator—in this case, an integer vector type. You can substitute any type for `int` to create a convenient alias to hide the complex parameter lists in your main functional code. By using the custom allocator throughout your code you can improve readability and reduce the risk of introducing bugs caused by typos.  
   
 ```cpp  
-  
 #include <stdlib.h>  
 #include <new>  
   
@@ -151,16 +161,18 @@ int main ()
 }  
 ```  
   
-## Saída  
-  **1701 1764 1664**   
-## DefsTipo  
- Uma declaração `typedef` introduz um nome que, dentro de seu escopo, se torna um sinônimo para o tipo fornecido pela parte de *declaração do tipo* da declaração.  
+```Output  
+1701 1764 1664  
+```  
   
- Você pode usar declarações de typedef para construir nomes mais curtos ou mais significativos para os tipos já definidos pelo idioma ou para os tipos que você declarou.  Os nomes de typedef permitem que você encapsule os detalhes da implementação que podem ser alterados.  
+## <a name="typedefs"></a>Typedefs  
+ A `typedef` declaration introduces a name that, within its scope, becomes a synonym for the type given by the *type-declaration* portion of the declaration.  
   
- Em contraste com declarações **class**, `struct`, **union** e `enum`, as declarações de `typedef` não introduzem novos tipos — introduzem novos nomes para tipos existentes.  
+ You can use typedef declarations to construct shorter or more meaningful names for types already defined by the language or for types that you have declared. Typedef names allow you to encapsulate implementation details that may change.  
   
- Nomes declarados usando `typedef` ocupam o mesmo namespace que outros identificadores \(exceto os rótulos de instrução\).  Portanto, não podem usar o mesmo identificador de um nome declarado anteriormente, exceto em uma declaração de tipo de classe.  Considere o exemplo a seguir:  
+ In contrast to the **class**, `struct`, **union**, and `enum` declarations, `typedef` declarations do not introduce new types — they introduce new names for existing types.  
+  
+ Names declared using `typedef` occupy the same namespace as other identifiers (except statement labels). Therefore, they cannot use the same identifier as a previously declared name, except in a class-type declaration. Consider the following example:  
   
 ```  
 // typedef_names1.cpp  
@@ -169,7 +181,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.  
 ```  
   
- As regras de ocultação de nome pertencentes a outros identificadores também controlam a visibilidade dos nomes declarados usando `typedef`.  Portanto, o exemplo a seguir é válido em C\+\+:  
+ The name-hiding rules that pertain to other identifiers also govern the visibility of names declared using `typedef`. Therefore, the following example is legal in C++:  
   
 ```  
 // typedef_names2.cpp  
@@ -181,12 +193,7 @@ int main()
   
 // typedef UL back in scope  
 ```  
-  
--   [Redeclaração de nomes de typedef](../misc/redeclaration-of-typedef-names.md)  
-  
--   [Uso do typedef com tipos de classe](../misc/use-of-typedef-with-class-types.md)  
-  
--   [Namespace de nomes de typedef](../misc/name-space-of-typedef-names.md)  
+ 
   
 ```  
 // typedef_specifier1.cpp  
@@ -202,37 +209,37 @@ void myproc( int )
 }  
 ```  
   
- Ao declarar um identificador de escopo local com o mesmo nome de um typedef, ou ao declarar um membro de uma estrutura ou de uma união no mesmo escopo ou em um escopo interno, o especificador do tipo deverá ser especificado.  Por exemplo:  
+ When declaring a local-scope identifier by the same name as a typedef, or when declaring a member of a structure or union in the same scope or in an inner scope, the type specifier must be specified. For example:  
   
 ```  
 typedef char FlagType;  
 const FlagType x;  
 ```  
   
- Para reutilizar o nome `FlagType` para um identificador, um membro da estrutura ou da união, o tipo deve ser fornecido:  
+ To reuse the `FlagType` name for an identifier, a structure member, or a union member, the type must be provided:  
   
 ```  
 const int FlagType;  // Type specifier required  
 ```  
   
- Não é suficiente indicar  
+ It is not sufficient to say  
   
 ```  
 const FlagType;      // Incomplete specification  
 ```  
   
- pois `FlagType` é tomado como parte do tipo, não como um identificador que redeclarado.  Esta declaração é executada para ser uma declaração inválida como  
+ because the `FlagType` is taken to be part of the type, not an identifier that is being redeclared. This declaration is taken to be an illegal declaration like  
   
 ```  
 int;  // Illegal declaration   
 ```  
   
- Você pode declarar qualquer tipo com typedef, incluindo o ponteiro, função e tipos de matriz.  Você pode declarar um nome de typedef para um ponteiro para um tipo de estrutura ou união antes de definir o tipo da estrutura ou de união, contanto que a definição tenha a mesma visibilidade da declaração.  
+ You can declare any type with typedef, including pointer, function, and array types. You can declare a typedef name for a pointer to a structure or union type before you define the structure or union type, as long as the definition has the same visibility as the declaration.  
   
-### Exemplos  
- Um uso de declarações `typedef` é tornar as declarações mais uniformes e compactas.  Por exemplo:  
+### <a name="examples"></a>Examples  
+ One use of `typedef` declarations is to make declarations more uniform and compact. For example:  
   
-```  
+```cpp  
 typedef char CHAR;          // Character type.  
 typedef CHAR * PSTR;        // Pointer to a string (char *).  
 PSTR strchr( PSTR source, CHAR target );  
@@ -240,33 +247,33 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- Para usar `typedef` para especificar tipos fundamentais e derivados na mesma declaração, você pode separar os declaradores com vírgulas.  Por exemplo:  
+ To use `typedef` to specify fundamental and derived types in the same declaration, you can separate declarators with commas. For example:  
   
 ```  
 typedef char CHAR, *PSTR;  
 ```  
   
- O exemplo a seguir fornece o tipo `DRAWF` para uma função que não retorna valor e que usa dois argumentos int:  
+ The following example provides the type `DRAWF` for a function returning no value and taking two int arguments:  
   
 ```  
 typedef void DRAWF( int, int );  
 ```  
   
- Após a instrução de `typedef` anterior, a declaração  
+ After the above `typedef` statement, the declaration  
   
 ```  
 DRAWF box;   
 ```  
   
- é equivalente à declaração  
+ would be equivalent to the declaration  
   
 ```  
 void box( int, int );  
 ```  
   
- `typedef` é combinado com frequência com `struct` para declarar e nomear tipos definidos pelo usuário:  
+ `typedef` is often combined with `struct` to declare and name user-defined types:  
   
-```  
+```cpp  
 // typedef_specifier2.cpp  
 #include <stdio.h>  
   
@@ -285,11 +292,14 @@ int main()
 }  
 ```  
   
-  **10   0.990000**   
-### Nova declaração Typedefs  
- A declaração `typedef` pode ser usada para redeclarar o mesmo nome para fazer referência ao mesmo tipo.  Por exemplo:  
-  
+```Output  
+10   0.990000  
 ```  
+  
+### <a name="re-declaration-of-typedefs"></a>Re-declaration of typedefs  
+ The `typedef` declaration can be used to redeclare the same name to refer to the same type. For example:  
+  
+```cpp  
 // FILE1.H  
 typedef char CHAR;  
   
@@ -301,18 +311,18 @@ typedef char CHAR;
 #include "file2.h"   // OK  
 ```  
   
- O programa PROG.CPP inclui dois arquivos de cabeçalho, os quais contêm declarações `typedef` para o nome `CHAR`.  Contanto que as duas declarações façam referência ao mesmo tipo, essa redeclaração é aceitável.  
+ The program PROG.CPP includes two header files, both of which contain `typedef` declarations for the name `CHAR`. As long as both declarations refer to the same type, such redeclaration is acceptable.  
   
- Um `typedef` não pode redefinir um nome que foi declarado anteriormente como um tipo diferente.  Portanto, se FILE2.H contém  
+ A `typedef` cannot redefine a name that was previously declared as a different type. Therefore, if FILE2.H contains  
   
-```  
+```cpp  
 // FILE2.H  
 typedef int CHAR;     // Error  
 ```  
   
- o compilador emite um erro devido à tentativa de redeclarar o nome `CHAR` para fazer referência a um tipo diferente.  Isso se estende a construtos como:  
+ the compiler issues an error because of the attempt to redeclare the name `CHAR` to refer to a different type. This extends to constructs such as:  
   
-```  
+```cpp  
 typedef char CHAR;  
 typedef CHAR CHAR;      // OK: redeclared as same type  
   
@@ -323,10 +333,10 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;  
 ```  
   
-### definições de tipo no C\+\+ vs.C  
- O uso do especificador `typedef` com tipos de classe tem amplo suporte devido à prática de ANSI C de declaração de estruturas sem nome em declarações `typedef`.  Por exemplo, muitos desenvolvedores de C usam o seguinte:  
+### <a name="typedefs-in-c-vs-c"></a>typedefs in C++ vs. C  
+ Use of the `typedef` specifier with class types is supported largely because of the ANSI C practice of declaring unnamed structures in `typedef` declarations. For example, many C programmers use the following:  
   
-```  
+```cpp  
 // typedef_with_class_types1.cpp  
 // compile with: /c  
 typedef struct {   // Declare an unnamed structure and give it the  
@@ -336,21 +346,21 @@ typedef struct {   // Declare an unnamed structure and give it the
 } POINT;  
 ```  
   
- A vantagem dessa declaração é que ela permite declarações como:  
+ The advantage of such a declaration is that it enables declarations like:  
   
 ```  
 POINT ptOrigin;  
 ```  
   
- em vez de:  
+ instead of:  
   
 ```  
 struct point_t ptOrigin;  
 ```  
   
- No C\+\+, a diferença entre os nomes de `typedef` e os tipos reais \(declarados com as palavras\-chave **class**, `struct`, **union** e `enum`\) é mais distinta.  Embora a prática de C de declarar uma estrutura sem nome em uma instrução `typedef` ainda funcione, ela não fornece nenhum benefício notacional como em C.  
+ In C++, the difference between `typedef` names and real types (declared with the **class**, `struct`, **union**, and `enum` keywords) is more distinct. Although the C practice of declaring a nameless structure in a `typedef` statement still works, it provides no notational benefits as it does in C.  
   
-```  
+```cpp  
 // typedef_with_class_types2.cpp  
 // compile with: /c /W1  
 typedef struct {  
@@ -360,13 +370,11 @@ typedef struct {
 } POINT;  
 ```  
   
- O exemplo anterior declara uma classe chamada `POINT` usando a sintaxe `typedef` da classe sem nome.  `POINT` é tratado como um nome de classe; no entanto, as seguintes restrições se aplicam aos nomes introduzidos desta forma:  
+ The preceding example declares a class named `POINT` using the unnamed class `typedef` syntax. `POINT` is treated as a class name; however, the following restrictions apply to names introduced this way:  
   
--   O nome \(o sinônimo\) não pode aparecer após o prefixo **class**, `struct` ou **union**.  
+-   The name (the synonym) cannot appear after a **class**, `struct`, or **union** prefix.  
   
--   O nome não pode ser usado como nomes de construtor ou destruidor dentro de uma declaração da classe.  
+-   The name cannot be used as constructor or destructor names within a class declaration.  
   
- Em resumo, essa sintaxe não fornece um mecanismo para herança, construção ou destruição.  
-  
-## Consulte também  
- [usando palavra\-chave](../misc/using-keyword.md)
+ In summary, this syntax does not provide any mechanism for inheritance, construction, or destruction.  
+

@@ -1,94 +1,112 @@
 ---
-title: "TN003: mapeamento de identificadores do Windows para objetos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mapping"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapas de identificador"
-  - "mapeamentos, manipuladores do Windows para objetos"
-  - "TN003"
-  - "manipuladores do Windows para objetos [C++]"
+title: 'TN003: Mapping of Windows Handles to Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mapping
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN003
+- handle maps
+- Windows handles to objects [MFC]
+- mappings [MFC]], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
 caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN003: mapeamento de identificadores do Windows para objetos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1ae730c803bd8c8e4e3f5c5a700ccfb52fb738e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Essa observação descreve as rotinas de MFC que dão suporte a identificadores de objeto do windows do para objetos C\+\+.  
+---
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapping of Windows Handles to Objects
+This note describes the MFC routines that support mapping Windows object handles to C++ objects.  
   
-## O problema  
- Os objetos do windows geralmente são representados por vários objetos de [ALÇA](http://msdn.microsoft.com/library/windows/desktop/aa383751) os identificadores de objeto do windows da quebra automática das classes MFC com C\+\+ objeto.  O identificador que envolve funções da biblioteca MFC da classe permite localizar o objeto do C\+\+ que está encapsulando o objeto que tem um identificador específico.  No entanto, às vezes um objeto não tiver o objeto de wrapper c criando e essas hora do sistema cria um objeto temporário para atuar como o wrapper C\+\+.  
+## <a name="the-problem"></a>The Problem  
+ Windows objects are typically represented by various [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751) objects The MFC classes wrap Windows object handles with C++ objects. The handle wrapping functions of the MFC class library let you find the C++ object that is wrapping the Windows object that has a particular handle. However, sometimes an object does not have a C++ wrapper object and at these times the system creates a temporary object to act as the C++ wrapper.  
   
- O objeto que os mapas do identificador de uso são os seguintes:  
+ The Windows objects that use handle maps are as follows:  
   
--   HWND \([CWnd](../Topic/CWnd%20Class.md) e `CWnd`\- classes derivadas\)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) and `CWnd`-derived classes)  
   
--   HDC \([CDC](../Topic/CDC%20Class.md) e `CDC`\- classes derivadas\)  
+-   HDC ([CDC](../mfc/reference/cdc-class.md) and `CDC`-derived classes)  
   
--   HMENU \([CMenu](../mfc/reference/cmenu-class.md)\)  
+-   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
--   HPEN \([CGdiObject](../mfc/reference/cgdiobject-class.md)\)  
+-   HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))  
   
--   HBRUSH \(`CGdiObject`\)  
+-   HBRUSH (`CGdiObject`)  
   
--   HFONT \(`CGdiObject`\)  
+-   HFONT (`CGdiObject`)  
   
--   HBITMAP \(`CGdiObject`\)  
+-   HBITMAP (`CGdiObject`)  
   
--   HPALETTE \(`CGdiObject`\)  
+-   HPALETTE (`CGdiObject`)  
   
--   HRGN \(`CGdiObject`\)  
+-   HRGN (`CGdiObject`)  
   
--   HIMAGELIST \([CImageList](../Topic/CImageList%20Class.md)\)  
+-   HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))  
   
--   SOQUETE \([CSocket](../mfc/reference/csocket-class.md)\)  
+-   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Um identificador atribuído a qualquer um desses objetos, você pode localizar o objeto de MFC que encapsula o identificador chamando o método estático `FromHandle`.  Por exemplo, em um HWND chamou `hWnd`, a linha a seguir retornará um ponteiro para `CWnd` que encapsula `hWnd`:  
+ Given a handle to any one of these objects, you can find the MFC object that wraps the handle by calling the static method `FromHandle`. For example, given an HWND called `hWnd`, the following line will return a pointer to the `CWnd` that wraps `hWnd`:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Se `hWnd` não tem um objeto específico de wrapper, `CWnd` temporário será criado para envolver `hWnd`.  Isso possibilita fazer um objeto válido C\+\+ de qualquer identificador.  
+ If `hWnd` does not have a specific wrapper object, a temporary `CWnd` is created to wrap `hWnd`. This makes it possible to obtain a valid C++ object from any handle.  
   
- Depois que você tiver um objeto de wrapper, você pode recuperar seu identificador de uma variável pública do membro da classe de invólucro.  No caso de `CWnd`, `m_hWnd` contém o HWND para esse objeto.  
+ After you have a wrapper object, you can retrieve its handle from a public member variable of the wrapper class. In the case of a `CWnd`, `m_hWnd` contains the HWND for that object.  
   
-## Anexando identificadores para objetos MFC  
- Dado um objeto recém\-criado alça\- de invólucro e um identificador para o objeto, você pode associar os dois chamando a função de `Attach` como neste exemplo:  
+## <a name="attaching-handles-to-mfc-objects"></a>Attaching Handles to MFC Objects  
+ Given a newly created handle-wrapper object and a handle to a Windows object, you can associate the two by calling the `Attach` function as in this example:  
   
 ```  
 CWnd myWnd;  
-myWnd.Attach(hWnd);  
+myWnd.Attach(hWnd);
 ```  
   
- Isso torna uma entrada no mapa permanente que associa `myWnd` e `hWnd`.  A chamada `CWnd::FromHandle(hWnd)` retornará agora um ponteiro para `myWnd`.  Quando `myWnd` é excluído, o destruidor destruirá automaticamente `hWnd` chamando a função de [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) do windows.  Se isso não for desejado, `hWnd` deve ser desanexado de `myWnd` antes de `myWnd` ser destruído \(normalmente deixando o escopo em que `myWnd` estiver definido\).  O método de `Detach` faz isso.  
+ This makes an entry in the permanent map associating `myWnd` and `hWnd`. Calling `CWnd::FromHandle(hWnd)` will now return a pointer to `myWnd`. When `myWnd` is deleted, the destructor will automatically destroy `hWnd` by calling the Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) function. If this is not desired, `hWnd` must be detached from `myWnd` before `myWnd` is destroyed (normally when leaving the scope at which `myWnd` was defined). The `Detach` method does this.  
   
 ```  
-myWnd.Detach();  
+myWnd.Detach();
 ```  
   
-## Mais objetos temporários  
- Os objetos temporários são criados sempre que `FromHandle` é fornecido um identificador que não tem um objeto do wrapper.  Esses objetos temporários são desanexados de seu identificador e excluídos por funções de `DeleteTempMap` .  Por padrão [CWinThread::OnIdle](../Topic/CWinThread::OnIdle.md) chama automaticamente `DeleteTempMap` para cada classe que oferece suporte a mapas temporários do identificador.  Isso significa que você não pode assumir um ponteiro para um objeto temporário será válida após o ponto de saída da função onde o ponteiro foi obtido.  
+## <a name="more-about-temporary-objects"></a>More About Temporary Objects  
+ Temporary objects are created whenever `FromHandle` is given a handle that does not already have a wrapper object. These temporary objects are detached from their handle and deleted by the `DeleteTempMap` functions. By default [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatically calls `DeleteTempMap` for each class that supports temporary handle maps. This means that you cannot assume a pointer to a temporary object will be valid past the point of exit from the function where the pointer was obtained.  
   
-## Objetos de invólucro e vários threads  
- Os objetos temporários e permanentes são mantidos em uma base por thread.  Isto é, um thread não pode acessar objetos de wrapper de C\+\+ de outro thread, independentemente de se é temporário ou permanente.  
+## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper Objects and Multiple Threads  
+ Both temporary and permanent objects are maintained on a per-thread basis. That is, one thread cannot access another thread's C++ wrapper objects, regardless of whether it is temporary or permanent.  
   
- Para passar esses objetos de um thread para outro, envie sempre como seu tipo nativo de `HANDLE` .  Passe o objeto de wrapper c criando de um thread para outro fará com que frequência resultados inesperados.  
+ To pass these objects from one thread to another, always send them as their native `HANDLE` type. Passing a C++ wrapper object from one thread to another will often cause unexpected results.  
   
-## Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Assistente de classe MFC | Documentos do Microsoft
+title: MFC Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,89 +34,89 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 42e46853541b9770a61fba4314fbbb37dea80d43
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-class-wizard"></a>Assistente de classe MFC
-Permite adicionar mensagens e manipuladores de mensagens para classes no seu projeto. Você também pode iniciar outros assistentes ou adicionar uma classe ao seu projeto.  
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- Para abrir o **MFC Class Wizard**, no **projeto** menu, clique em **Class Wizard**. Para abrir o assistente com um atalho de teclado, digite CTRL + SHIFT + X.  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## <a name="uielement-list"></a>Lista UIElement  
- **Projeto**  
- O nome de um projeto em sua solução.  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- Você pode selecionar outros projetos na solução na caixa de listagem suspensa.  
+ You can select other projects in your solution from the drop-down list box.  
   
- **Nome da classe**  
- O nome de uma classe em seu projeto.  
+ **Class name**  
+ The name of a class in your project.  
   
- Quando você seleciona uma classe no **nome da classe** lista, dados da classe preenche os controles a **MFC Class Wizard**. Quando você altera o valor de um controle, os dados na classe selecionada são afetados.  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **Adicionar classe**  
- Permite adicionar uma classe de uma das várias fontes.  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- Dependendo da sua seleção, o **Assistente de classe do MFC adicionar**, **Adicionar classe de Typelib assistente**, **classe do ActiveX Assistente para adicionar controle**, ou **Assistente de consumidor ODBC MFC** é iniciado.  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **Classe base**  
- A classe base da classe que é exibida no **nome da classe**.  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **Declaração de classe**  
- A classe na qual o **nome da classe** classe é declarada.  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- O **declaração de classe** caixa é exibida somente se o nome do difere do nome em **implementação da classe**.  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **Recurso**  
- A ID do recurso no **nome da classe**, se houver. Caso contrário, o **recursos** caixa estiver vazia.  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **Implementação da classe**  
- O nome do arquivo que contém a implementação da classe de **nome da classe**.  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- Você pode selecionar um arquivo de implementação diferentes clicando na seta. A tabela a seguir lista as opções disponíveis.  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|Opção|Descrição|  
+|Option|Description|  
 |------------|-----------------|  
-|**Abrir arquivo**|Sai do Assistente de classe e abre o arquivo de implementação de classe atual.|  
-|**Abra que contém a pasta**|Abre a pasta que contém o arquivo de implementação de classe atual.|  
-|**Copiar caminho completo para a área de transferência**|Copia o caminho do arquivo de implementação atual para a área de transferência.|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **Comandos**  
- Permite adicionar, excluir, editar ou pesquisar um comando e o manipulador de mensagens.  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- Para adicionar um manipulador, clique em **Adicionar manipulador**, ou clique duas vezes em um item de **IDs de objeto** lista ou **mensagens** lista. O nome da função, ID e mensagem resultante são exibidos na **funções de membro** lista.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- Para excluir um manipulador, selecione um item no **funções de membro** lista e, em seguida, clique em **excluir manipulador**.  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- Para modificar um manipulador, clique duas vezes no item correspondente no **funções de membro** lista. Ou, selecione um item na caixa de listagem e, em seguida, clique em **editar código**.  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **Mensagens**  
- Permite adicionar, excluir, editar ou pesquisar uma mensagem e seu manipulador de mensagens.  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- Para adicionar um manipulador, clique em **Adicionar manipulador**, ou clique duas vezes em um item de **mensagens** lista.  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- Para adicionar uma mensagem personalizada, clique em **Adicionar mensagem personalizada** ou pressione a tecla Enter e, em seguida, especifique valores de **Adicionar mensagem personalizada** caixa de diálogo. Na caixa de diálogo, você também pode selecionar **mensagem registrada** para lidar com uma mensagem da janela é garantida como sendo exclusivo em todo o sistema operacional.  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **Funções virtuais**  
- Permite adicionar, excluir, editar ou pesquisar uma função virtual ou uma função virtual substituída.  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **Variáveis de membro**  
- Permite adicionar, excluir, editar ou pesquisar uma variável de membro.  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **Métodos**  
- Permite adicionar, excluir, ou procure um método e também ir para a definição ou declaração de um método.  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- Para adicionar um método, clique em **Adicionar método**e especifique valores no **Adicionar método** caixa de diálogo.  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- Para excluir um método, selecione um item no **métodos** lista e, em seguida, clique em **método Delete**.  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- Para exibir uma declaração, selecione um item no **métodos** lista e, em seguida, clique em **ir para declaração.**  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- Para exibir uma definição, clique duas vezes em um item de **métodos** lista. Ou, selecione um item no **métodos** lista e, em seguida, clique no **ir para definição** botão.  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

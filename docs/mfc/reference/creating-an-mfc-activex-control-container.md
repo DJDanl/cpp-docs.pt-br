@@ -1,5 +1,5 @@
 ---
-title: "Criando um contêiner de controle ActiveX MFC | Documentos do Microsoft"
+title: Creating an MFC ActiveX Control Container | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC ActiveX controls [C++], containers
-- ActiveX control containers [C++], creating
-- containers [C++], creating
-- OLE controls [C++], containers
+- MFC ActiveX controls [MFC], containers
+- ActiveX control containers [MFC], creating
+- containers [MFC], creating
+- OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
 caps.latest.revision: 8
 author: mikeblome
@@ -36,31 +36,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 54e2edef0a0b37da1260e9d62c57524e864356be
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9bfc976963c759b540fc104fbddceebcc8747375
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-an-mfc-activex-control-container"></a>Criando um contêiner de controle ActiveX MFC
-Um contêiner de controle ActiveX é um programa pai que fornece o ambiente para um controle ActiveX (anteriormente OLE) para executar. Você pode criar um aplicativo capaz de conter controles ActiveX com ou sem MFC, mas é muito mais fácil de fazer com o MFC.  
+# <a name="creating-an-mfc-activex-control-container"></a>Creating an MFC ActiveX Control Container
+An ActiveX control container is a parent program that supplies the environment for an ActiveX (formerly OLE) control to run. You can create an application capable of containing ActiveX controls with or without MFC, but it is much easier to do with MFC.  
   
- Criando um contêiner MFC programa usando o [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) permite acessar muitos recursos de automação e controles ActiveX que são implementados pelas classes do MFC e ActiveX. Esses recursos incluem a edição visual, automação, criando arquivos compostos e suportam para controles. As opções de edição visual MFC Application Wizard que oferecerá suporte a seu programa pai incluem a criação de um contêiner, um servidor simplificado, um servidor completo e um programa que é um contêiner e um servidor.  
+ Creating an MFC container program using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) allows you to access the many features of ActiveX controls and Automation that are implemented by the MFC and ActiveX classes. These features include visual editing, Automation, creating compound files, and support for controls. The MFC Application Wizard visual editing options that your parent program will support include creating a container, a mini-server, a full-server, and a program that is both a container and a server.  
   
--   **Novo aplicativo do MFC**. Para criar um novo programa MFC que inclui automação, edição visual, composta de arquivos, ou controlar suporte, use o Assistente para aplicativo do MFC e escolha as opções de automação apropriadas.  
+-   **New MFC Application**. To create a new MFC program that includes Automation, visual editing, compound files, or control support, use the MFC Application Wizard and choose the appropriate Automation options.  
   
--   **Aplicativo MFC existente**. Se você estiver adicionando contenção de controle a um aplicativo MFC existente, consulte [contêineres de controle OLE: manualmente habilitando OLE contenção de controle](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
+-   **Existing MFC Application**. If you are adding control containment to an existing MFC application, see [OLE Control Containers: Manually Enabling OLE Control Containment](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
   
-### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Para criar um contêiner do ActiveX para qualquer um dos seguintes tipos de aplicativos  
+### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>To create an ActiveX container for any of the following types of applications  
   
-1.  [Contêineres](../../mfc/containers.md)  
+1.  [Containers](../../mfc/containers.md)  
   
-2.  [Edição Visual](../../mfc/ole-mfc.md)  
+2.  [Visual editing](../../mfc/ole-mfc.md)  
   
-3.  [Controles ActiveX MFC](../../mfc/mfc-activex-controls.md)  
+3.  [MFC ActiveX controls](../../mfc/mfc-activex-controls.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)
+## <a name="see-also"></a>See Also  
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)
 
 

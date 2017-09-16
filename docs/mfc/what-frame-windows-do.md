@@ -1,49 +1,67 @@
 ---
-title: "O que fazem janelas de quadro | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "janelas com moldura, sobre janelas com moldura"
-  - "janelas com moldura, tarefas"
-  - "MFC, janelas com moldura"
+title: What Frame Windows Do | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], about frame widows
+- frame windows [MFC], tasks
+- MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# O que fazem janelas de quadro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c36c7c4390f548128ad31767bfd8288f079b5f40
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Além de simplesmente moldar uma exibição, as janelas de peças são responsáveis pelas várias tarefas envolvidas no coordenam o quadro com sua exibição e ao aplicativo.  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) herdam de [CFrameWnd](../mfc/reference/cframewnd-class.md), para que tenha os recursos de `CFrameWnd` bem como os novos recursos que adiciona.  Os exemplos das janelas filho incluem exibições, controla como os botões e as caixas de listagem, e barras de controle, inclusive barras de ferramentas, barras de status, e barras da caixa de diálogo.  
+---
+# <a name="what-frame-windows-do"></a>What Frame Windows Do
+Besides simply framing a view, frame windows are responsible for numerous tasks involved in coordinating the frame with its view and with the application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) inherit from [CFrameWnd](../mfc/reference/cframewnd-class.md), so they have `CFrameWnd` capabilities as well as new capabilities that they add. Examples of child windows include views, controls such as buttons and list boxes, and control bars, including toolbars, status bars, and dialog bars.  
   
- A janela do quadro é responsável por gerenciar o layout das janelas filho.  Na estrutura, MFC uma janela do quadro posiciona todas as barras de controle, exibições, e outras janelas filho dentro da área do cliente.  
+ The frame window is responsible for managing the layout of its child windows. In the MFC framework, a frame window positions any control bars, views, and other child windows inside its client area.  
   
- A janela do quadro também encaminha comandos às exibições e pode responder às notificações do windows de controle.  
+ The frame window also forwards commands to its views and can respond to notification messages from control windows.  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Barras de controle \(como se ajustaram a na janela do quadro\)](../Topic/Control%20Bars.md)  
+-   [Control bars (how they fit into the frame window)](../mfc/control-bars.md)  
   
--   [Gerenciando menus, barras de controle, e aceleradores \(como se ajustaram a na janela do quadro\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (how they fit into the frame window)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [Roteamento de comando \(quadro da janela da sua exibição e outros destinos de comando\)](../mfc/command-routing.md)  
+-   [Command Routing (from the frame window to its view and other command targets)](../mfc/command-routing.md)  
   
--   [Arquitetura de \/View do documento](../Topic/Document-View%20Architecture.md)  
+-   [Document /View Architecture](../mfc/document-view-architecture.md)  
   
--   [Barras de controle](../Topic/Control%20Bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
--   [Controles](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## Consulte também  
- [Janelas com moldura](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

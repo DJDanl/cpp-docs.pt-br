@@ -1,5 +1,5 @@
 ---
-title: Estrutura de BITMAP | Documentos do Microsoft
+title: BITMAP Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BITMAP structure
+- BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22bd4bfe4d2c396e0a7a706218c3d2fec08ab738
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="bitmap-structure"></a>Estrutura BITMAP
-O **BITMAP** estrutura define a altura, largura, formato de cor e valores dos bits de um bitmap lógico**.**  
+# <a name="bitmap-structure"></a>BITMAP Structure
+The **BITMAP** structure defines the height, width, color format, and bit values of a logical bitmap**.**  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagBITMAP {  /* bm */  
@@ -57,32 +57,32 @@ typedef struct tagBITMAP {  /* bm */
 } BITMAP;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  *bmType*  
- Especifica o tipo de bitmap. Para bitmaps lógico, esse membro deve ser 0.  
+ Specifies the bitmap type. For logical bitmaps, this member must be 0.  
   
  *bmWidth*  
- Especifica a largura do bitmap em pixels. A largura deve ser maior que 0.  
+ Specifies the width of the bitmap in pixels. The width must be greater than 0.  
   
  *bmHeight*  
- Especifica a altura do bitmap em linhas de varredura. A altura deve ser maior que 0.  
+ Specifies the height of the bitmap in raster lines. The height must be greater than 0.  
   
  *bmWidthBytes*  
- Especifica o número de bytes em cada linha de varredura. Esse valor deve ser um número par, pois a interface gráfica de dispositivo (GDI) pressupõe que os valores de bit de um bitmap formam uma matriz de inteiros (2 bytes). Em outras palavras, **bmWidthBytes** \* 8 deve ser o próximo múltiplo de 16 maior ou igual ao valor obtido quando o **bmWidth** membro é multiplicado pelo **bmBitsPixel** membro.  
+ Specifies the number of bytes in each raster line. This value must be an even number since the graphics device interface (GDI) assumes that the bit values of a bitmap form an array of integer (2-byte) values. In other words, **bmWidthBytes** \* 8 must be the next multiple of 16 greater than or equal to the value obtained when the **bmWidth** member is multiplied by the **bmBitsPixel** member.  
   
  *bmPlanes*  
- Especifica o número de planos de cores no bitmap.  
+ Specifies the number of color planes in the bitmap.  
   
  *bmBitsPixel*  
- Especifica o número de bits de cor adjacentes em cada plano necessário para definir um pixel.  
+ Specifies the number of adjacent color bits on each plane needed to define a pixel.  
   
  *bmBits*  
- Aponta para o local dos valores de bit do bitmap. O **bmBits** membro deve ser um ponteiro para uma matriz de valores de 1 byte long.  
+ Points to the location of the bit values for the bitmap. The **bmBits** member must be a long pointer to an array of 1-byte values.  
   
-## <a name="remarks"></a>Comentários  
- Os formatos de bitmap usado atualmente são monocromática e cor. O bitmap monocromático usa um formato de 1 bit, plano de 1. Cada digitalização é um múltiplo de 16 bits.  
+## <a name="remarks"></a>Remarks  
+ The currently used bitmap formats are monochrome and color. The monochrome bitmap uses a 1-bit, 1-plane format. Each scan is a multiple of 16 bits.  
   
- Verificações são organizadas da seguinte maneira para um bitmap monocromático da altura *n*:  
+ Scans are organized as follows for a monochrome bitmap of height *n*:  
   
  `Scan 0`  
   
@@ -98,16 +98,16 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- Os pixels em um dispositivo monocromático são ambos preto ou branco. Se o bit correspondente no bitmap for 1, o pixel é ativado (branco). Se o bit correspondente no bitmap for 0, o pixel é desativado (preto).  
+ The pixels on a monochrome device are either black or white. If the corresponding bit in the bitmap is 1, the pixel is turned on (white). If the corresponding bit in the bitmap is 0, the pixel is turned off (black).  
   
- Todos os dispositivos oferecem suporte a bitmaps que possuem o **RC_BITBLT** bit definido no **RASTERCAPS** índice da [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) função de membro.  
+ All devices support bitmaps that have the **RC_BITBLT** bit set in the **RASTERCAPS** index of the [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) member function.  
   
- Cada dispositivo tem seu próprio formato de cor exclusiva. Para transferir um bitmap de um dispositivo para outro, use o [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funções do Windows.  
+ Each device has its own unique color format. In order to transfer a bitmap from one device to another, use the [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) and [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows functions.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** wingdi  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
 

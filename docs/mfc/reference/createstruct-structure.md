@@ -1,5 +1,5 @@
 ---
-title: Estrutura CREATESTRUCT | Documentos do Microsoft
+title: CREATESTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CREATESTRUCT structure
+- CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ec72d4725cb7e5959369b24a6ff7f0e3e9da1ca7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0409e6ff80c9491ffc36b4ca7b6ecc05edfdb264
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="createstruct-structure"></a>Estrutura CREATESTRUCT
-O `CREATESTRUCT` estrutura define os parâmetros de inicialização passados para o procedimento de janela de um aplicativo.  
+# <a name="createstruct-structure"></a>CREATESTRUCT Structure
+The `CREATESTRUCT` structure defines the initialization parameters passed to the window procedure of an application.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagCREATESTRUCT {  
@@ -62,48 +62,48 @@ typedef struct tagCREATESTRUCT {
 } CREATESTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `lpCreateParams`  
- Pontos de dados a ser usado para criar a janela.  
+ Points to data to be used to create the window.  
   
  `hInstance`  
- Identifica o identificador de instância de módulo do módulo que possui a nova janela.  
+ Identifies the module-instance handle of the module that owns the new window.  
   
  `hMenu`  
- Identifica o menu a ser usado pela nova janela. Se uma janela filho, contém o ID de inteiro.  
+ Identifies the menu to be used by the new window. If a child window, contains the integer ID.  
   
  `hwndParent`  
- Identifica a janela que possui a nova janela. Esse membro é **nulo** se a nova janela é uma janela de nível superior.  
+ Identifies the window that owns the new window. This member is **NULL** if the new window is a top-level window.  
   
  `cy`  
- Especifica a altura da nova janela.  
+ Specifies the height of the new window.  
   
  `cx`  
- Especifica a largura da nova janela.  
+ Specifies the width of the new window.  
   
  `y`  
- Especifica a coordenada y do canto superior esquerdo da nova janela. Coordenadas são em relação a janela pai, se a nova janela é uma janela filho; Caso contrário, as coordenadas são em relação à origem da tela.  
+ Specifies the y-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `x`  
- Especifica a coordenada x do canto superior esquerdo da nova janela. Coordenadas são em relação a janela pai, se a nova janela é uma janela filho; Caso contrário, as coordenadas são em relação à origem da tela.  
+ Specifies the x-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `style`  
- Especifica a nova janela [estilo](../../mfc/reference/styles-used-by-mfc.md).  
+ Specifies the new window's [style](../../mfc/reference/styles-used-by-mfc.md).  
   
  `lpszName`  
- Aponta para uma cadeia de caracteres terminada em nulo que especifica o novo nome da janela.  
+ Points to a null-terminated string that specifies the new window's name.  
   
  `lpszClass`  
- Aponta para uma cadeia de caracteres terminada em nulo que especifica o nome da classe a nova janela Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura; para obter mais informações, consulte o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
+ Points to a null-terminated string that specifies the new window's Windows class name (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure; for more information, see the Windows SDK).  
   
  `dwExStyle`  
- Especifica o [estilo estendido](../../mfc/reference/extended-window-styles.md) para a nova janela.  
+ Specifies the [extended style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) for the new window.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** WinUser. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
 
 

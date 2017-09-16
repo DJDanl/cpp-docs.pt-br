@@ -1,138 +1,156 @@
 ---
-title: "Classes da caixa de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de caixa de diálogo comuns"
-  - "classes de caixa de diálogo"
-  - "classes de caixa de diálogo comuns OLE"
-  - "classes de folha de propriedades"
-  - "caixas de diálogo de guia"
+title: Dialog Box Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheet classes
+- dialog box classes
+- OLE common dialog classes
+- common dialog classes [MFC]
+- tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes da caixa de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 534f360915b0909b6dac97e6cc7afaae7ae38835
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A classe `CDialog` e suas classes derivadas encapsulam a funcionalidade da caixa de diálogo.  Desde que um diálogo é um tipo especial da janela, `CDialog` é derivado de `CWnd`.  Derivar suas classes da caixa de diálogo de `CDialog` ou use uma das classes comuns da caixa de diálogo para caixas de diálogo padrão, como abrir ou salvar um arquivo, uma impressão, selecionando uma fonte ou uma cor inicial, uma operação de localização e substituição, ou ao executar várias operações OLE\- relacionados.  
+---
+# <a name="dialog-box-classes"></a>Dialog Box Classes
+Class `CDialog` and its derived classes encapsulate dialog-box functionality. Since a dialog box is a special kind of window, `CDialog` is derived from `CWnd`. Derive your dialog classes from `CDialog` or use one of the common dialog classes for standard dialog boxes, such as opening or saving a file, printing, selecting a font or color, initiating a search-and-replace operation, or performing various OLE-related operations.  
   
  [CDialog](../mfc/reference/cdialog-class.md)  
- A classe base para todas as caixas de diálogo modal, e modeless.  
+ The base class for all dialog boxes, both modal and modeless.  
   
- [CDataExchange](../Topic/CDataExchange%20Class.md)  
- Fontes informações de troca de dados e de validação para caixas de diálogo.  
+ [CDataExchange](../mfc/reference/cdataexchange-class.md)  
+ Supplies data exchange and validation information for dialog boxes.  
   
-## Caixas de diálogo comum  
- Essas classes da caixa de diálogo encapsulam as caixas de diálogo comum do windows.  Fornecem implementações de fácil utilização de caixas de diálogo complicadas.  
+## <a name="common-dialogs"></a>Common Dialogs  
+ These dialog box classes encapsulate the Windows common dialog boxes. They provide easy-to-use implementations of complicated dialog boxes.  
   
- [CCommonDialog](../Topic/CCommonDialog%20Class.md)  
- Classe base para todas as caixas de diálogo comum.  
+ [CCommonDialog](../mfc/reference/ccommondialog-class.md)  
+ Base class for all common dialog boxes.  
   
- [CFileDialog](../Topic/CFileDialog%20Class.md)  
- Fornece uma caixa de diálogo padrão para abrir ou salvar um arquivo.  
+ [CFileDialog](../mfc/reference/cfiledialog-class.md)  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CColorDialog](../mfc/reference/ccolordialog-class.md)  
- Fornece uma caixa de diálogo padrão para selecionar uma cor.  
+ Provides a standard dialog box for selecting a color.  
   
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
- Fornece uma caixa de diálogo padrão para selecionar uma fonte.  
+ Provides a standard dialog box for selecting a font.  
   
- [CFindReplaceDialog](../Topic/CFindReplaceDialog%20Class.md)  
- Fornece uma caixa de diálogo padrão para uma operação de localização e substituição.  
+ [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
+ Provides a standard dialog box for a search-and-replace operation.  
   
- [CPrintDialog](../Topic/CPrintDialog%20Class.md)  
- Fornece uma caixa de diálogo padrão para imprimir um arquivo.  
+ [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Fornece uma folha de propriedade da cópia do Windows 2000.  
+ Provides a Windows 2000 Print property sheet.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
- Encapsula os serviços fornecidos pela caixa de diálogo comum de configuração de página do windows com suporte adicional para as margens definindo e da cópia.  
+ Encapsulates the services provided by the Windows common Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## Caixas de diálogo comum com OLE DB  
- OLE adiciona várias caixas de diálogo comum do windows.  Essas classes encapsulam as caixas de diálogo comum com OLE DB.  
+## <a name="ole-common-dialogs"></a>OLE Common Dialogs  
+ OLE adds several common dialog boxes to Windows. These classes encapsulate the OLE common dialog boxes.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Usado pela estrutura para conter implementações comuns de todas as caixas de diálogo do.  Todas as classes da caixa de diálogo na categoria da interface do usuário são derivadas dessa classe base.  `COleDialog` não pode ser usado diretamente.  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Exibe a caixa de diálogo do objeto de inserção, a interface do usuário padrão para inserir novos itens vinculados ou inseridos OLE.  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Exibe a caixa de diálogo especial da pasta, a interface do usuário padrão para implementar o comando especial da pasta de edição.  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Exibe a caixa de diálogo de Links de edição, a interface do usuário padrão para as informações de alteração em itens vinculados.  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Exibe a caixa de diálogo de ícone de alteração, a interface do usuário padrão para alterar o ícone associado a um item inserido ou vinculado OLE.  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Exibe a caixa de diálogo de conversão, a interface do usuário padrão para itens do converter de um tipo para outro.  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
- [COlePropertiesDialog](../Topic/COlePropertiesDialog%20Class.md)  
- Encapsula a caixa de diálogo OLE comum das propriedades do windows.  As caixas de diálogo DE propriedades comuns fornecem uma maneira fácil de um modo exibir e modificar as propriedades de um item OLE do documento consistente com os padrões do windows.  
+ [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
- [COleUpdateDialog](../Topic/COleUpdateDialog%20Class.md)  
- Exibe a caixa de diálogo da atualização, a interface do usuário padrão para atualizar todos os links em um documento.  A caixa de diálogo contém um indicador de progresso para indicar como o fim do procedimento de atualização é até a conclusão.  
+ [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Exibe a caixa de diálogo origem da alteração, a interface do usuário padrão para modificar o destino ou a origem de um link.  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Exibe o servidor as caixas de diálogo de resposta e ocupados do servidor, a interface do usuário padrão para tratar chamadas para os aplicativos ocupados.  Exibido normalmente automaticamente pela implementação de [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) .  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementation.  
   
-## Classes de folha de propriedade  
- As classes da folha de propriedades permitem seus aplicativos para usar as folhas de propriedades, também conhecidas como caixas de diálogo com guias.  As folhas de propriedades são um modo eficiente de organizar grandes quantidades controles em uma única caixa de diálogo.  
+## <a name="property-sheet-classes"></a>Property Sheet Classes  
+ The property sheet classes allow your applications to use property sheets, also known as tabbed dialogs. Property sheets are an efficient way to organize a large number of controls in a single dialog box.  
   
  [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
- Fornece páginas individuais em uma folha de propriedades.  Derivar uma classe de `CPropertyPage` para cada página é adicionada à folha de propriedades.  
+ Provides the individual pages within a property sheet. Derive a class from `CPropertyPage` for each page to be added to your property sheet.  
   
  [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
- Fornece o quadro para várias páginas de propriedades.  Derivar a sua classe de folha de propriedade de `CPropertySheet` para implementar rapidamente as folhas de propriedades.  
+ Provides the frame for multiple property pages. Derive your property sheet class from `CPropertySheet` to implement your property sheets quickly.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Exibe as propriedades de um controlador OLE em uma interface gráfica, semelhantes a uma caixa de diálogo.  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
-## Classes HTML \- base na caixa de diálogo  
- [CDHtmlDialog](../Topic/CDHtmlDialog%20Class.md)  
- Usado para criar as caixas de diálogo que implementam sua interface de usuário com HTML em vez de recursos da caixa de diálogo.  
+## <a name="html-based-dialog-classes"></a>HTML-based Dialog Classes  
+ [CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)  
+ Used to create dialog boxes that implement their user interface with HTML rather than dialog resources.  
   
  [CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)  
- Exibe várias páginas HTML em sequência e trata os eventos de cada página.  
+ Displays multiple HTML pages sequentially and handles the events from each page.  
   
-## Classes relacionadas  
- Essas classes não são caixas de diálogo por si mesmo, mas usam modelos da caixa de diálogo e têm muito do comportamento das caixas de diálogo.  
+## <a name="related-classes"></a>Related Classes  
+ These classes are not dialog boxes per se, but they use dialog box templates and have much of the behavior of dialog boxes.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Uma barra de controle que é baseado em um modelo da caixa de diálogo.  
+ A control bar that is based on a dialog box template.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Uma exibição de rolagem cujo layout é definido em um modelo da caixa de diálogo.  Derivar uma classe de `CFormView` para implementar uma interface do usuário com base em um modelo da caixa de diálogo.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Fornece uma exibição de formulário conectada diretamente a um objeto do conjunto de registros \(DAO\) de objeto de acesso a dados.  Como todas as exibições de formulário, `CDaoRecordView` é baseado em um modelo da caixa de diálogo.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Fornece uma exibição de formulário conectada diretamente a um objeto do conjunto de registros de ODBC.  Como todas as exibições de formulário, `CRecordView` é baseado em um modelo da caixa de diálogo.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Uma estrutura que contém informações sobre um trabalho de cópia ou visualização de impressão.  Usado pela arquitetura de impressão de [CView](../Topic/CView%20Class.md).  
+ A structure containing information about a print or print preview job. Used by the printing architecture of [CView](../mfc/reference/cview-class.md).  
   
-## Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

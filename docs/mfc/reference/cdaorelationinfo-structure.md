@@ -1,5 +1,5 @@
 ---
-title: Estrutura CDaoRelationInfo | Documentos do Microsoft
+title: CDaoRelationInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationInfo structure
+- CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7c3a8195aed2c3b3fe5c78c98afcc6e72a83cc21
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dee874251923212544fa886f5a219e1613fe61c9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationinfo-structure"></a>Estrutura CDaoRelationInfo
-O `CDaoRelationInfo` estrutura contém informações sobre uma relação definida entre os campos de duas tabelas em um [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto.  
+# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo Structure
+The `CDaoRelationInfo` structure contains information about a relation defined between fields of two tables in a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationInfo  
@@ -60,49 +60,49 @@ struct CDaoRelationInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Exclusivamente nomeia o objeto de relação. Para obter mais informações, consulte o tópico "Propriedade Name" na Ajuda do DAO.  
+ Uniquely names the relation object. For more information, see the topic "Name Property" in DAO Help.  
   
  *m_strTable*  
- Nomeia a tabela primária da relação.  
+ Names the primary table in the relation.  
   
  *m_strForeignTable*  
- Nomes de tabela externa na relação. Uma tabela externa é uma tabela usada para conter chaves estrangeiras. Geralmente, você usa uma tabela externa para estabelecer ou impor a integridade referencial. A tabela externa normalmente está no lado muitos de uma relação um-para-muitos. Exemplos de tabelas externas incluem tabelas que contêm códigos para o American estados ou províncias canadenses ou pedidos de clientes.  
+ Names the foreign table in the relation. A foreign table is a table used to contain foreign keys. Generally, you use a foreign table to establish or enforce referential integrity. The foreign table is usually on the many side of a one-to-many relationship. Examples of foreign tables include tables containing codes for the American states or Canadian provinces or customer orders.  
   
  `m_lAttributes`  
- Contém informações sobre o tipo de relação. O valor desse membro pode ser qualquer um dos seguintes:  
+ Contains information about the relation type. The value of this member can be any of the following:  
   
-- **dbRelationUnique** relação é-para-um.  
+- **dbRelationUnique** Relationship is one-to-one.  
   
-- **dbRelationDontEnforce** relação não é imposta (sem integridade referencial).  
+- **dbRelationDontEnforce** Relationship is not enforced (no referential integrity).  
   
-- **dbRelationInherited** relação existe em um banco de dados não atuais que contém as duas tabelas anexadas.  
+- **dbRelationInherited** Relationship exists in a noncurrent database that contains the two attached tables.  
   
-- **dbRelationLeft** a relação é uma associação à esquerda. Uma junção externa esquerda inclui todos os registros da primeira (esquerda) de duas tabelas, mesmo que não existem valores correspondentes para os registros da segunda tabela (direita).  
+- **dbRelationLeft** The relationship is a left join. A left outer join includes all of the records from the first (left-hand) of two tables, even if there are no matching values for records in the second (right-hand) table.  
   
-- **dbRelationRight** a relação é uma associação à direita. Uma junção externa direita inclui todos os registros da segunda (direita) de duas tabelas, mesmo que não existem valores correspondentes para os registros da primeira tabela (esquerda).  
+- **dbRelationRight** The relationship is a right join. A right outer join includes all of the records from the second (right-hand) of two tables, even if there are no matching values for records in the first (left-hand) table.  
   
-- **dbRelationUpdateCascade** atualizações ocorrerão em cascata.  
+- **dbRelationUpdateCascade** Updates will cascade.  
   
-- **dbRelationDeleteCascade** exclusões serão transmitida.  
+- **dbRelationDeleteCascade** Deletions will cascade.  
   
  `m_pFieldInfos`  
- Um ponteiro para uma matriz de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) estruturas. A matriz contém um objeto para cada campo na relação. O `m_nFields` membro de dados fornece uma contagem dos elementos da matriz.  
+ A pointer to an array of [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. The array contains one object for each field in the relation. The `m_nFields` data member gives a count of the array elements.  
   
  `m_nFields`  
- O número de `CDaoRelationFieldInfo` objetos no `m_pFieldInfos` membro de dados.  
+ The number of `CDaoRelationFieldInfo` objects in the `m_pFieldInfos` data member.  
   
-## <a name="remarks"></a>Comentários  
- As referências ao primário e secundário acima indicam como as informações são retornadas pelo [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) a função de membro na classe `CDaoDatabase`.  
+## <a name="remarks"></a>Remarks  
+ The references to Primary and Secondary above indicate how the information is returned by the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function in class `CDaoDatabase`.  
   
- Objetos de relação não são representados por uma classe do MFC. Em vez disso, o objeto DAO subjacente de um objeto MFC do `CDaoDatabase` classe mantém uma coleção de objetos de relação: `CDaoDatabase` fornece funções de membro para acessar alguns itens individuais de informações de relação, ou você podem acessá-los todos de uma vez com um `CDaoRelationInfo` objeto chamando o `GetRelationInfo` a função de membro do objeto de banco de dados que contém.  
+ Relation objects are not represented by an MFC class. Instead, the DAO object underlying an MFC object of the `CDaoDatabase` class maintains a collection of relation objects: `CDaoDatabase` supplies member functions to access some individual items of relation information, or you can access them all at once with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function of the containing database object.  
   
- As informações recuperadas pelo [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) função de membro é armazenada em um `CDaoRelationInfo` estrutura. `CDaoRelationInfo`também define um `Dump` compilações de função de membro no modo de depuração. Você pode usar `Dump` para despejar o conteúdo de um `CDaoRelationInfo` objeto.  
+ Information retrieved by the [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function is stored in a `CDaoRelationInfo` structure. `CDaoRelationInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationInfo` object.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>Consulte também  
- [Estrutura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)
 

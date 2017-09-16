@@ -1,81 +1,99 @@
 ---
-title: "Menus e recursos: adi&#231;&#245;es de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDP_OLE_INIT_FAILED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tabelas de teclas aceleradoras [C++], aplicativos de servidor"
-  - "Macro IDP_OLE_INIT_FAILED"
-  - "falha na inicialização de OLE"
-  - "aplicativos de servidor OLE, menus e recursos"
-  - "Servidores de edição visual OLE"
-  - "recursos [MFC], aplicativos de servidor"
-  - "aplicativos de servidor, tabela de aceleradores"
-  - "aplicativos de servidor, Menus e recursos OLE"
-  - "servidores, adições de menu"
-  - "edição de cadeia de caracteres, aplicativos de edição visual"
-  - "tabelas de cadeias de caracteres, aplicativos de edição visual"
-  - "edição visual, menus e recursos de aplicativo"
+title: 'Menus and Resources: Server Additions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDP_OLE_INIT_FAILED
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE visual editing servers [MFC]
+- accelerator tables [MFC], server applications
+- visual editing [MFC], application menus and resources
+- server applications [MFC], accelerator table
+- string tables [MFC], visual editing applications
+- servers [MFC], menu additions
+- resources [MFC], server applications
+- OLE server applications [MFC], menus and resources
+- string editing [MFC], visual editing applications
+- IDP_OLE_INIT_FAILED macro [MFC]
+- server applications [MFC], OLE menus and resources
+- OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Menus e recursos: adi&#231;&#245;es de servidor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfbeb53251242f545f35908c051ab18192965124
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Este artigo explica as alterações que precisam ser feitas nos menus e outros recursos em um aplicativo visual do servidor edition \(componente\).  Um aplicativo de servidor exige várias adições à estrutura de menu e outros recursos como o pode ser iniciado em um de três modos: suporte a seguir, inserido sozinho, ou no lugar.  Como descrito no artigo de [Menus e recursos \(OLE\)](../mfc/menus-and-resources-ole.md) , há um máximo de quatro conjuntos de menus.  Todos os quatro são usados para um aplicativo de servidor full\-scale MDI, quando apenas três são usados para um miniserver.  O assistente de aplicativo criará o layout do menu necessário para o tipo de servidor que você deseja.  Qualquer personalizaçaõ pode ser necessária.  
+---
+# <a name="menus-and-resources-server-additions"></a>Menus and Resources: Server Additions
+This article explains the changes that need to be made to the menus and other resources in a visual editing server (component) application. A server application requires many additions to the menu structure and other resources because it can be started in one of three modes: stand alone, embedded, or in place. As described in the [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md) article, there are a maximum of four sets of menus. All four are used for an MDI full-server application, while only three are used for a miniserver. The application wizard will create the menu layout necessary for the type of server you want. Some customization may be necessary.  
   
- Se você não usar o assistente de aplicativo, talvez você queira examinar HIERSVR.RC, o script de recursos para o aplicativo de exemplo [HIERSVR](../top/visual-cpp-samples.md)MFC, consulte como essas alterações são implementadas.  
+ If you do not use the application wizard, you may want to look at HIERSVR.RC, the resource script for the MFC sample application [HIERSVR](../visual-cpp-samples.md), to see how these changes are implemented.  
   
- Os tópicos abordados neste artigo incluem:  
+ Topics covered in this article include:  
   
--   [Adições de menu do servidor](#_core_server_menu_additions)  
+-   [Server Menu Additions](#_core_server_menu_additions)  
   
--   [Adições da tabela de aceleração](#_core_server_application_accelerator_table_additions)  
+-   [Accelerator Table Additions](#_core_server_application_accelerator_table_additions)  
   
--   [Adições da tabela de cadeia de caracteres](../mfc/menus-and-resources-container-additions.md)  
+-   [String Table Additions](../mfc/menus-and-resources-container-additions.md)  
   
--   [Adições de Miniserver](#_core_mini.2d.server_additions)  
+-   [Miniserver Additions](#_core_mini.2d.server_additions)  
   
-##  <a name="_core_server_menu_additions"></a> Adições de menu do servidor  
- Os aplicativos de servidor \(componente\) devem ter os recursos do menu adicionados para oferecer suporte à edição visual OLE.  Os menus usados quando o aplicativo é executado no modo autônomo não precisam ser alterados, mas você deve adicionar dois novos recursos no menu antes de criar o aplicativo: um para oferecer suporte à ativação local e um para dar suporte ao servidor que está completamente aberto.  Ambos os recursos do menu são usados por aplicativos completo e de miniserver.  
+##  <a name="_core_server_menu_additions"></a> Server Menu Additions  
+ Server (component) applications must have menu resources added to support OLE visual editing. The menus used when the application is run in stand-alone mode do not have to be changed, but you must add two new menu resources before building the application: one to support in-place activation and one to support the server being fully open. Both menu resources are used by full- and miniserver applications.  
   
--   Para oferecer suporte à ativação no local, você deve criar um recurso de menu que seja muito semelhante ao recurso de menu usado quando executado em modo autônomo.  A diferença nesse menu é que os itens de Arquivo e da janela \(e alguns outros itens de menu que tratarem o aplicativo, e não os dados estão ausentes.\)  O aplicativo de contêiner fornecerá esses itens de menu.  Para obter mais informações sobre, e um exemplo, essa técnica menu\- mesclando, consulte o artigo [Menus e recursos: A mesclagem de menu](../mfc/menus-and-resources-menu-merging.md).  
+-   To support in-place activation, you must create a menu resource that is very similar to the menu resource used when run in stand-alone mode. The difference in this menu is that the File and Window items (and any other menu items that deal with the application, and not the data) are missing. The container application will supply these menu items. For more information on, and an example of, this menu-merging technique, see the article [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md).  
   
--   Para dar suporte à ativação completamente aberta, você deve criar um recurso no menu quase idêntico ao recurso de menu usado quando executado em modo autônomo.  A única alteração para esse recurso no menu é que alguns itens estão reformulados para refletir o fato que o servidor está operando em um item inserido em um documento composto.  
+-   To support fully open activation, you must create a menu resource nearly identical to the menu resource used when run in stand-alone mode. The only modification to this menu resource is that some items are reworded to reflect the fact that the server is operating on an item embedded in a compound document.  
   
- Além das alterações listadas neste artigo, seu arquivo de recurso precisa incluir AFXOLESV.RC, que é necessário para a implementação da biblioteca de classes do Microsoft.  Esse arquivo está em MFC \\ inclui o subdiretório.  
+ In addition to the changes listed in this article, your resource file needs to include AFXOLESV.RC, which is required for the Microsoft Foundation Class Library implementation. This file is in the MFC\Include subdirectory.  
   
-##  <a name="_core_server_application_accelerator_table_additions"></a> Adições da tabela de aceleração de aplicativo de servidor  
- Dois novos recursos de tabela de aceleração devem ser adicionados aos aplicativos de servidor; corresponde diretamente aos novos recursos no menu descritos anteriormente.  A primeira tabela de aceleração é usada quando o aplicativo para servidores é ativado no lugar.  Consiste de todas as entradas na tabela de aceleração de exibição com exceção associada aos menus de Arquivo e da janela.  
+##  <a name="_core_server_application_accelerator_table_additions"></a> Server Application Accelerator Table Additions  
+ Two new accelerator table resources must be added to server applications; they correspond directly to the new menu resources previously described. The first accelerator table is used when the server application is activated in place. It consists of all the entries in the view's accelerator table except those tied to the File and Window menus.  
   
- A segunda tabela é quase uma cópia exata da tabela de aceleração de exibição.  Algumas das diferenças paralelas alterações feitas no menu completamente aberto mencionado em [Adições de menu do servidor](#_core_server_menu_additions).  
+ The second table is nearly an exact copy of the view's accelerator table. Any differences parallel changes made in the fully open menu mentioned in [Server Menu Additions](#_core_server_menu_additions).  
   
- Para obter um exemplo dessas alterações da tabela de aceleração, compare as tabelas de aceleração de **IDR\_HIERSVRTYPE\_SRVR\_IP** e de **IDR\_HIERSVRTYPE\_SRVR\_EMB** com **IDR\_MAINFRAME** no arquivo de HIERSVR.RC incluído no exemplo [HIERSVR](../top/visual-cpp-samples.md)MFC OLE.  Os aceleradores de Arquivo e da janela estão ausentes de tabela no e requerem cópias deless estão na tabela inserido.  
+ For an example of these accelerator table changes, compare the **IDR_HIERSVRTYPE_SRVR_IP** and **IDR_HIERSVRTYPE_SRVR_EMB** accelerator tables with **IDR_MAINFRAME** in the HIERSVR.RC file included in the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). The File and Window accelerators are missing from the in-place table and exact copies of them are in the embedded table.  
   
-##  <a name="_core_string_table_additions_for_server_applications"></a> Adições da tabela de cadeia de caracteres para aplicativos de servidor  
- Apenas uma adição da tabela de cadeia de caracteres é necessária em um aplicativo de servidor — uma cadeia de caracteres para mostrar que a inicialização OLE DB falhou.  Como exemplo, aqui está a entrada de cadeia de caracteres\- tabela que o assistente do aplicativo gerenciar:  
+##  <a name="_core_string_table_additions_for_server_applications"></a> String Table Additions for Server Applications  
+ Only one string table addition is necessary in a server application — a string to signify that the OLE initialization failed. As an example, here is the string-table entry that the application wizard generates:  
   
-|ID|Cadeia de caracteres|  
-|--------|--------------------------|  
-|**IDP\_OLE\_INIT\_FAILED**|Falha na inicialização da OLE.  Certifique\-se de que as bibliotecas do são a versão correta.|  
+|ID|String|  
+|--------|------------|  
+|**IDP_OLE_INIT_FAILED**|OLE initialization failed. Make sure that the OLE libraries are the correct version.|  
   
-##  <a name="_core_mini.2d.server_additions"></a> Adições de Miniserver  
- As mesmas adições se aplicam a miniservers como aquelas listadas acima para servidores completo.  Como um miniserver não pode ser executado no modo autônomo, o menu principal é muito secundária.  O menu principal criado pelo assistente de aplicativo tem apenas um menu arquivo, contendo apenas a saída dos itens e aproximadamente.  Os menus e inseridos no local e os aceleradores para miniservers são os mesmos que os servidores para completo.  
+##  <a name="_core_mini.2d.server_additions"></a> Miniserver Additions  
+ The same additions apply for miniservers as those listed above for full-servers. Because a miniserver cannot be run in stand-alone mode, its main menu is much smaller. The main menu created by the application wizard has only a File menu, containing only the items Exit and About. Embedded and in-place menus and accelerators for miniservers are the same as those for full-servers.  
   
-## Consulte também  
- [Menus e recursos \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Menus e recursos: mescla de menu](../mfc/menus-and-resources-menu-merging.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md)
+
+

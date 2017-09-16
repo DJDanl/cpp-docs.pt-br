@@ -1,41 +1,59 @@
 ---
-title: "Um exemplo dos coment&#225;rios | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comentários de código, MFC"
-  - "comentários, MFC"
-  - "exemplos [MFC], comentários de código"
-  - "Arquivos de origem MFC, exemplo de comentário"
+title: An Example of the Comments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC source files, comment example
+- code comments, MFC
+- comments, MFC
+- examples [MFC], code comments
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Um exemplo dos coment&#225;rios
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e76e853073157dca03fec67a19a5f583c0cbfee7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-A seguinte lista parcial da classe `CChildFrame` usa a maioria dos comentários padrão que o MFC emprega em suas classes para particionar membros da classe que são usados por maneiras:  
+---
+# <a name="an-example-of-the-comments"></a>An Example of the Comments
+The following partial listing of class `CChildFrame` uses most of the standard comments that MFC employs in its classes to divide class members by the ways they are used:  
   
- [!CODE [NVC_MFCListView#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#5)]  
+ [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
   
- Esses comentários marcam consistentemente as seções de declaração da classe que contêm tipos semelhantes de membros da classe.  Tenha em mente que essas são as convenções MFC, não defina regras.  
+ These comments consistently mark sections of the class declaration that contain similar kinds of class members. Keep in mind that these are MFC conventions, not set rules.  
   
-## Consulte também  
- [Usando os arquivos de origem MFC](../Topic/Using%20the%20MFC%20Source%20Files.md)   
- [\/\/ Comentário da implementação](../mfc/decrement-implementation-comment.md)   
- [\/\/ Comentário sobre construtores](../mfc/decrement-constructors-comment.md)   
- [\/\/ Comentário sobre atributos](../Topic/--%20Attributes%20Comment.md)   
- [\/\/ Comentário sobre operações](../mfc/decrement-operations-comment.md)   
- [\/\/ Comentário sobre substituíveis](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

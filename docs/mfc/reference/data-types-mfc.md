@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados (MFC) | Documentos do Microsoft
+title: Data Types (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,24 +14,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LPCRECT data type
-- WPARAM data type
-- data types [C++], MFC
-- LRESULT
-- POSITION data type
-- UINT
-- LPVOID data type
-- COLORREF
-- LPCTSTR
-- LPSTR
-- DWORD operator
-- WORD data type
-- LPTSTR
+- LPCRECT data type [MFC]
+- WPARAM data type [MFC]
+- data types [MFC], MFC
+- LRESULT [MFC]
+- POSITION data type [MFC]
+- UINT [MFC]
+- LPVOID data type [MFC]
+- COLORREF [MFC]
+- LPCTSTR [MFC]
+- LPSTR [MFC]
+- DWORD operator [MFC]
+- WORD data type [MFC]
+- LPTSTR [MFC]
 - BYTE data type (Windows)
-- Long data type, Windows types
-- Boolean data type [C++], supported data types
-- LPARAM data type
-- LPCSTR
+- Long data type [MFC], Windows types
+- Boolean data type [MFC], supported data types
+- LPARAM data type [MFC]
+- LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
 caps.latest.revision: 14
 author: mikeblome
@@ -51,25 +51,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 042e8d987b64fca78dc3ff8eab9b9740b52017d9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88d40ab60e26647b840d673948b376c5549db137
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="data-types-mfc"></a>Tipos de dados (MFC)
-Este tópico lista os tipos de dados mais comumente usados na biblioteca Microsoft Foundation Class. A maioria dos tipos de dados são iguais na Platform Software Development Kit (SDK), enquanto outras são exclusivas para MFC.  
+# <a name="data-types-mfc"></a>Data Types (MFC)
+This topic lists the data types most commonly used in the Microsoft Foundation Class Library. Most of the data types are the same as those in the Platform Software Development Kit (SDK), while others are unique to MFC.  
   
- Para obter informações sobre os tipos de dados usados em ambos os [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] e MFC, consulte [tipos de dados do Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ For information about the data types used in both the             Windows SDK and MFC, see             [Windows Data Types](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
- Tipos de dados exclusivos para a biblioteca Microsoft Foundation Class incluem o seguinte:  
+ Data types unique to the Microsoft Foundation Class Library include the following:  
   
--   **POSIÇÃO** um valor usado para indicar a posição de um elemento em uma coleção, usados por classes de coleção MFC.  
+-   **POSITION** A value used to denote the position of an element in a collection; used by MFC collection classes.  
   
--   **LPCRECT** A 32-bit ponteiro para uma constante (não modificável) `RECT` estrutura.  
+-   **LPCRECT** A 32-bit pointer to a constant (nonmodifiable)                     `RECT` structure.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../../mfc/class-library-overview.md)   
- [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../../mfc/class-library-overview.md)   
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

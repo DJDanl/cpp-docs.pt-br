@@ -33,29 +33,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4493dbe0f50c35d06c0d90d0492a2c01301affd1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7a53f312f7a9cbaccfe143fe341227c2cd913fb6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
-Inclua o cabeçalho padrão `<typeinfo>` para definir vários tipos associados ao operador de identificação de tipo [operador typeid](../cpp/typeid-operator.md), que traz informações sobre tipos estáticos e dinâmicos.  
+Include the standard header `<typeinfo>` to define several types associated with the type-identification operator [typeid Operator](../cpp/typeid-operator.md), which yields information about both static and dynamic types.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <typeinfo>  
   
 ```  
   
-## <a name="remarks"></a>Comentários  
- Para obter informações sobre as classes definidas em \<typeinfo>, consulte os seguintes tópicos:  
+## <a name="remarks"></a>Remarks  
+ For information on classes defined in \<typeinfo>, see the following topics:  
   
-- [Exceção bad_cast](../cpp/bad-cast-exception.md)  
+- [bad_cast Exception](../cpp/bad-cast-exception.md)  
   
-- [Exceção bad_typeid](../cpp/bad-typeid-exception.md)  
+- [bad_typeid Exception](../cpp/bad-typeid-exception.md)  
   
-- [Classe type_info](../cpp/type-info-class.md)
+- [type_info Class](../cpp/type-info-class.md)
 

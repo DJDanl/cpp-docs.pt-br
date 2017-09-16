@@ -1,5 +1,5 @@
 ---
-title: Classe COleDropSource | Documentos do Microsoft
+title: COleDropSource Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag operations
-- drop target, dragging data to
-- COleDropSource class
-- drag and drop, drop source
+- COleDropSource [MFC], COleDropSource
+- COleDropSource [MFC], GiveFeedback
+- COleDropSource [MFC], OnBeginDrag
+- COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
 caps.latest.revision: 24
 author: mikeblome
@@ -41,112 +41,112 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f3d0e5b7184cf305459173065b8e1cc07e032aef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80bdf496877f0f0c78ca2d3cb3ea75dfe729a2c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledropsource-class"></a>Classe COleDropSource
-Permite que os dados ser arrastado para um destino de soltar.  
+# <a name="coledropsource-class"></a>COleDropSource Class
+Allows data to be dragged to a drop target.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDropSource : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropSource::COleDropSource](#coledropsource)|Constrói um objeto `COleDropSource`.|  
+|[COleDropSource::COleDropSource](#coledropsource)|Constructs a `COleDropSource` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropSource::GiveFeedback](#givefeedback)|Altera o cursor durante uma operação de arrastar e soltar.|  
-|[COleDropSource::OnBeginDrag](#onbegindrag)|Manipula a captura do mouse durante uma operação de arrastar e soltar.|  
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Verifica se arrastar deve continuar.|  
+|[COleDropSource::GiveFeedback](#givefeedback)|Changes the cursor during a drag-and-drop operation.|  
+|[COleDropSource::OnBeginDrag](#onbegindrag)|Handles mouse capture during a drag-and-drop operation.|  
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Checks to see whether dragging should continue.|  
   
-## <a name="remarks"></a>Comentários  
- O [COleDropTarget](../../mfc/reference/coledroptarget-class.md) classe trata a parte receptora da operação de arrastar e soltar. O `COleDropSource` objeto é responsável por determinar quando começa uma operação de arrastar, fornecendo comentários durante a operação de arrastar e determinar quando a operação de arrastar termina.  
+## <a name="remarks"></a>Remarks  
+ The [COleDropTarget](../../mfc/reference/coledroptarget-class.md) class handles the receiving portion of the drag-and-drop operation. The `COleDropSource` object is responsible for determining when a drag operation begins, providing feedback during the drag operation, and determining when the drag operation ends.  
   
- Para usar um `COleDropSource` de objeto, basta chamar o construtor. Isso simplifica o processo de determinar quais eventos, como um clique do mouse, iniciar uma operação de arrastar usando [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), ou [COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) função. Essas funções criará uma `COleDropSource` objeto para você. Você talvez queira modificar o comportamento padrão de `COleDropSource` funções substituíveis. Essas funções de membro serão chamadas nos momentos apropriados do Framework.  
+ To use a `COleDropSource` object, just call the constructor. This simplifies the process of determining what events, such as a mouse click, begin a drag operation using [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), or [COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) function. These functions will create a `COleDropSource` object for you. You might want to modify the default behavior of the `COleDropSource` overridable functions. These member functions will be called at the appropriate times by the framework.  
   
- Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
+ For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Para obter mais informações, consulte [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDropSource`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
- Constrói um objeto `COleDropSource`.  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
+ Constructs a `COleDropSource` object.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
- Chamado pela estrutura depois de chamar [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
+ Called by the framework after calling [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) or [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dropEffect`  
- O efeito que você deseja exibir para o usuário, que geralmente indica o que aconteceria se uma queda ocorreu neste ponto, com os dados selecionados. Normalmente, esse é o valor retornado pela chamada mais recente para [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Ele pode ser um ou mais destes procedimentos:  
+ The effect you would like to display to the user, usually indicating what would happen if a drop occurred at this point with the selected data. Typically, this is the value returned by the most recent call to [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) or [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`Uma lista não seria permitida.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Uma operação de cópia seria realizada.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Uma operação de movimentação seria realizada.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Seria possível estabelecer um vínculo de dados eliminados para os dados originais.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Uma operação de arrastar rolagem está prestes a ocorrer ou está ocorrendo no destino.  
+- `DROPEFFECT_SCROLL` A drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna **DRAGDROP_S_USEDEFAULTCURSORS** se arrastar estiver em andamento, **NOERROR** se não for.  
+### <a name="return-value"></a>Return Value  
+ Returns **DRAGDROP_S_USEDEFAULTCURSORS** if dragging is in progress, **NOERROR** if it is not.  
   
-### <a name="remarks"></a>Comentários  
- Substitua essa função para fornecer comentários ao usuário sobre o que aconteceria se uma queda ocorreu neste momento. A implementação padrão usa cursores de padrão de OLE. Para obter mais informações sobre operações de arrastar e soltar usando OLE, consulte o artigo [arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md).  
+### <a name="remarks"></a>Remarks  
+ Override this function to provide feedback to the user about what would happen if a drop occurred at this point. The default implementation uses the OLE default cursors. For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- Para obter mais informações, consulte [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), e [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), and [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in the Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
- Chamado pela estrutura quando ocorre um evento que pode começar uma operação de arrastar, como pressionar o botão esquerdo do mouse.  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
+ Called by the framework when an event occurs that could begin a drag operation, such as pressing the left mouse button.  
   
 ```  
 virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Aponta para a janela que contém os dados selecionados.  
+ Points to the window that contains the selected data.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se arrastar for permitida, caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if dragging is allowed, otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Substitua essa função se você quiser modificar o modo como o processo de arrastar é iniciado. A implementação padrão de captura do mouse e permanece no modo arrastar até que o usuário clica no botão esquerdo ou direito do mouse ou pressiona ESC, momento em que ele libera o mouse.  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to modify the way the dragging process is started. The default implementation captures the mouse and stays in drag mode until the user clicks the left or right mouse button or hits ESC, at which time it releases the mouse.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
- Depois de arrastar iniciada, essa função é chamada repetidamente pela estrutura até que a operação de arrastar seja cancelada ou concluída.  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
+ After dragging has begun, this function is called repeatedly by the framework until the drag operation is either canceled or completed.  
   
 ```  
 virtual SCODE QueryContinueDrag(
@@ -154,28 +154,28 @@ virtual SCODE QueryContinueDrag(
     DWORD dwKeyState);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *bEscapePressed*  
- Indica se a tecla ESC foi pressionada desde a última chamada para `COleDropSource::QueryContinueDrag`.  
+ States whether the ESC key has been pressed since the last call to `COleDropSource::QueryContinueDrag`.  
   
  `dwKeyState`  
- Contém o estado das teclas modificadoras do teclado. Isso é uma combinação de qualquer número das seguintes opções: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, e **MK_RBUTTON**.  
+ Contains the state of the modifier keys on the keyboard. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
-### <a name="return-value"></a>Valor de retorno  
- **DRAGDROP_S_CANCEL** se a tecla ESC ou o botão direito é pressionado ou botão esquerdo é gerado antes de arrastar inicia. **DRAGDROP_S_DROP** se uma operação de soltar ocorrer. Caso contrário, `S_OK`.  
+### <a name="return-value"></a>Return Value  
+ **DRAGDROP_S_CANCEL** if the ESC key or right button is pressed, or left button is raised before dragging starts. **DRAGDROP_S_DROP** if a drop operation should occur. Otherwise `S_OK`.  
   
-### <a name="remarks"></a>Comentários  
- Substituir que essa função se você quiser alterar o ponto no qual arrastando é cancelada ou soltar ocorre.  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to change the point at which dragging is canceled or a drop occurs.  
   
- A implementação padrão inicia o descarte ou cancela a arrastar da seguinte maneira. Quando a tecla ESC ou o botão direito do mouse é pressionado, ele cancela uma operação de arrastar. Ele inicia uma operação de soltar quando o botão esquerdo é gerado depois de arrastar foi iniciado. Caso contrário, ele retorna `S_OK` e executa sem outras operações.  
+ The default implementation initiates the drop or cancels the drag as follows. It cancels a drag operation when the ESC key or the right mouse button is pressed. It initiates a drop operation when the left mouse button is raised after dragging has started. Otherwise, it returns `S_OK` and performs no further operations.  
   
- Como essa função é chamada com frequência, ele deve ser otimizado tanto quanto possível.  
+ Because this function is called frequently, it should be optimized as much as possible.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplo MFC HIERSVR](../../visual-cpp-samples.md)   
- [Exemplo MFC OCLIENT](../../visual-cpp-samples.md)   
- [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

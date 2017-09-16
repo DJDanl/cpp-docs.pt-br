@@ -1,42 +1,59 @@
 ---
-title: "Hist&#243;rico de DCOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM"
-  - "DCOM, sobre DCOM"
-  - "Automação remota, DCOM"
+title: History of DCOM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
+- DCOM, about DCOM
+- DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Hist&#243;rico de DCOM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a932ac569b5c43aa652eeb39ae2758d33298f6ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Quando a automação foi introduzida primeiro ao princípio de 1993, era capaz de usar apenas entre os aplicativos executados no mesmo computador.  No entanto, como usarem os mesmos sustentamentos que o restante OLE, ou seja, ou COM \(Component Object Model\), pretendeu\-se sempre que se tornaria “remotable” quando COM próprio foi atualizado para incluir recursos comunicação remota.  Também planejou\-se que a transição da operação puramente local para a operação distribuída exigiria quase nenhuma alteração no código existente.  
+---
+# <a name="history-of-dcom"></a>History of DCOM
+When Automation was first introduced in early 1993, it was capable of being used only between applications running on the same machine. However, because it shared the same underpinnings as the rest of OLE, that is, COM (or Component Object Model), it was always intended that it would become "remotable" when COM itself was updated to include remoting capabilities. It was also planned that the transition from purely local operation to distributed operation would require little or no change to existing code.  
   
- Assim que faz a comunicação remota”? “  O local COM ditou que o consumidor de uma interface reside e executa no mesmo computador que o provedor dessa interface.  Por exemplo, o Microsoft Visual Basic pode controlar uma cópia do Microsoft Excel no computador de área de trabalho, mas não é capaz de direcionar a execução do excel em outro computador.  Com o desenvolvimento de COM distribuída, o consumidor de uma interface já não precisar residir no mesmo computador que o de que o provedor da interface é executado.  
+ So what does "remoting" mean Local COM dictated that the consumer of an interface reside and execute on the same machine as the provider of that interface. For example, Microsoft Visual Basic could control a copy of Microsoft Excel on your desktop machine, but it was not capable of directing the execution of Excel on another machine. With the development of distributed COM, the consumer of an interface no longer needs to reside on the same machine as that on which the interface provider executes.  
   
- Uma vez que foi adaptado COM ao trabalho por uma rede, então qualquer interface que não é associada a um modelo local de execução \(algumas interfaces tem a confiança inerente em instalações do computador local, como as interfaces de desenho cujos métodos têm identificadores para contextos de dispositivo como parâmetros\) teriam o recurso de distribuição.  Um consumidor da interface faz uma solicitação para uma interface especificada; essa interface pode ser fornecida por uma instância de um objeto que executa \(ou\) para ser executado em um computador diferente.  O mecanismo de distribuição em COM conectaria o consumidor do provedor de modo que as chamadas de método feitas pelo consumidor apareceriam no final do provedor, onde serão executados.  Todos os valores de retorno em posteriores serão enviados ao consumidor.  Para todos os fins práticos, o ato de distribuição é transparente ao consumidor e ao provedor.  
+ Once COM was adapted to work across a network, then any interface that was not tied to a local execution model (some interfaces have inherent reliance on local machine facilities, such as those drawing interfaces whose methods have handles to device contexts as parameters) would have the capability of being distributed. An interface consumer would make a request for a given interface; that interface may be provided by an instance of an object running (or to be run) on a different machine. The distribution mechanism inside COM would connect the consumer to the provider in such a way that method calls made by the consumer would appear at the provider end, where they would be executed. Any return values would then be sent back to the consumer. To all intents and purposes, the act of distribution is transparent to both the consumer and the provider.  
   
- Como uma variedade de COM agora existe.  DCOM \(distributed COM” para “\) enviados com as versões do Windows NT que começam com a versão 4,0 e que incluem o Windows 2000.  Desde o fim de 1996, também esteve disponível para as janelas 9x.  Em ambos os casos, o DCOM compõe um conjunto de substituição e de DLL adicionais, com alguns utilitários, que fornece recursos locais e remotas da.  Em virtude disso é agora uma parte inerentemente de plataformas de Win32\-based, e será disponibilizado em outras plataformas por outras empresas com o passar do tempo.  
+ Such a variety of COM does now exist. DCOM (for "distributed COM") has shipped with versions of Windows NT beginning with version 4.0 and including Windows 2000. Since late 1996, it has also been available for Windows 9x. In both cases, DCOM comprises a set of replacement and additional DLLs, with some utilities, which provide both local and remote COM capabilities. It is therefore now an inherent part of Win32-based platforms, and will be made available on other platforms by other organizations over time.  
   
-## Nesta seção  
- [Onde a automação remoto se ajustar em?](../mfc/where-does-remote-automation-fit-in-q.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)  
   
- [A automação remoto fornece?](../mfc/what-does-remote-automation-provide-q.md)  
+ [What Does Remote Automation Provide](what-does-remote-automation-provide-q.md)  
   
-## Consulte também  
- [Automação remota](../mfc/remote-automation.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+

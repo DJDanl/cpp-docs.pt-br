@@ -1,5 +1,5 @@
 ---
-title: Classe CScrollBar | Documentos do Microsoft
+title: CScrollBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,11 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollBar class
-- SCROLLBAR window class
-- scroll bars
-- Windows common controls [C++], CScrollBar
-- controls [MFC], scroll bar
+- CScrollBar [MFC], CScrollBar
+- CScrollBar [MFC], Create
+- CScrollBar [MFC], EnableScrollBar
+- CScrollBar [MFC], GetScrollBarInfo
+- CScrollBar [MFC], GetScrollInfo
+- CScrollBar [MFC], GetScrollLimit
+- CScrollBar [MFC], GetScrollPos
+- CScrollBar [MFC], GetScrollRange
+- CScrollBar [MFC], SetScrollInfo
+- CScrollBar [MFC], SetScrollPos
+- CScrollBar [MFC], SetScrollRange
+- CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
 caps.latest.revision: 21
 author: mikeblome
@@ -50,60 +57,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 84b59f041f1a6cf73843c303e1a6b71adffc2101
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3686af908abc199f878576aea22b30b1952c2183
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollbar-class"></a>Classe CScrollBar
-Fornece a funcionalidade de um controle de barra de rolagem do Windows.  
+# <a name="cscrollbar-class"></a>CScrollBar Class
+Provides the functionality of a Windows scroll-bar control.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollBar : public CWnd  
 ```  
   
-## <a name="members"></a>Membros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Construtores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::CScrollBar](#cscrollbar)|Constrói um objeto `CScrollBar`.|  
+|[CScrollBar::CScrollBar](#cscrollbar)|Constructs a `CScrollBar` object.|  
   
-### <a name="public-methods"></a>Métodos Públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nome|Descrição|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::Create](#create)|Cria a barra de rolagem do Windows e anexa-o para o `CScrollBar` objeto.|  
-|[CScrollBar::EnableScrollBar](#enablescrollbar)|Habilita ou desabilita uma ou ambas as setas de uma barra de rolagem.|  
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Recupera informações sobre a barra de rolagem uma `SCROLLBARINFO` estrutura.|  
-|[CScrollBar::GetScrollInfo](#getscrollinfo)|Recupera informações sobre a barra de rolagem.|  
-|[CScrollBar::GetScrollLimit](#getscrolllimit)|Recupera o limite da barra de rolagem|  
-|[CScrollBar::GetScrollPos](#getscrollpos)|Recupera a posição atual de uma caixa de rolagem.|  
-|[CScrollBar::GetScrollRange](#getscrollrange)|Recupera as posições de barra de rolagem mínimo e máximo atual para a barra de rolagem determinado.|  
-|[CScrollBar::SetScrollInfo](#setscrollinfo)|Define informações sobre a barra de rolagem.|  
-|[CScrollBar::SetScrollPos](#setscrollpos)|Define a posição atual de uma caixa de rolagem.|  
-|[CScrollBar::SetScrollRange](#setscrollrange)|Define os valores mínimo e máximo de posição para a barra de rolagem determinado.|  
-|[CScrollBar::ShowScrollBar](#showscrollbar)|Mostra ou oculta uma barra de rolagem.|  
+|[CScrollBar::Create](#create)|Creates the Windows scroll bar and attaches it to the `CScrollBar` object.|  
+|[CScrollBar::EnableScrollBar](#enablescrollbar)|Enables or disables one or both arrows of a scroll bar.|  
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Retrieves information about the scroll bar using a `SCROLLBARINFO` structure.|  
+|[CScrollBar::GetScrollInfo](#getscrollinfo)|Retrieves information about the scroll bar.|  
+|[CScrollBar::GetScrollLimit](#getscrolllimit)|Retrieves the limit of the scroll bar|  
+|[CScrollBar::GetScrollPos](#getscrollpos)|Retrieves the current position of a scroll box.|  
+|[CScrollBar::GetScrollRange](#getscrollrange)|Retrieves the current minimum and maximum scroll-bar positions for the given scroll bar.|  
+|[CScrollBar::SetScrollInfo](#setscrollinfo)|Sets information about the scroll bar.|  
+|[CScrollBar::SetScrollPos](#setscrollpos)|Sets the current position of a scroll box.|  
+|[CScrollBar::SetScrollRange](#setscrollrange)|Sets minimum and maximum position values for the given scroll bar.|  
+|[CScrollBar::ShowScrollBar](#showscrollbar)|Shows or hides a scroll bar.|  
   
-## <a name="remarks"></a>Comentários  
- Você pode criar um controle de barra de rolagem em duas etapas. Primeiro, chame o construtor `CScrollBar` para construir o `CScrollBar` do objeto, em seguida, chame o [criar](#create) a função de membro para criar o controle de barra de rolagem do Windows e anexá-lo a `CScrollBar` objeto.  
+## <a name="remarks"></a>Remarks  
+ You create a scroll-bar control in two steps. First, call the constructor `CScrollBar` to construct the `CScrollBar` object, then call the [Create](#create) member function to create the Windows scroll-bar control and attach it to the `CScrollBar` object.  
   
- Se você criar um `CScrollBar` objeto dentro de uma caixa de diálogo (por meio de um recurso de caixa de diálogo), o `CScrollBar` é destruído automaticamente quando o usuário fecha a caixa de diálogo.  
+ If you create a `CScrollBar` object within a dialog box (through a dialog resource), the `CScrollBar` is automatically destroyed when the user closes the dialog box.  
   
- Se você criar um `CScrollBar` do objeto em uma janela, você também precisa destruí-lo.  
+ If you create a `CScrollBar` object within a window, you may also need to destroy it.  
   
- Se você criar o `CScrollBar` do objeto na pilha, ele será destruído automaticamente. Se você criar o `CScrollBar` objeto no heap usando o **novo** função, você deve chamar **excluir** no objeto para destruí-lo quando o usuário termina a barra de rolagem do Windows.  
+ If you create the `CScrollBar` object on the stack, it is destroyed automatically. If you create the `CScrollBar` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user terminates the Windows scroll bar.  
   
- Se você alocar qualquer memória no `CScrollBar` de objeto, substituir o `CScrollBar` destruidor descartar as alocações.  
+ If you allocate any memory in the `CScrollBar` object, override the `CScrollBar` destructor to dispose of the allocations.  
   
- Para obter informações relacionadas sobre o uso de `CScrollBar`, consulte [controles](../../mfc/controls-mfc.md).  
+ For related information about using `CScrollBar`, see [Controls](../../mfc/controls-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,11 +119,11 @@ class CScrollBar : public CWnd
   
  `CScrollBar`  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
- Cria a barra de rolagem do Windows e anexa-o para o `CScrollBar` objeto.  
+##  <a name="create"></a>  CScrollBar::Create  
+ Creates the Windows scroll bar and attaches it to the `CScrollBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -126,95 +133,95 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Especifica a rolagem estilo da barra. Aplique qualquer combinação de [estilos de barra de rolagem](../../mfc/reference/scroll-bar-styles.md) para a barra de rolagem.  
+ Specifies the scroll bar's style. Apply any combination of [scroll-bar styles](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) to the scroll bar.  
   
  `rect`  
- Especifica o tamanho da barra de rolagem e a posição. Pode ser um `RECT` estrutura ou um `CRect` objeto.  
+ Specifies the scroll bar's size and position. Can be either a `RECT` structure or a `CRect` object.  
   
  `pParentWnd`  
- Especifica a rolagem janela do pai da barra, geralmente um `CDialog` objeto. Ele não deve ser **nulo**.  
+ Specifies the scroll bar's parent window, usually a `CDialog` object. It must not be **NULL**.  
   
  `nID`  
- ID do controle da barra de rolagem.  
+ The scroll bar's control ID.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Você construir um `CScrollBar` objeto em duas etapas. Primeiro, chame o construtor, que constrói a `CScrollBar` objeto; em seguida, chame **criar**, que cria e inicializa a barra de rolagem do Windows associada e anexa-o para o `CScrollBar` objeto.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CScrollBar` object in two steps. First, call the constructor, which constructs the `CScrollBar` object; then call **Create**, which creates and initializes the associated Windows scroll bar and attaches it to the `CScrollBar` object.  
   
- Aplique o seguinte [estilos de janela](../../mfc/reference/window-styles.md) para uma barra de rolagem:  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a scroll bar:  
   
-- **Estilo** sempre  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** geral  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** raramente  
+- **WS_DISABLED** Rarely  
   
-- **WS_GROUP** para agrupar controles  
+- **WS_GROUP** To group controls  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFC_CScrollBar n º&1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
- Constrói um objeto `CScrollBar`.  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
+ Constructs a `CScrollBar` object.  
   
 ```  
 CScrollBar();
 ```  
   
-### <a name="remarks"></a>Comentários  
- Depois de criar o objeto, chame o **criar** função de membro para criar e inicializar a barra de rolagem do Windows.  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, call the **Create** member function to create and initialize the Windows scroll bar.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFC_CScrollBar n º&2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
- Habilita ou desabilita uma ou ambas as setas de uma barra de rolagem.  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
+ Enables or disables one or both arrows of a scroll bar.  
   
 ```  
 BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nArrowFlags`  
- Especifica se as setas de rolagem estão habilitadas ou desabilitadas e quais setas estão habilitadas ou desabilitadas. Esse parâmetro pode ser um dos seguintes valores:  
+ Specifies whether the scroll arrows are enabled or disabled and which arrows are enabled or disabled. This parameter can be one of the following values:  
   
-- **ESB_ENABLE_BOTH** permite que ambas as setas de uma barra de rolagem.  
+- **ESB_ENABLE_BOTH** Enables both arrows of a scroll bar.  
   
-- **ESB_DISABLE_LTUP** desabilita a seta para a esquerda de uma barra de rolagem horizontal ou na seta para cima de uma barra de rolagem vertical.  
+- **ESB_DISABLE_LTUP** Disables the left arrow of a horizontal scroll bar or the up arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_RTDN** desabilita a seta à direita de uma barra de rolagem horizontal ou na seta para baixo da barra de rolagem vertical.  
+- **ESB_DISABLE_RTDN** Disables the right arrow of a horizontal scroll bar or the down arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_BOTH** desabilita ambas as setas de uma barra de rolagem.  
+- **ESB_DISABLE_BOTH** Disables both arrows of a scroll bar.  
   
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se as setas estão habilitadas ou desabilitadas conforme especificado; Caso contrário, 0, que indica que as setas já estão no estado solicitado ou que ocorreu um erro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the arrows are enabled or disabled as specified; otherwise 0, which indicates that the arrows are already in the requested state or that an error occurred.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CScrollBar::SetScrollRange](#setscrollrange).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
- Recupera as informações que o **SCROLLBARINFO** estrutura mantém sobre uma barra de rolagem.  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
+ Retrieves the information that the **SCROLLBARINFO** structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  *pScrollInfo*  
- Um ponteiro para o [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) estrutura.  
+ A pointer to the [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) structure.  
   
-### <a name="return-value"></a>Valor de retorno  
- Retorna **TRUE** com êxito, **FALSE** em caso de falha.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>Comentários  
- Essa função membro emula a funcionalidade do [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) mensagem, conforme descrito na [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) message, as described in the Windows SDK.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
- Recupera as informações que o `SCROLLINFO` estrutura mantém sobre uma barra de rolagem.  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
+ Retrieves the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollInfo(
@@ -222,57 +229,57 @@ BOOL GetScrollInfo(
     UINT nMask = SIF_ALL);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- Um ponteiro para um [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura. Consulte o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter mais informações sobre essa estrutura.  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure. See the Windows SDK for more information about this structure.  
   
  `nMask`  
- Especifica os parâmetros da barra de rolagem para recuperar. Uso típico, SIF_ALL, especifica uma combinação de SIF_PAGE, SIF_POS, SIF_TRACKPOS e SIF_RANGE. Consulte `SCROLLINFO` para obter mais informações sobre os valores de nMask.  
+ Specifies the scroll bar parameters to retrieve. Typical usage, SIF_ALL, specifies a combination of SIF_PAGE, SIF_POS, SIF_TRACKPOS, and SIF_RANGE. See `SCROLLINFO` for more information on the nMask values.  
   
-### <a name="return-value"></a>Valor de retorno  
- Se a mensagem recuperada quaisquer valores, o retorno será **TRUE**. Caso contrário, ele será **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ If the message retrieved any values, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>Comentários  
- `GetScrollInfo`permite que aplicativos usem as posições de rolagem de 32 bits.  
+### <a name="remarks"></a>Remarks  
+ `GetScrollInfo` enables applications to use 32-bit scroll positions.  
   
- O [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura contém informações sobre uma barra, incluindo o mínimo e máximo de rolagem posições, o tamanho da página e a posição da caixa de rolagem (thumb) de rolagem. Consulte o `SCROLLINFO` tópico estrutura o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter mais informações sobre como alterar os padrões de estrutura.  
+ The [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the `SCROLLINFO` structure topic in the Windows SDK for more information about changing the structure defaults.  
   
- O Windows MFC mensagem manipuladores que indicam a posição da barra de rolagem, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) e [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), fornecer apenas 16 bits de dados de posição. `GetScrollInfo`e `SetScrollInfo` fornecem 32 bits de dados de posição da barra de rolagem. Assim, um aplicativo pode chamar `GetScrollInfo` ao processar uma `CWnd::OnHScroll` ou `CWnd::OnVScroll` para obter dados de posição de barra de rolagem de 32 bits.  
+ The MFC Windows message handlers that indicate scroll bar position, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), provide only 16 bits of position data. `GetScrollInfo` and `SetScrollInfo` provide 32 bits of scroll bar position data. Thus, an application can call `GetScrollInfo` while processing either `CWnd::OnHScroll` or `CWnd::OnVScroll` to obtain 32-bit scroll bar position data.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
- Recupera o posição da barra de rolagem de rolagem no máximo.  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
+ Retrieves the maximum scrolling position of the scroll bar.  
   
 ```  
 int GetScrollLimit();
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Especifica a posição de máximo de uma barra de rolagem se for bem-sucedida; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the maximum position of a scroll bar if successful; otherwise 0.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
- Recupera a posição atual de uma caixa de rolagem.  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
+ Retrieves the current position of a scroll box.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>Valor de retorno  
- Especifica a posição atual da caixa de rolagem, se for bem-sucedido; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the current position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- A posição atual é um valor relativo depende o intervalo de rolagem atual. Por exemplo, se o intervalo de rolagem é de 100 a 200 e a caixa de rolagem está no meio de barra, a posição atual é 150.  
+### <a name="remarks"></a>Remarks  
+ The current position is a relative value that depends on the current scrolling range. For example, if the scrolling range is 100 to 200 and the scroll box is in the middle of the bar, the current position is 150.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
- Copia as posições de barra de rolagem mínimo e máximo atual para a barra de rolagem determinada para os locais especificados por `lpMinPos` e `lpMaxPos`.  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
+ Copies the current minimum and maximum scroll-bar positions for the given scroll bar to the locations specified by `lpMinPos` and `lpMaxPos`.  
   
 ```  
 void GetScrollRange(
@@ -280,21 +287,21 @@ void GetScrollRange(
     LPINT lpMaxPos) const;  
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpMinPos`  
- Aponta para a variável de inteiro que receberá a posição mínima.  
+ Points to the integer variable that is to receive the minimum position.  
   
  `lpMaxPos`  
- Aponta para a variável de inteiro que receberá a posição máxima.  
+ Points to the integer variable that is to receive the maximum position.  
   
-### <a name="remarks"></a>Comentários  
- O intervalo padrão para um controle de barra de rolagem está vazio (ambos os valores são 0).  
+### <a name="remarks"></a>Remarks  
+ The default range for a scroll-bar control is empty (both values are 0).  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
- Define as informações que o `SCROLLINFO` estrutura mantém sobre uma barra de rolagem.  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
+ Sets the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL SetScrollInfo(
@@ -302,26 +309,26 @@ BOOL SetScrollInfo(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- Um ponteiro para um [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estrutura.  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure.  
   
  `bRedraw`  
- Especifica se a barra de rolagem deve ser redesenhada para refletir as novas informações. Se `bRedraw` é **TRUE**, a barra de rolagem é redesenhada. Se for **FALSE**, ele não é redesenhado. A barra de rolagem é redesenhada por padrão.  
+ Specifies whether the scroll bar should be redrawn to reflect the new information. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, o retorno será **TRUE**. Caso contrário, ele será **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>Comentários  
- Você deve fornecer os valores necessários para o `SCROLLINFO` estrutura parâmetros, incluindo os valores de sinalizador.  
+### <a name="remarks"></a>Remarks  
+ You must provide the values required by the `SCROLLINFO` structure parameters, including the flag values.  
   
- O `SCROLLINFO` estrutura contém informações sobre uma barra, incluindo o mínimo e máximo de rolagem posições, o tamanho da página e a posição da caixa de rolagem (thumb) de rolagem. Consulte o [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) tópico estrutura o [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obter mais informações sobre como alterar os padrões de estrutura.  
+ The `SCROLLINFO` structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure topic in the Windows SDK for more information about changing the structure defaults.  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFC_CScrollBar n º&3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
- Define a posição atual de uma caixa de rolagem especificado por `nPos` e, se especificado, redesenha a barra de rolagem para refletir a nova posição.  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
+ Sets the current position of a scroll box to that specified by `nPos` and, if specified, redraws the scroll bar to reflect the new position.  
   
 ```  
 int SetScrollPos(
@@ -329,24 +336,24 @@ int SetScrollPos(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Especifica a nova posição da caixa de rolagem. Ele deve estar dentro do intervalo de rolagem.  
+ Specifies the new position for the scroll box. It must be within the scrolling range.  
   
  `bRedraw`  
- Especifica se a barra de rolagem deve ser redesenhada para refletir a nova posição. Se `bRedraw` é **TRUE**, a barra de rolagem é redesenhada. Se for **FALSE**, ele não é redesenhado. A barra de rolagem é redesenhada por padrão.  
+ Specifies whether the scroll bar should be redrawn to reflect the new position. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>Valor de retorno  
- Especifica a posição anterior da caixa de rolagem, se for bem-sucedido; Caso contrário, 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the previous position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentários  
- Definir `bRedraw` para **FALSE** sempre que a barra de rolagem será redesenhada por uma chamada subsequente para outra função para evitar que a barra de rolagem redesenhada duas vezes em um breve intervalo.  
+### <a name="remarks"></a>Remarks  
+ Set `bRedraw` to **FALSE** whenever the scroll bar will be redrawn by a subsequent call to another function to avoid having the scroll bar redrawn twice within a short interval.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CScrollBar::SetScrollRange](#setscrollrange).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
- Define os valores mínimo e máximo de posição para a barra de rolagem determinado.  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
+ Sets minimum and maximum position values for the given scroll bar.  
   
 ```  
 void SetScrollRange(
@@ -355,53 +362,53 @@ void SetScrollRange(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `nMinPos`  
- Especifica o mínimo de posição de rolagem.  
+ Specifies the minimum scrolling position.  
   
  `nMaxPos`  
- Especifica o máximo de posição de rolagem.  
+ Specifies the maximum scrolling position.  
   
  `bRedraw`  
- Especifica se a barra de rolagem deve ser redesenhada para refletir a alteração. Se `bRedraw` é **TRUE**, a barra de rolagem é redesenhada; se **FALSE**, ele não é redesenhado. Ela é redesenhada por padrão.  
+ Specifies whether the scroll bar should be redrawn to reflect the change. If `bRedraw` is **TRUE**, the scroll bar is redrawn; if **FALSE**, it is not redrawn. It is redrawn by default.  
   
-### <a name="remarks"></a>Comentários  
- Definir `nMinPos` e `nMaxPos` como 0 para ocultar as barras de rolagem padrão.  
+### <a name="remarks"></a>Remarks  
+ Set `nMinPos` and `nMaxPos` to 0 to hide standard scroll bars.  
   
- Não chame essa função para ocultar uma barra de rolagem ao processar uma mensagem de notificação da barra de rolagem.  
+ Do not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
- Se uma chamada para `SetScrollRange` imediatamente após uma chamada para o `SetScrollPos` definir função de membro, `bRedraw` na `SetScrollPos` como 0 para impedir que a barra de rolagem sendo redesenhadas duas vezes.  
+ If a call to `SetScrollRange` immediately follows a call to the `SetScrollPos` member function, set `bRedraw` in `SetScrollPos` to 0 to prevent the scroll bar from being redrawn twice.  
   
- A diferença entre os valores especificados pelo `nMinPos` e `nMaxPos` não deve ser maior que 32.767. O intervalo padrão para um controle de barra de rolagem está vazio (ambos `nMinPos` e `nMaxPos` são 0).  
+ The difference between the values specified by `nMinPos` and `nMaxPos` must not be greater than 32,767. The default range for a scroll-bar control is empty (both `nMinPos` and `nMaxPos` are 0).  
   
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFC_CScrollBar n º&4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
- Mostra ou oculta uma barra de rolagem.  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
+ Shows or hides a scroll bar.  
   
 ```  
 void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- Especifica se a barra de rolagem é mostrada ou ocultada. Se esse parâmetro for **TRUE**, a barra de rolagem é mostrada; caso contrário, ele é oculto.  
+ Specifies whether the scroll bar is shown or hidden. If this parameter is **TRUE**, the scroll bar is shown; otherwise it is hidden.  
   
-### <a name="remarks"></a>Comentários  
- Um aplicativo não deve chamar essa função para ocultar uma barra de rolagem ao processar uma mensagem de notificação da barra de rolagem.  
+### <a name="remarks"></a>Remarks  
+ An application should not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
-### <a name="example"></a>Exemplo  
-  Veja o exemplo de [CScrollBar::Create](#create).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::Create](#create).  
   
-## <a name="see-also"></a>Consulte também  
- [Classe CWnd](../../mfc/reference/cwnd-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CWnd](../../mfc/reference/cwnd-class.md)   
- [Classe CButton](../../mfc/reference/cbutton-class.md)   
- [Classe CComboBox](../../mfc/reference/ccombobox-class.md)   
- [Classe CEdit](../../mfc/reference/cedit-class.md)   
- [Classe CListBox](../../mfc/reference/clistbox-class.md)   
- [Classe CStatic](../../mfc/reference/cstatic-class.md)   
- [Classe CDialog](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

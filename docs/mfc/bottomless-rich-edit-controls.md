@@ -1,38 +1,56 @@
 ---
-title: "Controles de edi&#231;&#227;o avan&#231;ada sem parte inferior | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles de edição avançada sem parte inferior"
-  - "Classe CRichEditCtrl, sem parte inferior"
-  - "controles de edição avançada, sem parte inferior"
+title: Bottomless Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bottomless rich edit controls
+- rich edit controls [MFC], bottomless
+- CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controles de edi&#231;&#227;o avan&#231;ada sem parte inferior
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8aa7de0cd6da9a8fafc28d68203eb61c65bab627
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Seu aplicativo pode redimensionar um controle de edição avançado \([CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\) quando necessário de modo que sempre é o mesmo tamanho que seu conteúdo.  Um controle de edição amplo suporte a essa funcionalidade “sem fundo” assim chamada enviando a janela pai uma notificação de [EN\_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) sempre que o tamanho do conteúdo é alterado.  
+---
+# <a name="bottomless-rich-edit-controls"></a>Bottomless Rich Edit Controls
+Your application can resize a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) as needed so that it is always the same size as its contents. A rich edit control supports this so-called "bottomless" functionality by sending its parent window an [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) notification message whenever the size of its contents changes.  
   
- Ao processar a notificação de **EN\_REQUESTRESIZE** , um aplicativo precisa redimensionar o controle a dimensões na estrutura especificada de [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) .  Um aplicativo também pode mover todas as informações do controle para acomodar a alteração de controle no momento.  Para redimensionar o controle, você pode usar a função [SetWindowPos](../Topic/CWnd::SetWindowPos.md)de `CWnd` .  
+ When processing the **EN_REQUESTRESIZE** notification message, an application should resize the control to the dimensions in the specified [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) structure. An application might also move any information near the control to accommodate the control's change in height. To resize the control, you can use the `CWnd` function [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
- Você pode forçar um controle de edição rico sem fundo para enviar uma notificação de **EN\_REQUESTRESIZE** usando a função de membro de [RequestResize](../Topic/CRichEditCtrl::RequestResize.md) .  Essa mensagem pode ser útil no manipulador de [OnSize](../Topic/CWnd::OnSize.md) .  
+ You can force a bottomless rich edit control to send an **EN_REQUESTRESIZE** notification message by using the [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) member function. This message can be useful in the [OnSize](../mfc/reference/cwnd-class.md#onsize) handler.  
   
- Para receber notificações de **EN\_REQUESTRESIZE** , você deve habilitar a notificação usando a função de membro de `SetEventMask` .  
+ To receive **EN_REQUESTRESIZE** notification messages, you must enable the notification by using the `SetEventMask` member function.  
   
-## Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

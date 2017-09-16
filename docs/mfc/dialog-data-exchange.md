@@ -1,65 +1,83 @@
 ---
-title: "Troca de dados da caixa de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cancelamento de troca de dados"
-  - "capturando entrada de usuário"
-  - "Classe CDataExchange, usando DDX"
-  - "DDX (troca de dados da caixa de diálogo), cancelando"
-  - "DDX (troca de dados da caixa de diálogo), mecanismo de troca de dados"
-  - "dados de caixa de diálogo"
-  - "dados de caixa de diálogo, recuperando"
-  - "caixas de diálogo, troca de dados"
-  - "caixas de diálogo, inicializando"
-  - "caixas de diálogo, recuperando entrada de usuário usando DDX"
-  - "Método DoDataExchange"
-  - "inicializando caixas de diálogo"
-  - "recuperando dados de caixa de diálogo"
-  - "transferindo dados de caixa de diálogo"
-  - "Método UpdateData"
-  - "entrada do usuário, recuperando a partir de caixas de diálogo MFC"
+title: Dialog Data Exchange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes
+- canceling data exchange
+- dialog box data, retrieving
+- DDX (dialog data exchange), data exchange mechanism
+- dialog boxes [MFC], initializing
+- dialog boxes [MFC], retrieving user input using DDX
+- dialog box data
+- dialog boxes [MFC], data exchange
+- CDataExchange class [MFC], using DDX
+- DoDataExchange method [MFC]
+- user input [MFC], retrieving from MFC dialog boxes
+- capturing user input [MFC]
+- transferring dialog box data
+- DDX (dialog data exchange), canceling
+- UpdateData method [MFC]
+- retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Troca de dados da caixa de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fbb20507f4412ee32309d178ab473375bec1d29
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/12/2017
 
-Se você usar o mecanismo de DDX, defina os valores iniciais de variáveis do membro do objeto da caixa de diálogo, normalmente no manipulador de `OnInitDialog` ou no construtor da caixa de diálogo.  Imediatamente antes da caixa de diálogo for exibida, o mecanismo de DDX da estrutura transfere os valores de variáveis de membro nos controles na caixa de diálogo, onde aparecem quando a própria caixa de diálogo aparece em resposta a `DoModal` ou a **Criar**.  A implementação padrão de `OnInitDialog` em `CDialog` chama a função de membro de `UpdateData` da classe `CWnd` para inicializar os controles na caixa de diálogo.  
+---
+# <a name="dialog-data-exchange"></a>Dialog Data Exchange
+If you use the DDX mechanism, you set the initial values of the dialog object's member variables, typically in your `OnInitDialog` handler or the dialog constructor. Immediately before the dialog is displayed, the framework's DDX mechanism transfers the values of the member variables to the controls in the dialog box, where they appear when the dialog box itself appears in response to `DoModal` or **Create**. The default implementation of `OnInitDialog` in `CDialog` calls the `UpdateData` member function of class `CWnd` to initialize the controls in the dialog box.  
   
- O mesmo mecanismo transfere valores dos controles para variáveis de membro quando o usuário clicar no botão OK \(ou sempre que chama a função de membro de `UpdateData` com o argumento **Verdadeiro**\).  O mecanismo de validação de dados na caixa de diálogo valida todos os itens de dados para você especificar as regras de validação.  
+ The same mechanism transfers values from the controls to the member variables when the user clicks the OK button (or whenever you call the `UpdateData` member function with the argument **TRUE**). The dialog data validation mechanism validates any data items for which you specified validation rules.  
   
- A figura a seguir ilustra a caixa de diálogo de troca de dados.  
+ The following figure illustrates dialog data exchange.  
   
- ![Troca de dados do diálogo](../mfc/media/vc379d1.png "vc379D1")  
-Caixa de diálogo de troca de dados  
+ ![Dialog box data exchange](../mfc/media/vc379d1.gif "vc379d1")  
+Dialog Data Exchange  
   
- trabalho de`UpdateData` em ambas as direções, conforme especificado pelo parâmetro de **BOOL** transmitido a ele.  Para realizar a troca, os conjuntos de `UpdateData` \- acima de um objeto de `CDataExchange` e chama a substituição da sua classe da caixa de diálogo da função de membro de `CDialog``DoDataExchange` .  `DoDataExchange` usa um argumento do tipo `CDataExchange`.  O objeto de `CDataExchange` passado a `UpdateData` representa o contexto de troca, definindo informações como a direção de troca.  
+ `UpdateData` works in both directions, as specified by the **BOOL** parameter passed to it. To carry out the exchange, `UpdateData` sets up a `CDataExchange` object and calls your dialog class's override of `CDialog`'s `DoDataExchange` member function. `DoDataExchange` takes an argument of type `CDataExchange`. The `CDataExchange` object passed to `UpdateData` represents the context of the exchange, defining such information as the direction of the exchange.  
   
- Quando você \(ou um assistente do código\) substituem `DoDataExchange`, você especifica uma chamada a uma função de DDX pelo membro de dados \(controle\).  Cada função de DDX sabe para trocar dados em ambas as direções com base no contexto fornecido pelo argumento de `CDataExchange` passado ao `DoDataExchange` por `UpdateData`.  
+ When you (or a Code wizard) override `DoDataExchange`, you specify a call to one DDX function per data member (control). Each DDX function knows how to exchange data in both directions based on the context supplied by the `CDataExchange` argument passed to your `DoDataExchange` by `UpdateData`.  
   
- MFC O fornece muitas funções de DDX para diferentes tipos de troca.  O exemplo a seguir mostra uma substituição de `DoDataExchange` no qual duas funções de DDX e uma função de DDV são chamadas:  
+ MFC provides many DDX functions for different kinds of exchange. The following example shows a `DoDataExchange` override in which two DDX functions and one DDV function are called:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/CPP/dialog-data-exchange_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]  
   
- As linhas de `DDX_` e de `DDV_` são um mapa de dados.  O exemplo DDX e funções de DDV são mostradas para um controle da caixa de seleção e um controle da caixa de edição, respectivamente.  
+ The `DDX_` and `DDV_` lines are a data map. The sample DDX and DDV functions shown are for a check-box control and an edit-box control, respectively.  
   
- Se o usuário cancelar uma caixa de diálogo modal, a função de membro de `OnCancel` finaliza a caixa de diálogo e `DoModal` retorna o valor **IDCANCEL**.  Nesse caso, os dados não são trocados entre a caixa de diálogo e o objeto da caixa de diálogo.  
+ If the user cancels a modal dialog box, the `OnCancel` member function terminates the dialog box and `DoModal` returns the value **IDCANCEL**. In that case, no data is exchanged between the dialog box and the dialog object.  
   
-## Consulte também  
- [Troca de dados da caixa de diálogo e validação](../mfc/dialog-data-exchange-and-validation.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Validação dos dados da caixa de diálogo](../mfc/dialog-data-validation.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Validation](../mfc/dialog-data-validation.md)
+
+
