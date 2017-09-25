@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d245749a437213ba08c63e4ce7873809c6b08cb
+ms.openlocfilehash: 161d27f68553a7fe9c8a22d8ad0db3afbbe6830f
 ms.contentlocale: pt-br
 
 ---
-SDK do Windows
+x64
