@@ -1,44 +1,60 @@
 ---
-title: "Operador de indire&#231;&#227;o: * | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador *"
-  - "Operador de indireção"
-  - "Operador de indireção, sintaxe"
-  - "operadores [C++], indireção"
+title: "Operador de indireção: * | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de indire&#231;&#227;o: *
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="indirection-operator-"></a>Operador de indireção: *
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 * cast-expression  
 ```  
   
-## Comentários  
- O operador unário de indireção \(**\***\) removerá a referência de um ponteiro; ou seja, ele converterá um valor de ponteiro para um l\-value.  O operando do operador de indireção deve ser um ponteiro para um tipo.  O resultado da expressão de indireção é o tipo do qual o tipo do ponteiro é derivado.  O uso do operador **\*** nesse contexto é diferente do seu significado como operador binário, que é de multiplicação.  
+## <a name="remarks"></a>Comentários  
+ O operador de indireção unário (**\***) cancela a referência de um ponteiro; ou seja, ele converte um valor de ponteiro para um l-value. O operando do operador de indireção deve ser um ponteiro para um tipo. O resultado da expressão de indireção é o tipo do qual o tipo do ponteiro é derivado. O uso do ** \* ** operador neste contexto é diferente de seu significado como um operador binário, que é de multiplicação.  
   
- Se o operando apontar para uma função, o resultado será um designador de função.  Se ele apontar para um local de armazenamento, o resultado será um valor l que designa o local de armazenamento.  
+ Se o operando apontar para uma função, o resultado será um designador de função. Se ele apontar para um local de armazenamento, o resultado será um valor l que designa o local de armazenamento.  
   
- O operador de indireção pode ser usado cumulativamente para retirar as referências dos ponteiros para os ponteiros.  Por exemplo:  
+ O operador de indireção pode ser usado cumulativamente para retirar as referências dos ponteiros para os ponteiros. Por exemplo:  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -60,7 +76,7 @@ int main() {
 }  
 ```  
   
- Se o valor do ponteiro for inválido, o resultado será indefinido.  A lista a seguir inclui algumas das condições mais comuns que invalidam um valor de ponteiro.  
+ Se o valor do ponteiro for inválido, o resultado será indefinido. A lista a seguir inclui algumas das condições mais comuns que invalidam um valor de ponteiro.  
   
 -   O ponteiro é um ponteiro nulo.  
   
@@ -70,9 +86,8 @@ int main() {
   
 -   O ponteiro especifica um endereço não usado pelo programa em execução.  
   
-## Consulte também  
- [Expressões com operadores unários](../Topic/Expressions%20with%20Unary%20Operators.md)   
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operador Address\-of: &](../cpp/address-of-operator-amp.md)   
- [Operadores de indireção e endereço de](../c-language/indirection-and-address-of-operators.md)
+## <a name="see-also"></a>Consulte também  
+ [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)   
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operador address-of: &](../cpp/address-of-operator-amp.md)   
+ [Operadores de indireção e address-of](../c-language/indirection-and-address-of-operators.md)

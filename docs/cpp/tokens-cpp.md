@@ -1,34 +1,51 @@
 ---
-title: "Tokens (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tokens"
-  - "análise, tokens C++"
-  - "unidades de tradução"
-  - "espaço em branco, em tokens C++"
+title: Tokens (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- tokens
+- parsing, C++ tokens
+- translation units
+- white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Tokens (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 041750d86f12f82e0f905c65f0a75d6a32f37cdf
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Um token é o menor elemento de um programa C\+\+ que seja significativo para o compilador. O analisador C\+\+ reconhece os seguintes tipos de tokens: identificadores, palavras\-chave, literais, operadores, pontuadores e outros separadores. Um fluxo desses tokens compõe uma unidade de conversão.  
+---
+# <a name="tokens-c"></a>Tokens (C++)
+Um token é o menor elemento de um programa em C/C++ que é significativo para o compilador. O analisador C++ reconhece os seguintes tipos de tokens: identificadores, palavra-chave, literais, operadores, pontuadores e outros separadores. Um fluxo desses tokens compõe uma unidade de tradução.  
   
- Tokens geralmente são separados por *espaço em branco*. Espaço em branco pode ser um ou mais:  
+ Tokens geralmente são separados por *espaço em branco*. O espaço em branco pode ser um ou vários:  
   
 -   Espaços em branco  
   
@@ -40,17 +57,17 @@ Um token é o menor elemento de um programa C\+\+ que seja significativo para o 
   
 -   Comentários  
   
- O analisador reconhece palavras\-chave, identificadores, literais, operadores e sinais de pontuação. Para obter informações sobre tipos específicos de token, consulte [palavras\-chave](../cpp/keywords-cpp.md), [identificadores](../cpp/identifiers-cpp.md), [numérico, booleano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [cadeia de caracteres e caracteres literais](../cpp/string-and-character-literals-cpp.md), [literais definidos pelo usuário](../Topic/User-Defined%20Literals%20%20\(C++\).md), [operadores internos do C\+\+, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md), e [pontuadores](../cpp/punctuators-cpp.md). Espaço em branco é ignorado, exceto conforme necessário separar os tokens.  
+ O analisador reconhece as palavras-chave, identificadores, literais, operadores e sinais de pontuação. Para obter informações sobre tipos específicos de token, consulte [palavras-chave](../cpp/keywords-cpp.md), [identificadores](../cpp/identifiers-cpp.md), [numérico, booleano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [cadeia de caracteres e literais de caracteres ](../cpp/string-and-character-literals-cpp.md), [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md), [operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md), e [sinais de pontuação](../cpp/punctuators-cpp.md). Espaço em branco é ignorado, exceto conforme necessário separar os tokens.  
   
- Tokens de pré\-processamento é usado nas fases de pré\-processamento para gerar o token fluxo passado para o compilador. As categorias de token de pré\-processamento são nomes de cabeçalho, identificadores, números de pré\-processamento, literais de caracteres, literais de cadeia de caracteres, operadores de pré\-processamento e sinais de pontuação e caracteres de espaço em branco não únicos que não correspondem a uma das outras categorias. Literais de caracteres podem ser literais definidos pelo usuário. Tokens de pré\-processamento podem ser separados por espaços em branco ou comentários.  
+ Símbolos de pré-processamento são usados nas fases de pré-processamento para gerar o fluxo do token passado para o compilador. As categorias de token de pré-processamento são nomes de cabeçalho, identificadores, números de pré-processamento, literais de caracteres, literais de cadeia de caracteres, operadores de pré-processamento e sinais de pontuação e caracteres de espaço em branco não único que não correspondem a uma das categorias de. Literais de caracteres e cadeia de caracteres podem ser literais definidos pelo usuário. Símbolos de pré-processamento pode ser separado por espaços em branco ou comentários.  
   
- O analisador separa os tokens do fluxo de entrada criando o maior token possível usando os caracteres de entrada em um exame da esquerda para a direita. Considere este fragmento de código:  
+ O analisador separa os tokens do fluxo de entrada criando o maior token possível usando os caracteres de entrada em uma verificação da esquerda para a direita. Considere este fragmento de código:  
   
 ```  
 a = i+++j;  
 ```  
   
- O programador que escreveu o código esperado qualquer uma destas duas instruções:  
+ Talvez o programador que criou o código tenha desejado criar uma destas duas instruções:  
   
 ```  
 a = i + (++j)  
@@ -58,7 +75,7 @@ a = i + (++j)
 a = (i++) + j  
 ```  
   
- Como o analisador cria o maior token possível do fluxo de entrada, ele escolhe a segunda interpretação, criando os tokens `i++`, `+`, e `j`.  
+ Como o analisador cria o maior token possível a partir do fluxo de entrada, ele seleciona a segunda interpretação, criando os tokens `i++`, `+` e `j`.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Convenções lexicais](../cpp/lexical-conventions.md)

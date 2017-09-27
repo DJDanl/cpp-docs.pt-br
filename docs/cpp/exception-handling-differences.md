@@ -1,39 +1,55 @@
 ---
-title: "Diferen&#231;as de tratamento de exce&#231;&#245;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de exceção de C++, s. tratamento estruturado de exceções"
-  - "exceções, classe wrapper"
-  - "tratamento estruturado de exceções, vs. tratamento de exceção C++"
-  - "tratamento estruturado de exceções, vs. não estruturado"
-  - "classes wrapper, exceção C"
+title: "Diferenças de tratamento de exceção | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured exception handling, vs. C++ exception handling
+- structured exception handling, vs. unstructured
+- exceptions, wrapper class
+- C++ exception handling, vs. structured exception handling
+- wrapper classes, C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Diferen&#231;as de tratamento de exce&#231;&#245;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A principal diferença entre o tratamento de exceções estruturado e o tratamento de exceções de C\+\+ é que o modelo do tratamento de exceções de C\+\+ lida com tipos, enquanto o modelo de tratamento de exceções estruturado do C lida exceções de um tipo — especificamente, `unsigned int`.  Ou seja, as exceções de C são identificadas por um valor inteiro sem sinal, enquanto as exceções de C\+\+ são identificadas pelo tipo de dados.  Quando uma exceção é gerada em C, cada manipulador possível executa um filtro que examina o contexto da exceção de C e determine se aceitará a exceção, a transmitirá para algum outro manipulador, ou a ignorará.  Quando uma exceção é gerada em C\+\+, ela pode ser de qualquer tipo.  
+---
+# <a name="exception-handling-differences"></a>Diferenças de tratamento de exceções
+A principal diferença entre o tratamento de exceções estruturado e o tratamento de exceções de C++ é que o modelo do tratamento de exceções de C++ lida com tipos, enquanto o modelo de tratamento de exceções estruturado do C lida exceções de um tipo — especificamente, `unsigned int`. Ou seja, as exceções de C são identificadas por um valor inteiro sem sinal, enquanto as exceções de C++ são identificadas pelo tipo de dados. Quando uma exceção é gerada em C, cada manipulador possível executa um filtro que examina o contexto da exceção de C e determine se aceitará a exceção, a transmitirá para algum outro manipulador, ou a ignorará. Quando uma exceção é gerada em C++, ela pode ser de qualquer tipo.  
   
- Uma segunda diferença é que o modelo de tratamento de exceções estruturado de C é chamado de "assíncrono", onde as exceções ocorrem secundariamente ao fluxo de controle normal.  O mecanismo de tratamento de exceções de C\+\+ é totalmente "síncrono", o que significa que as exceções ocorrem apenas quando são geradas.  
+ Uma segunda diferença é que o modelo de tratamento de exceções estruturado de C é chamado de "assíncrono", onde as exceções ocorrem secundariamente ao fluxo de controle normal. O mecanismo de tratamento de exceções de C++ é totalmente "síncrono", o que significa que as exceções ocorrem apenas quando são geradas.  
   
- Se a exceção de C é gerada em um programa C\/C\+\+, pode ser tratada por um manipulador de exceções estruturado com o filtro associado ou por um manipulador de **catch** de C\+\+, seja qual estiver dinamicamente mais próximo ao contexto da exceção.  Por exemplo, o seguinte programa de C\+\+ gera uma exceção dentro de um contexto **try** de C\+\+:  
+ Se uma exceção de C é gerada em um programa C++, ela pode ser tratada por um manipulador de exceções estruturado com seu filtro associado ou por um C++ **catch** manipulador, o que for dinamicamente mais perto o contexto de exceção. Por exemplo, o programa C++ a seguir gera uma exceção de C dentro de um C++ **tente** contexto:  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // exceptions_Exception_Handling_Differences.cpp  
@@ -63,12 +79,15 @@ void SEHFunc() {
 }  
 ```  
   
-  **In finally.**  
-**Caught a C exception.**   
-##  <a name="_core_c_exception_wrapper_class"></a> Classe de wrapper exceção de C  
- Em um exemplo simples como o acima, a exceção de C pode ser capturada somente por um manipulador de **catch** de reticências \(**...**\).  Nenhuma informação sobre o tipo ou a natureza de exceção é comunicada ao manipulador.  Ainda que este método funcione, em alguns casos pode ser necessário definir uma transformação entre os dois modelos de tratamento de exceções para que cada exceção de C seja associada a uma classe específica.  Para fazer isso, você pode definir a classe da exceção de C como "wrapper", que pode ser usada ou derivada de para atribuir um tipo específico da classe a uma exceção de C.  Ao fazer isso, cada exceção de C pode ser tratada pelo manipulador **catch** de C\+\+, mais separadamente do que no exemplo anterior.  
+```Output  
+In finally.  
+Caught a C exception.  
+```  
   
- Sua classe wrapper pode ter uma interface que consiste em algumas funções de membro que determinam o valor de exceção, e que acessam informações estendidas de contexto de exceção fornecidas pelo modelo da exceção de C.  Você também pode desejar definir um construtor padrão e um construtor que aceite um argumento `unsigned int` \(para fornecer para a representação subjacente da exceção de C\) e um construtor de cópia bit a bit.  O seguinte é uma possível implementação da classe wrapper de exceção do C:  
+##  <a name="_core_c_exception_wrapper_class"></a>Classe de invólucro de exceção C  
+ Um exemplo simples como acima, a exceção de C pode ser capturada somente por um sinal de reticências (**... **) **catch** manipulador. Nenhuma informação sobre o tipo ou a natureza de exceção é comunicada ao manipulador. Ainda que este método funcione, em alguns casos pode ser necessário definir uma transformação entre os dois modelos de tratamento de exceções para que cada exceção de C seja associada a uma classe específica. Para fazer isso, você pode definir a classe da exceção de C como "wrapper", que pode ser usada ou derivada de para atribuir um tipo específico da classe a uma exceção de C. Ao fazer isso, cada exceção C pode ser tratada por um C++ **catch** manipulador separadamente que no exemplo anterior.  
+  
+ Sua classe wrapper pode ter uma interface que consiste em algumas funções de membro que determinam o valor de exceção, e que acessam informações estendidas de contexto de exceção fornecidas pelo modelo da exceção de C. Você também pode desejar definir um construtor padrão e um construtor que aceite um argumento `unsigned int` (para fornecer para a representação subjacente da exceção de C) e um construtor de cópia bit a bit. O seguinte é uma possível implementação da classe wrapper de exceção do C:  
   
 ```  
 // exceptions_Exception_Handling_Differences2.cpp  
@@ -88,11 +107,11 @@ public:
   
 ```  
   
- Para usar essa classe, você instala uma função personalizada de tradução da exceção de C, chamada pelo mecanismo interno de tratamento de exceções sempre que uma exceção de C é lançada.  Dentro de sua função de tradução, você pode gerar qualquer exceção digitada \(talvez um tipo `SE_Exception`, ou um tipo de classe derivada de `SE_Exception`\) que possa ser capturada por um manipulador de correspondência C\+\+ **catch** adequado.  A função de tradução só pode retornar, o que indica que ela não conseguiu tratar a exceção.  Se a própria função de conversão criar uma exceção de C, [terminate](../c-runtime-library/reference/terminate-crt.md) é chamado.  
+ Para usar essa classe, você instala uma função personalizada de tradução da exceção de C, chamada pelo mecanismo interno de tratamento de exceções sempre que uma exceção de C é lançada. Dentro de sua função de conversão, você pode lançar qualquer exceção tipada (talvez um `SE_Exception` um tipo de classe ou tipo derivado de `SE_Exception`) que pode ser capturado por um C++ correspondente adequado **catch** manipulador. A função de tradução só pode retornar, o que indica que ela não conseguiu tratar a exceção. Se a própria função de conversão gera uma exceção de C, [encerrar](../c-runtime-library/reference/terminate-crt.md) é chamado.  
   
- Para especificar uma função personalizada de tradução, chame a função de [\_set\_se\_translator](../c-runtime-library/reference/set-se-translator.md) com o nome da função de translação como seu único argumento.  A função de tradução que você grava é chamada uma vez para cada invocação de função na pilha que tem blocos **try**.  Não há nenhuma função padrão de tradução; se você não especificar uma chamando `_set_se_translator`, a exceção de C só pode ser capturada por um manipulador de **catch** de reticências.  
+ Para especificar uma função de conversão personalizado, chame o [set_se_translator](../c-runtime-library/reference/set-se-translator.md) função com o nome da sua função de conversão como seu único argumento. A função de conversão que você escreve é chamada uma vez para cada invocação de função na pilha que tem **tente** blocos. Não há nenhuma função de conversão padrão; Se você não especificar um chamando `_set_se_translator`, a exceção de C só pode ser capturada por reticências **catch** manipulador.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Por exemplo, o código a seguir instala uma função personalizada de tradução e gerará a exceção de C que é envolvida pela classe `SE_Exception`:  
   
 ```  
@@ -141,9 +160,12 @@ int main() {
 }  
 ```  
   
-  **In trans\_func.**  
-**In finally**  
-**Caught a \_\_try exception with SE\_Exception.**  
-**nSE \= 0xc0000094**   
-## Consulte também  
- [Combinando C \(estrutura\) e exceções de C\+\+](../Topic/Mixing%20C%20\(Structured\)%20and%20C++%20Exceptions.md)
+```Output  
+In trans_func.  
+In finally  
+Caught a __try exception with SE_Exception.  
+nSE = 0xc0000094  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Combinação de exceções C (estruturadas) e C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

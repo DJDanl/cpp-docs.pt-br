@@ -1,37 +1,53 @@
 ---
-title: "_bstr_t::operator +=, + | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator+"
-  - "_bstr_t::operator+="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador +, Objetos _bstr_t"
-  - "Operador +=, acrescentando cadeias de caracteres"
+title: + = _bstr_t::Operator, + | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator+
+- _bstr_t::operator+=
+dev_langs:
+- C++
+helpviewer_keywords:
+- += operator, appending strings
+- + operator, _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator +=, +
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ba8936df56359523a76992866642521f899af69
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
+**Seção específica da Microsoft**  
   
  Acrescenta caracteres ao final do objeto `_bstr_t` ou concatena duas cadeias de caracteres.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -51,28 +67,28 @@ friend _bstr_t operator+(
 );  
 ```  
   
-#### Parâmetros  
- *s1*  
+#### <a name="parameters"></a>Parâmetros  
+ *S1*  
  Um objeto `_bstr_t`.  
   
- *s2*  
+ *S2*  
  Uma cadeia de caracteres multibyte.  
   
  `s3`  
  Uma cadeia de caracteres Unicode.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Esses operadores executam a concatenação de cadeias de caracteres:  
   
--   **operador\+\=\(**  *s1*  **\)** Anexa os caracteres em `BSTR` encapsulado de *s1* ao final do `BSTR`encapsulado deste objeto.  
+-   **+ operador = (***s1***)** acrescenta os caracteres a encapsulada `BSTR` de *s1* ao final da encapsuladadesseobjeto`BSTR`.      
   
--   **operador\+\(**  *s1*  **\)** Retorna um novo `_bstr_t`, formado pela concatenação de `BSTR` deste objeto com o de *s1*.  
+-   **operador + (***s1***)** retorna o novo `_bstr_t` que é formado pela concatenação do objeto `BSTR` da *s1*.      
   
--   **operador\+\(**  *s2*  **&#124;**  *s1*  **\)** Retorna um novo `_bstr_t`, formado pela concatenação de uma cadeia de caracteres multibyte *s2*, convertida para Unicode, com `BSTR` encapsulada em *s1*.  
+-   **operador + (***s2***&#124;** *s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres multibyte *s2*, convertido em Unicode, com o `BSTR` encapsulada na *s1*.          
   
--   **operador\+\(**  `s3` **,**  *s1*  **\)** Retorna um novo `_bstr_t`, formado pela concatenação de uma cadeia de caracteres Unicode `s3` com `BSTR` encapsulada em *s1*.  
+-   **operador + (** `s3` **,***s1***)** retorna um novo `_bstr_t` que é formado pela concatenação de uma cadeia de caracteres Unicode `s3` com o `BSTR` encapsulada na *s1*.        
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_bstr\_t](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _bstr_t](../cpp/bstr-t-class.md)

@@ -1,47 +1,63 @@
 ---
-title: "Operador reinterpret_cast | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "reinterpret_cast"
-  - "reinterpret_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave reinterpret_cast [C++]"
+title: Operador reinterpret_cast | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- reinterpret_cast
+- reinterpret_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador reinterpret_cast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71218dc713b24669dc1648b748a0326da0c03152
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Permite que qualquer ponteiro seja convertido em outro tipo de ponteiro.  Também permite que qualquer tipo integral seja convertido em qualquer tipo de ponteiro e vice\-versa.  
+---
+# <a name="reinterpretcast-operator"></a>Operador reinterpret_cast
+Permite que qualquer ponteiro seja convertido em outro tipo de ponteiro. Também permite que qualquer tipo integral seja convertido em qualquer tipo de ponteiro e vice-versa.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 reinterpret_cast < type-id > ( expression )  
 ```  
   
-## Comentários  
- O uso incorreto do operador `reinterpret_cast` pode ser facilmente inseguros.  A menos que a conversão desejada seja inerentemente de nível baixo, você deve usar um dos outros operadores de conversão.  
+## <a name="remarks"></a>Comentários  
+ O uso incorreto do operador `reinterpret_cast` pode ser facilmente inseguros. A menos que a conversão desejada seja inerentemente de nível baixo, você deve usar um dos outros operadores de conversão.  
   
  O operador `reinterpret_cast` pode ser usado para conversões como `char*` a `int*`, ou `One_class*` a `Unrelated_class*`, que é inerentemente inseguro.  
   
- O resultado de `reinterpret_cast` não pode ser usado com segurança para algo diferente de ser convertido de volta ao seu tipo original.  Outros usos são, na melhor das hipóteses, não portáteis.  
+ O resultado de `reinterpret_cast` não pode ser usado com segurança para algo diferente de ser convertido de volta ao seu tipo original. Outros usos são, na melhor das hipóteses, não portáteis.  
   
- O operador `reinterpret_cast` não pode eliminar os atributos **const**, `volatile` ou **\_\_unaligned**.  Consulte [Operador const\_cast](../Topic/const_cast%20Operator.md) para obter informações sobre como remover esses atributos.  
+ O `reinterpret_cast` operador não pode eliminar o **const**, `volatile`, ou **unaligned** atributos. Consulte [operador const_cast](../cpp/const-cast-operator.md) para obter informações sobre como remover esses atributos.  
   
  O operador `reinterpret_cast` converte um valor de ponteiro nulo em valor de ponteiro nulo do tipo de destino.  
   
@@ -87,8 +103,8 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` permite que o ponteiro é tratado como um tipo integral.  O resultado de bit é deslocado e recebe XOR para gerar um índice exclusivo \(exclusivo para um alto nível de probabilidade\).  O índice é truncado em seguida por uma conversão padrão do estilo C para o tipo de retorno de função.  
+ `reinterpret_cast` permite que o ponteiro é tratado como um tipo integral. O resultado de bit é deslocado e recebe XOR para gerar um índice exclusivo (exclusivo para um alto nível de probabilidade). O índice é truncado em seguida por uma conversão padrão do estilo C para o tipo de retorno de função.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Operadores de conversão](../cpp/casting-operators.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+ [Palavras-chave](../cpp/keywords-cpp.md)

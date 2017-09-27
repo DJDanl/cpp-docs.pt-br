@@ -1,63 +1,78 @@
 ---
-title: "Operadores relacionais: &lt;, &gt;, &lt;=, and &gt;= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "<"
-  - ">"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador <"
-  - "Operador <="
-  - "Operador >"
-  - "Operador >="
-  - "operadores greater than"
-  - "operadores greater than or equal to"
-  - "Operador less than"
-  - "Operador less than or equal to"
-  - "operadores relacionais, sintaxe"
+title: 'Operadores relacionais: &lt;, &gt;, &lt;=, e &gt;= | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- <
+- '>'
+dev_langs:
+- C++
+helpviewer_keywords:
+- '> operator'
+- less than operator
+- relational operators, syntax
+- '>= operator'
+- greater than or equal to operators
+- greater than operators
+- < operator
+- less than or equal to operator
+- <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores relacionais: &lt;, &gt;, &lt;=, and &gt;=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 56eead68e733a3950915af2227cbeb0a1bfabbd4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>Operadores relacionais: &lt;, &gt;, &lt;=, e&gt;=
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-        expression < expression  
+expression < expression  
 expression > expression  
 expression <= expression  
 expression >= expression  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Os operadores relacionais binários determinam as seguintes relações:  
   
--   Menor que \(**\<**\)  
+-   Menor que (**\<**)  
   
--   Maior que \(**\>**\)  
+-   Maior que (**>**)  
   
--   Menor que ou igual a \(**\<\=**\)  
+-   Menor ou igual a (**\<=**)  
   
--   Maior que ou igual a \(**\>\=**\)  
+-   Maior que ou igual a (**>=**)  
   
- Esses operadores relacionais possuem associatividade da esquerda para a direita.  Ambos os operandos de operadores relacionais devem ser do tipo aritmético ou de ponteiro.  Eles resultam em valores do tipo `bool`.  O valor retornado é **false** \(0\) se a relação na expressão for falsa; caso contrário, o valor retornado é **true** \(1\).  
+ Esses operadores relacionais possuem associatividade da esquerda para a direita. Ambos os operandos de operadores relacionais devem ser do tipo aritmético ou de ponteiro. Eles resultam em valores do tipo `bool`. O valor retornado é **false** (0) se a relação na expressão for false; caso contrário, o valor retornado é **true** (1).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // expre_Relational_Operators.cpp  
@@ -74,35 +89,34 @@ int main() {
 }  
 ```  
   
- As expressões no exemplo anterior devem ser colocadas entre parênteses porque o operador de inserção de fluxo \(**\<\<**\) tem precedência maior do que os operadores relacionais.  Portanto, a primeira expressão sem parênteses seria avaliada como:  
+ As expressões no exemplo anterior devem ser colocadas entre parênteses, porque o operador de inserção de fluxo (**<<**) tem precedência maior do que os operadores relacionais. Portanto, a primeira expressão sem parênteses seria avaliada como:  
   
 ```  
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");  
 ```  
   
- As conversões aritméticas usuais cobertas em [Conversões aritméticas](../misc/arithmetic-conversions.md) são aplicadas aos operandos de tipos aritméticos.  
+ Conversões aritméticas usuais abordados [conversões padrão](standard-conversions.md) são aplicados a operandos de tipos aritméticos.  
   
-## Comparando ponteiros  
- Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa.  Os ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou a um ponteiro do tipo nulo \*.  Se uma comparação de ponteiros for feita em relação a um ponteiro do tipo nulo \*, o outro ponteiro será convertido implicitamente no tipo nulo \*.  Então, a comparação será feita.  
+## <a name="comparing-pointers"></a>Comparando ponteiros  
+ Quando dois ponteiros para objetos do mesmo tipo são comparados, o resultado é determinado pelo local dos objetos apontados no espaço de endereço do programa. Os ponteiros também podem ser comparados a uma expressão constante que é avaliada como 0 ou a um ponteiro do tipo nulo *. Se uma comparação de ponteiro é feita em relação a um ponteiro de tipo void \*, o outro ponteiro é convertido implicitamente para tipo void \*. Então, a comparação será feita.  
   
  Dois ponteiros de tipos diferentes não podem ser comparados, a menos que:  
   
 -   Um tipo é um tipo de classe derivado de outro tipo.  
   
--   Pelo menos um dos ponteiros é convertido explicitamente \(conversão\) no tipo nulo \*.  \(O outro ponteiro é implicitamente convertido no tipo nulo \* para a conversão.\)  
+-   Pelo menos um dos ponteiros é convertido explicitamente (conversão) no tipo nulo *. (O outro ponteiro é convertido implicitamente para tipo void \* para a conversão.)  
   
- Dois ponteiros do mesmo tipo que apontam para o mesmo objeto são obrigatoriamente comparados como iguais.  Se dois ponteiros para membros não estáticos de um objeto são comparados, as seguintes regras se aplicam:  
+ Dois ponteiros do mesmo tipo que apontam para o mesmo objeto são obrigatoriamente comparados como iguais. Se dois ponteiros para membros não estáticos de um objeto são comparados, as seguintes regras se aplicam:  
   
--   Se o tipo de classe não é uma união e se os dois membros não são separados por um *access\-specifier*, como público, protegido ou particular, o ponteiro para o membro declarado por último será comparado como maior do que o ponteiro para o membro declarado anteriormente.  \(Para obter informações sobre *access\-specifier*, consulte a seção Sintaxe em [Especificadores de acesso](../misc/access-specifiers.md).\)  
+-   Se o tipo de classe não é uma união, e se os dois membros não são separados por um *especificador de acesso*, como pública, protegida ou privada, o ponteiro para o membro declarado última comparará maior do que o ponteiro para o membro declarado anteriormente.  
   
--   Se os dois membros são separados por um *access\-specifier*, os resultados são indefinidos.  
+-   Se os dois membros são separados por um *especificador de acesso*, os resultados serão indefinidos.  
   
 -   Se o tipo de classe for uma união, os ponteiros para membros de dados diferentes nessa união serão comparados como iguais.  
   
- Se dois ponteiros apontarem para elementos da mesma matriz ou para o elemento além do final da matriz, o ponteiro para o objeto com o subscrito mais alto será comparado como superior.  A comparação dos ponteiros é garantida como válida somente quando os ponteiros se referem a objetos na mesma matriz ou ao local após o término da matriz.  
+ Se dois ponteiros apontarem para elementos da mesma matriz ou para o elemento além do final da matriz, o ponteiro para o objeto com o subscrito mais alto será comparado como superior. A comparação dos ponteiros é garantida como válida somente quando os ponteiros se referem a objetos na mesma matriz ou ao local após o término da matriz.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores relacionais e de igualdade C](../c-language/c-relational-and-equality-operators.md)

@@ -1,43 +1,59 @@
 ---
-title: "Instru&#231;&#245;es de itera&#231;&#227;o (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instruções iteration"
-  - "Estruturas de loop, instruções iteration"
+title: "Instruções de iteração (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- iteration statements
+- loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instru&#231;&#245;es de itera&#231;&#227;o (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e00939a9ff383be4cf84c098ee7e93af307a1536
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-As instruções de iteração fazem com que as instruções \(ou instruções compostas\) sejam executadas nenhuma ou mais vezes, de acordo com os critérios de término de loop.  Quando essas instruções são compostas, são executadas em sequência, exceto quando a instrução [break](../cpp/break-statement-cpp.md) ou a instrução [continue](../cpp/continue-statement-cpp.md) são encontradas.  
+---
+# <a name="iteration-statements-c"></a>Instruções de iteração (C++)
+As instruções de iteração fazem com que as instruções (ou instruções compostas) sejam executadas nenhuma ou mais vezes, de acordo com os critérios de término de loop. Quando essas instruções são declarações compostas, eles são executados em ordem, exceto quando ambos o [quebra](../cpp/break-statement-cpp.md) instrução ou o [continuar](../cpp/continue-statement-cpp.md) instrução for encontrada.  
   
- O C\+\+ fornece quatro instruções de iteração — [while](../cpp/while-statement-cpp.md), [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)e [range\-based for](../Topic/Range-based%20for%20Statement%20\(C++\).md).  Cada uma delas itera até que a expressão de término seja avaliada como zero \(false\), ou até que o término de loop seja imposto com uma instrução **break**.  A tabela a seguir resume essas instruções e suas ações; cada uma delas é discutida em detalhes nas seções seguintes.  
+ C++ fornece quatro instruções de iteração — [enquanto](../cpp/while-statement-cpp.md), [fazer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), e [com base em intervalo para](../cpp/range-based-for-statement-cpp.md). Cada uma dessas itera até que sua expressão de encerramento é avaliada como zero (false) ou encerramento do loop for forçado com um **quebra** instrução. A tabela a seguir resume essas instruções e suas ações; cada uma delas é discutida em detalhes nas seções seguintes.  
   
-### Instruções de iteração  
+### <a name="iteration-statements"></a>Instruções de iteração  
   
 |Instrução|Avaliada como|Inicialização|Incremento|  
-|---------------|-------------------|-------------------|----------------|  
+|---------------|------------------|--------------------|---------------|  
 |`while`|Topo do loop|Não|Não|  
 |**do**|Final do loop|Não|Não|  
 |**for**|Topo do loop|Sim|Sim|  
-|**range\-based for**|Topo do loop|Sim|Sim|  
+|**com base em intervalo para**|Topo do loop|Sim|Sim|  
   
- A parte da instrução de uma instrução de iteração não pode ser uma declaração.  No entanto, pode ser uma instrução composta que contenha uma declaração.  
+ A parte da instrução de uma instrução de iteração não pode ser uma declaração. No entanto, pode ser uma instrução composta que contenha uma declaração.  
   
-## Consulte também  
- [Visão geral de instruções C\+\+](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>Consulte também  
+ [Visão geral das instruções C++](../cpp/overview-of-cpp-statements.md)

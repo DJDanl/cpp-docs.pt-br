@@ -1,44 +1,60 @@
 ---
-title: "Usando extern para especificar liga&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "extern"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declarações, externo"
-  - "palavra-chave extern [C++], vinculação a funções não C++"
-  - "vinculação externa, modificador extern"
+title: "Usando extern para especificar ligação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- extern
+dev_langs:
+- C++
+helpviewer_keywords:
+- extern keyword [C++], linkage to non-C++ functions
+- declarations, external
+- external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Usando extern para especificar liga&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="using-extern-to-specify-linkage"></a>Usando extern para especificar ligação
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-        extern string-literal { declaration-list }  
+      extern string-literal { declaration-list }  
 extern string-literal declaration  
 ```  
   
-## Comentários  
- A palavra\-chave `extern` declara uma variável ou uma função e especifica que tem vinculação externa \(seu nome é visível em arquivos diferentes daquele em que é definida\).  Ao alterar uma variável, `extern` especifica que a variável tem duração estática \(é atribuída quando o programa começa e desalocada quando o programa é encerrado\).  A variável ou função pode ser definida em outro arquivo de origem, ou posteriormente no mesmo arquivo.  As declarações de variáveis e funções no escopo do arquivo são externas por padrão.  
+## <a name="remarks"></a>Comentários  
+ A palavra-chave `extern` declara uma variável ou uma função e especifica que tem vinculação externa (seu nome é visível em arquivos diferentes daquele em que é definida). Ao alterar uma variável, `extern` especifica que a variável tem duração estática (é atribuída quando o programa começa e desalocada quando o programa é encerrado). A variável ou função pode ser definida em outro arquivo de origem, ou posteriormente no mesmo arquivo. As declarações de variáveis e funções no escopo do arquivo são externas por padrão.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // specifying_linkage1.cpp  
@@ -59,11 +75,11 @@ void other() {
 }  
 ```  
   
- Em C\+\+, quando usada com uma cadeia de caracteres, `extern` especifica que as convenções de vinculação de outra linguagem estão sendo usadas para os declaradores.  As funções C e os dados podem ser acessados somente se forem declarados anteriormente como tendo vinculação C.  No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.  
+ Em C++, quando usada com uma cadeia de caracteres, `extern` especifica que as convenções de vinculação de outra linguagem estão sendo usadas para os declaradores. As funções C e os dados podem ser acessados somente se forem declarados anteriormente como tendo vinculação C. No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.  
   
- O Microsoft C\+\+ oferece suporte às cadeias de caracteres **"C"** e **"C\+\+"** no campo *string\-literal*.  Todos os arquivos de inclusão padrão usam a sintaxe `extern` “C ” para permitir que funções da biblioteca em tempo de execução sejam usadas em programas C\+\+.  
+ Microsoft C++ oferece suporte as cadeias de caracteres **"C"** e **"C++"** no *literal de cadeia de caracteres* campo. Todos os arquivos de inclusão padrão usam a sintaxe `extern` “C ” para permitir que funções da biblioteca em tempo de execução sejam usadas em programas C++.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra formas alternativas de declarar os nomes que têm vinculação C:  
   
 ```  
@@ -104,7 +120,7 @@ extern "C" char GetChar( void ) {
 extern "C" int errno;  
 ```  
   
- Se uma função tiver mais de uma especificação de vinculação, elas devem concordar; é errado declarar funções como tendo o vínculos de C e C\+\+.  Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira.  Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração.  Por exemplo:  
+ Se uma função tiver mais de uma especificação de vinculação, elas devem concordar; é errado declarar funções como tendo o vínculos de C e C++. Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira. Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração. Por exemplo:  
   
 ```  
 extern "C" int CFunc1();  
@@ -119,11 +135,10 @@ extern "C" int CFunc2(); // Error: not the first declaration of
                          //  specifier.  
 ```  
   
- Funções e objetos declarados explicitamente como **static** dentro do corpo de um especificador composto de vinculação \(**{ }**\) são tratados como funções estáticas ou objetos; o especificador de vinculação é ignorado.  Funções e outros objetos se comportam como se declarados usando a palavra\-chave `extern`.  \(Consulte [Uso da palavra\-chave Extern para especificar a vinculação](../cpp/using-extern-to-specify-linkage.md) para obter detalhes sobre a palavra\-chave `extern`.\)  
+ Funções e objetos explicitamente declarado como **estático** dentro do corpo de um especificador de vinculação composta (**{}**) são tratados como funções estáticas ou objetos; o especificador de vinculação é ignorado. Funções e outros objetos se comportam como se declarados usando a palavra-chave `extern`. (Consulte [usando extern para especificar ligação](../cpp/using-extern-to-specify-linkage.md) para obter detalhes sobre o `extern` palavra-chave.)  
   
-## Consulte também  
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\)Linkage Specifications](http://msdn.microsoft.com/pt-br/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)   
- [Especificador de classe de armazenamento externa](../c-language/extern-storage-class-specifier.md)   
+## <a name="see-also"></a>Consulte também  
+ [Palavras-chave](../cpp/keywords-cpp.md)   
+ [extern especificador de classe de armazenamento](../c-language/extern-storage-class-specifier.md)   
  [Comportamento de identificadores](../c-language/behavior-of-identifiers.md)   
- [Ligação](../c-language/linkage.md)
+ [Vinculação](../c-language/linkage.md)

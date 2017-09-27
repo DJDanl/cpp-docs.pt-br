@@ -1,37 +1,53 @@
 ---
-title: "_com_error::HelpContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error::HelpContext"
-  - "HelpContext"
-  - "_com_error.HelpContext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método HelpContext"
+title: _com_error::HelpContext | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error::HelpContext
+- HelpContext
+- _com_error.HelpContext
+dev_langs:
+- C++
+helpviewer_keywords:
+- HelpContext method
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_error::HelpContext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d3eb0678e7d3b7cb4c1824cf17bc25499bf0c0ce
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+**Seção específica da Microsoft**  
   
- Chama a função **IErrorInfo::GetHelpContext**.  
+ Chamadas **IErrorInfo::GetHelpContext** função.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,13 +55,13 @@ DWORD HelpContext( ) const throw( );
   
 ```  
   
-## Valor de retorno  
- Retorna o resultado de **IErrorInfo::GetHelpContext** para o objeto **IErrorInfo** registrado no objeto `_com_error`.  Se nenhum objeto **IErrorInfo** for registrado, retornará zero.  
+## <a name="return-value"></a>Valor de retorno  
+ Retorna o resultado da **IErrorInfo::GetHelpContext** para o **IErrorInfo** objeto registrados dentro de `_com_error` objeto. Se nenhum **IErrorInfo** objeto será registrado, ele retorna um zero.  
   
-## Comentários  
- Qualquer falha ao chamar o método **IErrorInfo::GetHelpContext** é ignorada.  
+## <a name="remarks"></a>Comentários  
+ Qualquer falha ao chamar o **IErrorInfo::GetHelpContext** método será ignorado.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _com_error](../cpp/com-error-class.md)

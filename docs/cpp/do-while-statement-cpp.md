@@ -1,59 +1,75 @@
 ---
-title: "Instru&#231;&#227;o do-while (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "do-while_cpp"
-  - "do-while"
-  - "do"
-  - "while_cpp"
-  - "do_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave do [C++]"
-  - "Palavra-chave do [C++], do-while"
-  - "Palavra-chave do-while [C++]"
-  - "Palavra-chave while [C++], do-while"
+title: "Siga-enquanto a instrução (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- do-while_cpp
+- do-while
+- do
+- while_cpp
+- do_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- do keyword [C++], do-while
+- do-while keyword [C++]
+- do keyword [C++]
+- while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instru&#231;&#227;o do-while (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8c81bbeea9f841a834d59186017b2932f83de862
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Executa uma *instrução* repetidamente até que a condição de término especificada \(a *expressão*\) seja avaliada como zero.  
+---
+# <a name="do-while-statement-c"></a>Instrução do-while (C++)
+Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) for avaliada como zero.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
       do  
-   statement  
-   while ( expression ) ;  
+   statement  
+   while ( expression ) ;  
 ```  
   
-## Comentários  
- O teste da condição de término é realizado após cada execução do loop; portanto, um loop `do-while` é executado uma ou mais vezes, dependendo do valor da expressão de término.  A instrução `do-while` também pode terminar quando uma instrução [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../Topic/return%20Statement%20\(C++\).md) for executada no corpo da instrução.  
+## <a name="remarks"></a>Comentários  
+ O teste da condição de término é realizado após cada execução do loop; portanto, um loop `do-while` é executado uma ou mais vezes, dependendo do valor da expressão de término. O `do-while` instrução também pode encerrar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) instrução é executada dentro do corpo de instrução.  
   
- A *expressão* deve ter o tipo aritmético ou ponteiro.  A execução procede da seguinte maneira:  
+ A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
   
 1.  O corpo da instrução é executado.  
   
-2.  Em seguida, a *expressão* é avaliada.  Se a *expressão* for falsa, a instrução `do-while` é finalizada e o controle é passado para a próxima instrução no programa.  Se a *expressão* for verdadeira \(diferente de zero\), o processo é repetido, começando da etapa 1.  
+2.  Em seguida, a *expressão* é avaliada. Se a *expressão* for falsa, a instrução `do-while` será finalizada e o controle será passado para a próxima instrução no programa. Se a *expressão* for verdadeira (diferente de zero), o processo será repetido, começando da etapa 1.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra a instrução `do-while`:  
   
 ```  
@@ -69,9 +85,9 @@ int main()
 }  
 ```  
   
-## Consulte também  
- [Instruções de iteração](../cpp/iteration-statements-cpp.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)   
- [Instrução while \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [Instrução for \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Instrução for com base em intervalo \(C\+\+\)](../Topic/Range-based%20for%20Statement%20\(C++\).md)
+## <a name="see-also"></a>Consulte também  
+ [Instruções de Iteração](../cpp/iteration-statements-cpp.md)   
+ [Palavras-chave](../cpp/keywords-cpp.md)   
+ [Instrução while (C++)](../cpp/while-statement-cpp.md)   
+ [Instrução for (C++)](../cpp/for-statement-cpp.md)   
+ [Instrução for baseada intervalo (C++)](../cpp/range-based-for-statement-cpp.md)

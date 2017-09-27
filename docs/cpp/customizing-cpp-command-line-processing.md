@@ -1,46 +1,62 @@
 ---
-title: "Personalizando processamento de linha de comando C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_setenvp"
-  - "_setargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função _setargv"
-  - "Função _setenvp"
-  - "linha de comando, processando"
-  - "linha de comando, processando argumentos"
-  - "processamento de linha de comando"
-  - "ambiente, rotina de processamento de ambiente"
-  - "código de inicialização, personalizando o processamento de linha de comando"
-  - "suprimindo o processamento de ambiente"
+title: Personalizando processamento de linha de comando C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _setenvp
+- _setargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- command line, processing
+- command-line processing
+- startup code, customizing command-line processing
+- environment, environment-processing routine
+- _setargv function
+- command line, processing arguments
+- suppressing environment processing
+- _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Personalizando processamento de linha de comando C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 977ab6f5a7a8dbddf045e83a14127ac979a114a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Específico da Microsoft  
- Se o seu programa não utiliza argumentos de linha de comando, é possível economizar um pequeno espaço suprimindo o uso da rotina de biblioteca que executa o processamento de linha de comando.  Essa rotina é chamada **\_setargv** e descrita em [Expansão curinga](../cpp/wildcard-expansion.md).  Para suprimir seu uso, defina uma rotina que não faça nada no arquivo que contém a função **main** e denomine\-a **\_setargv**.  A chamada para **\_setargv** é satisfeita por sua definição de **\_setargv** e a versão da biblioteca não é carregada.  
+---
+# <a name="customizing-c-command-line-processing"></a>Personalizando processamento de linha de comando C++
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Se o seu programa não utiliza argumentos de linha de comando, é possível economizar um pequeno espaço suprimindo o uso da rotina de biblioteca que executa o processamento de linha de comando. Esta rotina é chamada **setargv** e é descrito na [expansão de curinga](../cpp/wildcard-expansion.md). Para suprimir o seu uso, definir uma rotina que não faz nada no arquivo que contém o **principal** de função e nomeie-o **setargv**. A chamada para **setargv** , em seguida, é atendido pela sua definição de **setargv**, e a versão da biblioteca não está carregada.  
   
- Da mesma forma, se você nunca acessa a tabela de ambiente pelo argumento `envp`, é possível fornecer sua própria rotina vazia a ser usada em vez de **\_setenvp**, a rotina de ambiente de processamento.  Da mesma forma que a função **\_setargv**, **\_setenvp** deve ser declarada como **extern "C"**.  
+ Da mesma forma, se você nunca acessa a tabela de ambiente por meio de `envp` argumento, você pode fornecer sua própria rotina vazia a ser usado no lugar de **setenvp**, a rotina de processamento de ambiente. Assim como ocorre com o **setargv** função **setenvp** deve ser declarado como **extern "C"**.  
   
- O programa poderá fazer chamadas para a família de rotinas **spawn** ou `exec` na biblioteca em tempo de execução de C.  Se esse for o caso, você não deve suprimir a rotina de processamento de ambiente, pois essa rotina é usada para passar um ambiente do processo pai para o processo filho.  
+ Seu programa pode fazer chamadas para o **geração** ou `exec` família de rotinas na biblioteca de tempo de execução do C. Se esse for o caso, você não deve suprimir a rotina de processamento de ambiente, pois essa rotina é usada para passar um ambiente do processo pai para o processo filho.  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [main: inicialização do programa](../Topic/main:%20Program%20Startup.md)
+## <a name="see-also"></a>Consulte também  
+ [main: inicialização do programa](../cpp/main-program-startup.md)

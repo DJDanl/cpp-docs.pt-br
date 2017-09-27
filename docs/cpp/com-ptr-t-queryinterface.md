@@ -1,36 +1,52 @@
 ---
-title: "_com_ptr_t::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::QueryInterface"
-  - "_com_ptr_t.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método QueryInterface"
+title: _com_ptr_t::QueryInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::QueryInterface
+- _com_ptr_t.QueryInterface
+dev_langs:
+- C++
+helpviewer_keywords:
+- QueryInterface method
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_ptr_t::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6b5c8fb9ca1d628b178c19b677b90f17cc992373
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+**Seção específica da Microsoft**  
   
- Chama a função de membro `QueryInterface` de **IUnknown** no ponteiro de interface encapsulado.  
+ Chamadas de `QueryInterface` função membro de **IUnknown** no ponteiro de interface encapsulado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -44,17 +60,17 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `iid`  
- **IID** de um ponteiro da interface.  
+ **IID** de um ponteiro de interface.  
   
  `p`  
  Ponteiro da interface bruto.  
   
-## Comentários  
- Chama **IUnknown::QueryInterface** no ponteiro encapsulado da interface com a **IID** especificada e retorna o ponteiro bruto da interface resultante em `p`.  Essa rotina retorna `HRESULT` para indicar êxito ou falha.  
+## <a name="remarks"></a>Comentários  
+ Chamadas **IUnknown:: QueryInterface** no ponteiro de interface encapsulados com especificado **IID** e retorna o ponteiro de interface bruto resultante em `p`. Essa rotina retorna `HRESULT` para indicar êxito ou falha.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

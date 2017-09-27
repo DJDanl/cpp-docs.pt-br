@@ -1,45 +1,61 @@
 ---
-title: "Classes de suporte COM do compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_raise_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compilador cl.exe, Suporte COM"
-  - "COM, suporte de compilador"
+title: Classes de suporte COM do compilador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_raise_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, COM support
+- COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de suporte COM do compilador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 48540910db97e7662eeaa7e8a7febf7e44df653b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="compiler-com-support-classes"></a>Classes de suporte COM do compilador
+**Seção específica da Microsoft**  
   
- As classes padrão são usadas para dar suporte a alguns dos tipos COM.  As classes são definidas em comdef.h e nos arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
+ As classes padrão são usadas para dar suporte a alguns dos tipos COM. As classes são definidas em comdef.h e nos arquivos de cabeçalho gerados a partir da biblioteca de tipos.  
   
 |Classe|Finalidade|  
-|------------|----------------|  
-|[\_bstr\_t](../cpp/bstr-t-class.md)|Encapsula o tipo `BSTR` para fornecer operadores e métodos úteis.|  
-|[\_com\_error](../cpp/com-error-class.md)|Define o objeto de erro lançado por [\_com\_raise\_error](../cpp/com-raise-error.md) na maioria das falhas.|  
-|[\_com\_ptr\_t](../cpp/com-ptr-t-class.md)|Encapsula ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, **Release** e `QueryInterface`.|  
-|[\_variant\_t](../cpp/variant-t-class.md)|Encapsula o tipo **VARIANT** para fornecer operadores e métodos úteis.|  
+|-----------|-------------|  
+|[bstr_t](../cpp/bstr-t-class.md)|Encapsula o tipo `BSTR` para fornecer operadores e métodos úteis.|  
+|[com_error](../cpp/com-error-class.md)|Define o objeto de erro gerado pelo [com_raise_error](../cpp/com-raise-error.md) na maioria das falhas.|  
+|[com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula os ponteiros de interface COM e automatiza as chamadas necessárias para `AddRef`, **versão**, e `QueryInterface`.|  
+|[variant_t](../cpp/variant-t-class.md)|Encapsula o **VARIANT** tipo para fornecer métodos e operadores útil.|  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Suporte COM do compilador](../Topic/Compiler%20COM%20Support.md)   
+## <a name="see-also"></a>Consulte também  
+ [Suporte COM do compilador](../cpp/compiler-com-support.md)   
  [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)   
- [Referência de linguagem C\+\+](../cpp/cpp-language-reference.md)
+ [Referência da linguagem C++](../cpp/cpp-language-reference.md)

@@ -1,51 +1,67 @@
 ---
-title: "__declspec | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__declspec_cpp"
-  - "__declspec"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __declspec [C++]"
+title: declspec | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __declspec_cpp
+- __declspec
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++]
 ms.assetid: 832db681-e8e1-41ca-b78c-cd9d265cdb87
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __declspec
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Específico da Microsoft  
- A sintaxe de atributo estendido para a especificação de informações de classe de armazenamento usa a palavra\-chave `__declspec`, que especifica que uma instância de um determinado tipo deve ser armazenada com um atributo de classe de armazenamento específico da Microsoft listado abaixo.  Exemplos de outros modificadores de classe de armazenamento incluem as palavras\-chave `static` e `extern`.  No entanto, essas palavras\-chave fazem parte da especificação ANSI das linguagens C e C\+\+ e, assim, não são abrangidas pela sintaxe de atributo estendido.  A sintaxe de atributo estendido simplifica e padroniza extensões específicas da Microsoft para as linguagens C e C\+\+.  
+---
+# <a name="declspec"></a>__declspec
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ A sintaxe de atributo estendido para a especificação de informações de classe de armazenamento usa a palavra-chave `__declspec`, que especifica que uma instância de um determinado tipo deve ser armazenada com um atributo de classe de armazenamento específico da Microsoft listado abaixo. Exemplos de outros modificadores de classe de armazenamento incluem as palavras-chave `static` e `extern`. No entanto, essas palavras-chave fazem parte da especificação ANSI das linguagens C e C++ e, assim, não são abrangidas pela sintaxe de atributo estendido. A sintaxe de atributo estendido simplifica e padroniza extensões específicas da Microsoft para as linguagens C e C++.  
   
-## Gramática  
- *decl\-specifier*:  
- `__declspec (`  *extended\-decl\-modifier\-seq*  `)`  
+## <a name="grammar"></a>Gramática  
+ *especificador de Decl*:  
+ `__declspec (`  *estendido-decl-modificador-seq*  `)`  
   
- *extended\-decl\-modifier\-seq*:  
- *extended\-decl\-modifier* opt  
+ *extended-decl-modifier-seq*:  
+ *extended-decl-modifier*opt  
   
- *extended\-decl\-modifier extended\-decl\-modifier\-seq*  
+ *modificador estendido de decl estendido-decl-modificador-seq*  
   
- *extended\-decl\-modifier*:  
- `align(` *\#* `)`  
+ *extended-decl-modifier*:  
+ `align(` *#* `)`  
   
- `allocate("` *segname* `")`  
+ `allocate("`*segname*`")`  
   
  `appdomain`  
   
- `code_seg("` *segname* `")`  
+ `code_seg("`*segname*`")`  
   
  `deprecated`  
   
@@ -69,7 +85,7 @@ manager: "ghogen"
   
  `process`  
   
- `property(`{`get=`*get\_func\_name*&#124;`,put=`*put\_func\_name*}`)`  
+ `property(`{`get=`*get_func_name*&#124;`,put=` *put_func_name*}`)`  
   
  `restrict`  
   
@@ -79,23 +95,23 @@ manager: "ghogen"
   
  `thread`  
   
- `uuid("` *ComObjectGUID* `")`  
+ `uuid("`*ComObjectGUID*`")`  
   
- O espaço em branco separa a sequência modificadora de declaração.  Os exemplos aparecem nas seções posteriores.  
+ O espaço em branco separa a sequência modificadora de declaração. Os exemplos aparecem nas seções posteriores.  
   
- A gramática do atributo estendido oferece suporte a estes atributos de classe de armazenamento específicos da Microsoft: [align](../cpp/align-cpp.md), [allocate](../Topic/allocate.md), [appdomain](../Topic/appdomain.md), [code\_seg](../cpp/code-seg-declspec.md), [deprecated](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../Topic/naked%20\(C++\).md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../Topic/nothrow%20\(C++\).md), [novtable](../cpp/novtable.md), [process](../cpp/process.md), [restrict](../cpp/restrict.md), [safebuffers](../Topic/safebuffers.md), [selectany](../cpp/selectany.md) e [thread](../cpp/thread.md).  Ela também oferece suporte a estes atributos de objeto COM: [property](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).  
+ Esses atributos de classe de armazenamento específicas da Microsoft oferece suporte a gramática de atributo estendido: [alinhar](../cpp/align-cpp.md), [alocar](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [preterido](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [processo](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), e [thread](../cpp/thread.md). Ele também dá suporte a esses atributos de objeto COM: [propriedade](../cpp/property-cpp.md) e [uuid](../cpp/uuid-cpp.md).  
   
- Os atributos de classe de armazenamento `code_seg`, `dllexport`, `dllimport`, `naked`, `noalias`, `nothrow`, `property`, `restrict`, `selectany`, `thread` e `uuid` são propriedades somente da declaração do objeto ou da função aos quais são aplicadas.  O atributo `thread` afeta somente dados e objetos.  O atributo `naked` afeta somente funções.  Os atributos `dllimport` e `dllexport` afetam funções, dados e objetos.  Os atributos `property`, `selectany` e `uuid` afetam objetos COM.  
+ Os atributos de classe de armazenamento `code_seg`, `dllexport`, `dllimport`, `naked`, `noalias`, `nothrow`, `property`, `restrict`, `selectany`, `thread` e `uuid` são propriedades somente da declaração do objeto ou da função aos quais são aplicadas. O atributo `thread` afeta somente dados e objetos. O atributo `naked` afeta somente funções. Os atributos `dllimport` e `dllexport` afetam funções, dados e objetos. Os atributos `property`, `selectany` e `uuid` afetam objetos COM.  
   
- As palavras\-chave `__declspec` devem ser colocadas no início de uma declaração simples.  O compilador ignora, sem aviso, qualquer palavra\-chave `__declspec` colocada após \* ou & e na frente do identificador de variável em uma declaração.  
+ As palavras-chave `__declspec` devem ser colocadas no início de uma declaração simples. O compilador ignora, sem aviso, qualquer palavra-chave `__declspec` colocada após * ou & e na frente do identificador de variável em uma declaração.  
   
- Um atributo `__declspec` especificado no início de uma declaração de tipo definido pelo usuário se aplica à variável desse tipo.  Por exemplo:  
+ Um atributo `__declspec` especificado no início de uma declaração de tipo definido pelo usuário se aplica à variável desse tipo. Por exemplo:  
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- Nesse caso, o atributo se aplica a `varX`.  Um atributo `__declspec` colocado após a palavra\-chave `class` ou `struct` se aplica ao tipo definido pelo usuário.  Por exemplo:  
+ Nesse caso, o atributo se aplica a `varX`. Um atributo `__declspec` colocado após a palavra-chave `class` ou `struct` se aplica ao tipo definido pelo usuário. Por exemplo:  
   
 ```  
 class __declspec(dllimport) X {};  
@@ -107,10 +123,11 @@ class __declspec(dllimport) X {};
   
 ```  
   
-decl-specifier-seq declarator-list;  
+decl-specifier-seq  
+declarator-list;  
 ```  
   
- *decl\-specifier\-seq* deve conter, entre outras coisas, um tipo base \(por exemplo,  `int`, `float`, um `typedef` ou um nome de classe\), uma classe de armazenamento \(por exemplo,  `static`, `extern`\) ou a extensão `__declspec`.  *init\-declarator\-list* deve conter, entre outras coisas, a parte do ponteiro de declarações.  Por exemplo:  
+ O *decl de especificador de seq* deve conter, em entre outras coisas, um tipo base (por exemplo, `int`, `float`, um `typedef`, ou um nome de classe), uma classe de armazenamento (por exemplo, `static`, `extern`), ou o `__declspec`extensão. O *lista de declaradores init* deve conter entre outras coisas, a parte de ponteiro de declarações. Por exemplo:  
   
 ```  
 __declspec(selectany) int * pi1 = 0;   //OK, selectany & int both part of decl-specifier  
@@ -125,8 +142,8 @@ int * __declspec(selectany) pi3 = 0;   //ERROR, selectany is not part of a decla
 __declspec( thread ) int tls_i = 1;  
 ```  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Consulte também  
+ [Palavras-chave](../cpp/keywords-cpp.md)   
  [Atributos de classe de armazenamento estendido C](../c-language/c-extended-storage-class-attributes.md)

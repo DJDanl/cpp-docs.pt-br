@@ -1,36 +1,52 @@
 ---
-title: "_com_ptr_t::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::Detach"
-  - "_com_ptr_t.Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Detach"
+title: _com_ptr_t::Detach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::Detach
+- _com_ptr_t.Detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- Detach method
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_ptr_t::Detach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f61b0fb05f182ef2723fdcc564fd697f490aed20
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+**Seção específica da Microsoft**  
   
  Extrai e retorna o ponteiro de interface encapsulado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -38,10 +54,10 @@ Interface* Detach( ) throw( );
   
 ```  
   
-## Comentários  
- Extrai e retorna o ponteiro de interface encapsulado, e depois limpa o armazenamento de ponteiro encapsulado para **NULL**.  Isso remove o ponteiro de interface do encapsulamento.  Cabe a você chamar **Release** no ponteiro de interface retornado.  
+## <a name="remarks"></a>Comentários  
+ Extrai e retorna o ponteiro de interface encapsulados e limpa o armazenamento de ponteiro encapsulada **nulo**. Isso remove o ponteiro de interface do encapsulamento. Cabe a você chamar **versão** no ponteiro de interface retornado.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

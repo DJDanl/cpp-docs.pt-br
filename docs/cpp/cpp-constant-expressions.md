@@ -1,33 +1,49 @@
 ---
-title: "Express&#245;es de constante C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressões de constante"
-  - "expressões de constante, sintaxe"
-  - "expressões [C++], Constante "
+title: "Expressões de constante C++ | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Express&#245;es de constante C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Um *constante* valor é aquele que não é alterado.  C\+\+ fornece duas palavras\-chave para permitir que você expresse a intenção de que um objeto não se destina a ser modificada e impor essa intenção.  
+---
+# <a name="c-constant-expressions"></a>Expressões de constante C++
+Um *constante* valor é aquele que não é alterado. C++ fornece duas palavras-chave para ativar expressar a intenção de que um objeto não se destina a ser modificada e para impor essa intenção.  
   
- O C\+\+ requer expressões constantes — expressões que são avaliadas como uma constante — para declarações de:  
+ O C++ requer expressões constantes — expressões que são avaliadas como uma constante — para declarações de:  
   
 -   Limites de matriz  
   
@@ -45,18 +61,18 @@ Um *constante* valor é aquele que não é alterado.  C\+\+ fornece duas palavra
   
 -   Valores declarados como const que são inicializados com expressões constantes  
   
--   `sizeof` expressões  
+-   Expressões `sizeof`  
   
- As constantes não integral devem ser convertidas \(explicitamente ou implicitamente\) em tipos integrais para serem válidas em uma expressão constante.  Portanto, o código a seguir é válido:  
+ As constantes não integral devem ser convertidas (explicitamente ou implicitamente) em tipos integrais para serem válidas em uma expressão constante. Portanto, o código a seguir é válido:  
   
 ```  
 const double Size = 11.0;  
 char chArray[(int)Size];  
 ```  
   
- Conversões explícitas em tipos integrais são válidas em expressões constantes; todos os outros tipos e tipos derivados são inválidos, exceto quando usado como operandos para o `sizeof` operador.  
+ Conversões explícitas de tipos integrais são válidas em expressões de constante; todos os outros tipos e tipos derivados são ilegais exceto quando usado como operandos para o `sizeof` operador.  
   
  O operador vírgula e os operadores de atribuição não podem ser usados em expressões constantes.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tipos de expressões](../cpp/types-of-expressions.md)

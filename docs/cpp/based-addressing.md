@@ -1,35 +1,51 @@
 ---
-title: "Endere&#231;amento com base em | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "endereços [C++]"
-  - "endereços [C++], baseado"
-  - "abordando com base em [C++]"
+title: Abordando com base em | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- based addressing [C++]
+- addresses [C++]
+- addresses [C++], based
 ms.assetid: e80527b0-2303-4755-a52e-3e07e17232da
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Endere&#231;amento com base em
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1b3a91cc09da9d5fcf4fb0360b3755364b92553e
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="based-addressing"></a>Endereçamento com base em
 Esta seção inclui os seguintes tópicos:  
   
--   [Gramática \_\_based](../cpp/based-grammar.md)  
+-   [Gramática __based](../cpp/based-grammar.md)  
   
--   [Ponteiros com base](../Topic/Based%20Pointers%20\(C++\).md)  
+-   [Ponteiros baseados](../cpp/based-pointers-cpp.md)  
   
-## Consulte também  
- [Modificadores específicos da Microsoft](../Topic/Microsoft-Specific%20Modifiers.md)
+## <a name="see-also"></a>Consulte também  
+ [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)

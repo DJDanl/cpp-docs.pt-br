@@ -1,50 +1,66 @@
 ---
-title: "Sobrecarga de operador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "operator_cpp"
-  - "operator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operadores não redefiníveis"
-  - "palavra-chave operator [C++]"
-  - "sobrecarga de operador"
-  - "operadores [C++], sobrecarga"
-  - "operadores redefiníveis"
+title: Sobrecarga de operador | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- operator_cpp
+- operator
+dev_langs:
+- C++
+helpviewer_keywords:
+- redefinable operators
+- non-redefinable operators
+- operator keyword [C++]
+- operators [C++], overloading
+- operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sobrecarga de operador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5ac9415ec186760a70394772ffaff011d7c68c95
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A palavra\-chave `operator` declara uma função especificando o que `operator-symbol` significa quando aplicado às instâncias de uma classe.  Isso confere ao operador mais de um significado, ou seja, o "sobrecarrega".  O compilador distingue entre os diversos significados de um operador examinando os tipos de seus operandos.  
+---
+# <a name="operator-overloading"></a>Sobrecarga de operador
+A palavra-chave `operator` declara uma função especificando o que `operator-symbol` significa quando aplicado às instâncias de uma classe. Isso confere ao operador mais de um significado, ou seja, o "sobrecarrega". O compilador distingue entre os diversos significados de um operador examinando os tipos de seus operandos.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 type operator operator-symbol ( parameter-list )  
 ```  
   
-## Comentários  
- Você pode redefinir a função da maioria dos operadores internos globalmente ou em uma classe de cada vez.  Os operadores sobrecarregados são implementados como funções.  
+## <a name="remarks"></a>Comentários  
+ Você pode redefinir a função da maioria dos operadores internos globalmente ou em uma classe de cada vez. Os operadores sobrecarregados são implementados como funções.  
   
- O nome de um operador sobrecarregado é `operator``x`, onde `x` é o operador conforme aparece na tabela a seguir.  Por exemplo, para sobrecarregar o operador de adição, você define uma função chamada `operator+`.  Da mesma forma, para sobrecarregar o operador de adição\/atribuição, `+=`, você define uma função chamada `operator+=`.  
+ É o nome de um operador sobrecarregado `operator x`, onde `x` é o operador como ele aparece na tabela a seguir. Por exemplo, para sobrecarregar o operador de adição, você define uma função chamada `operator+`. Da mesma forma, para sobrecarregar o operador de adição/atribuição, `+=`, você define uma função chamada `operator+=`.  
   
-### Operadores redefiníveis  
+### <a name="redefinable-operators"></a>Operadores redefiníveis  
   
 |Operador|Nome|Tipo|  
 |--------------|----------|----------|  
@@ -54,7 +70,7 @@ type operator operator-symbol ( parameter-list )
 |`%`|Módulo|Binário|  
 |`%=`|Atribuição de módulo|Binário|  
 |`&`|AND bit a bit|Binário|  
-|`&`|Address\-of|Unário|  
+|`&`|Address-of|Unário|  
 |`&&`|AND lógico|Binário|  
 |`&=`|Atribuição AND de bit a bit|Binário|  
 |`( )`|Chamada de função|—|  
@@ -66,22 +82,22 @@ type operator operator-symbol ( parameter-list )
 |`+`|Mais unário|Unário|  
 |`++`|Incremento <sup>1</sup>|Unário|  
 |`+=`|Atribuição de adição|Binário|  
-|`–`|Subtração|Binário|  
-|`–`|Negação unária|Unário|  
-|`––`|Decremento <sup>1</sup>|Unário|  
-|`–=`|Atribuição de subtração|Binário|  
-|`–>`|Seleção de membro|Binário|  
-|`–>*`|Seleção de ponteiro para membro|Binário|  
+|`-`|Subtração|Binário|  
+|`-`|Negação unária|Unário|  
+|`--`|Decremento <sup>1</sup>|Unário|  
+|`-=`|Atribuição de subtração|Binário|  
+|`->`|Seleção de membro|Binário|  
+|`->*`|Seleção de ponteiro para membro|Binário|  
 |`/`|Divisão|Binário|  
 |`/=`|Atribuição de divisão|Binário|  
 |`<`|Menor que|Binário|  
 |`<<`|Shift esquerda|Binário|  
 |`<<=`|Atribuição de deslocamento para a esquerda|Binário|  
-|`<=`|Menor ou igual a|Binário|  
+|`<=`|Menor que ou igual a|Binário|  
 |`=`|Atribuição|Binário|  
 |`==`|Igualdade|Binário|  
 |`>`|Maior que|Binário|  
-|`>=`|Maior ou igual a|Binário|  
+|`>=`|Maior que ou igual a|Binário|  
 |`>>`|Shift direita|Binário|  
 |`>>=`|Atribuição de deslocamento para a direita|Binário|  
 |`[ ]`|Subscrito de matriz|—|  
@@ -95,9 +111,9 @@ type operator operator-symbol ( parameter-list )
 |`new`|`New`|—|  
 |`conversion operators`|operadores de conversão|Unário|  
   
- 1 Existem duas versões dos operadores unários de incremento e decremento: pré\-incremento e pós\-incremento.  
+ 1 duas versões da unária incrementam e operadores de decremento existir: preincrement e postincrement.  
   
- Consulte o tópico sobre [regras gerais do sobrecarregamento de operadores](../cpp/general-rules-for-operator-overloading.md) para obter mais informações.  As restrições nas diversas categorias de operadores sobrecarregados são descritas nos tópicos a seguir:  
+ Consulte [regras gerais para sobrecarga de operador](../cpp/general-rules-for-operator-overloading.md) para obter mais informações. As restrições nas diversas categorias de operadores sobrecarregados são descritas nos tópicos a seguir:  
   
 -   [Operadores unários](../cpp/overloading-unary-operators.md)  
   
@@ -105,19 +121,19 @@ type operator operator-symbol ( parameter-list )
   
 -   [Atribuição](../cpp/assignment.md)  
   
--   [Chamada de função](../Topic/Function%20Call%20\(C++\).md)  
+-   [Chamada de função](../cpp/function-call-cpp.md)  
   
 -   [Subscrito](../cpp/subscripting.md)  
   
--   [Acesso de membros de classe](../Topic/Member%20Access.md)  
+-   [Acesso de membro de classe](../cpp/member-access.md)  
   
--   [Incremento e decremento](../Topic/Increment%20and%20Decrement%20Operator%20Overloading%20\(C++\).md).  
+-   [Incremento e decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Conversões](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Conversões de tipo definido pelo usuário](../cpp/user-defined-type-conversions-cpp.md)  
   
- Os operadores mostrados na tabela a seguir não podem ser sobrecarregados.  A tabela inclui os símbolos de pré\-processador `#` e `##`.  
+ Os operadores mostrados na tabela a seguir não podem ser sobrecarregados. A tabela inclui os símbolos de pré-processador `#` e `##`.  
   
-### Operadores não redefiníveis  
+### <a name="nonredefinable-operators"></a>Operadores não redefiníveis  
   
 |||  
 |-|-|  
@@ -125,9 +141,9 @@ type operator operator-symbol ( parameter-list )
 |`.`|Seleção de membro|  
 |`.*`|Seleção de ponteiro para membro|  
 |`::`|Resolução do escopo|  
-|`?  :`|Condicional|  
-|`#`|Conversão de pré\-processador em cadeia de caracteres|  
-|`##`|Concatenação de pré\-processador|  
+|`? :`|Condicional|  
+|`#`|Conversão de pré-processador em cadeia de caracteres|  
+|`##`|Concatenação de pré-processador|  
   
  Embora, de modo geral, os operadores sobrecarregados sejam chamados implicitamente pelo compilador quando são encontrados no código, eles podem ser invocados explicitamente da mesma maneira que qualquer função de membro ou de não membro é chamada:  
   
@@ -136,7 +152,7 @@ Point pt;
 pt.operator+( 3 );  // Call addition operator to add 3 to pt.  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir sobrecarrega o operador `+` para adicionar dois números complexos e retorna o resultado.  
   
 ```  
@@ -168,28 +184,28 @@ int main() {
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 6.8, 11.2  
 ```  
   
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
   
 1.  [Regras gerais para sobrecarga de operador](../cpp/general-rules-for-operator-overloading.md)  
   
-2.  [Operadores unários de sobrecarga](../cpp/overloading-unary-operators.md)  
+2.  [Sobrecarga de operadores unários](../cpp/overloading-unary-operators.md)  
   
 3.  [Operadores binários](../cpp/binary-operators.md)  
   
 4.  [Atribuição](../cpp/assignment.md)  
   
-5.  [Chamada de função](../Topic/Function%20Call%20\(C++\).md)  
+5.  [Chamada de função](../cpp/function-call-cpp.md)  
   
-6.  [Subscripting](../cpp/subscripting.md)  
+6.  [Subscrito](../cpp/subscripting.md)  
   
-7.  [Acesso de membro](../Topic/Member%20Access.md)  
+7.  [Acesso de membro](../cpp/member-access.md)  
   
-## Consulte também  
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Palavras-chave](../cpp/keywords-cpp.md)

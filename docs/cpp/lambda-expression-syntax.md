@@ -1,43 +1,59 @@
 ---
-title: "Sintaxe da express&#227;o lambda | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "VCF1 Lambda_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressões lambda [C++], sintaxe"
+title: "Sintaxe da expressão lambda | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCF1 Lambda_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sintaxe da express&#227;o lambda
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9daa1ce8d7b55f71113dcf7559394715bd93c604
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Esse artigo demonstra a sintaxe e os elementos estruturais das expressões lambda.  Para obter uma descrição das expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).  
+---
+# <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda
+Esse artigo demonstra a sintaxe e os elementos estruturais das expressões lambda. Para obter uma descrição de expressões lambda, consulte [expressões Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
-## Objetos de função vs.Lambdas  
- Ao escrever um código, você provavelmente usa ponteiros de função e objetos de função para resolver problemas e realizar cálculos, especialmente quando você usa [algoritmos STL](../cpp/algorithms-modern-cpp.md).  Ponteiros de função e objetos de função têm vantagens e desvantagens — por exemplo, ponteiros de função têm sobrecarga sintática mínima, mas não retêm estado dentro de um escopo e objetos de função podem manter o estado, mas exigem sobrecarga sintática de uma definição de classe.  
+## <a name="function-objects-vs-lambdas"></a>Objetos de função vs. Lambdas  
+ Quando você escreve o código, você provavelmente usar ponteiros de função e objetos de função para solucionar problemas e executar cálculos, especialmente quando você usar [algoritmos da biblioteca padrão C++](../cpp/algorithms-modern-cpp.md). Ponteiros de função e objetos de função tem vantagens e desvantagens — por exemplo, ponteiros de função tem sobrecarga mínima de sintática mas não manter o estado em um escopo e objetos de função podem manter o estado mas exigem a sobrecarga sintática de um definição de classe.  
   
- Um lambda combina os benefícios dos ponteiros de função com os objetos de função e evita suas desvantagens.  Como um objeto de função, uma lambda é flexível e pode manter o estado, mas ao contrário de um objeto de função, sua sintaxe compacta não exige uma definição de classe explícita.  Ao usar lambdas, você pode escrever código que seja menos inconveniente e menos sujeito a erros do que o código para um objeto de função equivalente.  
+ Um lambda combina os benefícios dos ponteiros de função com os objetos de função e evita suas desvantagens. Como objetos de função, uma expressão lambda é flexível e pode manter o estado, mas ao contrário de um objeto de função, sua sintaxe compact não requer uma definição de classe explícita. Ao usar lambdas, você pode escrever código que seja menos inconveniente e menos sujeito a erros do que o código para um objeto de função equivalente.  
   
- Os exemplos a seguir comparam o uso de uma lambda ao uso de um objeto de função.  O primeiro exemplo usa uma lambda para imprimir no console se cada elemento em um objeto `vector` é para ou ímpar.  O segundo exemplo usa um objeto de função para realizar a mesma tarefa.  
+ Os exemplos a seguir comparam o uso de uma lambda ao uso de um objeto de função. O primeiro exemplo usa uma lambda para imprimir no console se cada elemento em um objeto `vector` é para ou ímpar. O segundo exemplo usa um objeto de função para realizar a mesma tarefa.  
   
-## Exemplo 1: Usando uma lambda  
- Este exemplo passa um lambda de `for_each` função.  Lambda imprime um resultado que indica se cada elemento em uma `vector` objeto é par ou ímpar.  
+## <a name="example-1-using-a-lambda"></a>Exemplo 1: Usando uma lambda  
+ Este exemplo passa uma expressão lambda para o `for_each` função. O lambda imprime um resultado que indica se cada elemento em uma `vector` objeto é par ou ímpar.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```cpp  
 // even_lambda.cpp  
@@ -74,26 +90,31 @@ int main()
 }  
 ```  
   
-### Saída  
-  **1 é ímpar**  
-**2 é par**  
-**3 é ímpar**  
-**4 é par**  
-**5 é ímpar**  
-**6 é par**  
-**7 é ímpar**  
-**8 é par**  
-**9 é ímpar**  
-**Existem 4 números pares no vetor.**   
-### Comentários  
- No exemplo, o terceiro argumento para a função `for_each` é um lambda.  A parte `[&evenCount]` especifica a cláusula capture da expressão, `(int n)` especifica a lista de parâmetros e a parte restante especifica o corpo da expressão.  
+### <a name="output"></a>Saída  
   
-## Exemplo 2: Usando um objeto de função  
- Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior.  O próximo exemplo usa um objeto de função, em vez de uma lambada, juntamente com a função `for_each`, para gerar os mesmos resultados do Exemplo 1.  Os dois exemplos armazenam a contagem de números pares em um objeto `vector`.  Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro.  Para executar a operação, `FunctorClass` implementa o operador da chamada de função, `operator()`.  O compilador do Visual C\+\+ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1.  Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função.  No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
   
- Para obter mais informações sobre o `operator()`, consulte [Chamada de função](../Topic/Function%20Call%20\(C++\).md).  Para obter mais informações sobre o `for_each` funcionam, consulte [for\_each](../Topic/for_each.md).  
+```  
   
-### Código  
+### <a name="comments"></a>Comentários  
+ No exemplo, o terceiro argumento para a função `for_each` é um lambda. A parte `[&evenCount]` especifica a cláusula capture da expressão, `(int n)` especifica a lista de parâmetros e a parte restante especifica o corpo da expressão.  
+  
+## <a name="example-2-using-a-function-object"></a>Exemplo 2: Usando um objeto de função  
+ Às vezes, uma lambda seria muito pesada para se estender muito além do exemplo anterior. O próximo exemplo usa um objeto de função, em vez de uma lambada, juntamente com a função `for_each`, para gerar os mesmos resultados do Exemplo 1. Os dois exemplos armazenam a contagem de números pares em um objeto `vector`. Para manter o estado da operação, a classe `FunctorClass` armazena a variável `m_evenCount` por referência como uma variável de membro. Para executar a operação, `FunctorClass` implementa o operador da chamada de função, `operator()`. O compilador do Visual C++ gerencia o código que é comparável em tamanho e desempenho ao código da lambda no Exemplo 1. Para um problema básico como o deste artigo, o design da lambda mais simples é provavelmente melhor do que o design do objeto de função. No entanto, se achar que a funcionalidade pode exigir expansão significativa no futuro, use um design de objeto de função, assim, a manutenção do código será mais fácil.  
+  
+ Para obter mais informações sobre o `operator()`, consulte [chamada de função](../cpp/function-call-cpp.md). Para obter mais informações sobre o `for_each` funcionam, consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
+  
+### <a name="code"></a>Código  
   
 ```cpp  
 // even_functor.cpp  
@@ -151,23 +172,28 @@ int main()
   
 ```  
   
-## Saída  
-  **1 é ímpar**  
-**2 é par**  
-**3 é ímpar**  
-**4 é par**  
-**5 é ímpar**  
-**6 é par**  
-**7 é ímpar**  
-**8 é par**  
-**9 é ímpar**  
-**Existem 4 números pares no vetor.**   
-## Consulte também  
- [Expressões lambda](../cpp/lambda-expressions-in-cpp.md)   
- [Exemplos de expressões lambda](../cpp/examples-of-lambda-expressions.md)   
- [generate](../Topic/generate.md)   
- [generate\_n](../Topic/generate_n.md)   
- [for\_each](../Topic/for_each.md)   
- [Especificações de exceção \(lançar\)](../cpp/exception-specifications-throw-cpp.md)   
- [Aviso do compilador \(nível 1\) C4297](../Topic/Compiler%20Warning%20\(level%201\)%20C4297.md)   
- [Modificadores específicos da Microsoft](../Topic/Microsoft-Specific%20Modifiers.md)
+## <a name="output"></a>Saída  
+  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
+  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Expressões Lambda](../cpp/lambda-expressions-in-cpp.md)   
+ [Exemplos de expressões Lambda](../cpp/examples-of-lambda-expressions.md)   
+ [Gerar](../standard-library/algorithm-functions.md#generate)   
+ [generate_n](../standard-library/algorithm-functions.md#generate_n)   
+ [for_each](../standard-library/algorithm-functions.md#for_each)   
+ [Especificações de exceção (lançar)](../cpp/exception-specifications-throw-cpp.md)   
+ [Compilador C4297 de aviso (nível 1)](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
+ [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)

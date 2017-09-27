@@ -1,48 +1,64 @@
 ---
-title: "Escrevendo um manipulador de t&#233;rmino | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tratamento de exceção, manipuladores de encerramento"
-  - "exceções, encerrando"
-  - "manipuladores"
-  - "manipuladores, encerramento"
-  - "tratamento estruturado de exceções, manipuladores de encerramento"
-  - "manipuladores de encerramento"
-  - "manipuladores de encerramento, gravando"
-  - "palavra-chave try-catch [C++], manipuladores de encerramento"
+title: "Escrevendo um manipulador de término | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured exception handling, termination handlers
+- exceptions, terminating
+- termination handlers, writing
+- handlers
+- handlers, termination
+- termination handlers
+- exception handling, termination handlers
+- try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Escrevendo um manipulador de t&#233;rmino
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 06fb01f2ee2782f8786308554923b3c5597a4574
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Diferente de um manipulador de exceção, um manipulador de término sempre é executado, independentemente do bloco de código protegido encerrado normalmente.  O único propósito do manipulador de término deve ser garantir que os recursos, como memória, identificadores e arquivos, sejam fechados corretamente, independentemente de como uma seção de código termina a execução.  
+---
+# <a name="writing-a-termination-handler"></a>Escrevendo um manipulador de término
+Diferente de um manipulador de exceção, um manipulador de término sempre é executado, independentemente do bloco de código protegido encerrado normalmente. O único propósito do manipulador de término deve ser garantir que os recursos, como memória, identificadores e arquivos, sejam fechados corretamente, independentemente de como uma seção de código termina a execução.  
   
- Os manipuladores de término usam a instrução try\-finally.  
+ Os manipuladores de término usam a instrução try-finally.  
   
-## Que mais você deseja saber?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [A instrução try\-finally](../cpp/try-finally-statement.md)  
+-   [Instrução try-finally](../cpp/try-finally-statement.md)  
   
 -   [Limpando recursos](../cpp/cleaning-up-resources.md)  
   
--   [Controle de tempo de ações no tratamento de exceções](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [Tempo de ações no tratamento de exceção](../cpp/timing-of-exception-handling-a-summary.md)  
   
--   [Restrições de manipuladores de término](../cpp/restrictions-on-termination-handlers.md)  
+-   [Restrições em manipuladores de encerramento](../cpp/restrictions-on-termination-handlers.md)  
   
-## Consulte também  
- [Tratamento de exceções estruturado](../cpp/structured-exception-handling-c-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

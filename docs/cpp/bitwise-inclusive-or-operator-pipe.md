@@ -1,35 +1,51 @@
 ---
-title: "Operador OR inclusivo bit a bit: | | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitor"
-  - "|"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador |"
-  - "operadores bit a bit, Operador OR"
-  - "Operador OR inclusivo"
-  - "Operador OR, inclusivo bit a bit"
+title: 'Bit a bit inclusivo ou operador: | | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitor
+- '|'
+dev_langs:
+- C++
+helpviewer_keywords:
+- OR operator, bitwise inclusive
+- bitwise operators, OR operator
+- inclusive OR operator
+- '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador OR inclusivo bit a bit: |
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bb2fcc7c85e112b80929b2a8392f0e6c19ab97f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="bitwise-inclusive-or-operator-"></a>Operador OR inclusivo bit a bit: |
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -39,15 +55,15 @@ expression
   
 ```  
   
-## Comentários  
- O operador OR inclusivo de bit a bit \(         **&#124;** \) compara cada bit do primeiro operando com o bit correspondente de seu segundo operando.  Se um bit for 1, o bit de resultado correspondente será definido como 1.  Caso contrário, o bit de resultado correspondente será definido como 0.  
+## <a name="remarks"></a>Comentários  
+ O operador OR inclusivo bit a bit (**&#124;**) compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se um bit for 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente será definido como 0.  
   
- Ambos os operandos para o operador OR inclusivo bit a bit devem ser do tipo integral.  As conversões aritméticas usuais abordadas em [Conversões aritméticas](../misc/arithmetic-conversions.md) são aplicadas aos operandos.  
+ Ambos os operandos para o operador OR inclusivo bit a bit devem ser do tipo integral. Conversões aritméticas usuais abordados [conversões padrão](standard-conversions.md) são aplicadas para os operandos.  
   
-## Palavra\-chave do operador para &#124;  
- O operador `bitor` é o equivalente de texto de              **&#124;** .  Há duas maneiras de acessar o operador `bitor` nos programas: incluindo o arquivo de cabeçalho `iso646.h` ou compilando com a opção do compilador [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(Desabilitar extensões de linguagem\).  
+## <a name="operator-keyword-for-124"></a>Palavra-chave de operador para &#124;  
+ O `bitor` operador é equivalente a texto **&#124;**. Há duas maneiras para acessar o `bitor` operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // expre_Bitwise_Inclusive_OR_Operator.cpp  
@@ -64,8 +80,8 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [Operadores bit a bit C\+\+](../Topic/C++%20Bitwise%20Operators.md)   
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Consulte também  
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores bit a bit C](../c-language/c-bitwise-operators.md)
+
+

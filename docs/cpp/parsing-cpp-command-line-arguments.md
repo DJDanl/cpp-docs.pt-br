@@ -1,43 +1,60 @@
 ---
-title: "Analisando argumentos de linha de comando C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aspas, argumentos de linha de comando"
-  - "aspas duplas"
-  - "linha de comando de análise"
-  - "argumentos de linha de comando de análise"
-  - "código de inicialização, Analisando argumentos de linha de comando"
+title: Analisando argumentos de linha de comando C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Analisando argumentos de linha de comando C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="parsing-c-command-line-arguments"></a>Analisando argumentos de linha de comando C++
+**Seção específica da Microsoft**  
   
  O código de inicialização do Microsoft C/C++ usa as seguintes regras para interpretar os argumentos dados na linha de comando do sistema operacional:  
   
--   Argumentos são delimitados por espaço em branco, que é um espaço ou uma tabulação.  
+-   Os argumentos são delimitados por espaço em branco, que é um espaço ou uma tabulação.  
   
 -   O caractere de acento circunflexo (^) não é reconhecido como um caractere de escape ou um delimitador. O caractere é completamente tratado pelo analisador de linha de comando no sistema operacional antes de ser passada para a matriz `argv` no programa.  
   
 -   Uma cadeia de caracteres entre aspas duplas ("*cadeia de caracteres*") é interpretada como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento.  
   
--   Aspas duplas precedidas por uma barra invertida (\\") é interpretada como um caractere literal de aspas duplas (").  
+-   Aspas duplas precedidas por uma barra invertida (\\") são interpretados como um caractere literal de aspas duplas (").  
   
 -   As barras invertidas são interpretadas literalmente, a menos que precedam imediatamente as aspas duplas.  
   
@@ -46,7 +63,7 @@ manager: "ghogen"
 -   Se um número ímpar de barras invertidas for seguido por aspas duplas, uma barra invertida é colocada na matriz de `argv` para cada par de barras invertidas, e aspas duplas são "ignoradas" pela barra invertida restante, causando a colocação de aspas duplas (") literais em `argv`.  
   
 ## <a name="example"></a>Exemplo  
- O programa a seguir demonstra os argumentos de linha de comando como são passados:  
+ O programa a seguir demonstra como argumentos de linha de comando são passados:  
   
 ```  
 // command_line_arguments.cpp  
@@ -68,18 +85,18 @@ int main( int argc,      // Number of strings in array argv
 }  
 ```  
   
- A tabela a seguir mostra exemplos de entrada e saída esperada, demonstrando as regras na lista anterior.  
+ A tabela a seguir mostra exemplos de entrada e saídas esperadas, demonstrando as regras na lista acima.  
   
-### <a name="results-of-parsing-command-lines"></a>Resultados da análise de linhas de comando  
+### <a name="results-of-parsing-command-lines"></a>Resultados de linhas de comando de análise  
   
-|Entrada de linha de comando|argv [1]|argv [2]|argv [3]|  
+|Entrada de linha de comando|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>FIM de específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
 ## <a name="see-also"></a>Consulte também  
- [principal: inicialização do programa](../Topic/main:%20Program%20Startup.md)
+ [main: inicialização do programa](../cpp/main-program-startup.md)

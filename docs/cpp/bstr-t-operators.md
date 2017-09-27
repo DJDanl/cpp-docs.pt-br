@@ -1,29 +1,45 @@
 ---
-title: "Operadores (_bstr_t) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe _bstr_t, operadores"
+title: operadores bstr_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _bstr_t class, operators
 ms.assetid: 9f76364c-a552-418f-b71b-468f015c5ac9
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores (_bstr_t)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 529c6579c200f942769556218663633527977f7a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Para obter informações sobre os operadores `_bstr_t`, consulte o tópico sobre a [classe \_bstr\_t](../cpp/bstr-t-class.md).  
+---
+# <a name="bstrt-operators"></a>Operadores (_bstr_t)
+Para obter informações sobre o `_bstr_t` operadores, consulte [bstr_t classe](../cpp/bstr-t-class.md).  
   
-## Consulte também  
- [Classe \_bstr\_t](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _bstr_t](../cpp/bstr-t-class.md)

@@ -1,58 +1,74 @@
 ---
-title: "Limites flutuantes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquivo de cabeçalho FLOAT.H"
-  - "constantes de ponto flutuante, limites"
-  - "números de ponto flutuante, limites flutuantes"
-  - "limites, constantes de ponto flutuante"
-  - "intervalos, constantes de ponto flutuante"
+title: Limites flutuantes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ranges, floating-point constants
+- floating-point constants, limits
+- FLOAT.H header file
+- limits, floating-point constants
+- floating-point numbers, floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Limites flutuantes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a19ed24e7765c9b0042831fc2eda9df937be42b3
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="floating-limits"></a>Limites flutuantes
+**Seção específica da Microsoft**  
   
- A tabela a seguir lista os limites nos valores de constantes de ponto flutuante.  Esses limites também são definidos no arquivo de cabeçalho padrão FLOAT.H.  
+ A tabela a seguir lista os limites nos valores de constantes de ponto flutuante. Esses limites também são definidos no arquivo de cabeçalho padrão FLOAT.H.  
   
-### Limites em constantes de ponto flutuante  
+### <a name="limits-on-floating-point-constants"></a>Limites em constantes de ponto flutuante  
   
 |Constante|Significado|Valor|  
-|---------------|-----------------|-----------|  
-|FLT\_DIG DBL\_DIG LDBL\_DIG|Número de dígitos, q, de modo que um número de ponto flutuante com dígitos decimais de q possam ser arredondados em uma representação de ponto flutuante e de volta sem perda de precisão.|6 15 15|  
-|FLT\_EPSILON DBL\_EPSILON LDBL\_EPSILON|O menor número positivo x, de modo que x \+ 1,0 não é igual a 1,0.|1.192092896e–07F 2.2204460492503131e–016 2.2204460492503131e–016|  
-|FLT\_GUARD||0|  
-|FLT\_MANT\_DIG DBL\_MANT\_DIG LDBL\_MANT\_DIG|Número de dígitos na raiz especificada por FLT\_RADIX em significando de ponto flutuante.  A raiz é 2; portanto, esses valores especificam bits.|24 53 53|  
-|FLT\_MAX DBL\_MAX LDBL\_MAX|Número de ponto flutuante representável máximo.|3.402823466e\+38F 1.7976931348623158e\+308 1.7976931348623158e\+308|  
-|FLT\_MAX\_10\_EXP DBL\_MAX\_10\_EXP LDBL\_MAX\_10\_EXP|Inteiro máximo de modo que 10 gerados para esse número sejam um número de ponto flutuante representável.|38 308 308|  
-|FLT\_MAX\_EXP DBL\_MAX\_EXP LDBL\_MAX\_EXP|Inteiro máximo de modo que FLT\_RADIX gerado para esse número seja um número de ponto flutuante representável.|128 1024 1024|  
-|FLT\_MIN DBL\_MIN LDBL\_MIN|Valor positivo mínimo.|1.175494351e–38F 2.2250738585072014e–308 2.2250738585072014e–308|  
-|FLT\_MIN\_10\_EXP DBL\_MIN\_10\_EXP LDBL\_MIN\_10\_EXP|Inteiro negativo mínimo de modo que 10 gerados para esse número sejam um número de ponto flutuante representável.|–37<br /><br /> –307<br /><br /> –307|  
-|FLT\_MIN\_EXP DBL\_MIN\_EXP LDBL\_MIN\_EXP|Inteiro negativo mínimo de modo que FLT\_RADIX gerado para esse número seja um número de ponto flutuante representável.|–125<br /><br /> –1021<br /><br /> –1021|  
-|FLT\_NORMALIZE||0|  
-|FLT\_RADIX \_DBL\_RADIX \_LDBL\_RADIX|Raiz de representação do expoente.|2 2 2|  
-|FLT\_ROUNDS \_DBL\_ROUNDS \_LDBL\_ROUNDS|Arredondamento do modo para a adição de ponto flutuante.|1 \(aproximado\) 1 \(aproximado\) 1 \(aproximado\)|  
+|--------------|-------------|-----------|  
+|FLT_DIG DBL_DIG LDBL_DIG|Número de dígitos, q, de modo que um número de ponto flutuante com dígitos decimais de q possam ser arredondados em uma representação de ponto flutuante e de volta sem perda de precisão.|6 15 15|  
+|FLT_EPSILON DBL_EPSILON LDBL_EPSILON|O menor número positivo x, de modo que x + 1,0 não é igual a 1,0.|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  
+|FLT_GUARD||0|  
+|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|Número de dígitos na raiz especificada por FLT_RADIX em significando de ponto flutuante. A base é 2; Portanto, esses valores especificam bits.|24 53 53|  
+|FLT_MAX DBL_MAX LDBL_MAX|Número máximo de ponto flutuante representável.|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
+|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|Inteiro máximo, de modo que 10 gerado para esse número é um número de ponto flutuante representável.|38 308 308|  
+|FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|Inteiro máximo de modo que FLT_RADIX gerado para esse número seja um número de ponto flutuante representável.|128 1024 1024|  
+|FLT_MIN DBL_MIN LDBL_MIN|Valor positivo mínimo.|1.175494351e-38F 2.2250738585072014e-308 2.2250738585072014e-308|  
+|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|Mínimo inteiro negativo, de modo que 10 gerado para esse número é um número de ponto flutuante representável.|-37<br /><br /> -307<br /><br /> -307|  
+|FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|Inteiro negativo mínimo de modo que FLT_RADIX gerado para esse número seja um número de ponto flutuante representável.|-125<br /><br /> -1021<br /><br /> -1021|  
+|FLT_NORMALIZE||0|  
+|FLT_RADIX _DBL_RADIX _LDBL_RADIX|Raiz de representação do expoente.|2 2 2|  
+|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|Modo de arredondamento para adição de ponto flutuante.|1 (aproximado) 1 (aproximado) 1 (aproximado)|  
   
 > [!NOTE]
 >  As informações da tabela podem ser diferente em versões futuras do produto.  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Limites de inteiro](../Topic/Integer%20Limits.md)
+## <a name="see-also"></a>Consulte também  
+ [Limites de inteiros](../cpp/integer-limits.md)

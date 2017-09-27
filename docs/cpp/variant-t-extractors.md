@@ -1,90 +1,105 @@
 ---
-title: "Extratores _variant_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operatordouble"
-  - "operatorlong"
-  - "_variant_t::operator_bstr_t"
-  - "operatordouble"
-  - "_variant_t.operatorCY"
-  - "operatorCY"
-  - "_variant_t::operatorCY"
-  - "_variant_t::operatordouble"
-  - "operatorfloat"
-  - "operatorBYTE"
-  - "_variant_t.operatorDECIMAL"
-  - "_variant_t::operatorlong"
-  - "operatorIDispatch"
-  - "_variant_t.operatorBYTE"
-  - "operatorDECIMAL"
-  - "_variant_t.operator_bstr_t"
-  - "_variant_t::operatorDECIMAL"
-  - "_variant_t.operatorIUnknown"
-  - "_variant_t.operatorlong"
-  - "_variant_t::operatorIDispatch"
-  - "_variant_t::operatorIUnknown"
-  - "operatorIUnknown"
-  - "_variant_t.operatorbool"
-  - "_variant_t::operatorBYTE"
-  - "_variant_t.operatorfloat"
-  - "operator_bstr_t"
-  - "_variant_t::operatorbool"
-  - "operatorshort"
-  - "_variant_t::operatorshort"
-  - "_variant_t::operatorfloat"
-  - "_variant_t.operatorIDispatch"
-  - "_variant_t.operatorshort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extratores, Classe _variant_t"
-  - "operator _bstr_t"
-  - "Operador bool"
-  - "Operador BYTE"
-  - "Operador CY"
-  - "Operador DECIMAL"
-  - "Operador double"
-  - "Operador float"
-  - "Operador IDispatch"
-  - "Operador IUnknown"
-  - "Operador long"
-  - "operador SHORT"
+title: Extratores variant_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operatordouble
+- operatorlong
+- _variant_t::operator_bstr_t
+- operatordouble
+- _variant_t.operatorCY
+- operatorCY
+- _variant_t::operatorCY
+- _variant_t::operatordouble
+- operatorfloat
+- operatorBYTE
+- _variant_t.operatorDECIMAL
+- _variant_t::operatorlong
+- operatorIDispatch
+- _variant_t.operatorBYTE
+- operatorDECIMAL
+- _variant_t.operator_bstr_t
+- _variant_t::operatorDECIMAL
+- _variant_t.operatorIUnknown
+- _variant_t.operatorlong
+- _variant_t::operatorIDispatch
+- _variant_t::operatorIUnknown
+- operatorIUnknown
+- _variant_t.operatorbool
+- _variant_t::operatorBYTE
+- _variant_t.operatorfloat
+- operator_bstr_t
+- _variant_t::operatorbool
+- operatorshort
+- _variant_t::operatorshort
+- _variant_t::operatorfloat
+- _variant_t.operatorIDispatch
+- _variant_t.operatorshort
+dev_langs:
+- C++
+helpviewer_keywords:
+- extractors, _variant_t class
+- operator CY
+- operator IDispatch
+- operator SHORT
+- operator double
+- operator long
+- operator _bstr_t
+- operator DECIMAL
+- operator float
+- operator bool
+- operator BYTE
+- operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Extratores _variant_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 9ec02d82529a6772e079305c34c5f43ee163a2f7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="variantt-extractors"></a>Extratores _variant_t
+**Seção específica da Microsoft**  
   
- Extrai dados do objeto **VARIANT** encapsulado.  
+ Extrair dados do encapsulada **VARIANT** objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
+operator short( ) const;   
+operator long( ) const;   
+operator float( ) const;   
+operator double( ) const;   
+operator CY( ) const;   
+operator _bstr_t( ) const;   
+operator IDispatch*( ) const;   
+operator bool( ) const;   
+operator IUnknown*( ) const;   
+operator DECIMAL( ) const;   
 operator BYTE( ) const;  
 operator VARIANT() const throw();  
 operator char() const;  
@@ -96,32 +111,33 @@ operator __int64() const;
 operator unsigned __int64() const;  
 ```  
   
-## Comentários  
- Extrai dados brutos de um **VARIANT** encapsulado.  Se **VARIANT** ainda não for do tipo apropriado, **VariantChangeType** será usado para tentar uma conversão, e um erro será gerado mediante falha:  
+## <a name="remarks"></a>Comentários  
+ Extrai dados brutos de um encapsulada **VARIANT**. Se o **VARIANT** já não é do tipo apropriado, **VariantChangeType** é usado para tentar uma conversão, e será gerado um erro em caso de falha:  
   
--   **operador short\( \)** Extrai um valor inteiro **short**.  
+-   **operador short ()** extrai um **curto** valor inteiro.  
   
--   **operador long\( \)** Extrai um valor inteiro **long**.  
+-   **operador long ()** extrai um **longo** valor inteiro.  
   
--   **operador float\( \)** Extrai um valor numérico **float**.  
+-   **operador float ()** extrai um **float** valor numérico.  
   
--   **operador double\( \)** Extrai um valor inteiro **double**.  
+-   **operador double ()** extrai um **duplo** valor inteiro.  
   
--   **operador CY\( \)** Extrai um objeto **CY**.  
+-   **operador (CY)** extrai um **CY** objeto.  
   
--   **operador bool\( \)** Extrai um valor `bool`.  
+-   **operador bool ()** extrai um `bool` valor.  
   
--   **operador DECIMAL\( \)** Extrai um valor **DECIMAL**.  
+-   **operador (DECIMAL)** extrai um **DECIMAL** valor.  
   
--   **operador BYTE\( \)** Extrai um valor **BYTE**.  
+-   **operador (bytes)** extrai um **bytes** valor.  
   
--   **operador \_bstr\_t\( \)** Extrai uma cadeia de caracteres, que é encapsulada em um objeto `_bstr_t`.  
+-   **operador de bstr_t ()** extrai uma cadeia de caracteres, que é encapsulada em um `_bstr_t` objeto.  
   
--   **operador IDispatch\*\( \)** Extrai um ponteiro dispinterface de um **VARIANT** encapsulado.  `AddRef` é chamado do ponteiro resultante; então, cabe a você chamar **Release** para liberá\-lo.  
+-   **operador IDispatch\*()** extrai um ponteiro dispinterface de um encapsulada **VARIANT**. `AddRef`é chamado no ponteiro resultante, então você chamar **versão** para liberá-la.  
   
--   **operador IUnknown\*\( \)** Extrai um ponteiro da interface COM de um **VARIANT** encapsulado.  `AddRef` é chamado do ponteiro resultante; então, cabe a você chamar **Release** para liberá\-lo.  
+-   **operador IUnknown\*()** extrai um ponteiro de interface COM de um encapsulada **VARIANT**. `AddRef`é chamado no ponteiro resultante, então você chamar **versão** para liberá-la.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_variant\_t](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _variant_t](../cpp/variant-t-class.md)
+

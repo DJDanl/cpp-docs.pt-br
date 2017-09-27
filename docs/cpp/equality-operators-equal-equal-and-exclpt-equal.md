@@ -1,57 +1,72 @@
 ---
-title: "Operadores de igualdade: == e != | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "not_eq"
-  - "!="
-  - "=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador !="
-  - "Operador =="
-  - "Operador equal to"
-  - "Operador de igualdade"
-  - "Operador de igualdade, sintaxe"
-  - "Operador de comparação not equal to"
-  - "Operador not_eq"
+title: 'Operadores de igualdade: = = e! = | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- not_eq
+- '!='
+- ==
+dev_langs:
+- C++
+helpviewer_keywords:
+- '!= operator'
+- equality operator
+- not equal to comparison operator
+- equality operator, syntax
+- == operator
+- not_eq operator
+- equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores de igualdade: == e !=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5412869204f088e321d2a41da407026f9447eb82
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="equality-operators--and-"></a>Operadores de igualdade: == e !=
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      expression == expression  
+expression == expression  
 expression != expression  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Operadores de igualdade binários comparam seus operandos em buscar de igualdades ou desigualdades estritas.  
   
- Os operadores de igualdade, igual a \(`==`\) e diferente de \(`!=`\), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante.  O tipo do resultado desses operadores é `bool`.  
+ Os operadores de igualdade, igual a (`==`) e diferente de (`!=`), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante. O tipo do resultado desses operadores é `bool`.  
   
- O operador igual a \(`==`\) retorna **true** \(1\) se os dois operandos tiverem o mesmo valor; caso contrário, retorna **false** \(0\).  O operador diferente de \(`!=`\) retorna **true** \(1\) se os operandos não tiverem o mesmo valor; caso contrário, retorna **false**.  
+ O operador igual a (`==`) retorna **true** (1) se ambos os operandos têm o mesmo valor; caso contrário, retornará **false** (0). O operador não-igual a (`!=`) retorna **true** se os operandos não têm o mesmo valor; caso contrário, retornará **false**.  
   
-## Palavra\-chave do operador para \!\=  
- O operador `not_eq` é o equivalente em texto a `!=`.  Há duas maneiras de acessar o operador `not_eq` em seus programas: incluindo o arquivo de cabeçalho `iso646.h` ou compilando com a opção de compilador [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(Desativar extensões de linguagem\).  
+## <a name="operator-keyword-for-"></a>Palavra-chave do operador para !=  
+ O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras para acessar o `not_eq` operador em seus programas: incluem o arquivo de cabeçalho `iso646.h`, ou de compilação com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção de compilador (desabilitar extensões de linguagem).  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // expre_Equality_Operators.cpp  
@@ -69,10 +84,9 @@ int main() {
 }  
 ```  
   
- Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo.  Nessa comparação, as conversões ponteiro para membro, como discutido em [Conversões de ponteiro em membro](../misc/pointer-to-member-conversions.md), são executadas.  Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.  
+ Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Em comparação, as conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores relacionais e de igualdade C](../c-language/c-relational-and-equality-operators.md)

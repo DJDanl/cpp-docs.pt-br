@@ -1,38 +1,54 @@
 ---
-title: "Tipos de liga&#231;&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vinculação externa, tipos de vinculação"
-  - "vinculação interna, tipos de vinculação"
-  - "vinculação [C++], nenhum"
-  - "vinculação [C++], tipos de"
-  - "sem vinculação"
-  - "tipos [C++], vinculação"
+title: "Tipos de vinculação | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- no linkage
+- linkage [C++], none
+- linkage [C++], types of
+- types [C++], linkage
+- internal linkage, types of linkage
+- external linkage, linkage types
 ms.assetid: 41326c7f-4602-4bad-a648-697604858ba0
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Tipos de liga&#231;&#227;o
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b4d5aca80e7b074c86a1446fabb9852f3b9fe3a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A maneira como os nomes de objetos e funções são compartilhados entre unidades de conversão é chamada de vinculação.  Esses nomes podem ter:  
+---
+# <a name="types-of-linkage"></a>Tipos de ligação
+A maneira como os nomes de objetos e funções são compartilhados entre unidades de conversão é chamada de vinculação. Esses nomes podem ter:  
   
--   Vinculação interna, referindo\-se somente aos elementos do programa dentro de suas próprias unidades de conversão; não são compartilhados com outras unidades de conversão.  
+-   Vinculação interna, referindo-se somente aos elementos do programa dentro de suas próprias unidades de conversão; não são compartilhados com outras unidades de conversão.  
   
-     O mesmo nome em outra unidade de conversão pode se referir a um objeto diferente ou a uma classe diferente.  Os nomes com vinculação interna são às vezes referidos como sendo locais para suas unidades de conversão.  
+     O mesmo nome em outra unidade de conversão pode se referir a um objeto diferente ou a uma classe diferente. Os nomes com vinculação interna são às vezes referidos como sendo locais para suas unidades de conversão.  
   
      Um exemplo de declaração de um nome com vinculação interna é:  
   
@@ -42,7 +58,7 @@ A maneira como os nomes de objetos e funções são compartilhados entre unidade
   
 -   Vinculação externa, caso em que podem se referir a elementos do programa em qualquer unidade de conversão do programa — o elemento do programa é compartilhado entre as unidades de conversão.  
   
-     O mesmo nome em outra unidade de conversão refere\-se garantidamente ao mesmo objeto ou classe.  Os nomes com vinculação externa às vezes são referidos como sendo globais.  
+     O mesmo nome em outra unidade de conversão refere-se garantidamente ao mesmo objeto ou classe. Os nomes com vinculação externa às vezes são referidos como sendo globais.  
   
      Um exemplo de declaração de um nome com vinculação externa é:  
   
@@ -50,7 +66,7 @@ A maneira como os nomes de objetos e funções são compartilhados entre unidade
     extern int i;  
     ```  
   
--   Nenhum vínculo, caso em que se referem a entidades exclusivas.  O mesmo nome em outro escopo pode não se referir ao mesmo objeto.  Um exemplo é uma enumeração.  \(Observe, entretanto, que você pode passar um ponteiro para um objeto sem vinculação.  Isso torna o objeto acessível em outras unidades de conversão.\)  
+-   Nenhum vínculo, caso em que se referem a entidades exclusivas. O mesmo nome em outro escopo pode não se referir ao mesmo objeto. Um exemplo é uma enumeração. (Observe, entretanto, que você pode passar um ponteiro para um objeto sem vinculação. Isso torna o objeto acessível em outras unidades de conversão.)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Programa e ligação](../cpp/program-and-linkage-cpp.md)

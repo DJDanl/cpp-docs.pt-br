@@ -1,34 +1,50 @@
 ---
-title: "Refer&#234;ncias para ponteiros | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "referências, para ponteiros"
+title: "Referências a ponteiros | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Refer&#234;ncias para ponteiros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-As referências para ponteiros podem ser declaradas de forma semelhante às referências para objetos.  Declarar uma referência a um ponteiro gera um valor modificável que é usado como um ponteiro normal.  
+---
+# <a name="references-to-pointers"></a>Referências a ponteiros
+As referências para ponteiros podem ser declaradas de forma semelhante às referências para objetos. Declarar uma referência a um ponteiro gera um valor modificável que é usado como um ponteiro normal.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Os exemplos de código a seguir ilustram a diferença entre usar um ponteiro para um ponteiro e uma referência para um ponteiro.  
   
- As funções `Add1` e `Add2` são funcionalmente equivalentes \(embora não sejam chamadas da mesma maneira\).  A diferença é que `Add1` usa valores de indireção double, enquanto `Add2` usa a conveniência de uma referência para um ponteiro.  
+ As funções `Add1` e `Add2` são funcionalmente equivalentes (embora não sejam chamadas da mesma maneira). A diferença é que `Add1` usa valores de indireção double, enquanto `Add2` usa a conveniência de uma referência para um ponteiro.  
   
 ```  
 // references_to_pointers.cpp  
@@ -37,7 +53,7 @@ As referências para ponteiros podem ser declaradas de forma semelhante às refe
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -158,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **Uso: Refptr \[1 &#124; 2\]**  
-**onde:**  
-**1 usa indireção double**  
-**2 usa uma referência para um ponteiro.  A entrada é de stdin.**    
-## Consulte também  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>Consulte também  
  [Referências](../cpp/references-cpp.md)

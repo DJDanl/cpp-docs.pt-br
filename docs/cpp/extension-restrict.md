@@ -1,47 +1,63 @@
 ---
-title: "__restrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__restrict"
-  - "__restrict_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __restrict [C++]"
+title: Restrict | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __restrict
+- __restrict_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __restrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Como o **declspec \( [restrict](../cpp/restrict.md) \)** modificador, o `__restrict` palavra\-chave indica que um símbolo não é um alias no escopo atual.  A palavra\-chave `__restrict` difere do modificador `__declspec ( restrict )` das seguintes maneiras:  
+---
+# <a name="restrict"></a>__restrict
+Como o **declspec ( [restringir](../cpp/restrict.md) )** modificador, do `__restrict` palavra-chave indica que um símbolo não é um alias no escopo atual. A palavra-chave `__restrict` difere do modificador `__declspec ( restrict )` das seguintes maneiras:  
   
--   A palavra\-chave `__restrict` só é válida em variáveis, e `__declspec ( restrict )` só é válido em declarações e definições de função.  
+-   A palavra-chave `__restrict` só é válida em variáveis, e `__declspec ( restrict )` só é válido em declarações e definições de função.  
   
--   `__restrict` é semelhante a `restrict` das especificações C99, mas `__restrict` pode ser usado em programas C ou C\+\+.  
+-   `__restrict` é semelhante a `restrict` das especificações C99, mas `__restrict` pode ser usado em programas C ou C++.  
   
--   Quando `__restrict` é usado, o compilador não propaga a propriedade no\-alias de uma variável.  Ou seja, se você atribuir um `__restrict` variável para um não \-`__restrict` variável, o compilador ainda permitirá que os não\- Restrict variável para receber um alias.  Isso é diferente do comportamento da palavra\-chave `restrict` da especificação C99.  
+-   Quando `__restrict` é usado, o compilador não propaga a propriedade no-alias de uma variável. Ou seja, se você atribuir um `__restrict` variável ao não`__restrict` variável, o compilador ainda permitirá que o não- Restrict variável para receber um alias. Isso é diferente do comportamento da palavra-chave `restrict` da especificação C99.  
   
- Em geral, se você afeta o comportamento de uma função inteira, é melhor usar `__declspec ( restrict )` que a palavra\-chave.  
+ Em geral, se você afeta o comportamento de uma função inteira, é melhor usar `__declspec ( restrict )` que a palavra-chave.  
   
- No Visual Studio de 2015 e posterior, `__restrict` pode ser usado em referências C\+\+.  
+ No Visual Studio 2015 e posteriores, `__restrict` pode ser usado em referências do C++.  
   
 > [!NOTE]
->  Quando usada em uma variável que também tenha o [volatile](../cpp/volatile-cpp.md) palavra\-chave, `volatile` terá precedência.  
+>  Quando usado em uma variável que também tenha o [volátil](../cpp/volatile-cpp.md) palavra-chave, `volatile` terá precedência.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // __restrict_keyword.c  
@@ -65,5 +81,5 @@ union z {
 };  
 ```  
   
-## Consulte também  
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Palavras-chave](../cpp/keywords-cpp.md)

@@ -1,33 +1,49 @@
 ---
-title: "_set_com_error_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função _set_com_error_handler"
+title: set_com_error_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _set_com_error_handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 626227fb9c5162e5b9fc72fc64348b75ecb27e44
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="setcomerrorhandler"></a>_set_com_error_handler
+**Seção específica da Microsoft**  
   
  Substitui a função padrão que é usada para o tratamento de erros COM.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void __stdcall _set_com_error_handler(  
@@ -38,7 +54,7 @@ void __stdcall _set_com_error_handler(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `pHandler`  
  Ponteiro para a função de substituição.  
   
@@ -48,12 +64,12 @@ void __stdcall _set_com_error_handler(
  `perrinfo`  
  Objeto `IErrorInfo`.  
   
-## Comentários  
- Por padrão, [\_com\_raise\_error](../cpp/com-raise-error.md) trata todos os erros COM.  Você pode alterar esse comportamento usando `_set_com_error_handler` para chamar sua própria função de tratamento de erros.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, [com_raise_error](../cpp/com-raise-error.md) trata todos os erros de COM. Você pode alterar esse comportamento usando `_set_com_error_handler` para chamar sua própria função de tratamento de erros.  
   
  A função de substituição deve ter uma assinatura equivalente à de `_com_raise_error`.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // _set_com_error_handler.cpp  
@@ -90,11 +106,14 @@ int main()
 }  
 ```  
   
-  **Exceção gerada: Não é possível estabelecer a conexão\!**   
-## Requisitos  
+```Output  
+Exception raised: Unable to establish the connection!  
+```  
+  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** comdef.h  
   
- **Bib:** se a opção do compilador “wchar\_t is Native Type” está ativada, use comsuppw.lib ou comsuppwd.lib.  Se “wchar\_t is Native Type” estiver desativado, use comsupp.lib.  Para obter mais informações, consulte [\/Zc:wchar\_t \(wchar\_t é do tipo nativo\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **Lib:** se o **wchar_t é do tipo nativo** opção de compilador está ativada, use comsuppw.lib ou comsuppwd.lib. Se **wchar_t é do tipo nativo** está desativado, use comsupp.lib. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Funções globais COM do compilador](../cpp/compiler-com-global-functions.md)

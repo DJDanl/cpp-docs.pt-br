@@ -1,73 +1,91 @@
 ---
-title: "Especifica&#231;&#245;es de exce&#231;&#227;o (lan&#231;ar) (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Tratamento de exceções em C++, lançando exceções"
-  - "exceções, especificações de exceção"
-  - "palavra-chave throw [C++], especificações de exceção"
-  - "palavra-chave throw [C++], throw() vs. throw(...)"
-  - "lançando exceções, palavra-chave throw"
+title: "Especificações de exceção (lançar) (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions, exception specifications
+- throwing exceptions, throw keyword
+- C++ exception handling, throwing exceptions
+- throw keyword [C++], throw() vs. throw(...)
+- throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Especifica&#231;&#245;es de exce&#231;&#227;o (lan&#231;ar) (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-As especificações de exceção são um recurso da linguagem C\+\+ que foi preterido no C\+\+11.  Elas foram criadas para fornecer informações resumidas sobre exceções que podem ser lançadas fora de uma função, mas na prática foi verificado que eram problemáticas.  A especificação de uma exceção que provou ser um pouco útil era a especificação de throw\(\).  Por exemplo:  
+---
+# <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
+Especificações de exceção são um recurso de linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que pode ser propagada por uma função. Você pode especificar que uma função pode não ser encerrado ou por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar a chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função. Há dois tipos de especificação de exceção. O *noexcept especificação* é novo no C++ 11. Especifica se o conjunto de exceções potenciais que podem escapar a função está vazio. O *especificação de exceção dinâmico*, ou `throw(optional_type_list)` especificação foi preterido no C++ 11 e apenas parcialmente com suporte pelo Visual Studio. Essa especificação de exceção foi projetada para fornecer informações de resumo sobre quais exceções podem ser geradas fora de uma função, mas na prática, ele foi encontrado para ser problemático. Uma especificação de exceção dinâmico que revelar um pouco úteis foi o incondicional `throw()` especificação. Por exemplo, a declaração da função:  
   
-```  
+```cpp  
 void MyFunction(int i) throw();  
 ```  
   
- informa o compilador que a função não lança exceções.  É o equivalente a usar [\_\_declspec\(nothrow\)](../Topic/nothrow%20\(C++\).md).  Seu uso é considerado opcional.  
+ informa o compilador que a função não lança exceções. É equivalente a usar [nothrow](../cpp/nothrow-cpp.md). Seu uso é considerado opcional.  
   
- **\(C \+ \+ 11\)** no ISO do C\+\+ 11 Standard, [noexcept](../Topic/noexcept%20\(C++\).md) operador foi introduzida e é suportado no Visual Studio de 2015 e versões posteriores.  Sempre que possível, use `noexcept` para especificar se uma função pode lançar exceções.  
+No C++ 11 padrão ISO, o [noexcept](../cpp/noexcept-cpp.md) operador foi introduzido como uma substituição. Há suporte no Visual Studio 2015 e posteriores. Sempre que possível, use um `noexcept` expressão para especificar se uma função pode lançar exceções. Por exemplo, use essa declaração de função em vez de acima:  
   
- O Visual C\+\+ parte do padrão ISO C\+\+ em sua implementação de especificações de exceção.  A tabela a seguir resume a implementação do Visual C\+\+ de especificações de exceção:  
+```cpp  
+void MyFunction(int i) noexcept;  
+```  
+  
+Enquanto o Visual C++ dá suporte totalmente o `noexcept` expressão, entregas de ISO C++ padrão em sua implementação de especificações de exceções dinâmicas.  A tabela a seguir resume a implementação do Visual C++ de especificações de exceção:  
   
 |Especificação de exceção|Significado|  
-|------------------------------|-----------------|  
-|throw\(\)|A função não gera uma exceção.  No entanto, se uma exceção for lançada fora de uma função marcada como Throw \(\), o compilador do Visual C\+\+ não chamará inesperado \(consulte [unexpected](../Topic/unexpected%20\(CRT\).md) e [unexpected](../Topic/unexpected%20\(%3Cexception%3E\).md) para obter mais informações\).  Se uma função for marcada com throw\(\), o compilador Visual C\+\+ assumirá que a função não lança exceções de C\+\+ e gerará o código corretamente.  Devido às otimizações de código que podem ser realizadas pelo compilador C\+\+ \(baseado na suposição de que a função não gera nenhuma exceção de C\+\+\) se uma função gerar uma exceção, o programa pode não executar corretamente.|  
-|throw\(...\)|A função pode gerar uma exceção.|  
-|throw\(`type`\)|A função pode gerar uma exceção do tipo `type`.  No entanto, no Visual C\+\+ .NET, isso é interpretado como throw\(...\).  Consulte [Especificadores de exceção de função](../misc/15-4-function-exception-specifiers.md).|  
+|-----------------------------|-------------|  
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|A função não gera uma exceção. No entanto, se uma exceção será lançada fora de uma função marcada `throw()`, as chamadas de compilador do Visual C++ `std::terminate`, não `std::unexpected`. Consulte [std::unexpected](../c-runtime-library/reference/unexpected-crt.md) para obter mais informações. Se uma função é marcada como `noexcept`, `noexcept(true)`, ou `throw()`, o compilador do Visual C++ pressupõe que a função não lança exceções C++ e gera o código adequadamente. Porque otimizações de código podem ser executadas pelo compilador C++ baseado na suposição de que a função não gerará as exceções do C++, se uma função lançar uma exceção, o programa pode não ser executada corretamente.|  
+|`noexcept(false)`<br/>`throw(...)`<br/>Não há especificação|A função pode lançar uma exceção de qualquer tipo.|  
+|`throw(type)`|A função pode gerar uma exceção do tipo `type`. No Visual C++, essa sintaxe é aceita, mas ele será interpretado como `noexcept(false)`.|  
   
- Se a manipulação de exceção for usada em um aplicativo, deverá haver uma ou mais funções que tratam as exceções lançadas.  Todas as funções chamadas entre a que lança uma exceção e aquela que lida com a exceção devem ser capazes de lançar a exceção.  
+ Se o tratamento de exceção é usado em um aplicativo, deve haver uma função na pilha de chamadas identificadores geradas exceções antes de sair do escopo externo de uma função marcados `noexcept`, `noexcept(true)`, ou `throw()`. Se todas as funções chamadas entre o que lança uma exceção e o que lida com a exceção são especificados como `noexcept`, `noexcept(true)`, ou `throw()`, o programa é encerrado quando a função noexcept propaga a exceção.  
   
- O comportamento de lançamento de uma função depende dos fatores a seguir:  
+ O comportamento de exceção de uma função depende dos seguintes fatores:  
   
--   Se você estiver compilando a função em C ou C\+\+.  
+-   Se você estiver compilando a função em C ou C++.  
   
--   Qual opção do compilador [\/EH](../build/reference/eh-exception-handling-model.md) você usa.  
+-   Qual [/EH](../build/reference/eh-exception-handling-model.md) opção de compilador que você usa.  
   
 -   Se a especificação de exceção for determinada explicitamente.  
   
- As especificações explícitas de exceção não são permitidas em funções C.  
+ As especificações explícitas de exceção não são permitidas em funções C. Uma função C não deve para lançar exceções em **/EHsc**e pode gerar exceções estruturadas em **/EHs**, **/EHa**, ou **/EHac**.  
   
- A tabela a seguir resume o comportamento de lançamento de uma função:  
+ A tabela a seguir resume se uma função C++ potencialmente pode gerar em várias opções de tratamento de exceção do compilador:  
   
-|Função|\/EHsc|\/EHs|\/EHa|\/EHac|  
-|------------|------------|-----------|-----------|------------|  
-|Função C|throw\(\)|throw\(...\)|throw\(...\)|throw\(...\)|  
-|Função C\+\+ sem especificação de exceção|throw\(...\)|throw\(...\)|throw\(...\)|throw\(...\)|  
-|Função C\+\+ com a especificação de exceção throw\(\)|throw\(\)|throw\(\)|throw\(...\)|throw\(...\)|  
-|Função C\+\+ com a especificação de exceção throw\(...\)|throw\(...\)|throw\(...\)|throw\(...\)|throw\(...\)|  
-|Função C\+\+ com a especificação de exceção throw\(`type`\)|throw\(...\)|throw\(...\)|throw\(...\)|throw\(...\)|  
+|Função|/EHsc|/EHs|/EHa|/EHac|  
+|--------------|------------|-----------|-----------|------------|  
+|Função C++ sem especificação de exceção|Sim|Sim|Sim|Sim|  
+|Função C++ com `noexcept`, `noexcept(true)`, ou `throw()` especificação de exceção|Não|Não|Sim|Sim|  
+|Função C++ com `noexcept(false)`, `throw(...)`, ou `throw(type)` especificação de exceção|Sim|Sim|Sim|Sim|  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```cpp  
 // exception_specification.cpp  
@@ -127,12 +145,15 @@ int main() {
 }  
 ```  
   
-  **Prestes a lançar 1**  
-**no manipulador**  
-**Prestes a lançar 1**  
-**Exceção detectada de f4**  
-**Prestes a lançar 1**  
-**no manipulador**   
-## Consulte também  
- [Instruções try, throw e catch \(C\+\+\)](../cpp/try-throw-and-catch-statements-cpp.md)   
- [Tratamento de exceções C\+\+](../cpp/cpp-exception-handling.md)
+```Output  
+About to throw 1  
+in handler  
+About to throw 1  
+Caught exception from f4  
+About to throw 1  
+in handler  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Instruções try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)   
+ [Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)

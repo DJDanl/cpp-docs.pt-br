@@ -1,63 +1,80 @@
 ---
-title: "Controles ActiveX MFC: eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe COleControl, tratamento de eventos"
-  - "eventos de contêiner"
-  - "eventos personalizados, Adicionando aos controles ActiveX"
-  - "eventos [C++], Controles ActiveX"
-  - "eventos [C++], mapeamento"
-  - "mapeamentos, eventos"
-  - "Controles ActiveX MFC, eventos"
-  - "notificações [C++], notificando contêineres de eventos"
-  - "Eventos OLE"
-  - "eventos de estoque"
+title: 'Controles ActiveX MFC: Eventos | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], events
+- notifications [MFC], notifying containers of events
+- custom events [MFC], adding to ActiveX controls
+- events [MFC], mapping
+- COleControl class [MFC], handling of events
+- mappings [MFC], events
+- stock events [MFC]
+- container events [MFC]
+- events [MFC], ActiveX controls
+- OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Controles ActiveX MFC: eventos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
+ms.openlocfilehash: f4e6cfc21a12288a53eca391eccb86bb4ea3ff55
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Os controles ActiveX usam eventos para notificar um contêiner que algo ocorra ao controle.  Os exemplos comuns de eventos incluem clique no controle, dados inseridos usando o teclado, e as alterações no estado do controle.  Quando essas ações ocorrerem, o controle dispara um evento para alertar o contêiner.  
+---
+# <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: eventos
+Controles ActiveX usam eventos para notificar um contêiner que algo aconteceu com o controle. Exemplos comuns de eventos incluem cliques no controle, dados inseridos usando o teclado e as alterações no estado do controle. Quando essas ações ocorrem, o controle dispara um evento para alertar o contêiner.  
   
- Os eventos também são chamadas de mensagens.  
+ Eventos também são chamados de mensagens.  
   
- MFC O oferece suporte a dois tipos de eventos: estoque e personalizados.  Os eventos de estoque são os eventos que classificam as alças de [COleControl](../mfc/reference/colecontrol-class.md) automaticamente.  Para obter uma lista completa dos eventos de estoque, consulte o artigo [Controles ActiveX MFC: Para adicionar os eventos de estoque](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Stock%20Events%20to%20an%20ActiveX%20Control.md).  Os eventos personalizados permitem a um controle a capacidade de notificar o contêiner quando um específico de ação ocorre ao controle.  Alguns exemplos são uma alteração no estado interno de um controle ou de um recebimento de uma determinada mensagem da janela.  
+ MFC dá suporte a dois tipos de eventos: personalizados e ações. Eventos de estoque são os eventos que classe [COleControl](../mfc/reference/colecontrol-class.md) manipula automaticamente. Para obter uma lista completa de eventos de estoque, consulte o artigo [controles ActiveX MFC: adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventos personalizados permitem que um controle a capacidade notificar o contêiner quando ocorre uma ação específica para esse controle. Alguns exemplos seria uma alteração no estado interno de um controle ou no recebimento de uma determinada mensagem de janela.  
   
- Para que o controle seja acionado eventos corretamente, a sua classe de controle deve mapear cada evento de controle para uma função de membro que deve ser chamada quando o evento relacionado ocorre.  Esse mecanismo de mapeamento \(chamado em um mapa de evento\) é centralizada informações sobre o evento e permite que o Visual Studio facilmente acessar e manipular os eventos do controle.  Esse mapa de evento é declarado pela macro, localizado em \(cabeçalho. H\) arquivo de declaração da classe de controle:  
+ Para o controle disparar eventos corretamente, sua classe de controle deve mapear cada evento do controle para uma função de membro que deve ser chamada quando ocorre o evento relacionado. Esse mecanismo de mapeamento (chamado de um mapa de eventos) centraliza informações sobre o evento e permite que o Visual Studio acessar facilmente e manipular eventos de controle. Este mapa de evento é declarado com a macro a seguir, localizada no cabeçalho (. H) o arquivo da declaração de classe do controle:  
   
- [!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/CPP/mfc-activex-controls-events_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/cpp/mfc-activex-controls-events_1.h)]  
   
- Depois que o mapa de evento foi declarado, deve ser definido no arquivo de implementação do controle .CPP \(\).  As seguintes linhas de código definem o mapa de evento, permitindo que o controle seja acionado eventos específicos:  
+ Após ter sido declarado do mapa de evento, ele deverá ser definido na implementação do controle (. Arquivo CPP). Linhas de código a seguir definem o mapa de evento, permitindo que o controle para acionar eventos específicos:  
   
- [!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/CPP/mfc-activex-controls-events_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/CPP/mfc-activex-controls-events_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/cpp/mfc-activex-controls-events_2.cpp)]  
+[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/cpp/mfc-activex-controls-events_3.cpp)]  
   
- Se você usar o assistente de controle ActiveX de MFC para criar o projeto, o adiciona automaticamente essas linhas.  Se você não usar o assistente de controle ActiveX de MFC, você deve adicionar essas linhas manualmente.  
+ Se você usar o Assistente de controle ActiveX MFC para criar o projeto, ele adiciona automaticamente essas linhas. Se você não usar o Assistente de controle ActiveX MFC, você deve adicionar essas linhas manualmente.  
   
- A exibição da classe, você pode adicionar os eventos de estoque suportados pela classe `COleControl` ou eventos personalizados que você definir.  Para cada novo evento, a exibição da classe adiciona automaticamente a entrada apropriada para o mapa do evento de controle e arquivo de .IDL do controle.  
+ Com a exibição de classe, você pode adicionar suportados pela classe de eventos de estoque `COleControl` ou eventos personalizados que você definir. Para cada novo evento, o modo de exibição de classe adiciona automaticamente a entrada correta para mapa de evento do controle e o controle. Arquivo IDL.  
   
- Outros dois artigos a seguir discutem eventos em detalhes:  
+ Dois outros artigos discutem eventos detalhadamente:  
   
--   [Controles ActiveX MFC: Para adicionar os eventos de estoque](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Stock%20Events%20to%20an%20ActiveX%20Control.md)  
+-   [Controles ActiveX MFC: Adicionando eventos de estoque](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
--   [Controles ActiveX MFC: Adicionando eventos personalizados](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Custom%20Events.md)  
+-   [Controles ActiveX do MFC: adicionando eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md)   
- [Classe de COleControl](../mfc/reference/colecontrol-class.md)
+ [Classe COleControl](../mfc/reference/colecontrol-class.md)
+
