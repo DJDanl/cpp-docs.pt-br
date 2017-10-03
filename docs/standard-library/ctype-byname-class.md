@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::ctype_byname
-- ctype_byname
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 591ad03b2c5a2d2cd085c13f2f5ca8a6918974ba
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: 5f57ef8eadf5ea963ef4a8b8c1eaa7b6ec48ee6d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="ctypebyname-class"></a>Classe ctype_byname
