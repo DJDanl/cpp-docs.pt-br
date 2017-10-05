@@ -1,51 +1,67 @@
 ---
-title: "Fun&#231;&#245;es com listas de argumentos vari&#225;veis (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "listas de argumentos [C++], número variável de"
-  - "argumentos [C++], número variável de"
-  - "declaradores, funções"
-  - "declarando funções, variáveis"
-  - "chamadas de função, número variável de argumentos"
-  - "listas de argumentos variáveis"
+title: "Funções com listas de argumentos variáveis (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], variable number of
+- variable argument lists
+- declarators, functions
+- argument lists [C++], variable number of
+- declaring functions, variables
+- function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#245;es com listas de argumentos vari&#225;veis (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Declarações de função, o último membro é o reticências \(...\) pode levar a um número variável de argumentos.  Nesses casos, o C\+\+ fornece verificação de tipo apenas para os argumentos explicitamente declarados.  Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar.  A família de funções é um exemplo de funções que usam listas de argumentos variáveis.`printf`*lista de declarações de argumento*  
+---
+# <a name="functions-with-variable-argument-lists--c"></a>Lista de funções com argumentos variáveis (C++)
+Declarações de função em que o último membro é o botão de reticências (...) pode levar a um número variável de argumentos. Nesses casos, o C++ fornece verificação de tipo apenas para os argumentos explicitamente declarados. Você pode usar listas de argumentos variáveis quando precisar criar uma função tão geral que mesmo o número e os tipos de argumentos possam variar. A família de funções é um exemplo de funções que usam listas de argumentos de variável. `printf` *argumento de declaração de lista*  
   
-## Funções com argumentos de variável  
- Para acessar argumentos após a declaração, use as macros contidos no arquivo de inclusão padrão STDARG. H conforme descrito abaixo.  
+## <a name="functions-with-variable-arguments"></a>Funções com argumentos variáveis  
+ Para acessar argumentos após aqueles declarados, use as macros contidas no arquivo de inclusão padrão STDARG. H conforme descrito abaixo.  
   
- **Específico da Microsoft**  
+ **Seção específica da Microsoft**  
   
- O Microsoft C\+\+ permite que as reticências sejam especificadas como um argumento se as reticências forem o último argumento e se forem precedidas por uma vírgula.  Consequentemente, a declaração `int Func( int i, ... );` é válida, mas `int Func( int i ... );` não é.  
+ O Microsoft C++ permite que as reticências sejam especificadas como um argumento se as reticências forem o último argumento e se forem precedidas por uma vírgula. Consequentemente, a declaração `int Func( int i, ... );` é válida, mas `int Func( int i ... );` não é.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
- A declaração de uma função que pega um número variável de argumentos que requer pelo menos um argumento de espaço reservado, mesmo se não for usado.  Se esse argumento de espaço reservado não for fornecido, não há como acessar os argumentos restantes.  
+ A declaração de uma função que pega um número variável de argumentos que requer pelo menos um argumento de espaço reservado, mesmo se não for usado. Se esse argumento de espaço reservado não for fornecido, não há como acessar os argumentos restantes.  
   
- Quando os argumentos do tipo `char` são passados como argumentos variáveis, são convertidos para o tipo `int`.  De maneira similar, quando os argumentos do tipo **float** são passados como argumentos variáveis, eles são convertidos para o tipo **double**.  Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns.  Consulte [Promoções integrais](../misc/integral-promotions.md) para obter mais informações.  
+ Quando os argumentos do tipo `char` são passados como argumentos variáveis, são convertidos para o tipo `int`. Da mesma forma, quando os argumentos de tipo **float** são transmitidos como argumentos de variável, eles são convertidos para o tipo **duplo**. Os argumentos de outros tipos estão sujeitos às promoções integral e de ponto flutuante comuns. Consulte [conversões padrão](standard-conversions.md) para obter mais informações.  
   
- Funções que exigem listas de variáveis são declaradas usando as reticências \(...\) na lista de argumentos.  Use os tipos e as macros que são descritos no arquivo de inclusão STDARG.H para acessar os argumentos que são passados por uma lista de variáveis.  Para obter mais informações sobre essas macros, consulte [va\_arg, va\_copy, va\_end, va\_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  na documentação da biblioteca de tempo de execução C.  
+ Funções que exigem listas de variáveis são declaradas usando o botão de reticências (...) na lista de argumentos. Use os tipos e as macros que são descritos no arquivo de inclusão STDARG.H para acessar os argumentos que são passados por uma lista de variáveis. Para obter mais informações sobre essas macros, consulte [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). a documentação para a biblioteca de tempo de execução C.  
   
- O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo \(declarado em STDARG. H\): `va_list` `va_end` `va_arg` `va_start`  
+ O exemplo a seguir mostra como as macros funcionam em conjunto com o tipo (declarado em STDARG. H): 
   
 ```  
 // variable_argument_lists.cpp  
@@ -123,10 +139,10 @@ void ShowVar( char *szTypes, ... ) {
   
  O exemplo anterior ilustra estes conceitos importantes:  
   
-1.  Você deve estabelecer um marcador de lista como uma variável de tipo `va_list` antes que argumentos de variáveis sejam acessados.  No exemplo anterior, o marcador é chamado `vl`.  
+1.  Você deve estabelecer um marcador de lista como uma variável de tipo `va_list` antes que argumentos de variáveis sejam acessados. No exemplo anterior, o marcador é chamado `vl`.  
   
-2.  Os argumentos individuais são acessados usando a macro `va_arg`.  Você deve informar à macro `va_arg` o tipo de argumento a ser recuperado para que ela possa transferir o número de bytes correto da pilha.  Se você especificar um tipo incorreto de um tamanho diferente do fornecido pelo programa de chamada para `va_arg`, os resultados serão imprevisíveis.  
+2.  Os argumentos individuais são acessados usando a macro `va_arg`. Você deve informar à macro `va_arg` o tipo de argumento a ser recuperado para que ela possa transferir o número de bytes correto da pilha. Se você especificar um tipo incorreto de um tamanho diferente do fornecido pelo programa de chamada para `va_arg`, os resultados serão imprevisíveis.  
   
 3.  É necessário converter explicitamente o resultado obtido usando a macro `va_arg` no tipo desejado.  
   
- Você deve chamar a macro para encerrar o processamento do argumento de variável.`va_end`
+ Você deve chamar a macro para encerrar o processamento de argumento variável.`va_end`

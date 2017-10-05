@@ -1,36 +1,52 @@
 ---
-title: "__super | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__super_cpp"
-  - "__super"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __super [C++]"
+title: Super | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __super_cpp
+- __super
+dev_langs:
+- C++
+helpviewer_keywords:
+- __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __super
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 64600f8cf642b0c7906873a73aa4da41897a57f5
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="super"></a>__super
+**Seção específica da Microsoft**  
   
  Permite que você indique explicitamente que está chamando uma implementação da classe base para uma função que está substituindo.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,16 +56,16 @@ member_function
   
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Todos os métodos acessíveis da classe base são considerados durante a fase de resolução de sobrecarga e a função que fornece a melhor correspondência é a chamada.  
   
  `__super` só pode aparecer no corpo de uma função membro.  
   
- `__super` não pode ser usado com uma declaração de uso.  Consulte [Declaração de uso](../cpp/using-declaration.md) para obter mais informações.  
+ `__super` não pode ser usado com uma declaração de uso. Consulte [usando declaração](../cpp/using-declaration.md) para obter mais informações.  
   
- Com a introdução de [atributos](../windows/cpp-attributes-reference.md) que injetam código, seu código pode conter uma ou várias classes base cujos nomes você pode não saber, mas que contêm métodos que você deseja chamar.  
+ Com a introdução de [atributos](../windows/cpp-attributes-reference.md) que injetar código, seu código pode conter uma ou mais classes base cujos nomes talvez não saiba mas que contêm métodos que você deseja chamar.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // deriv_super.cpp  
@@ -72,7 +88,7 @@ struct D : B1, B2 {
 };  
 ```  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Palavras-chave](../cpp/keywords-cpp.md)

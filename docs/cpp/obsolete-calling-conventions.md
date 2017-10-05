@@ -1,42 +1,58 @@
 ---
-title: "Conven&#231;&#245;es de chamada obsoletas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__fortran"
-  - "__pascal"
-  - "__syscall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __fortran [C++]"
-  - "Palavra-chave __pascal [C++]"
-  - "Palavra-chave __syscall [C++]"
-  - "convenções de chamada, obsoleto"
-  - "WINAPI"
+title: "Convenções de chamada obsoletas | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __fortran
+- __pascal
+- __syscall
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINAPI
+- __syscall keyword [C++]
+- __pascal keyword [C++]
+- __fortran keyword [C++]
+- calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Conven&#231;&#245;es de chamada obsoletas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 90f328552677bc0f41accc316433365467dd7673
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Específico da Microsoft  
- As convenções de chamada **\_\_pascal**, **\_\_fortran** e **\_\_syscall** não têm mais suporte.  Você pode emular a funcionalidade delas usando uma das convenções de chamada com suporte e as opções do vinculador apropriadas.  
+---
+# <a name="obsolete-calling-conventions"></a>Convenções de chamada obsoletas
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ O **Pascal**, **Fortran**, e **syscall** convenções de chamada não têm mais suporte. Você pode emular a funcionalidade delas usando uma das convenções de chamada com suporte e as opções do vinculador apropriadas.  
   
- O WINDOWS.H agora oferece suporte à macro **WINAPI**, que traduz a convenção de chamada apropriada para o destino.  Use **WINAPI** onde você usava **PASCAL** ou **\_\_far \_\_pascal** anteriormente.  
+ WINDOWS. H agora dá suporte ao **WINAPI** macro, que pode ser convertido para a convenção de chamada apropriada para o destino. Use **WINAPI** em que você usou anteriormente **PASCAL** ou **__far \__pascal**.  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Passagem de argumento e convenções de nomenclatura](../Topic/Argument%20Passing%20and%20Naming%20Conventions.md)
+## <a name="see-also"></a>Consulte também  
+ [Convenções de passagem e nomenclatura de argumentos](../cpp/argument-passing-and-naming-conventions.md)

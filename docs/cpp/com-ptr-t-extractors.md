@@ -1,81 +1,97 @@
 ---
-title: "Extratores _com_ptr_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::operatorInterface&"
-  - "operatorInterface*"
-  - "operatorInterface&"
-  - "_com_ptr_t::operatorbool"
-  - "_com_ptr_t.operator->"
-  - "_com_ptr_t.operator*"
-  - "_com_ptr_t::operator->"
-  - "_com_ptr_t::operator*"
-  - "_com_ptr_t.operatorInterface&"
-  - "_com_ptr_t.operatorbool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador &, com objetos específicos"
-  - "Operador *, com objetos específicos"
-  - "Operador ->, com objetos específicos"
-  - "extratores"
-  - "extratores, Classe _com_ptr_t"
-  - "Operador *"
-  - "Operador bool"
-  - "Operador Interface&"
-  - "Operador Interface*"
-  - "operator&"
-  - "operator*"
-  - "operator->"
+title: Extratores com_ptr_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::operatorInterface&
+- operatorInterface*
+- operatorInterface&
+- _com_ptr_t::operatorbool
+- _com_ptr_t.operator->
+- _com_ptr_t.operator*
+- _com_ptr_t::operator->
+- _com_ptr_t::operator*
+- _com_ptr_t.operatorInterface&
+- _com_ptr_t.operatorbool
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator Interface&
+- '* operator, with specific objects'
+- operator&
+- operator*
+- -> operator, with specific objects
+- '& operator, with specific objects'
+- operator Interface*
+- operator *
+- operator->
+- operator bool
+- extractors, _com_ptr_t class
+- extractors
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Extratores _com_ptr_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 136afa55361ff25f9ad606886be938a00551393d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comptrt-extractors"></a>Extratores _com_ptr_t
+**Seção específica da Microsoft**  
   
  Extrai o ponteiro de interface COM encapsulado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
+      operator Interface*( ) const throw( );   
+operator Interface&( ) const;   
+Interface& operator*( ) const;   
+Interface* operator->( ) const;   
+Interface** operator&( ) throw( );   
 operator bool( ) const throw( );  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
   
--   **operador Interface\*** Retorna o ponteiro de interface encapsulado, que pode ser **NULL**.  
+-   **operador Interface\* ** retorna o ponteiro de interface encapsulados, o que pode ser **nulo**.  
   
--   **operador Interface&** Retorna uma referência ao ponteiro de interface encapsulado, e emite um erro se o ponteiro for **NULL**.  
+-   **operador Interface &** retorna uma referência para o ponteiro de interface encapsulados e emite um erro se o ponteiro for **nulo**.  
   
--   **operador \*** Permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.  
+-   **operador\* ** permite que um objeto de ponteiro inteligente atuar como se fosse a interface encapsulada real quando cancelada.  
   
--   **operador \-\>** Permite que um objeto de ponteiro inteligente atue como se fosse a interface encapsulada real quando desreferenciado.  
+-   **operador ->** permite que um objeto de ponteiro inteligente atuar como se fosse a interface encapsulada real quando cancelada.  
   
--   **operador &** Libera qualquer ponteiro de interface encapsulado, substituindo\-o por **NULL**, e retorna o endereço do ponteiro encapsulado.  Isso permite que o ponteiro inteligente seja passado pelo endereço para uma função que possui um parâmetro **out** pelo qual retorna um ponteiro de interface.  
+-   **operador &** libera qualquer ponteiro de interface encapsulada, substituí-lo com **nulo**e retorna o endereço do ponteiro encapsulado. Isso permite que o ponteiro inteligente deve passar pelo endereço de uma função que tem um **out** parâmetro por meio do qual ele retorna um ponteiro de interface.  
   
--   **operador bool** Permite que um objeto de ponteiro inteligente seja usado em uma expressão condicional.  Esse operador retornará **true** se o ponteiro não for **NULL**.  
+-   **operador bool** permite que um objeto de ponteiro inteligente a ser usado em uma expressão condicional. Esse operador retorna **true** se o ponteiro não é **nulo**.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Classe \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

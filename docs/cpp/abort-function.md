@@ -1,31 +1,47 @@
 ---
-title: "Fun&#231;&#227;o abort | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Abort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Função abort"
+title: "Função Abort | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Abort
+dev_langs:
+- C++
+helpviewer_keywords:
+- abort function
 ms.assetid: 3352bcc4-1a8a-4e1f-8dcc-fe30f6b50f2d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#227;o abort
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 169c76f4925dd02aeffbaa510526ce3caa53e93f
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A função **abort**, também declarada no arquivo de inclusão padrão STDLIB.H, encerra um programa C\+\+.  A diferença entre **exit** e **abort** é que **exit** permite que o processamento de encerramento do tempo de execução C\+\+ ocorra \(os destruidores de objeto globais serão chamados\), enquanto que **abort** encerra o programa imediatamente.  Para obter mais informações, consulte [abort](../c-runtime-library/reference/abort.md) na *Referência da biblioteca em tempo de execução*.  
+---
+# <a name="abort-function"></a>Função abort
+O **anular** função, também são declarada no arquivo de inclusão padrão STDLIB. H, encerra um programa C++. A diferença entre **sair** e **anular** é que **sair** permite o processamento de término do tempo de execução C++ ocorra (objeto global destruidores serão chamados), enquanto **anular** o programa é encerrado imediatamente. Para obter mais informações, consulte [anular](../c-runtime-library/reference/abort.md) no *referência da biblioteca de tempo de execução*.  
   
-## Consulte também  
- [Término do programa](../Topic/Program%20Termination.md)
+## <a name="see-also"></a>Consulte também  
+ [Término do programa](../cpp/program-termination.md)

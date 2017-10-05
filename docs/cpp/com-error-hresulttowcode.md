@@ -1,37 +1,53 @@
 ---
-title: "_com_error::HRESULTToWCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "HRESULTToWCode"
-  - "_com_error.HRESULTToWCode"
-  - "_com_error::HRESULTToWCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método HRESULTToWCode"
+title: _com_error::HRESULTToWCode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- HRESULTToWCode
+- _com_error.HRESULTToWCode
+- _com_error::HRESULTToWCode
+dev_langs:
+- C++
+helpviewer_keywords:
+- HRESULTToWCode method
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_error::HRESULTToWCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 296c6f43c1bc840ae13bdf4ad355d7f41e2cc3fd
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
+**Seção específica da Microsoft**  
   
- Mapeia um `HRESULT` de 32 bits para um `wCode` de 16 bits.  
+ Mapas de 32 bits `HRESULT` para 16 bits `wCode`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,19 +56,19 @@ manager: "ghogen"
 ) throw( );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `hr`  
- O `HRESULT` de 32 bits a ser mapeado para o  `wCode` de 16 bits.  
+ 32 bits `HRESULT` a ser mapeada para 16-bit `wCode`.  
   
-## Valor de retorno  
- O `wCode` de 16 bits mapeado para o `HRESULT` de 32 bits.  
+## <a name="return-value"></a>Valor de retorno  
+ 16-bit `wCode` mapeada a partir de 32 bits `HRESULT`.  
   
-## Comentários  
- Consulte [\_com\_error::WCode](../cpp/com-error-wcode.md) para obter mais informações.  
+## <a name="remarks"></a>Comentários  
+ Consulte [_com_error::WCode](../cpp/com-error-wcode.md) para obter mais informações.  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [\_com\_error::WCode](../cpp/com-error-wcode.md)   
- [\_com\_error::WCodeToHRESULT](../Topic/_com_error::WCodeToHRESULT.md)   
- [Classe \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>Consulte também  
+ [_com_error::WCode](../cpp/com-error-wcode.md)   
+ [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
+ [Classe _com_error](../cpp/com-error-class.md)

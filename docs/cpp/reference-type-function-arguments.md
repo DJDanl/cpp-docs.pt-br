@@ -1,33 +1,49 @@
 ---
-title: "Argumentos da fun&#231;&#227;o de tipo de refer&#234;ncia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argumentos [C++], Função "
-  - "argumentos de função, tipo de referência"
-  - "parâmetros de função, tipo de referência"
-  - "funções [C++], parâmetros"
-  - "passando parâmetros, argumentos de tipo de referência"
+title: "Argumentos de função de tipo de referência | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- functions [C++], paramters
+- function parameters, reference-type
+- function arguments, reference-type
+- passing parameters, reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Argumentos da fun&#231;&#227;o de tipo de refer&#234;ncia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-É geralmente mais eficiente passar referências, em vez de objetos grandes, para funções.  Isso permite que o compilador passe o endereço do objeto enquanto mantém a sintaxe que seria usada para acessar o objeto.  Considere o seguinte exemplo que usa a estrutura `Date`:  
+---
+# <a name="reference-type-function-arguments"></a>Argumentos de funções de tipo de referência
+É geralmente mais eficiente passar referências, em vez de objetos grandes, para funções. Isso permite que o compilador passe o endereço do objeto enquanto mantém a sintaxe que seria usada para acessar o objeto. Considere o seguinte exemplo que usa a estrutura `Date`:  
   
 ```  
 // reference_type_function_arguments.cpp  
@@ -68,9 +84,9 @@ int main()
 }  
 ```  
   
- O código anterior mostra que os membros de uma estrutura passada por referência são acessados usando o operador de seleção de membro \(**.**\) em vez do operador de seleção de membro de ponteiro \(**–\>**\).  
+ O código anterior mostra que os membros de uma estrutura passado por referência são acessados usando o operador de seleção de membro (**.**) em vez do operador de seleção de membro de ponteiro (**->**).  
   
- Embora os argumentos passados como tipos de referência observem a sintaxe de tipos de não ponteiro, eles retêm uma característica importante de tipos de ponteiro: são modificáveis a menos que declarados como **const**.  Como a intenção do código anterior não é alterar o objeto `GDate`, um protótipo de função mais apropriado é:  
+ Embora os argumentos passados como tipos de referência observar a sintaxe dos tipos de ponteiro não, eles mantêm uma característica importante dos tipos de ponteiro: estiverem modificáveis, a menos que declarado como **const**. Como a intenção do código anterior não é alterar o objeto `GDate`, um protótipo de função mais apropriado é:  
   
 ```  
 long JulianFromGregorian( const Date& GDate );  
@@ -78,7 +94,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Esse protótipo garante que a função `JulianFromGregorian` não alterará seu argumento.  
   
- Qualquer função cujo protótipo é usar um tipo de referência pode aceitar um objeto do mesmo tipo em seu lugar, porque não há uma conversão padrão de *typename* para *typename***&**.  
+ Qualquer função prototipada como colocar um tipo de referência pode aceitar um objeto do mesmo tipo em seu lugar, porque não há uma conversão padrão de *typename* para *typename* ** & **.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referências](../cpp/references-cpp.md)

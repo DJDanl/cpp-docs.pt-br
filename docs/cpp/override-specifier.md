@@ -1,42 +1,58 @@
 ---
-title: "substituir especificador | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Identificador de substituição"
+title: "Especificador de substituição | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# substituir especificador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Você pode usar a palavra\-chave `override` para designar as funções membro que substituem uma função virtual em uma classe base.  
+---
+# <a name="override-specifier"></a>substituir especificador
+Você pode usar a palavra-chave `override` para designar as funções membro que substituem uma função virtual em uma classe base.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 function-declaration override;  
 ```  
   
-## Comentários  
- `override` é contextual e tem um significado especial somente quando usada após uma declaração de função membro. Caso contrário, não é uma palavra\-chave reservada.  
+## <a name="remarks"></a>Comentários  
+ `override` é contextual e tem um significado especial somente quando usada após uma declaração de função membro. Caso contrário, não é uma palavra-chave reservada.  
   
-## Exemplo  
- Use `override` para ajudar a impedir comportamentos de herança inadequados em seu código.  O exemplo a seguir mostra onde, sem usar `override`, o comportamento da função membro da classe derivada pode não ser o esperado.  O compilador não emite erros para esse código.  
+## <a name="example"></a>Exemplo  
+ Use `override` para ajudar a impedir comportamentos de herança inadequados em seu código. O exemplo a seguir mostra onde, sem usar `override`, o comportamento da função membro da classe derivada pode não ser o esperado. O compilador não emite erros para esse código.  
   
 ```cpp  
 class BaseClass  
@@ -90,9 +106,9 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Para especificar que as funções não podem ser substituídas e que as classes não podem ser herdadas, use a palavra\-chave [final](../cpp/final-specifier.md).  
+ Para especificar que as funções não podem ser substituídas e que as classes não podem ser herdadas, use o [final](../cpp/final-specifier.md) palavra-chave.  
   
-## Consulte também  
- [especificador final](../cpp/final-specifier.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) C\+\+ Type Names](http://msdn.microsoft.com/pt-br/b53ba470-e583-4e5c-b634-6018f6110674)
+## <a name="see-also"></a>Consulte também  
+ [Especificador final](../cpp/final-specifier.md)   
+ [Palavras-chave](../cpp/keywords-cpp.md)   
+ 

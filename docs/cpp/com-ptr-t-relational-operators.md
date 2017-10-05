@@ -1,199 +1,215 @@
 ---
-title: "Operadores relacionais _com_ptr_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::operator>"
-  - "_com_ptr_t::operator>="
-  - "_com_ptr_t.operator<="
-  - "_com_ptr_t.operator!="
-  - "_com_ptr_t::operator<="
-  - "_com_ptr_t.operator>"
-  - "_com_ptr_t.operator<"
-  - "_com_ptr_t.operator=="
-  - "_com_ptr_t::operator=="
-  - "_com_ptr_t.operator>="
-  - "_com_ptr_t::operator!="
-  - "_com_ptr_t::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador !="
-  - "Operador <, comparando objetos específicos"
-  - "Operador <=, com objetos específicos"
-  - "Operador ==, com objetos Visual C++ específicos"
-  - "Operador >, comparando objetos específicos"
-  - "Operador >=, comparando objetos específicos"
-  - "Operador !=, operadores relacionais"
-  - "Operador <, ponteiros"
-  - "Operador <=, ponteiros"
-  - "Operador ==, ponteiros"
-  - "Operador >, ponteiros"
-  - "Operador >=, ponteiros"
-  - "operator!=, operadores relacionais"
-  - "operator<, ponteiros"
-  - "operator<=, ponteiros"
-  - "operator==, ponteiros"
-  - "operator>=, ponteiros"
-  - "operadores relacionais, Classe _com_ptr_t"
+title: Operadores relacionais com_ptr_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::operator>
+- _com_ptr_t::operator>=
+- _com_ptr_t.operator<=
+- _com_ptr_t.operator!=
+- _com_ptr_t::operator<=
+- _com_ptr_t.operator>
+- _com_ptr_t.operator<
+- _com_ptr_t.operator==
+- _com_ptr_t::operator==
+- _com_ptr_t.operator>=
+- _com_ptr_t::operator!=
+- _com_ptr_t::operator<
+dev_langs:
+- C++
+helpviewer_keywords:
+- '>= operator, comparing specific objects'
+- '!= operator'
+- operator >, pointers
+- operator>=, pointers
+- operator <, pointers
+- operator!=, relational operators
+- < operator, comparing specific objects
+- operator==, pointers
+- operator ==, pointers
+- <= operator, with specific objects
+- relational operators, _com_ptr_t class
+- operator >=, pointers
+- operator !=, relational operators
+- operator <=, pointers
+- '> operator, comparing specific objects'
+- operator<=, pointers
+- operator<, pointers
+- == operator, with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores relacionais _com_ptr_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 25ec5c27afcc6374f4f450a3fc290aad2cf6bfac
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="comptrt-relational-operators"></a>Operadores relacionais _com_ptr_t
+**Seção específica da Microsoft**  
   
- Comparam o objeto de ponteiro inteligente com outro ponteiro inteligente, um ponteiro de interface bruto ou um **NULL**.  
+ Compare o objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
-      template<typename _OtherIID>   
-bool operator==(   
-   const _com_ptr_t<_OtherIID>& p   
+      template<typename _OtherIID>   
+bool operator==(   
+   const _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _OtherIID>    
-bool operator==(   
-   _com_ptr_t<_OtherIID>& p   
+template<typename _OtherIID>    
+bool operator==(   
+   _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _InterfaceType>   
-bool operator==(   
-   _InterfaceType* p   
+template<typename _InterfaceType>   
+bool operator==(   
+   _InterfaceType* p   
 );  
   
-template<>   
-bool operator==(   
-   Interface* p   
+template<>   
+bool operator==(   
+   Interface* p   
 );  
   
-template<>   
-bool operator==(   
-   const _com_ptr_t& p   
+template<>   
+bool operator==(   
+   const _com_ptr_t& p   
 ) throw();  
   
-template<>   
-bool operator==(   
-   _com_ptr_t& p   
+template<>   
+bool operator==(   
+   _com_ptr_t& p   
 ) throw();  
   
-bool operator==(   
-   int null   
+bool operator==(   
+   int null   
 );  
 ```  
   
 ```  
   
-      template<typename _OtherIID>   
-bool operator!=(   
-   const _com_ptr_t<_OtherIID>& p   
+      template<typename _OtherIID>   
+bool operator!=(   
+   const _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _OtherIID>   
-bool operator!=(   
-   _com_ptr_t<_OtherIID>& p   
+template<typename _OtherIID>   
+bool operator!=(   
+   _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _InterfaceType>   
-bool operator!=(   
-   _InterfaceType* p   
+template<typename _InterfaceType>   
+bool operator!=(   
+   _InterfaceType* p   
 );  
   
-bool operator!=(   
-   int null   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator<(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
-  
-template<typename _OtherIID>   
-bool operator<(   
-   _com_ptr_t<_OtherIID>& p   
-);  
-  
-template<typename _InterfaceType>   
-bool operator<(   
-   _InterfaceType* p   
+bool operator!=(   
+   int null   
 );  
 ```  
   
 ```  
   
-      template<typename _OtherIID>   
-bool operator>(   
-   const _com_ptr_t<_OtherIID>& p   
+      template<typename _OtherIID>   
+bool operator<(   
+   const _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _OtherIID>   
-bool operator>(_com_ptr_t<   
-   _OtherIID>& p   
+template<typename _OtherIID>   
+bool operator<(   
+   _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _InterfaceType>   
-bool operator>(   
-   _InterfaceType* p   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator<=(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
-  
-template<typename _OtherIID>   
-bool operator<=(   
-   _com_ptr_t<_OtherIID>& p   
-);  
-  
-template<typename _InterfaceType>   
-bool operator<=(   
-   _InterfaceType* p   
+template<typename _InterfaceType>   
+bool operator<(   
+   _InterfaceType* p   
 );  
 ```  
   
 ```  
   
-      template<typename _OtherIID>   
-bool operator>=(   
-   const _com_ptr_t<_OtherIID>& p   
+      template<typename _OtherIID>   
+bool operator>(   
+   const _com_ptr_t<_OtherIID>& p   
 );  
   
-template<typename _OtherIID>   
-bool operator>=(   
-   _com_ptr_t<_OtherIID>& p   
+template<typename _OtherIID>   
+bool operator>(_com_ptr_t<   
+   _OtherIID>& p   
 );  
   
-template<typename _InterfaceType>   
-bool operator>=(   
-   _InterfaceType* p   
+template<typename _InterfaceType>   
+bool operator>(   
+   _InterfaceType* p   
 );  
 ```  
   
-## Comentários  
- Compara um objeto ponteiro inteligente com outro ponteiro inteligente, um ponteiro de interface bruto ou um **NULL**.  Exceto pelos testes de ponteiro **NULL**, esses operadores primeiro consultam os dois ponteiros em relação a **IUnknown** e depois comparam os resultados.  
+```  
   
- **FIM de Específico da Microsoft**  
+      template<typename _OtherIID>   
+bool operator<=(   
+   const _com_ptr_t<_OtherIID>& p   
+);  
   
-## Consulte também  
- [Classe \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+template<typename _OtherIID>   
+bool operator<=(   
+   _com_ptr_t<_OtherIID>& p   
+);  
+  
+template<typename _InterfaceType>   
+bool operator<=(   
+   _InterfaceType* p   
+);  
+```  
+  
+```  
+  
+      template<typename _OtherIID>   
+bool operator>=(   
+   const _com_ptr_t<_OtherIID>& p   
+);  
+  
+template<typename _OtherIID>   
+bool operator>=(   
+   _com_ptr_t<_OtherIID>& p   
+);  
+  
+template<typename _InterfaceType>   
+bool operator>=(   
+   _InterfaceType* p   
+);  
+```  
+  
+## <a name="remarks"></a>Comentários  
+ Compara a um objeto de ponteiro inteligente para outro ponteiro inteligente, o ponteiro de interface bruto, ou **nulo**. Exceto para o **nulo** testes de ponteiro, esses operadores primeiro consultar ambos os ponteiros para **IUnknown**e comparar os resultados.  
+  
+ **Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

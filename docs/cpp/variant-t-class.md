@@ -1,69 +1,85 @@
 ---
-title: "Classe _variant_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Variant"
-  - "_variant_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe _variant_t"
-  - "Classe _variant_t, funções de membro"
-  - "Classe _variant_t, operadores"
-  - "objeto VARIANT"
-  - "objeto VARIANT, encapsulamento COM"
+title: classe variant_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Variant
+- _variant_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- _variant_t class, operators
+- _variant_t class
+- _variant_t class, member functions
+- VARIANT object
+- VARIANT object, COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classe _variant_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3c074061955adbb1682bb7d96345a31fcf8f04e7
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="variantt-class"></a>Classe _variant_t
+**Seção específica da Microsoft**  
   
- Um objeto `_variant_t` encapsula o tipo de dados `VARIANT`.  A classe gerencia a alocação e a desalocação de recursos e faz chamadas de função para **VariantInit** e **VariantClear** conforme apropriado.  
+ Um objeto `_variant_t` encapsula o tipo de dados `VARIANT`. A classe gerencia a alocação e desalocação e faz chamadas de função **VariantInit** e **VariantClear** conforme apropriado.  
   
-### Construção  
-  
-|||  
-|-|-|  
-|[\_variant\_t](../Topic/_variant_t::_variant_t.md)|Constrói um objeto `_variant_t`.|  
-  
-### Operações  
+### <a name="construction"></a>Construção  
   
 |||  
 |-|-|  
-|[Attach](../cpp/variant-t-attach.md)|Anexa um objeto **VARIANT** ao objeto `_variant_t`.|  
-|[Clear](../cpp/variant-t-clear.md)|Limpa o objeto **VARIANT** encapsulado.|  
-|[ChangeType](../Topic/_variant_t::ChangeType.md)|Altera o tipo do objeto `_variant_t` para o **VARTYPE** indicado.|  
-|[Detach](../cpp/variant-t-detach.md)|Desanexa o objeto **VARIANT** encapsulado deste objeto `_variant_t`.|  
+|[variant_t](../cpp/variant-t-variant-t.md)|Constrói um objeto `_variant_t`.|  
+  
+### <a name="operations"></a>Operações  
+  
+|||  
+|-|-|  
+|[Anexar](../cpp/variant-t-attach.md)|Anexa uma **VARIANT** objeto para o `_variant_t` objeto.|  
+|[Limpar](../cpp/variant-t-clear.md)|Limpa o encapsulada **VARIANT** objeto.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Altera o tipo do `_variant_t` objeto do tipo **VARTYPE**.|  
+|[Desanexar](../cpp/variant-t-detach.md)|Desanexa o encapsulada **VARIANT** objeto neste `_variant_t` objeto.|  
 |[SetString](../cpp/variant-t-setstring.md)|Atribui uma cadeia de caracteres a este objeto `_variant_t`.|  
   
-### Operadores  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator \=](../cpp/variant-t-operator-equal.md)|Atribui um novo valor a um objeto `_variant_t` existente.|  
-|[operator \=\=, \!\=](../cpp/variant-t-relational-operators.md)|Compare dois objetos `_variant_t` em termos de igualdade ou desigualdade.|  
-|[Extratores](../cpp/variant-t-extractors.md)|Extrai dados do objeto **VARIANT** encapsulado.|  
+|[Operador =](../cpp/variant-t-operator-equal.md)|Atribui um novo valor a um objeto `_variant_t` existente.|  
+|[operador = =,! =](../cpp/variant-t-relational-operators.md)|Compare dois objetos `_variant_t` em termos de igualdade ou desigualdade.|  
+|[Extratores](../cpp/variant-t-extractors.md)|Extrair dados do encapsulada **VARIANT** objeto.|  
   
-## FIM de Específico da Microsoft  
+**Fim da seção específica da Microsoft**  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** comutil.h  
   
- **Bib:** comsuppw.lib ou comsuppwd.lib \(consulte [\/Zc:wchar\_t \(wchar\_t é do tipo nativo\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações\)  
+ **Lib:** comsuppw.lib ou comsuppwd.lib (consulte [/ZC: (wchar_t é do tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)

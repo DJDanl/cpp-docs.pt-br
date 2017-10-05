@@ -1,36 +1,52 @@
 ---
-title: "Subscripting | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrizes [C++], assinatura"
-  - "sobrecarga de operador, exemplos"
-  - "operadores [C++], sobrecarga"
-  - "Operador subscript"
-  - "Operador subscript, sobrecarregado"
-  - "assinatura"
+title: Subscripting | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, overloaded
+- arrays [C++], subscripting
+- subscripting
+- operators [C++], overloading
+- operator overloading, examples
+- subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Subscripting
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82feaa68724e36c7ac7e739397d8a11a18e970a0
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-O operador subscrito \(**\[ \]**\), como o operador de chamada da função, é considerado um operador binário.  O operador subscrito deve ser uma função de membro não estático que usa um único argumento.  Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.  
+---
+# <a name="subscripting"></a>Subscrito
+O operador de subscrito (**[]**), como o operador de chamada de função, é considerado um operador binário. O operador subscrito deve ser uma função de membro não estático que usa um único argumento. Este argumento ou pode ser de qualquer tipo e designa o subscrito de matriz desejado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como criar um vetor de tipo `int` que implementa a verificação dos limites:  
   
 ```  
@@ -82,23 +98,26 @@ int main() {
 }  
 ```  
   
-  **Violação dos limites de matriz.**  
-**Elemento: \[0\] \= 0**  
-**Elemento: \[1\] \= 1**  
-**Elemento: \[2\] \= 2**  
-**Elemento: \[3\] \= 9**  
-**Elemento: \[4\] \= 4**  
-**Elemento: \[5\] \= 5**  
-**Elemento: \[6\] \= 6**  
-**Elemento: \[7\] \= 7**  
-**Elemento: \[8\] \= 8**  
-**Elemento: \[9\] \= 9**  
-**Violação dos limites de matriz.**  
-**Elemento: \[10\] \= 10**   
-## Comentários  
+```Output  
+Array bounds violation.  
+Element: [0] = 0  
+Element: [1] = 1  
+Element: [2] = 2  
+Element: [3] = 9  
+Element: [4] = 4  
+Element: [5] = 5  
+Element: [6] = 6  
+Element: [7] = 7  
+Element: [8] = 8  
+Element: [9] = 9  
+Array bounds violation.  
+Element: [10] = 10  
+```  
+  
+## <a name="comments"></a>Comentários  
  Quando `i` atinge 10 no programa anterior, `operator[]` detecta que um subscrito fora dos limites está sendo usado e emite uma mensagem de erro.  
   
- Observe que a função `operator[]` retorna um tipo de referência.  Isso a torna um l\-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.  
+ Observe que a função `operator[]` retorna um tipo de referência. Isso a torna um l-value, permitindo usar as expressões subscritas em ambos os lados dos operadores de atribuição.  
   
-## Consulte também  
- [Sobrecarga de operador](../cpp/operator-overloading.md)
+## <a name="see-also"></a>Consulte também  
+ [Sobrecarga de Operador](../cpp/operator-overloading.md)

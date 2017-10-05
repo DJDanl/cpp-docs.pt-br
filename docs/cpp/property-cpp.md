@@ -1,37 +1,53 @@
 ---
-title: "property (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "property_cpp"
-  - "Property"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Palavra-chave __declspec [C++], propriedade"
-  - "palavra-chave property __declspec"
+title: propriedade (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- property_cpp
+- Property
+dev_langs:
+- C++
+helpviewer_keywords:
+- property __declspec keyword
+- __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# property (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d4cb68d02f9ee543c2d3271bc48ad4318352faa2
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="property-c"></a>property (C++)
+**Seção específica da Microsoft**  
   
- Esse atributo pode ser aplicado a “membros de dados virtuais” não estáticos em uma definição de classe ou estrutura.  O compilador trata esses “membros de dados virtuais” como membros de dados alterando suas referências em chamadas de função.  
+ Esse atributo pode ser aplicado a “membros de dados virtuais” não estáticos em uma definição de classe ou estrutura. O compilador trata esses “membros de dados virtuais” como membros de dados alterando suas referências em chamadas de função.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -40,20 +56,20 @@ __declspec( property( put=put_func_name ) ) declarator
 __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
-## Comentários  
- Quando o compilador consulta um membro de dados declarado com esse atributo à direita de um operador de seleção de membro \(“**.**” ou “**\-\>**"\), a operação converte a uma função **get** ou **put**, dependendo se essa expressão for um l\-value ou r\-value.  Nos contextos mais complicados, como “`+=`”, uma regravação é executada fazendo **get** e **put**.  
+## <a name="remarks"></a>Comentários  
+ Quando o compilador vê um membro de dados declarado com esse atributo à direita de um operador de seleção de membro ("**.**"ou"**->**"), ele converte a operação para um **obter** ou **colocar** função, dependendo se essa expressão é um l-value ou um r. Mais complicado contextos, como "`+=`", é executada uma reescrita fazendo ambos **obter** e **colocar**.  
   
- Esse atributo também pode ser usado na declaração de uma matriz vazia em uma definição de classe ou estrutura.  Por exemplo:  
+ Esse atributo também pode ser usado na declaração de uma matriz vazia em uma definição de classe ou estrutura. Por exemplo:  
   
 ```  
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
- A instrução anterior indica que `x[]` pode ser usado com um ou mais índices da matriz.  Nesse caso, `i=p->x[a][b]` será transformado em `i=p->GetX(a, b)`, e `p->x[a][b] = i` será transformado em `p->PutX(a, b, i);`  
+ A instrução anterior indica que `x[]` pode ser usado com um ou mais índices da matriz. Nesse caso, `i=p->x[a][b]` será transformado em `i=p->GetX(a, b)`, e `p->x[a][b] = i` será transformado em `p->PutX(a, b, i);`  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // declspec_property.cpp  
@@ -77,6 +93,6 @@ int main() {
 }  
 ```  
   
-## Consulte também  
- [\_\_declspec](../cpp/declspec.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [declspec](../cpp/declspec.md)   
+ [Palavras-chave](../cpp/keywords-cpp.md)

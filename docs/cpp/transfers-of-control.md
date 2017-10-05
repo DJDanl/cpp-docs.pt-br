@@ -1,32 +1,48 @@
 ---
-title: "Transfer&#234;ncias de controle | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fluxo de controle, ramificação"
-  - "fluxo de controle, transferindo o controle"
+title: "Transferências de controle | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Transfer&#234;ncias de controle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Você pode usar a instrução `goto` ou rótulo **case** em uma instrução `switch` para especificar um programa que crie ramificações após um inicializador.  Esse código é inválido, a menos que a declaração que contém o inicializador esteja em um bloco delimitado pelo bloco em que a instrução de salto ocorre.  
+---
+# <a name="transfers-of-control"></a>Transferências de controle
+Você pode usar o `goto` instrução ou um **caso** rótulo em uma `switch` instrução para especificar um programa que se ramifica após um inicializador. Esse código é inválido, a menos que a declaração que contém o inicializador esteja em um bloco delimitado pelo bloco em que a instrução de salto ocorre.  
   
- O exemplo a seguir mostra um loop que declara e inicializa os objetos `total`, `ch` e `i`.  Há também uma instrução `goto` com erros que transfere o controle após um inicializador.  
+ O exemplo a seguir mostra um loop que declara e inicializa os objetos `total`, `ch` e `i`. Há também uma instrução `goto` com erros que transfere o controle após um inicializador.  
   
 ```  
 // transfers_of_control.cpp  
@@ -58,9 +74,8 @@ int main()
 }  
 ```  
   
- No exemplo anterior, a instrução `goto` tenta transferir o controle após a inicialização de `i`.  No entanto, se `i` tivesse sido declarado, mas não inicializado, a transferência seria válida.  
+ No exemplo anterior, a instrução `goto` tenta transferir o controle após a inicialização de `i`. No entanto, se `i` tivesse sido declarado, mas não inicializado, a transferência seria válida.  
   
- Os objetos `total` e `ch`, declarados no bloco que serve como *instrução* da instrução `while`, são destruídos quando esse bloco é fechado usando a instrução `break`.  
+ Os objetos `total` e `ch`, declarado no bloco que serve como o *instrução* do `while` instrução, são destruídos quando aquele bloco é finalizado usando o `break` instrução.  
   
-## Consulte também  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/pt-br/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

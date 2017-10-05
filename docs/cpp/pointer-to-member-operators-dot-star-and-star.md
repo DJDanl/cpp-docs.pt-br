@@ -1,45 +1,60 @@
 ---
-title: "Operadores de ponteiro para membro: .* e -&gt;* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador .*"
-  - "Operador ->*"
-  - "expressões [C++], operadores"
-  - "expressões [C++], ponteiro"
-  - "operadores de ponteiro para membro"
+title: Operadores de ponteiro para membro:. * e -&gt;* | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores de ponteiro para membro: .* e -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-## Sintaxe  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>Operadores de ponteiro para membro:. * e -&gt;*
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## Comentários  
- Os operadores de ponteiro para membro .\* e –\>\*, retornam o valor de um membro de classe específico da classe especificada à esquerda da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:  
+## <a name="remarks"></a>Comentários  
+ Os operadores de ponteiro para membro,. * e ->\*, retornar o valor de um membro de classe específica para o objeto especificado no lado esquerdo da expressão.  O lado direito deve especificar um membro da classe.  O exemplo a seguir mostra como usar estes operadores:  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -79,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Saída  
+## <a name="output"></a>Saída  
   
 ```  
 m_func1  
@@ -88,17 +103,17 @@ m_func1
 2  
 ```  
   
- No exemplo anterior, um ponteiro para um membro, `pmfn`, é usado para invocar a função de membro `m_func1`.  Outro ponteiro para um membro, `pmd`, é usado para acessar o membro `m_num`.  
+ No exemplo anterior, um ponteiro para um membro, `pmfn`, é usado para invocar a função de membro `m_func1`. Outro ponteiro para um membro, `pmd`, é usado para acessar o membro `m_num`.  
   
- O operador binário .\* combina seu primeiro operando, que deve ser um objeto de tipo de classe, com o segundo operando, que deve ser um tipo de ponteiro para membro.  
+ O operador binário .* combina seu primeiro operando, que deve ser um objeto de tipo de classe, com o segundo operando, que deve ser um tipo de ponteiro para membro.  
   
- O operador binário –\>\* combina seu primeiro operando, que deve ser um ponteiro para um objeto de tipo de classe, com seu segundo operando, que deve ser um tipo de ponteiro para membro.  
+ O operador binário -> * combina seu primeiro operando, que deve ser um ponteiro para um objeto do tipo de classe, com seu segundo operando deve ser um tipo de ponteiro-para-membro.  
   
- Em uma expressão que contém o operador .\*, o primeiro operando deve ser do tipo de classe, e é acessível para, do ponteiro para o membro especificado no segundo operando ou de um tipo acessível derivado de maneira não ambígua de e acessíveis a essa classe.  
+ Em uma expressão que contém o operador .*, o primeiro operando deve ser do tipo de classe, e é acessível para, do ponteiro para o membro especificado no segundo operando ou de um tipo acessível derivado de maneira não ambígua de e acessíveis a essa classe.  
   
- Em uma expressão que contém o operador –\>\*, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando, ou deve ser de um tipo derivado de maneira não ambígua dessa classe.  
+ Em uma expressão que contém o-> * operador, o primeiro operando deve ser do tipo "ponteiro para o tipo de classe" do tipo especificado no segundo operando, ou ele deve ser de um tipo de maneira não ambígua derivado de classe.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Considere as seguintes classes e fragmento de programa:  
   
 ```  
@@ -137,11 +152,12 @@ int main() {
 }  
 ```  
   
- O resultado dos operadores de ponteiro para membro do .\* ou –\>\* é um objeto ou uma função do tipo especificado na declaração do ponteiro para membro.  Assim, no exemplo anterior, o resultado da expressão `ADerived.*pmfnFunc1()` é um ponteiro para uma função que retorna void.  Esse resultado será um valor l se o segundo operando for um valor l.  
+ O resultado da. * ou ->\* operadores de ponteiro para membro é um objeto ou função do tipo especificado na declaração de ponteiro para membro. Assim, no exemplo anterior, o resultado da expressão `ADerived.*pmfnFunc1()` é um ponteiro para uma função que retorna void. Esse resultado será um valor l se o segundo operando for um valor l.  
   
 > [!NOTE]
 >  Se o resultado de um dos operadores de ponteiro para membro for uma função, o resultado poderá ser usado apenas como um operando para o operador da chamada de função.  
   
-## Consulte também  
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>Consulte também  
+ [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

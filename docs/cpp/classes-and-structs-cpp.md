@@ -1,0 +1,91 @@
+---
+title: Classes e estruturas (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C++, classes
+- structures, C++ classes
+- user-defined types
+- classes [C++]
+- user-defined types, C++ classes
+ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
+caps.latest.revision: 9
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: db6fd2ff70e805e6681adb9eeca6adac41a38f0b
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
+
+---
+# <a name="classes-and-structs-c"></a>Classes e structs (C++)
+Esta seção apresenta as estruturas e classes C++. As duas construções são idênticas em C++, exceto que em structs a acessibilidade padrão é pública, enquanto em classes, o padrão é particular.  
+  
+ Classes e estruturas são as construções no qual você pode definir seus próprios tipos. Classes e estruturas podem conter membros de dados e funções de membro, que permitem descrever o estado e o comportamento do tipo.  
+  
+ Os seguintes tópicos estão incluídos:  
+  
+-   [class](../cpp/class-cpp.md)  
+  
+-   [struct](../cpp/struct-cpp.md)  
+  
+-   [Visão geral de membros de classe](../cpp/class-member-overview.md)  
+  
+-   [Controle de acesso de membro](../cpp/member-access-control-cpp.md)  
+  
+-   [Herança](../cpp/inheritance-cpp.md)  
+  
+-   [Membros estáticos](../cpp/static-members-cpp.md)  
+  
+-   [Conversões de tipo definido pelo usuário](../cpp/user-defined-type-conversions-cpp.md)  
+  
+-   [Mutáveis (especificador mutável) membros de dados](../cpp/mutable-data-members-cpp.md)  
+  
+-   [Declarações de classe aninhada](../cpp/nested-class-declarations.md)  
+  
+-   [Tipos de classe anônima](../cpp/anonymous-class-types.md)  
+  
+-   [Ponteiros para membros](../cpp/pointers-to-members.md)  
+  
+-   [Ponteiro this](../cpp/this-pointer.md)  
+  
+-   [Campos de bits C++](../cpp/cpp-bit-fields.md)  
+  
+ Os três tipos de classe são estrutura, classe e união. Eles são declarados usando o [struct](../cpp/struct-cpp.md), [classe](../cpp/class-cpp.md), e [união](../cpp/unions.md) palavras-chave (consulte [definindo tipos de classe](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). A tabela a seguir mostra as diferenças entre os três tipos de classe.  
+  
+ Para obter mais informações sobre uniões, consulte [uniões](../cpp/unions.md). Para obter informações sobre classes gerenciadas e estruturas, consulte [Classes e estruturas](../windows/classes-and-structs-cpp-component-extensions.md).  
+  
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Controle de acesso e restrições de estruturas, classes e uniões  
+  
+|Estruturas|Classes|Uniões|  
+|----------------|-------------|------------|  
+|a chave da classe é `struct`|classe de chave é **classe**|classe de chave é **union**|  
+|O acesso padrão é público|O acesso padrão é particular|O acesso padrão é público|  
+|Nenhuma restrição de uso|Nenhuma restrição de uso|Use apenas um membro de cada vez|  
+  
+## <a name="see-also"></a>Consulte também  
+ [Referência da linguagem C++](../cpp/cpp-language-reference.md)

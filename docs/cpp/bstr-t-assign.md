@@ -1,35 +1,51 @@
 ---
-title: "_bstr_t::Assign | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::Assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Método Assign"
+title: _bstr_t::Assign | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::Assign
+dev_langs:
+- C++
+helpviewer_keywords:
+- Assign method
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
 caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::Assign
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 11bbf30deb45e33bbc52354b3b1b03ac26e8a4ae
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="bstrtassign"></a>_bstr_t::Assign
+**Seção específica da Microsoft**  
   
- Copia um `BSTR` para o `BSTR` encapsulado por um **\_**`bstr_t`.  
+ Copia um `BSTR` no `BSTR` encapsulada por um **_**`bstr_t`.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 void Assign(  
@@ -37,14 +53,14 @@ void Assign(
 );  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `s`  
  Um `BSTR` a ser copiado para o `BSTR` encapsulado por um `_bstr_t`.  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  `Assign` faz uma cópia binária, que significa que o comprimento inteiro de `BSTR` é copiado, independentemente do conteúdo.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // _bstr_t_Assign.cpp  
@@ -105,16 +121,19 @@ int main()
 }  
 ```  
   
-  **bstrWrapper \= qualquer texto**  
-**bstrWrapper \= \(null\)**  
-**bstr \= qualquer texto**  
-**bstrWrapper \= SysAllocedString**  
-**bstrWrapper \= qualquer texto**  
-**bstrWrapper \= outra cadeia de caracteres**  
-**bstrWrapper2 \= qualquer texto**  
-**bstrWrapper \= alterando BSTR**  
-**bstrWrapper2 \= qualquer texto**   
-## FIM de Específico da Microsoft  
+```Output  
+bstrWrapper = some text  
+bstrWrapper = (null)  
+bstr = some text  
+bstrWrapper = SysAllocedString  
+bstrWrapper = some text  
+bstrWrapper = Yet another string  
+bstrWrapper2 = some text  
+bstrWrapper = changing BSTR  
+bstrWrapper2 = some text  
+```  
   
-## Consulte também  
- [Classe \_bstr\_t](../cpp/bstr-t-class.md)
+**Fim da seção específica da Microsoft**  
+  
+## <a name="see-also"></a>Consulte também  
+ [Classe _bstr_t](../cpp/bstr-t-class.md)

@@ -1,77 +1,92 @@
 ---
-title: "Operador de chamada da fun&#231;&#227;o: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Operador de chamada de função ( )"
-  - "Operador de chamada de função ()"
-  - "Operador de chamada de função ( )"
-  - "chamadas de função, funções C++"
-  - "chamadas de função, operator"
-  - "funções [C++], Operador de chamada de função"
-  - "operadores de sufixo"
+title: "Operador de chamada de função: () | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) function call operator
+- function calls, C++ functions
+- () function call operator
+- postfix operators
+- function calls, operator
+- functions [C++], function-call operator
+- function call operator ( )
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de chamada da fun&#231;&#227;o: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Uma expressão de sufixo seguida pelo operador de chamada de função, **\( \)**, especifica uma chamada de função.  
+---
+# <a name="function-call-operator-"></a>Operador de chamada da função: ()
+Uma expressão de sufixo seguida pelo operador de chamada de função, **()**, especifica uma chamada de função.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 postfix-expression   
 ( [argument-expression-list ] )  
 ```  
   
-## Comentários  
+## <a name="remarks"></a>Comentários  
  Os argumentos para o operador de chamada de função são zero ou mais expressões separadas por vírgulas — os argumentos reais para a função.  
   
- O elemento *postfix\-expression* deve ser avaliado no endereço de uma função \(por exemplo, um identificador de função ou o valor de um ponteiro de função\), e o elemento *argument\-expression\-list* é uma lista de expressões \(separadas por vírgulas\) cujos valores \(argumentos\) são passados para a função.  O argumento *argument\-expression\-list* pode estar vazio.  
+ O *sufixo expressão* devem ser avaliadas como o endereço de uma função (por exemplo, um identificador de função ou o valor de um ponteiro de função), e *lista de expressões de argumento* é uma lista de expressões (separados por vírgulas) cujos valores (argumentos) são passados para a função. O argumento *argument-expression-list* pode estar vazio.  
   
- O elemento *postfix\-expression* deve ser de um destes tipos:  
+ O *sufixo expressão* deve ser um destes tipos:  
   
--   Tipo de retorno de função `T`.  Uma declaração de exemplo é  
+-   Tipo de retorno de função `T`. Uma declaração de exemplo é  
   
     ```  
     T func( int i )  
     ```  
   
--   Tipo de retorno de ponteiro para uma função `T`.  Uma declaração de exemplo é  
+-   Tipo de retorno de ponteiro para uma função `T`. Uma declaração de exemplo é  
   
     ```  
     T (*func)( int i )  
     ```  
   
--   Tipo de retorno de referência para uma função `T`.  Uma declaração de exemplo é  
+-   Tipo de retorno de referência para uma função `T`. Uma declaração de exemplo é  
   
     ```  
     T (&func)(int i)  
     ```  
   
--   Tipo de retorno de desreferência de ponteiro para função de membro `T`.  As chamadas de função de exemplo são  
+-   Tipo de retorno de desreferência de ponteiro para função de membro `T`. As chamadas de função de exemplo são  
   
     ```  
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir chama a função de biblioteca padrão `strcat_s` com três argumentos:  
   
 ```  
@@ -81,7 +96,7 @@ postfix-expression
 #include <iostream>  
 #include <string>  
   
-// STL name space  
+// C++ Standard Library name space  
 using namespace std;  
   
 int main()  
@@ -100,9 +115,12 @@ int main()
 }  
 ```  
   
-  **Bem\-vindo ao C\+\+**   
-## Resultados da chamada de função  
- Uma chamada de função é avaliada como um r\-value, a menos que a função seja declarada como do tipo referência.  As funções com o tipo de retorno de referência são avaliadas como l\-values e podem ser usadas no lado esquerdo de uma instrução de atribuição, como segue:  
+```Output  
+Welcome to C++  
+```  
+  
+## <a name="function-call-results"></a>Resultados da chamada de função  
+ Uma chamada de função é avaliada como um r-value, a menos que a função seja declarada como do tipo referência. As funções com o tipo de retorno de referência são avaliadas como l-values e podem ser usadas no lado esquerdo de uma instrução de atribuição, como segue:  
   
 ```  
 // expre_Function_Call_Results.cpp  
@@ -134,9 +152,9 @@ int main()
 }  
 ```  
   
- O código anterior define uma classe chamada `Point`, que contém os objetos de dados privados que representam as coordenadas *x* e *y*.  Esses objetos de dados devem ser alterados e seus valores recuperados.  Esse programa é apenas um de vários projetos para essa classe; o uso das funções `GetX` e `SetX` ou `GetY` e `SetY` é outro projeto possível.  
+ O código anterior define uma classe chamada `Point`, que contém dados particulares objetos que representam *x* e *y* coordenadas. Esses objetos de dados devem ser alterados e seus valores recuperados. Esse programa é apenas um de vários projetos para essa classe; o uso das funções `GetX` e `SetX` ou `GetY` e `SetY` é outro projeto possível.  
   
- As funções que retornam tipos de classe, os ponteiros para tipos de classe ou referências a tipos de classe podem ser usados como o operando à esquerda para operadores de seleção de membros.  Portanto, o código a seguir é válido:  
+ As funções que retornam tipos de classe, os ponteiros para tipos de classe ou referências a tipos de classe podem ser usados como o operando à esquerda para operadores de seleção de membros. Portanto, o código a seguir é válido:  
   
 ```  
 // expre_Function_Results2.cpp  
@@ -179,11 +197,10 @@ int main() {
 }  
 ```  
   
- As funções podem ser chamadas recursivamente.  Para obter mais informações sobre declarações de função, consulte [Especificadores de função](../misc/function-specifiers.md) e [Funções membro](../Topic/Member%20Functions%20\(C++\).md).  O material relacionado está em [Programa e vinculação](../cpp/program-and-linkage-cpp.md).  
+ As funções podem ser chamadas recursivamente. Para obter mais informações sobre declarações de função, consulte [funções](functions-cpp.md). Material relacionado está em [programa e ligação](../cpp/program-and-linkage-cpp.md).  
   
-## Consulte também  
- [Expressões pós\-fixadas](../cpp/postfix-expressions.md)   
- [Operadores C\+\+](../misc/cpp-operators.md)   
- [Operadores, precedência e associatividade C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Consulte também  
+ [Expressões pós-fixadas](../cpp/postfix-expressions.md)   
+ [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Chamada de função](../c-language/function-call-c.md)   
- [\(NOTINBUILD\) Function Declarations](http://msdn.microsoft.com/pt-br/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)
+

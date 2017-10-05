@@ -1,47 +1,74 @@
 ---
-title: "Declara&#231;&#227;o de uso | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "usando declaração"
-  - "declarando namespaces, nomes não qualificados em namespaces"
-  - "declarações [C++], declaração using"
-  - "namespaces [C++], nomes não qualificados em"
-  - "palavra-chave using [C++]"
-  - "declarações [C++], namespaces"
+title: "usando declaração | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- using declaration
+- declaring namespaces, unqualified names in namespaces
+- declarations [C++], using-declaration
+- namespaces [C++], unqualified names in
+- using keyword [C++]
+- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Declara&#231;&#227;o de uso
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A declaração `using` introduz um nome na região declarativa em que a declaração `using` aparece.  
+---
+# <a name="using-declaration"></a>Declaração de uso
+O usando a declaração apresenta um nome para a região declarativa no qual o usando a declaração é exibida.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
-      using [typename][::] nested-name-specifier unqualified-id  
-using :: unqualified-id  
+using [typename] nested-name-specifier unqualified-id ;  
+using declarator-list ;  
 ```  
   
-## Comentários  
- O nome se torna um sinônimo para uma entidade declarada em outro lugar.  Permite que um nome *individual* de um namespace específico seja usado sem [qualificação explícita](../misc/explicit-qualification.md).  Isso contrasta com a política `using`, que permite que *todos* os nomes em um namespace sejam usados sem qualificação.  Consulte [Diretiva using](../misc/using-directive-cpp.md) para obter mais informações.  Essa palavra\-chave é usada também para [aliases de tipo](../cpp/aliases-and-typedefs-cpp.md).  
+### <a name="parameters"></a>Parâmetros
   
-## Exemplo  
+*especificador aninhados de nome*  
+    Uma sequência de namespace, classe, ou nomes de enumeração e operadores de resolução do escopo (:), terminada por um operador de resolução do escopo. Um operador de resolução do escopo único pode ser usado para introduzir um nome do namespace global. A palavra-chave `typename` é opcional e pode ser usado para resolver nomes de dependente quando introduzida em um modelo de classe de uma classe base.  
+  
+*id não qualificado*  
+    Não qualificada id-expressão, que pode ser um identificador, um nome de operador sobrecarregado, um definido pelo usuário literal operador ou conversão de nome de função, um nome de destruidor da classe ou uma lista de nome e o argumento de modelo.  
+  
+*lista de declaradores*  
+    Uma lista separada por vírgulas de [`typename`] *especificador aninhados de nome* *não qualificados id* declaradores, opcionalmente seguidos por um sinal de reticências.
+    
+## <a name="remarks"></a>Comentários  
+Um uso declaração introduz um nome não qualificado como um sinônimo para uma entidade declarada em outro lugar. Ele permite que um único nome de um namespace específico a ser usados sem qualificação explícita na região de declaração na qual ele aparece. Isso é, em comparação com o [usando diretiva](../cpp/namespaces-cpp.md#using_directives), que permite *todos os* os nomes em um namespace a ser usados sem qualificação. O `using` palavra-chave também é usado para [alias de tipo](../cpp/aliases-and-typedefs-cpp.md).  
+  
+## <a name="example"></a>Exemplo  
  Uma declaração using pode ser usada em uma definição de classe.  
   
 ```cpp  
@@ -60,16 +87,16 @@ public:
   
 class D : B {  
 public:  
-   using B::f;  
-   using B::g;  
+   using B::f;    // B::f(char) is now visible as D::f(char)  
+   using B::g;    // B::g(char) is now visible as D::g(char)  
    void f(int) {  
       printf_s("In D::f()\n");  
-      f('c');  
+      f('c');     // Invokes B::f(char) instead of recursing  
    }  
   
    void g(int) {  
       printf_s("In D::g()\n");  
-      g('c');  
+      g('c');     // Invokes B::g(char) instead of recursing  
    }  
 };  
   
@@ -80,11 +107,14 @@ int main() {
 }  
 ```  
   
-  **In D::f\(\)**  
-**In B::f\(\)**  
-**In B::g\(\)**   
-## Exemplo  
- Quando usada para declarar um membro, uma declaração using deve se referir a um membro de uma classe base.  
+```Output  
+In D::f()  
+In B::f()  
+In B::g()  
+```  
+  
+## <a name="example"></a>Exemplo  
+Quando usada para declarar um membro, uma declaração using deve se referir a um membro de uma classe base.  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -118,9 +148,12 @@ int main() {
 }  
 ```  
   
-  **In B::f\(\)**   
-## Exemplo  
- Os membros declarados com uma declaração using podem ser referenciados usando a qualificação explícita.  O prefixo `::` refere\-se ao namespace global.  
+```Output  
+In B::f()  
+```  
+  
+## <a name="example"></a>Exemplo  
+Membros declarados usando uma declaração pode ser referenciada por meio de qualificação explícita. O prefixo `::` refere-se ao namespace global.  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -137,8 +170,8 @@ namespace A {
 }  
   
 namespace X {  
-   using ::f;   // global f  
-   using A::g;   // A's g  
+   using ::f;   // global f is also visible as X::f  
+   using A::g;   // A's g is now visible as X::g 
 }  
   
 void h() {  
@@ -152,13 +185,16 @@ int main() {
 }  
 ```  
   
-  **In h**  
-**In f**  
-**In A::g**   
-## Exemplo  
- Quando uma declaração using é feita, o sinônimo criado pela declaração se refere apenas às definições que são válidas no ponto da declaração using.  As definições adicionadas a um namespace depois da declaração using são sinônimos inválidos.  
+```Output  
+In h  
+In f  
+In A::g  
+```  
   
- Um nome definido por uma declaração using é um alias para o nome original.  Não afeta o tipo, a vinculação ou outros atributos da declaração original.  
+## <a name="example"></a>Exemplo  
+Quando uma declaração using é feita, o sinônimo criado pela declaração se refere apenas às definições que são válidas no ponto da declaração using. As definições adicionadas a um namespace depois da declaração using são sinônimos inválidos.  
+  
+Um nome definido por um `using` declaração é um alias para seu nome original. Não afeta o tipo, a vinculação ou outros atributos da declaração original.  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -183,8 +219,8 @@ void b() {
 }  
 ```  
   
-## Exemplo  
- Com relação às funções nos namespaces, se um conjunto de declarações locais e declarações using para um único nome for fornecido em uma região declarativa, todas as declarações deverão referenciar a mesma entidade, ou referenciar funções.  
+## <a name="example"></a>Exemplo  
+Com relação às funções nos namespaces, se um conjunto de declarações locais e declarações using para um único nome for fornecido em uma região declarativa, todas as declarações deverão referenciar a mesma entidade, ou referenciar funções.  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -203,10 +239,10 @@ void g() {
 }  
 ```  
   
- No exemplo anterior, a instrução `using B::i` faz com que um segundo `int i` seja declarado na função `g()`.  A instrução `using B::f` não entra em conflito com a função `f(char)` porque os nomes de função introduzidos por `B::f` têm tipos de parâmetro diferentes.  
+ No exemplo anterior, a instrução `using B::i` faz com que um segundo `int i` seja declarado na função `g()`. A instrução `using B::f` não entra em conflito com a função `f(char)` porque os nomes de função introduzidos por `B::f` têm tipos de parâmetro diferentes.  
   
-## Exemplo  
- Uma declaração de função local não pode ter o mesmo nome e tipo que uma função introduzida usando a declaração.  Por exemplo:  
+## <a name="example"></a>Exemplo  
+ Uma declaração de função local não pode ter o mesmo nome e tipo que uma função introduzida usando a declaração. Por exemplo:  
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -231,7 +267,7 @@ void h() {
 }  
 ```  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  No que diz respeito à herança, quando uma declaração using introduz um nome de uma classe base em um escopo de classe derivada, as funções de membro na classe derivada substituem funções de membro virtuais com o mesmo nome e tipo de argumento na classe base.  
   
 ```cpp  
@@ -269,9 +305,9 @@ struct D : B {
 };  
   
 void f(D* pd) {  
-   pd->f(1);   // calls D::f(int)  
+   pd->f(1);     // calls D::f(int)  
    pd->f('a');   // calls B::f(char)  
-   pd->g(1);   // calls B::g(int)  
+   pd->g(1);     // calls B::g(int)  
    pd->g('a');   // calls D::g(char)  
 }  
   
@@ -281,14 +317,17 @@ int main() {
 }  
 ```  
   
-  **In D::f\(int\)**  
-**In B::f\(char\)**  
-**In B::g**  
-**In D::g\(char\)**   
-## Exemplo  
- Todas as instâncias de um nome mencionado em uma declaração using devem estar acessíveis.  Em particular, se uma classe derivada usar uma declaração using para acessar um membro de uma classe base, o nome do membro deverá ser acessível.  Se o nome for o de uma função de membro sobrecarregada, todas as funções nomeadas deverão estar acessíveis.  
+```Output  
+In D::f(int)  
+In B::f(char)  
+In B::g  
+In D::g(char)  
+```  
   
- Consulte [Controle de acesso de membros](../cpp/member-access-control-cpp.md) para obter mais informações sobre a acessibilidade de membros.  
+## <a name="example"></a>Exemplo  
+Todas as instâncias de um nome mencionado em uma declaração using devem estar acessíveis. Em particular, se uma classe derivada usar uma declaração using para acessar um membro de uma classe base, o nome do membro deverá ser acessível. Se o nome for o de uma função de membro sobrecarregada, todas as funções nomeadas deverão estar acessíveis.  
+  
+Para obter mais informações sobre acessibilidade de membros, consulte [controle de acesso de membro](../cpp/member-access-control-cpp.md).  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  
@@ -309,6 +348,6 @@ public:
 };  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Namespaces](../cpp/namespaces-cpp.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+ [Palavras-chave](../cpp/keywords-cpp.md)

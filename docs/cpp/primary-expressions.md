@@ -1,48 +1,62 @@
 ---
-title: "Express&#245;es prim&#225;rias | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressões [C++], literal"
-  - "expressões [C++], nome"
-  - "expressões [C++], primários"
-  - "expressões [C++], nomes qualificados"
-  - "expressões primárias"
+title: "Expressões primárias | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- primary expressions
+- expressions [C++], name
+- expressions [C++], literal
+- expressions [C++], primary
+- expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Express&#245;es prim&#225;rias
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-As expressões primárias são os blocos de construção de expressões mais complexas.  Elas são literais, nomes e nomes qualificados pelo operador de resolução de escopo \(`::`\).  Uma expressão primária pode ter qualquer uma das seguintes formas:  
+---
+# <a name="primary-expressions"></a>Expressões primárias
+As expressões primárias são os blocos de construção de expressões mais complexas. Elas são literais, nomes e nomes qualificados pelo operador de resolução de escopo (`::`).  Uma expressão primária pode ter qualquer uma das seguintes formas:  
   
 ```  
   
-        literal  
-this  
-:: name  
-name   
-( expression )  
+      literal  
+      this  
+:: namename( expression )  
 ```  
   
- Um *literal* é uma expressão primária constante.  Seu tipo depende da forma de sua especificação.  Consulte [Literais](../cpp/numeric-boolean-and-pointer-literals-cpp.md) para obter informações completas sobre como especificar literais.  
+ Um *literal* é uma expressão de constante primária. Seu tipo depende da forma de sua especificação. Consulte [literais](../cpp/numeric-boolean-and-pointer-literals-cpp.md) para obter informações completas sobre como especificar literais.  
   
- A palavra\-chave **this** é um ponteiro para um objeto de classe.  Ela está disponível nas funções membro não estáticas e aponta para a instância da classe para a qual a função foi invocada.  A palavra\-chave **this** não pode ser usada fora do corpo de uma função membro de classe.  
+ O **isso** palavra-chave é um ponteiro para um objeto de classe. Ela está disponível nas funções membro não estáticas e aponta para a instância da classe para a qual a função foi invocada. O **isso** palavra-chave não pode ser usado fora do corpo de uma função de membro de classe.  
   
- O tipo do ponteiro **this** é `type` **\*const** \(em que `type` é o nome da classe\) com funções que não modificam especificamente o ponteiro **this**.  O exemplo a seguir mostra declarações de função membro e os tipos de **this**:  
+ O tipo do **isso** ponteiro é `type` ** \*const** (onde `type` é o nome de classe) em funções não especificamente modificando o **este** ponteiro. O exemplo a seguir mostra o membro declarações de função e os tipos de **isso**:  
   
 ```  
 // expre_Primary_Expressions.cpp  
@@ -56,13 +70,13 @@ public:
 };  
 ```  
   
- Consulte [Tipo desse ponteiro](../misc/type-of-this-pointer.md) para obter mais informações sobre como modificar o tipo do ponteiro **this**.  
+ Consulte [esse ponteiro](this-pointer.md) para obter mais informações sobre como modificar o tipo do **isso** ponteiro.  
   
- O operador de resolução de escopo \(`::`\) seguido por um nome constitui uma expressão primária.  Tais nomes devem estar no escopo global, não em nomes de membro.  O tipo dessa expressão é determinado pela declaração do nome.  Será um l\-value \(isto é, pode aparecer à esquerda de uma expressão de operador de atribuição\) se o nome declarativo for um l\-value.  O operador de resolução de escopo permite que um nome global seja referenciado, mesmo se esse nome estiver oculto no escopo atual.  Consulte [Escopo](../cpp/scope-visual-cpp.md) para obter um exemplo de como usar o operador de resolução de escopo.  
+ O operador de resolução de escopo (`::`) seguido por um nome constitui uma expressão primária.  Tais nomes devem estar no escopo global, não em nomes de membro.  O tipo dessa expressão é determinado pela declaração do nome. Será um l-value (isto é, pode aparecer à esquerda de uma expressão de operador de atribuição) se o nome declarativo for um l-value. O operador de resolução de escopo permite que um nome global seja referenciado, mesmo se esse nome estiver oculto no escopo atual. Consulte [escopo](../cpp/scope-visual-cpp.md) para obter um exemplo de como usar o operador de resolução do escopo.  
   
- Uma expressão entre parênteses é uma expressão primária cujo tipo e valor são idênticos aos da expressão fora dos parênteses.  Será um l\-value se a expressão fora dos parênteses for um l\-value.  
+ Uma expressão entre parênteses é uma expressão primária cujo tipo e valor são idênticos aos da expressão fora dos parênteses. Será um l-value se a expressão fora dos parênteses for um l-value.  
   
- No contexto da sintaxe da expressão primária fornecida acima, *name* significa qualquer coisa na sintaxe descrita para [Nomes](http://msdn.microsoft.com/pt-br/1c49cc24-08d5-4884-b170-ba8ed42d80db), embora ao usar o operador de resolução de escopo antes do nome, os tipos de nome que podem ocorrer apenas em uma classe não são permitidos.  Isso inclui os nomes de função de conversão definida pelo usuário e nomes de destruidor.  
+ No contexto da sintaxe de expressão primária acima, *nome* significa qualquer coisa a sintaxe descrita para [nomes](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db), embora quando usando o operador de resolução do escopo antes do nome, tipos de nomes que só pode ocorrer em uma classe não são permitidas.  Isso inclui os nomes de função de conversão definida pelo usuário e nomes de destruidor.  
   
  Os exemplos de expressões primárias incluem:  
   
@@ -76,7 +90,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- Os exemplos abaixo são todos *names* considerados e, portanto, expressões primárias, em várias formas:  
+ Os exemplos a seguir são considerados *nomes*e, portanto, primárias expressões, de várias formas:  
   
 ```  
 MyClass // a identifier  
@@ -88,5 +102,5 @@ A::B   // a qualified name
 A<int> // a template id  
 ```  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Tipos de expressões](../cpp/types-of-expressions.md)

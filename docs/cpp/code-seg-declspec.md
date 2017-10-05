@@ -1,65 +1,81 @@
 ---
-title: "code_seg (__declspec) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "code_seg_cpp"
-  - "code_seg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palavra-chave code_seg __declspec"
+title: code_seg ( declspec) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- code_seg_cpp
+- code_seg
+dev_langs:
+- C++
+helpviewer_keywords:
+- code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# code_seg (__declspec)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 242dfa36d3cd0c28d1feeb2bd4a2c41d29220b40
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-**Específico da Microsoft**  
+---
+# <a name="codeseg-declspec"></a>code_seg (__declspec)
+**Seção específica da Microsoft**  
   
  O atributo de declaração `code_seg` nomeia um segmento de texto executável no arquivo .obj, no qual o código do objeto para a função ou funções membro da classe será armazenado.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 __declspec(code_seg("segname")) declarator  
 ```  
   
-## Comentários  
- O atributo `__declspec(code_seg(...))` permite o posicionamento do código em segmentos nomeados distintos que podem ser paginados ou bloqueados na memória individualmente.  Você pode usar esse atributo para controlar o posicionamento de modelos instanciados e do código gerado pelo compilador.  
+## <a name="remarks"></a>Comentários  
+ O atributo `__declspec(code_seg(...))` permite o posicionamento do código em segmentos nomeados distintos que podem ser paginados ou bloqueados na memória individualmente. Você pode usar esse atributo para controlar o posicionamento de modelos instanciados e do código gerado pelo compilador.  
   
- Um *segmento* é um bloco de dados nomeado em um arquivo .obj que é carregado na memória como uma unidade.  Um *segmento de texto* é um segmento que contém código executável.  O termo *seção* muitas vezes é usado alternadamente com segmento.  
+ Um *segmento* é um bloco nomeado de dados em um arquivo. obj que é carregado na memória como uma unidade. Um *segmento texto* é um segmento que contém o código executável. O termo *seção* é geralmente usados de maneira intercambiável com o segmento.  
   
- O código de objeto gerado quando `declarator` é definido é colocado no segmento de texto especificado por `segname`, que é um literal de cadeia de caracteres estreito.  O nome `segname` não precisa ser especificado em um pragma de [seção](../preprocessor/section.md) para que possa ser usado em uma declaração.  Por padrão, quando nenhum `code_seg` é especificado, o código do objeto é colocado em um segmento chamado .text.  Um atributo `code_seg` substitui qualquer diretiva [\#pragma code\_seg](../preprocessor/code-seg.md) existente.  Um atributo `code_seg` aplicado a uma função membro substitui qualquer atributo `code_seg` aplicado à classe delimitadora.  
+ O código de objeto gerado quando `declarator` é definido é colocado no segmento de texto especificado por `segname`, que é um literal de cadeia de caracteres estreito. O nome `segname` não precisa ser especificado em uma [seção](../preprocessor/section.md) pragma antes que ele pode ser usado em uma declaração. Por padrão, quando nenhum `code_seg` é especificado, o código do objeto é colocado em um segmento chamado .text. Um `code_seg` atributo substitui qualquer existente [#pragma code_seg](../preprocessor/code-seg.md) diretiva. Um atributo `code_seg` aplicado a uma função membro substitui qualquer atributo `code_seg` aplicado à classe delimitadora.  
   
- Se uma entidade tiver um atributo `code_seg`, todas as declarações e definições da mesma entidade deverão ter atributos `code_seg` idênticos.  Se uma classe base tiver um atributo `code_seg`, as classes derivadas deverão ter o mesmo atributo.  
+ Se uma entidade tiver um atributo `code_seg`, todas as declarações e definições da mesma entidade deverão ter atributos `code_seg` idênticos. Se uma classe base tiver um atributo `code_seg`, as classes derivadas deverão ter o mesmo atributo.  
   
- Quando um atributo `code_seg` é aplicado a uma função de escopo de namespace ou a uma função membro, o código do objeto para essa função é colocado no segmento de texto especificado.  Quando esse atributo é aplicado a uma classe, todas as funções membro da classe e classes aninhadas \(isso inclui funções membro especiais geradas por compilador\) são colocadas no segmento especificado.  As classes definidas localmente \(por exemplo, classes definidas no corpo de uma função membro\) não herdam o atributo `code_seg` do escopo delimitador.  
+ Quando um atributo `code_seg` é aplicado a uma função de escopo de namespace ou a uma função membro, o código do objeto para essa função é colocado no segmento de texto especificado. Quando esse atributo é aplicado a uma classe, todas as funções membro da classe e classes aninhadas (isso inclui funções membro especiais geradas por compilador) são colocadas no segmento especificado. As classes definidas localmente (por exemplo, classes definidas no corpo de uma função membro) não herdam o atributo `code_seg` do escopo delimitador.  
   
- Quando um atributo `code_seg` é aplicado a uma classe de modelo ou função de modelo, todas as especializações implícitas do modelo são colocadas no segmento especificado.  As especializações explícitas ou parciais não herdam o atributo `code_seg` do modelo primário.  Você pode especificar um atributo `code_seg` igual ou diferente na especialização.  Um atributo `code_seg` não pode ser aplicado a uma instanciação explícita de modelo.  
+ Quando um atributo `code_seg` é aplicado a uma classe de modelo ou função de modelo, todas as especializações implícitas do modelo são colocadas no segmento especificado. As especializações explícitas ou parciais não herdam o atributo `code_seg` do modelo primário. Você pode especificar um atributo `code_seg` igual ou diferente na especialização. Um atributo `code_seg` não pode ser aplicado a uma instanciação explícita de modelo.  
   
- Por padrão, o código gerado por compilador, como uma função membro especial, é colocado no segmento .text.  A diretiva `#pragma code_seg` não substitui esse padrão.  Use o atributo `code_seg` na classe, no modelo de classe ou no modelo de função para controlar onde o código gerado por compilador é colocado.  
+ Por padrão, o código gerado por compilador, como uma função membro especial, é colocado no segmento .text. A diretiva `#pragma code_seg` não substitui esse padrão. Use o atributo `code_seg` na classe, no modelo de classe ou no modelo de função para controlar onde o código gerado por compilador é colocado.  
   
- As lambdas herdam atributos `code_seg` do respectivo escopo delimitador.  Para especificar um segmento para uma lambda, aplique um atributo `code_seg` depois da cláusula de declaração de parâmetro e antes de qualquer especificação mutável ou de exceção, qualquer especificação de tipo de retorno à direita e do corpo lambda.  Para obter mais informações, consulte [Sintaxe da expressão lambda](../cpp/lambda-expression-syntax.md).  Este exemplo define uma lambda em um segmento denominado PagedMem:  
+ As lambdas herdam atributos `code_seg` do respectivo escopo delimitador. Para especificar um segmento para uma lambda, aplique um atributo `code_seg` depois da cláusula de declaração de parâmetro e antes de qualquer especificação mutável ou de exceção, qualquer especificação de tipo de retorno à direita e do corpo lambda. Para obter mais informações, consulte [sintaxe da expressão Lambda](../cpp/lambda-expression-syntax.md). Este exemplo define uma lambda em um segmento denominado PagedMem:  
   
 ```cpp  
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };  
 ```  
   
- Tenha cuidado ao colocar funções membro específicas, especialmente funções membro virtuais, em diferentes segmentos.  Se você definir uma função virtual em uma classe derivada que resida em um segmento paginado quando o método da classe base residir em um segmento não paginado, outros métodos de classe base ou o código de usuário poderão supor que invocando o método virtual não acionarão uma falha de página.  
+ Tenha cuidado ao colocar funções membro específicas, especialmente funções membro virtuais, em diferentes segmentos. Se você definir uma função virtual em uma classe derivada que resida em um segmento paginado quando o método da classe base residir em um segmento não paginado, outros métodos de classe base ou o código de usuário poderão supor que invocando o método virtual não acionarão uma falha de página.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
  Este exemplo mostra como um atributo `code_seg` controla o posicionamento do segmento quando a especialização de modelo implícita e explícita é usada:  
   
 ```  
@@ -112,8 +128,8 @@ int main()
 }  
 ```  
   
- **FIM de Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [\_\_declspec](../cpp/declspec.md)   
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [declspec](../cpp/declspec.md)   
+ [Palavras-chave](../cpp/keywords-cpp.md)

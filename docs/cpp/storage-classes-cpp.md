@@ -1,0 +1,346 @@
+---
+title: Classes de armazenamento (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- thread_local_cpp
+- external_cpp
+- static_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- storage classes, basic concepts
+ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
+caps.latest.revision: 13
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
+
+---
+# <a name="storage-classes-c"></a>Classes de armazenamento (C++)  
+  
+Um *classe de armazenamento* no contexto do C++ declarações de variável é um especificador de tipo que controla o local de memória, vinculação e tempo de vida de objetos. Um determinado objeto pode ter apenas uma classe de armazenamento. As variáveis definidas em um bloco tem armazenamento automático, a menos que especificado de outra forma usando o `extern`, `static`, ou `thread_local` especificadores. Variáveis e objetos automáticos têm sem ligação; eles não são visíveis para o código fora do bloco.  
+  
+**Observações**  
+  
+1.  O [mutável](../cpp/mutable-data-members-cpp.md) palavra-chave pode ser considerada um especificador de classe de armazenamento. No entanto, ela só está disponível na lista de membros de uma definição de classe.  
+  
+2.  **Visual C++ 2010 e posterior:** o `auto` palavra-chave não é mais um especificador de classe de armazenamento do C++ e o `register` palavra-chave é preterida. **Visual Studio 2017 versão 15,3 e posterior:** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): O `register` palavra-chave não é uma classe de armazenamento com suporte. A palavra-chave é preservada no padrão para uso futuro. 
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="in-this-section"></a>Nesta seção:
+  
+-   [static](#static)  
+-   [extern](#extern)  
+-   [thread_local](#thread_local)
+
+<a name="static"></a>
+  
+## <a name="static"></a>static  
+  
+O `static` palavra-chave pode ser usado para declarar variáveis e funções no escopo global, o escopo de namespace e o escopo da classe. Variáveis estáticas também podem ser declaradas no escopo local.  
+  
+Duração estática significa que o objeto ou a variável são alocados quando o programa inicia e desalocados quando o programa termina. Vinculação externa significa que o nome da variável é visível fora do arquivo em que a variável é declarada. Por outro lado, a vinculação externa significa que o nome não é visível fora do arquivo em que a variável é declarada. Por padrão, um objeto ou variável que é definido no namespace global tem duração estática e ligação externa. A palavra-chave `static` pode ser usada nas seguintes situações:  
+  
+1.  Ao declarar uma variável ou função no escopo do arquivo (escopo global e/ou de namespace), a palavra-chave `static` especifica que a variável ou função possui vinculação interna. Ao declarar uma variável, a variável tem duração estática, e o compilador a inicializa com o valor 0 a menos que você especifique outro valor.  
+  
+2.  Ao declarar uma variável em uma função, a palavra-chave `static` especifica que a variável manterá seu estado entre as chamadas para essa função.  
+  
+3.  Ao declarar um membro de dados em uma declaração de classe, a palavra-chave `static` especifica que uma cópia do membro é compartilhada por todas as instâncias da classe. Um membro de dados static deve ser definido no escopo do arquivo. Um membro de dados inteiros que você declare como `const static` pode ter um inicializador.  
+  
+4.  Ao declarar uma função de membro em uma declaração de classe, a palavra-chave `static` especifica que a função é compartilhada por todas as instâncias da classe. Uma função de membro static não pode acessar um membro de instância porque a função não tem um ponteiro `this` implícito. Para acessar um membro de instância, declare a função com um parâmetro que seja um ponteiro ou uma referência de instância.  
+  
+5.  Não é possível declarar os membros de uma união como estáticos. No entanto, uma união anônima globalmente declarada deve ser explicitamente declarada como `static`.  
+  
+Este exemplo mostra como declarar uma variável `static` em uma função mantém seu estado entre as chamadas para essa função.  
+  
+```cpp  
+// static1.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+  
+using namespace std;  
+void showstat( int curr ) {  
+   static int nStatic;    // Value of nStatic is retained  
+                          // between each function call  
+   nStatic += curr;  
+   cout << "nStatic is " << nStatic << endl;  
+}  
+  
+int main() {  
+   for ( int i = 0; i < 5; i++ )  
+      showstat( i );  
+}  
+```  
+  
+```Output  
+nStatic is 0  
+nStatic is 1  
+nStatic is 3  
+nStatic is 6  
+nStatic is 10  
+```  
+  
+Este exemplo mostra o uso de `static` em uma classe.  
+  
+```cpp  
+// static2.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+  
+using namespace std;  
+class CMyClass {  
+public:  
+   static int m_i;  
+};  
+  
+int CMyClass::m_i = 0;  
+CMyClass myObject1;  
+CMyClass myObject2;  
+  
+int main() {  
+   cout << myObject1.m_i << endl;  
+   cout << myObject2.m_i << endl;  
+  
+   myObject1.m_i = 1;  
+   cout << myObject1.m_i << endl;  
+   cout << myObject2.m_i << endl;  
+  
+   myObject2.m_i = 2;  
+   cout << myObject1.m_i << endl;  
+   cout << myObject2.m_i << endl;  
+  
+   CMyClass::m_i = 3;  
+   cout << myObject1.m_i << endl;  
+   cout << myObject2.m_i << endl;  
+}  
+```  
+  
+```Output  
+0  
+0  
+1  
+1  
+2  
+2  
+3  
+3  
+```  
+  
+Este exemplo mostra uma variável local declarada `static` em uma função de membro. A variável estática está disponível para o programa inteiro; todas as instâncias do tipo compartilham a mesma cópia da variável estática.  
+  
+```cpp  
+// static3.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+struct C {  
+   void Test(int value) {  
+      static int var = 0;  
+      if (var == value)   
+         cout << "var == value" << endl;  
+      else  
+         cout << "var != value" << endl;  
+  
+      var = value;  
+   }  
+};   
+  
+int main() {  
+   C c1;  
+   C c2;  
+   c1.Test(100);  
+   c2.Test(100);  
+}  
+```  
+  
+```Output  
+var != value  
+var == value  
+```  
+  
+A partir do C++ 11, uma inicialização de variável local estática é garantia de ser thread-safe. Esse recurso às vezes é chamado *magic estática*. No entanto, em um aplicativo multithread todas as atribuições subsequentes devem ser sincronizadas. O recurso de inicialização estática de thread-safe pode ser desativado usando o [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) sinalizador para evitar assumir uma dependência de CRT.  
+  
+<a name="extern"></a>  
+  
+## <a name="extern"></a>extern  
+  
+Os objetos e variáveis declaradas como `extern` declaram um objeto que é definido em outra unidade de tradução ou em um escopo delimitador como tendo vinculação externa.  
+  
+Declaração de `const` variáveis com o `extern` classe de armazenamento força a variável com ligação externa. Uma inicialização de um `extern const` variável é permitida na unidade de tradução de definição. As inicializações das unidades de tradução diferentes da unidade de tradução de definição geram resultados indefinidos. Para obter mais informações, consulte [usando extern para especificar ligação](../cpp/using-extern-to-specify-linkage.md)  
+  
+O código a seguir mostra duas declarações `extern`, `DefinedElsewhere` (que se refere a um nome definido em uma unidade de tradução diferente) e `DefinedHere` (que se refere a um nome definido em um escopo delimitador):  
+  
+```cpp  
+// external.cpp  
+// DefinedElsewhere is defined in another translation unit  
+extern int DefinedElsewhere;     
+int main() {  
+   int DefinedHere;   
+   {  
+      // refers to DefinedHere in the enclosing scope  
+      extern int DefinedHere;  
+   }  
+}  
+```  
+  
+<a name="thread_local"></a>  
+  
+## <a name="threadlocal-c11"></a>thread_local (C++ 11)  
+  
+Uma variável declarada com o `thread_local` especificador é acessível somente no thread no qual ele é criado. A variável é criada quando o thread é criado e destruído quando o thread é destruído. Cada thread tem sua própria cópia da variável. No Windows, `thread_local` é funcionalmente equivalente à específicos do Microsoft [declspec (thread)](../cpp/thread.md) atributo.  
+  
+```cpp  
+thread_local float f = 42.0; // Global namespace. Not implicitly static.
+  
+struct S // cannot be applied to type definition  
+{  
+    thread_local int i; // Illegal. The member must be static.  
+    thread_local static char buf[10]; // OK 
+};  
+  
+void DoSomething()  
+{  
+    // Apply thread_local to a local variable.
+    // Implicitly "thread_local static S my_struct".
+    thread_local S my_struct;  
+}  
+```  
+  
+Coisas a observar sobre o `thread_local` especificador:  
+  
+-  O `thread_local` especificador pode ser combinado com `static` ou `extern`.  
+  
+-  Você pode aplicar `thread_local` somente para declarações de dados e as definições. `thread_local` não pode ser usado em definições ou declarações de função.  
+  
+-  O uso de `thread_local` podem interferir com [carregamento de atraso](../build/reference/linker-support-for-delay-loaded-dlls.md) da DLL importa. 
+  
+-  Em sistemas XP, `thread_local` pode não funcionar corretamente se usa um DLL `thread_local` dados e ele é carregado dinamicamente via `LoadLibrary`.  
+  
+-  Você pode especificar `thread_local` apenas em itens de dados com duração de armazenamento estático. Isso inclui objetos de dados globais (ambos `static` e `extern`), locais objetos static e membros de dados estáticos de classes. Qualquer variável local declarada `thread_local` é implicitamente static se nenhuma outra classe de armazenamento é fornecido; em outras palavras, no escopo de bloco `thread_local` é equivalente a `thread_local static`. 
+  
+-  Você deve especificar `thread_local` para a declaração e a definição de um objeto de local de thread, se a declaração e a definição de ocorrerem no mesmo arquivo ou arquivos separados.  
+  
+No Windows, `thread_local` é funcionalmente equivalente à [__declspec(thread)](../cpp/thread.md) exceto que `__declspec(thread)` pode ser aplicado a uma definição de tipo e é válido no código C. Sempre que possível, use `thread_local` porque ela é parte do C++ padrão e, portanto, é mais portáteis.  
+  
+##  <a name="register"></a>registrar  
+**Visual Studio 2017 versão posterior e 15,3** (disponível com [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): O `register` palavra-chave não é uma classe de armazenamento com suporte. A palavra-chave é preservada no padrão para uso futuro. 
+
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="example-automatic-vs-static-initialization"></a>Exemplo: automático versus inicialização estática  
+  
+Um objeto ou uma variável local automática são inicializados cada vez que o fluxo de controle alcança sua definição. Um objeto ou uma variável local estática são inicializados na primeira vez que o fluxo de controle alcança sua definição.  
+  
+Considere o exemplo a seguir, que define uma classe que registra a inicialização e a destruição de objetos e depois define três objetos, `I1`, `I2` e `I3`:  
+  
+```cpp  
+// initialization_of_objects.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+#include <string.h>  
+using namespace std;  
+  
+// Define a class that logs initializations and destructions.  
+class InitDemo {  
+public:  
+    InitDemo( const char *szWhat );  
+    ~InitDemo();  
+  
+private:  
+    char *szObjName;  
+    size_t sizeofObjName;  
+};  
+  
+// Constructor for class InitDemo  
+InitDemo::InitDemo( const char *szWhat ) :  
+    szObjName(NULL), sizeofObjName(0) {  
+    if ( szWhat != 0 && strlen( szWhat ) > 0 ) {  
+        // Allocate storage for szObjName, then copy  
+        // initializer szWhat into szObjName, using  
+        // secured CRT functions.  
+        sizeofObjName = strlen( szWhat ) + 1;  
+  
+        szObjName = new char[ sizeofObjName ];  
+        strcpy_s( szObjName, sizeofObjName, szWhat );  
+  
+        cout << "Initializing: " << szObjName << "\n";  
+    }  
+    else {  
+        szObjName = 0;  
+    }
+}  
+  
+// Destructor for InitDemo  
+InitDemo::~InitDemo() {  
+    if( szObjName != 0 ) {  
+        cout << "Destroying: " << szObjName << "\n";  
+        delete szObjName;  
+    }  
+}  
+  
+// Enter main function  
+int main() {  
+    InitDemo I1( "Auto I1" ); {  
+        cout << "In block.\n";  
+        InitDemo I2( "Auto I2" );  
+        static InitDemo I3( "Static I3" );  
+    }  
+    cout << "Exited block.\n";  
+}  
+```  
+  
+```Output  
+Initializing: Auto I1  
+In block.  
+Initializing: Auto I2  
+Initializing: Static I3  
+Destroying: Auto I2  
+Exited block.  
+Destroying: Auto I1  
+Destroying: Static I3  
+```  
+  
+Este exemplo demonstra como e quando os objetos `I1`, `I2`, e `I3` são inicializadas e quando eles são destruídos.  
+  
+Há vários pontos a observar sobre o programa:  
+  
+- Primeiro, `I1` e `I2` são destruídos automaticamente quando o fluxo de controle sai do bloco em que estão definidos.  
+  
+- Depois, em C++, não é necessário declarar objetos ou variáveis no início de um bloco. Além disso, esses objetos são inicializados somente quando o fluxo de controle atinge suas definições. (`I2` e `I3` são exemplos de tais definições.) A saída mostra exatamente quando eles são inicializados.  
+  
+- Por fim, as variáveis locais estáticas, como `I3`, retêm seus valores enquanto o programa dura, mas são destruídas quando o programa é encerrado.  
+  
+## <a name="see-also"></a>Consulte também  
+  
+ [Declarações e definições](../cpp/declarations-and-definitions-cpp.md)
+

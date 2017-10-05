@@ -1,29 +1,45 @@
 ---
-title: "Fun&#231;&#245;es de membro _bstr_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Classe _bstr_t, funções de membro"
+title: "Funções de membro bstr_t | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _bstr_t class, member functions
 ms.assetid: 61f9c6c8-6b8f-46eb-8fc2-038e42563bd2
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fun&#231;&#245;es de membro _bstr_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f8a55631a04a0c9e18d8c2971e1ca213222ca6b4
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Para obter informações sobre as funções de membro de `_bstr_t`, consulte o tópico sobre a [classe \_bstr\_t](../cpp/bstr-t-class.md).  
+---
+# <a name="bstrt-member-functions"></a>Funções de membro _bstr_t
+Para obter informações sobre `_bstr_t` funções de membro, consulte [bstr_t classe](../cpp/bstr-t-class.md).  
   
-## Consulte também  
- [Classe \_bstr\_t](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Consulte também  
+ [Classe _bstr_t](../cpp/bstr-t-class.md)

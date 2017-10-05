@@ -1,35 +1,51 @@
 ---
-title: "Ponteiros | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declarações, ponteiros"
-  - "declaradores, ponteiros"
-  - "ponteiros"
-  - "ponteiros, declarações"
+title: Ponteiros (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Ponteiros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>Ponteiros (C++)
 Os ponteiros são declarados usando a seguinte sequência:  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,21 +55,21 @@ Os ponteiros são declarados usando a seguinte sequência:
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Os especificadores da declaração:  
+ 1. Os especificadores da declaração:  
   
--   Um especificador de classe de armazenamento opcional.  Para obter mais informações, consulte [Especificadores](../cpp/specifiers.md).  
+-   Um especificador de classe de armazenamento opcional. Para obter mais informações, consulte [especificadores](../cpp/specifiers.md).  
   
--   Uma palavra\-chave `const` ou `volatile` opcional que se aplica ao tipo do objeto que será o alvo do ponteiro.  
+-   Uma palavra-chave `const` ou `volatile` opcional que se aplica ao tipo do objeto que será o alvo do ponteiro.  
   
 -   O especificador de tipo: o nome de um tipo que representa o tipo do objeto que será o alvo do ponteiro.  
   
- 2.  O declarador:  
+ 2. O declarador:  
   
--   Um modificador opcional específico da Microsoft.  Para obter mais informações, consulte [Modificadores específicos da Microsoft](../Topic/Microsoft-Specific%20Modifiers.md).  
+-   Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   O operador `*`.  
   
--   Uma palavra\-chave `const` ou `volatile` opcional que se aplica ao próprio ponteiro.  
+-   Uma palavra-chave `const` ou `volatile` opcional que se aplica ao próprio ponteiro.  
   
 -   O identificador.  
   
@@ -72,8 +88,6 @@ Os ponteiros são declarados usando a seguinte sequência:
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   No entanto, os declaradores de ponteiro podem ser mais complexos.  Para obter mais informações, consulte [Declaradores](http://msdn.microsoft.com/pt-br/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
-  
 -   Vários declaradores e seus inicializadores podem aparecer juntos em uma única declaração em uma lista separada por vírgulas que segue o especificador da declaração.  
   
  Um exemplo simples de uma declaração de ponteiro é:  
@@ -90,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- A declaração acima especifica que `ptr` é um ponteiro de constante para um objeto do tipo `unsigned` `int` com duração de armazenamento estático.  
+ A declaração anterior Especifica que `ptr` é um ponteiro para um objeto do tipo de constante `unsigned` `int` com duração de armazenamento estático.  
   
  O exemplo a seguir mostra como vários ponteiros são declarados e inicializados:  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  No exemplo acima, os ponteiros p e q apontam para objetos do tipo `int` e são inicializados para os endereços de i e j respectivamente.  O especificador de classe de armazenamento `static` se aplica aos dois ponteiros.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j is 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Exemplo  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Exemplo  
  Outro exemplo ilustra o uso de ponteiros em estruturas de dados; neste caso, uma lista vinculada.  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\)  d \(display list\)  q \(quit\)**   
-## Consulte também  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/pt-br/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Adição de tipos de ponteiro](../misc/addition-of-pointer-types.md)   
- [Operador de indireção: \*](../cpp/indirection-operator-star.md)   
- [Operador Address\-of: &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Operador de indireção: *](../cpp/indirection-operator-star.md)   
+ [Operador endereço de: &](../cpp/address-of-operator-amp.md)

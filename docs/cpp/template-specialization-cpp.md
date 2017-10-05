@@ -1,37 +1,54 @@
 ---
-title: "Especializa&#231;&#227;o parcial de modelos de classe (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "especialização parcial de modelos de classe"
+title: "Especialização de modelo (C++) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Especializa&#231;&#227;o parcial de modelos de classe (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-Os modelos da classe podem estar parcialmente especializados e a classe resultante ainda é um modelo.  A especialização parcial permite que o código do modelo seja personalizado parcialmente para tipos específicos em situações, como:  
+---
+# <a name="template-specialization-c"></a>Especialização de modelo (C++)
+
+Os modelos da classe podem estar parcialmente especializados e a classe resultante ainda é um modelo. A especialização parcial permite que o código do modelo seja personalizado parcialmente para tipos específicos em situações, como:  
   
--   Um modelo tem vários tipos e apenas alguns deles precisam ser especializados.  O resultado é um modelo com parâmetros nos tipos restantes.  
+-   Um modelo tem vários tipos e apenas alguns deles precisam ser especializados. O resultado é um modelo com parâmetros nos tipos restantes.  
   
--   Um modelo tem apenas um tipo, mas uma especialização é necessária para os tipos ponteiro, referência, ponteiro para o membro ou o ponteiro de função.  A própria especialização ainda é um modelo no tipo apontado ou referenciado.  
+-   Um modelo tem apenas um tipo, mas uma especialização é necessária para os tipos ponteiro, referência, ponteiro para o membro ou o ponteiro de função. A própria especialização ainda é um modelo no tipo apontado ou referenciado.  
   
-## Exemplo  
+## <a name="example"></a>Exemplo  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## Exemplo  
- Se você tiver uma classe de coleção de modelo que use qualquer tipo **T**, pode criar uma especialização parcial que usa qualquer tipo de ponteiro **T\***.  O código a seguir demonstra um modelo de classe de coleção `Bag` e uma especialização parcial para os tipos de ponteiro nos quais a coleção diferencia os tipos de ponteiro antes de copiá\-los na matriz.  Então, a coleção armazena os valores que forem apontados.  Com o modelo original, somente os próprios ponteiros seriam armazenados na coleção, deixando os dados vulneráveis a exclusão ou a alteração.  Nesta versão especial do ponteiro da coleção, o código para verificar se há um ponteiro nulo no método `add` é adicionado.  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>Exemplo
+
+ Se você tem uma classe de coleção do modelo que usa qualquer tipo **T**, você pode criar uma especialização parcial que usa qualquer tipo de ponteiro **T***. O código a seguir demonstra um modelo de classe de coleção `Bag` e uma especialização parcial para os tipos de ponteiro nos quais a coleção diferencia os tipos de ponteiro antes de copiá-los na matriz. Então, a coleção armazena os valores que forem apontados. Com o modelo original, somente os próprios ponteiros seriam armazenados na coleção, deixando os dados vulneráveis a exclusão ou a alteração. Nesta versão especial do ponteiro da coleção, o código para verificar se há um ponteiro nulo no método `add` é adicionado.  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**   
-**a b c**   
-**Null pointer\!**  
-**3 87 8 100**    
-## Exemplo  
- O exemplo a seguir define uma classe do modelo que usa pares de quaisquer dois tipos e depois define uma especialização parcial da classe do modelo especializada para que um dos tipos seja `int`.  A especialização define um método de classificação adicionais que implementa um tipo simples da bolha com base em inteiro.  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>Exemplo
+
+ O exemplo a seguir define uma classe do modelo que usa pares de quaisquer dois tipos e depois define uma especialização parcial da classe do modelo especializada para que um dos tipos seja `int`. A especialização define um método de classificação adicionais que implementa um tipo simples da bolha com base em inteiro.  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{apple, fruit}**  
-**{banana, fruit}**  
-**{dog, animal}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**  
-**{89, cat}**  
-**Lista classificada:**  
-**{89, cat}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**   
-## Consulte também  
- [Especialização explícita de modelos de classe](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

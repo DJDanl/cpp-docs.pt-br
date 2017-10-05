@@ -1,44 +1,60 @@
 ---
-title: "virtual (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "virtual_cpp"
-  - "virtual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes base, virtual"
-  - "classes de base virtuais, declarando"
-  - "funções virtuais, declarando"
-  - "palavra-chave virtual [C++]"
+title: virtual (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- virtual_cpp
+- virtual
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual base classes, declaring
+- base classes, virtual
+- virtual functions, declaring
+- virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# virtual (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 851f911dd7c49df1d685afe63ef5134cf0d5f175
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/25/2017
 
-A palavra\-chave `virtual` declara uma função virtual ou uma classe base virtual.  
+---
+# <a name="virtual-c"></a>virtual (C++)
+A palavra-chave `virtual` declara uma função virtual ou uma classe base virtual.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 virtual [type-specifiers] member-function-declarator  
 virtual [access-specifier] base-class-name  
 ```  
   
-#### Parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  `type-specifiers`  
  Especifica o tipo de retorno da função membro virtual.  
   
@@ -46,15 +62,15 @@ virtual [access-specifier] base-class-name
  Declara uma função membro.  
   
  `access-specifier`  
- Define o nível de acesso à classe base, `public`, `protected` ou `private`.  Pode aparecer antes ou depois da palavra\-chave `virtual`.  
+ Define o nível de acesso à classe base, `public`, `protected` ou `private`. Pode aparecer antes ou depois da palavra-chave `virtual`.  
   
  `base-class-name`  
  Identifica um tipo de classe declarado previamente.  
   
-## Comentários  
- Consulte [Funções virtuais](../cpp/virtual-functions.md) e [Classes base virtuais](../Topic/Virtual%20Base%20Classes.md) para obter mais informações.  
+## <a name="remarks"></a>Comentários  
+ Consulte [funções virtuais](../cpp/virtual-functions.md) para obter mais informações.  
   
- Consulte também as seguintes palavras\-chave: [classe](../cpp/class-cpp.md), [privado](../Topic/private%20\(C++\).md), [público](../cpp/public-cpp.md) e [protegido](../Topic/protected%20\(C++\).md).  
+ Consulte também as seguintes palavras-chave: [classe](../cpp/class-cpp.md), [privada](../cpp/private-cpp.md), [pública](../cpp/public-cpp.md), e [protegido](../cpp/protected-cpp.md).  
   
-## Consulte também  
- [Palavras\-chave C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [Palavras-chave](../cpp/keywords-cpp.md)
