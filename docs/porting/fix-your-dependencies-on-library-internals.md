@@ -18,20 +18,6 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: e775744188a895a11c09de03848f621b6e3ecee8
 ms.openlocfilehash: c2cc376776b79b4a20d8d98e9d97a56db008d433
@@ -39,15 +25,13 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 05/26/2017
 
 ---
-# Corrigir suas dependências de internos de biblioteca
-<a id="fix-your-dependencies-on-library-internals" class="xliff"></a>
+# <a name="fix-your-dependencies-on-library-internals"></a>Corrigir suas dependências de internos de biblioteca
 
 A Microsoft publicou o código-fonte da Biblioteca padrão, da maior parte da biblioteca de tempo de execução do C e de outras bibliotecas da Microsoft em muitas versões do Visual Studio. A intenção é ajudá-lo a entender o comportamento da biblioteca e para depurar seu código. Um efeito colateral da publicação do código-fonte da biblioteca é que alguns valores internos, algumas estruturas de dados e funções são expostos, mesmo que não façam parte da interface de biblioteca. Eles normalmente têm nomes que começam com dois sublinhados ou um sublinhado seguido por uma letra maiúscula, nomes que o padrão do C++ reserva para implementações. Esses valores, essas estruturas e essas funções são detalhes de implementação que podem se alterar conforme as bibliotecas evoluem ao longo do tempo e, portanto, convém evitar quaisquer dependências neles. Se fizer isso, você corre o risco de ter problemas e de ter um código não portátil ao tentar migrar seu código para novas versões das bibliotecas.  
 
 Na maioria dos casos, o documento de Novidades ou o de Alterações Significativas para cada versão do Visual Studio não menciona alterações de internos de biblioteca. Afinal, você não deveria ser afetado por esses detalhes de implementação. No entanto, algumas vezes a tentação de usar um código que você pode ver dentro da biblioteca é muito grande. Este tópico discute as dependências em CRT ou em internos de Biblioteca padrão que você possa ter utilizado e discute como atualizar seu código para remover essas dependências e torná-lo mais portátil ou migrar para novas versões da biblioteca.
 
-## _Hash_seq
-<a id="hashseq" class="xliff"></a>  
+## <a name="hashseq"></a>_Hash_seq  
 
 A função de hash interna `std::_Hash_seq(const unsigned char *, size_t)`, usada para implementar `std::hash` em alguns tipos de cadeia de caracteres, era visível em versões recentes da Biblioteca padrão. Essa função implementava um [hash FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) em uma sequência de caracteres.  
   
@@ -95,7 +79,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
     size_t result = fnv_offset_basis;
     for (size_t next = 0; next < count; ++next)
-        {    // fold in another byte
+        {   // fold in another byte
         result ^= (size_t)first[next];
         result *= fnv_prime;
         }
@@ -103,8 +87,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
   
 [Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  

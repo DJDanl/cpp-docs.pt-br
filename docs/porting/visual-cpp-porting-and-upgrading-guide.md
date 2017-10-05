@@ -15,16 +15,6 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
 translation.priority.mt:
 - cs-cz
 - pl-pl
@@ -37,12 +27,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/01/2017
 
 ---
-# Guia de atualização e portabilidade do Visual C++
-<a id="visual-c-porting-and-upgrading-guide" class="xliff"></a>
+# <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
 Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui fazer com que o código seja compilado e executado corretamente em uma versão mais recente das ferramentas, bem como tirar proveito da nova linguagem e dos recursos do Visual Studio. Este tópico também inclui informações sobre como migrar aplicativos herdados para plataformas mais modernas.  
   
-## Motivos para atualizar o código do Visual C++
-<a id="reasons-to-upgrade-visual-c-code" class="xliff"></a>  
+## <a name="reasons-to-upgrade-visual-c-code"></a>Motivos para atualizar o código do Visual C++  
  Considere atualizar seu código pelos seguintes motivos:  
   
 -   Código mais rápido, devido às otimizações do compilador aprimoradas.  
@@ -53,16 +41,14 @@ Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui
   
 -   Melhor segurança. Recursos de segurança, como proteção de verificação.  
   
-### Fazer portabilidade do seu código
-<a id="porting-your-code" class="xliff"></a>  
+### <a name="porting-your-code"></a>Fazer portabilidade do seu código  
  Ao atualizar, considere primeiro o código e os projetos do seu aplicativo. Seu aplicativo foi compilado com o Visual Studio?  Se sim, identifique os projetos envolvidos.  Você tem scripts de build personalizados?  Se você tiver scripts de build personalizados em vez de usar o sistema de build do Visual Studio, você terá mais trabalho a fazer na atualização, porque você não poderá economizar tempo com o Visual Studio atualizando seus arquivos de projeto e configurações de build.  
   
  O sistema de build e o formato de arquivo de projeto no Visual Studio foi alterado de vcbuild nas versões até o Visual Studio 2008 para MSBuild nas versões do Visual Studio 2010 em diante. Se a atualização é de uma versão anterior à 2010 e se você tem um sistema altamente personalizado de build, talvez seja necessário mais trabalho para atualizar.  Se você estiver atualizando a partir do Visual Studio 2010 ou versão posterior, os projetos já estarão usando o MSBuild e a atualização do projeto e o build do seu aplicativo deverá ser mais fácil.  
   
  Se você não estiver usando o sistema de build do Visual Studio, você deverá considerar a atualização para usar o MSBuild. Se você atualizar para usar o MSBuild, terá mais facilidade em atualizações futuras e será mais fácil usar serviços como o Visual Studio Online. O MSBuild oferece suporte a todas as plataformas de destino que têm suporte no Visual Studio.  
   
-### Portabilidade de projetos do Visual Studio
-<a id="porting-visual-studio-projects" class="xliff"></a>  
+### <a name="porting-visual-studio-projects"></a>Portabilidade de projetos do Visual Studio  
   Para começar a atualizar um projeto ou uma solução é só abrir a solução na nova versão do Visual Studio e seguir as solicitações para iniciar a atualização.  Ao atualizar um projeto, você obtém um relatório de atualização, que também é salvo na pasta do seu projeto como UpgradeLog.htm. O relatório de atualização mostra um resumo de quais problemas foram encontrados durante o processo de atualização e algumas informações sobre as alterações que foram feitas ou problemas que não puderam ser resolvidos automaticamente.  
   
 1.  Propriedades de projeto  
@@ -98,8 +84,7 @@ Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui
  Se você deseja dar ao programa uma interface do usuário de XAML, mas não deseja criar um aplicativo UWP, use C# com o WPF para criar a camada de interface do usuário e refatorar sua lógica padrão do C++ em DLLs. Criar uma camada de interoperabilidade no C++/CLI para conectar o C# com seu código nativo. Outra opção é criar um aplicativo UWP usando [C++/CX](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh699871.aspx) ou [C++/WinRT](https://github.com/microsoft/cppwinrt). No Windows 10, você pode usar o [Desktop App Converter](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) para empacotar o aplicativo da área de trabalho existente como um aplicativo UWP sem a necessidade de modificar nenhum código.   
  Como alternativa, você pode ter novos requisitos ou prever a necessidade de direcionamento a plataformas diferentes da área de trabalho do Windows, como o Windows Phone ou dispositivos Android. Você poderia portar seu código de interface do usuário para uma biblioteca de interface do usuário de plataforma cruzada. Com essas estruturas de interface do usuário, você pode ter vários dispositivos de destino e ainda usar o Visual Studio e o depurador do Visual Studio como ambiente de desenvolvimento.  
   
-## Tópicos relacionados
-<a id="related-topics" class="xliff"></a>  
+## <a name="related-topics"></a>Tópicos relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  
@@ -115,7 +100,6 @@ Este tópico fornece um guia para atualizar o código do Visual C++. Isso inclui
 |[Portabilidade de UNIX para Win32](porting-from-unix-to-win32.md)|Discute as opções para migrar aplicativos UNIX para o Windows.|  
 |[Primer de migração C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Mostra detalhadamente como atualizar suas sintaxes de Managed Extensions for C++ para usar a nova sintaxe. Para obter mais informações, consulte [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md).|  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Visual C++](../visual-cpp-in-visual-studio.md)
 
