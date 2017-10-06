@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - '-'
+- +
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -139,3 +140,4 @@ for( int i = 0; i < 10; ++i )
  [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
  [Operadores C++ internos, precedência e capacidade de associação](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores aditivos C](../c-language/c-additive-operators.md)
+
