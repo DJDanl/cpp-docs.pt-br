@@ -16,11 +16,6 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
 ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
@@ -28,8 +23,7 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 06/08/2017
 
 ---
-# Novidades do Visual C++ de 2003 até 2015
-<a id="visual-c-what39s-new-2003-through-2015" class="xliff"></a>
+# <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
 **Observação** Para obter informações sobre o Visual Studio 2017, consulte [Novidades do Visual C++ no Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Melhorias de conformidade no Visual C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md).
 
