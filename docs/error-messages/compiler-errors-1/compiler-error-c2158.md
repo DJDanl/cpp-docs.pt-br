@@ -1,5 +1,5 @@
 ---
-title: C2158 de erro do compilador | Documentos do Microsoft
+title: C2158 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6552a5a0e4f5b80b73cc6c2125f98603bddbb50c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84241663685ab1d12581b84bc761dcff77420fd2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2158"></a>C2158 de erro do compilador
-'type': #pragma make_public diretiva atualmente é suportada apenas tipos nativos diferente do modelo  
+'type': #pragma make_public diretiva atualmente há suporte para tipos não template nativos somente  
   
- O [make_public](../../preprocessor/make-public.md) pragma só pode ser aplicada a um tipo nativo, não de modelo.  
+ O [make_public](../../preprocessor/make-public.md) pragma só pode ser aplicado a um tipo nativo, não de modelo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2158.  

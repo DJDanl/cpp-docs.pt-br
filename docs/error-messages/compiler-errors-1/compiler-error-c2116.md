@@ -1,5 +1,5 @@
 ---
-title: C2116 de erro do compilador | Documentos do Microsoft
+title: C2116 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8ab8a91ef4678e74d58d32915ddac4770472f5ff
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a89c60a4cc017b2d534e47ec8ba5135a3d40eda6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2116"></a>C2116 de erro do compilador
-listas de parâmetros de função diferiram  
+listas de parâmetros de função diferente  
   
- Os parâmetros na lista de parâmetros padrão não correspondem a lista de parâmetros formais.
+ Os parâmetros na lista de parâmetros padrão não corresponde à lista de parâmetros formais.

@@ -1,5 +1,5 @@
 ---
-title: C2180 de erro do compilador | Documentos do Microsoft
+title: C2180 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 73fd87cc48abed22f74a5b59395d59b5606312fb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 181309cca171c872a7c3767729a755d6e73bd288
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2180"></a>C2180 de erro do compilador
-Controlando a expressão tem o tipo 'type'  
+expressão de controle possui tipo 'type'  
   
- A expressão de controle em uma `if`, `while`, `for`, ou `do` instrução é uma expressão convertida em `void`. Para corrigir esse problema, altere a expressão de controle para uma que produza um `bool` ou um tipo que pode ser convertido em `bool`.  
+ A expressão de controle em um `if`, `while`, `for`, ou `do` instrução for uma expressão, convertida em `void`. Para corrigir esse problema, altere a expressão de controle para um que produz um `bool` ou um tipo que pode ser convertido em `bool`.  
   
  O exemplo a seguir gera C2180:  
   

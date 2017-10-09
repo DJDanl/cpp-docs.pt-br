@@ -1,5 +1,5 @@
 ---
-title: C2191 de erro do compilador | Documentos do Microsoft
+title: C2191 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 930b2b489edca0f9aef3a1b7f663100b1cb10bf7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c8f1848fedf7bf811a335043693980855293694
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2191"></a>C2191 de erro do compilador
-segunda lista de parâmetros mais longa que a primeira  
+segunda lista de parâmetro maior do que o primeiro  
   
- Uma função C foi declarada uma segunda vez com uma lista mais longa do parâmetro. C não oferece suporte a funções sobrecarregadas.  
+ Uma função de C foi declarada uma segunda vez com uma lista mais longa do parâmetro. C não oferece suporte a funções sobrecarregadas.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2191:  

@@ -1,5 +1,5 @@
 ---
-title: C2108 de erro do compilador | Documentos do Microsoft
+title: C2108 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,20 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4861a5e11f3ae6734889f370d123c476f01f0db8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 936c7f53ba112d2fc7bf03d76acac27bd8b4c372
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2108"></a>C2108 de erro do compilador
-subscrito não é de tipo integral  
+subscrito não é do tipo integral  
   
- O subscrito de matriz é uma expressão não inteiras.  
+ Subscrito da matriz é uma expressão de fracionários.  
   
 ## <a name="example"></a>Exemplo  
- C2108 pode ocorrer se você usar incorretamente o `this` ponteiro de um tipo de valor para o indexador padrão do tipo de acesso. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ C2108 pode ocorrer se você usar incorretamente o `this` ponteiro de um tipo de valor para o indexador de padrão do tipo de acesso. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
  O exemplo a seguir gera C2108.  
   

@@ -1,5 +1,5 @@
 ---
-title: Erro do compilador c2261 () | Documentos do Microsoft
+title: Compilador erro C2261 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6e3f6dc3ae3c603a090e37451f0bb09f6eece6fd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8269b891ed899501625973b81c1823d4db2d56c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="compiler-error-c2261"></a>Erro do compilador c2261)
+# <a name="compiler-error-c2261"></a>C2261 de erro do compilador
 'string': referência de assembly é inválida e não pode ser resolvida  
   
  Um valor não era válido.  
   
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>é usado para especificar um assembly autorizado.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Por exemplo, se quiser. dll especificar a DLL como um assembly autorizado, você deve especificar (em dll): InternalsVisibleTo("b"). O tempo de execução, em seguida, permite que a DLL acessar todo o conteúdo do. dll (exceto tipos privados).  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>é usado para especificar um assembly friend. Por exemplo, se quiser. dll especificar o b. dll como um assembly autorizado, você especificaria (em. dll): InternalsVisibleTo("b"). O tempo de execução, em seguida, permite que o b. dll acessar todo o conteúdo do. dll (exceto tipos privados).  
   
  Para obter mais informações sobre a sintaxe correta ao especificar assemblies amigáveis, consulte [Friend Assemblies (C++)](../../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera c2261 ().  
+ O exemplo a seguir gera C2261.  
   
 ```  
 // C2261.cpp  

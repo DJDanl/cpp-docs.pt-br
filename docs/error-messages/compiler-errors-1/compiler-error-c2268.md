@@ -1,5 +1,5 @@
 ---
-title: C2268 de erro do compilador | Documentos do Microsoft
+title: C2268 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7939c012e2c6750901af8c35e3c76da9be9a35da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2268"></a>C2268 de erro do compilador
-'function' é um auxiliar de biblioteca de compilador predefinida. Auxiliares de biblioteca não são compatíveis com /GL; Compile o arquivo de objeto 'arquivo' sem /GL.  
+'function' é um auxiliar de biblioteca de compilador predefinido. Não há suporte para os auxiliares de biblioteca com /GL; Compile o arquivo de objeto 'file' sem /GL.  
   
- Uma função definida no seu código-fonte tem o mesmo nome que uma função interna do compilador. Compilar o módulo que contém a função sem [/GL](../../build/reference/gl-whole-program-optimization.md).  
+ Uma função definida no seu código-fonte tem o mesmo nome que uma função de compilador interno. Compilar o módulo que contém a função sem [/GL](../../build/reference/gl-whole-program-optimization.md).  
   
  O exemplo a seguir gera C2268:  
   

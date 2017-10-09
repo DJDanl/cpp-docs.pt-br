@@ -1,5 +1,5 @@
 ---
-title: C2197 de erro do compilador | Documentos do Microsoft
+title: C2197 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e32f622a3460e198c28d15f2a7cbfdc13f25e4cb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3b2f3482a8f66098d42389234924fee9238b7ed0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2197"></a>C2197 de erro do compilador
-'function': muitos argumentos para a chamada  
+'function': muitos argumentos para chamada  
   
  O compilador detectou muitos parâmetros para uma chamada para a função ou uma declaração de função incorreta.  
   

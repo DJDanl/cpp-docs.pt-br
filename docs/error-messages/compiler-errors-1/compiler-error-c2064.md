@@ -1,5 +1,5 @@
 ---
-title: C2064 de erro do compilador | Documentos do Microsoft
+title: C2064 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9b1dbeaf15361546d683e2c79e3f8c9de60cae39
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e0c82ae2de90a6e4e6e7e66648d84c2b55a9c2b0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2064"></a>C2064 de erro do compilador
-termo não é avaliada como uma função que usa argumentos N  
+termo não é avaliada como uma função recebendo argumentos N  
   
- É feita uma chamada para uma função através de uma expressão. A expressão não é avaliada como um ponteiro para uma função que usa o número especificado de argumentos.  
+ É feita uma chamada para uma função por meio de uma expressão. A expressão não avaliada como um ponteiro para uma função que usa o número especificado de argumentos.  
   
- Neste exemplo, o código tenta chamar funções não como funções. O exemplo a seguir gera C2064:  
+ Neste exemplo, o código tenta chamar não funções como funções. O exemplo a seguir gera C2064:  
   
 ```  
 // C2064.cpp  
@@ -57,7 +43,7 @@ void func() {
 }  
 ```  
   
- Você deve chamar ponteiros para funções de membro não estático do contexto de uma instância do objeto. O exemplo a seguir gera C2064 e mostra como corrigi-lo:  
+ Você deve chamar ponteiros para funções de membro não estático no contexto de uma instância do objeto. O exemplo a seguir gera C2064 e mostra como corrigi-lo:  
   
 ```  
 // C2064b.cpp  

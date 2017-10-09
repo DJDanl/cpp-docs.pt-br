@@ -1,5 +1,5 @@
 ---
-title: C2206 de erro do compilador | Documentos do Microsoft
+title: C2206 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 20655bf062b3a962b8c39332ccdcb4ddd7b65601
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f68484c5e28206b29cb4a76d4333c7c2c5fb266e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2206"></a>C2206 de erro do compilador
-'function': typedef não pode ser usado para a definição de função  
+'function': typedef não pode ser usado para definição de função  
   
- A `typedef` é usado para definir um tipo de função.  
+ Um `typedef` é usado para definir um tipo de função.  
   
  O exemplo a seguir gera C2206:  
   

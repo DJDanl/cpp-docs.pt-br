@@ -1,5 +1,5 @@
 ---
-title: C2266 de erro do compilador | Documentos do Microsoft
+title: C2266 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 981531157c2eacf135814edd20ce4d888d8c010a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b17d8c98e5afd00cbb98e8db5191544d9ad9ca13
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2266"></a>C2266 de erro do compilador
-'identifier': referência a uma matriz limitada não constante é ilegal  
+'Identificador': referência a uma matriz de limite não constante é inválida  
   
- Uma referência é declarada para uma matriz com um nonconstant associado. A matriz deve ter limites constantes.
+ Uma referência foi declarada para uma matriz com um nonconstant associado. A matriz deve ter limites de constantes.

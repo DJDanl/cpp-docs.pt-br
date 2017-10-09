@@ -1,5 +1,5 @@
 ---
-title: C2244 de erro do compilador | Documentos do Microsoft
+title: C2244 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: da3f0d560007cd63ae06ac7467af88a07a5ae1fb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc2afb310e7fdee866d437631f4a20554fc7a872
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2244"></a>C2244 de erro do compilador
-'identifier': não é possível corresponder a definição de função para uma declaração existente  
+'Identificador': não é possível corresponder a definição de função a uma declaração existente  
   
  Um uso comum do operador + unário foi usado na frente de uma chamada de função que não tinham o parêntese.  
   
- Esse erro ocorre somente em projetos do C++.  
+ Esse erro ocorre apenas em projetos do C++.  
   
  O exemplo a seguir gera C2244:  
   
@@ -96,7 +82,7 @@ void ABC::func(int i) {}   // C2244 wrong signature
 // void ABC::func(int i, T t) {}  
 ```  
   
- Você não pode parcialmente especializar um modelo de função.  
+ Você não pode parcialmente especializados um modelo de função.  
   
 ```  
 // C2244d.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C2143 de erro do compilador | Documentos do Microsoft
+title: C2143 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>C2143 de erro do compilador
-Erro de sintaxe: ausente 'token1' antes de 'token2'  
+Erro de sintaxe: faltando 'token1' antes de 'token2'  
   
  O compilador esperado um token específico (ou seja, um elemento de linguagem que não seja espaço em branco) e outro token encontrado.  
   
  Para obter informações sobre esse erro quando ele ocorre quando você estiver usando um bloco try de função, consulte [artigo da Base de dados de Conhecimento 241706](http://support.microsoft.com/kb/241706).  
   
- Verifique o [referência da linguagem C++](../../cpp/cpp-language-reference.md) para determinar onde o código está sintaticamente incorreto. Como o compilador pode relatar este erro depois de encontrar a linha que causa o problema, verifique várias linhas de código que precedem o erro.  
+ Verifique o [referência de linguagem C++](../../cpp/cpp-language-reference.md) para determinar onde o código está sintaticamente incorreto. Porque o compilador pode relatar esse erro depois de encontrar a linha que faz com que o problema, verifique várias linhas de código que precedem o erro.  
   
  C2143 pode ocorrer em situações diferentes.  
   
@@ -65,7 +50,7 @@ class MyClass
   
 ```  
   
- Por padrão, o C++ presume que `Ty::PutFuncType` não é um modelo; portanto, o seguinte `<` é interpretado como um menor-sinal.  Você deve informar o compilador explicitamente que `PutFuncType` é um modelo para que ele possa analisar corretamente o colchete angular. Para corrigir esse erro, use o `template` palavra-chave em nome do tipo dependentes, como mostrado aqui:  
+ Por padrão, o C++ supõe que `Ty::PutFuncType` não é um modelo; portanto, o seguinte `<` é interpretado como um valor menor-sinal.  Você deve informar o compilador explicitamente que `PutFuncType` é um modelo para que ele pode analisar corretamente o colchete angular. Para corrigir esse erro, use o `template` palavra-chave no nome do tipo dependentes, como mostrado aqui:  
   
 ```cpp  
 class MyClass  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- Ele também pode ocorrer quando você está tentando compilar um arquivo de código fonte usando a sintaxe do CLR sem também **/clr**:  
+ Ele também pode ocorrer quando você está tentando compilar um arquivo de código de origem usando a sintaxe do CLR sem também **/clr**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -116,7 +101,7 @@ int main() {
 }  
 ```  
   
- C2143 pode ocorrer quando uma chave de fechamento, parênteses ou ponto e vírgula está ausente na linha onde o erro for detectado ou em uma das linhas apenas acima:  
+ C2143 pode ocorrer quando uma chave de fechamento, parênteses ou ponto e vírgula está ausente na linha em que o erro for detectado ou em uma das linhas apenas acima:  
   
 ```cpp  
 // C2143d.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- Ou, quando um rótulo não é anexado a uma instrução. Se você deve colocar um rótulo por si só, por exemplo, no final de uma instrução composta, anexá-lo para uma instrução nula:  
+ Ou, quando um rótulo não é anexado a uma instrução. Se você deve colocar um rótulo por si só, por exemplo, no final de uma instrução composta, anexá-lo a uma instrução nulo:  
   
 ```cpp  
 // C2143f.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- Em um programa C, variáveis devem ser declaradas no início da função e não podem ser declaradas após a função executa instruções de declaração não.  
+ Em um programa C, variáveis devem ser declaradas no início da função e não pode ser declarados depois que a função executa instruções de declaração não.  
   
 ```C  
 // C2143j.c  

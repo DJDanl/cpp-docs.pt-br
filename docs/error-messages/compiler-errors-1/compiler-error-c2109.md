@@ -1,5 +1,5 @@
 ---
-title: C2109 de erro do compilador | Documentos do Microsoft
+title: C2109 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b968bec9cb9b67ce09b0ddb6d9b4ca3b705e48cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e783c0a68effd6a2302939ccf8303d401e23d6e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2109"></a>C2109 de erro do compilador
-subscrito requer tipo de matriz ou ponteiro  
+subscrito requer tipo de ponteiro ou matriz  
   
- O subscrito foi usado em uma variável que não era uma matriz.  
+ A subscrição foi usada em uma variável que não é uma matriz.  
   
  O exemplo a seguir gera C2109:  
   

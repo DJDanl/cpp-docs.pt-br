@@ -1,5 +1,5 @@
 ---
-title: C2199 de erro do compilador | Documentos do Microsoft
+title: Erro de compilador c2199 (compilador) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8deec77a533455d07157774d8abb9885b721102c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28410dfc8ced15c7c3cddd55b5403f45d1b15e78
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2199"></a>C2199 de erro do compilador
-Erro de sintaxe: encontrado ' identificador (' no escopo global (era uma declaração se destina?)  
+Erro de sintaxe: encontrado ' identificador (' no escopo global (uma declaração estava planejada?)  
   
- O contexto especificado causou um erro de sintaxe. Pode haver sintaxe de declaração incorreta.  
+ O contexto especificado causou um erro de sintaxe. Pode haver sintaxe de declaração incorreto.  
   
  O exemplo a seguir gera C2199:  
   

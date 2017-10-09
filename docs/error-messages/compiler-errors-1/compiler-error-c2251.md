@@ -1,5 +1,5 @@
 ---
-title: C2251 de erro do compilador | Documentos do Microsoft
+title: C2251 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: adc9116da47fb99e778eea5d5133187829fe7f61
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72ca85b05a8ac67fab5d152871eaed393e154c11
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2251"></a>C2251 de erro do compilador
-namespace 'namespace' não tem um membro 'member' - você quis dizer 'member'?  
+o namespace 'namespace' não tem um membro 'member' - você quis dizer 'member'?  
   
- O compilador não pôde localizar um identificador no namespace especificado.  
+ O compilador não pôde encontrar um identificador no namespace especificado.  
   
  O exemplo a seguir gera C2251:  
   
