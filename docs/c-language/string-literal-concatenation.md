@@ -18,25 +18,11 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e786a2d8993fb47a9b169e0194160134d2a86136
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="string-literal-concatenation"></a>Concatenação literal da cadeia de caracteres
@@ -55,7 +41,7 @@ ken into two or more pieces."
   
  A concatenação de cadeias de caracteres pode ser usada em qualquer lugar em que você usou anteriormente uma barra invertida seguida por um caractere de nova linha para inserir cadeias de caracteres mais longas que uma linha.  
   
- Para forçar uma nova linha dentro de uma literal de cadeia de caracteres, digite a sequência de escape de nova linha (**\n**) no ponto na cadeia de caracteres em que deseja que a linha seja interrompida, como segue:  
+ Para forçar uma nova linha dentro de uma cadeia de caracteres literal, digite a sequência de escape de nova linha (**\n**) no ponto na cadeia de caracteres onde você deseja que a linha quebrada, da seguinte maneira:  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  
