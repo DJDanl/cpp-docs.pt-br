@@ -1,5 +1,5 @@
 ---
-title: Classe _U_MENUorID | Documentos do Microsoft
+title: Classe _U_MENUorID | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,33 +22,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="umenuorid-class"></a>Classe _U_MENUorID
 Essa classe fornece wrappers para **CreateWindow** e **CreateWindowEx**.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,12 +56,12 @@ class _U_MENUorID
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Um identificador para um menu.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe de adaptador do argumento permite que qualquer um dos IDs ( **UINT**s) ou identificadores de menu ( `HMENU`s) a serem passados para uma função sem exigir uma conversão explícita na parte do chamador.  
+ Essa classe de adaptador do argumento permite que qualquer IDs ( **UINT**s) ou identificadores de menu ( `HMENU`s) a serem passados para uma função sem a necessidade de uma conversão explícita na parte do chamador.  
   
- Essa classe foi projetada para a implementação de invólucros para a API do Windows, principalmente o [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funções, dos quais aceitam um `HMENU` argumento pode ser um identificador de janela filho ( **UINT**) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Essa classe destina-se para implementar wrappers para a API do Windows, particularmente o [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funções, que aceitam um `HMENU` argumento pode ser um filho Identificador de janela ( **UINT**) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
- A classe define duas sobrecargas de construtor: uma aceita um **UINT** argumento e o outro aceita um `HMENU` argumento. O **UINT** argumento apenas é convertido para um `HMENU` no construtor e o resultado armazenado no membro de dados da classe, [m_hMenu](#_u_menuorid__m_hmenu). O argumento para o `HMENU` construtor é armazenado diretamente, sem conversão.  
+ A classe define duas sobrecargas de construtor: um aceita um **UINT** argumento e o outro aceita um `HMENU` argumento. O **UINT** argumento apenas é convertido para um `HMENU` no construtor e o resultado armazenado no membro de dados da classe, [m_hMenu](#_u_menuorid__m_hmenu). O argumento para o `HMENU` construtor é armazenado diretamente, sem conversão.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin.h  

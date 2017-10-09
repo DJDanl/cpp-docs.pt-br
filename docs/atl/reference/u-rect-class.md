@@ -1,5 +1,5 @@
 ---
-title: Classe _U_RECT | Documentos do Microsoft
+title: Classe _U_RECT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,32 +22,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a8c7d4e7b34256d9544cd75dc71dbfb8294db30b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="urect-class"></a>Classe _U_RECT
 Essa classe de adaptador do argumento permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,7 +71,7 @@ LPRECT m_lpRect;
  The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT (RECT < / rc);  
+_U_RECT (RECT & rc);  
 _U_RECT (LPRECT lpRect);
 ```  
   

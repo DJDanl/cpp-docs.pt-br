@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCompareTraits | Documentos do Microsoft
+title: Classe CDefaultCompareTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,25 +22,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultcomparetraits-class"></a>Classe CDefaultCompareTraits
@@ -64,10 +50,10 @@ class CDefaultCompareTraits
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CDefaultCompareTraits::CompareElements](#compareelements)|(Estático) Chame essa função para comparar dois elementos de igualdade.|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Estático) Chame essa função para determinar o elemento maior e menor.|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Estático) Chame essa função para determinar o elemento superior e inferior.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe contém duas funções estáticas para comparar elementos armazenados em um objeto de classe de coleção. Essa classe é utilizada pelo [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Essa classe contém duas funções estáticas para comparar armazenados em um objeto de classe de coleção de elementos. Essa classe é utilizada pelo [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -92,10 +78,10 @@ static bool CompareElements(const T& element1, const T& element2);
  Retorna VERDADEIRO se os elementos forem iguais; caso contrário, false.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão dessa função é a igualdade ( `==`) operador. Para objetos diferentes tipos de dados simples, essa função pode precisa ser substituído.  
+ A implementação padrão dessa função é a igualdade ( `==`) operador. Para objetos diferentes tipos de dados simples, essa função pode precisar ser substituído.  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
- Chame essa função para determinar o elemento maior e menor.  
+ Chame essa função para determinar o elemento superior e inferior.  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -118,7 +104,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão dessa função usa o `==`, ** \< **, e ** > ** operadores. Para objetos diferentes tipos de dados simples, essa função pode precisa ser substituído.  
+ A implementação padrão dessa função usa o `==`,  **\<** , e  **>**  operadores. Para objetos diferentes tipos de dados simples, essa função pode precisar ser substituído.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

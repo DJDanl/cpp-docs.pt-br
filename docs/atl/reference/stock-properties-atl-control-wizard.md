@@ -1,5 +1,5 @@
 ---
-title: Assistente de controle de propriedades de estoque, ATL | Documentos do Microsoft
+title: Assistente de controle de propriedades de estoque, ATL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,44 +17,30 @@ caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4515fe676b92a797be03abaea550e30baa1f34d8
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, Assistente de controle ATL
+# Propriedades de estoque, o Assistente de controle ATL
 Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, não há propriedades são identificadas.  
   
  **Sem suporte**  
  Indica as propriedades disponíveis no momento não há suporte para o controle.  
   
  **Com suporte**  
- Indica as propriedades que são suportadas atualmente para o controle.  
+ Indica as propriedades que são atualmente suportadas para o controle.  
   
 |Botão de transferência|Descrição|  
 |---------------------|-----------------|  
 |**>**|Adiciona o **com suporte** lista o nome da propriedade selecionado no momento o **não tem suporte** lista.|  
 |**>>**|Adiciona o **com suporte** lista todos os nomes de propriedade disponíveis no **não tem suporte** lista.|  
 |**<**|Remove o nome da propriedade selecionado no momento o **com suporte** lista.|  
-|**<<**|Remove todos os nomes de propriedade listados atualmente no **com suporte** lista.|  
+|**<<**|Remove todos os nomes de propriedade listados no momento no **com suporte** lista.|  
   
-## <a name="see-also"></a>Consulte também  
- [Assistente de controle ATL](../../atl/reference/atl-control-wizard.md)
+## Consulte também  
+ [Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
 
 

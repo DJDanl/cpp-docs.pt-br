@@ -1,5 +1,5 @@
 ---
-title: Estrutura de _ATL_COM_MODULE70 | Documentos do Microsoft
+title: Estrutura de _ATL_COM_MODULE70 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>Estrutura _ATL_COM_MODULE70
-Utilizada pelo código relacionado COM ATL.  
+Usado pelo relacionados COM o código em ATL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,13 +49,13 @@ struct _ATL_COM_MODULE70 {
  O tamanho da estrutura, usado para controle de versão.  
   
  `m_hInstTypeLib`  
- A instância do identificador para a biblioteca de tipos para este módulo.  
+ A instância de identificador para a biblioteca de tipos para este módulo.  
   
  **m_ppAutoObjMapFirst**  
- Endereço do elemento da matriz que indica o início das entradas de mapa de objeto para esse módulo.  
+ Endereço do elemento da matriz que indica o início das entradas do mapa de objeto para este módulo.  
   
  **m_ppAutoObjMapLast**  
- Endereço do elemento da matriz que indica o fim das entradas de mapa de objeto para esse módulo.  
+ Endereço do elemento da matriz que indica o fim das entradas de mapa de objeto para este módulo.  
   
  `m_csObjMap`  
  Seção crítica para serializar o acesso para as entradas de mapa do objeto. Usado internamente pelo ATL.  
@@ -78,7 +64,7 @@ struct _ATL_COM_MODULE70 {
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) é definido como um typedef de `_ATL_COM_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas](../../atl/reference/atl-structures.md)

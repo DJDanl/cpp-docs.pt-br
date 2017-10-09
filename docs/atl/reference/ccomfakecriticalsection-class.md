@@ -1,5 +1,5 @@
 ---
-title: Classe CComFakeCriticalSection | Documentos do Microsoft
+title: Classe CComFakeCriticalSection | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
-Essa classe fornece os mesmos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , mas não oferece uma seção crítica.  
+Essa classe fornece os mesmos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , mas não fornece uma seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,10 +46,10 @@ class CComFakeCriticalSection
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CComFakeCriticalSection::Init](#init)|Não fará nada, pois há uma seção crítica.|  
-|[CComFakeCriticalSection::Lock](#lock)|Não fará nada, pois há uma seção crítica.|  
-|[CComFakeCriticalSection::Term](#term)|Não fará nada, pois há uma seção crítica.|  
-|[CComFakeCriticalSection::Unlock](#unlock)|Não fará nada, pois há uma seção crítica.|  
+|[CComFakeCriticalSection::Init](#init)|Não faz nada porque não há nenhuma seção crítica.|  
+|[CComFakeCriticalSection::Lock](#lock)|Não faz nada porque não há nenhuma seção crítica.|  
+|[CComFakeCriticalSection::Term](#term)|Não faz nada porque não há nenhuma seção crítica.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|Não faz nada porque não há nenhuma seção crítica.|  
   
 ## <a name="remarks"></a>Comentários  
  `CComFakeCriticalSection`espelha os métodos encontrados em [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). No entanto, `CComFakeCriticalSection` não fornece uma seção crítica; portanto, seus métodos não fazem nada.  
@@ -74,7 +60,7 @@ class CComFakeCriticalSection
  **Cabeçalho:** atlcore.h  
   
 ##  <a name="init"></a>CComFakeCriticalSection::Init  
- Não fará nada, pois há uma seção crítica.  
+ Não faz nada porque não há nenhuma seção crítica.  
   
 ```
 HRESULT Init() throw();
@@ -84,7 +70,7 @@ HRESULT Init() throw();
  Retorna S_OK.  
   
 ##  <a name="lock"></a>CComFakeCriticalSection::Lock  
- Não fará nada, pois há uma seção crítica.  
+ Não faz nada porque não há nenhuma seção crítica.  
   
 ```
 HRESULT Lock() throw();
@@ -94,7 +80,7 @@ HRESULT Lock() throw();
  Retorna S_OK.  
   
 ##  <a name="term"></a>CComFakeCriticalSection::Term  
- Não fará nada, pois há uma seção crítica.  
+ Não faz nada porque não há nenhuma seção crítica.  
   
 ```
 HRESULT Term() throw();
@@ -104,7 +90,7 @@ HRESULT Term() throw();
  Retorna S_OK.  
   
 ##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
- Não fará nada, pois há uma seção crítica.  
+ Não faz nada porque não há nenhuma seção crítica.  
   
 ```
 HRESULT Unlock() throw();

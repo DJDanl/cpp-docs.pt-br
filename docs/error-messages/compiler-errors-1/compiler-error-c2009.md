@@ -1,5 +1,5 @@
 ---
-title: C2009 de erro do compilador | Documentos do Microsoft
+title: C2009 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 70a03009a636b2bc1ca99c4eb886daafed2d7b9f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2bbae441d7b4c9e57a4080dd643f6563eed6c48e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2009"></a>C2009 de erro do compilador
 reutilização de macro formal 'Identificador'  
   
- Lista de parâmetros formais de uma definição de macro usa o identificador de mais de uma vez. Identificadores na lista de parâmetros da macro devem ser exclusivos.  
+ A lista de parâmetros formais de uma definição de macro usa o identificador de mais de uma vez. Identificadores na lista de parâmetros da macro devem ser exclusivos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2009:  
@@ -61,7 +47,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2009b.cpp  

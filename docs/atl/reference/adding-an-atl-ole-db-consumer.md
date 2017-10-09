@@ -1,5 +1,5 @@
 ---
-title: Adicionando um consumidor ATL OLE DB | Documentos do Microsoft
+title: Adicionando um consumidor ATL OLE DB | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c7202444e1b3aa473060df359dbeb8a8668f65f4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Adicionando um consumidor ATL OLE DB
-Use este assistente para adicionar um consumidor ATL OLE DB a um projeto. Um consumidor ATL OLE DB consiste de um OLE DB acessador classe associações e de dados necessários para acessar uma fonte de dados. O projeto deve ter sido criado como um aplicativo COM ATL, ou como um aplicativo MFC ou Win32 que contém suporte ATL (que o ATL OLE DB consumidor Wizard adiciona automaticamente).  
+Use este assistente para adicionar um consumidor ATL OLE DB a um projeto. Um consumidor ATL OLE DB consiste em um banco de dados OLE acessador classe dados associações e necessárias para acessar uma fonte de dados. O projeto deve ter sido criado como um aplicativo COM ATL ou como um aplicativo MFC ou Win32 que contém suporte ATL (que o ATL OLE DB consumidor assistente adiciona automaticamente).  
   
- **Observação** você pode adicionar um consumidor OLE DB a um projeto. Nesse caso, o OLE DB consumidor assistente ATL adiciona o suporte COM necessário ao seu projeto. Isso pressupõe que, quando você criou o projeto MFC, você selecionou o **controles ActiveX** caixa de seleção (no **recursos avançados** página do Assistente de aplicativo MFC projeto), que é marcado por padrão. Selecionar essa opção garante que o aplicativo chama **CoInitialize** e **CoUninitialize**. Se você não selecionou **controles ActiveX** quando você criou o projeto MFC, você precisará chamar **CoInitialize** e **CoUninitialize** em seu código principal.  
+ **Observação** você pode adicionar um consumidor OLE DB para um projeto MFC. Se você fizer isso, o OLE DB consumidor assistente ATL adiciona o suporte COM necessário ao seu projeto. Isso pressupõe que, quando você criou o projeto MFC, você selecionou o **controles ActiveX** caixa de seleção (no **recursos avançados** página do Assistente de aplicativo MFC projeto), que é marcado por padrão. Selecionar essa opção garante que o aplicativo chama **CoInitialize** e **CoUninitialize**. Se você não selecionou **controles ActiveX** quando você criou o projeto MFC, você precisa chamar **CoInitialize** e **CoUninitialize** em seu código principal.  
   
 ### <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>Para adicionar um consumidor OLE DB ATL ao seu projeto  
   
@@ -51,11 +37,11 @@ Use este assistente para adicionar um consumidor ATL OLE DB a um projeto. Um con
   
 2.  Na pasta do Visual C++, clique duas vezes o **ATL OLE DB consumidor** ícone ou selecione-o e clique em **abrir**.  
   
-     O ATL OLE DB consumidor assistente é aberto.  
+     O OLE DB consumidor assistente ATL é aberto.  
   
 3.  Definir as configurações, conforme descrito em [ATL OLE DB Assistente de consumidor](../../atl/reference/atl-ole-db-consumer-wizard.md).  
   
-4.  Clique em **concluir** para fechar o assistente. O código de consumidor OLE DB recém-criado será inserido no seu projeto.  
+4.  Clique em **concluir** para fechar o assistente. O código de consumidor OLE DB recém-criado será inserido em seu projeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)

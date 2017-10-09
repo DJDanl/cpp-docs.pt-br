@@ -1,5 +1,5 @@
 ---
-title: Estrutura de _ATL_WIN_MODULE70 | Documentos do Microsoft
+title: Estrutura de _ATL_WIN_MODULE70 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,25 +22,11 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlwinmodule70-structure"></a>Estrutura _ATL_WIN_MODULE70
@@ -62,19 +48,19 @@ struct _ATL_WIN_MODULE70 {
  O tamanho da estrutura, usado para controle de versão.  
   
  `m_csWindowCreate`  
- Usado para serializar o acesso a código de registro de janela. Usado internamente pelo ATL.  
+ Usado para serializar o acesso ao código de registro de janela. Usado internamente pelo ATL.  
   
  **m_pCreateWndList**  
- Usado para ligar o windows para seus objetos. Usado internamente pelo ATL.  
+ Usado para associar o windows para seus objetos. Usado internamente pelo ATL.  
   
  **m_rgWindowClassAtoms**  
- Usado para controlar os registros de classe de janela para que eles possam ser registrados corretamente no encerramento. Usado internamente pelo ATL.  
+ Usado para controlar os registros de classe de janela para que eles possam ser corretamente seu registro cancelados no encerramento. Usado internamente pelo ATL.  
   
 ## <a name="remarks"></a>Comentários  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) é definido como um typedef de `_ATL_WIN_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas](../../atl/reference/atl-structures.md)

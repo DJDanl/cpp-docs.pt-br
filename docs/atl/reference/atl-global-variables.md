@@ -1,5 +1,5 @@
 ---
-title: "Variáveis globais ATL | Documentos do Microsoft"
+title: "Variáveis globais ATL | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,28 +18,14 @@ caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fa05caf6e590c8cf6a14c72d4e0a80fb1fb408f9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 0a7f17415ce6df7070ef2e8b57857902ef02fa91
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="atl-global-variables"></a>Variáveis globais ATL
+# <a name="atl-global-variables"></a>Variáveis globais do ATL
 
 
 

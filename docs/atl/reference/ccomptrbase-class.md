@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|O operador cast.|  
 |[CComPtrBase::operator!](#operator_not)|O operador NOT.|  
-|[CComPtrBase::operator &](#operator_amp)|O & operador.|  
+|[CComPtrBase::operator &](#operator_amp)|A & operador.|  
 |[CComPtrBase::operator *](#operator_star)|O * operador.|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|O menor-que o operador.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|O menor-que o operador.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|O operador de igualdade.|  
-|[CComPtrBase::operator->](#operator_ptr)|O operador de ponteiro para membros.|  
+|[CComPtrBase::operator ->](#operator_ptr)|O operador de ponteiro para membros.|  
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Parâmetros  
  `pOther`  
- O **IUnknown \*** para comparar.  
+ O **IUnknown \***  para comparar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna true se os objetos são idênticos, FALSO caso contrário.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  Retornará true se o `CComHeapPtr` ponteiro é igual a NULL, FALSO caso contrário.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- O & operador.  
+ A & operador.  
   
 ```
 T** operator&() throw();

@@ -1,5 +1,5 @@
 ---
-title: Estrutura de _AtlCreateWndData | Documentos do Microsoft
+title: Estrutura de _AtlCreateWndData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 300295629d3aad5a4c688d90e6f9dcc75e135a14
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcreatewnddata-structure"></a>Estrutura _AtlCreateWndData
-Essa estrutura contém dados de instância de classe no código em janela em ATL.  
+Essa estrutura contém dados de instância de classe no código de janelas em ATL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,7 +53,7 @@ Essa estrutura contém dados de instância de classe no código em janela em ATL
  Ponteiro para o próximo `_AtlCreateWndData` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ## <a name="see-also"></a>Consulte também  
  [Estruturas](../../atl/reference/atl-structures.md)
