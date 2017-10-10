@@ -1,5 +1,5 @@
 ---
-title: C2592 de erro do compilador | Documentos do Microsoft
+title: C2592 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f5d1ba0dec5b555f50c9fd6848e2d5a38020fff
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5f6483a168ffe5f7b487932770226c834b7fd611
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2592"></a>C2592 de erro do compilador
 'class': 'base_class_2' é herdado de 'base_class_1' e não pode ser especificado novamente  
   
- Você só pode especificar classes base que não herdam de outras classes base. Nesse caso, somente `base_class_1` é necessária na especificação de `class` porque `base_class_1` já herda `base_class_2`.
+ Você só pode especificar classes base que não herdar de outras classes base. Nesse caso, somente `base_class_1` é necessária na especificação de `class` porque `base_class_1` já herda `base_class_2`.

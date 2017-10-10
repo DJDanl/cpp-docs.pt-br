@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1900 | Documentos do Microsoft
+title: Erro fatal C1900 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5444945546dc23b494c65caa9a53b092f3b34697
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3b64061401189fb37f28492fbffe1e9941e8aab8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1900"></a>Erro fatal C1900
 II Incompatibilidade entre a versão "number1" da "tool1" e a versão "number2" da "tool2"  
   
- As ferramentas executadas em vários passos do compilador não correspondem. ***Número1*** e ***Número2*** consulte as datas nos arquivos. Por exemplo, na etapa 1, o front-end do compilador é executado (c1.dll) e na etapa 2, o back-end do compilador é executado (c2.dll). As datas nos arquivos devem ser correspondentes.  
+ As ferramentas executadas em vários passos do compilador não correspondem. ***Número1*** e ***Número2*** se referir às datas nos arquivos. Por exemplo, na etapa 1, o front-end do compilador é executado (c1.dll) e na etapa 2, o back-end do compilador é executado (c2.dll). As datas nos arquivos devem ser correspondentes.  
   
  Para corrigir esse problema, certifique-se de que todas as atualizações foram aplicadas ao Visual Studio. Se o problema persistir, use **programas e recursos** no painel de controle do Windows para reparar ou reinstalar o Visual Studio.

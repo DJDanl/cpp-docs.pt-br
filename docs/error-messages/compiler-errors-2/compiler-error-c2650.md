@@ -1,5 +1,5 @@
 ---
-title: C2650 de erro do compilador | Documentos do Microsoft
+title: C2650 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 537fe712e36da448ea26103e0ee338f18a3eb2a0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3352820434c8d794d4980a606cb945bd8ecc4a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2650"></a>C2650 de erro do compilador
 'operator': não pode ser uma função virtual  
   
- A `new` ou `delete` operador é declarado `virtual`. Esses operadores são `static` funções de membro e não pode ser `virtual`.  
+ Um `new` ou `delete` operador é declarado `virtual`. Esses operadores são `static` funções de membro e não pode ser `virtual`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2650:  

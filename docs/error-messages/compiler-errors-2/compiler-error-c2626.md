@@ -1,5 +1,5 @@
 ---
-title: C2626 de erro do compilador | Documentos do Microsoft
+title: C2626 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f435fff2208d4ac2c2f48ea9e27475d3943a15fb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54cee1b985f53e25a0ceb2426231440f1a1bd9bb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2626"></a>C2626 de erro do compilador
-'identifier': um membro de dados particular ou protegido não é permitido em uma estrutura anônima ou união  
+'Identificador': um membro de dados particular ou protegido não é permitido em uma struct anônima ou union  
   
- Um membro de um struct anônimo ou de união deve ter acesso público.  
+ Um membro de união ou struct anônima deve ter acesso público.  
   
  O exemplo a seguir gera C2626:  
   
@@ -59,7 +45,7 @@ int main() {
 }  
 ```  
   
- Para corrigir esse problema, remova quaisquer marcas particulares ou protegidas:  
+ Para corrigir esse problema, remova as marcas particulares ou protegidas:  
   
 ```  
 // C2626b.cpp  

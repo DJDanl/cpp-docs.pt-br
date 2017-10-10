@@ -1,5 +1,5 @@
 ---
-title: C2743 de erro do compilador | Documentos do Microsoft
+title: C2743 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>C2743 de erro do compilador
-'type': não é possível capturar um tipo nativo com o destruidor de clrcall ou Construtor de cópia  
+'type': não é possível capturar um tipo nativo com clrcall destruidor ou Construtor de cópia  
   
- Um módulo compilado com **/clr** tentou capturar uma exceção de tipo nativo e onde o tipo destruidor ou Construtor de cópia usa `__clrcall` convenção de chamada.  
+ Um módulo compilado com **/clr** tentou capturar uma exceção do tipo nativo e onde o tipo destruidor ou Construtor de cópia usa `__clrcall` convenção de chamada.  
   
- Quando compilado com **/clr**, tratamento de exceção espera que as funções de membro em um tipo nativo para ser [cdecl](../../cpp/cdecl.md) e não [clrcall](../../cpp/clrcall.md). Tipos nativos com funções de membro usando `__clrcall` convenção de chamada não pode ser detectada em um módulo compilado com **/clr**.  
+ Quando compilado com **/clr**, tratamento de exceção espera que as funções de membro em um tipo nativo seja [cdecl](../../cpp/cdecl.md) e não [clrcall](../../cpp/clrcall.md). Tipos nativos com funções de membro usando `__clrcall` convenção de chamada não pode ser capturada em um módulo compilado com **/clr**.  
   
  Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

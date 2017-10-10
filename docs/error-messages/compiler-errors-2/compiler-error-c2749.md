@@ -1,5 +1,5 @@
 ---
-title: C2749 de erro do compilador | Documentos do Microsoft
+title: C2749 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f69795d2beda90a2b06957f3ab4c8bc35767139e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23eb174bd161f14351fae18ae4aba72f427da4ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2749"></a>C2749 de erro do compilador
-'type': somente pode lançar ou capturar o identificador para uma classe gerenciada com /CLR: safe  
+'type': somente pode usar throw ou catch com identificador em uma classe gerenciada com /CLR: safe  
   
- Ao usar **/CLR: safe**, você somente pode lançar ou capturar um tipo de referência.  
+ Ao usar **/CLR: safe**, somente você pode lançar ou capturar um tipo de referência.  
   
  Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

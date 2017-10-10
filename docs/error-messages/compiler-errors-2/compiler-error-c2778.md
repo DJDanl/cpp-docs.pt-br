@@ -1,5 +1,5 @@
 ---
-title: C2778 de erro do compilador | Documentos do Microsoft
+title: C2778 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8c1d684480b230d824abc2e5b20ff926fa34efad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d3801f7ddef23f90a76007a09fdc7a2d552b7fdb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2778"></a>C2778 de erro do compilador
 GUID formado de modo inadequado em __declspec(uuid())  
   
- Um GUID incorreto é fornecido para o [uuid](../../cpp/uuid-cpp.md) atributo estendido.  
+ Um GUID incorreto é fornecido para o [uuid](../../cpp/uuid-cpp.md) atributos estendidos.  
   
- O GUID deve ser uma sequência de números hexadecimais com o seguinte formato:  
+ O GUID deve ser uma cadeia de caracteres de números hexadecimais com o seguinte formato:  
   
 ```  
 // C2778a.cpp  
@@ -54,7 +40,7 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
 ```  
   
- O `uuid` atributo estendido aceita cadeias de caracteres reconhecidas pelo [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589), com ou sem delimitadores.  
+ O `uuid` atributo estendido aceita cadeias de caracteres reconhecidas pelo [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589), com ou sem delimitadores de chave.  
   
  O exemplo a seguir gera C2778:  
   

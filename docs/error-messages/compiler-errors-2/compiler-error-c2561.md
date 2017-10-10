@@ -1,5 +1,5 @@
 ---
-title: C2561 de erro do compilador | Documentos do Microsoft
+title: C2561 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,39 +19,25 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f6a436024bcb48c67f4ef28c4ca94baaf5375d4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ce30ffb454deb7bc847e736458295d037826a0ad
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2561"></a>C2561 de erro do compilador
-'identifier': função deve retornar um valor  
+'Identificador': função deve retornar um valor  
   
- A função foi declarada como retornando um valor, mas a definição de função não contém um `return` instrução.  
+ A função foi declarada como retornar um valor, mas a definição da função não tem um `return` instrução.  
   
- Esse erro pode ser causado por um protótipo de função incorreta:  
+ Esse erro pode ser causado por um protótipo de função incorreto:  
   
 1.  Se a função não retorna um valor, declare a função com o tipo de retorno [void](../../cpp/void-cpp.md).  
   
 2.  Verifique se todas as possíveis ramificações da função retornam um valor do tipo declarado no protótipo.  
   
-3.  Funções C++ que contém rotinas de assembly embutido que armazenam o valor de retorno de `AX` Registro talvez seja necessário uma instrução return. Copie o valor em `AX` a uma variável temporária e a variável de retorno da função.  
+3.  Funções C++ que contém rotinas de assembly embutido que armazena o valor de retorno de `AX` registro terá uma instrução return. Copie o valor no `AX` em uma variável temporária e variável de retorno da função.  
   
  O exemplo a seguir gera C2561:  
   

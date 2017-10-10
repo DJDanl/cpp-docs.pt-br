@@ -1,5 +1,5 @@
 ---
-title: C2688 de erro do compilador | Documentos do Microsoft
+title: C2688 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ad2db9fd2777e42feae812621738a5b2be7a6d8e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eaacdb4c7404dd370de31ad1bca6c07391279584
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2688"></a>C2688 de erro do compilador
-'C2::fgrv': retorna covariante múltiplas ou herança virtual não tem suportado para funções varargs  
+'C2::fgrv': retornos covariantes com múltiplas heranças ou herança virtual não tem suportada para funções varargs  
   
  Não há suporte para tipos de retorno covariante no Visual C++ quando uma função contém argumentos de variável.  
   
- Para resolver este erro, defina suas funções para que eles não usam argumentos variáveis ou os valores de retorno de fazer o mesmo para todas as funções virtuais.  
+ Para resolver esse erro, defina suas funções para que eles não usam argumentos de variável ou os valores de retorno de fazer o mesmo para todas as funções virtuais.  
   
  O exemplo a seguir gera C2688:  
   

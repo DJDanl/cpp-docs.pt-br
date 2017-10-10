@@ -1,5 +1,5 @@
 ---
-title: C2718 de erro do compilador | Documentos do Microsoft
+title: C2718 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e1321c48c9050902d4aceac54ca76deb9428a700
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e3243d75f6bf1b389d624a85d04625f9bf0d368
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2718"></a>C2718 de erro do compilador
-'parâmetro': parâmetro real com __declspec(align('#')) não alinhado  
+'parameter': parâmetro real com __declspec(align('#')) não alinhado  
   
  O [alinhar](../../cpp/align-cpp.md) `__declspec` modificador não é permitido em parâmetros de função.  
   

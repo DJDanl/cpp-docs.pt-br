@@ -1,5 +1,5 @@
 ---
-title: C2758 de erro do compilador | Documentos do Microsoft
+title: C2758 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 381f659400965f2f13c757bfe22114ee132f24dd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f694df9f39edbc257b887bcfd9bd13a0ba31a1a0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2758"></a>C2758 de erro do compilador
 'member': um membro de tipo de referência deve ser inicializado  
   
- Erro do compilador C2758 é causado quando o construtor não inicializar um membro de tipo de referência em uma lista de inicializadores. O compilador deixa o membro indefinido. Membro de referência devem variáveis inicializado quando declaradas ou receberá um valor na lista de inicialização do construtor.  
+ Erro de compilador C2758 é causado quando o construtor não inicializar um membro de tipo de referência em uma lista de inicializadores. O compilador deixa o membro indefinido. Membro de referência devem variáveis inicializado quando declarados ou receberá um valor na lista de inicialização do construtor.  
   
  O exemplo a seguir gera C2758:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2682 de erro do compilador | Documentos do Microsoft
+title: C2682 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5b44d0cd891737f5fbd7a2870a6707568a729946
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3df494f5d78a862e260fa4edfe0a2740e4fc8cdd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2682"></a>C2682 de erro do compilador
 não é possível usar casting_operator para converter de 'type1' em 'type2'  
   
- Um operador de conversão tentou converter entre tipos incompatíveis. Por exemplo, você não pode usar o [dynamic_cast](../../cpp/dynamic-cast-operator.md) operador para converter um ponteiro para uma referência. O `dynamic_cast` operador não pode ser usado para eliminar qualificadores. Todos os qualificadores nos tipos devem corresponder.  
+ Tentativa de um operador de conversão converter entre tipos incompatíveis. Por exemplo, você não pode usar o [dynamic_cast](../../cpp/dynamic-cast-operator.md) para converter um ponteiro para uma referência. O `dynamic_cast` operador não pode ser usado para eliminar qualificadores. Todos os qualificadores nos tipos devem corresponder.  
   
- Você pode usar o `const_cast` operador para remover os atributos como `const`, `volatile`, ou `__unaligned`.  
+ Você pode usar o `const_cast` operador para remover atributos como `const`, `volatile`, ou `__unaligned`.  
   
  O exemplo a seguir gera C2682:  
   

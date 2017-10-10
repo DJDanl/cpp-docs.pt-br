@@ -1,5 +1,5 @@
 ---
-title: C2784 de erro do compilador | Documentos do Microsoft
+title: C2784 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d02b545bfb7567f04e2cf6cc620609979b555b36
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c65b03e098b1e0917e554052ee3c8ebfa7181193
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2784"></a>C2784 de erro do compilador
-'declaração de ': não foi possível deduzir o argumento de modelo para 'type' de 'type'  
+'declaração de ': não foi possível deduzir argumento de template para 'type' de 'type'  
   
- O compilador não pode determinar um argumento de modelo de argumentos da função fornecido.  
+ O compilador não pode determinar um argumento de template de argumentos da função fornecido.  
   
  O exemplo a seguir gera C2784 e mostra como corrigi-lo:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2612 de erro do compilador | Documentos do Microsoft
+title: C2612 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a9b997d781839017f1c05041b823da8a39bcdf3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51859278f3f1651bfa183eaaeaeae25802fd8cf7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2612"></a>C2612 de erro do compilador
-à direita 'char' inválida na lista de inicializador de membro/base  
+à direita 'char' inválida na lista de inicializadores de base/membro  
   
  Um caractere é exibida após a última base ou membro em uma lista de inicializadores.  
   

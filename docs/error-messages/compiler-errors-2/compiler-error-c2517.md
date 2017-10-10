@@ -1,5 +1,5 @@
 ---
-title: C2517 de erro do compilador | Documentos do Microsoft
+title: C2517 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 57cc04f43000ef06e00ad67b62bedc0137745278
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ffea60522817fe9e1942b1c622f19bdc135f0a45
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2517"></a>C2517 de erro do compilador
-'identifier': direito de ': ' é indefinido  
+'Identificador': direita de ':: ' é indefinido  
   
- O identificador à direita do operador de resolução de escopo (`::`) deve ser um membro definido de classe, estrutura ou união à esquerda. Se nenhuma classe, estrutura ou união é chamada, o identificador da direita deve ser declarado com escopo global.
+ O identificador de à direita do operador de resolução do escopo (`::`) deve ser um membro definido de classe, estrutura ou união à esquerda. Se nenhuma classe, estrutura ou união for chamado, o identificador da direita deve ser declarado com escopo global.

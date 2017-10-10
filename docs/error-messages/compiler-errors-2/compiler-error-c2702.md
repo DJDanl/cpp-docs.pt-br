@@ -1,5 +1,5 @@
 ---
-title: C2702 de erro do compilador | Documentos do Microsoft
+title: C2702 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0e188ab8da0ef261771e0081b58bbc0143ea1890
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f95a98262f9c7c00850575af883e4269590ead8e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2702"></a>C2702 de erro do compilador
-__except não deve aparecer em bloco de terminação  
+EXCEPT não pode aparecer em bloco de terminação  
   
- Um manipulador de exceção (`__try`/`__except`) não pode ser aninhada em uma `__finally` bloco.  
+ Um manipulador de exceção (`__try`/`__except`) não pode ser aninhado dentro de um `__finally` bloco.  
   
  O exemplo a seguir gera C2702:  
   

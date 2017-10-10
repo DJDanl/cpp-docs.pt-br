@@ -1,5 +1,5 @@
 ---
-title: C2764 de erro do compilador | Documentos do Microsoft
+title: C2764 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f8230d62dfe02f5bdddb16b0214fb9da033da4c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18e32646c3930dfae79ffd1ed13dfa014da4ce1a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2764"></a>C2764 de erro do compilador
-'param': parâmetro de modelo não usado ou deducible na especialização parcial 'especialização'  
+'param': parâmetro de modelo não usado ou dedutível em especialização parcial 'especialização'  
   
  Um parâmetro de modelo não é usado em uma especialização parcial. Isso torna a especialização parcial inutilizável porque o parâmetro de modelo não pode ser deduzido.  
   

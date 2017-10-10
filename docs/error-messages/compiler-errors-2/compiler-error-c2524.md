@@ -1,5 +1,5 @@
 ---
-title: C2524 de erro do compilador | Documentos do Microsoft
+title: C2524 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bd3e848ff9db59f17232025bc8655a1099c2d3c8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0b80ac9029f530b68afdc379d7660bba1ff76cb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2524"></a>C2524 de erro do compilador
-'destruidor': um destruidor/finalizador deve ter uma lista de parâmetro 'void'  
+'destruidor': um destruidor/finalizador deve ter uma lista de parâmetros 'void'  
   
- O destruidor ou finalizador tivesse uma lista de parâmetro que não seja [void](../../cpp/void-cpp.md). Outros tipos de parâmetros não são permitidos.  
+ O destruidor ou finalizador tinha uma lista de parâmetros que não seja [void](../../cpp/void-cpp.md). Outros tipos de parâmetros não são permitidos.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir reproduz C2524.  

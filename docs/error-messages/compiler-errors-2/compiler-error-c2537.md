@@ -1,5 +1,5 @@
 ---
-title: C2537 de erro do compilador | Documentos do Microsoft
+title: C2537 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 35afab4b6d37b7805ddfc26163fa7b3966438fa3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 610fe53b68ccfa9f0ec187356a737e67837656a4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2537"></a>C2537 de erro do compilador
-'especificador de ': especificação de vinculação ilegal  
+'especificador': especificação de vínculo inválida  
   
  Possíveis causas:  
   
-1.  Não há suporte para o especificador de vinculação. Há suporte para o especificador de vinculação "C".  
+1.  Não há suporte para o especificador de vinculação. Há suporte para apenas o especificador de ligação "C".  
   
-2.  Vinculação de "C" é especificada para mais de uma função em um conjunto de funções sobrecarregadas. Isso não é permitido.  
+2.  Ligação "C" é especificada mais de uma função em um conjunto de funções sobrecarregadas. Isso não é permitido.  
   
  O exemplo a seguir gera C2537:  
   

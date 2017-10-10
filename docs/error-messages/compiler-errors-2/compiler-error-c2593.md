@@ -1,5 +1,5 @@
 ---
-title: C2593 de erro do compilador | Documentos do Microsoft
+title: C2593 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a9028227315c1887d226a8fd4833f57346ace62c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cb0b752259503f7e14cd78298e487f5304e13a0d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2593"></a>C2593 de erro do compilador
-'operador identifier' é ambíguo  
+'Identificador do operador' é ambíguo  
   
  Mais de um operador possíveis é definido para um operador sobrecarregado.  
   
- Esse erro pode ser corrigido se você usar uma conversão explícita em um ou mais parâmetros reais.  
+ Esse erro pode ser corrigido, se você usar uma conversão explícita em um ou mais parâmetros reais.  
   
  O exemplo a seguir gera C2593:  
   
@@ -65,7 +51,7 @@ int main() {
 }  
 ```  
   
- Esse erro pode ser causado pela serialização uma variável ponto flutuante usando um `CArchive` objeto. O compilador identifica o `<<` operador como ambígua. O C++ apenas primitivos tipos que `CArchive` pode serializar os tipos de tamanho fixo `BYTE`, `WORD`, `DWORD`, e `LONG`. Todos os tipos de inteiro devem ser convertidos em um desses tipos para serialização. Tipos de ponto flutuante devem ser arquivados usando o `CArchive::Write()` função de membro.  
+ Esse erro pode ser causado pela serialização de uma variável ponto flutuante usando um `CArchive` objeto. O compilador identifica o `<<` operador como ambígua. Tipos de C++ somente primitivo `CArchive` pode serializar os tipos de tamanho fixo `BYTE`, `WORD`, `DWORD`, e `LONG`. Todos os tipos de inteiro devem ser convertidos em um desses tipos de serialização. Tipos de ponto flutuante devem ser arquivados usando o `CArchive::Write()` função de membro.  
   
  O exemplo a seguir mostra como arquivar uma variável de ponto flutuante (`f`) ao arquivo `ar`:  
   

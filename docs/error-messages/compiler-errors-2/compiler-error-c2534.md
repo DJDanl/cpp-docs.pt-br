@@ -1,5 +1,5 @@
 ---
-title: C2534 de erro do compilador | Documentos do Microsoft
+title: C2534 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 39c60c7a4f35034878ac803ebd740c2039d086e6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee5b0e009833ca4f67f87bb234881b044215d5f0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2534"></a>C2534 de erro do compilador
-'identifier': construtor não pode retornar um valor  
+'Identificador': construtor não pode retornar um valor  
   
- Um construtor não pode retornar um valor ou têm um tipo de retorno (nem mesmo um `void` tipo de retorno).  
+ Um construtor não pode retornar um valor ou têm um tipo de retorno (nem mesmo uma `void` tipo de retorno).  
   
- Esse erro pode ser corrigido removendo o `return` instrução da definição do construtor.  
+ Esse erro pode ser corrigido, removendo o `return` instrução da definição de construtor.  
   
  O exemplo a seguir gera C2534:  
   

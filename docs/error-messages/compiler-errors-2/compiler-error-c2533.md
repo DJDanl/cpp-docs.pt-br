@@ -1,5 +1,5 @@
 ---
-title: C2533 de erro do compilador | Documentos do Microsoft
+title: C2533 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b297f25128d7ef67455ff68c9a60e3141550e737
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c21849c7318ac4f169bf7104a478fa57ba7dd040
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2533"></a>C2533 de erro do compilador
-'identifier': os construtores não permitidos um tipo de retorno  
+'Identificador': construtores não permitidas um tipo de retorno  
   
- Um construtor não pode ter um tipo de retorno (nem mesmo um `void` tipo de retorno).  
+ Um construtor não pode ter um tipo de retorno (nem mesmo uma `void` tipo de retorno).  
   
- Uma origem comum desse erro é um ponto e vírgula ausente entre o fim de uma definição de classe e a primeira implementação do construtor. O compilador considera a classe como uma definição do tipo de retorno da função de construtor e gera C2533.  
+ Uma fonte comum desse erro é um ponto e vírgula ausente entre o fim de uma definição de classe e a implementação de construtor primeiro. O compilador considera a classe como uma definição do tipo de retorno da função de construtor e gera C2533.  
   
  O exemplo a seguir gera C2533 e mostra como corrigi-lo:  
   
