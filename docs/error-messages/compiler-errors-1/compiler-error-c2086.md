@@ -1,5 +1,5 @@
 ---
-title: C2086 de erro do compilador | Documentos do Microsoft
+title: C2086 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bd755665cb777ec0e9ed781bf1e95605ac1d227c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 36270e50049889e5c6819a22b6b6e35d4c7d2caf
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2086"></a>C2086 de erro do compilador
-'identifier': redefinição  
+'Identificador': redefinição  
   
- O identificador está definido mais de uma vez, ou uma declaração subsequente é diferente da anterior.  
+ O identificador está definido mais de uma vez, ou uma declaração subsequente difere do anterior.  
   
- C2086 também pode ser o resultado de construção incremental de um assembly referenciado do c#. Recompile o assembly c# para resolver esse erro.  
+ C2086 também pode ser o resultado da compilação incremental para um assembly referenciado do c#. Recompile o assembly do c# para resolver esse erro.  
   
  O exemplo a seguir gera C2086:  
   

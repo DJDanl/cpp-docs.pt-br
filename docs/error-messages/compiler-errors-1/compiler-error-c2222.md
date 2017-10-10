@@ -1,5 +1,5 @@
 ---
-title: C2222 de erro do compilador | Documentos do Microsoft
+title: C2222 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f95e8c4b2d787772ca0c2387c5d29caabfd09681
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a2aa31bab935d92b9080030669ed9c7be03fb26
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2222"></a>C2222 de erro do compilador
-tipo inesperado 'type': uma classe base ou membro era esperado  
+tipo inesperado 'type': uma classe base ou um membro era esperado  
   
- A lista de inicializadores pode inicializar apenas classes base ou membros de um tipo. Para corrigir esse erro, verifique se que classes base apenas ou membros do tipo são inicializados na lista de inicializadores.
+ A lista de inicializadores só pode inicializar classes base ou membros de um tipo. Para corrigir esse erro, verifique se que as classes base apenas ou membros do tipo são inicializados na lista de inicializador.

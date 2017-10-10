@@ -1,5 +1,5 @@
 ---
-title: C2224 de erro do compilador | Documentos do Microsoft
+title: C2224 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 569978ff15a0af5fc6cceb6b589a3eaa30284a96
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9c69e8487661a8caaeeeabfe59166bceac9cce3f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2224"></a>C2224 de erro do compilador
-à esquerda de '.identifier' deve ser do tipo de estrutura/união  
+esquerda de '.identifier' deve ter o tipo de struct/união  
   
- O operando para a esquerda do ponto (.) não é uma classe, estrutura ou união.  
+ O operando à esquerda do período (.) não é uma classe, estrutura ou união.  
   
- Esse erro pode ser causado por um operando esquerdo é uma variável de indefinido (portanto, digite `int`).
+ Esse erro pode ser causado por um operando esquerdo que é uma variável indefinida (portanto, digite `int`).

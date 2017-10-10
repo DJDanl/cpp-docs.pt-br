@@ -1,5 +1,5 @@
 ---
-title: C2044 de erro do compilador | Documentos do Microsoft
+title: C2044 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9e3e5dbc1eb59ecb0fc5d0a93153a02a1bc1c3f3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ad9012830195d50969dbadc1fc5846cccda6acb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2044"></a>C2044 de erro do compilador
-continue inválido  
+continuar ilegal  
   
- A [continuar](../../cpp/continue-statement-cpp.md) é válido somente dentro de um `do`, `for`, ou `while` instrução.
+ Um [continuar](../../cpp/continue-statement-cpp.md) é válido somente dentro de um `do`, `for`, ou `while` instrução.

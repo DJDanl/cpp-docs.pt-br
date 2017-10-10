@@ -1,5 +1,5 @@
 ---
-title: C2217 de erro do compilador | Documentos do Microsoft
+title: C2217 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2bdb30cf9022f8c9bf489a056c21f12eb183c203
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2217"></a>C2217 de erro do compilador
 'attribute1' requer 'attribute2'  
   
- O primeiro atributo de função requer o segundo atributo.  
+ O primeiro atributo de função requer que o segundo atributo.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 02/25/2017
 2.  Interromper a função declarada com `__stdcall`, ou `__fastcall`. Funções de interrupção deve usar C convenções de chamada.  
   
 ## <a name="example"></a>Exemplo  
- C2217 também pode ocorrer se você tentar associar um delegado para uma função CLR que aceita um número variável de argumentos. Se a função também tem sobrecarga de matriz e parâmetro, use-a. O exemplo a seguir gera C2217.  
+ C2217 também pode ocorrer se você tentar associar um delegado para uma função CLR que usa um número variável de argumentos. Se a função também tem sobrecarga de matriz e parâmetro, use-a. O exemplo a seguir gera C2217.  
   
 ```  
 // C2217.cpp  

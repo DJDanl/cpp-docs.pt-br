@@ -1,5 +1,5 @@
 ---
-title: C2039 de erro do compilador | Documentos do Microsoft
+title: C2039 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1ac1c16cff49587c8822dbaf67a2bbff1a5aff9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2039"></a>C2039 de erro do compilador
 'identifier1': não é um membro de 'identifier2'  
   
- Incorretamente, o código chama ou se refere a um membro de classe, estrutura ou união.  
+ O código incorretamente chama ou se refere a um membro de classe, estrutura ou união.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2039.  
@@ -127,7 +112,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2039 também pode ocorrer se você usar genéricos. O exemplo a seguir gera C2039.  
+ C2039 também poderá ocorrer se você usar genéricos. O exemplo a seguir gera C2039.  
   
 ```  
 // C2039_f.cpp  

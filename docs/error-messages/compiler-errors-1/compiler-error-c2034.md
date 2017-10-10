@@ -1,5 +1,5 @@
 ---
-title: C2034 de erro do compilador | Documentos do Microsoft
+title: C2034 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e7a3081fd1a2dad6f4f7986a66f1cb6647aefd8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: df3d2310a5f066fdb937900abe545c16f5526508
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2034"></a>C2034 de erro do compilador
-'identifier': tipo de campo de bits muito pequeno para o número de bits  
+'Identificador': tipo de campo de bits muito pequeno para número de bits  
   
- O número de bits na declaração do campo de bit excede o tamanho do tipo base.  
+ O número de bits na declaração de campo de bits excede o tamanho do tipo base.  
   
  O exemplo a seguir gera C2034:  
   
@@ -54,7 +40,7 @@ struct A {
 };  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2034b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C2228 de erro do compilador | Documentos do Microsoft
+title: C2228 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3e1a7fb29d792a5b72c2f6b67021c134c224bac2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>C2228 de erro do compilador
-à esquerda de '.identifier' deve ter a classe/estrutura/união  
+esquerda de '.identifier' deve ter uma classe/struct/união  
   
- O operando para a esquerda do ponto (.) não é uma classe, estrutura ou união.  
+ O operando à esquerda do período (.) não é uma classe, estrutura ou união.  
   
  O exemplo a seguir gera C2228:  
   
@@ -65,7 +50,7 @@ int main() {
 }  
 ```  
   
- Você também verá esse erro se você usar a sintaxe incorreta ao usar extensões gerenciadas. Enquanto em outras linguagens do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para o objeto em C++ significa que você deve usar o-> operador para acessar o membro:  
+ Você também verá esse erro se você usar uma sintaxe incorreta ao usar extensões gerenciadas. Enquanto em outros idiomas do Visual Studio, você pode usar o operador ponto para acessar um membro de uma classe gerenciada, um ponteiro para o objeto em C++ significa que você deve usar o operador para acessar o membro ->:  
   
  Errado:`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   

@@ -1,5 +1,5 @@
 ---
-title: C2220 de erro do compilador | Documentos do Microsoft
+title: C2220 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,39 +19,25 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 12e7cb41c9092db7c62aaab30bec76478123b410
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc31519b2153c66ea9bab42f536ba7c6be5b2a10
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2220"></a>C2220 de erro do compilador
 Aviso tratado como erro - nenhum arquivo de objeto gerado  
   
- [/WX](../../build/reference/compiler-option-warning-level.md) instrui o compilador a tratar todos os avisos como erros. Porque ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.  
+ [/WX](../../build/reference/compiler-option-warning-level.md) informa ao compilador trate todos os avisos como erros. Porque ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.  
   
- Este erro só aparece quando o **/WX** sinalizador está definido e ocorrer um aviso durante a compilação. Para corrigir esse erro, você deve excluir cada aviso em seu projeto.  
+ Esse erro aparece somente quando o **/WX** sinalizador é definido e ocorrer um aviso durante a compilação. Para corrigir esse erro, você deve eliminar cada aviso em seu projeto.  
   
 ### <a name="to-fix-use-one-of-the-following-techniques"></a>Para corrigir, use uma das seguintes técnicas  
   
 -   Corrija os problemas que causam avisos em seu projeto.  
   
--   Compilar em um nível inferior de aviso — por exemplo, use **/W3** em vez de **/W4**.  
+-   Em um nível inferior do aviso de compilação — por exemplo, use **/W3** em vez de **/W4**.  
   
 -   Use um [aviso](../../preprocessor/warning.md) pragma para desabilitar ou suprimir um aviso específico.  
   

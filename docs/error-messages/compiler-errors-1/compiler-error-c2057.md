@@ -1,5 +1,5 @@
 ---
-title: C2057 de erro do compilador | Documentos do Microsoft
+title: C2057 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9246c5714fb0e75ff788b652f7ed9058a001fb4a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e42871d8dd267d08282375de0df9efb4f828734
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2057"></a>C2057 de erro do compilador
-esperada expressão constante  
+expressão de constante esperada  
   
  O contexto requer uma expressão constante, uma expressão cujo valor é conhecido em tempo de compilação.  
   
@@ -61,7 +47,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C tem regras mais restritivas para expressões constantes.  O exemplo a seguir gera C2057 e mostra como corrigi-lo:  
+ C tem regras mais restritivas para expressões de constante.  O exemplo a seguir gera C2057 e mostra como corrigi-lo:  
   
 ```  
 // C2057b.c  

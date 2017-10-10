@@ -1,5 +1,5 @@
 ---
-title: C2041 de erro do compilador | Documentos do Microsoft
+title: C2041 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fb681c3ca493c7588ea26dfb2fc416d0fbd02db6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4102f95b5a48860cba2e9ec79d2d5c22cd1413cf
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2041"></a>C2041 de erro do compilador
-Dígito ilegal 'character' base 'number'  
+dígitos inválidos 'character' para 'número' base  
   
  O caractere especificado não é um dígito válido para a base (como octal ou hexadecimal).  
   
@@ -52,7 +38,7 @@ Dígito ilegal 'character' base 'number'
 int i = 081;   // C2041  8 is not a base 8 digit  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2041b.cpp  

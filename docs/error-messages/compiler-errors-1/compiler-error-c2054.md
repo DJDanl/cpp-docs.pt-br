@@ -1,5 +1,5 @@
 ---
-title: C2054 de erro do compilador | Documentos do Microsoft
+title: C2054 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dbaf9a6589c939952b2965998d56366f1698c3d8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ab12a8395f3587f0fbdca5ad821cd9ec2241d25
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2054"></a>C2054 de erro do compilador
@@ -45,7 +31,7 @@ esperado ' (' a seguir 'Identificador'
   
  O identificador de função é usado em um contexto que requer parênteses à direita.  
   
- Esse erro pode ser causado por um sinal de igual (=) em uma inicialização complexa a omissão.  
+ Esse erro pode ser causado omitindo um sinal de igual (=) em uma inicialização complexo.  
   
  O exemplo a seguir gera C2054:  
   
@@ -54,7 +40,7 @@ esperado ' (' a seguir 'Identificador'
 int array1[] { 1, 2, 3 };   // C2054, missing =  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2054b.c  

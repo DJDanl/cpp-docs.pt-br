@@ -1,5 +1,5 @@
 ---
-title: C2223 de erro do compilador | Documentos do Microsoft
+title: C2223 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4a0013899b4f0dac6831992089fcde5b3132774f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60fd15e0e514e30f62be32c4b465536deb7e252d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2223"></a>C2223 de erro do compilador
-à esquerda do 'Identificador->' deve apontar para a estrutura/união  
+esquerda de '-> identificador' deve apontar para struct/união  
   
- O operando à esquerda da `->` não é um ponteiro para uma classe, estrutura ou união.  
+ O operando à esquerda do `->` não é um ponteiro para uma classe, estrutura ou união.  
   
- Esse erro pode ser causado por um operando esquerdo é uma variável de indefinido (portanto, digite `int`).
+ Esse erro pode ser causado por um operando esquerdo que é uma variável indefinida (portanto, digite `int`).
