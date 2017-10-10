@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1054 | Documentos do Microsoft
+title: Erro fatal C1054 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dad2a6f88563f805d00c3d44590084d29da132bf
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d02d8eb05633d7250dc3f7ee85dd78ccf4153052
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1054"></a>Erro fatal C1054
-limite do compilador : inicializadores aninhados muito profundamente  
+limite do compilador: inicializadores com aninhamento muito profundo  
   
- O código excede o limite de aninhamento inicializadores (10 a&15; níveis, dependendo da combinação de tipos está sendo inicializado).  
+ O código excede o limite de aninhamento em inicializadores (níveis de 10 a 15, dependendo da combinação de tipos está sendo inicializado).  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
-1.  Simplificar os tipos de dados que está sendo inicializados para reduzir o aninhamento.  
+1.  Simplifica os tipos de dados que está sendo inicializados para reduzir o aninhamento.  
   
-2.  Inicialize variáveis em instruções separadas depois da declaração.
+2.  Inicialize variáveis em instruções separadas após a declaração.

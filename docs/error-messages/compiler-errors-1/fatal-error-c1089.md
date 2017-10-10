@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1089 | Documentos do Microsoft
+title: Erro fatal C1089 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 74267efdd56a09f897be7de64615f5fde1e23864
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 458d375d509c261acb7303717b071988979e285d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1089"></a>Erro fatal C1089
-Não é possível truncar o arquivo do tipo de arquivo: 'arquivo': mensagem  
+Não é possível truncar o arquivo de tipo de arquivo: 'file': mensagem  
   
- O compilador não pode reduzir um arquivo para comprimento de zero.
+ O compilador não é possível reduzir um arquivo para o comprimento de zero.

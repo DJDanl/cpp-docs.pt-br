@@ -1,5 +1,5 @@
 ---
-title: C2320 de erro do compilador | Documentos do Microsoft
+title: C2320 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 02b0a1f9a337edcd77897f17e6bb0dad9ba2c332
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b721bfa1ef2a3dd91572bbc12779dbf8f977ffb5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2320"></a>C2320 de erro do compilador
-esperado ':' a seguir o especificador de acesso 'especificador'  
+esperado ':' a seguir especificador de acesso 'especificador'  
   
  A palavra-chave `public`, `protected`, ou `private` deve ser seguido por dois-pontos.

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1192 | Documentos do Microsoft
+title: Erro fatal C1192 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cefd925daadaf91649221d5eba19b397ecb35126
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f7cea5935018e1d9a011be61081e5d3b979b2eb1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1192"></a>Erro fatal C1192
 \#usando falhou em 'arquivo'  
   
- Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outras linguagens do Visual Studio também produzem arquivos MSIL.
+ Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outros idiomas do Visual Studio também produzem arquivos MSIL.

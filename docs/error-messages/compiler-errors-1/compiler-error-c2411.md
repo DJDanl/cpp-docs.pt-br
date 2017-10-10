@@ -1,5 +1,5 @@
 ---
-title: C2411 de erro do compilador | Documentos do Microsoft
+title: C2411 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,18 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6df09e7116f73498d87ecff9beed1765a302103c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a34d49eaa35ab47103c0ece1ad969aac58fdca7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2411"></a>C2411 de erro do compilador
-'identifier': membro de estrutura/união ilegal em 'context'  
+'Identificador': membro de struct/union inválido em 'contexto'  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
-1.  O identificador não é um membro de uma estrutura visível ou união neste contexto.  
+1.  O identificador não é um membro de uma estrutura visível ou union neste contexto.  
   
-2.  O identificador não é um membro da estrutura ou união especificada com o operador de seleção de membro (.).
+2.  O identificador não é um membro da estrutura ou união especificado com o operador de seleção de membro (.).

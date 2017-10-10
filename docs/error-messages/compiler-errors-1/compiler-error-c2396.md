@@ -1,5 +1,5 @@
 ---
-title: C2396 de erro do compilador | Documentos do Microsoft
+title: C2396 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: abb0a9a56f5ffeea6a818ab5d3247fd18789df8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20eca11d402265bbc81d61a8079ae9975cceef67
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2396"></a>C2396 de erro do compilador
-' your_type::operator'type ': CLR ou WinRT functionnot de conversão definida pelo usuário válido. Deve converter de ou converta: ' t ^', ' t ^ %', ' t ^ < / ', onde T = 'your_type'  
+' your_type::operator'type ': CLR ou WinRT functionnot de conversão definida pelo usuário válido. Deve converter de ou converter em: ' t ^', ' t ^ %', ' t ^ &', onde T = 'your_type'  
   
- Uma função de conversão em um tempo de execução do Windows ou um tipo gerenciado não possui pelo menos um parâmetro cujo tipo é o mesmo que o tipo que contém a função de conversão.  
+ Uma função de conversão em um tempo de execução do Windows ou um tipo gerenciado não tem pelo menos um parâmetro cujo tipo é o mesmo que o tipo que contém a função de conversão.  
   
  O exemplo a seguir gera C2396 e mostra como corrigi-lo:  
   

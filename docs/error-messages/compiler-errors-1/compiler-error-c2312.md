@@ -1,5 +1,5 @@
 ---
-title: C2312 de erro do compilador | Documentos do Microsoft
+title: C2312 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c15400e6d711f181d7f24866761be39cd4e05ae0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d660a82b0bdf1b77848c993f6796ac3fa45e1ff
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2312"></a>C2312 de erro do compilador
-'exception1': detectada pelo Licença2 no número de linha  
+'exception1': é capturado por Licença2 no número de linha  
   
  Dois manipuladores catch do mesmo tipo de exceção.  
   

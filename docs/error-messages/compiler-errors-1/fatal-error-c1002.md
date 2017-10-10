@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1002 | Documentos do Microsoft
+title: Erro fatal C1002 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 97bab6c8efe6030bc19d3e5557fd152e09c593d1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cab0e1db2d84fb5ba84d773f28e70341faf10ac6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1002"></a>Erro fatal C1002
-espaço de heap do compilador insuficiente no passo 2  
+compilador está fora do espaço de heap no passo 2  
   
  O compilador ficou sem espaço de memória dinâmica durante a segunda fase, provavelmente devido a um programa com muitos símbolos ou expressões complexas.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
 1.  Divida o arquivo de origem em vários arquivos menores.  
   
-2.  Divida expressões em subexpressões menores.  
+2.  Quebre expressões em subexpressões menores.  
   
 3.  Remova outros programas ou drivers que consomem memória.

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1065 | Documentos do Microsoft
+title: Erro fatal C1065 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b90c1887135e80f2b2d423d4f3e44a1ca0419a14
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f28876aabf4726ce31777885c5a6519bcfdbe62c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1065"></a>Erro fatal C1065
-limite do compilador : marcas insuficientes  
+limite do compilador: sem marcas  
   
  O arquivo de origem contém mais de 65,523 classes, estruturas, uniões, namespaces ou enums.  
   

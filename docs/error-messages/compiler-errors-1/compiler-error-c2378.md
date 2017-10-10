@@ -1,5 +1,5 @@
 ---
-title: C2378 de erro do compilador | Documentos do Microsoft
+title: C2378 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a3e2affcadb691bd1a5c53bf143bc3ea99d4ec7a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 279a6c8c5de43f6ac0a9438e06f93b5d3b4294b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2378"></a>C2378 de erro do compilador
-'identifier': redefinição; símbolo não pode ser sobrecarregado com um typedef  
+'Identificador': redefinição; símbolo não pode ser sobrecarregado com um typedef  
   
  O identificador foi redefinido como um `typedef`.  
   

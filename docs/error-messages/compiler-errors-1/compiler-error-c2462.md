@@ -1,5 +1,5 @@
 ---
-title: C2462 de erro do compilador | Documentos do Microsoft
+title: C2462 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 17e30ff240ccacd1da960337764125e456fddbcd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7ddb841157bbd29e66812a30ea433868597f4ecc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2462"></a>C2462 de erro do compilador
-'identifier': não é possível definir um tipo em uma 'nova expressão'  
+'Identificador': não é possível definir um tipo em uma 'new-expression'  
   
- Você não pode definir um tipo no campo de operando a `new` operador. Colocar a definição de tipo em uma instrução separada.  
+ Não é possível definir um tipo no campo de operando a `new` operador. Coloque a definição de tipo em uma instrução separada.  
   
  O exemplo a seguir gera C2462:  
   

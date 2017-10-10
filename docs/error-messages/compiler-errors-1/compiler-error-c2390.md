@@ -1,5 +1,5 @@
 ---
-title: C2390 de erro do compilador | Documentos do Microsoft
+title: C2390 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8334477aef71e8f698bb70a48218c4b4b6c5ce0b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 37803b8eb5034fb3281dcea385b4a0fca462aaf0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2390"></a>C2390 de erro do compilador
-'identifier': classe de armazenamento incorreto 'especificador'  
+'Identificador': classe de armazenamento incorreta 'especificador'  
   
  A classe de armazenamento não é válida para o identificador de escopo global. A classe de armazenamento padrão é usada no lugar de classe inválida.  
   
@@ -49,9 +35,9 @@ ms.lasthandoff: 02/25/2017
   
 -   Se o identificador é uma função, declare-o com `extern` armazenamento.  
   
--   Se o identificador é um parâmetro formal ou uma variável local, declare-o com o armazenamento automático.  
+-   Se o identificador é uma variável local ou o parâmetro formal, declare-o com o armazenamento automaticamente.  
   
--   Se o identificador é uma variável global, você deve declará-lo com nenhuma classe de armazenamento (armazenamento automático).  
+-   Se o identificador é uma variável global, declare-o com nenhuma classe de armazenamento (armazenamento automático).  
   
 ## <a name="example"></a>Exemplo  
   

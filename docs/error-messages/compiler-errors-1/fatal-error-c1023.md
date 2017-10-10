@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1023 | Documentos do Microsoft
+title: Erro fatal C1023 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,16 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1c7c6c828631534c8f893c759ef6f758913cb418
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4fc69c5266c91edb52d9b253b5ee9d4646e29ec6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1023"></a>Erro fatal C1023
-'arquivo': erro inesperado com pch, tente recriar o pch  
+'arquivo': erro inesperado com pch, tente recompilá-lo  
   
- C1023 pode ser causado por um de vários problemas, a solução que é uma recriação do arquivo de cabeçalho pré-compilado.  
+ C1023 pode ser causado por um de vários problemas, a solução para o qual é uma recriação do arquivo de cabeçalho pré-compilado.  
   
- C1023 pode ser causado se você tentar usar um arquivo de cabeçalho pré-compilado em um computador diferente no qual ele foi criado.
+ C1023 pode ocorrer se você tentar usar um arquivo de cabeçalho pré-compilado em um computador diferente no qual ele foi criado.

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1196 | Documentos do Microsoft
+title: Erro fatal C1196 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2b8836eacb62722f8e88e77ced06a9da613c1d7a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 891f3e6983160898a3acd1202236309150e6bd63
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1196"></a>Erro fatal C1196
-'identifier': identificador localizado na biblioteca de tipos 'typelib' não é um identificador válido do C++  
+'Identificador': identificador encontrado na biblioteca de tipos 'typelib' não é um identificador válido do C++  
   
- Um dos identificadores em sua biblioteca de tipos não é um identificador válido do C++. A biblioteca de tipos não está disponível para uso com [#import](../../preprocessor/hash-import-directive-cpp.md).
+ Um dos identificadores de sua biblioteca de tipo não é um identificador válido do C++. A biblioteca de tipos não está disponível para uso com [#import](../../preprocessor/hash-import-directive-cpp.md).

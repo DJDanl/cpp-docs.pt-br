@@ -1,5 +1,5 @@
 ---
-title: C2318 de erro do compilador | Documentos do Microsoft
+title: C2318 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a20f5ff851134e269469eb5298289cdacf63159
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e73934351caf640b650335b7c4766407d5c485d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2318"></a>C2318 de erro do compilador
 nenhum bloco try associado a este manipulador catch  
   
- A `catch` manipulador é definido, mas não é precedido por um `try` bloco.  
+ Um `catch` manipulador é definido, mas não precedido por um `try` bloco.  
   
  O exemplo a seguir gera C2318:  
   
@@ -58,7 +43,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2318b.cpp  

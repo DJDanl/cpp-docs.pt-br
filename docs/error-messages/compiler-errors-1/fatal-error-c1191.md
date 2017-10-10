@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1191 | Documentos do Microsoft
+title: Erro fatal C1191 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 47380081e13a4cd005b6edc993198ba681d771e5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95795ddfcc27a7cd150dec565f0e52a4f7eca00e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1191"></a>Erro fatal C1191
 'dll' só pode ser importado no escopo global  
   
- A instrução para importar mscorlib. dll em um programa que usa programação /clr não pode aparecer em um namespace ou uma função, mas deve aparecer no escopo global.  
+ As instruções para importar mscorlib.dll em um programa que usa a programação /clr não podem aparecer em um namespace ou uma função, mas devem aparecer no escopo global.  
   
  O exemplo a seguir gera C1191:  
   
@@ -55,7 +41,7 @@ namespace sample {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C1191b.cpp  

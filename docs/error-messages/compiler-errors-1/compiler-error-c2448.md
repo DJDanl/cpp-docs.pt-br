@@ -1,5 +1,5 @@
 ---
-title: C2448 de erro do compilador | Documentos do Microsoft
+title: C2448 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b88dcb6b594ed6034d612f8f43f853a7c28fbe60
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f289baff628ad2139940f023de36b7f936775b61
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2448"></a>C2448 de erro do compilador
-'identifier': inicializador de estilo função parece ser uma definição de função  
+'Identificador': inicializador function-style parece ser uma definição de função  
   
  A definição da função está incorreta.  
   
- Esse erro pode ser causado por uma lista formal de linguagem C antiga.  
+ Esse erro pode ser causado por uma lista formal de linguagem C de estilo antigo.  
   
  O exemplo a seguir gera C2448:  
   

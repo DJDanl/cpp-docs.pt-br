@@ -1,5 +1,5 @@
 ---
-title: C2494 de erro do compilador | Documentos do Microsoft
+title: C2494 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7fc4cb4c88af3deb0d874da2dbd3cd5ca6ab1cb5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 742bf081c8bb6f0309dc53dc30b66f38324c92ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2494"></a>C2494 de erro do compilador
 'palavra-chave' não pode ser chamado de dentro de uma expressão de filtro ou finally/bloco finally  
   
- Não é possível usar `keyword` em uma `__finally` ou bloco finally.  
+ Não é possível usar `keyword` em um `__finally` ou bloco finally.  
   
  O exemplo a seguir gera C2494:  
   

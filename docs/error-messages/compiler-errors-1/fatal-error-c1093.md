@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1093 | Documentos do Microsoft
+title: Erro fatal C1093 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3b37cc98a637efcce683437929a874c643b3f939
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31151027d34067a8163b8fbd73eff7f7215cce92
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1093"></a>Erro fatal C1093
-Falha de chamada de API 'nome da função' 'local da chamada': 'texto de tempo de execução'  
+Falha da chamada de API 'nome da função' 'local da chamada': 'texto de tempo de execução'  
   
- Falha ao chamar uma função do .NET. ***texto de tempo de execução*** pode ou não ser fornecido pelo tempo de execução COM.  
+ Falha ao chamar uma função do .NET. ***o texto de tempo de execução*** pode ou não pode ser fornecido pelo tempo de execução COM.  
   
- Para obter mais informações sobre mensagens de erro do sistema, consulte o arquivo de sistema Winerror. h, e [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).
+ Para obter mais informações sobre mensagens de erro do sistema, consulte o arquivo de sistema de Winerror. h, e [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).

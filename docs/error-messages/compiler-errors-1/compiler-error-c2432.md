@@ -1,5 +1,5 @@
 ---
-title: C2432 de erro do compilador | Documentos do Microsoft
+title: C2432 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 574b0aa7ac1ca79d3a1c50c37319e53e7fd6b7ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d89d894738978359fa0cedb9a9da6c4f9781c135
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2432"></a>C2432 de erro do compilador
-referência ilegal para dados de 16 bits em 'Identificador'  
+referência inválida para dados de 16 bits em 'Identificador'  
   
- Um registro de 16 bits é usado como um índice ou registro base. O compilador não oferece suporte para referenciar dados de 16 bits. registros de 16 bits não podem ser usados como índice ou a base de dados de registros ao compilar para código de 32 bits.  
+ Um registro de 16 bits é usado como um índice ou registro base. O compilador não oferece suporte para fazer referência a dados de 16 bits. registros de 16 bits não podem ser usados como índice ou a base de dados de registros ao compilar o código de 32 bits.  
   
  O exemplo a seguir gera C2432:  
   

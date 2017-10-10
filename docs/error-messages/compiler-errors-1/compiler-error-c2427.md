@@ -1,5 +1,5 @@
 ---
-title: C2427 de erro do compilador | Documentos do Microsoft
+title: C2427 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b68efb0ba947f5e8f3642d05d4074a57c6112e35
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 416db305963b6357c6dce9c5b2d13f0a6ca186f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2427"></a>C2427 de erro do compilador
-'class': não é possível definir a classe neste escopo  
+'class': não é possível definir classe neste escopo  
   
- Foi feita uma tentativa de definir uma classe aninhada, mas a classe aninhada é um membro de uma classe base, não a classe mais que o contém.  
+ Foi feita uma tentativa para definir uma classe aninhada, mas a classe aninhada é um membro de uma classe base, e não a classe continente mais.  
   
  O exemplo a seguir gera C2427:  
   

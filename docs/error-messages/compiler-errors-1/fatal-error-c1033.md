@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1033 | Documentos do Microsoft
+title: Erro fatal C1033 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,18 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d7df1b8e518c7844f8c4404a9b64485f121071c2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a0c9c67d23f2d0b957fb3e43844245029efedc64
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1033"></a>Erro fatal C1033
-não é possível abrir o pdb de banco de dados do programa  
+não é possível abrir pdb de banco de dados do programa  
   
  Esse erro pode ser causado por um erro de disco.  
   
- No Visual C++ .NET 2002, a localidade do usuário deve ser definida corretamente quando o nome do arquivo (ou o caminho de diretório para o nome do arquivo) contém caracteres MBCS. Definir a localidade do sistema não é suficiente; a localidade do usuário deve ser configurada para processar caracteres MBCS.  
+ No Visual C++ .NET 2002, a localidade do usuário deve ser definida corretamente quando o nome de arquivo (ou o caminho de diretório para o nome do arquivo) contém caracteres MBCS. Definir a localidade do sistema não é suficiente; a localidade do usuário deve ser configurada para processar caracteres MBCS.  
   
  Para obter mais informações, consulte [http://support.microsoft.com/default.aspx?scid=kb;en-us;246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).

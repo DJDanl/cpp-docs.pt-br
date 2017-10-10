@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1073 | Documentos do Microsoft
+title: Erro fatal C1073 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d013e686e1349d9c4640debf200b73698f1ed730
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c8c3fb07772ea74a2d7e812f8636783dca698926
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1073"></a>Erro fatal C1073
-Erro interno que envolvem a compilação incremental (compilador 'arquivo', número de linha)  
+Erro interno envolvendo compilação incremental (arquivo de compilador 'filename', número de linha)  
   
  Recompile o arquivo sem usar compilação incremental.

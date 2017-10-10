@@ -1,5 +1,5 @@
 ---
-title: C2436 de erro do compilador | Documentos do Microsoft
+title: C2436 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f88538907656be9bb6d54c011cb39ef68bd97176
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ca7f9a160675009e1462b1e7c5c1b110180e10c5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2436"></a>C2436 de erro do compilador
-'identifier': função de membro ou classe aninhada na lista do inicializador de construtor  
+'Identificador': função membro ou classe aninhada na lista de inicializador de construtor  
   
- Funções de membro ou classes locais na lista de inicializador de construtor não podem ser inicializadas.  
+ Funções de membro ou classes locais na lista de inicializador de construtor não podem ser inicializados.  
   
  O exemplo a seguir gera C2436:  
   
