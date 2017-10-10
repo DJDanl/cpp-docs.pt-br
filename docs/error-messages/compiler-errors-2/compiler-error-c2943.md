@@ -1,5 +1,5 @@
 ---
-title: C2943 de erro do compilador | Documentos do Microsoft
+title: C2943 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7434e9399c968e89e076b364abb7ce755a1d70a0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bbd2a3310bb3f5cd18c241f9923d051acde58eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2943"></a>C2943 de erro do compilador
-'class': id de classe de tipo é redefinida como um argumento de tipo de um modelo  
+'class': id de classe de tipo redefinido como um argumento de tipo de um modelo  
   
  Você não pode usar uma classe genérica ou modelo, em vez de um símbolo, como um argumento de tipo genérico ou modelo.  
   

@@ -1,5 +1,5 @@
 ---
-title: C3013 de erro do compilador | Documentos do Microsoft
+title: C3013 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 680ff228c7fc45e845401da3f0ab35701f992cd8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 411dbc1a05f0ad5a08bbed2aea274975fe9dc53f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3013"></a>C3013 de erro do compilador
-'cláusula': cláusula pode aparecer apenas uma vez na diretiva de 'diretiva' OpenMP  
+'cláusula': cláusula deve aparecer apenas uma vez na diretiva de 'diretiva' OpenMP  
   
  Uma cláusula apareceu duas vezes na mesma diretiva. Exclua uma ocorrência da cláusula.  
   

@@ -1,5 +1,5 @@
 ---
-title: C3049 de erro do compilador | Documentos do Microsoft
+title: C3049 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5fb6eece00bf52fee8298945d097938b0a291579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c81bf792be0340cd558ce3ad8efccd64d0d8a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3049"></a>C3049 de erro do compilador
-'arg': argumento inválido na cláusula de 'default' OpenMP  
+'arg': argumento inválido em cláusula 'default' de OpenMP  
   
- Um valor incorreto foi passado para um [padrão](../../parallel/openmp/reference/default-openmp.md) cláusula.  
+ Um valor incorreto foi transmitido para um [padrão](../../parallel/openmp/reference/default-openmp.md) cláusula.  
   
  O exemplo a seguir gera C3049:  
   

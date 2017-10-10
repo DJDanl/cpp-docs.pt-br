@@ -1,5 +1,5 @@
 ---
-title: C2919 de erro do compilador | Documentos do Microsoft
+title: C2919 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4ca9fb301b3fbd684379e743daf81009663f405c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a70b679d4add5fa4ad2904e3c0d103e1c8881280
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2919"></a>C2919 de erro do compilador
-'type': operadores não podem ser usados na superfície de publicada de um tipo WinRT  
+'type': operadores não podem ser usados na superfície publicada de um tipo WinRT  
   
- O sistema de tipo de tempo de execução do Windows não oferece suporte a funções de membro do operador na superfície de publicada de um tipo. Isso ocorre porque nem todas as linguagens podem consumir funções de membro de operador. Você pode criar funções de membro que podem ser chamadas de código C++ na mesma unidade de compilação ou de classe do operador particular ou interno.  
+ O sistema de tipos do tempo de execução do Windows não oferece suporte a funções de membro do operador na superfície publicada de um tipo. Isso ocorre porque nem todos os idiomas podem consumir funções de membro do operador. Você pode criar funções de membro que podem ser chamadas de código C++ na mesma unidade de compilação ou a classe do operador privada ou interna.  
   
- Para corrigir esse problema, remova a função de membro do operador da interface pública ou alterá-la para uma função de membro nomeado. Por exemplo, em vez de `operator==`, nomeie a função de membro `Equals`.
+ Para corrigir esse problema, remova a função de membro do operador na interface pública ou alterá-la para uma função de membro nomeado. Por exemplo, em vez de `operator==`, nomear a função de membro `Equals`.

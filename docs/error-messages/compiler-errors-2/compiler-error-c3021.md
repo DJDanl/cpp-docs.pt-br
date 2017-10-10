@@ -1,5 +1,5 @@
 ---
-title: C3021 de erro do compilador | Documentos do Microsoft
+title: C3021 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 00fdc8608e4c46309c8922958fe6fa9ead2b818c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2dd19610cdb548fa3b9a81181fa8857d8c8e8644
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3021"></a>C3021 de erro do compilador
-'arg': argumento está vazia na diretiva OpenMP 'diretiva'  
+'arg': argumento está vazio na diretiva de OpenMP 'diretiva'  
   
- Um argumento é necessário uma diretiva para OpenMP.  
+ Um argumento é necessário para uma diretiva de OpenMP.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3021:  

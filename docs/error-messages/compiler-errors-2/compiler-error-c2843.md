@@ -1,5 +1,5 @@
 ---
-title: C2843 de erro do compilador | Documentos do Microsoft
+title: C2843 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e65fe26a7f6eae2ccadf902945ca1b322593689b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1c5e73c80fcb816a54d4bc815e68471282c59d59
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2843"></a>C2843 de erro do compilador
-'member': não é possível obter o endereço de um membro de dados não estáticos ou método de um gerenciado ou tipo WinRT  
+'member': não é possível obter o endereço de um membro de dados não estático ou o método de um gerenciado ou o tipo de WinRT  
   
- Uma instância é necessária para obter o endereço dos membros de dados não estático de um gerenciado ou WinRT classe ou interface.  
+ Uma instância é necessário para fazer o endereço de membros de dados não estático de um gerenciado WinRT classe ou interface.  
   
  O exemplo a seguir gera C2843 e mostra como corrigi-lo:  
   

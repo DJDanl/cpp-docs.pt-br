@@ -1,5 +1,5 @@
 ---
-title: C2928 de erro do compilador | Documentos do Microsoft
+title: C2928 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cda04e73987f8b5bbe6ddb0f63f7b5d4c4fb00a1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e29cb66a65914f62bcdd9417eda364282fb3b38c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2928"></a>C2928 de erro do compilador
-instanciação explícita; 'identifier' não é uma função ou um membro de dados estáticos de classe de modelo 'class'  
+instanciação explícita; 'Identificador' não é uma função ou um membro de dados estáticos da classe de modelo 'class'  
   
- Você não pode instanciar explicitamente um membro do `class` que é não uma função ou `static` variável.
+ Você não é possível instanciar explicitamente um membro de `class` que é não é uma função ou `static` variável.

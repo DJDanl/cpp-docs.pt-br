@@ -1,5 +1,5 @@
 ---
-title: C2910 de erro do compilador | Documentos do Microsoft
+title: C2910 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59d4735ed3cad9101f48e28c30f21817b8883af9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: db1c4d7b4533d6bbfb0848c1dc16a7336ad81eb0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2910"></a>C2910 de erro do compilador
 'function': não pode ser explicitamente especializado  
   
- O compilador detectou uma tentativa de especializar explicitamente uma função duas vezes.  
+ O compilador detectado ao tentar especializar explicitamente uma função duas vezes.  
   
  O exemplo a seguir gera C2910:  
   
@@ -57,7 +43,7 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization  
 ```  
   
- C2910 também pode ser gerado se você tentar specialize explicitamente um membro diferente do modelo. Ou seja, você pode specialize explicitamente apenas um modelo de função.  
+ C2910 também pode ser gerado se você tentar especializar explicitamente um membro diferente do modelo. Ou seja, você pode especializar explicitamente apenas um modelo de função.  
   
  O exemplo a seguir gera C2910:  
   
@@ -82,7 +68,7 @@ template <> A<void>::A(void* p){}   // C2910
   
  Esse erro também será gerado como resultado do trabalho de conformidade do compilador que foi feito no Visual Studio .NET 2003:.  
   
- Para código será válido nas versões Visual Studio .NET 2003 e Visual Studio .NET do Visual C++, remover `template <>`.  
+ Para o código será válido das versões do Visual Studio .NET 2003 e o Visual Studio .NET do Visual C++, remover `template <>`.  
   
  O exemplo a seguir gera C2910:  
   

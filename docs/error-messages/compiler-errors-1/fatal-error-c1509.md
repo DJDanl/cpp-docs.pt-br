@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1509 | Documentos do Microsoft
+title: Erro fatal C1509 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bb83e385126b05694c1c3c7cc437e68faa102c08
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3d3fc7a7be867a7137dab4155984cf1844b661ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1509"></a>Erro fatal C1509
-limite do compilador: muitos estados de manipulador de exceção na função 'function'. simplificar a função  
+limite do compilador: muitos estados de manipulador de exceção na função 'function'. Simplifique a função  
   
- O código excede um limite interno em estados do manipulador de exceção (32.768 estados).  
+ O código excede um limite interno nos Estados de manipulador de exceção (32.768 estados).  
   
  A causa mais comum é que a função contém uma expressão complexa de operadores aritméticos e variáveis de classe definida pelo usuário.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
-1.  Simplifica expressões atribuindo subexpressões comuns para variáveis temporárias.  
+1.  Simplifique expressões atribuindo subexpressões comuns para variáveis temporárias.  
   
 2.  Divida a função em funções menores.

@@ -1,5 +1,5 @@
 ---
-title: C2721 de erro do compilador | Documentos do Microsoft
+title: C2721 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 818ec868736b18cc82cc21f3e54a5663c0df16ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3c30868d5c264d81801ffec7e0fb43ec54a9d2d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2721"></a>C2721 de erro do compilador
-'especificador de ': ilegal entre a palavra-chave de operador e tipo de especificador de classe de armazenamento  
+'especificador': especificador de classe de armazenamento inválido entre palavra-chave operator e tipo  
   
  Conversões de tipo definido pelo usuário se aplicam a todas as classes de armazenamento, para que você não pode especificar uma classe de armazenamento em uma conversão de tipo.

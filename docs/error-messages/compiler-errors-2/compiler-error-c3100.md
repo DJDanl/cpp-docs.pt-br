@@ -1,5 +1,5 @@
 ---
-title: Compilador erro C3100 | Documentos do Microsoft
+title: Compilador erro C3100 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ae92643568401d64b96d0f3fd24c746aaffa6f2f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 666bd441fa45b56f9dc572b01f9428ee48b8d1bf
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3100"></a>C3100 de erro do compilador
-'target': o qualificador de atributo desconhecido  
+'target': qualificador de atributo desconhecido  
   
  Um destino de atributo inválido foi especificado.  
   

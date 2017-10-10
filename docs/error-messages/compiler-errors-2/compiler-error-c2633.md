@@ -1,5 +1,5 @@
 ---
-title: C2633 de erro do compilador | Documentos do Microsoft
+title: C2633 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5329420691da25ee484386f91d454272406ba118
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: be00f8dd1387aebb68fd4031006ad73e01295263
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2633"></a>C2633 de erro do compilador
-'identifier': 'embutido' é a classe de armazenamento válida somente para construtores  
+'Identificador': 'inline' é a classe de armazenamento válida somente para construtores  
   
- Um construtor é declarado como uma classe de armazenamento que não seja embutido.  
+ Um construtor está declarado como uma classe de armazenamento que não seja embutido.  
   
  O exemplo a seguir gera C2633:  
   

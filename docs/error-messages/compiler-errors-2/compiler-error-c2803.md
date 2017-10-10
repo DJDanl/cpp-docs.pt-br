@@ -1,5 +1,5 @@
 ---
-title: C2803 de erro do compilador | Documentos do Microsoft
+title: C2803 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bf6e622332f43ce90a1b71e4916b4b55fb8ca5cd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: efa9efa2dc204d302f69d873c0199d4431efccb1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2803"></a>C2803 de erro do compilador
-'operador' deve ter pelo menos um parâmetro formal do tipo de classe  
+'operador operator' deve ter pelo menos um parâmetro formal de tipo de classe  
   
  O operador sobrecarregado não tem um parâmetro de tipo de classe.  
   
- Você precisa passar pelo menos um parâmetro por referência (sem usar ponteiros e referências) ou valor para ser capaz de gravar "um< b" (a and b being of type class A). b"="" (a="" and="" b="" being="" of="" type="" class=""></ b" (a and b being of type class A).>  
+ Você precisa passar pelo menos um parâmetro por referência (sem usar ponteiros, mas referencia) ou por valor para ser capaz de gravar "um < b" (um de classe de tipo A e b).  
   
- Se ambos os parâmetros forem ponteiros, ela será uma comparação pura de endereços de ponteiro e não usará a conversão definida pelo usuário.  
+ Se ambos os parâmetros são ponteiros será uma comparação pura de endereços do ponteiro e não usará a conversão definida pelo usuário.  
   
  O exemplo a seguir gera C2803:  
   

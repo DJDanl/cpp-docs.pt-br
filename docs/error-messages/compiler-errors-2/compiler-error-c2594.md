@@ -1,5 +1,5 @@
 ---
-title: C2594 de erro do compilador | Documentos do Microsoft
+title: C2594 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 34843cdf38968b212f26ec6dd4ddafe2e7021d89
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2594"></a>C2594 de erro do compilador
 'operator': conversões ambíguas de 'type1' em 'type2'  
   
- Nenhuma conversão de *type1* para *type2* foi mais direto do que qualquer outro. Sugerimos duas soluções possíveis para converter do *type1* para *type2*. A primeira opção é definir uma conversão direta de *type1* para *type2*, e a segunda opção é especificar uma sequência de conversões de *type1* para *type2*.  
+ Nenhuma conversão de *type1* para *type2* foi mais direta de qualquer outro. Sugerimos duas soluções possíveis para converter do *type1* para *type2*. A primeira opção é definir uma conversão direta de *type1* para *type2*, e a segunda opção é especificar uma sequência de conversões de *type1* para  *type2*.  
   
  O exemplo a seguir gera C2594. A resolução sugerida para o erro é uma sequência de conversões:  
   

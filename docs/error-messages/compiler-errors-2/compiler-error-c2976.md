@@ -1,5 +1,5 @@
 ---
-title: C2976 de erro do compilador | Documentos do Microsoft
+title: C2976 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: d691eba50403819e1a468b850995f4ae55a3731f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49250abe3cef048b15f7af87f643002640fe6bf5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2976"></a>C2976 de erro do compilador
-'identifier': muito poucos argumentos de tipo  
+'Identificador': poucos argumentos de tipo  
   
  Um genérico ou modelo tem um ou mais argumentos reais. Verifique se a declaração genérico ou modelo para localizar o número correto de parâmetros.  
   
- Esse erro pode ser causado pela ausência de argumentos do modelo em componentes da biblioteca padrão C++.  
+ Esse erro pode ser causado pela falta de argumentos de modelo em componentes de biblioteca padrão C++.  
   
  O exemplo a seguir gera C2976:  
   

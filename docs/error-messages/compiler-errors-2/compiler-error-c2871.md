@@ -1,5 +1,5 @@
 ---
-title: C2871 de erro do compilador | Documentos do Microsoft
+title: C2871 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 7f26c189dc1e8b22d328c6fc65c6dd825f4720d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0003f04a32ff017234607a90162465549092a013
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2871"></a>C2871 de erro do compilador
 'name': um namespace com esse nome não existe  
   
-Este erro ocorre quando você passa um identificador que não é um namespace para um [usando](../../cpp/namespaces-cpp.md#using_directives) diretiva.  
+Este erro ocorre quando você passar um identificador que não é um namespace para um [usando](../../cpp/namespaces-cpp.md#using_directives) diretiva.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C2871:  

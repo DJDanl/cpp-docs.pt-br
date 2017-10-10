@@ -1,5 +1,5 @@
 ---
-title: C3044 de erro do compilador | Documentos do Microsoft
+title: C3044 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 53a542c913839c13e490c1a8513b1e95aca3b46e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 313b5d1d6b0d8204d4d4716d0671e8093f4978d5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3044"></a>C3044 de erro do compilador
-'section' : permitida apenas aninhada diretamente sob uma diretiva de OpenMP 'sections'  
+'section': permitida apenas aninhada diretamente sob uma diretiva de OpenMP 'sections'  
   
- O compilador encontrou um `section` diretiva foi usada incorretamente. Para obter mais informações, consulte [seções](../../parallel/openmp/reference/sections-openmp.md).  
+ O compilador encontrado um `section` diretiva foi usada incorretamente. Para obter mais informações, consulte [seções](../../parallel/openmp/reference/sections-openmp.md).  
   
  O exemplo a seguir gera C3044:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3032 de erro do compilador | Documentos do Microsoft
+title: C3032 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2183206fd222e963ab863c5b1c155f98414f7a45
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2bc15f7f1989a7cec11506a445b985fa6e863ba2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3032"></a>C3032 de erro do compilador
-'var': variável na cláusula 'cláusula' não pode ter tipo incompleto 'type'  
+'var': variável em cláusula ' da ' não pode ter tipo incompleto 'type'  
   
  Tipos passados para determinados cláusulas devem ser totalmente visíveis para o compilador.  
   

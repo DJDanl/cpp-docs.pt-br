@@ -1,5 +1,5 @@
 ---
-title: C2786 de erro do compilador | Documentos do Microsoft
+title: C2786 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 694943634a3d8aa98cabd3b6f2b0aa5c1bd114e6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d78b5664fa2853a3fe8f7934cba9ce5b8b3f782a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2786"></a>C2786 de erro do compilador
 'type': operando inválido para uuidof  
   
- O [uuidof](../../cpp/uuidof-operator.md) operador tem um tipo definido pelo usuário com um GUID vinculado ou um objeto de um tipo definido pelo usuário.  Possíveis causas:  
+ O [uuidof](../../cpp/uuidof-operator.md) operador tem um tipo definido pelo usuário com um GUID anexado ou um objeto de tal um tipo definido pelo usuário.  Possíveis causas:  
   
 1.  O argumento não é um tipo definido pelo usuário.  
   

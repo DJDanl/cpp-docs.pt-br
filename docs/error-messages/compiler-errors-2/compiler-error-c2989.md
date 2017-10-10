@@ -1,5 +1,5 @@
 ---
-title: C2989 de erro do compilador | Documentos do Microsoft
+title: C2989 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a6fb6c0a2b2c3a7608c10794e77ecc8b5573dc7b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 447d7d21cfc1ed95c9851ef310a4cb15bcdaf53e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2989"></a>C2989 de erro do compilador
-'class': tipo de classe já foi declarado como um tipo de classe não  
+'class': tipo de classe já foi declarado como um tipo diferente de classe  
   
- A classe genérica ou modelo redefine uma classe diferente do modelo ou não genérico. Verifique os arquivos de cabeçalho de conflitos.  
+ A classe genérica ou modelo redefine uma classe diferente do modelo ou não genérica. Verifique os arquivos de cabeçalho de conflitos.  
   
- Se você estiver usando especializações parciais do modelo de classe, consulte o artigo da Base de dados de Conhecimento Q240866.  
+ Se você estiver usando especializações parciais de modelo de classe, consulte o artigo da Base de dados de Conhecimento Q240866.  
   
  O exemplo a seguir gera C2989:  
   

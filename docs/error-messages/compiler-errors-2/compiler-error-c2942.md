@@ -1,5 +1,5 @@
 ---
-title: C2942 de erro do compilador | Documentos do Microsoft
+title: C2942 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dd5d9b6908b6af39f7d191d1a1d231d37716d6d1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2685762bc57b4ff0c2d056dff4c246d2286503eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2942"></a>C2942 de erro do compilador
-'class': id de classe de tipo é redefinida como um argumento formal de uma função  
+'class': tipo de id de classe redefinido como um argumento formal de uma função  
   
- Você não pode usar uma classe genérica ou um modelo como um argumento formal. Você não pode passar um argumento diretamente para o construtor de um genérico ou classe de modelo.  
+ Você não pode usar uma classe genérica ou o modelo como um argumento formal. Você não pode passar um argumento diretamente para o construtor de um generic ou classe de modelo.  
   
  O exemplo a seguir gera C2942:  
   

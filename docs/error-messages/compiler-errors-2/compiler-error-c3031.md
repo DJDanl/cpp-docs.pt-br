@@ -1,5 +1,5 @@
 ---
-title: C3031 de erro do compilador | Documentos do Microsoft
+title: C3031 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c804d5c31879563bb03d8918e30c7c607de51c67
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ddf6809081cae78d0280c57f9ecc156f82e2821
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3031"></a>C3031 de erro do compilador
-'var': variável na cláusula 'redução' deve ter tipo aritmético escalar  
+'var': variável em cláusula 'reduction' deve ter tipo aritmético escalar  
   
- Uma variável do tipo errado foi passada para uma cláusula de redução.  
+ Uma variável do tipo errado foi transmitida para uma cláusula de redução.  
   
  O exemplo a seguir gera C3031:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3110 de erro do compilador | Documentos do Microsoft
+title: C3110 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,23 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f6ada3a8894c8bc40c3821342a9a59911270029a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3110"></a>C3110 de erro do compilador
-'nome_da_função': você não pode sobrecarregar um método de interface COM  
+'function_name': não é possível sobrecarregar um método de interface COM  
   
- Uma interface que é prefixada por um atributo de interface, como:  
+ Uma interface que é precedida por um atributo de interface, tais como:  
   
 -   [personalizado](../../windows/custom-cpp.md)  
   
 -   [dispinterface](../../windows/dispinterface.md)  
   
--   [duplo](../../windows/dual.md)  
+-   [dual](../../windows/dual.md)  
   
 -   [object](../../windows/object-cpp.md)  
   

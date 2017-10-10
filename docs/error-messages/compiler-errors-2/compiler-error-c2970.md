@@ -1,5 +1,5 @@
 ---
-title: C2970 de erro do compilador | Documentos do Microsoft
+title: C2970 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e8118fa6f025be20f3d892ef0c0b1bbcca4b5b55
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc125b400a718805af2ee0829100c056fffa29a3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2970"></a>C2970 de erro do compilador
-'class': o parâmetro de modelo 'param': 'arg': uma expressão que envolva objetos com vinculação interna não pode ser usada como um argumento de tipo não  
+'class': parâmetro de modelo 'param': 'arg': uma expressão envolvendo objetos com vínculo interno não pode ser usada como um argumento sem tipo  
   
  Você não pode usar o nome ou endereço de uma variável estática como um argumento de modelo. A classe de modelo espera um valor constante que pode ser avaliado em tempo de compilação.  
   

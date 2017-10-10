@@ -1,5 +1,5 @@
 ---
-title: C2811 de erro do compilador | Documentos do Microsoft
+title: C2811 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2e3aa1eeaa11c1918bc0d28ecd1b5c3ffb4912bb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5a8f38fecb6b139a8e36007affc1a394bd81254
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2811"></a>C2811 de erro do compilador
-'type1': não pode herdar de 'type2', uma referência de classe só pode herdar de uma classe de interface ou classe ref  
+'type1': não é possível herdar de 'type2', uma referência de classe só pode herdar de uma classe ref ou classe de interface  
   
  Você tentou usar uma classe não gerenciada como uma classe base para uma classe gerenciada.  
   

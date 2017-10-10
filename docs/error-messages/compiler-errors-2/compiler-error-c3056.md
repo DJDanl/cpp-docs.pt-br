@@ -1,5 +1,5 @@
 ---
-title: C3056 de erro do compilador | Documentos do Microsoft
+title: C3056 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b3d8f49c518921bc41c5adf568d9fcdf1a190344
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c1b4ac942c4b17785b57d6206cd2f5a8724bd99
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3056"></a>C3056 de erro do compilador
-'symbol': símbolo não está no mesmo escopo com '' diretiva threadprivate  
+'symbol': símbolo não está no mesmo escopo da diretiva 'threadprivate'  
   
  Um símbolo usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula deve estar no mesmo escopo de `threadprivate` cláusula.  
   
@@ -61,7 +46,7 @@ void test() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3056b.cpp  

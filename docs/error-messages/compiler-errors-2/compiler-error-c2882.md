@@ -1,5 +1,5 @@
 ---
-title: C2882 de erro do compilador | Documentos do Microsoft
+title: C2882 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f2bb6b74e0f988bed91b7f737ff0368916c215bb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: acbe0158dd0514df066b37ffcc7544602ce3f5ca
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2882"></a>C2882 de erro do compilador
-'name': uso inválido do identificador de namespace na expressão  
+'name': uso inválido de identificador de namespace em expressão  
   
  Você tentou usar o nome de um namespace em uma expressão.  
   

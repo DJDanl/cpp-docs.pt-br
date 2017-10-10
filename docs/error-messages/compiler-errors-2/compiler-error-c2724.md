@@ -1,5 +1,5 @@
 ---
-title: C2724 de erro do compilador | Documentos do Microsoft
+title: C2724 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a90bad0c6e611544e98077918448d17e87b0a325
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13c582f081d78e415b4c98bf300b18004fcc33bc
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2724"></a>C2724 de erro do compilador
-'identifier': 'static' não deve ser usado nas funções de membro definidas no escopo de arquivo  
+'Identificador': 'static' não deve ser usado em funções membro definidas no escopo de arquivo  
   
- Funções de membro estático devem ser declaradas com vinculação externa.  
+ Funções de membro estático devem ser declaradas com ligação externa.  
   
  O exemplo a seguir gera C2724:  
   

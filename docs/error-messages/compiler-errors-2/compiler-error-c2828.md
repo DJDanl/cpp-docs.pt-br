@@ -1,5 +1,5 @@
 ---
-title: C2828 de erro do compilador | Documentos do Microsoft
+title: C2828 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 013772a49a0447beb718009a3f96be2f723c7704
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a461ae14edfbdffa9bd30068a7e935fb44817a6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2828"></a>C2828 de erro do compilador
-'operador' não pode ser substituído globalmente com formato binário  
+'operator operador' não pode ser substituído globalmente com forma binária  
   
  O operador não pode ter um formato binário fora de um objeto.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
-1.  Fazer o operador sobrecarregado local em um objeto.  
+1.  Verifique o operador sobrecarregado local a um objeto.  
   
 2.  Escolha um operador unário apropriado à sobrecarga.

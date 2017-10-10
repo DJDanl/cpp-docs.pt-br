@@ -1,5 +1,5 @@
 ---
-title: C2647 de erro do compilador | Documentos do Microsoft
+title: C2647 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 34af8186863396c1def4381dfc099632d167b9c6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8d9a068e70f39f05624cc1af843f1c8ae8db7caf
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2647"></a>C2647 de erro do compilador
-'operator': não é possível cancelar a referência de 'type1' em 'type2'  
+'operator': não é possível desreferenciar 'type1' em 'type2'  
   
- O operando esquerdo do operador ponteiro para membro ( `->*` ou `.*` ) não pode ser convertido implicitamente em um tipo relacionado ao operador à direita.  
+ O operando esquerdo de um operador de ponteiro para membro ( `->*` ou `.*` ) não pode ser convertido implicitamente em um tipo relacionado ao operador à direita.  
   
  O exemplo a seguir gera C2647:  
   

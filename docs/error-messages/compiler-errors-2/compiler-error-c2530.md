@@ -1,5 +1,5 @@
 ---
-title: C2530 de erro do compilador | Documentos do Microsoft
+title: C2530 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a5d6831c293f6ef25eb53cdfb6216f8142908d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2530"></a>C2530 de erro do compilador
-'identifier': referências devem ser inicializadas  
+'Identificador': referências devem ser inicializadas  
   
  Você deve inicializar uma referência quando ele foi declarado, a menos que ela é declarada já:  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 02/25/2017
   
 -   Como um membro de uma classe, estrutura ou união (e ele é inicializado no construtor).  
   
--   Como um parâmetro em uma definição ou declaração de função.  
+-   Como um parâmetro em uma declaração de função ou a definição.  
   
 -   Como o tipo de retorno de uma função.  
   

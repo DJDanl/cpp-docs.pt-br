@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 44b64b447a9cc5482014c9304f9101f54f45c72c
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2830"></a>C2830 de erro do compilador
-apenas parâmetros de posicionamento para 'operator new' podem possuir valores padrão  
+somente os parâmetros de posicionamento para 'operator new' podem ter valores padrão  
   
 Os parâmetros formais padrão [operador novo](../../standard-library/new-operators.md#op_new) não podem ter valores padrão. Apenas parâmetros de posicionamento definido pelo usuário podem especificar os padrões.
 

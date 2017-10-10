@@ -1,5 +1,5 @@
 ---
-title: C2551 de erro do compilador | Documentos do Microsoft
+title: C2551 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f106b292fbb4fd8bcc8717b8dd00bef4ed31619a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b626a6fe4c18d119a4cbd9eead1e180e493c5b48
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2551"></a>C2551 de erro do compilador
-tipo 'void *' precisa de conversão explícita  
+' void *' precisa de conversão explícita do tipo  
   
- Um `void` ponteiro é atribuído a um ponteiro nonvoid pela conversão implícita. Você deve usar uma conversão explícita.
+ Um `void` ponteiro é atribuído para um ponteiro nonvoid por conversão implícita. Você deve usar uma conversão explícita.

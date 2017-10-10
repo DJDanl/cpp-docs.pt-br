@@ -1,5 +1,5 @@
 ---
-title: C2994 de erro do compilador | Documentos do Microsoft
+title: C2994 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5e6ed0a38dad8e3cec610d18740d977a028bfb50
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 02d7b260d01e199af73a0b82aab3f96b33ba121e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2994"></a>C2994 de erro do compilador
-classe sem nome na lista de parâmetros de template  
+classe sem nome na lista de parâmetros de modelo  
   
  Não é possível usar o `class` palavra-chave como um argumento de modelo sem especificar um nome de classe.

@@ -1,5 +1,5 @@
 ---
-title: C3058 de erro do compilador | Documentos do Microsoft
+title: C3058 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bc8e40687720aad9e3a4f1f14f85839a9476b14f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e8d665e473877ac78612ccaeb9e2e917ee4094c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3058"></a>C3058 de erro do compilador
-'symbol': símbolo não declarado como 'threadprivate' antes de ser usada na cláusula 'copyin'  
+'symbol': símbolo não declarado como 'threadprivate' antes de ser usado na cláusula 'copyin'  
   
  Um símbolo deve ser declarado primeiro [threadprivate](../../parallel/openmp/reference/threadprivate.md) antes de ser usada em uma [copyin](../../parallel/openmp/reference/copyin.md) cláusula.  
   
@@ -61,7 +46,7 @@ void test() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3058b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C2798 de erro do compilador | Documentos do Microsoft
+title: C2798 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8b516b2ba9dc566a39060956fd8283ffb44797e3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb0a411651cf7c7f614942563baee5f04075fdf3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2798"></a>C2798 de erro do compilador
 'super::member' é ambíguo  
   
- Várias estruturas herdadas contêm o membro referenciado com [super](../../cpp/super.md). Você pode corrigir o erro ao:  
+ Várias estruturas herdadas contêm o membro referenciado com [super](../../cpp/super.md). Você pode corrigir o erro pelo:  
   
--   Removendo B1 ou B2 na lista de herança de D.  
+-   Removendo B1 ou B2 da lista de herança de D.  
   
--   Alterando o nome do membro de dados em B1 ou B2.  
+-   Alterar o nome do membro de dados em B1 ou B2.  
   
  O exemplo a seguir gera C2798:  
   

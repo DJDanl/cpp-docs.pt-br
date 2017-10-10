@@ -1,5 +1,5 @@
 ---
-title: C3054 de erro do compilador | Documentos do Microsoft
+title: C3054 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f58229b045fe6fa5966959e93f3312d81ffc58e4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d6ade06bf0d1f5382d1f5e89ec26e6790bf0bfb2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3054"></a>C3054 de erro do compilador
-'#pragma omp parallel' não é suportado atualmente em uma classe ou função de generic  
+'#pragma omp parallel' não é suportado atualmente em uma classe genérica ou função  
   
  Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md) e [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md).  
   

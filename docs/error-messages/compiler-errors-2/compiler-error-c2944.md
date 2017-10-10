@@ -1,5 +1,5 @@
 ---
-title: C2944 de erro do compilador | Documentos do Microsoft
+title: C2944 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c33b4fce669b5ccb1ee77cc6b5ccfd16507e61ba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4c23665d165bf425362b1b85135c53c667d8278c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2944"></a>C2944 de erro do compilador
-'class': id de classe de tipo é redefinida como um argumento de valor de um modelo  
+'class': tipo de id de classe redefinido como um argumento de valor de um modelo  
   
- Você não pode usar uma classe genérica ou modelo, em vez de um símbolo, como um argumento de valor do modelo.  
+ Você não pode usar uma classe genérica ou modelo, em vez de um símbolo, como um argumento de valor de modelo.  
   
  O exemplo a seguir gera C2944:  
   

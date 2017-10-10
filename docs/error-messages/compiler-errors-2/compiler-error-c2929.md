@@ -1,5 +1,5 @@
 ---
-title: C2929 de erro do compilador | Documentos do Microsoft
+title: C2929 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 793a3c43c505168d9c91a599e8ae09816f22ba35
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1b9b5fe2d73d3c51e2946fc43ef2c5c5cbc5051d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2929"></a>C2929 de erro do compilador
-'identifier': instanciação explícita; não é possível forçar explicitamente e suprimir instanciação de membro de classe de modelo  
+'Identificador': instanciação explícita; não é possível forçar explicitamente e suprimir instanciação de membro de classe de modelo  
   
- Você não pode explicitamente instanciar um identificador, evitando que ele seja instanciado.  
+ Você não pode instanciar explicitamente um identificador enquanto impede que ele seja instanciado.  
   
  O exemplo a seguir gera C2929:  
   

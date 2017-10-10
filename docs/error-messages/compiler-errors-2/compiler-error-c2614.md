@@ -1,5 +1,5 @@
 ---
-title: C2614 de erro do compilador | Documentos do Microsoft
+title: C2614 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a412542af9047477454709c9175458c4cd878eb7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 077762fef5474b3761c504224c58de83d82bdb12
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2614"></a>C2614 de erro do compilador
-'class1': inicialização de membro inválido: 'class2' não é um membro ou uma base  
+'class1': inicialização de membro inválida: 'class2' não é uma base ou membro  
   
- Somente os membros ou as classes base podem aparecer na lista de inicialização para uma classe ou estrutura.  
+ Apenas classes base ou membro podem aparecer na lista de inicialização para uma classe ou estrutura.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2614.  

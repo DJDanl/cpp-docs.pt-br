@@ -1,5 +1,5 @@
 ---
-title: C2510 de erro do compilador | Documentos do Microsoft
+title: C2510 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 652494d8a266fe1f37c4c78363c6a312b3b05bae
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5cc7ddf3cc4599ce87d4f96de50bfe23aa4c2209
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2510"></a>C2510 de erro do compilador
-'identifier': à esquerda de ': ' deve ser uma classe/estrutura/união  
+'Identificador': esquerda de ':: ' deve ser uma classe/struct/união  
   
- Uma classe, estrutura ou união nome deve aparecer no lado esquerdo do operador de resolução de escopo (`::`) operador.
+ Uma classe, estrutura ou nome de união deve aparecer no lado esquerdo do operador de resolução do escopo (`::`) operador.

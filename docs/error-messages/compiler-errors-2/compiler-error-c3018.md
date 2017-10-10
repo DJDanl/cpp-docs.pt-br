@@ -1,5 +1,5 @@
 ---
-title: C3018 de erro do compilador | Documentos do Microsoft
+title: C3018 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fe1d8ca187574d55d16aa2e8a479ac7812034775
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 05d0cc8f381335b22a53a4cc699172cd289126a9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3018"></a>C3018 de erro do compilador
-'var1': OpenMP 'para' teste ou o incremento deve usar índice variável 'var2'  
+'var1': OpenMP 'for' deve usar o teste ou incremento de índice 'var2' variável  
   
- Um `for` loop em uma instrução OpenMP deve usar a mesma variável de seu teste e incremento como ele usa para seu índice.  
+ Um `for` loop em uma instrução de OpenMP deve usar a mesma variável para seu teste e de incremento, pois ele usa para seu índice.  
   
  O exemplo a seguir gera C3018:  
   

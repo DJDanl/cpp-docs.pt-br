@@ -1,5 +1,5 @@
 ---
-title: C3117 de erro do compilador | Documentos do Microsoft
+title: C3117 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3634b40f50cfd3f260633cc1aa7c542ae861af71
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7f95c5e8073f896c42eebd273ff5923778847a56
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3117"></a>C3117 de erro do compilador
-'%$S' : uma interface só pode possuir uma classe base  
+'%$S s': uma interface só pode ter uma classe base  
   
  Você declarou uma interface que herda de várias classes base.  
   

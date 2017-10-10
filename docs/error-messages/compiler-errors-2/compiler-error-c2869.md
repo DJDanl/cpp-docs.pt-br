@@ -1,5 +1,5 @@
 ---
-title: C2869 de erro do compilador | Documentos do Microsoft
+title: C2869 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8b475458cc51381e6ed84b3e865e2ee104ea13e2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebdd6a371f20a03db3677f038155c40bfa2e75ab
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2869"></a>C2869 de erro do compilador
-'name': já foi definido para ser um namespace  
+'name': já foi definido para um namespace  
   
- Você não pode reutilizar um nome já usado como um namespace.  
+ Não é possível reutilizar um nome já usado como um namespace.  
   
  O exemplo a seguir gera C2869:  
   

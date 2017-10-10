@@ -1,5 +1,5 @@
 ---
-title: C3087 de erro do compilador | Documentos do Microsoft
+title: C3087 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e2852e333db82852aa1a9eb083b4a89e0cf8a10d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d786cb3f8c04e5d8ff32aebe30915d4aca3cfb2f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3087"></a>C3087 de erro do compilador
-'named_argument': a chamada de 'attribute' já inicializa este membro  
+'named_argument': chamada de 'attribute' já inicializa este membro  
   
- Um argumento nomeado foi especificado no mesmo bloco de atributo como um argumento sem nome para o mesmo valor. Especifique apenas um argumento ou sem nome.  
+ Um argumento nomeado foi especificado no mesmo bloco de atributo como um argumento sem nome para o mesmo valor. Especifique apenas um argumento nomeado ou sem nome.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3087.  

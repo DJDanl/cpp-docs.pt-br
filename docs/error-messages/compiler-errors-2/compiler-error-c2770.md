@@ -1,5 +1,5 @@
 ---
-title: C2770 de erro do compilador | Documentos do Microsoft
+title: C2770 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3c631c71a513e3c13b0e04fdc70919a811c7b9c4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 81179a10cc58c1b22f974b4367d471dde87bdc65
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2770"></a>C2770 de erro do compilador
-argumento inválido template_or_generic explícita para 'template'  
+argumentos inválidos template_or_generic explícita para 'template'  
   
- Candidatos do modelo de função com modelo explícito ou argumentos genéricos resultaram em tipos de função não permitido.  
+ Candidatos do modelo de função com o modelo explícito ou argumentos genéricos resultaram em tipos de função não permitido.  
   
  O exemplo a seguir gera C2770:  
   

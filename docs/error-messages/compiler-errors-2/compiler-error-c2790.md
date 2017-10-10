@@ -1,5 +1,5 @@
 ---
-title: C2790 de erro do compilador | Documentos do Microsoft
+title: C2790 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 13d38b9a3c507ecced1aa34311cf9f83c6f4f383
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 11ea7285d20808f16f2588d50caebe99429c8da0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2790"></a>C2790 de erro do compilador
-'super' : esta palavra-chave só pode ser usada dentro do corpo de função membro de classe  
+'super': esta palavra-chave só pode ser usado no corpo da função de membro de classe  
   
- Essa mensagem de erro será exibida se o usuário nunca tenta usa a palavra-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.  
+ Essa mensagem de erro será exibida se o usuário tentar usa a palavra-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.  
   
  O exemplo a seguir gera C2790:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2917 de erro do compilador | Documentos do Microsoft
+title: C2917 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e1702502d012f11c66d10fe41b57f2be0a0031de
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b66aee3abc57f7505f829fcedffdf2ffd927d839
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2917"></a>C2917 de erro do compilador
 'name': parâmetro de modelo inválido  
   
- Uma lista de parâmetros de modelo contém um identificador que não era um parâmetro de modelo.  
+ Uma lista de parâmetros de modelo contém um identificador que não é um parâmetro de modelo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2917.  

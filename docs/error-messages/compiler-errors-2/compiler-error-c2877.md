@@ -1,5 +1,5 @@
 ---
-title: C2877 de erro do compilador | Documentos do Microsoft
+title: C2877 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 356489d91fa030e98ba5629b935854ff1d232057
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 24bfc3cbf531e31add96d333e6da723dba4444a2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2877"></a>C2877 de erro do compilador
 'symbol' não é acessível de 'class'  
   
- Derivado de uma classe base de todos os membros devem estar acessíveis na classe derivada.  
+ Derivada de uma classe base de todos os membros devem estar acessíveis na classe derivada.  
   
  O exemplo a seguir gera C2877:  
   

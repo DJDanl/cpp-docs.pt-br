@@ -1,5 +1,5 @@
 ---
-title: C2857 de erro do compilador | Documentos do Microsoft
+title: C2857 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 58862c7251cecf33bc02ddbde64c30183c52a08c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ca0f2b8847600096c9e39de24c58e6a0021fa83f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2857"></a>C2857 de erro do compilador
@@ -45,4 +31,4 @@ ms.lasthandoff: 02/25/2017
   
  O [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opção especifica o nome de um arquivo de inclusão não está incluído no arquivo de origem que está sendo compilado.  
   
- Esse erro pode ser causado por um `#include` instrução em um bloco de compilação condicional não é compilado.
+ Esse erro pode ser causado por um `#include` instrução em um bloco de compilação condicional não está compilado.

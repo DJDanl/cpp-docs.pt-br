@@ -1,5 +1,5 @@
 ---
-title: C2680 de erro do compilador | Documentos do Microsoft
+title: C2680 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 92fbcb75de67b7d2f9f33c24ced48900d21550a4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2680"></a>C2680 de erro do compilador
 'type': tipo de destino inválido para nome  
   
- Um operador de conversão tentou converter para um tipo que não é um ponteiro ou referência. O [dynamic_cast](../../cpp/dynamic-cast-operator.md) operador pode ser usado apenas para ponteiros ou referências.  
+ Um operador de conversão tentou converter para um tipo que não é um ponteiro ou referência. O [dynamic_cast](../../cpp/dynamic-cast-operator.md) operador pode ser usado apenas para referências ou ponteiros.  
   
  O exemplo a seguir gera C2680:  
   

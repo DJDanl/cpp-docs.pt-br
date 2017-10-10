@@ -1,5 +1,5 @@
 ---
-title: C3042 de erro do compilador | Documentos do Microsoft
+title: C3042 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 44c759303bb5ecdb0286a94a437f83ca15b28723
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0fe35a4021cca6ac1e3dd9846a3c165f50797f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3042"></a>C3042 de erro do compilador
-cláusulas 'copyprivate' e 'nowait' não podem aparecer juntos na diretiva de 'diretiva' OpenMP  
+cláusulas 'copyprivate' e 'nowait' não podem aparecer juntas em diretiva de 'diretiva' OpenMP  
   
- O [copyprivate](../../parallel/openmp/reference/copyprivate.md) e [nowait](../../parallel/openmp/reference/nowait.md) cláusulas são mutuamente exclusivas na diretiva especificada. Para corrigir esse erro, remova uma ou ambas as `copyprivate` ou `nowait` cláusulas.  
+ O [copyprivate](../../parallel/openmp/reference/copyprivate.md) e [nowait](../../parallel/openmp/reference/nowait.md) cláusulas são mutuamente exclusivas na diretiva especificada. Para corrigir esse erro, remova um ou ambos os `copyprivate` ou `nowait` cláusulas.  
   
  O exemplo a seguir gera C3042:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3020 de erro do compilador | Documentos do Microsoft
+title: C3020 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cb42a1c0e27896f8cbd19c4993c1e57997de5579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3020"></a>C3020 de erro do compilador
-'var': variável de índice do OpenMP 'loop for' não pode ser modificado no corpo do loop  
+'var': variável de índice de OpenMP 'loop for' não pode ser modificado no corpo do loop  
   
  Um OpenMP `for` loop não pode modificar o índice (contador de loop) no corpo do `for` loop.  
   
@@ -66,7 +52,7 @@ int main() {
   
  Uma variável declarada com [lastprivate](../../parallel/openmp/reference/lastprivate.md) não pode ser usado como o índice dentro de um loop em paralelo.  
   
- O exemplo a seguir fornecerá C3020 para o segundo lastprivate porque esse lastprivate irá disparar uma gravação idx_a contidas loop for. A primeira lastprivate não fornece um erro porque essa lastprivate dispara uma gravação idx_a fora mais externo para loop (tecnicamente, no final da última iteração). O exemplo a seguir gera C3020.  
+ O exemplo a seguir fornecerá C3020 para o segundo lastprivate porque esse lastprivate disparará uma gravação idx_a contidas loop for. A primeira lastprivate não fornece um erro porque esse lastprivate dispara uma gravação idx_a fora externo para loop (tecnicamente, no final da última iteração). O exemplo a seguir gera C3020.  
   
 ```  
 // C3020b.cpp  
