@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4025 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4025 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: adc40b0b376b5553d136df420fd03b3500bc25a8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e9bca6428358d1ce33e8069c7fcdfef19b23c7a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4025"></a>Compilador C4025 de aviso (nível 1)
-'número': ponteiro baseado passado para a função com argumentos de variável: número do parâmetro  
+'número': ponteiro based passado para a função com argumentos variáveis: o número do parâmetro  
   
- Transmitir um ponteiro baseado em uma função com argumentos de variável faz com que o ponteiro ser normalizados, com resultados imprevisíveis. Não passe baseados em ponteiros para funções com argumentos de variável.
+ Transmitindo um ponteiro com base em uma função com argumentos variáveis faz com que o ponteiro ser normalizados, com resultados imprevisíveis. Não passe baseado em ponteiros para funções com argumentos variáveis.

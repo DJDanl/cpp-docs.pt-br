@@ -1,5 +1,5 @@
 ---
-title: C3772 de erro do compilador | Documentos do Microsoft
+title: C3772 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,41 +19,26 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 7bf4fc0d7e80d2bd77343ee43c31dc74b93c97de
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c2f6d59a03757ca609a821fd0ca7d520ffdbf8ba
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3772"></a>C3772 de erro do compilador
-"nome": declaração de modelo friend inválido  
+"name": declaração de modelo friend inválido  
   
-Não é válido para declarar um amigo uma especialização de modelo de classe. Você não pode declarar uma especialização explícita ou parcial de um modelo de classe e na mesma instrução declare um amigo que especialização. O *nome* espaço reservado identifica declaração inválida.  
+Não é válido para declarar um friend de uma especialização de modelo de classe. Você não pode declarar uma especialização explícita ou parcial de um modelo de classe e na mesma instrução declare um amigo dessa especialização. O *nome* espaço reservado identifica declaração inválida.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Não declare um amigo uma especialização de modelo de classe.  
+-   Não declare um amigo de uma especialização de modelo de classe.  
   
--   Se for apropriado para seu aplicativo, declare um amigo do modelo de classe ou declarar um amigo uma especialização parcial ou explícita específica.  
+-   Se for apropriado para seu aplicativo, declare um amigo do modelo de classe ou declare um amigo de uma especialização parcial ou explícita específica.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir falha porque ele declara um amigo de uma especialização parcial de um modelo de classe.  
+ O exemplo de código a seguir falha porque ele declara um friend de uma especialização parcial de um modelo de classe.  
   
 ```cpp  
 // c3772.cpp  

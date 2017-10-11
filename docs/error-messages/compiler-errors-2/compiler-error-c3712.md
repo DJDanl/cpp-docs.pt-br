@@ -1,5 +1,5 @@
 ---
-title: C3712 de erro do compilador | Documentos do Microsoft
+title: C3712 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59b463b932287775a815dd5edd844ad920b095ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69f23d7192bc72f5f287a3a5b84b7840f9d25310
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3712"></a>C3712 de erro do compilador
-'method': um método de manipulador de eventos deve retornar o mesmo tipo de origem 'method'  
+'method': um método de manipulador de eventos deve retornar o mesmo tipo que a origem 'method'  
   
- Você definiu um método de manipulador de eventos que não retornou o mesmo tipo que o método de evento do código-fonte. Para corrigir esse erro, dê o método do manipulador de eventos do mesmo tipo de retorno que o método de evento do código-fonte.  
+ Você definiu um método de manipulador de eventos que não retornou o mesmo tipo que o método de evento de origem. Para corrigir esse erro, dê o método do manipulador de eventos do mesmo tipo de retorno do método de evento de origem.  
   
  O exemplo a seguir gera C3712:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3633 de erro do compilador | Documentos do Microsoft
+title: C3633 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3633"></a>C3633 de erro do compilador
-não é possível definir 'member' como um membro de 'tipo' gerenciado  
+não é possível definir 'member' como um membro de 'type' gerenciado  
   
-Membros de dados de classe de referência CLR não podem ser de um tipo não POD C++.  Você só pode instanciar um tipo nativo POD em um tipo CLR.  Por exemplo, um tipo POD não pode conter um construtor de cópia ou um operador de atribuição.  
+Membros de dados de classe de referência do CLR não podem ser de um tipo não POD C++.  Você só pode instanciar um tipo nativo POD em um tipo CLR.  Por exemplo, um tipo POD não pode conter um construtor de cópia ou um operador de atribuição.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C3633.  

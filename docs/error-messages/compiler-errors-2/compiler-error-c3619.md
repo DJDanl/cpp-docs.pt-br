@@ -1,5 +1,5 @@
 ---
-title: C3619 de erro do compilador | Documentos do Microsoft
+title: C3619 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b55f164e7d672b843ddf45c8518d0540611fcd29
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3c57a7ca72529555420d32985da78b463baef268
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3619"></a>C3619 de erro do compilador
-um modelo não pode ser declarado dentro de um gerenciado ou WinRT tipo  
+um modelo não pode ser declarado dentro de um gerenciados ou WinRT tipo  
   
-Modelos de classe não são permitidos no gerenciada ou WinRT classe ou interface.  
+Modelos de classe não são permitidos em gerenciada ou WinRT classe ou interface.  
   
 C3619 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
 

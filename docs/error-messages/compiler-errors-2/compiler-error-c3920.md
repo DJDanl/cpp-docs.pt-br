@@ -1,5 +1,5 @@
 ---
-title: C3920 de erro do compilador | Documentos do Microsoft
+title: C3920 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2acdf4b372abcade3a0dc83e86e9e27f80ef1f75
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e2bf82de4e32c2b0ae586c78c69ce474947c3ec
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3920"></a>C3920 de erro do compilador
-' operador ': não é possível definir um operador CLR chamando o sufixo ou sufixo incrementar/diminuir WinRT operador WinRT ou CLR chamará o prefixo correspondente WinRT ou CLR operador (op_Increment op_Decrement), mas semântica de sufixo  
+' operador ': não é possível definir um incremento/decremento de sufixo WinRT ou um operador CLR chamando o sufixo prefixo correspondente será chamada de operador de WinRT ou CLR WinRT ou CLR operador (op_Increment/op_Decrement), mas com semântica de pós-fixo  
   
- O tempo de execução do Windows e o CLR não dão suporte para o operador de sufixo e operadores de sufixo definida pelo usuário não são permitidas.  Você pode definir um operador de prefixo e o operador de prefixo será usado para operações de pré e pós-incrementos.  
+ O tempo de execução do Windows e o CLR não dão suporte para o operador de sufixo e operadores de sufixo definida pelo usuário não são permitidas.  Você pode definir um operador de prefixo e o operador de prefixo que será usado para operações de pré e pós-incrementos.  
   
  O exemplo a seguir gera C3920 e mostra como corrigi-lo:  
   

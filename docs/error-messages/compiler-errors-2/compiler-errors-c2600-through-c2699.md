@@ -67,33 +67,18 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>C2600 de erros do compilador por meio de C2699
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -144,7 +129,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2642 de erro do compilador|Obsoleto.|  
 |C2643 de erro do compilador|Obsoleto.|  
 |C2644 de erro do compilador|Obsoleto.|  
-|[Erro do compilador C2645](compiler-error-c2645.md)|nenhum nome qualificado a ponteiro para membro (encontrado ':: *')|  
+|[Erro do compilador C2645](compiler-error-c2645.md)|Nenhum nome qualificado a ponteiro para membro (encontrado ':: *')|  
 |[Erro do compilador C2646](compiler-error-c2646.md)|uma struct/união anônima em global ou escopo de namespace deve ser declarado estático|  
 |[Erro do compilador C2647](compiler-error-c2647.md)|'*operador*': não é possível desreferenciar um '*type1*' em um '*type2*'|  
 |[Erro do compilador C2648](compiler-error-c2648.md)|'*identificador*': uso de membro como parâmetro padrão requer membro static|  
@@ -168,7 +153,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2666](compiler-error-c2666.md)|'*função*': *número* sobrecargas possuem conversões similares|  
 |[Erro do compilador C2667](compiler-error-c2667.md)|'*função*': nenhuma das *número* sobrecargas possuem uma conversão melhor|  
 |[Erro do compilador C2668](compiler-error-c2668.md)|'*função*': chamada ambígua para função sobrecarregada|  
-|[Erro do compilador C2669](compiler-error-c2669.md)|função membro não permitida em union anônima|  
+|[Erro do compilador C2669](compiler-error-c2669.md)|função de membro não permitida em union anônima|  
 |[Erro do compilador C2670](compiler-error-c2670.md)|'*função*': o modelo de função não é possível converter o parâmetro *número* do tipo '*tipo*'|  
 |[Erro do compilador C2671](compiler-error-c2671.md)|'*função*': funções membro static não possuem ponteiros 'this'|  
 |C2672 de erro do compilador|'*função*': função sobrecarregada não correspondente encontrada|  
@@ -185,7 +170,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2683](compiler-error-c2683.md)|'*cast*': '*tipo*' não é um tipo polimórfico|  
 |C2684 de erro do compilador|'*declarador*': funções excluídas e padronizadas não têm suporte nas classes do WinRT/gerenciado|  
 |C2685 de erro do compilador|'*declarador*': funções excluídas e padronizadas não têm suporte com especificadores de restrição explícitos|  
-|C2686 de erro do compilador|não é possível sobrecarregar funções membro static e não static com os mesmos tipos de parâmetros|  
+|C2686 de erro do compilador|não é possível sobrecarregar funções membro estáticas e não-estático com os mesmos tipos de parâmetro|  
 |[Erro do compilador C2687](compiler-error-c2687.md)|'*tipo*': declaração de exceção não pode ser 'void' ou denotar um tipo incompleto ou um ponteiro ou uma referência a um tipo incompleto|  
 |[Erro do compilador C2688](compiler-error-c2688.md)|'*tipo*::*membro*': retornos covariantes com múltiplas heranças ou herança virtual não tem suportada para funções varargs|  
 |[Erro do compilador C2689](compiler-error-c2689.md)|'*função*': uma função friend não pode ser definida dentro de uma classe local|  

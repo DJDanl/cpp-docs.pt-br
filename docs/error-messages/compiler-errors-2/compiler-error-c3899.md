@@ -1,5 +1,5 @@
 ---
-title: C3899 de erro do compilador | Documentos do Microsoft
+title: C3899 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 58d6cf8cbfe1bd8b649861f436a0c6dfb5e4accb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3899"></a>C3899 de erro do compilador
-'var': uso de l-value initonly do membro de dados não é permitido dentro de uma região paralela na classe 'class'  
+'var': uso l-value de membro de dados initonly não é permitido diretamente dentro de uma região parallel na classe 'class'  
   
- Um [initonly (C + + / CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado em que parte de um construtor que está em uma [paralela](../../parallel/openmp/reference/parallel.md) região.  Isso ocorre porque o compilador faz uma realocação interna desse código, de modo que, efetivamente não é parte do construtor.  
+ Um [initonly (C + + CLI)](../../dotnet/initonly-cpp-cli.md) membro de dados não pode ser inicializado em parte de um construtor que está em um [paralela](../../parallel/openmp/reference/parallel.md) região.  Isso ocorre porque o compilador faz uma realocação interna do código, que, efetivamente não faz parte do construtor.  
   
  Para resolver, inicialize o membro de dados initonly no construtor, mas fora da região paralela.  
   

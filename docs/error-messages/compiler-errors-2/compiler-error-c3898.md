@@ -1,5 +1,5 @@
 ---
-title: C3898 de erro do compilador | Documentos do Microsoft
+title: C3898 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 26d75123300470956c32cc03f911e36b74542f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c5ff2b3079de90efbf370082be4fee03dbfaab3e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3898"></a>C3898 de erro do compilador
 'var': membros de dados de tipo só podem ser membros de tipos gerenciados  
   
- Um [initonly](../../dotnet/initonly-cpp-cli.md) membro de dados foi declarado em uma classe nativa.  Um `initonly` membro de dados só pode ser declarado em uma classe CLR.  
+ Um [initonly](../../dotnet/initonly-cpp-cli.md) membro de dados foi declarado em uma classe nativo.  Um `initonly` membro de dados só pode ser declarado em uma classe CLR.  
   
  O exemplo a seguir gera C3898:  
   
@@ -56,7 +42,7 @@ struct Y1 {
 };  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3898b.cpp  

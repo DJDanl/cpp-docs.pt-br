@@ -1,5 +1,5 @@
 ---
-title: C3893 de erro do compilador | Documentos do Microsoft
+title: C3893 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c1d7c8bcb673384ecc718795bc154128db42d12c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49097d988175e7571c5825b4d54e1dd496fb2ba7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3893"></a>C3893 de erro do compilador
-'var': uso de l-value initonly do membro de dados só é permitido em um construtor de instância da classe 'type_name'  
+'var': uso l-value de membro de dados initonly só é permitido em um construtor de instância da classe 'type_name'  
   
  Estático [initonly](../../dotnet/initonly-cpp-cli.md) membros de dados só podem ter seus endereços obtidos em um construtor estático.  
   
- Membros de dados (não estático) initonly instância só podem ter seus endereços obtidos em construtores de instância (não estático).  
+ Membros de dados instância (não estático) initonly só podem ter seus endereços obtidos em construtores de instância (não estático).  
   
  O exemplo a seguir gera C3893:  
   

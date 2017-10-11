@@ -1,5 +1,5 @@
 ---
-title: C3611 de erro do compilador | Documentos do Microsoft
+title: C3611 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cf6cf19124cf4c08cc5df8ce7852ec4bcccc33a9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cfd4d0cb336f540387ad8f135c02c512a5282e26
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3611"></a>C3611 de erro do compilador
-'function': uma função lacrada não pode ter um especificador puro  
+'function': uma função sealed não pode ter um especificador puro  
   
- Uma função lacrada foi declarada incorretamente.  Para obter mais informações, consulte [lacrado](../../windows/sealed-cpp-component-extensions.md).  
+ Uma função sealed foi declarada incorretamente.  Para obter mais informações, consulte [lacrado](../../windows/sealed-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3611.  

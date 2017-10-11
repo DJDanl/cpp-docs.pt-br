@@ -1,5 +1,5 @@
 ---
-title: C3856 de erro do compilador | Documentos do Microsoft
+title: C3856 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9610d0df1761f4c0e08ad47280f4f2163d986bde
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d2f74872939a2237f2c816e348242ebd58c8b3e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3856"></a>C3856 de erro do compilador
 'type': classe não é um tipo de classe  
   
- A causa mais comum para esse erro é quando há mais genérica ou listas de parâmetros de modelo no ponto de definição que havia no ponto de declaração.  
+ A causa mais comum para esse erro é quando há mais genérico ou listas de parâmetros de modelo no ponto da definição que havia no ponto de declaração.  
   
  O exemplo a seguir gera C3856:  
   
@@ -62,7 +48,7 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3856b.cpp  
@@ -96,7 +82,7 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3856d.cpp  

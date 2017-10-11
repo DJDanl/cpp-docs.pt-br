@@ -1,5 +1,5 @@
 ---
-title: C3851 de erro do compilador | Documentos do Microsoft
+title: C3851 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 630198992aaf227c422d9f71b2c93f2f01f7bd84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed2a62b859e37455041171c81bb6830db372c697
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3851"></a>C3851 de erro do compilador
-'char': nome universal-caracteres não é possível designar um caractere no conjunto de caracteres básicas  
+'char': um-nome de caractere universal não pode designar um caractere no conjunto de caracteres básicas  
   
- No código compilado c++, você não pode usar um nome universal de caracteres que representa um caractere no conjunto de caracteres de origem básico fora de uma cadeia de caracteres ou literal de caractere. Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets2.md). No código compilado como C, você não pode usar um nome universal de caracteres para caracteres no intervalo 0x20-0x7f, inclusive, exceto 0x24 ('$'), 0x40 (' @'), ou 0x60 (' ').  
+ No código compilado como C++, você não pode usar um nome de caractere universal que representa um caractere no conjunto de caracteres de origem básico fora de uma cadeia de caracteres ou literal de caractere. Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets2.md). No código compilado como C, você não pode usar um nome de caractere universal para caracteres no intervalo 0x20-0x7f, inclusive, exceto 0x24 ('$'), 0x40 (' @'), ou 0x60 (' ').  
   
  Os exemplos a seguir geram C3851 e mostram como corrigi-lo:  
   

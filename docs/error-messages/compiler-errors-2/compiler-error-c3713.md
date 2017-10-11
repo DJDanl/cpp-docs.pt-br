@@ -1,5 +1,5 @@
 ---
-title: C3713 de erro do compilador | Documentos do Microsoft
+title: C3713 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 914641d8ab09862be0a01510e706926b4ba4ce09
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13387629ab4dda3965bc8b835e2e092ef29ef880
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3713"></a>C3713 de erro do compilador
 'method': um método de manipulador de eventos deve ter os mesmos parâmetros de função como a origem 'method'  
   
- Você definiu um método de manipulador de eventos que não usa os mesmos parâmetros como o método de evento do código-fonte. Para corrigir esse erro, dê o método do manipulador de eventos os mesmos parâmetros do método de evento do código-fonte.  
+ Você definiu um método de manipulador de eventos que não usa os mesmos parâmetros como o método de evento de origem. Para corrigir esse erro, conceda o método do manipulador de eventos os mesmos parâmetros de método de evento de origem.  
   
  O exemplo a seguir gera C3713:  
   

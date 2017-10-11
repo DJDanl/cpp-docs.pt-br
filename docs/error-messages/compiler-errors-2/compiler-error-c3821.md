@@ -1,5 +1,5 @@
 ---
-title: C3821 de erro do compilador | Documentos do Microsoft
+title: C3821 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3821"></a>C3821 de erro do compilador
-'function': tipo gerenciado ou função não pode ser usada em uma função não gerenciada  
+'function': tipo ou função gerenciados não pode ser usada em uma função não gerenciada  
   
  Funções com assembly embutido ou [setjmp](../../c-runtime-library/reference/setjmp.md) não pode conter tipos de valor ou classes gerenciadas. Para corrigir esse erro, remova o assembly embutido e `setjmp` ou remover os objetos gerenciados.  
   
- C3821 também pode ocorrer se você tentar usar o armazenamento automático em uma função vararg.  Para obter mais informações, consulte [listas de argumentos variáveis (...) (C + + / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [semântica da pilha do C++ para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ C3821 também poderá ocorrer se você tentar usar o armazenamento automático em uma função de vararg.  Para obter mais informações, consulte [listas de argumentos variáveis (...) (C + + CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [semântica de pilha do C++ para tipos de referência](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3821.  

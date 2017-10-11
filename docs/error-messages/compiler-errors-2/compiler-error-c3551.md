@@ -1,5 +1,5 @@
 ---
-title: C3551 de erro do compilador | Documentos do Microsoft
+title: C3551 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f46e0de158239c2c2d428de22358d01841ff4a8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 450bd97efc9cfbf07eac84a3e6a693af698fc64f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3551"></a>C3551 de erro do compilador
-"esperado que um final de tipo de retorno especificado"  
+"esperado o que tipo de retorno especificado um tardia"  
   
- Se você usar o `auto` palavra-chave como um espaço reservado para o tipo de retorno de uma função, você deve fornecer um tipo de retorno especificado tardia. No exemplo a seguir, a especificação tardia tipo de retorno da função `myFunction` é um ponteiro para uma matriz de quatro elementos do tipo `int`.  
+ Se você usar o `auto` palavra-chave como um espaço reservado para o tipo de retorno de uma função, você deve fornecer um tipo de retorno tardia especificado. No exemplo a seguir, o final especificado pelo tipo de retorno de função `myFunction` é um ponteiro para uma matriz de quatro elementos do tipo `int`.  
   
 ```  
 auto myFunction()->int(*)[4];   
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Automático](../../cpp/auto-cpp.md)
+ [auto](../../cpp/auto-cpp.md)

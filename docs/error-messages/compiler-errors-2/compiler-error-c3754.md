@@ -1,5 +1,5 @@
 ---
-title: C3754 de erro do compilador | Documentos do Microsoft
+title: C3754 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2a72db01b88f062f2b8866109cab6375930121ef
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 01fe6b5568da2e55d5ade4eca22a84ea4a0041e7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3754"></a>C3754 de erro do compilador
-Delegar o construtor: função de membro 'function' não pode ser chamada em uma instância do tipo 'type'  
+construtor delegate: função de membro 'function' não pode ser chamada em uma instância do tipo 'type'  
   
- Foi feita uma chamada para uma função através de um ponteiro para um tipo que não contém a função.  
+ Foi feita uma chamada para uma função por meio de um ponteiro para um tipo que não contém a função.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3754:  

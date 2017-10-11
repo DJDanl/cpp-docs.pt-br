@@ -1,5 +1,5 @@
 ---
-title: C3813 de erro do compilador | Documentos do Microsoft
+title: C3813 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 74c976fb090533ade91e5debf067371d5d3295c1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cabe753691b3d72ede25f0c25404d73fb63ceba8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3813"></a>C3813 de erro do compilador
-uma declaração de propriedade só pode aparecer dentro da definição de um gerenciado ou um tipo WinRT  
+uma declaração de propriedade só pode aparecer dentro da definição de um serviço ou tipo de WinRT  
   
-A [propriedade](../../dotnet/how-to-use-properties-in-cpp-cli.md) só pode ser declarado dentro gerenciada ou tempo de execução do Windows tipo. Não oferecem suporte a tipos nativos do `property` palavra-chave.  
+Um [propriedade](../../dotnet/how-to-use-properties-in-cpp-cli.md) só pode ser declarado dentro de um gerenciado ou tempo de execução do Windows tipo. Tipos nativos não dão suporte a `property` palavra-chave.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C3813 e mostra como corrigi-lo:  

@@ -1,5 +1,5 @@
 ---
-title: C3719 de erro do compilador | Documentos do Microsoft
+title: C3719 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9dff87eb093742239b6dff0771785f8a6111d256
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3719"></a>C3719 de erro do compilador
-'interface': uma fonte de evento com base de interface só pode ser usada para eventos COM  
+'interface': uma fonte de eventos baseada em interface só pode ser usada para eventos COM  
   
  Você declarou uma interface em um contexto de não-COM.  
   
@@ -72,7 +58,7 @@ int main() {
 }  
 ```  
   
- Para corrigir esse erro, aplicar o [objeto](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), e [event_receiver](../../windows/event-receiver.md) atributos apropriadamente para tornar as classes que você está usando as classes de interface COM. Por exemplo:  
+ Para corrigir esse erro, aplicar o [objeto](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), e [event_receiver](../../windows/event-receiver.md) atributos adequadamente para tornar o classes que você está usando as classes de interface COM. Por exemplo:  
   
 ```  
 // C3719b.cpp  

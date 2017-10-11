@@ -1,5 +1,5 @@
 ---
-title: C3807 de erro do compilador | Documentos do Microsoft
+title: C3807 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 73d27c611fe268d6b7073cdbb73b7606e28e5765
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc8e760d295cc0a4c2482449038ea09e89547425
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3807"></a>C3807 de erro do compilador
-'type': uma classe com o atributo ComImport não pode derivar de 'type2', é permitida apenas a implementação de interface  
+'type': uma classe com o atributo ComImport não pode derivar de 'type2', apenas implementação de interface é permitida  
   
- Um tipo derivado de <xref:System.Runtime.InteropServices.ComImportAttribute>só pode implementar uma interface.</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ Um tipo que derivado de <xref:System.Runtime.InteropServices.ComImportAttribute> somente pode implementar uma interface.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3807.  

@@ -1,5 +1,5 @@
 ---
-title: C3869 de erro do compilador | Documentos do Microsoft
+title: C3869 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 72759dbfc1f49799d8f286355a9bfd2083b74bd2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 902786dcce2a9bc8b959eb42b037c7476fad0738
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3869"></a>C3869 de erro do compilador
-faltando lista de parâmetros vazia '()' na restrição gcnew  
+restrição gcnew está faltando a lista de parâmetros vazia '()'  
   
- O `gcnew` especiais de restrição foi especificado sem a lista de parâmetros vazio. Consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
+ O `gcnew` restrição especial foi especificada sem a lista de parâmetros vazia. Consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3869.  

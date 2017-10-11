@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4022 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4022 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 586adb864216f04dd988ecb6c43800b200e2cecd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5f5591bd9f4130cd1672cf170038a9bc35df2e8d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4022"></a>Compilador C4022 de aviso (nível 1)
-'function': incompatibilidade de ponteiro para o parâmetro real 'number'  
+'function': incompatibilidade de ponteiro para parâmetro real 'número'  
   
- O tipo de ponteiro do parâmetro real é diferente do tipo de ponteiro do parâmetro formal correspondente. O parâmetro real será passado sem alteração.
+ O tipo de ponteiro do parâmetro real é diferente do tipo de ponteiro de parâmetro formal correspondente. O parâmetro real é passado sem alteração.

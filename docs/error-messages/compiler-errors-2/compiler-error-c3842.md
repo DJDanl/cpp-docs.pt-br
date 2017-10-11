@@ -1,5 +1,5 @@
 ---
-title: C3842 de erro do compilador | Documentos do Microsoft
+title: C3842 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbed0840025d7db60aed4cffd15d6defbf2d04c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d9fe94a50939af6d28f9dc29eb1eb7aa91a7d47c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3842"></a>C3842 de erro do compilador
-'function': não há suporte para 'const' e 'volátil' qualificadores em funções de membro do WinRT ou tipos gerenciados  
+'function': não há suporte para qualificadores 'const' e 'volatile' em funções membro de WinRT ou tipos gerenciados  
   
- [Const](../../cpp/const-cpp.md) e [volátil](../../cpp/volatile-cpp.md) não têm suporte em funções de membro de tempo de execução do Windows ou tipos gerenciados.  
+ [Const](../../cpp/const-cpp.md) e [volátil](../../cpp/volatile-cpp.md) não têm suporte em funções membro de tempo de execução do Windows ou tipos gerenciados.  
   
  O exemplo a seguir gera C3842:  
   

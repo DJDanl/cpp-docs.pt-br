@@ -1,5 +1,5 @@
 ---
-title: C4972 de aviso do compilador | Documentos do Microsoft
+title: C4972 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 12d046c1ade302412e7343a4c41661cb362e6104
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a0ac41ed06c30600c4189dbcca3af4da3dfa595f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4972"></a>C4972 de aviso do compilador
 Modificar diretamente ou tratar o resultado de uma operação de unbox como um lvalue não é verificável  
   
- Um identificador para um tipo de valor de referência, também conhecido como unboxing e, em seguida, atribuí-lo não são verificável.  
+ Não é verificável desreferenciar um identificador para um tipo de valor, também conhecido como unboxing e, em seguida, atribuí-lo.  
   
- Para obter mais informações, consulte [conversão Boxing](../../windows/boxing-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [Boxing](../../windows/boxing-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4972.  

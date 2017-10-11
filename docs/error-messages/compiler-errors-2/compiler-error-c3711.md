@@ -1,5 +1,5 @@
 ---
-title: C3711 de erro do compilador | Documentos do Microsoft
+title: C3711 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 54c5c2f3c57e1b1bc08bb7c5853634fcfecfce33
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3711"></a>C3711 de erro do compilador
 'method': um método de fonte de eventos não gerenciados deve retornar void ou um tipo integral  
   
- Você definiu um método em origem do evento não retornou nula ou um tipo integral. Para corrigir esse erro, verifique o evento e o manipulador de eventos que têm um tipo de retorno de `void` ou um tipo integral como `int` ou `long`.  
+ Você definiu um método na fonte de evento que não retornou nulo ou um tipo integral. Para corrigir esse erro, verifique o evento e o manipulador de eventos que têm um tipo de retorno `void` ou um tipo integral como `int` ou `long`.  
   
  O exemplo a seguir gera C3711:  
   

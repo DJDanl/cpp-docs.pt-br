@@ -65,32 +65,18 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 de erros do compilador por meio de C2599
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -136,22 +122,22 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2537](compiler-error-C2537.md)|'*especificador*': especificação de vínculo inválida|  
 |C2538 de erro do compilador|Obsoleto.|  
 |C2539 de erro do compilador|Obsoleto.|
-|[Erro do compilador C2540](compiler-error-C2540.md)|expressão não constante como limite da matriz|  
+|[Erro do compilador C2540](compiler-error-C2540.md)|expressão não constante como limite de matriz|  
 |[Erro do compilador C2541](compiler-error-C2541.md)|'*identificador*': não é possível excluir objetos que não são ponteiros|  
 |[Erro do compilador C2542](compiler-error-C2542.md)|'*identificador*': o objeto de classe não possui construtor para inicialização|  
 |[Erro do compilador C2543](compiler-error-C2543.md)|esperado ']' para o operador '[]'|  
-|[Erro do compilador C2544](compiler-error-C2544.md)|esperado ')' para operador '()'|  
+|[Erro do compilador C2544](compiler-error-C2544.md)|esperado ')' para o operador '()'|  
 |[Erro do compilador C2545](compiler-error-C2545.md)|'*operador*': não é possível encontrar operador sobrecarregado|  
 |C2546 de erro do compilador|'*identificador*': quando um tipo é definido em um PIA e um não PIA, o PIA deve ser referenciado primeiro|  
 |C2547 de erro do compilador|'*identificador*': todos os parâmetros de um método público devem ser nomeados explicitamente na declaração|  
 |[Erro do compilador C2548](compiler-error-C2548.md)|'*função*': faltando parâmetro padrão para o parâmetro *parâmetro*|  
-|[Erro do compilador C2549](compiler-error-C2549.md)|conversão definida pelo usuário não pode especificar um tipo de retorno|  
+|[Erro do compilador C2549](compiler-error-C2549.md)|conversão definida pelo usuário não é possível especificar um tipo de retorno|  
 |[Erro do compilador C2550](compiler-error-C2550.md)|'*identificador*': listas de inicializadores de construtor só são permitidas em definições de construtor|  
-|[Erro do compilador C2551](compiler-error-C2551.md)|tipo 'void *' precisa de conversão explícita|  
+|[Erro do compilador C2551](compiler-error-C2551.md)|' void *' precisa de conversão explícita do tipo|  
 |[Erro do compilador C2552](compiler-error-C2552.md)|'*identificador*': não não possível inicializar não agregações com uma lista de inicializadores|  
-|[Erro do compilador C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*função*': função virtual difere do tipo de retorno de substituição '*tipo* *base_class*::*função*'|  
+|[Erro do compilador C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*função*': tipo de retorno de função virtual de substituição difere de '*tipo* *base_ classe*::*função*'|  
 |[Erro do compilador C2555](compiler-error-C2555.md)|'*derived_class*::*função*': função virtual de substituição retornar tipo difere e não é covariante com '*base_class*::*função*'|  
-|[Erro do compilador C2556](compiler-error-C2556.md)|'*type1* *classe*::*função*': função sobrecarregada difere apenas pelo tipo de retorno de '*type2* *classe*::*função*'|  
+|[Erro do compilador C2556](compiler-error-C2556.md)|'*type1* *classe*::*função*': função sobrecarregada difere apenas pelo tipo de retorno de '*type2* *declasse*::*função*'|  
 |[Erro do compilador C2557](compiler-error-C2557.md)|'*identificador*': membros private e protected não podem ser inicializados sem um construtor|  
 |[Erro do compilador C2558](compiler-error-C2558.md)|classe*classe*': nenhum construtor de cópia disponível ou Construtor de cópia está declarado como 'explicit'|  
 |C2559 de erro do compilador|'*identificador*': não é possível sobrecarregar uma função de membro sem o qualificador de referência com uma função de membro com o qualificador de referência|  
@@ -193,5 +179,5 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2595 de erro do compilador|'*identificador*' WinRT de um tipo de atributo deve ser fechado.|  
 |C2596 de erro do compilador|'*identificador*' WinRT de um campo de atributo só pode ser um 'public enum class', 'int', 'unsigned int', 'bool', 'Platform:: Type', 'Platform:: String' ou 'Windows:: Foundation:: HResult'|  
 |[Erro do compilador C2597](compiler-error-C2597.md)|referência inválida para membro não estático '*identificador*'|  
-|[Erro do compilador C2598](compiler-error-C2598.md)|especificação de vínculo deve estar em escopo global|  
+|[Erro do compilador C2598](compiler-error-C2598.md)|especificação de vinculação deve estar no escopo global|  
 |[Erro do compilador C2599](compiler-error-C2599.md)|'*identificador*': a declaração de encaminhamento de uma enum WinRT gerenciado/não é permitida|  

@@ -1,5 +1,5 @@
 ---
-title: C3849 de erro do compilador | Documentos do Microsoft
+title: C3849 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 924892795ebdfb751ab9e30fd973cfaacf24709e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3849"></a>C3849 de erro do compilador
-chamada de estilo de função em uma expressão do tipo 'type' perderia qualificadores voláteis e/ou constantes para número de todas as sobrecargas do operador disponível  
+chamada Function-style em uma expressão do tipo 'type' perderia qualificadores constantes e/ou volatile para número de todas as sobrecargas de operator disponíveis  
   
- Uma variável com um tipo const volátil especificado só pode chamar membros a funções definidas com qualificações de const volátil igual ou superior.  
+ Uma variável com um tipo const-volatile especificado somente é possível chamar membro funções definidas com qualificações de const-volatile igual ou maiores.  
   
- Para corrigir esse erro, forneça uma função de membro apropriado. Você não pode executar uma conversão em uma constante ou objeto qualificado volátil quando a conversão causa perda de qualificação. Você pode obter qualificadores, mas você não pode perder qualificadores em uma conversão.  
+ Para corrigir esse erro, forneça uma função de membro apropriado. Você não pode executar uma conversão em uma constante ou volátil objeto qualificado quando a conversão causa perda de qualificação. Você pode obter qualificadores, mas você não pode perder qualificadores na conversão.  
   
  Os exemplos a seguir geram C3849:  
   

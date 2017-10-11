@@ -1,5 +1,5 @@
 ---
-title: C3552 de erro do compilador | Documentos do Microsoft
+title: C3552 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,16 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 313bca979c0d3c63d897fd0cf3883e444d501db1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54526c39a928cc534ba815ef8fda802db85f4020
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3552"></a>C3552 de erro do compilador
-'typename': um tipo de retorno especificado final não pode conter 'auto'  
+'typename': um tipo de retorno especificado tardia não pode conter 'auto'  
   
- Se você usar o `auto` palavra-chave como um espaço reservado para o tipo de retorno de uma função, você deve fornecer um tipo de retorno especificado tardia. No entanto, você não pode usar outro `auto` palavra-chave para especificar o tipo de retorno a especificação tardia. Por exemplo, o fragmento de código a seguir gera erro C3552.  
+ Se você usar o `auto` palavra-chave como um espaço reservado para o tipo de retorno de uma função, você deve fornecer um tipo de retorno tardia especificado. No entanto, você não pode usar outro `auto` palavra-chave para especificar o tipo de retorno de tardia especificado. Por exemplo, o fragmento de código a seguir gera erro C3552.  
   
  `auto myFunction->auto; // C3552`

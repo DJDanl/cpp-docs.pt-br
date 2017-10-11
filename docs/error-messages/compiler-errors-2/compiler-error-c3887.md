@@ -1,5 +1,5 @@
 ---
-title: C3887 de erro do compilador | Documentos do Microsoft
+title: C3887 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8df8538a22575dd1ba938bd404f82892a5a60775
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7dccbd3a34764eedc53c69ddd69c693cc4782d2a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3887"></a>C3887 de erro do compilador
-'var': o inicializador de um membro de dados literais deve ser uma expressão constante  
+'var': o inicializador para um membro de dados literal deve ser uma expressão constante  
   
- A [literal](../../windows/literal-cpp-component-extensions.md) membro de dados só pode ser inicializado com uma expressão constante.  
+ Um [literal](../../windows/literal-cpp-component-extensions.md) membro de dados só pode ser inicializado com uma expressão constante.  
   
  O exemplo a seguir gera C3887:  
   
@@ -57,7 +43,7 @@ ref struct Y1 {
 };  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3887b.cpp  

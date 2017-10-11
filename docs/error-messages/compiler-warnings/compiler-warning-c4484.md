@@ -1,5 +1,5 @@
 ---
-title: C4484 de aviso do compilador | Documentos do Microsoft
+title: C4484 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ec127038509275247a1030d7ac1bef4f448ec705
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06246c811c59ff126cd61d5c10d0d30a68857c2c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4484"></a>C4484 de aviso do compilador
-'override_function': corresponde ao método da classe base ref 'base_class_function', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') será assumido  
+'override_function': corresponde ao método de classe ref base 'base_class_function', mas não está marcado como 'virtual', 'new' ou 'override'; 'new' (e não 'virtual') é assumido  
   
- Ao compilar com **/clr**, o compilador não substituirá implicitamente uma função de classe base, o que significa que a função terá um novo slot em vtable. Para resolver, explicitamente especifique se uma função é uma substituição.  
+ Ao compilar com **/clr**, o compilador não substitui uma função de classe base, o que significa que a função terá um novo slot no vtable implicitamente. Para resolver, explicitamente especifique se uma função é uma substituição.  
   
  Para obter mais informações, consulte:  
   
@@ -53,7 +39,7 @@ ms.lasthandoff: 02/25/2017
   
 -   [novo (novo slot em vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
- C4484 sempre é emitida como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4484.  
+ C4484 sempre é emitido como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4484.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4484.  

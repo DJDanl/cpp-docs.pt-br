@@ -1,5 +1,5 @@
 ---
-title: C4368 de aviso do compilador | Documentos do Microsoft
+title: C4368 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a0c5ece0081f34c14a1e78050e612fc80d7dd658
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fd66d8fb6d30a960c659345910242ec5a1a2e11
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4368"></a>C4368 de aviso do compilador
-não é possível definir 'member' como um membro do tipo' gerenciado': não há suporte para tipos mistos  
+não é possível definir 'member' como um membro de gerenciado 'type': não há suporte para tipos mistos  
   
- Você não pode incorporar um membro de dados nativo em um tipo CLR.  
+ Não é possível inserir um membro de dados nativo em um tipo CLR.  
   
- No entanto, você pode declarar um ponteiro para um tipo nativo e controlar seu tempo de vida no construtor e destruidor e o finalizador da classe gerenciada. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ No entanto, você pode declarar um ponteiro para um tipo nativo e controlar seu tempo de vida no construtor e destruidor e o finalizador da sua classe gerenciada. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
- Esse aviso é emitido sempre que um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar C4368.  
+ Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma desabilitar C4368.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4368.  

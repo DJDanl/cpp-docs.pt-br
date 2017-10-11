@@ -1,5 +1,5 @@
 ---
-title: C3771 de erro do compilador | Documentos do Microsoft
+title: C3771 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,39 +19,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 448bb34ce51cea50d1f1c5d61b28b13a7ea02ff8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc3e9639fa83524e797c22edd771c847046f0e3c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3771"></a>C3771 de erro do compilador
 "identificador": declaração friend não pode ser encontrada no escopo de namespace mais próximo  
   
-Declaração de modelo de classe para o modelo especificado *identificador* não pode ser encontrado no namespace atual.  
+A declaração de modelo de classe para o modelo especificado *identificador* não pode ser encontrado no namespace atual.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Certifique-se de que a declaração de modelo de classe para o identificador do modelo é definida no namespace atual ou o identificador do modelo é um nome totalmente qualificado.  
+-   Certifique-se de que a declaração de modelo de classe para o identificador de modelo está definida no namespace atual ou o identificador de modelo é um nome totalmente qualificado.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo de código a seguir declara um modelo de classe e uma função no namespace `NA`, mas tentar declarar um modelo de função friend no namespace `NB`.  
+O exemplo de código a seguir declara um modelo de classe e a função no namespace `NA`, mas tentar declarar um modelo de função friend no namespace `NB`.  
   
 ```cpp  
 // C3771.cpp   

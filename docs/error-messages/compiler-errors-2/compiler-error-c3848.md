@@ -1,5 +1,5 @@
 ---
-title: C3848 de erro do compilador | Documentos do Microsoft
+title: C3848 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 62b5cac50b368b0eea99812c3ff0bd65ccfd129f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3220d3d278c0b5d877273b96defc23ac5852e066
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3848"></a>C3848 de erro do compilador
-expressão com tipo 'type' pode perder alguns qualificadores voláteis const para chamar 'function'  
+expressão possuindo tipo 'type' perderia alguns qualificadores const-volatile para chamar 'function'  
   
- Uma variável com um tipo const volátil especificado só pode chamar membros a funções definidas com qualificações de const volátil igual ou superior.  
+ Uma variável com um tipo const-volatile especificado somente é possível chamar membro funções definidas com qualificações de const-volatile igual ou maiores.  
   
  Os exemplos a seguir geram C3848:  
   

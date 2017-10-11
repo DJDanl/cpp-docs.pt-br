@@ -1,5 +1,5 @@
 ---
-title: C3915 de erro do compilador | Documentos do Microsoft
+title: C3915 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c853cba55fb72190f4e1432dd095d42bf2ba47e7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3915"></a>C3915 de erro do compilador
-'type' não tem nenhuma propriedade padrão indexado (indexador de classe)  
+'type' não tem nenhuma propriedade padrão indexada (indexador de classe)  
   
  Um tipo não tem um padrão, uma propriedade indexada.  
   
@@ -72,7 +58,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C3915 também pode ocorrer se você tentar consumir um indexador padrão no mesmo compiland onde ele foi definido com <xref:System.Reflection.DefaultMemberAttribute>.</xref:System.Reflection.DefaultMemberAttribute>  
+ C3915 também poderá ocorrer se você tentar consumir um indexador padrão em que o mesmo compiland onde ele foi definido com <xref:System.Reflection.DefaultMemberAttribute>.  
   
  O exemplo a seguir gera C3915.  
   

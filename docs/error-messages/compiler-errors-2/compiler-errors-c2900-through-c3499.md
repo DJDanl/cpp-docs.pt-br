@@ -85,32 +85,18 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>C2900 de erros do compilador por meio de C2999
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -140,8 +126,8 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2921](compiler-error-c2921.md)|redefinição: '*tipo*': classe de modelo/generic está sendo declarada novamente como*declaração*'|  
 |C2922 de erro do compilador|'*interface*': uma interface WinRT não pode conter membros estáticos|  
 |[Erro do compilador C2923](compiler-error-c2923.md)|'*tipo*': '*identificador*'não é um argumento de tipo de modelo/generic válido para o parâmetro'*parâmetro*'|  
-|C2924 de erro do compilador|argumento de rotina __declspec(interrupt) não está em R2|  
-|C2925 de erro do compilador|rotina __declspec(interrupt) não pode usar ponto flutuante|  
+|C2924 de erro do compilador|argumento de rotina __declspec(Interrupt) não está em R2|  
+|C2925 de erro do compilador|rotina __declspec(Interrupt) não é possível usar ponto flutuante|  
 |C2926 de erro do compilador|'*identificador*': um inicializador de membro padrão não é permitido para um membro de uma struct anônima dentro de uma união|  
 |[Erro do compilador C2927](compiler-error-c2927.md)|'*identificador*': um modelo de função deve ser chamado com pelo menos um argumento|  
 |[Erro do compilador C2928](compiler-error-c2928.md)|instanciação explícita; '*identificador*'não é uma função ou um membro de dados estáticos da classe de modelo'*classe*'|  
@@ -161,21 +147,21 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2942](compiler-error-c2942.md)|'*tipo*': id de modelo/id genérica redefinido como um argumento formal de uma função|  
 |[Erro do compilador C2943](compiler-error-c2943.md)|'*tipo*': id de modelo/id genérica redefinido como um argumento de tipo de um modelo|  
 |[Erro do compilador C2944](compiler-error-c2944.md)|'*tipo*': id de modelo/id genérica redefinido como um argumento de valor de um modelo|  
-|[Erro do compilador C2945](compiler-error-c2945.md)|instanciação explícita não faz referência a uma especialização de classe de template|  
+|[Erro do compilador C2945](compiler-error-c2945.md)|instanciação explícita não faz referência a uma especialização de classe de modelo|  
 |[Erro do compilador C2946](compiler-error-c2946.md)|instanciação explícita; '*tipo*' não é uma especialização de classe de modelo|  
 |[Erro do compilador C2947](compiler-error-c2947.md)|esperando ' >' para encerrar argumentos de template, encontrado '*token*'|  
 |[Erro do compilador C2948](compiler-error-c2948.md)|instanciação explícita; especificador de classe de armazenamento '*especificador*' não permitido em especialização|  
-|C2949 de erro do compilador|thread_local não é compatível com /kernel|  
+|C2949 de erro do compilador|thread_local não é suportado com /kernel|  
 |C2950 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C2951](compiler-error-c2951.md)|declarações de modelo/generic só são permitidas no namespace global, ou escopo de classe|  
 |[Erro do compilador C2952](compiler-error-c2952.md)|'*declaração*': declaração de modelo/generic faltando lista de parâmetros de modelo/generic|  
 |[Erro do compilador C2953](compiler-error-c2953.md)|'*tipo*': template de classe já foi definido|  
-|C2954 de erro do compilador|argumento de palavra de instrução fora de intervalo|  
+|C2954 de erro do compilador|argumento de palavra de instrução fora do intervalo|  
 |[Erro do compilador C2955](compiler-error-c2955.md)|'*tipo*': lista de argumentos de modelo/generic requer o uso da classe de modelo/generic|  
 |C2956 de erro do compilador|desalocação dimensionada função 'operator delete (void *, size_t)' deve ser escolhida como a função de desalocação de posicionamento.|  
 |[Erro do compilador C2957](compiler-error-c2957.md)|'*token*': delimitador esquerdo inválido: esperado ' <'|  
 |[Erro do compilador C2958](compiler-error-c2958.md)|à esquerda *delimitador* encontrado em '*arquivo*(*line_number*)' não foi correspondido corretamente|  
-|[Erro do compilador C2959](compiler-error-c2959.md)|uma classe ou função de generic não deve ser um membro de um template|  
+|[Erro do compilador C2959](compiler-error-c2959.md)|uma classe genérica ou função não pode ser um membro de um modelo|  
 |C2960 de erro do compilador|Obsoleto.|  
 |C2961 de erro do compilador|'*função*': instanciações explícitas inconsistentes, uma instanciação explícita anterior não especificou '*argumento*'|  
 |[Erro do compilador C2962](compiler-error-c2962.md)|Erro de sintaxe: '*token*': esperado da definição de função de membro de classe de modelo para terminar com '}'|  
@@ -196,7 +182,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2977](compiler-error-c2977.md)|'*tipo*': muitos argumentos de modelo/generic|  
 |[Erro do compilador C2978](compiler-error-c2978.md)|Erro de sintaxe: esperado '*keyword1*'ou'*keyword2*'; tipo encontrado'*tipo*'; tipo de não não há suporte para parâmetros genéricos|  
 |[Erro do compilador C2979](compiler-error-c2979.md)|especializações explícitas não são suportadas em generics|  
-|C2980 de erro do compilador|Não há suporte para manipulação de exceção de C++ com /kernel|  
+|C2980 de erro do compilador|Não há suporte para o tratamento de exceções C++ com /kernel|  
 |C2981 de erro do compilador|o formulário dinâmico de '*palavra-chave*' não é suportado com /kernel|  
 |C2982 de erro do compilador|'*declaração*': __declspec(code_seg(...)) diferentes usado: foi '*identifier1*'agora'*identifier2*'|  
 |C2983 de erro do compilador|'*declaração*': todas as declarações devem ter um __declspec(code_seg(...)) idênticos|  
@@ -210,7 +196,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2991](compiler-error-c2991.md)|redefinição do parâmetro de modelo/generic '*parâmetro*'|  
 |[Erro do compilador C2992](compiler-error-c2992.md)|'*classe*': lista de parâmetros de modelo/generic inválida ou ausente|  
 |[Erro do compilador C2993](compiler-error-c2993.md)|'*tipo*': tipo inválido para parâmetro sem-tipo de template '*identificador*'|  
-|[Erro do compilador C2994](compiler-error-c2994.md)|classe sem nome na lista de parâmetros de template|  
+|[Erro do compilador C2994](compiler-error-c2994.md)|classe sem nome na lista de parâmetros de modelo|  
 |[Erro do compilador C2995](compiler-error-c2995.md)|'*declaração*': template de função já foi definido|  
 |[Erro do compilador C2996](compiler-error-c2996.md)|'*função*': definição de modelo de função recursiva|  
 |C2997 de erro do compilador|'*função*': limite de matriz não pode ser deduzida de um inicializador de membro padrão|  

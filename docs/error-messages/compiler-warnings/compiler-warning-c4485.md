@@ -1,5 +1,5 @@
 ---
-title: C4485 de aviso do compilador | Documentos do Microsoft
+title: C4485 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a3578b78f3ae8d33a602fe4d52b76c10930e42b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4485"></a>C4485 de aviso do compilador
-'override_function': corresponde ao método da classe base ref 'base_class_function', mas não está marcado como 'new' ou 'Substituir'; 'new' (e 'virtual') serão assumidos  
+'override_function': corresponde ao método de classe ref base 'base_class_function', mas não está marcado como 'new' ou 'override'; 'new' (e 'virtual') são assumidos  
   
- Substitui um acessador, com ou sem o `virtual` palavra-chave, uma função de acessador de classe base, mas o `override` ou `new` especificador não fazia parte da assinatura de função de substituição. Adicionar o `new` ou `override` especificador para resolver esse aviso.  
+ Substitui um acessador, com ou sem o `virtual` palavra-chave, uma função de acessador de classe base, mas o `override` ou `new` especificador não fazia parte da assinatura de função de substituição. Adicionar o `new` ou `override` especificador para resolver este aviso.  
   
  Consulte [substituir](../../windows/override-cpp-component-extensions.md) e [novo (novo slot em vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obter mais informações.  
   
- C4485 sempre é emitida como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4485.  
+ C4485 sempre é emitido como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para suprimir C4485.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4485  

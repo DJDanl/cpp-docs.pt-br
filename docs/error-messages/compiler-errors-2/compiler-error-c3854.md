@@ -1,5 +1,5 @@
 ---
-title: C3854 de erro do compilador | Documentos do Microsoft
+title: C3854 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ca51acadc48e322a458dc22c374d0ff8dbe5d176
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34285e8de195b2b7c516cf665f3b2cbf37039e6d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3854"></a>C3854 de erro do compilador
 avalia a expressão à esquerda de '=' para uma função. Não é possível atribuir a uma função (uma função não é um l-value)  
   
- Uma referência não pode ser reinicializada. Uma referência a uma função de referência resulta em uma função, que é um rvalue, para que você não pode atribuir. Portanto, é possível atribuir através de uma referência a uma função.  
+ Uma referência não pode ser reinicializada. Uma referência a uma função de referência resulta em uma função, que é um rvalue, para que você não pode atribuir. Portanto, não é possível atribuir através de uma referência a uma função.  
   
  O exemplo a seguir gera C3854:  
   
