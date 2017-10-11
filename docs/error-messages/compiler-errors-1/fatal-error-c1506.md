@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1506 | Documentos do Microsoft
+title: Erro fatal C1506 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 24dd6c336b8e03db268d423758f085d56484ca69
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c5c21dc50abb55817fcaa800ea2da424a68fca8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1506"></a>Erro fatal C1506
-erro irrecuperável de escopo de blocos  
+Erro de escopo de bloco irrecuperável  
   
- O bloco grande demais para compilar.  
+ O bloco era muito grande para compilar.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   

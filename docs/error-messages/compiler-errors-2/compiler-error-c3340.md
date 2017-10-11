@@ -1,5 +1,5 @@
 ---
-title: C3340 de erro do compilador | Documentos do Microsoft
+title: C3340 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0485a84c778614acfdb4e71955ca35400c2c9689
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fafe0e3131512aff530f88daf023d76a47b7d3ab
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3340"></a>C3340 de erro do compilador
-'interface': interface não pode ser 'restricted' e 'default' coclass 'class'  
+'interface': interface não pode ser 'restricted' e 'default' em coclass 'class'  
   
  O [restrito](../../windows/restricted.md) atributo e o [padrão](../../windows/default-cpp.md) atributo são mutuamente exclusivos.  
   

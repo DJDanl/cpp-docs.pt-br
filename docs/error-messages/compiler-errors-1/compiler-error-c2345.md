@@ -1,5 +1,5 @@
 ---
-title: C2345 de erro do compilador | Documentos do Microsoft
+title: C2345 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1d91449f533a9bf406dcdf88eb7161acadbb900c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 372012b970ae277f3bb6854224bf4e432167abb3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2345"></a>C2345 de erro do compilador
-align(Value): valor inválido de alinhamento  
+align(Value): valor de alinhamento inválido  
   
  Passado um valor para o [alinhar](../../cpp/align-cpp.md) palavra-chave que está fora do intervalo permitido.  
   

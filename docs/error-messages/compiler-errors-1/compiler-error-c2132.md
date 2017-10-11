@@ -1,5 +1,5 @@
 ---
-title: C2132 de erro do compilador | Documentos do Microsoft
+title: C2132 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3e5240eb7f4814c3e8cb49678dc5b523cdb5e791
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7b3dbc4e88c6561df31c134a6cc988c9a46a3ee2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2132"></a>C2132 de erro do compilador
-erro de sintaxe : identificador inesperado  
+Erro de sintaxe: identificador inesperado  
   
  Um identificador é exibida em um contexto sem suporte.

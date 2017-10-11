@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1019 | Documentos do Microsoft
+title: Erro fatal C1019 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 787cceeb9a01cb184334c3d89d9cfcfba50c2c92
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 90d826ded9ebd8fdc2b304900af523b7ffe8b395
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1019"></a>Erro fatal C1019
-#else inesperado  
+inesperado #else  
   
  O `#else` diretiva aparece fora de um `#if`, `#ifdef`, ou `#ifndef` construir. Use `#else` apenas dentro de uma dessas construções.  
   
@@ -56,7 +41,7 @@ ms.lasthandoff: 02/25/2017
 int main() {}  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C1019b.cpp  

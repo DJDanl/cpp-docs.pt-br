@@ -1,5 +1,5 @@
 ---
-title: C3453 de erro do compilador | Documentos do Microsoft
+title: C3453 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ac1b853707d89a6a64d30cdfe2c22891ac328bd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a9dfd380a55d9233d0b421372e65fc3331c49cc9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3453"></a>C3453 de erro do compilador
-'attribute': atributo aplicado não porque não correspondeu qualificador 'assembly'  
+'attribute': atributo não aplicado porque qualificador 'assembly' não corresponde  
   
  Assembly ou atributos de nível de módulo só podem ser especificados como instruções autônomas.  
   

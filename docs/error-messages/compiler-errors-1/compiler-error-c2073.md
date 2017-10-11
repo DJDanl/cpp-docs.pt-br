@@ -1,5 +1,5 @@
 ---
-title: C2073 de erro do compilador | Documentos do Microsoft
+title: C2073 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2803824e64b5590376e3e41e2732f91aa0fffff3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28f44a0a51e5b1ff1c6cb39e8a330c4ac0bd3154
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2073"></a>C2073 de erro do compilador
-'identifier': elementos de matriz parcialmente inicializado devem ter um construtor padrão  
+'Identificador': elementos de matriz parcialmente inicializada devem ter um construtor padrão  
   
- Inicializadores de poucos foram especificados para uma matriz de tipos definidos pelo usuário ou constantes. Se um inicializador explícito e seu construtor correspondente não forem especificadas para um membro da matriz, um construtor padrão deve ser fornecido.  
+ Inicializadores de poucas foram especificados para uma matriz de tipos definidos pelo usuário ou constantes. Se um inicializador explícito e seu construtor correspondente não forem especificados para um membro da matriz, um construtor padrão deve ser fornecido.  
   
  O exemplo a seguir gera C2073:  
   

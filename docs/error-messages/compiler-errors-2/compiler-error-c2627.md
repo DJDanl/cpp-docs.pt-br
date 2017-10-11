@@ -1,5 +1,5 @@
 ---
-title: C2627 de erro do compilador | Documentos do Microsoft
+title: C2627 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2d0354971d4f512c7ba98a1e6d0f7cb014cba5af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2af1b475fb6eff2a37f333aa0ef5ed07eae791e2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2627"></a>C2627 de erro do compilador
-'function': função de membro não é permitida na união anônima  
+'function': função membro não permitida em union anônima  
   
  Um [união anônima](../../cpp/unions.md#anonymous_unions) não pode ter funções de membro.  
   

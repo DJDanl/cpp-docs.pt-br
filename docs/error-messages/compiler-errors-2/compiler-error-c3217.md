@@ -1,5 +1,5 @@
 ---
-title: C3217 de erro do compilador | Documentos do Microsoft
+title: C3217 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0d4045d32e32b888e9fa673b1b6a4cbd7320721e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b9122fc9c829ff017f717c2cec2d80dd254103ba
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3217"></a>C3217 de erro do compilador
-'param': não é possível restringir o parâmetro genérico nessa declaração  
+'param': parâmetro genérico não pode ser restringido nesta declaração  
   
  Uma restrição de preenchimento foi formada; a restrição de parâmetro genérico deve concordar com o parâmetro de modelo de classe genérica.  
   

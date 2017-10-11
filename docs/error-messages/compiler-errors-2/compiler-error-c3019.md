@@ -1,5 +1,5 @@
 ---
-title: C3019 de erro do compilador | Documentos do Microsoft
+title: C3019 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a2ef8264326ec47cead99d2c492cb7ec725d3929
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb418621a4a20fc802f22ca014c44809f80ce65b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3019"></a>C3019 de erro do compilador
-incremento em instrução de OpenMP 'for' possui forma inadequada  
+incremento de OpenMP 'instrução for' possui forma inadequada  
   
- A parte de incremento de uma OpenMP `for` loop deve usar a variável de índice na esquerda e direita do operador.  
+ A parte de incremento de uma OpenMP `for` loop deve usar a variável de índice tanto à esquerda e direita do operador.  
   
  O exemplo a seguir gera C3019:  
   

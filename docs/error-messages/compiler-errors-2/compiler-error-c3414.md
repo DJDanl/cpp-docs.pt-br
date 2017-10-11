@@ -1,5 +1,5 @@
 ---
-title: C3414 de erro do compilador | Documentos do Microsoft
+title: C3414 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0aee8d8860183f73f638e1ec41c6841ad45573d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dff7fc5162fb84a4878553ec74953d8b7d42ddea
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3414"></a>C3414 de erro do compilador
-'member': função de membro importado não pode ser definida  
+'member': função membro importada não pode ser definida  
   
  Um membro foi definido no código que também esteja definido em um assembly referenciado.  
   

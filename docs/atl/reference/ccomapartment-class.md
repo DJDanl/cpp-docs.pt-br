@@ -1,5 +1,5 @@
 ---
-title: Classe CComApartment | Documentos do Microsoft
+title: Classe CComApartment | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,32 +29,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>Classe CComApartment
-Essa classe fornece suporte para gerenciar um apartamento em um módulo EXE agrupada por thread.  
+Essa classe fornece suporte para gerenciar um apartamento em um módulo EXE pool de thread.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +61,7 @@ class CComApartment
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CComApartment::Apartment](#apartment)|Marca o endereço inicial do segmento.|  
-|[CComApartment::GetLockCount](#getlockcount)|Retorna a contagem de bloqueio do thread atual.|  
+|[CComApartment::GetLockCount](#getlockcount)|Retorna a contagem de bloqueio atual do thread.|  
 |[CComApartment::Lock](#lock)|Incrementa a contagem de bloqueio do thread.|  
 |[CComApartment::Unlock](#unlock)|Contagem de bloqueio do thread diminui.|  
   
@@ -85,13 +71,13 @@ class CComApartment
 |----------|-----------------|  
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Contém o identificador do segmento.|  
 |[CComApartment::m_hThread](#m_hthread)|Contém o identificador do segmento.|  
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contém a contagem de bloqueio do thread atual.|  
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contém a contagem de bloqueio atual do thread.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComApartment`é usado pelo [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para gerenciar um apartamento em um módulo EXE agrupada por thread. `CComApartment`fornece métodos para incrementar e decrementar o bloqueio de contagem em um thread.  
+ `CComApartment`é usado pelo [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para gerenciar um apartment em um módulo EXE pool de thread. `CComApartment`fornece métodos para incrementar e decrementar o bloqueio de contagem em um thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="apartment"></a>CComApartment::Apartment  
  Marca o endereço inicial do segmento.  
@@ -117,7 +103,7 @@ CComApartment();
  Inicializa o `CComApartment` membros de dados [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).  
   
 ##  <a name="getlockcount"></a>CComApartment::GetLockCount  
- Retorna a contagem de bloqueio do thread atual.  
+ Retorna a contagem de bloqueio atual do thread.  
   
 ```
 LONG GetLockCount();
@@ -134,10 +120,10 @@ LONG Lock();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor que pode ser útil para o diagnóstico ou teste.  
+ Um valor que pode ser útil para um diagnóstico ou teste.  
   
 ### <a name="remarks"></a>Comentários  
- Chamado por [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+ Chamado pelo [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
  A contagem de bloqueio no thread é usada para fins estatísticos.  
   
@@ -156,7 +142,7 @@ HANDLE m_hThread;
 ```  
   
 ##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
- Contém a contagem de bloqueio do thread atual.  
+ Contém a contagem de bloqueio atual do thread.  
   
 ```
 LONG m_nLockCnt;
@@ -170,10 +156,10 @@ LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor que pode ser útil para o diagnóstico ou teste.  
+ Um valor que pode ser útil para um diagnóstico ou teste.  
   
 ### <a name="remarks"></a>Comentários  
- Chamado por [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+ Chamado pelo [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
  A contagem de bloqueio no thread é usada para fins estatísticos.  
   

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1121 | Documentos do Microsoft
+title: Erro fatal C1121 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 83aa1fab119c9bff45561e57f6e8f9b1d519e942
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8017ec43a20f282625c1159f48c2a84e30679ee0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1121"></a>Erro fatal C1121
-falha na chamada a CryptoAPI  
+chamada a CryptoAPI falhou  
   
- O compilador fez uma chamada para o CryptoAPI e a chamada falhou. Reinstalar o Visual Studio e possivelmente reinstalar o sistema operacional.
+ O compilador é feita uma chamada a CryptoAPI e a chamada falhou. Reinstalar o Visual Studio e possivelmente reinstalar o sistema operacional.

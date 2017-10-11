@@ -1,5 +1,5 @@
 ---
-title: C3225 de erro do compilador | Documentos do Microsoft
+title: C3225 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d10c47913c5cc07b31e5e923b22f9196c341c5f8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cf62ba7b0c3b95f22c27172546ccdd253ed9279
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3225"></a>C3225 de erro do compilador
@@ -45,10 +31,10 @@ argumento de tipo genérico para 'arg' não pode ser 'type', ele deve ser um tip
   
  O argumento de tipo genérico não era do tipo correto.  
   
- Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [Genéricos](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
- Você não pode criar uma instância de um tipo genérico com um tipo nativo. O exemplo a seguir gera C3225.  
+ Não é possível instanciar um tipo genérico com um tipo nativo. O exemplo a seguir gera C3225.  
   
 ```  
 // C3225.cpp  
@@ -67,7 +53,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria um componente usando c#. Observe que a restrição Especifica que o tipo genérico somente pode ser instanciado com um tipo de valor.  
+ O exemplo a seguir cria um componente usando o c#. Observe que a restrição Especifica que o tipo genérico só pode ser instanciado com um tipo de valor.  
   
 ```  
 // C3225_b.cs  
@@ -77,7 +63,7 @@ public class MyList<T> where T: struct {}
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo consome c#-autor de componente e viola a restrição MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>.</xref:System.Nullable> O exemplo a seguir gera C3225.  
+ Este exemplo consome c#-autoria do componente e viola a restrição que MyList só pode ser instanciado com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.  
   
 ```  
 // C3225_c.cpp  

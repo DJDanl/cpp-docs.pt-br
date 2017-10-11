@@ -1,5 +1,5 @@
 ---
-title: C3373 de erro do compilador | Documentos do Microsoft
+title: C3373 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1bb67f4e6c9c4884d325d7d2b4333a962089f84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 641842664228bdbf9442c50cf5233332e05534c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3373"></a>C3373 de erro do compilador
-o atributo 'attribute' não assume nenhum argumento exceto coclass  
+o atributo 'attribute' não recebe argumentos exceto em uma coclass  
   
- Alguns atributos podem ser aplicados a mais de uma construção de C++, mas os argumentos para o atributo só podem ser permitida em algumas construções.  
+ Alguns atributos podem ser aplicados a mais de uma construção C++, mas os argumentos para o atributo só podem ser permitido em algumas construções.  
   
  O exemplo a seguir gera C3373:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2400 de erro do compilador | Documentos do Microsoft
+title: C2400 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3b952e78f0be7025f4e501a11d8829de4ee41d24
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b819c81a3475a541fb672094bbdfa62b2fcfe6d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2400"></a>C2400 de erro do compilador
-Erro de sintaxe de assembler embutido 'contexto'; encontrado 'token'  
+Erro de sintaxe do assembler embutido 'contexto'; encontrado 'token'  
   
  O token causou um erro de sintaxe no contexto especificado.  
   

@@ -1,5 +1,5 @@
 ---
-title: C3008 de erro do compilador | Documentos do Microsoft
+title: C3008 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8262e0c5c79f052767b950a3f3a5f773398259ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 392725c883621490b6f9d748cf394e01af329606
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3008"></a>C3008 de erro do compilador
 'arg': argumento é de fechamento ausente ')' na diretiva de 'diretiva' OpenMP  
   
- Uma diretiva OpenMP que usa um argumento não tem um parêntese de fechamento.  
+ Uma diretiva de OpenMP que usa um argumento não tinha um parêntese de fechamento.  
   
  O exemplo a seguir gera C3008:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3739 de erro do compilador | Documentos do Microsoft
+title: C3739 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbb619ca737a9666a098fbd8cc6c2575d72845ea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3fa62f908f152e127669d1cd935fafdb75d413f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3739"></a>C3739 de erro do compilador
-'class': sintaxe só tem suporte quando o parâmetro 'layout_dependent' de event_receiver é true  
+'class': sintaxe só tem suporte quando o parâmetro ' layout_dependent ' de event_receiver é verdadeiro  
   
- Você tentou conectar uma toda interface de eventos, mas `layout_dependent` na [event_receiver](../../windows/event-receiver.md) atributo não é válido; você deve vincular um único evento de cada vez.  
+ Você tentou conectar-se com uma interface inteira de eventos, mas `layout_dependent` na [event_receiver](../../windows/event-receiver.md) atributo não é válido; você deve conectar-se com um único evento de cada vez.  
   
  O exemplo a seguir gera C3739:  
   

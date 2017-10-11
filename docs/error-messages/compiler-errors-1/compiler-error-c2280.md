@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bec93f1ee238184cbb4eed0d98921fb28e94e222
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2280"></a>C2280 de erro do compilador  

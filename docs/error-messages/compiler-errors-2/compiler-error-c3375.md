@@ -1,5 +1,5 @@
 ---
-title: C3375 de erro do compilador | Documentos do Microsoft
+title: C3375 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 57e9d7e2ac4d9672209813c5130697f145d06a7c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c5fc1af314d5c48149365ab77b4b0b3d9da4915
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3375"></a>C3375 de erro do compilador
-'function': função de delegação ambíguo  
+'function': função delegate ambígua  
   
- Uma instanciação de delegado poderia ser uma função de membro estático, ou como um delegado não associado a uma função de instância, então o compilador emitiu esse erro.  
+ Uma instanciação de delegado poderia ter sido para uma função de membro estático, ou como um delegate não associado a uma função de instância, então o compilador emitido esse erro.  
   
  Para obter mais informações, consulte [delegado (extensões de componentes C++)](../../windows/delegate-cpp-component-extensions.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1351 | Documentos do Microsoft
+title: Erro fatal C1351 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,30 +20,16 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 376498c52bebb1b89f4328cb064ce70d2e07c1f7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5ad87a957e7ef6329291bcbd1185c427aa04dc8f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1351"></a>Erro fatal C1351
 Erro ao carregar a dll 'dll': versão incompatível  
   
- A versão de uma DLL foi encontrada.  
+ A versão incorreta de uma DLL foi encontrada.  
   
  Isso indica um problema com a instalação e você deve reinstalar o DLL do CD do produto.

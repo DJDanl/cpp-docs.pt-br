@@ -1,5 +1,5 @@
 ---
-title: C3496 de erro do compilador | Documentos do Microsoft
+title: C3496 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cfb81290d121d200721683b46c2c1121c45d404a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86c80c4b708bd4315b2ce2ceaf7b61e0629a8b2e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3496"></a>C3496 de erro do compilador
 'this' sempre é capturado por valor: '&' ignorado  
   
- Você não pode capturar o `this` ponteiro por referência.  
+ Não é possível capturar a `this` ponteiro por referência.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Capturar a `this` ponteiro por valor.  
+-   Capturar o `this` ponteiro por valor.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3496 porque uma referência para o `this` ponteiro aparece na lista de captura de uma expressão lambda:  

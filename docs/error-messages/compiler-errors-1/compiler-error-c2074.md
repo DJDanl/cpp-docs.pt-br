@@ -1,5 +1,5 @@
 ---
-title: C2074 de erro do compilador | Documentos do Microsoft
+title: C2074 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7ba778957aa0e4a33cf8f03e78de550f54327b3e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4ceb52aa0c15b5f464697242ecac271d935784f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2074"></a>C2074 de erro do compilador
-'identifier': 'class-key' inicialização precisa de chaves  
+'Identificador': '-chave da classe' inicialização precisa de chaves  
   
- Não havia nenhuma chaves alternativa para a classe especificada, estrutura ou união inicializador.
+ Não havia nenhum chaves em torno de classe especificada, a estrutura ou o inicializador de união.

@@ -1,5 +1,5 @@
 ---
-title: C3396 de erro do compilador | Documentos do Microsoft
+title: C3396 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 300ae964d0b20d94cc1f8441579460447787ddd0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d7052924ac7addc96b76c30423035848aa218d41
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3396"></a>C3396 de erro do compilador
 'attribute': atributo personalizado não encontrado em 'namespace'  
   
- C3396 indica que você não estiver usando um runtime de linguagem comum atualizadas.  Reinstale o CLR para resolver.
+ C3396 indica que você não estiver usando um atualizadas CLR.  Reinstale o CLR para resolver.

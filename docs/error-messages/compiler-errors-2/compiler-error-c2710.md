@@ -1,5 +1,5 @@
 ---
-title: C2710 de erro do compilador | Documentos do Microsoft
+title: C2710 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 172f11cae4f54b5a16e42bee7c436229311c810d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5bb6349bf6efb8c63b68c78644343ace5dc07e67
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2710"></a>C2710 de erro do compilador
-'Criar': '__declspec(modifier)' só pode ser aplicado a uma função que retorna um ponteiro  
+'Criar': '__declspec(modifier)' só pode ser aplicado a uma função que retorne um ponteiro  
   
  Uma função cujo valor de retorno é um ponteiro é a construção somente para o qual `modifier` podem ser aplicadas.  
   

@@ -1,5 +1,5 @@
 ---
-title: C2242 de erro do compilador | Documentos do Microsoft
+title: C2242 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9ba2f53173a09bd1196bb278b5d0cb4f72adc054
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 712b3ce82439200522a134dc1ce592e26592bc96
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2242"></a>C2242 de erro do compilador
-nome de typedef não pode seguir class/struct/union  
+o nome de TypeDef não pode seguir classe/struct/união  
   
- Um `typedef` nome é exibido no final de um nome qualificado.
+ Um `typedef` nome aparecerá no final de um nome qualificado.

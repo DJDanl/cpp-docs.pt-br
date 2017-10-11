@@ -1,5 +1,5 @@
 ---
-title: C3747 de erro do compilador | Documentos do Microsoft
+title: C3747 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 67a4c8dcb7477f992605c0cbf988ad1bb3f74557
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f68363a0d3a6c5b9354f89993fd658cf227edd0f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3747"></a>C3747 de erro do compilador
-parâmetro de tipo padrão ausente: param de parâmetro  
+parâmetro de tipo padrão ausente: parâmetro param  
   
- Genérico ou modelo de parâmetros com valores padrão não podem ser seguidos na lista de parâmetros por parâmetros que não têm valores padrão.  
+ Genérico ou modelo de parâmetros com valores padrão não podem ser seguidos na lista de parâmetros parâmetros que não têm valores padrão.  
   
  O exemplo a seguir gera C3747:  
   
@@ -53,7 +39,7 @@ template <class T1 = int, class T2>   // C3747
 struct MyStruct {};  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3747b.cpp  

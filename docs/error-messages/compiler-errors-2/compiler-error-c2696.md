@@ -1,5 +1,5 @@
 ---
-title: C2696 de erro do compilador | Documentos do Microsoft
+title: C2696 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 08b8a7990efbf981aec342b99bbb558fd9fab8d5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 70ccaf34a0191f0bd69c95d2cb110f6e6542a6d1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2696"></a>C2696 de erro do compilador
 Não é possível criar um objeto temporário de um tipo gerenciado 'type'  
   
-As referências a `const` em um programa gerenciado com que o compilador chama o construtor e criar um objeto temporário na pilha. No entanto, uma classe gerenciada nunca pode ser criada na pilha.  
+As referências a `const` em um programa não gerenciado com que o compilador chama o construtor e criar um objeto temporário na pilha. No entanto, uma classe gerenciada nunca pode ser criada na pilha.  
   
 C2696 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
 

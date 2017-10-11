@@ -1,5 +1,5 @@
 ---
-title: C3662 de erro do compilador | Documentos do Microsoft
+title: C3662 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 186960b2430840489cd0f9c925ad8cdb0b58d201
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0068080f4cb1b2b25e350acd331898d6c49a3f6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3662"></a>C3662 de erro do compilador
-'member': especificador de substituição 'especificador' só é permitido em funções de membro gerenciado ou classes do WinRT  
+'member': especificador de substituição 'especificador' só é permitido em funções de membro gerenciado ou classes de WinRT  
   
- Um especificador de substituição foi usado em um membro de tipo nativo, que não é permitido.  
+ Um especificador de substituição foi usado em um membro do tipo nativo, que não é permitido.  
   
  Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   

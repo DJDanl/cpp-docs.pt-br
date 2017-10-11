@@ -1,5 +1,5 @@
 ---
-title: C2948 de erro do compilador | Documentos do Microsoft
+title: C2948 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c7aaaa79ee6ad05f130b85d9b3f49dd3f54c886f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 30975999bff106e878332d44336f5cdbb31cea97
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2948"></a>C2948 de erro do compilador
-instanciação explícita; especificador de classe de armazenamento 'especificador' não permitida em especialização  
+instanciação explícita; especificador de classe de armazenamento 'especificador' não permitido em especialização  
   
- Você não pode usar especificadores de classe de armazenamento (como `extern`) em uma especialização de uma classe de modelo que anteriormente foi instanciada explicitamente.
+ Não é possível usar especificadores de classe de armazenamento (como `extern`) em uma especialização de uma classe de modelo que anteriormente foi instanciada explicitamente.

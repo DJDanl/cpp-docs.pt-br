@@ -1,5 +1,5 @@
 ---
-title: C2935 de erro do compilador | Documentos do Microsoft
+title: C2935 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cf5e7ef5d519c3d81ff4b1802b28332dc6c331d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d270ed23d9bddc9ef14d1ebd9a6aca78f24d59f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2935"></a>C2935 de erro do compilador
-'class': id de classe de tipo é redefinida como uma função global  
+'class': tipo de id de classe redefinido como uma função global  
   
  Você não pode usar uma classe genérica ou modelo como uma função global.  
   
- Esse erro pode ser causado se chaves serão comparados incorretamente.  
+ Esse erro pode ocorrer se as chaves são combinadas incorretamente.  
   
  O exemplo a seguir gera C2935:  
   

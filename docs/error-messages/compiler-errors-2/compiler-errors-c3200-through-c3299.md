@@ -47,32 +47,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 de erros do compilador por meio de C3299
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -104,7 +90,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3223](compiler-error-c3223.md)|'*propriedade*': não é possível aplicar 'typeid' a uma propriedade|  
 |[Erro do compilador C3224](compiler-error-c3224.md)|'*tipo*': toma nenhuma classe de generic sobrecarregada*número*' argumentos de tipo genérico|  
 |[Erro do compilador C3225](compiler-error-c3225.md)|argumento de tipo genérico para '*argumento*'não pode ser'*tipo*', ela deve ser um tipo de valor ou um identificador para um tipo de referência|  
-|[Erro do compilador C3226](compiler-error-c3226.md)|Uma declaração de template não é permitida dentro de uma declaração de generic|  
+|[Erro do compilador C3226](compiler-error-c3226.md)|Uma declaração de modelo não é permitida em uma declaração de generic|  
 |[Erro do compilador C3227](compiler-error-c3227.md)|'*tipo*': não é possível usar '*operador*' para alocar um tipo genérico|  
 |[Erro do compilador C3228](compiler-error-c3228.md)|'*função*': argumento de tipo genérico para '*argumento*'não pode ser'*tipo*', ele deve ser um tipo de valor ou lidar com tipo|  
 |[Erro do compilador C3229](compiler-error-c3229.md)|'*tipo*': indireções em um parâmetro de tipo genérico não são permitidas|  
@@ -112,9 +98,9 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3231](compiler-error-c3231.md)|'*tipo*': argumento de tipo de modelo não é possível usar um parâmetro de tipo genérico|  
 |[Erro do compilador C3232](compiler-error-c3232.md)|'*parâmetro*': um parâmetro de tipo genérico não pode ser usado em um nome qualificado|  
 |[Erro do compilador C3233](compiler-error-c3233.md)|'*tipo*': parâmetro de tipo genérico já restringido|  
-|[Erro do compilador C3234](compiler-error-c3234.md)|uma classe de generic não deve derivar de um parâmetro de tipo de generic|  
+|[Erro do compilador C3234](compiler-error-c3234.md)|uma classe genérica não pode derivar de um parâmetro de tipo genérico|  
 |[Erro do compilador C3235](compiler-error-c3235.md)|'*especialização*': especialização explícita ou parcial de uma classe genérica não é permitida|  
-|[Erro do compilador C3236](compiler-error-c3236.md)|instanciação explícita de um generic não é permitida|  
+|[Erro do compilador C3236](compiler-error-c3236.md)|instanciação explícita de um genérico não é permitida|  
 |[Erro do compilador C3237](compiler-error-c3237.md)|'*classe*': uma classe genérica não pode ser um atributo personalizado|  
 |[Erro do compilador C3238](compiler-error-c3238.md)|'*tipo*': um tipo com este nome já foi encaminhado para o assembly '*assembly*'|  
 |[Erro do compilador C3239](compiler-error-c3239.md)|'*tipo*': ponteiro para ponteiro interior/pin não é permitido pelo common language runtime|  
@@ -127,9 +113,9 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3246](compiler-error-c3246.md)|'*classe*': não é possível herdar de '*base_class*'pois ele foi declarado como'*herança*'|  
 |[Erro do compilador C3247](compiler-error-c3247.md)|'*coclass*': uma coclass não pode herdar de outra coclass*base_class*'|  
 |[Erro do compilador C3248](compiler-error-c3248.md)|Obsoleto. '*função*': função declarada como 'sealed' não pode ser substituído por '*função*'|  
-|C3249 de erro do compilador|instrução ou subexpressão inválida para a função 'constexpr'|  
+|C3249 de erro do compilador|instrução ilegal ou subexpressão para a função 'constexpr'|  
 |C3250 de erro do compilador|'*declaração*': declaração não é permitida no corpo da função 'constexpr'|  
-|[Erro do compilador C3251](compiler-error-c3251.md)|não é possível chamar método de classe base em uma instância de tipo value|  
+|[Erro do compilador C3251](compiler-error-c3251.md)|não é possível invocar o método da classe base em uma instância de tipo de valor|  
 |[Erro do compilador C3252](compiler-error-c3252.md)|'*função*': não é possível reduzir acessibilidade de um método virtual em um tipo gerenciado/WinRT|  
 |[Erro do compilador C3253](compiler-error-c3253.md)|'*função*': erro substituição explícita|  
 |[Erro do compilador C3254](compiler-error-c3254.md)|'*função*': classe contém substituição explícita '*função*', mas não deriva de uma interface que contém a declaração da função|  
@@ -157,7 +143,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3276](compiler-error-c3276.md)|'*palavra-chave*': salto de finalmente /\_\_finalmente bloco possui comportamento indefinido durante manipulação de encerramento|  
 |[Erro do compilador C3277](compiler-error-c3277.md)|não é possível definir um enum não gerenciado '*enumeração*'interna gerenciado'*tipo*'|  
 |[Erro do compilador C3278](compiler-error-c3278.md)|direcionar a chamada de interface ou método puro '*função*' falhará em tempo de execução|  
-|[Erro do compilador C3279](compiler-error-c3279.md)|especializações parciais e explícitas bem como instanciações explícitas de templates de classe declaradas no namespace cli não são permitidas|  
+|[Erro do compilador C3279](compiler-error-c3279.md)|especializações parciais e explícitas bem como instanciações explícitas de modelos de classe declaradas no namespace cli não são permitidas|  
 |[Erro do compilador C3280](compiler-error-c3280.md)|'*função*': uma função de membro de um tipo gerenciado não pode ser compilada como uma função não gerenciada|  
 |C3281 de erro do compilador|'*função*': operador global não pode ter tipo gerenciado/WinRT '*tipo*' na assinatura|  
 |[Erro do compilador C3282](compiler-error-c3282.md)|listas de parâmetro genérico só podem aparecer em gerenciados/WinRT classes, estruturas ou funções|  
@@ -176,6 +162,6 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3295](compiler-error-c3295.md)|' #pragma *especificador*' só pode ser usada em global ou escopo de namespace|  
 |[Erro do compilador C3296](compiler-error-c3296.md)|'*identificador*': já existe uma propriedade com esse nome|  
 |[Erro do compilador C3297](compiler-error-c3297.md)|' *restrição2*': não é possível usar ' *constraint1*' como uma restrição porque ' *constraint1*' tem a restrição de valor|  
-|[Erro do compilador C3298](compiler-error-c3298.md)|' *constraint1*': não é possível usar ' *restrição2*' como uma restrição porque ' *restrição2*' possui a restrição ref e ' *constraint1*' tem a restrição de valor|  
+|[Erro do compilador C3298](compiler-error-c3298.md)|' *constraint1*': não é possível usar ' *restrição2*' como uma restrição porque ' *restrição2*' possui a restrição ref e ' *constraint1*' possui a restrição de valor|  
 |[Erro do compilador C3299](compiler-error-c3299.md)|' *função*': não é possível especificar restrições, elas são herdadas do método base|  
 

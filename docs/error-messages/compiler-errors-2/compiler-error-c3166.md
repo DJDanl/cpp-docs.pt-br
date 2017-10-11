@@ -1,5 +1,5 @@
 ---
-title: C3166 de erro do compilador | Documentos do Microsoft
+title: C3166 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 13ff799b21825c24ae98cfd416e7e2021b6bd2bb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aa933235f14f2ab6f11c86e6cbd3e23dc15481ec
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3166"></a>C3166 de erro do compilador
-'ponteiro': não é possível declarar um ponteiro para um ponteiro de GC interiores como um membro de 'type'  
+'ponteiro': não é possível declarar um ponteiro para um ponteiro interior GC como um membro de 'type'  
   
-O compilador encontrado uma declaração de ponteiro inválido (um `__nogc` ponteiro para um `__gc` ponteiro.). 
+O compilador encontrada uma declaração de ponteiro inválido (um `__nogc` ponteiro para um `__gc` ponteiro.). 
   
 C3166 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
 

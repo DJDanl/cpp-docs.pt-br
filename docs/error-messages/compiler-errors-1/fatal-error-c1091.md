@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1091 | Documentos do Microsoft
+title: Erro fatal C1091 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,16 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 223b1528e1806a2e3297ca6bc5c0632d362d06c5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c3fd2dae1f3258ce90d30c78792c498be75615a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1091"></a>Erro fatal C1091
 limite do compilador: cadeia de caracteres excede 'comprimento' bytes de comprimento  
   
- Uma constante de cadeia de caracteres excedeu o limite atual no comprimento de cadeias de caracteres.  
+ Uma constante de cadeia de caracteres excedeu o limite atual de comprimento de cadeias de caracteres.  
   
  Você talvez queira dividir a cadeia de caracteres estática em duas (ou mais) variáveis e usar [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para unir o resultado como parte da declaração ou durante o tempo de execução.

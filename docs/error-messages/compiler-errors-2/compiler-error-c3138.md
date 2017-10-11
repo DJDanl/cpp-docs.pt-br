@@ -1,5 +1,5 @@
 ---
-title: C3138 de erro do compilador | Documentos do Microsoft
+title: C3138 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 588f807fae454c1c497c7247f9f429e7476ac311
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3138"></a>C3138 de erro do compilador
-'interface': uma interface de 'attribute' deve herdar de IDispatch ou de uma interface que herda de IDispatch  
+'interface': uma interface de 'attribute' deve herdar de IDispatch, ou de uma interface que herde de IDispatch  
   
  Uma interface com o [dual](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) atributos não tem `IDispatch` como uma interface base direta ou indireta.  
   

@@ -1,5 +1,5 @@
 ---
-title: C3244 de erro do compilador | Documentos do Microsoft
+title: C3244 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8f1390d49e942af16402fd0f133317cc4586e439
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 225b3e95e2f0ba7e41959732f2c11b8860ef8b3b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3244"></a>C3244 de erro do compilador
-'method': esse método foi introduzido pela interface não por 'interface'  
+'method': este método foi introduzido por 'interface', não por 'interface'  
   
- Você tentou [substituir explicitamente](../../cpp/explicit-overrides-cpp.md) um membro que não existe na interface especificada, mas existe em outra classe base.  
+ Você tentou [substituir explicitamente](../../cpp/explicit-overrides-cpp.md) um membro que existe em outra classe base, mas não existe na interface especificada.  
   
  O exemplo a seguir gera C3244:  
   

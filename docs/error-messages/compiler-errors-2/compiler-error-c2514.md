@@ -1,5 +1,5 @@
 ---
-title: C2514 de erro do compilador | Documentos do Microsoft
+title: C2514 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff83de0ee313e7a0dfa1ebbeeab1d471264571ba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f91dfffe27127cfbff20d7b2e67d097b65cae358
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2514"></a>C2514 de erro do compilador
-'class': classe não tem nenhum construtor  
+'class': classe não possui construtores  
   
- A classe, estrutura ou união não tem nenhum construtor com uma lista de parâmetros que corresponde aos parâmetros que está sendo usados para uma instância.  
+ A classe, estrutura ou união não possui construtor com uma lista de parâmetros que corresponde aos parâmetros que está sendo usados para uma instância.  
   
  Uma classe deve ser declarada totalmente antes que ele pode ser instanciado.  
   

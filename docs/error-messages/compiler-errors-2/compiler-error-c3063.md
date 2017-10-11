@@ -1,5 +1,5 @@
 ---
-title: C3063 de erro do compilador | Documentos do Microsoft
+title: C3063 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ce6a597e0246cee5c62dd6612d48fe4946505e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26d30e56c3e694b39f583b29d8bd378b6dcaee0f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3063"></a>C3063 de erro do compilador
 operador 'operator': todos os operandos devem ter o mesmo tipo de enumeração  
   
-Ao usar operadores em enumeradores, ambos os operandos devem ser do tipo de enumeração. Para obter mais informações, consulte [como: definir e consumir enumerações em c++ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
+Ao usar operadores em enumeradores, ambos os operandos devem ser do tipo de enumeração. Para obter mais informações, consulte [como: definir e consumir enumerações em C + + CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C3063 e mostra como corrigi-lo:  

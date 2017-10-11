@@ -1,5 +1,5 @@
 ---
-title: C2129 de erro do compilador | Documentos do Microsoft
+title: C2129 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a84dacca59a1cb93d91ffe0a561196df8c6b3975
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c5bd1b79960f83ef6effeb064375d6b49e8f20
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2129"></a>C2129 de erro do compilador
-função estática 'function' declarado, mas não definido  
+função static 'function' declarada mas não definido  
   
- É feita uma referência direta para uma `static` função nunca é definida.  
+ Uma referência de encaminhamento é feita para um `static` função nunca é definida.  
   
- Um `static` função deve ser definida no escopo do arquivo. Se a função é definida em outro arquivo, ele deve ser declarado `extern`.
+ Um `static` função deve ser definida no escopo de arquivo. Se a função é definida em outro arquivo, ele deve ser declarado `extern`.

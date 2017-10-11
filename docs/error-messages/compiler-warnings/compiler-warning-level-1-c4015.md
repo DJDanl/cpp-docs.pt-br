@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4015 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4015 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 23b5e8b3caf2da2dcd3fb569cc4676ad8a359a89
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0a13084b55a780af59950e0f38d6400796f1ab6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4015"></a>Compilador C4015 de aviso (nível 1)
-'identifier': tipo de campo de bits deve ser um inteiro  
+'Identificador': tipo de campo de bits deve ser integral  
   
- O campo de bits não é declarado como um tipo inteiro. O compilador pressupõe que o tipo base do campo de bits a ser não assinado. Os campos de bits devem ser declarados como tipos de inteiros não assinados.
+ O campo de bits não está declarado como um tipo inteiro. O compilador assumirá que o tipo base do campo de bits para ser não assinado. Campos de bits devem ser declarados como tipos de inteiro não assinado.

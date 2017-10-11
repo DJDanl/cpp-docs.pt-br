@@ -1,5 +1,5 @@
 ---
-title: C3872 de erro do compilador | Documentos do Microsoft
+title: C3872 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cdc8048cb8cf50faeefb43b5fb166fc2f3fd2c1c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e42ebb3e1fc286e40662eb7fcce83893b1e4007f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3872"></a>C3872 de erro do compilador
 'char': Este caractere não é permitido em um identificador  
   
- O compilador C++ segue o padrão C++&11; caracteres permitidos em um identificador. Somente determinados intervalos de caracteres e nomes de caracteres universais são permitidos em um identificador. Restrições adicionais para o caractere inicial de um identificador. Para obter mais informações e uma lista de caracteres permitidos e intervalos de nomes de caracteres universais, consulte [identificadores](../../cpp/identifiers-cpp.md).  
+ O compilador do C++ segue o padrão de 11 C + + em caracteres permitidos em um identificador. Somente determinados intervalos de caracteres e nomes de caractere universais são permitidos em um identificador. Restrições adicionais para o caractere inicial de um identificador. Para obter mais informações e uma lista de intervalos de nome de caractere universal e caracteres permitidos, consulte [identificadores](../../cpp/identifiers-cpp.md).  
   
- O intervalo de caracteres permitidos em um identificador é menos restritivo quando compilar C + + / código CLI. Identificadores no código compilado usando /clr devem seguir [padrão ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ O intervalo de caracteres permitido em um identificador é menos restritivo quando estiver compilando C + + código. Identificadores no código compilado usando /clr devem seguir [padrão ECMA-335: infra-estrutura de linguagem comum (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  O exemplo a seguir gera C3872:  
   

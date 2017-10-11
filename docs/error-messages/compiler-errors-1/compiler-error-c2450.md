@@ -1,5 +1,5 @@
 ---
-title: C2450 de erro do compilador | Documentos do Microsoft
+title: C2450 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1b7ff274c7874b02dee932d89f42b883e5d182c6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 484eeb2c8c586a3f552cb77b5afd1671c199a551
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2450"></a>C2450 de erro do compilador
-opção de expressão do tipo 'type' é inválido  
+expressão de switch de tipo 'type' é inválida  
   
- O `switch` expressão é avaliada como um tipo inválido. Ele deve ser avaliada como um tipo de inteiro ou um tipo de classe com conversão inequívoca para um tipo inteiro. Se for avaliada como um tipo definido pelo usuário, você deve fornecer um operador de conversão.  
+ O `switch` expressão é avaliada como um tipo inválido. Ele deve ser avaliada como um tipo inteiro ou um tipo de classe ambíguo conversão para um tipo inteiro. Se ele for avaliada como um tipo definido pelo usuário, você deve fornecer um operador de conversão.  
   
  O exemplo a seguir gera C2450:  
   

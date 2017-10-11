@@ -1,5 +1,5 @@
 ---
-title: C2941 de erro do compilador | Documentos do Microsoft
+title: C2941 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ec8abc8972b6b361c9157d8ff094b417fe3e6d9f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 426450596807a3f8ac81ec71e400040f74c5d493
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2941"></a>C2941 de erro do compilador
-'class': id de classe de tipo é redefinida como local 'item'  
+'class': tipo de id de classe redefinido como um 'item' local  
   
- Você não pode usar uma classe genérica ou um modelo como um item.
+ Você não pode usar uma classe genérica ou o modelo como um item.

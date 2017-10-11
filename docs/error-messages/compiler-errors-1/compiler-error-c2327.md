@@ -1,5 +1,5 @@
 ---
-title: C2327 de erro do compilador | Documentos do Microsoft
+title: C2327 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2327"></a>C2327 de erro do compilador
-'symbol': não é um nome de tipo, estático ou enumerador  
+'symbol': não é um nome de tipo, static ou enumerador  
   
- O código dentro de uma classe aninhada tenta acessar um membro da classe delimitadora não é um nome de tipo, um membro estático ou um enumerador.  
+ O código dentro de uma classe aninhada tenta acessar um membro da classe delimitador que não é um nome de tipo, um membro estático ou um enumerador.  
   
  Ao compilar com **/clr**, uma causa comum para C2327 é uma propriedade com o mesmo nome que o tipo de propriedade.  
   
@@ -66,7 +52,7 @@ public:
 };  
 ```  
   
- C2327 também pode ocorrer se o nome de um tipo estiver oculto por nome de um membro:  
+ C2327 também poderá ocorrer se o nome de um tipo é ocultado por nome de um membro:  
   
 ```  
 // C2327b.cpp  
@@ -80,7 +66,7 @@ class S {
 };  
 ```  
   
- C2327 também podem acionar nessa situação, onde você precisa especificar completamente o tipo de dados do parâmetro:  
+ C2327 também podem acionar nessa situação, onde você precisa especificar totalmente o tipo de dados do parâmetro:  
   
 ```  
 // C2327c.cpp  
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-O exemplo a seguir mostra C2327 quando uma propriedade tem o mesmo nome que o tipo da propriedade:  
+O exemplo a seguir mostra C2327 quando uma propriedade tem o mesmo nome que o tipo de propriedade:  
   
 ```  
 // C2327f.cpp  

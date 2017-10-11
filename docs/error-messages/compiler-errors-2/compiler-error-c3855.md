@@ -1,5 +1,5 @@
 ---
-title: C3855 de erro do compilador | Documentos do Microsoft
+title: C3855 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d70b14c0b4dea79a65e02821e08d860195da8ff5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3855"></a>C3855 de erro do compilador
-'class': o parâmetro de tipo 'param' é incompatível com a declaração  
+'class': parâmetro de tipo 'param' é incompatível com a declaração  
   
- O compilador encontrados modelo sem tipo ou parâmetros genéricos com nomes diferentes. Isso pode ocorrer quando um parâmetro de modelo especificado na definição de uma especialização de modelo é incompatível com sua declaração.  
+ O compilador encontrado modelo sem tipo ou parâmetros genéricos com nomes diferentes. Isso pode ocorrer quando um parâmetro de modelo especificado na definição de uma especialização de modelo é incompatível com sua declaração.  
   
  O exemplo a seguir gera C3855:  
   
@@ -58,7 +44,7 @@ template <char N>
 void C<N>::f() {}   // C3855  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3855b.cpp  
@@ -89,7 +75,7 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3855d.cpp  

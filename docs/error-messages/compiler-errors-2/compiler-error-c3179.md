@@ -1,5 +1,5 @@
 ---
-title: C3179 de erro do compilador | Documentos do Microsoft
+title: C3179 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 7175968669ff05ac61e1a60716d4cd04941d37ba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d8ce81f56a9cbdfda7ddef7ac1a6f9fcd7954d7c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3179"></a>C3179 de erro do compilador
-gerenciado sem um nome ou tipo WinRT não é permitido  
+gerenciado sem um nome ou tipo de WinRT não é permitido  
   
-CLR e do WinRT todas as classes e estruturas devem ter nomes.  
+Classes CLR e o WinRT e estruturas devem ter nomes.  
   
 O exemplo a seguir gera C3179 e mostra como corrigi-lo:  
   

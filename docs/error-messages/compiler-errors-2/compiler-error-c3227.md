@@ -1,5 +1,5 @@
 ---
-title: C3227 de erro do compilador | Documentos do Microsoft
+title: C3227 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5e332ab40ae9b561656eae29108d4be5ab816d29
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2f65791d709b5790144cd919bf06b61fd94da973
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3227"></a>C3227 de erro do compilador
-'parâmetro': não é possível usar 'palavra-chave' para alocar um tipo genérico  
+'parameter': não é possível usar 'palavra-chave' para alocar um tipo genérico  
   
- Para criar uma instância de um tipo, um construtor apropriado é necessário. No entanto, o compilador não é capaz de garantir que um construtor apropriado está disponível.  
+ Para criar uma instância de um tipo, é necessário um construtor apropriado. No entanto, o compilador não é capaz de garantir que um construtor apropriado está disponível.  
   
  Você pode usar os modelos em vez de genéricos para resolver esse erro, ou você pode usar um dos vários métodos para criar uma instância do tipo.  
   

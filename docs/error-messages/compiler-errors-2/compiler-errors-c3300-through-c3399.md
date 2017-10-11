@@ -113,32 +113,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 de erros do compilador por meio de C3399
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -155,7 +141,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C3308 de erro do compilador|' *função*': direta não há suporte para a chamada por meio de classe importada|  
 |[Erro do compilador C3309](compiler-error-c3309.md)|'*macro*/*palavra-chave*': nome do módulo não pode ser uma macro ou uma palavra-chave|  
 |C3310 de erro do compilador|'*identificador*': conflito de nome de módulo|  
-|C3311 de erro do compilador|atributo de módulo deve ser definido em escopo global|  
+|C3311 de erro do compilador|atributo de módulo deve ser definido no escopo global|  
 |C3312 de erro do compilador|não pode ser chamado '*identificador*'função encontrado para o tipo'*tipo*'|  
 |C3313 de erro do compilador|'*identificador*': variável não pode ter o tipo '*tipo*'|  
 |C3314 de erro do compilador|'*símbolo*': não um tipo com suporte de módulo IDL|  
@@ -167,7 +153,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3320](compiler-error-c3320.md)|'*tipo*': tipo não pode ter o mesmo nome que a propriedade 'name' de módulo|  
 |C3321 de erro do compilador|uma lista de inicializadores é inesperada neste contexto|  
 |[Erro do compilador C3322](compiler-error-c3322.md)|'*propriedade*': não é uma propriedade válida para o atributo '*atributo*'|  
-|C3323 de erro do compilador|'alinharcomo' e '__declspec(alinhar)' não são permitidos nas declarações de função|  
+|C3323 de erro do compilador|'alinharcomo' e '__declspec(align)' não são permitidos em declarações de função|  
 |C3324 de erro do compilador|'*propriedade*': propriedade ocorre mais de uma vez no atributo '*atributo*'|  
 |C3325 de erro do compilador|'*atributo*': atributo possui muitos argumentos|  
 |C3326 de erro do compilador|'*valor*': não é um valor válido para a propriedade '*propriedade*'do atributo'*atributo*'|  
@@ -178,12 +164,12 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C3331 de erro do compilador|'*identificador*': atributos em parâmetros são permitidos somente em interfaces e coclasses|  
 |C3332 de erro do compilador|'*propriedade*': propriedade inconsistente, gramática '*propriedade*' é obrigatórias e tem um padrão|  
 |[Erro do compilador C3333](compiler-error-c3333.md)|'*biblioteca*': não é possível #import biblioteca de tipos corrompida|  
-|[Erro do compilador C3334](compiler-error-c3334.md)|não é possível usar #import com biblioteca de tipos corrompida|  
+|[Erro do compilador C3334](compiler-error-c3334.md)|não é possível #import corrompido com biblioteca de tipos|  
 |C3335 de erro do compilador|'*identificador*': pode haver no máximo uma interface padrão para uma coclass*classe*'|  
-|C3336 de erro do compilador|Esta operação deve ser realizada em escopo de classe|  
+|C3336 de erro do compilador|Esta operação deve ser executada no escopo da classe|  
 |C3337 de erro do compilador|'*identificador*': defaultvtable deve ser uma fonte de evento para uma coclass*classe*'|  
 |C3338 de erro do compilador|'*identificador*': pode haver no máximo uma interface padrão que também é uma origem de evento para uma coclass*classe*'|  
-|C3339 de erro do compilador|o parâmetro do modelo modelo requer 'class' ou 'typename' após a lista de parâmetros|  
+|C3339 de erro do compilador|parâmetro de modelo requer 'class' ou 'typename' após a lista de parâmetros|  
 |[Erro do compilador C3340](compiler-error-c3340.md)|'*identificador*': interface não pode ser 'restricted' e 'default' em coclass'*classe*'|  
 |C3341 de erro do compilador|'*interface*': uma interface defaultvtable deve ser 'dual' ou 'custom'|  
 |[Erro do compilador C3342](compiler-error-c3342.md)|'*identificador*': atributo ambíguo|  
@@ -221,13 +207,13 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3374](compiler-error-c3374.md)|não é possível obter o endereço de ' *função*', a menos que criar instância delegate|  
 |[Erro do compilador C3375](compiler-error-c3375.md)|'*função*': função delegate ambígua|  
 |C3376 de erro do compilador|'*modelo*': somente modelos de membro de dados estáticos são permitidos|  
-|C3377 de erro do compilador|'decltype(auto)' não é permitido em uma new-expression|  
+|C3377 de erro do compilador|'decltype (Auto)' não é permitido em uma nova expressão|  
 |C3378 de erro do compilador|uma declaração pode ser exportada somente de uma unidade de interface de módulo|  
 |[Erro do compilador C3379](compiler-error-c3379.md)|'*classe*': uma classe aninhada não pode ter um especificador de acesso de assembly como parte de sua declaração|  
 |[Erro do compilador C3380](compiler-error-c3380.md)|'*especificador*': acesso de assembly inválido especificador - apenas 'public' ou 'private' é permitidas|  
 |[Erro do compilador C3381](compiler-error-c3381.md)|'*especificador*': especificadores de acesso de assembly só estão disponíveis no código compilado com uma opção /clr|  
-|[Erro do compilador C3382](compiler-error-c3382.md)|'sizeof' não é suportado com /clr:safe|  
-|[Erro do compilador C3383](compiler-error-c3383.md)|'operator new' não é suportado com /clr:safe|  
+|[Erro do compilador C3382](compiler-error-c3382.md)|'sizeof' não é suportado com /CLR: safe|  
+|[Erro do compilador C3383](compiler-error-c3383.md)|'operator new' não é suportado com /CLR: safe|  
 |[Erro do compilador C3384](compiler-error-c3384.md)|'*tipo*': a restrição de valor e a restrição ref são mutuamente exclusivos|  
 |[Erro do compilador C3385](compiler-error-c3385.md)|' *função*': uma função que tem um atributo personalizado de DllImport não pode retornar uma instância de uma classe|  
 |[Erro do compilador C3386](compiler-error-c3386.md)|'*tipo*': __declspec(dllexport)/__declspec(dllimport) não pode ser aplicado a um tipo gerenciado/WinRT|  
@@ -240,7 +226,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C3393](compiler-error-c3393.md)|Erro de sintaxe em cláusula de restrição: '*identificador*' não é um tipo|  
 |[Erro do compilador C3394](compiler-error-c3394.md)|Erro de sintaxe em cláusula de restrição: encontrado '*símbolo*' era esperado um tipo|  
 |[Erro do compilador C3395](compiler-error-c3395.md)|' *função*': dllexport não pode ser aplicado a uma função com o clrcall convenção de chamada|  
-|[Erro do compilador C3396](compiler-error-c3396.md)|'*class*. *membro*': atributo personalizado não encontrado em '*namespace*'|  
+|[Erro do compilador C3396](compiler-error-c3396.md)|'*classe*. *membro*': atributo personalizado não encontrado em '*namespace*'|  
 |[Erro do compilador C3397](compiler-error-c3397.md)|Inicialização de agregação não é permitida em argumentos padrão|  
 |[Erro do compilador C3398](compiler-error-c3398.md)|'*operador*': não é possível converter de '*tipo*'para'*tipo*'. Expressão fonte deve ser um símbolo de função|  
 |[Erro do compilador C3399](compiler-error-c3399.md)|'*tipo*': não é possível fornecer argumentos ao criar uma instância de um parâmetro genérico|  

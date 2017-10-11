@@ -1,5 +1,5 @@
 ---
-title: C2417 de erro do compilador | Documentos do Microsoft
+title: C2417 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8baf1f23d104649ad81d6c5263e47263c5819077
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 731aa187af54bae03a95d91ab847218ba9eb5417
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2417"></a>C2417 de erro do compilador
-divisão por zero em 'context'  
+divisão por zero em 'contexto'  
   
- O parâmetro à direita do operador de divisão é zero neste contexto.
+ O parâmetro para a direita do operador de divisão é zero neste contexto.

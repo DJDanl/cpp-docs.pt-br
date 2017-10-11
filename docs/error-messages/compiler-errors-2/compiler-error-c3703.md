@@ -1,5 +1,5 @@
 ---
-title: C3703 de erro do compilador | Documentos do Microsoft
+title: C3703 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ea2ca458b49b2fbd7bb9f45b080f12282c2fbcb9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6ef53628f3a24dd3e6f7f387491fc959d70aa04
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3703"></a>C3703 de erro do compilador
-'manipulador de eventos ': um método de manipulador de eventos deve ter a mesma classe de armazenamento como a origem 'event'  
+'manipulador de eventos': um método de manipulador de eventos deve ter a mesma classe de armazenamento como a origem 'event'  
   
- Um [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferentes que o manipulador de eventos para o qual ele está conectado. Por exemplo, esse erro ocorre se o manipulador de eventos é uma função de membro estático e o evento não é estático. Para corrigir esse erro, forneça o evento e o manipulador de eventos da mesma classe de armazenamento.  
+ Um [evento](../../cpp/event-handling.md) tem uma classe de armazenamento diferentes que o manipulador de eventos para o qual ele está conectado. Por exemplo, esse erro ocorre se o manipulador de eventos é uma função de membro estático e o evento não é estático. Para corrigir esse erro, forneça o evento e o manipulador de eventos a mesma classe de armazenamento.  
   
  O exemplo a seguir gera C3703:  
   

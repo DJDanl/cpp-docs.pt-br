@@ -1,5 +1,5 @@
 ---
-title: C2188 de erro do compilador | Documentos do Microsoft
+title: C2188 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 19ba9a628d3431f0fb84f4ce56c8bf36b5a04a21
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5b225cab9216078996bdf387ea0929ef38d66d0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2188"></a>C2188 de erro do compilador
-'número': muito grande de caractere largo  
+'número': muito grande para caractere largo  
   
- O número exceder o limite de tamanho para o tipo de caractere largo. Escolha um tipo maior.
+ O número excede o limite de tamanho para o tipo de caractere largo. Escolha um tipo maior.

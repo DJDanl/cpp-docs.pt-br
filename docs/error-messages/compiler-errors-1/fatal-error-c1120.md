@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1120 | Documentos do Microsoft
+title: Erro fatal C1120 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a7a0596c243ab8b22997bd9cbdf1b2746ff273c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0374d89601649dfab833ca62993e34489a41021
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1120"></a>Erro fatal C1120
-plano de GetProcAddress falhou para 'function'  
+chamada a GetProcAddress falhou para 'function'  
   
  Esse erro indica que o Visual C++ precisa ser reinstalado.

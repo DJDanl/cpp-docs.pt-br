@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1045 | Documentos do Microsoft
+title: Erro fatal C1045 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 86020fcd25a0cc382ff8978dcfd8f6994066176d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 523c717f2e3e3e7485cfbd1f4c2e7bf270b4e6a3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1045"></a>Erro fatal C1045
-limite do compilador : especificações de vínculo aninhadas muito profundamente  
+limite do compilador: especificações de vinculação com aninhamento muito profundo  
   
- Itens aninhados externos excederem o limite do compilador. Externos aninhados são permitidos com o tipo de vinculação externa, como `extern` "C++". Reduza o número de itens aninhados externos para resolver o erro.
+ Externos aninhados excederem o limite do compilador. Externos aninhados são permitidos com o tipo de ligação externa, como `extern` "C++". Reduza o número de itens aninhados externos para resolver o erro.

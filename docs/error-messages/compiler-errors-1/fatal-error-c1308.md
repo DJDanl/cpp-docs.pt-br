@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1308 | Documentos do Microsoft
+title: Erro fatal C1308 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4d2481a724ac98d325dd2bd05714d410f5e75e3c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9958ccb3daa537f8789d7485822fd623da8c703
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1308"></a>Erro fatal C1308
-Não há suporte para a vinculação de assemblies  
+Não há suporte para vinculação assemblies  
   
- É permitido um. netmodule como entrada para o vinculador, mas não é de um assembly. Esse erro pode ser gerado quando é feita uma tentativa de vincular um assembly compilado com `/clr:safe`.  
+ Um. netmodule é permitido como entrada para o vinculador, mas não é de um assembly. Esse erro pode ser gerado quando é feita uma tentativa para vincular um assembly compilado com `/clr:safe`.  
   
- Para obter mais informações, consulte [arquivos. netmodule como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).  
+ Para obter mais informações, consulte [. netmodule arquivos como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).  
   
  O exemplo a seguir gera C1308:  
   
@@ -58,7 +44,7 @@ public:
 };  
 ```  
   
- e, em seguida,  
+ E, em seguida,  
   
 ```  
 // C1308b.cpp  

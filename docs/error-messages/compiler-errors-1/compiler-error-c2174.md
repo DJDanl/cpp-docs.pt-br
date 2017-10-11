@@ -1,5 +1,5 @@
 ---
-title: C2174 de erro do compilador | Documentos do Microsoft
+title: C2174 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 52554f2af130c098dc005e18f897b45550b0397d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d01a99cf6bd1a4c95b2e5c8609b79e83437dbbf4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2174"></a>C2174 de erro do compilador
-'function': parâmetro real tem o tipo 'nulo': parâmetro Número1, Número2 da lista de parâmetro  
+'function': parâmetro real possui tipo 'void': parâmetro Número1, Número2 da lista de parâmetro  
   
- Parâmetro `number1` passada à lista de parâmetros `number2` é um `void` parâmetro. Parâmetros não podem ter o tipo `void`. Use `void*` em seu lugar.
+ Parâmetro `number1` passado à lista de parâmetros `number2` é um `void` parâmetro. Parâmetros não podem ter tipo `void`. Use `void*` em seu lugar.

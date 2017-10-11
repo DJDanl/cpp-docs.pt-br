@@ -1,5 +1,5 @@
 ---
-title: C2923 de erro do compilador | Documentos do Microsoft
+title: C2923 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 842403bfdd6ae49fbf338b7fd1d8a1a3f68e6d59
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84a0e844161ea13fdc2515fa6ea403adf2e5caa1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2923"></a>C2923 de erro do compilador
 'type': 'Identificador' não é um argumento de tipo de modelo válido para o parâmetro 'param'  
   
- A lista de argumentos não tem um tipo necessário para instanciar o modelo ou genérico. Verifique o modelo ou a declaração genérica.  
+ A lista de argumentos está faltando um tipo necessário para criar uma instância de modelo ou genérico. Verifique o modelo ou declaração de generic.  
   
  O exemplo a seguir gera C2923:  
   

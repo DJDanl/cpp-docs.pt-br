@@ -1,5 +1,5 @@
 ---
-title: C3480 de erro do compilador | Documentos do Microsoft
+title: C3480 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0fda755a1443e084baf63fc2dc84dbab4295a3dc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d84314d20ea00e880981e418c2b5b11008f74229
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3480"></a>C3480 de erro do compilador
-'var': uma variável de captura lambda deve ser de um escopo delimitador de função  
+'var': uma variável de captura de lambda deve ser de um escopo de função delimitadora  
   
- A variável de captura lambda não é de um escopo delimitador da função.  
+ A variável de captura de lambda não é de um escopo delimitador de função.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova a variável na lista da expressão lambda captura.  
+-   Remova a variável na lista de captura da expressão lambda.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3480 porque a variável `global` não está em um escopo delimitador de função:  
@@ -64,7 +49,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3480 removendo a variável `global` na lista da expressão lambda captura:  
+ O exemplo a seguir elimina C3480, removendo a variável `global` na lista da expressão lambda captura:  
   
 ```  
 // C3480b.cpp  

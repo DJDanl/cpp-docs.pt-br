@@ -1,5 +1,5 @@
 ---
-title: C3242 de erro do compilador | Documentos do Microsoft
+title: C3242 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5b219656f1635100b8c71f83157e097d45bdc89a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7ebe7086bf690680da47575abb48c84daad8461c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3242"></a>C3242 de erro do compilador
-'function': você pode substituir apenas explicitamente funções virtuais  
+'function': você pode substituir apenas explicitamente funções virtual  
   
- Você tentou substituir um método virtual explicitamente.
+ Você tentou substituir explicitamente um método não virtual.

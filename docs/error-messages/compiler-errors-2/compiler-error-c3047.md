@@ -1,5 +1,5 @@
 ---
-title: C3047 de erro do compilador | Documentos do Microsoft
+title: C3047 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6f4743b4303d69ecfe4a128abc8e4bfa572c8c7c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d2133330ab45eb4667c100cde9495e54eec15e7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3047"></a>C3047 de erro do compilador
-Bloco estruturado em uma região de OpenMP 'sections' deve ser precedido por '#pragma omp section'  
+Bloco estruturado em um região 'sections' deve ser precedido por '#pragma omp section' de OpenMP  
   
  Qualquer código em um bloco de código introduzido por um [seções](../../parallel/openmp/reference/sections-openmp.md) diretiva deve estar em um bloco de código introduzido por um `section` diretiva.  
   

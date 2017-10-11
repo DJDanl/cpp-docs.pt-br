@@ -1,5 +1,5 @@
 ---
-title: C4355 de aviso do compilador | Documentos do Microsoft
+title: C4355 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 93b6a78365e493cbfea656e608b7bd3d77e600eb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 061ad3df17cf9c86fbc5ac98048932aff8b0b25b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4355"></a>C4355 de aviso do compilador
 'this' : usado na lista de inicializadores do membro base  
   
- O **isso** ponteiro é válido somente dentro de funções de membro não estático. Ele não pode ser usado na lista de inicializadores para uma classe base.  
+ O **isso** ponteiro é válido somente dentro de funções de membro não estático. Ele não pode ser usado na lista de inicializador para uma classe base.  
   
- Os construtores de classe base e construtores de membro de classe são chamados antes de **isso** construtor. Na verdade, passar um ponteiro para um objeto não construído para outro construtor. Se esses outros construtores acessar todos os membros ou chamam funções de membro nisso, o resultado será indefinido. Você não deve usar o **isso** ponteiro até que todos os construção seja concluída.  
+ Os construtores de classe base e construtores de membro de classe são chamados antes **isso** construtor. Na verdade, passar um ponteiro para um objeto não construído para outro construtor. Se esses outros construtores acessar todos os membros ou chamam funções de membro sobre isso, o resultado será indefinido. Você não deve usar o **isso** ponteiro até que todos os construção seja concluída.  
   
  Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   

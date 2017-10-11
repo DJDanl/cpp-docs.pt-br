@@ -1,5 +1,5 @@
 ---
-title: C2061 de erro do compilador | Documentos do Microsoft
+title: C2061 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 06a14e3c7c05af5cac03c7b0a49cef6a6b9fdfeb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 82518c78b49418c10cc0cd07ae59e58336af08f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2061"></a>C2061 de erro do compilador
 Erro de sintaxe: identificador 'Identificador'  
   
- O compilador encontrar um identificador onde ele não era esperado. Verifique se `identifier` é declarado antes de você usá-lo.  
+ O compilador encontrado um identificador em que ele não era esperado. Verifique se `identifier` é declarada antes de você usá-lo.  
   
  Um inicializador pode ser delimitado por parênteses. Para evitar esse problema, coloque o declarador entre parênteses ou torná-lo um `typedef`.  
   
- Esse erro também pode ser causado quando o compilador detecta uma expressão como um argumento de modelo de classe; Use [typename](../../cpp/typename.md) para dizer ao compilador é um tipo.  
+ Esse erro também pode ser causado quando o compilador detecta uma expressão como um argumento de modelo de classe. Use [typename](../../cpp/typename.md) para informar o compilador é um tipo.  
   
  O exemplo a seguir gera C2061:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3661 de erro do compilador | Documentos do Microsoft
+title: C3661 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 22e97d420ab85719b6310455d9ace502b4c895b1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45d40adbe1e8dd6abe509e532ba5ccc97b21c4d1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3661"></a>C3661 de erro do compilador
 lista de substituição explícita não encontrou nenhum método para substituir  
   
- Uma substituição explícita especificado um ou mais nomes de tipo.  No entanto, não havia nenhuma função com a assinatura necessária no tipo (s) que correspondem a substituição da assinatura da função.  Se você tentar substituir com base no nome do tipo, deve haver uma ou mais funções virtuais nos tipos especificados que correspondem à assinatura da função de substituição.  
+ Uma substituição explícita especificada de um ou mais nomes de tipo.  No entanto, não havia nenhuma função com a assinatura necessária no tipo (s) correspondente à assinatura da função de substituição.  Se você tentar substituir com base no nome do tipo, deve haver uma ou mais funções virtuais em tipos de especificado que correspondem à assinatura da função de substituição.  
   
  Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).

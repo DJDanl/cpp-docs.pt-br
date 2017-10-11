@@ -1,5 +1,5 @@
 ---
-title: C2229 de erro do compilador | Documentos do Microsoft
+title: C2229 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7de148fcd83b780c767efaf6d28216628558b059
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c54e3affb39cb396df1caaafe6450d5c6ac80f6e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2229"></a>C2229 de erro do compilador
-o tipo 'identifier' tem uma matriz de tamanho zero ilegal  
+o tipo 'Identificador' tem uma matriz de tamanho zero ilegal  
   
- Um membro de um campo de estrutura ou bit contém uma matriz de tamanho zero não é o último membro.  
+ Um membro de um campo de bits ou de estrutura contém uma matriz de tamanho zero não é o último membro.  
   
- Como você pode ter uma matriz de tamanho zero como o último membro da estrutura, você deve especificar seu tamanho ao alocar a estrutura.  
+ Como você pode ter uma matriz de tamanho zero como o último membro de struct, você deve especificar seu tamanho ao alocar a estrutura.  
   
  Se a matriz de tamanho zero não é o último membro da estrutura, o compilador não pode calcular o deslocamento para os campos restantes.  
   

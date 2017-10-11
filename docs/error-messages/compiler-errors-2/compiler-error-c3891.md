@@ -1,5 +1,5 @@
 ---
-title: C3891 de erro do compilador | Documentos do Microsoft
+title: C3891 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cca5b84f627fd0007ef01cd96f0176756398508d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b9db8f6142e4d2d99071d9d02255e0789a14dd50
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3891"></a>C3891 de erro do compilador
 'var': um membro de dados literal não pode ser usado como um l-value  
   
- A [literal](../../windows/literal-cpp-component-extensions.md) variável é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.  
+ Um [literal](../../windows/literal-cpp-component-extensions.md) variável é const, e seu valor não pode ser alterado depois que ele é inicializado na declaração.  
   
  O exemplo a seguir gera C3891:  
   

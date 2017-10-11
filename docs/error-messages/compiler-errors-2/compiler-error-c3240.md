@@ -1,5 +1,5 @@
 ---
-title: C3240 de erro do compilador | Documentos do Microsoft
+title: C3240 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7eb5f52206d7f47a06814c050f11b68b58a33ebd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 988c0a54b6c748acc7236642263a6c18390a44ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3240"></a>C3240 de erro do compilador
-'function': deve ser uma função de membro abstrato não sobrecarregado de 'type'  
+'function': deve ser uma função membro abstract não sobrecarregada de 'type'  
   
  Um tipo base continha uma função que foi definida. Função deve ser virtual.  
   

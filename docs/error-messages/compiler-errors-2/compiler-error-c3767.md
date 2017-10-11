@@ -1,5 +1,5 @@
 ---
-title: C3767 de erro do compilador | Documentos do Microsoft
+title: C3767 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>C3767 de erro do compilador
 funções de candidato 'function' não está acessíveis  
   
- Uma função friend definida em uma classe não deve ser tratado como se fosse definido e declarado no escopo de namespace global. Ele pode, no entanto, ser localizado pela pesquisa dependente de argumento.  
+ Uma função friend definida em uma classe não deve ser tratado como se fosse definido e declarada no escopo de namespace global. Ele pode, no entanto, ser encontrados pela pesquisa dependente de argumento.  
   
- C3767 também pode ser causado por uma alteração significativa: tipos nativos agora são privados por padrão em uma **/clr** compilação; consulte [digite visibilidade](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.  
+ C3767 também pode ser causado por uma alteração significativa: tipos nativos agora são private por padrão em um **/clr** compilação; consulte [visibilidade de tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3767:  
@@ -102,7 +87,7 @@ ref class Der : public Base {
 };  
 ```  
   
- No Visual C++ .NET 2002, o compilador mudou a forma procurada de símbolos. Em alguns casos, ele automaticamente seria para símbolos em um namespace especificado. Agora, ele usa a pesquisa dependente de argumento.  
+ No Visual C++ .NET 2002, o compilador mudou a forma de pesquisado de símbolos. Em alguns casos, ele automaticamente seria para símbolos em um namespace especificado. Agora, ele usa a pesquisa dependente de argumento.  
   
  O exemplo a seguir gera C3767:  
   
@@ -123,7 +108,7 @@ int main() {
 }  
 ```  
   
- Para o código que é válido no Visual C++ .NET 2003 e no Visual C++ .NET 2002, declare o amigo no escopo de classe e defini-lo no escopo de namespace:  
+ Para o código que é válido no Visual C++ .NET 2003 e o Visual C++ .NET 2002, declare um amigo no escopo de classe e defini-lo no escopo de namespace:  
   
 ```  
 // C3767f.cpp  

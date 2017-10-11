@@ -1,5 +1,5 @@
 ---
-title: C2238 de erro do compilador | Documentos do Microsoft
+title: C2238 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 19d49893c5749fbc036b77d949298309264f2e05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0fbf1b4d416a72d1836ac5a69f5106f84c6db1c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2238"></a>C2238 de erro do compilador
 token inesperado (s) anterior 'token'  
   
- Foi encontrado um token incorreto.  
+ Um símbolo incorreto foi encontrado.  
   
  O exemplo a seguir gera C2238:  
   

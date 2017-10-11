@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1084 | Documentos do Microsoft
+title: Erro fatal C1084 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6b6b181fbc885282dd5f89c4bcfb9c3440094000
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: caf1e64e91871087c9e47860a41c2824a811295a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1084"></a>Erro fatal C1084
-Não é possível ler o arquivo do tipo de arquivo: 'arquivo': mensagem  
+Não é possível ler o arquivo de tipo de arquivo: 'file': mensagem  
   
- Esse erro costuma ser resultado de uma falha na chamada à API do sistema interna feita pelo compilador. A mensagem mostrada quando esse erro geralmente é gerada por [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351.aspx).  
+ Esse erro costuma ser resultado de uma falha na chamada à API do sistema interna feita pelo compilador. A mensagem mostrada quando este erro ocorre geralmente é gerada pelo [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351.aspx).  
   
  A reprodução das seguintes etapas pode ajudar a resolver C1084:  
   
@@ -51,9 +37,9 @@ Não é possível ler o arquivo do tipo de arquivo: 'arquivo': mensagem
   
 -   Verifique se as permissões apropriadas estão definidas para acessar o arquivo especificado.  
   
--   Certifique-se de que a sintaxe de linha de comando segue as regras descritas em [sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md).  
+-   Certifique-se de que a sintaxe de linha de comando cumpre as regras descritas em [sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md).  
   
--   Verifique se as variáveis de ambiente **TMP** e **TEMP** estão corretamente conjunto, bem como as permissões apropriadas para acessar os diretórios consultem essas variáveis de ambiente. Também verifique se as unidades mencionadas pelo **TMP** e **TEMP** variáveis de ambiente contêm uma quantidade suficiente de espaço livre.  
+-   Verifique se as variáveis de ambiente **TMP** e **TEMP** estão corretamente conjunto, bem como as permissões apropriadas para acessar os diretórios, consultem essas variáveis de ambiente. Também verifique se as unidades referenciadas pelo **TMP** e **TEMP** variáveis de ambiente contém uma quantidade suficiente de espaço livre.  
   
 -   Se a mensagem indicar "número de arquivo incorreto", o arquivo especificado pode estar sendo fechado em primeiro plano durante a compilação em segundo plano.  
   

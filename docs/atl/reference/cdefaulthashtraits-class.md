@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultHashTraits | Documentos do Microsoft
+title: Classe CDefaultHashTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,25 +21,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
@@ -87,7 +73,7 @@ static ULONG Hash(const T& element) throw();
  Retorna o valor de hash.  
   
 ### <a name="remarks"></a>Comentários  
- O algoritmo de hash padrão é muito simple: o valor de retorno é o número do elemento. Substitua essa função se um algoritmo mais complicado é necessário.  
+ O algoritmo de hash padrão é muito simple: o valor de retorno é o número de elemento. Substitua essa função se um algoritmo mais complicado é necessário.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

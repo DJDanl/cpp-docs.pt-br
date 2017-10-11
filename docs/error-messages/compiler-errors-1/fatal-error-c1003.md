@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1003 | Documentos do Microsoft
+title: Erro fatal C1003 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 773dbff0fe4d96ff3b5b5e9bc4c601093a6ae443
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 171bb90004ae2d786a582dda10d12e614a603b28
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1003"></a>Erro fatal C1003
-Contagem de erros excede o número; interromper a compilação  
+Contagem de erros excede o número; interrompendo compilação  
   
  Erros no programa são muito numerosos para permitir a recuperação. O compilador deve terminar.

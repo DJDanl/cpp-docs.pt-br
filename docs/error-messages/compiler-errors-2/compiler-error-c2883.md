@@ -1,5 +1,5 @@
 ---
-title: C2883 de erro do compilador | Documentos do Microsoft
+title: C2883 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b9bb61acb079dcab24b1cbc453f6e92a9f8bd0a9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28c2031c3e659099507a8e59758e27f364dd29b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2883"></a>C2883 de erro do compilador
-'name': declaração de função está em conflito com 'identifier' introduzido pela declaração using  
+'name': declaração da função está em conflito com 'Identificador' introduzido por declaração de using  
   
- Você tentou definir uma função mais de uma vez. A primeira definição foi feita de um namespace com um `using` declaração. A segunda era uma definição de local.  
+ Você tentou definir uma função de mais de uma vez. A primeira definição foi feita de um namespace com um `using` declaração. A segunda é uma definição de local.  
   
  O exemplo a seguir gera C2883:  
   

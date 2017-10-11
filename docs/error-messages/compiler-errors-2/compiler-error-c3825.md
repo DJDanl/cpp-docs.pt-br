@@ -1,5 +1,5 @@
 ---
-title: C3825 de erro do compilador | Documentos do Microsoft
+title: C3825 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 403ad0379db8384fd9cf84ea06d4f58f4878d269
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3f8547cee8638fe5cda6c5b0a3d3ff375850406
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3825"></a>C3825 de erro do compilador
 'class': gerenciada ou WinRTclass pode apenas suporte gerenciado ou WinRTevents  
   
- Somente os eventos .NET têm suporte em classes gerenciadas. Somente os eventos de tempo de execução do Windows têm suporte nas classes de tempo de execução do Windows. Para corrigir esse erro em código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` de `native` para `managed`. Como alternativa, remova o atributo.  
+ Somente os eventos de .NET são suportados em classes gerenciadas. Somente os eventos de tempo de execução do Windows têm suporte em tempo de execução do Windows. Para corrigir esse erro no código gerenciado, altere o parâmetro de tipo de `event_source` e `event_receiver` de `native` para `managed`. Como alternativa, remova o atributo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3825 e mostra como corrigi-lo:  

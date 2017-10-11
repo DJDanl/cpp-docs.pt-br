@@ -1,5 +1,5 @@
 ---
-title: C2499 de erro do compilador | Documentos do Microsoft
+title: C2499 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4de83bdfe4f7b1d4315db1a666fca697b1d68a4f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aaf3a8cfc59a2bf4d602fc8c194d034704f7bc69
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2499"></a>C2499 de erro do compilador
 'class': uma classe não pode ser sua própria classe base  
   
- Tentativa de especificar a classe que você está definindo como uma classe base.  
+ Você tentou especificar a classe que você está definindo como uma classe base.  
   
  O exemplo a seguir gera C2499:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2750 de erro do compilador | Documentos do Microsoft
+title: C2750 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9b4603b404bf2ec241b599f34152cc58e59d7f6d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbe3ee423183bb841e3e6777db94e4645b94355d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2750"></a>C2750 de erro do compilador
-'type': não é possível usar 'new' no tipo de referência; Use 'gcnew' em vez disso  
+'type': não é possível usar 'new' no tipo de referência; Nesse caso, use 'gcnew'  
   
- Para criar uma instância de um tipo CLR, que faz com que a instância a ser colocado no heap coletado como lixo, você deve usar [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).  
+ Para criar uma instância de um tipo CLR, o que faz com que a instância a ser colocado no heap do coletor de lixo, você deve usar [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
  O exemplo a seguir gera C2750:  
   

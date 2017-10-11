@@ -1,5 +1,5 @@
 ---
-title: C3278 de erro do compilador | Documentos do Microsoft
+title: C3278 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a6eb79da13a6c5267d22fc4c55adc94ef69ff06
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee3c14e1b6d306807735f8d58570089f128a1c19
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3278"></a>C3278 de erro do compilador
-uma chamada direta de interface ou um método puro 'method' falhará em tempo de execução  
+a chamada direta de interface ou método puro 'method' falhará em tempo de execução  
   
  Foi feita uma chamada para um método de interface ou um método puro, que não é permitido.  
   

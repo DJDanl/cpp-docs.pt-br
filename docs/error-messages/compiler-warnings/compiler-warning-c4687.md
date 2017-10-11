@@ -1,5 +1,5 @@
 ---
-title: C4687 de aviso do compilador | Documentos do Microsoft
+title: C4687 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f2dc847b6d75a563379b46e1375f93ceab9c7531
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 266213deba94bdc925747d57dee184aca5f5f605
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4687"></a>C4687 de aviso do compilador
-'class': uma classe abstrata lacrada não pode implementar uma interface de ''  
+'class': uma classe sealed abstract não pode implementar uma interface 'interface'  
   
- Um tipo abstrato lacrado normalmente só é útil para manter funções de membro estático.  
+ Um tipo lacrado, abstract normalmente só é útil para manter as funções de membro estático.  
   
- Para obter mais informações, consulte [abstrato](../../windows/abstract-cpp-component-extensions.md)e [lacrado](../../windows/sealed-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [abstrata](../../windows/abstract-cpp-component-extensions.md)e [lacrado](../../windows/sealed-cpp-component-extensions.md).  
   
- Por padrão, C4687 é emitida como um erro. Você pode suprimir C4687 com o [aviso](../../preprocessor/warning.md) pragma. Se você tiver certeza de que deseja implementar uma interface em um tipo abstrato lacrado, você pode suprimir C4687.  
+ Por padrão, C4687 é emitido como um erro. Você pode suprimir C4687 com o [aviso](../../preprocessor/warning.md) pragma. Se você tiver certeza de que deseja implementar uma interface em um tipo lacrado, abstract, você pode suprimir C4687.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4687.  

@@ -1,5 +1,5 @@
 ---
-title: C3732 de erro do compilador | Documentos do Microsoft
+title: C3732 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bfae84076fbbf58defdfbc678a0ad9e8c30da712
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c545391883d4e2becd21fbb4b3279e3f0c1d60f1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3732"></a>C3732 de erro do compilador
 'interface': uma interface personalizada que dispara eventos COM não pode herdar de IDispatch  
   
- Uma interface que oferece suporte a eventos COM não pode herdar de `IDispatch`. Para obter mais informações, consulte [manipulação de eventos em COM](../../cpp/event-handling-in-com.md).  
+ Uma interface que oferece suporte a eventos COM não pode herdar de `IDispatch`. Para obter mais informações, consulte [manipulação de eventos COM](../../cpp/event-handling-in-com.md).  
   
  O erro a seguir gera C3732:  
   

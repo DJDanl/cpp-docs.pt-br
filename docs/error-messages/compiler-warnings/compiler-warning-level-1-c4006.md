@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4006 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4006 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dd2b1f3501a3dd806e160d23b7160191428b26b1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d7c09f256223decda7d2a2e52cd6cb8c29f21b1b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4006"></a>Compilador C4006 de aviso (nível 1)
-\#um identificador é esperado undef  
+\#undef esperava um identificador  
   
- A `#undef` diretiva não especificou um identificador para excluir. A diretiva será ignorada. Para resolver o aviso, certifique-se de especificar um identificador. O exemplo a seguir gera C4006:  
+ O `#undef` diretiva não especificou um identificador para o exclua. A diretiva será ignorada. Para resolver o aviso, certifique-se de especificar um identificador. O exemplo a seguir gera C4006:  
   
 ```  
 // C4006.cpp  

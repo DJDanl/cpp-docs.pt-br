@@ -1,5 +1,5 @@
 ---
-title: C2833 de erro do compilador | Documentos do Microsoft
+title: C2833 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2fbe6bcb1850948d4484fca93f2cd511a9e2a1da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2d3adf42ddb4df4365a45fd3ef24bccd682ac3c9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2833"></a>C2833 de erro do compilador
-'operador' não é um operador reconhecido ou tipo  
+'operator operador' não é um operador ou tipo reconhecido  
   
  A palavra `operator` deve ser seguido por um operador que você deseja substituir ou um tipo que você deseja converter.  
   

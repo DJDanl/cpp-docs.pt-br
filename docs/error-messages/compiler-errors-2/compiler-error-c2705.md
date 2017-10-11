@@ -1,5 +1,5 @@
 ---
-title: C2705 de erro do compilador | Documentos do Microsoft
+title: C2705 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 17617aa6121e6ac05c1119bc4d5025fb2588faac
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 734287b37835d196ebfc131bc5f9392d0a712f3e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2705"></a>C2705 de erro do compilador
-'Rótulo': ilegal salto no escopo de 'block do manipulador de exceção'  
+'Rótulo': salto ilegal no escopo de 'block do manipulador de exceção'  
   
- Execution jumps to a label within a `try`/`catch`, `__try`/`__except`, `__try`/`__finally` block. Para obter mais informações, consulte [Exception Handling](../../cpp/exception-handling-in-visual-cpp.md).  
+ A execução saltará para um rótulo dentro de um `try` / `catch`, `__try` / `__except`, `__try` / `__finally` bloco. Para saber mais, veja [Tratamento de exceção](../../cpp/exception-handling-in-visual-cpp.md).  
   
  O exemplo a seguir gera C2705:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2319 de erro do compilador | Documentos do Microsoft
+title: C2319 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a1d8809b8c002983c0f0ce74dc710ba5a2d0edda
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23db7e68a5f590d7c20f70e122b746b0f43fd2fd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2319"></a>C2319 de erro do compilador
-' try/catch' deve ser seguido por uma instrução composta. Ausente ' {'  
+' try/catch' deve ser seguido por uma instrução composta. Faltando ' {'  
   
- A `try` ou `catch` bloco não for encontrado após o `try` ou `catch` instrução. O bloco deve ser colocado entre chaves.  
+ Um `try` ou `catch` bloco não for encontrado após o `try` ou `catch` instrução. O bloco deve ser colocado entre chaves.  
   
  O exemplo a seguir gera C2319:  
   

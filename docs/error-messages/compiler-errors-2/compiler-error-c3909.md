@@ -1,5 +1,5 @@
 ---
-title: C3909 de erro do compilador | Documentos do Microsoft
+title: C3909 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ec5900d7a4e60c70ba2582b3d934e3168f8e1f4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5cb5929fe1619ce75a7bde15ac08955247f1af7a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3909"></a>C3909 de erro do compilador
-aWinRT ou declaração de evento gerenciado deve ocorrer em um tipo gerenciado ou WinRT  
+aWinRT ou declaração de evento gerenciado deve ocorrer em um WinRT ou tipo gerenciado  
   
- Um evento de tempo de execução do Windows ou gerenciados foi declarado em um tipo nativo. Para corrigir esse erro, declare eventos em tipos de tempo de execução do Windows ou tipos gerenciados.  
+ Um evento de tempo de execução do Windows ou gerenciado foi declarado em um tipo nativo. Para corrigir esse erro, declare eventos em tipos de tempo de execução do Windows ou tipos gerenciados.  
   
  Para obter mais informações, consulte [evento](../../windows/event-cpp-component-extensions.md).  
   

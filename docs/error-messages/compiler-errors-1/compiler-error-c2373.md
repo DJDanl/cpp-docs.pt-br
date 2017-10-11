@@ -1,5 +1,5 @@
 ---
-title: C2373 de erro do compilador | Documentos do Microsoft
+title: C2373 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0e5b573a6371dcf75d02cff960fc2cbf31c12cc2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 93e9538b53b278f12af0a3b50566f444d5289362
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2373"></a>C2373 de erro do compilador
-'identifier': redefinição; modificadores de tipo diferente  
+'Identificador': redefinição; modificadores de tipo diferentes  
   
  O identificador já está definido com um modificador de tipo diferente.  
   
@@ -54,7 +39,7 @@ void __clrcall func( void );
 const int i = 20;  
 ```  
   
- E, em seguida:  
+ e, em seguida:  
   
 ```  
 // C2373.cpp  

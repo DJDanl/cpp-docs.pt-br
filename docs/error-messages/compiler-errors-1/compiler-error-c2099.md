@@ -1,5 +1,5 @@
 ---
-title: C2099 de erro do compilador | Documentos do Microsoft
+title: C2099 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cc82e0e603fd0ce28626247f073dbc493faf5b47
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0378426777bc7ce831eee9ecb62170baf5e906b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2099"></a>C2099 de erro do compilador
 inicializador não é uma constante  
   
- Esse erro é emitido apenas pelo compilador C e ocorre apenas para variáveis não automático.  O compilador inicializa variáveis não automático no início do programa e os valores que são inicializados com devem ser constantes.  
+ Esse erro é emitido somente pelo compilador C e ocorre apenas para variáveis não automático.  O compilador inicializa variáveis não automático no início do programa e os valores que são inicializados com devem ser constantes.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2099.  
@@ -57,11 +42,11 @@ j = *p;   // C2099 *p is not a constant
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2099 também pode ocorrer porque o compilador não é capaz de executar a dobra constante em uma expressão em **/fp: strict** porque o ponto flutuante configurações de ambiente de precisão (consulte [controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obter mais informações) pode ser diferente da compilação para tempo de execução.  
+ C2099 também pode ocorrer porque o compilador não é capaz de executar a dobra constante em uma expressão em **/fp: strict** porque o ponto flutuante configurações de ambiente de precisão (consulte [controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obter mais informações) podem diferir da compilação em tempo de execução.  
   
- Quando constante dobra falhar, o compilador invocará inicialização dinâmica, que não é permitida em C.  
+ Quando constante dobra falhar, o compilador chama inicialização dinâmica, o que não é permitida em C.  
   
- Para resolver esse erro, compilar o módulo como um arquivo. cpp ou simplificar a expressão.  
+ Para resolver esse erro, compilar o módulo como um arquivo. cpp ou Simplifique a expressão.  
   
  Para obter mais informações, consulte [/fp (especificar comportamento de ponto flutuante)](../../build/reference/fp-specify-floating-point-behavior.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: C3149 de erro do compilador | Documentos do Microsoft
+title: C3149 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>C3149 de erro do compilador
-'type': não é possível usar esse tipo sem um nível superior 'char'  
+'type': não é possível usar este tipo aqui sem um nível superior 'char'  
   
  Uma declaração não foi especificada corretamente.  
   
- Por exemplo, você pode ter definido um tipo CLR no escopo global e tentou criar uma variável do tipo como parte da definição. Como variáveis globais de tipos CLR não são permitidas, o compilador irá gerar C3149.  
+ Por exemplo, você pode ter definido um tipo CLR no escopo global e tentou criar uma variável do tipo como parte da definição. Como variáveis globais de tipos CLR não são permitidas, o compilador gerará C3149.  
   
  Para resolver esse erro, declare variáveis de tipos CLR dentro de uma definição de função ou tipo.  
   

@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1070 | Documentos do Microsoft
+title: Erro fatal C1070 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f0634e67c038ed834833e2693ff715f89d64ade9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47a878c3e14f86144f4b4aaf5908107ef95b256f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1070"></a>Erro fatal C1070
-incompatíveis #if / par #endif no arquivo 'filename'  
+incompatível #if #endif par em File 'filename'  
   
  Um `#if`, `#ifdef`, ou `#ifndef` diretiva não tem correspondente `#endif`.  
   
@@ -59,7 +44,7 @@ incompatíveis #if / par #endif no arquivo 'filename'
 // C1070  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C1070b.cpp  

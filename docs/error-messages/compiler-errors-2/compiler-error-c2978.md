@@ -1,5 +1,5 @@
 ---
-title: C2978 de erro do compilador | Documentos do Microsoft
+title: C2978 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e6b0a081587c0195674fa418da6dbc00c443c5bf
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3d02f0844cf3abe975531ec0560441c8eedd1ba6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2978"></a>C2978 de erro do compilador
-Erro de sintaxe: esperava-se 'keyword1' ou 'keyword2'; encontrado o tipo 'keyword3'; Não há suporte para parâmetros de tipo não genéricos  
+Erro de sintaxe: era esperado 'keyword1' ou 'keyword2'; encontrado o tipo 'keyword3'; Não há suporte para parâmetros de tipo não em genéricos  
   
  Uma classe genérica foi declarada incorretamente. Consulte [genéricos](../../windows/generics-cpp-component-extensions.md)para obter mais informações.  
   

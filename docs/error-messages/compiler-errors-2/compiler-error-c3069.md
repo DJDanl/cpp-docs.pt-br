@@ -1,5 +1,5 @@
 ---
-title: C3069 de erro do compilador | Documentos do Microsoft
+title: C3069 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 6cb151dcb6f96ec897eea5cea126ed23f68d147c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6470ec9177ee1478c691fa3afb2c5e997e16be8a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3069"></a>C3069 de erro do compilador
-'operator': não é permitida para o tipo de enumeração  
+'operator': não é permitido para tipo de enumeração  
   
- Um operador não há suporte para enumerações do CLR.  Para obter mais informações, consulte [como: definir e consumir enumerações em c++ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
+ Não há suporte para um operador para enumerações do CLR.  Para obter mais informações, consulte [como: definir e consumir enumerações em C + + CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3069:  

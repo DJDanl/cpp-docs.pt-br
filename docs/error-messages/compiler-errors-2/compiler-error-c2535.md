@@ -1,5 +1,5 @@
 ---
-title: C2535 de erro do compilador | Documentos do Microsoft
+title: C2535 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9427ba49fba329d99df5f3d266b344b7f4992472
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0af3ce8f0f3fe89d8e2f120f1b9b16383f11ef6a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2535"></a>C2535 de erro do compilador
-'identifier': função de membro já definido ou declarado  
+'Identificador': função de membro já definida ou declarada  
   
  Esse erro pode ser causado por usando a mesma lista de parâmetros formais em mais de uma definição ou declaração de uma função sobrecarregada.  
   
  Se você receber C2535 devido a função Dispose, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.  
   
- Se você estiver compilando um projeto ATL, consulte o artigo da Base de dados de Conhecimento Q241852.  
+ Se você estiver compilando um projeto de ATL, consulte o artigo da Base de dados de Conhecimento Q241852.  
   
  O exemplo a seguir gera C2535:  
   

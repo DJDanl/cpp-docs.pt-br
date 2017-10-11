@@ -1,5 +1,5 @@
 ---
-title: C3014 de erro do compilador | Documentos do Microsoft
+title: C3014 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4172060fcb646e5bcfbc4977b00070d974aa5c1c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e8d7191b6b8d48d06931fb286b96f9daec8abce9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3014"></a>C3014 de erro do compilador
-esperado um loop OpenMP 'diretiva' diretiva a seguir  
+esperado um loop após diretiva de OpenMP 'diretiva'  
   
- É um erro para algo diferente de uma `for` loop seguir imediatamente uma `#pragma omp for` diretiva.  
+ É um erro para qualquer coisa diferente de um `for` loop seguir imediatamente um `#pragma omp for` diretiva.  
   
  O exemplo a seguir gera C3014:  
   

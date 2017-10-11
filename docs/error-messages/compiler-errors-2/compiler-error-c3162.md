@@ -1,5 +1,5 @@
 ---
-title: C3162 de erro do compilador | Documentos do Microsoft
+title: C3162 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f902889c3390dc65eb58750db9114e15e4bd10d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8bfde260ef0efe58ed70469a80a8bf7316eefa46
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3162"></a>C3162 de erro do compilador
-'type': um tipo de referência que tem um destruidor não pode ser usado como o tipo de membro de dados estáticos 'member'  
+'type': um tipo de referência que tenha um destruidor não pode ser usado como o tipo de membro de dados estáticos 'member'  
   
  O common language runtime não é possível saber quando executar um destruidor definido pelo usuário quando a classe também contém a função de membro estático.  
   
@@ -51,7 +37,7 @@ ms.lasthandoff: 02/25/2017
   
 -   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
--   [Problemas de migração de 64 bits do Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Problemas de migração de 64 bits do Visual C++ comuns](../../build/common-visual-cpp-64-bit-migration-issues.md)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3162.  

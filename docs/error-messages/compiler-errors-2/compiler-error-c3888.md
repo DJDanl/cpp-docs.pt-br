@@ -1,5 +1,5 @@
 ---
-title: C3888 de erro do compilador | Documentos do Microsoft
+title: C3888 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4c35d218b42d7a618d05014cd90032e62bf2a227
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26e55c8a675ada3fd2e88976bc9d9a51cfa8b751
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3888"></a>C3888 de erro do compilador
-'name': não há suporte para a expressão constante associada a este membro de dados literais pelo C + + / CLI  
+'name': a expressão const associada a este membro de dados literal não é suportado pelo C + + CLI  
   
- O *nome* membro de dados que é declarado com o [literal](../../windows/literal-cpp-component-extensions.md) palavra-chave é inicializada com um valor que o compilador não oferece suporte. O compilador suporta apenas constante integral, enum ou tipos de cadeia de caracteres. A causa provável para o **C3888** erro é que o membro de dados é inicializado com uma matriz de bytes.  
+ O *nome* membro de dados que é declarado com o [literal](../../windows/literal-cpp-component-extensions.md) palavra-chave é inicializada com um valor que o compilador não oferece suporte. O compilador suporta apenas constante integral, enum ou tipos de cadeia de caracteres. A causa mais provável para o **C3888** erro é que o membro de dados é inicializado com uma matriz de bytes.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Verifique se o membro de dados literais declarada é um tipo com suporte.  
+1.  Verifique se o membro de dados literal declarado é um tipo com suporte.  
   
 ## <a name="see-also"></a>Consulte também  
  [literal](../../windows/literal-cpp-component-extensions.md)

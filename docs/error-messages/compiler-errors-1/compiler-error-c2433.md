@@ -1,5 +1,5 @@
 ---
-title: C2433 de erro do compilador | Documentos do Microsoft
+title: C2433 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9e3116ae4055f2fc0a13de03fcba0d51e52d4aa0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c5994da7e2e2dff73f7746dd0fdb2b7a20395cce
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2433"></a>C2433 de erro do compilador
-'identifier': 'modificador' não é permitido em declarações de dados  
+'Identificador': 'modificador' não é permitido em declarações de dados  
   
  O `friend`, `virtual`, e `inline` modificadores não podem ser usados para declarações de dados.  
   

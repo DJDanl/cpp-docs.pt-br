@@ -1,5 +1,5 @@
 ---
-title: C2676 de erro do compilador | Documentos do Microsoft
+title: C2676 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b58a14d094aa75a93c13d87d02f1026accb1b283
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2676"></a>C2676 de erro do compilador
-binário 'operator': 'type' não define esse operador ou uma conversão para um tipo aceitável para o operador predefinido  
+binário 'operator': 'type' não define este operador ou uma conversão para um tipo aceitável ao operador pré-definido  
   
  Para usar o operador, você deve sobrecarregá-lo para o tipo especificado ou definir uma conversão para um tipo para o qual o operador está definido.  
   
@@ -78,9 +63,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2676 também pode ocorrer se você tentar fazer aritmética de ponteiro a `this` ponteiro do tipo de referência.  
+ C2676 também poderá ocorrer se você tentar realizar aritmética de ponteiro no `this` ponteiro de um tipo de referência.  
   
- O `this` ponteiro for do tipo identificador em um tipo de referência. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ O `this` ponteiro for do tipo de identificador em um tipo de referência. Para obter mais informações, consulte [semântica do ponteiro](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
  O exemplo a seguir gera C2676.  
   

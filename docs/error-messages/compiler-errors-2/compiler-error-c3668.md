@@ -1,5 +1,5 @@
 ---
-title: C3668 de erro do compilador | Documentos do Microsoft
+title: C3668 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de7503713b421e539821e2e0c3393372c4de9c13
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5db5144aac56112522f7ac707bd1b5f252929dc8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3668"></a>C3668 de erro do compilador
-'method': método com o especificador de substituição 'override' não substituir quaisquer métodos de classe base  
+'method': método com especificador de substituição 'override' não substituiu nenhum método de classe base  
   
- Uma função de tentativa de substituir uma função não existente.  
+ Uma função tentada substituir uma função não existente.  
   
  Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
   

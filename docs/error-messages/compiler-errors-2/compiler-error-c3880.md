@@ -1,5 +1,5 @@
 ---
-title: C3880 de erro do compilador | Documentos do Microsoft
+title: C3880 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5398a0c1d1c2e32007f1e163de7cc18a0479c7ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e86108e0ab2608f7f59f160d9f7a849b83ef71a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3880"></a>C3880 de erro do compilador
-'var': não pode ser um membro de dados literais  
+'var': não pode ser um membro de dados literal  
   
  O tipo de um [literal](../../windows/literal-cpp-component-extensions.md) atributo deve ser, ou em tempo de compilação conversível para um dos seguintes tipos:  
   

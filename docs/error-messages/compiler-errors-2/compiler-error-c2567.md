@@ -1,5 +1,5 @@
 ---
-title: C2567 de erro do compilador | Documentos do Microsoft
+title: C2567 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6cd355d7654f931196acc324f7d58b99c6f25f29
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bbdc535f75230da05a92eb0498176da40e918ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2567"></a>C2567 de erro do compilador
-não é possível abrir metadados no 'arquivo', arquivo pode ter foram excluído ou movido  
+não é possível abrir metadados 'file', arquivo pode ter foi excluído ou movido  
   
- Um arquivo de metadados que foi referenciado na fonte (com `#using`) não foi encontrado no mesmo diretório pelo processo de back-end do compilador como era pelo processo de front-end do compilador. Consulte [#using diretiva](../../preprocessor/hash-using-directive-cpp.md) para obter mais informações.  
+ Um arquivo de metadados referenciado na fonte (com `#using`) não foi encontrado no mesmo diretório pelo processo de back-end do compilador como ele era pelo processo de front-end do compilador. Consulte [#using diretiva](../../preprocessor/hash-using-directive-cpp.md) para obter mais informações.  
   
- C2567 pode ser causado se você compilar com **/c** em uma máquina e, em seguida, tente uma geração de código para link-time em outra máquina. Para obter mais informações, consulte [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md)).  
+ C2567 pode ocorrer se você compilar com **/c** em um computador e, em seguida, tente uma geração de código para link-time em outro computador. Para obter mais informações, consulte [/LTCG (geração de código Link-time)](../../build/reference/ltcg-link-time-code-generation.md)).  
   
- Isso também pode indicar que o computador tem não mais memória.  
+ Ele também pode indicar que o computador tem não mais memória.  
   
- Para corrigir esse erro, verifique se o arquivo de metadados está no mesmo local de diretório para todas as fases do processo de compilação.
+ Para corrigir esse erro, certifique-se de que o arquivo de metadados é o mesmo local de diretório para todas as fases do processo de compilação.

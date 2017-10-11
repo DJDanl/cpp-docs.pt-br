@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1080 | Documentos do Microsoft
+title: Erro fatal C1080 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f0923102842ac548819e31b7d8b2fb142c0e919f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6bfc9254dd346974a725faee0bbd470c6eff87e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1080"></a>Erro fatal C1080
-limite do compilador: limite da opção excedida de linha de comando de caracteres numéricas  
+limite do compilador: limite excedido para a opção de linha de comando do número de caracteres  
   
  Um argumento passado para o compilador excede 256 caracteres.

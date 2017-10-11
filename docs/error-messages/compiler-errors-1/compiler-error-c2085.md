@@ -1,5 +1,5 @@
 ---
-title: C2085 de erro do compilador | Documentos do Microsoft
+title: C2085 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ea242cdcd217ea64d6386fff6541a42a7da0ea1b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45805bbea2eca77ae81922088471e99de26be1e4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2085"></a>C2085 de erro do compilador
-'identifier': não está na lista de parâmetros formal  
+'Identificador': não está na lista de parâmetros formais  
   
- O identificador foi declarado em uma definição de função, mas não na lista de parâmetros formais. ANSI C (apenas)  
+ O identificador foi declarado em uma definição de função, mas não na lista de parâmetros formais. (Somente para ANSI C)  
   
  O exemplo a seguir gera C2085:  
   
@@ -53,7 +39,7 @@ void func1( void )
 int main( void ) {}   // C2085  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2085b.c  
@@ -61,4 +47,4 @@ void func1( void );
 int main( void ) {}  
 ```  
   
- Com ponto e vírgula ausente, `func1()` parece com uma definição de função, não é um protótipo, então `main` é definido dentro de `func1()`, gerando o erro C2085 para identificador `main`.
+ Com o ponto e vírgula ausente `func1()` se parece com uma definição de função, não um protótipo, portanto `main` esteja definido no `func1()`, gerar erro C2085 do identificador `main`.

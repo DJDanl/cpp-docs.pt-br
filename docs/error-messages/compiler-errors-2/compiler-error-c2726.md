@@ -1,5 +1,5 @@
 ---
-title: C2726 de erro do compilador | Documentos do Microsoft
+title: C2726 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 33632a12e16e9ba1a47f41ad21e0c250e66009b8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f97067f71927491072f303bc872616640bae3367
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2726"></a>C2726 de erro do compilador
-'gcnew' só pode ser usado para criar um objeto com gerenciado ou digite WinRT  
+'gcnew' só pode ser usado para criar um objeto com gerenciado ou tipo de WinRT  
   
  Você não pode criar uma instância de um tipo nativo no heap coletado como lixo.  
   

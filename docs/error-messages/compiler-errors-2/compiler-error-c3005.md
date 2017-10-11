@@ -1,5 +1,5 @@
 ---
-title: C3005 de erro do compilador | Documentos do Microsoft
+title: C3005 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9086ec5d5d47df1418cc08d5f10bd7326192be1c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 711b5083146f4b9a77d65746601eba264f0d41b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3005"></a>C3005 de erro do compilador
 'error_text': token inesperado encontrado na diretiva de 'diretiva' OpenMP  
   
- Uma diretiva OpenMP ill foi formada.  
+ Uma diretiva de OpenMP ill foi formada.  
   
  O exemplo a seguir gera C3005:  
   
@@ -57,7 +42,7 @@ int main()
 }  
 ```  
   
- C3005 também pode ocorrer se você colocar uma chave de abertura na mesma linha que o pragma.  
+ C3005 também pode ocorrer se você colocar uma chave de abertura na mesma linha como o pragma.  
   
 ```  
 // C3005b.c  

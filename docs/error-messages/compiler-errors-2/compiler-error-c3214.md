@@ -1,5 +1,5 @@
 ---
-title: C3214 de erro do compilador | Documentos do Microsoft
+title: C3214 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8f5398ac0985fbb991957a9a2b2bea9b98abd812
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6d280f500368ac7ac6ad0a987b987e1f9e57b6a5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3214"></a>C3214 de erro do compilador
-'type': argumento de tipo inválido para parâmetro genérico param de genérico 'generic_type', não atender a restrição 'restrição'  
+'type': argumento de tipo inválido para parâmetro de generic 'generic_type' do parâmetro genérico não atender a restrição 'restrição'  
   
- O tipo foi especificado para uma instanciação de uma classe genérica que não atenda a restrição da classe genérica.  
+ O tipo foi especificado para uma instanciação de uma classe genérica que não satisfaz a restrição da classe genérica.  
   
  O exemplo a seguir gera C3214:  
   

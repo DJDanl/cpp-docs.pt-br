@@ -1,5 +1,5 @@
 ---
-title: C3531 de erro do compilador | Documentos do Microsoft
+title: C3531 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6ce52fda967f7296e7bb85b03f219cb8913398ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3531"></a>C3531 de erro do compilador
@@ -50,7 +36,7 @@ ms.lasthandoff: 02/25/2017
 1.  Especifique uma expressão de inicializador, como uma atribuição simple que usa a sintaxe de sinal de igual, quando você declara a variável.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3531 porque variáveis `x1`, `y1, y2, y3`, e `z2` não são inicializados.  
+ O exemplo a seguir produz C3531 porque variáveis `x1`, `y1, y2, y3`, e `z2` não foram inicializados.  
   
 ```  
 // C3531.cpp  
@@ -65,4 +51,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [palavra-chave auto](../../cpp/auto-keyword.md)
+ [Palavra-chave auto](../../cpp/auto-keyword.md)

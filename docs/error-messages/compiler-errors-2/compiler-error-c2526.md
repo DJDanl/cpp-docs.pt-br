@@ -1,5 +1,5 @@
 ---
-title: C2526 de erro do compilador | Documentos do Microsoft
+title: C2526 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59217e407abfcfa32a7df4286bfaac6fd42eff8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f62f659c309735fa410c6538e6eb8f79a1a0dcea
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2526"></a>C2526 de erro do compilador
-'identifier1': função de vinculação C não pode retornar a classe C++ 'identifier2'  
+'identifier1': função de vínculo a C não pode retornar classe C++ 'identifier2'  
   
- Uma função definida com vinculação C não pode retornar um tipo definido pelo usuário.
+ Uma função definida com vínculo a C não pode retornar um tipo definido pelo usuário.

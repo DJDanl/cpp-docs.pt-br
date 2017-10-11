@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1053 | Documentos do Microsoft
+title: Erro fatal C1053 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,22 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7d62625f09a2acb6c3727a23c7da9cd8ad03e40c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3acd7d6422f9a48d7802cf58b35cd706183697b5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1053"></a>Erro fatal C1053
 '\<identificador >': função muito grande  
   
- A função é grande demais para compilar.  
+ A função é muito grande para compilar.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir, usando as seguintes soluções possíveis  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
   
 1.  Tente compilar sem otimizações.  
   
 2.  Divida a função em funções menores.  
   
-3.  Reduza as chamadas de funções embutidas.
+3.  Reduza as chamadas para funções embutidas.

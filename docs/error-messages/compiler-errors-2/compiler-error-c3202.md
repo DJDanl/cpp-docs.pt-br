@@ -1,5 +1,5 @@
 ---
-title: C3202 de erro do compilador | Documentos do Microsoft
+title: C3202 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3d624f05535135c3188420076094b5580831ed84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60e0432a40b7aa66762c235223b0f8d48a50bab4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3202"></a>C3202 de erro do compilador
 'arg name': argumento padrão inválido para parâmetro de modelo 'parameter', esperado um modelo de classe  
   
- Você passou um argumento padrão inválido para um parâmetro de modelo.  
+ Passou um argumento padrão inválido para um parâmetro de modelo.  
   
  O exemplo a seguir gera C3202:  
   

@@ -1,5 +1,5 @@
 ---
-title: C2405 de erro do compilador | Documentos do Microsoft
+title: C2405 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cdc1bd9254987b7a0228849b5ff26f3fe1cb99e4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c45da7edbbdd7ba0f414f29ca8b43102ab3b15c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2405"></a>C2405 de erro do compilador
-referência short posterior com deslocamento inválida  
+ilegal referência short posterior com deslocamento  
   
- Referências de avançada curtas devem se referir a apenas um rótulo. Um deslocamento adicional não pode ser usado.
+ Referências de encaminhamento curtas devem se referir a apenas um rótulo. Um deslocamento adicional não pode ser usado.

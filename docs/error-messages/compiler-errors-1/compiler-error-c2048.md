@@ -1,5 +1,5 @@
 ---
-title: C2048 de erro do compilador | Documentos do Microsoft
+title: C2048 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7d67c0548c007b054a23eefe12f4746ae1a3f459
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 644094c2c2fa498d616369a9147b41bdd6cb3e03
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2048"></a>C2048 de erro do compilador
-mais de um default  
+mais de um padrão  
   
- A `switch` instrução contém várias `default` rótulos. Exclua uma da `default` rótulos para resolver o erro.  
+ Um `switch` instrução contém várias `default` rótulos. Exclua uma da `default` rótulos para resolver o erro.  
   
  O exemplo a seguir gera C2048:  
   
@@ -63,7 +48,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2048b.cpp  

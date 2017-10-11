@@ -1,5 +1,5 @@
 ---
-title: C2079 de erro do compilador | Documentos do Microsoft
+title: C2079 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 75aae9e2a93f1d03e1d16f05b502c4c557994bab
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 236e40ed865230416ddde9511420c1cf333d2687
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2079"></a>C2079 de erro do compilador
-'identifier' usa indefinido classe/estrutura/união 'name'  
+'Identificador' usa a classe/struct/union indefinida 'name'  
   
  O identificador especificado é uma classe indefinida, estrutura ou união.  
   
@@ -58,7 +44,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2079b.cpp  
@@ -82,7 +68,7 @@ class B {
 class A {};  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2079d.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C2384 de erro do compilador | Documentos do Microsoft
+title: C2384 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0f44af65c5de565f505aa31eb50fcaecfc09c1e1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d87769a2e02e6214e474dab2b74859e85a6880b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2384"></a>C2384 de erro do compilador
-'member': não é possível aplicar __declspec(thread) a um membro de um gerenciado ou classe do WinRT  
+'member': não é possível aplicar __declspec(thread) a um membro de um gerenciado ou classe WinRT  
   
- O [segmento](../../cpp/thread.md) `__declspec` modificador não pode ser usado em um membro de um gerenciado ou classe de tempo de execução do Windows.  
+ O [thread](../../cpp/thread.md) `__declspec` modificador não pode ser usado em uma classe de tempo de execução do Windows ou um membro de um gerenciado.  
   
- Armazenamento local em código gerenciado só pode ser usado de forma estática de thread estático DLLs carregadas — a DLL deve ser carregada estaticamente quando o processo é iniciado. Tempo de execução do Windows não oferece suporte a armazenamento local de thread.  
+ DLLs carregadas de thread estático armazenamento local no código gerenciado só pode ser usado para estaticamente — a DLL deve ser carregada estaticamente ao iniciar o processo. Tempo de execução do Windows não oferece suporte a armazenamento local de thread.  
   
- A linha a seguir gera C2384 e mostra como corrigi-lo em C + + / código CLI:  
+ A linha a seguir gera C2384 e mostra como corrigi-lo em C + + código:  
   
 ```  
 // C2384.cpp  

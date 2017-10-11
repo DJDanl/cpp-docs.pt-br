@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4010 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4010 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d92f9dfcfef18e2fa9752c2787146ccfe74c7d9f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b6a0c84d5138cf2ae8a7a6279d9dc0fde9fe9512
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4010"></a>Compilador C4010 de aviso (nível 1)
 comentário de linha única contém caractere de continuação de linha  
   
- Um comentário de linha única, que é apresentado pelo / /, contém uma barra invertida (\\) que serve como um caractere de continuação de linha. O compilador considera a próxima linha seja uma continuação e tratá-la como um comentário.  
+ Um comentário de linha única, que é apresentado pelo / /, contém uma barra invertida (\\) que serve como um caractere de continuação de linha. O compilador considera a próxima linha a ser uma continuação e tratá-la como um comentário.  
   
- Alguns sintaxe direcionadas editores não indicam a linha após o caractere de continuação como um comentário. Ignore cores em todas as linhas que causam esse aviso de sintaxe.  
+ Alguns sintaxe orientada para editores não indicam a linha após o caractere de continuação como um comentário. Ignore cores em todas as linhas que causam esse aviso de sintaxe.  
   
  O exemplo a seguir gera C4010:  
   

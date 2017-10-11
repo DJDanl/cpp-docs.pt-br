@@ -1,5 +1,5 @@
 ---
-title: C3646 de erro do compilador | Documentos do Microsoft
+title: C3646 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 54383ebdd29d8aad9bcc085a82b955f67ae9a32a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0bc9b2601a57e2be98c3a356cbd2ede69dc7be79
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3646"></a>C3646 de erro do compilador
-'especificador de ': especificador desconhecido de substituição  
+'especificador': especificador de substituição desconhecido  
   
- O compilador encontrar um token na posição onde espera-se encontrar um especificador de substituição, mas o token não foi reconhecido pelo compilador.  
+ O compilador encontrado um token na posição onde ele era esperado encontrar um especificador de substituição, mas o token não foi reconhecido pelo compilador.  
   
  Para obter mais informações, consulte [especificadores de substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
   

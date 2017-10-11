@@ -1,5 +1,5 @@
 ---
-title: Classe ICollectionOnSTLImpl | Documentos do Microsoft
+title: Classe ICollectionOnSTLImpl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,25 +24,11 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: d413fec8d22d3925dc8755e758e964fcc4e6b855
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b1c2debc93f6503bf7928ed789345a50c281804d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="icollectiononstlimpl-class"></a>Classe ICollectionOnSTLImpl
@@ -116,7 +102,7 @@ class ICollectionOnSTLImpl : public T```
  This method returns the number of items in the collection.  
   
 ```
-STDMETHOD(GetCount) (long * pcount);
+STDMETHOD(GetCount) (longa * pcount);
 ```  
   
 ### Parameters  

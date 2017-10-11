@@ -1,5 +1,5 @@
 ---
-title: C2992 de erro do compilador | Documentos do Microsoft
+title: C2992 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fcca5398ab92e0e17ae232524a1f0af3c263529d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d6bf275d4d2ba42168112547832c5b7e0d7c62f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2992"></a>C2992 de erro do compilador
-'class': lista de parâmetros de tipo inválida ou ausente  
+'class': lista de parâmetros de tipo inválido ou ausente  
   
  A classe é precedida por um `template` ou **genérico** palavra-chave com parâmetros inválidos ou ausentes.  
   

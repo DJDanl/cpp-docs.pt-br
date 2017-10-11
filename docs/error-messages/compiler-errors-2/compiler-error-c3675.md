@@ -1,5 +1,5 @@
 ---
-title: C3675 de erro do compilador | Documentos do Microsoft
+title: C3675 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 38ccb1df6b30d82de1992d63ba127c050cdb5443
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d45236fc32fd0d10e9617b6946683d8ebd73ef0e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3675"></a>C3675 de erro do compilador
 'function': é reservado porque 'property' está definido  
   
- Quando você declarar uma propriedade simples, o compilador gera get e métodos de acessador set e os nomes estão presentes no escopo do seu programa.  Os nomes gerados pelo compilador são formados acrescentando _ e configurou _ ao nome da propriedade.  Portanto, você não pode declarar funções com o mesmo nome que os acessadores gerado pelo compilador.  
+ Quando você declara uma propriedade simples, o compilador gera get e métodos de acessador set e os nomes estão presentes no escopo do seu programa.  Os nomes gerados pelo compilador são formados anexando get _ e set _ ao nome da propriedade.  Portanto, você não pode declarar funções com o mesmo nome que os acessadores gerados pelo compilador.  
   
  Consulte [propriedade](../../windows/property-cpp-component-extensions.md) para obter mais informações.  
   

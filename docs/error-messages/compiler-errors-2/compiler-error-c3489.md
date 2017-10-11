@@ -1,5 +1,5 @@
 ---
-title: C3489 de erro do compilador | Documentos do Microsoft
+title: C3489 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 173f9294db52db21f4b6205be7b6ae3f4c9bd329
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4605b0b688cc879f68224442e7df5571cb8d2f7d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3489"></a>C3489 de erro do compilador
-'var' é necessário quando o modo de captura padrão é por valor  
+'var' é necessária quando o modo de captura padrão é por valor  
   
- Quando você especifica o modo de captura padrão para uma expressão lambda é por valor, você não pode passar uma variável pelo valor para a cláusula capture dessa expressão.  
+ Quando você especificar o modo de captura padrão para uma expressão lambda é por valor, você não pode passar uma variável pelo valor para a cláusula de captura dessa expressão.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -54,10 +39,10 @@ ms.lasthandoff: 02/25/2017
   
 -   Especifique por referência como o modo de captura padrão, ou  
   
--   A variável é passada por referência para a cláusula de captura. (Isso pode mudar o comportamento da expressão lambda).  
+-   A variável é passada por referência para a cláusula de captura. (Isso pode mudar o comportamento da expressão lambda.)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera a variável C3489 `n` é exibida pelo valor na cláusula de captura de uma expressão lambda cujo modo padrão é por valor:  
+ O exemplo a seguir gera C3489 variável `n` aparece pelo valor na cláusula de captura de uma expressão lambda cujo padrão é por valor:  
   
 ```  
 // C3489a.cpp  

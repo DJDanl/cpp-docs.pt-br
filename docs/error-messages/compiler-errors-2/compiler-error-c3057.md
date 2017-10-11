@@ -1,5 +1,5 @@
 ---
-title: C3057 de erro do compilador | Documentos do Microsoft
+title: C3057 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e6eb4fb8ace07aab10e7452ce54b455b40ed3614
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 424c4dfb224b3d0778f80148aaac11e11c9ff440
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3057"></a>C3057 de erro do compilador
-'symbol': inicialização dinâmica de símbolos 'threadprivate' não é suportada atualmente  
+'symbol': inicialização dinâmica de símbolos de 'threadprivate' não é suportada atualmente  
   
  O valor inicializado de um símbolo usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula deve ser conhecida em tempo de compilação.  
   

@@ -1,5 +1,5 @@
 ---
-title: C2698 de erro do compilador | Documentos do Microsoft
+title: C2698 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7d023ab3a76ca5de71c2165b4b4b37d67545d654
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 654367e882b16c18cc4bd58c339d61c653dc68e9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2698"></a>C2698 de erro do compilador
-a declaração using para ' declaração 1' não pode coexistir com a existente usando declaração para ' declaração 2'  
+a declaração using para ' declaração 1' não pode coexistir com a declaração de using existente para ' declaração 2'  
   
- Depois de ter um [usando a declaração](../../cpp/using-declaration.md) para um membro de dados, uso de qualquer declaração no mesmo escopo que usa o mesmo nome não é permitida como funções só podem ser sobrecarregadas.  
+ Depois que você tiver um [usando declaração](../../cpp/using-declaration.md) para um membro de dados, uso de qualquer declaração no mesmo escopo que usa o mesmo nome não é permitida, como funções só podem ser sobrecarregadas.  
   
  O exemplo a seguir gera C2698:  
   

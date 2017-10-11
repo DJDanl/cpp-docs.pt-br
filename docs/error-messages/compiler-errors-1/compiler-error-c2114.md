@@ -1,5 +1,5 @@
 ---
-title: C2114 de erro do compilador | Documentos do Microsoft
+title: C2114 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 668b258d196499e76469ba3a9ed4a2ed3f601c9a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92ccd57f08254457d4df43284d5222a3f849123f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2114"></a>C2114 de erro do compilador
-'operator': ponteiro esquerda; precisa de um valor integral à direita  
+'operator': ponteiro esquerda; precisa de valor integral à direita  
   
- O operando esquerdo do `operator` foi um ponteiro para o operando direito deve ser um valor inteiro.
+ O operando esquerdo da `operator` foi um ponteiro para o operando da direita deve ser um valor inteiro.

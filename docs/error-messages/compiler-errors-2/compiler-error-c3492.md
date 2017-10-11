@@ -1,5 +1,5 @@
 ---
-title: C3492 de erro do compilador | Documentos do Microsoft
+title: C3492 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5a7db2e706b298abec1aef7fde3f98644c1173a5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a1b2626d49f759b3e694890ddb73a33e92803dc6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3492"></a>C3492 de erro do compilador
 'var': não é possível capturar um membro de uma união anônima  
   
- Você não pode capturar um membro de uma união sem nome.  
+ Não é possível capturar um membro de uma union sem nome.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -70,7 +55,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3492 fornecendo um nome de união e passando a estrutura completa de união para a lista de captura da expressão lambda:  
+ O exemplo a seguir elimina C3492, fornecendo um nome de união e passando a estrutura completa de união para a lista de captura da expressão lambda:  
   
 ```  
 // C3492b.cpp  

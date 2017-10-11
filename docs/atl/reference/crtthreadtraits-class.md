@@ -1,5 +1,5 @@
 ---
-title: Classe de CRTThreadTraits | Documentos do Microsoft
+title: Classe CRTThreadTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,32 +23,18 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24cee5c74819d9a880bedbcebcce4dabfabae960
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: f6265f6c53133abbe8cd96b67bbbeb7657c98b26
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="crtthreadtraits-class"></a>Classe de CRTThreadTraits
-Essa classe fornece a função de criação de um thread de CRT. Use esta classe se o thread possa utilizar as funções de CRT.  
+# <a name="crtthreadtraits-class"></a>Classe CRTThreadTraits
+Essa classe fornece a função de criação de um thread do CRT. Use essa classe se o thread de usar funções de CRT.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,18 +51,18 @@ class CRTThreadTraits
 |[CRTThreadTraits::CreateThread](#createthread)|(Estático) Chame essa função para criar um thread que pode usar funções de CRT.|  
   
 ## <a name="remarks"></a>Comentários  
- Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e semântica de como o Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função.  
+ Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e a semântica de como o Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função.  
   
- Características de thread são usadas por classes a seguir:  
+ Características de segmento são usadas por classes a seguir:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Se o thread não usar funções de CRT, [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) em vez disso.  
+ Se o thread não usando funções de CRT, use [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) em vez disso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   
 ##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
  Chame essa função para criar um thread que pode usar funções de CRT.  
@@ -116,7 +102,7 @@ static HANDLE CreateThread(
 ### <a name="remarks"></a>Comentários  
  Consulte [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obter mais informações sobre os parâmetros para essa função.  
   
- Essa função chama [beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) criar o thread.  
+ Esta função chama [beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) para criar o thread.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

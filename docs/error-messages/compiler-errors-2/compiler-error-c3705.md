@@ -1,5 +1,5 @@
 ---
-title: C3705 de erro do compilador | Documentos do Microsoft
+title: C3705 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0361be7eb3f86466ea7d379cd0919bb84addcfea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3705"></a>C3705 de erro do compilador
-'function': não é possível localizar a interface de eventos  
+'function': não é possível encontrar a interface de eventos  
   
- Você deve definir uma interface de eventos para usar COM eventos. Observe que o `#include` linhas dos arquivos de cabeçalho ATL mostrados no exemplo a seguir são necessárias para o uso de eventos COM. Para corrigir esse erro, remova a definição do `IEvents` interface no código de exemplo.  
+ Você deve definir uma interface de eventos para usar COM os eventos. Observe que o `#include` linhas dos arquivos de cabeçalho de ATL mostrados no exemplo a seguir são necessárias para usar COM os eventos. Para corrigir esse erro, remova a definição do `IEvents` interface no código de exemplo.  
   
  O exemplo a seguir gera C3705:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4020 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4020 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 15cb40b592452081cac5de3cfe887f60d2b24c1e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f4980961746f2711fcf0655dd37b5f37d8d8124e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4020"></a>Compilador C4020 de aviso (nível 1)
-'function': excesso de parâmetros real  
+'function': muitos parâmetros reais  
   
- O número de parâmetros reais em uma chamada de função excede o número de parâmetros formais na definição ou protótipo de função. O compilador passa parâmetros extras reais de acordo com a convenção de chamada da função.  
+ O número de parâmetros reais em uma chamada de função excede o número de parâmetros formais no protótipo de função ou definição. O compilador passa os parâmetros extra reais de acordo com a convenção de chamada da função.  
   
  O exemplo a seguir gera C4020:  
   
@@ -56,7 +42,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C4020b.c  

@@ -1,5 +1,5 @@
 ---
-title: C2441 de erro do compilador | Documentos do Microsoft
+title: C2441 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1b98c85df0db4e947ceb5722715f5d020e1ecbec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6868feadda4c0c0f3d65a86c77a403b8965fded5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2441"></a>C2441 de erro do compilador
-'variável': um símbolo declarado com declspec deve ser const em /clr: modo puro  
+'variável': um símbolo declarado com __declspec(process) deve ser const em /clr: pure modo  
   
- O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
+ As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
- Por padrão, as variáveis são por domínio de aplicativo em **/clr: puro**. Uma variável marcada `__declspec(process)` em **/clr: puro** é propensa a erros se modificado em um domínio de aplicativo e lidos em outra.  
+ Por padrão, as variáveis são por domínio de aplicativo em **/clr: pure**. Marcado como uma variável `__declspec(process)` em **/clr: pure** é propensa a erros se modificado em um domínio do aplicativo e de leitura em outro.  
   
- Portanto, o compilador impõe por processo ser variáveis `const` em **/clr: puro**, fazendo-os de leitura somente em todos os domínios de aplicativo.  
+ Portanto, o compilador aplica por processo ser variáveis `const` em **/clr: puro**, tornando-os de leitura apenas em todos os domínios de aplicativo.  
   
  Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

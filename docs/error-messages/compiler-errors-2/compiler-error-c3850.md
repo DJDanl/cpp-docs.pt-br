@@ -1,5 +1,5 @@
 ---
-title: C3850 de erro do compilador | Documentos do Microsoft
+title: C3850 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 24dc7cef2205aac4e9ab4001127b6fefc3256b6e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86d286b31d8ac9255af6f6d20400213f39576a47
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3850"></a>C3850 de erro do compilador
-'char': nome universal-caracteres Especifica um caractere inválido  
+'char': um-nome de caractere universal Especifica um caractere inválido  
   
- Caracteres representados como nomes de caracteres universais devem representar os pontos de código Unicode válidos no intervalo 0-10FFFF. Um nome de caracteres universais não pode conter um valor no intervalo substituto Unicode, D800 DFFF ou um par substituto codificado. O compilador gera o substituto par de um código válido aponte automaticamente.  
+ Caracteres representados como nomes de caractere universal devem representam pontos de código Unicode válidos no intervalo 0-10FFFF. Um nome de caractere universal não pode conter um valor no intervalo substituto Unicode, D800 DFFF ou um par substituto codificado. O compilador gera o substituto automaticamente do ponto de par de um código válido.  
   
- No código compilado como C, um nome de caractere universais pode não representar um caractere no intervalo 0000-009F, inclusive, com exceção das 0024 ('$'), 0040 (' @') e 0060 (' ').  
+ No código compilado como C, um nome de caractere universal não pode representar um caractere no intervalo 0000-009F, inclusive, com exceção das 0024 ('$'), 0040 (' @') e 0060 (' ').  
   
- No código compilado c++, um nome de caracteres universais pode usar qualquer ponto de código Unicode válido em uma cadeia de caracteres ou literal de caractere. Fora de um literal, um nome de caractere universais pode não representar um caractere de controle no intervalos 0000-001F ou 007F-009F, inclusive, ambos ou definir um membro do caractere fonte básica.  Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets2.md).  
+ No código compilado como C++, um nome de caractere universal pode usar qualquer ponto de código Unicode válido em uma cadeia de caracteres ou um literal de caractere. Fora de um literal, um nome de caractere universal não pode representar um caractere de controle no intervalos 001F 0000 ou 007F-009F, inclusive, ambos ou define um membro do caractere fonte básica.  Para obter mais informações, consulte [conjuntos de caracteres](../../cpp/character-sets2.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3850 e mostra como corrigi-lo:  

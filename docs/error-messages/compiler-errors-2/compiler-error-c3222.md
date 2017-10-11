@@ -1,5 +1,5 @@
 ---
-title: C3222 de erro do compilador | Documentos do Microsoft
+title: C3222 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bd1058f4e33bc70c9021bfb1ceff78af58d09552
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: edc882f340e92defeaa2db92d868680f7791e7b9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3222"></a>C3222 de erro do compilador
-'parâmetro': não é possível declarar argumentos padrão para o membro funções de gerenciada ou tipo WinRT ou genérico  
+'parameter': não é possível declarar argumentos padrão para o membro de um serviço ou tipo de WinRT ou genéricas funções  
   
-Não é permitido para declarar um parâmetro de método com um argumento padrão. Um formulário de sobrecarga do método é uma maneira de contornar esse problema. Ou seja, defina um método com o mesmo nome sem parâmetros e, em seguida, inicialize a variável no corpo do método.  
+Não é permitido para declarar um parâmetro de método com um argumento padrão. Um formulário de sobrecarga do método é uma maneira de solucionar esse problema. Ou seja, definir um método com o mesmo nome sem parâmetros e, em seguida, inicializar a variável no corpo do método.  
   
 O exemplo a seguir gera C3222:  
   

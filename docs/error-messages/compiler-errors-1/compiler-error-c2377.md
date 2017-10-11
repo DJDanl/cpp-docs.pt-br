@@ -1,5 +1,5 @@
 ---
-title: C2377 de erro do compilador | Documentos do Microsoft
+title: C2377 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e00ee6b58cd55a1f9daf270905d2bf3b79dd0182
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: df5596f92c0205a45f3ef03e2ffba212bf168c30
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2377"></a>C2377 de erro do compilador
-'identifier': redefinição; TypeDef não pode ser sobrecarregado com qualquer outro símbolo  
+'Identificador': redefinição; TypeDef não pode ser sobrecarregado com nenhum outro símbolo  
   
  Um `typedef` identificador será redefinido.  
   

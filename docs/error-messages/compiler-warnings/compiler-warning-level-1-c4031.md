@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4031 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4031 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 67ee70fe03a2dca9486eacbd4fcdcf721be45c3e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4c19eea9587af7d3797d639cf910257de76552e1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4031"></a>Compilador C4031 de aviso (nível 1)
 segunda lista de parâmetros formais maior do que a primeira lista  
   
- Uma função é declarado novamente com diferentes parâmetros formais. O compilador usa parâmetros formais dado na primeira declaração.
+ Uma função é declarado novamente com parâmetros formais diferentes. O compilador usa parâmetros formais fornecidos na primeira declaração.

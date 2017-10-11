@@ -1,5 +1,5 @@
 ---
-title: C3060 de erro do compilador | Documentos do Microsoft
+title: C3060 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a7f64683a8a09adfc8edadeb940aa8af815fe7e4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 528ce6f8b94d73acde2a92412c6f3578dd83b4bd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3060"></a>C3060 de erro do compilador
-'member': uma função friend não pode ser definida dentro de uma classe com um nome qualificado (ele pode ser declarado apenas)  
+'member': uma função friend não pode ser definida dentro de uma classe usando um nome qualificado (ela pode somente ser declarada)  
   
  Uma função friend foi definida com um nome qualificado, que não é permitido.  
   

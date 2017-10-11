@@ -1,5 +1,5 @@
 ---
-title: C3868 de erro do compilador | Documentos do Microsoft
+title: C3868 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d251e34eec5c1505f8d2f19326fa369006440ea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3fc2ce896658468e1ae53638512d92d925f0362a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3868"></a>C3868 de erro do compilador
-'type': restrições no parâmetro genérico 'parameter' diferem na declaração  
+'type': restrições de parâmetro genérico 'parameter' diferem na declaração  
   
- Várias declarações devem ter as mesmas restrições genéricas.  Para obter mais informações, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
+ Várias declarações devem ter as mesmas restrições genéricas.  Para obter mais informações, consulte [Genéricos](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3868.  

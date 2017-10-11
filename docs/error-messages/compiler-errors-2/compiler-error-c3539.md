@@ -1,5 +1,5 @@
 ---
-title: C3539 de erro do compilador | Documentos do Microsoft
+title: C3539 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f7e9f8d260d17d7561077aabb0dfc26bf20f8c07
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03283217be6aabbf216e2e60ad47abfc01a961d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3539"></a>C3539 de erro do compilador
-'type': um argumento de modelo não pode ser um tipo que contém 'auto'  
+'type': um argumento de template não pode ser um tipo que contenha 'auto'  
   
  O tipo de argumento de modelo indicado não pode conter um uso do `auto` palavra-chave.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Não especificar o argumento de modelo com o `auto` palavra-chave.  
+1.  Não especifique o argumento de modelo com o `auto` palavra-chave.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir produz C3539.  
@@ -64,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [palavra-chave auto](../../cpp/auto-keyword.md)
+ [Palavra-chave auto](../../cpp/auto-keyword.md)

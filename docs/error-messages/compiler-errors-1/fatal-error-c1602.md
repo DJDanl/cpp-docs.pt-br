@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1602 | Documentos do Microsoft
+title: Erro fatal C1602 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c4c5cd8e9c06ea670f2efe3424de1079a3c219fb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8141065845e9aeacbd8fa83f74026875daf98168
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1602"></a>Erro fatal C1602
-intrínseco não suportado  
+sem suporte intrínseco  
   
- Esse erro indica uma incompatibilidade em arquivos de .exe compilador, que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.
+ Esse erro indica uma incompatibilidade nos arquivos de .exe de compilador, o que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.

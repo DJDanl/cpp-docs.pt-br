@@ -1,5 +1,5 @@
 ---
-title: C2732 de erro do compilador | Documentos do Microsoft
+title: C2732 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7113f2d093515b9bdbe6464f26e858ae5f762289
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38b364ac890118ce90164c3003a76e0d3c2e100d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2732"></a>C2732 de erro do compilador
-especificação de vinculação contradiz especificação anterior para 'function'  
+especificação de vínculo contradiz especificação anterior para 'function'  
   
  A função já foi declarada com um especificador de vinculação diferentes.  
   
- Esse erro pode ser causado pela inclusão dos arquivos com especificadores de ligação diferente.  
+ Esse erro pode ser causado por incluem arquivos com especificadores de vinculação diferentes.  
   
- Para corrigir esse erro, altere o `extern` instruções para que os vínculos concordam. Em particular, não encapsule `#include` diretivas no `extern "C"` blocos.  
+ Para corrigir esse erro, altere o `extern` instruções para que os vínculos concordam. Em particular, não encapsule `#include` diretivas em `extern "C"` blocos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2732:  

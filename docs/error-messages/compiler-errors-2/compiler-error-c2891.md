@@ -1,5 +1,5 @@
 ---
-title: C2891 de erro do compilador | Documentos do Microsoft
+title: C2891 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,40 +19,26 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 629d1c0b98f1bf6a813bd28f25c4e5afc0e7b367
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c35294472fe4142e7e6689adfc5f5f71c27b664
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2891"></a>C2891 de erro do compilador
-'parâmetro': não é possível obter o endereço de um parâmetro de modelo  
+'parameter': não é possível obter o endereço de um parâmetro de modelo  
   
- Você não pode obter o endereço de um parâmetro de modelo, a menos que é um l-value. Parâmetros de tipo não são l-Values porque eles não possuem endereço. Valores sem tipo em listas de parâmetros de modelo que não são l-Values também não tem um endereço. Este é um exemplo de código que faz com que o compilador C2891 de erro, porque o valor passado como o parâmetro do modelo é uma cópia do argumento de modelo gerado pelo compilador.  
+ Você não pode obter o endereço de um parâmetro de modelo, a menos que ele seja um lvalue. Parâmetros de tipo não são lvalues porque eles não possuem endereço. Não-digite os valores nas listas de parâmetros de modelo que não são lvalues também não tem um endereço. Este é um exemplo de código que faz com que o compilador C2891 de erro, porque o valor passado como parâmetro de modelo é uma cópia gerada pelo compilador do argumento de modelo.  
   
 ```  
 template <int i> int* f() { return &i; }  
 ```  
   
- Parâmetros de modelo são l-Values, como tipos de referência, podem ter seus endereços executadas.  
+ Parâmetros de modelo são lvalues, como tipos de referência, pode ter seu endereço feitos.  
   
 ```  
 template <int& r> int* f() { return &r; }  
 ```  
   
- Para corrigir esse erro, não têm o endereço de um parâmetro de modelo, a menos que é um l-value.
+ Para corrigir esse erro, não tomar o endereço de um parâmetro de modelo, a menos que ele é um lvalue.

@@ -1,5 +1,5 @@
 ---
-title: C3231 de erro do compilador | Documentos do Microsoft
+title: C3231 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 666234b53842a009a6b33bcd81f0b19deb2e5629
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d3cf8747f25fdccda1467e894f95d8bcfb3525c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3231"></a>C3231 de erro do compilador
 'arg': argumento de tipo de modelo não é possível usar um parâmetro de tipo genérico  
   
- Modelos são instanciados em tempo de compilação, mas genéricos são instanciados em tempo de execução. Portanto, não é possível gerar código genérico que pode chamar o modelo porque o modelo não pode ser instanciado em tempo de execução quando o tipo genérico é conhecido por último.  
+ Modelos são instanciados no tempo de compilação, mas são instanciados genéricos em tempo de execução. Portanto, não é possível gerar o código genérico que pode chamar o modelo porque o modelo não pode ser instanciado em tempo de execução quando o tipo genérico é conhecido por último.  
   
  O exemplo a seguir gera C3231:  
   

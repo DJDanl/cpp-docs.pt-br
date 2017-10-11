@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4027 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4027 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 77b4eceb0bfcbbef8995105d4a5083cb3fc0325e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72736a9d0a4e0d4a09aca5cb452a82d5261aa1e4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4027"></a>Compilador C4027 de aviso (nível 1)
 função declarada sem lista de parâmetros formais  
   
- A declaração de função sem parâmetros formais, mas não há parâmetros formais na definição de função ou parâmetros reais em uma chamada. Chamadas subsequentes para essa função pressupõem que a função utiliza parâmetros reais dos tipos encontrados na definição de função ou chamada.
+ A declaração da função sem parâmetros formais, mas não há parâmetros formais na definição de função ou parâmetros reais em uma chamada. Chamadas subsequentes para essa função assumem a função usa parâmetros reais dos tipos encontrados na definição de função ou chamada.

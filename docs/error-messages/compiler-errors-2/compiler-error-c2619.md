@@ -1,5 +1,5 @@
 ---
-title: C2619 de erro do compilador | Documentos do Microsoft
+title: C2619 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5b697f86bd3142fc927bce6875942de13b5023b5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4ef72e986aae1746444b434997755a260d715ed
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2619"></a>C2619 de erro do compilador
-'identifier': um membro de dados estático não é permitido em uma estrutura anônima ou união  
+'Identificador': um membro de dados estático não é permitido em uma struct anônima ou union  
   
- Um membro de uma estrutura anônima ou união é declarado `static`.  
+ Um membro de união ou struct anônima é declarado como `static`.  
   
- O exemplo a seguir gera C2619 e demonstra como corrigi-lo removendo a palavra-chave static.  
+ O exemplo a seguir gera C2619 e demonstra como corrigi-lo, removendo a palavra-chave static.  
   
 ```  
 // C2619.cpp  

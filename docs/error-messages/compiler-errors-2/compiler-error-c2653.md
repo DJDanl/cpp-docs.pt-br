@@ -1,5 +1,5 @@
 ---
-title: C2653 de erro do compilador | Documentos do Microsoft
+title: C2653 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
-ms.openlocfilehash: 2203cf8a09dbb05f6145ed238ab9fc03e458aaa5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cc7990614283a20e9d07f52187258dbccad7c075
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2653"></a>C2653 de erro do compilador
-'identifier': não é um nome de classe ou namespace  
+'Identificador': não é um nome de classe ou namespace  
   
-A sintaxe requer uma classe, estrutura, união ou nome do namespace.  
+Sintaxe requer uma classe, estrutura, união ou nome de namespace.  
   
 O exemplo a seguir gera C2653:  
   
@@ -58,7 +44,7 @@ void xx::func1(int m) {}   // C2653
 void yy::func1(int m) {}   // OK  
 ```  
   
-C2653 também é possível se você tentar definir uma *composta namespace*, um namespace que contém um ou mais nomes de namespace de escopo aninhado, quando você usa uma versão do Visual C++ antes da atualização 3 do Visual Studio 2015. Composto de namespace não são permitidas definições em C++ antes do C++&17;. A partir do Visual C++ 2015 atualização 3, o compilador suporta as definições do namespace composta quando o [/std:c + + mais recente](../../build/reference/std-specify-language-standard-version.md) for especificada a opção de compilador:  
+C2653 também é possível se você tentar definir um *composta namespace*, um namespace que contém um ou mais nomes de namespace aninhado de escopo, quando você usa uma versão do Visual C++ antes da atualização 3 do Visual Studio 2015. Composta namespace não são permitidas definições em C++ antes de C++ 17. A partir do Visual C++ 2015 atualização 3, o compilador suporta as definições do namespace composta quando o [/std:c + + mais recente](../../build/reference/std-specify-language-standard-version.md) opção de compilador é especificada:  
 ```cpp  
 // C2653b.cpp  
 namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,  

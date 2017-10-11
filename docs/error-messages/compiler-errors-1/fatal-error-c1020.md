@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1020 | Documentos do Microsoft
+title: Erro fatal C1020 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 23b9d24fde38495818665ea520f2f0d63b85e1b8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c2689b2526b2cf9dc513052e292aca429113c129
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1020"></a>Erro fatal C1020
 #endif inesperado  
   
- O `#endif` diretiva não tem nenhuma correspondência `#if`, `#ifdef`, ou `#ifndef` diretiva. Ser-se de que cada `#endif` tem uma diretiva correspondente.  
+ O `#endif` diretiva não tem correspondente `#if`, `#ifdef`, ou `#ifndef` diretiva. Ser-se de que cada `#endif` tem uma diretiva correspondente.  
   
  O exemplo a seguir gera C1020:  
   
@@ -53,7 +38,7 @@ ms.lasthandoff: 02/25/2017
 #endif     // C1020  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C1020b.cpp  

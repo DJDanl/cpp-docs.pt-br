@@ -1,5 +1,5 @@
 ---
-title: C3485 de erro do compilador | Documentos do Microsoft
+title: C3485 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c3c0225bda4aa58a68099af2cb301c6dcfbfa22a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cd49b93beb54776bf17a9ee2bc5c9816f0964451
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3485"></a>C3485 de erro do compilador
-uma definição de lambda não pode possuir cv-qualifiers  
+uma definição de lambda não pode ter cv-qualifiers  
   
  Não é possível usar um `const` ou `volatile` qualificador como parte da definição de uma expressão lambda.  
   

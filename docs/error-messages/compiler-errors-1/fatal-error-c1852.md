@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1852 | Documentos do Microsoft
+title: Erro fatal C1852 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f74717ee3f129869428efc7082a0d922fc6090b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cd7168c6ffa653af54404bf81cdc4d308a76783a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1852"></a>Erro fatal C1852
@@ -50,4 +35,4 @@ ms.lasthandoff: 02/25/2017
   
 1.  Arquivo inválido especificado com **/Yu** ou **#pragma hdrstop**.  
   
-2.  O compilador pressupõe uma extensão de arquivo de. pch se você não especifique o contrário.
+2.  O compilador assumirá uma extensão de arquivo de. pch se você não especifique o contrário.

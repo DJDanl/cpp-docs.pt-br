@@ -1,5 +1,5 @@
 ---
-title: C2804 de erro do compilador | Documentos do Microsoft
+title: C2804 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b0942cd173281b022052c45ffcf513f380994b4a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42669f02fb687c35ee159cb28b852e13281a83f1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2804"></a>C2804 de erro do compilador
-binário 'operador' tem muitos parâmetros  
+binário 'operator operador' possui muitos parâmetros  
   
- A função de membro sobrecarregadas do operador binário é declarada com mais de um parâmetro. O primeiro parâmetro do operando de uma função de membro de operador binário, cujo tipo é o operador envolve o tipo, está implícito.  
+ A função de membro do operador binário sobrecarregado é declarada com mais de um parâmetro. O primeiro parâmetro de operando de uma função de membro do operador binário, cujo tipo é o operador tipo delimitador, indicado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2804 e mostra como corrigi-lo.  

@@ -1,5 +1,5 @@
 ---
-title: C3379 de erro do compilador | Documentos do Microsoft
+title: C3379 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>C3379 de erro do compilador
-'class': uma classe aninhada não pode ter um especificador de acesso do assembly como parte de sua declaração  
+'class': uma classe aninhada não pode ter um especificador de acesso de assembly como parte de sua declaração  
   
- Quando aplicado a um tipo gerenciado, como class ou struct, o [pública](../../cpp/public-cpp.md) e [particular](../../cpp/private-cpp.md) palavras-chave que indicam se a classe será exposta por meio de metadados do assembly. `public`ou `private` não pode ser aplicado a uma classe aninhada, que herda o acesso de assembly da classe delimitadora.  
+ Quando aplicado a um tipo gerenciado, como a classe ou estrutura, o [pública](../../cpp/public-cpp.md) e [privada](../../cpp/private-cpp.md) palavras-chave que indicam se a classe será exposta por meio de metadados do assembly. `public`ou `private` não pode ser aplicado a uma classe aninhada, que herda o acesso de assembly da classe de delimitador.  
   
  Quando usado com [/clr](../../build/reference/clr-common-language-runtime-compilation.md), o `ref` e `value` palavras-chave que indicam que uma classe seja gerenciada (consulte [Classes e estruturas](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   

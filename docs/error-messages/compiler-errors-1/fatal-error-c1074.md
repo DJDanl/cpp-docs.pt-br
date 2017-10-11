@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1074 | Documentos do Microsoft
+title: Erro fatal C1074 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8d61acb0d929187e66187fd401c621792bc589a4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ac24c5e8822196bb4d3d5d6ec2ee020d22e89b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1074"></a>Erro fatal C1074
-'IDB' é ilegal extensão para o arquivo PDB: filename  
+'IDB' é uma extensão inválida para o arquivo PDB: filename  
   
- O compilador espera que os bancos de dados do programa para ter a extensão. PDB.
+ O compilador espera bancos de dados do programa para ter a extensão. PDB.

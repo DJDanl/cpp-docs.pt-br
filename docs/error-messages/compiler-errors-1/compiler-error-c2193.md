@@ -1,5 +1,5 @@
 ---
-title: C2193 de erro do compilador | Documentos do Microsoft
+title: C2193 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fedfbaff0f01d92e1145dd5472b867b008e7328f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e59b7e3ab659ee7760254680e51db9e2d4ca35d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2193"></a>C2193 de erro do compilador
-'identifier': já está em um segmento  
+'Identificador': já está em um segmento  
   
  Uma função foi colocada em dois segmentos diferentes usando `alloc_text` e `code_seg` pragmas.  
   

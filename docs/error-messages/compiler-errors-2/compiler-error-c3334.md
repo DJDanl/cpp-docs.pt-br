@@ -1,5 +1,5 @@
 ---
-title: C3334 de erro do compilador | Documentos do Microsoft
+title: C3334 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,16 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 23d91802b82ffb130b9aca5cb9b39984176db0f9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 732849389f6b535177a3243d7e79f6cec0c59e03
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3334"></a>C3334 de erro do compilador
-não é possível usar #import com biblioteca de tipos corrompida  
+não é possível #import corrompido com biblioteca de tipos  
   
- O arquivo de biblioteca em um `#import` instrução está corrompida e não pode ser consumida pelo compilador.  Corrupção pode vir de geração incorreta do módulo, corrupção do disco, ou se o arquivo binário de alguma forma editado e modificado.  
+ O arquivo de biblioteca em um `#import` instrução está corrompida e não pode ser consumida pelo compilador.  Corrupção pode vir de geração inválida do módulo, corrupção do disco, ou se o arquivo binário foi editado alguma forma e modificado.  
   
  Para obter mais informações, consulte [#import diretiva](../../preprocessor/hash-import-directive-cpp.md).

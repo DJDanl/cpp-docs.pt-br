@@ -1,5 +1,5 @@
 ---
-title: C3764 de erro do compilador | Documentos do Microsoft
+title: C3764 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ed66a6348c08d8b33b12ecd3ec4209213d12bcd3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60317bb31b5021d4b9b1b6568d77ae92e06880ce
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3764"></a>C3764 de erro do compilador
 'override_function': não é possível substituir o método da classe base 'base_class_function'  
   
- O compilador detectou uma substituição malformados. Por exemplo, a função de classe base não era `virtual`. Para obter mais informações, consulte [substituir](../../windows/override-cpp-component-extensions.md).  
+ O compilador detectou uma substituição mal formados. Por exemplo, a função de classe base não era `virtual`. Para obter mais informações, consulte [substituir](../../windows/override-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3764.  
@@ -63,7 +49,7 @@ public ref struct B : A {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C3764 também pode ocorrer quando um método da classe base é explicitamente e chamado substituído. O exemplo a seguir gera C3764.  
+ C3764 também pode ocorrer quando um método de classe base é explicitamente e nomeado substituído. O exemplo a seguir gera C3764.  
   
 ```  
 // C3764_b.cpp  

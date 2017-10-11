@@ -1,5 +1,5 @@
 ---
-title: C3537 de erro do compilador | Documentos do Microsoft
+title: C3537 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8dcc58d8a5f6702740eda805c7e48e60a7512b3c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f425ee0d93a277bac5dc1f0a798c1a7cc3ed3bac
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3537"></a>C3537 de erro do compilador
@@ -65,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [palavra-chave auto](../../cpp/auto-keyword.md)
+ [Palavra-chave auto](../../cpp/auto-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: C2951 de erro do compilador | Documentos do Microsoft
+title: C2951 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 117c1b40c1533edb0abc5012e2b5fd5cd43d9c80
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4be1b3a298fc24572fcc44b9deb031c0d49b7332
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2951"></a>C2951 de erro do compilador
-declarações de tipo são permitidas somente no namespace global, ou escopo de classe  
+declarações de tipo são permitidas apenas no namespace global ou escopo de classe  
   
- Você não pode declarar um genérico ou escopo de namespace ou classe de modelo global externo. Se você tornar suas declarações genérico ou um modelo em um arquivo de inclusão, verifique se o arquivo de inclusão está no escopo global.  
+ Você não pode declarar um genérico ou escopo de namespace ou classe de modelo global externo. Se você fizer suas declarações genérico ou modelo em um arquivo de inclusão, verifique se o arquivo de inclusão está no escopo global.  
   
  O exemplo a seguir gera C2951:  
   

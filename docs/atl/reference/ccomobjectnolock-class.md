@@ -1,5 +1,5 @@
 ---
-title: Classe CComObjectNoLock | Documentos do Microsoft
+title: Classe CComObjectNoLock | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4cf4cad1a3b1a4ac0a21ef76a0eaca35732abf3a
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomobjectnolock-class"></a>Classe CComObjectNoLock
@@ -57,7 +43,7 @@ class CComObjectNoLock : public Base
   
 #### <a name="parameters"></a>Parâmetros  
  `Base`  
- Sua classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface para o qual você deseja oferecer suporte no objeto.  
+ A classe derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como qualquer outra interface desejar dar suporte ao objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -77,7 +63,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Diminui a contagem de referência no objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComObjectNoLock`é semelhante ao [CComObject](../../atl/reference/ccomobject-class.md) que ele implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado; no entanto, `CComObjectNoLock` conta de incrementar o bloqueio de módulo no construtor.  
+ `CComObjectNoLock`é semelhante a [CComObject](../../atl/reference/ccomobject-class.md) em que ele implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado; no entanto, `CComObjectNoLock` a contagem de incremento o bloqueio de módulo no construtor.  
   
  ATL usa `CComObjectNoLock` internamente para fábricas de classe. Em geral, você não usará essa classe diretamente.  
   
@@ -97,7 +83,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor que pode ser útil para o diagnóstico ou teste.  
+ Um valor que pode ser útil para um diagnóstico ou teste.  
   
 ##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  O construtor. Ao contrário de [CComObject](../../atl/reference/ccomobject-class.md), não incrementa a contagem de bloqueios do módulo.  
@@ -108,7 +94,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Parâmetros  
  **void\***  
- [in] Esse parâmetro sem nome não é usado. Ele existe para obter simetria com outros **CCom***XXX*`Object`*XXX* construtores.  
+ [in] Esse parâmetro sem nome não é usado. Ela existe para simetria com outros **CCom***XXX*`Object`*XXX* construtores.  
   
 ##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
  O destruidor.  
@@ -133,7 +119,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  [in] O identificador da interface que está sendo solicitado.  
   
  `ppvObject`  
- [out] Um ponteiro para o ponteiro de interface identificado pelo `iid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
+ [out] Um ponteiro para o ponteiro de interface identificado por `iid`. Se o objeto não oferece suporte a essa interface, `ppvObject` é definido como **nulo**.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um padrão `HRESULT` valor.  
@@ -146,7 +132,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Em compilações de depuração, **versão** retorna um valor que pode ser útil para o diagnóstico ou teste. Em compilações de depuração não **versão** sempre retorna 0.  
+ Em compilações de depuração, **versão** retorna um valor que pode ser útil para um diagnóstico ou teste. Em compilações de depuração não **versão** sempre retorna 0.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

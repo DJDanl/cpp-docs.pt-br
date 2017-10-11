@@ -1,5 +1,5 @@
 ---
-title: Classe CFirePropNotifyEvent | Documentos do Microsoft
+title: Classe CFirePropNotifyEvent | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,32 +24,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1511a9e9ba287d12aade7c393887c6b5f8880b96
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
 Essa classe fornece métodos para notificar o coletor do contêiner sobre as alterações de propriedade do controle.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,13 +49,13 @@ class CFirePropNotifyEvent
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Estático) Notifica o coletor do contêiner que uma propriedade de controle mudou.|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Estático) Notifica o coletor do contêiner que uma propriedade de controle está prestes a alterar.|  
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Estático) Notifica o coletor do contêiner que uma propriedade de controle foi alterado.|  
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Estático) Notifica o coletor do contêiner que uma propriedade do controle está prestes a alterar.|  
   
 ## <a name="remarks"></a>Comentários  
- `CFirePropNotifyEvent`tem dois métodos que notificam o coletor do contêiner que uma propriedade de controle foi alterado ou está prestes a alterar.  
+ `CFirePropNotifyEvent`tem dois métodos que notificam o coletor do contêiner que uma propriedade de controle foi alterado ou está prestes a ser alterada.  
   
- Se a classe que implementa o controle é derivada de `IPropertyNotifySink`, o `CFirePropNotifyEvent` métodos são chamados quando você chama `FireOnRequestEdit` ou `FireOnChanged`. Se sua classe de controle não é derivado de `IPropertyNotifySink`, chamadas para essas funções retornam `S_OK`.  
+ Se a classe que implementa o controle for derivada de `IPropertyNotifySink`, o `CFirePropNotifyEvent` métodos são chamados quando você chamar `FireOnRequestEdit` ou `FireOnChanged`. Se sua classe de controle não é derivado de `IPropertyNotifySink`, chamadas para essas funções retornam `S_OK`.  
   
  Para obter mais informações sobre a criação de controles, consulte o [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md).  
   
@@ -77,7 +63,7 @@ class CFirePropNotifyEvent
  **Cabeçalho:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
- Notifica todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (em cada ponto de conexão do objeto) que a propriedade do objeto especificado foi alterado.  
+ Notifica todos conectado [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (em cada ponto de conexão do objeto) que a propriedade do objeto especificado foi alterado.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -85,19 +71,19 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parâmetros  
  *pUnk*  
- [in] Ponteiro para o **IUnknown** do objeto que está enviando a notificação.  
+ [in] Ponteiro para o **IUnknown** do objeto ao enviar a notificação.  
   
  *dispID*  
  [in] Identificador da propriedade que foi alterada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um dos padrão `HRESULT` valores.  
+ Um padrão `HRESULT` valores.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é segura chamar o mesmo que o controle não dá suporte a pontos de conexão.  
+ Essa função é segura chamar mesmo se o controle não oferece suporte a pontos de conexão.  
   
 ##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
- Notifica todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (em cada ponto de conexão do objeto) que a propriedade do objeto especificado está prestes a ser alterada.  
+ Notifica todos conectado [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (em cada ponto de conexão do objeto) que a propriedade do objeto especificado está prestes a alterar.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -105,16 +91,16 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parâmetros  
  *pUnk*  
- [in] Ponteiro para o **IUnknown** do objeto que está enviando a notificação.  
+ [in] Ponteiro para o **IUnknown** do objeto ao enviar a notificação.  
   
  *dispID*  
  [in] Identificador da propriedade prestes a ser alterada.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um dos padrão `HRESULT` valores.  
+ Um padrão `HRESULT` valores.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função é segura chamar o mesmo que o controle não dá suporte a pontos de conexão.  
+ Essa função é segura chamar mesmo se o controle não oferece suporte a pontos de conexão.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2660 de erro do compilador | Documentos do Microsoft
+title: C2660 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c812a1bbaa080f3699767746513b2c3893c8d76c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2660"></a>C2660 de erro do compilador
@@ -46,11 +31,11 @@ ms.lasthandoff: 02/25/2017
   
  A função é chamada com um número incorreto de parâmetros.  
   
- C2660 pode ocorrer se você acidentalmente chamar uma função da API do Windows em vez de uma função de membro MFC do mesmo nome. Para resolver esse problema:  
+ C2660 pode ocorrer se você acidentalmente chamar uma função de API do Windows em vez de uma função de membro do MFC de mesmo nome. Para resolver esse problema:  
   
 -   Ajuste a chamada de função de acordo com o formato da chamada de função de membro.  
   
--   Use o operador de resolução de escopo (`::`) para indicar ao compilador para procurar o nome da função no espaço de nome global.  
+-   Use o operador de resolução do escopo (`::`) para informar ao compilador para procurar o nome da função no espaço de nome global.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2660.  
@@ -66,7 +51,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2660 também pode ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.  
+ C2660 também poderá ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.  
   
 ```  
 // C2660_a.cpp  
@@ -117,7 +102,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.  
+ C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.  
   
 ```  
 // C2660c.cpp  
@@ -141,7 +126,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.  
+ C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.  
   
 ```  
 // C2660d.cpp  
@@ -163,7 +148,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo delimitador.  
+ C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo de delimitador.  
   
 ```  
 // C2660e.cpp  

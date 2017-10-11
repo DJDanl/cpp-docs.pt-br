@@ -1,5 +1,5 @@
 ---
-title: C3710 de erro do compilador | Documentos do Microsoft
+title: C3710 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 29f5e2d696cbf14b1d5ce9b516a5f6de6b980813
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc39cd77bc9316024d0980be3a432e332f09cbb7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3710"></a>C3710 de erro do compilador
-'function': sintaxe incorreta para especificar o manipulador de eventos em hook /\__unhook  
+'function': sintaxe inadequada ao especificar o manipulador de eventos em hook /\__unhook  
   
- Quando você especifica um manipulador de eventos com [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md), o manipulador deve ser um método válido.  
+ Quando você especificar um manipulador de eventos com [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md), o manipulador deve ser um método válido.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3710  

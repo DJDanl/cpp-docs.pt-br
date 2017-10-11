@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1013 | Documentos do Microsoft
+title: Erro fatal C1013 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,16 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d3468fa161667aca9ab60ea9a5f60931718cd3a3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72196927de45c639b8aea7e26bb721c57b6d7c1d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1013"></a>Erro fatal C1013
-limite do compilador : muitos parênteses abertos  
+limite do compilador: muitos parênteses abertos  
   
- Uma expressão contém muitos níveis de parênteses em uma única expressão. Simplificar a expressão ou dividi-lo em várias instruções.  
+ Uma expressão contém muitos níveis de parênteses em uma única expressão. Simplifique a expressão ou dividi-la em várias instruções.  
   
- Antes do Visual C++ 6.0 Service Pack 3, o limite de parênteses aninhados em uma única expressão era 59. Atualmente, o limite de parênteses aninhados é 256.
+ Antes do Visual C++ 6.0 Service Pack 3, o limite de parênteses aninhados em uma única expressão foi 59. Atualmente, o limite de parênteses aninhados é 256.

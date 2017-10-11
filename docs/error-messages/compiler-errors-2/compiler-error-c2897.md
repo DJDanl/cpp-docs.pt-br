@@ -1,5 +1,5 @@
 ---
-title: C2897 de erro do compilador | Documentos do Microsoft
+title: C2897 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bee789fa83d3db47164a8da16522dbfcb8c728dc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d3aa9ae6c79d3320104d9689f82b894cf2b76d9c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2897"></a>C2897 de erro do compilador
-um destruidor/finalizador não pode ser um modelo de função  
+um destruidor/finalizador não pode ser um template de função  
   
- Destruidores ou os finalizadores não podem ser sobrecarregados, para que declarar um destruidor como um modelo (o que seria definir um conjunto de destruidores) não é permitido.  
+ Destruidores ou finalizadores não podem ser sobrecarregados, para que declarar um destruidor como um modelo (que define um conjunto de destruidores) não é permitido.  
   
  O exemplo a seguir gera C2897:  
   

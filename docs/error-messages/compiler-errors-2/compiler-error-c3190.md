@@ -1,5 +1,5 @@
 ---
-title: C3190 de erro do compilador | Documentos do Microsoft
+title: C3190 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c7bde771a0448645aa260c3c7df5ab9f16fe8e80
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29d85c8a58b20c5a3c4492c56a66591e1509f2c4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3190"></a>C3190 de erro do compilador
-instanciação com os argumentos do modelo fornecido não é a instanciação explícita de qualquer função de membro de 'type'  
+instanciação com os argumentos de modelo fornecido não é a instanciação explícita de nenhuma função de membro de 'type'  
   
- O compilador detectou uma tentativa de fazer uma instanciação de função explícito; No entanto, os argumentos de tipo fornecido não corresponde qualquer uma das funções possíveis.  
+ O compilador detectado ao tentar fazer uma instanciação de função explícita; No entanto, os argumentos de tipo fornecido não corresponde qualquer uma das funções possíveis.  
   
  O exemplo a seguir gera C3190:  
   

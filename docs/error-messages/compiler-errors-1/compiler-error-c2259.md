@@ -1,5 +1,5 @@
 ---
-title: C2259 de erro do compilador | Documentos do Microsoft
+title: C2259 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2259"></a>C2259 de erro do compilador
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/25/2017
   
  Código declara uma instância de uma estrutura ou classe abstrata.  
   
- Você não pode instanciar uma classe ou estrutura com uma ou mais funções virtuais puras. Para instanciar objetos de uma classe derivada, a classe derivada deve substituir cada função virtual pura.  
+ Você não pode instanciar uma classe ou estrutura com um ou mais funções virtuais puras. Para instanciar objetos de uma classe derivada, a classe derivada deve substituir cada função virtual pura.  
   
  Para obter mais informações, consulte [classes implicitamente abstratas](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).  
   
@@ -69,15 +54,15 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- Sempre que deriva de uma interface e implementa os métodos de interface na classe derivada com permissões de acesso que não seja público, você pode receber C2259.  Isso ocorre porque o compilador espera que os métodos de interface implementados na classe derivada com acesso público. Quando você implementa as funções de membro de uma interface com permissões de acesso mais restritivos, o compilador não considera a ser implementações para os métodos de interface definidos na interface, que por sua vez faz a classe derivada de uma classe abstrata.  
+ Sempre que deriva de uma interface e implementa os métodos de interface na classe derivada com permissões de acesso diferente de público, você pode receber C2259.  Isso ocorre porque o compilador espera que os métodos de interface implementados na classe derivada para ter acesso público. Quando você implementa as funções de membro para uma interface com permissões de acesso mais restritivos, o compilador não considera a serem implementações para os métodos de interface definidos na interface, que por sua vez torna a classe derivada de uma classe abstrata.  
   
  Há duas soluções possíveis para o problema:  
   
 -   Verifique as permissões de acesso público para os métodos implementados.  
   
--   Use o operador de resolução de escopo para os métodos de interface implementados na classe derivada para qualificar o nome do método implementado com o nome da interface.  
+-   Use o operador de resolução de escopo para os métodos da interface implementados na classe derivada para qualificar o nome do método implementado com o nome da interface.  
   
- C2259 também pode ocorrer como resultado do trabalho de conformidade que foi feito no Visual C++ 2005, **/ZC:** está ativada por padrão. Nessa situação, C2599 pode ser resolvido ou por compilar com **/Zc:wchar_t-**, para obter o comportamento de versões anteriores ou, preferencialmente, atualizando seus tipos para que sejam compatíveis. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ C2259 também pode ocorrer como resultado do trabalho de conformidade que foi feito no Visual C++ 2005, **/ZC:** está ativada por padrão. Nessa situação, C2599 pode ser resolvido ou pela compilação com **/Zc:wchar_t-**, para obter o comportamento de versões anteriores, ou, de preferência, atualizando seus tipos, para que eles sejam compatíveis. Para obter mais informações, consulte [/Zc:wchar_t (wchar_t é o tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
  O exemplo a seguir gera C2259:  
   

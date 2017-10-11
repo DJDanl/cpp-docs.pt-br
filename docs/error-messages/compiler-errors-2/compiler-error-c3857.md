@@ -1,5 +1,5 @@
 ---
-title: C3857 de erro do compilador | Documentos do Microsoft
+title: C3857 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 43642d6cf7a912652ea70236ef577375d5a56e70
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e9c553adf8eb9b326bcb2b3b35a381973c9c4a50
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3857"></a>C3857 de erro do compilador
-'type': não são permitidas várias listas de parâmetros de tipo  
+'type': várias listas de parâmetros de tipo não são permitidas  
   
  Mais de um modelo ou genérico foi especificado para o mesmo tipo, que não é permitido.  
   
@@ -54,7 +40,7 @@ template <class T2>    // C3857
 struct B {};  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3857b.cpp  
@@ -73,7 +59,7 @@ generic <typename U>
 ref class GC;   // C3857  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3857d.cpp  

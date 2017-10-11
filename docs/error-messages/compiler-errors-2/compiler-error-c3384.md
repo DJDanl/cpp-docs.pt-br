@@ -1,5 +1,5 @@
 ---
-title: C3384 de erro do compilador | Documentos do Microsoft
+title: C3384 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 50ebdb6f446ddde88ea0c6ef043e4eaea4b47c45
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ce70a37639288bce3244f48635ae4b756bb98cad
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3384"></a>C3384 de erro do compilador
-'type_parameter': a restrição de valor e a restrição de referência são mutuamente exclusivos  
+'type_parameter': a restrição de valor e a restrição ref são mutuamente exclusivos  
   
- Não é possível restringir um tipo genérico tanto `value class` e `ref class`.  
+ Não é possível restringir um tipo genérico para ambos `value class` e `ref class`.  
   
- Consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
+ Consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3384.  

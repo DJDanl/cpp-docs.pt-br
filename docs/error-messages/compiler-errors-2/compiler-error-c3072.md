@@ -1,5 +1,5 @@
 ---
-title: C3072 de erro do compilador | Documentos do Microsoft
+title: C3072 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f5124c3a3eb2b1c22cc60be8d05400e646caba05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3334edd6f297a61ca62a5fe5a0f8b6cddfef7f80
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3072"></a>C3072 de erro do compilador
 operador 'operator' não pode ser aplicado a uma instância de uma classe ref  
   
- usar o operador unário '`operator` ' operador para converter uma instância de uma classe ref em um tipo de identificador  
+ usar o operador unário '`operator` ' para converter uma instância de uma classe ref para um tipo de identificador  
   
- Um tipo CLR requer operadores do CLR, não operadores nativos (ou padrão).  Para obter mais informações, consulte [operador de referência de controle](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
+ Um tipo CLR requer operadores CLR, operadores não nativo (ou padrão).  Para obter mais informações, consulte [operador de referência de rastreamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3072.  

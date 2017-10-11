@@ -1,5 +1,5 @@
 ---
-title: C3173 de erro do compilador | Documentos do Microsoft
+title: C3173 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fe9a5f6cf4f0810feeb9e036a9435fe8a59f95be
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6f900c598749611f33b63853fa63213d38a03902
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3173"></a>C3173 de erro do compilador
 incompatibilidade de versão em mesclagem de idl  
   
- Esse erro ocorre quando um arquivo de objeto contém idl incorporado que foi criado com uma versão anterior do compilador. O compilador codifica um número de versão para garantir que o mesmo compilador usado para gerar o conteúdo de idl que é inserido nos arquivos. obj também é o mesmo compilador usado para mesclar idl incorporado.  
+ Esse erro ocorre quando um arquivo de objeto contém idl inserido que foi criado com uma versão anterior do compilador. O compilador codifica um número de versão para garantir que o compilador mesmo usado para gerar o conteúdo idl que é inserido nos arquivos. obj também é o mesmo compilador usado para mesclar idl inserido.  
   
- Atualize sua instalação do Visual C++ para que todas as ferramentas são da versão mais recente.
+ Atualiza a instalação do Visual C++ para que todas as ferramentas são da versão lançada mais recente.

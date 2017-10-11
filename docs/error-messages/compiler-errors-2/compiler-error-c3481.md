@@ -1,5 +1,5 @@
 ---
-title: C3481 de erro do compilador | Documentos do Microsoft
+title: C3481 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a2d1e70756e23b5c6dbed403e8f95e43d953c28d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 33bd3d85a4cf44741d59ccb81259babd34704b69
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3481"></a>C3481 de erro do compilador
-'var': variável de captura lambda não encontrado  
+'var': variável de captura de lambda não encontrada  
   
- O compilador não pôde localizar a definição de uma variável que é passado para a lista de captura de uma expressão lambda.  
+ O compilador não foi possível encontrar a definição de uma variável que é passado para a lista de captura de uma expressão lambda.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Remova a variável na lista da expressão lambda captura.  
+-   Remova a variável na lista de captura da expressão lambda.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3481 porque a variável `n` não está definido:  

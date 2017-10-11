@@ -1,5 +1,5 @@
 ---
-title: C3309 de erro do compilador | Documentos do Microsoft
+title: C3309 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 34a6bff089d9d97bac9a49b36a1811ce489085d5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 528ee8dd3925ee989003db8a484041bb2a3a03dd
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3309"></a>C3309 de erro do compilador
 'macro_name': nome do módulo não pode ser uma macro ou uma palavra-chave  
   
- O valor passado para a propriedade de nome do atributo do módulo não pode ser um símbolo para o pré-processador expanda; ele deve ser um literal de cadeia de caracteres.  
+ O valor que você passa para a propriedade de nome do atributo de módulo não pode ser um símbolo para o pré-processador expandir; ele deve ser uma cadeia de caracteres literal.  
   
  O exemplo a seguir gera C3309:  
   

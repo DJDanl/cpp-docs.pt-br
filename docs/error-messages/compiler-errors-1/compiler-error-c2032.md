@@ -1,5 +1,5 @@
 ---
-title: C2032 de erro do compilador | Documentos do Microsoft
+title: C2032 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f1079979099dbf3b12e81a9b736faa40e8e4d8d8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 81bbe4c9e5242f68a5e0e304858c13c9274c1743
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2032"></a>C2032 de erro do compilador
-'identifier': função não pode ser membro de estrutura/união 'structorunion'  
+'Identificador': função não pode ser membro de struct/união 'structorunion'  
   
  A estrutura ou união tem uma função de membro, que é permitida em C++, mas não em C. Para resolver o erro, compilar como um programa C++ ou remova a função de membro.  
   
@@ -55,7 +41,7 @@ struct z {
 };  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2032b.c  

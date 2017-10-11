@@ -1,5 +1,5 @@
 ---
-title: C3482 de erro do compilador | Documentos do Microsoft
+title: C3482 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1970d44f18c752b9f8f300b313938d80f3b2d3d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b19769a8a326613401263fa7700b85c36a9dbbe1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3482"></a>C3482 de erro do compilador
-'this' só pode ser usado como uma captura de lambda dentro de uma função membro não static  
+'this' só pode ser usado como uma captura de lambda dentro de uma função de membro não estático  
   
  Você não pode passar `this` à lista de captura de uma expressão lambda que é declarada em um método estático ou uma função global.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Converter a função para um método não estático, ou  
+-   Converter a função delimitador para um método não estático, ou  
   
--   Remover o `this` ponteiro na lista da expressão lambda captura.  
+-   Remover o `this` ponteiro da lista de captura da expressão lambda.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3482:  

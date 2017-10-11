@@ -1,5 +1,5 @@
 ---
-title: Erro do compilador C2418 | Documentos do Microsoft
+title: Erro do compilador C2418 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a9e4feec05a4d039703a1e222e3a4e14e6ca8ba1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4fddb3d3fdcbc04c7c6fce8e906a80f15b4adb81
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2418"></a>Erro do Compilador C2418
-não é possível excluir o arquivo do navegador: filename  
+não é possível excluir o arquivo de navegador: filename  
   
- O compilador não pôde excluir o arquivo do navegador.  
+ O compilador não foi possível excluir o arquivo de navegador.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   

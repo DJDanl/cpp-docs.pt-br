@@ -1,5 +1,5 @@
 ---
-title: C3457 de erro do compilador | Documentos do Microsoft
+title: C3457 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 357ecf494d6f2f48b6605120bee3343ab22087f8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d2550bdaa8d070b046ab9dbab6b21b691eed6f49
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3457"></a>C3457 de erro do compilador
-'attribute': atributo não oferece suporte a argumentos sem nome  
+'attribute': atributo não suporta argumentos sem nome  
   
- Atributos de anotação de origem, diferentemente do atributo personalizado do CLR ou atributos de compilador somente dão suporte a argumentos nomeados.  
+ Atributos de anotação de origem, ao contrário de atributo personalizado de CLR ou atributos de compilador só oferecem suporte a argumentos nomeados.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3457.  

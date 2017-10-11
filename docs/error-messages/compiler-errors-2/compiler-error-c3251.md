@@ -1,5 +1,5 @@
 ---
-title: C3251 de erro do compilador | Documentos do Microsoft
+title: C3251 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 45cc8b305af437205ee046d6d1ff8058e51a1743
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f17f45a35f9ddd1b3270b484a49c603bee92f8f7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3251"></a>C3251 de erro do compilador
-não é possível chamar método de classe base em uma instância de tipo value  
+não é possível invocar o método da classe base em uma instância de tipo de valor  
   
- Este erro ocorre porque `GetClass` é um membro de `Microsoft.Runtime.Object`, não é de `Microsoft.Runtime.Integer4`.
+ O seguinte erro ocorre porque `GetClass` é um membro de `Microsoft.Runtime.Object`, não do `Microsoft.Runtime.Integer4`.

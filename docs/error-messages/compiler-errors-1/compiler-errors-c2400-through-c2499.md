@@ -41,32 +41,18 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>C2400 de erros do compilador por meio de C2499
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
@@ -77,7 +63,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2402](compiler-error-c2402.md)|'*identificador*': registro deve ser índice em '*contexto*'|  
 |[Erro do compilador C2403](compiler-error-c2403.md)|'*identificador*': registro deve ser base/índice em '*contexto*'|  
 |[Erro do compilador C2404](compiler-error-c2404.md)|'*identificador*': registro inválido em '*contexto*'|  
-|[Erro do compilador C2405](compiler-error-c2405.md)|referência short posterior com deslocamento inválida|  
+|[Erro do compilador C2405](compiler-error-c2405.md)|ilegal referência short posterior com deslocamento|  
 |[Erro do compilador C2406](compiler-error-c2406.md)|'*identificador*': nome indefinido '*contexto*'|  
 |[Erro do compilador C2407](compiler-error-c2407.md)|registrar ilegal 'float' em '*contexto*'|  
 |[Erro do compilador C2408](compiler-error-c2408.md)|tipo inválido no operador PTR em '*contexto*'|  
@@ -87,7 +73,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2412](compiler-error-c2412.md)|'*rótulo*': rótulo de maiusculas e minúsculas redefinido|  
 |[Erro do compilador C2413](compiler-error-c2413.md)|'*identificador*': tamanho de align inválido|  
 |[Erro do compilador C2414](compiler-error-c2414.md)|número de operandos inválido|  
-|[Erro do compilador C2415](compiler-error-c2415.md)|tipo de operando inadequado|  
+|[Erro do compilador C2415](compiler-error-c2415.md)|tipo de operando inadequada|  
 |C2416 de erro do compilador|atributo '*atributo*' não pode ser aplicado neste contexto|  
 |[Erro do compilador C2417](compiler-error-c2417.md)|divisão por zero em '*contexto*'|  
 |[Erro do compilador C2418](compiler-error-c2418.md)|não é possível excluir o arquivo de navegador: *filename*|  
@@ -120,7 +106,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2446](compiler-error-c2446.md)|'*operador*': nenhuma conversão de '*type_1*'para'*type_2*'|  
 |[Erro do compilador C2447](compiler-error-c2447.md)|' {': faltando cabeçalho de função (lista formal de estilo antigo?)|  
 |[Erro do compilador C2448](compiler-error-c2448.md)|'*identificador*': inicializador function-style parece ser uma definição de função|  
-|[Erro do compilador C2449](compiler-error-c2449.md)|encontrado '{' no escopo de arquivo (faltando cabeçalho de função?)|  
+|[Erro do compilador C2449](compiler-error-c2449.md)|encontrado ' {' no escopo de arquivo (faltando cabeçalho de função?)|  
 |[Erro do compilador C2450](compiler-error-c2450.md)|Alternar a expressão do tipo '*tipo*' é inválido|  
 |[Erro do compilador C2451](compiler-error-c2451.md)|expressão condicional do tipo '*tipo*' é inválido|  
 |[Erro do compilador C2452](compiler-error-c2452.md)|'*tipo*': tipo de fonte inválido para safe_cast|  
@@ -136,7 +122,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2462](compiler-error-c2462.md)|'*identificador*': não é possível definir um tipo em uma 'new-expression'|  
 |[Erro do compilador C2464](compiler-error-c2464.md)|'*tipo*': não é possível usar 'new' para alocar uma referência|  
 |[Erro do compilador C2465](compiler-error-c2465.md)|não é possível definir um tipo anônimo dentro de parênteses|  
-|[Erro do compilador C2466](compiler-error-c2466.md)|não é possível alocar uma matriz de dimensão constante 0|  
+|[Erro do compilador C2466](compiler-error-c2466.md)|não é possível alocar uma matriz de tamanho constante 0|  
 |[Erro do compilador C2467](compiler-error-c2467.md)|declaração inválida de anônimo '*user_defined_type*'|  
 |C2468 de erro do compilador|construtor não pode ser 'constexpr' em uma classe ou struct com classes base virtuais|  
 |[Erro do compilador C2469](compiler-error-c2469.md)|'new': não é possível alocar objetos 'void'|  
@@ -154,14 +140,14 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2482](compiler-error-c2482.md)|'*identificador*': inicialização dinâmica de dados de local de thread não é permitidas no código gerenciado/WINRT|  
 |[Erro do compilador C2483](compiler-error-c2483.md)|'*identificador*': o objeto com destruidor ou tipo não agregado não pode ser declarado com duração de armazenamento de thread no código gerenciado/WINRT|  
 |[Erro do compilador C2485](compiler-error-c2485.md)|'*identificador*': atributo estendido não reconhecido|  
-|[Erro do compilador C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' permitido apenas em função com o atributo 'naked'|  
+|[Erro do compilador C2486](compiler-error-c2486.md)|Local_size' permitido apenas em função com o atributo 'naked'|  
 |[Erro do compilador C2487](compiler-error-c2487.md)|'*identificador*': membro de classe de interface de dll não pode ser declarado com dll interface|  
 |[Erro do compilador C2488](compiler-error-c2488.md)|'*identificador*': 'naked' só pode ser aplicado às definições de função não membro|  
 |[Erro do compilador C2489](compiler-error-c2489.md)|'*identificador*': inicializado variável auto ou register não permitida no escopo de função na função 'naked'|  
 |[Erro do compilador C2490](compiler-error-c2490.md)|'*palavra-chave*' não é permitido em função com atributo 'naked'|  
 |[Erro do compilador C2491](compiler-error-c2491.md)|'*identificador*': definição de dllimport *função* não permitido|  
 |[Erro do compilador C2492](compiler-error-c2492.md)|'*variável*': dados com duração de armazenamento de thread não podem possuir dll interface|  
-|[Erro do compilador C2493](compiler-error-c2493.md)|forma inválida de __based|  
+|[Erro do compilador C2493](compiler-error-c2493.md)|forma inválida de based|  
 |[Erro do compilador C2494](compiler-error-c2494.md)|'*palavra-chave*' não pode ser chamado de dentro de uma expressão de filtro ou \_ \_finalmente/bloco finally|  
 |[Erro do compilador C2495](compiler-error-c2495.md)|'*identificador*': '__declspec(noexcept)' só pode ser aplicado a declarações de função ou definições|  
 |[Erro do compilador C2496](compiler-error-c2496.md)|'*identificador*': 'selectany' só pode ser aplicado a itens de dados com ligação externa|  

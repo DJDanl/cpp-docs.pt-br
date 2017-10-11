@@ -1,5 +1,5 @@
 ---
-title: C2632 de erro do compilador | Documentos do Microsoft
+title: C2632 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fc40711eb9f366e37dd2815a9cb79df874859a39
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c1af198d4949da112792c2bbddfac68a80d0daf4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2632"></a>C2632 de erro do compilador
@@ -52,7 +38,7 @@ ms.lasthandoff: 02/25/2017
 int float i;   // C2632  
 ```  
   
- Esse erro também pode ser gerado como resultado de trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003. `bool`Agora é um tipo adequado. Nas versões anteriores, `bool` foi um typedef, e você pode criar identificadores com esse nome.  
+ Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003. `bool`Agora é um tipo adequado. Nas versões anteriores, `bool` foi um typedef, e você pode criar identificadores com esse nome.  
   
  O exemplo a seguir gera C2632:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3507 de erro do compilador | Documentos do Microsoft
+title: C3507 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a6746600672ca8f3b73b087ef3a8672c0ca7c534
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 697732f9e9c37735db591fc5a90d2380806fb7eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3507"></a>C3507 de erro do compilador
-ProgID pode ter não mais de 39 caracteres 'id'; nem conter qualquer tipo de pontuação além de '.'; nem começar com um dígito  
+um ProgID pode ter não mais do que 39 caracteres 'id'; nem conter pontuações, exceto '.'; nem começar com um dígito  
   
  O [progid](../../windows/progid.md) atributo tem restrições nos valores que podem ser necessários.  
   

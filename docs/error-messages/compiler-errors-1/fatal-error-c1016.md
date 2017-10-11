@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1016 | Documentos do Microsoft
+title: Erro fatal C1016 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 33913f85858ee6f02c52e20e164c4fa006301b38
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ef8e1547b636ec6722daca3f73639d8e1db42d5f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1016"></a>Erro fatal C1016
-\#ifdef esperado que um identificador é esperado um identificador #ifndef  
+\#ifdef esperado que um identificador #ifndef esperado um identificador  
   
  A diretiva de compilação condicional ([#ifdef](../../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md) ou `#ifndef`) não tem identificador para avaliar. Para resolver o erro, especifique um identificador.  
   
@@ -57,7 +42,7 @@ ms.lasthandoff: 02/25/2017
 int main() {}  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C1016b.cpp  

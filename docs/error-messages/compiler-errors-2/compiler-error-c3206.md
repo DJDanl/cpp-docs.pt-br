@@ -1,5 +1,5 @@
 ---
-title: C3206 de erro do compilador | Documentos do Microsoft
+title: C3206 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 69e6fcd77916af3defc29dfb12381d3491e478e6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3206"></a>C3206 de erro do compilador
-'function': argumento de tipo inválido para 'param,' ausente da lista de argumentos de tipo no tipo de classe 'typename'  
+'function': argumento de tipo inválido para 'param', faltando lista de argumentos de tipo no tipo de classe 'typename'  
   
- Uma função de modelo é definida como colocar um argumento de tipo de modelo. No entanto, foi passado um argumento de modelo do modelo.  
+ Um modelo de função é definido como colocar um argumento de tipo de modelo. No entanto, foi passado um argumento de modelo do modelo.  
   
  O exemplo a seguir gera C3206:  
   
@@ -63,7 +48,7 @@ void f1() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3206b.cpp  
@@ -95,7 +80,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3206d.cpp  
@@ -111,11 +96,11 @@ int main() {
 }  
 ```  
   
- Esse erro também pode ser gerado como resultado de trabalho de conformidade do compilador do Visual C++ .NET 2003, onde os modelos de classe não são permitidos como argumento de tipo de modelo.  
+ Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador do Visual C++ .NET 2003, onde os modelos de classe não são permitidos como argumento de tipo de modelo.  
   
  Um modelo de classe não é permitido como argumento de tipo de modelo. Isso funcionou no Visual C++ .NET 2003, mas é C++ inválido.  
   
- O exemplo a seguir compila no Visual C++ .NET 2002, mas falharão no Visual C++ .NET 2003:  
+ O exemplo a seguir é compilado no Visual C++ .NET 2002 mas falharão no Visual C++ .NET 2003:  
   
 ```  
 // C3206e.cpp  
@@ -132,7 +117,7 @@ int main() {
 }  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3206f.cpp  
@@ -149,7 +134,7 @@ int main() {
 }  
 ```  
   
- Se um parâmetro de modelo é necessário, a resolução para o erro é válido no Visual C++ .NET 2003 e versões do Visual C++ .NET 2002 exigem envolver a função em uma classe de modelo que usa um parâmetro de modelo:  
+ Se um parâmetro de modelo for necessário, a resolução para o erro que é válido no Visual C++ .NET 2003 e versões do Visual C++ .NET 2002 requerem a encapsular a função em uma classe de modelo que usa um parâmetro de modelo:  
   
 ```  
 // C3206g.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3071 de erro do compilador | Documentos do Microsoft
+title: C3071 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 11abc98378bd77dafe4a741fb7f7d5ea83ba3d4c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc5cca3bdb0ff10f9f11c89ed3193002ebc884b0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3071"></a>C3071 de erro do compilador
-operador 'operator' só pode ser aplicado a uma instância de uma classe ref ou um tipo de valor  
+operador 'operator' só pode ser aplicado a uma instância de uma classe ou um tipo de valor  
   
- Um operador CLR não pode ser usado em um tipo nativo. O operador pode ser usado em uma classe ref ou um struct ref (um tipo de valor), mas não um tipo nativo como int ou um alias para um tipo nativo como System:: Int32. Esses tipos não podem ser convertidos no código C++ de forma que se refere à variável nativa para que o operador não pode ser usado.  
+ Um operador CLR não pode ser usado em um tipo nativo. O operador pode ser usado em uma classe ref ou uma estrutura (um tipo de valor), mas não é um tipo nativo como int ou um alias para um tipo nativo como System::Int32. Esses tipos não podem ser convertidos de código C++ de forma que se refere à variável nativo para que o operador não pode ser usado.  
   
- Para obter mais informações, consulte [operador de referência de controle](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
+ Para obter mais informações, consulte [operador de referência de rastreamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3071.  

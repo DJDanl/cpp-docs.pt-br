@@ -1,5 +1,5 @@
 ---
-title: C2842 de erro do compilador | Documentos do Microsoft
+title: C2842 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: e4b3067b3293892d25dace565538a022e49a6f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3998ff0b07ba78228ac51bccac047d8889ccf81b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2842"></a>C2842 de erro do compilador
-'class': gerenciada ou tipo WinRT não pode definir seu próprios 'operator new' ou 'operador delete'  
+'class': um gerenciado ou tipo de WinRT não pode definir seu próprio 'operator new' ou 'operator delete'  
   
- Você pode definir seus próprios **novo operador ou **operador delete * * para gerenciar a alocação de memória no heap nativo. No entanto, as classes de referência não podem definir esses operadores porque elas só são alocadas no heap gerenciado.  
+ Você pode definir suas próprias * * operador novo ou **operador delete** para gerenciar a alocação de memória no heap nativo. No entanto, as classes de referência não é possível definir esses operadores porque elas só são alocadas no heap gerenciado.  
 
   
- Para obter mais informações, consulte [operadores definidos pelo usuário (C + + / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
+ Para obter mais informações, consulte [operadores definidos pelo usuário (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C2842.  

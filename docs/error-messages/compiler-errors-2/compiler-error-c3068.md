@@ -1,5 +1,5 @@
 ---
-title: C3068 de erro do compilador | Documentos do Microsoft
+title: C3068 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1b86e93da3900c7735fe9ff4a7ee4fc9903e5e9a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 413376428e33cbc703b3371589777ba4fed0c1f7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3068"></a>C3068 de erro do compilador
-'function': uma função 'naked' não pode conter objetos que exigem desenrolamento se ocorreu uma exceção de C++  
+'function': uma função 'naked' não pode conter objetos que possam requerer liberação caso uma exceção de C++  
   
- O compilador não pôde executar o desenrolamento de pilha em uma [naked](../../cpp/naked-cpp.md) função que lançou uma exceção porque foi criado um objeto temporário na função e tratamento de exceções C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.  
+ O compilador não pôde executar o desenrolamento de pilha em uma [naked](../../cpp/naked-cpp.md) função que gerou uma exceção porque um objeto temporário foi criado na função e tratamento de exceções C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.  
   
  Para resolver esse erro, faça pelo menos um dos seguintes:  
   
@@ -53,9 +39,9 @@ ms.lasthandoff: 02/25/2017
   
 -   Não crie um objeto temporário na função.  
   
- Se uma função cria um objeto temporário na pilha, se a função lançará uma exceção, e se o tratamento de exceções C++ estiver habilitado, o compilador irá limpar a pilha se uma exceção é lançada.  
+ Se uma função cria um objeto temporário na pilha, se a função gera uma exceção, e se o tratamento de exceções C++ estiver habilitado, o compilador limpará a pilha se uma exceção for lançada.  
   
- Quando uma exceção é lançada, compilador gerado código, chamado de prólogo e epílogo e que não estão presente em uma função naked, é executada para uma função.  
+ Quando uma exceção é gerada, compilador gerado código, chamado de prólogo e epílogo e que não estão presentes em uma função naked, é executado para uma função.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3068:  

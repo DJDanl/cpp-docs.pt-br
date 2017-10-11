@@ -1,5 +1,5 @@
 ---
-title: C2993 de erro do compilador | Documentos do Microsoft
+title: C2993 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 83d1c0b2c4da8b419c94afa359a8961e616b0dec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2993"></a>C2993 de erro do compilador
-'identifier': tipo inválido para parâmetro de modelo sem tipo 'parameter'  
+'Identificador': tipo inválido para parâmetro de modelo de tipo não 'parameter'  
   
- Você não pode declarar um modelo com uma estrutura ou união argumento. Use ponteiros para passar estruturas e uniões como parâmetros de modelo.  
+ Você não pode declarar um modelo com uma estrutura ou um argumento de união. Use ponteiros para passar estruturas e uniões como parâmetros de modelo.  
   
  O exemplo a seguir gera C2993:  
   
@@ -64,7 +50,7 @@ class CMyClass {};
   
  Esse erro também será gerado como resultado do trabalho de conformidade do compilador que foi feito no Visual Studio .NET 2003: parâmetros de modelo sem tipo não pode mais de ponto flutuante. O padrão C++ não permitir ponto flutuante parâmetros de modelo sem tipo.  
   
- Se for um modelo de função, use um argumento de função para passar o flutuante ponto de parâmetro de modelo sem tipo (esse código será válido nas versões Visual Studio .NET 2003 e Visual Studio .NET do Visual C++). Se for um modelo de classe, não há nenhuma solução alternativa mais simples.  
+ Se for um modelo de função, use um argumento de função para passar o flutuante ponto de parâmetro de modelo sem tipo (esse código será válido das versões do Visual Studio .NET 2003 e o Visual Studio .NET do Visual C++). Se for um modelo de classe, não há nenhuma solução alternativa mais simples.  
   
 ```  
 // C2993b.cpp  

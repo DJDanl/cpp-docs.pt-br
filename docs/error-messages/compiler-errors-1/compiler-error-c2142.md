@@ -1,5 +1,5 @@
 ---
-title: C2142 de erro do compilador | Documentos do Microsoft
+title: C2142 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d52eff9bee2f55d5fc67e9300f7278373a7f6f98
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3a7e3a8950718ef50c8a497847d72a371f592e59
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2142"></a>C2142 de erro do compilador
-declarações da função diferem, parâmetros variáveis especificados em apenas uma delas  
+declarações de função diferem, parâmetros variáveis especificados em apenas uma delas  
   
- Uma declaração da função contém uma lista de parâmetros de variável. Outra declaração não. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) apenas.  
+ Uma declaração da função contém uma lista de parâmetros variáveis. Outra declaração não. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) apenas.  
   
  O exemplo a seguir gera C2142:  
   

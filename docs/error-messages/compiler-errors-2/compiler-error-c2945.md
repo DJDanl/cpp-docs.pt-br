@@ -1,5 +1,5 @@
 ---
-title: C2945 de erro do compilador | Documentos do Microsoft
+title: C2945 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bf570d975c9638ae0e5321525ca94e3d5738be2a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dce5e327caf9979711119871809dbd02b3966f64
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2945"></a>C2945 de erro do compilador
-instanciação explícita não faz referência a uma especialização de classe de template  
+instanciação explícita não faz referência a uma especialização de classe de modelo  
   
  Não é possível instanciar algo que não é modelado explicitamente.

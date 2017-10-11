@@ -1,5 +1,5 @@
 ---
-title: C2293 de erro do compilador | Documentos do Microsoft
+title: C2293 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c5ff743e572c92c47231563f2c2b35ba5fca03f6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0b57daead4d355c81d0d411e37665e453d8f76c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2293"></a>C2293 de erro do compilador
-'identifier': ilegal para ter uma variável de membro como um especificador de __based  
+'Identificador': inválido ter uma variável de membro como um especificador based  
   
- Os especificadores de `__based` modificador deve ser ponteiros de não-membro.  
+ Especificadores de `__based` modificador deve ser ponteiros não membro.  
   
  O exemplo a seguir gera C2293:  
   

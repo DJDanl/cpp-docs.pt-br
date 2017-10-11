@@ -1,5 +1,5 @@
 ---
-title: C2557 de erro do compilador | Documentos do Microsoft
+title: C2557 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ac5c4e6950b8887d6b9cf00d1a95b5241c9e829f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1c52e0230504e9da79033def009aa8513c7e663c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2557"></a>C2557 de erro do compilador
-'identifier': membros particulares e protegidos não podem ser inicializados sem um construtor  
+'Identificador': membros private e protected não podem ser inicializados sem um construtor  
   
- Somente os membros e amigos podem atribuir um valor a um membro particular ou protegido. Membros não públicos devem ser inicializados no construtor da classe.
+ Somente membros e seus amigos podem atribuir um valor a um membro particular ou protegido. Membros não públicos devem ser inicializados no construtor da classe.

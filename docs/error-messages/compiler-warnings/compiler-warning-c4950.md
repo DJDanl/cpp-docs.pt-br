@@ -1,5 +1,5 @@
 ---
-title: C4950 de aviso do compilador | Documentos do Microsoft
+title: C4950 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 937510b3fadf3dd2aff81defc08ea2c74b8b7dec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6a922a0ee324afcf5f263abe2189e4071c5575c7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4950"></a>C4950 de aviso do compilador
-'type_or_member': marcados como obsoletos  
+'type_or_member': marcado como obsoleto  
   
-Um tipo ou membro foi marcado como obsoleto com a <xref:System.ObsoleteAttribute>atributo.</xref:System.ObsoleteAttribute>  
+Um membro ou tipo foi marcado como obsoleto com o <xref:System.ObsoleteAttribute> atributo.  
   
-C4950 sempre é emitida como um erro. Você pode desativar esse aviso usando o [aviso](../../preprocessor/warning.md) diretiva pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.  
+C4950 sempre é emitido como um erro. Você pode desativar esse aviso usando o [aviso](../../preprocessor/warning.md) diretiva pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C4950:  

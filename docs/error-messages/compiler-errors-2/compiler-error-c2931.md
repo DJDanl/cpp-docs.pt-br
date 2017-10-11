@@ -1,5 +1,5 @@
 ---
-title: C2931 de erro do compilador | Documentos do Microsoft
+title: C2931 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 007d7f3b7e5de79d8e8fd239eb169bd25ce9660f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8b8289508c84b24a5077be2160a7915900d3619a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2931"></a>C2931 de erro do compilador
-'class': id de classe de tipo é redefinida como uma função de membro de 'Identificador'  
+'class': id de classe de tipo é redefinido como uma função de membro de 'Identificador'  
   
  Você não pode usar uma classe genérica ou modelo como uma função de membro de outra classe.  
   
- Esse erro pode ser causado se chaves serão comparados incorretamente.  
+ Esse erro pode ocorrer se as chaves são combinadas incorretamente.  
   
  O exemplo a seguir gera C2931:  
   

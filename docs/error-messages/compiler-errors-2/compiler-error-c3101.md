@@ -1,5 +1,5 @@
 ---
-title: C3101 de erro do compilador | Documentos do Microsoft
+title: C3101 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4447806432ddb1ae884e9ba4b27efae3b6a89b04
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f08cfe2c201981183305f6ac04d1bf24b6378d48
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3101"></a>C3101 de erro do compilador
-Expressão ilegal para o campo' argumento de atributo nomeado'  
+expressão inválida para o campo' argumento de atributo nomeado'  
   
  Ao inicializar um argumento de atributo nomeado, o valor deve ser uma constante de tempo de compilação.  
   

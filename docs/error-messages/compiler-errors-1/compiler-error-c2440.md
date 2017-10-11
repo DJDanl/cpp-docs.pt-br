@@ -19,25 +19,11 @@ caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2440"></a>C2440 de erro do compilador
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/12/2017
 O compilador não pode converter de `type1` para `type2`.  
   
 ## <a name="example"></a>Exemplo  
-C2440 pode ser causado se você tentar inicializar a não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de uma literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
+C2440 pode ocorrer se você tentar inicializar a não const `char*` (ou `wchar_t*`) usando uma cadeia de caracteres literal no código C++, quando a opção de conformidade do compilador [/ZC: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) está definido. Em C, o tipo de uma literal de cadeia de caracteres é a matriz de `char`, mas em C++, ele é a matriz de `const char`. Este exemplo gera C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -187,7 +173,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- C2440 também poderá ocorrer se você tentar criar uma instância de uma matriz de Visual C++ cujo tipo é <xref:System.Array>.</xref:System.Array>  Para obter mais informações, consulte [matrizes](../../windows/arrays-cpp-component-extensions.md).  O próximo exemplo gera C2440:  
+ C2440 também poderá ocorrer se você tentar criar uma instância de uma matriz de Visual C++ cujo tipo é um <xref:System.Array>.  Para obter mais informações, consulte [matrizes](../../windows/arrays-cpp-component-extensions.md).  O próximo exemplo gera C2440:  
   
 ```cpp  
 // C2440e.cpp  

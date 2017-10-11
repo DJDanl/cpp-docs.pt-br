@@ -1,5 +1,5 @@
 ---
-title: C3487 de erro do compilador | Documentos do Microsoft
+title: Erro do compilador C3487 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4502e7c20f41c733e57ffc1c861a51f15b6d829c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb659f2d7971d1dd2ff27c438839336d4744767e
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3487"></a>Erro do Compilador C3487
-tipo de retorno: todos retornam expressões devem deduzir o mesmo tipo: anteriormente era 'tipo de retorno'  
+tipo de retorno: todos retornam expressões devem ser deduzidas para o mesmo tipo: anteriormente era 'tipo de retorno'  
   
- Um lambda deve especificar seu tipo de retorno, a menos que ela contém uma única instrução return. Se um lambda contém várias instruções de retornos, eles devem todos ter o mesmo tipo.  
+ Uma expressão lambda deve especificar seu tipo de retorno, a menos que ele contém uma única instrução de retorno. Se uma expressão lambda contiver várias instruções de retorno, eles devem todos ter o mesmo tipo.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Especifique um tipo de retorno à direita para lambda. Verifique se todas as devoluções de lambda são do mesmo tipo ou podem ser convertidas implicitamente para o tipo de retorno.  
+-   Especifique um tipo de retorno à direita para o lambda. Verifique se todos os retornos de lambda são do mesmo tipo ou podem ser convertidos implicitamente para o tipo de retorno.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3487 porque os tipos de retorno do lambda não coincidem:  

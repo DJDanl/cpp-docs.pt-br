@@ -1,5 +1,5 @@
 ---
-title: C3279 de erro do compilador | Documentos do Microsoft
+title: C3279 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 79b2d44cdb55237f190195cd063b34d0b55d7293
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 16bb13d226b6d4d5d5846f8302070bf0c9579cfb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3279"></a>C3279 de erro do compilador
-especializações parciais e explícitas bem como instanciações explícitas de templates de classe declaradas no namespace cli não são permitidas  
+especializações parciais e explícitas bem como instanciações explícitas de modelos de classe declaradas no namespace cli não são permitidas  
   
- O `cli` namespace é definida pela Microsoft e contém modelos pseudo. O compilador do Visual C++ não permite especializações definidas pelo usuário, parciais e explícitas e explícitas instanciações de modelos de classe neste namespace.  
+ O `cli` namespace é definida pela Microsoft e contém os modelos de pseudo. O compilador do Visual C++ não permite especializações definida pelo usuário, parciais e explícitas e instanciações explícitas de modelos de classe neste namespace.  
   
  O exemplo a seguir gera C3279:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3463 de erro do compilador | Documentos do Microsoft
+title: C3463 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e9deada94af9afb671b878018b7ff0b10599d67a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2c5f79f76329277fa24e90eaa0ab32209cafe6c0
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3463"></a>C3463 de erro do compilador
-'type': tipo não são permitido no atributo 'implements'  
+'type': tipo não permitido em atributo 'implements'  
   
- Um tipo inválido foi passado para o [implementa](../../windows/implements-cpp.md) atributo. Por exemplo, você pode passar uma interface para `implements`, mas você não pode passar um ponteiro para uma interface.  
+ Um tipo inválido foi passado para o [implementa](../../windows/implements-cpp.md) atributo. Por exemplo, você pode transmitir uma interface para `implements`, mas você não pode passar um ponteiro para uma interface.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3463.  

@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4028 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4028 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1db6458377104463d7f350e7ed5cdaa4bc25739a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0041d795ed5afce50592f21f41986d3f32c71fe3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4028"></a>Compilador C4028 de aviso (nível 1)
-parâmetro formal 'number' diferente da declaração  
+'número' diferente da declaração de parâmetro formal  
   
- O tipo do parâmetro formal não concordar com o parâmetro correspondente na declaração. O tipo de declaração original é usado.  
+ O tipo do parâmetro formal não concorda com o parâmetro correspondente na declaração. O tipo de declaração original é usado.  
   
  Este aviso só é válido para o código-fonte C.  
   

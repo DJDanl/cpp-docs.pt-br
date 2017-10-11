@@ -1,5 +1,5 @@
 ---
-title: C2203 de erro do compilador | Documentos do Microsoft
+title: C2203 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 50dc129eb55c992dcc150366354c56274c9425dd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebb6260cbf41ffcd48ef60a1bd183e27db17e16a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2203"></a>C2203 de erro do compilador
-operador delete não pode especificar limites para uma matriz  
+Excluir operador não é possível especificar limites para uma matriz  
   
- Com o **/Za** opção (ANSI), o `delete` operador pode excluir uma matriz inteira, mas não partes ou membros específicos da matriz.  
+ Com o **/Za** opção (ANSI), o `delete` operador pode excluir uma matriz de inteira, mas não partes ou membros específicos da matriz.  
   
  O exemplo a seguir gera C2203:  
   

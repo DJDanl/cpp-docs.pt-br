@@ -1,5 +1,5 @@
 ---
-title: "Compilador aviso (nível 1) C4026 | Documentos do Microsoft"
+title: "Compilador (nível 1) de aviso C4026 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8d83dd06e4b79372c2921ec980864107c92aa39c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e0590ab769aa7fd1da43405ea62085c992130e6f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4026"></a>Compilador C4026 de aviso (nível 1)
 função declarada com lista de parâmetros formais  
   
- A declaração de função tem parâmetros formais, mas não a definição da função. Chamadas subsequentes para essa função pressupõem que a função não usa nenhum parâmetro.
+ A declaração da função possui parâmetros formais, mas não a definição da função. Chamadas subsequentes para essa função presumem que a função não usa nenhum parâmetro.

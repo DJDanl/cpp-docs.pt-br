@@ -1,5 +1,5 @@
 ---
-title: C2283 de erro do compilador | Documentos do Microsoft
+title: C2283 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0ab2992bf11a13dc54fcebe067ed21f0c6670ff1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6c3a02fcd88f5bb61e6856ad841883a17718d1a
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2283"></a>C2283 de erro do compilador
-'identifier': especificador puro ou abstrato substituir especificador não permitida em estrutura sem nome  
+'Identificador': especificador puro ou abstrato especificador de substituição não permitido no struct sem nome  
   
- Uma função de membro de uma classe sem nome ou a estrutura é declarada com um especificador puro, que não é permitido.  
+ Uma função de membro de uma estrutura ou classe sem nome foi declarada com um especificador puro, que não é permitido.  
   
  O exemplo a seguir gera C2283:  
   

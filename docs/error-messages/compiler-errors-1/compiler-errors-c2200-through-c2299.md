@@ -65,41 +65,27 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>C2200 de erros do compilador por meio de C2299
 Os artigos nesta parte da documentação contêm informações sobre uma subseção de erros do compilador do Visual C++. Você pode acessar as informações aqui ou no **saída** janela no Visual Studio, você pode selecionar um número de erro e, em seguida, escolha a tecla F1.  
   
 > [!NOTE]
->  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug em [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+>  Nem todo [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erro está documentado no MSDN. Em muitos casos, a mensagem de diagnóstica fornece todas as informações que estão disponíveis. Se você achar que precisa de uma mensagem de erro explicação adicional, você poderá nos informar. Use o formulário de comentários nesta página, ou vá para a barra de menus do Visual Studio e escolha **ajuda**, **relatar um erro**, ou você pode enviar um relatório de sugestão ou um bug no [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre os erros e avisos em [estouro de pilha](http://stackoverflow.com/).  
+ Você pode obter assistência adicional para erros e avisos nos fóruns públicos do MSDN. O [linguagem Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) fórum é para perguntas e discussões sobre o [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxe de linguagem e compilador. O [geral do Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) fórum é para perguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que não são abordados em outros fóruns. Você também pode encontrar ajuda sobre erros e avisos sobre [estouro de pilha](http://stackoverflow.com/).  
   
 |Erro|Mensagem|  
 |-----------|-------------|  
 |[Erro do compilador C2200](compiler-error-c2200.md)|'*função*': função já foi definida|  
 |[Erro do compilador C2201](compiler-error-c2201.md)|'*identificador*': deve possuir vínculo externo para ser exportado/importado|  
 |C2202 de erro do compilador|'*função*': nem todos os caminhos de controle retornam um valor|  
-|[Erro do compilador C2203](compiler-error-c2203.md)|operador delete não pode especificar limites para uma matriz|  
+|[Erro do compilador C2203](compiler-error-c2203.md)|Excluir operador não é possível especificar limites para uma matriz|  
 |[Erro do compilador C2204](compiler-error-c2204.md)|'*tipo*': definição de tipo encontrada dentro dos parênteses|  
 |[Erro do compilador C2205](compiler-error-c2205.md)|'*identificador*': não é possível inicializar variáveis extern com escopo de bloco|  
 |[Erro do compilador C2206](compiler-error-c2206.md)|'*função*': typedef não pode ser usado para definição de função|  
@@ -110,12 +96,12 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2211 de erro do compilador|Um destruidor não virtual em uma classe ref derivado de uma classe ref com um destruidor público também deve ser público|  
 |[Erro do compilador C2212](compiler-error-c2212.md)|'*identificador*': based não disponível a ponteiros para funções|  
 |[Erro do compilador C2213](compiler-error-c2213.md)|'*identificador*': argumento inválido para based|  
-|C2214 de erro do compilador|ponteiros com base em 'void' requerem o uso de:>|  
+|C2214 de erro do compilador|ponteiros com base em 'void' requerem o uso de: >|  
 |C2215 de erro do compilador|'*palavra-chave*' não pode ser usado com ' / /arch: SSE'|  
 |[Erro do compilador C2216](compiler-error-c2216.md)|'*keyword1*'não pode ser usado com'*keyword2*'|  
 |[Erro do compilador C2217](compiler-error-c2217.md)|'*attribute1*'requer'*attribute2*'|  
 |[Erro do compilador C2218](compiler-error-c2218.md)|'*calltype*' não pode ser usado com ' / /arch: IA32'|  
-|[Erro do compilador C2219](compiler-error-c2219.md)|erro de sintaxe: o qualificador de tipo deve estar depois de '*'|  
+|[Erro do compilador C2219](compiler-error-c2219.md)|Erro de sintaxe: qualificador de tipo deve ser posterior à ' *'|  
 |[Erro do compilador C2220](compiler-error-c2220.md)|Aviso tratado como erro - não '*filetype*' arquivo gerado|  
 |C2221 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C2222](compiler-error-c2222.md)|tipo inesperado '*tipo*': uma classe base ou um membro era esperado|  
@@ -138,7 +124,7 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |C2239 de erro do compilador|'*função*': tentativa de excluir uma função de dllexport|  
 |C2240 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C2241](compiler-error-c2241.md)|'*identificador*': acesso de membro é restrito|  
-|[Erro do compilador C2242](compiler-error-c2242.md)|nome de typedef não pode seguir class/struct/union|  
+|[Erro do compilador C2242](compiler-error-c2242.md)|o nome de TypeDef não pode seguir classe/struct/união|  
 |[Erro do compilador C2243](compiler-error-c2243.md)|'*conversion_type*': conversão de '*type1*'para'*type2*' existe, mas é inacessível|  
 |[Erro do compilador C2244](compiler-error-c2244.md)|'*identificador*': não é possível corresponder a definição de função a uma declaração existente|  
 |[Erro do compilador C2245](compiler-error-c2245.md)|função membro inexistente '*função*' especificada como friend (assinatura de função de membro não corresponde a nenhuma sobrecarga)|  
@@ -148,8 +134,8 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2249](compiler-error-c2249.md)|'*identificador*': nenhum caminho acessível para *acessibilidade* *membro* declarado na base virtual '*classe*'|  
 |[Erro do compilador C2250](compiler-error-c2250.md)|'*identificador*': herança ambígua de *classe*::*membro*'|  
 |[Erro do compilador C2251](compiler-error-c2251.md)|namespace '*namespace*'não tem um membro'*identificador*'-você quis dizer '*membro*'?|  
-|[Erro do compilador C2252](compiler-error-c2252.md)|uma instanciação explícita de um template só pode ocorrer em escopo de namespace|  
-|[Erro do compilador C2253](compiler-error-c2253.md)|'*função*': especificador puro ou abstrato só é permitido em função virtual de especificador de substituição|  
+|[Erro do compilador C2252](compiler-error-c2252.md)|uma instanciação explícita de um modelo só pode ocorrer no escopo do namespace|  
+|[Erro do compilador C2253](compiler-error-c2253.md)|'*função*': especificador puro ou abstract permitido apenas em função virtual de especificador de substituição|  
 |[Erro do compilador C2254](compiler-error-c2254.md)|'*função*': especificador puro ou abstrato especificador de substituição não permitido em função friend|  
 |[Erro do compilador C2255](compiler-error-c2255.md)|'*elemento*': não é permitida fora de uma definição de classe|  
 |[Erro do compilador C2256](compiler-error-c2256.md)|Uso inválido de especificador friend em '*função*'|  
@@ -176,12 +162,12 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2277](compiler-error-c2277.md)|'*função*': não é possível obter o endereço desta função de membro|  
 |C2278 de erro do compilador|Obsoleto.|  
 |[Erro do compilador C2279](compiler-error-c2279.md)|especificação de exceção não pode aparecer em uma declaração de typedef|  
-|[C2280 de erro do compilador](compiler-error-c2280.md)|'*classe*::*função*': tentativa de fazer referência a uma função excluída|  
+|[Erro do compilador C2280](compiler-error-c2280.md)|'*classe*::*função*': tentativa de fazer referência a uma função excluída|  
 |C2281 de erro do compilador|'*classe*::*função*': uma função só pode ser excluída na primeira declaração|  
 |C2282 de erro do compilador|'*function1*'não pode substituir'*function2*'|  
 |[Erro do compilador C2283](compiler-error-c2283.md)|'*identificador*': especificador puro ou abstrata não permitido em sem nome de classe/struct de especificador de substituição|  
 |C2284 de erro do compilador|'*função*': argumento inválido para função intrínseca, parâmetro *número*|  
-|[Erro do compilador C2285](compiler-error-c2285.md)|representação de ponteiros para membros já foi determinada - pragma ignorado|  
+|[Erro do compilador C2285](compiler-error-c2285.md)|ponteiros para representação de membros já foi determinada - pragma ignorado|  
 |[Erro do compilador C2286](compiler-error-c2286.md)|ponteiros para membros de '*identificador*' representação já está definida como *herança* -declaração ignorada|  
 |[Erro do compilador C2287](compiler-error-c2287.md)|'*identificador*': representação de herança: '*inheritiance*'é menos geral do que o necessário'*herança*'|  
 |C2288 de erro do compilador|Obsoleto.|  
@@ -194,6 +180,6 @@ Os artigos nesta parte da documentação contêm informações sobre uma subseç
 |[Erro do compilador C2295](compiler-error-c2295.md)|escape '*caracteres*': é inválido na definição de macro|  
 |[Erro do compilador C2296](compiler-error-c2296.md)|'*operador*': inválido, operando esquerdo possui tipo '*tipo*'|  
 |[Erro do compilador C2297](compiler-error-c2297.md)|'*operador*': inválido, operando direito possui tipo '*tipo*'|  
-|[Erro do compilador C2298](compiler-error-c2298.md)|ponteiro de chamada para limite ausente para função de membro|  
+|[Erro do compilador C2298](compiler-error-c2298.md)|chamada para limite de ponteiro para função de membro ausente|  
 |[Erro do compilador C2299](compiler-error-c2299.md)|'*função*': alteração de comportamento: uma especialização explícita não pode ser um construtor de cópia ou operador de atribuição de cópia|  
 

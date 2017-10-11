@@ -1,5 +1,5 @@
 ---
-title: C3623 de erro do compilador | Documentos do Microsoft
+title: C3623 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e76c363b805df93a04309a215d092e4bb56717b9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: df590a7883266f34c749e1aaae2f7f0b8a1f0243
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3623"></a>C3623 de erro do compilador
-'variável': não há suporte para campos de bits em gerenciados ou tipos WinRT  
+'variável': não há suporte para campos de bits no gerenciados ou tipos de WinRT  
   
- O uso de campos de bits não é permitido em variáveis em um gerenciado ou classe do WinRT.  
+ O uso de campos de bits não é permitido em uma classe de WinRT ou variáveis em um gerenciado.  
   
  O exemplo a seguir gera C3623:  
   

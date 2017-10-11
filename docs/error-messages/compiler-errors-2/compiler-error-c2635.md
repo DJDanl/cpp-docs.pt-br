@@ -1,5 +1,5 @@
 ---
-title: C2635 de erro do compilador | Documentos do Microsoft
+title: C2635 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7bc10305778a247864d99ad5a5e65c8392d2765e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a8ff1361a312c8d2abf7e07de3add2dbd3254ca
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2635"></a>C2635 de erro do compilador
-não é possível converter um 'identifier1 *' para um ' identifier2\*'; a conversão de uma classe base virtual está implícito  
+não é possível converter um 'identifier1 *' para um ' identifier2\*'; conversão de uma classe base virtual está implícita  
   
- A conversão requer uma conversão de um `virtual` base classe em uma classe derivada, que não é permitida.  
+ A conversão requer uma conversão de um `virtual` classe base a uma classe derivada, que não é permitida.  
   
  O exemplo a seguir gera C2635:  
   

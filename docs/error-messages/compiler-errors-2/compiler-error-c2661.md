@@ -1,5 +1,5 @@
 ---
-title: C2661 de erro do compilador | Documentos do Microsoft
+title: C2661 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c0d9d871feb7a673d0937ea65942c7a9733b4261
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5d33bbb0dd1053a200791952848146450e9a16
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2661"></a>C2661 de erro do compilador
-'function': nenhuma função sobrecarregada usa parâmetros de número  
+'function': nenhuma função sobrecarregada recebe parâmetros de número  
   
  Possíveis causas:  
   
-1.  Parâmetros incorretos reais na chamada de função.  
+1.  Parâmetros reais incorretos na chamada de função.  
   
 2.  Declaração de função ausente.  
   

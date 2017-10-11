@@ -1,5 +1,5 @@
 ---
-title: C3025 de erro do compilador | Documentos do Microsoft
+title: C3025 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f80cb5047543abda98fec9bc224df7cca471fea9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 96211bf47a286a6de9a59042749b8aa2f9a3292f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3025"></a>C3025 de erro do compilador
-'cláusula': expressão integral esperado  
+'cláusula': expressão integral esperada  
   
- Uma cláusula requer uma expressão de inteiro, mas recebeu uma expressão não inteiras.  
+ Uma cláusula requer uma expressão de inteiro, mas recebeu uma expressão fracionários.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3025.  

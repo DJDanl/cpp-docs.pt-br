@@ -1,5 +1,5 @@
 ---
-title: C2002 de erro do compilador | Documentos do Microsoft
+title: C2002 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,44 +19,30 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 68cb3b5b63d2b3267332be8e2e5375445aa2f5cf
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d8f6fc5983a462850581f69ca32dd7c305f9e847
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2002"></a>C2002 de erro do compilador
-constante de caractere largo inválida  
+constante de caractere largo inválido  
   
- A constante de caractere multibyte não é válida.  
+ A constante de caracteres multibyte não é válida.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
   
 1.  A constante de caractere largo contiver mais bytes que o esperado.  
   
-2.  O cabeçalho padrão stddef não está incluído.  
+2.  O cabeçalho padrão STDDEF.h não está incluído.  
   
 3.  Caracteres largos não podem ser concatenados com literais de cadeia de caracteres comum.  
   
-4.  Uma constante de caractere largo deve ser precedida pelo caractere 'L',':  
+4.  Uma constante de caractere largo deve ser precedida pelo caractere 'L':  
   
     ```  
     L'mbconst'  
     ```  
   
-5.  Para o Microsoft C++, os argumentos de texto de uma diretiva de pré-processador devem ser ASCII. Por exemplo, a diretiva `#pragma message(L"string")`, não é válido.
+5.  Para C++ da Microsoft, os argumentos de texto de uma diretiva de pré-processador devem ser ASCII. Por exemplo, a diretiva `#pragma message(L"string")`, não é válido.

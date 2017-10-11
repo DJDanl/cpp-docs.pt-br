@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1311 | Documentos do Microsoft
+title: Erro fatal C1311 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f7d28b0a8033e05052ac24704dc5008a0bebdea9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9aeb63e041ddfe26a8fc47afc838f2f5c3ce35d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1311"></a>Erro fatal C1311
-Formato COFF estaticamente não é possível inicializar 'var' com número byte de um endereço  
+Formato COFF não pode inicializar estaticamente 'var' com número bytes de um endereço  
   
- Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo possui armazenamento de menos de quatro bytes.  
+ Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo tem o armazenamento de menos de quatro bytes.  
   
- Esse erro pode ocorrer no código que seja válido C++.  
+ Esse erro pode ocorrer em código que seja C++ válido.  
   
  O exemplo a seguir mostra uma condição que pode causar C1311.  
   

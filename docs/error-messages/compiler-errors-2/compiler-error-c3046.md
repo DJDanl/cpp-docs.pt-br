@@ -1,5 +1,5 @@
 ---
-title: C3046 de erro do compilador | Documentos do Microsoft
+title: C3046 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 82e67365f5a6ac4c2d5f7a3430925ecb97848bd7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: faeb97b8588731340bc40dfbd53a64fe7e96a77c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3046"></a>C3046 de erro do compilador
 Faltando bloco estruturado em uma região de OpenMP '#pragma omp sections'  
   
- A [seções](../../parallel/openmp/reference/sections-openmp.md) diretiva tem um bloco de código vazio.  
+ Um [seções](../../parallel/openmp/reference/sections-openmp.md) diretiva tem um bloco de código vazio.  
   
  O exemplo a seguir gera C3046:  
   

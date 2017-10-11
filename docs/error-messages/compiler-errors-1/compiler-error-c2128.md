@@ -1,5 +1,5 @@
 ---
-title: C2128 de erro do compilador | Documentos do Microsoft
+title: C2128 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3cb653846f0c69e7a53131ee778bc09ac1132c49
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0739af6c84b2dc1a7f86c5cb4843ce66e85bf85
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2128"></a>C2128 de erro do compilador
-'function': alloc_text/same_seg aplicável somente a funções com vinculação C  
+'function': alloc_text/same_seg aplicável apenas a funções com vínculo a C  
   
- `pragma``alloc_text` só pode ser usada com funções declaradas com vinculação C.  
+ `pragma``alloc_text` só pode ser usada com funções declaradas com vínculo a C.  
   
  O exemplo a seguir gera C2128:  
   

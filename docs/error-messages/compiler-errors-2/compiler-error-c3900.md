@@ -1,5 +1,5 @@
 ---
-title: C3900 de erro do compilador | Documentos do Microsoft
+title: C3900 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c957b6c315e2e5440cfb9d23e05de862363548d1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29a2210ec372de6f752091a8eb13a4e5eb4f4aa7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3900"></a>C3900 de erro do compilador
 'member': não é permitida no escopo atual  
   
- Blocos de propriedade podem conter declarações de função e definições de função embutida somente. Não há membros diferentes funções são permitidos em blocos de propriedade. Nenhuma função friend, operadores ou definições de tipo é permitidas. Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
+ Blocos de propriedade podem conter declarações de função e definições de função embutida somente. Não há membros que não sejam são permitidos em blocos de propriedade. Nenhuma função friend, operadores ou definições de tipo é permitidas. Para obter mais informações, consulte [propriedade](../../windows/property-cpp-component-extensions.md).  
   
- Definições de eventos podem conter apenas métodos de acesso e funções.  
+ Definições de evento só podem conter funções e métodos de acesso.  
   
  O exemplo a seguir gera C3900:  
   

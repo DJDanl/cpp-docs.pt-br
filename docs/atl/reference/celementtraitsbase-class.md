@@ -1,5 +1,5 @@
 ---
-title: Classe CElementTraitsBase | Documentos do Microsoft
+title: Classe CElementTraitsBase | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>Classe CElementTraitsBase
-Essa classe fornece uma cópia padrão e move os métodos para uma classe de coleção.  
+Esta classe fornece uma cópia padrão e move os métodos para uma classe de coleção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,15 +51,15 @@ class CElementTraitsBase
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
 |[CElementTraitsBase::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Chame esse método para copiar elementos armazenados em um objeto de classe de coleção.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Chame esse método para transferir elementos armazenados em um objeto de classe de coleção.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Chame esse método para copiar os elementos armazenados em um objeto de classe de coleção.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Chame este método para realocar armazenados em um objeto de classe de coleção de elementos.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa classe base define métodos para copiar e realocação de elementos em uma classe de coleção. Ele é utilizado pelas classes [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
@@ -84,7 +70,7 @@ class CElementTraitsBase
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- Chame esse método para copiar elementos armazenados em um objeto de classe de coleção.  
+ Chame esse método para copiar os elementos armazenados em um objeto de classe de coleção.  
   
 ```
 static void CopyElements(
@@ -121,7 +107,7 @@ typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
- Chame esse método para transferir elementos armazenados em um objeto de classe de coleção.  
+ Chame este método para realocar armazenados em um objeto de classe de coleção de elementos.  
   
 ```
 static void RelocateElements(
@@ -135,13 +121,13 @@ static void RelocateElements(
  Ponteiro para o primeiro elemento que receberá os dados realocados.  
   
  `pSrc`  
- Ponteiro para o primeiro elemento para realocar.  
+ Ponteiro para o primeiro elemento a ser localizado.  
   
  `nElements`  
- O número de elementos para realocar.  
+ O número de elementos a ser localizado.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método chama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que é suficiente para a maioria dos tipos de dados. Se os objetos que está sendo movidos contêm ponteiros para os seus próprios membros, esse método precisa ser substituído.  
+ Este método chama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que é suficiente para a maioria dos tipos de dados. Se os objetos que estão sendo movidos contêm ponteiros para seus próprios membros, esse método precisa ser substituído.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C3493 de erro do compilador | Documentos do Microsoft
+title: C3493 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6fef74b42b7c0bc62f11a68cf734148d598ce092
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d2336caee3cf2eac6ee748bf40c8cd3f8bf871c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3493"></a>C3493 de erro do compilador
-'var' não pode ser capturada implicitamente porque nenhum modo de captura padrão foi especificado  
+'var' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado  
   
- A captura de expressão lambda vazio, `[]`, especifica que a expressão lambda não não explicitamente ou implicitamente capturar quaisquer variáveis.  
+ A captura de expressão lambda vazio, `[]`, especifica que a expressão lambda não não explicitamente ou implicitamente capturar todas as variáveis.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -53,7 +38,7 @@ ms.lasthandoff: 02/25/2017
 -   Capture explicitamente uma ou mais variáveis.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3493 porque ele modifica uma variável externa, mas Especifica a cláusula capture vazia:  
+ O exemplo a seguir gera C3493 porque ela modifica uma variável externa, mas Especifica a cláusula de captura vazia:  
   
 ```  
 // C3493a.cpp  
@@ -66,7 +51,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3493 especificando por referência como o modo de captura padrão.  
+ O exemplo a seguir elimina C3493 especificando por referência como o modo de captura padrão.  
   
 ```  
 // C3493b.cpp  

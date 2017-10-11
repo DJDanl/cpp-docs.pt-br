@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: pt-br
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Como relatar um problema com o Conjunto de Ferramentas do Visual C++
@@ -40,7 +37,7 @@ Se você encontrar problemas com o compilador, o vinculador ou outras ferramenta
   
  Os relatórios são importantes para nós e para outros desenvolvedores como você. Obrigado por nos ajudar a melhorar o Visual C++!  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> Como preparar seu relatório  
+##  <a name="prepare"></a> Como preparar seu relatório  
  Criar um relatório de alta qualidade é importante porque é muito difícil reproduzir o problema encontrado em nossos computadores sem informações completas. Quanto melhor for seu relatório, mais efetivamente poderemos recriar e diagnosticar o problema.  
   
  No mínimo, o relatório deve conter  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> Falha de back-end (geração de código)  
+####  <a name="backend_crash"></a> Falha de back-end (geração de código)  
  As falhas de back-end ocorrem durante a fase de geração do código do compilador. Normalmente, o compilador emitirá o [Erro Fatal C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e poderá não referenciar o arquivo de código-fonte e número de linha associados ao problema, geralmente ele mencionará um arquivo compiler\utc\src\p2\main.c, mas você pode ignorar esse detalhe.  
   
  Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link_repro) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma [Reprodução pré-processada](#preprocessed_repro) se não estiver. A LTGC é habilitada pelo argumento de linha de comando `/GL` para cl.exe.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  Para esse tipo de falha, forneça uma [Reprodução de vinculação](#link_repro) se você estiver usando a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma [Reprodução pré-processada](#preprocessed_repro) se não estiver. A LTGC é habilitada pelo argumento de linha de comando `/GL` para cl.exe.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> Maneiras de enviar o relatório  
+##  <a name="send"></a> Maneiras de enviar o relatório  
  Há várias maneiras de enviar seu relatório para nós. Você pode registrar um bug no Microsoft Connect, enviá-lo por email para nós ou usar a Ferramenta Reportar um Problema interna do Visual Studio. A melhor opção para seu relatório depende do tipo de problema que você encontrou, como você deseja interagir com os engenheiros que investigarão o relatório e se você deseja acompanhar o progresso ou compartilhar seu relatório com a comunidade.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  Para outros tipos de problemas que podem ocorrer no Visual Studio que não estão relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a ferramenta Relatar um Problema pode ser uma opção especialmente boa devido aos seus recursos de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. O Microsoft Connect também pode ser uma boa opção para relatar esses outros tipos de erro, mas não tem os recursos adicionais da ferramenta Relatar um Problema. Você jamais deve informar esses outros tipos de erros enviando um email para compilercrash@microsoft.com.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> Gerando reproduções  
+##  <a name="generate"></a> Gerando reproduções  
  Uma reprodução é um exemplo de código completo e independente, que demonstra o problema que você está relatando. Uma reprodução **não** é um trecho de código — ela deve ser um exemplo completo que é compilado e executado (ou que deveria, exceto pelos erros gerados pelo problema que você está relatando). Ele deve conter todas as diretivas #include, mesmo para os cabeçalhos padrão.  
   
  Além disso, é uma boa reprodução é  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  A seguir estão as instruções para gerar os vários tipos de reproduções que você usará para relatar diferentes tipos de problemas.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> Reproduções pré-processadas  
+###  <a name="preprocessed_repro"></a> Reproduções pré-processadas  
  Uma reprodução pré-processada é um único arquivo de origem que demonstra um problema e foi gerado da saída do pré-processador C processando o arquivo de origem original. As linhas internas de processo incluíam cabeçalhos para remover dependências de origem adicionais e arquivos de cabeçalho e também resolvem as macros, #ifdefs e outros comandos de pré-processador que poderiam dependem do seu ambiente local.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  Por fim, anexe essa reprodução ao seu relatório.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> Reproduções de vinculação  
+###  <a name="link_repro"></a> Reproduções de vinculação  
  Uma reprodução de vinculação é um único diretório que contém artefatos de build que coletivamente demonstram um problema que ocorre no tempo de vinculação, como falha do back-end envolvendo a LTCG (Geração de Código Durante o Tempo de Vinculação) ou uma falha do vinculador, os artefatos de build incluídos são os necessários como entrada do vinculador para que o problema possa ser reproduzido. As reproduções de vinculação podem ser facilmente criadas usando os recursos fornecidos pelo vinculador.  
   
 ##### <a name="to-generate-a-link-repro"></a>Para gerar uma reprodução de vinculação:  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  Por fim, compacte a reprodução compactando todo o diretório em um arquivo .zip ou semelhante e anexe-o ao seu relatório.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> Outras reproduções  
+###  <a name="other_repros"></a> Outras reproduções  
  Se você não puder reduzir o problema para um único arquivo de origem ou reprodução pré-processada e o problema não exigir uma reprodução de vinculação, poderemos investigar e o projeto do IDE. O código dentro do projeto ainda deverá ser mínimo e todas as diretrizes deste documento ainda se aplicam.  
   
  Crie sua reprodução como um projeto do IDE mínimo e empacote-o compactando toda a estrutura do diretório em um arquivo .zip ou semelhante e anexe-o ao relatório.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

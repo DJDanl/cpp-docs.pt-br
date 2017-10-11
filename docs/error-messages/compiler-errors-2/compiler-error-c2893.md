@@ -1,5 +1,5 @@
 ---
-title: C2893 de erro do compilador | Documentos do Microsoft
+title: C2893 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6dca7f1acf10620232859ac6b9f5a2ff87d4b865
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ad558968720a13b95fecc6860df5826b47874aa
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2893"></a>C2893 de erro do compilador
-Falha de especializar o nome do modelo do modelo de função  
+Falha ao especializar template de função 'nome do modelo'  
   
- O compilador não conseguiu especializar um modelo de função. Pode haver várias causas para esse erro.  
+ Falha do compilador especializar um modelo de função. Pode haver várias causas para esse erro.  
   
- Em geral, a maneira de resolver um erro C2893 é examinar a assinatura da função e certificar-se de que você pode instanciar cada tipo.  
+ Em geral, a maneira de resolver um erro C2893 é examinar a assinatura da função e certificar-se de que você pode criar uma instância de cada tipo de.  
   
 ## <a name="example"></a>Exemplo  
- C2893 ocorre porque `f`do parâmetro de modelo `T` é deduzida como sendo `std::map<int,int>`, mas `std::map<int,int>` não tiver nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.  
+ C2893 ocorre porque `f`do parâmetro de modelo `T` é deduzido seja `std::map<int,int>`, mas `std::map<int,int>` não tem nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.  
   
 ```  
 // C2893.cpp  

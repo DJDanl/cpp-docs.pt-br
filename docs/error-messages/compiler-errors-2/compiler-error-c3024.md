@@ -1,5 +1,5 @@
 ---
-title: C3024 de erro do compilador | Documentos do Microsoft
+title: C3024 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 56879f8a36d5d2cdc3a177c1f446b7c07dbcc2b0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6d1512df35b7ac6042ee1aef05d15eb4392b9d9
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3024"></a>C3024 de erro do compilador
-'schedule(runtime)' : expressão de chunk_size não é permitida  
+'Schedule (Runtime)': expressão de chunk_size não é permitido  
   
- Um valor não pode ser passado para o parâmetro de tempo de execução da cláusula de agendamento.  
+ Um valor não pode ser passado para o parâmetro de tempo de execução da cláusula de agenda.  
   
  O exemplo a seguir gera C3024:  
   

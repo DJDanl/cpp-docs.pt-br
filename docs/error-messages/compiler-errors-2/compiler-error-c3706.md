@@ -1,5 +1,5 @@
 ---
-title: C3706 de erro do compilador | Documentos do Microsoft
+title: C3706 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 080298796a97d6b983b7ff731f6c25ec11722b1b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3706"></a>C3706 de erro do compilador
-'function': deve ser uma interface COM para acionar eventos COM  
+'function': deve ser uma interface COM para disparar eventos COM  
   
- A interface de eventos que você usa para acionar eventos COM deve ser uma interface COM. Nessa situação, a interface devem ser definida usando um atributo de Visual C++ ou importados usando [#import](../../preprocessor/hash-import-directive-cpp.md) de uma biblioteca de tipos com atributo de embedded_idl do #import.  
+ A interface de eventos que você pode usar para disparar eventos COM deve ser uma interface COM. Nessa situação, a interface devem ser definida usando um atributo de Visual C++ ou importados usando [#import](../../preprocessor/hash-import-directive-cpp.md) de uma biblioteca de tipo com atributo de embedded_idl do #import.  
   
- Observe que o `#include` linhas dos arquivos de cabeçalho ATL mostrados no exemplo a seguir são necessárias para o uso de eventos COM. Para corrigir esse erro, verifique `IEvents` (a interface de eventos) uma interface COM aplicando um dos seguintes atributos à definição de interface: [objeto](../../windows/object-cpp.md), [dual](../../windows/dual.md), ou [dispinterface](../../windows/dispinterface.md).  
+ Observe que o `#include` linhas dos arquivos de cabeçalho de ATL mostrados no exemplo a seguir são necessárias para usar COM os eventos. Para corrigir esse erro, verifique `IEvents` (a interface de eventos) uma interface COM aplicando um dos seguintes atributos à definição da interface: [objeto](../../windows/object-cpp.md), [dual](../../windows/dual.md), ou [ dispinterface](../../windows/dispinterface.md).  
   
- Se uma interface for de um arquivo de cabeçalho gerado pelo MIDL, o compilador não a reconhecerá como uma interface COM.  
+ Se uma interface for de um arquivo de cabeçalho gerado pelo MIDL, o compilador não o reconhecerão como uma interface COM.  
   
  O exemplo a seguir gera C3706:  
   

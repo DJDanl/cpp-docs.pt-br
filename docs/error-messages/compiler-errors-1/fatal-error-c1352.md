@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1352 | Documentos do Microsoft
+title: Erro fatal C1352 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,18 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: db8e3be196283a64e58f050918dd951332fb9546
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71f2bf8ef42896447d48c9cb3581006c2e3d7620
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1352"></a>Erro fatal C1352
-MSIL inválido ou corrompido na função 'function' do módulo 'arquivo'  
+MSIL inválido ou corrompido na função 'function' do módulo 'file'  
   
- Um. netmodule foi passado para o compilador, mas o compilador detectou danos no arquivo.  Peça à pessoa que produziu a. netmodule investigar.  
+ Um. netmodule foi passado para o compilador, mas o compilador a corrupção detectada no arquivo.  Peça à pessoa que produziu o. netmodule para investigar.  
   
- O compilador não verifica arquivos. netmodule para todos os tipos de corrupção.  No entanto, ele, verifique todos os caminhos de controle em uma função contêm uma instrução return.  
+ O compilador não verifica arquivos. netmodule para todos os tipos de danos.  No entanto, ele, verifica que todos os caminhos de controle em uma função contém uma instrução return.  
   
- Para obter mais informações, consulte [arquivos. netmodule como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).
+ Para obter mais informações, consulte [. netmodule arquivos como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).

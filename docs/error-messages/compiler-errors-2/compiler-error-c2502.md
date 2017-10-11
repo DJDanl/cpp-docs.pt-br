@@ -1,5 +1,5 @@
 ---
-title: C2502 de erro do compilador | Documentos do Microsoft
+title: C2502 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 41b06375dde83888cbce18f5632a861e19511587
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 396ec843c03843b506174308a5b548f50379c06f
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2502"></a>C2502 de erro do compilador
-'identifier': muitos modificadores de acesso na classe base  
+'Identificador': muitos modificadores de acesso na classe base  
   
- A classe base tem mais de um modificador de acesso. Somente um modificador (`public`, `private`, ou `protected`) é permitido.  
+ A classe base tiver mais de um modificador de acesso. Modificador de acesso de somente um (`public`, `private`, ou `protected`) é permitido.  
   
  O exemplo a seguir gera C2502:  
   

@@ -1,5 +1,5 @@
 ---
-title: C4693 de aviso do compilador | Documentos do Microsoft
+title: C4693 de aviso do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0a2262d559f9771dc2ba4286e675de1bdea6c9ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bd881645b36e29be987850c1ceb9f3b4fd35b9d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4693"></a>C4693 de aviso do compilador
-'class': uma classe abstrata lacrada não pode ter qualquer membro de instância 'Test'  
+'class': uma classe sealed abstract não pode ter quaisquer membros de instância 'Test'  
   
- Se um tipo é marcado [lacrado](../../windows/sealed-cpp-component-extensions.md) e [abstrato](../../windows/abstract-cpp-component-extensions.md), ele só pode ter membros estáticos.  
+ Se um tipo está marcado como [lacrado](../../windows/sealed-cpp-component-extensions.md) e [abstrata](../../windows/abstract-cpp-component-extensions.md), ele só pode ter membros estáticos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C4693.  

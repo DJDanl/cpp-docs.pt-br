@@ -1,5 +1,5 @@
 ---
-title: C2352 de erro do compilador | Documentos do Microsoft
+title: C2352 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 15447f7da47fcfb63ddfa357cc303de0f8d7c0d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2f41907647f11a5f7ca47c272b735f2eeca0f452
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2352"></a>C2352 de erro do compilador
-'class::function': chamada ilegal da função de membro não estático  
+'class::function': chamada inválida a função de membro não estático  
   
- Um `static` uma função de membro não estático chamado de função de membro. Ou, a função de membro não estático foi chamada fora da classe como uma função estática.  
+ Um `static` chamado de função de membro de uma função de membro não estático. Ou então, uma função de membro não estático foi chamada de fora da classe como uma função estática.  
   
  O exemplo a seguir gera C2352 e mostra como corrigi-lo:  
   

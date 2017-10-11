@@ -1,5 +1,5 @@
 ---
-title: C3501 de erro do compilador | Documentos do Microsoft
+title: C3501 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a0f4d89615d812f0a3ab9c8961f5853b3ff57bc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc778fe6719de9d370af3f23ebee1d7c131b1517
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3501"></a>C3501 de erro do compilador
-Não há nenhum typelib registrada para ProgID 'progid'  
+Não há nenhum typelib registrado para ProgID 'progid'  
   
  A ID de classe para um dado progid não tem uma biblioteca de tipo associado. Portanto, você não pode passar essa progid para o `#import` instrução.

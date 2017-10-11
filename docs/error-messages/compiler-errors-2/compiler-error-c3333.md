@@ -1,5 +1,5 @@
 ---
-title: C3333 de erro do compilador | Documentos do Microsoft
+title: C3333 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a192efb1a126ac95802835641e3aac9e6e801629
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 351c9669f9f4f7fbbc7b09d48a517b67a07b679c
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3333"></a>C3333 de erro do compilador
-'biblioteca de tipos ': não é possível #import biblioteca de tipo corrompido  
+'biblioteca de tipos ': não é possível #import biblioteca de tipos corrompida  
   
- A biblioteca de tipos especificada no `#import` instrução é ilegível pelo compilador. Convém regenerar a biblioteca de tipos, se possível, ou solicitar uma nova biblioteca de tipos de seu fornecedor. Você talvez queira usar o OLE visualizador, fornecido com o Visual C++, para exibir o arquivo de biblioteca de tipos para ver qual é o assunto com ela.
+ A biblioteca de tipos especificada no `#import` instrução é ilegível pelo compilador. Você deseja renovar a biblioteca de tipos, se possível, ou solicitar uma nova biblioteca de tipos de seu fornecedor. Você talvez queira usar o OLE visualizador, fornecido com o Visual C++, para exibir o arquivo de biblioteca de tipo para ver o que é a questão com ele.

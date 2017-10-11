@@ -1,5 +1,5 @@
 ---
-title: C3506 de erro do compilador | Documentos do Microsoft
+title: C3506 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1eb7624fb651df54c201d8bf3e138d43457907ae
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4eb6b6fef849e038137e8beed70c266689c8e1ec
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3506"></a>C3506 de erro do compilador
-Não há nenhum typelib registrada para a ID da biblioteca 'id'  
+Não há nenhum typelib registrado para LIBID 'id'  
   
- Um typelib não foi registrado corretamente. Use regsvr32.exe para registrar uma biblioteca de tipos.
+ Um typelib não foi registrado corretamente. Use o regsvr32.exe para registrar uma biblioteca de tipos.

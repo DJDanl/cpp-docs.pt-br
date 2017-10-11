@@ -1,5 +1,5 @@
 ---
-title: Erro fatal C1109 | Documentos do Microsoft
+title: Erro fatal C1109 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 22734f438855c7256a76325aadf4ac7e185451a4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6898a84d2fdfe4adef17ff91f9a723deec65bcfa
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1109"></a>Erro fatal C1109
-não é possível encontrar o 'ponto de entrada ' na DLL 'dll'  
+não é possível localizar o 'ponto de entrada ' na DLL 'dll'  
   
- Um ponto de entrada em uma [DLL carregada com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md) exigido pelo compilador não pôde ser encontrado.
+ Um ponto de entrada em um [DLL carregada com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md) exigido pelo compilador não pôde ser encontrado.

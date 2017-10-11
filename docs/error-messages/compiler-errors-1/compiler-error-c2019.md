@@ -1,5 +1,5 @@
 ---
-title: C2019 de erro do compilador | Documentos do Microsoft
+title: C2019 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a07ee152086b5feca7b9de364196ba3018d3338a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 93c91bccf1b9bc709d006696b22e0e8c2febb713
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2019"></a>C2019 de erro do compilador
 diretiva de pré-processamento esperada, encontrada 'character'  
   
- O caractere seguido um `#` logon, mas não é a primeira letra de uma diretiva de pré-processamento.  
+ O caractere seguido um `#` sinal, mas não é a primeira letra de uma diretiva de pré-processamento.  
   
  O exemplo a seguir gera C2019:  
   
@@ -52,7 +38,7 @@ diretiva de pré-processamento esperada, encontrada 'character'
 #!define TRUE 1   // C2019  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C2019b.cpp  

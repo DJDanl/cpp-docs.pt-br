@@ -1,5 +1,5 @@
 ---
-title: C3509 de erro do compilador | Documentos do Microsoft
+title: C3509 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3bfbeb373964212e23f6012e6a061bd456d0c6b4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb8fcb4c51ce0a7e69154e77ac5990898275ba16
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3509"></a>C3509 de erro do compilador
-'type': tipo de retorno inválido de automação; Quando um parâmetro está marcado como 'retval', o tipo de retorno deve ser 'void', 'HRESULT' ou 'SCODE'  
+'type': tipo de retorno de automação inválido; Quando um parâmetro está marcado como 'retval', o tipo de retorno deve ser 'void', 'HRESULT' ou 'SCODE'  
   
  Um método em uma interface COM deve retornar void ou um HRESULT.  
   
