@@ -1,5 +1,5 @@
 ---
-title: C3226 de erro do compilador | Documentos do Microsoft
+title: C3226 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 81533dfe2005c64d9ee3bcf4d08d419a3977edb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4dbba2964b99dd059f27d4bc4917a74fec664ab2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3226"></a>C3226 de erro do compilador
-Uma declaração de template não é permitida dentro de uma declaração de generic  
+Uma declaração de modelo não é permitida em uma declaração de generic  
   
- Use uma declaração genérica dentro de uma classe genérica.  
+ Use uma declaração de generic dentro de uma classe genérica.  
   
  O exemplo a seguir gera C3226:  
   

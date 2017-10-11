@@ -1,5 +1,5 @@
 ---
-title: C3276 de erro do compilador | Documentos do Microsoft
+title: C3276 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d0800a5b2bd3a5c899abc73f94741ccbd3e42f9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc2dd9f16e5970d27cefd2d7f5de43f51c62574b
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3276"></a>C3276 de erro do compilador
-'palavra-chave': Finally/bloco finally de saída tem um comportamento indefinido durante a manipulação de término  
+'palavra-chave': salto para fora de Finally/bloco finally possui comportamento indefinido durante manipulação de encerramento  
   
  Esse erro é o mesmo que o [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) aviso. No entanto, quando você estiver usando /clr, essa condição não pode ser desabilitada com o [aviso](../../preprocessor/warning.md) pragma.

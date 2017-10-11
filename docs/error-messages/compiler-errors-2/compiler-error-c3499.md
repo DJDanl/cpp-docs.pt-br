@@ -1,5 +1,5 @@
 ---
-title: C3499 de erro do compilador | Documentos do Microsoft
+title: C3499 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 51213128e2f0492f4b296c1abbfac0cdab214174
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6f9f6ad123e111239cbd2c2d1ff2bd886b587b60
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3499"></a>C3499 de erro do compilador
-um lambda cujo tipo de retorno foi especificado como void não pode retornar um valor  
+uma expressão lambda que foi especificada para ter um tipo de retorno void não pode retornar um valor  
   
- O compilador gera este erro quando uma expressão lambda que especifique `void` como o tipo de retorno retorna um valor; ou quando uma expressão lambda contiver mais de uma instrução e retorna um valor, mas não especifica seu tipo de retorno.  
+ O compilador gera este erro quando uma expressão lambda que especifica `void` como o tipo de retorno retorna um valor; ou quando uma expressão lambda contém mais de uma instrução e retorna um valor, mas não especificar seu tipo de retorno.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Retorna um valor da expressão lambda, ou  
+-   Retorna um valor da expressão lambda ou  
   
--   Forneça o tipo de retorno da expressão lambda, ou  
+-   Fornece o tipo de retorno da expressão lambda, ou  
   
 -   Combine as instruções que constituem o corpo da expressão lambda em uma única instrução.  
   
@@ -67,7 +52,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra duas possíveis resoluções para C3499. A resolução primeiro fornece o tipo de retorno da expressão lambda. A segunda resolução combina as instruções que constituem o corpo da expressão lambda em uma única instrução.  
+ O exemplo a seguir mostra duas possíveis resoluções para C3499. A primeira resolução fornece o tipo de retorno da expressão lambda. A segunda resolução combina as instruções que constituem o corpo da expressão lambda em uma única instrução.  
   
 ```  
 // C3499b.cpp  

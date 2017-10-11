@@ -1,5 +1,5 @@
 ---
-title: C3152 de erro do compilador | Documentos do Microsoft
+title: C3152 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 955f365da967b2fb9499f59fc97489f1302e49a1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 222a45a8a8820c426902ef3584a3663103b63fa2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3152"></a>C3152 de erro do compilador
-'Criar': 'palavra-chave' só pode ser aplicada a uma classe, estrutura ou função membro virtual  
+'Criar': 'palavra-chave' só pode ser aplicado a uma classe, struct ou função membro virtual  
   
- Determinadas palavras-chave só pode ser aplicada a uma classe C++.  
+ Determinadas palavras-chave só pode ser aplicado a uma classe do C++.  
   
  O exemplo a seguir gera C3152 e mostra como corrigi-lo:  
   

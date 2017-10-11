@@ -1,5 +1,5 @@
 ---
-title: C3367 de erro do compilador | Documentos do Microsoft
+title: C3367 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 8c7d1df695aa54e350902929ee8ea57be2101058
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d1d144399ca42ba321d8f3d11425bf2ff8e65891
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3367"></a>C3367 de erro do compilador
-'static_member_function': não pode usar a função estática para criar um delegado não acoplado  
+'static_member_function': não é possível usar função static para criar um delegate não associado  
   
-Quando você chama um delegado não acoplado, você deve passar uma instância de um objeto. Como uma função de membro estático é chamada através do nome de classe, você só pode instanciar um delegado não associado com uma função de membro de instância.  
+Quando você chama um delegate não associado, você deve passar uma instância de um objeto. Como uma função de membro estático é chamada através do nome de classe, você pode criar um delegate não associado com uma função de membro de instância.  
   
-Para obter mais informações sobre delegados não associados, consulte [como: definir e usar delegados (C + + / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).  
+Para obter mais informações sobre delegados não associados, consulte [como: definir e usar delega (C + + CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir gera C3367.  

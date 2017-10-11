@@ -1,5 +1,5 @@
 ---
-title: C3207 de erro do compilador | Documentos do Microsoft
+title: C3207 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f0cbd2cbc5595447e54c968f9838b74bb53c4a21
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d0f50d73f32a388669ea49af737b69b57d6a64d
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3207"></a>C3207 de erro do compilador
-'function': argumento de modelo inválido para 'arg', esperado do modelo de classe  
+'function': argumento de template inválido para 'arg', o modelo de classe esperado  
   
- Uma função de modelo é definida como colocar um argumento de modelo do modelo. No entanto, foi passado um argumento do tipo de modelo.  
+ Um modelo de função é definido como colocar um argumento de modelo do modelo. No entanto, foi passado um argumento de tipo de modelo.  
   
  O exemplo a seguir gera C3207:  
   

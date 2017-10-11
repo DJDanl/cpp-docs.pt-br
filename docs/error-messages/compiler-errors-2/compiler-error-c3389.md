@@ -1,5 +1,5 @@
 ---
-title: C3389 de erro do compilador | Documentos do Microsoft
+title: C3389 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 6cfe5a03ecbb370eaf290f94ee5e26a5d185a1ae
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 561359afcd9cf694369bd1addb4f641a33a3f989
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3389"></a>C3389 de erro do compilador
-__declspec(Keyword) não pode ser usado com o /clr: puro ou /CLR: safe  
+__declspec(Keyword) não pode ser usado com /clr: pure ou /CLR: safe  
   
- O **/clr: puro** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015.  
+ As opções do compilador **/clr:pure** e **/clr:safe** são preteridas no Visual Studio 2015.  
   
- A [declspec](../../cpp/declspec.md) modificador usado implica um segundo o estado do processo.  [/CLR: puro](../../build/reference/clr-common-language-runtime-compilation.md) implica um por [appdomain](../../cpp/appdomain.md) estado.  Portanto, declarando uma variável com o `keyword` **declspec** modificador e compilar com **/clr: puro** não é permitido.  
+ Um [declspec](../../cpp/declspec.md) modificador usado implica um por estado de processo.  [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) implica um por [appdomain](../../cpp/appdomain.md) estado.  Assim, declarando uma variável com o `keyword` **declspec** modificador e compilar com **/clr: pure** não é permitido.  
   
  O exemplo a seguir gera C3389:  
   

@@ -1,5 +1,5 @@
 ---
-title: C3510 de erro do compilador | Documentos do Microsoft
+title: C3510 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,23 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f458caabcedf16d2bf794cd6b5a74c303f2b8a7b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9603a4f94106d491ea5e14f30b36b1b230554ad2
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3510"></a>C3510 de erro do compilador
 não é possível localizar a biblioteca de tipos dependente 'type_lib'  
   
- [no_registry](../../preprocessor/no-registry.md) e [auto_search](../../preprocessor/auto-search.md) foram passados para `#import` , mas o compilador não foi capaz de encontrar uma biblioteca de tipos referenciada.  
+ [no_registry](../../preprocessor/no-registry.md) e [auto_search](../../preprocessor/auto-search.md) foram passados para `#import` , mas o compilador não foi possível localizar uma biblioteca de tipos referenciada.  
   
- Para resolver esse erro, certifique-se de que todas as bibliotecas de tipos e bibliotecas de tipo referenciado estão disponíveis para o compilador.  
+ Para resolver esse erro, certifique-se de que todas as bibliotecas de tipo e bibliotecas de tipo referenciado estão disponíveis para o compilador.  
   
  O exemplo a seguir gera C3510:  
   
- Vamos supor que as seguintes bibliotecas de dois tipo foram criadas e que C3510a.tlb foi excluído ou não no caminho.  
+ Vamos supor que as bibliotecas de dois tipos a seguir foram criadas e que C3510a.tlb foi excluído ou não no caminho.  
   
 ```  
 // C3510a.idl  

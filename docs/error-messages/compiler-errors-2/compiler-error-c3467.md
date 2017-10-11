@@ -1,5 +1,5 @@
 ---
-title: C3467 de erro do compilador | Documentos do Microsoft
+title: C3467 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: edea758c567f74202c12f7ee1391fb3f12faa980
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e14104c0fe67ce371f2faf5debb4a07f0c938856
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3467"></a>C3467 de erro do compilador
-'type': esse tipo já foi encaminhado  
+'type': este tipo já foi enviado  
   
- O compilador encontrar mais de uma declaração de tipo direta para o mesmo tipo. É permitida apenas uma declaração por tipo.  
+ O compilador encontrado mais de uma declaração de tipo direta para o mesmo tipo. É permitida somente uma declaração por tipo.  
   
- Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md).  
+ Para obter mais informações, consulte [encaminhamento de tipo (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria um componente.  

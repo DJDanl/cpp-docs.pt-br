@@ -1,5 +1,5 @@
 ---
-title: C3284 de erro do compilador | Documentos do Microsoft
+title: C3284 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d300c6df624cf1fe3a4145585272b6b5e54af377
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60f8335637064acb7e1c2f5c41d4ddca07b51711
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3284"></a>C3284 de erro do compilador
-as restrições de parâmetro genérico 'parameter' da função 'function' devem coincidir com as restrições de parâmetro de função 'function' do parâmetro genérico  
+as restrições de parâmetro genérico 'parameter' da função 'function' devem corresponder às restrições de parâmetro genérico 'parameter' da função 'function'  
   
  Uma função genérica virtual deve usar as mesmas restrições que uma função virtual com o mesmo nome e o conjunto de argumentos na classe base.  
   

@@ -1,5 +1,5 @@
 ---
-title: C3182 de erro do compilador | Documentos do Microsoft
+title: C3182 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7af33bd1854525bebd5d0cb423558d6077366431
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3182"></a>C3182 de erro do compilador
-'class': uma declaração de declaração using ou acesso de membro é ilegal em gerenciada ou WinRTtype  
+'class': uma declaração de acesso ou declaração de using membro é ilegal dentro de um gerenciado ou WinRTtype  
   
- A [usando](../../cpp/using-declaration.md) declaração é inválida em todos os formulários de classes gerenciadas.  
+ Um [usando](../../cpp/using-declaration.md) declaração não é válida dentro de todos os formulários de classes gerenciadas.  
   
  O exemplo a seguir gera C3182 e mostra como corrigi-lo.  
   

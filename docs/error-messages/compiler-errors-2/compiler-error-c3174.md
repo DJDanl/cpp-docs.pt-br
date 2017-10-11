@@ -1,5 +1,5 @@
 ---
-title: C3174 de erro do compilador | Documentos do Microsoft
+title: C3174 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b9b1cab44678fdaf52edf498de59498a04050bc8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2dea7e564b7685cf58f9d97f15659d7f911817a6
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3174"></a>C3174 de erro do compilador
-atributo de módulo não foi especificado  
+atributo de módulo não foi especificado.  
   
- Um programa que usa os atributos do Visual C++ também não usou o [módulo](../../windows/module-cpp.md) atributo, que é necessária em qualquer programa que usa atributos.  
+ Um programa que usa os atributos do Visual C++ também não usou o [módulo](../../windows/module-cpp.md) atributo, que é necessário em qualquer programa que usa atributos.  
   
  O exemplo a seguir gera C3174:  
   

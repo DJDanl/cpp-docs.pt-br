@@ -1,5 +1,5 @@
 ---
-title: C3498 de erro do compilador | Documentos do Microsoft
+title: C3498 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 15ab0c7ec9bfce79ad128dc0e48719d35ef380fc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0429b9d21829f772596b6d0fd2c51d72b0924e26
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3498"></a>C3498 de erro do compilador
-'var': não é possível capturar uma variável que possui um gerenciado ou WinRTtype  
+'var': não é possível capturar uma variável que tenha um gerenciado ou WinRTtype  
   
- Você não pode capturar uma variável que possui um tipo gerenciado ou um tipo de tempo de execução do Windows na lambda.  
+ Não é possível capturar uma variável que possui um tipo gerenciado ou um tipo de tempo de execução do Windows em uma expressão lambda.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Passar o gerenciado ou variável de tempo de execução do Windows à lista de parâmetros da expressão lambda.  
+-   Passe o gerenciado ou variável de tempo de execução do Windows à lista de parâmetros da expressão lambda.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3498 porque uma variável que possui um tipo gerenciado aparece na lista de captura de uma expressão lambda:  
+ O exemplo a seguir gera C3498 como uma variável que possui um tipo gerenciado aparece na lista de captura de uma expressão lambda:  
   
 ```  
 // C3498a.cpp  
@@ -66,7 +52,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3498, passando a variável gerenciada `s` à lista de parâmetros da expressão lambda:  
+ O exemplo a seguir elimina C3498, passando a variável gerenciada `s` à lista de parâmetros da expressão lambda:  
   
 ```  
 // C3498b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3298 de erro do compilador | Documentos do Microsoft
+title: C3298 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cb967c3832d548450ff20e9c617764c20b039590
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a21b2d28120cb5e1c936b632d67ff28bb6568210
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3298"></a>C3298 de erro do compilador
-'constraint_1': não é possível usar 'constraint_2' como uma restrição, pois 'constraint_2' tem a restrição de ref e 'constraint_1' tem a restrição de valor  
+'constraint_1': não é possível usar 'constraint_2' como uma restrição porque 'constraint_2' tem a restrição ref e 'constraint_1' tem a restrição de valor  
   
- Você não pode especificar características mutuamente exclusivas para uma restrição. Por exemplo, um parâmetro de tipo genérico não pode ser restrito a um tipo de valor e um tipo de referência.  
+ Não é possível especificar características mutuamente exclusivas de uma restrição. Por exemplo, um parâmetro de tipo genérico não pode ser restrito a um tipo de valor e um tipo de referência.  
   
- Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Para obter mais informações, consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3298.  

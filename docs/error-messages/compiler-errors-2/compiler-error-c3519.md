@@ -1,5 +1,5 @@
 ---
-title: C3519 de erro do compilador | Documentos do Microsoft
+title: C3519 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbd140a0bd9509adddc11d71e3fdd043dff52450
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c655c8ba0513bcf25d5bc9666d65352a7f587374
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3519"></a>C3519 de erro do compilador
-'invalid_param': parâmetro inválido para o atributo embedded_idl  
+'invalid_param': parâmetro inválido para atributo embedded_idl  
   
- Um parâmetro passado para o `embedded_idl` atributo de [#import](../../preprocessor/hash-import-directive-cpp.md), mas o compilador não reconhece o parâmetro.  
+ Foi passado um parâmetro para o `embedded_idl` atributo de [#import](../../preprocessor/hash-import-directive-cpp.md), mas o compilador não reconheceu o parâmetro.  
   
  Os únicos parâmetros que são permitidos para `embedded_idl` são `emitidl` e `no_emitidl`.  
   

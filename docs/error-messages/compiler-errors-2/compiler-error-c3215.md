@@ -1,5 +1,5 @@
 ---
-title: C3215 de erro do compilador | Documentos do Microsoft
+title: C3215 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1146ba35a5ae06ace650c14316b1765a6036cc13
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e4a649c01762b8a113e928bb63ffe293f86d21c3
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3215"></a>C3215 de erro do compilador
-'type1': o parâmetro de tipo genérico já restringido por 'type2'  
+'type1': parâmetro de tipo genérico já restringido por 'type2'  
   
  Uma restrição foi especificada mais de uma vez.  
   
- Para obter mais informações sobre os genéricos, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
+ Para obter mais informações sobre genéricos, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
   
  O exemplo a seguir gera C3215:  
   
@@ -60,7 +45,7 @@ where T : A,A
 ref class C {};   // C3215  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3215b.cpp  

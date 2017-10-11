@@ -1,5 +1,5 @@
 ---
-title: C3295 de erro do compilador | Documentos do Microsoft
+title: C3295 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 11040d3c99cdc790bc73ac2e525729813005f739
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b72e4839341006d2058c21a1523b0d7567f51696
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3295"></a>C3295 de erro do compilador
 '#pragma pragma' só pode ser usada em global ou escopo de namespace  
   
- Alguns pragmas não pode ser usado em uma função.  Consulte [diretivas Pragma e a palavra-chave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) para obter mais informações.  
+ Alguns pragmas não pode ser usados em uma função.  Consulte [diretivas Pragma e a palavra-chave de pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3295.  

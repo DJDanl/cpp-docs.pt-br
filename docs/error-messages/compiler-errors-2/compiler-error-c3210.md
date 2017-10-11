@@ -1,5 +1,5 @@
 ---
-title: C3210 de erro do compilador | Documentos do Microsoft
+title: C3210 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6bc6ec27e6f68288e22a4240989af5c6de469e9c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f4825abf58b7c0277b3e7f00ce16bcd0d5b1df64
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3210"></a>C3210 de erro do compilador
 'type': declaração de acesso só pode ser aplicada a um membro de classe base  
   
- A [usando a declaração](../../cpp/using-declaration.md) foi especificado incorretamente.  
+ Um [usando declaração](../../cpp/using-declaration.md) foi especificado incorretamente.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3210.  

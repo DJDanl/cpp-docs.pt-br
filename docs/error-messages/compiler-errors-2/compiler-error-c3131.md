@@ -1,5 +1,5 @@
 ---
-title: C3131 de erro do compilador | Documentos do Microsoft
+title: C3131 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 94f9cfdce266506d663fbaea20e85bcf71e9f263
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 53b42516687d34b7eeb92ee46becf9afa99ef592
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3131"></a>C3131 de erro do compilador
-projeto deve possuir um atributo 'module' com uma propriedade 'name'  
+projeto deve ter um atributo 'module' com a propriedade 'name'  
   
  O [módulo](../../windows/module-cpp.md) atributo deve ter um parâmetro de nome.  
   

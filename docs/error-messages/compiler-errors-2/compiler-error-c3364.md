@@ -1,5 +1,5 @@
 ---
-title: C3364 de erro do compilador | Documentos do Microsoft
+title: C3364 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 783e05439168a63c21a3900c993813dd973a642a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3364"></a>C3364 de erro do compilador
-'representante': construtor delegate: argumento deve ser um ponteiro para função de membro de classe gerenciada ou função global  
+'delegate': construtor delegate: o argumento deve ser um ponteiro para a função global ou de função de membro de classe gerenciada  
   
- O segundo parâmetro do construtor do delegado tem o endereço de uma função de membro ou o endereço de uma função de membro estático de qualquer classe. Ambos são tratadas como endereços simples.  
+ O segundo parâmetro do construtor do representante usa o endereço de uma função de membro ou o endereço de uma função de membro estático de qualquer classe. Ambos são tratadas como endereços simples.  
   
  O exemplo a seguir gera C3364:  
   

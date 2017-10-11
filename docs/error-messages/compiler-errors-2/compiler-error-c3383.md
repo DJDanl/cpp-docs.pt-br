@@ -1,5 +1,5 @@
 ---
-title: C3383 de erro do compilador | Documentos do Microsoft
+title: C3383 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: df007af0f20134fda6d1facdc2d9dfdcb33d88b3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2a97cd1348bc927b633e683bed80a6b907f88a58
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3383"></a>C3383 de erro do compilador
-'operator new' não é suportado com /clr:safe  
+'operator new' não é suportado com /CLR: safe  
   
- O arquivo de saída de um **/CLR: safe** compilação é um arquivo que é comprovadamente fortemente tipado e não há suporte para ponteiros.  
+ O arquivo de saída de um **/CLR: safe** compilação é um arquivo que é do tipo verificável seguro e ponteiros não são suportados.  
   
  Para obter mais informações, consulte  
   
 -   [/CLR (common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
--   [Problemas de migração de 64 bits do Visual C++](../../build/common-visual-cpp-64-bit-migration-issues.md)  
+-   [Problemas de migração de 64 bits do Visual C++ comuns](../../build/common-visual-cpp-64-bit-migration-issues.md)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3383.  

@@ -1,5 +1,5 @@
 ---
-title: C3491 de erro do compilador | Documentos do Microsoft
+title: C3491 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d1b614ddbb60fe5086a2cc3f3cc75791b4f63562
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58458a1ab0b67eb4fa6d38d0be2fb38f6d7496eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3491"></a>C3491 de erro do compilador
-'var': uma captura por valor não pode ser modificada na lambda não mutável  
+'var': uma captura por valor não pode ser modificada em um lambda não mutável  
   
- Uma expressão lambda não mutável não pode modificar o valor de uma variável que é capturada pelo valor.  
+ Uma expressão lambda não mutável não é possível modificar o valor de uma variável que é capturado por valor.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Declare a expressão lambda com o `mutable` palavra-chave, ou  
+-   Declarar a expressão lambda com o `mutable` palavra-chave, ou  
   
 -   A variável é passada por referência à lista de captura da expressão lambda.  
   
@@ -66,7 +51,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3491 declarando a expressão lambda com o `mutable` palavra-chave:  
+ O exemplo a seguir elimina C3491 declarando a expressão lambda com o `mutable` palavra-chave:  
   
 ```  
 // C3491b.cpp  

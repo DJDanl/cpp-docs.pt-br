@@ -1,5 +1,5 @@
 ---
-title: C3370 de erro do compilador | Documentos do Microsoft
+title: C3370 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a398f8060fe2df9ea46f5ba804303f0afee077ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b1a6a450c0c3faca9088b01e1016df5f4e5a4045
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3370"></a>C3370 de erro do compilador
-nome do idl_module: idl_module ainda não foi definido  
+'idl_module name': idl_module ainda não foi definido  
   
  Antes de usar [idl_module](../../windows/idl-module.md) para especificar um ponto de entrada em uma DLL, você deve primeiro usar `idl_module` para especificar o nome da DLL.  
   

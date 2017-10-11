@@ -1,5 +1,5 @@
 ---
-title: C3388 de erro do compilador | Documentos do Microsoft
+title: C3388 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 730f22acacd6cee7841c622bb27ef09d47c20f00
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dce412e8998448cdbf746b4598804f2645e10237
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3388"></a>C3388 de erro do compilador
-'type': não é permitido como uma restrição, supondo que 'classe ref' para continuar a análise  
+'type': não é permitido como uma restrição, assumindo 'classe ref' para continuar análise  
   
- Uma restrição foi especificada em um tipo genérico, mas a restrição não foi especificada corretamente. Consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
+ Uma restrição foi especificada em um tipo genérico, mas a restrição não foi especificada corretamente. Consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3388.  

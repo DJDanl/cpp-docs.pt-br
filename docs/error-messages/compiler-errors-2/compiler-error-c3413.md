@@ -1,5 +1,5 @@
 ---
-title: C3413 de erro do compilador | Documentos do Microsoft
+title: C3413 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e652c514d7ff5151d6a7dd74df396ef9a8b79fdc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1403c65b0eac3879cbbcd612b077d4b4b3937b49
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3413"></a>C3413 de erro do compilador
 'name': instanciação explícita inválida  
   
- O compilador detectou uma instanciação explícita malformados.  
+ O compilador detectou uma instanciação explícita mal formados.  
   
  O exemplo a seguir gera C3413:  
   
@@ -54,7 +39,7 @@ template
 class MyClass {};   // C3413  
 ```  
   
- Resolução possível:  
+ Possível solução:  
   
 ```  
 // C3413b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3484 de erro do compilador | Documentos do Microsoft
+title: C3484 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 007dfdb97702a94f31075126b15f9765c3c5cdce
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ec019561a042b5dd5fd05aa8660bc8ff6b1d976
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3484"></a>C3484 de erro do compilador
@@ -63,7 +48,7 @@ int main()
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir resolve C3484 fornecendo `->` antes do tipo de retorno da expressão lambda:  
+ O exemplo a seguir elimina C3484 fornecendo `->` antes do tipo de retorno da expressão lambda:  
   
 ```  
 // C3484b.cpp  

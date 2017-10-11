@@ -1,5 +1,5 @@
 ---
-title: C3289 de erro do compilador | Documentos do Microsoft
+title: C3289 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b159a9aabbf5601abf8ef3632428e467d2e16e5f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28e79ec1da42e2dab150a0b89cd8bc4d7ff87180
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3289"></a>C3289 de erro do compilador
-'property': não é possível indexar uma propriedade trivial  
+'property': uma propriedade trivial não pode ser indexada.  
   
  Uma propriedade foi declarada incorretamente. Acessadores devem ser definidos para uma propriedade indexada. Consulte [propriedade](../../windows/property-cpp-component-extensions.md) para obter mais informações.  
   

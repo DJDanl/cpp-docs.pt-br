@@ -1,5 +1,5 @@
 ---
-title: C3246 de erro do compilador | Documentos do Microsoft
+title: C3246 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ac8458487d9ed500420f2e687f8eb7c37bf053da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 262dc8bde5dcb4c12909c69bce3fa867685245eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3246"></a>C3246 de erro do compilador
-'class': não pode herdar de 'type', pois ele foi declarado como 'lacradas'  
+'class': não pode herdar de 'type', pois ele foi declarado como 'sealed'  
   
 Uma classe que está marcada como [lacrado](../../windows/sealed-cpp-component-extensions.md) não pode ser a classe base para outras classes.  
   

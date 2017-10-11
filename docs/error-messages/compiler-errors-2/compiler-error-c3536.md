@@ -1,5 +1,5 @@
 ---
-title: C3536 de erro do compilador | Documentos do Microsoft
+title: C3536 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6ae6728026560e1c88cefd32e987eed1a954e3e7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 90db065c9a16e72a396bd1c1ae54bb99cdb97153
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3536"></a>C3536 de erro do compilador
-'symbol': não pode ser usada antes de ser inicializado  
+'symbol': não pode ser usado antes de ser inicializada  
   
- O símbolo indicado não pode ser usado antes de ser inicializado. Na prática, isso significa que uma variável não pode ser usada para se inicializar.  
+ O símbolo indicado não pode ser usado antes de ser inicializada. Na prática, isso significa que uma variável não pode ser usada para se inicializar.  
   
 ### <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1.  Não inicialize uma variável com ele próprio.  
+1.  Não inicialize uma variável com ele mesmo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3536 porque cada variável é inicializada com ele próprio.  
+ O exemplo a seguir produz C3536 porque cada variável é inicializada com ele mesmo.  
   
 ```  
 // C3536.cpp  
@@ -67,4 +53,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [palavra-chave auto](../../cpp/auto-keyword.md)
+ [Palavra-chave auto](../../cpp/auto-keyword.md)

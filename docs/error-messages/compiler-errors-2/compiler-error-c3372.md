@@ -1,5 +1,5 @@
 ---
-title: C3372 de erro do compilador | Documentos do Microsoft
+title: C3372 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c781cd1cceefbaddbb94ceb9b2b1cabb2d5512e9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8f81bccba2dc03a87d2a3d87bb7048d07cf28509
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3372"></a>C3372 de erro do compilador
-Especifique pelo menos 1 interface para o atributo 'fonte' em coclass  
+Especifique pelo menos 1 interface para atributo 'fonte' em uma coclass  
   
  Para determinados atributos, você deve passar um nome de interface como um parâmetro.  
   

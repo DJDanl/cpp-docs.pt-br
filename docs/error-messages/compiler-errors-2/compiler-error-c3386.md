@@ -1,5 +1,5 @@
 ---
-title: C3386 de erro do compilador | Documentos do Microsoft
+title: C3386 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d61312489e5113afb18c26a0d6cbf5336c13dd27
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8b912d1d75ae120f993c3641ff2e2b561910b4aa
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3386"></a>C3386 de erro do compilador
-'type': dllexport /\__declspec(dllimport) não pode ser aplicado a gerenciada ou WinRTtype  
+'type': dllexport /\__declspec(dllimport) não pode ser aplicado a um gerenciado ou WinRTtype  
   
- O `dllimport` e [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` modificadores não são válidos em um gerenciado ou tempo de execução do Windows tipo.  
+ O `dllimport` e [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` modificadores não são válidos em um gerenciado ou em tempo de execução do Windows tipo.  
   
  O exemplo a seguir gera C3386 e mostra como corrigi-lo:  
   

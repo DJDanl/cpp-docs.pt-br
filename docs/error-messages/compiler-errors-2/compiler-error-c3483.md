@@ -1,5 +1,5 @@
 ---
-title: C3483 de erro do compilador | Documentos do Microsoft
+title: C3483 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cbf55fe75b0a08f9797e8733607d826e397fda7f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 145e0162c47b360b9d37cf95b108446f919435de
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3483"></a>C3483 de erro do compilador
-'var' já faz parte da lista de captura lambda  
+'var' já é parte da lista de captura de lambda  
   
  Você passou a mesma variável à lista de captura de uma expressão lambda mais de uma vez.  
   
@@ -51,7 +36,7 @@ ms.lasthandoff: 02/25/2017
 -   Remova todas as instâncias adicionais da variável na lista de captura.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3483 porque a variável `n` aparece mais de uma vez na lista da expressão lambda captura:  
+ O exemplo a seguir gera C3483 porque a variável `n` aparece mais de uma vez na lista de captura da expressão lambda:  
   
 ```  
 // C3483.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3287 de erro do compilador | Documentos do Microsoft
+title: C3287 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cd6bac405f7b06ccac920d61b35dae37571d65c8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b09d2af16ca6d38e476e7298b2b5fb61b2b30129
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3287"></a>C3287 de erro do compilador
-o tipo 'type' (tipo de retorno de GetEnumerator) deve ter uma função de membro MoveNext público adequada e uma propriedade Current  
+o tipo 'type' (tipo de retorno de GetEnumerator) deve ter uma função de membro MoveNext pública adequada e a propriedade Current pública  
   
  Classes de coleção definida pelo usuário devem conter definições para `MoveNext` e `Current`.  
   

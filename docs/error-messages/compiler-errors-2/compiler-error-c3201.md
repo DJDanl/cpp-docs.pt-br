@@ -1,5 +1,5 @@
 ---
-title: C3201 de erro do compilador | Documentos do Microsoft
+title: C3201 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 02a8bada2d18f4380dc6adeb28db752a4331c4a0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c398d3251c63a763af0fdf965e4c7f2e8c5bb3c4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3201"></a>C3201 de erro do compilador
-a lista de parâmetros de modelo para o modelo de classe 'template' não coincide com a lista de parâmetros de modelo para o parâmetro de modelo 'template'  
+a lista de parâmetros de template para template de classe 'template' não coincide com a lista de parâmetros de template para parâmetro de modelo 'template'  
   
- Você passou um modelo de classe no argumento para um modelo de classe que não utilizam um parâmetro de modelo ou passou um número incompatível de argumentos de modelo para o argumento de modelo padrão.  
+ Passado um modelo de classe no argumento para um modelo de classe que não tem um parâmetro de modelo, ou passou um número incompatível de argumentos de modelo para o argumento de modelo padrão.  
   
 ```  
 // C3201.cpp  

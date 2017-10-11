@@ -1,5 +1,5 @@
 ---
-title: C3229 de erro do compilador | Documentos do Microsoft
+title: C3229 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ca657ff4d7ab18305581ead0f95dc732c2363d4d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4687643e69ff0c31f4aac9cd30c4fc307c8b02e4
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3229"></a>C3229 de erro do compilador
-'type': indireções em um parâmetro de tipo genérico não são permitidas.  
+'type': indireções em um parâmetro de tipo genérico não são permitidas  
   
  Você não pode usar parâmetros genéricos com `*`, `^`, ou `&`.  
   

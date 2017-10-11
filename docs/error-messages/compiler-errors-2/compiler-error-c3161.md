@@ -1,5 +1,5 @@
 ---
-title: C3161 de erro do compilador | Documentos do Microsoft
+title: C3161 de erro do compilador | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0e12d426f689281f34a7680164a1197e4c7d94e3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4be981b2af166d85a3a83209a901f3e3e51b6246
 ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3161"></a>C3161 de erro do compilador
-'interface': aninhamento de classe, estrutura, união ou interface em uma interface é ilegal; interface aninhamento em uma classe, estrutura ou união é ilegal  
+'interface': aninhar classe, struct, união ou interface em uma interface é inválido; aninhar interface em uma classe, struct ou união é inválido  
   
- Um [interface](../../cpp/interface.md) só pode aparecer no escopo global ou dentro de um namespace. Uma classe, estrutura ou união não pode aparecer em uma interface.  
+ Um [interface](../../cpp/interface.md) só pode aparecer no escopo global ou dentro de um namespace. Uma classe, struct ou union não pode aparecer em uma interface.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3161.  
