@@ -2,7 +2,7 @@
 ## [Namespace de simultaneidade](concurrency-namespace.md)
 ### [Funções do namespace de simultaneidade](concurrency-namespace-functions.md)
 ### [Operadores do namespace de simultaneidade](concurrency-namespace-operators.md)
-### [Constantes do namespace de simultaneidade&1;](concurrency-namespace-constants1.md)
+### [Constantes do namespace de simultaneidade 1](concurrency-namespace-constants1.md)
 ### [Enums do namespace de simultaneidade](concurrency-namespace-enums.md)
 ### [Classe affinity_partitioner](affinity-partitioner-class.md)
 ### [Classe agent](agent-class.md)

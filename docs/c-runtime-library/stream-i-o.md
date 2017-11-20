@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>E/S de fluxo
 Essas funções processam os dados em diferentes tamanhos e formatos, desde caracteres únicos até grandes estruturas de dados. Elas também fornecem o armazenamento em buffer, o que pode melhorar o desempenho. O tamanho padrão de um buffer de fluxo é de 4 K. Essas rotinas afetam apenas os buffers criados por rotinas de biblioteca de tempo de execução e não têm efeito nos buffers criados pelo sistema operacional.  

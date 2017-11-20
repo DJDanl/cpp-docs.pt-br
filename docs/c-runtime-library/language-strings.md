@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- language strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
-ms.contentlocale: pt-br
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="language-strings"></a>Cadeias de caracteres de idioma
 As funções `setlocale` e `_create_locale` podem usar os idiomas dão suporte pela API NLS do Windows em sistemas operacionais que não usam a página de código Unicode. Para obter uma lista dos idiomas que tem suporte pela versão do sistema operacional, consulte [Referência da API National Language Support (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). A cadeia de caracteres de idioma pode ser qualquer um dos valores nas colunas **Idioma** e **Abreviação do nome do idioma** da lista de idiomas com suporte. Para obter informações adicionais de suporte de idioma por versão do sistema operacional, veja [Apêndice A: Comportamento de produto](http://msdn.microsoft.com/goglobal/bb896001.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows.   

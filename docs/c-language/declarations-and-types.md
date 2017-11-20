@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - data types [C]
 - types [C]
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 29e7d1687946c463a2c486423da8fb9d585a3546
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="declarations-and-types"></a>Declarações e tipos
 Esta seção descreve a declaração e a inicialização de variáveis, funções e tipos. A linguagem C inclui um conjunto padrão de tipos de dados básicos. Você também pode adicionar seus próprios tipos de dados, chamados “tipos derivados”, declarando novos com base em tipos já definidos. Os seguintes tópicos são abordados:  

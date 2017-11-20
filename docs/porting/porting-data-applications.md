@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 05/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -17,20 +15,17 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fa935667ed1ec0410e8981758dce25b88324718
 ms.openlocfilehash: b8599f7220554984453bfabe988b95209f5a82a0
-ms.contentlocale: pt-br
-ms.lasthandoff: 05/24/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-
-# Portabilidade de aplicativos de dados
-<a id="porting-data-applications" class="xliff"></a>
+# <a name="porting-data-applications"></a>Portabilidade de aplicativos de dados
 Ao longo dos anos, o Visual C++ forneceu várias maneiras de trabalhar com bancos de dados. Em 2011, a Microsoft anunciou que ele estaria se alinhando com ODBC como a tecnologia preferencial para acessar produtos do SQL Server de código nativo. O ODBC é um padrão do setor e, ao usá-lo, você obtém o máximo de portabilidade de código em várias plataformas e fontes de dados. A maioria dos produtos de banco de dados SQL e muitos produtos NoSQL dão suporte ao ODBC. Você pode usar o ODBC diretamente, chamando as APIs de ODBC de nível inferior, ou você pode usar as classes wrapper de ODBC do MFC ou em uma biblioteca wrapper de C++ de terceiros. 
 
 A OLE DB é uma API de nível baixo e alto desempenho com base na especificação COM e só tem suporte no Windows. Use a OLE DB se seu programa estiver acessando [servidores vinculados](https://msdn.microsoft.com/library/ms188279.aspx). A ATL fornece modelos de OLE DB que facilitam a criação de consumidores e provedores OLE DB personalizados. A versão mais recente da OLE DB é fornecida no SQL Native Client 11.  
@@ -45,8 +40,7 @@ Se você usa C++/CLI, você pode continuar a usar o ADO.NET como sempre. Para ob
 
 Para obter mais informações sobre o histórico de tecnologias de acesso a dados no Microsoft Windows, consulte [Microsoft Data Access Components (Wikipédia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
 
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Acesso a dados no Visual C++](../data/data-access-in-cpp.md)  
  [Microsoft ODBC (Open Database Connectivity)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
  [Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/en-us/library/ms810810.aspx)  

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - values, converting
 - type casts, conversion
 ms.assetid: 30fbd974-8f5a-4b70-ac44-d3937b96b702
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ed56c0c9ab3186200d3cbb47224dedc60adddb2f
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-other-types"></a>Conversões de outros tipos
 Como um valor `enum` é um valor `int` por definição, as conversões de e para um valor `enum` são do mesmo tipo de `int`. Para o compilador Microsoft C, um inteiro é o mesmo que um **long**.  

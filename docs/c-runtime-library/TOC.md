@@ -114,7 +114,7 @@
 ### [_crtDbgFlag](crtdbgflag.md)
 ## [Tipos padrão](standard-types.md)
 # [Constantes globais](global-constants.md)
-## [Formatos de data/hora do Windows de&32; bits](32-bit-windows-time-date-formats.md)
+## [Formatos de data/hora do Windows de 32 bits](32-bit-windows-time-date-formats.md)
 ## [BUFSIZ](bufsiz.md)
 ## [CLOCKS_PER_SEC, CLK_TCK](clocks-per-sec-clk-tck.md)
 ## [Constantes confirmar em disco](commit-to-disk-constants.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,40 +15,23 @@ apilocation:
 - msvcr100.dll
 - msvcr110.dll
 apitype: DLLExport
-f1_keywords:
-- strcoll
-dev_langs:
-- C++
+f1_keywords: strcoll
+dev_langs: C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - string comparison [C++], culture-specific
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b7291c2443ed559e1e0ee69f0b6867ca603e0713
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strcoll-functions"></a>Funções strcoll
 Cada uma das funções `strcoll` e `wcscoll` compara duas cadeias de caracteres de acordo com a configuração da categoria `LC_COLLATE` da página de código de localidade em uso no momento. Cada uma das funções `_mbscoll` compara duas cadeias de caracteres de acordo com a página de código multibyte em uso no momento. Use as funções `coll` para comparações de cadeia de caracteres quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação. Use as funções `cmp` correspondentes para testar apenas para igualdade de cadeia de caracteres.  

@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.international
-dev_langs:
-- C++
+f1_keywords: c.international
+dev_langs: C++
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -21,30 +18,15 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dc4480e79931f1ad3c1dc81b9687e82fcb2697a7
-ms.contentlocale: pt-br
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="code-pages"></a>Páginas de código
 `code page` é um conjunto de caracteres, que pode incluir números, marcas de pontuação e outros glifos. Localidades e idiomas diferentes usam diferentes páginas de código. Por exemplo, a página de código ANSI 1252 é usada para inglês e a maioria dos idiomas europeus; a página de código OEM 932 é usada para japonês kanji.  

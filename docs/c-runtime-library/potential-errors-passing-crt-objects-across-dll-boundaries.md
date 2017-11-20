@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- DLL conflicts [C++]
+dev_langs: C++
+helpviewer_keywords: DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erros em potencial passando por objetos CRT em limites de DLL
 Quando você passa objetos CRT (Tempo de execução de C), como identificadores de arquivos, localidades e variáveis do ambiente de ou para uma DLL (chamadas de função além do limite da DLL), pode ocorrer um comportamento inesperado se a DLL, bem como os arquivos chamando a DLL, usar cópias diferentes das bibliotecas de CRT.  

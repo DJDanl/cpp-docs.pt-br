@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - _LK_LOCK
 - _LK_NBRLCK
 - _LK_UNLCK
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - LK_UNLCK constant
 - LK_NBRLCK constant
@@ -28,30 +26,15 @@ helpviewer_keywords:
 - _LK_RLCK constant
 - LK_LOCK constant
 ms.assetid: c3dc92c8-60e3-4d29-9f50-5d217627c8ad
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 883e7ea979cbc4afd83ac8bfb5fa3ec4d68491c4
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 799b00209463c90c61b4b497a88af39ba554cd01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="locking-constants"></a>Constantes (_locking)
 ## <a name="syntax"></a>Sintaxe  

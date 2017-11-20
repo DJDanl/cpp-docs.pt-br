@@ -4,13 +4,12 @@ author: jasongroce
 ms.author: apexprodleads
 title: "Documentação de desenvolvimento em Linux com C++"
 description: "Criar e depurar aplicativos em execução no Linux."
-translationtype: Human Translation
-ms.sourcegitcommit: 3e711665c9d2ebdd33ca8696baeba3f9b0e276f7
 ms.openlocfilehash: 80dea4d1a963bd9c2f6f49dda3347529d51e8ce1
-ms.lasthandoff: 02/28/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="linux-development-with-c-documentation"></a>Documentação de desenvolvimento em Linux com C++
 
 Criar e depurar aplicativos em execução no Linux.

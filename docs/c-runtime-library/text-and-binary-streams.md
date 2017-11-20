@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="text-and-binary-streams"></a>Texto e fluxos binários
 Um fluxo de texto consiste em uma ou mais linhas de texto que podem ser gravados em uma exibição de texto para que possam ser lidos. Durante a leitura de um fluxo de texto, o programa lê um `NL` (nova linha) no final de cada linha. Ao gravar em um fluxo de texto, o programa grava um `NL` para sinalizar o final de uma linha. Para corresponder a convenções diferentes entre ambientes de destino para a representação de texto em arquivos, as funções da biblioteca podem alterar o número e representações de caracteres transmitidos entre o programa e um fluxo de texto.  

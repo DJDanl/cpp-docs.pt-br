@@ -631,8 +631,3 @@
 #### [Outros manipuladores de fluxo de saída de um argumento](other-one-argument-output-stream-manipulators.md)
 ## [Expressões Regulares (C++)](regular-expressions-cpp.md)
 ## [Navegação no sistema de arquivos](file-system-navigation.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
-ms.contentlocale: pt-br
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Guia de portabilidade: Spy++
-<a id="porting-guide-spy" class="xliff"></a>
+# <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de como é um projeto típico de portabilidade, dos tipos de problemas que você pode encontrar e algumas dicas gerais e truques para resolver problemas de portabilidade. Ele não foi projetado para ser um guia definitivo de portabilidade, uma vez que a experiência de portar um projeto depende muito das especificidades do código.  
   
-## Spy++
-<a id="spy" class="xliff"></a>  
+## <a name="spy"></a>Spy++  
  O Spy++ é uma ferramenta de diagnóstico de GUI amplamente utilizada para a Área de Trabalho do Windows, que fornece todos os tipos de informações sobre os elementos de interface do usuário na Área de Trabalho do Windows. Ele mostra a hierarquia de janelas completa e fornece acesso aos metadados sobre cada janela e controle. Este aplicativo útil é fornecido com o Visual Studio há muitos anos. Encontramos uma versão antiga dele que foi compilada pela última vez em Visual C++ 6.0 e o portamos para Visual Studio 2015. A experiência do Visual Studio 2017 deve ser quase idêntica.
   
  Consideramos este caso como sendo típico para portabilidade de aplicativos da Área de Trabalho do Windows que usam o MFC e a API do Win32, especialmente para projetos antigos que não foram atualizados com cada versão do Visual C++ desde o Visual C++ 6.0.  
@@ -702,11 +683,9 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ```  
   
-## Resumo
-<a id="summary" class="xliff"></a>  
+## <a name="summary"></a>Resumo  
  Portabilidade do Spy++ do código Visual C++ 6.0 original para o compilador mais recente levou aproximadamente 20 horas de tempo de codificação ao longo de aproximadamente uma semana. Nós atualizamos diretamente por oito versões do produto, do Visual Studio 6.0 para o Visual Studio 2015. Agora, essa é a abordagem recomendada para todas as atualizações em projetos grandes e pequenos.  
   
-## Consulte também
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Consulte também  
  [Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, enumerations
 - define directive (#define), alternative to
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 10c0772fa90997ac1ed4c6795f5a9f436c03fbff
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-enumeration-declarations"></a>Declarações de enumeração C
 Uma enumeração consiste em um conjunto de constantes de número inteiro nomeadas. Uma declaração do tipo enumeração fornece o nome da marca da enumeração (opcional) e define o conjunto de identificadores de número inteiro nomeados (chamados de “conjunto de enumerações”, “constantes de enumerador”, "enumeradores” ou “membros”). Uma variável do tipo enumeração armazena um dos valores do conjunto de enumerações definido por esse tipo.  

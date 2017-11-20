@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- TZNAME_MAX
-dev_langs:
-- C++
-helpviewer_keywords:
-- TZNAME_MAX constant
+f1_keywords: TZNAME_MAX
+dev_langs: C++
+helpviewer_keywords: TZNAME_MAX constant
 ms.assetid: e2286cb8-751d-4557-9650-5c4b98a8f7be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: de7e8f18150f894661f63403ed222e1fa86dd7f2
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 9508cd34a9ad97cb4a380729ddf0888c673392f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
 O comprimento máximo de cadeia de caracteres permitido para uma variável de nome de fuso horário.  

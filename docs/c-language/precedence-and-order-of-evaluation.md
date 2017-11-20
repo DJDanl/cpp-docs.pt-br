@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - associativity of operators [C++]
 - precedence [C++], operators
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.contentlocale: pt-br
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
 A precedência e a associatividade dos operadores C afetam o agrupamento e a avaliação dos operandos nas expressões. A precedência de um operador é significante somente quando outros operadores com precedência maior ou menor estão presentes. As expressões com operadores de maior precedência são avaliadas primeiro. A precedência também pode ser descrita pela palavra “associação”. Os operadores com maior precedência são ditos ter uma associação mais próxima.  
