@@ -1,46 +1,45 @@
 ---
-title: "Vantagens do assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembler [C++], vantagens"
-  - "assembly embutido [C++], sobre assembly embutido"
-  - "assembly embutido [C++], usando"
+title: Vantagens do Assembly embutido | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembler [C++], advantages
+- inline assembly [C++], about inline assembly
+- inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5a70ab92e76101c193db62fbe9119bb851d46738
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Vantagens do assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Como o assembler embutido não requer etapas do assembly separado e link, é mais conveniente que um assembler separado.  O código do assembly embutido pode usar qualquer nome de variável ou de função C que está no escopo, o que é fácil de integração com código C do programa.  Como o código do assembly pode ser embutidos misturada com instruções de 2.0 C ou C\+\+, poderá realizar as tarefas que são incômodas ou impossíveis em 2.0 C ou C\+\+.  
+# <a name="advantages-of-inline-assembly"></a>Vantagens do assembly embutido
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Como o assembler integrado não requer etapas de link e do assembly separado, é mais conveniente que um assembler separado. O código do assembly integrado pode usar qualquer nome de variável ou de função C que esteja no escopo. Portanto, ele é de fácil integração com código C do programa. Porque o código de assembly pode ser mesclado embutido com instruções C ou C++, ele pode realizar tarefas que são difícil ou impossível em C ou C++.  
   
- O assembly embutido incluem:  
+ Os usos dos assembly embutido incluem:  
   
--   Funções de gravação na linguagem assembly.  
+-   Gravando funções em linguagem de assembly.  
   
--   Point\-in\-time otimizando seções velocidade\- críticos de código.  
+-   Otimizando o ponto crítico de velocidade de seções de código.  
   
--   Fazendo o acesso direto de hardware para drivers de dispositivo.  
+-   Tornando o acesso direto de hardware para drivers de dispositivo.  
   
--   Prólogo de escrita e código de epílogo para chamadas “despidos”.  
+-   Escrevendo código de prólogo e epílogo para chamadas de "naked".  
   
- O assembly embutido é uma ferramenta do objetivo especial.  Se você planeja mover um aplicativo em computadores diferentes, você provavelmente vai colocar o código computador específico em um módulo separado.  Como o assembler embutido não oferece suporte a todas as políticas de macro e de dados do Microsoft macro assembler \(MASM\), pode ser mais conveniente usar MASM para esses módulos.  
+ Assembly embutido é uma ferramenta de finalidade especial. Se você pretende transferir um aplicativo para computadores diferentes, você provavelmente desejará colocar código específico do computador em um módulo separado. Como o assembler embutido não oferece suporte a todos os da Microsoft Macro Assembler (MASM) diretivas de macro e os dados, você pode achar mais conveniente usar MASM para esses módulos.  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Assembler embutido](../../assembler/inline/inline-assembler.md)

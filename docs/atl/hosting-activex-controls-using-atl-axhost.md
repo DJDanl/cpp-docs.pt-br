@@ -1,45 +1,44 @@
 ---
-title: "Hospedando controles ActiveX usando ATL AXHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Controles ActiveX [C++], hospedar"
-  - "Método de AXHost"
-  - "Controle de calendário (ActiveX)"
-  - "Controle de calendário (ActiveX), hospedar com ATL AXHost"
-  - "Classe de CAxWindow2T"
-  - "hospedando controles ActiveX"
+title: Hospedando controles ActiveX usando ATL AXHost | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CAxWindow2T class
+- Calendar control (ActiveX), hosting with ATL AXHost
+- Calendar control (ActiveX)
+- ActiveX controls [C++], hosting
+- hosting ActiveX controls
+- AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Hospedando controles ActiveX usando ATL AXHost
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-O exemplo em este tópico mostra como criar AXHost e como hospedar um controle ActiveX usando várias funções de ATL.  Também mostra como acessar os eventos do controle e o coletor \(usando [IDispEventImpl](../atl/reference/idispeventimpl-class.md)\) do controle que é hospedado.  O exemplo hospeda o controle de calendário em uma janela principal ou janela filho.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Hospedando controles ActiveX usando AXHost ATL
+O exemplo neste tópico mostra como criar AXHost e como hospedar um controle ActiveX usando várias funções ATL. Ele também mostra como acessar o controle e o coletor de eventos (usando [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) do controle que está hospedado. O exemplo hospeda o controle de calendário em uma janela principal ou em uma janela filho.  
   
- Observe a definição do símbolo de `USE_METHOD` .  Você pode alterar o valor de esse símbolo para variar entre 1 e 8.  O valor do símbolo determina como o controle será criado:  
+ Observe a definição do `USE_METHOD` símbolo. Você pode alterar o valor desse símbolo para variar entre 1 e 8. O valor do símbolo determina como o controle será criado:  
   
--   Para valores pares numerados de `USE_METHOD`, a chamada para criar as subclasses host uma janela e ele converte em um host do controle.  Para valores ímpares numerados, o código cria uma janela filho que atua como um host.  
+-   Para obter valores de pares de `USE_METHOD`, a chamada para criar uma janela de subclasses de host e os converte em um host do controle. Para obter valores de número ímpar, o código cria uma janela filho que atua como um host.  
   
--   Para valores de `USE_METHOD` entre 1 e 4, acesso ao controle e o naufrágio de eventos é realizada na chamada que também cria o host.  Os valores entre 5 e 8 consulte o host para engancham interfaces e o coletor.  
+-   Para obter valores de `USE_METHOD` entre 1 e 4, acesse o controle e recebendo de eventos são realizadas na chamada que também cria o host. Os valores entre 5 e 8 o host para as interfaces de consulta e conectar-se com o coletor.  
   
- Aqui está um resumo:  
+ Segue um resumo:  
   
-|USE\_METHOD|Hosts|Controle acesso e o naufrágio de evento|Função demonstrada|  
-|-----------------|-----------|---------------------------------------------|------------------------|  
+|USE_METHOD|Host|Controlar o acesso e a recepção de evento|Função demonstrada|  
+|-----------------|----------|--------------------------------------|---------------------------|  
 |1|Janela filho|Uma etapa|CreateControlLicEx|  
 |2|Janela principal|Uma etapa|AtlAxCreateControlLicEx|  
 |3|Janela filho|Uma etapa|CreateControlEx|  
@@ -49,13 +48,14 @@ O exemplo em este tópico mostra como criar AXHost e como hospedar um controle A
 |7|Janela filho|Várias etapas|CreateControl|  
 |8|Janela principal|Várias etapas|AtlAxCreateControl|  
   
- [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/CPP/hosting-activex-controls-using-atl-axhost_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Perguntas frequentes sobre contenção de controle](../atl/atl-control-containment-faq.md)   
- [AtlAxCreateControl](../Topic/AtlAxCreateControl.md)   
- [AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)   
- [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)   
- [AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)   
- [Classe de CAxWindow2T](../Topic/CAxWindow2T%20Class.md)   
- [Interface de IAxWinHostWindowLic](../atl/reference/iaxwinhostwindowlic-interface.md)
+ [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
+ [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
+ [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [Classe CAxWindow2T](../atl/reference/caxwindow2t-class.md)   
+ [Interface IAxWinHostWindowLic](../atl/reference/iaxwinhostwindowlic-interface.md)
+

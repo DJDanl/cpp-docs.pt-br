@@ -1,48 +1,46 @@
 ---
-title: "/DYNAMICBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dynamicbase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção /DYNAMICBASE (editbin)"
-  - "opção editbin DYNAMICBASE"
-  - "opção editbin -DYNAMICBASE"
+title: -DYNAMICBASE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dynamicbase
+dev_langs: C++
+helpviewer_keywords:
+- -DYNAMICBASE editbin option
+- DYNAMICBASE editbin option
+- /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b5af34353db3c5b7cebaf02e8ce6b1bd9518cc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /DYNAMICBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica se uma imagem executável possa ter REBASE aleatória no tempo de carregamento usando randomização de layout de espaço de endereço \(ASLR\).  
+# <a name="dynamicbase"></a>/DYNAMICBASE
+Especifica se uma imagem executável pode ser baseada aleatoriamente de novo no tempo de carregamento usando aleatória de layout de espaço de endereço (ASLR).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
 /DYNAMICBASE[:NO]  
 ```  
   
-## Comentários  
- Por padrão, o vinculador define o **\/DYNAMICBASE** opção.  
+## <a name="remarks"></a>Comentários  
+ Por padrão, o vinculador define o **/DYNAMICBASE** opção.  
   
  Esta opção modifica o cabeçalho de uma imagem executável para indicar se o carregador pode rebase aleatoriamente a imagem no tempo de carregamento.  
   
- O ASLR é suportado no Windows Vista, Windows Server 2008, Windows 7, Windows 8 e Windows Server 2012.  
+ ASLR é suportado no Windows Vista, Windows Server 2008, Windows 7, Windows 8 e Windows Server 2012.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções EDITBIN](../../build/reference/editbin-options.md)   
- [defesas de segurança do Windows Software ISV](http://msdn.microsoft.com/library/bb430720.aspx)
+ [Defesas de segurança do Windows Software ISV](http://msdn.microsoft.com/library/bb430720.aspx)

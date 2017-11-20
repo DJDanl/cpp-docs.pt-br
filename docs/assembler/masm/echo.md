@@ -1,33 +1,30 @@
 ---
-title: "ECHO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ECHO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ECHO directive"
+title: ECHO | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ECHO
+dev_langs: C++
+helpviewer_keywords: ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 17ff68395709b4484a5475c078498fdc5878187e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# ECHO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Exibe  *mensagem*  para o dispositivo de saída padrão \(por padrão, a tela\).  
+# <a name="echo"></a>ECHO
+Exibe *mensagem* para o dispositivo de saída padrão (por padrão, a tela).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -36,8 +33,8 @@ message
   
 ```  
   
-## Comentários  
- Mesmo que  [%\-OUT](../../assembler/masm/percent-out.md).  
+## <a name="remarks"></a>Comentários  
+ Mesmo que [% OUT](../../assembler/masm/percent-out.md).  
   
-## Consulte também  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de diretivas](../../assembler/masm/directives-reference.md)

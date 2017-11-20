@@ -1,37 +1,36 @@
 ---
-title: "Refer&#234;ncias de segmento em assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembly embutido, registros"
-  - "assembly embutido, referências de segmento"
-  - "referências, assembly embutido"
-  - "registros"
-  - "registros, assembly embutido"
-  - "referências de segmento em assembly embutido"
+title: "Referências de Assembly embutido de segmento | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- references, inline assembly
+- segment references in inline assembly
+- inline assembly, segment references
+- registers
+- inline assembly, registers
+- registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6e0781b4539836dbd68ae5d68ec41d2761c47e10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Refer&#234;ncias de segmento em assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específico da Microsoft  
- Você deve se referir a segmentos pelo registro em vez de por nome \(o nome de segmento `_TEXT` for inválido, por exemplo\).  As substituições da partição devem usar o registro explicitamente, como em ES: \[\] BX.  
+# <a name="segment-references-in-inline-assembly"></a>Referências de segmento em assembly embutido
+## <a name="microsoft-specific"></a>Específico da Microsoft  
+ Você deve se referir a segmentos por registro em vez de nome (nome de segmento `_TEXT` é inválido, por exemplo). Substituições de segmento devem usar o registro explicitamente, como ES: [BX].  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Usando linguagem de assembly em blocos de \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

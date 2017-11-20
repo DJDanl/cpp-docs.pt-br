@@ -1,33 +1,30 @@
 ---
-title: "@Line | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@Line"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@Line symbol"
+title: '@Line| Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@Line'
+dev_langs: C++
+helpviewer_keywords: '@Line symbol'
 ms.assetid: f879fda0-c046-478a-acbd-2e7ff7f7ddad
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2ef233651467158d44641fcd2be851bf8c0fc3c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# @Line
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O número da linha de código\-fonte no arquivo atual \(equacionar numérico\).  
+# <a name="line"></a>@Line
+O número de linha de origem do arquivo atual (numéricos serão iguais).  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -35,5 +32,5 @@ O número da linha de código\-fonte no arquivo atual \(equacionar numérico\).
   
 ```  
   
-## Consulte também  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de símbolos](../../assembler/masm/symbols-reference.md)

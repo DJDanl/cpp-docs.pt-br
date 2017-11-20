@@ -1,34 +1,33 @@
 ---
-title: "Como criar uma compila&#231;&#227;o da vers&#227;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilações de lançamento, criando"
-  - "Win32, compilação de lançamento"
+title: "Como: criar uma compilação de versão | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Win32, release build
+- release builds, creating
 ms.assetid: 6a4c89b1-48f0-44d2-8703-ca0a4b0351bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ca4d1401cf0cff6750473a3281a94053298662b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Como criar uma compila&#231;&#227;o da vers&#227;o
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-### Para gerar uma construção da versão do programa  
+# <a name="how-to-create-a-release-build"></a>Como criar um build da versão
+### <a name="to-generate-a-release-build-of-your-program"></a>Para gerar uma compilação de versão do programa  
   
-1.  **Versão** Selecione na lista suspensa de **Configuração da solução** , que está na barra de ferramentas de **Padrão** .  
+1.  Selecione **versão** do **configuração de solução** lista suspensa, o que está no **padrão** barra de ferramentas.  
   
-2.  No menu de **Compilar** , clique em **Compilar**.  
+2.  No **criar** menu, clique em **criar**.  
   
-## Consulte também  
- [Compilações de versão](../../build/reference/release-builds.md)
+## <a name="see-also"></a>Consulte também  
+ [Builds de versão](../../build/reference/release-builds.md)

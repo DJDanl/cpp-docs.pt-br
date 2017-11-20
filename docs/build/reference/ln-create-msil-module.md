@@ -1,62 +1,60 @@
 ---
-title: "/LN (criar m&#243;dulo MSIL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/LN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /LN (C++)"
-  - "Opção de compilador -LN [C++]"
+title: "-LN (Criar módulo MSIL) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /LN
+dev_langs: C++
+helpviewer_keywords:
+- -LN compiler option [C++]
+- /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 807fd762ab2780b70a395f62efbc72945228b1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /LN (criar m&#243;dulo MSIL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ln-create-msil-module"></a>/LN (criar módulo MSIL)
 Especifica que um manifesto do assembly não deve ser inserido no arquivo de saída.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /LN  
 ```  
   
-## Comentários  
- Por padrão, **\/LN** não é aplicado \(um manifesto do assembly é inserido no arquivo de saída\).  
+## <a name="remarks"></a>Comentários  
+ Por padrão, **/LN** não está em vigor (um manifesto do assembly é inserido no arquivo de saída).  
   
- Quando **\/LN** é usado, uma das opções de [\/clr \(compilação do Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) também deve ser usado.  
+ Quando **/LN** for usado, uma da [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opções também devem ser usadas.  
   
- Um programa gerenciado que não tem metadados de um assembly no manifesto é chamado em um módulo.  Se você compila com [\/c \(compilar sem vinculação\)](../../build/reference/c-compile-without-linking.md) e **\/LN**, especifique [\/NOASSEMBLY \(criar um módulo MSIL\)](../../build/reference/noassembly-create-a-msil-module.md) na fase do vinculador para criar o arquivo de saída.  
+ Um programa gerenciado que não tem metadados do assembly no manifesto é chamado de um módulo. Se você compilar com [/c (compilar sem vinculação)](../../build/reference/c-compile-without-linking.md) e **/LN**, especifique [/NOASSEMBLY (criar um módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) na fase de vinculador para criar o arquivo de saída.  
   
- Talvez você queira criar os módulos se você deseja utilizar uma abordagem à base de componentes a criar assemblies.  Ou seja, você pode criar tipos e criá\-las os módulos.  Em seguida, você pode gerar um assembly de um ou vários módulos.  Para obter mais informações sobre como criar assemblies os módulos, consulte [Arquivos .netmodule como entrada de vinculador](../Topic/.netmodule%20Files%20as%20Linker%20Input.md) ou [Al.exe \(Assembly Linker\)](../Topic/Al.exe%20\(Assembly%20Linker\).md).  
+ Você talvez queira criar módulos se você deseja adotar uma abordagem baseado em componente para criação de assemblies.  Ou seja, você pode criar tipos e compilá-los em módulos.  Em seguida, você pode gerar um assembly de um ou mais módulos.  Para obter mais informações sobre como criar assemblies de módulos, consulte [. netmodule arquivos como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md) ou [Al.exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).  
   
- A extensão de arquivo padrão para um módulo é .netmodule.  
+ A extensão de arquivo padrão para um módulo é. netmodule.  
   
- Em versões de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] antes do Visual C\+\+ 2005, um módulo foi criado com **\/clr:noAssembly**.  
+ Em [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] versões do Visual C++ 2005, um módulo foi criado com **/clr:noAssembly**.  
   
- O vinculador Visual C\+\+ aceita arquivos de .netmodule como a entrada e o arquivo de saída gerada pelo vinculador será um assembly ou em um .netmodule sem dependência de tempo de execução em qualquer um dos .netmodules que foram registrados no vinculador.  Para obter mais informações, consulte [Arquivos .netmodule como entrada de vinculador](../Topic/.netmodule%20Files%20as%20Linker%20Input.md).  
+ O vinculador do Visual C++ aceita arquivos. netmodule como entrada e o arquivo de saída produzido pelo vinculador será um assembly ou. netmodule com nenhuma dependência de tempo de execução em qualquer uma da. netmodules que foram inseridos para o vinculador.  Para obter mais informações, consulte [. netmodule arquivos como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
--   Especifique [\/NOASSEMBLY \(criar um módulo MSIL\)](../../build/reference/noassembly-create-a-msil-module.md) na fase do vinculador para criar o arquivo de saída.  
+-   Especifique [/NOASSEMBLY (criar um módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) na fase de vinculador para criar o arquivo de saída.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
--   Essa opção de compilador não pode ser modificada programaticamente.  
+-   Essa opção de compilador não pode ser alterada de forma programática.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -1,11 +1,10 @@
 ---
-title: Classe CComDynamicUnkArray | Documentos do Microsoft
+title: Classe CComDynamicUnkArray | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,36 +20,20 @@ f1_keywords:
 - ATLCOM/ATL::CComDynamicUnkArray::GetSize
 - ATLCOM/ATL::CComDynamicUnkArray::GetUnknown
 - ATLCOM/ATL::CComDynamicUnkArray::Remove
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 69fc2c9dbb86f88c85461e765182fd88050521e9
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 51ad16bacf147e2bafc1cc2ad1a9bb835067ee40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe CComDynamicUnkArray
 Essa classe armazena uma matriz de **IUnknown** ponteiros.  
@@ -77,22 +60,22 @@ class CComDynamicUnkArray
 |[CComDynamicUnkArray::Add](#add)|Chame este método para adicionar um `IUnknown` ponteiro para a matriz.|  
 |[CComDynamicUnkArray::begin](#begin)|Retorna um ponteiro para o primeiro `IUnknown` ponteiro na coleção.|  
 |[CComDynamicUnkArray::clear](#clear)|Esvazia a matriz.|  
-|[CComDynamicUnkArray::end](#end)|Retorna um ponteiro para um após o último **IUnknown** ponteiro na coleção.|  
+|[CComDynamicUnkArray::end](#end)|Retorna um ponteiro para após o último **IUnknown** ponteiro na coleção.|  
 |[CComDynamicUnkArray::GetAt](#getat)|Recupera o elemento no índice especificado.|  
 |[CComDynamicUnkArray::GetCookie](#getcookie)|Chame esse método para obter o cookie associado com um determinado **IUnknown** ponteiro.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Retorna o comprimento de uma matriz.|  
 |[CComDynamicUnkArray::GetUnknown](#getunknown)|Chame este método para obter o **IUnknown** ponteiro associado com um cookie determinado.|  
-|[CComDynamicUnkArray::Remove](#remove)|Chamar esse método para remover um **IUnknown** ponteiro da matriz.|  
+|[CComDynamicUnkArray::Remove](#remove)|Chame este método para remover um **IUnknown** ponteiro da matriz.|  
   
 ## <a name="remarks"></a>Comentários  
- **CComDynamicUnkArray** contém uma matriz alocada dinamicamente do **IUnknown** ponteiros, cada ponto de uma interface em uma conexão. **CComDynamicUnkArray** pode ser usado como um parâmetro para o [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
+ **CComDynamicUnkArray** contém uma matriz alocada dinamicamente de **IUnknown** ponteiros, cada ponto de uma interface em uma conexão. **CComDynamicUnkArray** pode ser usado como um parâmetro para o [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe de modelo.  
   
- O **CComDynamicUnkArray** métodos [begin](#begin) e [final](#end) pode ser usado para percorrer todos os pontos de conexão (por exemplo, quando um evento é disparado).  
+ O **CComDynamicUnkArray** métodos [começar](#begin) e [final](#end) pode ser usado para executar um loop através de todos os pontos de conexão (por exemplo, quando um evento é disparado).  
   
  Consulte [adicionando pontos de Conexão para um objeto](../../atl/adding-connection-points-to-an-object.md) para obter detalhes sobre como automatizar a criação de conexão do ponto de proxies.  
   
 > [!NOTE]
-> **Observação** a classe **CComDynamicUnkArray** é usado pelo **Add Class** assistente ao criar um controle que tem pontos de Conexão. Se você quiser especificar o número de pontos de Conexão manualmente, altere a referência de **CComDynamicUnkArray** para `CComUnkArray<` *n* `>`, onde *n* é o número de pontos de conexão necessários.  
+> **Observação** a classe **CComDynamicUnkArray** é usado pelo **Adicionar classe** assistente ao criar um controle que tem pontos de Conexão. Se você quiser especificar o número de pontos de Conexão manualmente, altere a referência de **CComDynamicUnkArray** para `CComUnkArray<`  *n*  `>`, onde  *n*  é o número de pontos de conexão necessários.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlcom.h  
@@ -123,7 +106,7 @@ IUnknown**
  Um ponteiro para um **IUnknown** ponteiro de interface.  
   
 ### <a name="remarks"></a>Comentários  
- A coleção contém ponteiros para interfaces armazenados localmente como **IUnknown**. Você converter cada **IUnknown** interface para o tipo de interface real e, em seguida, chamar através dele. Você não precisa consultar a interface primeiro.  
+ A coleção contém ponteiros para interfaces armazenados localmente como **IUnknown**. Converter cada **IUnknown** interface para o tipo de interface real e, em seguida, chamar por meio dele. Você não precisa consultar a interface primeiro.  
   
  Antes de usar o **IUnknown** interface, você deve verificar que não é **nulo**.  
   
@@ -142,7 +125,7 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Define o tamanho da coleção como zero e inicializa os valores para **nulo**. O destruidor libera a coleção, se necessário.  
+ Define o tamanho da coleção como zero e inicializa os valores a serem **nulo**. O destruidor libera a coleção, se necessário.  
   
 ##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  O destruidor.  
@@ -155,7 +138,7 @@ CComDynamicUnkArray();
  Libera os recursos alocados pelo construtor de classe.  
   
 ##  <a name="end"></a>CComDynamicUnkArray::end  
- Retorna um ponteiro para um após o último **IUnknown** ponteiro na coleção.  
+ Retorna um ponteiro para após o último **IUnknown** ponteiro na coleção.  
   
 ```
 IUnknown**
@@ -191,10 +174,10 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
  O **IUnknown** ponteiro para o qual o cookie associado é necessário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o cookie associado com a **IUnknown** ponteiro, ou zero se nenhuma correspondência **IUnknown** ponteiro for encontrado.  
+ Retorna o cookie associado a **IUnknown** ponteiro ou zero se nenhuma correspondência **IUnknown** ponteiro foi encontrado.  
   
 ### <a name="remarks"></a>Comentários  
- Se houver mais de uma instância do mesmo **IUnknown** ponteiro, esta função retorna o cookie para primeiro.  
+ Se houver mais de uma instância do mesmo **IUnknown** ponteiro, essa função retorna o cookie para o primeiro.  
   
 ##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
  Retorna o comprimento de uma matriz.  
@@ -218,10 +201,10 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
  O cookie para o qual associado **IUnknown** ponteiro é necessário.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o **IUnknown** ponteiro ou NULL se nenhum cookie correspondente for encontrado.  
+ Retorna o **IUnknown** ponteiro, ou nulo se nenhum cookie correspondente for encontrado.  
   
 ##  <a name="remove"></a>CComDynamicUnkArray::Remove  
- Chamar esse método para remover um **IUnknown** ponteiro da matriz.  
+ Chame este método para remover um **IUnknown** ponteiro da matriz.  
   
 ```
 BOOL Remove(DWORD dwCookie);
@@ -229,12 +212,11 @@ BOOL Remove(DWORD dwCookie);
   
 ### <a name="parameters"></a>Parâmetros  
  `dwCookie`  
- A referência de cookie do **IUnknown** ponteiro a ser removido da matriz.  
+ O cookie referenciando o **IUnknown** ponteiro a ser removido da matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna TRUE se o ponteiro for removido; Caso contrário, FALSE.  
+ Retornará TRUE se o ponteiro for removido; Caso contrário, FALSE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComUnkArray](../../atl/reference/ccomunkarray-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

@@ -1,39 +1,39 @@
 ---
-title: "Implementando uma janela | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, o windows"
-  - "Classe de CWindowImpl, Usando"
-  - "windows [C++], implementar em ATL"
+title: Implementando uma janela (ATL) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- CWindowImpl class, using
+- windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a31316d63ad74ccfdf718e15d8e54d5c75b0535b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Implementando uma janela
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A classe [CWindowImpl](../Topic/CWindowImpl%20Class.md) permite que você implemente uma janela e trate as mensagens.  A mensagem que entrega em ATL é baseada em um mapa de mensagem.  Esta seção explica:  
+# <a name="implementing-a-window"></a>Implementar uma janela
+Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) permite implementar uma janela e controlar suas mensagens. Mensagem de envio em ATL baseia-se em um mapa de mensagem. Esta seção explica:  
   
--   Como [adicionar um manipulador de mensagem](../atl/adding-an-atl-message-handler.md) a um controle.  
+-   Como [adicionar um manipulador de mensagens](../atl/adding-an-atl-message-handler.md) a um controle.  
   
--   [mapas de mensagem](../atl/message-maps-atl.md) que são e como usá\-los.  
+-   O que [mapas de mensagem](../atl/message-maps-atl.md) e como usá-los.  
   
--   a sintaxe para [funções do manipulador de mensagem](../atl/message-handler-functions.md).  
+-   A sintaxe para [funções de manipulador de mensagem](../atl/message-handler-functions.md).  
   
 -   Como [implementar uma janela com CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
   
-## Consulte também  
- [Classes de janela](../Topic/ATL%20Window%20Classes.md)
+## <a name="see-also"></a>Consulte também  
+ [Classes de janela](../atl/atl-window-classes.md)
+

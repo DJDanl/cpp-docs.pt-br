@@ -1,46 +1,32 @@
 ---
-title: "Funções globais WinModule | Documentos do Microsoft"
+title: "Funções globais WinModule | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlbase/ATL::AtlWinModuleAddCreateWndData
+- atlbase/ATL::AtlWinModuleExtractCreateWndData
+dev_langs: C++
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: c477f4500bd4fe78f21f04c58b02d1b493f72c01
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: 5435b9870a396f24cb2aca5889c9fcfbc90d879a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="winmodule-global-functions"></a>Funções globais WinModule
-Essas funções fornecem suporte para `_AtlCreateWndData` operações de estrutura.  
+Essas funções fornecem suporte para `_AtlCreateWndData` estrutura operações.  
   
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados a [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos que são executados o tempo de execução do Windows.  
   
 |||  
 |-|-|  
@@ -48,7 +34,7 @@ Essas funções fornecem suporte para `_AtlCreateWndData` operações de estrutu
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Chame essa função para extrair uma estrutura `_AtlCreateWndData` existente.|  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
+ **Cabeçalho:** atlbase  
   `            
 ##  <a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData  
  Essa função é usada para inicializar e adicionar uma estrutura `_AtlCreateWndData`.  
@@ -71,7 +57,7 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
  Ponteiro para um objeto **isso** ponteiro.  
   
 ### <a name="remarks"></a>Comentários  
- Inicializa uma `_AtlCreateWndData` estrutura, que é usada para armazenar o **isso** ponteiro usado para se referir às instâncias de classe e o adiciona à lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura. Chamado por [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
+ Inicializa um `_AtlCreateWndData` estrutura, que é usada para armazenar o **isso** ponteiro usado para se referir às instâncias de classe e o adiciona à lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura. Chamado pelo [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData  
  Chame essa função para extrair uma estrutura `_AtlCreateWndData` existente.  
@@ -88,8 +74,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
  Retorna um ponteiro para o [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função extrairá existente `_AtlCreateWndData` estrutura da lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura.  
+ Essa função extrairá um existente `_AtlCreateWndData` estrutura da lista referenciada por um módulo `_ATL_WIN_MODULE70` estrutura.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../atl/reference/atl-functions.md)
-

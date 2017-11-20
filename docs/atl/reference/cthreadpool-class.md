@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,18 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6c142d9c7dca6c46453317e056ec573cbc960f51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 Essa classe fornece um pool de threads de trabalho que processam uma fila de itens de trabalho.  
@@ -100,7 +82,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Comentários  
  Threads no pool são criados e destruídos quando o pool é inicializado, redimensionado ou desligado. Uma instância da classe *trabalho* será criado na pilha de cada thread de trabalho no pool. Cada instância ficará ativo para o tempo de vida do thread.  
   
- Imediatamente após a criação de um segmento, *trabalho*:: `Initialize` será chamado no objeto associado a esse thread. Imediatamente antes de destruição de um thread, *trabalho*:: `Terminate` será chamado. Ambos os métodos devem aceitar uma **void\*** argumento. O valor desse argumento é passado para o pool de threads por meio de `pvWorkerParam` parâmetro [CThreadPool::Initialize](#initialize).  
+ Imediatamente após a criação de um segmento, *trabalho*:: `Initialize` será chamado no objeto associado a esse thread. Imediatamente antes de destruição de um thread, *trabalho*:: `Terminate` será chamado. Ambos os métodos devem aceitar uma **void\***  argumento. O valor desse argumento é passado para o pool de threads por meio de `pvWorkerParam` parâmetro [CThreadPool::Initialize](#initialize).  
   
  Quando há itens de trabalho em threads de fila e de trabalho disponível para o trabalho, um thread de trabalho extrairá um item de fila e a chamada a **Execute** método o *trabalho* objeto para esse thread. Três itens, em seguida, são passados para o método: o item da fila, o mesmo `pvWorkerParam` passado para *trabalho*:: `Initialize` e *trabalho*:: `Terminate`e um ponteiro para o [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estrutura usada para a fila de porta de conclusão de e/s.  
   
@@ -331,4 +313,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [Interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Classes](../../atl/reference/atl-classes.md)
-

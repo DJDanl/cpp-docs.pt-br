@@ -1,64 +1,63 @@
 ---
-title: "Tamanhos de tipo e vari&#225;vel em assembly embutido | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "length"
-  - "Type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembly embutido, operadores"
-  - "Operador LENGTH"
-  - " (tamanho)"
-  - "Operador SIZE"
-  - " (tamanho), obtendo em assembly embutido"
-  - "Operador TYPE"
-  - "variáveis, comprimento"
-  - "variáveis,  (tamanho)"
-  - "variáveis, Tipo "
+title: "Tamanhos de tipo e variável em Assembly embutido | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- length
+- Type
+dev_langs: C++
+helpviewer_keywords:
+- variables, length
+- size, getting in inline assembly
+- size
+- LENGTH operator
+- TYPE operator
+- SIZE operator
+- inline assembly, operators
+- variables, type
+- variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1714d660cad6474f0b038a40e2ad1efdf5aa5743
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Tamanhos de tipo e vari&#225;vel em assembly embutido
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Específico da Microsoft**  
+# <a name="type-and-variable-sizes-in-inline-assembly"></a>Tamanhos de tipo e variável em assembly embutido
+**Seção específica da Microsoft**  
   
- **LENGTH**, **TAMANHO**, e os operadores de **TIPO** tem um significado limitado no assembly embutido.  Não podem ser usados em todas com o operador de `DUP` \(porque você não pode definir dados com políticas ou operadores de MASM\).  Mas você pode usá\-lo para localizar o tamanho de C ou variáveis ou tipos de C\+\+:  
+ O **comprimento**, **tamanho**, e **tipo** operadores têm um significado limitado em assembly embutido. Não pode ser usados em todos os com o `DUP` operador (porque você não pode definir dados com diretivas MASM ou operadores). Mas você pode usá-los para encontrar o tamanho de tipos ou variáveis de C ou C++:  
   
--   O operador de **LENGTH** pode retornar o número de elementos em uma matriz.  Retorna o valor 1 para variáveis de não matriz.  
+-   O **comprimento** operador pode retornar o número de elementos em uma matriz. Retorna o valor 1 para variáveis de matriz não.  
   
--   O operador de **TAMANHO** pode retornar o tamanho atual do da variável c ou C\+\+.  O tamanho de uma variável é o produto de seus **LENGTH** e **TIPO**.  
+-   O **tamanho** operador pode retornar o tamanho de uma variável C ou C++. Tamanho da variável é o produto de sua **comprimento** e **tipo**.  
   
--   O operador de **TIPO** pode retornar o tamanho do tipo c ou C\+\+ ou a variável.  Se a variável for uma matriz, **TIPO** retorna o tamanho de um único elemento da matriz.  
+-   O **tipo** operador pode retornar o tamanho de um tipo de C ou C++ ou uma variável. Se a variável for uma matriz, **tipo** retorna o tamanho de um único elemento da matriz.  
   
- Por exemplo, se seu programa tem uma matriz de `int` de elementos, 8  
+ Por exemplo, se seu programa tem um elemento de 8 `int` matriz,  
   
 ```  
 int arr[8];  
 ```  
   
- as seguintes expressões e C do assembly retorna o tamanho de `arr` e de seus elementos.  
+ as seguintes expressões C e assembly produzem o tamanho de `arr` e seus elementos.  
   
-|\_\_asm|C|Size \(Tamanho\)|  
-|-------------|-------|----------------------|  
-|Arr de**LENGTH**|`sizeof`\(\) de arr\/`sizeof`\(arr \[0\]\)|8|  
-|arr de**TAMANHO**|`sizeof`\(arr\)|32|  
-|arr de**TIPO**|`sizeof`\(arr \[0\]\)|4|  
+|__asm|C|Tamanho|  
+|-------------|-------|----------|  
+|**COMPRIMENTO** arr|`sizeof`(arr) /`sizeof`(arr[0])|8|  
+|**TAMANHO** arr|`sizeof`(arr)|32|  
+|**TIPO** arr|`sizeof`(arr[0])|4|  
   
- **FINALIZAR Específico da Microsoft**  
+ **Fim da seção específica da Microsoft**  
   
-## Consulte também  
- [Usando linguagem de assembly em blocos de \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Consulte também  
+ [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

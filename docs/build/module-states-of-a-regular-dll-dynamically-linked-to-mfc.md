@@ -1,55 +1,54 @@
 ---
-title: "Estados de m&#243;dulo de uma DLL regular vinculada dinamicamente ao MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLLs [C++], estados de módulo"
-  - "DLLs MFC [C++], DLLs regulares"
-  - "estados de módulo [C++]"
-  - "estados de módulo [C++], DLLs regulares vinculadas dinamicamente a"
-  - "DLLs regulares [C++], vinculadas dinamicamente a MFC"
+title: "Estados de módulo de uma DLL MFC Regular vinculada dinamicamente ao MFC | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++], dynamically linked to MFC
+- module states [C++]
+- MFC DLLs [C++], regular MFC DLLs
+- module states [C++], regular MFC DLLs dynamically linked to
+- DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8908fb93cf6bc1c5a0c19cbbdb6597451c1cfa51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Estados de m&#243;dulo de uma DLL regular vinculada dinamicamente ao MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A capacidade de vincular dinamicamente uma DLL normal para a DLL MFC permite algumas configurações que são muito complexas.  Por exemplo, uma DLL normal e o executável que usa que pode vincular dinamicamente para a DLL MFC e a todas as dlls de extensão.  
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados de módulo de uma DLL MFC Regular vinculada dinamicamente ao MFC
+A capacidade de vincular dinamicamente uma DLL MFC regular para a DLL do MFC permite que algumas configurações que são muito complicadas. Por exemplo, uma DLL MFC regular e o executável que usa podem ambos dinamicamente vincular a DLL do MFC e qualquer extensão de MFC.  
   
- Essa configuração gerencie um problema com relação aos dados globais MFC, como o ponteiro mapas atuais dos objetos e de `CWinApp` .  
+ Esta configuração representa um problema com relação aos dados globais MFC, como o ponteiro para o atual `CWinApp` mapas de identificador de objeto.  
   
- Antes da versão 4,0 MFC, esses dados globais resididos na DLL próprio MFC e foram compartilhados por todos os módulos no processo.  Como cada processo que usa uma DLL do Win32 obtém sua própria cópia dos dados da DLL, esse esquema fornece uma maneira fácil de localizar dados do processo.  Além disso, como os AFXDLL modelagem presumido que não apenas um objeto de `CWinApp` e apenas um conjunto de mapas do identificador do processo, esses itens podem ser controlados na DLL próprio MFC.  
+ Antes de MFC versão 4.0, esses dados globais da DLL do MFC e foi compartilhados por todos os módulos no processo. Como cada processo usando uma DLL Win32 obtém sua própria cópia dos dados da DLL, esse esquema fornecidas uma maneira fácil de controlar os dados por processo. Além disso, porque o modelo AFXDLL presume que deveria haver apenas um `CWinApp` mapas no processo de identificador de objeto e apenas um conjunto de, esses itens podem ser controlados na DLL do MFC.  
   
- Mas com a capacidade de vincular dinamicamente uma DLL normal para a DLL MFC, agora é possível ter dois ou mais objetos de `CWinApp` em um processo — e também dois ou mais conjuntos de mapas do identificador.  Como o MFC se mantém a qual par deve usar?  
+ Mas com a capacidade de vincular dinamicamente uma DLL MFC regular para a DLL do MFC, é possível ter dois ou mais `CWinApp` objetos em um processo e também dois ou mais conjuntos de mapas de identificador. Como MFC manter o controle de quais devem usar?  
   
- A solução é dar a cada módulo \(aplicativo ou DLL comum\) sua própria cópia dessas informações de estado global.  Assim, uma chamada a **AfxGetApp** na DLL normal retorna um ponteiro para o objeto de `CWinApp` na DLL, não nesse executável.  Essa cópia do módulo de dados globais MFC é conhecida como um estado de módulo e descrita em [Observação 58 da tecnologia de MFC](../mfc/tn058-mfc-module-state-implementation.md).  
+ A solução é fornecer sua própria cópia dessas informações de estado global de cada módulo (aplicativo ou DLL MFC regular). Portanto, uma chamada para **AfxGetApp** comum DLL MFC retorna um ponteiro para o `CWinApp` objeto na DLL, não aquele do executável. Esta cópia por módulo dos dados globais MFC é conhecida como um estado de módulo e é descrita na [MFC Tech Observação 58](../mfc/tn058-mfc-module-state-implementation.md).  
   
- As opções comuns do procedimento da janela de MFC automaticamente para o estado correto do módulo, a você não precisa se preocupar sobre ele nos manipuladores de mensagem implementada no DLL normal.  Mas quando seus chamadas do executável na DLL normal, é necessário definir explicitamente o estado atual do módulo ao para a DLL.  Para fazer isso, use a macro de **AFX\_MANAGE\_STATE** em cada função exportada da DLL.  Isso é feito adicionando a seguinte linha de código ao início das funções exportadas da DLL:  
+ O procedimento de janela comuns MFC alterna automaticamente para o estado do módulo correto, e não será necessário se preocupar em qualquer manipuladores de mensagens implementadas no DLL normais do MFC. Mas quando o executável chama a DLL do MFC regular, você precisa definir explicitamente o estado atual do módulo para o outro para a DLL. Para fazer isso, use o **AFX_MANAGE_STATE** macro em todas as funções exportadas da DLL. Isso é feito adicionando a seguinte linha de código para o início da função DLL exportada:  
   
 ```  
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
 ```  
   
-## Que você deseja saber mais?  
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
   
--   [Gerenciando os dados do estado dos módulos de MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
+-   [Gerenciando os dados de estado dos módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
--   [DLL normais vinculadas dinamicamente ao MFC](../Topic/Regular%20DLLs%20Dynamically%20Linked%20to%20MFC.md)  
+-   [DLLs MFC regulares vinculadas dinamicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [DLLs de Extensão](../build/extension-dlls-overview.md)  
+-   [DLLs de extensão de MFC](../build/extension-dlls-overview.md)  
   
-## Consulte também  
- [DLLs no Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Consulte também  
+ [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)

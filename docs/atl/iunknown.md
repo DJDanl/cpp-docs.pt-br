@@ -1,33 +1,32 @@
 ---
-title: "IUnknown | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Interfaces COM, interface base"
-  - "Interface de IUnknown"
+title: IUnknown | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IUnknown
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces, base interface
+- IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f750cea17029a76f56edaa3dc6531554fa81901a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# IUnknown
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) é a interface base de todas as outras interfaces COM.  Essa interface define três métodos: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) permite que um usuário da interface peça o objeto de um ponteiro para outro de suas interfaces.  [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [Versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) implementam a contagem de referência na interface.  
+# <a name="iunknown"></a>IUnknown
+[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) é a interface base de outra interface COM.  Essa interface define três métodos: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) permite que um usuário de interface solicitar que o objeto para um ponteiro para outro de suas interfaces. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versão](http://msdn.microsoft.com/library/windows/desktop/ms682317) implementar a interface de contagem de referência.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Introdução ao COM](../atl/introduction-to-com.md)   
- [IUnknown and Interface Inheritance](http://msdn.microsoft.com/library/windows/desktop/ms692713)
+ [IUnknown e herança de Interface](http://msdn.microsoft.com/library/windows/desktop/ms692713)
+

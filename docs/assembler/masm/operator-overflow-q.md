@@ -1,35 +1,34 @@
 ---
-title: "operator OVERFLOW? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator OVERFLOW?"
-  - "OVERFLOW?"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator OVERFLOW?"
-  - "OVERFLOW? operator"
+title: operador OVERFLOW? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator OVERFLOW?
+- OVERFLOW?
+dev_langs: C++
+helpviewer_keywords:
+- operator OVERFLOW?
+- OVERFLOW? operator
 ms.assetid: 376b2850-993a-4538-b8f1-bd682ff7e91c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0212274de830ee11ba54287ee415ede27e520c90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operator OVERFLOW?
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Status do sinalizador de estouro.  Usado somente dentro  [.IF](../Topic/.IF.md), [.WHILE](../../assembler/masm/dot-while.md), or [.Repetir](../../assembler/masm/dot-repeat.md) bloqueia e avaliado em tempo de execução, não no tempo de montagem.  
+# <a name="operator-overflow"></a>operador OVERFLOW?
+Status do sinalizador de estouro. Usado somente em [. Se](../../assembler/masm/dot-if.md), [. ENQUANTO](../../assembler/masm/dot-while.md), ou [. REPITA](../../assembler/masm/dot-repeat.md) bloqueia e avaliadas em tempo de execução, não no momento do assembly.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
   
@@ -37,5 +36,5 @@ OVERFLOW?
   
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)

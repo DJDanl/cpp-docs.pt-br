@@ -1,61 +1,59 @@
 ---
-title: "/bigobj (aumentar n&#250;mero de se&#231;&#245;es no arquivo .Obj) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/bigobj"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opção de compilador /bigobj (C++)"
-  - "Opção de compilador bigobj [C++]"
-  - "Opção de compilador -bigobj [C++]"
+title: "-bigobj (aumentar o número de seções. Arquivo obj) | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /bigobj
+dev_langs: C++
+helpviewer_keywords:
+- -bigobj compiler option [C++]
+- /bigobj compiler option [C++]
+- bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73e6da121b099bdf6e67cdffe4d7d2bd0892d32a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# /bigobj (aumentar n&#250;mero de se&#231;&#245;es no arquivo .Obj)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/bigobj** aumenta o número de seções que um arquivo de objeto pode conter.  
+# <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (aumentar número de seções no arquivo .Obj)
+**/bigobj** aumenta o número de seções que pode conter um arquivo de objeto.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 /bigobj  
 ```  
   
-## Comentários  
- Por padrão, um arquivo de objeto pode conter até 65.536 \(2^16\) seções endereçáveis.  Esse é o caso, não importa qual plataforma de destino é especificada.  **\/bigobj** aumenta a capacidade de endereço para 4.294.967.296 \(2^32\).  
+## <a name="remarks"></a>Comentários  
+ Por padrão, um arquivo de objeto pode conter até 65.536 (2 ^ 16) seções endereçável. Esse é o caso, não importando qual plataforma de destino é especificada. **/bigobj** aumenta a capacidade desse endereço 4.294.967.296 (2 ^ 32).  
   
- A maioria de módulos nunca irá gerar um arquivo .obj que contém mais de 65.536 seções.  No entanto, o código gerado pelo computador, ou código que fizer uso intenso das bibliotecas de modelo poderá exigir os arquivos .obj que podem conter mais seções.  **\/bigobj** é habilitado por padrão em projetos do Windows Store, pois o código XAML gerado pela máquina inclui um grande número cabeçalhos.  Se você desativar essa opção em um projeto de aplicativo da Windows Store, você provavelmente encontrará o erro C1128 de compilador.  
+ A maioria dos módulos nunca irá gerar um arquivo. obj que contém mais de 65.536 seções. No entanto, código gerado por máquina ou código que faz uso intenso de bibliotecas de modelos pode exigir arquivos. obj que podem conter mais seções. **/bigobj** é habilitado por padrão em projetos da Windows Store porque o código XAML geradas por computador inclui um grande número de cabeçalhos. Se você desabilitar essa opção em um projeto de aplicativo da Windows Store são probabilidade de encontrar o erro do compilador C1128.  
   
- Os vinculadores fornecidos antes do Visual C\+\+ 2005 não podem ler arquivos .obj que foram gerados com **\/bigobj**.  
+ Vinculadores fornecido antes do Visual C++ 2005 não é possível ler os arquivos. obj produzidas com **/bigobj**.  
   
-### Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedade** do projeto.  Para obter detalhes, consulte [Como abrir páginas de propriedade do projeto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Clique na pasta **C\/C\+\+**.  
+2.  Clique o **C/C++** pasta.  
   
-3.  Clique na página de propriedades de **Linha de Comando**.  
+3.  Clique o **linha de comando** página de propriedades.  
   
-4.  Digite a opção de compilador na caixa **Opções Adicionais**.  
+4.  Digite a opção de compilador no **opções adicionais** caixa.  
   
-### Para definir essa opção do compilador via programação  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
 -   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../Topic/Setting%20Compiler%20Options.md)
+ [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

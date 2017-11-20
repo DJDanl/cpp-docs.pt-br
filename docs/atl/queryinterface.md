@@ -1,38 +1,37 @@
 ---
-title: "QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces, disponibilidade"
-  - "interfaces, ponteiros"
-  - "Método de QueryInterface"
+title: QueryInterface | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: QueryInterface
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, pointers
+- interfaces, availability
+- QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b269ed51cc9a1648de7a52f9c250919c9ef4c1c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Embora haja mecanismos por que um objeto pode expressar a funcionalidade ele fornece estaticamente \(antes que é instanciada\), o mecanismo de COM o fundamento é usar o método de **IUnknown** chamado [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+# <a name="queryinterface"></a>QueryInterface
+Embora haja mecanismos pelos quais um objeto pode expressar a funcionalidade que ele fornece estaticamente (antes que seja instanciado), o mecanismo COM fundamentais é usar o **IUnknown** método chamado [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
   
- Cada interface é derivada de **IUnknown**, para que cada interface tem uma implementação de `QueryInterface`.  Independentemente da implementação, esse método consulta a um objeto usando o IID de interface para que o chamador deseja um ponteiro.  Se o oferece suporte a interface, `QueryInterface` do objeto recupera um ponteiro para a interface, o também chamar `AddRef`.  Caso contrário, retornará o código de erro de **E\_NOINTERFACE** .  
+ Cada interface é derivada de **IUnknown**, de modo que cada interface tem uma implementação de `QueryInterface`. Independentemente de implementação, esse método consulta um objeto usando o IID da interface para que o chamador deseja um ponteiro. Se o objeto der suporte a essa interface, `QueryInterface` recupera um ponteiro para a interface, enquanto também chama `AddRef`. Caso contrário, retornará o **E_NOINTERFACE** código de erro.  
   
- Observe que você deve obedecer regras de [Contagem de referência](../atl/reference-counting.md) em cada vez.  Se você chamar **Versão** em um ponteiro de interface para diminuir a contagem de referência como zero, você não deve usar esse ponteiro novamente.  Ocasionalmente você pode precisar obter uma referência fraca a um objeto \(ou seja, você pode desejar obter um ponteiro para uma de suas interfaces sem incrementar contagem de referência\), mas não é aceitável fazer isso chamando `QueryInterface` seguido por **Versão**.  O ponteiro obtido em tal forma não é válido e não deve ser usado.  Isso torna mais imediatamente aparente quando [\_ATL\_DEBUG\_INTERFACES](../Topic/_ATL_DEBUG_INTERFACES.md) é definido, então defina isso macro é uma maneira útil para localizar erros de contagem de referência.  
+ Observe que você deve obedecer [contagem de referência](../atl/reference-counting.md) regras em todos os momentos. Se você chamar **versão** em um ponteiro de interface para diminuir a contagem de referência como zero, você não deve usar esse ponteiro novamente. Ocasionalmente, talvez seja necessário obter uma referência fraca a um objeto (ou seja, você poderá obter um ponteiro para uma das suas interfaces sem incrementar a contagem de referência), mas não é aceitável para fazer isso chamando `QueryInterface` seguido por  **Versão**. O ponteiro obtido na forma é inválido e não deve ser usado. Isso mais prontamente torna-se aparente quando [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) é definido para definir esta macro é uma maneira útil de encontrar erros de contagem de referência.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Introdução ao COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navigating in an Object](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface: Navegando em um objeto](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+

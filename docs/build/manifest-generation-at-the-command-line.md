@@ -1,34 +1,33 @@
 ---
-title: "Gera&#231;&#227;o de manifesto na linha de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ferramenta de manifesto (mt.exe)"
-  - "manifestos [C++]"
+title: "Geração de manifesto na linha de comando | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Gera&#231;&#227;o de manifesto na linha de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ao criar aplicativos C\/C\+\+ de linha de comando que usa o nmake ou ferramentas semelhantes, o manifesto é gerado depois que o vinculador processar todos os arquivos de objeto e compilou binário final.  O vinculador coleta informações de assembly armazenada em arquivos de objeto e combina essas informações em um arquivo de manifesto final.  Por padrão o vinculador gerará um arquivo denominado \<binary\_name\>.\<extension\>.manifest para descrever o binário final.  O vinculador não digitar um arquivo de manifesto em binários e só pode gerar um manifesto como um arquivo externo.  Há várias maneiras de inserir um manifesto no final binário, como o uso de [Ferramenta manifesta \(mt.exe\)](http://msdn.microsoft.com/library/aa375649) ou criar o manifesto em um arquivo de recursos.  É importante ter em mente que as regras específicas precisam ser seguidas ao inserir um manifesto binário no final para habilitar recursos como vincular, assinar, e edição e incrementais para continuar.  Esses e outras opções são discutidos em [Como inserir um manifesto em um aplicativo do C\/C\+\+](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) ao criar a linha de comando.  
+# <a name="manifest-generation-at-the-command-line"></a>Geração de manifesto na linha de comando
+Ao criar aplicativos C/C++ na linha de comando usando nmake ou ferramentas semelhantes, o manifesto é gerado depois que o vinculador é processado todos os arquivos de objeto e compilado binário final. O vinculador coleta informações de assembly armazenadas nos arquivos de objeto e combina essas informações em um arquivo de manifesto final. Por padrão, o vinculador gerará um arquivo chamado < binary_name >. \<extensão >. manifest para descrever o binário final. O vinculador não insere um arquivo de manifesto dentro do binário e só pode gerar um manifesto como um arquivo externo. Há várias maneiras para inserir um manifesto em binário final, como o uso de [ferramenta de manifesto (mt.exe)](http://msdn.microsoft.com/library/aa375649) ou compilando manifesto em um arquivo de recurso. É importante ter em mente que regras específicas devem ser seguidos durante a inserção de um manifesto em binário final para habilitar recursos como vínculo incremental, assinatura, e editar e continuar. Estas e outras opções são discutidas em [como: inserir um manifesto dentro de um aplicativo C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) ao compilar na linha de comando.  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Manifestos](http://msdn.microsoft.com/library/aa375365)   
- [\/INCREMENTAL \(vincular de maneira incremental\)](../build/reference/incremental-link-incrementally.md)   
- [Assemblies de nome forte \(assinatura de assembly\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
- [Editar e continuar](../Topic/Edit%20and%20Continue.md)   
- [Noções básicas sobre geração de manifesto para programas do C\/C\+\+](../Topic/Understanding%20Manifest%20Generation%20for%20C-C++%20Programs.md)
+ [/INCREMENTAL (vincular de maneira incremental)](../build/reference/incremental-link-incrementally.md)   
+ [Assemblies de nome forte (assinatura de Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
+ [Editar e continuar](/visualstudio/debugger/edit-and-continue)   
+ [Noções básicas sobre o Manifest Generation para programas do C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

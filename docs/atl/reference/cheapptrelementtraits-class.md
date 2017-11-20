@@ -1,11 +1,10 @@
 ---
-title: Classe CHeapPtrElementTraits | Documentos do Microsoft
+title: Classe CHeapPtrElementTraits | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,41 +12,24 @@ f1_keywords:
 - ATLCOLL/ATL::CHeapPtrElementTraits
 - ATLCOLL/ATL::CHeapPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CHeapPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: cf442a47a8f7f56a9563b73d03224165248232d5
-ms.contentlocale: pt-br
-ms.lasthandoff: 02/25/2017
-
+ms.openlocfilehash: c8d673b530f67507cd72e6f14a1c0d0ebd48a8f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cheapptrelementtraits-class"></a>Classe CHeapPtrElementTraits
 Essa classe fornece métodos, funções estáticas e typedefs útil ao criar coleções de ponteiros de pilha.  
   
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
+>  Essa classe e seus membros não podem ser usados em aplicativos que são executados o tempo de execução do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -62,7 +44,7 @@ class CHeapPtrElementTraits :
  O tipo de objeto a ser armazenado na classe da coleção.  
   
  `Allocator`  
- A classe de alocação de memória para usar. O padrão é [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ A classe de alocação de memória a ser usado. O padrão é [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Membros  
   
@@ -70,11 +52,11 @@ class CHeapPtrElementTraits :
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.|  
 |[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|O tipo de dados a ser usado para recuperar os elementos do objeto de classe de coleção.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe fornece métodos, funções estáticas e definições de tipo para auxílio a criação de objetos de classe de coleção que contém ponteiros de pilha. A classe `CHeapPtrList` deriva de `CHeapPtrElementTraits`.  
+ Essa classe fornece métodos, funções estáticas e definições de tipo para ajudando a criação de objetos de classe de coleção que contém ponteiros de pilha. A classe `CHeapPtrList` deriva de `CHeapPtrElementTraits`.  
   
  Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
   
@@ -93,7 +75,7 @@ class CHeapPtrElementTraits :
  **Cabeçalho:** atlcoll.h  
   
 ##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
- O tipo de dados a ser usado para adicionar elementos para o objeto de classe de coleção.  
+ O tipo de dados a ser usado para a adição de elementos para o objeto de classe de coleção.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
@@ -110,4 +92,3 @@ typedef T *& OUTARGTYPE;
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
  [Visão geral da classe](../../atl/atl-class-overview.md)
-

@@ -1,50 +1,48 @@
 ---
-title: "Refer&#234;ncia LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gerenciador de Biblioteca de 32 bits"
-  - "LIB [C++]"
-  - "Gerenciador de Biblioteca"
-  - "bibliotecas estáticas"
-  - "bibliotecas estáticas, definindo opções IDE"
+title: "Referência LIB | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- static libraries
+- static libraries, setting IDE options
+- Library Manager
+- LIB [C++]
+- 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# Refer&#234;ncia LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-O gerenciador de biblioteca do Microsoft LIB.exe \(\) cria e gerencia uma biblioteca de arquivos de objeto comum \(COFF\) de formato de arquivo do objeto.  O LIB também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referenciar definições exportadas.  
+# <a name="lib-reference"></a>Referência LIB
+O Gerenciador de biblioteca da Microsoft (LIB.exe) cria e gerencia uma biblioteca de arquivos de objeto do formato de arquivo de objeto comum (COFF). LIB também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referência exportada de definições.  
   
 > [!NOTE]
->  É possível iniciar esta ferramenta somente usando o prompt de comando [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Não é possível iniciá\-lo a partir de um prompt de comando do sistema ou do gerenciador de arquivos.  
+>  Você pode iniciar essa ferramenta apenas o [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] prompt de comando. Você não pode iniciá-lo em um prompt de comando do sistema ou no Explorador de arquivos.  
   
 -   [Visão geral de LIB](../../build/reference/overview-of-lib.md)  
   
--   [Como: Definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
+-   [Como definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
   
--   [LIB em execução](../../build/reference/running-lib.md)  
+-   [Executando LIB](../../build/reference/running-lib.md)  
   
 -   [Gerenciando uma biblioteca](../../build/reference/managing-a-library.md)  
   
--   [Extraindo um membro de biblioteca](../../build/reference/extracting-a-library-member.md)  
+-   [Extraindo um membro da biblioteca](../../build/reference/extracting-a-library-member.md)  
   
 -   [Trabalhando com bibliotecas de importação e arquivos de exportação](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
-## Consulte também  
- [Ferramentas de compilação do C\/C\+\+](../Topic/C-C++%20Build%20Tools.md)
+## <a name="see-also"></a>Consulte também  
+ [Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)

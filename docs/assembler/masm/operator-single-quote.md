@@ -1,39 +1,38 @@
 ---
-title: "operator &#39; &#39; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator ' '"
-  - "' '"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator ' '"
-  - "' ' operator"
+title: operador &#39; &#39; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator ' '
+- "' '"
+dev_langs: C++
+helpviewer_keywords:
+- operator ' '
+- "' ' operator"
 ms.assetid: 62a5d993-3d9b-470d-ba8a-53d76afd29b1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6a5f749914f72f466d6651e75a7187aaa7529439
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/24/2017
 ---
-# operator &#39; &#39;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dos trata*texto*' como uma seqüência de caracteres.  
+# <a name="operator-39-39"></a>operador &#39; &#39;
+Trata*texto*' como uma cadeia de caracteres.  
   
-## Sintaxe  
+## <a name="syntax"></a>Sintaxe  
   
 ```  
 'text'  
 ```  
   
-## Consulte também  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>Consulte também  
+ [Referência de operadores](../../assembler/masm/operators-reference.md)
